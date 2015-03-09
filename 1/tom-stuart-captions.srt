@@ -220,7 +220,7 @@ know what this is for.
 49
 00:02:57,370 --> 00:02:59,480
 Is this the entire
-scope of the problem ?
+scope of the problem?
 
 50
 00:03:02,140 --> 00:03:04,000
@@ -567,7 +567,7 @@ TS: Yes
 
 126
 00:08:04,340 --> 00:08:06,220
-Does that make sense ?
+Does that make sense?
 DN: Yes it does.
 
 127
@@ -1347,7 +1347,7 @@ we don't count them.
 
 294
 00:18:08,200 --> 00:18:09,220
-TS: And one terminal ?
+TS: And one terminal?
 
 295
 00:18:10,480 --> 00:18:11,600
@@ -1397,7 +1397,7 @@ that go as far as the terminal.
 
 305
 00:18:56,080 --> 00:18:57,600
-TS: Like this ?
+TS: Like this?
 DN: That's right.
 
 306
@@ -2001,7 +2001,7 @@ been running cucumber scenarios.
 
 433
 00:26:49,400 --> 00:26:50,800
-Are you suspending them or ..... ?
+Are you suspending them or .....?
 
 434
 00:26:52,370 --> 00:26:53,280
@@ -2010,7 +2010,7 @@ TS:  I will show you.
 435
 00:26:59,080 --> 00:27:01,140
 DN: So you have
-something in your vimrc ?
+something in your vimrc?
 
 436
 00:27:01,140 --> 00:27:02,770
@@ -2274,7 +2274,7 @@ This is from inaudible I think. It's very nice.
 
 492
 00:30:28,220 --> 00:30:28,820
-Where was I ?
+Where was I?
 
 493
 00:30:30,280 --> 00:30:30,800
@@ -2334,7 +2334,7 @@ want the API to be.
 505
 00:31:26,280 --> 00:31:28,400
 DN: Do you want
-to use the word children ?
+to use the word children?
 
 506
 00:31:28,910 --> 00:31:31,510
@@ -3168,7 +3168,7 @@ useful way of doing it.
 684
 00:41:48,540 --> 00:41:50,110
 So let's see,
-what did I do here ?
+what did I do here?
 
 685
 00:41:50,910 --> 00:41:51,970
@@ -3213,7 +3213,7 @@ called a 'git', git gutter.
 694
 00:42:29,910 --> 00:42:31,820
 DN: Do you always
-have that enabled ?
+have that enabled?
 
 695
 00:42:31,820 --> 00:42:32,420
@@ -3286,7 +3286,7 @@ it's starting to get a bit dirty.
 709
 00:43:16,400 --> 00:43:18,940
 DN: How much noise in
-the gutter can you tolerate ?
+the gutter can you tolerate?
 
 710
 00:43:18,940 --> 00:43:19,800
@@ -3948,7 +3948,7 @@ DN: Right.
 851
 00:52:22,310 --> 00:52:24,600
 The one whose
-children you're asking about ?
+children you're asking about?
 
 852
 00:52:24,850 --> 00:52:26,050
@@ -4346,7 +4346,7 @@ what we've got.
 
 937
 00:57:06,600 --> 00:57:07,620
-Why has that worked ?
+Why has that worked?
 
 938
 00:57:08,770 --> 00:57:10,600
@@ -4426,7 +4426,7 @@ call this you want it
 955
 00:57:49,740 --> 00:57:51,740
 to count all the ....
-what did we call them ?
+what did we call them?
 
 956
 00:57:56,000 --> 00:57:57,620
@@ -5165,7 +5165,7 @@ be more challenging.
 1115
 01:08:32,910 --> 01:08:34,910
 It has three
-terminals, is that right ?
+terminals, is that right?
 
 1116
 01:08:36,020 --> 01:08:36,600
@@ -5190,7 +5190,7 @@ Expected three, got zero.
 
 1121
 01:09:03,620 --> 01:09:04,850
-What do I want to do here ?
+What do I want to do here?
 
 1122
 01:09:07,970 --> 01:09:10,020
@@ -5534,7 +5534,7 @@ instances of node.
 1195
 01:13:56,650 --> 01:13:58,650
 What was actually
-the source of that ?
+the source of that?
 
 1196
 01:14:00,400 --> 01:14:01,170
@@ -5611,12 +5611,12 @@ have done that first.
 1211
 01:15:01,340 --> 01:15:03,200
 What order do we
-want these to be in ?
+want these to be in?
 
 1212
 01:15:05,680 --> 01:15:08,310
 DN: Is it sorting from small
-to large at the moment ?
+to large at the moment?
 
 1213
 01:15:08,310 --> 01:15:08,910
@@ -5634,7 +5634,7 @@ one node, wide tree.
 
 1216
 01:15:17,050 --> 01:15:17,770
-Is that right ?
+Is that right?
 
 1217
 01:15:18,770 --> 01:15:19,600
@@ -5840,7 +5840,7 @@ I will say:
 1259
 01:17:54,220 --> 01:17:55,800
 And then what
-have I done here ?
+have I done here?
 
 1260
 01:17:55,800 --> 01:17:56,200
@@ -6028,7 +6028,7 @@ and go back to that later.
 1300
 01:20:19,310 --> 01:20:21,340
 DN: That is more
-driving the API isn't it ?
+driving the API isn't it?
 
 1301
 01:20:21,340 --> 01:20:22,200
@@ -6104,7 +6104,7 @@ a way of doing it.
 
 1316
 01:21:42,280 --> 01:21:44,080
-This is implicitly a requirement ?
+This is implicitly a requirement?
 
 1317
 01:21:44,910 --> 01:21:45,370
@@ -6391,7 +6391,7 @@ this from the outside,
 1377
 01:26:14,000 --> 01:26:16,000
 what does adding a
-node to a tree mean ?
+node to a tree mean?
 
 1378
 01:26:18,970 --> 01:26:20,910
@@ -6970,7 +6970,7 @@ implementation I think.
 
 1501
 01:33:56,600 --> 01:33:58,050
-How did you feel about that ?
+How did you feel about that?
 
 1502
 01:33:58,650 --> 01:33:59,220
@@ -7020,7 +7020,7 @@ TS: Thank you.
 1512
 01:34:44,020 --> 01:34:46,080
 Well that's stupid
-why didn't that fail ?
+why didn't that fail?
 
 1513
 01:34:47,080 --> 01:34:48,850
@@ -7212,7 +7212,7 @@ you want access
 
 1554
 01:37:17,450 --> 01:37:18,880
-to the contents of the tree ?
+to the contents of the tree?
 
 1555
 01:37:18,880 --> 01:37:19,600
@@ -7298,7 +7298,7 @@ we get at the children
 
 1573
 01:38:07,940 --> 01:38:08,510
-of the tree ?
+of the tree?
 
 1574
 01:38:18,200 --> 01:38:20,650
@@ -7430,7 +7430,7 @@ That is not what I wanted.
 
 1603
 01:40:28,310 --> 01:40:29,220
-What did I do here ?
+What did I do here?
 
 1604
 01:40:30,140 --> 01:40:30,710
@@ -7572,7 +7572,7 @@ an assessor here that says:
 
 1634
 01:42:47,510 --> 01:42:48,600
-Can we freeze it here ?
+Can we freeze it here?
 
 1635
 01:42:51,650 --> 01:42:53,770
@@ -7757,7 +7757,7 @@ reach inside it and say
 1674
 01:45:42,680 --> 01:45:45,000
 "what kind of thing
-are you iterating over" ?
+are you iterating over"?
 
 1675
 01:45:47,420 --> 01:45:48,620
@@ -7867,7 +7867,7 @@ same as the array of children".
 
 1698
 01:46:59,940 --> 01:47:01,540
-What's that complaining about ?
+What's that complaining about?
 
 1699
 01:47:03,140 --> 01:47:04,970
@@ -8048,7 +8048,7 @@ whether we are a leaf.
 
 1737
 01:49:10,710 --> 01:49:11,220
-"Am I a leaf ?"
+"Am I a leaf?"
 
 1738
 01:49:12,140 --> 01:49:13,570
@@ -8069,7 +8069,7 @@ We can have a method here.
 
 1742
 01:49:22,910 --> 01:49:24,110
-Which is "are you a leaf" ?
+Which is "are you a leaf"?
 
 1743
 01:49:26,650 --> 01:49:28,140
@@ -8167,7 +8167,7 @@ and you can say
 
 1763
 01:50:27,740 --> 01:50:28,850
-satisfy this condition ?"
+satisfy this condition?"
 
 1764
 01:50:28,910 --> 01:50:30,650
@@ -8942,7 +8942,7 @@ So I shall say:
 
 1931
 01:59:32,770 --> 01:59:33,620
-How are we doing ?
+How are we doing?
 
 1932
 01:59:33,620 --> 01:59:35,680
