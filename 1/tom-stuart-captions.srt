@@ -5286,16 +5286,17 @@ that are at max depth.
 
 1139
 01:10:38,910 --> 01:10:40,880
-This just gives me an inaudible because we
+This just gives me an 'in' because
 
 1140
 01:10:45,510 --> 01:10:47,910
-are not going to be
-able call terminal count
+terminal count is one of those things that
+we're not going to be able to call recursively
 
 1141
 01:10:47,910 --> 01:10:49,600
-recursively on the child nodes.
+we're not going to be able
+to say on the child nodes:
 
 1142
 01:10:50,540 --> 01:10:53,050
