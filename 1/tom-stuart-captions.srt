@@ -201,7 +201,7 @@ at the root as being .....
 
 45
 00:02:45,680 --> 00:02:47,570
-I'd use the word descendents for that.
+I'd use the word descendants for that.
 
 46
 00:02:47,570 --> 00:02:50,140
@@ -316,7 +316,7 @@ word ancestors but
 70
 00:03:55,710 --> 00:03:57,710
 if you want to
-call them descendents,
+call them descendants,
 
 71
 00:03:57,710 --> 00:03:59,680
@@ -347,7 +347,7 @@ DN: Yes, let's change the problem
 
 77
 00:04:11,680 --> 00:04:12,970
-and call them decedents.
+and call them descendants.
 
 78
 00:04:15,850 --> 00:04:17,370
@@ -1210,7 +1210,7 @@ only one deep but has
 
 264
 00:16:37,910 --> 00:16:39,370
-lots of direct descendents.
+lots of direct descendants.
 
 265
 00:16:42,200 --> 00:16:44,220
@@ -1224,7 +1224,7 @@ then 5 emanating from it.
 267
 00:16:45,970 --> 00:16:48,050
 DN: So that would
-have many descendents
+have many descendants
 
 268
 00:16:48,050 --> 00:16:48,940
@@ -1321,7 +1321,7 @@ and no terminals.
 288
 00:17:51,250 --> 00:17:53,220
 TS: This one would
-have 5 descendents.
+have 5 descendants.
 
 289
 00:17:54,540 --> 00:17:55,570
@@ -1334,7 +1334,7 @@ And no terminals.
 291
 00:17:59,370 --> 00:18:01,200
 This one has I
-think, 4 descendents.
+think, 4 descendants.
 
 292
 00:18:04,000 --> 00:18:04,820
@@ -1384,7 +1384,7 @@ tree that has say,
 
 302
 00:18:43,170 --> 00:18:44,370
-perhaps 2 descendents,
+perhaps 2 descendants,
 
 303
 00:18:47,280 --> 00:18:49,220
@@ -1486,7 +1486,7 @@ a useful test case.
 324
 00:19:58,800 --> 00:20:01,170
 If we sort them by the
-number of descendents
+number of descendants
 
 325
 00:20:01,170 --> 00:20:02,570
@@ -2352,7 +2352,7 @@ introduced the word children
 
 509
 00:31:35,680 --> 00:31:37,140
-but yes, we mean descendents.
+but yes, we mean descendants.
 
 510
 00:31:37,570 --> 00:31:40,400
@@ -2968,7 +2968,7 @@ implemented these steps.
 641
 00:39:18,620 --> 00:39:20,450
 sort by total
-number of descendents
+number of descendants
 
 642
 00:39:20,450 --> 00:39:22,170
@@ -3022,7 +3022,7 @@ you to sort them by
 
 652
 00:39:46,620 --> 00:39:48,020
-the number of descendents,
+the number of descendants,
 
 653
 00:39:48,020 --> 00:39:49,450
@@ -3096,7 +3096,7 @@ I would like it so that ....
 
 669
 00:40:40,800 --> 00:40:43,420
-I can call descendents
+I can call descendants
 count or terminals count
 
 670
@@ -3131,7 +3131,7 @@ This is complaining about
 676
 00:41:00,650 --> 00:41:02,710
 undefined method
-descendents count
+descendants count
 
 677
 00:41:02,710 --> 00:41:04,600
@@ -3320,7 +3320,7 @@ that we don't have a
 716
 00:43:35,450 --> 00:43:38,020
 terminal count, or a
-descendents count method.
+descendants count method.
 
 717
 00:43:50,170 --> 00:43:52,110
@@ -3394,7 +3394,7 @@ the opportunity to run
 732
 00:44:34,340 --> 00:44:36,910
 through getting the
-descendents count to work.
+descendants count to work.
 
 733
 00:44:38,740 --> 00:44:40,770
@@ -3431,7 +3431,7 @@ something here and then
 
 740
 00:45:17,340 --> 00:45:18,650
-it has five descendents.
+it has five descendants.
 
 741
 00:45:19,880 --> 00:45:21,110
@@ -3444,7 +3444,7 @@ said in the step definition:
 
 743
 00:45:28,800 --> 00:45:30,820
-no descendent count
+no descendant count
 to be equal to a 5.
 
 744
@@ -3468,7 +3468,7 @@ of nodes, I could already
 748
 00:45:50,200 --> 00:45:52,480
 build you a tree
-that has five descendents
+that has five descendants
 
 749
 00:45:52,480 --> 00:45:55,200
@@ -3486,7 +3486,7 @@ to make <i>real</i> trees
 
 752
 00:45:59,420 --> 00:46:00,450
-with 5 descendents.
+with 5 descendants.
 
 753
 00:46:02,910 --> 00:46:05,970
@@ -3500,7 +3500,7 @@ then I need to work out ....
 755
 00:46:11,400 --> 00:46:14,510
 what it is that makes this
-fake tree has five descendents.
+fake tree has five descendants.
 
 756
 00:46:27,110 --> 00:46:29,710
@@ -3510,12 +3510,12 @@ be a recursive method.
 757
 00:46:31,910 --> 00:46:33,820
 The number of
-descendents of a tree
+descendants of a tree
 
 758
 00:46:34,280 --> 00:46:36,540
 is the number of
-descendents of all of it's
+descendants of all of it's
 
 759
 00:46:36,880 --> 00:46:38,650
@@ -3529,12 +3529,12 @@ and each one of them
 
 761
 00:46:42,710 --> 00:46:44,200
-has three descendents in it,
+has three descendants in it,
 
 762
 00:46:45,800 --> 00:46:49,450
 then I've got 3 + 3 + 3 = 9
-descendents, plus myself is 10.
+descendants, plus myself is 10.
 
 763
 00:46:51,850 --> 00:46:54,940
@@ -3549,7 +3549,7 @@ ahead of myself here.
 765
 00:47:04,620 --> 00:47:06,970
 It would be nice to say
-"it has no descendents"
+"it has no descendants"
 
 766
 00:47:07,600 --> 00:47:08,480
@@ -3613,7 +3613,7 @@ mean for the tree to have
 
 779
 00:48:07,370 --> 00:48:08,370
-five descendents.
+five descendants.
 
 780
 00:48:14,800 --> 00:48:16,710
@@ -3751,7 +3751,7 @@ to say check that it does.
 808
 00:49:41,340 --> 00:49:44,510
 If I already knew how my
-descendent count was going to work
+descendant count was going to work
 
 809
 00:49:52,680 --> 00:49:54,000
@@ -3898,7 +3898,7 @@ me that I'm not sure.
 
 840
 00:51:50,540 --> 00:51:53,000
-Oh, descendent count of
+Oh, descendant count of
 zero for the empty node
 
 841
@@ -3926,7 +3926,7 @@ is to take all the children
 
 846
 00:52:10,170 --> 00:52:11,940
-and call descendent count on them.
+and call descendant count on them.
 
 847
 00:52:14,400 --> 00:52:16,340
@@ -4001,7 +4001,7 @@ all of these to return
 
 862
 00:53:00,370 --> 00:53:01,910
-that it has five descendents.
+that it has five descendants.
 
 863
 00:53:02,400 --> 00:53:03,280
@@ -4126,7 +4126,7 @@ to be .... new style
 
 889
 00:54:35,880 --> 00:54:37,540
-I can say the descendent count
+I can say the descendant count
 
 890
 00:54:37,540 --> 00:54:39,200
@@ -4162,7 +4162,7 @@ each one is a node.
 897
 00:55:01,650 --> 00:55:04,110
 And it's reporting that
-it has one descendent
+it has one descendant
 
 898
 00:55:04,110 --> 00:55:06,310
@@ -4186,7 +4186,7 @@ that an empty node
 
 902
 00:55:16,770 --> 00:55:18,280
-should have no descendents.
+should have no descendants.
 
 903
 00:55:18,970 --> 00:55:20,170
@@ -4209,7 +4209,7 @@ of being empty ones,
 907
 00:55:25,280 --> 00:55:27,220
 will have a
-descendent count of one.
+descendant count of one.
 
 908
 00:55:27,820 --> 00:55:29,480
@@ -4390,7 +4390,7 @@ the outside, which is
 
 947
 00:57:28,000 --> 00:57:29,570
-going to be descendent count.
+going to be descendant count.
 
 948
 00:57:29,970 --> 00:57:31,880
@@ -4822,7 +4822,7 @@ three children that each
 
 1041
 01:03:18,000 --> 01:03:19,710
-say they have four descendents.
+say they have four descendants.
 
 1042
 01:03:21,050 --> 01:03:23,080
@@ -4901,11 +4901,11 @@ Why has that happened?
 1058
 01:04:03,000 --> 01:04:04,650
 Because it's
-descendent count.
+descendant count.
 
 1059
 01:04:11,450 --> 01:04:13,450
-I think descendent
+I think descendant
 count is the name
 
 1060
@@ -4921,7 +4921,7 @@ the acceptance test
 1062
 01:04:19,420 --> 01:04:21,050
 I did write
-descendents count.
+descendants count.
 
 1063
 01:04:24,170 --> 01:04:26,250
@@ -4931,17 +4931,17 @@ re-factoring to change.
 1064
 01:04:31,080 --> 01:04:33,450
 TS: The reason there
-was descendents there
+was descendants there
 
 1065
 01:04:33,450 --> 01:04:35,650
 was because I'd
-written descendents here.
+written descendants here.
 
 1066
 01:04:35,650 --> 01:04:38,220
 We've got the word
-descendents all over the place.
+descendants all over the place.
 
 1067
 01:04:41,200 --> 01:04:43,650
@@ -4992,7 +4992,7 @@ the collection should
 1077
 01:05:35,740 --> 01:05:37,880
 be ordered by the
-total number of descendents.
+total number of descendants.
 
 1078
 01:05:38,940 --> 01:05:40,420
@@ -5007,7 +5007,7 @@ in here which says:
 1080
 01:05:49,680 --> 01:05:51,970
 So if we've sorted
-them by descendent count
+them by descendant count
 
 1081
 01:05:54,970 --> 01:05:56,570
@@ -5016,7 +5016,7 @@ see just one node
 
 1082
 01:05:58,710 --> 01:06:00,080
-which has no descendents.
+which has no descendants.
 
 1083
 01:06:01,050 --> 01:06:02,450
@@ -5450,7 +5450,7 @@ of its' children it says
 1177
 01:12:54,850 --> 01:12:57,650
 "do you guys have any leaf
-descendents at depth four
+descendants at depth four
 
 1178
 01:12:57,650 --> 01:13:00,480
