@@ -1415,11 +1415,11 @@ I was expecting
 
 308
 00:19:12,800 --> 00:19:14,740
-to see a highlight on the first inaudible
+to see a highlight on the first [bracket]
 
 309
 00:19:15,970 --> 00:19:18,620
-DN: But if you pressed
+DN: But if you put your cursor
 on the first opening bracket.
 
 310
