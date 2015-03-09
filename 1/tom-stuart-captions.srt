@@ -229,7 +229,7 @@ you feel its too much
 
 51
 00:03:04,020 --> 00:03:06,450
-we can make it inaudible by one of those fields.
+we can make it sortable by one of those fields.
 
 52
 00:03:07,600 --> 00:03:09,310
