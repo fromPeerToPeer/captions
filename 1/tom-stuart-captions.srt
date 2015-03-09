@@ -7629,7 +7629,7 @@ to iterate over my children".
 
 1644
 01:43:47,420 --> 01:43:48,540
-If I open irb we can do,
+If I just pop open irb we can do,
 
 1645
 01:43:51,000 --> 01:43:51,880
@@ -7638,16 +7638,16 @@ If I open irb we can do,
 1646
 01:44:00,200 --> 01:44:02,820
 There are a variety of
-ways to make an enumerator
+ways to make an enumerator out of that
 
 1647
 01:44:02,820 --> 01:44:04,740
-inaudible call each
+you can call `to_enum`, or
+you can just call `each`
 
 1648
 01:44:05,510 --> 01:44:07,340
-and that also
-returns enumerator.
+and that also returns enumerator.
 
 1649
 01:44:08,510 --> 01:44:11,000
