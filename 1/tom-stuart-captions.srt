@@ -7992,7 +7992,8 @@ I will commit that:
 
 1722
 01:48:35,540 --> 01:48:38,340
-DN: If you did call each type child.entries inaudible
+DN: If you did call each child.entries
+on the array the you get back
 
 1723
 01:48:39,680 --> 01:48:42,110
