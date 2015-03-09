@@ -6057,17 +6057,16 @@ means to modify these trees.
 
 1304
 01:20:32,200 --> 01:20:33,710
-If you look at
-our node class,
+At the moment it if you look at
+our node class
 
 1305
 01:20:35,820 --> 01:20:38,080
-at the moment it
-can't even get the children,
+you can't even get the children,
 
 1306
 01:20:39,570 --> 01:20:40,940
-much less inaudible them.
+much less set them.
 
 1307
 01:20:41,000 --> 01:20:42,710
@@ -6076,7 +6075,7 @@ any way addressed
 
 1308
 01:20:43,620 --> 01:20:45,600
-what it means to
+what it means to be able to
 mutate these things.
 
 1309
