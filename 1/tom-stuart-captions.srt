@@ -1763,12 +1763,12 @@ providing an array of children,
 
 382
 00:23:30,740 --> 00:23:33,880
-rather than creating
-an empty one inaudible
+rather than creating an empty one
+and then mutating it to add them
 
 383
 00:23:34,000 --> 00:23:36,770
-we will investigate whether
+but we will investigate whether
 that's a good idea or not.
 
 384
