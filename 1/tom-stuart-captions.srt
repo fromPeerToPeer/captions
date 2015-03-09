@@ -3581,7 +3581,8 @@ only run that line.
 
 771
 00:47:34,420 --> 00:47:36,200
-inaudible count for node
+So now it's saying 'undefined method:
+descendant_count for node'
 
 772
 00:47:37,510 --> 00:47:39,340
