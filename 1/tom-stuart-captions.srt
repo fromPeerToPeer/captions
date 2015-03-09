@@ -1052,12 +1052,12 @@ the actual name of the class
 
 230
 00:14:37,220 --> 00:14:38,250
-inaudible options hash
+or how it's instantiated. You know,
+do you pass in an options hash
 
 231
 00:14:38,250 --> 00:14:40,310
-do you pass in
-positional arguments,
+or do you pass in positional arguments,
 
 232
 00:14:40,310 --> 00:14:42,510
@@ -1066,7 +1066,7 @@ empty one and mutate it.
 
 233
 00:14:44,200 --> 00:14:46,080
-I can try keep
+I can try and keep
 this step definition
 
 234
