@@ -1,0 +1,6580 @@
+1
+00:00:01,600 --> 00:00:05,740
+Welcome to Peer to Peer, where you
+can watch our experts solve tech problems.
+
+2
+00:00:07,370 --> 00:00:09,200
+Our guest today is Camille Baldock
+
+3
+00:00:09,600 --> 00:00:13,140
+who by day writes Ruby and
+Java script for the British Government.
+
+4
+00:00:13,140 --> 00:00:17,220
+And by night mentors junior
+developers and teaches programming in schools.
+
+5
+00:00:18,200 --> 00:00:19,370
+Our host is Tom Stuart.
+
+6
+00:00:20,450 --> 00:00:23,080
+And the challenge that we set for CamI'lle is called ..
+
+7
+00:00:25,910 --> 00:00:29,220
+TS: So CamI'lle, would you like to
+read out the problem statement ?
+
+8
+00:00:44,740 --> 00:00:47,114
+Do you know the standard poker ranking rules ?
+
+9
+00:00:47,114 --> 00:00:48,457
+CB: I do !  Which is fortunate.
+
+10
+00:00:50,110 --> 00:00:51,970
+CB: OK, right, so this is nice and vague !
+
+11
+00:00:54,742 --> 00:00:57,914
+CB: If I'm doing something like that
+I need some way of knowing
+
+12
+00:01:00,480 --> 00:01:03,940
+this is hand A and this is hand
+B and the program wI'll sort it out.
+
+13
+00:01:06,340 --> 00:01:10,420
+And I need to think of how to
+tell people to tell me what their hand looks like.
+
+14
+00:01:10,710 --> 00:01:11,110
+TS: OK
+
+15
+00:01:14,340 --> 00:01:16,514
+The first 'off the top of my head', easy thing,
+
+16
+00:01:16,514 --> 00:01:16,540
+is that you have some sort of string or array.
+The first 'off the top of my head', easy thing,
+
+17
+00:01:16,540 --> 00:01:18,857
+is that you have some sort of string or array.
+
+18
+00:01:20,910 --> 00:01:22,370
+you have an array of 5 things,
+
+19
+00:01:22,370 --> 00:01:25,020
+that says I have a 5 of Hearts and the 6 of Diamonds
+
+20
+00:01:26,140 --> 00:01:30,110
+I could put that in an array and
+represent that as 4H5D. (4 Hearts 5 Diamonds).
+
+21
+00:01:33,820 --> 00:01:35,910
+Put that in an array and then two arrays.
+
+22
+00:01:37,140 --> 00:01:40,050
+And create the problem.
+So we'll get started with that.
+
+23
+00:01:44,420 --> 00:01:46,110
+So, I want to switch to input code.
+
+24
+00:01:54,110 --> 00:01:57,620
+What I'm going to do is make sure
+I've got a couple of things in place
+
+25
+00:01:58,080 --> 00:02:00,540
+Like a spec helper.
+And then, we can get started.
+
+26
+00:02:06,110 --> 00:02:09,257
+The first thing I want to
+do is enter some kind of array 'thing'
+
+27
+00:02:09,250 --> 00:02:11,742
+and it creates .... we'll I don't know what it creates.
+
+28
+00:02:16,910 --> 00:02:18,800
+So, if I'm going to be comparing hands
+
+29
+00:02:20,220 --> 00:02:22,250
+A hand has several cards in it, and I need
+
+30
+00:02:22,250 --> 00:02:24,110
+some way to represent what a card is
+
+31
+00:02:24,710 --> 00:02:26,770
+and a hand that has several cards in it.
+
+32
+00:02:27,140 --> 00:02:30,850
+And then I want to be taking the hand,
+and taking the other hand object
+
+33
+00:02:30,880 --> 00:02:32,570
+and then somehow comparing them.
+
+34
+00:02:33,000 --> 00:02:36,000
+So the first thing I want
+to have in place is some kind of
+
+35
+00:02:36,970 --> 00:02:40,480
+hand object and some kind
+of card object in which I can put 'things'
+
+36
+00:02:47,650 --> 00:02:49,280
+So the first thing I want to do is .....
+
+37
+00:02:51,820 --> 00:02:54,020
+I have an array that says 5H and 6 Diamond
+
+38
+00:02:54,570 --> 00:02:57,600
+And in the other hand - and this is my hand object with those
+
+39
+00:02:59,110 --> 00:03:00,280
+card 'things' inside it.
+
+40
+00:03:01,110 --> 00:03:02,800
+So we wI'll start with that I think.
+
+41
+00:03:04,000 --> 00:03:06,340
+TS: Are you talking about an array of strings?
+
+42
+00:03:06,940 --> 00:03:08,180
+CB: As an input or .....
+TS: Yes
+
+43
+00:03:09,200 --> 00:03:12,110
+CB: Yes.  I'm not really
+concerned about that at the moment
+
+44
+00:03:13,740 --> 00:03:15,510
+I don't think it matters that much
+
+45
+00:03:15,510 --> 00:03:18,200
+Since I don't want to keep
+them as an array of strings
+
+46
+00:03:18,400 --> 00:03:20,571
+but do interesting things afterwards so
+
+47
+00:03:20,571 --> 00:03:22,342
+I don't think it matters that much.
+
+48
+00:03:22,342 --> 00:03:25,057
+TS: So this is just going to be a serialisation format.
+
+49
+00:03:25,542 --> 00:03:28,028
+CB: Yes, a hand parser type thing. Let's call it that.
+
+50
+00:03:31,420 --> 00:03:33,000
+So, if I have a hand parser 'thing'.
+
+51
+00:03:36,340 --> 00:03:38,600
+Ok, so this is the 'I cant type moment'. (laughter)
+
+52
+00:03:42,250 --> 00:03:44,970
+So if we have some kind
+of object called hand parser
+
+53
+00:03:51,770 --> 00:03:55,170
+It probably should parses
+the array of strings and represent
+
+54
+00:03:58,820 --> 00:04:01,680
+the cards (this is quite
+verbose), but let's get to that.
+
+55
+00:04:03,820 --> 00:04:06,710
+Actually this is going to
+fail so how about we run this
+
+56
+00:04:08,570 --> 00:04:12,200
+And this is not very happy and inaudible
+
+57
+00:04:13,420 --> 00:04:15,480
+Yes, this is my first failure - here we go !
+
+58
+00:04:18,450 --> 00:04:20,280
+So I'm going to have to inaudible
+
+59
+00:04:21,110 --> 00:04:24,200
+It's getting somewhere.
+I need to create that file in there.
+
+60
+00:04:25,850 --> 00:04:28,770
+And let's create a  parser
+that does absolutely nothing.
+
+61
+00:04:29,370 --> 00:04:31,620
+But that should make my test happy enough,
+
+62
+00:04:33,820 --> 00:04:35,710
+unless I don't require it, obviously
+
+63
+00:04:36,080 --> 00:04:39,140
+inaudible - know where to look
+
+64
+00:04:40,020 --> 00:04:42,857
+So let's give that a try....
+OK zero example zero failures.
+
+65
+00:04:43,620 --> 00:04:44,340
+So far so good.
+
+66
+00:04:45,710 --> 00:04:47,220
+What I probably want to do is ....
+
+67
+00:04:48,800 --> 00:04:51,770
+If I create a hand parser
+and I give it the array of cards.
+
+68
+00:04:54,140 --> 00:04:56,740
+Of string things that wI'll represent cards then
+
+69
+00:04:57,200 --> 00:05:00,220
+on the other hand I want
+to check what the output of that is.
+
+70
+00:05:04,510 --> 00:05:06,650
+So the subject is hand parser, so if we have
+
+71
+00:05:08,250 --> 00:05:09,080
+Describe cards.
+
+72
+00:05:10,340 --> 00:05:13,800
+I create hand parser and then
+I hopefully have some kind of thing
+
+73
+00:05:14,600 --> 00:05:17,250
+That says pars and
+it wI'll take the array of cards
+
+74
+00:05:20,400 --> 00:05:21,540
+Which I need to define.
+
+75
+00:05:24,628 --> 00:05:27,400
+Let's have a look at how
+I'm going to put those cards in.
+
+76
+00:05:27,480 --> 00:05:29,800
+So we can have those as 5 Hearts 6 of Diamonds
+
+77
+00:05:32,510 --> 00:05:33,970
+That's not an array (Laughter).
+
+78
+00:05:38,370 --> 00:05:39,250
+Choose the cards.
+
+79
+00:05:40,480 --> 00:05:42,228
+TS: King, Queen, Ace, I'm not an expert.
+
+80
+00:05:46,171 --> 00:05:48,257
+CB: King of Spades,
+what's the other suit?
+
+81
+00:05:50,480 --> 00:05:51,510
+Clubs, that's the one
+
+82
+00:05:53,370 --> 00:05:55,370
+So Queen of Clubs, and then we can have
+
+83
+00:05:57,510 --> 00:05:59,400
+let's have an annoying card in there.
+
+84
+00:06:00,080 --> 00:06:01,480
+Just so we have a bit of fun.
+
+85
+00:06:02,570 --> 00:06:03,228
+Which is Ace.
+
+86
+00:06:08,280 --> 00:06:10,770
+let's keep Ace as one
+and see where that takes us.
+
+87
+00:06:10,770 --> 00:06:12,400
+I reckon that matters somehow.
+
+88
+00:06:13,740 --> 00:06:15,450
+But I have no idea, so we shall see.
+
+89
+00:06:17,820 --> 00:06:20,050
+And this should give me some kind of 'thing'.
+
+90
+00:06:21,940 --> 00:06:23,450
+This is already going to fail
+
+91
+00:06:23,770 --> 00:06:26,480
+so I'm not even going
+to put an expectation in there
+
+92
+00:06:26,510 --> 00:06:29,910
+I'm going to go ahead and
+run my tests and this should fail nicely.
+
+93
+00:06:31,050 --> 00:06:32,510
+I don't have method parts, so ........
+
+94
+00:06:39,080 --> 00:06:42,280
+I have a group of cards that
+takes an array of things - cards.
+
+95
+00:06:44,540 --> 00:06:45,650
+It's not these things.
+
+96
+00:06:53,650 --> 00:06:55,200
+we'll - this test tests nothing.
+
+97
+00:06:55,200 --> 00:06:57,370
+But at least it's not giving error any more
+
+98
+00:06:57,820 --> 00:06:59,970
+On the other hand - I want it to be a hand and ....
+
+99
+00:07:05,680 --> 00:07:08,650
+I want this to be some
+kind of hand 'object' type of thing.
+
+100
+00:07:13,000 --> 00:07:15,450
+So, I want to create a hand object type of thing.
+
+101
+00:07:15,480 --> 00:07:16,080
+TS: OK.
+
+102
+00:07:20,250 --> 00:07:22,080
+Oh, how do we even do this in our spec.
+
+103
+00:07:23,480 --> 00:07:25,740
+I don't want to do something like this, right.
+
+104
+00:07:26,620 --> 00:07:29,020
+How do you get a thing and check the class of it.
+
+105
+00:07:35,170 --> 00:07:36,571
+so, expect (hand.cards.count)
+
+106
+00:07:40,400 --> 00:07:41,310
+2 or 5 for example,
+
+107
+00:07:45,710 --> 00:07:49,370
+this doesn't test that anymore
+so let's rewire this thing a little bit.
+
+108
+00:07:51,820 --> 00:07:53,285
+We'll just give this 5 cards
+
+109
+00:07:53,285 --> 00:07:55,140
+and it returns back a hand of cards.
+
+110
+00:07:59,620 --> 00:08:03,340
+So here we want it to have exactly
+the same number of things that we have.
+
+111
+00:08:04,250 --> 00:08:05,940
+I'm going to gloss over the issue
+
+112
+00:08:05,940 --> 00:08:08,600
+and give it an array of cards that only has 4 cards
+
+113
+00:08:08,600 --> 00:08:09,970
+if it falls over, let's just
+
+114
+00:08:10,600 --> 00:08:13,310
+not go there for now,
+we'll just assume that our users
+
+115
+00:08:13,310 --> 00:08:15,685
+are going to put correct the things in there.
+
+116
+00:08:16,000 --> 00:08:16,310
+TS: OK.
+
+117
+00:08:18,000 --> 00:08:21,680
+So yes let's just start with that,
+this has already failed quite nicely.
+
+118
+00:08:27,880 --> 00:08:28,940
+Right, excellent, so
+
+119
+00:08:31,620 --> 00:08:34,228
+This needs to return a thing that quacks dot cards.
+
+120
+00:08:37,050 --> 00:08:37,370
+TS: OK.
+
+121
+00:08:51,680 --> 00:08:54,620
+CB: Look at me failing,
+that's sublime, beautiful. (laughter)
+
+122
+00:08:57,710 --> 00:08:58,940
+OK, so if it has that then ......
+
+123
+00:09:02,000 --> 00:09:04,600
+This should complain for different reasons now.
+
+124
+00:09:06,680 --> 00:09:07,480
+No shortcut, OK
+
+125
+00:09:08,770 --> 00:09:13,050
+inaudible parser hand ... so far so good.
+
+126
+00:09:16,050 --> 00:09:19,280
+This doesn't know what hand
+it is so let's quickly acquire it.
+
+127
+00:09:21,680 --> 00:09:22,970
+And now back to our tests.
+
+128
+00:09:27,970 --> 00:09:30,220
+And if I make the count, it has nothing in it.
+
+129
+00:09:36,510 --> 00:09:39,020
+This should fail for a slightly nicer reason now.
+
+130
+00:09:43,140 --> 00:09:45,650
+So here we have an
+array that has nothing in it.
+
+131
+00:09:45,650 --> 00:09:47,710
+And we should have 5 things, inaudible
+
+132
+00:09:49,650 --> 00:09:50,420
+it's about time!
+
+133
+00:09:51,510 --> 00:09:53,340
+So if we have an array of cards and it
+
+134
+00:09:53,680 --> 00:09:56,080
+has 5 things, then I want to do is create a hand
+
+135
+00:09:56,940 --> 00:09:58,020
+with some cards in it.
+
+136
+00:09:59,200 --> 00:10:00,680
+So if we have some 'thing' that
+
+137
+00:10:04,370 --> 00:10:06,800
+takes the array of cards which is essentially
+
+138
+00:10:10,310 --> 00:10:13,370
+an array of string cards,
+or however you want to call that.
+
+139
+00:10:15,110 --> 00:10:18,110
+And I want it to basically
+find that string of cards and
+
+140
+00:10:24,600 --> 00:10:26,650
+say, make me a string
+object type 'thing'.
+
+141
+00:10:28,400 --> 00:10:28,970
+TS: Right.
+
+142
+00:10:29,850 --> 00:10:32,480
+and then eventually I'll want to inaud hand.
+
+143
+00:10:32,480 --> 00:10:33,620
+but one thing at a time.
+
+144
+00:10:34,770 --> 00:10:35,971
+OK, so that can live here.
+
+145
+00:10:38,140 --> 00:10:39,620
+So if I  have make a card thing,
+
+146
+00:10:43,200 --> 00:10:45,370
+this is going to move to card object later.
+
+147
+00:10:45,480 --> 00:10:46,880
+Let's get to that in a second.
+
+148
+00:10:46,970 --> 00:10:47,280
+TS: OK.
+
+149
+00:10:49,770 --> 00:10:52,680
+I don't like the interface
+of this, it is quite unnatural.
+
+150
+00:10:53,450 --> 00:10:55,850
+I quite like the fact that my parsing object
+
+151
+00:10:55,850 --> 00:10:57,510
+is going to sit somewhere else.
+
+152
+00:10:57,510 --> 00:11:00,510
+I don't want to have to do
+crazy inaud and things like that
+
+153
+00:11:00,514 --> 00:11:01,800
+as part of a thing that is
+
+154
+00:11:01,800 --> 00:11:03,457
+supposed to be comparing cards.
+
+155
+00:11:03,457 --> 00:11:06,220
+But, at the same time,
+like here, I'm creating a new card
+
+156
+00:11:07,910 --> 00:11:10,850
+TS: So why are you
+approaching it in this particular way ?
+
+157
+00:11:10,857 --> 00:11:13,485
+if your saying you don't
+want this method to be here,
+
+158
+00:11:13,485 --> 00:11:15,570
+why are you putting it here at the moment ?
+
+159
+00:11:15,570 --> 00:11:17,400
+CB: I'm not quite sure how much logic
+
+160
+00:11:20,080 --> 00:11:22,650
+what my card.new type
+method should be, setting.
+
+161
+00:11:23,080 --> 00:11:23,400
+TS: OK
+
+162
+00:11:23,970 --> 00:11:27,800
+CB: In a perfect world, I would
+like it to say 'if it's a 5 of Diamond' it takes
+
+163
+00:11:28,480 --> 00:11:30,800
+card.move 5 and a
+diamond symbol type thing.
+
+164
+00:11:33,200 --> 00:11:35,850
+So I want a tiny bit of
+pre-processing before hand.
+
+165
+00:11:36,340 --> 00:11:38,970
+To check that there are
+two things in this string
+
+166
+00:11:38,970 --> 00:11:41,080
+H maps to Hearts, and something like that.
+
+167
+00:11:42,050 --> 00:11:42,540
+TS: Fine
+
+168
+00:11:42,540 --> 00:11:45,480
+So this is where I want
+this to live. I'm not quite sure yet.
+
+169
+00:11:46,000 --> 00:11:47,510
+TS: So your expecting later on
+
+170
+00:11:47,510 --> 00:11:49,540
+that your going to have a better idea of
+
+171
+00:11:49,540 --> 00:11:51,000
+what's going on here.
+CB: Yes.
+
+172
+00:11:51,742 --> 00:11:53,200
+TS: Ok let's see what happens.
+
+173
+00:11:56,510 --> 00:11:58,680
+This is a thing, and it takes a card string.
+
+174
+00:12:01,510 --> 00:12:02,850
+And, if I remember rightly,
+
+175
+00:12:03,370 --> 00:12:05,770
+my card string has 5 H or something like that.
+
+176
+00:12:06,510 --> 00:12:08,620
+So what I'm going to do is create card.new
+
+177
+00:12:12,680 --> 00:12:14,570
+and I'm taking card string zero cards
+
+178
+00:12:14,940 --> 00:12:16,710
+card string one but actually not.
+
+179
+00:12:20,880 --> 00:12:23,740
+How do I want my cards to look,
+how do I want them to quack.
+
+180
+00:12:27,080 --> 00:12:29,600
+It's going to be easier
+for me as a human, to have
+
+181
+00:12:30,570 --> 00:12:32,420
+my suits (as in Hearts/Diamonds etc)
+
+182
+00:12:32,450 --> 00:12:34,880
+written out in plain letters
+not as H and D etc.
+
+183
+00:12:34,880 --> 00:12:35,200
+TS: OK
+
+184
+00:12:36,140 --> 00:12:38,250
+I just want to do a very quick pre-parsing
+
+185
+00:12:42,710 --> 00:12:45,110
+if this is H then just
+give me a Heart symbol.
+
+186
+00:12:50,110 --> 00:12:52,110
+and this is D give me a Diamond symbol.
+
+187
+00:12:52,450 --> 00:12:55,110
+Actually, this could be
+variable, hash Y might do it
+
+188
+00:12:56,600 --> 00:12:58,740
+and switch.  Let's have a hash sitting here.
+
+189
+00:13:02,050 --> 00:13:03,600
+We have other suits, so we have
+
+190
+00:13:07,910 --> 00:13:09,220
+H, Diamonds, Clubs, Spades.
+
+191
+00:13:13,310 --> 00:13:14,370
+That seems correct.
+
+192
+00:13:14,880 --> 00:13:16,080
+TS: That's all of them yes.
+
+193
+00:13:20,910 --> 00:13:23,970
+This is the slightly tedious
+typing part - oh right ! Spades
+
+194
+00:13:30,570 --> 00:13:31,600
+So, this goes bye bye.
+
+195
+00:13:33,420 --> 00:13:37,142
+TS: So now you can just look up with hash rather than using a inaudible set.
+
+196
+00:13:37,142 --> 00:13:37,771
+CB: Yes.
+
+197
+00:13:39,310 --> 00:13:41,880
+And I actually want it
+to fall over quite loudly,
+
+198
+00:13:42,280 --> 00:13:44,200
+If I have something crazy as my suit.
+
+199
+00:13:45,110 --> 00:13:47,228
+TS: How are you going to make it fall over ?
+
+200
+00:13:47,285 --> 00:13:48,914
+With 'fetch'. It means that if I put
+
+201
+00:13:51,200 --> 00:13:53,510
+5 A in there that fetch is going to complain.
+
+202
+00:13:54,540 --> 00:13:56,450
+because there is no suits with key A
+
+203
+00:13:58,200 --> 00:14:00,450
+and therefore it wI'll throw an exception
+
+204
+00:14:02,310 --> 00:14:05,970
+I should probably be handling this
+in a different way if I'm doing that.
+
+205
+00:14:05,970 --> 00:14:08,370
+I definitely don't want to have a default value
+
+206
+00:14:08,370 --> 00:14:09,910
+because there's no such thing.
+
+207
+00:14:10,340 --> 00:14:12,420
+I should be thinking about things like,
+
+208
+00:14:12,771 --> 00:14:15,657
+do I want capital H in
+there and little things like that.
+
+209
+00:14:15,880 --> 00:14:18,420
+But for now I'm doing
+it with the minimum viable
+
+210
+00:14:18,820 --> 00:14:19,910
+array string parser.
+
+211
+00:14:21,020 --> 00:14:22,400
+And see where that takes me.
+
+212
+00:14:22,420 --> 00:14:24,510
+TS: So your motivation here sounds like
+
+213
+00:14:24,510 --> 00:14:26,250
+you don't want it to 'silently' fail ?
+
+214
+00:14:29,220 --> 00:14:31,680
+But you want it to complain.
+CB: Yes, that's fine
+
+215
+00:14:31,910 --> 00:14:35,050
+In the same way here,
+for example, it takes the first symbol.
+
+216
+00:14:36,820 --> 00:14:38,570
+So if someone puts H5 for example,
+
+217
+00:14:39,680 --> 00:14:41,457
+That would also fail quite loudly.
+
+218
+00:14:41,485 --> 00:14:44,371
+If someone puts HH however,
+it's not going to fail loudly.
+
+219
+00:14:46,542 --> 00:14:48,650
+But, I'm not entirely inaud,
+
+220
+00:14:49,540 --> 00:14:51,420
+and I don't want to spend time on it now
+
+221
+00:14:52,540 --> 00:14:53,940
+I'll clean it up a bit later,
+
+222
+00:14:56,280 --> 00:14:57,480
+what I would usually do
+
+223
+00:14:57,480 --> 00:14:59,314
+If I'm writing things I want to ship
+
+224
+00:15:02,140 --> 00:15:04,142
+I would put fail loudly and with better
+
+225
+00:15:09,800 --> 00:15:11,114
+errors with unexpected
+
+226
+00:15:13,970 --> 00:15:15,370
+inputs, much in the same way
+
+227
+00:15:16,480 --> 00:15:19,485
+I would probably be having to
+do a fail nicely when not 5.
+
+228
+00:15:28,420 --> 00:15:31,770
+There's other things, if you
+have two 5 of Hearts, you have cheat.
+
+229
+00:15:33,310 --> 00:15:35,850
+and things like that,
+but let's not even go there !
+
+230
+00:15:35,850 --> 00:15:38,600
+Let's assume that that
+our players are trying to be
+
+231
+00:15:38,600 --> 00:15:39,420
+honest, at least.
+
+232
+00:15:39,710 --> 00:15:41,620
+TS: we'll, I don't know enough about the
+
+233
+00:15:41,620 --> 00:15:44,140
+variance of Poker to
+say whether that's I'llegal.
+
+234
+00:15:45,480 --> 00:15:48,485
+CB: I think if you have one deck
+and you have 2 x 5 of Hearts
+
+235
+00:15:48,570 --> 00:15:51,970
+you can reasonably assume that
+somebody's messing with the game.
+
+236
+00:15:54,171 --> 00:15:56,057
+So that's going to fail quite nicely
+
+237
+00:15:56,057 --> 00:15:57,971
+because I'm obviously missing quite
+
+238
+00:15:57,971 --> 00:15:59,820
+a lot of objects and things like that
+
+239
+00:15:59,820 --> 00:16:01,400
+but let's see where it's failing.
+
+240
+00:16:03,450 --> 00:16:04,540
+So, undefined method
+
+241
+00:16:05,310 --> 00:16:07,310
+Oh yes of course,
+I did something here ...
+
+242
+00:16:09,685 --> 00:16:12,170
+Here I'm assuming
+that make card is available
+
+243
+00:16:12,170 --> 00:16:13,540
+on my string, which it isn't.
+
+244
+00:16:15,400 --> 00:16:18,650
+TS: You want to make it available,
+I thought you were going to do
+
+245
+00:16:19,600 --> 00:16:20,940
+some monkey patching and ....
+
+246
+00:16:24,050 --> 00:16:27,250
+we'll, if you want to do it for
+fun, to do crazy things. (laughter)
+
+247
+00:16:27,680 --> 00:16:29,910
+and then see how I fail later, then sure, but
+
+248
+00:16:35,170 --> 00:16:37,400
+I love myself too much
+to do that to myself.
+
+249
+00:16:42,940 --> 00:16:47,710
+inaud, so now it's complaining
+that we don't have whatever that is.
+
+250
+00:16:50,170 --> 00:16:52,170
+we should re-create a 'whatever that is'
+
+251
+00:16:54,650 --> 00:17:00,110
+To be honest I don't see it doing anything really smart
+
+252
+00:17:00,110 --> 00:17:02,850
+so it's just going to have,
+it's called 'Pips' in English
+
+253
+00:17:05,420 --> 00:17:08,020
+that's the number on the
+face of the card, is it not ?
+
+254
+00:17:09,820 --> 00:17:13,080
+TS: I think I've heard the word
+'rank' but 'Pips' also seems sensible
+
+255
+00:17:14,800 --> 00:17:16,200
+I'm going to stick with 'Pips'
+
+256
+00:17:17,910 --> 00:17:21,280
+Since I'm also doing hand ranker,
+rank is going to confuse things.
+
+257
+00:17:21,280 --> 00:17:22,510
+TS: Oh .. that's a good point.
+
+258
+00:17:23,170 --> 00:17:25,080
+Separate words for separate ideas.
+
+259
+00:17:26,910 --> 00:17:28,770
+I believe that's helpful. (laughter)
+
+260
+00:17:33,200 --> 00:17:36,370
+OK, so I have some kind of
+sI'lly strap that doesn't do much here.
+
+261
+00:17:39,250 --> 00:17:42,828
+I just want to acquire it -
+rather than leave it sitting around here.
+
+262
+00:17:43,400 --> 00:17:44,970
+And let's go back to our spec. Go.
+
+263
+00:17:50,020 --> 00:17:54,570
+Excellent, we stI'll have nothing and that is simply inaud
+
+264
+00:17:54,570 --> 00:17:59,620
+because I stI'll haven't implemented it. So if we do now hand inaud cards
+
+265
+00:18:02,740 --> 00:18:04,942
+we're just going to initialise the cards.
+
+266
+00:18:08,050 --> 00:18:09,114
+I can get rid of that 
+
+267
+00:18:11,028 --> 00:18:12,657
+and make that cards available. 
+
+268
+00:18:18,540 --> 00:18:20,740
+this should hopefully stop complaining
+
+269
+00:18:24,200 --> 00:18:27,057
+because it did a zero failure,
+so that is the one I want.
+
+270
+00:18:33,080 --> 00:18:33,910
+Let's have a look.
+
+271
+00:18:35,450 --> 00:18:36,510
+I'm creating my hand ...
+
+272
+00:18:42,220 --> 00:18:46,820
+My favourite way is also inaudible
+
+273
+00:18:46,820 --> 00:18:48,740
+and then I spent 2 minutes thinking
+
+274
+00:18:48,820 --> 00:18:51,740
+inaud spelling.
+TS: Yes. 
+
+275
+00:18:54,000 --> 00:18:56,400
+Yes, good, certainly more convincing isn't it?
+
+276
+00:18:56,420 --> 00:18:57,450
+TS: Yes, very good.
+
+277
+00:18:58,540 --> 00:19:02,650
+I now have some 'thing' and it has the inaud of things.
+
+278
+00:19:02,650 --> 00:19:05,740
+I don't actually know that
+it does pars the cards correctly.
+
+279
+00:19:07,250 --> 00:19:10,480
+And if the array looks like
+I want it to look, so what I can do is
+
+280
+00:19:15,540 --> 00:19:17,710
+because, currently my parser doesn't care
+
+281
+00:19:18,400 --> 00:19:19,850
+how many cards I'm parsing in
+
+282
+00:19:21,110 --> 00:19:22,450
+I can do a very quick check.
+
+283
+00:19:23,250 --> 00:19:24,800
+so it returns the right cards.
+
+284
+00:19:27,370 --> 00:19:29,910
+as a test, and if my
+array of cards is just the one
+
+285
+00:19:34,110 --> 00:19:35,310
+let's say 6 of Diamonds.
+
+286
+00:19:38,050 --> 00:19:41,540
+then I go inaud exact same.
+
+287
+00:19:43,570 --> 00:19:44,450
+And what I want is ...
+
+288
+00:19:46,080 --> 00:19:48,200
+I take my hand,
+I take the cards in there,
+
+289
+00:19:48,740 --> 00:19:51,850
+I take the first one and I
+want to check the suit is Diamonds
+
+290
+00:19:56,220 --> 00:19:58,820
+I also want to check that my Pips are equal to six.
+
+291
+00:19:59,480 --> 00:19:59,800
+TS: Ok.
+
+292
+00:20:00,620 --> 00:20:04,020
+And I reckon that were going
+to have a surprising 'thing' because
+
+293
+00:20:04,020 --> 00:20:05,570
+I haven't cast it to an integer.
+
+294
+00:20:10,220 --> 00:20:13,480
+Since we're going to compare
+them, it's a lot easier to look at
+
+295
+00:20:15,620 --> 00:20:16,650
+if they're integers.
+
+296
+00:20:17,200 --> 00:20:20,050
+That's strings - expected an
+integer and got a string !
+
+297
+00:20:21,285 --> 00:20:23,714
+What I'm going to do is not really good practice,
+
+298
+00:20:26,340 --> 00:20:28,050
+but that should please it for now.
+
+299
+00:20:30,400 --> 00:20:33,800
+So now I can have a 'thing'
+and when I put several things in there
+
+300
+00:20:35,620 --> 00:20:38,140
+it puts them in a hand
+with cards, and then I can
+
+301
+00:20:38,800 --> 00:20:41,450
+check that if I do put
+a card it seems relatively ok.
+
+302
+00:20:42,000 --> 00:20:42,310
+TS: Ok.
+
+303
+00:20:42,400 --> 00:20:45,200
+CB: If I wanted to be really
+exhaustive I would go through
+
+304
+00:20:45,200 --> 00:20:47,280
+check Spades, check Hearts, check Clubs.
+
+305
+00:20:48,620 --> 00:20:50,510
+Just to see that that matching is ok.
+
+306
+00:20:51,740 --> 00:20:53,940
+And that would give
+me a bit more certainty
+
+307
+00:20:53,940 --> 00:20:55,450
+about what on Earth I am doing !
+
+308
+00:20:55,740 --> 00:20:56,050
+TS: Ok
+
+309
+00:20:57,340 --> 00:21:00,110
+But that kind of does the
+thing, that is good enough.
+
+310
+00:21:01,450 --> 00:21:03,140
+Now I'm going to start focusing on ....
+
+311
+00:21:05,510 --> 00:21:07,171
+If I have those two hand objects
+
+312
+00:21:07,280 --> 00:21:08,850
+and I can look at cards on them.
+
+313
+00:21:09,110 --> 00:21:12,370
+I have a nice interface with my
+cards, it gives me Pips and Suits
+
+314
+00:21:13,110 --> 00:21:14,200
+How do I compare them.
+
+315
+00:21:17,370 --> 00:21:19,540
+Step away from the
+computer for a second.
+
+316
+00:21:19,540 --> 00:21:22,400
+TS: Yes, it felt like this
+was an administrative thing
+
+317
+00:21:24,740 --> 00:21:27,310
+Your warmed up now,
+you can make two hands of cards.
+
+318
+00:21:28,400 --> 00:21:30,057
+And now it's back to compare them ?
+
+319
+00:21:30,057 --> 00:21:31,140
+CB: Yes, that's about it.
+
+320
+00:21:34,310 --> 00:21:36,420
+The first thing we can do is have some way
+
+321
+00:21:38,600 --> 00:21:41,000
+of having a hand, and
+it tells me 'you have a Flush'
+
+322
+00:21:42,250 --> 00:21:45,140
+or 'you have a Pair' and
+that is actually your best thing.
+
+323
+00:21:45,570 --> 00:21:47,620
+Not just 'you stI'll happen to have a Pair'
+
+324
+00:21:47,680 --> 00:21:49,620
+because the last thing I want to do is,
+
+325
+00:21:50,170 --> 00:21:51,910
+I have a card that has for example,
+
+326
+00:21:52,280 --> 00:21:54,420
+3 of a kind which is better than 2 of a kind
+
+327
+00:21:54,420 --> 00:21:59,080
+inaud which isn't very nice (laughter)
+
+328
+00:22:00,340 --> 00:22:02,910
+TS: I am roughly familiar with the rules of Poker.
+
+329
+00:22:04,800 --> 00:22:07,880
+I'm just being unnecessarily
+verbose - you can just stop me.
+
+330
+00:22:08,910 --> 00:22:10,110
+No, no, talk me through it.
+
+331
+00:22:12,028 --> 00:22:14,280
+so if I have 3 of a kind, the last thing I want to do is
+
+332
+00:22:14,280 --> 00:22:14,600
+my hand inaud
+so if I have 3 of a kind, the last thing I want to do is
+
+333
+00:22:14,600 --> 00:22:15,140
+my hand inaud
+
+334
+00:22:15,140 --> 00:22:16,850
+Oh ! we have two of a kind, excellent.
+
+335
+00:22:16,850 --> 00:22:19,910
+whereas the best thing I
+could do with this is 3 of a kind.
+
+336
+00:22:19,910 --> 00:22:23,250
+ST: So for any individual hand
+there might be several possible
+
+337
+00:22:23,250 --> 00:22:25,540
+classification of the cards in it, but we want
+
+338
+00:22:25,540 --> 00:22:27,370
+to use the one that is most likely to
+
+339
+00:22:27,370 --> 00:22:29,200
+cause this hand to beat another one.
+
+340
+00:22:29,620 --> 00:22:32,450
+CB: Yes, you want the
+highest possible rank of things
+
+341
+00:22:34,510 --> 00:22:35,540
+you can get in Poker,
+
+342
+00:22:36,050 --> 00:22:38,570
+so if I have 4 fours then I can't inaud
+
+343
+00:22:39,800 --> 00:22:42,820
+I want 4 of a kind,
+not 3 of a kind, and definitely not a Pair.
+
+344
+00:22:42,828 --> 00:22:43,714
+TS: Not a high card.
+
+345
+00:22:43,710 --> 00:22:44,657
+CB: Definitely not.
+
+346
+00:22:50,540 --> 00:22:54,280
+It sounds like your first line
+of interest, is classifying these hands
+
+347
+00:22:57,600 --> 00:22:59,280
+according to what kind they are.
+
+348
+00:23:00,250 --> 00:23:02,450
+TS: How were you expecting to approach that ?
+
+349
+00:23:02,740 --> 00:23:06,220
+Essentially I want to look at a
+hand and it gives me what the rank is.
+
+350
+00:23:06,220 --> 00:23:08,340
+so it tells me if it's a straight or thing
+
+351
+00:23:08,970 --> 00:23:12,420
+So it feels to me like we're going
+to have some kind of rank method
+
+352
+00:23:12,420 --> 00:23:14,220
+on the hand that is going to return
+
+353
+00:23:14,910 --> 00:23:17,140
+and 'this is the thing that you can do with it'.
+
+354
+00:23:17,480 --> 00:23:19,057
+That is the best possible one, 
+
+355
+00:23:22,970 --> 00:23:24,828
+which we can half implement for now.
+
+356
+00:23:25,510 --> 00:23:28,540
+The first thing I'm going to
+do is create a spec for my hand
+
+357
+00:23:28,540 --> 00:23:31,050
+because we're going to start adding stuff to that.
+
+358
+00:23:33,657 --> 00:23:35,171
+Quick housekeeping.
+TS: Yes.
+
+359
+00:23:38,620 --> 00:23:40,570
+And I'm going to be describing my hand
+
+360
+00:23:42,850 --> 00:23:48,710
+And, I want some kind of method inaud
+
+361
+00:23:48,710 --> 00:23:49,540
+I'll call it 'Rank'
+
+362
+00:23:52,114 --> 00:23:54,400
+I have no particular reason to know whether
+
+363
+00:23:54,480 --> 00:23:55,880
+that's a good idea or not now.
+
+364
+00:23:56,910 --> 00:23:58,020
+So I'll keep it as it is.
+
+365
+00:23:59,600 --> 00:24:01,428
+And it returns the best type of hand,
+
+366
+00:24:13,742 --> 00:24:14,742
+from it's own cards.
+
+367
+00:24:24,050 --> 00:24:25,050
+ST: Ok. (laughter)
+
+368
+00:24:32,600 --> 00:24:33,510
+Which seems easy.
+
+369
+00:24:35,370 --> 00:24:37,820
+And I might regret this
+because maybe it's not
+
+370
+00:24:38,370 --> 00:24:40,370
+the easiest choice I could have made.
+
+371
+00:24:45,970 --> 00:24:48,020
+I'm not going to put in a context for now
+
+372
+00:24:48,140 --> 00:24:49,510
+I'm not sure where I'm going.
+
+373
+00:24:49,940 --> 00:24:50,910
+So, I have a hand and .......
+
+374
+00:24:58,020 --> 00:25:00,200
+So this is where things get a bit annoying.
+
+375
+00:25:07,800 --> 00:25:09,420
+I have some kind of hand around.
+
+376
+00:25:14,850 --> 00:25:16,850
+For now I'm going to use the hand parser
+
+377
+00:25:17,400 --> 00:25:20,970
+which makes me feel this is
+not the right interface for the problem,
+
+378
+00:25:20,970 --> 00:25:23,140
+If I have to use it in such a way, but if I have
+
+379
+00:25:23,850 --> 00:25:25,370
+say, 5 of Hearts, 5 of Diamonds,
+
+380
+00:25:30,140 --> 00:25:32,000
+we're actually going to take a Pair.
+
+381
+00:25:32,740 --> 00:25:34,050
+and see where it takes us.
+
+382
+00:25:35,600 --> 00:25:36,310
+7 of Diamonds,
+
+383
+00:25:37,510 --> 00:25:38,220
+8 of Diamonds.
+
+384
+00:25:47,680 --> 00:25:51,570
+This should just say is 'we have a Pair'
+and by the way that Pair is a Pair of 5s.
+
+385
+00:25:53,620 --> 00:25:55,680
+For now let's start with 'you have a Pair'
+
+386
+00:25:57,600 --> 00:26:00,171
+TS: As you said, that
+might be enough information.
+
+387
+00:26:00,628 --> 00:26:03,314
+If there's another hand
+that doesn't have a Pair in it,
+
+388
+00:26:03,310 --> 00:26:04,971
+you've already determined that.
+
+389
+00:26:05,570 --> 00:26:08,620
+The first thing you want to
+know is do I have a better hand?
+
+390
+00:26:09,110 --> 00:26:11,510
+and then if your two hands are not the same rank,
+
+391
+00:26:11,800 --> 00:26:13,250
+then you try calculating it.
+
+392
+00:26:15,170 --> 00:26:18,310
+my initial reckoning is that
+it wI'll be easier to calculate
+
+393
+00:26:18,800 --> 00:26:22,400
+what the highest card is at the
+time I'm also establishing the rank.
+
+394
+00:26:23,080 --> 00:26:26,370
+So for now I want my interface
+to just return the type of hand.
+
+395
+00:26:28,770 --> 00:26:30,740
+But in the future, I also want it to say,
+
+396
+00:26:31,080 --> 00:26:34,570
+this is the type of hand and
+this is the highest card that counts.
+
+397
+00:26:35,450 --> 00:26:36,770
+Just in case there's a tie.
+
+398
+00:26:36,820 --> 00:26:37,540
+TS: Alright.
+
+399
+00:26:40,910 --> 00:26:43,510
+CB: Let's assume that's my
+hand and I want hand.rank.
+
+400
+00:26:47,080 --> 00:26:48,110
+So 'expect' hand.rank.
+
+401
+00:26:50,400 --> 00:26:51,310
+to equal, and then ...
+
+402
+00:26:57,910 --> 00:27:01,370
+It turns information about
+the winning potential of the hand.
+
+403
+00:27:09,250 --> 00:27:10,940
+This is a terrible description !
+
+404
+00:27:14,820 --> 00:27:17,220
+I'm just going to let it go, because in a minute,
+
+405
+00:27:17,880 --> 00:27:21,280
+I wI'll probably change my mind
+about what this should look like.
+
+406
+00:27:26,050 --> 00:27:28,170
+So expect the hand equals that .......not that
+
+407
+00:27:35,110 --> 00:27:37,800
+This is failing quite nicely because I haven't done
+
+408
+00:27:40,200 --> 00:27:41,710
+all my inquiring correctly.
+
+409
+00:27:46,970 --> 00:27:50,080
+I'm doing sI'lly thing with
+sI'lly shortcuts here.
+(laughter)
+
+410
+00:27:51,850 --> 00:27:53,480
+I also don't have my hand parser.
+
+411
+00:27:55,910 --> 00:27:57,314
+What I don't like about that
+
+412
+00:27:57,880 --> 00:28:01,370
+is that now I can call this extra
+class and I have this extra thing
+
+413
+00:28:02,370 --> 00:28:03,850
+that has all this logic here.
+
+414
+00:28:04,310 --> 00:28:07,650
+So rethinking it now I would
+probably move that logic around
+
+415
+00:28:09,000 --> 00:28:16,510
+And have my hand.new handles inaudible things like that.
+
+416
+00:28:16,510 --> 00:28:18,480
+and my hand.new can take a hand parser
+
+417
+00:28:20,970 --> 00:28:23,600
+as one of it's attributes
+of the method and go and
+
+418
+00:28:28,770 --> 00:28:31,480
+I can make sure that the
+logic of if it's H it's Hearts,
+
+419
+00:28:32,970 --> 00:28:35,620
+and if it's D it's Diamonds,
+just goes somewhere else.
+
+420
+00:28:35,880 --> 00:28:37,680
+I'm not happy about that interface.
+
+421
+00:28:43,200 --> 00:28:46,080
+Because I don't like
+stopping in the middle of a 'thing'
+
+422
+00:28:46,080 --> 00:28:46,370
+to do .........
+
+423
+00:28:48,400 --> 00:28:51,200
+This is not a nice interface,
+not what I wanted to do.
+
+424
+00:28:52,940 --> 00:28:55,457
+TS: So your queuing up a
+bit of re-factoring to do ?
+
+425
+00:28:56,714 --> 00:29:00,457
+CB: Yes, my tests have passed so
+I can't afford to just go off on a tangent
+
+426
+00:29:00,650 --> 00:29:02,080
+and go to fix all the things.
+
+427
+00:29:04,420 --> 00:29:05,800
+So let's just have a quick go.
+
+428
+00:29:17,770 --> 00:29:19,620
+So that's parsing, and that's failing.
+
+429
+00:29:22,171 --> 00:29:23,114
+inaud returns nil
+
+430
+00:29:23,114 --> 00:29:25,171
+which is pretty much what you'd expect
+
+431
+00:29:25,171 --> 00:29:26,428
+because it returns nil.
+
+432
+00:29:27,110 --> 00:29:28,420
+OK, so I've got all my cards
+
+433
+00:29:29,250 --> 00:29:30,880
+and how do I want to detect a Pair.
+
+434
+00:29:33,370 --> 00:29:35,570
+For their cards if I want to detect a Pair,
+
+435
+00:29:36,370 --> 00:29:38,480
+all I care about is the Pips on the cards.
+
+436
+00:29:40,540 --> 00:29:43,420
+I have all the cards, I can look
+at how many Pips there are
+
+437
+00:29:45,050 --> 00:29:48,710
+for each of those cards and I can
+count for each possible Pip value,
+
+438
+00:29:51,540 --> 00:29:53,220
+how many of that Pip I have.
+TS: Ok.
+
+439
+00:29:53,650 --> 00:29:54,940
+So if I have say, 5678 here
+
+440
+00:30:01,970 --> 00:30:03,510
+There was 2 x 5s, 1 x 6, 1 x7 and 1 x 8
+
+441
+00:30:05,110 --> 00:30:08,420
+TS: I see so your counting then
+barring how many Pips they have.
+
+442
+00:30:09,910 --> 00:30:12,540
+you want to somehow say I've got 2x5s, I've got 1x6 etc.
+
+443
+00:30:14,370 --> 00:30:16,280
+CB: Yes, I want some kind of Pip counter
+
+444
+00:30:17,110 --> 00:30:20,650
+that sort of mashes them up in
+some structure they can read nicely.
+
+445
+00:30:24,650 --> 00:30:27,280
+Ideally, if I had a thing like that then I would have
+
+446
+00:30:28,910 --> 00:30:30,510
+something along the lines of .....
+
+447
+00:30:31,250 --> 00:30:32,650
+I'm going to do that as a hash
+
+448
+00:30:32,970 --> 00:30:35,710
+but I would expect my
+result to look a bit like this.
+
+449
+00:30:38,970 --> 00:30:41,600
+I would like a magical
+thing that does that for me.
+
+450
+00:30:43,940 --> 00:30:46,280
+And once I have that then I can check if I have
+
+451
+00:30:48,540 --> 00:30:51,050
+any things that so happen to have 2 of the 'thing'.
+
+452
+00:30:53,480 --> 00:30:54,770
+And if I do then it's a Pair.
+
+453
+00:30:55,620 --> 00:30:58,170
+Otherwise, it's a highest card.
+So that's about it.
+
+454
+00:31:00,910 --> 00:31:03,114
+I want to implement a thing that does that.
+
+455
+00:31:04,850 --> 00:31:07,450
+So what does this do ? I would say it's a 'Pip counter'
+
+456
+00:31:11,420 --> 00:31:13,000
+but it's not a great word for it.
+
+457
+00:31:21,820 --> 00:31:23,600
+I'm going to call it Pip counter and ............
+
+458
+00:31:29,740 --> 00:31:32,140
+This is a sI'lly thing I do,
+and I may as we'll do it.
+
+459
+00:31:32,880 --> 00:31:34,850
+on camera, (the world wI'll laugh), so when
+
+460
+00:31:36,310 --> 00:31:39,457
+I have a terrible name for a thing,
+I just put a hash hash bob
+
+461
+00:31:41,050 --> 00:31:44,342
+I was given the clean code
+thing when I started programming.
+
+462
+00:31:45,140 --> 00:31:47,171
+And it has this amazing thing about how
+
+463
+00:31:47,171 --> 00:31:48,914
+inaud not name your methods.
+
+464
+00:31:49,050 --> 00:31:51,280
+Things like holy hand grenade for destroy,
+
+465
+00:31:52,280 --> 00:31:54,710
+and sI'lly things like that, so I always put a bob
+
+466
+00:31:54,710 --> 00:31:56,800
+when I have bad name thing, and I usually
+
+467
+00:31:56,800 --> 00:31:58,285
+have fun, inaud my interface.
+
+468
+00:32:01,370 --> 00:32:03,000
+when I'm finishing off an object.
+
+469
+00:32:03,000 --> 00:32:05,250
+So let's say it's a Pip counter thing, for now.
+
+470
+00:32:06,510 --> 00:32:06,820
+TS: Ok.
+
+471
+00:32:08,510 --> 00:32:09,970
+So what does my Pip count do,
+
+472
+00:32:10,250 --> 00:32:11,220
+Hey, we've run a test !
+
+473
+00:32:14,170 --> 00:32:15,770
+That is going to do that for me.
+
+474
+00:32:17,480 --> 00:32:18,680
+So if I have a Pip count ....
+
+475
+00:32:22,850 --> 00:32:26,370
+now whether that should be
+in the public interface is debatable.
+
+476
+00:32:27,080 --> 00:32:27,650
+ST: Right.
+
+477
+00:32:28,110 --> 00:32:30,370
+CB: But I'm just going to keep it there for now.
+
+478
+00:32:30,910 --> 00:32:32,680
+As I don't yet know where we're going.
+
+479
+00:32:33,140 --> 00:32:34,710
+So if I have a pip count and I am ...
+
+480
+00:32:39,000 --> 00:32:42,370
+parsing exactly that hand then
+this is exactly the thing I want.
+
+481
+00:32:46,020 --> 00:32:47,710
+I'm going to stop returning that.
+
+482
+00:32:51,220 --> 00:32:51,820
+There we go...
+
+483
+00:32:52,170 --> 00:32:54,571
+That should fail quite loudly, let's this test.
+
+484
+00:32:57,510 --> 00:32:58,080
+There we go ....
+
+485
+00:32:59,000 --> 00:33:00,450
+Yes, we've got nil, excellent.
+
+486
+00:33:00,740 --> 00:33:03,457
+So how are we going
+implement this.  I have my cards
+
+487
+00:33:04,510 --> 00:33:06,510
+And for each of those cards I have Pips.
+
+488
+00:33:08,480 --> 00:33:10,480
+I can just inaud
+
+489
+00:33:13,080 --> 00:33:15,280
+Suddenly here I have an array of numbers,
+
+490
+00:33:23,710 --> 00:33:26,170
+For a thing like this I need my documentation,
+
+491
+00:33:29,310 --> 00:33:31,170
+in case I don't remember everything
+
+492
+00:33:32,680 --> 00:33:34,680
+There is a Ruby collect on Ruby array
+
+493
+00:33:38,540 --> 00:33:41,510
+This is dash.  It's a
+documentation tool that I like to use.
+
+494
+00:33:45,050 --> 00:33:48,370
+TS: So you have all of the Ruby inaud.
+
+495
+00:33:49,710 --> 00:33:52,140
+CB: This is just a quick reminder for me because
+
+496
+00:33:53,480 --> 00:33:55,450
+I reckon this has already been solved
+
+497
+00:33:56,250 --> 00:34:00,250
+But maybe not, who knows.
+
+498
+00:34:00,850 --> 00:34:02,970
+Essentially I want to loop over my array
+
+499
+00:34:02,970 --> 00:34:05,600
+and count the number of
+incidences of each 'thing'.
+
+500
+00:34:07,310 --> 00:34:09,820
+Which actually I could
+do in any number of ways.
+
+501
+00:34:16,450 --> 00:34:18,370
+I can't remember off the top of my head
+
+502
+00:34:18,370 --> 00:34:21,340
+how I would do that in pure Ruby.
+Any suggestions welcome !
+
+503
+00:34:24,510 --> 00:34:26,680
+TS: I don't know that there is a method in the
+
+504
+00:34:26,680 --> 00:34:27,770
+array that does that.
+
+505
+00:34:28,770 --> 00:34:30,600
+the only thing that comes to mind is
+
+506
+00:34:30,600 --> 00:34:32,970
+a 'group by' method,
+which won't do what you want
+
+507
+00:34:32,970 --> 00:34:34,880
+but wI'll do a related thing, which is
+
+508
+00:34:35,200 --> 00:34:36,620
+group together all of them
+
+509
+00:34:36,620 --> 00:34:38,740
+All of the 5s, all of the 6s and all of the 7s,
+
+510
+00:34:39,880 --> 00:34:41,850
+but that doesn't give you what you want.
+
+511
+00:34:41,850 --> 00:34:44,170
+CB: Does that give me
+an array of arrays then ?
+
+512
+00:34:44,170 --> 00:34:46,940
+TS: It gives you a hash,
+where the keys of the hash are
+
+513
+00:34:47,800 --> 00:34:49,370
+So the key in the hash would be
+
+514
+00:34:50,310 --> 00:34:52,400
+5 and the elements in the array would be
+
+515
+00:34:52,510 --> 00:34:53,940
+all of the 5 pip cards there.
+
+516
+00:34:54,540 --> 00:34:56,680
+and then it would be six and the array inaud.
+
+517
+00:34:56,880 --> 00:34:58,800
+CB: Ok, I could map on that quite easily.
+
+518
+00:35:02,220 --> 00:35:04,280
+let's do a 'group by' and see how that works.
+
+519
+00:35:11,220 --> 00:35:11,800
+So group by ....
+
+520
+00:35:20,200 --> 00:35:21,171
+inaud an array.
+
+521
+00:35:21,828 --> 00:35:23,828
+TS: It wI'll be in the new model I expect.
+
+522
+00:35:27,970 --> 00:35:29,028
+CB: Let's just search,
+
+523
+00:35:29,970 --> 00:35:31,450
+no it's not letting me search.
+
+524
+00:35:33,220 --> 00:35:34,650
+I'm in the wrong scope for it.
+
+525
+00:35:39,510 --> 00:35:40,940
+Numerable group by .... no, no no.
+
+526
+00:35:43,400 --> 00:35:45,400
+It's just giving me answerable stuff.
+
+527
+00:35:45,400 --> 00:35:47,400
+TS: Maybe that was a bad idea.
+
+528
+00:35:48,420 --> 00:35:49,885
+CB: All of the documentation.
+
+529
+00:35:51,910 --> 00:35:53,770
+TS: If you can implement it yourself.
+
+530
+00:35:53,770 --> 00:35:56,200
+CB: I shall implement it
+in the space of a minute.
+
+531
+00:35:56,220 --> 00:35:58,200
+That should be fine, Iv'e got all my Pips.
+
+532
+00:35:59,000 --> 00:36:00,570
+What I'm wondering is, do I want
+
+533
+00:36:01,480 --> 00:36:02,880
+just 52617181 or do I want
+
+534
+00:36:04,800 --> 00:36:07,000
+all of the keys of all the possible things.
+
+535
+00:36:07,880 --> 00:36:09,420
+and then how many cards I have,
+
+536
+00:36:09,600 --> 00:36:12,020
+but I don't think it
+makes a lot of difference.
+
+537
+00:36:13,340 --> 00:36:14,800
+TS: It depends what you want.
+
+538
+00:36:17,200 --> 00:36:20,480
+CB: Group by, I was very excited by this.
+
+539
+00:36:24,680 --> 00:36:25,650
+Ok, yes fair enough.
+
+540
+00:36:27,820 --> 00:36:30,280
+TS: That's not quite what
+you said, but it's close.
+
+541
+00:36:32,170 --> 00:36:34,020
+in that you would get the right keys
+
+542
+00:36:34,110 --> 00:36:36,420
+but your values
+instead of being how many
+
+543
+00:36:36,420 --> 00:36:39,140
+cards there were it would
+be an array of those cards.
+
+544
+00:36:39,140 --> 00:36:43,450
+CB: I'm just wondering inaud which is
+
+545
+00:36:45,910 --> 00:36:47,680
+this is not particularly pretty
+
+546
+00:36:48,480 --> 00:36:50,540
+It probably has a better way of doing it.
+
+547
+00:36:51,020 --> 00:36:52,650
+it might be the default for that.
+
+548
+00:36:54,620 --> 00:36:56,800
+Let's run a test and
+see what that returns.
+
+549
+00:36:59,340 --> 00:37:00,650
+Yes, that gives me arrays.
+
+550
+00:37:02,200 --> 00:37:03,620
+Now we can just have a 'thing'.
+
+551
+00:37:06,280 --> 00:37:08,342
+This is my grouped cards, and then I can
+
+552
+00:37:12,200 --> 00:37:14,710
+say - group cards and
+then for each of my things,
+
+553
+00:37:18,020 --> 00:37:18,480
+I can say ....
+
+554
+00:37:25,170 --> 00:37:25,650
+TS: Ah, ok,
+
+555
+00:37:27,220 --> 00:37:30,000
+so each of those arrays
+you are turning into a number.
+
+556
+00:37:30,540 --> 00:37:31,340
+by counting it.
+
+557
+00:37:31,800 --> 00:37:33,510
+CB: Yes so let's see how that works.
+
+558
+00:37:34,680 --> 00:37:37,220
+It's not very elegant but it should meet the test.
+
+559
+00:37:40,140 --> 00:37:41,770
+and pass, so that's close enough.
+
+560
+00:37:43,770 --> 00:37:46,771
+We stI'll have a failure
+because we're not ranking stuff.
+
+561
+00:37:50,170 --> 00:37:52,342
+So, we are in the magical
+world where only
+
+562
+00:37:52,400 --> 00:37:53,310
+2 rankings exist.
+
+563
+00:37:55,020 --> 00:37:56,480
+There is Pair and high card.
+
+564
+00:38:00,880 --> 00:38:02,650
+If these are all my grouped cards,
+
+565
+00:38:03,370 --> 00:38:04,540
+and if I have 'anywhere',
+
+566
+00:38:09,250 --> 00:38:11,080
+in the number of group cards I have
+
+567
+00:38:13,050 --> 00:38:13,910
+a 2, then it's a win,
+
+568
+00:38:16,220 --> 00:38:17,400
+and otherwise it's not.
+
+569
+00:38:20,200 --> 00:38:23,540
+This is my minimal viable code,
+it's something along the lines of
+
+570
+00:38:26,200 --> 00:38:27,340
+so this should return.
+
+571
+00:38:29,880 --> 00:38:31,770
+I have a rank of type Pair, otherwise
+
+572
+00:38:34,050 --> 00:38:35,280
+I have a rank of highest.
+
+573
+00:38:37,420 --> 00:38:39,250
+I'm not quite sure about line 10 now.
+
+574
+00:38:42,510 --> 00:38:44,480
+So I have all the values, I need to find ....
+
+575
+00:38:53,110 --> 00:38:56,280
+I think this is where the web tests help me.
+TS: Yes (laughter)
+
+576
+00:39:00,200 --> 00:39:03,000
+I want to inaud group of cards.
+
+577
+00:39:04,170 --> 00:39:07,371
+I've done something sI'lly.
+Of course, this is called Pip count
+
+578
+00:39:12,370 --> 00:39:13,400
+Let;s try that again.
+
+579
+00:39:14,680 --> 00:39:17,540
+So it does something, and
+for the sake of completeness
+
+580
+00:39:17,680 --> 00:39:19,940
+I also want to start using better names now.
+
+581
+00:39:27,220 --> 00:39:29,170
+And here I have a hand with just a Pair.
+
+582
+00:39:32,020 --> 00:39:34,450
+and here I wI'll have
+a hand with nothing in it,
+
+583
+00:39:36,370 --> 00:39:38,200
+which I wI'll call highest, as a type.
+
+584
+00:39:42,850 --> 00:39:45,220
+So if I have a highest hand, I essentially want
+
+585
+00:39:45,680 --> 00:39:47,000
+it to be pretty much this,
+
+586
+00:39:48,740 --> 00:39:50,880
+but I'm just going to put something there,
+
+587
+00:39:50,880 --> 00:39:52,910
+which as you see actually is a straight.
+
+588
+00:39:55,428 --> 00:39:57,485
+So, this shouldn't be ranking as highest.
+
+589
+00:39:57,620 --> 00:39:58,650
+TS: Does that matter ?
+
+590
+00:39:58,910 --> 00:40:00,510
+CB: No I'm quite happy about that.
+
+591
+00:40:03,910 --> 00:40:06,710
+It's fine, it's just setting
+the scope of the problem to
+
+592
+00:40:08,028 --> 00:40:09,685
+solving a very small type 'thing'.
+
+593
+00:40:10,620 --> 00:40:13,570
+TS: Like you said before,
+your I'maging a smaller version
+
+594
+00:40:14,420 --> 00:40:16,314
+of Poker that only has 5 cards right ?
+
+595
+00:40:18,450 --> 00:40:20,450
+CB: Yes, a simpler and more boring world.
+
+596
+00:40:24,480 --> 00:40:25,914
+And now we have no failures.
+
+597
+00:40:26,110 --> 00:40:28,680
+I have a way of getting
+arrays and then suddenly
+
+598
+00:40:30,650 --> 00:40:32,742
+I have one Pair, and another with nothing
+
+599
+00:40:34,400 --> 00:40:36,000
+and it does rankings.
+TS: Great !
+
+600
+00:40:38,740 --> 00:40:40,310
+So now we have some kind of way,
+
+601
+00:40:40,710 --> 00:40:42,570
+in an oversimplified game of Poker
+
+602
+00:40:42,970 --> 00:40:44,910
+to say I have a Pair and I have a highest.
+
+603
+00:40:49,770 --> 00:40:51,480
+So what I would really like to do
+
+604
+00:40:53,200 --> 00:40:55,340
+is start Implementing a few more things.
+
+605
+00:40:56,570 --> 00:40:58,450
+So I think the super easy way to go is
+
+606
+00:40:59,540 --> 00:41:01,170
+we're not going to do just Pairs
+
+607
+00:41:01,170 --> 00:41:03,570
+but we're going to find 3 or a kind, and 4 of a kind.
+
+608
+00:41:03,570 --> 00:41:05,600
+and make sure the right thing comes out,
+
+609
+00:41:05,600 --> 00:41:06,480
+and by that I mean,
+
+610
+00:41:08,940 --> 00:41:11,080
+if I create a 3 of a kind, let's call it a '3 hand'.
+
+611
+00:41:19,220 --> 00:41:21,420
+So if we have a 3 of a kind hand, it's going to be
+
+612
+00:41:25,770 --> 00:41:27,742
+I need 5 of Hearts Diamonds and Spades.
+
+613
+00:41:30,280 --> 00:41:33,310
+and that at the moment it's
+going to return a Pair, I presume.
+
+614
+00:41:34,970 --> 00:41:37,080
+but actually we want to return 3 of a kind,
+
+615
+00:41:37,280 --> 00:41:39,450
+so this, if I have the rank, should be type 3.
+
+616
+00:41:45,000 --> 00:41:46,770
+so if I start running this file now....
+
+617
+00:41:49,200 --> 00:41:50,050
+Not like this,
+
+618
+00:41:51,220 --> 00:41:52,540
+and not like this either.
+
+619
+00:41:52,800 --> 00:41:55,200
+I think I'm doing something wrong .... there we go.
+
+620
+00:41:56,310 --> 00:41:58,480
+I do have a failure because it is assuming
+
+621
+00:42:00,250 --> 00:42:02,200
+that I have type highest and not type 3.
+
+622
+00:42:03,510 --> 00:42:05,420
+because I am matching for exactly 2,
+
+623
+00:42:06,570 --> 00:42:07,620
+and obviously it's 3.
+
+624
+00:42:08,110 --> 00:42:09,970
+This might make my life a bit easier
+
+625
+00:42:10,600 --> 00:42:12,280
+because I don't need to make sure
+
+626
+00:42:12,310 --> 00:42:14,370
+that I'm doing things in the right order,
+
+627
+00:42:14,570 --> 00:42:16,170
+for that specific comparison.
+
+628
+00:42:17,080 --> 00:42:19,371
+I reckon it does matter for other things but,
+
+629
+00:42:19,970 --> 00:42:21,820
+let's get to that when we get to that.
+
+630
+00:42:24,820 --> 00:42:27,480
+I'm staring to write
+some pretty terrible code now.
+
+631
+00:42:34,428 --> 00:42:35,885
+so if I have 3 then it becomes
+
+632
+00:42:38,220 --> 00:42:39,740
+3 of a kind and if I have 4 then
+
+633
+00:42:42,940 --> 00:42:44,740
+suddenly it becomes 4 of of a kind.
+
+634
+00:42:54,480 --> 00:42:55,620
+but that is pretty bad.
+
+635
+00:42:58,800 --> 00:43:01,510
+I'm just going to check that
+my tests do pass nicely.
+
+636
+00:43:03,940 --> 00:43:05,540
+And as they don't .... it is 3 of a kind.
+
+637
+00:43:06,942 --> 00:43:10,220
+This is 3, so this should now parser inaud.
+
+638
+00:43:10,220 --> 00:43:12,000
+This now knows what a 3 of a kind is.
+
+639
+00:43:13,910 --> 00:43:16,400
+I could write a quick 4 of a kind ones that we have
+
+640
+00:43:16,970 --> 00:43:18,914
+that we haven't covered for the future
+
+641
+00:43:19,620 --> 00:43:21,770
+when we're going to
+be adding more things.
+
+642
+00:43:21,770 --> 00:43:24,370
+I want to make sure
+that I'm not breaking things
+
+643
+00:43:29,000 --> 00:43:31,880
+let's just create some
+test data with a 4 of a kind hand.
+
+644
+00:43:34,370 --> 00:43:38,740
+This is terribly verbose, but we should
+have here 5 of Clubs and that should pass.
+
+645
+00:43:45,340 --> 00:43:46,620
+This is working out fine,
+
+646
+00:43:47,140 --> 00:43:49,080
+This however, looks pretty terrible.
+
+647
+00:43:50,650 --> 00:43:52,970
+So there must be a smarter way of doing this.
+
+648
+00:43:56,600 --> 00:43:59,340
+I could jump in right there
+and try to do some kind of ....
+
+649
+00:44:00,880 --> 00:44:02,710
+look at the Pip count and the values
+
+650
+00:44:02,710 --> 00:44:05,370
+and then if it's 2 it's a Pair, 3 of a kind, 4 four of a kind.
+
+651
+00:44:06,280 --> 00:44:10,510
+What I'm thinking now is that it matters
+things along the lines of for example
+
+652
+00:44:14,680 --> 00:44:18,080
+I'm going to take a problematic example of the full house, where
+
+653
+00:44:20,400 --> 00:44:23,080
+at the moment my code
+would give me back a 3 of a kind.
+
+654
+00:44:23,080 --> 00:44:25,080
+I definitely don't want it to say that.
+
+655
+00:44:25,080 --> 00:44:26,480
+I want it to be a full house.
+
+656
+00:44:27,110 --> 00:44:29,770
+What I want to avoid now is making an abstraction
+
+657
+00:44:32,110 --> 00:44:34,280
+on this logic of pit counts, when actually,
+
+658
+00:44:38,510 --> 00:44:41,000
+it's not clear to me as to where that should live.
+
+659
+00:44:42,020 --> 00:44:43,770
+What I would like to try doing now
+
+660
+00:44:43,770 --> 00:44:47,280
+is try Implementing full house
+which has 3 of a kind, two of a kind
+
+661
+00:44:48,340 --> 00:44:49,170
+in the same hand.
+
+662
+00:44:50,370 --> 00:44:52,450
+Get that working and then at that point
+
+663
+00:44:52,450 --> 00:44:53,600
+hopefully, I wI'll know
+
+664
+00:44:54,080 --> 00:44:56,140
+how I want to look at those card counts.
+
+665
+00:44:57,140 --> 00:44:57,510
+TS: Ok.
+
+666
+00:44:57,850 --> 00:44:58,970
+So I can extract that.
+
+667
+00:44:58,970 --> 00:45:01,680
+I'm going to leave this
+horror in a tiny bit longer
+
+668
+00:45:02,510 --> 00:45:05,220
+until I know with more
+certainty where I'm heading.
+
+669
+00:45:05,510 --> 00:45:07,940
+TS: So even though your unhappy with your code
+
+670
+00:45:07,940 --> 00:45:10,110
+your going to hold of from re-factoring it
+
+671
+00:45:10,110 --> 00:45:12,940
+because you're not
+confident that your solution to it
+
+672
+00:45:13,510 --> 00:45:14,370
+is complete yet.
+
+673
+00:45:15,020 --> 00:45:18,020
+You don't want to introduce
+an abstraction that won't fit.
+
+674
+00:45:19,940 --> 00:45:22,510
+Your worried that if you extract it at this point,
+
+675
+00:45:22,510 --> 00:45:24,250
+then you wI'll end up with something
+
+676
+00:45:24,250 --> 00:45:25,680
+that won't support full house.
+
+677
+00:45:25,680 --> 00:45:27,770
+Is that what you mean ?
+CB: Yes, absolutely.
+
+678
+00:45:27,770 --> 00:45:29,710
+My initial premature abstraction is
+
+679
+00:45:30,340 --> 00:45:32,910
+I just map the number of pip count values to a type.
+
+680
+00:45:34,080 --> 00:45:37,480
+and I can sense that that's
+going to fail when I get to full house.
+
+681
+00:45:39,220 --> 00:45:44,110
+I want to see how I wI'll implement full house
+which is going to create more inaud in this code,
+
+682
+00:45:44,880 --> 00:45:47,910
+but I think it would help
+me finding the right structure.
+
+683
+00:45:47,910 --> 00:45:50,140
+if there is such a thing as inaud structure,
+
+684
+00:45:50,540 --> 00:45:52,970
+I find myself guilty of it a lot of times.
+TS: Ok.
+
+685
+00:46:00,200 --> 00:46:03,000
+CB: I'm going to do a quick
+test for my full house hand.
+
+686
+00:46:04,940 --> 00:46:08,770
+and it has 5 of Hearts, 5 of Diamonds,
+5 of Spades, 6 of Clubs and 6 of Hearts.
+
+687
+00:46:14,970 --> 00:46:16,650
+So we have inaud 6s, and here we go.
+
+688
+00:46:19,080 --> 00:46:20,540
+This is going to fail nicely.
+
+689
+00:46:21,080 --> 00:46:26,280
+because we haven't inaud that yet and it's detecting a Pair.
+
+690
+00:46:26,600 --> 00:46:27,880
+which is not what we want.
+
+691
+00:46:37,170 --> 00:46:38,880
+Right now with my code I'm saying
+
+692
+00:46:38,880 --> 00:46:43,170
+if there's 2 let's go there, if there'
+three let's go there, if there's four let's go there.
+
+693
+00:46:43,540 --> 00:46:46,110
+This feels counter intuitive because in Poker,
+
+694
+00:46:46,110 --> 00:46:51,620
+what I want to check is do I have an array or flush, or a straight flush etc.
+
+695
+00:46:51,620 --> 00:46:53,770
+There is an order in which you would check
+
+696
+00:46:54,370 --> 00:46:57,540
+because you would start
+(in your head) with the highest hand
+
+697
+00:46:57,570 --> 00:46:59,940
+and if you don't have the best possible thing,
+
+698
+00:47:00,280 --> 00:47:02,740
+you would lower the expectations of your hand
+
+699
+00:47:03,110 --> 00:47:04,940
+and try to get as far down as you can.
+
+700
+00:47:07,342 --> 00:47:11,200
+The way I have written this code
+as a human trying to solve the problem
+
+701
+00:47:12,820 --> 00:47:14,820
+I can also see it as part of a full house.
+
+702
+00:47:15,050 --> 00:47:16,680
+so if we do a bit of reshuffling,
+
+703
+00:47:20,050 --> 00:47:21,650
+and by that I mean check things,
+
+704
+00:47:23,110 --> 00:47:26,140
+(this is terrible code by the way),
+but check things in a way
+
+705
+00:47:28,480 --> 00:47:30,820
+so I start with the nicest possible outcome.
+
+706
+00:47:31,880 --> 00:47:35,020
+and as I go along I get less
+desirable outcomes from my hand.
+
+707
+00:47:37,280 --> 00:47:40,200
+then that would have given
+me 3 of a kind, as a full house
+
+708
+00:47:42,000 --> 00:47:44,280
+which is less wrong but stI'll pretty wrong !
+
+709
+00:47:46,400 --> 00:47:49,710
+TS: But what  you've there,
+it seems to me is you were expecting it
+
+710
+00:47:53,200 --> 00:47:55,600
+then your saying there is this implied thing.
+
+711
+00:47:56,510 --> 00:47:58,820
+but if you're explaining what a 3 of a kind is
+
+712
+00:47:59,170 --> 00:48:01,740
+there's this implication, we'll it's not 4 of a kind
+
+713
+00:48:03,220 --> 00:48:05,850
+a Pair is not 3 of a kind,
+nor 4 of a kind, and so it seems
+
+714
+00:48:06,850 --> 00:48:09,280
+now your code more accurately reflects that.
+
+715
+00:48:10,370 --> 00:48:13,170
+whereas before it was just working what 'by accident' ?
+
+716
+00:48:15,420 --> 00:48:18,420
+CB: It was working only in the case where a specific hand
+
+717
+00:48:20,200 --> 00:48:23,000
+only has for example, only
+3 of a kind and nothing else.
+
+718
+00:48:23,257 --> 00:48:26,228
+TS: I see, it's the full house
+that's going to bring this out.
+
+719
+00:48:26,650 --> 00:48:28,650
+CB: The full house is bringing this out
+
+720
+00:48:28,650 --> 00:48:32,114
+and I think that other hands
+are going to bring this out anyway
+
+721
+00:48:32,114 --> 00:48:35,771
+because if you have a flush that
+also happens to have a Pair in there
+
+722
+00:48:35,771 --> 00:48:39,200
+you want to check flush first,
+it doesn't matter if you have a Pair.
+
+723
+00:48:40,770 --> 00:48:44,020
+In the case of a full house,
+tell my code go along the lines of
+
+724
+00:48:46,942 --> 00:48:49,142
+if I happen to have 3 in my pip count values
+
+725
+00:48:50,080 --> 00:48:51,485
+then two things can happen.
+
+726
+00:48:51,820 --> 00:48:54,420
+Either I have also in my pip count a value that is
+
+727
+00:48:55,650 --> 00:48:57,971
+2, so I have a 3 and a 2 and therefore a full house.
+
+728
+00:48:59,650 --> 00:49:01,514
+Otherwise, the best thing I do have
+
+729
+00:49:02,970 --> 00:49:03,600
+is 3 of a kind.
+
+730
+00:49:05,850 --> 00:49:09,510
+So that would make my test pass,
+but it's beginning to look terrible
+
+731
+00:49:11,740 --> 00:49:14,280
+First let's check that I didn't get this one wrong.
+
+732
+00:49:15,914 --> 00:49:18,400
+so now that parses nicely and this looks awful !
+
+733
+00:49:26,600 --> 00:49:29,200
+I believe there's a problem in how I'm testing those
+
+734
+00:49:32,970 --> 00:49:34,080
+TS: What's the problem ?
+
+735
+00:49:34,800 --> 00:49:37,740
+CB: I'm checking that an
+array includes a certain number.
+
+736
+00:49:39,250 --> 00:49:41,450
+and what I want to know is does my array,
+
+737
+00:49:41,880 --> 00:49:44,250
+in the case of 4 of a kind it includes 4, for sure.
+
+738
+00:49:45,880 --> 00:49:47,570
+and I don't need to look at the rest,
+
+739
+00:49:47,570 --> 00:49:51,110
+but in the others there is a number
+of things that we want to look at.
+
+740
+00:49:57,110 --> 00:49:58,480
+What I want to try doing is...........
+
+741
+00:50:03,620 --> 00:50:06,400
+TS: It sounds like you're
+switching into re-factoring.
+
+742
+00:50:06,420 --> 00:50:06,740
+CB: Yes.
+
+743
+00:50:07,340 --> 00:50:09,110
+TS: Why have you chosen this point.
+
+744
+00:50:09,110 --> 00:50:13,250
+because you said there are some
+other hands that you haven't implemented yet
+
+745
+00:50:14,600 --> 00:50:16,910
+Do you feel that you have come to a point now
+
+746
+00:50:16,910 --> 00:50:18,970
+where you have sufficient confidence
+
+747
+00:50:18,970 --> 00:50:21,714
+in your implementation so far to start factoring it ?
+
+748
+00:50:21,714 --> 00:50:25,228
+CB: I think I have sufficient
+confidence to start thinking about it.
+
+749
+00:50:25,228 --> 00:50:28,257
+But I might hit a mental
+block in a few seconds (laughter).
+
+750
+00:50:29,450 --> 00:50:32,370
+I want to see how the
+other hands are going to work out.
+
+751
+00:50:38,080 --> 00:50:40,370
+So all my other hands are along the lines of
+
+752
+00:50:40,880 --> 00:50:44,280
+straight and flush, and we can
+assume that's already out of the way.
+
+753
+00:50:45,420 --> 00:50:47,200
+By the time the code wI'll hit those
+
+754
+00:50:47,370 --> 00:50:50,310
+and now we're counting the
+cards we've already excluded.
+
+755
+00:50:50,310 --> 00:50:51,620
+a couple of those things.
+
+756
+00:50:54,680 --> 00:50:55,850
+I stI'll don't like this.
+
+757
+00:50:56,480 --> 00:50:58,940
+I don't like entering this type of code because
+
+758
+00:50:59,620 --> 00:51:02,000
+if 4 of a kind is better than a flush, for example,
+
+759
+00:51:02,850 --> 00:51:04,880
+so I want to look at those things later.
+
+760
+00:51:06,220 --> 00:51:08,510
+I am starting to imagine that I am creating
+
+761
+00:51:10,170 --> 00:51:12,450
+as I go along - this is a list of all the things
+
+762
+00:51:12,710 --> 00:51:13,710
+you can do in Poker,
+
+763
+00:51:13,710 --> 00:51:16,370
+and this is how we'll they rank in the world of poker.
+
+764
+00:51:18,710 --> 00:51:20,620
+the highest and the lowest ranking - 1.
+
+765
+00:51:22,880 --> 00:51:25,050
+And a straight flush is as high as it gets.
+
+766
+00:51:31,310 --> 00:51:33,910
+What I am creating in my head is some kind of 'thing.
+
+767
+00:51:34,450 --> 00:51:36,910
+along the lines of a thing called Poker ranks
+
+768
+00:51:41,620 --> 00:51:43,570
+which is something along the lines of.
+
+769
+00:51:45,680 --> 00:51:48,020
+The most desirable 'thing' is a straight flush.
+
+770
+00:51:50,680 --> 00:51:52,540
+we'll.... I don't know, I don't know how many
+
+771
+00:51:52,540 --> 00:51:55,480
+different types of cards there are
+in Poker. Let's say 10
+
+772
+00:51:56,200 --> 00:51:58,800
+but I think that's wrong, and then we have 4 of a kind
+
+773
+00:51:59,970 --> 00:52:02,000
+and that would be a rating line, and then
+
+774
+00:52:04,000 --> 00:52:04,880
+so on and so forth.
+
+775
+00:52:06,680 --> 00:52:08,310
+Each of those can have a method
+
+776
+00:52:08,310 --> 00:52:10,028
+That checks the card is what it is.
+
+777
+00:52:11,710 --> 00:52:13,770
+But that would re-use quite a lot of code
+
+778
+00:52:13,770 --> 00:52:15,570
+and I'm not happy about that either.
+
+779
+00:52:16,820 --> 00:52:17,820
+So, let's not do that.
+
+780
+00:52:19,020 --> 00:52:21,220
+Ok, so you're talking about having some sort
+
+781
+00:52:22,510 --> 00:52:23,480
+of scoring system.
+
+782
+00:52:24,110 --> 00:52:26,940
+TS: What was your motivation
+for wanting to score them ?
+
+783
+00:52:30,170 --> 00:52:32,770
+CB: I'm motivated to have some defined order which
+
+784
+00:52:34,740 --> 00:52:37,342
+looks for the best and worst possible outcomes
+
+785
+00:52:39,340 --> 00:52:42,600
+other than it checks for them
+in a different order in the code.
+
+786
+00:52:43,940 --> 00:52:46,020
+TS: So you want to make that more explicit
+
+787
+00:52:46,020 --> 00:52:48,400
+rather than writing a method that looks like
+
+788
+00:52:48,620 --> 00:52:50,480
+you could do it in any order.
+CB: Yes.
+
+789
+00:53:03,450 --> 00:53:07,820
+I'm going to stard doing inaud method.
+
+790
+00:53:18,310 --> 00:53:20,400
+Just so I can see where things are going
+
+791
+00:53:20,420 --> 00:53:22,020
+This is all going to be private.
+
+792
+00:53:22,940 --> 00:53:24,940
+I'm going to quickly go through those
+
+793
+00:53:32,628 --> 00:53:33,514
+That was a bit odd ......
+
+794
+00:53:36,600 --> 00:53:39,200
+Now we are assuming
+that we have those magical
+
+795
+00:53:40,650 --> 00:53:42,000
+methods. It has 4, has 2 has 3
+
+796
+00:53:44,170 --> 00:53:45,970
+And checks whether there is a Pair
+
+797
+00:53:45,970 --> 00:53:47,770
+or a 3 or a combination of 4 in there.
+
+798
+00:53:50,600 --> 00:53:52,540
+which doesn't mean it's a three of a kind.
+
+799
+00:53:52,770 --> 00:53:56,085
+it means there happens to be
+3 cards of the same kind in there.
+
+800
+00:53:57,420 --> 00:53:59,000
+So if we have 'has 4', then this is
+
+801
+00:53:59,820 --> 00:54:01,857
+stI'll include 4 and in much the same way
+
+802
+00:54:03,020 --> 00:54:06,000
+inaud has 3 and has 2
+
+803
+00:54:07,020 --> 00:54:09,710
+and that's going to be
+pretty much what the pick is.
+
+804
+00:54:10,340 --> 00:54:11,570
+and that's a bit verbose
+
+805
+00:54:11,570 --> 00:54:13,280
+but I'm not so bothered about that
+
+806
+00:54:13,280 --> 00:54:16,710
+because it's inad private methods and I can get round to it later
+
+807
+00:54:17,020 --> 00:54:18,310
+if I feel it is necessary.
+
+808
+00:54:20,570 --> 00:54:22,200
+This feels more readable to me.
+
+809
+00:54:24,050 --> 00:54:25,371
+It feels like a 4 kind type
+
+810
+00:54:27,680 --> 00:54:28,971
+It has the Haskell check.
+
+811
+00:54:29,200 --> 00:54:32,740
+And for the full house, this needs
+to be true and this needs to be true.
+
+812
+00:54:32,880 --> 00:54:35,080
+3 of a kind check this only needs to be true
+
+813
+00:54:35,457 --> 00:54:36,971
+Pair has Pair needs to be true.
+
+814
+00:54:37,620 --> 00:54:39,220
+So suddenly I have all my cards,
+
+815
+00:54:41,570 --> 00:54:43,800
+all of the types of things I can do in Poker.
+
+816
+00:54:44,050 --> 00:54:45,940
+and I have a combination of methods
+
+817
+00:54:46,170 --> 00:54:48,340
+that can tell me exactly why that would be.
+
+818
+00:54:49,650 --> 00:54:50,280
+TS: Right,
+
+819
+00:54:50,280 --> 00:54:52,250
+CB: So the easy way of doing it would be:
+
+820
+00:54:56,028 --> 00:54:56,914
+If has 4 then that.
+
+821
+00:54:56,914 --> 00:54:58,085
+This is stI'll verbose.
+
+822
+00:54:58,400 --> 00:55:00,800
+I start re-factoring and then usually I think
+
+823
+00:55:01,080 --> 00:55:03,142
+add a lot of stuff, make it very explicit
+
+824
+00:55:03,142 --> 00:55:04,771
+then start compressing later.
+
+825
+00:55:06,000 --> 00:55:07,057
+So elsif full house
+
+826
+00:55:10,110 --> 00:55:11,200
+then type full house
+
+827
+00:55:13,420 --> 00:55:14,257
+elsif has 3 then....
+
+828
+00:55:17,140 --> 00:55:18,971
+3 of a kind, elsif has Pair, then Pair
+
+829
+00:55:21,680 --> 00:55:24,257
+I'm going to have to implement full house quickly,
+
+830
+00:55:27,140 --> 00:55:28,057
+missing def here.
+
+831
+00:55:28,740 --> 00:55:29,850
+Here we go, it has 3 and ....
+
+832
+00:55:34,340 --> 00:55:35,714
+maybe not multiply these.
+
+833
+00:55:37,050 --> 00:55:38,970
+I don't know what that does actually.
+
+834
+00:55:38,970 --> 00:55:40,570
+inaud methods
+
+835
+00:55:40,570 --> 00:55:42,600
+It complains loudly but I don't know how.
+
+836
+00:55:43,000 --> 00:55:44,371
+This feels more readable.
+
+837
+00:55:48,050 --> 00:55:52,570
+That's kind of what I would like inaud
+
+838
+00:55:53,280 --> 00:55:53,800
+It doesn't.
+
+839
+00:55:55,820 --> 00:55:57,880
+That's because question marks are nice
+
+840
+00:56:00,170 --> 00:56:07,020
+it's maybe not the day to invent new methods in inaud
+
+841
+00:56:07,020 --> 00:56:13,970
+inaud has Pair simply because I called it has 2 and has Pair
+
+842
+00:56:13,970 --> 00:56:15,085
+it has 2 and it has 4 so
+
+843
+00:56:18,170 --> 00:56:19,257
+let's keep it that way.
+
+844
+00:56:22,570 --> 00:56:23,280
+Go.
+
+845
+00:56:24,170 --> 00:56:25,570
+and now were back in action.
+
+846
+00:56:26,080 --> 00:56:27,250
+this is more readable.
+
+847
+00:56:29,050 --> 00:56:30,680
+We're checking things in order.
+
+848
+00:56:31,020 --> 00:56:33,540
+there is a better way of doing that but let's wait
+
+849
+00:56:33,540 --> 00:56:35,170
+until I have a couple more hands
+
+850
+00:56:35,170 --> 00:56:37,342
+and I can drive out something a bit better.
+
+851
+00:56:37,340 --> 00:56:40,420
+inaud with the ranking but I'm quite happy with it yet.
+
+852
+00:56:40,420 --> 00:56:40,685
+TS: Ok.
+
+853
+00:56:45,628 --> 00:56:48,514
+CB: Do you have a favorite
+hand that you want to go next.
+
+854
+00:56:48,514 --> 00:56:50,428
+TS: we'll I don't want to prejudice you. 
+
+855
+00:56:50,457 --> 00:56:51,857
+What's your favorite hand ?
+
+856
+00:56:51,850 --> 00:56:52,885
+CB: A straight flush.
+
+857
+00:56:52,885 --> 00:56:53,942
+TS: Then go with that.
+
+858
+00:56:56,820 --> 00:56:58,940
+CB: So, we're going to have a straight flush.
+
+859
+00:56:59,280 --> 00:57:02,880
+TS: Seems a bit optimistic as you 
+don't have straights or flushes yet
+
+860
+00:57:04,200 --> 00:57:05,220
+but if you want to yes.
+
+861
+00:57:05,220 --> 00:57:05,314
+I think that's going to drive out the changes quickly.
+but if you want to yes.
+
+862
+00:57:05,314 --> 00:57:07,942
+I think that's going to drive out the changes quickly.
+
+863
+00:57:09,280 --> 00:57:11,485
+But yes your right, may be a bit optimistic.
+
+864
+00:57:15,170 --> 00:57:19,342
+In much the same way that full house
+has 2 or 3 situations of straight flushes in
+
+865
+00:57:19,820 --> 00:57:21,742
+there's a straight and there's flush
+
+866
+00:57:21,850 --> 00:57:23,714
+TS: Is straight or flush easier to do?
+
+867
+00:57:27,220 --> 00:57:28,000
+I reckon flush.
+
+868
+00:57:28,740 --> 00:57:30,170
+TS: Why don't we do flush then.
+
+869
+00:57:30,170 --> 00:57:30,740
+CB: Alright.
+
+870
+00:57:32,880 --> 00:57:34,600
+Let's quickly create a flush hand.
+
+871
+00:57:39,680 --> 00:57:43,280
+The test definition is right at the top.
+This file is getting verbose.
+
+872
+00:57:46,080 --> 00:57:48,280
+TS: It's a good job you've got that hand parser
+
+873
+00:57:48,280 --> 00:57:50,340
+otherwise it would be inaud
+
+874
+00:57:51,450 --> 00:57:53,971
+CB: I don't want to imagine what it would look like
+
+875
+00:57:53,971 --> 00:57:55,542
+if we had to do doubles for this.
+
+876
+00:57:58,480 --> 00:58:00,050
+So flush, let's go for all Hearts.
+
+877
+00:58:06,880 --> 00:58:09,570
+I'm going to give myself a very disappointing hand.
+
+878
+00:58:12,910 --> 00:58:15,257
+If you had that hand in Poker, you would say WHY !!!
+
+879
+00:58:18,850 --> 00:58:20,400
+So that should give me a flush
+
+880
+00:58:20,740 --> 00:58:23,370
+and I'm going to check that it's definitely failing.
+
+881
+00:58:24,020 --> 00:58:25,400
+TS: What does it think it is
+
+882
+00:58:27,480 --> 00:58:28,940
+CB: That's an interesting one.
+
+883
+00:58:32,480 --> 00:58:33,800
+We have a new problem now.
+
+884
+00:58:33,910 --> 00:58:34,800
+TS: What's going on?
+
+885
+00:58:35,820 --> 00:58:37,400
+CB: we'll, 10, it's got two numbers.
+
+886
+00:58:39,650 --> 00:58:41,310
+so it's not parsing it properly.
+
+887
+00:58:42,710 --> 00:58:44,570
+I'm taking the first character only
+
+888
+00:58:45,570 --> 00:58:48,220
+and in the second I'm taking the second character.
+
+889
+00:58:48,910 --> 00:58:50,620
+There's two ways we can solve this
+
+890
+00:58:50,620 --> 00:58:53,485
+I represent 10 in another way, like zero or something.
+
+891
+00:58:54,710 --> 00:58:57,680
+inaud that very quickly change the parser
+
+892
+00:58:58,457 --> 00:59:00,657
+so that it doesn't take the zero, and the one
+
+893
+00:59:01,020 --> 00:59:02,940
+and it takes something a bit smarter.
+
+894
+00:59:02,940 --> 00:59:04,770
+TS: The error that's coming out there
+
+895
+00:59:04,770 --> 00:59:07,085
+is that because you did the fetch on the hash ?
+
+896
+00:59:07,370 --> 00:59:09,280
+CB: Yes, if I hadn't done a fetch on a hash.
+
+897
+00:59:09,280 --> 00:59:10,800
+and I had put a default value.
+
+898
+00:59:11,080 --> 00:59:12,971
+who knows what would happen in that
+
+899
+00:59:12,971 --> 00:59:16,450
+inaud fail loudly.
+
+900
+00:59:16,450 --> 00:59:17,910
+TS: Yes, it's already coming on.
+
+901
+00:59:18,450 --> 00:59:19,910
+CB: It is failing loudly, so ok ....
+
+902
+00:59:23,140 --> 00:59:25,400
+here we're taking only the first character,
+
+903
+00:59:25,571 --> 00:59:27,371
+and here only the last character.
+
+904
+00:59:28,680 --> 00:59:29,620
+What I want to do is
+
+905
+00:59:31,110 --> 00:59:32,000
+take the last one
+
+906
+00:59:34,080 --> 00:59:38,400
+inaud I can do something along the lines of
+
+907
+00:59:44,020 --> 00:59:44,970
+Oh, I don't even know.
+
+908
+00:59:45,510 --> 00:59:48,110
+Now how I would do that,
+and I know that's incorrect
+
+909
+00:59:53,480 --> 00:59:55,450
+would be something along those lines.
+
+910
+00:59:56,340 --> 00:59:58,080
+There must be a better way though.
+
+911
+01:00:02,910 --> 01:00:05,340
+I know there's a way of doing it with minus ones
+
+912
+01:00:05,340 --> 01:00:07,140
+but I don't want to do that right now.
+
+913
+01:00:08,480 --> 01:00:10,140
+I'm feeling particularly lazy.
+
+914
+01:00:11,170 --> 01:00:12,570
+Here, I want to go up to cards.
+
+915
+01:00:14,820 --> 01:00:17,570
+inaud minus one, take that as a string.
+
+916
+01:00:18,740 --> 01:00:20,770
+I want to run the spec quickly because
+
+917
+01:00:21,250 --> 01:00:22,680
+I reckon I've got this wrong.
+
+918
+01:00:24,571 --> 01:00:27,420
+inaud arguments, what have we done now,
+
+919
+01:00:35,000 --> 01:00:36,200
+This is stI'll a string.
+
+920
+01:00:38,000 --> 01:00:40,771
+I wI'll make sure I've got a
+test that does the 10 again
+
+921
+01:00:43,850 --> 01:00:44,540
+might as we'll
+
+922
+01:00:47,650 --> 01:00:49,050
+let's just run this file now.
+
+923
+01:00:50,000 --> 01:00:52,457
+Now we have a hand parser 20 length, so that's not.
+
+924
+01:00:56,420 --> 01:00:58,685
+So hand parser on line 20 calling length on
+
+925
+01:01:06,220 --> 01:01:08,340
+It's an array, no.  No it's called card string
+
+926
+01:01:11,940 --> 01:01:14,000
+inaud
+
+927
+01:01:14,000 --> 01:01:18,170
+so one inaud for zero, why
+does it think it has an argument.
+
+928
+01:01:18,770 --> 01:01:22,000
+because parenthesis
+
+929
+01:01:25,400 --> 01:01:29,420
+Ah, inaud method, this is terrible.
+
+930
+01:01:32,370 --> 01:01:33,285
+so last number of ....
+
+931
+01:01:36,310 --> 01:01:38,940
+This is terrible, I should just do it in minus ones.
+
+932
+01:01:41,080 --> 01:01:42,970
+TS: How does the minus one thing work ?
+
+933
+01:01:42,970 --> 01:01:45,828
+I believe it puts you in an
+imaginary space between
+
+934
+01:01:47,050 --> 01:01:49,650
+the start and end of your
+row, but I might be wrong.
+
+935
+01:01:51,000 --> 01:01:51,970
+So what I wI'll do is....
+
+936
+01:01:53,220 --> 01:01:55,110
+it's the end of the card number index.
+
+937
+01:02:01,080 --> 01:02:03,400
+this should be something along those lines.
+
+938
+01:02:03,770 --> 01:02:06,680
+and here I want to go up to the inaud card index
+
+939
+01:02:07,080 --> 01:02:10,257
+and here I want to go front
+zero to the end card index minus
+
+940
+01:02:17,140 --> 01:02:20,250
+No, I want to go to the end
+of card index and here I want to go
+
+941
+01:02:23,770 --> 01:02:27,450
+to this.  So this should stI'll fail,
+if I reckon I've got something else.
+
+942
+01:02:30,850 --> 01:02:32,420
+TS: That's not very optimistic.
+
+943
+01:02:32,420 --> 01:02:33,680
+CB: We have key not found
+
+944
+01:02:37,880 --> 01:02:39,280
+that's just failing again.
+
+945
+01:02:42,050 --> 01:02:44,310
+so my card string of this is not working out.
+
+946
+01:02:46,970 --> 01:02:48,110
+So this is nil because
+
+947
+01:02:49,450 --> 01:02:51,000
+end of card number plus one is
+
+948
+01:02:56,570 --> 01:02:58,080
+not quite what I want it to be.
+
+949
+01:02:59,480 --> 01:03:00,820
+Why is old code popping up ?
+
+950
+01:03:04,570 --> 01:03:08,140
+It has been returning inaud laughter.
+
+951
+01:03:09,570 --> 01:03:10,970
+Let's get back to our tests
+
+952
+01:03:12,570 --> 01:03:14,620
+It's lucky that I spotted that when I did.
+
+953
+01:03:19,770 --> 01:03:23,400
+this is the failure which led us
+to another failure, but this is good.
+
+954
+01:03:27,080 --> 01:03:28,250
+Now, where is our flush ?
+
+955
+01:03:29,280 --> 01:03:32,680
+this is where I don't know Poker
+quite as we'll as I would like to
+
+956
+01:03:36,080 --> 01:03:37,400
+so elsif flush, type flush.
+
+957
+01:03:43,510 --> 01:03:45,850
+Where does flush belong on this sort of thing
+
+958
+01:03:47,020 --> 01:03:48,400
+It is above full house. Yes.
+
+959
+01:03:53,710 --> 01:03:55,220
+TS: It doesn't actually matter.
+
+960
+01:03:55,220 --> 01:03:57,050
+No, that's right but it would matter
+
+961
+01:03:58,480 --> 01:04:00,600
+to someone who plays Poker perhaps.
+
+962
+01:04:02,280 --> 01:04:04,280
+TS: At the moment you don't have any code
+
+963
+01:04:04,280 --> 01:04:07,110
+that compares your hand
+to find out which one is better.
+
+964
+01:04:07,110 --> 01:04:09,770
+as long as they are correctly classified that's ok.
+
+965
+01:04:09,800 --> 01:04:12,400
+CB: Yes, so let's implement inaud very quick flush.
+
+966
+01:04:18,450 --> 01:04:19,420
+so what my flush is ....
+
+967
+01:04:19,710 --> 01:04:22,940
+in much the same way as I'm
+asking do I have two of the same thing.
+
+968
+01:04:23,880 --> 01:04:25,880
+I'm saying can you look at all my suits
+
+969
+01:04:26,620 --> 01:04:28,370
+and tell me if they're all the same.
+
+970
+01:04:28,370 --> 01:04:29,370
+and that's about it.
+
+971
+01:04:31,370 --> 01:04:33,570
+Much in the same way
+I'm doing the pip count,
+
+972
+01:04:33,570 --> 01:04:36,650
+I probably want something
+along the lines of a suit count.
+
+973
+01:04:38,510 --> 01:04:40,020
+that does this but with suits.
+
+974
+01:04:41,000 --> 01:04:51,020
+and here I'm going to do the dupe flag which is inaud. this
+
+975
+01:04:51,620 --> 01:04:55,250
+inaud a better abstraction to use here.
+
+976
+01:04:55,250 --> 01:04:56,770
+so here I'm grouping my suits.
+
+977
+01:04:59,650 --> 01:05:03,620
+I'm going to write a quick test to
+make sure this is doing what I think it is
+
+978
+01:05:04,740 --> 01:05:08,650
+because I'm not confident enough
+to reckon that it's all going to be fine.
+
+979
+01:05:11,600 --> 01:05:12,710
+So in this hand I have
+
+980
+01:05:15,450 --> 01:05:16,940
+my Pair hand which I am using
+
+981
+01:05:19,850 --> 01:05:21,310
+It has 4 Diamonds and 1 Heart.
+
+982
+01:05:22,740 --> 01:05:24,710
+so I should have Heart 1 and Diamonds 4.
+
+983
+01:05:28,910 --> 01:05:31,740
+It should'nt be the pip
+count should be the suit count
+
+984
+01:05:33,600 --> 01:05:35,480
+I believe that's what I called it. Yes.
+
+985
+01:05:39,770 --> 01:05:41,020
+Now I have two failures.
+
+986
+01:05:41,020 --> 01:05:42,620
+This is the expected failure
+
+987
+01:05:43,020 --> 01:05:44,650
+inaud method suits.
+
+988
+01:05:46,200 --> 01:05:48,250
+Not the interface I was programming to
+
+989
+01:05:50,820 --> 01:05:52,680
+So this should be suit and not suits.
+
+990
+01:05:56,970 --> 01:06:00,170
+And now it seems to be working
+and we're back on our problem.
+
+991
+01:06:00,680 --> 01:06:02,110
+which is permitting flush.
+
+992
+01:06:03,000 --> 01:06:05,140
+but now if I have some kind of flush count
+
+993
+01:06:06,340 --> 01:06:09,850
+rather than suit count then
+suddenly my life is quite a lot easier.
+
+994
+01:06:21,170 --> 01:06:22,710
+I can implement this .... let's see
+
+995
+01:06:25,080 --> 01:06:26,000
+Now I have a flush.
+
+996
+01:06:34,714 --> 01:06:35,970
+Very quickly a straight
+
+997
+01:06:38,310 --> 01:06:41,050
+inaud was more interesting and more complicated
+
+998
+01:06:41,570 --> 01:06:43,140
+not something we've done so far
+
+999
+01:06:45,370 --> 01:06:48,200
+so I have 5 of Hearts, 6 of Hearts 7, of Hearts, Ace of Hearts
+
+1000
+01:06:48,480 --> 01:06:49,450
+and a 9 of Diamonds.
+
+1001
+01:06:50,540 --> 01:06:52,340
+because it's not a straight flush.
+
+1002
+01:06:54,650 --> 01:06:57,050
+let's check if this this is failing nicely. Yes.
+
+1003
+01:06:59,420 --> 01:07:01,850
+And let's put our straight somewhere in there.
+
+1004
+01:07:08,680 --> 01:07:09,280
+There we go.
+
+1005
+01:07:10,000 --> 01:07:12,370
+and if flush and straight in much the same way
+
+1006
+01:07:15,680 --> 01:07:17,680
+Let's have a look and see if those ones
+
+1007
+01:07:19,680 --> 01:07:22,170
+what I care about is the inaud and not the suits.
+
+1008
+01:07:22,540 --> 01:07:25,800
+inaud list of cards and their face values
+
+1009
+01:07:25,820 --> 01:07:28,200
+and I need to make sure they are consecutive.
+
+1010
+01:07:28,200 --> 01:07:28,600
+TS: Ok.
+
+1011
+01:07:30,250 --> 01:07:31,310
+CB: How wI'll I do that ?
+
+1012
+01:07:32,080 --> 01:07:33,000
+TS: Good question.
+
+1013
+01:07:34,110 --> 01:07:37,200
+The first thing I would
+probably want to do is abstract out
+
+1014
+01:07:37,600 --> 01:07:39,800
+or if the cards are just the array of values.
+
+1015
+01:07:40,940 --> 01:07:42,650
+because this is what I care about.
+
+1016
+01:07:46,000 --> 01:07:47,450
+Let's see, where are our cards ?
+
+1017
+01:07:48,650 --> 01:07:49,650
+What I want is this
+
+1018
+01:07:50,910 --> 01:07:54,080
+Now I have a sort of array
+that is 3567, something like that.
+
+1019
+01:07:56,450 --> 01:07:58,340
+In all likelihood it could be 47892
+
+1020
+01:08:00,420 --> 01:08:01,800
+and completely unsorted.
+
+1021
+01:08:04,080 --> 01:08:06,080
+so let's just sort that really quickly.
+
+1022
+01:08:07,710 --> 01:08:09,600
+and we have a sorted card that leaves
+
+1023
+01:08:17,000 --> 01:08:19,570
+I don't know why I'm
+doing it in a destructive way.
+
+1024
+01:08:22,020 --> 01:08:25,850
+I just like inaud a bit sI'lly.
+
+1025
+01:08:25,850 --> 01:08:26,970
+So I have a inaud card
+
+1026
+01:08:28,280 --> 01:08:30,600
+What I want to know is are they consecutive.
+
+1027
+01:08:35,370 --> 01:08:37,480
+Is there something that does that for me ?
+
+1028
+01:08:37,480 --> 01:08:38,970
+inaud to re-implement it.
+
+1029
+01:08:40,480 --> 01:08:41,170
+TS: I'm not sure.
+
+1030
+01:08:41,540 --> 01:08:42,850
+CB: Ok, so what I care about
+
+1031
+01:08:43,770 --> 01:08:46,570
+if I'm trying to determine
+if things are consecutive
+
+1032
+01:08:47,280 --> 01:08:50,000
+Let's assume we live in
+a world where Aces don't exist.
+
+1033
+01:08:51,370 --> 01:08:51,770
+TS: Ok.
+
+1034
+01:08:53,970 --> 01:08:56,080
+CB: Because Aces .... no I don't want to go there
+
+1035
+01:08:57,080 --> 01:08:59,650
+So if I have 12345 as in Ace 2345, that's a straight
+
+1036
+01:09:03,250 --> 01:09:07,220
+but I can also inaud the high card, the King.
+
+1037
+01:09:08,170 --> 01:09:11,800
+inaud I could just have a bunch of numbers
+
+1038
+01:09:12,080 --> 01:09:13,650
+and all I need to care about is
+
+1039
+01:09:15,450 --> 01:09:18,020
+is to look at the face
+value on there and on there,
+
+1040
+01:09:18,140 --> 01:09:20,570
+they are sorted, so if the difference between
+
+1041
+01:09:21,110 --> 01:09:23,740
+this Pair and this Pair
+and this Pair is always one,
+
+1042
+01:09:24,220 --> 01:09:25,820
+then I've won and it's a straight.
+
+1043
+01:09:26,650 --> 01:09:28,971
+but I can't re-do that if I'm doing Ace because
+
+1044
+01:09:30,280 --> 01:09:33,620
+my Ace would potentially sit on
+one side or other of the array.
+
+1045
+01:09:38,110 --> 01:09:40,110
+Let's assume Aces are just ones for now.
+
+1046
+01:09:41,910 --> 01:09:43,770
+and then I'm going to make sure that I
+
+1047
+01:09:45,280 --> 01:09:48,540
+write a test which is
+'it works with a straight with high Ace'.
+
+1048
+01:09:57,420 --> 01:09:59,510
+and it works with a straight with low ace.
+
+1049
+01:10:01,000 --> 01:10:03,080
+TS: Which one of those is the special case ?
+
+1050
+01:10:04,170 --> 01:10:06,000
+CB: It depends how I classify an Ace.
+
+1051
+01:10:07,800 --> 01:10:09,510
+If Ace is a one in the way I write it
+
+1052
+01:10:10,680 --> 01:10:12,400
+then low Ace isn't my special case.
+
+1053
+01:10:12,800 --> 01:10:14,650
+But if I write Ace as an A for example,
+
+1054
+01:10:14,880 --> 01:10:17,450
+which then puts it in
+the category of King Queen....
+
+1055
+01:10:18,970 --> 01:10:21,170
+which I would assign a higher point value.
+
+1056
+01:10:23,200 --> 01:10:25,600
+So then 10 is 10, Jack is 11, Queen is 12, King is 13.
+
+1057
+01:10:27,510 --> 01:10:28,910
+then this is both one and 14.
+
+1058
+01:10:29,770 --> 01:10:30,140
+TS: Ok.
+
+1059
+01:10:33,220 --> 01:10:34,970
+Which might be how I implement it.
+
+1060
+01:10:36,220 --> 01:10:37,510
+If you see an Ace in there ....
+
+1061
+01:10:39,200 --> 01:10:41,170
+look at the array and count it as a one,
+
+1062
+01:10:41,170 --> 01:10:43,680
+and then look at the other array and count it as 14.
+
+1063
+01:10:44,340 --> 01:10:45,740
+and see where it takes you.
+
+1064
+01:10:47,820 --> 01:10:50,740
+You can't really have a
+straight that takes both anyway
+
+1065
+01:10:50,740 --> 01:10:52,480
+so that should sort us out nicely.
+
+1066
+01:10:53,510 --> 01:10:56,540
+We might be looking later
+at where's my high card, on hand.
+
+1067
+01:10:57,880 --> 01:10:59,880
+then that's also going to inaud
+
+1068
+01:10:59,880 --> 01:11:03,514
+inaud 1, 14 inaud
+
+1069
+01:11:05,050 --> 01:11:07,000
+Let's assume that we are taking Aces as ....
+
+1070
+01:11:09,850 --> 01:11:11,510
+(do I have any examples here?) No.
+
+1071
+01:11:12,310 --> 01:11:14,020
+So I'm going to write Aces with an A
+
+1072
+01:11:14,020 --> 01:11:16,020
+because of just personal preference.
+
+1073
+01:11:16,280 --> 01:11:17,450
+No particular reason.
+
+1074
+01:11:18,600 --> 01:11:23,820
+My special case is going to be inaud sting with no Ace
+
+1075
+01:11:32,620 --> 01:11:36,370
+I've just realized something
+that I had completely forgotten about
+
+1076
+01:11:38,080 --> 01:11:40,080
+right now if we look at the hand parser....
+
+1077
+01:11:40,880 --> 01:11:43,400
+I've chosen cards that
+translate in a lovely way
+
+1078
+01:11:46,970 --> 01:11:49,170
+to integers, but if I do something like that....
+
+1079
+01:11:52,880 --> 01:11:54,280
+Let's say Queen of Diamonds.
+
+1080
+01:11:56,570 --> 01:11:58,480
+Let's say 10 is 10 Jack is 11, Queen is 12
+
+1081
+01:12:00,140 --> 01:12:02,080
+I actually would want this to happen.
+
+1082
+01:12:04,570 --> 01:12:06,140
+number 12, got zero, excellent.
+
+1083
+01:12:08,050 --> 01:12:09,710
+Let's go back into my hand parser
+
+1084
+01:12:09,820 --> 01:12:12,650
+this is going to be another
+one of those special cases.
+
+1085
+01:12:15,710 --> 01:12:17,085
+So let's say Pips for heads.
+
+1086
+01:12:22,110 --> 01:12:23,310
+TS: What does that mean.
+
+1087
+01:12:23,310 --> 01:12:27,050
+CB: this is inaud English I think inaud
+
+1088
+01:12:28,480 --> 01:12:30,310
+If it has only now Jack, Queen and Ace.
+
+1089
+01:12:32,740 --> 01:12:34,085
+Let's say, if you get a Q card.
+
+1090
+01:12:36,200 --> 01:12:38,450
+then assign it the value of 12 explicitly.
+
+1091
+01:12:46,510 --> 01:12:48,450
+Let's start with a Jack, and that's an 11
+
+1092
+01:12:49,570 --> 01:12:51,310
+and then I have Queen and that's 12,
+
+1093
+01:12:53,080 --> 01:12:54,600
+and that's a King and that's 13
+
+1094
+01:12:56,340 --> 01:12:57,170
+and the Ace is 14.
+
+1095
+01:13:04,540 --> 01:13:05,850
+So this is number of Pips.
+
+1096
+01:13:08,340 --> 01:13:10,620
+I'm going to put it into a different variable.
+
+1097
+01:13:11,620 --> 01:13:13,540
+because this is getting too crowded.
+
+1098
+01:13:15,110 --> 01:13:16,680
+Number of Pips equals this now.
+
+1099
+01:13:17,310 --> 01:13:17,970
+TS: Right.
+
+1100
+01:13:18,400 --> 01:13:20,740
+Just to check I hav'nt done something stupid.
+
+1101
+01:13:21,850 --> 01:13:22,420
+There we go.
+
+1102
+01:13:22,800 --> 01:13:24,800
+So expected 12, got zero, perfect, so now
+
+1103
+01:13:27,080 --> 01:13:29,820
+what I want is 'check if
+the beginning of that string
+
+1104
+01:13:33,400 --> 01:13:34,910
+is one of those special cases',
+
+1105
+01:13:35,400 --> 01:13:37,740
+otherwise you should just go with face value
+
+1106
+01:13:39,600 --> 01:13:41,080
+so I can have something like
+
+1107
+01:13:41,850 --> 01:13:43,370
+Pips for heads and dot fetch.
+
+1108
+01:13:51,000 --> 01:13:52,970
+This is what we said at the beginning,
+
+1109
+01:13:53,970 --> 01:13:55,250
+before I specified suit
+
+1110
+01:13:56,220 --> 01:13:57,370
+This is my Pips string.
+
+1111
+01:13:59,740 --> 01:14:01,250
+and this is what it looks like.
+
+1112
+01:14:04,800 --> 01:14:07,850
+I'm going to take Pips for
+heads and I fetch my Pips string
+
+1113
+01:14:13,200 --> 01:14:16,200
+So, if it's in there inaud forward.
+
+1114
+01:14:16,680 --> 01:14:19,140
+and if it's not then I want it to fail gracefully
+
+1115
+01:14:20,170 --> 01:14:20,740
+and do this.
+
+1116
+01:14:21,110 --> 01:14:23,050
+Now, the issue with that is, for example
+
+1117
+01:14:24,480 --> 01:14:26,280
+if someone goes along the lines of
+
+1118
+01:14:27,540 --> 01:14:29,310
+entering a queen with a capital Q.
+
+1119
+01:14:30,000 --> 01:14:31,020
+That would not work
+
+1120
+01:14:31,850 --> 01:14:33,280
+It wI'll try to translate it.
+
+1121
+01:14:33,800 --> 01:14:36,620
+into an integer and that
+would not work very nicely.
+
+1122
+01:14:40,800 --> 01:14:42,650
+If I want to do something foolproof
+
+1123
+01:14:44,140 --> 01:14:46,220
+I would put something along the lines of
+
+1124
+01:14:46,940 --> 01:14:50,450
+and by the way 'can you check that
+the pip string only has digit's in it,
+
+1125
+01:14:50,600 --> 01:14:53,820
+before I cast it to an integer which wI'll save me the worry of
+
+1126
+01:14:54,970 --> 01:14:56,850
+how do I handle Queens -  a bit later on.
+
+1127
+01:14:59,080 --> 01:15:00,680
+TS: Are you worried about that ?
+
+1128
+01:15:00,680 --> 01:15:01,480
+CB: No. (laughter)
+
+1129
+01:15:03,600 --> 01:15:05,570
+If I was shipping this then yes, but no.
+
+1130
+01:15:11,450 --> 01:15:14,570
+This assumes correct
+capitalisation, correct letters.
+
+1131
+01:15:19,200 --> 01:15:20,600
+all kinds of assumptions.
+
+1132
+01:15:22,310 --> 01:15:23,080
+and that's fine.
+
+1133
+01:15:23,080 --> 01:15:24,940
+I'm making that compromise for now
+
+1134
+01:15:24,940 --> 01:15:28,800
+because I don't think that's part
+of the problem that I'm most interested in.
+
+1135
+01:15:30,850 --> 01:15:33,080
+So now we have a 'thing' and it parses queens
+
+1136
+01:15:33,080 --> 01:15:35,420
+12 of Diamonds and that's all working out fine
+
+1137
+01:15:36,740 --> 01:15:38,080
+Now, I've got my card values.
+
+1138
+01:15:39,250 --> 01:15:41,400
+Let's go back to our hand spec and see where
+
+1139
+01:15:42,220 --> 01:15:43,020
+that leaves us.
+
+1140
+01:15:43,370 --> 01:15:46,310
+TS:  Is your policy now
+to implement ordinary straights
+
+1141
+01:15:46,370 --> 01:15:49,400
+or are you going straight for
+the one that has an Ace in it ?
+
+1142
+01:15:51,200 --> 01:15:53,200
+CB: I'm going with an ordinary straight.
+
+1143
+01:15:54,620 --> 01:15:56,510
+So my straight hand in here just has....
+
+1144
+01:15:57,820 --> 01:15:59,600
+56789, which is quite reasonable.
+
+1145
+01:16:02,220 --> 01:16:04,370
+I've accidentally broken things because
+
+1146
+01:16:04,820 --> 01:16:08,050
+my straight is broken and
+tells me that everything is fine.
+
+1147
+01:16:08,710 --> 01:16:10,420
+but now other tests are failing.
+
+1148
+01:16:11,540 --> 01:16:17,820
+inaud
+
+1149
+01:16:18,280 --> 01:16:20,200
+This is a more sensible place to be in
+
+1150
+01:16:22,820 --> 01:16:26,400
+I have assorted card values
+and I want to look at each of the things
+
+1151
+01:16:29,250 --> 01:16:30,940
+They are in assorted order and I'm
+
+1152
+01:16:30,940 --> 01:16:33,800
+going to calculate the
+difference between all of them
+
+1153
+01:16:33,820 --> 01:16:35,880
+If at the end I am in an array of only ones.
+
+1154
+01:16:38,820 --> 01:16:39,940
+I wI'll be quite happy.
+
+1155
+01:16:40,250 --> 01:16:40,800
+TS: I see.
+
+1156
+01:16:41,020 --> 01:16:42,680
+and if it's not then.... I'm not happy.
+
+1157
+01:16:45,310 --> 01:16:46,000
+So far so good
+
+1158
+01:16:51,000 --> 01:16:53,200
+I'm going to go for a naive implementation
+
+1159
+01:16:53,570 --> 01:16:56,600
+of this now because I don't
+quite know where I'm going yet.
+
+1160
+01:16:58,880 --> 01:17:00,080
+I look at my card values.
+
+1161
+01:17:00,800 --> 01:17:02,710
+Actually that's not what I want to do.
+
+1162
+01:17:03,480 --> 01:17:05,080
+I want to know each of the decks
+
+1163
+01:17:05,400 --> 01:17:08,800
+because I want to know where I am in that inaud.
+
+1164
+01:17:08,970 --> 01:17:10,400
+I have my value and my index
+
+1165
+01:17:11,570 --> 01:17:13,820
+and I am looking at my assorted card value
+
+1166
+01:17:13,820 --> 01:17:14,740
+and what I want is....
+
+1167
+01:17:18,740 --> 01:17:20,370
+inaud
+
+1168
+01:17:20,370 --> 01:17:22,828
+and I want to compare it to the next card value
+
+1169
+01:17:25,570 --> 01:17:27,510
+So I want to compare those two values.
+
+1170
+01:17:30,820 --> 01:17:31,850
+and I only want to go....
+
+1171
+01:17:33,620 --> 01:17:35,140
+this is going to throw a very
+
+1172
+01:17:35,940 --> 01:17:38,020
+reached the end of the array situation.
+
+1173
+01:17:38,420 --> 01:17:40,020
+which is not where I want to be.
+
+1174
+01:17:48,400 --> 01:17:50,800
+This is sI'lly, I always have 5 cards, it's a hand
+
+1175
+01:17:52,140 --> 01:17:54,280
+so I'm going to put a magic number in there.
+
+1176
+01:17:56,000 --> 01:17:56,450
+I'm sorry.
+
+1177
+01:17:56,740 --> 01:17:57,310
+TS: No, no.
+
+1178
+01:18:02,680 --> 01:18:05,857
+This is the kind of thing that
+you would have in productions
+
+1179
+01:18:05,857 --> 01:18:09,420
+you have something that defines what 5 is somewhere and inaud
+
+1180
+01:18:10,620 --> 01:18:11,540
+So magic number 4
+
+1181
+01:18:17,250 --> 01:18:19,740
+Ok 5 inaud
+
+1182
+01:18:22,680 --> 01:18:24,200
+It is reasonable for me to say,
+
+1183
+01:18:24,650 --> 01:18:26,140
+and by the way do this 4 times.
+
+1184
+01:18:33,680 --> 01:18:37,450
+I need to start with an assumption inaud one
+
+1185
+01:18:38,910 --> 01:18:40,820
+and then I have some kind of integer.
+
+1186
+01:18:40,820 --> 01:18:41,400
+and then, Oh ....
+
+1187
+01:18:42,200 --> 01:18:44,420
+there's got to be a better way of doing this,
+
+1188
+01:18:44,420 --> 01:18:46,800
+but this is the first thing that comes to mind.
+
+1189
+01:18:47,080 --> 01:18:49,110
+So I'm looking at my sorted card values
+
+1190
+01:18:49,110 --> 01:18:51,050
+and also at my other sorted card value.
+
+1191
+01:18:54,080 --> 01:18:54,820
+This is it.
+
+1192
+01:18:56,620 --> 01:18:57,940
+Let's try something like
+
+1193
+01:18:59,020 --> 01:19:00,220
+this, the zero index, and
+
+1194
+01:19:05,400 --> 01:19:06,000
+TS: I see.
+
+1195
+01:19:06,420 --> 01:19:08,400
+So these two things I want to compare
+
+1196
+01:19:09,280 --> 01:19:10,340
+Just get rid of that
+
+1197
+01:19:15,280 --> 01:19:17,850
+I want the absolute difference between the two.
+
+1198
+01:19:18,510 --> 01:19:19,340
+They are sorted.
+
+1199
+01:19:26,080 --> 01:19:26,800
+What I want is ....
+
+1200
+01:19:34,710 --> 01:19:36,110
+So the first naive thing is...
+
+1201
+01:19:40,140 --> 01:19:41,340
+actually the result is ......
+
+1202
+01:19:43,820 --> 01:19:48,220
+inaud
+
+1203
+01:19:49,220 --> 01:19:50,620
+This is equals to one, so now
+
+1204
+01:19:55,020 --> 01:19:56,880
+This wI'll have to go somewhere else
+
+1205
+01:19:56,880 --> 01:19:58,400
+because it's getting verbose.
+
+1206
+01:19:58,420 --> 01:20:00,510
+What this chock of code is doing there is
+
+1207
+01:20:02,940 --> 01:20:04,850
+is saying difference between cards.
+
+1208
+01:20:11,880 --> 01:20:13,400
+And different Pips on a card.
+
+1209
+01:20:23,250 --> 01:20:23,940
+Dislike.
+
+1210
+01:20:27,080 --> 01:20:28,970
+TS: Yes, it's getting the value of that ....
+
+1211
+01:20:29,400 --> 01:20:31,220
+CB: Yes, I absolutely don't like this.
+
+1212
+01:20:31,940 --> 01:20:37,850
+For now inaud unnecessary.
+
+1213
+01:20:40,000 --> 01:20:41,250
+This should be the loop
+
+1214
+01:20:43,200 --> 01:20:44,220
+Let's get rid of that.
+
+1215
+01:20:45,050 --> 01:20:46,910
+A slightly misguided abstraction.
+
+1216
+01:20:48,400 --> 01:20:50,370
+If my difference between Pips is one,
+
+1217
+01:20:52,450 --> 01:20:53,310
+then I continue.
+
+1218
+01:20:53,740 --> 01:20:55,685
+Actually I don't like now I'm doing this
+
+1219
+01:20:56,680 --> 01:20:58,170
+inaud
+
+1220
+01:21:00,510 --> 01:21:01,850
+difference is always one.
+
+1221
+01:21:06,880 --> 01:21:08,140
+So what I want to do is say
+
+1222
+01:21:09,340 --> 01:21:11,400
+difference of one is true to start with
+
+1223
+01:21:12,510 --> 01:21:14,570
+and the second I get a difference is not
+
+1224
+01:21:14,650 --> 01:21:16,970
+one between the cards, I exit out of the loop
+
+1225
+01:21:16,970 --> 01:21:18,000
+and get out of there.
+
+1226
+01:21:18,880 --> 01:21:19,940
+So I start with true
+
+1227
+01:21:20,250 --> 01:21:21,250
+and while it's true
+
+1228
+01:21:25,400 --> 01:21:26,570
+And my index is below 4
+
+1229
+01:21:28,710 --> 01:21:30,170
+on sorted card values.count
+
+1230
+01:21:41,170 --> 01:21:42,570
+Magic number 4 that's fine.
+
+1231
+01:21:43,680 --> 01:21:45,820
+While difference is always one we do that.
+
+1232
+01:21:48,650 --> 01:21:50,620
+So if difference between Pips is that
+
+1233
+01:21:50,620 --> 01:21:52,310
+and difference is always one is ....
+
+1234
+01:21:53,910 --> 01:21:58,250
+and the new difference between Pips is one.inaud
+
+1235
+01:21:59,940 --> 01:22:01,140
+This we no longer need.
+
+1236
+01:22:02,310 --> 01:22:03,540
+Those we no longer need.
+
+1237
+01:22:04,110 --> 01:22:07,680
+This is called 'I' because I don't
+want to remember all the variables.
+
+1238
+01:22:09,450 --> 01:22:10,370
+Where is my loops.
+
+1239
+01:22:12,370 --> 01:22:13,740
+And now what I want to do is....
+
+1240
+01:22:17,880 --> 01:22:20,680
+maybe initialise that,
+that seems like a good idea.
+
+1241
+01:22:24,110 --> 01:22:25,371
+I stI'll haven't inaud zero
+
+1242
+01:22:26,480 --> 01:22:28,771
+I'm assuming that it is going to be a straight.
+
+1243
+01:22:28,771 --> 01:22:31,542
+and then I continue until
+something proves me wrong.
+
+1244
+01:22:31,800 --> 01:22:33,820
+so either I'm done with my calculation.
+
+1245
+01:22:37,080 --> 01:22:37,940
+or that's failed.
+
+1246
+01:22:40,050 --> 01:22:42,340
+So if it's not equal to one it should be false.
+
+1247
+01:22:42,480 --> 01:22:44,480
+inaud quite nice.
+
+1248
+01:22:45,050 --> 01:22:45,910
+So now, test tI'me.
+
+1249
+01:22:55,820 --> 01:22:57,820
+And now the computer fails (laughter).
+
+1250
+01:22:58,510 --> 01:23:00,510
+TS: It looks like it's got stuck in a loop
+
+1251
+01:23:01,880 --> 01:23:03,970
+CB: Maybe because I have an internet loop.
+
+1252
+01:23:05,800 --> 01:23:08,880
+I think I have an increment
+in being dense, but there we go
+
+1253
+01:23:15,250 --> 01:23:16,510
+Every tI'me, just failing.
+
+1254
+01:23:17,600 --> 01:23:19,710
+This is now stI'll failing but this is ok
+
+1255
+01:23:23,970 --> 01:23:25,140
+StI'll seeing failure.
+
+1256
+01:23:25,970 --> 01:23:27,085
+So different strait.
+
+1257
+01:23:27,680 --> 01:23:29,880
+TS: When that loop finishes, how do you know
+
+1258
+01:23:30,200 --> 01:23:31,880
+whether or not it was a straight ?
+
+1259
+01:23:35,650 --> 01:23:36,020
+Ah ok.
+
+1260
+01:23:37,370 --> 01:23:38,770
+I'm missing a return value
+
+1261
+01:23:42,020 --> 01:23:44,480
+By the tI'me we get there, I want, if it's a straight
+
+1262
+01:23:44,880 --> 01:23:46,600
+to exit because of this failing.
+
+1263
+01:23:47,800 --> 01:23:49,800
+and then it should return the result.
+
+1264
+01:23:50,940 --> 01:23:52,020
+Which is stI'll wrong.
+
+1265
+01:23:52,710 --> 01:23:53,820
+Ok, so let's have a look.
+
+1266
+01:23:56,110 --> 01:23:58,140
+So I start an index here and as I go along
+
+1267
+01:23:58,880 --> 01:24:01,200
+my difference is....how have I sorted them....yes.
+
+1268
+01:24:05,170 --> 01:24:06,970
+I would do something naughty now
+
+1269
+01:24:12,510 --> 01:24:13,970
+print the thing out so I know
+
+1270
+01:24:15,250 --> 01:24:16,170
+where I'm heading.
+
+1271
+01:24:16,540 --> 01:24:18,650
+Iv'e got 56789 which seems 'straightish'
+
+1272
+01:24:20,370 --> 01:24:21,820
+Now let's walk through this
+
+1273
+01:24:22,220 --> 01:24:24,480
+So difference is always one is always true.
+
+1274
+01:24:24,940 --> 01:24:27,650
+While this is true,
+the difference between Pips is
+
+1275
+01:24:28,910 --> 01:24:29,770
+this minus this
+
+1276
+01:24:30,110 --> 01:24:31,110
+this should be one
+
+1277
+01:24:31,200 --> 01:24:33,480
+inaud is one, this is
+
+1278
+01:24:34,110 --> 01:24:34,820
+It goes to one
+
+1279
+01:24:39,250 --> 01:24:40,570
+Yes, this returns as false.
+
+1280
+01:24:47,370 --> 01:24:48,600
+I'm going to run one test
+
+1281
+01:24:51,050 --> 01:24:51,740
+that one 5679
+
+1282
+01:24:53,310 --> 01:24:55,280
+and I'm going to shell out a few things.
+
+1283
+01:24:56,340 --> 01:24:58,170
+Because I don't know what's going on.
+
+1284
+01:24:58,620 --> 01:25:00,370
+TS: It looked like it passed there
+
+1285
+01:25:01,000 --> 01:25:02,800
+CB: Yes, this is why I'm a bit confused.
+
+1286
+01:25:04,200 --> 01:25:06,280
+TS: Is it a different test that's failing ?
+
+1287
+01:25:06,280 --> 01:25:07,000
+CB: Good point.
+
+1288
+01:25:07,020 --> 01:25:09,280
+Maybe one of my cases is actually a straight.
+
+1289
+01:25:14,650 --> 01:25:15,770
+Let's get rid of those
+
+1290
+01:25:17,250 --> 01:25:18,970
+I'm going to run this entire file
+
+1291
+01:25:19,710 --> 01:25:20,910
+and where is my failure.
+
+1292
+01:25:22,880 --> 01:25:25,050
+Should be a highest and it got a straight.
+
+1293
+01:25:26,850 --> 01:25:30,510
+Oh yes, one of my test cases inaud
+
+1294
+01:25:31,650 --> 01:25:34,620
+I'm feeling really clever
+now because it enters a flush,
+
+1295
+01:25:36,910 --> 01:25:41,310
+but it's not a flush so it's not going to cause me inaud at any point then.
+
+1296
+01:25:43,540 --> 01:25:44,400
+Yes, it's all fine.
+
+1297
+01:25:44,400 --> 01:25:45,080
+TS: Great.
+
+1298
+01:25:49,200 --> 01:25:52,170
+I have an Ace which is a 14
+but also a 1 when I want it to be
+
+1299
+01:25:58,400 --> 01:26:01,140
+So straight hand no Ace,
+stI'll straight, same result.
+
+1300
+01:26:08,710 --> 01:26:10,620
+If we do this, and we have a hand parser.
+
+1301
+01:26:13,820 --> 01:26:15,600
+Actually, no we don't want to do that.
+
+1302
+01:26:17,140 --> 01:26:18,970
+We have an Ace now, we don't want a one.
+
+1303
+01:26:21,880 --> 01:26:22,940
+So we have 2345 and A.
+
+1304
+01:26:25,050 --> 01:26:25,450
+TS: Ok,
+
+1305
+01:26:29,050 --> 01:26:30,310
+The order doesn't matter
+
+1306
+01:26:30,310 --> 01:26:33,600
+CB: The order shouldn't matter
+because I'm sorting them anyway.
+
+1307
+01:26:33,650 --> 01:26:35,220
+TS: So that's going to show up as
+
+1308
+01:26:35,220 --> 01:26:37,250
+just being a high card hand.
+CB: Correct.
+
+1309
+01:26:37,250 --> 01:26:40,370
+This is showing up as a highest,
+and I want it to be a straight.
+
+1310
+01:26:40,880 --> 01:26:42,770
+Let's go in there and implement that.
+
+1311
+01:26:45,420 --> 01:26:47,940
+This is a method that takes sorted card values
+
+1312
+01:26:48,680 --> 01:26:50,880
+then it can work out if it's a straight or not.
+
+1313
+01:26:51,000 --> 01:26:52,510
+Now if I have an Ace in my hand,
+
+1314
+01:26:54,000 --> 01:26:58,480
+I want it to work out, is this a straight if inaud 14 ?
+
+1315
+01:26:58,480 --> 01:27:00,880
+and is this a straight if it behaves like a one ?
+
+1316
+01:27:05,400 --> 01:27:08,850
+If this fails, if I treat my Ace
+as a 14, then just do again with a one.
+
+1317
+01:27:12,400 --> 01:27:14,000
+let's extract that method out.
+
+1318
+01:27:16,970 --> 01:27:18,650
+and this takes an array of cards
+
+1319
+01:27:19,170 --> 01:27:21,250
+and determines if they are consecutive.
+
+1320
+01:27:22,400 --> 01:27:23,540
+So, consecutive cards
+
+1321
+01:27:36,370 --> 01:27:38,570
+This says my cards are consecutive.
+
+1322
+01:27:39,620 --> 01:27:41,710
+I don't like the fact that it's living here.
+
+1323
+01:27:43,880 --> 01:27:44,742
+This is just odd.
+
+1324
+01:27:48,450 --> 01:27:55,220
+If I had more time I would want to move this to inaud somewhere.
+
+1325
+01:27:55,710 --> 01:27:57,880
+This is a utility type function which has
+
+1326
+01:27:58,570 --> 01:27:59,820
+no business being here.
+
+1327
+01:28:01,080 --> 01:28:03,540
+TS: Right. It doesn't need to be an instance method ?
+
+1328
+01:28:06,280 --> 01:28:08,250
+CB: it's got nothing to do with the hand.
+
+1329
+01:28:08,250 --> 01:28:10,510
+The concept of numbers being consecutive
+
+1330
+01:28:11,480 --> 01:28:13,620
+The hand needs it in order to rank it'self.
+
+1331
+01:28:13,620 --> 01:28:16,540
+but the actual
+implementation of it does not live here.
+
+1332
+01:28:17,400 --> 01:28:18,800
+TS: It could be any numbers.
+
+1333
+01:28:18,850 --> 01:28:21,450
+CB: Absolutely, it could
+be just some random thing,
+
+1334
+01:28:23,020 --> 01:28:25,850
+That takes an array and
+determines whether they are
+
+1335
+01:28:25,850 --> 01:28:27,170
+in some sort of nice order.
+
+1336
+01:28:27,480 --> 01:28:27,850
+TS: Ok.
+
+1337
+01:28:31,510 --> 01:28:33,510
+I'm just going to check that it is stI'll
+
+1338
+01:28:37,880 --> 01:28:38,800
+behaving nicely.
+
+1339
+01:28:48,110 --> 01:28:50,510
+In the case where sorted card values include
+
+1340
+01:28:51,850 --> 01:28:54,000
+the value 14, which is the Ace, I also want to
+
+1341
+01:28:56,110 --> 01:28:58,880
+change that array and do
+the same thing with the one.
+
+1342
+01:29:01,110 --> 01:29:02,770
+and then check if it's a straight.
+
+1343
+01:29:03,540 --> 01:29:05,310
+So let's say assorted card values.
+
+1344
+01:29:13,620 --> 01:29:16,140
+I'm going to do something naive, if it includes 14
+
+1345
+01:29:26,650 --> 01:29:29,450
+This is where I want to know
+what my array let's me do.
+
+1346
+01:29:37,340 --> 01:29:39,450
+No that's drop a certain number of things.
+
+1347
+01:29:39,740 --> 01:29:41,680
+I want to delete a thing from an array.
+
+1348
+01:29:43,310 --> 01:29:47,970
+inaud the array, documentation
+
+1349
+01:29:50,080 --> 01:29:51,200
+I do this all the tI'me.
+
+1350
+01:29:51,220 --> 01:29:53,820
+I have a bad memory
+when it comes to remembering
+
+1351
+01:29:55,650 --> 01:29:56,420
+all the things.
+
+1352
+01:29:56,880 --> 01:29:59,050
+TS: it's probably inaud
+
+1353
+01:30:00,540 --> 01:30:03,710
+CB: Once you start programming
+in more than three languages,
+
+1354
+01:30:03,710 --> 01:30:05,280
+it becomes a little difficult.
+
+1355
+01:30:07,000 --> 01:30:10,020
+TS: So you're going to
+delete all of the 14s from the array ?
+
+1356
+01:30:12,170 --> 01:30:14,740
+CB: Yes, and I need to know
+how many 14s I'm deleting
+
+1357
+01:30:17,000 --> 01:30:19,140
+That exact number of 1s on the other side
+
+1358
+01:30:19,140 --> 01:30:22,740
+otherwise I might end up with such
+as an array and maybe three cards
+
+1359
+01:30:26,650 --> 01:30:29,110
+expecting a certain number of things in there
+
+1360
+01:30:29,110 --> 01:30:30,910
+remember my magic number in there.
+
+1361
+01:30:30,910 --> 01:30:32,250
+It would not be a good idea.
+
+1362
+01:30:41,740 --> 01:30:42,250
+delete 40.
+
+1363
+01:30:46,000 --> 01:30:48,828
+According to the Ruby
+documentation this is deleted.
+
+1364
+01:30:56,342 --> 01:30:59,600
+This gives me back all the
+documentation that's it deleted.
+
+1365
+01:31:02,050 --> 01:31:03,910
+TS: It returns the last deleted item?
+
+1366
+01:31:04,170 --> 01:31:06,770
+CB:  Yes, but It doesn't tell me how many, interesting.
+
+1367
+01:31:11,820 --> 01:31:13,540
+I want to know how many 14s I have,
+
+1368
+01:31:16,600 --> 01:31:19,220
+so I want to count the number of things that match.
+
+1369
+01:31:25,970 --> 01:31:26,740
+How do I do that ?
+
+1370
+01:31:31,600 --> 01:31:33,020
+My implementation is this.
+
+1371
+01:31:38,650 --> 01:31:40,110
+This can go somewhere else,
+
+1372
+01:31:41,020 --> 01:31:42,770
+and be called what it actually is
+
+1373
+01:31:46,540 --> 01:31:48,770
+and if my number of Aces is bigger than one.
+
+1374
+01:31:49,200 --> 01:31:50,970
+then I want to delete all the Aces.
+
+1375
+01:31:52,140 --> 01:31:53,970
+and add two sorted card value once,
+
+1376
+01:31:58,080 --> 01:32:00,970
+but I want to do that
+exactly the number of aces tI'mes.
+
+1377
+01:32:04,220 --> 01:32:06,600
+I could do it in a better way by concatulating
+
+1378
+01:32:07,480 --> 01:32:09,480
+two card values in an array of exactly
+
+1379
+01:32:14,200 --> 01:32:15,540
+the number of aces as ones.
+
+1380
+01:32:16,000 --> 01:32:17,420
+but let's leave that for now
+
+1381
+01:32:18,340 --> 01:32:20,480
+and let's check if things have gone wrong.
+
+1382
+01:32:21,885 --> 01:32:22,657
+They have.
+
+1383
+01:32:25,480 --> 01:32:27,250
+This is terrible parenthesis use.
+
+1384
+01:32:30,450 --> 01:32:33,400
+because it turns out
+blocks don't take round brackets.
+
+1385
+01:32:39,310 --> 01:32:41,680
+It's not working but it's not failing any more.
+
+1386
+01:32:45,680 --> 01:32:48,370
+TS: Is it because your
+number of Aces is equal to one
+
+1387
+01:32:48,940 --> 01:32:50,050
+not greater than one ?
+
+1388
+01:32:54,420 --> 01:32:56,370
+CB: Yes, and there is also the fact that
+
+1389
+01:33:00,650 --> 01:33:02,540
+I think it's going to fail another way.
+
+1390
+01:33:04,420 --> 01:33:05,600
+And let me explain why,
+
+1391
+01:33:07,570 --> 01:33:10,450
+I think what I just wrote
+is going to fail in the case of
+
+1392
+01:33:13,110 --> 01:33:15,370
+highest, because of how I've implemented it.
+
+1393
+01:33:18,770 --> 01:33:20,540
+To prove my point I'm going to write
+
+1394
+01:33:24,770 --> 01:33:26,680
+There we go inaud, high ace.
+
+1395
+01:33:31,850 --> 01:33:33,450
+What I mean by that... and do that.
+
+1396
+01:33:36,540 --> 01:33:38,800
+inaud add for array.  Interesting.
+
+1397
+01:33:39,200 --> 01:33:40,540
+TS: There are two failures,
+
+1398
+01:33:40,540 --> 01:33:41,910
+on both of those Ace tests.
+
+1399
+01:33:42,220 --> 01:33:43,110
+CB: Correct.
+
+1400
+01:33:44,050 --> 01:33:47,650
+So this is you cant inaud and insert. Yes.
+
+1401
+01:33:53,800 --> 01:34:01,170
+inaud going in the loop which is good news.
+
+1402
+01:34:01,170 --> 01:34:03,450
+I want to find my inaud pass
+
+1403
+01:34:04,480 --> 01:34:06,140
+Let's de-bug our way through this
+
+1404
+01:34:08,220 --> 01:34:10,220
+It's happening on consecutive cards
+
+1405
+01:34:12,340 --> 01:34:14,310
+and it's happening on my eighty three
+
+1406
+01:34:15,600 --> 01:34:16,650
+Which is here.
+
+1407
+01:34:21,420 --> 01:34:23,510
+TS: What does the document for insert say ?
+
+1408
+01:34:25,110 --> 01:34:26,620
+CB: it's not destructive is it ?
+
+1409
+01:34:28,280 --> 01:34:31,020
+TS: it's not inaud the values with an index
+
+1410
+01:34:31,020 --> 01:34:32,514
+so you have to inaud an index.
+
+1411
+01:34:32,514 --> 01:34:33,228
+CB: OK, alright.
+
+1412
+01:34:35,600 --> 01:34:39,250
+I'm going to insert it at the
+start because it doesn't really matter
+
+1413
+01:34:42,200 --> 01:34:43,910
+Or I could go for the lazy option.
+
+1414
+01:34:57,770 --> 01:34:58,800
+TS: Has that fixed it.
+
+1415
+01:34:59,000 --> 01:35:01,140
+CB: No, so many things going wrong right now.
+
+1416
+01:35:05,680 --> 01:35:08,220
+This is take my sorted of card values and give me
+
+1417
+01:35:10,200 --> 01:35:12,110
+other possible card values for Aces.
+
+1418
+01:35:22,740 --> 01:35:23,880
+bit premature.
+
+1419
+01:35:26,510 --> 01:35:28,570
+If the number of Aces is bigger than one
+
+1420
+01:35:29,420 --> 01:35:30,400
+then I want to have ....
+
+1421
+01:35:36,140 --> 01:35:36,800
+Aces as ones.
+
+1422
+01:35:40,600 --> 01:35:42,570
+Which is just like sorted card values
+
+1423
+01:35:44,600 --> 01:35:45,970
+I want to manipulate that.
+
+1424
+01:35:46,650 --> 01:35:49,140
+TS: So your going to leave the original one alone.
+
+1425
+01:35:49,140 --> 01:35:51,020
+CB: Correct. I don't want to touch that.
+
+1426
+01:35:51,020 --> 01:35:53,570
+And then in the case
+of straight I want to check
+
+1427
+01:35:55,280 --> 01:35:58,250
+either it works out fine
+with the usual way of doing it.
+
+1428
+01:35:59,280 --> 01:36:02,110
+Or it works out with using
+Ace as ones, way of doing it.
+
+1429
+01:36:06,200 --> 01:36:07,110
+So either is true.
+
+1430
+01:36:09,000 --> 01:36:10,450
+If the number of Aces is none
+
+1431
+01:36:15,600 --> 01:36:21,020
+then inaud usual check inaud cards.
+
+1432
+01:36:22,050 --> 01:36:24,800
+Now that's going to fail
+nicely in places, excellent.
+
+1433
+01:36:27,110 --> 01:36:29,740
+It stI'll doesn't work with a straight with low ace.
+
+1434
+01:36:35,770 --> 01:36:37,940
+I want to check what my Aces as ones is like.
+
+1435
+01:36:40,480 --> 01:36:43,540
+This is my best chance of
+understanding what's going on.
+
+1436
+01:36:45,110 --> 01:36:46,710
+Aces as ones looks like 123, aha !
+
+1437
+01:36:47,450 --> 01:36:48,250
+it's not sorted
+
+1438
+01:36:49,570 --> 01:36:52,680
+inaud sort here and I am doing
+
+1439
+01:36:52,680 --> 01:36:53,400
+my sort again.
+
+1440
+01:36:55,140 --> 01:36:57,050
+How about .... we just don't sort them here
+
+1441
+01:37:01,170 --> 01:37:04,450
+TS: And then consecutive cards
+is going to be in charge of that.
+
+1442
+01:37:04,600 --> 01:37:08,250
+I'll give it any number of cards
+in any odd number called card values
+
+1443
+01:37:11,220 --> 01:37:13,400
+and inside here my job is just to sort them.
+
+1444
+01:37:17,850 --> 01:37:18,220
+TS: Ok.
+
+1445
+01:37:18,650 --> 01:37:20,850
+And then go ahead with the rest of the code.
+
+1446
+01:37:22,880 --> 01:37:24,770
+Which I have changed variable names
+
+1447
+01:37:27,340 --> 01:37:28,970
+so it should be less angry at me.
+
+1448
+01:37:33,510 --> 01:37:35,714
+Good, strait inaud Aces straight pan Aces.
+
+1449
+01:37:37,280 --> 01:37:41,250
+TS: Ok so we are nearly out of tI'me now,
+what would you like to do to wrap this up.
+
+1450
+01:37:43,680 --> 01:37:47,020
+I was going to run hand comparer, and about to write hand ranker,
+
+1451
+01:37:47,800 --> 01:37:50,050
+I'd like to try that out and see what happens
+
+1452
+01:37:52,420 --> 01:37:54,220
+TS: So ranking the hands you've inaud
+
+1453
+01:37:55,680 --> 01:37:57,220
+There are a few hands missing
+
+1454
+01:37:58,570 --> 01:38:00,080
+but not a lot of work left to do.
+
+1455
+01:38:03,970 --> 01:38:05,280
+Let me just correct this
+
+1456
+01:38:08,420 --> 01:38:13,050
+inaud
+
+1457
+01:38:14,540 --> 01:38:16,828
+I've got a hand, it's told me what the rank it is
+
+1458
+01:38:17,020 --> 01:38:19,020
+but if I had two cards, I want to give my
+
+1459
+01:38:19,020 --> 01:38:20,510
+hand to my other hand and say
+
+1460
+01:38:21,650 --> 01:38:23,540
+Are you better than That hand.
+TS: Ok.
+
+1461
+01:38:25,170 --> 01:38:28,220
+In my public interface with
+my hand I would like to have
+
+1462
+01:38:30,600 --> 01:38:31,940
+is, better than other hand.
+
+1463
+01:38:34,200 --> 01:38:36,280
+TS: And it's going to return true or false.
+
+1464
+01:38:36,280 --> 01:38:37,080
+CB: Yes, exactly.
+
+1465
+01:38:38,770 --> 01:38:40,340
+How about we have a very quick,
+
+1466
+01:38:42,400 --> 01:38:43,910
+I wI'll describe 'better than'
+
+1467
+01:38:50,020 --> 01:38:51,285
+We can just say alright.
+
+1468
+01:38:54,620 --> 01:38:56,280
+It tells me if the hand is better
+
+1469
+01:39:05,420 --> 01:39:07,480
+We already have some very handy hands
+
+1470
+01:39:10,680 --> 01:39:12,540
+We know, for example, 4 of a kind hand
+
+1471
+01:39:15,420 --> 01:39:17,310
+It should be better than full house.
+
+1472
+01:39:18,420 --> 01:39:19,600
+let's start with those
+
+1473
+01:39:19,650 --> 01:39:22,000
+so full house dot better than 4 of a kind hand
+
+1474
+01:39:25,850 --> 01:39:26,420
+So I expect
+
+1475
+01:39:28,820 --> 01:39:29,910
+all of this to be true.
+
+1476
+01:39:34,480 --> 01:39:36,080
+TS: Is that the right way round?
+
+1477
+01:39:37,850 --> 01:39:39,770
+A full house is better than 4 of a kind.
+
+1478
+01:39:39,770 --> 01:39:40,910
+CB: No it's not - thank you.
+
+1479
+01:39:45,420 --> 01:39:46,740
+That looks more sensible.
+
+1480
+01:39:49,940 --> 01:39:50,650
+Let's run this.
+
+1481
+01:39:52,000 --> 01:39:53,910
+I want to find a 'better than' for hand
+
+1482
+01:39:54,200 --> 01:39:57,170
+Oh that's because I've
+implemented it as a Poker method
+
+1483
+01:39:59,740 --> 01:40:00,450
+let's run this
+
+1484
+01:40:01,400 --> 01:40:03,710
+and now it's inaud excellent
+
+1485
+01:40:04,020 --> 01:40:07,710
+So I have the rank of both hands
+and I want to know which is the better.
+
+1486
+01:40:12,340 --> 01:40:13,820
+This comes back to the thing
+
+1487
+01:40:13,820 --> 01:40:15,820
+which I was thinking about an hour ago.
+
+1488
+01:40:17,450 --> 01:40:20,820
+If only I'd known there was a
+ranking that told me the best hand.
+
+1489
+01:40:23,620 --> 01:40:25,110
+and next possible best hand.
+
+1490
+01:40:26,400 --> 01:40:27,600
+So this is what we want.
+
+1491
+01:40:28,420 --> 01:40:29,740
+If we have big poker ranks
+
+1492
+01:40:34,200 --> 01:40:36,420
+and it's an array and ordered thing for now.
+
+1493
+01:40:40,280 --> 01:40:41,680
+and if we go forward and say.....
+
+1494
+01:40:43,140 --> 01:40:44,770
+this is a naive implementation
+
+1495
+01:40:46,080 --> 01:40:48,510
+So if we have 4 of a kind, full house and straight.
+
+1496
+01:40:50,540 --> 01:40:56,110
+What I could do is inaud
+
+1497
+01:40:57,650 --> 01:40:59,310
+I can just get the index of rank
+
+1498
+01:41:00,650 --> 01:41:02,420
+and compare that to the Poker rank.
+
+1499
+01:41:04,050 --> 01:41:05,280
+index of the other hand
+
+1500
+01:41:05,820 --> 01:41:09,220
+and that would give me a straightforward answer for inaud
+
+1501
+01:41:12,970 --> 01:41:15,740
+I'm assuming that the
+index is here, I'm not really sure
+
+1502
+01:41:18,740 --> 01:41:21,250
+This is me, this is my rank, and this is confusing.
+
+1503
+01:41:26,340 --> 01:41:28,050
+TS: Your putting the worst first
+
+1504
+01:41:29,220 --> 01:41:31,850
+CB: Yes because inaud
+
+1505
+01:41:32,420 --> 01:41:34,680
+And if it's a high rank inaud happier with it.
+
+1506
+01:41:35,250 --> 01:41:38,050
+TS: The the question wI'll
+be is my index greater than
+
+1507
+01:41:40,740 --> 01:41:43,620
+CB: Yes and I am going to
+say it's strictly greater than
+
+1508
+01:41:43,620 --> 01:41:45,220
+I'll get back to that in a second
+
+1509
+01:41:47,940 --> 01:41:51,450
+inaud index doesn't exist obviously
+
+1510
+01:41:52,220 --> 01:41:54,910
+Let's now assume if we have some method on the array
+
+1511
+01:41:56,400 --> 01:41:59,220
+That is find index, that's the
+one I probably want, is it ?
+
+1512
+01:42:06,540 --> 01:42:08,310
+Yes, it returns the index of a thing,
+
+1513
+01:42:08,310 --> 01:42:10,420
+so just index would have worked better.
+
+1514
+01:42:13,400 --> 01:42:14,310
+Let's go back here
+
+1515
+01:42:21,570 --> 01:42:25,220
+Go and define method inaud. excellent.
+
+1516
+01:42:32,680 --> 01:42:33,910
+This is apparently nil.
+
+1517
+01:42:36,110 --> 01:42:38,850
+TS: Because it was not
+finding the rank in that array.
+
+1518
+01:42:38,850 --> 01:42:39,450
+CB: Correct.
+
+1519
+01:42:48,510 --> 01:42:50,800
+I am comparing four of a kind and full house.
+
+1520
+01:42:55,080 --> 01:42:58,050
+I'm going to print out the
+rank of the other hands because
+
+1521
+01:43:01,110 --> 01:43:03,710
+I'm running out of tI'me so I don't want to spend ages
+
+1522
+01:43:04,480 --> 01:43:06,420
+debugging this. Oh of course it's a hash.
+
+1523
+01:43:13,510 --> 01:43:16,480
+So I'm not comparing that,
+I'm just assuming there is a type.
+
+1524
+01:43:18,250 --> 01:43:21,820
+If there is a type then I should
+be wary so I'm going to let that fail.
+
+1525
+01:43:25,600 --> 01:43:26,800
+And we have no failures.
+
+1526
+01:43:27,710 --> 01:43:29,200
+Now we can compare two hands.
+
+1527
+01:43:29,600 --> 01:43:31,220
+There is a tiny bit of work left
+
+1528
+01:43:31,600 --> 01:43:33,740
+there's a few hands I haven't implemented.
+
+1529
+01:43:34,940 --> 01:43:36,970
+And there's a bit of work left in terms of:
+
+1530
+01:43:37,770 --> 01:43:41,050
+we'll, we should probably
+have all the rankings in nice order.
+
+1531
+01:43:41,250 --> 01:43:43,140
+Theres an obvious re-factoring step
+
+1532
+01:43:43,710 --> 01:43:45,770
+which is, we'll now I have a list of things.
+
+1533
+01:43:47,140 --> 01:43:48,510
+that rank things and then
+
+1534
+01:43:49,820 --> 01:43:53,570
+my rank method is executing
+and checking for things in a certain order.
+
+1535
+01:43:56,740 --> 01:43:59,510
+The order that I'm defining in this inaud array
+
+1536
+01:44:00,140 --> 01:44:03,200
+Is the exact same one which I want to be ranking those cards
+
+1537
+01:44:03,200 --> 01:44:05,540
+so I should be something really clever here.
+
+1538
+01:44:08,200 --> 01:44:10,710
+The big piece of functionality that's missing is
+
+1539
+01:44:11,850 --> 01:44:14,280
+If I have two straights, how do I know who has one.
+
+1540
+01:44:14,850 --> 01:44:17,940
+and this is why I'm returning
+this rank as type something
+
+1541
+01:44:19,600 --> 01:44:22,820
+because I had in mind, I
+don't only care about the type of hand
+
+1542
+01:44:23,910 --> 01:44:26,371
+I also care about the highest card in that hand
+
+1543
+01:44:28,340 --> 01:44:31,280
+For a straight for example,
+I would get the highest card
+
+1544
+01:44:33,620 --> 01:44:34,280
+in that hand
+
+1545
+01:44:34,820 --> 01:44:37,170
+With the mix of Ace should be counted as 1 or 14
+
+1546
+01:44:40,200 --> 01:44:42,650
+depending on the kind of straight that I have.
+
+1547
+01:44:42,650 --> 01:44:44,570
+and I would return that as inaud rank.
+
+1548
+01:44:45,370 --> 01:44:48,740
+and if my rank method gives
+me back not just the type of my hand
+
+1549
+01:44:48,940 --> 01:44:51,200
+but also the highest possible tie breaker
+
+1550
+01:44:54,620 --> 01:44:57,110
+in some hands than others it's different things,
+
+1551
+01:44:57,620 --> 01:45:00,570
+then I can definitely determine
+if my hand has won or not.
+
+1552
+01:45:01,450 --> 01:45:02,050
+TS: Ok, great.
+
+1553
+01:45:02,620 --> 01:45:05,400
+TS: we'll I think that would
+be a good place to wrap it up.
+
+1554
+01:45:05,650 --> 01:45:08,170
+Thank  you very much
+for showing us this today
+
+1555
+01:45:08,170 --> 01:45:10,280
+It's been fascinating watching you work.
+
+1556
+01:45:10,280 --> 01:45:11,770
+So again, thank you very much.
+
+1557
+01:45:11,770 --> 01:45:12,540
+CB: Thanks.
