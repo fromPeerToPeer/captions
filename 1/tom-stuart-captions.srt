@@ -2573,12 +2573,11 @@ load this class.
 
 555
 00:34:14,250 --> 00:34:15,250
-wrong number inaudible
+'wrong number of arguments'
 
 556
 00:34:15,280 --> 00:34:16,910
-so it has found
-it and we've got
+Ok, so it has found it and we've got
 
 557
 00:34:16,910 --> 00:34:19,280
