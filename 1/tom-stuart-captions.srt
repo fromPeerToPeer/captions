@@ -2067,21 +2067,22 @@ about this on the internet),
 
 446
 00:27:30,970 --> 00:27:32,820
-it does give you
-an opportunity to
+it does create the opportunity
+for someone to get you to
 
 447
 00:27:32,820 --> 00:27:34,800
-inaudible already has a bundle bin folder,
+clone a git repository that
+already has a bundle bin folder,
 
 448
 00:27:34,800 --> 00:27:36,310
 with a binary
-called 'LS' in it
+called 'ls' in it
 
 449
 00:27:37,000 --> 00:27:40,200
-that emails your password to the inaudible
+that emails your password to the person
 
 450
 00:27:42,400 --> 00:27:44,340
