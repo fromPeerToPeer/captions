@@ -5484,7 +5484,7 @@ Got a failure.
 
 1185
 01:13:20,740 --> 01:13:22,510
-Double  inad unexpected leaf count
+Double inaudible unexpected leaf count
 
 1186
 01:13:22,510 --> 01:13:24,970
