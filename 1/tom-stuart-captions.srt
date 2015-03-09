@@ -1827,8 +1827,8 @@ the constructor of node.
 
 396
 00:24:20,620 --> 00:24:23,340
-So I just need to call
-this recurser on the children.
+So I just need to call this
+recursively on all the children.
 
 397
 00:24:23,400 --> 00:24:25,540
