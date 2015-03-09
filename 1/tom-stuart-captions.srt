@@ -655,7 +655,7 @@ there to create a file.
 
 145
 00:09:24,420 --> 00:09:25,820
-TS: Yes. by hitting control Y.
+TS: Yes. By hitting control Y.
 
 146
 00:09:29,140 --> 00:09:31,420
@@ -6778,7 +6778,7 @@ the top you can see:
 1459
 01:30:54,110 --> 01:30:56,910
 when I add a node to it
-undefined method apend child.
+undefined method append child.
 
 1460
 01:30:56,910 --> 01:30:58,370
@@ -6916,7 +6916,7 @@ undefined method add child.
 1489
 01:33:02,970 --> 01:33:04,820
 Now we're going to
-eed a method here
+need a method here
 
 1490
 01:33:07,000 --> 01:33:07,910
@@ -7671,7 +7671,7 @@ If I call:
 
 1656
 01:44:42,280 --> 01:44:44,450
-If I pass on thenblock argument like that.
+If I pass on the block argument like that.
 
 1657
 01:44:44,740 --> 01:44:46,110
@@ -7990,7 +7990,7 @@ that, it wouldn't affect it.
 
 1724
 01:48:42,110 --> 01:48:43,940
-TS: Right. because that's your array
+TS: Right. Because that's your array
 
 1725
 01:48:43,940 --> 01:48:44,570
@@ -8340,7 +8340,7 @@ I feel slightly nervous about that.
 
 1801
 01:52:31,620 --> 01:52:33,020
-Oh ! but, I've just remembered !
+Oh! But, I've just remembered!
 
 1802
 01:52:35,540 --> 01:52:37,940
@@ -8550,7 +8550,7 @@ pass in the constructor.
 
 1847
 01:54:59,800 --> 01:55:01,770
-and every time you call yieler.yeild
+and every time you call yielder.yield
 
 1848
 01:55:03,110 --> 01:55:04,400
@@ -8617,7 +8617,7 @@ normal enumerable 'thing'
 1862
 01:56:01,880 --> 01:56:03,880
 but you've
-built it programmaticaly.
+built it programmatically.
 
 1863
 01:56:04,340 --> 01:56:06,370
