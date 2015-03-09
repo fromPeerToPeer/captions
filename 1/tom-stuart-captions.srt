@@ -1582,8 +1582,8 @@ that, by running ....
 
 345
 00:21:03,800 --> 00:21:05,880
-Oh! undefined
-method, build tree, OK, fine.
+Oh! Undefined method:
+build tree. OK, fine.
 
 346
 00:21:07,080 --> 00:21:08,940
