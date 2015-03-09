@@ -5490,11 +5490,12 @@ If I run all the tests.
 
 1184
 01:13:19,820 --> 01:13:20,510
-Got a failure.
+Got a failure:
 
 1185
 01:13:20,740 --> 01:13:22,510
-Double inaudible unexpected leaf count
+"Double received unexpected
+message: leaf_count"
 
 1186
 01:13:22,510 --> 01:13:24,970
