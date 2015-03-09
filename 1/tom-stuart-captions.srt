@@ -2153,7 +2153,7 @@ that patches the main object
 
 464
 00:28:23,370 --> 00:28:25,600
-and extends object with the inaudible method.
+and extends object with the 'should' method.
 
 465
 00:28:28,200 --> 00:28:30,600
