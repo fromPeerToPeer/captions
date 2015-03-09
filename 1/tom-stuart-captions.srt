@@ -910,7 +910,7 @@ have a shallow tree,
 
 199
 00:12:32,770 --> 00:12:34,910
-one that has inaudible terminals,
+one that has no terminals,
 
 200
 00:12:35,310 --> 00:12:37,540
