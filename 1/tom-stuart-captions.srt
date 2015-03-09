@@ -554,12 +554,14 @@ So I say:
 
 123
 00:07:54,140 --> 00:07:58,200
-Let's say when I sort it by inaudible
+Let's say when I sort it by
+total number of descendants
+Then it should be ordered by...
 
 124
 00:08:01,540 --> 00:08:04,020
-DN: It being a
-collection on an individual tree ?
+DN: 'It' being a collection
+rather than an individual tree?
 
 125
 00:08:04,020 --> 00:08:04,340
