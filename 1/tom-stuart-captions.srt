@@ -1809,7 +1809,7 @@ in my representation here
 392
 00:24:07,680 --> 00:24:10,450
 is of the same form as
-the list of children ie. an array.
+the list of children i.e. an array.
 
 393
 00:24:12,250 --> 00:24:15,480
