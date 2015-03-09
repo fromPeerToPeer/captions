@@ -8183,12 +8183,11 @@ satisfy this condition?"
 
 1764
 01:50:28,910 --> 01:50:30,650
-If you don't
-provide the block, it says
+If you don't provide the block, it says:
 
 1765
 01:50:30,650 --> 01:50:32,600
-"are there no children that are inaudible",
+"are there no children that are truthy?",
 
 1766
 01:50:33,620 --> 01:50:36,200
