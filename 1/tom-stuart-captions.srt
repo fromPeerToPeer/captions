@@ -2762,7 +2762,7 @@ level of functionality here.
 
 596
 00:36:57,340 --> 00:37:01,970
-DN: Your missing a inaudible
+DN: Your missing a closing brace.
 
 597
 00:37:02,200 --> 00:37:05,650
