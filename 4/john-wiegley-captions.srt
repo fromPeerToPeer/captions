@@ -17,7 +17,7 @@ John Wiegley
 
 5
 00:00:10,720 --> 00:00:12,080
-whose a researcher at BAE,
+who's a researcher at BAE,
 
 6
 00:00:12,700 --> 00:00:15,100
@@ -229,7 +229,7 @@ looks like Parsec.Prim.
 
 53
 00:03:42,960 --> 00:03:45,500
-Iv'e said I want the
+I've said I want the
 Parser to return an integer.
 
 54
@@ -843,7 +843,7 @@ inaudible
 
 193
 00:14:21,600 --> 00:14:26,600
-Ah! I don't have recurser inaudible
+Ah! I don't have recursive parsing yet
 
 194
 00:14:29,400 --> 00:14:30,700
@@ -1756,7 +1756,7 @@ It will put it with the explicit.
 404
 00:33:01,200 --> 00:33:04,000
 OC: Is that coming from
-the normal Haskell mode unix
+the normal Haskell mode for emacs
 
 405
 00:33:04,400 --> 00:33:06,300
@@ -1768,11 +1768,11 @@ JW: Let's see .....
 
 407
 00:33:11,600 --> 00:33:13,400
-GHC mod is providing that feature.
+GHC ins-mod is providing that feature.
 
 408
 00:33:17,100 --> 00:33:22,000
-I use Haskell mode and I use GHC mod and inaudible tools.
+I use Haskell mode and I use GHC mod and hdevtools.
 
 409
 00:33:22,700 --> 00:33:25,000
@@ -2340,15 +2340,15 @@ have you got a template for Emacs?
 
 541
 00:46:26,800 --> 00:46:28,960
-JW: There is a module called inaudible snippet
+JW: There is a module called YASnippet
 
 542
 00:46:30,880 --> 00:46:32,560
-And I have a snippet called 'play'.
+And I have a snippet called 'lang'.
 
 543
 00:46:35,440 --> 00:46:36,320
-So if I type inaudible
+So if I type 'lang' and hit tab
 
 544
 00:46:37,760 --> 00:46:39,200
@@ -2356,7 +2356,7 @@ It will expand and then ask ....
 
 545
 00:46:39,680 --> 00:46:41,680
-It actually has gone to GHC and ASBIT.
+It actually has gone to GHC and asked it.
 
 546
 00:46:44,080 --> 00:46:45,440
@@ -2565,7 +2565,7 @@ line comment look like.
 
 595
 00:50:38,320 --> 00:50:39,680
-Can they be nested etc etc.
+Can they be nested etc. etc.
 
 596
 00:50:41,200 --> 00:50:43,040
@@ -3111,7 +3111,7 @@ Can't do that in Haskell yet.
 
 723
 01:01:04,470 --> 01:01:07,410
-OC: So that's the start of the inaudible that you were refering to
+OC: So that's the start of the inaudible that you were referring to
 
 724
 01:01:08,580 --> 01:01:10,700
@@ -3205,7 +3205,7 @@ opportunity to delete some.
 745
 01:03:48,110 --> 01:03:51,764
 OC: Those warnings about
-redundant brackets are coming from H. file ?
+redundant brackets are coming from hlint?
 
 746
 01:03:53,050 --> 01:03:53,880
@@ -3709,7 +3709,7 @@ that you avoid packing.
 
 864
 01:13:19,290 --> 01:13:21,294
-OC: And you have got two .readfiles here.
+OC: And you have got T.readFile here.
 
 865
 01:13:41,050 --> 01:13:42,941
@@ -4068,7 +4068,7 @@ OC: Yes, that's all that happens
 
 948
 01:19:35,760 --> 01:19:37,050
-in these lambda scripts.
+in these little example scripts.
 
 949
 01:19:37,050 --> 01:19:38,820
@@ -4088,7 +4088,7 @@ So that variable is going to itself
 
 953
 01:19:46,700 --> 01:19:48,000
-evaluate down to evalue.
+evaluate down to a value.
 
 954
 01:19:49,760 --> 01:19:50,230
@@ -4333,7 +4333,7 @@ referenced by name.
 
 1011
 01:24:11,520 --> 01:24:12,941
-So we have eapp be the name 
+So we have EApp be the name 
 
 1012
 01:24:14,823 --> 01:24:17,411
@@ -4371,7 +4371,7 @@ context in which it's evaluating.
 
 1020
 01:26:25,050 --> 01:26:26,580
-OC: That's basicly a type error.
+OC: That's basically a type error.
 
 1021
 01:26:26,580 --> 01:26:28,580
@@ -4397,7 +4397,7 @@ now we're going to have fun binding.
 1026
 01:27:17,410 --> 01:27:19,880
 OC: We're already having
-fun binding. laughter.
+fun binding. (laughter).
 
 1027
 01:27:26,580 --> 01:27:28,110
@@ -4525,7 +4525,7 @@ inherit the environment.
 
 1057
 01:29:22,000 --> 01:29:23,760
-that it was executed in each tIme.
+that it was executed in each time.
 
 1058
 01:29:23,760 --> 01:29:26,820
@@ -4719,7 +4719,7 @@ Which makes sense.
 
 1102
 01:33:08,940 --> 01:33:13,050
-inaudible first agument.
+inaudible first argument.
 
 1103
 01:33:14,580 --> 01:33:16,580
@@ -4743,7 +4743,7 @@ Unknown variable, fine.
 
 1108
 01:33:50,580 --> 01:33:52,230
-We havn't tied it in yet so we need:
+We haven't tied it in yet so we need:
 
 1109
 01:33:56,000 --> 01:33:57,290
@@ -4931,7 +4931,7 @@ Ah, that's what it is.
 
 1153
 01:36:54,820 --> 01:36:56,000
-OC: Define gave us elam ....
+OC: Define gave us Elam ....
 
 1154
 01:36:56,820 --> 01:36:58,580
@@ -4947,7 +4947,7 @@ Elam needs to have:
 
 1157
 01:37:07,640 --> 01:37:09,294
-Just as let did, elam needs a name.
+Just as let did, Elam needs a name.
 
 1158
 01:37:14,470 --> 01:37:16,941
@@ -4961,7 +4961,7 @@ new to go into our map, right ?
 
 1160
 01:37:27,880 --> 01:37:29,410
-We can just put elam in there.
+We can just put Elam in there.
 
 1161
 01:37:30,580 --> 01:37:31,640
@@ -4969,7 +4969,7 @@ So we're going to say:
 
 1162
 01:37:33,640 --> 01:37:35,290
-OC: It's exactly the same as e let
+OC: It's exactly the same as Elet
 
 1163
 01:37:35,880 --> 01:37:37,760
@@ -5274,7 +5274,7 @@ good place for us to check in.
 
 1235
 01:44:00,230 --> 01:44:00,940
- OC: Awsome !
+ OC: Awesome!
 
 1236
 01:44:07,410 --> 01:44:10,000
@@ -5287,7 +5287,7 @@ I wonder if we might try
 
 1238
 01:44:11,290 --> 01:44:13,410
-to implement that fibbonacci function.
+to implement that Fibonacci function.
 
 1239
 01:44:13,760 --> 01:44:15,520
