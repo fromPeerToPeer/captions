@@ -1,9 +1,18 @@
 ﻿1
-00:00:01,450 --> 00:00:02,710
+00:00:01,280 --> 00:00:02,710
 Welcome to Peer to Peer
 
 2
-00:00:02,820 --> 00:00:05,650
-where you can watch our
-experts solve tech problems.
+00:00:02,820 --> 00:00:07,000
+where you can hone your
+skills by watching live coding videos.
+
+3
+00:00:07,740 --> 00:00:09,930
+Our guest today is Jamie White
+
+4
+00:00:09,930 --> 00:00:13,705
+Who's a Ruby an Javascript
+developer at With Associates.
 
