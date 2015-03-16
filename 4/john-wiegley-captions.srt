@@ -1899,7 +1899,7 @@ Debugging at a distance.
 437
 00:35:40,500 --> 00:35:42,900
 OC: So this is more
-down to Haskell's laziness
+down to Haskells laziness
 
 438
 00:35:42,900 --> 00:35:44,900
