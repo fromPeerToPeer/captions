@@ -201,7 +201,7 @@ at the root as being .....
 
 45
 00:02:45,680 --> 00:02:47,570
-I'd use the word descendents for that.
+I'd use the word descendants for that.
 
 46
 00:02:47,570 --> 00:02:50,140
@@ -220,7 +220,7 @@ know what this is for.
 49
 00:02:57,370 --> 00:02:59,480
 Is this the entire
-scope of the problem ?
+scope of the problem?
 
 50
 00:03:02,140 --> 00:03:04,000
@@ -229,7 +229,7 @@ you feel its too much
 
 51
 00:03:04,020 --> 00:03:06,450
-we can make it inaudible by one of those fields.
+we can make it sortable by one of those fields.
 
 52
 00:03:07,600 --> 00:03:09,310
@@ -238,7 +238,7 @@ You can pick whichever you like.
 53
 00:03:12,340 --> 00:03:15,220
 TS:  One more question.
-The camp you've called ancestors
+The count you've called ancestors
 
 54
 00:03:15,850 --> 00:03:17,940
@@ -306,7 +306,8 @@ going to be a problem
 
 68
 00:03:50,940 --> 00:03:53,880
-to subtract one from inaudible
+to subtract one from
+whatever that number is.
 
 69
 00:03:53,880 --> 00:03:55,710
@@ -316,7 +317,7 @@ word ancestors but
 70
 00:03:55,710 --> 00:03:57,710
 if you want to
-call them descendents,
+call them descendants,
 
 71
 00:03:57,710 --> 00:03:59,680
@@ -347,7 +348,7 @@ DN: Yes, let's change the problem
 
 77
 00:04:11,680 --> 00:04:12,970
-and call them decedents.
+and call them descendants.
 
 78
 00:04:15,850 --> 00:04:17,370
@@ -554,12 +555,14 @@ So I say:
 
 123
 00:07:54,140 --> 00:07:58,200
-Let's say when I sort it by inaudible
+Let's say when I sort it by
+total number of descendants
+Then it should be ordered by...
 
 124
 00:08:01,540 --> 00:08:04,020
-DN: It being a
-collection on an individual tree ?
+DN: 'It' being a collection
+rather than an individual tree?
 
 125
 00:08:04,020 --> 00:08:04,340
@@ -567,12 +570,12 @@ TS: Yes
 
 126
 00:08:04,340 --> 00:08:06,220
-Does that make sense ?
+Does that make sense?
 DN: Yes it does.
 
 127
 00:08:07,400 --> 00:08:09,080
-TS: That inaudible is referring to
+TS: That pronoun is referring to
 
 128
 00:08:09,080 --> 00:08:11,110
@@ -609,7 +612,8 @@ change this to 'the collection'
 
 135
 00:08:34,680 --> 00:08:39,620
-inaudible sorting the nodes of the tree or the collection.
+just because... Are we sorting the
+nodes of the tree or the collection?
 
 136
 00:08:40,340 --> 00:08:42,540
@@ -655,7 +659,7 @@ there to create a file.
 
 145
 00:09:24,420 --> 00:09:25,820
-TS: Yes. by hitting control Y.
+TS: Yes. By hitting control Y.
 
 146
 00:09:29,140 --> 00:09:31,420
@@ -906,7 +910,7 @@ have a shallow tree,
 
 199
 00:12:32,770 --> 00:12:34,910
-one that has inaudible terminals,
+one that has no terminals,
 
 200
 00:12:35,310 --> 00:12:37,540
@@ -994,7 +998,7 @@ DN: Yes, which would be a root.
 219
 00:13:58,770 --> 00:14:01,420
 TS: I'm trying to speak
-through my hesitation here !
+through my hesitation here!
 
 220
 00:14:02,970 --> 00:14:05,110
@@ -1048,12 +1052,12 @@ the actual name of the class
 
 230
 00:14:37,220 --> 00:14:38,250
-inaudible options hash
+or how it's instantiated. You know,
+do you pass in an options hash
 
 231
 00:14:38,250 --> 00:14:40,310
-do you pass in
-positional arguments,
+or do you pass in positional arguments,
 
 232
 00:14:40,310 --> 00:14:42,510
@@ -1062,7 +1066,7 @@ empty one and mutate it.
 
 233
 00:14:44,200 --> 00:14:46,080
-I can try keep
+I can try and keep
 this step definition
 
 234
@@ -1210,7 +1214,7 @@ only one deep but has
 
 264
 00:16:37,910 --> 00:16:39,370
-lots of direct descendents.
+lots of direct descendants.
 
 265
 00:16:42,200 --> 00:16:44,220
@@ -1224,7 +1228,7 @@ then 5 emanating from it.
 267
 00:16:45,970 --> 00:16:48,050
 DN: So that would
-have many descendents
+have many descendants
 
 268
 00:16:48,050 --> 00:16:48,940
@@ -1321,7 +1325,7 @@ and no terminals.
 288
 00:17:51,250 --> 00:17:53,220
 TS: This one would
-have 5 descendents.
+have 5 descendants.
 
 289
 00:17:54,540 --> 00:17:55,570
@@ -1334,7 +1338,7 @@ And no terminals.
 291
 00:17:59,370 --> 00:18:01,200
 This one has I
-think, 4 descendents.
+think, 4 descendants.
 
 292
 00:18:04,000 --> 00:18:04,820
@@ -1347,7 +1351,7 @@ we don't count them.
 
 294
 00:18:08,200 --> 00:18:09,220
-TS: And one terminal ?
+TS: And one terminal?
 
 295
 00:18:10,480 --> 00:18:11,600
@@ -1384,7 +1388,7 @@ tree that has say,
 
 302
 00:18:43,170 --> 00:18:44,370
-perhaps 2 descendents,
+perhaps 2 descendants,
 
 303
 00:18:47,280 --> 00:18:49,220
@@ -1397,7 +1401,7 @@ that go as far as the terminal.
 
 305
 00:18:56,080 --> 00:18:57,600
-TS: Like this ?
+TS: Like this?
 DN: That's right.
 
 306
@@ -1411,11 +1415,11 @@ I was expecting
 
 308
 00:19:12,800 --> 00:19:14,740
-to see a highlight on the first inaudible
+to see a highlight on the first [bracket]
 
 309
 00:19:15,970 --> 00:19:18,620
-DN: But if you pressed
+DN: But if you put your cursor
 on the first opening bracket.
 
 310
@@ -1461,7 +1465,7 @@ basically tripled that one up.
 
 319
 00:19:47,620 --> 00:19:48,940
-Just a sanity check this !
+Just a sanity check this!
 
 320
 00:19:49,250 --> 00:19:51,620
@@ -1486,7 +1490,7 @@ a useful test case.
 324
 00:19:58,800 --> 00:20:01,170
 If we sort them by the
-number of descendents
+number of descendants
 
 325
 00:20:01,170 --> 00:20:02,570
@@ -1582,8 +1586,8 @@ that, by running ....
 
 345
 00:21:03,800 --> 00:21:05,880
-Oh! undefined
-method, build tree, OK, fine.
+Oh! Undefined method:
+build tree. OK, fine.
 
 346
 00:21:07,080 --> 00:21:08,940
@@ -1592,7 +1596,7 @@ I was expecting.
 
 347
 00:21:09,970 --> 00:21:11,850
-I will make a features inaudible
+I will make a features [inaudible]
 
 348
 00:21:20,880 --> 00:21:23,000
@@ -1759,12 +1763,12 @@ providing an array of children,
 
 382
 00:23:30,740 --> 00:23:33,880
-rather than creating
-an empty one inaudible
+rather than creating an empty one
+and then mutating it to add them
 
 383
 00:23:34,000 --> 00:23:36,770
-we will investigate whether
+but we will investigate whether
 that's a good idea or not.
 
 384
@@ -1809,7 +1813,7 @@ in my representation here
 392
 00:24:07,680 --> 00:24:10,450
 is of the same form as
-the list of children ie. an array.
+the list of children i.e. an array.
 
 393
 00:24:12,250 --> 00:24:15,480
@@ -1827,8 +1831,8 @@ the constructor of node.
 
 396
 00:24:20,620 --> 00:24:23,340
-So I just need to call
-this recurser on the children.
+So I just need to call this
+recursively on all the children.
 
 397
 00:24:23,400 --> 00:24:25,540
@@ -1987,7 +1991,7 @@ version of rspec, is
 
 430
 00:26:34,800 --> 00:26:35,620
-DN:  Leading edge !!
+DN:  Leading edge!
 
 431
 00:26:36,570 --> 00:26:39,340
@@ -2001,7 +2005,7 @@ been running cucumber scenarios.
 
 433
 00:26:49,400 --> 00:26:50,800
-Are you suspending them or ..... ?
+Are you suspending them or .....?
 
 434
 00:26:52,370 --> 00:26:53,280
@@ -2010,7 +2014,7 @@ TS:  I will show you.
 435
 00:26:59,080 --> 00:27:01,140
 DN: So you have
-something in your vimrc ?
+something in your vimrc?
 
 436
 00:27:01,140 --> 00:27:02,770
@@ -2063,21 +2067,22 @@ about this on the internet),
 
 446
 00:27:30,970 --> 00:27:32,820
-it does give you
-an opportunity to
+it does create the opportunity
+for someone to get you to
 
 447
 00:27:32,820 --> 00:27:34,800
-inaudible already has a bundle bin folder,
+clone a git repository that
+already has a bundle bin folder,
 
 448
 00:27:34,800 --> 00:27:36,310
 with a binary
-called 'LS' in it
+called 'ls' in it
 
 449
 00:27:37,000 --> 00:27:40,200
-that emails your password to the inaudible
+that emails your password to the person
 
 450
 00:27:42,400 --> 00:27:44,340
@@ -2148,7 +2153,7 @@ that patches the main object
 
 464
 00:28:23,370 --> 00:28:25,600
-and extends object with the inaudible method.
+and extends object with the 'should' method.
 
 465
 00:28:28,200 --> 00:28:30,600
@@ -2270,11 +2275,11 @@ by just pressing it.
 
 491
 00:30:22,570 --> 00:30:25,000
-This is from inaudible I think. It's very nice.
+This is from thoughtbot I think. It's very nice.
 
 492
 00:30:28,220 --> 00:30:28,820
-Where was I ?
+Where was I?
 
 493
 00:30:30,280 --> 00:30:30,800
@@ -2314,7 +2319,8 @@ creation of the class.
 
 501
 00:31:13,200 --> 00:31:15,280
-I don't know what inaudible I want but let's say:
+I don't really know what behaviour
+I want yet but let's say:
 
 502
 00:31:17,540 --> 00:31:19,450
@@ -2334,7 +2340,7 @@ want the API to be.
 505
 00:31:26,280 --> 00:31:28,400
 DN: Do you want
-to use the word children ?
+to use the word children?
 
 506
 00:31:28,910 --> 00:31:31,510
@@ -2352,7 +2358,7 @@ introduced the word children
 
 509
 00:31:35,680 --> 00:31:37,140
-but yes, we mean descendents.
+but yes, we mean descendants.
 
 510
 00:31:37,570 --> 00:31:40,400
@@ -2567,12 +2573,11 @@ load this class.
 
 555
 00:34:14,250 --> 00:34:15,250
-wrong number inaudible
+'wrong number of arguments'
 
 556
 00:34:15,280 --> 00:34:16,910
-so it has found
-it and we've got
+Ok, so it has found it and we've got
 
 557
 00:34:16,910 --> 00:34:19,280
@@ -2661,7 +2666,7 @@ in that situation before
 575
 00:35:21,680 --> 00:35:23,680
 but I got over
-excited by the problem !
+excited by the problem!
 
 576
 00:35:23,680 --> 00:35:24,340
@@ -2757,7 +2762,7 @@ level of functionality here.
 
 596
 00:36:57,340 --> 00:37:01,970
-DN: Your missing a inaudible
+DN: Your missing a closing brace.
 
 597
 00:37:02,200 --> 00:37:05,650
@@ -2968,7 +2973,7 @@ implemented these steps.
 641
 00:39:18,620 --> 00:39:20,450
 sort by total
-number of descendents
+number of descendants
 
 642
 00:39:20,450 --> 00:39:22,170
@@ -3022,7 +3027,7 @@ you to sort them by
 
 652
 00:39:46,620 --> 00:39:48,020
-the number of descendents,
+the number of descendants,
 
 653
 00:39:48,020 --> 00:39:49,450
@@ -3096,7 +3101,7 @@ I would like it so that ....
 
 669
 00:40:40,800 --> 00:40:43,420
-I can call descendents
+I can call descendants
 count or terminals count
 
 670
@@ -3131,7 +3136,7 @@ This is complaining about
 676
 00:41:00,650 --> 00:41:02,710
 undefined method
-descendents count
+descendants count
 
 677
 00:41:02,710 --> 00:41:04,600
@@ -3168,7 +3173,7 @@ useful way of doing it.
 684
 00:41:48,540 --> 00:41:50,110
 So let's see,
-what did I do here ?
+what did I do here?
 
 685
 00:41:50,910 --> 00:41:51,970
@@ -3213,7 +3218,7 @@ called a 'git', git gutter.
 694
 00:42:29,910 --> 00:42:31,820
 DN: Do you always
-have that enabled ?
+have that enabled?
 
 695
 00:42:31,820 --> 00:42:32,420
@@ -3286,7 +3291,7 @@ it's starting to get a bit dirty.
 709
 00:43:16,400 --> 00:43:18,940
 DN: How much noise in
-the gutter can you tolerate ?
+the gutter can you tolerate?
 
 710
 00:43:18,940 --> 00:43:19,800
@@ -3320,7 +3325,7 @@ that we don't have a
 716
 00:43:35,450 --> 00:43:38,020
 terminal count, or a
-descendents count method.
+descendants count method.
 
 717
 00:43:50,170 --> 00:43:52,110
@@ -3394,7 +3399,7 @@ the opportunity to run
 732
 00:44:34,340 --> 00:44:36,910
 through getting the
-descendents count to work.
+descendants count to work.
 
 733
 00:44:38,740 --> 00:44:40,770
@@ -3431,7 +3436,7 @@ something here and then
 
 740
 00:45:17,340 --> 00:45:18,650
-it has five descendents.
+it has five descendants.
 
 741
 00:45:19,880 --> 00:45:21,110
@@ -3444,7 +3449,7 @@ said in the step definition:
 
 743
 00:45:28,800 --> 00:45:30,820
-no descendent count
+no descendant count
 to be equal to a 5.
 
 744
@@ -3468,7 +3473,7 @@ of nodes, I could already
 748
 00:45:50,200 --> 00:45:52,480
 build you a tree
-that has five descendents
+that has five descendants
 
 749
 00:45:52,480 --> 00:45:55,200
@@ -3486,7 +3491,7 @@ to make <i>real</i> trees
 
 752
 00:45:59,420 --> 00:46:00,450
-with 5 descendents.
+with 5 descendants.
 
 753
 00:46:02,910 --> 00:46:05,970
@@ -3500,7 +3505,7 @@ then I need to work out ....
 755
 00:46:11,400 --> 00:46:14,510
 what it is that makes this
-fake tree has five descendents.
+fake tree has five descendants.
 
 756
 00:46:27,110 --> 00:46:29,710
@@ -3510,12 +3515,12 @@ be a recursive method.
 757
 00:46:31,910 --> 00:46:33,820
 The number of
-descendents of a tree
+descendants of a tree
 
 758
 00:46:34,280 --> 00:46:36,540
 is the number of
-descendents of all of it's
+descendants of all of it's
 
 759
 00:46:36,880 --> 00:46:38,650
@@ -3529,12 +3534,12 @@ and each one of them
 
 761
 00:46:42,710 --> 00:46:44,200
-has three descendents in it,
+has three descendants in it,
 
 762
 00:46:45,800 --> 00:46:49,450
 then I've got 3 + 3 + 3 = 9
-descendents, plus myself is 10.
+descendants, plus myself is 10.
 
 763
 00:46:51,850 --> 00:46:54,940
@@ -3549,7 +3554,7 @@ ahead of myself here.
 765
 00:47:04,620 --> 00:47:06,970
 It would be nice to say
-"it has no descendents"
+"it has no descendants"
 
 766
 00:47:07,600 --> 00:47:08,480
@@ -3576,7 +3581,8 @@ only run that line.
 
 771
 00:47:34,420 --> 00:47:36,200
-inaudible count for node
+So now it's saying 'undefined method:
+descendant_count for node'
 
 772
 00:47:37,510 --> 00:47:39,340
@@ -3613,7 +3619,7 @@ mean for the tree to have
 
 779
 00:48:07,370 --> 00:48:08,370
-five descendents.
+five descendants.
 
 780
 00:48:14,800 --> 00:48:16,710
@@ -3751,7 +3757,7 @@ to say check that it does.
 808
 00:49:41,340 --> 00:49:44,510
 If I already knew how my
-descendent count was going to work
+descendant count was going to work
 
 809
 00:49:52,680 --> 00:49:54,000
@@ -3814,7 +3820,9 @@ inside here and then
 
 822
 00:50:37,020 --> 00:50:41,220
-it would provide inaudible.
+it would provide...
+DN: ...a locally scoped version?
+TS: Yeah, exactly.
 
 823
 00:50:43,940 --> 00:50:45,170
@@ -3850,7 +3858,7 @@ Is that right, Oh well,
 
 830
 00:51:11,400 --> 00:51:12,220
-Yes .... No.... laughter.
+Yes .... No.... (laughter).
 
 831
 00:51:20,570 --> 00:51:23,340
@@ -3898,7 +3906,7 @@ me that I'm not sure.
 
 840
 00:51:50,540 --> 00:51:53,000
-Oh, descendent count of
+Oh, descendant count of
 zero for the empty node
 
 841
@@ -3926,7 +3934,7 @@ is to take all the children
 
 846
 00:52:10,170 --> 00:52:11,940
-and call descendent count on them.
+and call descendant count on them.
 
 847
 00:52:14,400 --> 00:52:16,340
@@ -3948,7 +3956,7 @@ DN: Right.
 851
 00:52:22,310 --> 00:52:24,600
 The one whose
-children you're asking about ?
+children you're asking about?
 
 852
 00:52:24,850 --> 00:52:26,050
@@ -4001,7 +4009,7 @@ all of these to return
 
 862
 00:53:00,370 --> 00:53:01,910
-that it has five descendents.
+that it has five descendants.
 
 863
 00:53:02,400 --> 00:53:03,280
@@ -4126,7 +4134,7 @@ to be .... new style
 
 889
 00:54:35,880 --> 00:54:37,540
-I can say the descendent count
+I can say the descendant count
 
 890
 00:54:37,540 --> 00:54:39,200
@@ -4162,7 +4170,7 @@ each one is a node.
 897
 00:55:01,650 --> 00:55:04,110
 And it's reporting that
-it has one descendent
+it has one descendant
 
 898
 00:55:04,110 --> 00:55:06,310
@@ -4186,7 +4194,7 @@ that an empty node
 
 902
 00:55:16,770 --> 00:55:18,280
-should have no descendents.
+should have no descendants.
 
 903
 00:55:18,970 --> 00:55:20,170
@@ -4209,7 +4217,7 @@ of being empty ones,
 907
 00:55:25,280 --> 00:55:27,220
 will have a
-descendent count of one.
+descendant count of one.
 
 908
 00:55:27,820 --> 00:55:29,480
@@ -4346,7 +4354,7 @@ what we've got.
 
 937
 00:57:06,600 --> 00:57:07,620
-Why has that worked ?
+Why has that worked?
 
 938
 00:57:08,770 --> 00:57:10,600
@@ -4390,7 +4398,7 @@ the outside, which is
 
 947
 00:57:28,000 --> 00:57:29,570
-going to be descendent count.
+going to be descendant count.
 
 948
 00:57:29,970 --> 00:57:31,880
@@ -4426,7 +4434,7 @@ call this you want it
 955
 00:57:49,740 --> 00:57:51,740
 to count all the ....
-what did we call them ?
+what did we call them?
 
 956
 00:57:56,000 --> 00:57:57,620
@@ -4443,7 +4451,7 @@ and then disregard itself.
 
 959
 00:58:06,020 --> 00:58:06,770
-I think !
+I think!
 
 960
 00:58:07,800 --> 00:58:10,140
@@ -4602,12 +4610,13 @@ there apart from me.
 
 994
 01:00:09,370 --> 01:00:12,600
-Whatever my intuitive idea of
-descendant count was doing.
+For whatever reason, my intuitive idea of
+what descendant count was doing
 
 995
 01:00:15,250 --> 01:00:18,220
-Would inaudible the descendant
+would be including the... It would
+be like self AND descendant count
 
 996
 01:00:19,510 --> 01:00:20,940
@@ -4771,7 +4780,7 @@ So this one is going to be:
 1030
 01:02:48,450 --> 01:02:50,080
 I was right, it
-does have twelve !
+does have twelve!
 
 1031
 01:02:54,570 --> 01:02:56,650
@@ -4822,7 +4831,7 @@ three children that each
 
 1041
 01:03:18,000 --> 01:03:19,710
-say they have four descendents.
+say they have four descendants.
 
 1042
 01:03:21,050 --> 01:03:23,080
@@ -4901,11 +4910,11 @@ Why has that happened?
 1058
 01:04:03,000 --> 01:04:04,650
 Because it's
-descendent count.
+descendant count.
 
 1059
 01:04:11,450 --> 01:04:13,450
-I think descendent
+I think descendant
 count is the name
 
 1060
@@ -4921,7 +4930,7 @@ the acceptance test
 1062
 01:04:19,420 --> 01:04:21,050
 I did write
-descendents count.
+descendants count.
 
 1063
 01:04:24,170 --> 01:04:26,250
@@ -4931,17 +4940,17 @@ re-factoring to change.
 1064
 01:04:31,080 --> 01:04:33,450
 TS: The reason there
-was descendents there
+was descendants there
 
 1065
 01:04:33,450 --> 01:04:35,650
 was because I'd
-written descendents here.
+written descendants here.
 
 1066
 01:04:35,650 --> 01:04:38,220
 We've got the word
-descendents all over the place.
+descendants all over the place.
 
 1067
 01:04:41,200 --> 01:04:43,650
@@ -4992,7 +5001,7 @@ the collection should
 1077
 01:05:35,740 --> 01:05:37,880
 be ordered by the
-total number of descendents.
+total number of descendants.
 
 1078
 01:05:38,940 --> 01:05:40,420
@@ -5007,7 +5016,7 @@ in here which says:
 1080
 01:05:49,680 --> 01:05:51,970
 So if we've sorted
-them by descendent count
+them by descendant count
 
 1081
 01:05:54,970 --> 01:05:56,570
@@ -5016,7 +5025,7 @@ see just one node
 
 1082
 01:05:58,710 --> 01:06:00,080
-which has no descendents.
+which has no descendants.
 
 1083
 01:06:01,050 --> 01:06:02,450
@@ -5037,7 +5046,7 @@ So let's run that.
 
 1087
 01:06:14,540 --> 01:06:17,570
-I got that inaudible before but I didn't deserve it.
+I got that green before but I didn't deserve it.
 
 1088
 01:06:17,570 --> 01:06:19,420
@@ -5155,7 +5164,7 @@ DN: With no extra work.
 1113
 01:08:25,510 --> 01:08:27,850
 TS: Yes that's great, and
-we can just stop there !
+we can just stop there!
 
 1114
 01:08:30,020 --> 01:08:31,970
@@ -5165,7 +5174,7 @@ be more challenging.
 1115
 01:08:32,910 --> 01:08:34,910
 It has three
-terminals, is that right ?
+terminals, is that right?
 
 1116
 01:08:36,020 --> 01:08:36,600
@@ -5190,7 +5199,7 @@ Expected three, got zero.
 
 1121
 01:09:03,620 --> 01:09:04,850
-What do I want to do here ?
+What do I want to do here?
 
 1122
 01:09:07,970 --> 01:09:10,020
@@ -5263,7 +5272,7 @@ is very realistic.
 
 1136
 01:10:23,250 --> 01:10:24,220
-DN: Use my language !
+DN: Use my language!
 
 1137
 01:10:25,940 --> 01:10:28,340
@@ -5277,16 +5286,17 @@ that are at max depth.
 
 1139
 01:10:38,910 --> 01:10:40,880
-This just gives me an inaudible because we
+This just gives me an 'in' because
 
 1140
 01:10:45,510 --> 01:10:47,910
-are not going to be
-able call terminal count
+terminal count is one of those things that
+we're not going to be able to call recursively
 
 1141
 01:10:47,910 --> 01:10:49,600
-recursively on the child nodes.
+we're not going to be able
+to say on the child nodes:
 
 1142
 01:10:50,540 --> 01:10:53,050
@@ -5450,7 +5460,7 @@ of its' children it says
 1177
 01:12:54,850 --> 01:12:57,650
 "do you guys have any leaf
-descendents at depth four
+descendants at depth four
 
 1178
 01:12:57,650 --> 01:13:00,480
@@ -5480,11 +5490,12 @@ If I run all the tests.
 
 1184
 01:13:19,820 --> 01:13:20,510
-Got a failure.
+Got a failure:
 
 1185
 01:13:20,740 --> 01:13:22,510
-Double  inad unexpected leaf count
+"Double received unexpected
+message: leaf_count"
 
 1186
 01:13:22,510 --> 01:13:24,970
@@ -5534,7 +5545,7 @@ instances of node.
 1195
 01:13:56,650 --> 01:13:58,650
 What was actually
-the source of that ?
+the source of that?
 
 1196
 01:14:00,400 --> 01:14:01,170
@@ -5571,7 +5582,8 @@ was calling real methods.
 
 1203
 01:14:21,540 --> 01:14:25,770
-They were for the purpose of creating the inaudible.
+They were for the purpose of
+creating the [inaudible].
 
 1204
 01:14:28,910 --> 01:14:30,740
@@ -5611,12 +5623,12 @@ have done that first.
 1211
 01:15:01,340 --> 01:15:03,200
 What order do we
-want these to be in ?
+want these to be in?
 
 1212
 01:15:05,680 --> 01:15:08,310
 DN: Is it sorting from small
-to large at the moment ?
+to large at the moment?
 
 1213
 01:15:08,310 --> 01:15:08,910
@@ -5634,7 +5646,7 @@ one node, wide tree.
 
 1216
 01:15:17,050 --> 01:15:17,770
-Is that right ?
+Is that right?
 
 1217
 01:15:18,770 --> 01:15:19,600
@@ -5840,7 +5852,7 @@ I will say:
 1259
 01:17:54,220 --> 01:17:55,800
 And then what
-have I done here ?
+have I done here?
 
 1260
 01:17:55,800 --> 01:17:56,200
@@ -6028,7 +6040,7 @@ and go back to that later.
 1300
 01:20:19,310 --> 01:20:21,340
 DN: That is more
-driving the API isn't it ?
+driving the API isn't it?
 
 1301
 01:20:21,340 --> 01:20:22,200
@@ -6046,17 +6058,16 @@ means to modify these trees.
 
 1304
 01:20:32,200 --> 01:20:33,710
-If you look at
-our node class,
+At the moment it if you look at
+our node class
 
 1305
 01:20:35,820 --> 01:20:38,080
-at the moment it
-can't even get the children,
+you can't even get the children,
 
 1306
 01:20:39,570 --> 01:20:40,940
-much less inaudible them.
+much less set them.
 
 1307
 01:20:41,000 --> 01:20:42,710
@@ -6065,7 +6076,7 @@ any way addressed
 
 1308
 01:20:43,620 --> 01:20:45,600
-what it means to
+what it means to be able to
 mutate these things.
 
 1309
@@ -6104,7 +6115,7 @@ a way of doing it.
 
 1316
 01:21:42,280 --> 01:21:44,080
-This is implicitly a requirement ?
+This is implicitly a requirement?
 
 1317
 01:21:44,910 --> 01:21:45,370
@@ -6391,7 +6402,7 @@ this from the outside,
 1377
 01:26:14,000 --> 01:26:16,000
 what does adding a
-node to a tree mean ?
+node to a tree mean?
 
 1378
 01:26:18,970 --> 01:26:20,910
@@ -6778,7 +6789,7 @@ the top you can see:
 1459
 01:30:54,110 --> 01:30:56,910
 when I add a node to it
-undefined method apend child.
+undefined method append child.
 
 1460
 01:30:56,910 --> 01:30:58,370
@@ -6916,7 +6927,7 @@ undefined method add child.
 1489
 01:33:02,970 --> 01:33:04,820
 Now we're going to
-eed a method here
+need a method here
 
 1490
 01:33:07,000 --> 01:33:07,910
@@ -6970,7 +6981,7 @@ implementation I think.
 
 1501
 01:33:56,600 --> 01:33:58,050
-How did you feel about that ?
+How did you feel about that?
 
 1502
 01:33:58,650 --> 01:33:59,220
@@ -7020,7 +7031,7 @@ TS: Thank you.
 1512
 01:34:44,020 --> 01:34:46,080
 Well that's stupid
-why didn't that fail ?
+why didn't that fail?
 
 1513
 01:34:47,080 --> 01:34:48,850
@@ -7034,7 +7045,7 @@ append child is a better name
 
 1515
 01:34:59,340 --> 01:35:01,340
-DN: inaudible nature of it.
+DN: For the immutable nature of it?
 
 1516
 01:35:01,340 --> 01:35:03,650
@@ -7043,7 +7054,7 @@ where it's going to go.
 
 1517
 01:35:05,020 --> 01:35:05,940
-DN: inaudible below me.
+DN: Right: 'Add child below me'.
 
 1518
 01:35:07,250 --> 01:35:09,510
@@ -7212,7 +7223,7 @@ you want access
 
 1554
 01:37:17,450 --> 01:37:18,880
-to the contents of the tree ?
+to the contents of the tree?
 
 1555
 01:37:18,880 --> 01:37:19,600
@@ -7252,7 +7263,8 @@ array that had additional
 
 1563
 01:37:42,600 --> 01:37:45,570
-node in there then I think that my inaudible
+node in there then I think
+that my... Yeah!
 
 1564
 01:37:45,800 --> 01:37:48,650
@@ -7298,7 +7310,7 @@ we get at the children
 
 1573
 01:38:07,940 --> 01:38:08,510
-of the tree ?
+of the tree?
 
 1574
 01:38:18,200 --> 01:38:20,650
@@ -7388,7 +7400,7 @@ that those tests will.... ,
 
 1593
 01:39:39,940 --> 01:39:40,280
-Wow !
+Wow!
 
 1594
 01:39:41,420 --> 01:39:42,510
@@ -7430,7 +7442,7 @@ That is not what I wanted.
 
 1603
 01:40:28,310 --> 01:40:29,220
-What did I do here ?
+What did I do here?
 
 1604
 01:40:30,140 --> 01:40:30,710
@@ -7572,7 +7584,7 @@ an assessor here that says:
 
 1634
 01:42:47,510 --> 01:42:48,600
-Can we freeze it here ?
+Can we freeze it here?
 
 1635
 01:42:51,650 --> 01:42:53,770
@@ -7618,7 +7630,7 @@ to iterate over my children".
 
 1644
 01:43:47,420 --> 01:43:48,540
-If I open irb we can do,
+If I just pop open irb we can do,
 
 1645
 01:43:51,000 --> 01:43:51,880
@@ -7627,16 +7639,16 @@ If I open irb we can do,
 1646
 01:44:00,200 --> 01:44:02,820
 There are a variety of
-ways to make an enumerator
+ways to make an enumerator out of that
 
 1647
 01:44:02,820 --> 01:44:04,740
-inaudible call each
+you can call `to_enum`, or
+you can just call `each`
 
 1648
 01:44:05,510 --> 01:44:07,340
-and that also
-returns enumerator.
+and that also returns enumerator.
 
 1649
 01:44:08,510 --> 01:44:11,000
@@ -7671,7 +7683,7 @@ If I call:
 
 1656
 01:44:42,280 --> 01:44:44,450
-If I pass on thenblock argument like that.
+If I pass on the block argument like that.
 
 1657
 01:44:44,740 --> 01:44:46,110
@@ -7757,7 +7769,7 @@ reach inside it and say
 1674
 01:45:42,680 --> 01:45:45,000
 "what kind of thing
-are you iterating over" ?
+are you iterating over"?
 
 1675
 01:45:47,420 --> 01:45:48,620
@@ -7867,7 +7879,7 @@ same as the array of children".
 
 1698
 01:46:59,940 --> 01:47:01,540
-What's that complaining about ?
+What's that complaining about?
 
 1699
 01:47:03,140 --> 01:47:04,970
@@ -7981,7 +7993,8 @@ I will commit that:
 
 1722
 01:48:35,540 --> 01:48:38,340
-DN: If you did call each type child.entries inaudible
+DN: If you did call each child.entries
+on the array the you get back
 
 1723
 01:48:39,680 --> 01:48:42,110
@@ -7990,7 +8003,7 @@ that, it wouldn't affect it.
 
 1724
 01:48:42,110 --> 01:48:43,940
-TS: Right. because that's your array
+TS: Right. Because that's your array
 
 1725
 01:48:43,940 --> 01:48:44,570
@@ -8048,7 +8061,7 @@ whether we are a leaf.
 
 1737
 01:49:10,710 --> 01:49:11,220
-"Am I a leaf ?"
+"Am I a leaf?"
 
 1738
 01:49:12,140 --> 01:49:13,570
@@ -8069,7 +8082,7 @@ We can have a method here.
 
 1742
 01:49:22,910 --> 01:49:24,110
-Which is "are you a leaf" ?
+Which is "are you a leaf"?
 
 1743
 01:49:26,650 --> 01:49:28,140
@@ -8167,16 +8180,15 @@ and you can say
 
 1763
 01:50:27,740 --> 01:50:28,850
-satisfy this condition ?"
+satisfy this condition?"
 
 1764
 01:50:28,910 --> 01:50:30,650
-If you don't
-provide the block, it says
+If you don't provide the block, it says:
 
 1765
 01:50:30,650 --> 01:50:32,600
-"are there no children that are inaudible",
+"are there no children that are truthy?",
 
 1766
 01:50:33,620 --> 01:50:36,200
@@ -8340,7 +8352,7 @@ I feel slightly nervous about that.
 
 1801
 01:52:31,620 --> 01:52:33,020
-Oh ! but, I've just remembered !
+Oh! But, I've just remembered!
 
 1802
 01:52:35,540 --> 01:52:37,940
@@ -8550,7 +8562,7 @@ pass in the constructor.
 
 1847
 01:54:59,800 --> 01:55:01,770
-and every time you call yieler.yeild
+and every time you call yielder.yield
 
 1848
 01:55:03,110 --> 01:55:04,400
@@ -8617,7 +8629,7 @@ normal enumerable 'thing'
 1862
 01:56:01,880 --> 01:56:03,880
 but you've
-built it programmaticaly.
+built it programmatically.
 
 1863
 01:56:04,340 --> 01:56:06,370
@@ -8942,7 +8954,7 @@ So I shall say:
 
 1931
 01:59:32,770 --> 01:59:33,620
-How are we doing ?
+How are we doing?
 
 1932
 01:59:33,620 --> 01:59:35,680
