@@ -3,16 +3,38 @@
 Welcome to Peer to Peer
 
 2
-00:00:02,820 --> 00:00:07,000
+00:00:03,185 --> 00:00:07,000
 where you can hone your
 skills by watching live coding videos.
 
 3
-00:00:07,740 --> 00:00:09,930
+00:00:07,740 --> 00:00:09,995
 Our guest today is Jamie White
 
 4
-00:00:09,930 --> 00:00:13,705
-Who's a Ruby an Javascript
+00:00:09,990 --> 00:00:13,700
+Who's a Ruby and Javascript
 developer at With Associates.
+
+5
+00:00:13,700 --> 00:00:16,075
+and a co-organizer of the London Ember inaud
+
+6
+00:00:17,155 --> 00:00:19,260
+I'm your host, Drew Neil.
+
+7
+00:00:19,305 --> 00:00:21,540
+And the challenge that
+I set for Jamie is called
+
+8
+00:00:24,110 --> 00:00:27,180
+DN: OK Jamie, would you like
+to start by reading out the challenge
+
+9
+00:00:27,180 --> 00:00:27,665
+JW: OK.
 
