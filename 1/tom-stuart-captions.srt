@@ -3729,7 +3729,7 @@ say something like this:
 
 802
 00:49:24,050 --> 00:49:25,170
-I don't know what to do ....
+What do I want to do?
 
 803
 00:49:27,600 --> 00:49:29,540
@@ -3855,7 +3855,7 @@ could be something like:
 
 829
 00:51:08,420 --> 00:51:09,510
-Is that right, Oh well,
+Is that right? Oh well,
 
 830
 00:51:11,400 --> 00:51:12,220
