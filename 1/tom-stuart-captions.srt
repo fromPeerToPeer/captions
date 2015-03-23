@@ -3524,7 +3524,7 @@ descendants of all of its
 
 759
 00:46:36,880 --> 00:46:38,650
-'sub' trees plus
+subtrees plus
 the node at the top.
 
 760
@@ -4375,8 +4375,8 @@ reason why we've got one
 
 942
 00:57:16,740 --> 00:57:19,250
-is because the sub
-trees have all returned zero
+is because the subtrees
+have all returned zero
 
 943
 00:57:19,250 --> 00:57:20,850
