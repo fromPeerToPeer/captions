@@ -3520,7 +3520,7 @@ descendants of a tree
 758
 00:46:34,280 --> 00:46:36,540
 is the number of
-descendants of all of it's
+descendants of all of its
 
 759
 00:46:36,880 --> 00:46:38,650
@@ -4180,7 +4180,7 @@ descendant is itself ....
 899
 00:55:07,850 --> 00:55:10,170
 ah yes, of course,
-it's reporting to it's parent.
+it's reporting to its parent.
 
 900
 00:55:10,800 --> 00:55:12,570
