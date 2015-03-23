@@ -3071,7 +3071,7 @@ It's tempting to call it
 662
 00:40:13,680 --> 00:40:16,450
 But I'm wondering if it
-should be descendants count.
+should be 'descendants count'.
 
 663
 00:40:19,620 --> 00:40:20,940
@@ -3101,8 +3101,8 @@ I would like it so that ....
 
 669
 00:40:40,800 --> 00:40:43,420
-I can call descendants
-count or terminals count
+I can call 'descendants count'
+or 'terminals count'
 
 670
 00:40:45,970 --> 00:40:48,540
@@ -3136,12 +3136,12 @@ This is complaining about
 676
 00:41:00,650 --> 00:41:02,710
 undefined method
-descendants count
+'descendants count'
 
 677
 00:41:02,710 --> 00:41:04,600
 undefined method
-terminals count.
+'terminals count'.
 
 678
 00:41:07,620 --> 00:41:09,220
@@ -3324,8 +3324,8 @@ that we don't have a
 
 716
 00:43:35,450 --> 00:43:38,020
-terminal count, or a
-descendants count method.
+'terminals count', or a
+'descendants count' method.
 
 717
 00:43:50,170 --> 00:43:52,110
@@ -3934,7 +3934,7 @@ is to take all the children
 
 846
 00:52:10,170 --> 00:52:11,940
-and call descendant count on them.
+and call 'descendant count' on them.
 
 847
 00:52:14,400 --> 00:52:16,340
@@ -4086,12 +4086,12 @@ and put into an array.
 
 879
 00:54:06,820 --> 00:54:09,250
-I can use rspec 3s
+I can use RSpec 3's
 verifying doubles for this.
 
 880
 00:54:09,400 --> 00:54:10,740
-I can say instance double.
+I can say 'instance double'.
 
 881
 00:54:11,850 --> 00:54:13,880
@@ -4125,7 +4125,7 @@ methods that don't exist.
 887
 00:54:30,600 --> 00:54:32,510
 I want to stub
-out descendant count.
+out 'descendant count'.
 
 888
 00:54:32,800 --> 00:54:34,370
@@ -4299,7 +4299,7 @@ saying we don't
 
 925
 00:56:27,020 --> 00:56:28,510
-have that build tree helper.
+have that 'build tree' helper.
 
 926
 00:56:30,400 --> 00:56:31,680
@@ -4398,7 +4398,7 @@ the outside, which is
 
 947
 00:57:28,000 --> 00:57:29,570
-going to be descendant count.
+going to be 'descendant count'.
 
 948
 00:57:29,970 --> 00:57:31,880
@@ -4523,7 +4523,7 @@ forgot to change this.
 975
 00:58:52,220 --> 00:58:55,110
 So we have to call that
-node count method recursively
+'node count' method recursively
 
 976
 00:58:55,250 --> 00:58:57,620
