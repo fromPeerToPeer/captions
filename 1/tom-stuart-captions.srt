@@ -3242,7 +3242,7 @@ the gutter will appear.
 699
 00:42:44,110 --> 00:42:46,340
 If I then make a
-change back so the git says
+change back so that git says
 
 700
 00:42:46,340 --> 00:42:48,370
