@@ -3186,7 +3186,7 @@ I'm going to commit this change:
 687
 00:42:01,450 --> 00:42:04,370
 Which should have been
-happening in the first place.
+pending in the first place.
 
 688
 00:42:06,650 --> 00:42:07,220
