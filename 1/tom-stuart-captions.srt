@@ -3660,12 +3660,13 @@ from the Cucumber step.
 
 788
 00:48:32,050 --> 00:48:34,570
-I think that the
-notion of it being a unit test
+I think that slightly
+subverts the notion
 
 789
 00:48:34,570 --> 00:48:36,220
-is slightly sub-verse, because
+of it being a unit
+test, because
 
 790
 00:48:37,820 --> 00:48:40,020
