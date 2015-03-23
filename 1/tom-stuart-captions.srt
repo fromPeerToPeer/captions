@@ -3117,7 +3117,7 @@ it's going to sort the collection
 672
 00:40:51,710 --> 00:40:53,880
 If I run one of my
-cucumber features now.
+Cucumber features now.
 
 673
 00:40:54,740 --> 00:40:56,820
@@ -3371,8 +3371,8 @@ ways of doing that.
 
 726
 00:44:20,420 --> 00:44:22,680
-With cucumber you
-can tag scenario so you
+With Cucumber you
+can tag scenarios so you
 
 727
 00:44:22,710 --> 00:44:24,000
@@ -3576,7 +3576,7 @@ I press leader 'S' there
 
 770
 00:47:32,420 --> 00:47:34,420
-It's set up rspec to
+It's set up RSpec to
 only run that line.
 
 771
@@ -4321,7 +4321,7 @@ to include a module
 
 930
 00:56:44,420 --> 00:56:45,250
-in my rspec file.
+in my RSpec file.
 
 931
 00:56:47,110 --> 00:56:49,540
@@ -4331,7 +4331,7 @@ way of having test helpers
 932
 00:56:50,020 --> 00:56:52,970
 that are available in both
-rspec and cucumber features.
+RSpec and Cucumber features.
 
 933
 00:56:52,970 --> 00:56:55,370
