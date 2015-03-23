@@ -3449,8 +3449,8 @@ said in the step definition:
 
 743
 00:45:28,800 --> 00:45:30,820
-no descendant count
-to be equal to a 5.
+node descendant count
+to be equal to 5.
 
 744
 00:45:32,540 --> 00:45:34,000
