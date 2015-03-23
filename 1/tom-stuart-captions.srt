@@ -4575,7 +4575,7 @@ better way of doing this.
 986
 00:59:36,910 --> 00:59:38,740
 We can do a bit
-of re-factoring here
+of refactoring here
 
 987
 00:59:38,740 --> 00:59:40,740
