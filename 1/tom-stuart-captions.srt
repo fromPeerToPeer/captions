@@ -4157,12 +4157,13 @@ Because it adds one, I get six.
 
 894
 00:54:55,710 --> 00:54:56,970
-DN: On the same pages here
+DN: Just so I'm on the same page
+as you here
 
 895
 00:54:56,970 --> 00:54:58,880
 you've created
- five instance levels,
+five instance doubles,
 
 896
 00:54:59,620 --> 00:55:00,510
