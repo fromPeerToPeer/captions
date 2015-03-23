@@ -4111,12 +4111,12 @@ if the node class is loaded
 884
 00:54:17,970 --> 00:54:20,680
 it will check whatever
-stub methods I put on this.
+stub methods I put on this
 
 885
 00:54:21,850 --> 00:54:24,280
-Double actually
-exists so it's checking that
+double actually
+exist so it's checking that
 
 886
 00:54:25,880 --> 00:54:28,280
