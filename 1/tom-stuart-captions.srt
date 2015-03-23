@@ -3656,7 +3656,7 @@ got some examples
 
 787
 00:48:28,570 --> 00:48:29,770
-from the cucumber step.
+from the Cucumber step.
 
 788
 00:48:32,050 --> 00:48:34,570
