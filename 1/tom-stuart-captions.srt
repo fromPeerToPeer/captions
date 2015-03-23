@@ -3271,8 +3271,8 @@ didn't make those commits is
 
 705
 00:42:58,080 --> 00:43:00,540
-because I forgot to 'git'
-in it in the beginning.
+because I forgot to 'git
+init' in the beginning.
 
 706
 00:43:02,570 --> 00:43:04,770
