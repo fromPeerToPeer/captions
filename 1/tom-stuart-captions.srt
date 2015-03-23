@@ -3467,8 +3467,8 @@ because I've got doubles here.
 
 747
 00:45:47,280 --> 00:45:49,910
-If I just make real lists
-of nodes, I could already
+If I just make real instances
+of node, I could already
 
 748
 00:45:50,200 --> 00:45:52,480
