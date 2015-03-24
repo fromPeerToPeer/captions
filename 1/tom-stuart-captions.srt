@@ -561,7 +561,7 @@ Then it should be ordered by...
 
 124
 00:08:01,540 --> 00:08:04,020
-DN: 'It' being a collection
+DN: 'It' being the collection
 rather than an individual tree?
 
 125
