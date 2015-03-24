@@ -6922,7 +6922,7 @@ Let's try running that example.
 
 1488
 01:32:57,020 --> 01:32:58,540
-undefined method add child.
+undefined method add_child.
 
 1489
 01:33:02,970 --> 01:33:04,820
