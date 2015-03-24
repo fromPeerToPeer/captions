@@ -6600,7 +6600,7 @@ memoize the result of those
 
 1419
 01:29:05,400 --> 01:29:07,250
-re-cursive calls
+recursive calls
 then I could just
 
 1420
