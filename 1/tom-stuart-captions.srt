@@ -6253,7 +6253,7 @@ you're not doing anything
 
 1345
 01:23:16,970 --> 01:23:18,570
-with cache, all
+with caching, all
 you are doing
 
 1346
