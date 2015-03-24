@@ -1554,11 +1554,11 @@ they are instance variables
 338
 00:20:44,110 --> 00:20:45,540
 is so I can refer
-to them in there.
+to them outside of this
 
 339
 00:20:46,110 --> 00:20:46,940
-That's got scope.
+lexical scope.
 
 340
 00:20:47,080 --> 00:20:48,370
