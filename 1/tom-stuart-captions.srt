@@ -6244,7 +6244,7 @@ you would be doing
 
 1343
 01:23:13,340 --> 01:23:14,480
-something with cache.
+some kind of caching.
 
 1344
 01:23:14,880 --> 01:23:16,970
