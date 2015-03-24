@@ -7017,11 +7017,11 @@ you move on,
 1509
 01:34:37,800 --> 01:34:39,600
 I notice you used
-append child there,
+append_child there,
 
 1510
 01:34:39,600 --> 01:34:41,600
-but it's add child
+but it's add_child
 in the implementation.
 
 1511
@@ -7041,7 +7041,7 @@ just didn't read it.
 1514
 01:34:56,450 --> 01:34:58,770
 Yes you're right,
-append child is a better name
+append_child is a better name
 
 1515
 01:34:59,340 --> 01:35:01,340
