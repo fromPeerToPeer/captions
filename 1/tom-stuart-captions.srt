@@ -1347,7 +1347,7 @@ Is that correct?
 293
 00:18:04,820 --> 00:18:06,910
 DN: Yes it is because
-we don't count them.
+we don't count the root.
 
 294
 00:18:08,200 --> 00:18:09,220
