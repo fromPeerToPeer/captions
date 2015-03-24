@@ -1081,7 +1081,7 @@ is to think of a tree
 
 236
 00:15:04,450 --> 00:15:06,450
-as being a collection of its' children
+as being a collection of its children
 
 237
 00:15:09,200 --> 00:15:11,220
@@ -3520,7 +3520,7 @@ descendants of a tree
 758
 00:46:34,280 --> 00:46:36,540
 is the number of
-descendants of all of it's
+descendants of all of its
 
 759
 00:46:36,880 --> 00:46:38,650
@@ -4180,7 +4180,7 @@ descendant is itself ....
 899
 00:55:07,850 --> 00:55:10,170
 ah yes, of course,
-it's reporting to it's parent.
+it's reporting to its parent.
 
 900
 00:55:10,800 --> 00:55:12,570
@@ -5315,7 +5315,7 @@ it is in the tree.
 1145
 01:11:00,250 --> 01:11:02,080
 It doesn't have
-a link to its' parent.
+a link to its parent.
 
 1146
 01:11:02,080 --> 01:11:03,510
@@ -5455,7 +5455,7 @@ looking for leaves at depth five.
 1176
 01:12:52,600 --> 01:12:54,850
 But when it asks all
-of its' children it says
+of its children it says
 
 1177
 01:12:54,850 --> 01:12:57,650
@@ -8863,7 +8863,7 @@ finished enumerating all
 
 1912
 01:58:23,680 --> 01:58:25,680
-of its' children, it
+of its children, it
 yields the new one.
 
 1913
