@@ -1154,7 +1154,7 @@ all the numbers in the tree
 251
 00:15:59,050 --> 00:16:01,250
 we will find a way
-to sort them in the tree.
+to store them in the tree.
 
 252
 00:16:01,250 --> 00:16:03,770
