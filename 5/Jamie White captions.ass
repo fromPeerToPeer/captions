@@ -16,8 +16,8 @@ Video File: ../../Peer_to_Peer_with_Jamie_White.m4v
 Video AR Mode: 4
 Video AR Value: 1.777778
 Video Zoom Percent: 0.500000
-Scroll Position: 546
-Active Line: 555
+Scroll Position: 690
+Active Line: 699
 Video Position: 3
 
 [V4+ Styles]
@@ -408,7 +408,7 @@ Dialogue: 0,0:33:42.57,0:33:43.58,Default,,0,0,0,,it might not find it.
 Dialogue: 0,0:33:43.58,0:33:47.09,Default,,0,0,0,,But because we're looking\nover the entire list of episodes each time
 Dialogue: 0,0:33:47.30,0:33:48.45,Default,,0,0,0,,that doesn't matter.
 Dialogue: 0,0:33:48.65,0:33:50.77,Default,,0,0,0,,If we wanted to make this more efficient
-Dialogue: 0,0:33:50.77,0:33:53.81,Default,,0,0,0,,we could assume that a sequel won't appear 
+Dialogue: 0,0:33:50.77,0:33:53.81,Default,,0,0,0,,we could assume that a sequel won't appear
 Dialogue: 0,0:33:54.14,0:33:57.30,Default,,0,0,0,,earlier up the list, and you\ncan only search after this point.
 Dialogue: 0,0:33:57.60,0:33:59.68,Default,,0,0,0,,But that's not\nwhat we need in this case.
 Dialogue: 0,0:34:00.73,0:34:01.68,Default,,0,0,0,,So let's just add:
@@ -435,7 +435,7 @@ Dialogue: 0,0:35:46.94,0:35:48.75,Default,,0,0,0,,JW: The way to prove this work
 Dialogue: 0,0:35:54.73,0:35:57.92,Default,,0,0,0,,go to the home of the representation,
 Dialogue: 0,0:35:58.67,0:35:59.92,Default,,0,0,0,,see a list of people
 Dialogue: 0,0:36:00.11,0:36:02.05,Default,,0,0,0,,who have played a part in Peer to Peer
-Dialogue: 0,0:36:02.16,0:36:04.57,Default,,0,0,0,,click on somebodys\nname and see the episode 
+Dialogue: 0,0:36:02.16,0:36:04.57,Default,,0,0,0,,click on somebodys\nname and see the episode
 Dialogue: 0,0:36:04.57,0:36:05.78,Default,,0,0,0,,they first appeared in.
 Dialogue: 0,0:36:05.98,0:36:08.99,Default,,0,0,0,,And then see the\nthe sequels
 Dialogue: 0,0:36:09.81,0:36:11.46,Default,,0,0,0,,and be able to follow to a sequel.
@@ -542,7 +542,7 @@ Dialogue: 0,0:43:49.96,0:43:52.04,Default,,0,0,0,,It should be the same for each
 Dialogue: 0,0:43:57.56,0:43:59.76,Default,,0,0,0,,DN: Ah yes, because build collaborators does
 Dialogue: 0,0:43:59.76,0:44:00.90,Default,,0,0,0,,return the full list.
 Dialogue: 0,0:44:02.03,0:44:04.99,Default,,0,0,0,,We don't yet have\nsomething that just returns the roots.
-Dialogue: 0,0:44:09.57,0:44:12.05,Default,,0,0,0,,That's interesting,\nwe're passing something into it 
+Dialogue: 0,0:44:09.57,0:44:12.05,Default,,0,0,0,,That's interesting,\nwe're passing something into it
 Dialogue: 0,0:44:12.05,0:44:13.45,Default,,0,0,0,,that it doesn't understand.
 Dialogue: 0,0:44:24.75,0:44:27.17,Default,,0,0,0,,That's good inaud.
 Dialogue: 0,0:44:28.08,0:44:31.60,Default,,0,0,0,,Let me find this malfunction inaud
@@ -556,8 +556,8 @@ Dialogue: 0,0:45:17.93,0:45:19.93,Default,,0,0,0,,I'm going back to the test at 
 Dialogue: 0,0:45:19.93,0:45:22.50,Default,,0,0,0,,rather than relying\non the running application.
 Dialogue: 0,0:45:37.44,0:45:39.18,Default,,0,0,0,,It's inaud, but
 Dialogue: 0,0:45:39.18,0:45:41.18,Default,,0,0,0,,The error is that we try and link to
-Dialogue: 0,0:45:41.18,0:45:43.21,Default,,0,0,0,,the root called episode but not yet said 
-Dialogue: 0,0:45:43.21,0:45:45.64,Default,,0,0,0,,what that root is or where it lives, 
+Dialogue: 0,0:45:41.18,0:45:43.21,Default,,0,0,0,,the root called episode but not yet said
+Dialogue: 0,0:45:43.21,0:45:45.64,Default,,0,0,0,,what that root is or where it lives,
 Dialogue: 0,0:45:45.64,0:45:46.58,Default,,0,0,0,,so let's do that.
 Dialogue: 0,0:45:47.24,0:45:49.15,Default,,0,0,0,,Before we do that let's:
 Dialogue: 0,0:46:25.26,0:46:28.08,Default,,0,0,0,,I'm happy to lump all\nthose together as one commit.
@@ -565,7 +565,7 @@ Dialogue: 0,0:46:45.74,0:46:47.42,Default,,0,0,0,,There's no root just yet so ..
 Dialogue: 0,0:46:47.81,0:46:49.23,Default,,0,0,0,,let's get that working.
 Dialogue: 0,0:47:07.07,0:47:09.43,Default,,0,0,0,,Let's see what kind\nof difference that makes.
 Dialogue: 0,0:47:09.99,0:47:11.63,Default,,0,0,0,,Cool, now on to the next.
-Dialogue: 0,0:47:15.20,0:47:17.54,Default,,0,0,0,,Right now, there's no link to 
+Dialogue: 0,0:47:15.20,0:47:17.54,Default,,0,0,0,,Right now, there's no link to
 Dialogue: 0,0:47:17.54,0:47:19.00,Default,,0,0,0,,Counting Tree Nodes on here.
 Dialogue: 0,0:47:19.39,0:47:21.36,Default,,0,0,0,,And technically we're on root
 Dialogue: 0,0:47:22.96,0:47:24.56,Default,,0,0,0,,which doesn't do very much.
@@ -582,4 +582,148 @@ Dialogue: 0,0:48:24.93,0:48:26.37,Default,,0,0,0,,There's an application root
 Dialogue: 0,0:48:26.37,0:48:28.98,Default,,0,0,0,,which is at the top root of everything.
 Dialogue: 0,0:48:28.98,0:48:29.55,Default,,0,0,0,,DN: OK.
 Dialogue: 0,0:48:29.55,0:48:32.06,Default,,0,0,0,,The episode route will\nbe rendered inside of it.
-Dialogue: 0,0:48:32.49,0:48:34.06,Default,,0,0,0,,
+Dialogue: 0,0:48:32.49,0:48:34.69,Default,,0,0,0,,And the side where I want it rendered
+Dialogue: 0,0:48:35.53,0:48:39.11,Default,,0,0,0,,is in outlet so I\nwill put the outlet here.
+Dialogue: 0,0:48:39.73,0:48:42.24,Default,,0,0,0,,But I want the main\nlist of episodes to go away
+Dialogue: 0,0:48:42.24,0:48:44.12,Default,,0,0,0,,when I step into an individual one.
+Dialogue: 0,0:48:48.93,0:48:54.86,Default,,0,0,0,,Index is a route you get for free you don't have to inaud
+Dialogue: 0,0:48:55.91,0:48:58.56,Default,,0,0,0,,And it should inherit it's model from it's parents.
+Dialogue: 0,0:48:59.45,0:49:01.77,Default,,0,0,0,,That change, I wouldn't expect to do very much.
+Dialogue: 0,0:49:02.84,0:49:04.38,Default,,0,0,0,,I could be wrong inaud.
+Dialogue: 0,0:49:09.46,0:49:12.05,Default,,0,0,0,,That looks the same inaud.
+Dialogue: 0,0:49:14.05,0:49:16.78,Default,,0,0,0,,I think it might be a case\nof too many changes at once.
+Dialogue: 0,0:49:19.40,0:49:21.60,Default,,0,0,0,,DN: Your test error is quite fragile I see.
+Dialogue: 0,0:49:22.11,0:49:25.33,Default,,0,0,0,,JW: It is yes, but that is probably because
+Dialogue: 0,0:49:25.33,0:49:26.19,Default,,0,0,0,,we're on a ....
+Dialogue: 0,0:49:27.88,0:49:30.07,Default,,0,0,0,,I know that at this point in time
+Dialogue: 0,0:49:30.07,0:49:33.72,Default,,0,0,0,,the CLI is operating to\na new file watching strategy.
+Dialogue: 0,0:49:34.34,0:49:36.18,Default,,0,0,0,,so that may be part of it.
+Dialogue: 0,0:49:36.18,0:49:39.03,Default,,0,0,0,,It's probably still going\nthrough growing pains.
+Dialogue: 0,0:49:41.95,0:49:45.14,Default,,0,0,0,,So now we're on\nroughly the same point I think.
+Dialogue: 0,0:49:52.57,0:49:53.68,Default,,0,0,0,,I'll take one of these.
+Dialogue: 0,0:49:54.29,0:49:56.53,Default,,0,0,0,,We've got inaud, there's nothing to explain,
+Dialogue: 0,0:49:56.86,0:49:58.34,Default,,0,0,0,,because there's no template.
+Dialogue: 0,0:49:59.22,0:50:03.59,Default,,0,0,0,,So let's  make an inaud template for this route.
+Dialogue: 0,0:50:04.61,0:50:05.94,Default,,0,0,0,,In fact let's inaud a route.
+Dialogue: 0,0:50:20.22,0:50:21.81,Default,,0,0,0,,So I've added that other route.
+Dialogue: 0,0:50:21.92,0:50:22.86,Default,,0,0,0,,It was an inaud yet
+Dialogue: 0,0:50:23.59,0:50:25.60,Default,,0,0,0,,That is the right direction to head in.
+Dialogue: 0,0:50:39.01,0:50:40.93,Default,,0,0,0,,I think these are all part of one step.
+Dialogue: 0,0:50:54.61,0:50:56.03,Default,,0,0,0,,So far there's not much here.
+Dialogue: 0,0:50:56.32,0:50:58.06,Default,,0,0,0,,What we ideally want is to be able 
+Dialogue: 0,0:50:58.06,0:50:59.04,Default,,0,0,0,,to go from episode .....
+Dialogue: 0,0:51:00.53,0:51:03.10,Default,,0,0,0,,and refer that to that acceptance test.
+Dialogue: 0,0:51:06.64,0:51:09.28,Default,,0,0,0,,We're expecting to\nfind another link at this point
+Dialogue: 0,0:51:09.28,0:51:11.28,Default,,0,0,0,,with Ranking Poker Hands on it.
+Dialogue: 0,0:51:14.12,0:51:15.71,Default,,0,0,0,,DN: So the list you are doing now,
+Dialogue: 0,0:51:16.52,0:51:20.10,Default,,0,0,0,,is a list of sequels for the inaud.
+Dialogue: 0,0:51:20.10,0:51:25.16,Default,,0,0,0,,JW: Yes.
+Dialogue: 0,0:51:49.60,0:51:51.99,Default,,0,0,0,,DN; So that's the\nname of the route episode?
+Dialogue: 0,0:51:53.52,0:51:55.36,Default,,0,0,0,,JW: Yes, the name of the episode
+Dialogue: 0,0:51:55.43,0:51:56.34,Default,,0,0,0,,the route and the
+Dialogue: 0,0:51:57.80,0:51:59.93,Default,,0,0,0,,actual instance of them.
+Dialogue: 0,0:52:00.10,0:52:01.93,Default,,0,0,0,,And the model we want for that route.
+Dialogue: 0,0:52:06.72,0:52:09.79,Default,,0,0,0,,inaud collaborators function might
+Dialogue: 0,0:52:10.44,0:52:13.05,Default,,0,0,0,,not be the thing I wanted after all, but ....
+Dialogue: 0,0:52:20.40,0:52:21.49,Default,,0,0,0,,I might just ....
+Dialogue: 0,0:52:27.55,0:52:28.93,Default,,0,0,0,,I'll just check out ....
+Dialogue: 0,0:52:40.83,0:52:42.95,Default,,0,0,0,,DN: Switch to different ember inaud live.
+Dialogue: 0,0:52:43.46,0:52:46.16,Default,,0,0,0,,JW: Yes, I'm going to go\nto last stable releases of CLI
+Dialogue: 0,0:52:47.04,0:52:49.15,Default,,0,0,0,,This is the cause of my problem so ....
+Dialogue: 0,0:52:52.16,0:52:54.87,Default,,0,0,0,,Narrator: We're going to\nspeak through this section
+Dialogue: 0,0:52:54.87,0:52:57.78,Default,,0,0,0,,We spent almost 10 minutes troubleshooting this issue.
+Dialogue: 0,0:52:57.85,0:53:01.09,Default,,0,0,0,,But, switching to the\nlatest stable release of ember CLI
+Dialogue: 0,0:53:01.09,0:53:02.53,Default,,0,0,0,,didn't fix the tests however.
+Dialogue: 0,0:53:03.92,0:53:06.02,Default,,0,0,0,,Narrator: We'll pick up again where Jamie 
+Dialogue: 0,0:53:06.02,0:53:07.41,Default,,0,0,0,,came up with a 'workaround'.
+Dialogue: 0,0:53:08.37,0:53:11.35,Default,,0,0,0,,JW: Unfortunately, in the current build
+Dialogue: 0,0:53:12.10,0:53:13.95,Default,,0,0,0,,of ember CLI, or rather the current 
+Dialogue: 0,0:53:13.96,0:53:15.81,Default,,0,0,0,,master build of ember CLI,
+Dialogue: 0,0:53:16.77,0:53:21.05,Default,,0,0,0,,some aspects when rapidly re-loading files,
+Dialogue: 0,0:53:21.05,0:53:22.80,Default,,0,0,0,,causes the build to fall over.
+Dialogue: 0,0:53:23.49,0:53:25.86,Default,,0,0,0,,So for the time being, instead we will run
+Dialogue: 0,0:53:26.52,0:53:27.89,Default,,0,0,0,,ember test as a 'one off'
+Dialogue: 0,0:53:27.89,0:53:29.94,Default,,0,0,0,,Like a one shot test.
+Dialogue: 0,0:53:29.94,0:53:31.47,Default,,0,0,0,,so it will inaud run the tests,
+Dialogue: 0,0:53:31.47,0:53:33.33,Default,,0,0,0,,then it will tear it all down again.
+Dialogue: 0,0:53:33.33,0:53:35.72,Default,,0,0,0,,That will give us\nsomething to work against
+Dialogue: 0,0:53:37.06,0:53:38.75,Default,,0,0,0,,So it's not working at the moment.
+Dialogue: 0,0:53:39.28,0:53:41.54,Default,,0,0,0,,And the reason is that the inaud .....
+Dialogue: 0,0:53:44.94,0:53:47.05,Default,,0,0,0,,Although my build inaud point to
+Dialogue: 0,0:53:47.05,0:53:48.41,Default,,0,0,0,,the correct inaud.
+Dialogue: 0,0:53:48.81,0:53:50.62,Default,,0,0,0,,What we won't have here is ....
+Dialogue: 0,0:53:52.08,0:53:53.58,Default,,0,0,0,,We're asking for inaud sequels,
+Dialogue: 0,0:53:54.36,0:53:55.90,Default,,0,0,0,,There is no such thing right now.
+Dialogue: 0,0:53:55.90,0:53:56.87,Default,,0,0,0,,DN: Of course, right.
+Dialogue: 0,0:53:56.91,0:53:59.09,Default,,0,0,0,,JW: So we need to get those.
+Dialogue: 0,0:54:04.70,0:54:06.76,Default,,0,0,0,,You're probably thinking
+Dialogue: 0,0:54:08.78,0:54:10.80,Default,,0,0,0,,it may be possible to do something like:
+Dialogue: 0,0:54:23.26,0:54:25.09,Default,,0,0,0,,We know from the old collaborators
+Dialogue: 0,0:54:25.09,0:54:29.92,Default,,0,0,0,,that we do have \nthe sequel ids, like this:
+Dialogue: 0,0:54:34.76,0:54:36.92,Default,,0,0,0,,So based on that\nfirst bit of work we did
+Dialogue: 0,0:54:36.92,0:54:38.70,Default,,0,0,0,,that's as far as we got at the moment.
+Dialogue: 0,0:54:39.70,0:54:41.25,Default,,0,0,0,,Technically, that would work.
+Dialogue: 0,0:54:43.29,0:54:45.44,Default,,0,0,0,,The API doesn't\nactually have an end point
+Dialogue: 0,0:54:45.44,0:54:47.36,Default,,0,0,0,,for that you could inaud all the data
+Dialogue: 0,0:54:47.36,0:54:49.22,Default,,0,0,0,,and find the one with the correct id.
+Dialogue: 0,0:54:51.04,0:54:54.72,Default,,0,0,0,,At this point I'm inclined to lean on
+Dialogue: 0,0:54:55.37,0:54:57.08,Default,,0,0,0,,ember data to do some of the
+Dialogue: 0,0:54:57.70,0:54:59.86,Default,,0,0,0,,pulling together of records:
+Dialogue: 0,0:55:00.15,0:55:01.86,Default,,0,0,0,,So I'm going to:
+Dialogue: 0,0:55:03.97,0:55:05.81,Default,,0,0,0,,inaud bonus of elbow commit.
+Dialogue: 0,0:55:08.15,0:55:09.82,Default,,0,0,0,,Let's see what I added there.
+Dialogue: 0,0:55:13.41,0:55:14.64,Default,,0,0,0,,Let's say:
+Dialogue: 0,0:55:29.54,0:55:31.17,Default,,0,0,0,,inaud branch.
+Dialogue: 0,0:55:34.50,0:55:36.54,Default,,0,0,0,,This will be quite a substantial thing
+Dialogue: 0,0:55:36.54,0:55:37.43,Default,,0,0,0,,to start to add in.
+Dialogue: 0,0:55:39.41,0:55:40.95,Default,,0,0,0,,I think that in order to prove
+Dialogue: 0,0:55:40.95,0:55:42.43,Default,,0,0,0,,that is definitely working,
+Dialogue: 0,0:55:42.49,0:55:44.40,Default,,0,0,0,,I'm going to have a play with the inaud
+Dialogue: 0,0:55:44.40,0:55:47.03,Default,,0,0,0,,to begin with, rather\nthan the test environment.
+Dialogue: 0,0:55:48.30,0:55:50.75,Default,,0,0,0,,I have a gut feeling\nit will be quicker that way.
+Dialogue: 0,0:55:51.90,0:55:54.13,Default,,0,0,0,,So up top, in the application route.
+Dialogue: 0,0:55:59.46,0:56:01.89,Default,,0,0,0,,Rather than this quite inaud process of
+Dialogue: 0,0:56:03.04,0:56:05.04,Default,,0,0,0,,getting the data and it pulling it out
+Dialogue: 0,0:56:05.04,0:56:07.35,Default,,0,0,0,,and building collaborators from that
+Dialogue: 0,0:56:10.29,0:56:11.24,Default,,0,0,0,,I'm going to return:
+Dialogue: 0,0:56:25.49,0:56:26.78,Default,,0,0,0,,The promise line inaud
+Dialogue: 0,0:56:27.44,0:56:28.80,Default,,0,0,0,,It has this hash function 
+Dialogue: 0,0:56:28.80,0:56:30.61,Default,,0,0,0,,which is a hash of promises.
+Dialogue: 0,0:56:30.61,0:56:33.30,Default,,0,0,0,,Where they all pass on this hash
+Dialogue: 0,0:56:33.30,0:56:35.56,Default,,0,0,0,,with the promises switched out 
+Dialogue: 0,0:56:35.56,0:56:37.55,Default,,0,0,0,,for whatever the resolve inaud
+Dialogue: 0,0:56:37.98,0:56:39.45,Default,,0,0,0,,So it's quite happy.
+Dialogue: 0,0:56:39.85,0:56:42.86,Default,,0,0,0,,What this let's us do is ....
+Dialogue: 0,0:56:45.86,0:56:47.01,Default,,0,0,0,,I want to do two things.
+Dialogue: 0,0:56:47.01,0:56:48.40,Default,,0,0,0,,I want to load the episodes:
+Dialogue: 0,0:56:57.84,0:56:59.43,Default,,0,0,0,,And that returns the promise.
+Dialogue: 0,0:57:06.46,0:57:08.28,Default,,0,0,0,,This is going to return two promises
+Dialogue: 0,0:57:08.28,0:57:10.09,Default,,0,0,0,,and it's going to wait\nfor them both to resolve
+Dialogue: 0,0:57:10.09,0:57:11.92,Default,,0,0,0,,before it\nfinishes doing it's thing.
+Dialogue: 0,0:57:12.02,0:57:13.41,Default,,0,0,0,,Dont need the ajax anymore.
+Dialogue: 0,0:57:14.87,0:57:16.89,Default,,0,0,0,,DN: Do we now have to define a store?
+Dialogue: 0,0:57:17.94,0:57:19.25,Default,,0,0,0,,inaud
+Dialogue: 0,0:57:19.25,0:57:20.68,Default,,0,0,0,,The store is something we get for free,
+Dialogue: 0,0:57:20.68,0:57:22.34,Default,,0,0,0,,but what we do need is ....
+Dialogue: 0,0:57:22.65,0:57:24.09,Default,,0,0,0,,To begin with, some models,
+Dialogue: 0,0:57:44.39,0:57:47.31,Default,,0,0,0,,So right now this is\ngoing to be complaining I need ... that:
+Dialogue: 0,0:57:47.51,0:57:49.49,Default,,0,0,0,,I've got no such models I think.
+Dialogue: 0,0:57:51.02,0:57:52.78,Default,,0,0,0,,No models found for episode.
+Dialogue: 0,0:58:11.55,0:58:13.89,Default,,0,0,0,,DN: Your using\ncamel case deliberately here?
+Dialogue: 0,0:58:14.96,0:58:16.22,Default,,0,0,0,,It uses underscore case.
+Dialogue: 0,0:58:16.22,0:58:16.95,Default,,0,0,0,,JW: It does yes.
+Dialogue: 0,0:58:18.34,0:58:23.81,Default,,0,0,0,,Just by convention ember\ntends to use camel case where possible.
+Dialogue: 0,0:58:23.81,0:58:26.34,Default,,0,0,0,,Just because\nthat's what JavaScript looks like.
+Dialogue: 0,0:58:28.24,0:58:29.53,Default,,0,0,0,,inaud
+Dialogue: 0,0:58:30.74,0:58:31.74,Default,,0,0,0,,What else have we got in there ....
+Dialogue: 0,0:58:31.74,0:58:33.53,Default,,0,0,0,,we've got inaud
+Dialogue: 0,0:58:33.53,0:58:35.70,Default,,0,0,0,,We should be able\nto infer those from the ....
+Dialogue: 0,0:58:36.04,0:58:37.56,Default,,0,0,0,,So let's say we've got:
+Dialogue: 0,0:58:48.36,0:58:50.79,Default,,0,0,0,,That should have\nmade me a model for episode.
+Dialogue: 0,0:58:57.48,0:58:59.31,Default,,0,0,0,,Let's generate another one of these:
+Dialogue: 0,0:59:15.82,0:59:17.55,Default,,0,0,0,,Let's just have a look at the data.
+Dialogue: 0,0:59:48.03,0:59:50.49,Default,,0,0,0,,It might get\nconfused about what I mean here.
+Dialogue: 0,0:59:54.93,0:59:57.11,Default,,0,0,0,,It will think there's a model with that name, 
+Dialogue: 0,0:59:57.11,0:59:58.19,Default,,0,0,0,,but in fact these are:
+Dialogue: 0,0:59:59.46,1:00:01.86,Default,,0,0,0,,It's referring to the partner model.
+Dialogue: 0,1:00:01.86,1:00:03.86,Default,,0,0,0,,
