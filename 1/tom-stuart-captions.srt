@@ -1114,7 +1114,7 @@ storing values on the node.
 243
 00:15:30,620 --> 00:15:33,650
 In a binary tree you might
-only store values of the leaves.
+only store values at the leaves.
 
 244
 00:15:34,250 --> 00:15:36,710
