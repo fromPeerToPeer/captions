@@ -7071,7 +7071,7 @@ At the moment you can't tell.
 
 1521
 01:35:16,420 --> 01:35:17,880
-So yes, let's call it add child
+So yes, let's call it add_child
 
 1522
 01:35:18,280 --> 01:35:20,220
