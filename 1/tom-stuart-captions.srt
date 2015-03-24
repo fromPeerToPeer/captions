@@ -6789,7 +6789,7 @@ the top you can see:
 1459
 01:30:54,110 --> 01:30:56,910
 when I add a node to it
-undefined method append child.
+undefined method append_child.
 
 1460
 01:30:56,910 --> 01:30:58,370
