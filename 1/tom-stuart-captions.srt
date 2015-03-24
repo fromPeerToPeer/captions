@@ -1008,7 +1008,7 @@ to make a decision about
 221
 00:14:05,110 --> 00:14:07,710
 what's the class called
-and how it instantiates.
+and how it is instantiated.
 
 222
 00:14:07,710 --> 00:14:11,110
