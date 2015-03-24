@@ -1514,7 +1514,7 @@ sort them by terminals,
 329
 00:20:13,020 --> 00:20:15,140
 we would expect
-them to be in disorder.
+them to be in this order.
 
 330
 00:20:15,140 --> 00:20:16,620
