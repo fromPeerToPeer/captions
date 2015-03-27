@@ -2005,7 +2005,7 @@ been running cucumber scenarios.
 
 433
 00:26:49,400 --> 00:26:50,800
-Are you suspending them or .....?
+Are you suspending Vim or .....?
 
 434
 00:26:52,370 --> 00:26:53,280
@@ -2628,7 +2628,7 @@ that by opening a new screen
 
 567
 00:34:55,970 --> 00:34:58,080
-I'll still have them
+I'll still have Vim
 open but I'm going to
 
 568
