@@ -6240,7 +6240,7 @@ you would be doing
 
 1342
 01:23:13,340 --> 01:23:14,480
-something with cache.
+some kind of caching.
 
 1343
 01:23:14,880 --> 01:23:16,970
@@ -6249,7 +6249,7 @@ you're not doing anything
 
 1344
 01:23:16,970 --> 01:23:18,570
-with cache, all
+with caching, all
 you are doing
 
 1345
@@ -6596,7 +6596,7 @@ memoize the result of those
 
 1418
 01:29:05,400 --> 01:29:07,250
-re-cursive calls
+recursive calls
 then I could just
 
 1419
@@ -6707,7 +6707,7 @@ Like do that:
 1441
 01:30:06,110 --> 01:30:08,340
 If there was just
-an assessor on tree that
+an accessor on tree that
 
 1442
 01:30:08,340 --> 01:30:10,080
@@ -6785,7 +6785,7 @@ the top you can see:
 1458
 01:30:54,110 --> 01:30:56,910
 when I add a node to it
-undefined method append child.
+undefined method append_child.
 
 1459
 01:30:56,910 --> 01:30:58,370
@@ -6918,7 +6918,7 @@ Let's try running that example.
 
 1487
 01:32:57,020 --> 01:32:58,540
-undefined method add child.
+undefined method add_child.
 
 1488
 01:33:02,970 --> 01:33:04,820
@@ -7013,11 +7013,11 @@ you move on,
 1508
 01:34:37,800 --> 01:34:39,600
 I notice you used
-append child there,
+append_child there,
 
 1509
 01:34:39,600 --> 01:34:41,600
-but it's add child
+but it's add_child
 in the implementation.
 
 1510
@@ -7036,8 +7036,8 @@ just didn't read it.
 
 1513
 01:34:56,450 --> 01:34:58,770
-Yes your right,
-append child is a better name
+Yes you're right,
+append_child is a better name
 
 1514
 01:34:59,340 --> 01:35:01,340
@@ -7067,7 +7067,7 @@ At the moment you can't tell.
 
 1520
 01:35:16,420 --> 01:35:17,880
-So yes, let's call it add child
+So yes, let's call it add_child
 
 1521
 01:35:18,280 --> 01:35:20,220
