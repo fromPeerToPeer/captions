@@ -2048,7 +2048,7 @@ TS: Yes exactly.
 442
 00:27:18,080 --> 00:27:20,820
 TS: It stores all of these
-bin stubs in dot bundle bin,
+bin stubs in .bundle/bin,
 
 443
 00:27:21,140 --> 00:27:23,450
@@ -2073,7 +2073,7 @@ for someone to get you to
 447
 00:27:32,820 --> 00:27:34,800
 clone a git repository that
-already has a bundle bin folder,
+already has a .bundle/bin folder,
 
 448
 00:27:34,800 --> 00:27:36,310
@@ -2193,7 +2193,7 @@ the class being called Node
 
 473
 00:28:57,400 --> 00:28:58,910
-so I will call this node spec
+so I will call this node_spec
 
 474
 00:29:01,880 --> 00:29:03,770
@@ -2283,7 +2283,7 @@ Where was I?
 
 493
 00:30:30,280 --> 00:30:30,800
-Node spec.
+node_spec.
 
 494
 00:30:35,110 --> 00:30:37,370
