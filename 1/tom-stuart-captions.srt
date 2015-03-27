@@ -4,7 +4,7 @@ Welcome to Peer to Peer
 
 2
 00:00:02,820 --> 00:00:05,650
-where you can watch our
+where you can watch how
 experts solve tech problems.
 
 3
@@ -104,7 +104,7 @@ The blue ones are ancestors.
 
 24
 00:01:33,420 --> 00:01:34,970
-Some of them have to be leaves,
+Some of them happen to be leaves,
 
 25
 00:01:34,970 --> 00:01:37,820
@@ -160,8 +160,8 @@ exactly what you want,
 
 36
 00:02:10,450 --> 00:02:13,000
-so your talking about
-how many fences there are
+so you're talking about
+how many fence posts there are
 
 37
 00:02:13,420 --> 00:02:15,800
@@ -192,7 +192,7 @@ your parents' parents etc.
 
 43
 00:02:34,050 --> 00:02:35,420
-DN: So your looking upward.
+DN: So you're looking upward.
 
 44
 00:02:37,280 --> 00:02:39,370
@@ -225,7 +225,7 @@ scope of the problem?
 50
 00:03:02,140 --> 00:03:04,000
 DN: Yes, but if
-you feel its too much
+you feel it's too much
 
 51
 00:03:04,020 --> 00:03:06,450
@@ -264,7 +264,7 @@ in the tree minus one
 
 59
 00:03:27,020 --> 00:03:29,170
-because your not
+because you're not
 considering the root.
 
 60
@@ -561,7 +561,7 @@ Then it should be ordered by...
 
 124
 00:08:01,540 --> 00:08:04,020
-DN: 'It' being a collection
+DN: 'It' being the collection
 rather than an individual tree?
 
 125
@@ -654,7 +654,7 @@ Tree steps file.
 
 144
 00:09:22,000 --> 00:09:24,420
-DN: Your using Control P
+DN: You're using Control P
 there to create a file.
 
 145
@@ -834,7 +834,7 @@ API to sort them.
 183
 00:11:43,480 --> 00:11:45,650
 and then go through
-and say, "when I ask you
+and say, "when I ask each
 
 184
 00:11:45,650 --> 00:11:48,570
@@ -1008,7 +1008,7 @@ to make a decision about
 221
 00:14:05,110 --> 00:14:07,710
 what's the class called
-and how it instantiates.
+and how it is instantiated.
 
 222
 00:14:07,710 --> 00:14:11,110
@@ -1081,7 +1081,7 @@ is to think of a tree
 
 236
 00:15:04,450 --> 00:15:06,450
-as being a collection of its' children
+as being a collection of its children
 
 237
 00:15:09,200 --> 00:15:11,220
@@ -1114,7 +1114,7 @@ storing values on the node.
 243
 00:15:30,620 --> 00:15:33,650
 In a binary tree you might
-only store values of the leaves.
+only store values at the leaves.
 
 244
 00:15:34,250 --> 00:15:36,710
@@ -1154,7 +1154,7 @@ all the numbers in the tree
 251
 00:15:59,050 --> 00:16:01,250
 we will find a way
-to sort them in the tree.
+to store them in the tree.
 
 252
 00:16:01,250 --> 00:16:03,770
@@ -1347,7 +1347,7 @@ Is that correct?
 293
 00:18:04,820 --> 00:18:06,910
 DN: Yes it is because
-we don't count them.
+we don't count the root.
 
 294
 00:18:08,200 --> 00:18:09,220
@@ -1514,7 +1514,7 @@ sort them by terminals,
 329
 00:20:13,020 --> 00:20:15,140
 we would expect
-them to be in disorder.
+them to be in this order.
 
 330
 00:20:15,140 --> 00:20:16,620
@@ -5313,7 +5313,7 @@ it is in the tree.
 1144
 01:11:00,250 --> 01:11:02,080
 It doesn't have
-a link to its' parent.
+a link to its parent.
 
 1145
 01:11:02,080 --> 01:11:03,510
@@ -5453,7 +5453,7 @@ looking for leaves at depth five.
 1175
 01:12:52,600 --> 01:12:54,850
 But when it asks all
-of its' children it says
+of its children it says
 
 1176
 01:12:54,850 --> 01:12:57,650
@@ -7198,7 +7198,7 @@ so that's going to say
 1548
 01:36:57,250 --> 01:36:59,140
 "I don't know
-what your talking about".
+what you're talking about".
 
 1549
 01:37:02,510 --> 01:37:05,050
@@ -8861,7 +8861,7 @@ finished enumerating all
 
 1911
 01:58:23,680 --> 01:58:25,680
-of its' children, it
+of its children, it
 yields the new one.
 
 1912
