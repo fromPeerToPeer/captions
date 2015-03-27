@@ -4748,7 +4748,7 @@ are passing the test.
 1023
 01:01:51,770 --> 01:01:53,540
 I might stick one
-more in in here.
+more in here.
 
 1024
 01:01:54,020 --> 01:01:55,280
@@ -4813,7 +4813,7 @@ Now I've decided how this works
 1037
 01:03:10,540 --> 01:03:13,540
 I could go back and instead
-of having real children here
+of having real instances here
 
 1038
 01:03:13,850 --> 01:03:15,680
@@ -4888,7 +4888,7 @@ so I'm going to carry on.
 1053
 01:03:54,650 --> 01:03:56,770
 Let's run the
-cucumber features and see
+Cucumber features and see
 
 1054
 01:03:56,770 --> 01:03:57,400
@@ -4931,7 +4931,7 @@ descendants count.
 1062
 01:04:24,170 --> 01:04:26,250
 DN: That's an easy
-re-factoring to change.
+refactoring to change.
 
 1063
 01:04:31,080 --> 01:04:33,450
@@ -5253,7 +5253,7 @@ to make it work.
 
 1132
 01:10:16,370 --> 01:10:18,540
-If we want to re-factor
+If we want to refactor
 it then we can do so.
 
 1133
@@ -5278,7 +5278,7 @@ terminal count will just be
 1137
 01:10:28,820 --> 01:10:31,220
 count all of the leaves
-that are at max depth.
+that are at depth MAX_DEPTH.
 
 1138
 01:10:38,910 --> 01:10:40,880
@@ -5369,7 +5369,7 @@ If you are at depth one,
 
 1157
 01:12:03,420 --> 01:12:04,880
-and your a
+and you're a
 leaf then you are
 
 1158
@@ -5387,11 +5387,11 @@ how many leaves there are
 
 1161
 01:12:09,280 --> 01:12:10,740
-and if you are already a leaf.
+and if you are already a leaf,
 
 1162
 01:12:12,050 --> 01:12:14,680
-And we're looking for things
+and we're looking for things
 that are at depth one,
 
 1163
@@ -5594,7 +5594,7 @@ confident that that is correct.
 1205
 01:14:38,770 --> 01:14:41,450
 In which case, let's go
-back to the cucumber feature,
+back to the Cucumber feature,
 
 1206
 01:14:45,450 --> 01:14:47,910
@@ -5707,7 +5707,7 @@ to stay in the same order
 1229
 01:16:11,800 --> 01:16:13,740
 in the array, we
-can't use Rubys' sort by.
+can't use Ruby's sort_by.
 
 1230
 01:16:15,480 --> 01:16:17,220
@@ -5824,7 +5824,7 @@ what we were doing.
 1253
 01:17:28,310 --> 01:17:30,450
 Before I started
-dropping down to rspec,
+dropping down to RSpec,
 
 1254
 01:17:31,050 --> 01:17:33,450
