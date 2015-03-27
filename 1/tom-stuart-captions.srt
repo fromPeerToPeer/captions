@@ -1558,7 +1558,7 @@ to them in there.
 
 339
 00:20:46,110 --> 00:20:46,940
-That's got scope.
+Outside of this lexical scope.
 
 340
 00:20:47,080 --> 00:20:48,370
@@ -1774,7 +1774,7 @@ that's a good idea or not.
 384
 00:23:42,770 --> 00:23:46,050
 I'll just make it clearer that
-that is going to be an empty node.
+that is going to be an empty array.
 
 385
 00:23:46,220 --> 00:23:48,710
@@ -2244,11 +2244,11 @@ run your rspec tests?
 
 484
 00:29:34,570 --> 00:29:35,940
-TS: I am using the vim-rspec.
+TS: I am using the vim-rspec plugin.
 
 485
 00:29:42,370 --> 00:29:42,970
-So if I ...
+So if I grep ...
 
 486
 00:29:49,080 --> 00:29:50,340
@@ -2270,7 +2270,7 @@ Leader 'S' is very handy,
 
 490
 00:30:10,220 --> 00:30:12,340
-I can run focus test
+I can run focused tests
 by just pressing it.
 
 491
@@ -2358,7 +2358,7 @@ introduced the word children
 
 509
 00:31:35,680 --> 00:31:37,140
-but yes, we mean descendants.
+but yes, I mean direct descendants.
 
 510
 00:31:37,570 --> 00:31:40,400
