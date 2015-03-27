@@ -3067,7 +3067,7 @@ It's tempting to call it
 661
 00:40:13,680 --> 00:40:16,450
 But I'm wondering if it
-should be descendants count.
+should be 'descendants count'.
 
 662
 00:40:19,620 --> 00:40:20,940
@@ -3097,8 +3097,8 @@ I would like it so that ....
 
 668
 00:40:40,800 --> 00:40:43,420
-I can call descendants
-count or terminals count
+I can call 'descendants count'
+or 'terminals count'
 
 669
 00:40:45,970 --> 00:40:48,540
@@ -3113,7 +3113,7 @@ it's going to sort the collection
 671
 00:40:51,710 --> 00:40:53,880
 If I run one of my
-cucumber features now.
+Cucumber features now.
 
 672
 00:40:54,740 --> 00:40:56,820
@@ -3132,12 +3132,12 @@ This is complaining about
 675
 00:41:00,650 --> 00:41:02,710
 undefined method
-descendants count
+'descendants count'
 
 676
 00:41:02,710 --> 00:41:04,600
 undefined method
-terminals count.
+'terminals count'.
 
 677
 00:41:07,620 --> 00:41:09,220
@@ -3182,7 +3182,7 @@ I'm going to commit this change:
 686
 00:42:01,450 --> 00:42:04,370
 Which should have been
-happening in the first place.
+pending in the first place.
 
 687
 00:42:06,650 --> 00:42:07,220
@@ -3209,7 +3209,7 @@ I think that's fabulous.
 692
 00:42:24,800 --> 00:42:27,080
 TS: I think it's just
-called a 'git', git gutter.
+called 'git gutter'.
 
 693
 00:42:29,910 --> 00:42:31,820
@@ -3238,7 +3238,7 @@ the gutter will appear.
 698
 00:42:44,110 --> 00:42:46,340
 If I then make a
-change back so the git says
+change back so that git says
 
 699
 00:42:46,340 --> 00:42:48,370
@@ -3267,8 +3267,8 @@ didn't make those commits is
 
 704
 00:42:58,080 --> 00:43:00,540
-because I forgot to 'git'
-in it in the beginning.
+because I forgot to 'git
+init' in the beginning.
 
 705
 00:43:02,570 --> 00:43:04,770
@@ -3320,8 +3320,8 @@ that we don't have a
 
 715
 00:43:35,450 --> 00:43:38,020
-terminal count, or a
-descendants count method.
+'terminals count', or a
+'descendants count' method.
 
 716
 00:43:50,170 --> 00:43:52,110
@@ -3367,8 +3367,8 @@ ways of doing that.
 
 725
 00:44:20,420 --> 00:44:22,680
-With cucumber you
-can tag scenario so you
+With Cucumber you
+can tag scenarios so you
 
 726
 00:44:22,710 --> 00:44:24,000
@@ -3445,8 +3445,8 @@ said in the step definition:
 
 742
 00:45:28,800 --> 00:45:30,820
-no descendant count
-to be equal to a 5.
+node descendant count
+to be equal to 5.
 
 743
 00:45:32,540 --> 00:45:34,000
@@ -3463,8 +3463,8 @@ because I've got doubles here.
 
 746
 00:45:47,280 --> 00:45:49,910
-If I just make real lists
-of nodes, I could already
+If I just make real instances
+of node, I could already
 
 747
 00:45:50,200 --> 00:45:52,480
@@ -3516,11 +3516,11 @@ descendants of a tree
 757
 00:46:34,280 --> 00:46:36,540
 is the number of
-descendants of all of it's
+descendants of all of its
 
 758
 00:46:36,880 --> 00:46:38,650
-'sub' trees plus
+subtrees plus
 the node at the top.
 
 759
@@ -3572,7 +3572,7 @@ I press leader 'S' there
 
 769
 00:47:32,420 --> 00:47:34,420
-It's set up rspec to
+It's set up RSpec to
 only run that line.
 
 770
@@ -3652,16 +3652,17 @@ got some examples
 
 786
 00:48:28,570 --> 00:48:29,770
-from the cucumber step.
+from the Cucumber step.
 
 787
 00:48:32,050 --> 00:48:34,570
-I think that the
-notion of it being a unit test
+I think that slightly
+subverts the notion
 
 788
 00:48:34,570 --> 00:48:36,220
-is slightly sub-verse, because
+of it being a unit
+test, because
 
 789
 00:48:37,820 --> 00:48:40,020
@@ -3724,7 +3725,7 @@ say something like this:
 
 801
 00:49:24,050 --> 00:49:25,170
-I don't know what to do ....
+What do I want to do?
 
 802
 00:49:27,600 --> 00:49:29,540
@@ -3850,7 +3851,7 @@ could be something like:
 
 828
 00:51:08,420 --> 00:51:09,510
-Is that right, Oh well,
+Is that right? Oh well,
 
 829
 00:51:11,400 --> 00:51:12,220
@@ -3930,7 +3931,7 @@ is to take all the children
 
 845
 00:52:10,170 --> 00:52:11,940
-and call descendant count on them.
+and call 'descendant count' on them.
 
 846
 00:52:14,400 --> 00:52:16,340
@@ -4082,12 +4083,12 @@ and put into an array.
 
 878
 00:54:06,820 --> 00:54:09,250
-I can use rspec 3s
+I can use RSpec 3's
 verifying doubles for this.
 
 879
 00:54:09,400 --> 00:54:10,740
-I can say instance double.
+I can say 'instance double'.
 
 880
 00:54:11,850 --> 00:54:13,880
@@ -4106,12 +4107,12 @@ if the node class is loaded
 883
 00:54:17,970 --> 00:54:20,680
 it will check whatever
-stub methods I put on this.
+stub methods I put on this
 
 884
 00:54:21,850 --> 00:54:24,280
-Double actually
-exists so it's checking that
+double actually
+exist so it's checking that
 
 885
 00:54:25,880 --> 00:54:28,280
@@ -4121,7 +4122,7 @@ methods that don't exist.
 886
 00:54:30,600 --> 00:54:32,510
 I want to stub
-out descendant count.
+out 'descendant count'.
 
 887
 00:54:32,800 --> 00:54:34,370
@@ -4152,12 +4153,13 @@ Because it adds one, I get six.
 
 893
 00:54:55,710 --> 00:54:56,970
-DN: On the same pages here
+DN: Just so I'm on the same page
+as you here
 
 894
 00:54:56,970 --> 00:54:58,880
 you've created
-five instance levels,
+five instance doubles,
 
 895
 00:54:59,620 --> 00:55:00,510
@@ -4176,7 +4178,7 @@ descendant is itself ....
 898
 00:55:07,850 --> 00:55:10,170
 ah yes, of course,
-it's reporting to it's parent.
+it's reporting to its parent.
 
 899
 00:55:10,800 --> 00:55:12,570
@@ -4226,7 +4228,7 @@ two different methods here
 
 909
 00:55:35,110 --> 00:55:37,770
-and we're trying to crowd
+and we're trying to cram
 them into the same place.
 
 910
@@ -4295,7 +4297,7 @@ saying we don't
 
 924
 00:56:27,020 --> 00:56:28,510
-have that build tree helper.
+have that 'build tree' helper.
 
 925
 00:56:30,400 --> 00:56:31,680
@@ -4317,7 +4319,7 @@ to include a module
 
 929
 00:56:44,420 --> 00:56:45,250
-in my rspec file.
+in my RSpec file.
 
 930
 00:56:47,110 --> 00:56:49,540
@@ -4327,7 +4329,7 @@ way of having test helpers
 931
 00:56:50,020 --> 00:56:52,970
 that are available in both
-rspec and cucumber features.
+RSpec and Cucumber features.
 
 932
 00:56:52,970 --> 00:56:55,370
@@ -4371,8 +4373,8 @@ reason why we've got one
 
 941
 00:57:16,740 --> 00:57:19,250
-is because the sub
-trees have all returned zero
+is because the subtrees
+have all returned zero
 
 942
 00:57:19,250 --> 00:57:20,850
@@ -4394,7 +4396,7 @@ the outside, which is
 
 946
 00:57:28,000 --> 00:57:29,570
-going to be descendant count.
+going to be 'descendant count'.
 
 947
 00:57:29,970 --> 00:57:31,880
@@ -4465,7 +4467,7 @@ So this needs to be one.
 
 962
 00:58:21,910 --> 00:58:24,020
-So we are trying to
+So what we are trying to
 ask is how many nodes
 
 963
@@ -4519,7 +4521,7 @@ forgot to change this.
 974
 00:58:52,220 --> 00:58:55,110
 So we have to call that
-node count method recursively
+'node count' method recursively
 
 975
 00:58:55,250 --> 00:58:57,620
@@ -4569,7 +4571,7 @@ better way of doing this.
 985
 00:59:36,910 --> 00:59:38,740
 We can do a bit
-of re-factoring here
+of refactoring here
 
 986
 00:59:38,740 --> 00:59:40,740
