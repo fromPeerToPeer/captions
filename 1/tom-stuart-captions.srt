@@ -3067,7 +3067,7 @@ It's tempting to call it
 661
 00:40:13,680 --> 00:40:16,450
 But I'm wondering if it
-should be 'descendants count'.
+should be descendants_count.
 
 662
 00:40:19,620 --> 00:40:20,940
@@ -3097,8 +3097,8 @@ I would like it so that ....
 
 668
 00:40:40,800 --> 00:40:43,420
-I can call 'descendants count'
-or 'terminals count'
+I can call descendants_count
+or terminals_count
 
 669
 00:40:45,970 --> 00:40:48,540
@@ -3132,12 +3132,12 @@ This is complaining about
 675
 00:41:00,650 --> 00:41:02,710
 undefined method
-'descendants count'
+descendants_count
 
 676
 00:41:02,710 --> 00:41:04,600
 undefined method
-'terminals count'.
+terminals_count.
 
 677
 00:41:07,620 --> 00:41:09,220
@@ -3320,8 +3320,8 @@ that we don't have a
 
 715
 00:43:35,450 --> 00:43:38,020
-'terminals count', or a
-'descendants count' method.
+terminals_count, or a
+descendants_count method.
 
 716
 00:43:50,170 --> 00:43:52,110
@@ -3931,7 +3931,7 @@ is to take all the children
 
 845
 00:52:10,170 --> 00:52:11,940
-and call 'descendant count' on them.
+and call descendant_count on them.
 
 846
 00:52:14,400 --> 00:52:16,340
@@ -4122,7 +4122,7 @@ methods that don't exist.
 886
 00:54:30,600 --> 00:54:32,510
 I want to stub
-out 'descendant count'.
+out descendant_count.
 
 887
 00:54:32,800 --> 00:54:34,370
@@ -4297,7 +4297,7 @@ saying we don't
 
 924
 00:56:27,020 --> 00:56:28,510
-have that 'build tree' helper.
+have that build_tree helper.
 
 925
 00:56:30,400 --> 00:56:31,680
@@ -4396,7 +4396,7 @@ the outside, which is
 
 946
 00:57:28,000 --> 00:57:29,570
-going to be 'descendant count'.
+going to be descendant_count.
 
 947
 00:57:29,970 --> 00:57:31,880
@@ -4521,7 +4521,7 @@ forgot to change this.
 974
 00:58:52,220 --> 00:58:55,110
 So we have to call that
-'node count' method recursively
+node_count method recursively
 
 975
 00:58:55,250 --> 00:58:57,620
@@ -5221,7 +5221,7 @@ of having another method,
 1125
 01:09:34,450 --> 01:09:36,050
 that can be
-called 'leaf count',
+called leaf_count,
 
 1126
 01:09:39,250 --> 01:09:40,770
@@ -6488,7 +6488,7 @@ my tree to add it.
 1395
 01:27:30,370 --> 01:27:32,940
 So it could be that there's
-some kind of 'add child'.
+some kind of add_child.
 
 1396
 01:27:34,220 --> 01:27:37,220
