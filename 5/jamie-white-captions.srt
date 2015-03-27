@@ -1,40 +1,4031 @@
 ﻿1
-00:00:01,280 --> 00:00:02,710
-Welcome to Peer to Peer
+00:00:01,270 --> 00:00:02,660
+Welcome to Peer to Peer.
 
 2
-00:00:03,185 --> 00:00:07,000
-where you can hone your
+00:00:03,190 --> 00:00:06,480
+Where you can hone your
 skills by watching live coding videos.
 
 3
-00:00:07,740 --> 00:00:09,995
-Our guest today is Jamie White
+00:00:07,730 --> 00:00:09,550
+Our guest today is Jamie White.
 
 4
-00:00:09,990 --> 00:00:13,700
-Who's a Ruby and Javascript
+00:00:10,020 --> 00:00:13,140
+Who's a Ruby a JavaScript
 developer at With Associates.
 
 5
-00:00:13,700 --> 00:00:16,075
-and a co-organizer of the London Ember inaud
+00:00:13,760 --> 00:00:16,040
+And a co-organizer of the London Ember inaud
 
 6
-00:00:17,155 --> 00:00:19,260
-I'm your host, Drew Neil.
+00:00:17,150 --> 00:00:18,860
+I'm your host Drew Neil
 
 7
-00:00:19,305 --> 00:00:21,540
-And the challenge that
-I set for Jamie is called
+00:00:19,300 --> 00:00:21,750
+And the challenge that I set for Jamie is called
 
 8
-00:00:24,110 --> 00:00:27,180
-DN: OK Jamie, would you like
-to start by reading out the challenge
+00:00:24,110 --> 00:00:27,670
+DN: OK Jamie, would you like to
+start by reading out the challenge?
 
 9
-00:00:27,180 --> 00:00:27,665
-JW: OK.
+00:00:58,990 --> 00:01:02,830
+JW: This is how the sequencing should look.
+
+10
+00:01:11,950 --> 00:01:14,990
+And a sequence is
+connected by guests and hosts.
+
+11
+00:01:15,390 --> 00:01:16,430
+DN: Effectively yes.
+
+12
+00:01:17,200 --> 00:01:20,950
+JW: So let's have a look
+at the data to begin with.
+
+13
+00:01:27,060 --> 00:01:28,460
+I've already got this stuff.
+
+14
+00:01:36,450 --> 00:01:38,590
+I'm looking at past episodes to begin with.
+
+15
+00:01:38,880 --> 00:01:44,170
+I'm interested in the ones that
+do form parser sequences already.
+
+16
+00:01:45,750 --> 00:01:49,560
+We have episode one where the host was you
+
+17
+00:01:49,560 --> 00:01:50,740
+and the guest was Tom.
+
+18
+00:01:52,900 --> 00:01:54,770
+That sequence moves on to two .
+
+19
+00:01:54,900 --> 00:01:57,860
+where Tom the guest becomes Tom the host
+
+20
+00:01:57,930 --> 00:02:00,220
+Camille becomes the guest.
+
+21
+00:02:00,840 --> 00:02:05,250
+And then this one leads on to here
+
+22
+00:02:05,400 --> 00:02:07,060
+where Camille goes from guest
+
+23
+00:02:07,220 --> 00:02:07,760
+to should have been host.
+
+24
+00:02:07,820 --> 00:02:09,940
+DW: Unfortunately Camille was ill today
+
+25
+00:02:10,500 --> 00:02:12,400
+so I'm standing in as host.
+
+26
+00:02:12,500 --> 00:02:19,600
+DW: In fact, this data is slightly stale
+
+27
+00:02:21,340 --> 00:02:25,660
+We could have changed it so that we have a branch
+
+28
+00:02:25,920 --> 00:02:29,480
+Where I interview Tom and also you.
+
+29
+00:02:29,540 --> 00:02:32,380
+But we're going to pretend that Camille is acting as host today
+
+30
+00:02:32,500 --> 00:02:35,540
+and stick with the sample data that we came up with.
+
+31
+00:02:35,720 --> 00:02:38,560
+We can always adapt it later.
+
+32
+00:02:39,880 --> 00:02:42,120
+Thinking of the nouns in this description
+
+33
+00:02:43,080 --> 00:02:46,160
+The data structure is composed of collaborations
+
+34
+00:02:46,460 --> 00:02:48,460
+The description is quite explicit about that
+
+35
+00:02:48,600 --> 00:02:51,160
+Now, at the moment an episode
+
+36
+00:02:51,220 --> 00:02:53,940
+isn't strictly a collaboration
+
+37
+00:02:54,740 --> 00:02:56,220
+A collaboration should have an episode
+
+38
+00:02:56,280 --> 00:02:57,940
+but not necessarily be an episode.
+
+39
+00:02:59,840 --> 00:03:01,420
+And it is not explicit in this data
+
+40
+00:03:01,540 --> 00:03:02,880
+ inaud sequels.
+
+41
+00:03:03,000 --> 00:03:04,720
+But we know that we can
+
+42
+00:03:04,720 --> 00:03:08,060
+determine those from the host and guest inaudible..
+
+43
+00:03:13,420 --> 00:03:18,300
+I am going to use ember for this
+
+44
+00:03:18,300 --> 00:03:20,800
+A bit like reaching for rails,
+
+45
+00:03:20,860 --> 00:03:23,150
+I won't use all of it to begin with
+
+46
+00:03:23,240 --> 00:03:26,110
+but it gives you plenty of
+directions to go in once you set up
+
+47
+00:03:32,260 --> 00:03:34,960
+Let me see what version of Ember I am running.
+
+48
+00:03:35,250 --> 00:03:38,040
+Cool .... leading edge inaud
+
+49
+00:03:39,420 --> 00:03:40,560
+Let's call this:
+
+50
+00:03:48,900 --> 00:03:52,450
+inaud all the dependencies we need.
+
+51
+00:03:52,540 --> 00:03:52,930
+DN: OK.
+
+52
+00:03:56,200 --> 00:03:59,150
+JW: It will take a while,
+there's quite a few of them.
+
+53
+00:04:04,260 --> 00:04:07,520
+Because I'm using a local copy of inaud
+
+54
+00:04:07,520 --> 00:04:08,870
+inaud
+
+55
+00:04:08,950 --> 00:04:10,000
+I got it off GitHub
+
+56
+00:04:11,300 --> 00:04:13,460
+With inaud, what you tend to do
+
+57
+00:04:13,460 --> 00:04:17,550
+when working on packages that you're adapting.
+
+58
+00:04:17,600 --> 00:04:20,990
+Is to .... you do MPM work and it will similar cup
+
+59
+00:04:22,390 --> 00:04:26,280
+your copy of the repository to the node modules.
+
+60
+00:04:26,280 --> 00:04:28,280
+or directory
+
+61
+00:04:28,720 --> 00:04:30,050
+I cant use it straight away,
+
+62
+00:04:30,050 --> 00:04:32,050
+I need to first enter the ember mpm link cli
+
+63
+00:04:33,260 --> 00:04:35,680
+And that says also use it inside this project.
+
+64
+00:04:37,630 --> 00:04:42,530
+Now, if you follow the
+trail in this local project.
+
+65
+00:04:42,530 --> 00:04:48,830
+You'll find this sim-link here going to local modules. inaud
+
+66
+00:04:52,370 --> 00:04:56,780
+inaud links to my very own copy of it.
+
+67
+00:04:57,810 --> 00:04:59,120
+It's a nicety of mpm.
+
+68
+00:05:14,520 --> 00:05:16,100
+Let's just make a quick change
+
+69
+00:05:16,960 --> 00:05:20,330
+and make sure we're
+doing what we think we're doing.
+
+70
+00:05:28,600 --> 00:05:29,700
+OK, it seems to work.
+
+71
+00:05:33,540 --> 00:05:35,760
+I am inclined to ....
+
+72
+00:05:38,690 --> 00:05:41,800
+Get the data in first, and get it in the browser,
+
+73
+00:05:41,800 --> 00:05:43,800
+and think about it that way.
+
+74
+00:05:45,420 --> 00:05:48,400
+Pick up the data and put
+it down again as much as possible
+
+75
+00:05:48,400 --> 00:05:50,930
+until some way to handle it emerges.
+
+76
+00:05:54,710 --> 00:05:57,570
+Before we get going, I'm going to ....
+
+77
+00:05:58,070 --> 00:06:00,030
+store another dependency.
+
+78
+00:06:09,560 --> 00:06:11,880
+So Ember is about to undergo ....
+
+79
+00:06:12,900 --> 00:06:15,060
+some significant improvements and this
+
+80
+00:06:16,420 --> 00:06:19,090
+inaud
+
+81
+00:06:23,700 --> 00:06:26,660
+And so you just opt in to the future.
+
+82
+00:06:37,350 --> 00:06:38,860
+I just want to do a quick check.
+
+83
+00:06:45,450 --> 00:06:47,520
+inaud at once and anyway it's wrong.
+
+84
+00:06:47,520 --> 00:06:48,900
+parser once and ....
+
+85
+00:06:50,140 --> 00:06:51,330
+There is another one.
+
+86
+00:06:56,530 --> 00:06:59,460
+DN: Did you just
+switch to repository for Ember.js?
+
+87
+00:06:59,460 --> 00:06:59,960
+JW: Yes.
+
+88
+00:07:04,930 --> 00:07:07,680
+So I want these three features.
+
+89
+00:07:10,380 --> 00:07:11,800
+If you're running on Canary
+
+90
+00:07:12,420 --> 00:07:14,640
+inaud
+
+91
+00:07:16,050 --> 00:07:18,320
+The new things that are coming down the pipe
+
+92
+00:07:18,320 --> 00:07:20,270
+are hidden behind the feature flags.
+
+93
+00:07:20,820 --> 00:07:25,900
+That allows the inaud to release things incrementally.
+
+94
+00:07:28,470 --> 00:07:30,300
+That allows people to try them out.
+
+95
+00:07:30,300 --> 00:07:32,300
+without breaking the inaud
+
+96
+00:07:32,690 --> 00:07:34,170
+So I want those three things,
+
+97
+00:07:34,170 --> 00:07:35,760
+and the other thing I want is ....
+
+98
+00:07:38,800 --> 00:07:40,750
+I don't want this stable build of ember,
+
+99
+00:07:40,790 --> 00:07:44,180
+I want the Canary build components.
+
+100
+00:07:51,050 --> 00:07:53,280
+DN: OK, so this is leading edge, all the way.
+
+101
+00:07:53,500 --> 00:07:54,120
+JW: Yes
+
+102
+00:07:54,120 --> 00:07:58,490
+And the reason I think it's
+going to be worth while is that
+
+103
+00:07:59,780 --> 00:08:02,250
+Ember will be changing shortly after you record this,
+
+104
+00:08:02,250 --> 00:08:04,840
+and I think it's worth
+seeing what it's about to become.
+
+105
+00:08:04,840 --> 00:08:05,370
+DN: OK.
+
+106
+00:08:07,190 --> 00:08:09,890
+JW: So I think I want
+that version of handlebars.
+
+107
+00:08:11,820 --> 00:08:13,160
+And that version of Ember.
+
+108
+00:08:17,030 --> 00:08:17,870
+Yes that's taken.
+
+109
+00:08:22,460 --> 00:08:25,070
+I'll just have a look at ....
+
+110
+00:08:27,300 --> 00:08:28,670
+all these differences.
+
+111
+00:08:29,990 --> 00:08:31,220
+So ember in the future ....
+
+112
+00:08:33,220 --> 00:08:36,340
+opt in to the future inaud features
+
+113
+00:08:36,340 --> 00:08:38,340
+and including inaud bars, which is the ....
+
+114
+00:08:39,190 --> 00:08:41,260
+next generation inaud up
+
+115
+00:08:41,440 --> 00:08:43,760
+I'll just make sure
+all that actually works.
+
+116
+00:08:52,880 --> 00:08:54,370
+inaud this side of bower
+
+117
+00:08:54,370 --> 00:08:55,540
+inaud locked file.
+
+118
+00:08:59,650 --> 00:09:02,450
+It keeps the dependency
+resolutions in the same file
+
+119
+00:09:02,450 --> 00:09:05,040
+in which they were specified in the first place.
+
+120
+00:09:11,020 --> 00:09:13,870
+There's not a lot of
+difference to notice at the moment.
+
+121
+00:09:13,870 --> 00:09:17,280
+But things are better under
+the hood for various reasons.
+
+122
+00:09:20,570 --> 00:09:22,450
+I'm not going to begin to test just yet,
+
+123
+00:09:22,450 --> 00:09:25,760
+because I don't know
+quite what the target is yet.
+
+124
+00:09:25,760 --> 00:09:27,370
+I know I| want a data structure.
+
+125
+00:09:27,970 --> 00:09:29,450
+But if it's something I want to display,
+
+126
+00:09:29,450 --> 00:09:31,450
+then I want to let the view lead me
+
+127
+00:09:32,960 --> 00:09:35,120
+to what would be most useful.
+
+128
+00:09:36,940 --> 00:09:39,260
+Let's say for the beginning ....
+
+129
+00:09:40,350 --> 00:09:42,770
+display a list of episodes.
+
+130
+00:10:11,730 --> 00:10:16,160
+Thinking back to Toms Peer to Peer
+
+131
+00:10:16,160 --> 00:10:18,830
+and how often he commits,
+
+132
+00:10:18,830 --> 00:10:21,770
+and I realise that I'm
+already several changes
+
+133
+00:10:21,770 --> 00:10:23,940
+into that inaud commit
+
+134
+00:10:24,980 --> 00:10:26,170
+my bits of inaud stuff.
+
+135
+00:10:30,170 --> 00:10:31,930
+DN: You've created a git repository,
+
+136
+00:10:32,010 --> 00:10:34,340
+was that done for
+you by the ember inaud?
+
+137
+00:10:34,340 --> 00:10:36,340
+JW: Yes, ember as a new creates a inaud.
+
+138
+00:10:37,470 --> 00:10:41,530
+So that's my stuff to get
+up on the latest ember.
+
+139
+00:10:50,560 --> 00:10:52,290
+And partly to demonstrate how easy
+
+140
+00:10:52,290 --> 00:10:54,240
+it is to use the leading edge of ember.
+
+141
+00:10:54,670 --> 00:10:59,460
+inaud rails, and inaud  command line inaud
+
+142
+00:10:59,820 --> 00:11:01,590
+It should feel inaud
+
+143
+00:11:03,870 --> 00:11:05,270
+Check in that check as well.
+
+144
+00:11:09,330 --> 00:11:11,040
+I'll just see what that is exactly.
+
+145
+00:11:14,460 --> 00:11:17,200
+So that at the moment is fine.
+
+146
+00:11:17,200 --> 00:11:19,170
+It's compiling, it's just that there's nothing to inaud
+
+147
+00:11:19,170 --> 00:11:20,670
+It just says there is no data.
+
+148
+00:11:22,000 --> 00:11:23,370
+So I'm going to commit that
+
+149
+00:11:31,000 --> 00:11:32,290
+Let's pull in those files.
+
+150
+00:11:34,430 --> 00:11:35,810
+I've got men next door.
+
+151
+00:11:40,130 --> 00:11:43,190
+I'm going to pretend they're
+coming from an api of some sort.
+
+152
+00:11:44,520 --> 00:11:45,520
+So we'll put them in.
+
+153
+00:11:56,130 --> 00:11:58,280
+So we now should be
+able to fetch down from
+
+154
+00:11:58,520 --> 00:12:00,480
+lol host\api\
+
+155
+00:12:01,890 --> 00:12:05,640
+lol host is because a inaud
+
+156
+00:12:12,820 --> 00:12:14,590
+I'll concentrate on episodes for now,
+
+157
+00:12:14,590 --> 00:12:16,230
+because it looks the most like ....
+
+158
+00:12:17,840 --> 00:12:21,180
+I don't have inaud yet the
+roots of where data gets loaded in,
+
+159
+00:12:22,570 --> 00:12:23,150
+so I will:
+
+160
+00:12:29,380 --> 00:12:31,090
+I don't want to change the template
+
+161
+00:12:31,540 --> 00:12:32,910
+but  I do want the rest of it.
+
+162
+00:12:39,740 --> 00:12:40,920
+In my template,
+
+163
+00:12:42,240 --> 00:12:44,210
+I wasn't referring to model directly,
+
+164
+00:12:44,210 --> 00:12:46,720
+I'm referring to the episodes.
+
+165
+00:12:48,780 --> 00:12:50,210
+I'm going to stick with that.
+
+166
+00:12:50,400 --> 00:12:52,210
+So what I want to return from here
+
+167
+00:12:53,700 --> 00:12:54,990
+Is .... set up some ember uses.
+
+168
+00:13:01,360 --> 00:13:04,250
+I want to return a
+promise to load in that data.
+
+169
+00:13:33,810 --> 00:13:35,330
+That should I think, be enough.
+
+170
+00:13:37,290 --> 00:13:38,990
+Let's just see if it compiles.
+
+171
+00:13:40,850 --> 00:13:41,720
+Yes, it seems to.
+
+172
+00:13:57,060 --> 00:13:59,050
+I'm going to go a step back to something
+
+173
+00:13:59,440 --> 00:14:01,330
+that looks a bit more like the guides.
+
+174
+00:14:02,180 --> 00:14:03,130
+Ajax ....
+
+175
+00:14:10,630 --> 00:14:12,640
+DN: Oh wow, that was quick.
+
+176
+00:14:12,640 --> 00:14:13,850
+JW: Yes (laughter).
+
+177
+00:14:18,620 --> 00:14:20,690
+DN: The episode inaud already
+
+178
+00:14:20,840 --> 00:14:23,200
+JW: Yes, its already made space. inaud
+
+179
+00:14:24,290 --> 00:14:25,730
+inaud here, I wasn't accounting for that,
+
+180
+00:14:25,760 --> 00:14:29,290
+It's actually way better.
+
+181
+00:14:29,290 --> 00:14:31,630
+We need to bring in the model,
+
+182
+00:14:31,680 --> 00:14:34,040
+for this template to render its ....
+
+183
+00:14:34,930 --> 00:14:37,560
+promise that you get to
+load it somewhere in the future
+
+184
+00:14:37,560 --> 00:14:39,330
+and the rest will be taken care of.
+
+185
+00:14:45,250 --> 00:14:47,730
+Let's emit a little more data about this.
+
+186
+00:15:02,640 --> 00:15:04,690
+See what else we have to work with here.
+
+187
+00:15:33,710 --> 00:15:35,990
+This is to 'feel out' the data
+
+188
+00:15:36,570 --> 00:15:39,360
+and see what it suggests as
+a good way to move forward.
+
+189
+00:15:40,120 --> 00:15:41,070
+Interestingly ....
+
+190
+00:15:42,190 --> 00:15:46,060
+inaud, leave off the closing dl tag.
+
+191
+00:15:46,680 --> 00:15:48,200
+And then what you'll find here ....
+
+192
+00:15:48,980 --> 00:15:52,900
+is that the new template compiler
+
+193
+00:15:53,460 --> 00:15:56,300
+It worked out that I
+made a semantic mistake
+
+194
+00:15:56,300 --> 00:15:58,300
+in not closing my dl.
+
+195
+00:16:13,120 --> 00:16:14,480
+I guess I could just ....
+
+196
+00:16:29,470 --> 00:16:31,550
+DN: It should work for all but the last one.
+
+197
+00:16:32,220 --> 00:16:32,820
+JW: Great.
+
+198
+00:16:35,830 --> 00:16:38,720
+DN: I don't have a
+poster frame yet for todays episode.
+
+199
+00:16:49,300 --> 00:16:50,740
+JS: We'll be doing a lot of that.
+
+200
+00:17:00,820 --> 00:17:02,930
+This data, in a sense tells us everything
+
+201
+00:17:03,350 --> 00:17:05,500
+we need to know about inaud the sequence.
+
+202
+00:17:12,340 --> 00:17:15,540
+What I would like to do is be able to ....
+
+203
+00:17:17,970 --> 00:17:21,560
+If I'm going to create this collaborator data structure.
+
+204
+00:17:21,560 --> 00:17:25,010
+I feel like I want to inaud test.
+
+205
+00:17:25,200 --> 00:17:28,240
+Now that I've got that rendering of the data
+
+206
+00:17:28,240 --> 00:17:29,700
+this is a good place to start.
+
+207
+00:17:30,970 --> 00:17:32,610
+Let's just commit that.
+
+208
+00:17:35,140 --> 00:17:40,290
+So I've added a route,
+which brings in the same data.
+
+209
+00:17:41,520 --> 00:17:44,370
+I've added some of that data
+to my template to make sure .....
+
+210
+00:17:45,000 --> 00:17:46,180
+I fully understand it.
+
+211
+00:17:48,580 --> 00:17:50,620
+And I'll generate some inaud tests which
+
+212
+00:17:50,620 --> 00:17:53,380
+I'll leave alone inaud too much about at the moment.
+
+213
+00:18:12,850 --> 00:18:15,940
+Maybe the simplest thing
+for now is just to have a function
+
+214
+00:18:16,660 --> 00:18:20,480
+that does the job of
+taking these two data sources
+
+215
+00:18:22,060 --> 00:18:25,600
+and produces all the right things as the output.
+
+216
+00:18:27,460 --> 00:18:29,150
+If I generate ....
+
+217
+00:18:47,350 --> 00:18:52,680
+So that's going to generate
+a function in it's own module.
+
+218
+00:19:01,440 --> 00:19:05,040
+So I need a bunch of episodes to feed this thing.
+
+219
+00:19:07,040 --> 00:19:10,530
+and I might leave the
+partners to one side for now.
+
+220
+00:19:11,600 --> 00:19:14,550
+It would be good
+eventually, if that data is available
+
+221
+00:19:14,550 --> 00:19:16,550
+that the objects are re-used.
+
+222
+00:19:17,180 --> 00:19:19,660
+So that if I've got for example, one record for Tom
+
+223
+00:19:19,660 --> 00:19:20,690
+loaded into memory.
+
+224
+00:19:20,690 --> 00:19:23,550
+It's always that same
+record, wherever I reference it.
+
+225
+00:19:24,530 --> 00:19:26,530
+And let's just see if we can
+
+226
+00:19:26,530 --> 00:19:28,530
+inaud the sequencing.
+
+227
+00:19:28,530 --> 00:19:30,530
+That's what we would expect inaud
+
+228
+00:19:32,690 --> 00:19:35,460
+I'm just going to refer to this again.
+
+229
+00:19:38,760 --> 00:19:40,390
+Episode 1 begins the sequence,
+
+230
+00:19:40,390 --> 00:19:41,970
+therefore it has no prequel.
+
+231
+00:19:43,150 --> 00:19:44,800
+but it has one sequel.
+
+232
+00:19:46,360 --> 00:19:49,020
+Oh no it has two sequels according to this data.
+
+233
+00:19:49,730 --> 00:19:51,780
+Jamie reads from screen.
+
+234
+00:19:59,420 --> 00:20:01,600
+Are there any left after 2 sequels?
+
+235
+00:20:02,040 --> 00:20:04,070
+DN: Not yet, but I think we could easily
+
+236
+00:20:04,500 --> 00:20:05,950
+adapt our data
+
+237
+00:20:07,600 --> 00:20:09,270
+to accommodate that later.
+
+238
+00:20:09,270 --> 00:20:15,310
+JW: OK. So let's take a
+sum of what's in this data here.
+
+239
+00:20:19,140 --> 00:20:21,750
+so the episodes we're passing in are:
+
+240
+00:20:35,160 --> 00:20:37,850
+Let's get the prequel
+side of things working first.
+
+241
+00:20:38,420 --> 00:20:39,850
+The challenge being ....
+
+242
+00:20:42,400 --> 00:20:45,200
+Let's just base this on the inaud id  to begin with.
+
+243
+00:21:15,790 --> 00:21:22,090
+I want to know when
+I build collaborators as this:
+
+244
+00:21:29,150 --> 00:21:31,540
+Basically, I want a data structure
+
+245
+00:21:31,720 --> 00:21:33,550
+that's exactly as described in here.
+
+246
+00:21:36,130 --> 00:21:38,370
+So I want something that looks like:
+
+247
+00:21:38,540 --> 00:21:39,920
+I'll just take away this OK.
+
+248
+00:21:53,350 --> 00:21:56,360
+What I'm expecting to get
+at the end of the road is episode .....
+
+249
+00:21:57,780 --> 00:22:00,350
+Its going to look a bit like .....
+
+250
+00:22:08,330 --> 00:22:09,040
+Like that:
+
+251
+00:22:17,700 --> 00:22:19,360
+Let's just deal with the sequels.
+
+252
+00:22:25,860 --> 00:22:28,340
+This is an interesting aspect,
+
+253
+00:22:30,800 --> 00:22:32,760
+If they point at each other ....
+
+254
+00:22:34,820 --> 00:22:36,150
+Let's find out.
+
+255
+00:22:39,430 --> 00:22:40,620
+It could get cyclic
+
+256
+00:22:41,510 --> 00:22:42,690
+DN: Yes, that's possible.
+
+257
+00:22:44,550 --> 00:22:47,610
+So this collaboration is
+going to point to the next one.
+
+258
+00:22:48,380 --> 00:22:51,290
+inaud sequel back to this one, a prequel.
+
+259
+00:22:53,160 --> 00:22:55,520
+So I can't really expand out that necessarily,
+
+260
+00:22:56,120 --> 00:22:59,370
+So they will have to refer
+to each one by an id I think.
+
+261
+00:22:59,390 --> 00:23:00,070
+DN: Right.
+
+262
+00:23:00,360 --> 00:23:03,540
+So you don't want this
+one containing it's sequels?
+
+263
+00:23:03,670 --> 00:23:04,700
+JW: Not necessarily.
+
+264
+00:23:24,980 --> 00:23:27,810
+So this is an episode and
+it would have this one sequel.
+
+265
+00:23:28,050 --> 00:23:29,810
+But then this would have ....
+
+266
+00:23:31,440 --> 00:23:33,330
+a prequel, which is ....
+
+267
+00:23:34,580 --> 00:23:36,640
+this one again which contains sequels.
+
+268
+00:23:42,380 --> 00:23:47,840
+Maybe what I want is
+to simply append the id
+
+269
+00:23:48,740 --> 00:23:51,810
+of the prequel and ids
+of sequels into these episodes.
+
+270
+00:23:53,300 --> 00:23:56,370
+Otherwise it will become this cyclic thing.
+
+271
+00:24:01,890 --> 00:24:03,760
+Say instead that I do get a inaud back ....
+
+272
+00:24:04,400 --> 00:24:07,010
+I get the same two episodes inaud a bit more data.
+
+273
+00:24:58,990 --> 00:25:01,380
+I guess we should run
+some tests against this.
+
+274
+00:25:03,820 --> 00:25:06,610
+Let's ditch that server
+for now and get test server.
+
+275
+00:25:15,350 --> 00:25:18,160
+I've got inaud just now.
+
+276
+00:25:19,360 --> 00:25:22,090
+That's interesting, I'm being told I've got js inaud now.
+
+277
+00:25:36,330 --> 00:25:42,060
+It's telling me that
+the results are just true.
+
+278
+00:25:42,060 --> 00:25:44,600
+because I've not written a line of this method yet.
+
+279
+00:25:44,600 --> 00:25:46,010
+and this is inaud that's expected.
+
+280
+00:25:46,010 --> 00:25:48,280
+So let's start by ....
+
+281
+00:25:51,840 --> 00:25:54,560
+rather than inserting true in this let's go:
+
+282
+00:25:57,020 --> 00:25:58,610
+Let's return the episodes back.
+
+283
+00:25:58,710 --> 00:26:00,560
+inaud density function.
+
+284
+00:26:02,380 --> 00:26:04,130
+Let's see what the diff looks like.
+
+285
+00:26:05,250 --> 00:26:07,490
+I can see in the prequel inaud.
+
+286
+00:26:08,230 --> 00:26:09,890
+DN: So we're close.
+ JW: Yes.
+
+287
+00:26:15,580 --> 00:26:18,840
+JW: If we take this list of episodes.
+
+288
+00:26:20,730 --> 00:26:22,790
+We want to reduce it to some result.
+
+289
+00:26:28,930 --> 00:26:31,130
+The result is another list.
+
+290
+00:26:34,210 --> 00:26:35,660
+Each time we hit an episode ....
+
+291
+00:26:36,420 --> 00:26:38,270
+We can figure out what it's ....
+
+292
+00:26:43,680 --> 00:26:45,250
+We've got a temporal advantage
+
+293
+00:26:45,250 --> 00:26:49,240
+which is that our list of episodes are in
+
+294
+00:26:50,060 --> 00:26:51,560
+order of time, and therefore
+
+295
+00:26:52,660 --> 00:26:54,240
+a prequel isn't going to appear
+
+296
+00:26:55,840 --> 00:26:57,750
+the moment after one of it's sequels.
+
+297
+00:26:57,750 --> 00:26:58,660
+DN: Yes, that's true.
+
+298
+00:26:58,660 --> 00:27:00,070
+DW: Although if they
+did come in a different order.
+
+299
+00:27:00,070 --> 00:27:01,300
+this would break down.
+
+300
+00:27:01,300 --> 00:27:03,300
+But let's just go for this to start with.
+
+301
+00:27:03,300 --> 00:27:05,940
+DN: I think that's the
+safest option for now at least.
+
+302
+00:27:06,480 --> 00:27:08,200
+JW: Yes. So let's say:
+
+303
+00:27:12,750 --> 00:27:16,660
+I need to figure out
+what it's prequel id is.
+
+304
+00:27:17,140 --> 00:27:21,330
+I'm looking for something in
+the list of episodes, that has ....
+
+305
+00:27:22,000 --> 00:27:23,610
+inaud code this for a second.
+
+306
+00:27:24,880 --> 00:27:28,780
+inaud prequel if my current host was quest on that episode.
+
+307
+00:27:52,030 --> 00:27:55,330
+This isn't going to be very efficient algorithmicly
+
+308
+00:27:55,330 --> 00:27:58,060
+But it's a small list so
+it shouldn't matter too much.
+
+309
+00:27:58,180 --> 00:27:59,570
+So we want to find,
+
+310
+00:28:00,450 --> 00:28:03,360
+an episode whose guest id
+
+311
+00:28:05,810 --> 00:28:08,220
+matches this episode.
+
+312
+00:28:22,860 --> 00:28:26,420
+Dn: I think that inaud by is going to find a record.
+
+313
+00:28:26,420 --> 00:28:29,380
+You were inaud to prequel id.
+
+314
+00:28:29,960 --> 00:28:31,300
+JW: Your absolutely right.
+
+315
+00:28:33,070 --> 00:28:35,600
+Let's make sure we
+actually get a prequel first.
+
+316
+00:28:44,410 --> 00:28:46,930
+I'm mutating the
+episode that has been passed in
+
+317
+00:28:47,460 --> 00:28:50,880
+I want to make a shell and copy of it.
+
+318
+00:28:51,200 --> 00:28:53,010
+But we'll deal with that in a second.
+
+319
+00:29:01,290 --> 00:29:02,610
+See what effect that has.
+
+320
+00:29:04,580 --> 00:29:06,960
+Sure enough we do have
+a prequel id on one of them.
+
+321
+00:29:10,720 --> 00:29:12,460
+It's a weird diff to read.
+
+322
+00:29:14,110 --> 00:29:15,530
+DN: The second one looks right.
+
+323
+00:29:16,950 --> 00:29:18,300
+JW: Yes, I think this is cool.
+
+324
+00:29:18,300 --> 00:29:21,380
+I've got prequeliser, it's
+just commas it's confused about.
+
+325
+00:29:21,940 --> 00:29:25,200
+OK, so let's try the
+same thing with sequels.
+
+326
+00:29:28,460 --> 00:29:30,640
+Rather than find
+by we will use filter by.
+
+327
+00:29:32,380 --> 00:29:34,500
+I'll refer to the docs for these methods,
+
+328
+00:29:34,500 --> 00:29:37,280
+just to show you
+where I'm getting them from.
+
+329
+00:29:37,550 --> 00:29:42,070
+These are extensions
+to the array prototype
+
+330
+00:29:43,430 --> 00:29:45,360
+You don't have to opt in to extensions.
+
+331
+00:29:45,360 --> 00:29:47,430
+You can leave them on the floor.
+
+332
+00:29:50,340 --> 00:29:54,060
+If you don't want your
+core object monkey-patched.
+
+333
+00:29:54,290 --> 00:29:57,140
+But they are so useful most of the time
+
+334
+00:29:58,010 --> 00:30:00,740
+So a sequel is an episode whose host id,
+
+335
+00:30:00,740 --> 00:30:02,080
+is equal to our guest id.
+
+336
+00:30:10,730 --> 00:30:12,340
+And with this one ....
+
+337
+00:30:14,260 --> 00:30:15,970
+Because we know it's always a list,
+
+338
+00:30:16,090 --> 00:30:18,260
+we don't need to check so much.
+
+339
+00:30:29,910 --> 00:30:31,650
+I'll just break this up a bit.
+
+340
+00:30:36,240 --> 00:30:37,920
+inaud difference here.
+
+341
+00:30:39,330 --> 00:30:41,500
+DN: It's only the prequel id inaud.
+
+342
+00:30:44,940 --> 00:30:48,050
+JW: Yes, find instead rather than null inaud.
+
+343
+00:30:55,080 --> 00:30:57,990
+So rather than expecting null, let's inaud there
+
+344
+00:30:59,170 --> 00:31:02,610
+That's our data structure.
+
+345
+00:31:07,350 --> 00:31:08,970
+Let me commit this.
+
+346
+00:31:10,720 --> 00:31:12,190
+See what new stuff we've got.
+
+347
+00:31:12,880 --> 00:31:15,520
+I fixed inaud error so I'll :
+
+348
+00:31:36,900 --> 00:31:39,230
+DN: Your making your
+commits granular there.
+
+349
+00:31:39,230 --> 00:31:39,620
+JW: Yes
+
+350
+00:31:40,850 --> 00:31:42,790
+I'm not always the best at this,
+
+351
+00:31:43,310 --> 00:31:45,260
+but it's such good practice.
+
+352
+00:31:46,440 --> 00:31:49,400
+It's probably the best inaud you can get in this programme.
+
+353
+00:31:50,530 --> 00:31:52,490
+Let's have a quick look at what this did.
+
+354
+00:31:53,650 --> 00:31:54,580
+So I've got this ....
+
+355
+00:31:55,170 --> 00:31:58,100
+inefficient object mutating function.
+
+356
+00:31:58,130 --> 00:32:00,320
+It's not a very
+pure function, but it does
+
+357
+00:32:01,830 --> 00:32:04,890
+help us work out what the algorithm is
+
+358
+00:32:04,890 --> 00:32:06,890
+and what its trying to produce.
+
+359
+00:32:08,240 --> 00:32:09,120
+I'll commit this.
+
+360
+00:32:22,210 --> 00:32:25,140
+I fancy giving it a quick re-factor,
+
+361
+00:32:25,140 --> 00:32:27,280
+to make sure that they can be re-factored.
+
+362
+00:32:31,190 --> 00:32:34,180
+Avoid this nasty mutation.
+
+363
+00:32:35,090 --> 00:32:37,420
+Ideally, what I want is ....
+
+364
+00:32:39,830 --> 00:32:42,620
+Rather than using the
+original episode let's copy it.
+
+365
+00:32:45,750 --> 00:32:50,420
+This will be a shallow
+copy so it will be a new object.
+
+366
+00:32:50,620 --> 00:32:53,920
+but the values for each of
+the fields should be the same.
+
+367
+00:33:01,780 --> 00:33:07,120
+Right, so this is telling
+me I've not imported ember,
+
+368
+00:33:07,120 --> 00:33:08,760
+and I'm going to try to use it here.
+
+369
+00:33:09,140 --> 00:33:11,920
+This is all using the s6 module syntax
+
+370
+00:33:12,590 --> 00:33:15,760
+which assumes you don't
+want things on a global scope.
+
+371
+00:33:15,760 --> 00:33:18,030
+If you want
+something you have to import it.
+
+372
+00:33:18,130 --> 00:33:20,820
+So let's import ember
+from the ember package.
+
+373
+00:33:28,780 --> 00:33:31,920
+Let's see if there's anything
+else that can be tidied up there.
+
+374
+00:33:31,920 --> 00:33:32,960
+I think there isn't.
+
+375
+00:33:33,650 --> 00:33:36,340
+I was talking about
+the temporal problem earlier ....
+
+376
+00:33:38,180 --> 00:33:40,570
+If a sequel or a prequel appeared elsewhere,
+
+377
+00:33:40,570 --> 00:33:42,570
+out of order,
+
+378
+00:33:42,570 --> 00:33:43,580
+it might not find it.
+
+379
+00:33:43,580 --> 00:33:47,090
+But because we're looking
+over the entire list of episodes each time
+
+380
+00:33:47,300 --> 00:33:48,450
+that doesn't matter.
+
+381
+00:33:48,650 --> 00:33:50,770
+If we wanted to make this more efficient
+
+382
+00:33:50,770 --> 00:33:53,810
+we could assume that a sequel won't appear
+
+383
+00:33:54,140 --> 00:33:57,300
+earlier up the list, and you
+can only search after this point.
+
+384
+00:33:57,600 --> 00:33:59,680
+But that's not
+what we need in this case.
+
+385
+00:34:00,730 --> 00:34:01,680
+So let's just add:
+
+386
+00:34:20,160 --> 00:34:22,210
+So now we've got that let's ....
+
+387
+00:34:24,910 --> 00:34:26,490
+Let's go for another test.
+
+388
+00:34:27,350 --> 00:34:29,300
+I want to know that ....
+
+389
+00:34:32,250 --> 00:34:34,740
+I guess that what
+might be a good thing to do ....
+
+390
+00:34:36,890 --> 00:34:40,080
+a way to represent this in HGML,
+
+391
+00:34:40,710 --> 00:34:42,080
+could just be links.
+
+392
+00:34:42,990 --> 00:34:46,040
+So jumping back and
+forth between different episodes
+
+393
+00:34:46,040 --> 00:34:49,050
+and making sure that
+sequence is maintained correctly.
+
+394
+00:34:52,180 --> 00:34:54,080
+Let's see what's the best way to do this.
+
+395
+00:34:57,860 --> 00:35:00,500
+I'm going to side step the problem of
+
+396
+00:35:01,170 --> 00:35:03,010
+mocking out the data for every test
+
+397
+00:35:03,010 --> 00:35:04,450
+because our data is static
+
+398
+00:35:04,450 --> 00:35:05,890
+and instead I'm going to say:
+
+399
+00:35:10,730 --> 00:35:12,810
+We'll call this:
+
+400
+00:35:20,560 --> 00:35:22,450
+It should generate me a failing test.
+
+401
+00:35:22,450 --> 00:35:26,800
+although this test isn't going
+to mirror what we actually want
+
+402
+00:35:27,650 --> 00:35:29,500
+You'll notice, it's trying to look up
+
+403
+00:35:29,500 --> 00:35:31,800
+URL walking sequence.
+
+404
+00:35:33,550 --> 00:35:35,760
+DN: It wants to live in a world of URLs.
+
+405
+00:35:46,940 --> 00:35:48,750
+JW: The way to prove this works is ....
+
+406
+00:35:54,730 --> 00:35:57,920
+go to the home of the representation,
+
+407
+00:35:58,670 --> 00:35:59,920
+see a list of people
+
+408
+00:36:00,110 --> 00:36:02,050
+who have played a part in Peer to Peer
+
+409
+00:36:02,160 --> 00:36:04,570
+click on somebodys
+name and see the episode
+
+410
+00:36:04,570 --> 00:36:05,780
+they first appeared in.
+
+411
+00:36:05,980 --> 00:36:08,990
+And then see the
+the sequels
+
+412
+00:36:09,810 --> 00:36:11,460
+and be able to follow to a sequel.
+
+413
+00:36:13,570 --> 00:36:16,290
+Yes I think that makes sense.
+
+414
+00:36:17,230 --> 00:36:21,650
+So I want to be able
+to click on Tom and see the ....
+
+415
+00:36:25,220 --> 00:36:27,880
+I'll remind myself what
+the name of the episode was.
+
+416
+00:36:28,820 --> 00:36:32,450
+Counting Tree Nodes, where he was the host,
+
+417
+00:36:32,720 --> 00:36:34,450
+and be able to see ....
+
+418
+00:36:36,560 --> 00:36:38,180
+all the sequels to the episode
+
+419
+00:36:38,180 --> 00:36:40,180
+click on those to follow through,
+
+420
+00:36:40,180 --> 00:36:41,740
+and then be able to click back
+
+421
+00:36:42,180 --> 00:36:45,680
+to the prequel.
+
+422
+00:36:45,680 --> 00:36:47,830
+I think the most logical way to represent
+
+423
+00:36:47,830 --> 00:36:49,830
+the sequels is probably via via links.
+
+424
+00:36:49,920 --> 00:36:50,560
+DN: Yes, OK.
+
+425
+00:36:52,370 --> 00:36:55,020
+What would be nice later is to find
+
+426
+00:36:55,020 --> 00:36:57,860
+a way to represent the whole graph.
+
+427
+00:36:59,540 --> 00:37:02,090
+In one visual set up.
+
+428
+00:37:02,820 --> 00:37:06,040
+But this is a useful way to ....
+
+429
+00:37:06,340 --> 00:37:08,330
+test being able to pull all the data in.
+
+430
+00:37:12,030 --> 00:37:12,980
+Let's call this one:
+
+431
+00:37:19,510 --> 00:37:21,860
+Let's start by
+visiting the home of the app.
+
+432
+00:37:33,490 --> 00:37:36,290
+A link that contains the words Tom Stuart.
+
+433
+00:37:41,410 --> 00:37:43,630
+What we are expecting that .....
+
+434
+00:37:48,290 --> 00:37:50,180
+At that point we should see ....
+
+435
+00:37:55,170 --> 00:37:57,170
+I guess what I want to do is go
+
+436
+00:37:58,670 --> 00:38:02,090
+from the tree episode
+to the Poker ranks episode
+
+437
+00:38:02,090 --> 00:38:03,150
+and back again.
+
+438
+00:38:20,090 --> 00:38:22,220
+DN: I suppose another way to look at this is
+
+439
+00:38:22,220 --> 00:38:24,860
+rather than starting
+with a list of all the people,
+
+440
+00:38:25,250 --> 00:38:27,160
+you could start with a list of all the,
+
+441
+00:38:27,670 --> 00:38:29,300
+episodes that have no prequels
+
+442
+00:38:30,410 --> 00:38:31,820
+which at the moment
+
+443
+00:38:32,510 --> 00:38:34,020
+Toms episode has no prequel
+
+444
+00:38:34,020 --> 00:38:36,020
+and Ollies episode has no prequel.
+
+445
+00:38:37,580 --> 00:38:39,530
+JW:  That sounds good, but it sounds like
+
+446
+00:38:40,180 --> 00:38:41,530
+what I was flailing for.
+
+447
+00:38:43,330 --> 00:38:45,390
+DN:  If we did have a list of all the people
+
+448
+00:38:46,020 --> 00:38:48,590
+JW: Some of those people
+don't have roots episodes.
+
+449
+00:38:49,090 --> 00:38:51,900
+Everyone has an
+episode that they first appeared on.
+
+450
+00:38:53,410 --> 00:38:54,660
+Yes, OK let's do that then.
+
+451
+00:38:55,140 --> 00:38:57,300
+We want the roots episodes,
+
+452
+00:38:57,300 --> 00:38:59,020
+of the different sequences.
+
+453
+00:39:00,040 --> 00:39:02,260
+Counting Tree Nodes
+is one of those roots.
+
+454
+00:39:02,340 --> 00:39:04,160
+That feels like a thing we click on.
+
+455
+00:39:06,320 --> 00:39:08,550
+When we've clicked on Counting Tree Nodes
+
+456
+00:39:08,710 --> 00:39:11,100
+we expect to end up on .....
+
+457
+00:39:12,250 --> 00:39:13,840
+see what we can ask about this.
+
+458
+00:39:15,420 --> 00:39:16,850
+the state you've ended up in.
+
+459
+00:39:17,360 --> 00:39:19,250
+We could ask something about the URL
+
+460
+00:39:19,250 --> 00:39:21,250
+I think that might be useful.
+
+461
+00:39:33,410 --> 00:39:35,060
+The other thing I want to know is
+
+462
+00:39:35,060 --> 00:39:39,060
+does this episode
+contain a link back to its prequel.
+
+463
+00:39:53,890 --> 00:39:55,650
+DN: So if we're stuck on the home page
+
+464
+00:39:55,830 --> 00:39:58,410
+and we click a link
+that says Counting Tree Nodes.
+
+465
+00:39:58,500 --> 00:40:00,490
+That is episode 1 itself.
+
+466
+00:40:00,490 --> 00:40:04,640
+So wouldn't we end up with
+current path being episode \1.
+
+467
+00:40:05,050 --> 00:40:06,640
+JW: Oh yes, of course, you're right.
+
+468
+00:40:10,560 --> 00:40:13,160
+Then I'd expect to be
+able to click a link, of course.
+
+469
+00:40:13,860 --> 00:40:15,250
+I'll get there eventually.
+
+470
+00:40:15,250 --> 00:40:15,730
+DN: OK.
+
+471
+00:40:27,370 --> 00:40:29,460
+We expect to be
+able to visit the home page
+
+472
+00:40:29,490 --> 00:40:30,920
+click on Counting Tree Nodes
+
+473
+00:40:30,920 --> 00:40:32,740
+then click on Ranking Poker Hands
+
+474
+00:40:34,740 --> 00:40:36,700
+We could say at certain points what
+
+475
+00:40:36,700 --> 00:40:38,260
+URL we expected it on.
+
+476
+00:40:40,990 --> 00:40:42,940
+It doesn't matter too much
+
+477
+00:40:45,150 --> 00:40:46,920
+inaud of walking forward and back
+
+478
+00:40:47,140 --> 00:40:48,410
+through a sequence.
+
+479
+00:40:48,970 --> 00:40:50,960
+to get some confidence that
+
+480
+00:40:50,960 --> 00:40:52,770
+we've set things up right.
+
+481
+00:40:59,940 --> 00:41:01,570
+Let's leave it like this for now,
+
+482
+00:41:01,570 --> 00:41:02,850
+and see where this leads.
+
+483
+00:41:03,450 --> 00:41:05,300
+DN: So we're staring at the top level.
+
+484
+00:41:05,300 --> 00:41:08,800
+In the directory of
+episodes that have no prequel
+
+485
+00:41:09,380 --> 00:41:10,950
+And then we click the first one
+
+486
+00:41:10,950 --> 00:41:12,490
+which is Counting Tree Nodes
+
+487
+00:41:12,490 --> 00:41:14,000
+and that has a sequel which is
+
+488
+00:41:14,000 --> 00:41:15,620
+episode 2 Ranking Poker Hands?
+
+489
+00:41:15,620 --> 00:41:16,440
+JW: Yes.
+
+490
+00:41:17,730 --> 00:41:19,530
+See what kind of errors .....
+
+491
+00:41:21,680 --> 00:41:24,520
+DN:  It doesn't like
+the URL walking a sequence.
+
+492
+00:41:25,610 --> 00:41:26,520
+JW: Let's find out.
+
+493
+00:41:26,520 --> 00:41:28,520
+DN: How did it end up there?
+
+494
+00:41:28,910 --> 00:41:30,500
+JW: That's a very good question.
+
+495
+00:41:34,130 --> 00:41:36,110
+Anyway, the failure is that there is no
+
+496
+00:41:36,110 --> 00:41:38,300
+link containing Counting Tree Nodes.
+
+497
+00:41:39,560 --> 00:41:42,080
+So let's head over to this template
+
+498
+00:42:05,120 --> 00:42:06,840
+We want to link to a root episode.
+
+499
+00:42:14,890 --> 00:42:17,230
+And the model we
+want to pass in for it is this:
+
+500
+00:42:17,490 --> 00:42:19,230
+This episode here.
+
+501
+00:42:34,880 --> 00:42:39,230
+We need to deliver this data down
+
+502
+00:42:39,870 --> 00:42:42,640
+DN: So do we need
+a root episodes function ?
+
+503
+00:42:46,040 --> 00:42:47,440
+We could say that the model
+
+504
+00:42:47,440 --> 00:42:47,450
+for the application is the root episodes
+We could say that the model
+
+505
+00:42:47,450 --> 00:42:49,620
+for the application is the root episodes
+
+506
+00:42:52,560 --> 00:42:54,580
+Now it's getting stuck.
+
+507
+00:42:55,310 --> 00:42:56,820
+For some reason .....
+
+508
+00:43:00,400 --> 00:43:02,290
+I'm going to do something to the model
+
+509
+00:43:02,290 --> 00:43:03,490
+before handing it over.
+
+510
+00:43:03,490 --> 00:43:04,080
+So let's say:
+
+511
+00:43:34,770 --> 00:43:36,720
+The first test has passing so let's
+
+512
+00:43:37,650 --> 00:43:39,950
+See what the world
+looks like at this point.
+
+513
+00:43:49,960 --> 00:43:52,040
+It should be the same for each episode.
+
+514
+00:43:57,560 --> 00:43:59,760
+DN: Ah yes, because build collaborators does
+
+515
+00:43:59,760 --> 00:44:00,900
+return the full list.
+
+516
+00:44:02,030 --> 00:44:04,990
+We don't yet have
+something that just returns the roots.
+
+517
+00:44:09,570 --> 00:44:12,050
+That's interesting,
+we're passing something into it
+
+518
+00:44:12,050 --> 00:44:13,450
+that it doesn't understand.
+
+519
+00:44:24,750 --> 00:44:27,170
+That's good inaud.
+
+520
+00:44:28,080 --> 00:44:31,600
+Let me find this malfunction inaud
+
+521
+00:44:46,290 --> 00:44:49,970
+That is probably slightly
+adrift of where it really is.
+
+522
+00:44:59,870 --> 00:45:01,550
+Oh don't know what I've done, again.
+
+523
+00:45:03,870 --> 00:45:04,980
+Let's call this:
+
+524
+00:45:12,290 --> 00:45:12,920
+DN: Unpack it.
+
+525
+00:45:12,920 --> 00:45:13,300
+JW: Yes.
+
+526
+00:45:15,800 --> 00:45:17,930
+Now we've got a
+different kind of failure.
+
+527
+00:45:17,930 --> 00:45:19,930
+I'm going back to the test at this point
+
+528
+00:45:19,930 --> 00:45:22,500
+rather than relying
+on the running application.
+
+529
+00:45:37,440 --> 00:45:39,180
+It's inaud, but
+
+530
+00:45:39,180 --> 00:45:41,180
+The error is that we try and link to
+
+531
+00:45:41,180 --> 00:45:43,210
+the root called episode but not yet said
+
+532
+00:45:43,210 --> 00:45:45,640
+what that root is or where it lives,
+
+533
+00:45:45,640 --> 00:45:46,580
+so let's do that.
+
+534
+00:45:47,240 --> 00:45:49,150
+Before we do that let's:
+
+535
+00:46:25,260 --> 00:46:28,080
+I'm happy to lump all
+those together as one commit.
+
+536
+00:46:45,740 --> 00:46:47,420
+There's no root just yet so ....
+
+537
+00:46:47,810 --> 00:46:49,230
+let's get that working.
+
+538
+00:47:07,070 --> 00:47:09,430
+Let's see what kind
+of difference that makes.
+
+539
+00:47:09,990 --> 00:47:11,630
+Cool, now on to the next.
+
+540
+00:47:15,200 --> 00:47:17,540
+Right now, there's no link to
+
+541
+00:47:17,540 --> 00:47:19,000
+Counting Tree Nodes on here.
+
+542
+00:47:19,390 --> 00:47:21,360
+And technically we're on root
+
+543
+00:47:22,960 --> 00:47:24,560
+which doesn't do very much.
+
+544
+00:47:24,940 --> 00:47:26,770
+And there's only the template for it.
+
+545
+00:47:29,940 --> 00:47:33,490
+I'll have a running version of the inaud
+
+546
+00:47:33,490 --> 00:47:34,650
+alongside the tests.
+
+547
+00:47:34,930 --> 00:47:35,530
+DN: OK.
+
+548
+00:47:48,450 --> 00:47:49,340
+Oh that's curious ....
+
+549
+00:48:06,380 --> 00:48:07,460
+Oh that's interesing.
+
+550
+00:48:08,620 --> 00:48:09,830
+Oh right yes.
+
+551
+00:48:11,990 --> 00:48:13,880
+I'm going to do a bit of a maneuver here.
+
+552
+00:48:20,980 --> 00:48:23,170
+Let me have a look
+at the tree roots again.
+
+553
+00:48:24,930 --> 00:48:26,370
+There's an application root
+
+554
+00:48:26,370 --> 00:48:28,980
+which is at the top root of everything.
+
+555
+00:48:28,980 --> 00:48:29,550
+DN: OK.
+
+556
+00:48:29,550 --> 00:48:32,060
+The episode route will
+be rendered inside of it.
+
+557
+00:48:32,490 --> 00:48:34,690
+And the side where I want it rendered
+
+558
+00:48:35,530 --> 00:48:39,110
+is in outlet so I
+will put the outlet here.
+
+559
+00:48:39,730 --> 00:48:42,240
+But I want the main
+list of episodes to go away
+
+560
+00:48:42,240 --> 00:48:44,120
+when I step into an individual one.
+
+561
+00:48:48,930 --> 00:48:54,860
+Index is a route you get for free you don't have to inaud
+
+562
+00:48:55,910 --> 00:48:58,560
+And it should inherit it's model from it's parents.
+
+563
+00:48:59,450 --> 00:49:01,770
+That change, I wouldn't expect to do very much.
+
+564
+00:49:02,840 --> 00:49:04,380
+I could be wrong inaud.
+
+565
+00:49:09,460 --> 00:49:12,050
+That looks the same inaud.
+
+566
+00:49:14,050 --> 00:49:16,780
+I think it might be a case
+of too many changes at once.
+
+567
+00:49:19,400 --> 00:49:21,600
+DN: Your test error is quite fragile I see.
+
+568
+00:49:22,110 --> 00:49:25,330
+JW: It is yes, but that is probably because
+
+569
+00:49:25,330 --> 00:49:26,190
+we're on a ....
+
+570
+00:49:27,880 --> 00:49:30,070
+I know that at this point in time
+
+571
+00:49:30,070 --> 00:49:33,720
+the CLI is operating to
+a new file watching strategy.
+
+572
+00:49:34,340 --> 00:49:36,180
+so that may be part of it.
+
+573
+00:49:36,180 --> 00:49:39,030
+It's probably still going
+through growing pains.
+
+574
+00:49:41,950 --> 00:49:45,140
+So now we're on
+roughly the same point I think.
+
+575
+00:49:52,570 --> 00:49:53,680
+I'll take one of these.
+
+576
+00:49:54,290 --> 00:49:56,530
+We've got inaud, there's nothing to explain,
+
+577
+00:49:56,860 --> 00:49:58,340
+because there's no template.
+
+578
+00:49:59,220 --> 00:50:03,590
+So let's  make an inaud template for this route.
+
+579
+00:50:04,610 --> 00:50:05,940
+In fact let's inaud a route.
+
+580
+00:50:20,220 --> 00:50:21,810
+So I've added that other route.
+
+581
+00:50:21,920 --> 00:50:22,860
+It was an inaud yet
+
+582
+00:50:23,590 --> 00:50:25,600
+That is the right direction to head in.
+
+583
+00:50:39,010 --> 00:50:40,930
+I think these are all part of one step.
+
+584
+00:50:54,610 --> 00:50:56,030
+So far there's not much here.
+
+585
+00:50:56,320 --> 00:50:58,060
+What we ideally want is to be able
+
+586
+00:50:58,060 --> 00:50:59,040
+to go from episode .....
+
+587
+00:51:00,530 --> 00:51:03,100
+and refer that to that acceptance test.
+
+588
+00:51:06,640 --> 00:51:09,280
+We're expecting to
+find another link at this point
+
+589
+00:51:09,280 --> 00:51:11,280
+with Ranking Poker Hands on it.
+
+590
+00:51:14,120 --> 00:51:15,710
+DN: So the list you are doing now,
+
+591
+00:51:16,520 --> 00:51:20,100
+is a list of sequels for the inaud.
+
+592
+00:51:20,100 --> 00:51:25,160
+JW: Yes.
+
+593
+00:51:49,600 --> 00:51:51,990
+DN; So that's the
+name of the route episode?
+
+594
+00:51:53,520 --> 00:51:55,360
+JW: Yes, the name of the episode
+
+595
+00:51:55,430 --> 00:51:56,340
+the route and the
+
+596
+00:51:57,800 --> 00:51:59,930
+actual instance of them.
+
+597
+00:52:00,100 --> 00:52:01,930
+And the model we want for that route.
+
+598
+00:52:06,720 --> 00:52:09,790
+inaud collaborators function might
+
+599
+00:52:10,440 --> 00:52:13,050
+not be the thing I wanted after all, but ....
+
+600
+00:52:20,400 --> 00:52:21,490
+I might just ....
+
+601
+00:52:27,550 --> 00:52:28,930
+I'll just check out ....
+
+602
+00:52:40,830 --> 00:52:42,950
+DN: Switch to different ember inaud live.
+
+603
+00:52:43,460 --> 00:52:46,160
+JW: Yes, I'm going to go
+to last stable releases of CLI
+
+604
+00:52:47,040 --> 00:52:49,150
+This is the cause of my problem so ....
+
+605
+00:52:52,160 --> 00:52:54,870
+Narrator: We're going to
+speak through this section
+
+606
+00:52:54,870 --> 00:52:57,780
+We spent almost 10 minutes troubleshooting this issue.
+
+607
+00:52:57,850 --> 00:53:01,090
+But, switching to the
+latest stable release of ember CLI
+
+608
+00:53:01,090 --> 00:53:02,530
+didn't fix the tests however.
+
+609
+00:53:03,920 --> 00:53:06,020
+Narrator: We'll pick up again where Jamie
+
+610
+00:53:06,020 --> 00:53:07,410
+came up with a 'workaround'.
+
+611
+00:53:08,370 --> 00:53:11,350
+JW: Unfortunately, in the current build
+
+612
+00:53:12,100 --> 00:53:13,950
+of ember CLI, or rather the current
+
+613
+00:53:13,960 --> 00:53:15,810
+master build of ember CLI,
+
+614
+00:53:16,770 --> 00:53:21,050
+some aspects when rapidly re-loading files,
+
+615
+00:53:21,050 --> 00:53:22,800
+causes the build to fall over.
+
+616
+00:53:23,490 --> 00:53:25,860
+So for the time being, instead we will run
+
+617
+00:53:26,520 --> 00:53:27,890
+ember test as a 'one off'
+
+618
+00:53:27,890 --> 00:53:29,940
+Like a one shot test.
+
+619
+00:53:29,940 --> 00:53:31,470
+so it will inaud run the tests,
+
+620
+00:53:31,470 --> 00:53:33,330
+then it will tear it all down again.
+
+621
+00:53:33,330 --> 00:53:35,720
+That will give us
+something to work against
+
+622
+00:53:37,060 --> 00:53:38,750
+So it's not working at the moment.
+
+623
+00:53:39,280 --> 00:53:41,540
+And the reason is that the inaud .....
+
+624
+00:53:44,940 --> 00:53:47,050
+Although my build inaud point to
+
+625
+00:53:47,050 --> 00:53:48,410
+the correct inaud.
+
+626
+00:53:48,810 --> 00:53:50,620
+What we won't have here is ....
+
+627
+00:53:52,080 --> 00:53:53,580
+We're asking for inaud sequels,
+
+628
+00:53:54,360 --> 00:53:55,900
+There is no such thing right now.
+
+629
+00:53:55,900 --> 00:53:56,870
+DN: Of course, right.
+
+630
+00:53:56,910 --> 00:53:59,090
+JW: So we need to get those.
+
+631
+00:54:04,700 --> 00:54:06,760
+You're probably thinking
+
+632
+00:54:08,780 --> 00:54:10,800
+it may be possible to do something like:
+
+633
+00:54:23,260 --> 00:54:25,090
+We know from the old collaborators
+
+634
+00:54:25,090 --> 00:54:29,920
+that we do have 
+the sequel ids, like this:
+
+635
+00:54:34,760 --> 00:54:36,920
+So based on that
+first bit of work we did
+
+636
+00:54:36,920 --> 00:54:38,700
+that's as far as we got at the moment.
+
+637
+00:54:39,700 --> 00:54:41,250
+Technically, that would work.
+
+638
+00:54:43,290 --> 00:54:45,440
+The API doesn't
+actually have an end point
+
+639
+00:54:45,440 --> 00:54:47,360
+for that you could inaud all the data
+
+640
+00:54:47,360 --> 00:54:49,220
+and find the one with the correct id.
+
+641
+00:54:51,040 --> 00:54:54,720
+At this point I'm inclined to lean on
+
+642
+00:54:55,370 --> 00:54:57,080
+ember data to do some of the
+
+643
+00:54:57,700 --> 00:54:59,860
+pulling together of records:
+
+644
+00:55:00,150 --> 00:55:01,860
+So I'm going to:
+
+645
+00:55:03,970 --> 00:55:05,810
+inaud bonus of elbow commit.
+
+646
+00:55:08,150 --> 00:55:09,820
+Let's see what I added there.
+
+647
+00:55:13,410 --> 00:55:14,640
+Let's say:
+
+648
+00:55:29,540 --> 00:55:31,170
+inaud branch.
+
+649
+00:55:34,500 --> 00:55:36,540
+This will be quite a substantial thing
+
+650
+00:55:36,540 --> 00:55:37,430
+to start to add in.
+
+651
+00:55:39,410 --> 00:55:40,950
+I think that in order to prove
+
+652
+00:55:40,950 --> 00:55:42,430
+that is definitely working,
+
+653
+00:55:42,490 --> 00:55:44,400
+I'm going to have a play with the inaud
+
+654
+00:55:44,400 --> 00:55:47,030
+to begin with, rather
+than the test environment.
+
+655
+00:55:48,300 --> 00:55:50,750
+I have a gut feeling
+it will be quicker that way.
+
+656
+00:55:51,900 --> 00:55:54,130
+So up top, in the application route.
+
+657
+00:55:59,460 --> 00:56:01,890
+Rather than this quite inaud process of
+
+658
+00:56:03,040 --> 00:56:05,040
+getting the data and it pulling it out
+
+659
+00:56:05,040 --> 00:56:07,350
+and building collaborators from that
+
+660
+00:56:10,290 --> 00:56:11,240
+I'm going to return:
+
+661
+00:56:25,490 --> 00:56:26,780
+The promise line inaud
+
+662
+00:56:27,440 --> 00:56:28,800
+It has this hash function
+
+663
+00:56:28,800 --> 00:56:30,610
+which is a hash of promises.
+
+664
+00:56:30,610 --> 00:56:33,300
+Where they all pass on this hash
+
+665
+00:56:33,300 --> 00:56:35,560
+with the promises switched out
+
+666
+00:56:35,560 --> 00:56:37,550
+for whatever the resolve inaud
+
+667
+00:56:37,980 --> 00:56:39,450
+So it's quite happy.
+
+668
+00:56:39,850 --> 00:56:42,860
+What this let's us do is ....
+
+669
+00:56:45,860 --> 00:56:47,010
+I want to do two things.
+
+670
+00:56:47,010 --> 00:56:48,400
+I want to load the episodes:
+
+671
+00:56:57,840 --> 00:56:59,430
+And that returns the promise.
+
+672
+00:57:06,460 --> 00:57:08,280
+This is going to return two promises
+
+673
+00:57:08,280 --> 00:57:10,090
+and it's going to wait
+for them both to resolve
+
+674
+00:57:10,090 --> 00:57:11,920
+before it
+finishes doing it's thing.
+
+675
+00:57:12,020 --> 00:57:13,410
+Dont need the ajax anymore.
+
+676
+00:57:14,870 --> 00:57:16,890
+DN: Do we now have to define a store?
+
+677
+00:57:17,940 --> 00:57:19,250
+inaud
+
+678
+00:57:19,250 --> 00:57:20,680
+The store is something we get for free,
+
+679
+00:57:20,680 --> 00:57:22,340
+but what we do need is ....
+
+680
+00:57:22,650 --> 00:57:24,090
+To begin with, some models,
+
+681
+00:57:44,390 --> 00:57:47,310
+So right now this is
+going to be complaining I need ... that:
+
+682
+00:57:47,510 --> 00:57:49,490
+I've got no such models I think.
+
+683
+00:57:51,020 --> 00:57:52,780
+No models found for episode.
+
+684
+00:58:11,550 --> 00:58:13,890
+DN: Your using
+camel case deliberately here?
+
+685
+00:58:14,960 --> 00:58:16,220
+It uses underscore case.
+
+686
+00:58:16,220 --> 00:58:16,950
+JW: It does yes.
+
+687
+00:58:18,340 --> 00:58:23,810
+Just by convention ember
+tends to use camel case where possible.
+
+688
+00:58:23,810 --> 00:58:26,340
+Just because
+that's what JavaScript looks like.
+
+689
+00:58:28,240 --> 00:58:29,530
+inaud
+
+690
+00:58:30,740 --> 00:58:31,740
+What else have we got in there ....
+
+691
+00:58:31,740 --> 00:58:33,530
+we've got inaud
+
+692
+00:58:33,530 --> 00:58:35,700
+We should be able
+to infer those from the ....
+
+693
+00:58:36,040 --> 00:58:37,560
+So let's say we've got:
+
+694
+00:58:48,360 --> 00:58:50,790
+That should have
+made me a model for episode.
+
+695
+00:58:57,480 --> 00:58:59,310
+Let's generate another one of these:
+
+696
+00:59:15,820 --> 00:59:17,550
+Let's just have a look at the data.
+
+697
+00:59:48,030 --> 00:59:50,490
+It might get
+confused about what I mean here.
+
+698
+00:59:54,930 --> 00:59:57,110
+It will think there's a model with that name,
+
+699
+00:59:57,110 --> 00:59:58,180
+but in fact these are:
+
+700
+00:59:59,460 --> 01:00:01,860
+It's referring to the partner model.
+
+701
+01:00:05,040 --> 01:00:07,200
+And just like in rails, I'll have to tell it ....
+
+702
+01:00:28,970 --> 01:00:30,620
+What the names of the
+inverse relationships are.
+
+703
+01:00:30,620 --> 01:00:32,930
+If the names are substantially different.
+
+704
+01:00:36,610 --> 01:00:39,210
+Certainly here, the inverse is guest.
+
+705
+01:00:42,880 --> 01:00:47,510
+And here the inverse is host.
+
+706
+01:01:13,050 --> 01:01:15,960
+At this point, I'm looking at build fabrics
+
+707
+01:01:15,960 --> 01:01:19,620
+as a way to prove to myself that
+
+708
+01:01:20,530 --> 01:01:22,350
+following host and guest that way
+
+709
+01:01:22,910 --> 01:01:24,410
+is what's intended.
+
+710
+01:01:24,880 --> 01:01:26,320
+by the description of the challenge.
+
+711
+01:01:26,320 --> 01:01:27,640
+But I have a feeling that using it
+
+712
+01:01:27,640 --> 01:01:30,450
+in the data like this is going to ....
+
+713
+01:01:33,070 --> 01:01:35,170
+shoulder a lot of the work for me.
+
+714
+01:01:35,600 --> 01:01:36,790
+I'm just going to go for:
+
+715
+01:01:52,900 --> 01:01:54,160
+What your seeing here is
+
+716
+01:01:54,160 --> 01:01:57,600
+It's trying to load episodes partners.
+
+717
+01:01:58,180 --> 01:02:00,600
+It assumes they are the
+end points we're looking for.
+
+718
+01:02:01,380 --> 01:02:03,880
+DN: We've got them in the API inaud haven't we?
+
+719
+01:02:03,880 --> 01:02:04,880
+JW: We have indeed.
+
+720
+01:02:05,820 --> 01:02:07,400
+If we add some of this:
+
+721
+01:02:24,830 --> 01:02:26,530
+This isn't quite inaud.
+
+722
+01:02:37,870 --> 01:02:39,620
+And then this change ....
+
+723
+01:02:49,490 --> 01:02:51,280
+It's fine, right so:
+
+724
+01:03:11,170 --> 01:03:14,580
+It doesn't know about the inaud in the API just yet.
+
+725
+01:03:14,580 --> 01:03:16,960
+And further more it doesn't know inaud case on the end.
+
+726
+01:03:18,310 --> 01:03:20,930
+We need to tell it, the way to do that is:
+
+727
+01:03:24,300 --> 01:03:27,700
+We want this to be the universal rule
+
+728
+01:03:27,700 --> 01:03:29,870
+so we call this the application adapter.
+
+729
+01:03:52,050 --> 01:03:54,290
+DN: Ah, forgot to save the universe.
+
+730
+01:03:54,290 --> 01:03:54,770
+JW: Yes.
+
+731
+01:04:08,050 --> 01:04:09,840
+At the moment it's the rest adapter
+
+732
+01:04:10,450 --> 01:04:14,290
+but the data that we're working with
+
+733
+01:04:14,290 --> 01:04:17,860
+looks quite a lot like what
+active model serialiser would yield.
+
+734
+01:04:18,560 --> 01:04:19,860
+So let's use that instead:
+
+735
+01:04:25,360 --> 01:04:27,460
+It's expected data of this form
+
+736
+01:04:27,680 --> 01:04:29,520
+So it should know what to do with it.
+
+737
+01:04:30,180 --> 01:04:33,160
+Then we need to tell it the namespace
+
+738
+01:04:33,160 --> 01:04:38,580
+and I think it is
+just namespace like this
+
+739
+01:04:59,510 --> 01:05:02,860
+DN: Does it still need to add inaud on?
+
+740
+01:05:02,860 --> 01:05:03,370
+JW: It does.
+
+741
+01:05:03,400 --> 01:05:05,480
+Now we're getting the right path
+
+742
+01:05:05,860 --> 01:05:07,480
+but without the tracer on the end.
+
+743
+01:05:08,160 --> 01:05:09,940
+And I think there's another method:
+
+744
+01:05:20,660 --> 01:05:22,900
+UrlPrefix is not quite what we want.
+
+745
+01:05:24,970 --> 01:05:26,320
+There's pathForType.
+
+746
+01:05:29,520 --> 01:05:30,900
+Which might well do the job.
+
+747
+01:05:32,340 --> 01:05:34,950
+Unless there's
+something more general than that.
+
+748
+01:05:42,230 --> 01:05:43,930
+Let's do pathFor Type:
+
+749
+01:05:53,810 --> 01:05:57,310
+Basically this calls straight
+through to the superclass method.
+
+750
+01:06:07,710 --> 01:06:10,150
+Now some
+interesting things have happened.
+
+751
+01:06:12,150 --> 01:06:13,460
+We've got these warnings:
+
+752
+01:06:18,900 --> 01:06:20,590
+Its saying you've got the state of it
+
+753
+01:06:20,590 --> 01:06:22,440
+but you've not
+declared that your going to use it.
+
+754
+01:06:22,540 --> 01:06:25,900
+similarly, we've got
+guest episode host episode.
+
+755
+01:06:40,170 --> 01:06:43,720
+Its expecting, like that:
+
+756
+01:07:02,840 --> 01:07:05,730
+Let's generate a serialiser which will
+
+757
+01:07:05,730 --> 01:07:07,860
+enable us
+inform those transformations
+
+758
+01:07:07,860 --> 01:07:08,750
+on the input data.
+
+759
+01:07:10,690 --> 01:07:15,110
+Before we do that let's stop it complaining
+
+760
+01:07:15,110 --> 01:07:17,110
+about those missing fields.
+
+761
+01:07:18,320 --> 01:07:20,530
+That's episodes, it's expecting to see
+
+762
+01:07:20,530 --> 01:07:22,530
+guest name, host name inaud
+
+763
+01:07:23,490 --> 01:07:24,850
+DN: inaud all these strings
+
+764
+01:07:24,850 --> 01:07:25,860
+JW: Yes I guess so.
+
+765
+01:07:37,480 --> 01:07:40,400
+DN: Again, your using
+camel case but the api has
+
+766
+01:07:40,400 --> 01:07:42,570
+inaud case underscores.
+
+767
+01:07:42,570 --> 01:07:43,280
+JW: Yes.
+
+768
+01:07:43,280 --> 01:07:45,430
+DN: So, where is
+that inference happening
+
+769
+01:07:45,430 --> 01:07:47,280
+from one format to the other?
+
+770
+01:07:47,330 --> 01:07:49,280
+It's all happening in the serialiser
+
+771
+01:07:49,490 --> 01:07:50,180
+DN: Ah right.
+
+772
+01:07:50,800 --> 01:07:52,760
+You will find that by default
+
+773
+01:07:53,530 --> 01:07:55,690
+there's this normalize method
+
+774
+01:07:55,840 --> 01:07:57,470
+which does all this kind of work,
+
+775
+01:07:57,850 --> 01:07:59,630
+converting snake case
+
+776
+01:07:59,940 --> 01:08:01,770
+into camel case.
+
+777
+01:08:01,770 --> 01:08:06,720
+inaud, whatever is appropriate for the format.
+
+778
+01:08:08,180 --> 01:08:10,360
+Now I've got rid of some of my warnings.
+
+779
+01:08:10,890 --> 01:08:14,070
+but there's still this guest
+episode, host episodes problem.
+
+780
+01:08:14,380 --> 01:08:16,070
+So let's say:
+
+781
+01:08:19,080 --> 01:08:21,050
+We don't want a serialiser
+
+782
+01:08:21,330 --> 01:08:22,780
+for everything, we just want:
+
+783
+01:08:57,740 --> 01:08:59,230
+There has got to be some hook
+
+784
+01:08:59,240 --> 01:09:02,240
+where I can turn
+these into what it's expecting.
+
+785
+01:09:04,550 --> 01:09:08,060
+I've got normalize which
+takes, type has and crop
+
+786
+01:09:08,800 --> 01:09:10,460
+And that's going to do this work.
+
+787
+01:09:10,460 --> 01:09:11,280
+So if I:
+
+788
+01:09:20,740 --> 01:09:22,980
+Type meaning "when you get the data through
+
+789
+01:09:26,780 --> 01:09:28,430
+it's going to inaud this key,
+
+790
+01:09:29,810 --> 01:09:31,510
+over which each record lives.
+
+791
+01:09:35,150 --> 01:09:38,900
+But we don't care too
+much about that manipulation here.
+
+792
+01:09:39,310 --> 01:09:41,520
+All we want to do is say is:
+
+793
+01:09:43,710 --> 01:09:47,500
+Hash is this:
+
+794
+01:09:48,230 --> 01:09:52,190
+We want to move this so we're saying:
+
+795
+01:10:26,510 --> 01:10:28,400
+Once we've done those manipulations
+
+796
+01:10:28,400 --> 01:10:29,190
+we just want to:
+
+797
+01:10:39,120 --> 01:10:43,850
+I've not been so careful
+to dodge a mutation here
+
+798
+01:10:43,860 --> 01:10:47,960
+because I think you
+get past a safe cache
+
+799
+01:10:48,100 --> 01:10:48,910
+DN: Oh, OK.
+
+800
+01:11:01,400 --> 01:11:02,940
+My warnings have now gone.
+
+801
+01:11:03,880 --> 01:11:05,400
+It's complaining that the value of each
+
+802
+01:11:05,400 --> 01:11:07,400
+inaud must be an array.
+
+803
+01:11:07,400 --> 01:11:09,400
+We passed a record array.
+
+804
+01:11:09,660 --> 01:11:10,860
+DN: So are we down to this
+
+805
+01:11:10,970 --> 01:11:13,000
+thing called model inaud
+
+806
+01:11:14,150 --> 01:11:17,530
+Now I'm at template index.
+
+807
+01:11:18,580 --> 01:11:19,620
+I'm calling model,
+
+808
+01:11:19,870 --> 01:11:21,800
+which is this object here:
+
+809
+01:11:21,900 --> 01:11:24,100
+containing an episode partners.
+
+810
+01:11:25,040 --> 01:11:26,180
+So I want to do:
+
+811
+01:11:30,850 --> 01:11:34,190
+DN: Ah, because now
+your model is in that promise
+
+812
+01:11:35,320 --> 01:11:37,316
+containing both models effectively.
+
+813
+01:11:37,310 --> 01:11:37,723
+JW: Yes.
+
+814
+01:11:38,787 --> 01:11:40,610
+So this has got me back to this point. 
+
+815
+01:11:41,593 --> 01:11:43,316
+But the advantage I have now,
+
+816
+01:11:44,818 --> 01:11:47,766
+Before, I got to the
+point where I knew the Ids
+
+817
+01:11:47,760 --> 01:11:50,455
+I wanted to get to, but
+I didn't have the data to hand.
+
+818
+01:11:50,450 --> 01:11:53,366
+And the question was, where do I go
+
+819
+01:11:53,366 --> 01:11:54,450
+and load in that data.
+
+820
+01:11:54,450 --> 01:11:55,600
+Do I have it available?
+
+821
+01:11:55,600 --> 01:11:59,507
+Whereas now ember
+data is doing that work for me.
+
+822
+01:11:59,563 --> 01:12:03,236
+And furthermore, here I can see
+the records that have been loaded.
+
+823
+01:12:06,596 --> 01:12:08,215
+I should also be able to see ...
+
+824
+01:12:09,833 --> 01:12:11,803
+There will be some inaud properties here
+
+825
+01:12:12,067 --> 01:12:15,095
+So you can see,
+belongs to guest episode.
+
+826
+01:12:15,661 --> 01:12:18,676
+There you can see it has
+managed to dig up the real model.
+
+827
+01:12:20,430 --> 01:12:23,587
+That was me inaud quick.
+
+828
+01:12:24,572 --> 01:12:26,646
+Here's an episode, Counting Tree Nodes.
+
+829
+01:12:26,775 --> 01:12:28,966
+These are it's properties, here on the right.
+
+830
+01:12:39,833 --> 01:12:42,363
+I should be able to go to the guest,
+
+831
+01:12:44,381 --> 01:12:45,864
+See what episodes Tom hosts,
+
+832
+01:12:45,860 --> 01:12:46,818
+That's a many array,
+
+833
+01:12:46,812 --> 01:12:47,587
+I'll go in there.
+
+834
+01:12:48,055 --> 01:12:51,464
+It's an array containing
+one string of Poker hands.
+
+835
+01:12:51,513 --> 01:12:53,021
+So you can see a flow through.
+
+836
+01:12:54,338 --> 01:12:55,020
+DN: Very nice.
+
+837
+01:12:55,975 --> 01:12:58,960
+JW: data inaud a lot quicker.
+
+838
+01:13:01,286 --> 01:13:03,680
+Now that's in place, let me commit this
+
+839
+01:13:03,680 --> 01:13:05,680
+by quite a lot all at once.
+
+840
+01:13:06,855 --> 01:13:11,513
+inaud serialiser change the template
+
+841
+01:13:11,513 --> 01:13:13,510
+Oh it's not too bad, OK,
+
+842
+01:13:24,227 --> 01:13:28,615
+JW: Right now we have an acceptance test.
+
+843
+01:13:30,000 --> 01:13:31,981
+Which at this point is still failing.
+
+844
+01:13:31,980 --> 01:13:34,184
+because we've not added the list of sequels, 
+
+845
+01:13:34,180 --> 01:13:36,381
+nor the prequel link yet.
+
+846
+01:13:37,323 --> 01:13:39,286
+I've got some unit tests which are failing
+
+847
+01:13:39,280 --> 01:13:42,190
+simply because they are inaud that was generated for me
+
+848
+01:13:43,261 --> 01:13:46,289
+They need to be told
+more about the rest of the world.
+
+849
+01:13:49,580 --> 01:13:52,276
+I could just remove them
+
+850
+01:13:52,270 --> 01:13:55,076
+I feel I want to inaud environment
+
+851
+01:13:55,070 --> 01:13:56,683
+So I'll do that quickly:
+
+852
+01:14:10,301 --> 01:14:12,436
+When I generated the episode model
+
+853
+01:14:12,609 --> 01:14:15,003
+I said that it had these two relationships
+
+854
+01:14:15,206 --> 01:14:19,273
+and the world they test
+has these two dependencies in it
+
+855
+01:14:19,270 --> 01:14:20,295
+because I said that.
+
+856
+01:14:20,520 --> 01:14:25,224
+But in fact there are
+no such models as those
+
+857
+01:14:25,224 --> 01:14:26,147
+It's just partner ....
+
+858
+01:14:27,458 --> 01:14:28,412
+So if I do that:
+
+859
+01:14:30,135 --> 01:14:33,015
+I have to keep jumping back to tests.
+
+860
+01:14:35,300 --> 01:14:38,800
+Now episode passes inaud.
+
+861
+01:14:39,206 --> 01:14:42,920
+If we flip over to inaud test you'll see a similar problem.
+
+862
+01:14:43,532 --> 01:14:45,661
+Really all this wants is:
+
+863
+01:14:54,360 --> 01:14:56,498
+Now I'm back to my
+acceptance test which is
+
+864
+01:14:56,504 --> 01:14:58,440
+the thing that was driving us towards
+
+865
+01:14:58,818 --> 01:14:59,975
+the place we want to be
+
+866
+01:15:00,843 --> 01:15:02,363
+which is as follows:
+
+867
+01:15:06,890 --> 01:15:08,092
+Eventually what we want to see 
+
+868
+01:15:08,090 --> 01:15:11,680
+is a list of just the root episodes
+
+869
+01:15:11,686 --> 01:15:13,507
+the episodes that begin a sequence.
+
+870
+01:15:13,990 --> 01:15:15,120
+Click on one of those,
+
+871
+01:15:15,120 --> 01:15:16,707
+and you see it's sequels.
+
+872
+01:15:17,224 --> 01:15:17,815
+DN: Yes,
+
+873
+01:15:17,810 --> 01:15:19,895
+And you click on a sequel and you see it's
+
+874
+01:15:20,467 --> 01:15:22,855
+sequel, and prequel as well.
+
+875
+01:15:29,800 --> 01:15:32,763
+I'm using so many
+styles of working with git.
+
+876
+01:15:33,260 --> 01:15:34,793
+So let's commit those:
+
+877
+01:15:37,080 --> 01:15:39,255
+DN: So this is the fugitive commit feature?
+
+878
+01:15:39,255 --> 01:15:39,723
+JW: Yes.
+
+879
+01:15:55,655 --> 01:15:57,243
+It's complaining at the moment
+
+880
+01:15:57,243 --> 01:15:59,673
+because I can't
+click on Ranking Poker Hands.
+
+881
+01:16:00,633 --> 01:16:02,073
+So that is ....
+
+882
+01:16:02,280 --> 01:16:05,606
+I'm in an episode, expecting to list all the
+
+883
+01:16:05,690 --> 01:16:07,009
+sequels of the model.
+
+884
+01:16:13,526 --> 01:16:14,627
+I do have inaud
+
+885
+01:16:15,298 --> 01:16:16,910
+So it's ready to list something.
+
+886
+01:16:17,384 --> 01:16:20,572
+It' not going to
+complain that this isn't an array.
+
+887
+01:16:23,593 --> 01:16:26,264
+It's more useful to just fail silently,
+
+888
+01:16:26,260 --> 01:16:28,818
+when your at the template point of things
+
+889
+01:16:28,953 --> 01:16:32,412
+because there's so little failure
+handling you can do in template.
+
+890
+01:16:32,710 --> 01:16:34,381
+As a general principle it's best to 
+
+891
+01:16:34,730 --> 01:16:37,095
+treat these values as inaud,
+
+892
+01:16:39,926 --> 01:16:43,735
+They will resolve down
+to nil, or the value you want.
+
+893
+01:16:46,800 --> 01:16:48,713
+I think what I need to to is .....
+
+894
+01:16:49,809 --> 01:16:51,624
+get hold of these sequels.
+
+895
+01:16:51,620 --> 01:16:54,547
+I'm going to change inaud if I do it now.
+
+896
+01:16:57,450 --> 01:17:00,713
+The question is, if I take an episode
+
+897
+01:17:01,206 --> 01:17:02,424
+how do I find it's sequel?
+
+898
+01:17:07,920 --> 01:17:11,009
+I'm going to add a inaud property
+
+899
+01:17:11,772 --> 01:17:12,787
+to this episode
+
+900
+01:17:13,880 --> 01:17:14,849
+called sequels:
+
+901
+01:17:23,913 --> 01:17:26,443
+Effectively I want to look
+at the rest of the episodes.
+
+902
+01:17:26,720 --> 01:17:28,510
+And filter them down to just a set
+
+903
+01:17:28,929 --> 01:17:30,996
+where the host is my guest.
+
+904
+01:17:32,756 --> 01:17:34,547
+Let's have a look at what we have
+
+905
+01:17:34,547 --> 01:17:35,913
+in terms of filtering.
+
+906
+01:17:41,110 --> 01:17:43,243
+Whenever you access records in ember data
+
+907
+01:17:43,243 --> 01:17:44,695
+you always get inaud store.
+
+908
+01:17:45,200 --> 01:17:48,086
+Which is the central hooking object.
+
+909
+01:17:49,570 --> 01:17:51,606
+And it makes sure your always geting
+
+910
+01:17:51,809 --> 01:17:53,913
+the same instance you got last time.
+
+911
+01:17:53,910 --> 01:17:54,486
+DN: Right.
+
+912
+01:17:56,756 --> 01:17:59,612
+I do have filter here:
+
+913
+01:18:06,024 --> 01:18:08,295
+I want to try asking for:
+
+914
+01:18:17,932 --> 01:18:20,707
+The thing I'm going to
+be filtering on is the host id.
+
+915
+01:18:29,556 --> 01:18:31,532
+Let's see what the symmetry of this is.
+
+916
+01:18:31,575 --> 01:18:39,821
+It's just going to give
+me an episode to work with.
+
+917
+01:18:41,969 --> 01:18:45,360
+Now this is going to
+return a promise of some kind.
+
+918
+01:18:50,344 --> 01:18:52,486
+It says it returns a live record array.
+
+919
+01:18:52,790 --> 01:18:54,996
+So hopefully we will be able to dump that
+
+920
+01:18:54,990 --> 01:18:56,990
+into the template, and it will update
+
+921
+01:18:57,944 --> 01:18:59,790
+Let's find out, that might not be true.
+
+922
+01:19:16,676 --> 01:19:18,529
+We could go potentially inaud ids
+
+923
+01:19:19,335 --> 01:19:22,043
+but I think they will be
+hidden from us by this point.
+
+924
+01:19:22,040 --> 01:19:24,873
+These are fully materialized records.
+
+925
+01:19:38,443 --> 01:19:41,649
+I forgot to declare
+that this is a computer property.
+
+926
+01:19:42,486 --> 01:19:44,806
+There we go, so that's my sequel.
+
+927
+01:19:46,460 --> 01:19:48,338
+DN: Does that give us a passing inaud test.
+
+928
+01:19:48,332 --> 01:19:49,427
+JW: Well, let's find out.
+
+929
+01:19:55,889 --> 01:19:58,624
+I think I might have inaud there,
+
+930
+01:19:58,640 --> 01:19:59,557
+let's find out.
+
+931
+01:20:16,954 --> 01:20:24,186
+This may be a problem
+with my acceptance test.
+
+932
+01:20:42,784 --> 01:20:45,978
+DN: inaud insertion checking inaud
+
+933
+01:20:46,186 --> 01:20:46,661
+JW: Yes.
+
+934
+01:20:49,776 --> 01:20:51,322
+I think it might be just my ....
+
+935
+01:21:01,904 --> 01:21:03,722
+DN: That's why you have a commit.
+
+936
+01:21:05,162 --> 01:21:06,672
+JW: So we see what happened there.
+
+937
+01:21:07,770 --> 01:21:10,298
+We've added a
+computer property called sequels, 
+
+938
+01:21:10,560 --> 01:21:13,072
+that sets up a filter
+
+939
+01:21:14,266 --> 01:21:15,776
+and these filters are live.
+
+940
+01:21:15,770 --> 01:21:19,429
+So the idea is, if a
+new episode entered the store,
+
+941
+01:21:20,240 --> 01:21:21,674
+this filter should update
+
+942
+01:21:22,140 --> 01:21:24,032
+anywhere it's used in the template.
+
+943
+01:21:29,072 --> 01:21:30,986
+We inaud challenge name,
+
+944
+01:21:31,530 --> 01:21:33,056
+and current path apparently
+
+945
+01:21:33,338 --> 01:21:34,736
+really means current root.
+
+946
+01:21:35,760 --> 01:21:38,437
+whereas what we want is the current URL.
+
+947
+01:21:39,488 --> 01:21:40,181
+So:
+
+948
+01:21:53,706 --> 01:21:55,413
+I feel that that acceptance test
+
+949
+01:21:55,413 --> 01:21:57,989
+has given me enough
+confidence that things are
+
+950
+01:21:58,250 --> 01:21:59,370
+working on the whole, 
+
+951
+01:21:59,370 --> 01:22:01,370
+and I feel that it's going to be
+
+952
+01:22:01,660 --> 01:22:04,069
+more fun just to play in the ui,
+
+953
+01:22:04,117 --> 01:22:06,336
+and see what other properties it has.
+
+954
+01:22:06,330 --> 01:22:08,106
+And see what other things we can do.
+
+955
+01:22:09,797 --> 01:22:10,965
+So jump to episode two.
+
+956
+01:22:11,530 --> 01:22:13,349
+We've already got the next sequel.
+
+957
+01:22:13,877 --> 01:22:15,312
+This at the moment has no sequels
+
+958
+01:22:15,310 --> 01:22:17,338
+and we're not showing prequels just yet.
+
+959
+01:22:17,392 --> 01:22:18,634
+So I'm going to:
+
+960
+01:22:22,997 --> 01:22:27,477
+Let's give this a title.
+
+961
+01:22:27,790 --> 01:22:32,480
+DN: Yes it would be nice to see
+the title of the current episode as well.
 
