@@ -1549,7 +1549,7 @@ this is an instance variable.
 337
 00:20:41,850 --> 00:20:44,000
 and the reason why
-they are instance variable
+they are instance variables
 
 338
 00:20:44,110 --> 00:20:45,540
@@ -1744,7 +1744,7 @@ let me think in code .....
 
 378
 00:23:16,540 --> 00:23:17,420
-It' fine to just do ....
+It's fine to just do ....
 
 379
 00:23:20,200 --> 00:23:22,710
@@ -2488,7 +2488,7 @@ rspec rails and cucumber rails,
 537
 00:33:25,510 --> 00:33:27,850
 because they wire
-cucumber into the rspec
+cucumber
 
 538
 00:33:27,850 --> 00:33:29,600
@@ -2508,7 +2508,7 @@ boot up your application
 541
 00:33:34,450 --> 00:33:37,080
 and then you've got
-rails, constant auto loading
+rails constant auto loading
 
 542
 00:33:38,480 --> 00:33:39,200
@@ -2824,7 +2824,7 @@ are exactly the same.
 609
 00:37:42,680 --> 00:37:44,940
 Ordinarily I would
-re-factor this and pull
+refactor this and pull
 
 610
 00:37:44,940 --> 00:37:46,970
