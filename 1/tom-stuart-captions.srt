@@ -1549,7 +1549,7 @@ this is an instance variable.
 337
 00:20:41,850 --> 00:20:44,000
 and the reason why
-they are instance variable
+they are instance variables
 
 338
 00:20:44,110 --> 00:20:45,540
@@ -1558,7 +1558,7 @@ to them in there.
 
 339
 00:20:46,110 --> 00:20:46,940
-That's got scope.
+Outside of this lexical scope.
 
 340
 00:20:47,080 --> 00:20:48,370
@@ -1744,7 +1744,7 @@ let me think in code .....
 
 378
 00:23:16,540 --> 00:23:17,420
-It' fine to just do ....
+It's fine to just do ....
 
 379
 00:23:20,200 --> 00:23:22,710
@@ -1774,7 +1774,7 @@ that's a good idea or not.
 384
 00:23:42,770 --> 00:23:46,050
 I'll just make it clearer that
-that is going to be an empty node.
+that is going to be an empty array.
 
 385
 00:23:46,220 --> 00:23:48,710
@@ -1817,7 +1817,7 @@ the list of children i.e. an array.
 
 393
 00:24:12,250 --> 00:24:15,480
-I need to call build tree
+I need to call build_tree
 on each child to turn it into a node,
 
 394
@@ -1845,8 +1845,8 @@ that I can do that by doing .....
 
 399
 00:24:32,170 --> 00:24:35,140
-That's going to call build
-tree on each individual child.
+That's going to call build_tree
+on each individual child.
 
 400
 00:24:37,080 --> 00:24:37,970
@@ -1901,7 +1901,7 @@ So now where are we....
 411
 00:25:20,220 --> 00:25:22,850
 Now it's complaining
-that I don't have a node class.
+that I don't have a Node class.
 
 412
 00:25:29,050 --> 00:25:29,740
@@ -1933,7 +1933,7 @@ where we're comfortable.
 
 418
 00:25:46,170 --> 00:25:47,800
-Still say initialize constant.
+Still say uninitialized constant.
 
 419
 00:25:50,280 --> 00:25:53,110
@@ -1958,7 +1958,7 @@ get this first step passing
 423
 00:26:06,480 --> 00:26:09,340
 because it's saying I don't
-know what this node thing is.
+know what this Node thing is.
 
 424
 00:26:10,020 --> 00:26:11,850
@@ -1991,7 +1991,7 @@ version of rspec, is
 
 430
 00:26:34,800 --> 00:26:35,620
-DN:  Leading edge!
+DN:  Bleeding edge!
 
 431
 00:26:36,570 --> 00:26:39,340
@@ -2005,7 +2005,7 @@ been running cucumber scenarios.
 
 433
 00:26:49,400 --> 00:26:50,800
-Are you suspending them or .....?
+Are you suspending Vim or .....?
 
 434
 00:26:52,370 --> 00:26:53,280
@@ -2028,7 +2028,7 @@ cleverer way than that
 
 438
 00:27:04,850 --> 00:27:07,170
-but I'm just telling
+but I'm just typing
 leader 'C' to run cucumber,
 
 439
@@ -2048,7 +2048,7 @@ TS: Yes exactly.
 442
 00:27:18,080 --> 00:27:20,820
 TS: It stores all of these
-bin stubs in dot bundle bin,
+bin stubs in .bundle/bin,
 
 443
 00:27:21,140 --> 00:27:23,450
@@ -2073,7 +2073,7 @@ for someone to get you to
 447
 00:27:32,820 --> 00:27:34,800
 clone a git repository that
-already has a bundle bin folder,
+already has a .bundle/bin folder,
 
 448
 00:27:34,800 --> 00:27:36,310
@@ -2100,7 +2100,7 @@ So that's all installed.
 453
 00:27:48,770 --> 00:27:50,310
 Rspec comes
-with a nice feed
+with a nice thingy
 
 454
 00:27:53,710 --> 00:27:55,340
@@ -2143,8 +2143,8 @@ this wonderful feature
 
 462
 00:28:15,620 --> 00:28:18,050
-called disable monkey
-patching which will
+called disable_monkey_patching
+which will
 
 463
 00:28:19,850 --> 00:28:22,770
@@ -2153,7 +2153,7 @@ that patches the main object
 
 464
 00:28:23,370 --> 00:28:25,600
-and extends object with the 'should' method.
+and extends Object with the 'should' method.
 
 465
 00:28:28,200 --> 00:28:30,600
@@ -2163,7 +2163,7 @@ to get any kind of behavior
 466
 00:28:30,600 --> 00:28:32,570
 out of rspec now,
-is to specify say I want
+is to specifically say I want
 
 467
 00:28:32,570 --> 00:28:34,480
@@ -2193,7 +2193,7 @@ the class being called Node
 
 473
 00:28:57,400 --> 00:28:58,910
-so I will call this node spec
+so I will call this node_spec
 
 474
 00:29:01,880 --> 00:29:03,770
@@ -2222,7 +2222,7 @@ the top level constant
 
 479
 00:29:11,710 --> 00:29:12,570
-rspec.describe.
+RSpec.describe.
 
 480
 00:29:15,970 --> 00:29:16,770
@@ -2244,11 +2244,11 @@ run your rspec tests?
 
 484
 00:29:34,570 --> 00:29:35,940
-TS: I am using the vim-rspec.
+TS: I am using the vim-rspec plugin.
 
 485
 00:29:42,370 --> 00:29:42,970
-So if I ...
+So if I grep ...
 
 486
 00:29:49,080 --> 00:29:50,340
@@ -2270,7 +2270,7 @@ Leader 'S' is very handy,
 
 490
 00:30:10,220 --> 00:30:12,340
-I can run focus test
+I can run focused tests
 by just pressing it.
 
 491
@@ -2283,7 +2283,7 @@ Where was I?
 
 493
 00:30:30,280 --> 00:30:30,800
-Node spec.
+node_spec.
 
 494
 00:30:35,110 --> 00:30:37,370
@@ -2358,7 +2358,7 @@ introduced the word children
 
 509
 00:31:35,680 --> 00:31:37,140
-but yes, we mean descendants.
+but yes, I mean direct descendants.
 
 510
 00:31:37,570 --> 00:31:40,400
@@ -2414,7 +2414,7 @@ TS: So if I run all my tests.
 521
 00:32:19,620 --> 00:32:23,020
 There's the failure I'm
-looking for, uninitialized constant node.
+looking for, uninitialized constant Node.
 
 522
 00:32:28,050 --> 00:32:29,020
@@ -2488,7 +2488,7 @@ rspec rails and cucumber rails,
 537
 00:33:25,510 --> 00:33:27,850
 because they wire
-cucumber into the rspec
+cucumber
 
 538
 00:33:27,850 --> 00:33:29,600
@@ -2502,13 +2502,13 @@ stuff in the spec helper
 
 540
 00:33:31,620 --> 00:33:33,820
-and N files that
+and env files that
 boot up your application
 
 541
 00:33:34,450 --> 00:33:37,080
 and then you've got
-rails, constant auto loading
+rails constant auto loading
 
 542
 00:33:38,480 --> 00:33:39,200
@@ -2555,12 +2555,12 @@ folder that's in the root
 551
 00:34:01,820 --> 00:34:03,480
 rspec will put
-it on the low path.
+it on the load path.
 
 552
 00:34:03,480 --> 00:34:06,000
 so I don't have to fiddle
-around with the low path
+around with the load path
 
 553
 00:34:06,000 --> 00:34:08,080
@@ -2619,7 +2619,7 @@ me nervous because
 565
 00:34:45,020 --> 00:34:47,140
 I've just written a
-load off actual code.
+line of actual code.
 
 566
 00:34:50,310 --> 00:34:53,020
@@ -2628,7 +2628,7 @@ that by opening a new screen
 
 567
 00:34:55,970 --> 00:34:58,080
-I'll still have them
+I'll still have Vim
 open but I'm going to
 
 568
@@ -2648,7 +2648,7 @@ waste any time on this,
 571
 00:35:11,140 --> 00:35:13,620
 I'm going to do some
-slightly more course grain
+slightly more coarse-grained
 
 572
 00:35:14,020 --> 00:35:15,480
@@ -2775,7 +2775,7 @@ Great, ok.
 
 599
 00:37:10,020 --> 00:37:12,280
-I've got my node
+I've got my Node
 class, and I can instantiate
 
 600
@@ -2824,7 +2824,7 @@ are exactly the same.
 609
 00:37:42,680 --> 00:37:44,940
 Ordinarily I would
-re-factor this and pull
+refactor this and pull
 
 610
 00:37:44,940 --> 00:37:46,970
@@ -2863,12 +2863,12 @@ were complaining about
 617
 00:38:04,280 --> 00:38:05,880
 was, you don't
-have a node class.
+have a Node class.
 
 618
 00:38:05,970 --> 00:38:07,510
 Now I have got
-the node class,
+the Node class,
 
 619
 00:38:08,310 --> 00:38:09,940
@@ -2892,7 +2892,7 @@ These are failing now.
 623
 00:38:18,310 --> 00:38:21,110
 They are still complaining
-that they can't find node.
+that they can't find Node.
 
 624
 00:38:21,110 --> 00:38:23,800
@@ -2915,7 +2915,7 @@ and again I think cucumber
 628
 00:38:30,800 --> 00:38:32,880
 is going to put lib
-on the low path again.
+on the load path again.
 
 629
 00:38:40,170 --> 00:38:41,820
