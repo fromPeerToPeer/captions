@@ -1991,7 +1991,7 @@ version of rspec, is
 
 430
 00:26:34,800 --> 00:26:35,620
-DN:  Leading edge!
+DN:  Bleeding edge!
 
 431
 00:26:36,570 --> 00:26:39,340
@@ -2028,7 +2028,7 @@ cleverer way than that
 
 438
 00:27:04,850 --> 00:27:07,170
-but I'm just telling
+but I'm just typing
 leader 'C' to run cucumber,
 
 439
@@ -2100,7 +2100,7 @@ So that's all installed.
 453
 00:27:48,770 --> 00:27:50,310
 Rspec comes
-with a nice feed
+with a nice thingy
 
 454
 00:27:53,710 --> 00:27:55,340
@@ -2163,7 +2163,7 @@ to get any kind of behavior
 466
 00:28:30,600 --> 00:28:32,570
 out of rspec now,
-is to specify say I want
+is to specifically say I want
 
 467
 00:28:32,570 --> 00:28:34,480
@@ -2619,7 +2619,7 @@ me nervous because
 565
 00:34:45,020 --> 00:34:47,140
 I've just written a
-load off actual code.
+lign of actual code.
 
 566
 00:34:50,310 --> 00:34:53,020
@@ -2648,7 +2648,7 @@ waste any time on this,
 571
 00:35:11,140 --> 00:35:13,620
 I'm going to do some
-slightly more course grain
+slightly more coarse-grained
 
 572
 00:35:14,020 --> 00:35:15,480
