@@ -162,7 +162,7 @@ And it is not explicit in this data
 
 40
 00:03:01,540 --> 00:03:02,880
- inaud sequels.
+inaud sequels.
 
 41
 00:03:03,000 --> 00:03:04,720
@@ -1193,7 +1193,7 @@ I can see in the prequel inaud.
 286
 00:26:08,230 --> 00:26:09,890
 DN: So we're close.
- JW: Yes.
+JW: Yes.
 
 287
 00:26:15,580 --> 00:26:18,840
@@ -2659,7 +2659,7 @@ We know from the old collaborators
 
 634
 00:54:25,090 --> 00:54:29,920
-that we do have 
+that we do have
 the sequel ids, like this:
 
 635
@@ -3412,7 +3412,7 @@ JW: Yes.
 
 814
 01:11:38,787 --> 01:11:40,610
-So this has got me back to this point. 
+So this has got me back to this point.
 
 815
 01:11:41,593 --> 01:11:43,316
@@ -3539,7 +3539,7 @@ Which at this point is still failing.
 
 844
 01:13:31,980 --> 01:13:34,184
-because we've not added the list of sequels, 
+because we've not added the list of sequels,
 
 845
 01:13:34,180 --> 01:13:36,381
@@ -3635,7 +3635,7 @@ which is as follows:
 
 867
 01:15:06,890 --> 01:15:08,092
-Eventually what we want to see 
+Eventually what we want to see
 
 868
 01:15:08,090 --> 01:15:11,680
@@ -3731,7 +3731,7 @@ handling you can do in template.
 
 890
 01:16:32,710 --> 01:16:34,381
-As a general principle it's best to 
+As a general principle it's best to
 
 891
 01:16:34,730 --> 01:16:37,095
@@ -3928,7 +3928,7 @@ JW: So we see what happened there.
 937
 01:21:07,770 --> 01:21:10,298
 We've added a
-computer property called sequels, 
+computer property called sequels,
 
 938
 01:21:10,560 --> 01:21:13,072
@@ -3982,7 +3982,7 @@ confidence that things are
 
 950
 01:21:58,250 --> 01:21:59,370
-working on the whole, 
+working on the whole,
 
 951
 01:21:59,370 --> 01:22:01,370
@@ -4028,4 +4028,8 @@ Let's give this a title.
 01:22:27,790 --> 01:22:32,480
 DN: Yes it would be nice to see
 the title of the current episode as well.
+
+962
+01:22:32,480 --> 01:22:34,480
+and maybe a poster frame.
 
