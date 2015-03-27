@@ -1933,7 +1933,7 @@ where we're comfortable.
 
 418
 00:25:46,170 --> 00:25:47,800
-Still say initialize constant.
+Still say uninitialized constant.
 
 419
 00:25:50,280 --> 00:25:53,110
