@@ -2555,12 +2555,12 @@ folder that's in the root
 551
 00:34:01,820 --> 00:34:03,480
 rspec will put
-it on the low path.
+it on the load path.
 
 552
 00:34:03,480 --> 00:34:06,000
 so I don't have to fiddle
-around with the low path
+around with the load path
 
 553
 00:34:06,000 --> 00:34:08,080
@@ -2915,7 +2915,7 @@ and again I think cucumber
 628
 00:38:30,800 --> 00:38:32,880
 is going to put lib
-on the low path again.
+on the load path again.
 
 629
 00:38:40,170 --> 00:38:41,820
