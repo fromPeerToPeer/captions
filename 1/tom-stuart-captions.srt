@@ -2502,7 +2502,7 @@ stuff in the spec helper
 
 540
 00:33:31,620 --> 00:33:33,820
-and N files that
+and env files that
 boot up your application
 
 541
