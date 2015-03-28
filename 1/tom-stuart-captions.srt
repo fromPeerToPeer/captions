@@ -8088,7 +8088,7 @@ Because I've got access to it
 
 1743
 01:49:28,140 --> 01:49:29,650
-I can just say children.empty.
+I can just say children.empty?
 
 1744
 01:49:31,970 --> 01:49:34,110
@@ -8126,7 +8126,7 @@ this leaf method,
 1751
 01:49:56,280 --> 01:49:58,680
 instead of saying
-children.empty, I could say:
+children.empty?, I could say:
 
 1752
 01:50:01,770 --> 01:50:03,310
