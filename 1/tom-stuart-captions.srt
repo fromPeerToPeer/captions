@@ -7991,8 +7991,8 @@ I will commit that:
 
 1721
 01:48:35,540 --> 01:48:38,340
-DN: If you did call each child.entries
-on the array the you get back
+DN: If you did call each_child.entries
+and the array that you get back
 
 1722
 01:48:39,680 --> 01:48:42,110
