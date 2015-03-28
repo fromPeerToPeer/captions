@@ -8817,13 +8817,13 @@ actually modifying anything.
 
 1902
 01:57:59,280 --> 01:58:01,710
-This has a nice
+This has the nice
 structural sharing property
 
 1903
 01:58:01,710 --> 01:58:03,800
 where this new
-node that we are getting
+new node that we are getting
 
 1904
 01:58:05,570 --> 01:58:07,680
