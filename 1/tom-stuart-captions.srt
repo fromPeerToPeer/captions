@@ -8225,7 +8225,7 @@ children here  to map
 1772
 01:51:00,170 --> 01:51:03,140
 over something, which
-each child will do quite nicely.
+each_child will do quite nicely.
 
 1773
 01:51:06,420 --> 01:51:07,110
