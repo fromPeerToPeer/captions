@@ -7641,8 +7641,8 @@ ways to make an enumerator out of that
 
 1646
 01:44:02,820 --> 01:44:04,740
-you can call `to_enum`, or
-you can just call `each`
+you can call to_enum, or
+you can just call each
 
 1647
 01:44:05,510 --> 01:44:07,340
