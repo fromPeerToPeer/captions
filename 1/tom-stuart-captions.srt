@@ -7881,8 +7881,8 @@ What's that complaining about?
 
 1698
 01:47:03,140 --> 01:47:04,970
-Node line 9..oh
-it's because I forgot
+Node line 9.
+Oh it's because I forgot
 
 1699
 01:47:07,170 --> 01:47:09,200
