@@ -7827,7 +7827,7 @@ are yielded by that enumerator.
 
 1686
 01:46:22,020 --> 01:46:23,680
-I can write some code that says:
+I could write some code that says:
 
 1687
 01:46:26,110 --> 01:46:28,050
