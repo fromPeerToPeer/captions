@@ -8159,12 +8159,12 @@ I can say:
 1758
 01:50:15,080 --> 01:50:17,020
 That is saying
-"are there no children".
+"are there no children?".
 
 1759
 01:50:18,510 --> 01:50:21,020
-In fact it will tell
-me if there are nil or false,
+In fact it will tell me if there
+are any children that are nil or false,
 
 1760
 01:50:22,140 --> 01:50:24,000
