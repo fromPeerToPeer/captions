@@ -8569,7 +8569,7 @@ It will yield that value.
 
 1848
 01:55:08,400 --> 01:55:09,710
-Let's look at it on the irb:
+Let's look at it on irb:
 
 1849
 01:55:11,170 --> 01:55:11,570
