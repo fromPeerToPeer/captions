@@ -7709,12 +7709,12 @@ an iterator back.
 1661
 01:45:00,970 --> 01:45:03,140
 This gives you the
-same as doing 10 x each.
+same as doing 10.times.each:
 
 1662
 01:45:10,080 --> 01:45:12,000
 Or I've just been
-using ten times and
+using 10.times and then
 
 1663
 01:45:12,680 --> 01:45:14,370
