@@ -8145,11 +8145,11 @@ better way of doing that.
 1755
 01:50:07,540 --> 01:50:09,540
 Enumerable has
-a method called 'none'.
+a method called 'none?'.
 
 1756
 01:50:11,540 --> 01:50:13,910
-So if I call each child
+So if I call each_child
 to get the enumerator ....
 
 1757
