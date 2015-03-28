@@ -7628,7 +7628,7 @@ to iterate over my children".
 
 1643
 01:43:47,420 --> 01:43:48,540
-If I just pop open irb we can do,
+If I just pop open irb:
 
 1644
 01:43:51,000 --> 01:43:51,880
