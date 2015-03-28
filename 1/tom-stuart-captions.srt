@@ -8371,7 +8371,7 @@ and it will tell you for
 1804
 01:52:47,740 --> 01:52:49,370
 how many
-items in enumeration,
+items in the enumeration,
 
 1805
 01:52:49,370 --> 01:52:50,310
