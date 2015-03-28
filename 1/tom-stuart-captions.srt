@@ -7771,11 +7771,11 @@ are you iterating over"?
 
 1674
 01:45:47,420 --> 01:45:48,620
-So that feel quite nice.
+So that feels quite nice.
 
 1675
 01:45:49,820 --> 01:45:53,020
-The problem is that it's
+The problem is that that's
 going to break all of our examples,
 
 1676
