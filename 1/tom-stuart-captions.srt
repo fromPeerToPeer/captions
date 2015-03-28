@@ -8238,16 +8238,17 @@ this instance variable
 
 1775
 01:51:14,820 --> 01:51:16,770
-is remember the
+using it to remember the
 value that was passed
 
 1776
 01:51:16,770 --> 01:51:18,480
-into the constructor, and then
+into the constructor,
+and then I am
 
 1777
 01:51:18,480 --> 01:51:20,050
-expose a way of iterating over.
+exposing a way of iterating over it.
 
 1778
 01:51:21,280 --> 01:51:23,370
