@@ -7664,8 +7664,8 @@ and I can provide a block.
 
 1651
 01:44:17,050 --> 01:44:19,420
-Then I will call 'each'
-on the children volume.
+Then I will call each
+on the children for you.
 
 1652
 01:44:23,510 --> 01:44:24,710
