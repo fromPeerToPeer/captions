@@ -7963,7 +7963,7 @@ add a children method
 
 1715
 01:48:01,050 --> 01:48:02,620
-that does each child.entries
+that does each_child.entries
 
 1716
 01:48:04,110 --> 01:48:05,740
