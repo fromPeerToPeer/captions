@@ -1046,7925 +1046,7935 @@ something that's
 a little bit agnostic.
 
 229
-00:14:31,600 --> 00:14:34,420
+00:14:31,600 --> 00:14:36,208
 That doesn't talk about
 the actual name of the class
 
 230
-00:14:37,220 --> 00:14:38,250
-or how it's instantiated. You know,
-do you pass in an options hash
+00:14:36,200 --> 00:14:37,493
+or how it's instantiated.
 
 231
-00:14:38,250 --> 00:14:40,310
-or do you pass in positional arguments,
+00:14:37,490 --> 00:14:38,912
+Do you pass in an options hash
 
 232
+00:14:38,917 --> 00:14:40,310
+or positional arguments,
+
+233
 00:14:40,310 --> 00:14:42,510
 or do you create an
 empty one and mutate it.
 
-233
+234
 00:14:44,200 --> 00:14:46,080
 I can try and keep
 this step definition
 
-234
+235
 00:14:46,080 --> 00:14:48,140
 to just stuff that
 we're interested in.
 
-235
+236
 00:15:02,510 --> 00:15:04,450
 My instinct here
 is to think of a tree
 
-236
+237
 00:15:04,450 --> 00:15:06,450
 as being a collection of its children
 
-237
+238
 00:15:09,200 --> 00:15:11,220
 and a leaf is a node
 that has no children.
 
-238
+239
 00:15:12,770 --> 00:15:13,800
 DN: Correct.
 
-239
+240
 00:15:17,540 --> 00:15:19,620
 I don't know yet if
 we are going to need to
 
-240
+241
 00:15:19,620 --> 00:15:22,080
 distinguish between
 parent nodes and leaves.
 
-241
+242
 00:15:23,480 --> 00:15:26,280
 Your problem statement
 didn't say anything about
 
-242
+243
 00:15:26,280 --> 00:15:27,740
 storing values on the node.
 
-243
+244
 00:15:30,620 --> 00:15:33,650
 In a binary tree you might
 only store values at the leaves.
 
-244
+245
 00:15:34,250 --> 00:15:36,710
 and the nodes are
 just a collection of children.
 
-245
+246
 00:15:38,420 --> 00:15:41,200
 for now, since you didn't
 mention it in the statement.
 
-246
+247
 00:15:41,400 --> 00:15:43,480
 I'm going to assume
 that what we want to
 
-247
+248
 00:15:43,480 --> 00:15:46,650
 represent is the structure
 with no values stored within it.
 
-248
+249
 00:15:48,480 --> 00:15:51,480
 And if we want to add to
 it later I want it to be flexible.
 
-249
+250
 00:15:54,770 --> 00:15:56,620
 If we finish this
 and then you say
 
-250
+251
 00:15:56,620 --> 00:15:59,050
 I want you yo add up
 all the numbers in the tree
 
-251
+252
 00:15:59,050 --> 00:16:01,250
 we will find a way
 to store them in the tree.
 
-252
+253
 00:16:01,250 --> 00:16:03,770
 DN:  I don't want to add
 requirements at this stage.
 
-253
+254
 00:16:08,570 --> 00:16:10,000
 TS: I think of a node as being
 
-254
+255
 00:16:10,540 --> 00:16:12,770
 a possible empty
 collection of children.
 
-255
+256
 00:16:12,770 --> 00:16:14,850
 So for me, the
 obvious representation
 
-256
+257
 00:16:14,850 --> 00:16:15,940
 is to give it an array.
 
-257
+258
 00:16:15,940 --> 00:16:17,710
 And say
 "I want you to build a tree",
 
-258
+259
 00:16:18,000 --> 00:16:20,220
 and here are the
 children of the root node
 
-259
+260
 00:16:21,850 --> 00:16:23,420
 which in that case is nothing.
 
-260
+261
 00:16:23,420 --> 00:16:25,910
 so if I just want a root
 node it will be like that.
 
-261
+262
 00:16:26,800 --> 00:16:27,910
 What else could we do?
 
-262
+263
 00:16:28,310 --> 00:16:30,200
 I can think of a
 'wide tree' that would
 
-263
+264
 00:16:33,740 --> 00:16:35,880
 be something like
 only one deep but has
 
-264
+265
 00:16:37,910 --> 00:16:39,370
 lots of direct descendants.
 
-265
+266
 00:16:42,200 --> 00:16:44,220
 That would be a
 node in the center and
 
-266
+267
 00:16:44,650 --> 00:16:45,970
 then 5 emanating from it.
 
-267
+268
 00:16:45,970 --> 00:16:48,050
 DN: So that would
 have many descendants
 
-268
+269
 00:16:48,050 --> 00:16:48,940
 but no terminals.
 
-269
+270
 00:16:49,000 --> 00:16:50,480
 TS: Yes, exactly.
 
-270
+271
 00:16:53,600 --> 00:16:56,200
 TS: Do you have any other
 suggestions, as the owner?
 
-271
+272
 00:16:56,200 --> 00:16:58,570
 DN: I guess we could
 do something that is deep.
 
-272
+273
 00:17:00,770 --> 00:17:02,420
 TS: Would that be deep and narrow?
 
-273
+274
 00:17:02,820 --> 00:17:05,080
 We could have one
 that's just got 5 children.
 
-274
+275
 00:17:10,050 --> 00:17:11,310
 Like this.
 DN: Yes, right.
 
-275
+276
 00:17:13,800 --> 00:17:16,020
 TS: I'm already liking
 this because you can
 
-276
+277
 00:17:16,940 --> 00:17:18,880
 almost see the
 structure of the tree.
 
-277
+278
 00:17:20,420 --> 00:17:22,510
 Each set of brackets
 is one node I think.
 
-278
+279
 00:17:23,000 --> 00:17:24,110
 This is just one node,
 
-279
+280
 00:17:24,710 --> 00:17:26,420
 this is one node with 5 children,
 
-280
+281
 00:17:26,420 --> 00:17:27,200
 and this 12345,
 
-281
+282
 00:17:29,020 --> 00:17:30,770
 so that's what
 you meant by a tree?
 
-282
+283
 00:17:31,050 --> 00:17:31,510
 DN: Yes.
 
-283
+284
 00:17:35,820 --> 00:17:38,340
 I'm going to write a comment
 next to each of these
 
-284
+285
 00:17:38,340 --> 00:17:39,800
 to keep track
 of what we think
 
-285
+286
 00:17:39,820 --> 00:17:41,220
 the metric is
 for each of them.
 
-286
+287
 00:17:41,220 --> 00:17:42,280
 This one would have ....
 
-287
+288
 00:17:44,050 --> 00:17:45,880
 no descendants,
 and no terminals.
 
-288
+289
 00:17:51,250 --> 00:17:53,220
 TS: This one would
 have 5 descendants.
 
-289
+290
 00:17:54,540 --> 00:17:55,570
 I'll write that down.
 
-290
+291
 00:17:56,910 --> 00:17:57,820
 And no terminals.
 
-291
+292
 00:17:59,370 --> 00:18:01,200
 This one has I
 think, 4 descendants.
 
-292
+293
 00:18:04,000 --> 00:18:04,820
 Is that correct?
 
-293
+294
 00:18:04,820 --> 00:18:06,910
 DN: Yes it is because
 we don't count the root.
 
-294
+295
 00:18:08,200 --> 00:18:09,220
 TS: And one terminal?
 
-295
+296
 00:18:10,480 --> 00:18:11,600
 DN: Exactly, yes.
 
-296
+297
 00:18:12,140 --> 00:18:14,340
 TS: It's frustrating
 that we have two trees
 
-297
+298
 00:18:15,710 --> 00:18:17,820
 that have no
 terminals, but that's fine,
 
-298
+299
 00:18:19,110 --> 00:18:20,200
 we can cope with that.
 
-299
+300
 00:18:31,220 --> 00:18:34,020
 We'll just have to cross that
 bridge when we come to it.
 
-300
+301
 00:18:36,400 --> 00:18:38,420
 What other kinds
 of tree could we have?
 
-301
+302
 00:18:38,420 --> 00:18:40,800
 DN: We could have a deep wide
 tree that has say,
 
-302
+303
 00:18:43,170 --> 00:18:44,370
 perhaps 2 descendants,
 
-303
+304
 00:18:47,280 --> 00:18:49,220
 in two entirely
 different branches,
 
-304
+305
 00:18:50,340 --> 00:18:51,910
 that go as far as the terminal.
 
-305
+306
 00:18:56,080 --> 00:18:57,600
 TS: Like this?
 DN: That's right.
 
-306
+307
 00:18:57,910 --> 00:18:58,970
 TS: We can have ....
 
-307
+308
 00:19:11,140 --> 00:19:12,800
 That threw me,
 I was expecting
 
-308
-00:19:12,800 --> 00:19:14,740
+309
+00:19:12,800 --> 00:19:14,826
 to see a highlight on the first [bracket]
 
-309
-00:19:15,970 --> 00:19:18,620
+310
+00:19:15,888 --> 00:19:19,104
 DN: But if you put your cursor
 on the first opening bracket.
 
-310
+311
 00:19:19,280 --> 00:19:21,250
 TS: Yes it highlights
 the closing one.
 
-311
+312
 00:19:25,970 --> 00:19:27,510
 What are our metrics for this?
 
-312
+313
 00:19:28,110 --> 00:19:30,570
 DN: We have 3 terminals
 and lots of descendants
 
-313
+314
 00:19:33,050 --> 00:19:34,540
 TS: Maybe that doesn't matter.
 
-314
+315
 00:19:36,170 --> 00:19:37,680
 That's certainly got the most.
 
-315
+316
 00:19:37,680 --> 00:19:39,080
 DN: It's going to be the winner.
 
-316
+317
 00:19:39,080 --> 00:19:41,400
 TS: My expectation
 would be that there are 12,
 
-317
+318
 00:19:42,620 --> 00:19:44,310
 because there
 were 4 in this one.
 
-318
+319
 00:19:44,310 --> 00:19:46,540
 And we have
 basically tripled that one up.
 
-319
+320
 00:19:47,620 --> 00:19:48,940
 Just a sanity check this!
 
-320
+321
 00:19:49,250 --> 00:19:51,620
 Would we expect that
 these two things would ....
 
-321
+322
 00:19:52,110 --> 00:19:55,000
 that sorting them by
 descendants versus by terminals
 
-322
+323
 00:19:55,020 --> 00:19:56,820
 is going to
 produce a different order
 
-323
+324
 00:19:56,820 --> 00:19:58,600
 otherwise it isn't
 a useful test case.
 
-324
+325
 00:19:58,800 --> 00:20:01,170
 If we sort them by the
 number of descendants
 
-325
+326
 00:20:01,170 --> 00:20:02,570
 then we have
 none.... 4,5 many
 
-326
+327
 00:20:05,080 --> 00:20:08,250
 So that would be just one
 deep tree, wide tree, deep wide tree.
 
-327
+328
 00:20:08,850 --> 00:20:09,450
 DN: Yes.
 
-328
+329
 00:20:11,050 --> 00:20:13,020
 Whereas if we
 sort them by terminals,
 
-329
+330
 00:20:13,020 --> 00:20:15,140
 we would expect
 them to be in this order.
 
-330
+331
 00:20:15,140 --> 00:20:16,620
 Like none, none, one and three.
 
-331
+332
 00:20:18,510 --> 00:20:19,600
 Bearing that in mind....
 
-332
+333
 00:20:21,450 --> 00:20:23,280
 I will not put
 them in in that order.
 
-333
+334
 00:20:25,620 --> 00:20:27,480
 I'll put them in
 yet another order
 
-334
+335
 00:20:27,510 --> 00:20:28,880
 so we can see the sort work.
 
-335
+336
 00:20:32,220 --> 00:20:32,800
 So let's say ....
 
-336
+337
 00:20:39,280 --> 00:20:40,850
 this is an instance variable.
 
-337
-00:20:41,850 --> 00:20:44,181
+338
+00:20:41,810 --> 00:20:44,170
 and the reason why they are
 instance variables is so I can
 
-338
+339
 00:20:44,181 --> 00:20:46,940
 refer to them in there
 outside of this lexical scope.
 
-339
+340
 00:20:47,080 --> 00:20:48,370
 Deep tree,
 just one node.
 
-340
+341
 00:20:51,540 --> 00:20:52,880
 Deep wide
 tree, wide tree.
 
-341
+342
 00:20:54,370 --> 00:20:54,970
 DN: Yes.
 
-342
+343
 00:20:54,970 --> 00:20:57,310
 TS: I'm hoping that's
 enough to get us started.
 
-343
+344
 00:21:00,680 --> 00:21:02,310
 I'll just check
 that, by running ....
 
-344
+345
 00:21:03,800 --> 00:21:05,880
 Oh! Undefined method:
 build tree. OK, fine.
 
-345
+346
 00:21:07,080 --> 00:21:08,940
 That's the failure
 I was expecting.
 
-346
+347
 00:21:09,970 --> 00:21:11,850
 I will make a features [inaudible]
 
-347
+348
 00:21:20,880 --> 00:21:23,000
 I need to define
 that method somewhere.
 
-348
+349
 00:21:23,000 --> 00:21:25,050
 I will make a file
 and put it in support.
 
-349
+350
 00:21:27,880 --> 00:21:29,140
 I'll call it trees helper.
 
-350
+351
 00:21:41,370 --> 00:21:43,280
 And so I don't
 forget I'm going to make
 
-351
+352
 00:21:44,080 --> 00:21:46,000
 that method
 available to cucumber,
 
-352
+353
 00:21:46,620 --> 00:21:49,000
 so I will remember
 to put a file in features.
 
-353
+354
 00:21:54,570 --> 00:21:57,050
 The names of these files
 are of no consequence,
 
-354
+355
 00:21:57,050 --> 00:21:59,020
 it's just what I'm
 used to calling them.
 
-355
+356
 00:21:59,200 --> 00:22:00,680
 So in here I
 want to require ....
 
-356
+357
 00:22:05,650 --> 00:22:06,770
 just trying to think ....
 
-357
+358
 00:22:09,140 --> 00:22:11,220
 I think I will need
 to require relative.
 
-358
+359
 00:22:13,340 --> 00:22:15,620
 I'm trying to work out if
 this file is going to run
 
-359
+360
 00:22:15,620 --> 00:22:17,850
 before or after the
 other one because cucumber
 
-360
+361
 00:22:17,850 --> 00:22:19,800
 will load all of
 the files in the directory.
 
-361
+362
 00:22:19,800 --> 00:22:21,540
 Just to be safe
 I will require it.
 
-362
+363
 00:22:22,540 --> 00:22:24,680
 I will do require
 relative trees helper
 
-363
+364
 00:22:25,110 --> 00:22:27,080
 then if it hasn't
 already been loaded,
 
-364
+365
 00:22:27,080 --> 00:22:29,310
 it will load it because
 I want to say world ....
 
-365
+366
 00:22:32,050 --> 00:22:33,540
 and say make that available
 
-366
+367
 00:22:35,340 --> 00:22:36,910
 in all of my step definitions.
 
-367
+368
 00:22:38,940 --> 00:22:40,740
 This needs an
 argument, children.
 
-368
+369
 00:22:43,340 --> 00:22:44,880
 It takes an array of children.
 
-369
+370
 00:22:48,600 --> 00:22:50,110
 Now I have
 to make a decision
 
-370
+371
 00:22:50,110 --> 00:22:52,200
 about how to
 instantiate these things.
 
-371
+372
 00:22:54,400 --> 00:22:56,820
 For now I'll assume
 we just have a single class
 
-372
+373
 00:22:57,600 --> 00:23:00,680
 and I'll call it node because
 that's a word we've been using.
 
-373
+374
 00:23:01,680 --> 00:23:04,450
 I'm assuming this will
 ultimately return a new node,
 
-374
+375
 00:23:05,170 --> 00:23:07,910
 but we need to know
 what children it's going to have.
 
-375
+376
 00:23:07,910 --> 00:23:09,540
 If our children
 array is empty ....
 
-376
+377
 00:23:10,400 --> 00:23:11,420
 let me think in code .....
 
-377
+378
 00:23:16,540 --> 00:23:17,420
 It's fine to just do ....
 
-378
+379
 00:23:20,200 --> 00:23:22,710
 We're going to give it
 an empty load of children.
 
-379
+380
 00:23:23,800 --> 00:23:26,220
 And I'm prejudging
 the idea that we're going to
 
-380
+381
 00:23:27,970 --> 00:23:30,570
 create these by
 providing an array of children,
 
-381
+382
 00:23:30,740 --> 00:23:33,880
 rather than creating an empty one
 and then mutating it to add them
 
-382
+383
 00:23:34,000 --> 00:23:36,770
 but we will investigate whether
 that's a good idea or not.
 
-383
+384
 00:23:42,770 --> 00:23:46,050
 I'll just make it clearer that
 that is going to be an empty array.
 
-384
+385
 00:23:46,220 --> 00:23:48,710
 It may be that is an
 optional argument and if we
 
-385
+386
 00:23:48,820 --> 00:23:51,200
 don't provide it then
 it creates an empty node.
 
-386
+387
 00:23:52,420 --> 00:23:54,510
 But this is what
 would make sense to me
 
-387
+388
 00:23:54,510 --> 00:23:57,340
 and I'm thinking in terms
 of myself being a client now.
 
-388
+389
 00:23:58,370 --> 00:24:00,710
 If there are no children
 we make an empty one,
 
-389
+390
 00:24:01,970 --> 00:24:03,400
 if there are children then ....
 
-390
+391
 00:24:04,650 --> 00:24:07,200
 each of the children
 in my representation here
 
-391
+392
 00:24:07,680 --> 00:24:10,450
 is of the same form as
 the list of children i.e. an array.
 
-392
+393
 00:24:12,250 --> 00:24:15,480
 I need to call build_tree
 on each child to turn it into a node,
 
-393
+394
 00:24:16,600 --> 00:24:18,880
 then I can pass that
 collection of nodes to
 
-394
+395
 00:24:19,310 --> 00:24:20,620
 the constructor of node.
 
-395
-00:24:20,620 --> 00:24:23,340
-So I just need to call this
-recursively on all the children.
-
 396
+00:24:20,620 --> 00:24:23,397
+So I just need to call this
+recursively on the children.
+
+397
 00:24:23,400 --> 00:24:25,540
 I know, because
 I've written Ruby before,
 
-397
+398
 00:24:26,050 --> 00:24:27,400
 that I can do that by doing .....
 
-398
+399
 00:24:32,170 --> 00:24:35,140
 That's going to call build_tree
 on each individual child.
 
-399
+400
 00:24:37,080 --> 00:24:37,970
 That's the same as ....
 
-400
+401
 00:24:44,600 --> 00:24:46,110
 Just slightly more concise.
 
-401
+402
 00:24:48,220 --> 00:24:49,540
 In fact I prefer that one.
 
-402
+403
 00:24:53,650 --> 00:24:55,570
 DN:  Yes, it shows
 the argument better.
 
-403
+404
 00:24:55,570 --> 00:24:57,600
 TS: Yes, you can see
 what's going on there.
 
-404
+405
 00:24:57,600 --> 00:25:00,370
 Then I just have to
 remember to close the brackets.
 
-405
+406
 00:25:00,370 --> 00:25:02,970
 Now I can see that this
 line here is a special case
 
-406
+407
 00:25:05,020 --> 00:25:07,370
 In this one, we're mapping
 over an empty array
 
-407
+408
 00:25:07,370 --> 00:25:09,200
 which just gives
 you an empty array.
 
-408
+409
 00:25:09,200 --> 00:25:10,340
 So I can get rid of that.
 
-409
+410
 00:25:15,140 --> 00:25:16,110
 So now where are we....
 
-410
+411
 00:25:20,220 --> 00:25:22,850
 Now it's complaining
 that I don't have a Node class.
 
-411
+412
 00:25:29,050 --> 00:25:29,740
 Let's make one.
 
-412
+413
 00:25:30,740 --> 00:25:32,450
 I'll put it in a
 folder called lib.
 
-413
+414
 00:25:38,080 --> 00:25:40,140
 I'm hesitating
 because this is the point
 
-414
+415
 00:25:40,140 --> 00:25:42,340
 at which I would like
 to start dropping down
 
-415
+416
 00:25:42,340 --> 00:25:43,540
 to write some unit tests.
 
-416
+417
 00:25:43,540 --> 00:25:45,770
 Get this to a point
 where we're comfortable.
 
-417
+418
 00:25:46,170 --> 00:25:47,800
 Still say uninitialized constant.
 
-418
+419
 00:25:50,280 --> 00:25:53,110
 I would like to start
 dropping down to unit tests now.
 
-419
+420
 00:25:55,800 --> 00:25:57,680
 We haven't filled
 this stuff out yet,
 
-420
+421
 00:26:00,050 --> 00:26:02,250
 but I'm happy to just
 bounce back and forth.
 
-421
+422
 00:26:03,710 --> 00:26:06,170
 It would be nice to
 get this first step passing
 
-422
+423
 00:26:06,480 --> 00:26:09,340
 because it's saying I don't
 know what this Node thing is.
 
-423
+424
 00:26:10,020 --> 00:26:11,850
 so I would be
 more comfortable to
 
-424
+425
 00:26:12,620 --> 00:26:14,480
 drive that out with
 a unit test now.
 
-425
+426
 00:26:19,140 --> 00:26:20,970
 TS: The main thing
 I'm going to do now
 
-426
+427
 00:26:23,220 --> 00:26:24,140
 is install rspec.
 
-427
+428
 00:26:25,740 --> 00:26:27,970
 At the time of
 recording the most recent
 
-428
+429
 00:26:29,480 --> 00:26:32,020
 version of rspec, is
 3.0.0 release candidate 1. (RC1)
 
-429
+430
 00:26:34,800 --> 00:26:35,620
 DN:  Bleeding edge!
 
-430
+431
 00:26:36,570 --> 00:26:39,340
 and hopefully the actual
 version 3 will be out soon.
 
-431
+432
 00:26:42,910 --> 00:26:46,370
 DN: Just out of interest, you've
 been running cucumber scenarios.
 
-432
+433
 00:26:49,400 --> 00:26:50,800
 Are you suspending Vim or .....?
 
-433
+434
 00:26:52,370 --> 00:26:53,280
 TS:  I will show you.
 
-434
+435
 00:26:59,080 --> 00:27:01,140
 DN: So you have
 something in your vimrc?
 
-435
+436
 00:27:01,140 --> 00:27:02,770
 TS: Yes, that
 does literally run.
 
-436
+437
 00:27:02,770 --> 00:27:04,850
 I'm sure there's a
 cleverer way than that
 
-437
+438
 00:27:04,850 --> 00:27:07,170
 but I'm just typing
 leader 'C' to run cucumber,
 
-438
+439
 00:27:07,450 --> 00:27:10,220
 and because I've got
 cucumber set up to use bin stubs ....
 
-439
+440
 00:27:13,480 --> 00:27:15,170
 DN: You don't
 have do bundle exec.
 
-440
+441
 00:27:15,250 --> 00:27:16,050
 TS: Yes exactly.
 
-441
+442
 00:27:18,080 --> 00:27:20,820
 TS: It stores all of these
 bin stubs in .bundle/bin,
 
-442
+443
 00:27:21,140 --> 00:27:23,450
 you can see there's
 a cucumber binary there
 
-443
+444
 00:27:23,450 --> 00:27:26,170
 and I've got my path set
 up so bundle bin is on the path
 
-444
-00:27:28,220 --> 00:27:30,970
-(people have arguments
-about this on the internet),
-
 445
-00:27:30,970 --> 00:27:32,820
+00:27:28,134 --> 00:27:30,540
+people have arguments
+about this on the internet,
+
+446
+00:27:30,544 --> 00:27:32,820
 it does create the opportunity
 for someone to get you to
 
-446
-00:27:32,820 --> 00:27:34,800
+447
+00:27:32,820 --> 00:27:35,541
 clone a git repository that
 already has a .bundle/bin folder,
 
-447
-00:27:34,800 --> 00:27:36,310
+448
+00:27:35,541 --> 00:27:37,061
 with a binary
 called 'ls' in it
 
-448
-00:27:37,000 --> 00:27:40,200
-that emails your password to the person
-
 449
+00:27:37,632 --> 00:27:39,744
+that emails your password to the person.
+
+450
 00:27:42,400 --> 00:27:44,340
 I prefer convenience over security,
 
-450
+451
 00:27:44,340 --> 00:27:46,370
 which is why I'm
 a terrible programmer.
 
-451
+452
 00:27:47,420 --> 00:27:48,650
 So that's all installed.
 
-452
+453
 00:27:48,770 --> 00:27:50,310
 Rspec comes
 with a nice thingy
 
-453
+454
 00:27:53,710 --> 00:27:55,340
 that will initialize it for me.
 
-454
+455
 00:27:55,340 --> 00:27:57,680
 That's made a rspec
 file with some sensible
 
-455
+456
 00:27:58,740 --> 00:28:00,820
 defaults in, and
 it's made a spec helper
 
-456
+457
 00:28:01,420 --> 00:28:03,050
 I will just
 check what's in here.
 
-457
+458
 00:28:05,370 --> 00:28:07,310
 Yes, there's a lot
 of guff in here which
 
-458
+459
 00:28:07,310 --> 00:28:09,510
 for the purpose of
 this, I'll just get rid of.
 
-459
+460
 00:28:11,250 --> 00:28:13,340
 The only piece of
 configuration I want
 
-460
+461
 00:28:13,340 --> 00:28:15,600
 is that rspec 3 has
 this wonderful feature
 
-461
+462
 00:28:15,620 --> 00:28:18,050
 called disable_monkey_patching
 which will
 
-462
+463
 00:28:19,850 --> 00:28:22,770
 turn off all of the stuff
 that patches the main object
 
-463
-00:28:23,370 --> 00:28:25,600
+464
+00:28:23,301 --> 00:28:25,600
 and extends Object with the 'should' method.
 
-464
-00:28:28,200 --> 00:28:30,600
+465
+00:28:27,893 --> 00:28:30,352
 So the only way I'm going
 to get any kind of behavior
 
-465
-00:28:30,600 --> 00:28:32,570
+466
+00:28:30,352 --> 00:28:32,570
 out of rspec now,
 is to specifically say I want
 
-466
+467
 00:28:32,570 --> 00:28:34,480
 to call this
 method as part of rspec.
 
-467
+468
 00:28:37,250 --> 00:28:38,370
 That's good.
 
-468
+469
 00:28:39,050 --> 00:28:40,310
 I will run all of my specs.
 
-469
+470
 00:28:42,620 --> 00:28:44,110
 Zero example, zero failures.
 
-470
+471
 00:28:46,970 --> 00:28:48,820
 I better write some examples then.
 
-471
+472
 00:28:54,540 --> 00:28:57,400
 I've already committed to
 the class being called Node
 
-472
+473
 00:28:57,400 --> 00:28:58,910
 so I will call this node_spec
 
-473
+474
 00:29:01,880 --> 00:29:03,770
 So because I turned
 monkey patching off,
 
-474
+475
 00:29:03,770 --> 00:29:05,800
 ordinarily the first
 thing I would do here
 
-475
-00:29:05,820 --> 00:29:08,000
+476
+00:29:05,802 --> 00:29:08,000
 is say "describe
 something" but in rspec 3
 
-476
+477
 00:29:08,000 --> 00:29:09,620
 when you turn
 monkey patching off
 
-477
+478
 00:29:09,620 --> 00:29:11,710
 you have to refer to
 the top level constant
 
-478
+479
 00:29:11,710 --> 00:29:12,570
 RSpec.describe.
 
-479
+480
 00:29:15,970 --> 00:29:16,770
 Nodes of a tree.
 
-480
+481
 00:29:21,820 --> 00:29:24,200
 Now I'm ready to start
 writing examples here.
 
-481
+482
 00:29:24,970 --> 00:29:26,140
 If I run all of my tests.
 
-482
+483
 00:29:31,540 --> 00:29:33,310
 DN: How do you
 run your rspec tests?
 
-483
-00:29:34,570 --> 00:29:35,940
+484
+00:29:34,570 --> 00:29:42,213
 TS: I am using the vim-rspec plugin.
 
-484
-00:29:42,370 --> 00:29:42,970
+485
+00:29:42,277 --> 00:29:43,744
 So if I grep ...
 
-485
+486
 00:29:49,080 --> 00:29:50,340
 That's not very helpful.
 
-486
+487
 00:29:54,620 --> 00:29:56,820
 Maybe what I want
 to find here is just spec.
 
-487
+488
 00:29:58,250 --> 00:30:00,420
 There are a few
 different bindings here.
 
-488
+489
 00:30:09,050 --> 00:30:10,200
 Leader 'S' is very handy,
 
-489
+490
 00:30:10,220 --> 00:30:12,340
 I can run focused tests
 by just pressing it.
 
-490
+491
 00:30:22,570 --> 00:30:25,000
 This is from thoughtbot I think. It's very nice.
 
-491
+492
 00:30:28,220 --> 00:30:28,820
 Where was I?
 
-492
+493
 00:30:30,280 --> 00:30:30,800
 node_spec.
 
-493
+494
 00:30:35,110 --> 00:30:37,370
 The first thing I want
 to do here is verify
 
-494
+495
 00:30:38,280 --> 00:30:39,370
 that I can create one.
 
-495
+496
 00:30:40,310 --> 00:30:40,910
 So let's say:
 
-496
+497
 00:30:45,970 --> 00:30:46,600
 That will do.
 
-497
+498
 00:30:52,000 --> 00:30:54,680
 I want to start with
 something really simple here.
 
-498
+499
 00:31:02,110 --> 00:31:04,250
 I'm trying to think
 what I want to do here
 
-499
+500
 00:31:04,250 --> 00:31:06,280
 to drive out the
 creation of the class.
 
-500
-00:31:13,200 --> 00:31:15,280
+501
+00:31:13,200 --> 00:31:16,160
 I don't really know what behaviour
 I want yet but let's say:
 
-501
+502
 00:31:17,540 --> 00:31:19,450
 I'm already
 jumping slightly ahead.
 
-502
+503
 00:31:21,420 --> 00:31:23,110
 This is going
 to help me to think
 
-503
+504
 00:31:23,110 --> 00:31:24,680
 about what I
 want the API to be.
 
-504
+505
 00:31:26,280 --> 00:31:28,400
 DN: Do you want
 to use the word children?
 
-505
+506
 00:31:28,910 --> 00:31:31,510
 But I guess children
 means something different.
 
-506
+507
 00:31:32,020 --> 00:31:33,140
 TS: That's a good point.
 
-507
+508
 00:31:33,280 --> 00:31:35,680
 I've already
 introduced the word children
 
-508
-00:31:35,680 --> 00:31:37,140
+509
+00:31:35,680 --> 00:31:37,440
 but yes, I mean direct descendants.
 
-509
+510
 00:31:37,570 --> 00:31:40,400
 That's just my prejudice
 about what trees look like
 
-510
+511
 00:31:40,400 --> 00:31:42,510
 and what the
 things in them are called.
 
-511
+512
 00:31:49,650 --> 00:31:52,800
 TS: I'm already having to
 think about the API of the thing here.
 
-512
+513
 00:31:55,680 --> 00:31:57,710
 I'm uncomfortable
 with that. Let's say:
 
-513
+514
 00:32:03,110 --> 00:32:05,540
 That's really the bare
 minimum I would expect,
 
-514
+515
 00:32:05,540 --> 00:32:07,910
 is the ability to create
 one of these things.
 
-515
+516
 00:32:07,910 --> 00:32:09,710
 I'm going to say expect this block.
 
-516
+517
 00:32:10,370 --> 00:32:12,200
 Make me a new
 tree with no children.
 
-517
+518
 00:32:13,940 --> 00:32:15,020
 Not to raise an error.
 
-518
+519
 00:32:15,740 --> 00:32:16,200
 DN: Ok
 
-519
+520
 00:32:17,650 --> 00:32:18,910
 TS: So if I run all my tests.
 
-520
+521
 00:32:19,620 --> 00:32:23,020
 There's the failure I'm
 looking for, uninitialized constant Node.
 
-521
+522
 00:32:28,050 --> 00:32:29,020
 I created the file.
 
-522
+523
 00:32:30,250 --> 00:32:32,220
 Or maybe I didn't
 because I didn't put
 
-523
+524
 00:32:32,220 --> 00:32:33,570
 anything in it and save it.
 
-524
+525
 00:32:40,200 --> 00:32:40,970
 There's a class.
 
-525
-00:32:43,540 --> 00:32:44,570
+526
+00:32:43,540 --> 00:32:45,301
 If I run all my specs.
 
-526
+527
 00:32:46,280 --> 00:32:48,710
 It's still saying
 uninitialized constant though
 
-527
+528
 00:32:48,710 --> 00:32:51,050
 because I haven't made
 any attempt to load it.
 
-528
-00:32:51,820 --> 00:32:53,370
+529
+00:32:51,781 --> 00:32:53,370
 DN: I wondered
 if that might be
 
-529
+530
 00:32:53,370 --> 00:32:54,850
 happening by magic somehow.
 
-530
+531
 00:32:54,850 --> 00:32:57,250
 TS: No it isn't happening
 by magic and I like that.
 
-531
+532
 00:32:57,250 --> 00:33:00,510
 With rspec and cucumber,
 you have to explicitly add them in.
 
-532
+533
 00:33:02,000 --> 00:33:03,000
 I'm a big fan of this.
 
-533
+534
 00:33:18,080 --> 00:33:19,970
 In fact a lot of
 the automatic stuff
 
-534
+535
 00:33:19,970 --> 00:33:22,370
 that people think of rspec
 and cucumber as doing
 
-535
+536
 00:33:22,370 --> 00:33:25,510
 are actually being done by
 rspec rails and cucumber rails,
 
-536
+537
 00:33:25,510 --> 00:33:27,850
 because they wire
 cucumber
 
-537
+538
 00:33:27,850 --> 00:33:29,600
 and rspec into
 a rails application
 
-538
+539
 00:33:29,620 --> 00:33:31,620
 and then put
 stuff in the spec helper
 
-539
+540
 00:33:31,620 --> 00:33:33,820
 and env files that
 boot up your application
 
-540
+541
 00:33:34,450 --> 00:33:37,080
 and then you've got
 rails constant auto loading
 
-541
+542
 00:33:38,480 --> 00:33:39,200
 as if  by magic.
 
-542
+543
 00:33:39,910 --> 00:33:41,310
 but in this kind of setting
 
-543
+544
 00:33:41,310 --> 00:33:43,110
 we have to be
 explicit and it's nice
 
-544
+545
 00:33:43,110 --> 00:33:44,510
 because it means that I can ....
 
-545
+546
 00:33:44,680 --> 00:33:46,200
 I mean whether
 or not we end up
 
-546
+547
 00:33:46,200 --> 00:33:48,140
 with more than one
 class here I don't know
 
-547
+548
 00:33:48,140 --> 00:33:50,650
 This might be the only
 spec file we write today.
 
-548
+549
 00:33:51,510 --> 00:33:53,940
 In this spec file I can
 say I want to load node.
 
-549
+550
 00:33:58,600 --> 00:34:01,140
 By convention that lib
 folder that's in the root
 
-550
+551
 00:34:01,820 --> 00:34:03,480
 rspec will put
 it on the load path.
 
-551
+552
 00:34:03,480 --> 00:34:06,000
 so I don't have to fiddle
 around with the load path
 
-552
+553
 00:34:06,000 --> 00:34:08,080
 but I do have to
 explicitly say I want to
 
-553
-00:34:08,080 --> 00:34:08,880
+554
+00:34:08,080 --> 00:34:09,370
 load this class.
 
-554
-00:34:14,250 --> 00:34:15,250
-'wrong number of arguments'
-
 555
-00:34:15,280 --> 00:34:16,910
-Ok, so it has found it and we've got
+00:34:14,160 --> 00:34:15,280
+'wrong number of arguments', OK
 
 556
-00:34:16,910 --> 00:34:19,280
+00:34:15,280 --> 00:34:15,514
+so it has found it and we've got
+'wrong number of arguments', OK
+
+557
+00:34:15,514 --> 00:34:16,864
+so it has found it and we've got
+
+558
+00:34:16,864 --> 00:34:19,280
 the wrong number of
 arguments in the constructor,
 
-557
+559
 00:34:19,280 --> 00:34:20,680
 so now I can go back and say:
 
-558
+560
 00:34:28,710 --> 00:34:30,220
 Now I hope to
 see a green test.
 
-559
+561
 00:34:34,970 --> 00:34:37,000
 I've just realised
 that I've powered on
 
-560
+562
 00:34:38,280 --> 00:34:39,480
 through this a long way
 
-561
+563
 00:34:39,620 --> 00:34:41,020
 and completely forgotten
 
-562
+564
 00:34:41,480 --> 00:34:43,250
 to make any
 commits and that's now
 
-563
+565
 00:34:43,250 --> 00:34:45,020
 starting to make
 me nervous because
 
-564
+566
 00:34:45,020 --> 00:34:47,140
 I've just written a
 line of actual code.
 
-565
+567
 00:34:50,310 --> 00:34:53,020
 I'm going to deal with
 that by opening a new screen
 
-566
+568
 00:34:55,970 --> 00:34:58,080
 I'll still have Vim
 open but I'm going to
 
-567
+569
 00:34:58,080 --> 00:35:00,000
 have another
 terminal where I'm going to
 
-568
+570
 00:35:00,020 --> 00:35:01,020
 make some commits.
 
-569
+571
 00:35:07,880 --> 00:35:09,850
 I'm not going to
 waste any time on this,
 
-570
+572
 00:35:11,140 --> 00:35:13,620
 I'm going to do some
 slightly more coarse-grained
 
-571
+573
 00:35:14,020 --> 00:35:15,480
 commits than I'm happy with.
 
-572
+574
 00:35:17,600 --> 00:35:18,370
 So I'm now clean.
 
-573
+575
 00:35:19,280 --> 00:35:21,680
 I should have been
 in that situation before
 
-574
+576
 00:35:21,680 --> 00:35:23,680
 but I got over
 excited by the problem!
 
-575
+577
 00:35:23,680 --> 00:35:24,340
 Let's go back
 
-576
+578
 00:35:25,910 --> 00:35:27,880
 and look at the
 test we were writing.
 
-577
+579
 00:35:30,480 --> 00:35:31,800
 I believe that's all fine
 
-578
+580
 00:35:32,620 --> 00:35:34,050
 Everything is happy there.
 
-579
+581
 00:35:37,480 --> 00:35:40,820
 What I'd like to do now is
 start building this functionality out.
 
-580
+582
 00:35:43,570 --> 00:35:44,020
 I can say:
 
-581
+583
 00:35:51,140 --> 00:35:52,770
 This is actually
 when the node
 
-582
+584
 00:35:55,770 --> 00:35:56,620
 has no children.
 
-583
+585
 00:35:58,680 --> 00:36:00,370
 I think that's
 more appropriate.
 
-584
+586
 00:36:02,080 --> 00:36:04,110
 And this is when
 the node has children.
 
-585
+587
 00:36:09,420 --> 00:36:10,370
 Oh... what a disaster.
 
-586
+588
 00:36:21,540 --> 00:36:22,740
 What I'd like to do here...
 
-587
+589
 00:36:23,940 --> 00:36:26,020
 and I don't know
 if I will stick with this,
 
-588
+590
 00:36:31,880 --> 00:36:34,080
 is to have a
 collection of test doubles.
 
-589
+591
 00:36:34,820 --> 00:36:36,740
 In fact that's not
 here, this is here.
 
-590
+592
 00:36:37,850 --> 00:36:40,050
 It is so I can give it
 an array of something
 
-591
+593
 00:36:40,940 --> 00:36:42,850
 without having to
 then think about
 
-592
+594
 00:36:42,850 --> 00:36:43,650
 what those are.
 
-593
+595
 00:36:43,650 --> 00:36:45,200
 Anyway, see how
 far we can get.
 
-594
+596
 00:36:52,880 --> 00:36:55,850
 We've still got a very basic
 level of functionality here.
 
-595
+597
 00:36:57,340 --> 00:37:01,970
 DN: Your missing a closing brace.
 
-596
+598
 00:37:02,200 --> 00:37:05,650
 I'm expecting the evaluation
 of that block not to raise an error.
 
-597
+599
 00:37:06,280 --> 00:37:06,740
 Great, ok.
 
-598
+600
 00:37:10,020 --> 00:37:12,280
 I've got my Node
 class, and I can instantiate
 
-599
+601
 00:37:12,820 --> 00:37:13,600
 which is great.
 
-600
+602
 00:37:14,250 --> 00:37:16,340
 I can see here this
 is some duplication.
 
-601
+603
 00:37:17,280 --> 00:37:19,850
 So instead of having
 two different things there
 
-602
+604
 00:37:19,850 --> 00:37:20,850
 I will pull up this.
 
-603
+605
 00:37:24,940 --> 00:37:26,940
 I'm defining
 children in both cases
 
-604
+606
 00:37:28,910 --> 00:37:30,420
 but in one
 context it's empty
 
-605
+607
 00:37:30,420 --> 00:37:32,420
 and in another
 context it's not empty.
 
-606
+608
 00:37:32,680 --> 00:37:34,770
 That gives me a
 nice clean separation.
 
-607
+609
 00:37:38,110 --> 00:37:40,200
 Those two things
 are exactly the same.
 
-608
+610
 00:37:42,680 --> 00:37:44,940
 Ordinarily I would
 refactor this and pull
 
-609
+611
 00:37:44,940 --> 00:37:46,970
 those out into a
 shared example group.
 
-610
+612
 00:37:48,000 --> 00:37:50,080
 If we duplicate a
 lot of examples here,
 
-611
+613
 00:37:50,080 --> 00:37:51,020
 I'll do that anyway.
 
-612
+614
 00:37:53,850 --> 00:37:55,420
 Now I want to
 think about what
 
-613
+615
 00:37:57,000 --> 00:37:58,910
 my acceptance
 tests are demanding.
 
-614
+616
 00:37:58,910 --> 00:38:01,140
 I've run these unit
 tests a couple of times
 
-615
+617
 00:38:01,770 --> 00:38:04,280
 The acceptance tests
 were complaining about
 
-616
+618
 00:38:04,280 --> 00:38:05,880
 was, you don't
 have a Node class.
 
-617
+619
 00:38:05,970 --> 00:38:07,510
 Now I have got
 the Node class,
 
-618
+620
 00:38:08,310 --> 00:38:09,940
 it's time for me
 to step back up
 
-619
+621
 00:38:09,940 --> 00:38:11,940
 and run the
 cucumber features again
 
-620
+622
 00:38:12,510 --> 00:38:15,000
 to see if I have finished,
 but I don't think I have.
 
-621
+623
 00:38:17,110 --> 00:38:18,310
 These are failing now.
 
-622
+624
 00:38:18,310 --> 00:38:21,110
 They are still complaining
 that they can't find Node.
 
-623
+625
 00:38:21,110 --> 00:38:23,800
 and that's because I
 need to make sure it's required.
 
-624
+626
 00:38:26,770 --> 00:38:27,940
 DN: In the environment.
 
-625
+627
 00:38:27,940 --> 00:38:28,420
 TS: Yes.
 
-626
+628
 00:38:28,420 --> 00:38:30,800
 So I'll say require
 and again I think cucumber
 
-627
+629
 00:38:30,800 --> 00:38:32,880
 is going to put lib
 on the load path again.
 
-628
+630
 00:38:40,170 --> 00:38:41,820
 I've gone slightly wrong there.
 
-629
+631
 00:38:42,650 --> 00:38:44,310
 That's not supposed to be green.
 
-630
+632
 00:38:46,220 --> 00:38:48,110
 These step definitions, tree steps
 
-631
+633
 00:38:50,710 --> 00:38:52,600
 DN: They don't
 actually do anything.
 
-632
+634
 00:38:56,970 --> 00:38:58,770
 In order to show
 what I wanted the
 
-633
+635
 00:38:58,770 --> 00:39:01,220
 structure to be here,
 this needs to be pending.
 
-634
+636
 00:39:01,220 --> 00:39:02,880
 because I'm not
 yet done with it.
 
-635
+637
 00:39:07,800 --> 00:39:08,680
 That's what I want.
 
-636
+638
 00:39:08,880 --> 00:39:10,570
 I should not have left these step
 
-637
+639
 00:39:12,510 --> 00:39:14,140
 definitions that say nothing.
 
-638
+640
 00:39:14,850 --> 00:39:15,740
 So now it's saying:
 
-639
+641
 00:39:16,710 --> 00:39:18,600
 You haven't
 implemented these steps.
 
-640
+642
 00:39:18,620 --> 00:39:20,450
 sort by total
 number of descendants
 
-641
+643
 00:39:20,450 --> 00:39:22,170
 or by the total
 number of terminals.
 
-642
+644
 00:39:22,170 --> 00:39:24,880
 Now I can think in terms
 of being a client of this API
 
-643
+645
 00:39:27,250 --> 00:39:28,880
 What do I want
 this to look like.
 
-644
+646
 00:39:28,880 --> 00:39:30,650
 So I've got my
 collection of trees,
 
-645
+647
 00:39:30,650 --> 00:39:32,450
 which I've just
 assumed is an array,
 
-646
+648
 00:39:32,450 --> 00:39:34,050
 but I think
 that's reasonable.
 
-647
+649
 00:39:36,220 --> 00:39:38,110
 If someone gave
 me this API and said
 
-648
+650
 00:39:38,970 --> 00:39:40,680
 You've got a
 collection of trees,
 
-649
+651
 00:39:41,020 --> 00:39:43,310
 and I have
 implemented an API, for the trees.
 
-650
+652
 00:39:44,450 --> 00:39:46,140
 and now I want
 you to sort them by
 
-651
+653
 00:39:46,620 --> 00:39:48,020
 the number of descendants,
 
-652
+654
 00:39:48,020 --> 00:39:49,450
 or the number of terminals
 
-653
+655
 00:39:49,450 --> 00:39:51,310
 I would expect
 there to be a method
 
-654
+656
 00:39:51,310 --> 00:39:52,710
 on each tree that I can call
 
-655
+657
 00:39:52,710 --> 00:39:54,400
 that would give
 me a number back,
 
-656
+658
 00:39:55,940 --> 00:39:57,140
 that would say how many....
 
-657
+659
 00:39:57,140 --> 00:39:58,420
 trees equals trees sort ....
 
-658
+660
 00:40:01,620 --> 00:40:02,310
 by something ....
 
-659
+661
 00:40:05,570 --> 00:40:06,970
 it will either be number of ....
 
-660
+662
 00:40:07,710 --> 00:40:10,250
 It's tempting to call it
 'number of descendants'.
 
-661
+663
 00:40:13,680 --> 00:40:16,450
 But I'm wondering if it
 should be descendants_count.
 
-662
+664
 00:40:19,620 --> 00:40:20,940
 Maybe that would be nicer.
 
-663
+665
 00:40:21,570 --> 00:40:22,880
 It's a bit more idiomatic.
 
-664
+666
 00:40:25,200 --> 00:40:27,600
 But then again, it's at
 odds with the language
 
-665
+667
 00:40:27,600 --> 00:40:29,800
 being used here, so I'm
 not sure about that.
 
-666
+668
 00:40:29,800 --> 00:40:31,200
 I might revisit that later.
 
-667
+669
 00:40:37,000 --> 00:40:38,200
 I would like it so that ....
 
-668
+670
 00:40:40,800 --> 00:40:43,420
 I can call descendants_count
 or terminals_count
 
-669
+671
 00:40:45,970 --> 00:40:48,540
 on each node in that
 collection, it would give me
 
-670
+672
 00:40:48,540 --> 00:40:51,420
 a number back and then
 it's going to sort the collection
 
-671
+673
 00:40:51,710 --> 00:40:53,880
 If I run one of my
 Cucumber features now.
 
-672
+674
 00:40:54,740 --> 00:40:56,820
 I would expect to
 see actual failures,
 
-673
+675
 00:40:56,820 --> 00:40:58,420
 which is what
 I was hoping for.
 
-674
+676
 00:40:58,420 --> 00:40:59,800
 This is complaining about
 
-675
+677
 00:41:00,650 --> 00:41:02,710
 undefined method
 descendants_count
 
-676
+678
 00:41:02,710 --> 00:41:04,600
 undefined method
 terminals_count.
 
-677
+679
 00:41:07,620 --> 00:41:09,220
 Again I've charged ahead here.
 
-678
+680
 00:41:11,340 --> 00:41:12,880
 Let's be a bit more meticulous.
 
-679
+681
 00:41:13,770 --> 00:41:14,680
 So this is:
 
-680
+682
 00:41:36,940 --> 00:41:39,510
 DN: Your commits sometimes
 have more text in the
 
-681
+683
 00:41:39,510 --> 00:41:41,880
 commit message than
 what is to be committed.
 
-682
+684
 00:41:45,020 --> 00:41:47,510
 I find that to be the most
 useful way of doing it.
 
-683
+685
 00:41:48,540 --> 00:41:50,110
 So let's see,
 what did I do here?
 
-684
+686
 00:41:50,910 --> 00:41:51,970
 I want to split that.
 
-685
+687
 00:41:52,770 --> 00:41:54,400
 I'm going to commit this change:
 
-686
+688
 00:42:01,450 --> 00:42:04,370
 Which should have been
 pending in the first place.
 
-687
+689
 00:42:06,650 --> 00:42:07,220
 Now this is:
 
-688
+690
 00:42:17,020 --> 00:42:18,420
 All clean again, I can relax.
 
-689
+691
 00:42:19,000 --> 00:42:21,110
 All of the stuff in
 my gutter goes away.
 
-690
+692
 00:42:21,110 --> 00:42:23,250
 DN: Yes, I wanted to
 draw attention to that.
 
-691
+693
 00:42:23,250 --> 00:42:24,480
 I think that's fabulous.
 
-692
+694
 00:42:24,800 --> 00:42:27,080
 TS: I think it's just
 called 'git gutter'.
 
-693
+695
 00:42:29,910 --> 00:42:31,820
 DN: Do you always
 have that enabled?
 
-694
+696
 00:42:31,820 --> 00:42:32,420
 TS: Yes.
 
-695
+697
 00:42:32,910 --> 00:42:36,050
 DN: I noticed it and I wondered
 if it had crept in at some point.
 
-696
+698
 00:42:38,170 --> 00:42:40,820
 TS: It only creeps in if
 there is something to show.
 
-697
+699
 00:42:40,820 --> 00:42:43,170
 so if I make a change
 the gutter will appear.
 
-698
+700
 00:42:44,110 --> 00:42:46,340
 If I then make a
 change back so that git says
 
-699
+701
 00:42:46,340 --> 00:42:48,370
 there's no change
 it disappears again.
 
-700
+702
 00:42:48,370 --> 00:42:50,450
 DN:  I think the
 reason we didn't see it for
 
-701
+703
 00:42:50,450 --> 00:42:52,820
 so long is because
 you didn't commit anything.
 
-702
+704
 00:42:52,820 --> 00:42:54,420
 Everything was
 added, and new.
 
-703
+705
 00:42:55,540 --> 00:42:58,080
 TS: The reason why I
 didn't make those commits is
 
-704
+706
 00:42:58,080 --> 00:43:00,540
 because I forgot to 'git
 init' in the beginning.
 
-705
+707
 00:43:02,570 --> 00:43:04,770
 Now I find I don't
 remember to make commits.
 
-706
+708
 00:43:05,650 --> 00:43:07,910
 It's the stuff in the
 gutter that reminds me
 
-707
+709
 00:43:08,400 --> 00:43:10,050
 it's starting to get a bit dirty.
 
-708
+710
 00:43:16,400 --> 00:43:18,940
 DN: How much noise in
 the gutter can you tolerate?
 
-709
+711
 00:43:18,940 --> 00:43:19,800
 TS: Not very much.
 
-710
+712
 00:43:22,140 --> 00:43:25,400
 Ordinarily I like to make
 commits as frequently as possible.
 
-711
+713
 00:43:25,940 --> 00:43:28,000
 Very small commits
 I can get away with.
 
-712
+714
 00:43:28,000 --> 00:43:29,880
 And as you say
 quite often the message
 
-713
+715
 00:43:29,880 --> 00:43:32,020
 is longer than the
 content of the commit.
 
-714
+716
 00:43:33,370 --> 00:43:35,450
 The problem here is
 that we don't have a
 
-715
+717
 00:43:35,450 --> 00:43:38,020
 terminals_count, or a
 descendants_count method.
 
-716
+718
 00:43:50,170 --> 00:43:52,110
 This makes me
 realise that I'm trying
 
-717
+719
 00:43:52,110 --> 00:43:54,050
 to do two
 scenarios at the same time.
 
-718
+720
 00:43:54,050 --> 00:43:55,770
 I would like to
 focus on just one.
 
-719
+721
 00:43:55,820 --> 00:43:56,650
 DN: Sure, yes.
 
-720
+722
 00:43:58,650 --> 00:44:01,340
 TS: I don't want to
 be simultaneously implementing
 
-721
+723
 00:44:01,340 --> 00:44:03,740
 number of descendants
 and number of terminals.
 
-722
+724
 00:44:03,740 --> 00:44:05,340
 I'd rather just look at this one.
 
-723
+725
 00:44:06,140 --> 00:44:07,450
 I'm going to temporarily:
 
-724
+726
 00:44:18,510 --> 00:44:20,420
 There are better
 ways of doing that.
 
-725
+727
 00:44:20,420 --> 00:44:22,680
 With Cucumber you
 can tag scenarios so you
 
-726
+728
 00:44:22,710 --> 00:44:24,000
 don't have to run them but ....
 
-727
+729
 00:44:24,540 --> 00:44:26,200
 this is the simplest thing to do.
 
-728
+730
 00:44:27,680 --> 00:44:29,110
 I mustn't forget about that
 
-729
+731
 00:44:30,250 --> 00:44:32,140
 but, as long as I
 don't forget about it,
 
-730
+732
 00:44:32,140 --> 00:44:34,340
 it's going to give me
 the opportunity to run
 
-731
+733
 00:44:34,340 --> 00:44:36,910
 through getting the
 descendants count to work.
 
-732
+734
 00:44:38,740 --> 00:44:40,770
 I'm going to switch
 back to my node spec
 
-733
+735
 00:44:42,850 --> 00:44:44,340
 and have a look at doing that.
 
-734
+736
 00:44:51,850 --> 00:44:54,680
 So now I need to start
 making some decisions around ....
 
-735
+737
 00:44:56,600 --> 00:44:58,000
 how to even set up the test
 
-736
+738
 00:44:58,620 --> 00:45:00,940
 because what I want
 here is something like:
 
-737
+739
 00:45:11,340 --> 00:45:13,570
 And then I want
 something here that's like
 
-738
+740
 00:45:14,450 --> 00:45:16,370
 the node is
 something here and then
 
-739
+741
 00:45:17,340 --> 00:45:18,650
 it has five descendants.
 
-740
+742
 00:45:19,880 --> 00:45:21,110
 And then this would say ....
 
-741
+743
 00:45:26,170 --> 00:45:28,510
 Which is what we
 said in the step definition:
 
-742
+744
 00:45:28,800 --> 00:45:30,820
 node descendant count
 to be equal to 5.
 
-743
+745
 00:45:32,540 --> 00:45:34,000
 So I know what the example is.
 
-744
+746
 00:45:36,450 --> 00:45:38,940
 I'm not quite sure exactly
 what I want to do here....
 
-745
+747
 00:45:43,220 --> 00:45:44,800
 because I've got doubles here.
 
-746
+748
 00:45:47,280 --> 00:45:49,910
 If I just make real instances
 of node, I could already
 
-747
+749
 00:45:50,200 --> 00:45:52,480
 build you a tree
 that has five descendants
 
-748
+750
 00:45:52,480 --> 00:45:55,200
 because we had a similar
 one in the step definition.
 
-749
+751
 00:45:55,200 --> 00:45:55,850
 DN: Yes, right.
 
-750
+752
 00:45:56,710 --> 00:45:58,400
 So I know how
 to make <i>real</i> trees
 
-751
+753
 00:45:59,420 --> 00:46:00,450
 with 5 descendants.
 
-752
+754
 00:46:02,910 --> 00:46:05,970
 If I want the children of this
 node to be the test doubles,
 
-753
+755
 00:46:07,140 --> 00:46:08,340
 then I need to work out ....
 
-754
+756
 00:46:11,400 --> 00:46:14,510
 what it is that makes this
 fake tree has five descendants.
 
-755
+757
 00:46:27,110 --> 00:46:29,710
 This feels like it should
 be a recursive method.
 
-756
+758
 00:46:31,910 --> 00:46:33,820
 The number of
 descendants of a tree
 
-757
+759
 00:46:34,280 --> 00:46:36,540
 is the number of
 descendants of all of its
 
-758
+760
 00:46:36,880 --> 00:46:38,650
 subtrees plus
 the node at the top.
 
-759
+761
 00:46:40,250 --> 00:46:42,710
 If I've got three children
 and each one of them
 
-760
+762
 00:46:42,710 --> 00:46:44,200
 has three descendants in it,
 
-761
+763
 00:46:45,800 --> 00:46:49,450
 then I've got 3 + 3 + 3 = 9
 descendants, plus myself is 10.
 
-762
+764
 00:46:51,850 --> 00:46:54,940
 That's a very obvious
 structure for solving the problem.
 
-763
+765
 00:47:02,570 --> 00:47:04,600
 I'm getting slightly
 ahead of myself here.
 
-764
+766
 00:47:04,620 --> 00:47:06,970
 It would be nice to say
 "it has no descendants"
 
-765
+767
 00:47:07,600 --> 00:47:08,480
 for the empty one.
 
-766
+768
 00:47:08,740 --> 00:47:10,540
 because I can
 avoid that problem.
 
-767
+769
 00:47:10,540 --> 00:47:11,250
 I can just say:
 
-768
+770
 00:47:30,400 --> 00:47:32,420
 You can see when
 I press leader 'S' there
 
-769
+771
 00:47:32,420 --> 00:47:34,420
 It's set up RSpec to
 only run that line.
 
-770
-00:47:34,420 --> 00:47:36,200
+772
+00:47:34,420 --> 00:47:37,477
 So now it's saying 'undefined method:
 descendant_count for node'
 
-771
-00:47:37,510 --> 00:47:39,340
-and then I can
-easily go in here and
-
-772
-00:47:41,650 --> 00:47:42,340
-and say:
-
 773
+00:47:37,477 --> 00:47:39,978
+and then I can easily
+
+774
+00:47:40,661 --> 00:47:42,340
+go in here and say:
+
+775
 00:47:47,340 --> 00:47:49,770
 So if I now do leader 'L'
 to run my last focus test
 
-774
+776
 00:47:51,280 --> 00:47:52,600
 It runs just that example.
 
-775
+777
 00:47:58,820 --> 00:48:00,910
 I can make that
 work quite easily here
 
-776
+778
 00:48:02,340 --> 00:48:04,370
 I can't make it work
 so easily down here.
 
-777
+779
 00:48:04,910 --> 00:48:07,370
 because what does it
 mean for the tree to have
 
-778
+780
 00:48:07,370 --> 00:48:08,370
 five descendants.
 
-779
+781
 00:48:14,800 --> 00:48:16,710
 This does go slightly counter to the
 
-780
+782
 00:48:16,710 --> 00:48:19,110
 way I want to write tests
 but I think in terms of
 
-781
+783
 00:48:19,110 --> 00:48:21,280
 expediency it's going
 to be quicker for me
 
-782
+784
 00:48:21,280 --> 00:48:23,280
 to just make a real
 tree here because
 
-783
+785
 00:48:23,280 --> 00:48:25,510
 because I've already
 written the tree helper
 
-784
+786
 00:48:25,510 --> 00:48:26,850
 that knows how to do that.
 
-785
+787
 00:48:26,850 --> 00:48:28,570
 And I've already
 got some examples
 
-786
+788
 00:48:28,570 --> 00:48:29,770
 from the Cucumber step.
 
-787
+789
 00:48:32,050 --> 00:48:34,570
 I think that slightly
 subverts the notion
 
-788
+790
 00:48:34,570 --> 00:48:36,220
 of it being a unit
 test, because
 
-789
+791
 00:48:37,820 --> 00:48:40,020
 although I'm only
 testing one method here,
 
-790
+792
 00:48:41,370 --> 00:48:43,910
 I'll end up testing
 it against multiple objects.
 
-791
+793
 00:48:44,510 --> 00:48:46,710
 If I didn't have a time
 limit, I would like to
 
-792
+794
 00:48:47,000 --> 00:48:48,800
 spend some
 time investigating
 
-793
+795
 00:48:48,800 --> 00:48:51,250
 what would be the
 consequences of me trying
 
-794
+796
 00:48:51,250 --> 00:48:53,020
 to do all of this
 with test doubles.
 
-795
+797
 00:48:54,170 --> 00:48:57,280
 But my instinct tells me that
 I might get a bit tied in knots.
 
-796
+798
 00:49:00,250 --> 00:49:02,710
 So for this specific
 example, I shall err on the
 
-797
+799
 00:49:02,710 --> 00:49:05,620
 side of 'quickness' and have
 a look at the tree steps here.
 
-798
+800
 00:49:09,740 --> 00:49:12,250
 I already have a tree
 here with 5 descendants
 
-799
+801
 00:49:12,740 --> 00:49:13,510
 this wide tree.
 
-800
+802
 00:49:16,620 --> 00:49:19,020
 So I can go here and
 say something like this:
 
-801
+803
 00:49:24,050 --> 00:49:25,170
 What do I want to do?
 
-802
+804
 00:49:27,600 --> 00:49:29,540
 It's going to be
 something like this:
 
-803
+805
 00:49:32,850 --> 00:49:33,880
 Let's get rid of this.
 
-804
+806
 00:49:34,400 --> 00:49:36,570
 That's going to give
 me a node that really
 
-805
+807
 00:49:36,570 --> 00:49:38,400
 does have five descendants.
 DN: Yes.
 
-806
+808
 00:49:38,450 --> 00:49:40,910
 And then this is going
 to say check that it does.
 
-807
+809
 00:49:41,340 --> 00:49:44,510
 If I already knew how my
 descendant count was going to work
 
-808
+810
 00:49:52,680 --> 00:49:54,000
 I'm in conflict about this ....
 
-809
+811
 00:49:54,000 --> 00:49:55,820
 Let's just see what happens if I say:
 
-810
+812
 00:50:02,910 --> 00:50:05,110
 I would like to get
 my head around if this
 
-811
+813
 00:50:05,110 --> 00:50:06,600
 is the right decision or not.
 
-812
+814
 00:50:07,620 --> 00:50:10,480
 So, if I run this, firstly the
 answer is going to be wrong.
 
-813
+815
 00:50:12,370 --> 00:50:14,770
 It's going to say,
 "expected five and I got none".
 
-814
+816
 00:50:16,540 --> 00:50:18,620
 DN: Where is
 children coming from there?
 
-815
+817
 00:50:18,620 --> 00:50:20,310
 TS: Children is coming from here
 
-816
+818
 00:50:24,570 --> 00:50:26,680
 It walks up until
 it finds a place where
 
-817
+819
 00:50:26,680 --> 00:50:27,880
 that has been defined.
 
-818
+820
 00:50:27,910 --> 00:50:30,400
 So I'm still using this
 as several test doubles.
 
-819
+821
 00:50:31,310 --> 00:50:32,310
 I may decide to put ....
 
-820
+822
 00:50:35,110 --> 00:50:37,020
 'let children'
 inside here and then
 
-821
+823
 00:50:37,020 --> 00:50:41,220
 it would provide...
 DN: ...a locally scoped version?
 TS: Yeah, exactly.
 
-822
+824
 00:50:43,940 --> 00:50:45,170
 That's the wrong answer.
 
-823
+825
 00:50:45,170 --> 00:50:46,400
 Expected five, got zero.
 
-824
+826
 00:50:47,020 --> 00:50:49,800
 Now I can start thinking
 about how I want this to work
 
-825
+827
 00:50:51,310 --> 00:50:53,570
 well the most
 obvious thing that I need is
 
-826
+828
 00:50:55,340 --> 00:50:57,200
 to remember
 what the children are.
 
-827
+829
 00:50:57,800 --> 00:50:59,940
 And I guess this
 could be something like:
 
-828
+830
 00:51:08,420 --> 00:51:09,510
 Is that right? Oh well,
 
-829
+831
 00:51:11,400 --> 00:51:12,220
 Yes .... No.... (laughter).
 
-830
+832
 00:51:20,570 --> 00:51:23,340
 It's a little difficult
 because this method needs to ....
 
-831
+833
 00:51:26,800 --> 00:51:28,480
 We need to
 subtract one from it,
 
-832
+834
 00:51:30,080 --> 00:51:31,480
 only once,
 right at the end.
 
-833
+835
 00:51:31,970 --> 00:51:34,050
 So if we call it on the
 root node of a tree,
 
-834
+836
 00:51:34,220 --> 00:51:36,280
 it needs to walk
 down through the tree
 
-835
+837
 00:51:36,280 --> 00:51:37,970
 adding up how
 many nodes there are.
 
-836
+838
 00:51:37,970 --> 00:51:40,480
 And then we subtract one
 from it right at the end.
 
-837
+839
 00:51:40,600 --> 00:51:41,220
 DN: Yes.
 
-838
+840
 00:51:48,450 --> 00:51:50,310
 It now occurs to
 me that I'm not sure.
 
-839
+841
 00:51:50,540 --> 00:51:53,000
 Oh, descendant count of
 zero for the empty node
 
-840
+842
 00:51:53,000 --> 00:51:55,420
 is correct because
 there's just the root node.
 
-841
+843
 00:52:00,540 --> 00:52:03,200
 Let's leave that as it was,
 I don't think that's right.
 
-842
+844
 00:52:03,480 --> 00:52:05,200
 So if it has got several children
 
-843
+845
 00:52:05,400 --> 00:52:07,940
 in my head, the general
 pattern that we want here
 
-844
+846
 00:52:07,940 --> 00:52:09,400
 is to take all the children
 
-845
+847
 00:52:10,170 --> 00:52:11,940
 and call descendant_count on them.
 
-846
+848
 00:52:14,400 --> 00:52:16,340
 And when I know
 how many descendants
 
-847
+849
 00:52:16,340 --> 00:52:17,620
 all of the children have
 
-848
+850
 00:52:17,620 --> 00:52:18,880
 I want to add one to that.
 
-849
+851
 00:52:20,110 --> 00:52:20,800
 DN: Right.
 
-850
+852
 00:52:22,310 --> 00:52:24,600
 The one whose
 children you're asking about?
 
-851
+853
 00:52:24,850 --> 00:52:26,050
 TS: The current node. Yes.
 
-852
+854
 00:52:27,170 --> 00:52:30,140
 If I collect all the
 descendant counts and add them up,
 
-853
+855
 00:52:30,770 --> 00:52:32,910
 by using inject plus,
 and then I have one
 
-854
+856
 00:52:34,110 --> 00:52:36,310
 and that's kind of
 the answer that I want.
 
-855
+857
 00:52:36,310 --> 00:52:39,310
 Or at least that's the answer
 I want in the recursive case.
 
-856
+858
 00:52:41,420 --> 00:52:44,710
 I haven't been called
 recursively as part of this procedure,
 
-857
+859
 00:52:44,820 --> 00:52:47,080
 the root node, I need
 to subtract one from it.
 
-858
+860
 00:52:47,080 --> 00:52:49,340
 I need to think
 more carefully about this.
 
-859
+861
 00:52:53,420 --> 00:52:55,970
 Hopefully that will be
 born out by the fact that
 
-860
+862
 00:52:56,340 --> 00:52:58,450
 here we would want
 all of these to return
 
-861
+863
 00:53:00,370 --> 00:53:01,910
 that it has five descendants.
 
-862
+864
 00:53:02,400 --> 00:53:03,280
 Right now it won't.
 
-863
+865
 00:53:04,710 --> 00:53:06,420
 Because we've
 got the wrong code.
 
-864
+866
 00:53:07,600 --> 00:53:08,850
 Let's run that last test.
 
-865
+867
 00:53:20,450 --> 00:53:22,540
 There's our first
 problem, that because
 
-866
+868
 00:53:22,540 --> 00:53:24,620
 all the children
 are just test doubles
 
-867
+869
 00:53:25,880 --> 00:53:27,200
 They've all just returned... .
 
-868
+870
 00:53:30,250 --> 00:53:32,310
 At the moment I've
 just got these three
 
-869
+871
 00:53:32,910 --> 00:53:34,370
 dumb children.
 So why don't I
 
-870
+872
 00:53:36,650 --> 00:53:38,510
 set up a situation that looks like
 
-871
+873
 00:53:40,080 --> 00:53:41,110
 the tree we had here.
 
-872
+874
 00:53:41,450 --> 00:53:43,540
 Which was .... there
 would be five of these
 
-873
+875
 00:53:47,940 --> 00:53:49,570
 It would be
 quicker to just say:
 
-874
+876
 00:53:52,450 --> 00:53:53,650
 if I want five children .....
 
-875
+877
 00:53:54,970 --> 00:53:56,820
 The easiest way to
 do that is 5 x map.
 
-876
+878
 00:53:59,650 --> 00:54:02,620
 Whatever is in this block
 will get evaluated five times,
 
-877
+879
 00:54:02,620 --> 00:54:03,740
 and put into an array.
 
-878
+880
 00:54:06,820 --> 00:54:09,250
 I can use RSpec 3's
 verifying doubles for this.
 
-879
+881
 00:54:09,400 --> 00:54:10,740
 I can say 'instance double'.
 
-880
+882
 00:54:11,850 --> 00:54:13,880
 I want to have a
 double for an instance
 
-881
+883
 00:54:13,880 --> 00:54:14,800
 of the node class.
 
-882
+884
 00:54:15,250 --> 00:54:17,970
 And what this will do is,
 if the node class is loaded
 
-883
+885
 00:54:17,970 --> 00:54:20,680
 it will check whatever
 stub methods I put on this
 
-884
+886
 00:54:21,850 --> 00:54:24,280
 double actually
 exist so it's checking that
 
-885
+887
 00:54:25,880 --> 00:54:28,280
 I'm not stubbing out
 methods that don't exist.
 
-886
+888
 00:54:30,600 --> 00:54:32,510
 I want to stub
 out descendant_count.
 
-887
+889
 00:54:32,800 --> 00:54:34,370
 and I want that
 to be .... new style
 
-888
+890
 00:54:35,880 --> 00:54:37,540
 I can say the descendant count
 
-889
+891
 00:54:37,540 --> 00:54:39,200
 of each of these,
 needs to be one.
 
-890
+892
 00:54:41,710 --> 00:54:43,650
 I can already see
 that is not going to
 
-891
+893
 00:54:43,650 --> 00:54:44,910
 give me the right answer.
 
-892
+894
 00:54:45,310 --> 00:54:46,820
 Because it adds one, I get six.
 
-893
+895
 00:54:55,710 --> 00:54:56,970
 DN: Just so I'm on the same page
 as you here
 
-894
+896
 00:54:56,970 --> 00:54:58,880
 you've created
 five instance doubles,
 
-895
+897
 00:54:59,620 --> 00:55:00,510
 each one is a node.
 
-896
+898
 00:55:01,650 --> 00:55:04,110
 And it's reporting that
 it has one descendant
 
-897
+899
 00:55:04,110 --> 00:55:06,310
 but actually that
 descendant is itself ....
 
-898
+900
 00:55:07,850 --> 00:55:10,170
 ah yes, of course,
 it's reporting to its parent.
 
-899
+901
 00:55:10,800 --> 00:55:12,570
 TS: Yes, so this is
 the problem, that ....
 
-900
+902
 00:55:14,770 --> 00:55:16,770
 we've already said
 that an empty node
 
-901
+903
 00:55:16,770 --> 00:55:18,280
 should have no descendants.
 
-902
+904
 00:55:18,970 --> 00:55:20,170
 That's returning zero.
 
-903
+905
 00:55:20,170 --> 00:55:22,400
 But to even get this
 started I'm having to say
 
-904
+906
 00:55:22,400 --> 00:55:24,200
 that these nodes,
 which I'm thinking
 
-905
+907
 00:55:24,220 --> 00:55:25,280
 of being empty ones,
 
-906
+908
 00:55:25,280 --> 00:55:27,220
 will have a
 descendant count of one.
 
-907
+909
 00:55:27,820 --> 00:55:29,480
 There's an impedance mismatch.
 
-908
+910
 00:55:31,110 --> 00:55:33,910
 Effectively you've got
 two different methods here
 
-909
+911
 00:55:35,110 --> 00:55:37,770
 and we're trying to cram
 them into the same place.
 
-910
+912
 00:55:38,080 --> 00:55:39,020
 I'll get rid of this.
 
-911
+913
 00:55:39,910 --> 00:55:40,820
 I need to fix this.
 
-912
+914
 00:55:56,940 --> 00:55:59,310
 I already feel
 confused by the test doubles.
 
-913
+915
 00:55:59,820 --> 00:56:01,680
 given that they
 weren't helping me
 
-914
+916
 00:56:01,680 --> 00:56:03,000
 I'll get rid of them for now.
 
-915
+917
 00:56:03,480 --> 00:56:05,000
 If I can use them later, I will.
 
-916
+918
 00:56:06,880 --> 00:56:08,910
 This is going to
 help me think through
 
-917
+919
 00:56:08,910 --> 00:56:10,310
 how we want this to behave
 
-918
+920
 00:56:10,620 --> 00:56:12,770
 because up here
 we've got a real instance
 
-919
+921
 00:56:12,770 --> 00:56:14,140
 of a node with no children
 
-920
+922
 00:56:14,140 --> 00:56:15,910
 and it's giving
 the right answer.
 
-921
+923
 00:56:17,510 --> 00:56:19,420
 Now we've got a
 real instance of node
 
-922
+924
 00:56:19,420 --> 00:56:21,310
 and we want to
 see what the answer is.
 
-923
+925
 00:56:25,420 --> 00:56:27,020
 So now this is
 saying we don't
 
-924
+926
 00:56:27,020 --> 00:56:28,510
 have that build_tree helper.
 
-925
+927
 00:56:30,400 --> 00:56:31,680
 So I need to require that.
 
-926
+928
 00:56:33,540 --> 00:56:35,420
 I think it's up
 in features support.
 
-927
+929
 00:56:37,710 --> 00:56:38,400
 Trees helper.
 
-928
+930
 00:56:40,820 --> 00:56:42,650
 And then I need
 to include a module
 
-929
+931
 00:56:44,420 --> 00:56:45,250
 in my RSpec file.
 
-930
+932
 00:56:47,110 --> 00:56:49,540
 I don't have a great
 way of having test helpers
 
-931
+933
 00:56:50,020 --> 00:56:52,970
 that are available in both
 RSpec and Cucumber features.
 
-932
+934
 00:56:52,970 --> 00:56:55,370
 Usually because, when
 I'm writing a unit test
 
-933
+935
 00:56:55,370 --> 00:56:57,510
 I wouldn't want
 these helpers that build
 
-934
+936
 00:56:59,250 --> 00:57:00,710
 huge trees of real objects.
 
-935
+937
 00:57:00,710 --> 00:57:02,000
 But .... that's
 what we've got.
 
-936
+938
 00:57:06,600 --> 00:57:07,620
 Why has that worked?
 
-937
+939
 00:57:08,770 --> 00:57:10,600
 Expect descendant count to be five.
 
-938
+940
 00:57:10,600 --> 00:57:12,000
 Ok, I've done the wrong thing.
 
-939
+941
 00:57:13,140 --> 00:57:14,510
 expected five and got one,
 
-940
+942
 00:57:14,710 --> 00:57:16,740
 and I think the
 reason why we've got one
 
-941
+943
 00:57:16,740 --> 00:57:19,250
 is because the subtrees
 have all returned zero
 
-942
+944
 00:57:19,250 --> 00:57:20,850
 DN: And then we've added one to it.
 
-943
+945
 00:57:20,850 --> 00:57:21,310
 TS: Yes.
 
-944
+946
 00:57:21,310 --> 00:57:23,480
 So I think that we
 need to have one method
 
-945
+947
 00:57:25,940 --> 00:57:28,000
 that we call from
 the outside, which is
 
-946
+948
 00:57:28,000 --> 00:57:29,570
 going to be descendant_count.
 
-947
+949
 00:57:29,970 --> 00:57:31,880
 And a different method that is used ....
 
-948
+950
 00:57:35,510 --> 00:57:37,910
 This code here is going
 to be something else.
 
-949
+951
 00:57:39,280 --> 00:57:39,850
 DN: I see.
 
-950
+952
 00:57:41,420 --> 00:57:43,680
 And this thing here
 can be 'something else'
 
-951
+953
 00:57:45,310 --> 00:57:45,850
 minus one.
 
-952
+954
 00:57:46,770 --> 00:57:47,280
 DN: OK.
 
-953
+955
 00:57:47,710 --> 00:57:49,740
 Because when you
 call this you want it
 
-954
+956
 00:57:49,740 --> 00:57:51,740
 to count all the ....
 what did we call them?
 
-955
+957
 00:57:56,000 --> 00:57:57,620
 This is almost like .... 'node count'.
 
-956
+958
 00:57:58,880 --> 00:58:01,710
 You want it to count all of
 the nodes, including itself
 
-957
+959
 00:58:03,250 --> 00:58:04,650
 and then disregard itself.
 
-958
+960
 00:58:06,020 --> 00:58:06,770
 I think!
 
-959
+961
 00:58:07,800 --> 00:58:10,140
 This may be stupid but
 let's see what happens.
 
-960
+962
 00:58:13,250 --> 00:58:15,140
 This I think, does
 the correct thing.
 
-961
+963
 00:58:20,170 --> 00:58:21,340
 So this needs to be one.
 
-962
+964
 00:58:21,910 --> 00:58:24,020
 So what we are trying to
 ask is how many nodes
 
-963
+965
 00:58:24,020 --> 00:58:25,250
 in total are in the tree.
 
-964
+966
 00:58:25,650 --> 00:58:27,050
 If I don't have any children
 
-965
+967
 00:58:27,050 --> 00:58:28,540
 there's just the one, that's me.
 
-966
+968
 00:58:29,200 --> 00:58:30,600
 and if I have some children
 
-967
+969
 00:58:30,600 --> 00:58:33,000
 then I have all my
 childrens' nodes and myself.
 
-968
+970
 00:58:34,340 --> 00:58:36,280
 So I'm always adding
 one, and at the end
 
-969
+971
 00:58:36,280 --> 00:58:37,200
 you subtract one.
 
-970
+972
 00:58:40,050 --> 00:58:41,140
 If I run my unit tests....
 
-971
+973
 00:58:42,250 --> 00:58:43,480
 expected five, got zero.
 
-972
+974
 00:58:47,200 --> 00:58:48,880
 That's not
 what I was expecting.
 
-973
+975
 00:58:48,880 --> 00:58:50,940
 Ah .... it's because I
 forgot to change this.
 
-974
+976
 00:58:52,220 --> 00:58:55,110
 So we have to call that
 node_count method recursively
 
-975
+977
 00:58:55,250 --> 00:58:57,620
 Now, it will correctly
 count all of the nodes.
 
-976
+978
 00:59:08,080 --> 00:59:10,510
 There are other ways
 that we can arrange this,
 
-977
+979
 00:59:10,510 --> 00:59:11,770
 but I think this is fine.
 
-978
+980
 00:59:11,770 --> 00:59:13,170
 I think this is just as good.
 
-979
+981
 00:59:14,250 --> 00:59:16,110
 It's slightly awkward that we have
 
-980
+982
 00:59:16,110 --> 00:59:17,450
 these two ways of doing it.
 
-981
+983
 00:59:23,050 --> 00:59:25,280
 But I think this is
 sort of an inevitable
 
-982
+984
 00:59:25,280 --> 00:59:27,850
 consequence of saying that
 the root node is not ....
 
-983
+985
 00:59:27,850 --> 00:59:28,540
 Actually ....
 
-984
+986
 00:59:33,740 --> 00:59:35,940
 Maybe there is a
 better way of doing this.
 
-985
+987
 00:59:36,910 --> 00:59:38,740
 We can do a bit
 of refactoring here
 
-986
+988
 00:59:38,740 --> 00:59:40,740
 and make a commit
 because I've definitely
 
-987
+989
 00:59:40,910 --> 00:59:41,620
 done the work.
 
-988
+990
 00:59:46,140 --> 00:59:47,910
 I've got
 something that works now.
 
-989
+991
 00:59:48,200 --> 00:59:49,110
 So I will just say:
 
-990
+992
 00:59:59,540 --> 01:00:01,740
 I think there is a
 smarter way of doing it
 
-991
+993
 01:00:01,740 --> 01:00:05,000
 which is to always think about
 the descendant count as being ....
 
-992
+994
 01:00:06,740 --> 01:00:08,770
 How many nodes are
 there apart from me.
 
-993
-01:00:09,370 --> 01:00:12,600
+995
+01:00:09,317 --> 01:00:13,989
 For whatever reason, my intuitive idea of
 what descendant count was doing
 
-994
-01:00:15,250 --> 01:00:18,220
+996
+01:00:15,189 --> 01:00:18,661
 would be including the... It would
 be like self AND descendant count
 
-995
+997
 01:00:19,510 --> 01:00:20,940
 But that's not what you want
 
-996
+998
 01:00:20,940 --> 01:00:23,370
 you want to know how
 many children there are
 
-997
+999
 01:00:24,000 --> 01:00:26,370
 and how many children
 of children there are.
 
-998
+1000
 01:00:26,370 --> 01:00:27,480
 Not counting myself.
 
-999
+1001
 01:00:31,850 --> 01:00:33,400
 if I do this descendant count
 
-1000
+1002
 01:00:34,000 --> 01:00:36,020
 Could I say,
 'if I don't have any children
 
-1001
+1003
 01:00:36,020 --> 01:00:37,820
 then there are
 zero descendants".
 
-1002
+1004
 01:00:38,250 --> 01:00:39,650
 If I do have some children
 
-1003
+1005
 01:00:40,800 --> 01:00:43,340
 I then add up the
 descendants each of them have
 
-1004
+1006
 01:00:44,420 --> 01:00:46,250
 then I add how
 many children I have.
 
-1005
+1007
 01:00:48,220 --> 01:00:49,050
 So this would be:
 
-1006
+1008
 01:00:54,510 --> 01:00:56,650
 And then I think that
 does the same thing.
 
-1007
+1009
 01:00:58,140 --> 01:00:59,340
 That's slightly nicer.
 
-1008
+1010
 01:01:00,080 --> 01:01:01,800
 I hadn't thought
 of that as being
 
-1009
+1011
 01:01:02,620 --> 01:01:04,880
 a way of adding them
 up but I think it works.
 
-1010
+1012
 01:01:09,620 --> 01:01:11,540
 It's a problem
 that you have to call
 
-1011
+1013
 01:01:11,880 --> 01:01:13,800
 size on the
 collection of children.
 
-1012
+1014
 01:01:14,140 --> 01:01:16,510
 Whereas, previously
 we didn't have to do that.
 
-1013
+1015
 01:01:16,510 --> 01:01:17,600
 You got that for free,
 
-1014
+1016
 01:01:17,600 --> 01:01:19,710
 because every child
 was returning 'one',
 
-1015
+1017
 01:01:20,540 --> 01:01:22,480
 If they included
 themselves anyway ....
 
-1016
+1018
 01:01:22,850 --> 01:01:24,540
 Now we have to
 have an awareness
 
-1017
+1019
 01:01:24,540 --> 01:01:26,000
 of how many
 children we have.
 
-1018
+1020
 01:01:26,220 --> 01:01:27,940
 I think that's why I avoided that.
 
-1019
+1021
 01:01:31,400 --> 01:01:33,400
 DN; Well there's
 only question to ask.
 
-1020
+1022
 01:01:35,000 --> 01:01:37,820
 This is the best way of
 representing what you wanted.
 
-1021
+1023
 01:01:38,370 --> 01:01:39,220
 DN: Right.
 
-1022
+1024
 01:01:41,050 --> 01:01:43,000
 TS: The examples
 are passing the test.
 
-1023
+1025
 01:01:51,770 --> 01:01:53,540
 I might stick one
 more in here.
 
-1024
+1026
 01:01:54,020 --> 01:01:55,280
 Given that we've got them.
 
-1025
+1027
 01:01:57,280 --> 01:01:59,200
 I said I thought
 this one had twelve.
 
-1026
+1028
 01:02:00,310 --> 01:02:02,770
 So let's find out if it
 does in fact, have twelve.
 
-1027
+1029
 01:02:03,820 --> 01:02:05,620
 DN: It definitely has many.
 TS: Yes.
 
-1028
+1030
 01:02:32,200 --> 01:02:33,480
 So this one is going to be:
 
-1029
+1031
 01:02:48,450 --> 01:02:50,080
 I was right, it
 does have twelve!
 
-1030
+1032
 01:02:54,570 --> 01:02:56,650
 Although I am
 uncomfortable with the
 
-1031
+1033
 01:02:57,600 --> 01:02:59,250
 use of the real
 instances here,
 
-1032
+1034
 01:02:59,310 --> 01:03:00,770
 I think I'm going to carry on
 
-1033
+1035
 01:03:00,770 --> 01:03:03,400
 because for the purposes
 of what we are doing here,
 
-1034
+1036
 01:03:03,420 --> 01:03:05,480
 I don't think it
 would be interesting
 
-1035
+1037
 01:03:05,480 --> 01:03:06,880
 for me to fix that problem.
 
-1036
+1038
 01:03:08,970 --> 01:03:10,540
 Now I've decided how this works
 
-1037
+1039
 01:03:10,540 --> 01:03:13,540
 I could go back and instead
 of having real instances here
 
-1038
+1040
 01:03:13,850 --> 01:03:15,680
 I could just
 have doubles, so that
 
-1039
+1041
 01:03:15,740 --> 01:03:18,000
 here, I just need
 three children that each
 
-1040
+1042
 01:03:18,000 --> 01:03:19,710
 say they have four descendants.
 
-1041
+1043
 01:03:21,050 --> 01:03:23,080
 So I don't need the
 real instances here,
 
-1042
+1044
 01:03:23,970 --> 01:03:26,220
 but I've already
 'flip flopped' on that a bit
 
-1043
+1045
 01:03:26,220 --> 01:03:28,340
 so I'm just going to
 move on with my life.
 
-1044
+1046
 01:03:29,800 --> 01:03:32,620
 I've only tested descendant
 count three times there
 
-1045
+1047
 01:03:32,620 --> 01:03:34,250
 but that's giving me confidence,
 
-1046
+1048
 01:03:34,250 --> 01:03:35,710
 that it's not totally wrong.
 
-1047
+1049
 01:03:36,970 --> 01:03:39,480
 All of these trees are
 pretty much symmetric.
 
-1048
+1050
 01:03:42,910 --> 01:03:45,340
 All of the children look
 the same in each tree.
 
-1049
+1051
 01:03:45,340 --> 01:03:46,880
 This one has got three children
 
-1050
+1052
 01:03:46,880 --> 01:03:48,140
 which are all four deep.
 
-1051
+1053
 01:03:49,400 --> 01:03:51,080
 I think I'm
 confident enough that
 
-1052
+1054
 01:03:51,080 --> 01:03:53,310
 that's not a problem,
 so I'm going to carry on.
 
-1053
+1055
 01:03:54,650 --> 01:03:56,770
 Let's run the
 Cucumber features and see
 
-1054
+1056
 01:03:56,770 --> 01:03:57,400
 where we are.
 
-1055
+1057
 01:03:58,680 --> 01:04:01,140
 Undefined method
 descendants count for node.
 
-1056
+1058
 01:04:01,800 --> 01:04:03,000
 Why has that happened?
 
-1057
+1059
 01:04:03,000 --> 01:04:04,650
 Because it's
 descendant count.
 
-1058
+1060
 01:04:11,450 --> 01:04:13,450
 I think descendant
 count is the name
 
-1059
+1061
 01:04:13,450 --> 01:04:14,850
 I want that
 method to have.
 
-1060
+1062
 01:04:17,340 --> 01:04:19,420
 When I was writing
 the acceptance test
 
-1061
+1063
 01:04:19,420 --> 01:04:21,050
 I did write
 descendants count.
 
-1062
+1064
 01:04:24,170 --> 01:04:26,250
 DN: That's an easy
 refactoring to change.
 
-1063
+1065
 01:04:31,080 --> 01:04:33,450
 TS: The reason there
 was descendants there
 
-1064
+1066
 01:04:33,450 --> 01:04:35,650
 was because I'd
 written descendants here.
 
-1065
+1067
 01:04:35,650 --> 01:04:38,220
 We've got the word
 descendants all over the place.
 
-1066
+1068
 01:04:41,200 --> 01:04:43,650
 But this feels more
 idiomatically Ruby to me,
 
-1067
+1069
 01:04:47,000 --> 01:04:48,200
 that's just my instinct.
 
-1068
+1070
 01:04:49,370 --> 01:04:50,080
 Let's run them.
 
-1069
+1071
 01:04:54,110 --> 01:04:55,770
 DN: The pending
 one is the one we
 
-1070
+1072
 01:04:56,340 --> 01:04:58,170
 don't care about
 the moment isn't it?
 
-1071
+1073
 01:04:58,170 --> 01:04:58,770
 TS: Yes, sure.
 
-1072
+1074
 01:05:00,050 --> 01:05:01,740
 I'm going to add
 this change and
 
-1073
+1075
 01:05:01,740 --> 01:05:02,200
 just say:
 
-1074
+1076
 01:05:31,650 --> 01:05:34,080
 I think we can power
 through the rest of it now.
 
-1075
-01:05:34,080 --> 01:05:35,740
+1077
+01:05:34,080 --> 01:05:35,829
 So now we say
 the collection should
 
-1076
-01:05:35,740 --> 01:05:37,880
+1078
+01:05:35,829 --> 01:05:38,272
 be ordered by the
 total number of descendants.
 
-1077
-01:05:38,940 --> 01:05:40,420
-That means we
-are going to start
-
-1078
-01:05:40,570 --> 01:05:42,570
-putting some code
-in here which says:
-
 1079
+01:05:38,272 --> 01:05:41,104
+That means we are going to
+start putting some code in here
+
+1080
+01:05:41,104 --> 01:05:42,160
+which says:
+
+1081
 01:05:49,680 --> 01:05:51,970
 So if we've sorted
 them by descendant count
 
-1080
+1082
 01:05:54,970 --> 01:05:56,570
 we expect to
 see just one node
 
-1081
+1083
 01:05:58,710 --> 01:06:00,080
 which has no descendants.
 
-1082
+1084
 01:06:01,050 --> 01:06:02,450
 A deep tree which has four.
 
-1083
+1085
 01:06:04,220 --> 01:06:05,600
 A wide tree which has five.
 
-1084
+1086
 01:06:08,250 --> 01:06:10,170
 and deep wide
 tree which has twelve.
 
-1085
+1087
 01:06:10,910 --> 01:06:11,770
 So let's run that.
 
-1086
+1088
 01:06:14,540 --> 01:06:17,570
 I got that green before but I didn't deserve it.
 
-1087
+1089
 01:06:17,570 --> 01:06:19,420
 In fact because
 I didn't deserve it
 
-1088
+1090
 01:06:19,420 --> 01:06:20,620
 I'll put pending in here.
 
-1089
+1091
 01:06:37,450 --> 01:06:38,910
 So, I think we finished that.
 
-1090
+1092
 01:06:40,710 --> 01:06:42,020
 I'll just go back here and ....
 
-1091
+1093
 01:06:46,080 --> 01:06:46,910
 un-comment  that
 
-1092
+1094
 01:06:48,450 --> 01:06:49,310
 and now we've got ....
 
-1093
+1095
 01:06:50,340 --> 01:06:52,800
 sort the collection
 by terminals is failing.
 
-1094
+1096
 01:06:54,080 --> 01:06:56,510
 Ok, so I'm hoping we can
 pick up the pace a bit now.
 
-1095
+1097
 01:06:58,740 --> 01:07:00,050
 What situation are we in?
 
-1096
+1098
 01:07:00,770 --> 01:07:02,600
 Undefined method
 terminal count
 
-1097
+1099
 01:07:03,540 --> 01:07:05,570
 I can start writing
 specs around that.
 
-1098
+1100
 01:07:05,970 --> 01:07:07,570
 For the moment
 I don't have any.
 
-1099
+1101
 01:07:11,770 --> 01:07:13,480
 So if we've only
 got a single node.
 
-1100
+1102
 01:07:14,620 --> 01:07:15,680
 It has no terminals.
 
-1101
+1103
 01:07:38,940 --> 01:07:41,140
 It's complaining
 about undefined method.
 
-1102
+1104
 01:07:42,740 --> 01:07:43,680
 I've done with that.
 
-1103
+1105
 01:07:49,850 --> 01:07:51,570
 If we just have
 that return zero,
 
-1104
+1106
 01:07:52,080 --> 01:07:53,770
 at least that
 example will pass
 
-1105
+1107
 01:07:53,770 --> 01:07:55,400
 and that's not
 broken anything.
 
-1106
+1108
 01:08:05,110 --> 01:08:07,370
 Now we have to do
 something more difficult.
 
-1107
+1109
 01:08:07,370 --> 01:08:08,170
 Which is:
 
-1108
+1110
 01:08:08,850 --> 01:08:09,850
 How does this work ....
 
-1109
+1111
 01:08:15,820 --> 01:08:16,910
 This is the flat tree.
 
-1110
+1112
 01:08:21,620 --> 01:08:23,110
 That's going
 to work as well.
 
-1111
+1113
 01:08:24,420 --> 01:08:25,510
 DN: With no extra work.
 
-1112
+1114
 01:08:25,510 --> 01:08:27,850
 TS: Yes that's great, and
 we can just stop there!
 
-1113
+1115
 01:08:30,020 --> 01:08:31,970
 This is going to
 be more challenging.
 
-1114
+1116
 01:08:32,910 --> 01:08:34,910
 It has three
 terminals, is that right?
 
-1115
+1117
 01:08:36,020 --> 01:08:36,600
 DN: Yes.
 
-1116
+1118
 01:08:38,250 --> 01:08:40,400
 We're expecting the
 node terminal count.
 
-1117
+1119
 01:08:40,420 --> 01:08:41,450
 to be equal to three.
 
-1118
+1120
 01:08:49,970 --> 01:08:50,880
 Let's run this one.
 
-1119
+1121
 01:08:53,570 --> 01:08:54,850
 Expected three, got zero.
 
-1120
+1122
 01:09:03,620 --> 01:09:04,850
 What do I want to do here?
 
-1121
+1123
 01:09:07,970 --> 01:09:10,020
 I'm counting how
 many leaves there are.
 
-1122
+1124
 01:09:17,820 --> 01:09:20,820
 But I only want the leaves that
 are at the maximum depth.
 
-1123
+1125
 01:09:21,820 --> 01:09:22,800
 DN: That's right, yes.
 
-1124
+1126
 01:09:28,510 --> 01:09:31,220
 TS: That gives me the idea
 of having another method,
 
-1125
+1127
 01:09:34,450 --> 01:09:36,050
 that can be
 called leaf_count,
 
-1126
+1128
 01:09:39,250 --> 01:09:40,770
 that takes a
 depth argument.
 
-1127
+1129
 01:09:47,710 --> 01:09:50,170
 We're going to have some
 kind of maximum depth.
 
-1128
+1130
 01:10:03,080 --> 01:10:04,910
 I think it would
 be easier for me if
 
-1129
+1131
 01:10:05,310 --> 01:10:08,000
 I thought of depth in the
 way that I talked about it.
 
-1130
+1132
 01:10:10,280 --> 01:10:12,280
 Let's go with
 your method definition.
 
-1131
+1133
 01:10:13,710 --> 01:10:15,170
 We just have
 to make it work.
 
-1132
+1134
 01:10:16,370 --> 01:10:18,540
 If we want to refactor
 it then we can do so.
 
-1133
+1135
 01:10:20,110 --> 01:10:21,680
 DN: I'm being
 an awkward client.
 
-1134
+1136
 01:10:21,680 --> 01:10:23,250
 TS: Yes this
 is very realistic.
 
-1135
+1137
 01:10:23,250 --> 01:10:24,220
 DN: Use my language!
 
-1136
+1138
 01:10:25,940 --> 01:10:28,340
 TS: So in that case,
 terminal count will just be
 
-1137
-01:10:28,820 --> 01:10:31,220
+1139
+01:10:28,820 --> 01:10:32,060
 count all of the leaves
 that are at depth MAX_DEPTH.
 
-1138
-01:10:38,910 --> 01:10:40,880
+1140
+01:10:38,910 --> 01:10:40,556
 This just gives me an 'in' because
 
-1139
-01:10:45,510 --> 01:10:47,910
-terminal count is one of those things that
-we're not going to be able to call recursively
+1141
+01:10:40,600 --> 01:10:44,860
+terminal count is one of those things
 
-1140
-01:10:47,910 --> 01:10:49,600
+1142
+01:10:44,860 --> 01:10:47,616
+that we're not going
+to be able to call recursively
+
+1143
+01:10:47,612 --> 01:10:50,196
 we're not going to be able
 to say on the child nodes:
 
-1141
-01:10:50,540 --> 01:10:53,050
+1144
+01:10:50,540 --> 01:10:55,836
 "Tell me how many
 terminal nodes are inside you".
 
-1142
+1145
 01:10:56,250 --> 01:10:58,200
 Because the child
 doesn't know where
 
-1143
+1146
 01:10:58,200 --> 01:10:59,050
 it is in the tree.
 
-1144
+1147
 01:11:00,250 --> 01:11:02,080
 It doesn't have
 a link to its parent.
 
-1145
+1148
 01:11:02,080 --> 01:11:03,510
 It just contains children.
 
-1146
+1149
 01:11:06,820 --> 01:11:08,710
 The reason I'm
 doing this is because
 
-1147
+1150
 01:11:08,710 --> 01:11:10,710
 I can define
 leaf count recursively.
 
-1148
+1151
 01:11:28,250 --> 01:11:30,020
 If we don't have
 any children then ....
 
-1149
+1152
 01:11:33,940 --> 01:11:35,340
 If the depth
 argument is 1
 
-1150
+1153
 01:11:45,650 --> 01:11:47,170
 The root node
 is at depth one
 
-1151
+1154
 01:11:47,170 --> 01:11:48,540
 In your numbering system.
 
-1152
+1155
 01:11:48,540 --> 01:11:49,880
 so the root is at depth one
 
-1153
+1156
 01:11:50,450 --> 01:11:51,770
 and a child is at depth two
 
-1154
+1157
 01:11:52,880 --> 01:11:55,480
 and another child is at
 depth three, four and five.
 
-1155
+1158
 01:11:55,480 --> 01:11:55,940
 DN: Yes.
 
-1156
+1159
 01:12:01,600 --> 01:12:02,740
 If you are at depth one,
 
-1157
+1160
 01:12:03,420 --> 01:12:04,880
 and you're a
 leaf then you are
 
-1158
+1161
 01:12:04,880 --> 01:12:06,080
 what we are looking for.
 
-1159
+1162
 01:12:06,600 --> 01:12:07,080
 DN: Yes.
 
-1160
+1163
 01:12:07,080 --> 01:12:09,280
 So you say count
 how many leaves there are
 
-1161
+1164
 01:12:09,280 --> 01:12:10,740
 and if you are already a leaf,
 
-1162
+1165
 01:12:12,050 --> 01:12:14,680
 and we're looking for things
 that are at depth one,
 
-1163
+1166
 01:12:14,680 --> 01:12:15,540
 then return one.
 
-1164
+1167
 01:12:15,540 --> 01:12:17,540
 Because that's
 what you are yourself.
 
-1165
+1168
 01:12:18,140 --> 01:12:20,050
 Otherwise, for
 leaves at some other
 
-1166
+1169
 01:12:20,050 --> 01:12:21,050
 depth return zero.
 
-1167
+1170
 01:12:23,880 --> 01:12:25,220
 And in the recursive case,
 
-1168
+1171
 01:12:26,940 --> 01:12:29,020
 I think we want to
 do something similar.
 
-1169
+1172
 01:12:29,020 --> 01:12:29,710
 We want to say:
 
-1170
+1173
 01:12:31,200 --> 01:12:33,140
 This is going to
 be more complicated.
 
-1171
+1174
 01:12:42,170 --> 01:12:43,680
 As we recursively walk down,
 
-1172
+1175
 01:12:44,340 --> 01:12:46,140
 we say now I
 am looking for things
 
-1173
+1176
 01:12:47,800 --> 01:12:48,740
 at one level lower.
 
-1174
+1177
 01:12:49,880 --> 01:12:52,600
 So the root node is
 looking for leaves at depth five.
 
-1175
+1178
 01:12:52,600 --> 01:12:54,850
 But when it asks all
 of its children it says
 
-1176
+1179
 01:12:54,850 --> 01:12:57,650
 "do you guys have any leaf
 descendants at depth four
 
-1177
+1180
 01:12:57,650 --> 01:13:00,480
 because if you do that's
 depth five with respect to me".
 
-1178
+1181
 01:13:06,400 --> 01:13:08,340
 So we get all of
 the child leaf counts
 
-1179
+1182
 01:13:09,080 --> 01:13:09,880
 and add them up.
 
-1180
+1183
 01:13:14,450 --> 01:13:16,110
 Let's try running that last test.
 
-1181
+1184
 01:13:16,450 --> 01:13:17,080
 That passes.
 
-1182
+1185
 01:13:17,710 --> 01:13:18,800
 If I run all the tests.
 
-1183
+1186
 01:13:19,820 --> 01:13:20,510
 Got a failure:
 
-1184
-01:13:20,740 --> 01:13:22,510
+1187
+01:13:20,652 --> 01:13:22,910
 "Double received unexpected
 message: leaf_count"
 
-1185
-01:13:22,510 --> 01:13:24,970
+1188
+01:13:22,916 --> 01:13:25,248
 This is the sort of
 thing I was talking about.
 
-1186
+1189
 01:13:26,880 --> 01:13:29,220
 The fact that there's
 a failure there is fine.
 
-1187
+1190
 01:13:30,420 --> 01:13:33,110
 Because it's what guides
 me to stubbing methods out
 
-1188
+1191
 01:13:33,620 --> 01:13:36,140
 of my test doubles and
 then gives me feedback
 
-1189
+1192
 01:13:36,140 --> 01:13:38,280
 on what the API of
 those objects should be.
 
-1190
+1193
 01:13:38,280 --> 01:13:40,280
 However in this
 case those instances
 
-1191
+1194
 01:13:40,280 --> 01:13:42,280
 are all objects of
 the same class as me.
 
-1192
+1195
 01:13:44,540 --> 01:13:46,020
 I think it
 would be quicker
 
-1193
+1196
 01:13:48,740 --> 01:13:50,450
 to make these
 instances of node.
 
-1194
+1197
 01:13:56,650 --> 01:13:58,650
 What was actually
 the source of that?
 
-1195
+1198
 01:14:00,400 --> 01:14:01,170
 This is line 38
 
-1196
+1199
 01:14:05,370 --> 01:14:06,600
 Expect no new children.
 
-1197
+1200
 01:14:07,710 --> 01:14:09,510
 I'm asking for
 the terminal count.
 
-1198
+1201
 01:14:10,000 --> 01:14:12,450
 And now I realise what
 I should  have been doing.
 
-1199
+1202
 01:14:13,310 --> 01:14:15,000
 This should have
 just been node.
 
-1200
+1203
 01:14:15,570 --> 01:14:18,080
 I already tried not
 to use these test doubles
 
-1201
+1204
 01:14:19,250 --> 01:14:21,540
 in places where I
 was calling real methods.
 
-1202
+1205
 01:14:21,540 --> 01:14:25,770
 They were for the purpose of
 creating the [inaudible].
 
-1203
+1206
 01:14:28,910 --> 01:14:30,740
 So all of those
 tests are passing.
 
-1204
+1207
 01:14:34,770 --> 01:14:37,450
 I feel moderately
 confident that that is correct.
 
-1205
+1208
 01:14:38,770 --> 01:14:41,450
 In which case, let's go
 back to the Cucumber feature,
 
-1206
+1209
 01:14:45,450 --> 01:14:47,910
 to see if we've done enough
 work in the unit test
 
-1207
+1210
 01:14:47,910 --> 01:14:49,680
 to make the
 acceptance test pass.
 
-1208
+1211
 01:14:50,000 --> 01:14:52,000
 We just haven't
 implemented this yet.
 
-1209
+1212
 01:14:55,480 --> 01:14:57,620
 Perhaps we should
 have done that first.
 
-1210
+1213
 01:15:01,340 --> 01:15:03,200
 What order do we
 want these to be in?
 
-1211
+1214
 01:15:05,680 --> 01:15:08,310
 DN: Is it sorting from small
 to large at the moment?
 
-1212
+1215
 01:15:08,310 --> 01:15:08,910
 TS: Yes.
 
-1213
+1216
 01:15:09,370 --> 01:15:10,940
 DN: So it's not
 much different.
 
-1214
+1217
 01:15:10,940 --> 01:15:12,710
 It will be just
 one node, wide tree.
 
-1215
+1218
 01:15:17,050 --> 01:15:17,770
 Is that right?
 
-1216
+1219
 01:15:18,770 --> 01:15:19,600
 TS: I think so yes.
 
-1217
+1220
 01:15:20,170 --> 01:15:21,880
 DN: Deep tree
 then deep wide tree.
 
-1218
+1221
 01:15:22,340 --> 01:15:22,940
 TS: Yes.
 
-1219
+1222
 01:15:32,310 --> 01:15:33,250
 TS: Oh dear...
 
-1220
+1223
 01:15:37,620 --> 01:15:39,220
 This is very difficult to read.
 
-1221
+1224
 01:15:39,400 --> 01:15:41,200
 My immediate
 suspicion here is
 
-1222
+1225
 01:15:41,800 --> 01:15:43,370
 that it is to
 do with the sort
 
-1223
+1226
 01:15:43,370 --> 01:15:45,080
 not being stable,
 as I mentioned.
 
-1224
+1227
 01:15:46,650 --> 01:15:48,310
 I can't read this
 output and see
 
-1225
+1228
 01:15:48,480 --> 01:15:49,680
 what the difference is.
 
-1226
+1229
 01:15:50,400 --> 01:15:53,310
 My intuition is that
 when you sort by terminal count
 
-1227
+1230
 01:16:03,770 --> 01:16:06,280
 It's also fine for them
 to be the other way round.
 
-1228
+1231
 01:16:06,850 --> 01:16:09,080
 If we wanted them
 to stay in the same order
 
-1229
+1232
 01:16:11,800 --> 01:16:13,740
 in the array, we
 can't use Ruby's sort_by.
 
-1230
+1233
 01:16:15,480 --> 01:16:17,220
 Well we can, but
 not out of the box.
 
-1231
+1234
 01:16:17,220 --> 01:16:18,820
 We have to find
 a way to preserve
 
-1232
+1235
 01:16:18,820 --> 01:16:20,400
 the original
 order of the list.
 
-1233
+1236
 01:16:20,400 --> 01:16:22,620
 So that we can
 associate all of the elements in
 
-1234
+1237
 01:16:22,620 --> 01:16:24,420
 the list with
 their original position
 
-1235
+1238
 01:16:24,420 --> 01:16:26,050
 and then sort
 by a compound key.
 
-1236
+1239
 01:16:27,450 --> 01:16:29,940
 Firstly sort by how
 many terminals they've got
 
-1237
+1240
 01:16:30,710 --> 01:16:33,220
 and then by what
 their original position in the
 
-1238
+1241
 01:16:33,220 --> 01:16:34,800
 list was so
 that is preserved.
 
-1239
+1242
 01:16:38,880 --> 01:16:41,140
 DN: It's more likely
 that I would be ordering
 
-1240
+1243
 01:16:41,140 --> 01:16:43,740
 them by quantity, those
 with the greatest number
 
-1241
+1244
 01:16:48,620 --> 01:16:50,450
 and things that
 have no terminals
 
-1242
+1245
 01:16:50,450 --> 01:16:51,620
 is of no interest to me.
 
-1243
+1246
 01:16:52,600 --> 01:16:54,400
 They are the
 ones I want to ignore.
 
-1244
+1247
 01:16:54,850 --> 01:16:57,910
 You could even throw away
 the ones with zero terminals.
 
-1245
+1248
 01:17:01,940 --> 01:17:04,280
 The use I would
 have for this tree structure
 
-1246
+1249
 01:17:06,570 --> 01:17:07,970
 it is not interesting to me.
 
-1247
+1250
 01:17:08,970 --> 01:17:12,170
 TS: I will see if I can get
 the existing test passing happily.
 
-1248
+1251
 01:17:12,170 --> 01:17:14,800
 Then we can refine the
 requirements if we want to.
 
-1249
+1252
 01:17:15,000 --> 01:17:16,880
 It's been too long
 since I committed.
 
-1250
+1253
 01:17:19,740 --> 01:17:20,310
 So let's say:
 
-1251
-01:17:23,510 --> 01:17:25,970
+1254
+01:17:23,408 --> 01:17:25,970
 I should have made
 this change first incidentally,
 
-1252
+1255
 01:17:25,970 --> 01:17:27,850
 I just lost track of
 what we were doing.
 
-1253
-01:17:28,310 --> 01:17:30,450
+1256
+01:17:27,850 --> 01:17:30,896
 Before I started
 dropping down to RSpec,
 
-1254
-01:17:31,050 --> 01:17:33,450
+1257
+01:17:30,892 --> 01:17:33,450
 I should have
 allowed myself to see this fail,
 
-1255
+1258
 01:17:33,850 --> 01:17:36,200
 and it would have
 indicated that I needed to
 
-1256
+1259
 01:17:36,200 --> 01:17:37,970
 go down and
 write some unit tests.
 
-1257
+1260
 01:17:38,400 --> 01:17:38,910
 I will say:
 
-1258
+1261
 01:17:54,220 --> 01:17:55,800
 And then what
 have I done here?
 
-1259
+1262
 01:17:55,800 --> 01:17:56,200
 This is:
 
-1260
+1263
 01:18:08,110 --> 01:18:09,680
 That's slightly frustrating.
 
-1261
+1264
 01:18:12,310 --> 01:18:14,740
 The best I can do here
 is to express our intent.
 
-1262
+1265
 01:18:15,450 --> 01:18:15,910
 I can say:
 
-1263
+1266
 01:18:35,650 --> 01:18:38,050
 That will verify
 that this collection here
 
-1264
+1267
 01:18:39,310 --> 01:18:41,970
 is exactly two long, and
 has those two things in it
 
-1265
+1268
 01:18:43,420 --> 01:18:45,480
 and we don't really
 care about the order.
 
-1266
+1269
 01:18:45,480 --> 01:18:47,340
 Because we do
 care about the order
 
-1267
+1270
 01:18:47,340 --> 01:18:48,170
 of the rest of it.
 
-1268
+1271
 01:18:48,170 --> 01:18:48,620
 I can say:
 
-1269
+1272
 01:18:55,850 --> 01:18:57,740
 This is a little
 bit clumsy but it is
 
-1270
+1273
 01:18:59,220 --> 01:19:01,000
 at least
 expressing what we want.
 
-1271
-01:19:01,480 --> 01:19:02,050
+1274
+01:19:01,480 --> 01:19:01,873
 DN: Yes.
 
-1272
-01:19:02,050 --> 01:19:03,370
+1275
+01:19:01,873 --> 01:19:03,370
 You are saying
 you don't care
 
-1273
+1276
 01:19:03,370 --> 01:19:04,540
 what order they come in,
 
-1274
+1277
 01:19:04,540 --> 01:19:06,650
 so we will use a
 'matcher' to check they are
 
-1275
+1278
 01:19:06,650 --> 01:19:07,680
 in the order we want.
 
-1276
+1279
 01:19:07,680 --> 01:19:09,340
 Whereas we do
 want the rest of it
 
-1277
+1280
 01:19:09,340 --> 01:19:10,710
 to look exactly like that.
 
-1278
+1281
 01:19:12,280 --> 01:19:12,970
 So, there we go.
 
-1279
+1282
 01:19:13,050 --> 01:19:13,710
 DN: Very nice.
 
-1280
+1283
 01:19:15,250 --> 01:19:16,940
 TS: We've got
 everything passing.
 
-1281
+1284
 01:19:17,050 --> 01:19:18,820
 I want to go back
 and look at this.
 
-1282
+1285
 01:19:23,540 --> 01:19:25,310
 We have definitely
 done this bit ....
 
-1283
+1286
 01:19:25,310 --> 01:19:27,080
 given a collection
 of trees let me
 
-1284
+1287
 01:19:27,080 --> 01:19:28,400
 sort by these properties.
 
-1285
+1288
 01:19:31,050 --> 01:19:33,050
 This max-depth of
 5 is implicit in the
 
-1286
+1289
 01:19:33,050 --> 01:19:34,450
 definition of a terminal,
 
-1287
+1290
 01:19:34,450 --> 01:19:35,850
 but we
 haven't enforced it.
 
-1288
+1291
 01:19:39,510 --> 01:19:42,170
 You haven't said, when
 instantiating these trees,
 
-1289
+1292
 01:19:44,000 --> 01:19:46,020
 enforce that it
 isn't deeper than five.
 
-1290
+1293
 01:19:48,170 --> 01:19:49,650
 But there is an implication.
 
-1291
-01:19:51,250 --> 01:19:53,310
+1294
+01:19:51,221 --> 01:19:53,310
 And you've also
 said the total should be
 
-1292
-01:19:53,400 --> 01:19:55,600
+1295
+01:19:53,317 --> 01:19:55,600
 correct after adding
 or removing nodes.
 
-1293
-01:19:56,280 --> 01:19:57,850
+1296
+01:19:56,324 --> 01:19:58,669
 So there are
 two things there.
 
-1294
+1297
 01:20:01,220 --> 01:20:04,170
 What is most interesting
 to me is the latter statement.
 
-1295
+1298
 01:20:09,050 --> 01:20:10,820
 Although the enforcement of the
 
-1296
+1299
 01:20:10,820 --> 01:20:12,480
 maximum depth is interesting.
 
-1297
+1300
 01:20:15,140 --> 01:20:16,800
 Let's think
 about the other one
 
-1298
+1301
 01:20:17,310 --> 01:20:18,620
 and go back to that later.
 
-1299
+1302
 01:20:19,310 --> 01:20:21,340
 DN: That is more
 driving the API isn't it?
 
-1300
+1303
 01:20:21,340 --> 01:20:22,200
 TS: I think so yes.
 
-1301
+1304
 01:20:25,740 --> 01:20:27,820
 If only because, at
 the moment we haven't
 
-1302
-01:20:27,820 --> 01:20:30,220
+1305
+01:20:27,820 --> 01:20:31,924
 looked at what it
 means to modify these trees.
 
-1303
-01:20:32,200 --> 01:20:33,710
-At the moment it if you look at
-our node class
+1306
+01:20:32,054 --> 01:20:35,208
+At the moment it if
+you look at our node class
 
-1304
-01:20:35,820 --> 01:20:38,080
+1307
+01:20:35,820 --> 01:20:38,492
 you can't even get the children,
 
-1305
-01:20:39,570 --> 01:20:40,940
+1308
+01:20:39,549 --> 01:20:40,940
 much less set them.
 
-1306
-01:20:41,000 --> 01:20:42,710
+1309
+01:20:41,020 --> 01:20:43,621
 We haven't in
 any way addressed
 
-1307
-01:20:43,620 --> 01:20:45,600
+1310
+01:20:43,621 --> 01:20:46,160
 what it means to be able to
 mutate these things.
 
-1308
+1311
 01:20:48,140 --> 01:20:50,420
 That's an interesting
 thing to think about.
 
-1309
+1312
 01:20:52,620 --> 01:20:54,280
 I'm not sure how
 to address that.
 
-1310
+1313
 01:21:00,280 --> 01:21:02,450
 Let me make a
 commit before I do anything.
 
-1311
+1314
 01:21:04,080 --> 01:21:04,600
 So this is:
 
-1312
+1315
 01:21:29,570 --> 01:21:31,650
 This is more
 difficult to accommodate
 
-1313
+1316
 01:21:31,650 --> 01:21:33,370
 in a cucumber
 feature, but I think
 
-1314
+1317
 01:21:33,370 --> 01:21:35,200
 there's probably
 a way of doing it.
 
-1315
+1318
 01:21:42,280 --> 01:21:44,080
 This is implicitly a requirement?
 
-1316
+1319
 01:21:44,910 --> 01:21:45,370
 DN: Yes.
 
-1317
+1320
 01:21:45,740 --> 01:21:47,710
 TS: What this
 implies is that firstly
 
-1318
+1321
 01:21:47,710 --> 01:21:49,710
 you should be able
 to add or remove a node.
 
-1319
+1322
 01:21:49,710 --> 01:21:51,820
 and secondly, when
 you do so it shouldn't
 
-1320
+1323
 01:21:52,140 --> 01:21:53,570
 change what's
 going on here.
 
-1321
+1324
 01:21:58,820 --> 01:22:01,250
 You should be able to
 change one of these trees,
 
-1322
+1325
 01:22:01,250 --> 01:22:03,340
 and then if I order
 the collection again,
 
-1323
+1326
 01:22:03,340 --> 01:22:04,220
 it should change.
 
-1324
+1327
 01:22:04,710 --> 01:22:05,770
 DN: Exactly.
 
-1325
+1328
 01:22:08,400 --> 01:22:10,400
 TS: So that
 necessitates some kind of
 
-1326
+1329
 01:22:10,710 --> 01:22:12,420
 acceptance test
 that tells us
 
-1327
+1330
 01:22:14,170 --> 01:22:15,080
 what it is we want.
 
-1328
+1331
 01:22:15,420 --> 01:22:17,480
 And then some
 kind of implementation
 
-1329
+1332
 01:22:18,480 --> 01:22:20,450
 that allows us to
 mutate these trees.
 
-1330
+1333
 01:22:23,420 --> 01:22:25,250
 Or add and
 remove nodes from them.
 
-1331
+1334
 01:22:27,910 --> 01:22:29,850
 I'm trying to think
 of the easiest way
 
-1332
+1335
 01:22:29,850 --> 01:22:30,480
 to test that.
 
-1333
+1336
 01:22:36,050 --> 01:22:38,000
 Maybe we need
 a new feature which is
 
-1334
+1337
 01:22:38,050 --> 01:22:40,020
 adding and
 removing and updating it.
 
-1335
+1338
 01:22:47,020 --> 01:22:49,080
 It's still part of
 the sorting feature.
 
-1336
+1339
 01:22:51,970 --> 01:22:54,080
 Given that I have
 a collection of trees,
 
-1337
+1340
 01:22:56,770 --> 01:22:58,540
 when I add a node
 to one of them and
 
-1338
+1341
 01:23:02,400 --> 01:23:03,910
 I sort the
 collection again
 
-1339
+1342
 01:23:05,370 --> 01:23:07,200
 then it should
 still be ordered by
 
-1340
+1343
 01:23:07,200 --> 01:23:08,800
 total number
 of descendants.
 
-1341
+1344
 01:23:10,820 --> 01:23:12,710
 DN: I had imagined
 you would be doing
 
-1342
+1345
 01:23:13,340 --> 01:23:14,480
 some kind of caching.
 
-1343
+1346
 01:23:14,880 --> 01:23:16,970
 At the moment
 you're not doing anything
 
-1344
+1347
 01:23:16,970 --> 01:23:18,570
 with caching, all
 you are doing
 
-1345
+1348
 01:23:18,570 --> 01:23:20,140
 is counting
 up live objects.
 
-1346
+1349
 01:23:22,970 --> 01:23:25,000
 If you were to
 create another feature
 
-1347
+1350
 01:23:25,000 --> 01:23:27,940
 maybe we could call it
 'manipulating trees' or something.
 
-1348
+1351
 01:23:27,940 --> 01:23:31,140
 It could justifiably not be
 part of the sorted trees story.
 
-1349
+1352
 01:23:31,910 --> 01:23:32,310
 TS: Ok.
 
-1350
+1353
 01:23:36,400 --> 01:23:37,940
 What's the best
 way to do that....
 
-1351
+1354
 01:23:46,280 --> 01:23:48,400
 I think what we are
 thinking about here
 
-1352
+1355
 01:23:48,400 --> 01:23:50,170
 is coming up with
 an API for being
 
-1353
+1356
 01:23:50,170 --> 01:23:51,570
 able to modify these trees.
 
-1354
+1357
 01:23:51,880 --> 01:23:52,480
 DN: Yes.
 
-1355
+1358
 01:23:57,650 --> 01:23:59,800
 TS: Let's say there is
 a modifying feature.
 
-1356
+1359
 01:24:06,650 --> 01:24:07,110
 Let's say:
 
-1357
+1360
 01:24:51,570 --> 01:24:53,340
 I'm not sure what
 I want to say here.
 
-1358
+1361
 01:24:53,770 --> 01:24:55,080
 But something like that.
 
-1359
+1362
 01:24:55,080 --> 01:24:57,080
 You start out with
 one of these things,
 
-1360
+1363
 01:24:57,080 --> 01:24:59,200
 and then you change
 it and get a new one.
 
-1361
+1364
 01:25:07,880 --> 01:25:09,250
 We don't need that anymore.
 
-1362
+1365
 01:25:11,140 --> 01:25:13,080
 I think I can keep
 putting this stuff
 
-1363
+1366
 01:25:13,080 --> 01:25:13,800
 in tree steps.
 
-1364
+1367
 01:25:14,540 --> 01:25:17,110
 If I run these cucumber
 features it's going to say
 
-1365
+1368
 01:25:17,110 --> 01:25:18,370
 you don't have any of this.
 
-1366
+1369
 01:25:30,020 --> 01:25:30,480
 Let's say:
 
-1367
+1370
 01:25:40,850 --> 01:25:42,140
 It doesn't matter really.
 
-1368
+1371
 01:25:43,050 --> 01:25:44,910
 I guess we just
 need to think about
 
-1369
+1372
 01:25:47,200 --> 01:25:48,370
 what it is that goes in.
 
-1370
+1373
 01:25:49,650 --> 01:25:50,910
 Now I've built 'some' tree.
 
-1371
+1374
 01:25:52,600 --> 01:25:54,170
 I've got one
 pending scenario.
 
-1372
+1375
 01:25:58,420 --> 01:26:00,080
 I need to put
 something in here.
 
-1373
+1376
 01:26:00,600 --> 01:26:02,710
 that involves
 adding a node to the tree.
 
-1374
+1377
 01:26:02,710 --> 01:26:05,200
 And then I want to do
 something that checks it.
 
-1375
+1378
 01:26:11,800 --> 01:26:14,000
 To someone using
 this from the outside,
 
-1376
+1379
 01:26:14,000 --> 01:26:16,000
 what does adding a
 node to a tree mean?
 
-1377
+1380
 01:26:18,970 --> 01:26:20,910
 I think the
 simplest thing is to add
 
-1378
+1381
 01:26:20,910 --> 01:26:22,250
 another child at the root.
 
-1379
+1382
 01:26:28,700 --> 01:26:31,700
 I guess it could be
 "I've got a node that is already a tree".
 
-1380
+1383
 01:26:32,310 --> 01:26:32,910
 I could say:
 
-1381
+1384
 01:26:41,110 --> 01:26:44,170
 It could be a node with no
 children or something like this:
 
-1382
+1385
 01:26:48,850 --> 01:26:50,680
 and then I want
 to somehow add that
 
-1383
+1386
 01:26:52,770 --> 01:26:53,850
 as a child of the tree.
 
-1384
+1387
 01:26:55,650 --> 01:26:57,600
 DN: I don't think
 it would be necessary
 
-1385
+1388
 01:26:57,800 --> 01:26:59,250
 to compose trees like that.
 
-1386
+1389
 01:26:59,540 --> 01:27:02,020
 You would only ever be
 adding one node at a time.
 
-1387
+1390
 01:27:02,710 --> 01:27:05,170
 For example, when you
 leave a comment on a blog,
 
-1388
+1391
 01:27:09,340 --> 01:27:11,510
 they sometimes have
 a 'nest it' type thing.
 
-1389
+1392
 01:27:11,510 --> 01:27:14,510
 Imagine each node is
 something that one user has added.
 
-1390
+1393
 01:27:16,770 --> 01:27:17,220
 TS: Ok.
 
-1391
+1394
 01:27:17,450 --> 01:27:18,340
 Well in that case ....
 
-1392
+1395
 01:27:20,450 --> 01:27:22,110
 That's just making an empty node.
 
-1393
+1396
 01:27:24,770 --> 01:27:26,570
 So I can add that,
 and then I have to
 
-1394
+1397
 01:27:27,170 --> 01:27:28,880
 do something to
 my tree to add it.
 
-1395
+1398
 01:27:30,370 --> 01:27:32,940
 So it could be that there's
 some kind of add_child.
 
-1396
+1399
 01:27:34,220 --> 01:27:37,220
 You haven't said anything
 about the ordering of nodes.
 
-1397
+1400
 01:27:37,220 --> 01:27:39,480
 Your diagram
 suggests that you might not
 
-1398
+1401
 01:27:39,480 --> 01:27:40,800
 care about the ordering.
 
-1399
+1402
 01:27:40,800 --> 01:27:42,170
 You haven't drawn this as a
 
-1400
+1403
 01:27:43,140 --> 01:27:44,880
 top to bottom,
 left to right tree.
 
-1401
+1404
 01:27:45,310 --> 01:27:46,820
 You just say
 there are nodes
 
-1402
+1405
 01:27:47,200 --> 01:27:48,880
 emanating out
 from the center.
 
-1403
+1406
 01:27:51,570 --> 01:27:53,620
 You can clarify
 whether or not you care
 
-1404
+1407
 01:27:53,620 --> 01:27:56,080
 but for the purpose of
 this, we're just going to
 
-1405
+1408
 01:27:57,770 --> 01:27:59,650
 add a child on to
 the end of this node.
 
-1406
+1409
 01:28:05,140 --> 01:28:06,880
 And then when
 we get to this step
 
-1407
+1410
 01:28:06,880 --> 01:28:09,050
 there is something
 that is going to check
 
-1408
+1411
 01:28:09,050 --> 01:28:11,310
 that this node has
 been added to the tree.
 
-1409
+1412
 01:28:19,170 --> 01:28:21,820
 We can go ahead and
 start writing unit tests here
 
-1410
+1413
 01:28:22,710 --> 01:28:24,710
 but my personal
 preference would be
 
-1411
+1414
 01:28:24,710 --> 01:28:26,540
 for making
 these trees immutable.
 
-1412
+1415
 01:28:32,170 --> 01:28:33,800
 Having this
 return a new tree.
 
-1413
+1416
 01:28:39,400 --> 01:28:42,340
 I don't think this example
 is going to illustrate this,
 
-1414
+1417
 01:28:43,480 --> 01:28:46,050
 but making these
 structures immutable makes it
 
-1415
+1418
 01:28:46,770 --> 01:28:48,250
 a lot easier to keep track of
 
-1416
+1419
 01:28:48,480 --> 01:28:49,850
 what can possibly happen.
 
-1417
+1420
 01:29:03,280 --> 01:29:05,400
 If I want to
 memoize the result of those
 
-1418
+1421
 01:29:05,400 --> 01:29:07,250
 recursive calls
 then I could just
 
-1419
+1422
 01:29:07,250 --> 01:29:09,250
 memoize them and
 then next time I call them
 
-1420
+1423
 01:29:09,250 --> 01:29:10,820
 you just get the memoized result.
 
-1421
+1424
 01:29:10,820 --> 01:29:12,740
 And if you change
 the tree, that just
 
-1422
+1425
 01:29:12,740 --> 01:29:13,940
 means you have a new one.
 
-1423
+1426
 01:29:14,970 --> 01:29:17,420
 And if you had some
 kind of structural sharing,
 
-1424
+1427
 01:29:17,420 --> 01:29:19,250
 so that when you
 add an extra child,
 
-1425
+1428
 01:29:19,800 --> 01:29:21,800
 you get a new tree
 back but all of the
 
-1426
+1429
 01:29:21,800 --> 01:29:24,600
 previous children are
 literally the same objects.
 
-1427
+1430
 01:29:24,600 --> 01:29:25,970
 But the parent node is new
 
-1428
+1431
 01:29:27,400 --> 01:29:29,820
 and has a new child
 and all of the cached stuff
 
-1429
+1432
 01:29:30,420 --> 01:29:32,910
 would be shared from
 the old parts of the tree
 
-1430
+1433
 01:29:32,910 --> 01:29:34,000
 that haven't changed.
 
-1431
+1434
 01:29:34,000 --> 01:29:35,820
 And then you
 would have to re-build
 
-1432
+1435
 01:29:35,820 --> 01:29:37,770
 the cache for the
 new parts of the tree.
 
-1433
+1436
 01:29:37,770 --> 01:29:39,770
 Driving all of that
 stuff out with tests
 
-1434
+1437
 01:29:39,770 --> 01:29:41,200
 is going to
 be time consuming.
 
-1435
+1438
 01:29:41,220 --> 01:29:42,680
 In my view,
 it's going to make
 
-1436
+1439
 01:29:42,680 --> 01:29:44,450
 for an easier
 system to deal with
 
-1437
+1440
 01:29:47,080 --> 01:29:49,020
 without these
 things being mutable.
 
-1438
+1441
 01:29:51,600 --> 01:29:54,000
 What I don't want, in
 my capacity as a consumer
 
-1439
+1442
 01:29:54,000 --> 01:29:56,510
 of this API, is to be
 able to only do tree.children.
 
-1440
+1443
 01:30:01,340 --> 01:30:02,000
 Like do that:
 
-1441
+1444
 01:30:06,110 --> 01:30:08,340
 If there was just
 an accessor on tree that
 
-1442
+1445
 01:30:08,340 --> 01:30:10,080
 returned an
 array of children and
 
-1443
+1446
 01:30:10,080 --> 01:30:11,940
 I concatenated
 that on to the end.
 
-1444
+1447
 01:30:12,740 --> 01:30:14,080
 The root node of that tree
 
-1445
+1448
 01:30:14,080 --> 01:30:15,680
 doesn't even know it's happened.
 
-1446
+1449
 01:30:25,050 --> 01:30:26,940
 Now you have that
 array in your hand
 
-1447
+1450
 01:30:26,940 --> 01:30:28,770
 and you can do
 whatever you like to it.
 
-1448
+1451
 01:30:28,770 --> 01:30:30,220
 I don't really like the idea
 
-1449
+1452
 01:30:30,280 --> 01:30:31,570
 of exposing it directly.
 
-1450
+1453
 01:30:32,020 --> 01:30:34,140
 For the same reason
 I don't like the idea
 
-1451
+1454
 01:30:35,250 --> 01:30:37,310
 of this being
 something that mutates
 
-1452
+1455
 01:30:37,970 --> 01:30:39,050
 the underlying tree.
 
-1453
+1456
 01:30:39,050 --> 01:30:40,940
 I would rather
 just return a new one.
 
-1454
+1457
 01:30:41,340 --> 01:30:43,850
 Assuming there's a way to
 append the child there,
 
-1455
+1458
 01:30:46,450 --> 01:30:47,400
 Which there isn't.
 
-1456
+1459
 01:30:48,450 --> 01:30:49,850
 a failure in our features.
 
-1457
+1460
 01:30:52,080 --> 01:30:53,970
 When I scroll off
 the top you can see:
 
-1458
+1461
 01:30:54,110 --> 01:30:56,910
 when I add a node to it
 undefined method append_child.
 
-1459
+1462
 01:30:56,910 --> 01:30:58,370
 So let's make
 a commit there.
 
-1460
+1463
 01:31:08,510 --> 01:31:09,820
 I'd like to make that work.
 
-1461
+1464
 01:31:11,910 --> 01:31:14,080
 I think this is an
 opportunity to do some ....
 
-1462
+1465
 01:31:15,370 --> 01:31:17,540
 tidying up at the
 implementation level.
 
-1463
+1466
 01:31:20,910 --> 01:31:22,970
 We've expressed
 what we want to happen
 
-1464
+1467
 01:31:23,540 --> 01:31:25,170
 in the feature
 here but let's go
 
-1465
+1468
 01:31:25,170 --> 01:31:26,280
 down to the unit test.
 
-1466
+1469
 01:31:32,880 --> 01:31:34,020
 Let's pick one of these.
 
-1467
+1470
 01:31:36,110 --> 01:31:37,970
 This is quite a
 nice one, where the
 
-1468
+1471
 01:31:37,970 --> 01:31:39,370
 node has five descendants.
 
-1469
+1472
 01:31:45,220 --> 01:31:47,140
 In this unit test
 we have to decide,
 
-1470
+1473
 01:31:47,140 --> 01:31:48,570
 and in the acceptance test,
 
-1471
+1474
 01:31:49,110 --> 01:31:51,340
 how do we know if
 it's done the right thing.
 
-1472
+1475
 01:31:53,800 --> 01:31:56,140
 I don't really know how
 we are going to do that.
 
-1473
+1476
 01:31:57,000 --> 01:31:59,450
 DN: You could check
 the number of descendants.
 
-1474
+1477
 01:31:59,450 --> 01:32:01,540
 TS: At the moment
 that's the only visibility
 
-1475
+1478
 01:32:01,540 --> 01:32:02,620
 we have on to the tree.
 
-1476
+1479
 01:32:04,050 --> 01:32:05,510
 Let's think about doing that.
 
-1477
+1480
 01:32:05,680 --> 01:32:06,140
 Let's say:
 
-1478
+1481
 01:32:23,880 --> 01:32:25,880
 So whatever that's
 worth, we would say:
 
-1479
+1482
 01:32:34,310 --> 01:32:35,250
 (Let's make a new one).
 
-1480
+1483
 01:32:39,000 --> 01:32:41,110
 And this would be
 the descendant count
 
-1481
+1484
 01:32:43,020 --> 01:32:43,940
 to be equal to six.
 
-1482
+1485
 01:32:45,820 --> 01:32:48,140
 I think that would
 give us some confidence
 
-1483
+1486
 01:32:48,250 --> 01:32:50,110
 that the right
 thing has happened.
 
-1484
+1487
 01:32:50,310 --> 01:32:52,310
 That's the best we
 can do at the moment,
 
-1485
+1488
 01:32:52,310 --> 01:32:54,310
 based on the API
 that's available to us.
 
-1486
+1489
 01:32:55,140 --> 01:32:56,740
 Let's try running that example.
 
-1487
+1490
 01:32:57,020 --> 01:32:58,540
 undefined method add_child.
 
-1488
+1491
 01:33:02,970 --> 01:33:04,820
 Now we're going to
 need a method here
 
-1489
+1492
 01:33:07,000 --> 01:33:07,910
 that adds a child.
 
-1490
+1493
 01:33:11,280 --> 01:33:13,310
 There's a very easy
 thing we can do here.
 
-1491
+1494
 01:33:13,710 --> 01:33:14,480
 Which is to say,
 
-1492
+1495
 01:33:27,020 --> 01:33:29,050
 And that's enough
 to make the test pass.
 
-1493
+1496
 01:33:29,050 --> 01:33:31,140
 That's moderately
 convincing I think.
 
-1494
+1497
 01:33:35,340 --> 01:33:37,540
 I don't think that
 spec would have passed
 
-1495
+1498
 01:33:37,540 --> 01:33:38,480
 if that didn't work.
 
-1496
+1499
 01:33:39,000 --> 01:33:40,620
 So I'll make a
 commit there and
 
-1497
+1500
 01:33:41,370 --> 01:33:42,620
 I'll say something like:
 
-1498
+1501
 01:33:50,080 --> 01:33:50,540
 Whoops .....
 
-1499
+1502
 01:33:51,910 --> 01:33:54,310
 That's a nice simple
 implementation I think.
 
-1500
+1503
 01:33:56,600 --> 01:33:58,050
 How did you feel about that?
 
-1501
+1504
 01:33:58,650 --> 01:33:59,220
 DN: I like it.
 
-1502
+1505
 01:34:03,140 --> 01:34:05,220
 TS: Let's go back
 to the step definitions
 
-1503
+1506
 01:34:06,710 --> 01:34:09,080
 and finish off,
 because we're still not done.
 
-1504
+1507
 01:34:13,740 --> 01:34:15,080
 That's made that step work.
 
-1505
+1508
 01:34:15,280 --> 01:34:16,400
 And now we have to say:
 
-1506
+1509
 01:34:32,820 --> 01:34:34,140
 Because that one was two.
 
-1507
+1510
 01:34:36,420 --> 01:34:37,800
 DN: Just before
 you move on,
 
-1508
+1511
 01:34:37,800 --> 01:34:39,600
 I notice you used
 append_child there,
 
-1509
+1512
 01:34:39,600 --> 01:34:41,600
 but it's add_child
 in the implementation.
 
-1510
+1513
 01:34:42,820 --> 01:34:43,450
 TS: Thank you.
 
-1511
+1514
 01:34:44,020 --> 01:34:46,080
 Well that's stupid
 why didn't that fail?
 
-1512
+1515
 01:34:47,080 --> 01:34:48,850
 Oh it did fail, I
 just didn't read it.
 
-1513
+1516
 01:34:56,450 --> 01:34:58,770
 Yes you're right,
 append_child is a better name
 
-1514
+1517
 01:34:59,340 --> 01:35:01,340
 DN: For the immutable nature of it?
 
-1515
+1518
 01:35:01,340 --> 01:35:03,650
 TS: Because it tells you
 where it's going to go.
 
-1516
-01:35:05,020 --> 01:35:05,940
+1519
+01:35:05,020 --> 01:35:06,446
 DN: Right: 'Add child below me'.
 
-1517
+1520
 01:35:07,250 --> 01:35:09,510
 TS: Yes, and the fact
 that it goes on the end.
 
-1518
-01:35:10,370 --> 01:35:11,880
+1521
+01:35:10,330 --> 01:35:12,126
 After the existing children.
 
-1519
-01:35:12,170 --> 01:35:13,600
+1522
+01:35:12,170 --> 01:35:14,185
 At the moment you can't tell.
 
-1520
+1523
 01:35:16,420 --> 01:35:17,880
 So yes, let's call it add_child
 
-1521
+1524
 01:35:18,280 --> 01:35:20,220
 because at the
 moment there's no way
 
-1522
+1525
 01:35:20,220 --> 01:35:21,620
 of knowing where it's gone.
 
-1523
+1526
 01:35:24,170 --> 01:35:26,310
 If at some point
 we decide we're going to
 
-1524
+1527
 01:35:26,310 --> 01:35:28,620
 be able to expose
 the collection of children
 
-1525
+1528
 01:35:28,620 --> 01:35:30,420
 and now we care
 about where it comes
 
-1526
+1529
 01:35:30,420 --> 01:35:31,280
 when you have it,
 
-1527
+1530
 01:35:31,280 --> 01:35:33,420
 that would be the
 point at which to make it.
 
-1528
+1531
 01:35:33,420 --> 01:35:35,800
 But right now you
 can't make that distinction.
 
-1529
+1532
 01:35:40,280 --> 01:35:41,600
 Let's just commit that fix.
 
-1530
+1533
 01:35:41,940 --> 01:35:43,050
 That looks annoying.
 
-1531
+1534
 01:35:47,620 --> 01:35:48,200
 And this is:
 
-1532
+1535
 01:36:02,680 --> 01:36:03,250
 That's fine.
 
-1533
+1536
 01:36:05,910 --> 01:36:08,080
 We are ignoring
 the fact that presumably
 
-1534
+1537
 01:36:08,080 --> 01:36:10,200
 the whole point
 of all of these trees is
 
-1535
+1538
 01:36:10,200 --> 01:36:12,420
 that you can at some
 point get to the nodes.
 
-1536
+1539
 01:36:13,420 --> 01:36:15,940
 At the moment there's
 no API for getting to them.
 
-1537
+1540
 01:36:18,770 --> 01:36:20,540
 I would like to
 bring that out a bit
 
-1538
+1541
 01:36:21,770 --> 01:36:23,110
 by saying something like:
 
-1539
+1542
 01:36:34,250 --> 01:36:35,880
 I think that to
 not do that is to
 
-1540
+1543
 01:36:37,310 --> 01:36:38,650
 slightly dodge the issue.
 
-1541
+1544
 01:36:41,800 --> 01:36:42,570
 DN: Sure
 
-1542
+1545
 01:36:44,370 --> 01:36:46,340
 TS: We don't have a
 way of doing this yet.
 
-1543
+1546
 01:36:46,970 --> 01:36:49,800
 DN: So at the moment
 children is a private attribute.
 
-1544
+1547
 01:36:50,420 --> 01:36:52,220
 TS: Well it's
 an instance variable.
 
-1545
+1548
 01:36:52,220 --> 01:36:53,250
 There is no children.
 
-1546
+1549
 01:36:53,250 --> 01:36:55,310
 Not even a private
 method called children.
 
-1547
+1550
 01:36:55,400 --> 01:36:56,480
 so that's going to say
 
-1548
+1551
 01:36:57,250 --> 01:36:59,140
 "I don't know
 what you're talking about".
 
-1549
+1552
 01:37:02,510 --> 01:37:05,050
 In the specification,
 you didn't say explicitly,
 
-1550
+1553
 01:37:05,050 --> 01:37:07,450
 but I think implicit
 in all of this stuff is:
 
-1551
+1554
 01:37:09,310 --> 01:37:10,680
 Where you say model a tree.
 
-1552
+1555
 01:37:13,620 --> 01:37:15,480
 It is implied that
 you want access
 
-1553
+1556
 01:37:17,450 --> 01:37:18,880
 to the contents of the tree?
 
-1554
+1557
 01:37:18,880 --> 01:37:19,600
 DN: Sure.
 
-1555
+1558
 01:37:21,570 --> 01:37:23,540
 TS: So this gives us
 a way in and verify
 
-1556
+1559
 01:37:27,020 --> 01:37:29,170
 that the children of
 the tree are inclusive.
 
-1557
+1560
 01:37:29,170 --> 01:37:30,200
 I want to check this.
 
-1558
+1561
 01:37:31,050 --> 01:37:32,280
 If it was an empty array,
 
-1559
+1562
 01:37:35,370 --> 01:37:36,570
 then that should fail.
 
-1560
+1563
 01:37:37,420 --> 01:37:39,450
 We expected that
 to include that node.
 
-1561
+1564
 01:37:39,910 --> 01:37:42,170
 If I just had an
 array that had additional
 
-1562
+1565
 01:37:42,600 --> 01:37:45,570
 node in there then I think
 that my... Yeah!
 
-1563
+1566
 01:37:45,800 --> 01:37:48,650
 That's to verify that my
 rspec expectation is right.
 
-1564
+1567
 01:37:51,310 --> 01:37:53,650
 Because I always
 spell include or includes ....
 
-1565
+1568
 01:37:54,970 --> 01:37:56,680
 or does it
 have a question mark.
 
-1566
+1569
 01:37:56,680 --> 01:37:58,310
 Every time I type include in Ruby,
 
-1567
+1570
 01:37:58,310 --> 01:37:59,020
 I get it wrong.
 
-1568
+1571
 01:37:59,450 --> 01:38:01,770
 So that has given
 me confidence that my test
 
-1569
+1572
 01:38:01,770 --> 01:38:03,170
 is testing the right thing.
 
-1570
+1573
 01:38:03,200 --> 01:38:05,340
 Now, that
 introduces a new requirement
 
-1571
+1574
 01:38:06,020 --> 01:38:07,940
 which is how do
 we get at the children
 
-1572
+1575
 01:38:07,940 --> 01:38:08,510
 of the tree?
 
-1573
+1576
 01:38:18,200 --> 01:38:20,650
 I guess that means we
 need a test here that says ....
 
-1574
+1577
 01:38:24,110 --> 01:38:25,820
 This would be a good place for it.
 
-1575
+1578
 01:38:33,850 --> 01:38:35,050
 Or something like that.
 
-1576
+1579
 01:38:36,880 --> 01:38:39,650
 It exposes that it's
 possible to 'get at' the children:
 
-1577
+1580
 01:38:42,450 --> 01:38:43,050
 I would say:
 
-1578
+1581
 01:38:59,310 --> 01:39:01,770
 I can round trip
 that collection of children
 
-1579
+1582
 01:39:02,540 --> 01:39:03,420
 through the node.
 
-1580
+1583
 01:39:07,680 --> 01:39:09,310
 There's some duplication here
 
-1581
+1584
 01:39:09,310 --> 01:39:10,140
 but I'll leave  it.
 
-1582
+1585
 01:39:10,450 --> 01:39:12,340
 All over here
 we've got places where
 
-1583
+1586
 01:39:12,340 --> 01:39:13,970
 we're making
 node.new children.
 
-1584
+1587
 01:39:13,970 --> 01:39:15,970
 There's a temptation
 to have one of these
 
-1585
+1588
 01:39:15,970 --> 01:39:17,050
 let things that says:
 
-1586
+1589
 01:39:18,620 --> 01:39:19,600
 Here we could do it.
 
-1587
+1590
 01:39:22,310 --> 01:39:22,820
 That says:
 
-1588
+1591
 01:39:28,110 --> 01:39:30,020
 That means that
 all of these places
 
-1589
+1592
 01:39:30,020 --> 01:39:31,710
 where I've got
 node.new children,
 
-1590
+1593
 01:39:32,450 --> 01:39:34,280
 I can replace
 that with just node.
 
-1591
+1594
 01:39:36,970 --> 01:39:38,740
 And I think
 that those tests will.... ,
 
-1592
+1595
 01:39:39,940 --> 01:39:40,280
 Wow!
 
-1593
+1596
 01:39:41,420 --> 01:39:42,510
 completely explode.
 
-1594
+1597
 01:39:43,770 --> 01:39:44,970
 That's not what I wanted.
 
-1595
+1598
 01:39:45,600 --> 01:39:47,280
 Oh, it's because
 this is nonsense.
 
-1596
+1599
 01:39:48,910 --> 01:39:49,570
 It should be:
 
-1597
+1600
 01:40:03,310 --> 01:40:04,770
 I was reading the one above.
 
-1598
+1601
 01:40:07,820 --> 01:40:09,620
 This is not
 supposed to be a block.
 
-1599
+1602
 01:40:09,620 --> 01:40:11,140
 This is an argument to expect.
 
-1600
+1603
 01:40:12,710 --> 01:40:14,340
 That's the one failure I wanted.
 
-1601
+1604
 01:40:23,680 --> 01:40:25,000
 That is not what I wanted.
 
-1602
+1605
 01:40:28,310 --> 01:40:29,220
 What did I do here?
 
-1603
+1606
 01:40:30,140 --> 01:40:30,710
 Oh this was:
 
-1604
+1607
 01:40:46,800 --> 01:40:47,820
 here I wanted to add ....
 
-1605
+1608
 01:40:49,220 --> 01:40:51,110
 (I've raced ahead
 and done two things).
 
-1606
+1609
 01:40:52,250 --> 01:40:53,400
 I just want to add that:
 
-1607
+1610
 01:40:57,740 --> 01:41:00,570
 That is still not added
 but all the rest of it which is:
 
-1608
+1611
 01:41:10,020 --> 01:41:11,710
 That has
 cleaned up my spec a bit.
 
-1609
+1612
 01:41:12,400 --> 01:41:13,910
 And now I've
 just got this new
 
-1610
+1613
 01:41:15,510 --> 01:41:16,850
 example which is failing.
 
-1611
+1614
 01:41:26,220 --> 01:41:28,080
 I'm not going
 to spend time writing
 
-1612
+1615
 01:41:28,080 --> 01:41:30,080
 examples around
 this, but I don't want
 
-1613
+1616
 01:41:30,310 --> 01:41:32,200
 to expose just
 that children array.
 
-1614
+1617
 01:41:33,400 --> 01:41:34,710
 I think that would be bad.
 
-1615
+1618
 01:41:36,280 --> 01:41:38,540
 Because then you
 would be able to modify it.
 
-1616
+1619
 01:41:40,170 --> 01:41:41,740
 The simplest
 thing I can do to
 
-1617
+1620
 01:41:41,740 --> 01:41:43,200
 make the test pass is to say:
 
-1618
+1621
 01:41:45,880 --> 01:41:47,650
 In fact I don't
 even need to do that.
 
-1619
+1622
 01:41:47,650 --> 01:41:48,370
 I can just say:
 
-1620
+1623
 01:41:53,820 --> 01:41:56,020
 I think that will
 make all of my tests pass,
 
-1621
+1624
 01:41:57,300 --> 01:41:58,970
 and hopefully
 when I run all my
 
-1622
+1625
 01:41:58,970 --> 01:42:01,420
 cucumber features,
 it will make them all pass.
 
-1623
+1626
 01:42:01,420 --> 01:42:02,880
 So I will commit that and say:
 
-1624
+1627
 01:42:10,420 --> 01:42:12,080
 But, I'm not really happy about it.
 
-1625
+1628
 01:42:13,480 --> 01:42:14,940
 DN: Even though it's a reader,
 
-1626
+1629
 01:42:14,940 --> 01:42:16,940
 you can take that
 object and modify it.
 
-1627
+1630
 01:42:16,940 --> 01:42:19,170
 TS: Exactly.  It doesn't
 let you re-assign the
 
-1628
+1631
 01:42:20,020 --> 01:42:22,570
 children collection, but
 once you have an array
 
-1629
+1632
 01:42:23,310 --> 01:42:25,170
 you can
 remove everything from it
 
-1630
+1633
 01:42:25,170 --> 01:42:26,170
 and re-populate it.
 
-1631
+1634
 01:42:35,620 --> 01:42:37,020
 We could freeze the array.
 
-1632
+1635
 01:42:38,820 --> 01:42:40,910
 We can make
 an assessor here that says:
 
-1633
+1636
 01:42:47,510 --> 01:42:48,600
 Can we freeze it here?
 
-1634
+1637
 01:42:51,650 --> 01:42:53,770
 I think if we do
 that, it will still work.
 
-1635
+1638
 01:42:59,050 --> 01:42:59,710
 DN: Yes, right.
 
-1636
+1639
 01:42:59,710 --> 01:43:01,910
 TS: Our cucumber
 features will still work.
 
-1637
+1640
 01:43:03,110 --> 01:43:04,970
 So that's one
 way of dealing with it.
 
-1638
+1641
 01:43:04,970 --> 01:43:07,170
 I think a more
 interesting way would be ....
 
-1639
+1642
 01:43:08,280 --> 01:43:09,600
 to expose an enumerator.
 
-1640
+1643
 01:43:38,650 --> 01:43:40,910
 I think that would
 feel more natural to me.
 
-1641
+1644
 01:43:40,910 --> 01:43:43,250
 To say "if you want
 to iterate over my children".
 
-1642
+1645
 01:43:43,280 --> 01:43:44,170
 "Then you may do so".
 
-1643
-01:43:47,420 --> 01:43:48,540
+1646
+01:43:47,322 --> 01:43:50,766
 If I just pop open irb we can do,
 
-1644
-01:43:51,000 --> 01:43:51,880
+1647
+01:43:51,000 --> 01:43:52,837
 "if I have an array".
 
-1645
-01:44:00,200 --> 01:44:02,820
+1648
+01:44:00,160 --> 01:44:02,892
 There are a variety of
 ways to make an enumerator out of that
 
-1646
-01:44:02,820 --> 01:44:04,740
+1649
+01:44:02,901 --> 01:44:05,473
 you can call `to_enum`, or
 you can just call `each`
 
-1647
+1650
 01:44:05,510 --> 01:44:07,340
 and that also returns enumerator.
 
-1648
+1651
 01:44:08,510 --> 01:44:11,000
 I think here I would
 like to define an iterator.
 
-1649
+1652
 01:44:12,650 --> 01:44:14,570
 So if we can
 iterate over each child,
 
-1650
+1653
 01:44:15,200 --> 01:44:16,480
 and I can provide a block.
 
-1651
+1654
 01:44:17,050 --> 01:44:19,420
 Then I will call 'each'
 on the children volume.
 
-1652
+1655
 01:44:23,510 --> 01:44:24,710
 And that's nice because ....
 
-1653
+1656
 01:44:29,170 --> 01:44:30,200
 if I have some class,
 
-1654
+1657
 01:44:35,510 --> 01:44:35,970
 If I call:
 
-1655
+1658
 01:44:42,280 --> 01:44:44,450
 If I pass on the block argument like that.
 
-1656
+1659
 01:44:44,740 --> 01:44:46,110
 And make a new one of these.
 
-1657
+1660
 01:44:52,310 --> 01:44:53,220
 Then it will work.
 
-1658
+1661
 01:44:54,220 --> 01:44:56,000
 If I don't pass in
 a block, each will
 
-1659
+1662
 01:44:57,200 --> 01:44:59,200
 behave as if I
 haven't passed in a block,
 
-1660
+1663
 01:44:59,200 --> 01:45:00,970
 which gives you
 an iterator back.
 
-1661
+1664
 01:45:00,970 --> 01:45:03,140
 This gives you the
 same as doing 10 x each.
 
-1662
+1665
 01:45:10,080 --> 01:45:12,000
 Or I've just been
 using ten times and
 
-1663
+1666
 01:45:12,680 --> 01:45:14,370
 not passing it
 a block, and then
 
-1664
+1667
 01:45:15,820 --> 01:45:18,140
 calling something like
 map on the end of it.
 
-1665
+1668
 01:45:18,710 --> 01:45:21,170
 The reason that works
 is because the methods
 
-1666
+1669
 01:45:21,170 --> 01:45:23,620
 in the standard
 library return an enumerator.
 
-1667
+1670
 01:45:24,540 --> 01:45:27,050
 The opportunity to
 return an enumerator here
 
-1668
+1671
 01:45:27,280 --> 01:45:28,400
 is a nicer interface.
 
-1669
+1672
 01:45:29,570 --> 01:45:32,170
 It's more constrained,
 and gives you what you want.
 
-1670
+1673
 01:45:35,140 --> 01:45:37,250
 And, you don't even
 know that it's an array.
 
-1671
+1674
 01:45:37,250 --> 01:45:39,280
 The enumerator
 itself doesn't let you
 
-1672
+1675
 01:45:39,280 --> 01:45:40,480
 reach inside it and say
 
-1673
+1676
 01:45:42,680 --> 01:45:45,000
 "what kind of thing
 are you iterating over"?
 
-1674
+1677
 01:45:47,420 --> 01:45:48,620
 So that feel quite nice.
 
-1675
+1678
 01:45:49,820 --> 01:45:53,020
 The problem is that it's
 going to break all of our examples,
 
-1676
+1679
 01:45:53,020 --> 01:45:55,280
 or just this one
 that asks for the children.
 
-1677
+1680
 01:45:55,310 --> 01:45:57,570
 DN: So we still don't
 have a children method.
 
-1678
+1681
 01:45:57,570 --> 01:45:59,450
 TS: No. We just have
 a way of iterating
 
-1679
+1682
 01:46:00,220 --> 01:46:01,540
 over all of the children.
 
-1680
+1683
 01:46:03,770 --> 01:46:05,800
 So we need to
 change our spec slightly.
 
-1681
+1684
 01:46:08,620 --> 01:46:10,340
 So I can't call
 children any more,
 
-1682
+1685
 01:46:10,340 --> 01:46:11,200
 only each child.
 
-1683
+1686
 01:46:12,420 --> 01:46:14,250
 Which gives me
 an enumerator back.
 
-1684
+1687
 01:46:15,570 --> 01:46:17,570
 If I want to
 check all the things that
 
-1685
+1688
 01:46:20,370 --> 01:46:22,020
 are yielded by that enumerator.
 
-1686
+1689
 01:46:22,020 --> 01:46:23,680
 I can write some code that says:
 
-1687
+1690
 01:46:26,110 --> 01:46:28,050
 I could pass this
 a block and then say:
 
-1688
+1691
 01:46:31,250 --> 01:46:33,740
 Append child if I
 had already initialized one.
 
-1689
+1692
 01:46:34,910 --> 01:46:37,310
 But fortunately
 enumerators include the
 
-1690
+1693
 01:46:37,310 --> 01:46:39,110
 enumerable module which already
 
-1691
+1694
 01:46:39,110 --> 01:46:40,400
 has a method called that.
 
-1692
+1695
 01:46:40,450 --> 01:46:41,510
 It's called entries.
 
-1693
+1696
 01:46:42,170 --> 01:46:44,200
 I can say "if I get
 an enumeration of all
 
-1694
+1697
 01:46:45,420 --> 01:46:47,600
 the children, and
 turn that into an array
 
-1695
+1698
 01:46:48,420 --> 01:46:49,940
 by accumulating all of them.
 
-1696
+1699
 01:46:49,940 --> 01:46:52,450
 That should be the
 same as the array of children".
 
-1697
+1700
 01:46:59,940 --> 01:47:01,540
 What's that complaining about?
 
-1698
+1701
 01:47:03,140 --> 01:47:04,970
 Node line 9..oh
 it's because I forgot
 
-1699
+1702
 01:47:07,170 --> 01:47:09,200
 to refer to it
 as an instance variable.
 
-1700
+1703
 01:47:14,480 --> 01:47:15,370
 So that's all fine.
 
-1701
+1704
 01:47:17,110 --> 01:47:18,910
 If I now run
 my cucumber features.
 
-1702
+1705
 01:47:19,570 --> 01:47:21,280
 I've got a
 failure because that's
 
-1703
+1706
 01:47:22,680 --> 01:47:24,050
 calling children as well.
 
-1704
+1707
 01:47:27,200 --> 01:47:29,080
 This is all
 about designing the API.
 
-1705
+1708
 01:47:31,000 --> 01:47:33,110
 I've got an
 opportunity to shape the API,
 
-1706
+1709
 01:47:37,910 --> 01:47:39,800
 and those changes
 to the API need to
 
-1707
+1710
 01:47:41,680 --> 01:47:43,770
 propagate out of
 the cucumber feature
 
-1708
+1711
 01:47:43,770 --> 01:47:45,970
 because in the
 world where the customer
 
-1709
+1712
 01:47:47,080 --> 01:47:49,050
 is the person using
 the API, we need to
 
-1710
+1713
 01:47:49,050 --> 01:47:51,400
 make sure that all the
 things they want to do
 
-1711
+1714
 01:47:51,620 --> 01:47:52,850
 have been designed out.
 
-1712
+1715
 01:47:52,850 --> 01:47:54,880
 And I think that
 exposing an iterator,
 
-1713
+1716
 01:47:55,220 --> 01:47:58,220
 although it's not as nice
 as being able to call children.
 
-1714
+1717
 01:47:58,220 --> 01:48:00,310
 In fact, we could
 add a children method
 
-1715
+1718
 01:48:01,050 --> 01:48:02,620
 that does each child.entries
 
-1716
+1719
 01:48:04,110 --> 01:48:05,740
 if we wanted to,
 but this is nice.
 
-1717
+1720
 01:48:06,450 --> 01:48:08,200
 It's low level
 but it exposes the ....
 
-1718
+1721
 01:48:09,940 --> 01:48:12,570
 This is like the essence
 of the interface, is that
 
-1719
+1722
 01:48:13,740 --> 01:48:15,910
 you can iterate
 over all of the children.
 
-1720
+1723
 01:48:19,250 --> 01:48:20,250
 I will commit that:
 
-1721
-01:48:35,540 --> 01:48:38,340
-DN: If you did call each child.entries
-on the array the you get back
+1724
+01:48:35,540 --> 01:48:39,684
+DN: If you did call each
+child.entries on the array the you get back
 
-1722
-01:48:39,680 --> 01:48:42,110
+1725
+01:48:39,680 --> 01:48:42,113
 if you then changed
 that, it wouldn't affect it.
 
-1723
+1726
 01:48:42,110 --> 01:48:43,940
 TS: Right. Because that's your array
 
-1724
+1727
 01:48:43,940 --> 01:48:44,570
 DN: It's a copy.
 
-1725
+1728
 01:48:45,710 --> 01:48:47,620
 TS: The tree doesn't
 even know that you
 
-1726
+1729
 01:48:47,620 --> 01:48:49,600
 have called entries
 on that enumerator.
 
-1727
+1730
 01:48:49,600 --> 01:48:50,540
 You've just got one.
 
-1728
+1731
 01:48:53,220 --> 01:48:54,420
 In fact, that reminds me.
 
-1729
+1732
 01:48:56,820 --> 01:48:58,620
 In terms of
 designing the API of
 
-1730
+1733
 01:48:58,620 --> 01:49:00,420
 this thing or
 doing some re-factoring.
 
-1731
+1734
 01:49:00,420 --> 01:49:02,450
 You can see there
 are a few places where
 
-1732
+1735
 01:49:02,450 --> 01:49:04,110
 we want to
 know if this is empty.
 
-1733
+1736
 01:49:06,420 --> 01:49:07,820
 Here's the clearest point.
 
-1734
+1737
 01:49:07,820 --> 01:49:09,200
 What we are asking here is
 
-1735
+1738
 01:49:09,200 --> 01:49:10,310
 whether we are a leaf.
 
-1736
+1739
 01:49:10,710 --> 01:49:11,220
 "Am I a leaf?"
 
-1737
+1740
 01:49:12,140 --> 01:49:13,570
 That's what it really means.
 
-1738
+1741
 01:49:15,800 --> 01:49:17,510
 If we're a leaf
 do this otherwise
 
-1739
+1742
 01:49:17,510 --> 01:49:18,570
 do this other thing.
 
-1740
+1743
 01:49:20,820 --> 01:49:22,140
 We can have a method here.
 
-1741
+1744
 01:49:22,910 --> 01:49:24,110
 Which is "are you a leaf"?
 
-1742
+1745
 01:49:26,650 --> 01:49:28,140
 Because I've got access to it
 
-1743
+1746
 01:49:28,140 --> 01:49:29,650
 I can just say children.empty.
 
-1744
+1747
 01:49:31,970 --> 01:49:34,110
 But I'm nervous
 about all of these places
 
-1745
+1748
 01:49:34,480 --> 01:49:37,050
 where we're referring
 to the instance variable.
 
-1746
+1749
 01:49:38,220 --> 01:49:40,740
 I would much rather
 have the instance variable
 
-1747
+1750
 01:49:41,140 --> 01:49:42,600
 in as few places as possible.
 
-1748
+1751
 01:49:50,340 --> 01:49:52,250
 Instead of all
 these places where
 
-1749
+1752
 01:49:52,880 --> 01:49:54,310
 I'm accessing the children
 
-1750
+1753
 01:49:54,570 --> 01:49:56,280
 For example, in
 this leaf method,
 
-1751
+1754
 01:49:56,280 --> 01:49:58,680
 instead of saying
 children.empty, I could say:
 
-1752
+1755
 01:50:01,770 --> 01:50:03,310
 So build me an
 array, and then
 
-1753
+1756
 01:50:04,140 --> 01:50:05,540
 tell me whether it's empty.
 
-1754
+1757
 01:50:05,540 --> 01:50:07,540
 But there's an even
 better way of doing that.
 
-1755
+1758
 01:50:07,540 --> 01:50:09,540
 Enumerable has
 a method called 'none'.
 
-1756
+1759
 01:50:11,540 --> 01:50:13,910
 So if I call each child
 to get the enumerator ....
 
-1757
+1760
 01:50:13,910 --> 01:50:14,370
 I can say:
 
-1758
+1761
 01:50:15,080 --> 01:50:17,020
 That is saying
 "are there no children".
 
-1759
+1762
 01:50:18,510 --> 01:50:21,020
 In fact it will tell
 me if there are nil or false,
 
-1760
+1763
 01:50:22,140 --> 01:50:24,000
 but in this case,
 none takes a block
 
-1761
+1764
 01:50:25,480 --> 01:50:27,740
 and you can say
 "are there no children that
 
-1762
-01:50:27,740 --> 01:50:28,850
+1765
+01:50:27,740 --> 01:50:28,913
 satisfy this condition?"
 
-1763
+1766
 01:50:28,910 --> 01:50:30,650
 If you don't provide the block, it says:
 
-1764
+1767
 01:50:30,650 --> 01:50:32,600
 "are there no children that are truthy?",
 
-1765
+1768
 01:50:33,620 --> 01:50:36,200
 which in our case is the
 same as there being none.
 
-1766
+1769
 01:50:36,200 --> 01:50:38,480
 If I run all of unit
 tests, that still works.
 
-1767
+1770
 01:50:39,250 --> 01:50:41,480
 And all the
 cucumber features still work.
 
-1768
+1771
 01:50:42,540 --> 01:50:44,420
 That gives me
 an opportunity to say:
 
-1769
+1772
 01:50:55,510 --> 01:50:57,370
 And there are
 several other places
 
-1770
+1773
 01:50:57,370 --> 01:50:58,400
 where I could do this.
 
-1771
+1774
 01:50:58,400 --> 01:51:00,170
 I'm only using
 children here  to map
 
-1772
+1775
 01:51:00,170 --> 01:51:03,140
 over something, which
 each child will do quite nicely.
 
-1773
+1776
 01:51:06,420 --> 01:51:07,110
 And same here.
 
-1774
+1777
 01:51:12,480 --> 01:51:14,800
 All I am doing with
 this instance variable
 
-1775
+1778
 01:51:14,820 --> 01:51:16,770
 is remember the
 value that was passed
 
-1776
+1779
 01:51:16,770 --> 01:51:18,480
 into the constructor, and then
 
-1777
+1780
 01:51:18,480 --> 01:51:20,050
 expose a way of iterating over.
 
-1778
+1781
 01:51:21,280 --> 01:51:23,370
 So the only state
 that is stored in here,
 
-1779
+1782
 01:51:25,770 --> 01:51:27,710
 allows you to
 expose it in iteration,
 
-1780
+1783
 01:51:27,710 --> 01:51:30,420
 and some of the work is
 done by doing that iteration.
 
-1781
+1784
 01:51:31,540 --> 01:51:32,820
 So if I run all of my tests.
 
-1782
+1785
 01:51:33,600 --> 01:51:34,250
 They're fine.
 
-1783
+1786
 01:51:34,250 --> 01:51:36,170
 And the cucumber features are fine.
 
-1784
+1787
 01:51:37,570 --> 01:51:38,620
 I can change this to:
 
-1785
+1788
 01:51:46,370 --> 01:51:48,080
 The other frustrating thing is
 
-1786
+1789
 01:51:48,080 --> 01:51:49,140
 because we did this:
 
-1787
+1790
 01:51:54,800 --> 01:51:56,680
 When you create
 an enumerator, it is
 
-1788
+1791
 01:51:56,680 --> 01:51:58,770
 possible to tell it
 how to find the size
 
-1789
+1792
 01:51:58,940 --> 01:52:00,540
 of the underlying collection.
 
-1790
+1793
 01:52:00,540 --> 01:52:01,710
 Some enumerators can.
 
-1791
+1794
 01:52:02,800 --> 01:52:04,450
 It has always
 got a size method,
 
-1792
+1795
 01:52:04,450 --> 01:52:06,450
 but sometimes it returns nil if your
 
-1793
+1796
 01:52:06,450 --> 01:52:09,080
 enumerator has been
 created without providing
 
-1794
+1797
 01:52:09,080 --> 01:52:11,680
 what the size of the
 underlying enumeration is.
 
-1795
+1798
 01:52:14,910 --> 01:52:17,170
 If I say each and
 then ask that for its size.
 
-1796
+1799
 01:52:18,570 --> 01:52:20,970
 In the case where
 the underlying collection
 
-1797
+1800
 01:52:20,970 --> 01:52:23,250
 that you've provided,
 does report the size,
 
-1798
+1801
 01:52:24,880 --> 01:52:26,400
 you can get the size back out.
 
-1799
+1802
 01:52:28,420 --> 01:52:30,310
 I feel slightly nervous about that.
 
-1800
+1803
 01:52:31,620 --> 01:52:33,020
 Oh! But, I've just remembered!
 
-1801
+1804
 01:52:35,540 --> 01:52:37,940
 I think enumerable
 has a method called count.
 
-1802
+1805
 01:52:41,650 --> 01:52:43,700
 Which does
 something like 'all' or 'none'.
 
-1803
+1806
 01:52:45,220 --> 01:52:47,740
 You can give it a block
 and it will tell you for
 
-1804
+1807
 01:52:47,740 --> 01:52:49,370
 how many
 items in enumeration,
 
-1805
+1808
 01:52:49,370 --> 01:52:50,310
 that block is true.
 
-1806
+1809
 01:52:53,170 --> 01:52:55,200
 But I'm not sure
 if this is going to work.
 
-1807
+1810
 01:52:56,310 --> 01:52:56,940
 It does, good.
 
-1808
+1811
 01:53:01,650 --> 01:53:03,970
 In all these cases
 I have avoided building
 
-1809
+1812
 01:53:04,570 --> 01:53:06,080
 an array of all the children.
 
-1810
+1813
 01:53:11,480 --> 01:53:13,400
 Now that we
 are only accessing that
 
-1811
+1814
 01:53:14,080 --> 01:53:16,400
 children collection....
 (we have got to do this).
 
-1812
+1815
 01:53:16,940 --> 01:53:19,250
 Apart from that we
 are only accessing that
 
-1813
+1816
 01:53:19,250 --> 01:53:21,340
 children collection
 through the iterator,
 
-1814
+1817
 01:53:21,340 --> 01:53:22,880
 which means
 that children can be
 
-1815
+1818
 01:53:22,910 --> 01:53:24,250
 anything that's enumerable,
 
-1816
-01:53:24,250 --> 01:53:25,880
+1819
+01:53:24,250 --> 01:53:25,949
 anything that
 responds to 'each'.
 
-1817
-01:53:25,880 --> 01:53:27,370
+1820
+01:53:25,957 --> 01:53:27,397
 It doesn't have to be an array.
 
-1818
-01:53:27,370 --> 01:53:29,540
+1821
+01:53:27,630 --> 01:53:30,450
 It could be some
 sort of 'lazy collection',
 
-1819
+1822
 01:53:31,510 --> 01:53:32,970
 which you haven't specified.
 
-1820
+1823
 01:53:33,280 --> 01:53:34,970
 But designing it
 this way means
 
-1821
+1824
 01:53:35,370 --> 01:53:37,770
 we are gradually
 reducing the surface area
 
-1822
+1825
 01:53:37,770 --> 01:53:39,450
 of what we expect from children.
 
-1823
+1826
 01:53:39,450 --> 01:53:41,450
 All we require
 from children is that
 
-1824
+1827
 01:53:41,450 --> 01:53:43,000
 we can call each
 on it, to get an
 
-1825
+1828
 01:53:43,000 --> 01:53:44,880
 enumerator back,
 and the rest of the
 
-1826
+1829
 01:53:44,880 --> 01:53:46,880
 functionality sits
 on top of that single
 
-1827
+1830
 01:53:46,880 --> 01:53:49,510
 assumption about what
 we can do with  the children.
 
-1828
+1831
 01:53:52,340 --> 01:53:54,310
 I'm not changing
 the tests at all here.
 
-1829
+1832
 01:53:54,680 --> 01:53:56,680
 I'm just getting a
 chance to re-factor:
 
-1830
+1833
 01:54:08,450 --> 01:54:10,170
 And then,
 (this one is a bit tricky).
 
-1831
+1834
 01:54:10,540 --> 01:54:12,200
 There are two ways of doing this.
 
-1832
+1835
 01:54:13,420 --> 01:54:14,880
 I'll show you the stupid way.
 
-1833
+1836
 01:54:14,880 --> 01:54:17,200
 Well, you don't need me
 to show you stupid way.
 
-1834
+1837
 01:54:18,140 --> 01:54:19,000
 It's just:
 
-1835
+1838
 01:54:27,480 --> 01:54:28,400
 Run all the tests.
 
-1836
+1839
 01:54:29,370 --> 01:54:30,510
 Run all the cucumbers.
 
-1837
+1840
 01:54:31,110 --> 01:54:31,710
 That's fine.
 
-1838
+1841
 01:54:32,110 --> 01:54:32,770
 DN: Yes.
 
-1839
+1842
 01:54:34,570 --> 01:54:36,370
 TS: I think a better way is to build
 
-1840
+1843
 01:54:36,370 --> 01:54:38,250
 an enumeration of the new children
 
-1841
+1844
 01:54:40,910 --> 01:54:42,650
 by adapting the old enumeration.
 
-1842
+1845
 01:54:44,020 --> 01:54:44,740
 I can say here:
 
-1843
+1846
 01:54:51,280 --> 01:54:53,280
 An enumerator
 works by providing an
 
-1844
+1847
 01:54:56,140 --> 01:54:57,800
 object called a yielder to this
 
-1845
+1848
 01:54:57,800 --> 01:54:59,800
 block that you
 pass in the constructor.
 
-1846
+1849
 01:54:59,800 --> 01:55:01,770
 and every time you call yielder.yield
 
-1847
+1850
 01:55:03,110 --> 01:55:04,400
 It will yield that value.
 
-1848
+1851
 01:55:08,400 --> 01:55:09,710
 Let's look at it on the irb:
 
-1849
+1852
 01:55:11,170 --> 01:55:11,570
 If I say:
 
-1850
+1853
 01:55:29,200 --> 01:55:30,910
 First you can step through them
 
-1851
+1854
 01:55:31,020 --> 01:55:31,680
 one at a time.
 
-1852
+1855
 01:55:31,800 --> 01:55:34,220
 You can say give me the
 next value, and the next .....
 
-1853
+1856
 01:55:34,220 --> 01:55:36,850
 using fibers to suspend
 execution of that block
 
-1854
+1857
 01:55:37,710 --> 01:55:39,800
 after every yield
 until I say I'm ready.
 
-1855
+1858
 01:55:40,650 --> 01:55:42,450
 If I re-numerate
 off the end it says ....
 
-1856
+1859
 01:55:43,650 --> 01:55:44,680
 I think I can re-wind.
 
-1857
+1860
 01:55:46,680 --> 01:55:47,020
 Yes.
 
-1858
+1861
 01:55:48,910 --> 01:55:50,650
 It's enumerable
 so I can also say:
 
-1859
+1862
 01:55:54,140 --> 01:55:54,540
 I can do:
 
-1860
+1863
 01:55:59,680 --> 01:56:01,850
 It works like a
 normal enumerable 'thing'
 
-1861
+1864
 01:56:01,880 --> 01:56:03,880
 but you've
 built it programmatically.
 
-1862
+1865
 01:56:04,340 --> 01:56:06,370
 I can take
 advantage of that by saying:
 
-1863
+1866
 01:56:15,850 --> 01:56:17,850
 So yield all of the existing children
 
-1864
+1867
 01:56:17,850 --> 01:56:19,740
 to the yielder,
 and then afterwards,
 
-1865
+1868
 01:56:21,540 --> 01:56:22,310
 Yield a new one.
 
-1866
+1869
 01:56:25,970 --> 01:56:27,800
 I need to do
 some variable re-names.
 
-1867
+1870
 01:56:29,740 --> 01:56:31,570
 It's fine but
 I think it's confusing.
 
-1868
+1871
 01:56:32,970 --> 01:56:33,880
 So add a new child.
 
-1869
+1872
 01:56:34,740 --> 01:56:36,800
 And then I'll say,
 make a new enumerator.
 
-1870
+1873
 01:56:38,600 --> 01:56:40,050
 It will not create an array.
 
-1871
+1874
 01:56:40,540 --> 01:56:42,740
 This piece of code
 will just spin over the
 
-1872
+1875
 01:56:42,740 --> 01:56:44,220
 old children and yield them.
 
-1873
+1876
 01:56:44,740 --> 01:56:46,540
 And then will
 yield the new child.
 
-1874
+1877
 01:56:46,540 --> 01:56:48,570
 Rather than
 building a new array here.
 
-1875
+1878
 01:56:49,220 --> 01:56:51,020
 I can pass in
 my new enumeration
 
-1876
+1879
 01:56:54,450 --> 01:56:55,310
 of the children.
 
-1877
+1880
 01:56:56,880 --> 01:56:57,650
 And that works.
 
-1878
+1881
 01:56:59,510 --> 01:57:01,170
 I think that's
 an efficient way
 
-1879
+1882
 01:57:01,170 --> 01:57:02,450
 of mutating these trees.
 
-1880
+1883
 01:57:03,540 --> 01:57:05,450
 To think of these
 children as being
 
-1881
+1884
 01:57:05,450 --> 01:57:06,880
 enumerations of children.
 
-1882
+1885
 01:57:09,850 --> 01:57:11,880
 If we have some
 kind of 'insert before'
 
-1883
+1886
 01:57:13,170 --> 01:57:15,020
 You could do a
 thing here that says
 
-1884
+1887
 01:57:17,510 --> 01:57:19,420
 "if child equals
 the one I'm supposed
 
-1885
+1888
 01:57:19,650 --> 01:57:20,910
 to be inserting before".
 
-1886
+1889
 01:57:21,420 --> 01:57:22,480
 then yield a new one.
 
-1887
+1890
 01:57:23,200 --> 01:57:25,220
 And after that
 yield the existing one.
 
-1888
+1891
 01:57:26,400 --> 01:57:28,200
 After you can
 yield the old child
 
-1889
+1892
 01:57:28,200 --> 01:57:30,020
 and then you can
 yield the new one.
 
-1890
+1893
 01:57:30,450 --> 01:57:32,340
 Adding on to the
 end is the easiest
 
-1891
+1894
 01:57:32,340 --> 01:57:33,800
 because we
 know where it goes.
 
-1892
+1895
 01:57:33,820 --> 01:57:35,800
 But enumerating
 over the old collection
 
-1893
+1896
 01:57:36,510 --> 01:57:38,680
 and inserting a new
 one at the right time
 
-1894
+1897
 01:57:40,280 --> 01:57:42,800
 allows us to insert that
 every time if we want to.
 
-1895
+1898
 01:57:44,650 --> 01:57:47,250
 Insert a copy of this
 after every existing child.
 
-1896
+1899
 01:57:47,250 --> 01:57:48,800
 We can say
 "yield the old child
 
-1897
+1900
 01:57:48,800 --> 01:57:50,140
 and then yield the new one",
 
-1898
+1901
 01:57:50,140 --> 01:57:51,480
 each time around the loop.
 
-1899
+1902
 01:57:52,970 --> 01:57:54,970
 We can do any
 basic level modifications
 
-1900
+1903
 01:57:55,000 --> 01:57:56,510
 to the tree
 that we want here.
 
-1901
+1904
 01:57:56,510 --> 01:57:58,740
 But we're not
 actually modifying anything.
 
-1902
+1905
 01:57:59,280 --> 01:58:01,710
 This has a nice
 structural sharing property
 
-1903
+1906
 01:58:01,710 --> 01:58:03,800
 where this new
 node that we are getting
 
-1904
+1907
 01:58:05,570 --> 01:58:07,680
 is re-using the
 collection of children
 
-1905
+1908
 01:58:08,170 --> 01:58:09,280
 that the old node had.
 
-1906
+1909
 01:58:09,710 --> 01:58:12,020
 It isn't copying that
 array and adding to it.
 
-1907
+1910
 01:58:12,020 --> 01:58:14,140
 It's holding on to
 it through each child.
 
-1908
+1911
 01:58:16,200 --> 01:58:18,770
 The new node has a
 child enumerator that scores
 
-1909
+1912
 01:58:20,140 --> 01:58:21,480
 each child on the old node,
 
-1910
+1913
 01:58:21,800 --> 01:58:23,680
 and when it's
 finished enumerating all
 
-1911
+1914
 01:58:23,680 --> 01:58:25,680
 of its children, it
 yields the new one.
 
-1912
+1915
 01:58:25,680 --> 01:58:27,420
 That feels close to optimal to me.
 
-1913
+1916
 01:58:32,020 --> 01:58:33,710
 It's not super efficient because
 
-1914
+1917
 01:58:34,140 --> 01:58:36,540
 when you are doing
 things non destructively,
 
-1915
+1918
 01:58:36,540 --> 01:58:38,480
 you're expecting
 the garbage collector
 
-1916
+1919
 01:58:38,480 --> 01:58:41,280
 to do the work of cleaning
 up all the old stuff for you.
 
-1917
+1920
 01:58:42,400 --> 01:58:44,540
 But after the
 garbage collector has run,
 
-1918
+1921
 01:58:44,540 --> 01:58:46,800
 we're not going to be
 using lots more memory.
 
-1919
+1922
 01:58:50,850 --> 01:58:53,340
 If you want to
 compose a lot of trees together,
 
-1920
+1923
 01:58:53,620 --> 01:58:55,310
 which this API
 allows you to do.
 
-1921
+1924
 01:58:55,570 --> 01:58:57,880
 Every time you compose
 a tree into a new one,
 
-1922
+1925
 01:58:57,880 --> 01:58:59,480
 you are not taking a copy of it.
 
-1923
+1926
 01:59:01,340 --> 01:59:03,400
 You are holding on
 to a reference to it.
 
-1924
+1927
 01:59:03,400 --> 01:59:05,680
 Which you would do
 anyway if it was mutable
 
-1925
+1928
 01:59:08,370 --> 01:59:10,800
 And every time you
 make a change it's creating
 
-1926
+1929
 01:59:10,820 --> 01:59:13,020
 just enough new stuff
 and holding on to as
 
-1927
+1930
 01:59:13,020 --> 01:59:15,820
 much of the old stuff as is
 necessary to make use of it.
 
-1928
+1931
 01:59:17,740 --> 01:59:20,370
 I feel good that we have
 been able to do that there.
 
-1929
+1932
 01:59:21,800 --> 01:59:22,510
 So I shall say:
 
-1930
+1933
 01:59:32,770 --> 01:59:33,620
 How are we doing?
 
-1931
+1934
 01:59:33,620 --> 01:59:35,680
 DN: I think that's a
 good place to wrap up.
 
-1932
+1935
 01:59:36,280 --> 01:59:39,310
 Thanks Tom, it's been very
 interesting watching you work.
 
-1933
+1936
 01:59:41,020 --> 01:59:43,800
 TS: Thanks for having me,
 it has been really good fun.
