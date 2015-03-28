@@ -8738,30 +8738,30 @@ the one I'm supposed
 
 1885
 01:57:19,650 --> 01:57:20,910
-to be inserting before".
+to be inserting before,
 
 1886
 01:57:21,420 --> 01:57:22,480
-then yield a new one.
+then yield the new one.
 
 1887
 01:57:23,200 --> 01:57:25,220
 And after that
-yield the existing one.
+yield the existing one."
 
 1888
 01:57:26,400 --> 01:57:28,200
-After you can
+If it's 'insert after' you can
 yield the old child
 
 1889
 01:57:28,200 --> 01:57:30,020
-and then you can
+and then immediately
 yield the new one.
 
 1890
 01:57:30,450 --> 01:57:32,340
-Adding on to the
+Adding it on to the
 end is the easiest
 
 1891
@@ -8776,17 +8776,16 @@ over the old collection
 
 1893
 01:57:36,510 --> 01:57:38,680
-and inserting a new
+and inserting the new
 one at the right time
 
 1894
 01:57:40,280 --> 01:57:42,800
-allows us to insert that
-every time if we want to.
+allows us to ....
 
 1895
 01:57:44,650 --> 01:57:47,250
-Insert a copy of this
+If we wanted to insert a copy of this
 after every existing child.
 
 1896
@@ -8804,8 +8803,7 @@ each time around the loop.
 
 1899
 01:57:52,970 --> 01:57:54,970
-We can do any
-basic level modifications
+We can do any modification
 
 1900
 01:57:55,000 --> 01:57:56,510
