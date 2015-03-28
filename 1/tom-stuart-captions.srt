@@ -7729,7 +7729,7 @@ map on the end of it.
 1665
 01:45:18,710 --> 01:45:21,170
 The reason that works
-is because the methods
+is because these methods
 
 1666
 01:45:21,170 --> 01:45:23,620
