@@ -7809,7 +7809,7 @@ children any more,
 
 1682
 01:46:10,340 --> 01:46:11,200
-only each child.
+I can only call each_child.
 
 1683
 01:46:12,420 --> 01:46:14,250
