@@ -8723,7 +8723,7 @@ enumerations of children.
 
 1882
 01:57:09,850 --> 01:57:11,880
-If we have some
+If we had some
 kind of 'insert before'
 
 1883
