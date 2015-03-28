@@ -8283,11 +8283,11 @@ I can change this to:
 
 1785
 01:51:46,370 --> 01:51:48,080
-The other frustrating thing is
+The only frustrating thing is
 
 1786
-01:51:48,080 --> 01:51:49,140
-because we did this:
+01:51:48,080 --> 01:51:,140
+because we did this children.size ....
 
 1787
 01:51:54,800 --> 01:51:56,680
@@ -8314,7 +8314,7 @@ got a size method,
 
 1792
 01:52:04,450 --> 01:52:06,450
-but sometimes it returns nil if your
+but sometimes it returns nil if the
 
 1793
 01:52:06,450 --> 01:52:09,080
