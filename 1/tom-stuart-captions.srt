@@ -7588,7 +7588,7 @@ We could freeze the array.
 1635
 01:42:38,820 --> 01:42:40,910
 We can make
-an assessor here that says:
+an accessor here that says:
 
 1636
 01:42:47,510 --> 01:42:48,600
@@ -7638,7 +7638,7 @@ to iterate over my children".
 
 1646
 01:43:47,322 --> 01:43:50,766
-If I just pop open irb we can do,
+If I just pop open irb:
 
 1647
 01:43:51,000 --> 01:43:52,837
@@ -7651,8 +7651,8 @@ ways to make an enumerator out of that
 
 1649
 01:44:02,901 --> 01:44:05,473
-you can call `to_enum`, or
-you can just call `each`
+you can call to_enum, or
+you can just call each
 
 1650
 01:44:05,510 --> 01:44:07,340
@@ -7674,8 +7674,8 @@ and I can provide a block.
 
 1654
 01:44:17,050 --> 01:44:19,420
-Then I will call 'each'
-on the children volume.
+Then I will call each
+on the children for you.
 
 1655
 01:44:23,510 --> 01:44:24,710
@@ -7719,12 +7719,12 @@ an iterator back.
 1664
 01:45:00,970 --> 01:45:03,140
 This gives you the
-same as doing 10 x each.
+same as doing 10.times.each:
 
 1665
 01:45:10,080 --> 01:45:12,000
 Or I've just been
-using ten times and
+using 10.times and then
 
 1666
 01:45:12,680 --> 01:45:14,370
@@ -7739,7 +7739,7 @@ map on the end of it.
 1668
 01:45:18,710 --> 01:45:21,170
 The reason that works
-is because the methods
+is because these methods
 
 1669
 01:45:21,170 --> 01:45:23,620
@@ -7781,11 +7781,11 @@ are you iterating over"?
 
 1677
 01:45:47,420 --> 01:45:48,620
-So that feel quite nice.
+So that feels quite nice.
 
 1678
 01:45:49,820 --> 01:45:53,020
-The problem is that it's
+The problem is that that's
 going to break all of our examples,
 
 1679
@@ -7819,7 +7819,7 @@ children any more,
 
 1685
 01:46:10,340 --> 01:46:11,200
-only each child.
+I can only call each_child.
 
 1686
 01:46:12,420 --> 01:46:14,250
@@ -7837,7 +7837,7 @@ are yielded by that enumerator.
 
 1689
 01:46:22,020 --> 01:46:23,680
-I can write some code that says:
+I could write some code that says:
 
 1690
 01:46:26,110 --> 01:46:28,050
@@ -7846,7 +7846,7 @@ a block and then say:
 
 1691
 01:46:31,250 --> 01:46:33,740
-Append child if I
+append_child if I
 had already initialized one.
 
 1692
@@ -7868,7 +7868,7 @@ It's called entries.
 
 1696
 01:46:42,170 --> 01:46:44,200
-I can say "if I get
+So I can say "if I get
 an enumeration of all
 
 1697
@@ -7891,8 +7891,8 @@ What's that complaining about?
 
 1701
 01:47:03,140 --> 01:47:04,970
-Node line 9..oh
-it's because I forgot
+Node line 9.
+Oh it's because I forgot
 
 1702
 01:47:07,170 --> 01:47:09,200
@@ -7973,7 +7973,7 @@ add a children method
 
 1718
 01:48:01,050 --> 01:48:02,620
-that does each child.entries
+that does each_child.entries
 
 1719
 01:48:04,110 --> 01:48:05,740
@@ -8001,8 +8001,8 @@ I will commit that:
 
 1724
 01:48:35,540 --> 01:48:39,684
-DN: If you did call each
-child.entries on the array the you get back
+DN: If you did call each_child.entries
+and the array that you get back
 
 1725
 01:48:39,680 --> 01:48:42,113
@@ -8098,7 +8098,7 @@ Because I've got access to it
 
 1746
 01:49:28,140 --> 01:49:29,650
-I can just say children.empty.
+I can just say children.empty?
 
 1747
 01:49:31,970 --> 01:49:34,110
@@ -8136,7 +8136,7 @@ this leaf method,
 1754
 01:49:56,280 --> 01:49:58,680
 instead of saying
-children.empty, I could say:
+children.empty?, I could say:
 
 1755
 01:50:01,770 --> 01:50:03,310
@@ -8155,11 +8155,11 @@ better way of doing that.
 1758
 01:50:07,540 --> 01:50:09,540
 Enumerable has
-a method called 'none'.
+a method called 'none?'.
 
 1759
 01:50:11,540 --> 01:50:13,910
-So if I call each child
+So if I call each_child
 to get the enumerator ....
 
 1760
@@ -8169,12 +8169,12 @@ I can say:
 1761
 01:50:15,080 --> 01:50:17,020
 That is saying
-"are there no children".
+"are there no children?".
 
 1762
 01:50:18,510 --> 01:50:21,020
-In fact it will tell
-me if there are nil or false,
+In fact it will tell me if there
+are any children that are nil or false,
 
 1763
 01:50:22,140 --> 01:50:24,000
@@ -8205,7 +8205,7 @@ same as there being none.
 
 1769
 01:50:36,200 --> 01:50:38,480
-If I run all of unit
+If I run all of the unit
 tests, that still works.
 
 1770
@@ -8235,7 +8235,7 @@ children here  to map
 1775
 01:51:00,170 --> 01:51:03,140
 over something, which
-each child will do quite nicely.
+each_child will do quite nicely.
 
 1776
 01:51:06,420 --> 01:51:07,110
@@ -8248,16 +8248,17 @@ this instance variable
 
 1778
 01:51:14,820 --> 01:51:16,770
-is remember the
+using it to remember the
 value that was passed
 
 1779
 01:51:16,770 --> 01:51:18,480
-into the constructor, and then
+into the constructor,
+and then I am
 
 1780
 01:51:18,480 --> 01:51:20,050
-expose a way of iterating over.
+exposing a way of iterating over it.
 
 1781
 01:51:21,280 --> 01:51:23,370
@@ -8292,11 +8293,11 @@ I can change this to:
 
 1788
 01:51:46,370 --> 01:51:48,080
-The other frustrating thing is
+The only frustrating thing is
 
 1789
 01:51:48,080 --> 01:51:49,140
-because we did this:
+because we did this children.size ....
 
 1790
 01:51:54,800 --> 01:51:56,680
@@ -8323,7 +8324,7 @@ got a size method,
 
 1795
 01:52:04,450 --> 01:52:06,450
-but sometimes it returns nil if your
+but sometimes it returns nil if the
 
 1796
 01:52:06,450 --> 01:52:09,080
@@ -8380,7 +8381,7 @@ and it will tell you for
 1807
 01:52:47,740 --> 01:52:49,370
 how many
-items in enumeration,
+items in the enumeration,
 
 1808
 01:52:49,370 --> 01:52:50,310
@@ -8436,7 +8437,7 @@ anything that's enumerable,
 1819
 01:53:24,250 --> 01:53:25,949
 anything that
-responds to 'each'.
+responds to each.
 
 1820
 01:53:25,957 --> 01:53:27,397
@@ -8578,7 +8579,7 @@ It will yield that value.
 
 1851
 01:55:08,400 --> 01:55:09,710
-Let's look at it on the irb:
+Let's look at it on irb:
 
 1852
 01:55:11,170 --> 01:55:11,570
@@ -8599,7 +8600,7 @@ next value, and the next .....
 
 1856
 01:55:34,220 --> 01:55:36,850
-using fibers to suspend
+It's using fibers to suspend
 execution of that block
 
 1857
@@ -8609,7 +8610,7 @@ until I say I'm ready.
 
 1858
 01:55:40,650 --> 01:55:42,450
-If I re-numerate
+If I enumerate
 off the end it says ....
 
 1859
@@ -8723,7 +8724,7 @@ of mutating these trees.
 
 1883
 01:57:03,540 --> 01:57:05,450
-To think of these
+To think of the
 children as being
 
 1884
@@ -8732,7 +8733,7 @@ enumerations of children.
 
 1885
 01:57:09,850 --> 01:57:11,880
-If we have some
+If we had some
 kind of 'insert before'
 
 1886
@@ -8747,30 +8748,30 @@ the one I'm supposed
 
 1888
 01:57:19,650 --> 01:57:20,910
-to be inserting before".
+to be inserting before,
 
 1889
 01:57:21,420 --> 01:57:22,480
-then yield a new one.
+then yield the new one.
 
 1890
 01:57:23,200 --> 01:57:25,220
 And after that
-yield the existing one.
+yield the existing one."
 
 1891
 01:57:26,400 --> 01:57:28,200
-After you can
+If it's 'insert after' you can
 yield the old child
 
 1892
 01:57:28,200 --> 01:57:30,020
-and then you can
+and then immediately
 yield the new one.
 
 1893
 01:57:30,450 --> 01:57:32,340
-Adding on to the
+Adding it on to the
 end is the easiest
 
 1894
@@ -8785,17 +8786,16 @@ over the old collection
 
 1896
 01:57:36,510 --> 01:57:38,680
-and inserting a new
+and inserting the new
 one at the right time
 
 1897
 01:57:40,280 --> 01:57:42,800
-allows us to insert that
-every time if we want to.
+allows us to ....
 
 1898
 01:57:44,650 --> 01:57:47,250
-Insert a copy of this
+If we wanted to insert a copy of this
 after every existing child.
 
 1899
@@ -8813,8 +8813,7 @@ each time around the loop.
 
 1902
 01:57:52,970 --> 01:57:54,970
-We can do any
-basic level modifications
+We can do any modification
 
 1903
 01:57:55,000 --> 01:57:56,510
@@ -8828,13 +8827,13 @@ actually modifying anything.
 
 1905
 01:57:59,280 --> 01:58:01,710
-This has a nice
+This has the nice
 structural sharing property
 
 1906
 01:58:01,710 --> 01:58:03,800
 where this new
-node that we are getting
+new node that we are getting
 
 1907
 01:58:05,570 --> 01:58:07,680
@@ -8853,16 +8852,16 @@ array and adding to it.
 1910
 01:58:12,020 --> 01:58:14,140
 It's holding on to
-it through each child.
+it through each_child.
 
 1911
 01:58:16,200 --> 01:58:18,770
 The new node has a
-child enumerator that scores
+child enumerator that calls
 
 1912
 01:58:20,140 --> 01:58:21,480
-each child on the old node,
+each_child on the old node,
 
 1913
 01:58:21,800 --> 01:58:23,680
@@ -8885,7 +8884,7 @@ It's not super efficient because
 1917
 01:58:34,140 --> 01:58:36,540
 when you are doing
-things non destructively,
+things non-destructively,
 
 1918
 01:58:36,540 --> 01:58:38,480
