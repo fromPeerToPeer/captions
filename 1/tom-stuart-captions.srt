@@ -8427,7 +8427,7 @@ anything that's enumerable,
 1816
 01:53:24,250 --> 01:53:25,880
 anything that
-responds to 'each'.
+responds to each.
 
 1817
 01:53:25,880 --> 01:53:27,370
