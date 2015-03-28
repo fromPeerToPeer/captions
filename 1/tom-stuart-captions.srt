@@ -7578,7 +7578,7 @@ We could freeze the array.
 1632
 01:42:38,820 --> 01:42:40,910
 We can make
-an assessor here that says:
+an accessor here that says:
 
 1633
 01:42:47,510 --> 01:42:48,600
