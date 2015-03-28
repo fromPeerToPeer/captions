@@ -7836,7 +7836,7 @@ a block and then say:
 
 1688
 01:46:31,250 --> 01:46:33,740
-Append child if I
+append_child if I
 had already initialized one.
 
 1689
