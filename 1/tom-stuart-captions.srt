@@ -8874,7 +8874,7 @@ It's not super efficient because
 1914
 01:58:34,140 --> 01:58:36,540
 when you are doing
-things non destructively,
+things non-destructively,
 
 1915
 01:58:36,540 --> 01:58:38,480
