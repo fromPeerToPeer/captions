@@ -4528,7 +4528,7 @@ So I have sorted card values
 
 1048
 01:08:28,280 --> 01:08:31,280
-What I want to know is are they consecutive.
+I want to know if they are consecutive.
 
 1049
 01:08:35,370 --> 01:08:37,480
