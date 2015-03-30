@@ -4664,7 +4664,7 @@ So then 10 is 10, Jack is 11, Queen is 12, King is 13.
 
 1079
 01:10:27,510 --> 01:10:29,680
-then this is both one and 14.
+then ace is both one and 14.
 
 1080
 01:10:29,880 --> 01:10:30,400
