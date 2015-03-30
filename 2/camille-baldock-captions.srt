@@ -4145,7 +4145,7 @@ to the end of card number index
 
 959
 01:02:07,080 --> 01:02:10,250
-and here I want to go front
+and here I want to go from
 zero to the end card index minus
 
 960
