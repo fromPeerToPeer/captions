@@ -568,12 +568,13 @@ a slightly nicer reason now.
 
 130
 00:09:43,140 --> 00:09:45,650
-So here we have an
+So now we have an
 array that has nothing in it.
 
 131
 00:09:45,650 --> 00:09:47,710
-And we should have 5 things, inaudible
+And we should have 5 things and now I'll
+actually implement the things because
 
 132
 00:09:49,700 --> 00:09:50,700
