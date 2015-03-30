@@ -4868,11 +4868,11 @@ so I can have something like
 
 1128
 01:13:41,850 --> 01:13:46,080
-Pips for heads and dot fetch.
+Pips for heads dot fetch.
 
 1129
 01:13:51,000 --> 01:13:53,960
-This is what we said at the beginning,
+This is what I said at the beginning,
 
 1130
 01:13:53,970 --> 01:13:55,740
