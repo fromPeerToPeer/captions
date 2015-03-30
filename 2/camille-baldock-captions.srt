@@ -4058,7 +4058,7 @@ This is still fetching a string.
 939
 01:00:38,000 --> 01:00:41,830
 I will make sure I've got a
-test that does the 10 again
+test that does the 10
 
 940
 01:00:43,850 --> 01:00:44,960
