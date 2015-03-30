@@ -147,8 +147,8 @@ to have in place is some kind of
 
 34
 00:02:36,970 --> 00:02:42,100
-hand object and some kind
-of card object in which I can put 'things'
+Hand object and some kind
+of Card object in which I can put 'things'
 
 35
 00:02:47,650 --> 00:02:51,650
@@ -160,8 +160,8 @@ I have an array that says 5H and 6 Diamond
 
 37
 00:02:54,570 --> 00:02:58,820
-And in the other hand, and
-this is my hand object with those
+And on the other end, and
+this is my Hand object with those
 
 38
 00:02:59,110 --> 00:03:00,970
@@ -221,7 +221,7 @@ Ok, so this is the 'I can't type moment'. (laughter)
 51
 00:03:42,250 --> 00:03:46,770
 So if we have some kind
-of object called hand parser
+of object called HandParser
 
 52
 00:03:51,770 --> 00:03:58,200
@@ -249,7 +249,7 @@ Yes, this is my first failure - here we go !
 57
 00:04:18,450 --> 00:04:22,020
 So I'm going to have to have
-a hand parser sitting somewhere
+a HandParser sitting somewhere
 
 58
 00:04:22,530 --> 00:04:25,090
@@ -287,7 +287,7 @@ What I probably want to do is ....
 
 66
 00:04:48,840 --> 00:04:54,030
-If I create a hand parser
+If I create a HandParser
 and I give it the array of cards.
 
 67
@@ -302,20 +302,20 @@ to check what the output of that is.
 
 69
 00:05:04,510 --> 00:05:06,650
-So the subject is hand parser, so if we have
+So the subject is HandParser, so if we have
 
 70
 00:05:08,250 --> 00:05:09,490
-describe class.
+described_class.
 
 71
 00:05:10,340 --> 00:05:14,700
-If create hand parser and
+If I create HandParser and
 hopefully have some kind of thing
 
 72
 00:05:14,700 --> 00:05:19,870
-that says pars and
+that says parse and
 it will take the array of cards
 
 73
@@ -401,11 +401,11 @@ run my tests and this should fail nicely,
 
 92
 00:06:30,700 --> 00:06:32,850
-because I don't have method parts.
+because I don't have a method parse.
 
 93
 00:06:39,080 --> 00:06:44,260
-I have a group of cards that
+If I have a method parse that
 takes an array of things (cards).
 
 94
@@ -427,12 +427,12 @@ On the other hand - I want it to be a hand and ....
 98
 00:07:05,680 --> 00:07:09,200
 I want this to be some
-kind of hand 'object' type of thing.
+kind of Hand object type of thing.
 
 99
 00:07:13,000 --> 00:07:15,450
 So, I want to create a
-hand object type of thing.
+Hand object type of thing.
 
 100
 00:07:15,450 --> 00:07:16,320
@@ -440,7 +440,7 @@ TS: OK.
 
 101
 00:07:20,250 --> 00:07:22,080
-Oh, how do we even do this in our spec.
+Oh, how do we even do this in RSpec.
 
 102
 00:07:23,480 --> 00:07:25,740
@@ -518,7 +518,7 @@ Right, excellent.
 119
 00:08:31,620 --> 00:08:36,690
 This needs to return a
-thing that quacks dot cards.
+thing that quacks .cards.
 
 120
 00:08:37,050 --> 00:08:37,460
@@ -526,8 +526,8 @@ TS: OK.
 
 121
 00:08:51,680 --> 00:08:55,050
-CB: Look at me failing,
-that's sublime, beautiful. (laughter)
+CB: Look at me failing
+at Sublime, beautiful. (laughter)
 
 122
 00:08:57,710 --> 00:09:00,100
@@ -544,12 +544,13 @@ No shortcut, OK
 
 125
 00:09:08,770 --> 00:09:13,050
-inaudible parser hand ... so far so good.
+uninitialized constant HandParser::Hand
+... so far so good.
 
 126
 00:09:16,050 --> 00:09:19,970
-This doesn't know what hand
-it is so let's quickly acquire it.
+This doesn't know what Hand
+is so let's quickly require it.
 
 127
 00:09:21,760 --> 00:09:23,570
@@ -557,7 +558,7 @@ And now back to our tests.
 
 128
 00:09:27,970 --> 00:09:30,440
-And if I make the count, it has nothing in it.
+undefined method count, it has nothing in it.
 
 129
 00:09:36,510 --> 00:09:39,900
@@ -617,8 +618,8 @@ find that string of cards
 
 142
 00:10:24,600 --> 00:10:28,300
-and say, make me
-a card object type 'thing'.
+be able to say, make me
+a Card object type 'thing'.
 
 143
 00:10:28,400 --> 00:10:28,970
@@ -626,7 +627,8 @@ TS: Right.
 
 144
 00:10:29,850 --> 00:10:32,460
-and then eventually I'll want to inaudible hand.
+and then eventually I'll want to feed it
+into Hand.
 
 145
 00:10:32,580 --> 00:10:33,720
@@ -638,11 +640,11 @@ OK, so that can live here.
 
 147
 00:10:38,140 --> 00:10:40,570
-So if I  have make a card thing,
+So if I have make_card thing,
 
 148
 00:10:43,200 --> 00:10:45,540
-this is going to move to card object later.
+this is going to move to Card object later.
 
 149
 00:10:45,540 --> 00:10:46,970
@@ -703,7 +705,7 @@ CB: I'm not quite sure how much logic
 
 162
 00:11:20,080 --> 00:11:23,850
-what my card.new type
+what my Card.new type
 method should be accepting.
 
 163
@@ -713,8 +715,8 @@ like it to say 'if it's a 5 of Diamond' it takes
 
 164
 00:11:28,480 --> 00:11:32,600
-card.move 5 and a
-diamond symbol type thing.
+Card.new 5 and a
+Diamond symbol type thing.
 
 165
 00:11:33,200 --> 00:11:36,180
@@ -774,12 +776,12 @@ So what I'm going to do is ....
 
 178
 00:12:09,800 --> 00:12:14,580
-create card.new and I'm
-taking card string zero
+create Card.new and I'm
+taking card_string[0]
 
 179
 00:12:14,640 --> 00:12:17,340
-card string one but actually not.
+card_string[1] but actually not.
 
 180
 00:12:20,880 --> 00:12:24,160
@@ -810,12 +812,12 @@ I just want to do a very quick pre-parsing
 
 186
 00:12:42,710 --> 00:12:47,570
-if this is H then just
-give me a Heart symbol.
+if this is 'h' then just
+give me :heart.
 
 187
 00:12:50,110 --> 00:12:52,360
-and this is D give me a Diamond symbol.
+and this is 'd' give me :diamond.
 
 188
 00:12:52,360 --> 00:12:55,850
