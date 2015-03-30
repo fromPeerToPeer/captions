@@ -4478,7 +4478,7 @@ probably want to do is extract out
 
 1036
 01:07:37,600 --> 01:07:40,680
-or if the cards are just the array of values.
+of the cards array just the array of values.
 
 1037
 01:07:40,940 --> 01:07:42,650
