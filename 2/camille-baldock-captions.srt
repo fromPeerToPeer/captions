@@ -271,12 +271,12 @@ unless I don't require it, obviously
 
 62
 00:04:36,080 --> 00:04:39,140
-inaudibleible - know where to look
+because otherwise it wouldn't know where to look
 
 63
 00:04:40,020 --> 00:04:43,780
 So let's give that a try....
-OK zero example zero failures.
+OK, zero examples, zero failures.
 
 64
 00:04:43,780 --> 00:04:45,080
