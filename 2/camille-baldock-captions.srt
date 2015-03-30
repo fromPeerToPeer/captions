@@ -939,11 +939,12 @@ TS: So your motivation here sounds like
 
 215
 00:14:24,510 --> 00:14:27,370
-you don't want it to 'silently' fail ?
+you don't want it to silently fail ?
 
 216
 00:14:29,220 --> 00:14:30,600
-But you want it to complain.
+If there's bad input, you want it to
+complain.
 
 217
 00:14:30,600 --> 00:14:31,910
