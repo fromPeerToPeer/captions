@@ -4511,7 +4511,7 @@ so let's just sort that really quickly.
 
 1044
 01:08:07,710 --> 01:08:14,680
-and we have a sorted card that leaves
+and we have sorted card values
 
 1045
 01:08:17,000 --> 01:08:19,570
