@@ -240,7 +240,8 @@ fail so how about we run this
 
 55
 00:04:08,570 --> 00:04:12,200
-And this is not very happy and inaudibleible
+And this is not very happy and
+'uninitialized constant HandParser'
 
 56
 00:04:13,420 --> 00:04:16,890
