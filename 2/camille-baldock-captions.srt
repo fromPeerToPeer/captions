@@ -4170,7 +4170,7 @@ CB: We have key not found
 
 965
 01:02:37,880 --> 01:02:39,280
-that's just failing again.
+fetch is failing again.
 
 966
 01:02:42,050 --> 01:02:46,870
