@@ -4124,7 +4124,7 @@ an imaginary space between
 954
 01:01:47,050 --> 01:01:50,630
 the start and end of your
-row, but I might be wrong.
+array, but I might be wrong.
 
 955
 01:01:51,000 --> 01:01:52,600
