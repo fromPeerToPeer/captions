@@ -4070,8 +4070,8 @@ let's just run this file now.
 
 942
 01:00:50,000 --> 01:00:55,360
-Now we have a hand
-parser 20 length, so that's not right.
+Now we have a hand parser...
+line 20...length, so that's not right.
 
 943
 01:00:56,420 --> 01:00:59,370
