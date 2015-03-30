@@ -990,7 +990,8 @@ If I'm writing things I want to ship.
 
 227
 00:15:02,140 --> 00:15:09,340
-I would put fail loudly and with better
+I would put a TODO and 'fail loudly and
+with better
 
 228
 00:15:09,800 --> 00:15:11,780
@@ -998,7 +999,7 @@ errors with unexpected
 
 229
 00:15:13,970 --> 00:15:15,930
-inputs, much in the same way
+inputs', much in the same way
 
 230
 00:15:16,480 --> 00:15:18,890
