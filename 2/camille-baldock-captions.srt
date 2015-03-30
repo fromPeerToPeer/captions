@@ -225,12 +225,12 @@ of object called HandParser
 
 52
 00:03:51,770 --> 00:03:58,200
-It probably should parses
+It probably should 'parses
 the array of strings representing
 
 53
 00:03:58,820 --> 00:04:02,930
-the cards (this is quite
+the cards' (this is quite
 verbose), but let's get to that.
 
 54
