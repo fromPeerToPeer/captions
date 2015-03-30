@@ -673,7 +673,7 @@ is going to sit somewhere else.
 154
 00:10:57,510 --> 00:11:00,510
 I don't want to have to do
-crazy inaudible and things like that
+crazy regexes and things like that
 
 155
 00:11:00,510 --> 00:11:01,800
