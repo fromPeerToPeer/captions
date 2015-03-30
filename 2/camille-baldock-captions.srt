@@ -4254,7 +4254,7 @@ TS: At the moment you don't have any code
 
 985
 01:04:04,280 --> 01:04:07,140
-that compares your hand
+that compares two hands
 to find out which one is better.
 
 986
