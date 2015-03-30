@@ -4053,7 +4053,7 @@ what have we done now?
 
 938
 01:00:35,000 --> 01:00:36,200
-This is still a string.
+This is still fetching a string.
 
 939
 01:00:38,000 --> 01:00:41,830
