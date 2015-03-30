@@ -419,7 +419,7 @@ well - this test tests nothing.
 
 96
 00:06:55,050 --> 00:06:57,240
-But at least it's not giving error any more
+But at least it's not erroring any more
 
 97
 00:06:57,770 --> 00:07:01,450
