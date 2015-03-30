@@ -103,7 +103,7 @@ I've got a couple of things in place
 
 24
 00:01:58,110 --> 00:02:02,690
-Like a spec helper.
+Like a spec_helper.rb
 And then, we can get started.
 
 25
