@@ -4938,7 +4938,7 @@ I would put something along the lines of
 
 1145
 01:14:46,940 --> 01:14:50,450
-and by the way 'can you check that
+and by the way can you check that
 the pip string only has digits in it,
 
 1146
