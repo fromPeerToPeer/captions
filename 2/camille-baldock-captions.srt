@@ -79,8 +79,9 @@ that says I have a 5 of Hearts and the 6 of Diamonds
 
 19
 00:01:26,140 --> 00:01:33,710
-I could put that in an array or
-represent that as 4H5D. (4 Hearts 5 Diamonds).
+I could put that in an array or represent
+that as ['4H', '5D']. (4 Hearts 5
+Diamonds).
 
 20
 00:01:33,820 --> 00:01:36,980
