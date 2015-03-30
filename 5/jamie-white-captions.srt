@@ -85,63 +85,68 @@ where Tom the guest becomes Tom the host
 Camille becomes the guest.
 
 21
-00:02:00,840 --> 00:02:05,250
+00:02:00,840 --> 00:02:04,000
 And then this one leads on to here
 
 22
-00:02:05,400 --> 00:02:07,060
+00:02:04,000 --> 00:02:06,340
 where Camille goes from guest
 
 23
-00:02:07,220 --> 00:02:07,760
+00:02:06,340 --> 00:02:07,740
 to should have been host.
 
 24
-00:02:07,820 --> 00:02:09,940
+00:02:07,820 --> 00:02:10,090
 DW: Unfortunately Camille was ill today
 
 25
-00:02:10,500 --> 00:02:12,400
+00:02:10,480 --> 00:02:12,400
 so I'm standing in as host.
 
 26
-00:02:12,500 --> 00:02:19,600
+00:02:14,270 --> 00:02:19,600
 DW: In fact, this data is slightly stale
 
 27
 00:02:21,340 --> 00:02:25,660
-We could have changed it so that we have a branch
+We could have changed
+it so that we have a branch
 
 28
 00:02:25,920 --> 00:02:29,480
 Where I interview Tom and also you.
 
 29
-00:02:29,540 --> 00:02:32,380
-But we're going to pretend that Camille is acting as host today
+00:02:29,540 --> 00:02:32,810
+But we're going to pretend
+that Camille is acting as host today
 
 30
-00:02:32,500 --> 00:02:35,540
-and stick with the sample data that we came up with.
+00:02:32,810 --> 00:02:35,540
+and stick with the sample
+data that we came up with.
 
 31
 00:02:35,720 --> 00:02:38,560
 We can always adapt it later.
 
 32
-00:02:39,880 --> 00:02:42,120
+00:02:40,080 --> 00:02:42,320
 Thinking of the nouns in this description
 
 33
 00:02:43,080 --> 00:02:46,160
-The data structure is composed of collaborations
+The data structure is
+composed of collaborations
 
 34
-00:02:46,460 --> 00:02:48,460
-The description is quite explicit about that
+00:02:46,420 --> 00:02:48,630
+The description is
+quite explicit about that.
 
 35
-00:02:48,600 --> 00:02:51,160
+00:02:48,630 --> 00:02:51,180
 Now, at the moment an episode
 
 36
@@ -3403,37 +3408,37 @@ DN: Ah, because now
 your model is in that promise
 
 812
-01:11:35,320 --> 01:11:37,316
+01:11:35,320 --> 01:11:37,310
 containing both models effectively.
 
 813
-01:11:37,310 --> 01:11:37,723
+01:11:37,310 --> 01:11:37,720
 JW: Yes.
 
 814
-01:11:38,787 --> 01:11:40,610
+01:11:38,780 --> 01:11:40,610
 So this has got me back to this point.
 
 815
-01:11:41,593 --> 01:11:43,316
+01:11:41,590 --> 01:11:43,310
 But the advantage I have now,
 
 816
-01:11:44,818 --> 01:11:47,766
+01:11:44,810 --> 01:11:47,760
 Before, I got to the
 point where I knew the Ids
 
 817
-01:11:47,760 --> 01:11:50,455
+01:11:47,760 --> 01:11:50,450
 I wanted to get to, but
 I didn't have the data to hand.
 
 818
-01:11:50,450 --> 01:11:53,366
+01:11:50,450 --> 01:11:53,360
 And the question was, where do I go
 
 819
-01:11:53,366 --> 01:11:54,450
+01:11:53,360 --> 01:11:54,450
 and load in that data.
 
 820
@@ -3441,80 +3446,80 @@ and load in that data.
 Do I have it available?
 
 821
-01:11:55,600 --> 01:11:59,507
+01:11:55,600 --> 01:11:59,500
 Whereas now ember
 data is doing that work for me.
 
 822
-01:11:59,563 --> 01:12:03,236
+01:11:59,560 --> 01:12:03,230
 And furthermore, here I can see
 the records that have been loaded.
 
 823
-01:12:06,596 --> 01:12:08,215
+01:12:06,590 --> 01:12:08,210
 I should also be able to see ...
 
 824
-01:12:09,833 --> 01:12:11,803
+01:12:09,830 --> 01:12:11,800
 There will be some inaud properties here
 
 825
-01:12:12,067 --> 01:12:15,095
+01:12:12,060 --> 01:12:15,090
 So you can see,
 belongs to guest episode.
 
 826
-01:12:15,661 --> 01:12:18,676
+01:12:15,660 --> 01:12:18,670
 There you can see it has
 managed to dig up the real model.
 
 827
-01:12:20,430 --> 01:12:23,587
+01:12:20,430 --> 01:12:23,580
 That was me inaud quick.
 
 828
-01:12:24,572 --> 01:12:26,646
+01:12:24,570 --> 01:12:26,640
 Here's an episode, Counting Tree Nodes.
 
 829
-01:12:26,775 --> 01:12:28,966
+01:12:26,770 --> 01:12:28,960
 These are it's properties, here on the right.
 
 830
-01:12:39,833 --> 01:12:42,363
+01:12:39,830 --> 01:12:42,360
 I should be able to go to the guest,
 
 831
-01:12:44,381 --> 01:12:45,864
+01:12:44,380 --> 01:12:45,860
 See what episodes Tom hosts,
 
 832
-01:12:45,860 --> 01:12:46,818
+01:12:45,860 --> 01:12:46,810
 That's a many array,
 
 833
-01:12:46,812 --> 01:12:47,587
+01:12:46,810 --> 01:12:47,580
 I'll go in there.
 
 834
-01:12:48,055 --> 01:12:51,464
+01:12:48,050 --> 01:12:51,460
 It's an array containing
 one string of Poker hands.
 
 835
-01:12:51,513 --> 01:12:53,021
+01:12:51,510 --> 01:12:53,020
 So you can see a flow through.
 
 836
-01:12:54,338 --> 01:12:55,020
+01:12:54,330 --> 01:12:55,020
 DN: Very nice.
 
 837
-01:12:55,975 --> 01:12:58,960
+01:12:55,970 --> 01:12:58,960
 JW: data inaud a lot quicker.
 
 838
-01:13:01,286 --> 01:13:03,680
+01:13:01,280 --> 01:13:03,680
 Now that's in place, let me commit this
 
 839
@@ -3522,31 +3527,31 @@ Now that's in place, let me commit this
 by quite a lot all at once.
 
 840
-01:13:06,855 --> 01:13:11,513
+01:13:06,850 --> 01:13:11,510
 inaud serialiser change the template
 
 841
-01:13:11,513 --> 01:13:13,510
+01:13:11,510 --> 01:13:13,510
 Oh it's not too bad, OK,
 
 842
-01:13:24,227 --> 01:13:28,615
+01:13:24,220 --> 01:13:28,610
 JW: Right now we have an acceptance test.
 
 843
-01:13:30,000 --> 01:13:31,981
+01:13:30,000 --> 01:13:31,980
 Which at this point is still failing.
 
 844
-01:13:31,980 --> 01:13:34,184
+01:13:31,980 --> 01:13:34,180
 because we've not added the list of sequels,
 
 845
-01:13:34,180 --> 01:13:36,381
+01:13:34,180 --> 01:13:36,380
 nor the prequel link yet.
 
 846
-01:13:37,323 --> 01:13:39,286
+01:13:37,320 --> 01:13:39,280
 I've got some unit tests which are failing
 
 847
@@ -3554,54 +3559,54 @@ I've got some unit tests which are failing
 simply because they are inaud that was generated for me
 
 848
-01:13:43,261 --> 01:13:46,289
+01:13:43,260 --> 01:13:46,280
 They need to be told
 more about the rest of the world.
 
 849
-01:13:49,580 --> 01:13:52,276
+01:13:49,580 --> 01:13:52,270
 I could just remove them
 
 850
-01:13:52,270 --> 01:13:55,076
+01:13:52,270 --> 01:13:55,070
 I feel I want to inaud environment
 
 851
-01:13:55,070 --> 01:13:56,683
+01:13:55,070 --> 01:13:56,680
 So I'll do that quickly:
 
 852
-01:14:10,301 --> 01:14:12,436
+01:14:10,300 --> 01:14:12,430
 When I generated the episode model
 
 853
-01:14:12,609 --> 01:14:15,003
+01:14:12,600 --> 01:14:15,000
 I said that it had these two relationships
 
 854
-01:14:15,206 --> 01:14:19,273
+01:14:15,200 --> 01:14:19,270
 and the world they test
 has these two dependencies in it
 
 855
-01:14:19,270 --> 01:14:20,295
+01:14:19,270 --> 01:14:20,290
 because I said that.
 
 856
-01:14:20,520 --> 01:14:25,224
+01:14:20,520 --> 01:14:25,220
 But in fact there are
 no such models as those
 
 857
-01:14:25,224 --> 01:14:26,147
+01:14:25,220 --> 01:14:26,140
 It's just partner ....
 
 858
-01:14:27,458 --> 01:14:28,412
+01:14:27,450 --> 01:14:28,410
 So if I do that:
 
 859
-01:14:30,135 --> 01:14:33,015
+01:14:30,130 --> 01:14:33,010
 I have to keep jumping back to tests.
 
 860
@@ -3609,32 +3614,32 @@ I have to keep jumping back to tests.
 Now episode passes inaud.
 
 861
-01:14:39,206 --> 01:14:42,920
+01:14:39,200 --> 01:14:42,920
 If we flip over to inaud test you'll see a similar problem.
 
 862
-01:14:43,532 --> 01:14:45,661
+01:14:43,530 --> 01:14:45,660
 Really all this wants is:
 
 863
-01:14:54,360 --> 01:14:56,498
+01:14:54,360 --> 01:14:56,490
 Now I'm back to my
 acceptance test which is
 
 864
-01:14:56,504 --> 01:14:58,440
+01:14:56,500 --> 01:14:58,440
 the thing that was driving us towards
 
 865
-01:14:58,818 --> 01:14:59,975
+01:14:58,810 --> 01:14:59,970
 the place we want to be
 
 866
-01:15:00,843 --> 01:15:02,363
+01:15:00,840 --> 01:15:02,360
 which is as follows:
 
 867
-01:15:06,890 --> 01:15:08,092
+01:15:06,890 --> 01:15:08,090
 Eventually what we want to see
 
 868
@@ -3642,7 +3647,7 @@ Eventually what we want to see
 is a list of just the root episodes
 
 869
-01:15:11,686 --> 01:15:13,507
+01:15:11,680 --> 01:15:13,500
 the episodes that begin a sequence.
 
 870
@@ -3650,132 +3655,132 @@ the episodes that begin a sequence.
 Click on one of those,
 
 871
-01:15:15,120 --> 01:15:16,707
+01:15:15,120 --> 01:15:16,700
 and you see it's sequels.
 
 872
-01:15:17,224 --> 01:15:17,815
+01:15:17,220 --> 01:15:17,810
 DN: Yes,
 
 873
-01:15:17,810 --> 01:15:19,895
+01:15:17,810 --> 01:15:19,890
 And you click on a sequel and you see it's
 
 874
-01:15:20,467 --> 01:15:22,855
+01:15:20,460 --> 01:15:22,850
 sequel, and prequel as well.
 
 875
-01:15:29,800 --> 01:15:32,763
+01:15:29,800 --> 01:15:32,760
 I'm using so many
 styles of working with git.
 
 876
-01:15:33,260 --> 01:15:34,793
+01:15:33,260 --> 01:15:34,790
 So let's commit those:
 
 877
-01:15:37,080 --> 01:15:39,255
+01:15:37,080 --> 01:15:39,250
 DN: So this is the fugitive commit feature?
 
 878
-01:15:39,255 --> 01:15:39,723
+01:15:39,250 --> 01:15:39,720
 JW: Yes.
 
 879
-01:15:55,655 --> 01:15:57,243
+01:15:55,650 --> 01:15:57,240
 It's complaining at the moment
 
 880
-01:15:57,243 --> 01:15:59,673
+01:15:57,240 --> 01:15:59,670
 because I can't
 click on Ranking Poker Hands.
 
 881
-01:16:00,633 --> 01:16:02,073
+01:16:00,630 --> 01:16:02,070
 So that is ....
 
 882
-01:16:02,280 --> 01:16:05,606
+01:16:02,280 --> 01:16:05,600
 I'm in an episode, expecting to list all the
 
 883
-01:16:05,690 --> 01:16:07,009
+01:16:05,690 --> 01:16:07,000
 sequels of the model.
 
 884
-01:16:13,526 --> 01:16:14,627
+01:16:13,520 --> 01:16:14,620
 I do have inaud
 
 885
-01:16:15,298 --> 01:16:16,910
+01:16:15,290 --> 01:16:16,910
 So it's ready to list something.
 
 886
-01:16:17,384 --> 01:16:20,572
+01:16:17,380 --> 01:16:20,570
 It' not going to
 complain that this isn't an array.
 
 887
-01:16:23,593 --> 01:16:26,264
+01:16:23,590 --> 01:16:26,260
 It's more useful to just fail silently,
 
 888
-01:16:26,260 --> 01:16:28,818
+01:16:26,260 --> 01:16:28,810
 when your at the template point of things
 
 889
-01:16:28,953 --> 01:16:32,412
+01:16:28,950 --> 01:16:32,410
 because there's so little failure
 handling you can do in template.
 
 890
-01:16:32,710 --> 01:16:34,381
+01:16:32,710 --> 01:16:34,380
 As a general principle it's best to
 
 891
-01:16:34,730 --> 01:16:37,095
+01:16:34,730 --> 01:16:37,090
 treat these values as inaud,
 
 892
-01:16:39,926 --> 01:16:43,735
+01:16:39,920 --> 01:16:43,730
 They will resolve down
 to nil, or the value you want.
 
 893
-01:16:46,800 --> 01:16:48,713
+01:16:46,800 --> 01:16:48,710
 I think what I need to to is .....
 
 894
-01:16:49,809 --> 01:16:51,624
+01:16:49,800 --> 01:16:51,620
 get hold of these sequels.
 
 895
-01:16:51,620 --> 01:16:54,547
+01:16:51,620 --> 01:16:54,540
 I'm going to change inaud if I do it now.
 
 896
-01:16:57,450 --> 01:17:00,713
+01:16:57,450 --> 01:17:00,710
 The question is, if I take an episode
 
 897
-01:17:01,206 --> 01:17:02,424
+01:17:01,200 --> 01:17:02,420
 how do I find it's sequel?
 
 898
-01:17:07,920 --> 01:17:11,009
+01:17:07,920 --> 01:17:11,000
 I'm going to add a inaud property
 
 899
-01:17:11,772 --> 01:17:12,787
+01:17:11,770 --> 01:17:12,780
 to this episode
 
 900
-01:17:13,880 --> 01:17:14,849
+01:17:13,880 --> 01:17:14,840
 called sequels:
 
 901
-01:17:23,913 --> 01:17:26,443
+01:17:23,910 --> 01:17:26,440
 Effectively I want to look
 at the rest of the episodes.
 
@@ -3784,74 +3789,74 @@ at the rest of the episodes.
 And filter them down to just a set
 
 903
-01:17:28,929 --> 01:17:30,996
+01:17:28,920 --> 01:17:30,990
 where the host is my guest.
 
 904
-01:17:32,756 --> 01:17:34,547
+01:17:32,750 --> 01:17:34,540
 Let's have a look at what we have
 
 905
-01:17:34,547 --> 01:17:35,913
+01:17:34,540 --> 01:17:35,910
 in terms of filtering.
 
 906
-01:17:41,110 --> 01:17:43,243
+01:17:41,110 --> 01:17:43,240
 Whenever you access records in ember data
 
 907
-01:17:43,243 --> 01:17:44,695
+01:17:43,240 --> 01:17:44,690
 you always get inaud store.
 
 908
-01:17:45,200 --> 01:17:48,086
+01:17:45,200 --> 01:17:48,080
 Which is the central hooking object.
 
 909
-01:17:49,570 --> 01:17:51,606
+01:17:49,570 --> 01:17:51,600
 And it makes sure your always geting
 
 910
-01:17:51,809 --> 01:17:53,913
+01:17:51,800 --> 01:17:53,910
 the same instance you got last time.
 
 911
-01:17:53,910 --> 01:17:54,486
+01:17:53,910 --> 01:17:54,480
 DN: Right.
 
 912
-01:17:56,756 --> 01:17:59,612
+01:17:56,750 --> 01:17:59,610
 I do have filter here:
 
 913
-01:18:06,024 --> 01:18:08,295
+01:18:06,020 --> 01:18:08,290
 I want to try asking for:
 
 914
-01:18:17,932 --> 01:18:20,707
+01:18:17,930 --> 01:18:20,700
 The thing I'm going to
 be filtering on is the host id.
 
 915
-01:18:29,556 --> 01:18:31,532
+01:18:29,550 --> 01:18:31,530
 Let's see what the symmetry of this is.
 
 916
-01:18:31,575 --> 01:18:39,821
+01:18:31,570 --> 01:18:39,820
 It's just going to give
 me an episode to work with.
 
 917
-01:18:41,969 --> 01:18:45,360
+01:18:41,960 --> 01:18:45,360
 Now this is going to
 return a promise of some kind.
 
 918
-01:18:50,344 --> 01:18:52,486
+01:18:50,340 --> 01:18:52,480
 It says it returns a live record array.
 
 919
-01:18:52,790 --> 01:18:54,996
+01:18:52,790 --> 01:18:54,990
 So hopefully we will be able to dump that
 
 920
@@ -3859,124 +3864,124 @@ So hopefully we will be able to dump that
 into the template, and it will update
 
 921
-01:18:57,944 --> 01:18:59,790
+01:18:57,940 --> 01:18:59,790
 Let's find out, that might not be true.
 
 922
-01:19:16,676 --> 01:19:18,529
+01:19:16,670 --> 01:19:18,520
 We could go potentially inaud ids
 
 923
-01:19:19,335 --> 01:19:22,043
+01:19:19,330 --> 01:19:22,040
 but I think they will be
 hidden from us by this point.
 
 924
-01:19:22,040 --> 01:19:24,873
+01:19:22,040 --> 01:19:24,870
 These are fully materialized records.
 
 925
-01:19:38,443 --> 01:19:41,649
+01:19:38,440 --> 01:19:41,640
 I forgot to declare
 that this is a computer property.
 
 926
-01:19:42,486 --> 01:19:44,806
+01:19:42,480 --> 01:19:44,800
 There we go, so that's my sequel.
 
 927
-01:19:46,460 --> 01:19:48,338
+01:19:46,460 --> 01:19:48,330
 DN: Does that give us a passing inaud test.
 
 928
-01:19:48,332 --> 01:19:49,427
+01:19:48,330 --> 01:19:49,420
 JW: Well, let's find out.
 
 929
-01:19:55,889 --> 01:19:58,624
+01:19:55,880 --> 01:19:58,620
 I think I might have inaud there,
 
 930
-01:19:58,640 --> 01:19:59,557
+01:19:58,640 --> 01:19:59,550
 let's find out.
 
 931
-01:20:16,954 --> 01:20:24,186
+01:20:16,950 --> 01:20:24,180
 This may be a problem
 with my acceptance test.
 
 932
-01:20:42,784 --> 01:20:45,978
+01:20:42,780 --> 01:20:45,970
 DN: inaud insertion checking inaud
 
 933
-01:20:46,186 --> 01:20:46,661
+01:20:46,180 --> 01:20:46,660
 JW: Yes.
 
 934
-01:20:49,776 --> 01:20:51,322
+01:20:49,770 --> 01:20:51,320
 I think it might be just my ....
 
 935
-01:21:01,904 --> 01:21:03,722
+01:21:01,900 --> 01:21:03,720
 DN: That's why you have a commit.
 
 936
-01:21:05,162 --> 01:21:06,672
+01:21:05,160 --> 01:21:06,670
 JW: So we see what happened there.
 
 937
-01:21:07,770 --> 01:21:10,298
+01:21:07,770 --> 01:21:10,290
 We've added a
 computer property called sequels,
 
 938
-01:21:10,560 --> 01:21:13,072
+01:21:10,560 --> 01:21:13,070
 that sets up a filter
 
 939
-01:21:14,266 --> 01:21:15,776
+01:21:14,260 --> 01:21:15,770
 and these filters are live.
 
 940
-01:21:15,770 --> 01:21:19,429
+01:21:15,770 --> 01:21:19,420
 So the idea is, if a
 new episode entered the store,
 
 941
-01:21:20,240 --> 01:21:21,674
+01:21:20,240 --> 01:21:21,670
 this filter should update
 
 942
-01:21:22,140 --> 01:21:24,032
+01:21:22,140 --> 01:21:24,030
 anywhere it's used in the template.
 
 943
-01:21:29,072 --> 01:21:30,986
+01:21:29,070 --> 01:21:30,980
 We inaud challenge name,
 
 944
-01:21:31,530 --> 01:21:33,056
+01:21:31,530 --> 01:21:33,050
 and current path apparently
 
 945
-01:21:33,338 --> 01:21:34,736
+01:21:33,330 --> 01:21:34,730
 really means current root.
 
 946
-01:21:35,760 --> 01:21:38,437
+01:21:35,760 --> 01:21:38,430
 whereas what we want is the current URL.
 
 947
-01:21:39,488 --> 01:21:40,181
+01:21:39,480 --> 01:21:40,180
 So:
 
 948
-01:21:53,706 --> 01:21:55,413
+01:21:53,700 --> 01:21:55,410
 I feel that that acceptance test
 
 949
-01:21:55,413 --> 01:21:57,989
+01:21:55,410 --> 01:21:57,980
 has given me enough
 confidence that things are
 
@@ -3989,47 +3994,712 @@ working on the whole,
 and I feel that it's going to be
 
 952
-01:22:01,660 --> 01:22:04,069
+01:22:01,660 --> 01:22:04,060
 more fun just to play in the ui,
 
 953
-01:22:04,117 --> 01:22:06,336
+01:22:04,110 --> 01:22:06,330
 and see what other properties it has.
 
 954
-01:22:06,330 --> 01:22:08,106
+01:22:06,330 --> 01:22:08,100
 And see what other things we can do.
 
 955
-01:22:09,797 --> 01:22:10,965
+01:22:09,790 --> 01:22:10,960
 So jump to episode two.
 
 956
-01:22:11,530 --> 01:22:13,349
+01:22:11,530 --> 01:22:13,340
 We've already got the next sequel.
 
 957
-01:22:13,877 --> 01:22:15,312
+01:22:13,870 --> 01:22:15,310
 This at the moment has no sequels
 
 958
-01:22:15,310 --> 01:22:17,338
+01:22:15,310 --> 01:22:17,330
 and we're not showing prequels just yet.
 
 959
-01:22:17,392 --> 01:22:18,634
+01:22:17,390 --> 01:22:18,630
 So I'm going to:
 
 960
-01:22:22,997 --> 01:22:27,477
+01:22:22,990 --> 01:22:27,470
 Let's give this a title.
 
 961
-01:22:27,790 --> 01:22:32,480
-DN: Yes it would be nice to see
-the title of the current episode as well.
+01:22:27,790 --> 01:22:29,750
+DN: Yes it would be nice to see the title
 
 962
-01:22:32,480 --> 01:22:34,480
+01:22:30,260 --> 01:22:32,480
+of the current episode as well.
+
+963
+01:22:33,040 --> 01:22:34,480
 and maybe a poster frame.
+
+964
+01:22:50,830 --> 01:22:56,430
+JW: inaud requirements, so let's ditch that.
+
+965
+01:23:02,920 --> 01:23:05,370
+I'm going to make a bunch of cosmetic
+
+966
+01:23:05,370 --> 01:23:06,630
+changes all at once.
+
+967
+01:23:06,820 --> 01:23:09,050
+And then bundle them in to commit.
+
+968
+01:23:14,500 --> 01:23:16,950
+DN: So we've got an inaud branch for each
+
+969
+01:23:17,050 --> 01:23:17,620
+JW: Yes.
+
+970
+01:23:19,030 --> 01:23:21,160
+I forget where inaud inherited this from.
+
+971
+01:23:21,580 --> 01:23:23,160
+It's not unique to ember
+
+972
+01:23:25,980 --> 01:23:30,620
+It's a little like inaud handlebars inaud language.
+
+973
+01:23:33,100 --> 01:23:36,050
+It's not really capable
+of doing multiple branches.
+
+974
+01:23:36,050 --> 01:23:38,550
+in a conditional, it's only inaud binary.
+
+975
+01:23:38,550 --> 01:23:41,820
+But it does mean you can do this kind of thing inaud:
+
+976
+01:23:46,100 --> 01:23:47,560
+I'm just going to:
+
+977
+01:23:50,090 --> 01:23:51,760
+Make it look a little different.
+
+978
+01:23:57,070 --> 01:23:59,420
+I'm going to add in the rudiments
+
+979
+01:24:00,610 --> 01:24:02,890
+of what the prequel looks like.
+
+980
+01:24:03,480 --> 01:24:05,770
+Let's make a list as well
+
+981
+01:24:06,720 --> 01:24:07,930
+to make it symmetric.
+
+982
+01:24:13,450 --> 01:24:15,690
+This needs to be:
+
+983
+01:24:18,560 --> 01:24:19,650
+DN: Or you could say
+
+984
+01:24:20,220 --> 01:24:21,950
+"this episode starts a sequence".
+
+985
+01:24:22,540 --> 01:24:23,040
+JW: Yes
+
+986
+01:24:24,220 --> 01:24:25,700
+I'm going to use an each again.
+
+987
+01:24:30,880 --> 01:24:32,300
+Semantically, that's wrong.
+
+988
+01:24:32,860 --> 01:24:34,500
+You wouldn't have more prequels.
+
+989
+01:24:35,720 --> 01:24:36,900
+At least at  the moment.
+
+990
+01:24:39,950 --> 01:24:41,470
+the way we are going to filter,
+
+991
+01:24:41,470 --> 01:24:43,600
+I think we are going to use the same filter.
+
+992
+01:24:45,020 --> 01:24:45,600
+So:
+
+993
+01:24:59,540 --> 01:25:02,040
+Right now this shouldn't fail
+
+994
+01:25:02,240 --> 01:25:03,570
+in a spectacular way.
+
+995
+01:25:04,050 --> 01:25:06,340
+It should just silently inaud not very much.
+
+996
+01:25:38,450 --> 01:25:41,970
+Notice the silence ....
+
+997
+01:25:42,150 --> 01:25:43,760
+That indicates to me a build up.
+
+998
+01:25:45,760 --> 01:25:46,870
+But maybe it's OK.
+
+999
+01:26:03,500 --> 01:26:06,020
+A bunch of cosmetic
+stuff .... let's just add that.
+
+1000
+01:26:14,050 --> 01:26:17,700
+Let's see if we can get
+a prequel implemented quickly.
+
+1001
+01:26:17,700 --> 01:26:20,820
+I'm not going to worry
+about the acceptance test for this
+
+1002
+01:26:21,500 --> 01:26:23,410
+I have a feeling it will be extremely
+
+1003
+01:26:24,690 --> 01:26:26,550
+similar to sequels.
+
+1004
+01:26:46,080 --> 01:26:48,130
+Here we're filtering on a quest instead.
+
+1005
+01:26:48,890 --> 01:26:50,770
+In the episode 2s guest is our host.
+
+1006
+01:27:09,220 --> 01:27:10,080
+DN: Looking good.
+
+1007
+01:27:11,300 --> 01:27:13,130
+So I guess the missing
+
+1008
+01:27:14,140 --> 01:27:17,400
+element there is that list of root.
+
+1009
+01:27:19,730 --> 01:27:21,550
+Those episodes without a prequel.
+
+1010
+01:27:21,550 --> 01:27:21,970
+JW: Yes.
+
+1011
+01:27:24,480 --> 01:27:27,190
+There is one little thing about this ....
+
+1012
+01:27:30,600 --> 01:27:32,200
+these prequels and sequels
+
+1013
+01:27:33,360 --> 01:27:35,810
+If the host of either episode was changed
+
+1014
+01:27:35,810 --> 01:27:40,080
+on the inaud, so if this became an editing interfact.
+
+1015
+01:27:41,220 --> 01:27:44,210
+these would stop inaud in sync with things.
+
+1016
+01:27:44,210 --> 01:27:47,360
+So I have to declare
+that this is a computer property
+
+1017
+01:27:47,360 --> 01:27:49,150
+that depends on the value of host.
+
+1018
+01:27:49,860 --> 01:27:52,350
+And this one depends on the value of guest.
+
+1019
+01:27:53,090 --> 01:27:56,210
+inaud store inaud change
+
+1020
+01:27:58,210 --> 01:27:59,680
+That's very interesting.
+
+1021
+01:28:01,010 --> 01:28:04,200
+Oh, don't know what I've done there, oh well.
+
+1022
+01:28:04,990 --> 01:28:06,450
+DN: So that second argument ....
+
+1023
+01:28:07,150 --> 01:28:08,720
+JW: Yes, I think it's if you want to
+
+1024
+01:28:08,720 --> 01:28:10,970
+send a different request off to the server.
+
+1025
+01:28:10,970 --> 01:28:11,420
+DN: I see.
+
+1026
+01:28:12,900 --> 01:28:16,420
+JW: It looks like it's
+requesting back and forth repeatedly.
+
+1027
+01:28:16,980 --> 01:28:18,720
+Let's kill that off.
+
+1028
+01:28:24,560 --> 01:28:25,690
+That's better.
+
+1029
+01:28:28,150 --> 01:28:29,100
+Excellent.
+
+1030
+01:28:32,450 --> 01:28:34,170
+Right, so that second argument .....
+
+1031
+01:28:37,680 --> 01:28:40,240
+Jamie reads the last paragraph (above examples).
+
+1032
+01:28:49,820 --> 01:28:53,630
+So it allows you to use
+the data you already have
+
+1033
+01:28:53,630 --> 01:28:57,270
+and make a query in the background.
+
+1034
+01:28:58,100 --> 01:29:00,000
+Just covering all the bases I think.
+
+1035
+01:29:05,410 --> 01:29:07,520
+So let's add that:
+
+1036
+01:29:07,860 --> 01:29:11,990
+That implements prequels.
+
+1037
+01:29:21,440 --> 01:29:28,530
+Here, rather than
+looping over the episodes,
+
+1038
+01:29:28,530 --> 01:29:32,360
+we want to loop over
+something like root episodes.
+
+1039
+01:29:32,360 --> 01:29:33,440
+DN: Yes.
+
+1040
+01:29:34,030 --> 01:29:35,850
+JW: I'm going to say that we're going to
+
+1041
+01:29:35,850 --> 01:29:37,280
+loop over something model.
+
+1042
+01:29:39,010 --> 01:29:40,560
+This is going to fail at first.
+
+1043
+01:29:41,080 --> 01:29:42,180
+We'll go back to:
+
+1044
+01:29:46,510 --> 01:29:49,380
+So it's saying we've inaud this thing
+
+1045
+01:29:49,380 --> 01:29:51,700
+where we're trying to inaud over objects
+
+1046
+01:29:51,700 --> 01:29:53,040
+just a hash.
+
+1047
+01:29:55,920 --> 01:29:58,320
+Right now, we are
+not in the application root.
+
+1048
+01:29:58,420 --> 01:30:00,680
+We are one down in the index root.
+
+1049
+01:30:00,960 --> 01:30:02,940
+So if I generate:
+
+1050
+01:30:04,790 --> 01:30:06,630
+That's like  a real live root for that.
+
+1051
+01:30:14,610 --> 01:30:17,130
+So by default a root will take a model
+
+1052
+01:30:17,130 --> 01:30:19,130
+of it's parent roots, as its own.
+
+1053
+01:30:22,530 --> 01:30:25,270
+If we say instead, the model for this
+
+1054
+01:30:25,270 --> 01:30:26,180
+is going to be:
+
+1055
+01:30:27,680 --> 01:30:29,700
+We'll get the model for the application.
+
+1056
+01:30:31,100 --> 01:30:34,180
+and then we want to pluck off the
+
+1057
+01:30:35,970 --> 01:30:37,770
+Episodes let's say, that should be
+
+1058
+01:30:37,770 --> 01:30:39,770
+more or less, back to where we started.
+
+1059
+01:30:43,550 --> 01:30:46,690
+I think the best way to
+perform that transformation is here.
+
+1060
+01:30:48,100 --> 01:30:49,380
+Let's think ....
+
+1061
+01:30:53,430 --> 01:30:55,760
+We could use that filter again
+
+1062
+01:30:55,760 --> 01:30:58,550
+We can say:
+
+1063
+01:31:00,800 --> 01:31:02,170
+Actually, do you know what,
+
+1064
+01:31:02,170 --> 01:31:04,610
+at this point these
+things are already loaded.
+
+1065
+01:31:04,910 --> 01:31:07,180
+Therefore we could do something like this:
+
+1066
+01:31:33,200 --> 01:31:35,000
+It's this kind of thing.
+
+1067
+01:31:39,410 --> 01:31:40,820
+I don't even quite call that,
+
+1068
+01:31:40,820 --> 01:31:41,830
+So let's say:
+
+1069
+01:31:53,420 --> 01:31:55,310
+The problem with that is that it is
+
+1070
+01:31:55,310 --> 01:31:57,600
+probably not quite what we think it is.
+
+1071
+01:32:02,290 --> 01:32:03,220
+Let's find out.
+
+1072
+01:32:04,210 --> 01:32:05,440
+At this point in time.
+
+1073
+01:32:05,890 --> 01:32:08,260
+I've got a strong feeling that if we ask for
+
+1074
+01:32:09,560 --> 01:32:11,680
+prequels.length, you wont get back
+
+1075
+01:32:14,270 --> 01:32:16,290
+an ordinary array of ordinary length.
+
+1076
+01:32:16,290 --> 01:32:17,100
+So:
+
+1077
+01:32:26,530 --> 01:32:27,920
+This is a ....
+
+1078
+01:32:31,440 --> 01:32:32,570
+I don't know what it is.
+
+1079
+01:32:33,600 --> 01:32:34,570
+That seems OK.
+
+1080
+01:32:37,090 --> 01:32:39,110
+So that's true for at least one of them.
+
+1081
+01:32:52,500 --> 01:32:54,820
+DN: It seems to be
+returning true every time.
+
+1082
+01:32:54,820 --> 01:32:55,880
+JW: It does doesn't it?
+
+1083
+01:32:59,330 --> 01:33:01,670
+So Ranking Poker
+Hands should not be in here.
+
+1084
+01:33:03,350 --> 01:33:06,400
+(Some sounds of confusion)
+
+1085
+01:33:06,400 --> 01:33:10,010
+DN: Ah, it's working! (laughter)
+
+1086
+01:33:14,990 --> 01:33:17,330
+JW: It suggests you
+have to ask some question
+
+1087
+01:33:17,330 --> 01:33:20,240
+before it becomes completely operational.
+
+1088
+01:33:25,140 --> 01:33:32,250
+I think you may well find that it's these prequels.
+
+1089
+01:33:33,370 --> 01:33:36,000
+It might be returning
+something asynchronous.
+
+1090
+01:33:36,000 --> 01:33:37,110
+Some kind of promise.
+
+1091
+01:33:43,420 --> 01:33:46,050
+Let's think inaud, best way to deal with this.
+
+1092
+01:33:46,050 --> 01:33:47,010
+Let's go for:
+
+1093
+01:34:02,250 --> 01:34:03,160
+I'm going to add:
+
+1094
+01:34:07,240 --> 01:34:08,630
+See what else is available.
+
+1095
+01:34:08,630 --> 01:34:10,630
+It might be there's another primitive
+
+1096
+01:34:10,630 --> 01:34:12,100
+for doing this kind of thing.
+
+1097
+01:34:15,696 --> 01:34:20,294
+Maybe we ought to add a
+computer property to the episode model
+
+1098
+01:34:23,898 --> 01:34:24,762
+We'll call this:
+
+1099
+01:34:28,623 --> 01:34:30,282
+And this is true ....
+
+1100
+01:34:35,789 --> 01:34:38,673
+inaud kind of the same problem.
+
+1101
+01:34:39,326 --> 01:34:42,437
+DN: If they were
+prequels rather than sequels ....
+
+1102
+01:34:42,680 --> 01:34:43,578
+JW: Yes ....
+
+1103
+01:34:49,503 --> 01:34:51,566
+So let's see ....
+
+1104
+01:35:13,040 --> 01:35:16,050
+DN: I wasn't anticipating that
+this would be the hard part.
+
+1105
+01:35:16,050 --> 01:35:18,050
+It's a suprise.
+
+1106
+01:35:24,909 --> 01:35:27,772
+What is it .... when we start with a list
+
+1107
+01:35:27,770 --> 01:35:30,964
+and it's got all five
+episodes, and we click on one
+
+1108
+01:35:30,964 --> 01:35:32,960
+and then go back again.
+
+1109
+01:35:32,960 --> 01:35:34,960
+What is it that's changed in that line?
+
+1110
+01:35:40,480 --> 01:35:41,578
+And then if we go back.
+
+1111
+01:35:41,751 --> 01:35:42,821
+JW: Yes so ....
+
+1112
+01:35:43,035 --> 01:35:43,894
+DN: Now it's OK.
+
+1113
+01:35:45,709 --> 01:35:46,572
+JW: At this point ....
+
+1114
+01:35:52,757 --> 01:35:54,934
+We've got these
+two computer properties,
+
+1115
+01:35:55,270 --> 01:35:57,376
+And the way they are bound into the inaud
+
+1116
+01:35:57,372 --> 01:35:59,264
+gives them a chance to fully resolve.
+
+1117
+01:35:59,392 --> 01:36:03,168
+To turn from promise to a real value.
+
+1118
+01:36:03,896 --> 01:36:07,168
+Whereas in our root,
+
+1119
+01:36:07,160 --> 01:36:10,496
+(sort of) inherited root environment,
+
+1120
+01:36:11,440 --> 01:36:13,848
+we're saying get host.
+
+1121
+01:36:15,024 --> 01:36:17,008
+sorry, rather we're saying ....
+
+1122
+01:36:21,888 --> 01:36:23,544
+I've still got all that to save.
+
+1123
+01:36:24,896 --> 01:36:27,352
+I was expecting to see
+the full list in this one.
 
