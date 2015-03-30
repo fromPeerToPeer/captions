@@ -663,7 +663,8 @@ of this, it is quite unnatural.
 
 152
 00:10:53,540 --> 00:10:55,850
-I quite like the fact that my parsing object
+I quite like the fact that my parsing
+logic
 
 153
 00:10:55,850 --> 00:10:57,510
