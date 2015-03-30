@@ -616,7 +616,7 @@ And I want it to basically ....
 
 141
 00:10:23,060 --> 00:10:24,400
-find that string of cards
+from that string of card
 
 142
 00:10:24,600 --> 00:10:28,300
