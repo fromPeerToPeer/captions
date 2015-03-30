@@ -892,7 +892,7 @@ fetch is going to complain.
 
 204
 00:13:54,570 --> 00:13:57,720
-because there is no suits with key A
+because there is no suit with key A
 
 205
 00:13:58,200 --> 00:14:00,450
