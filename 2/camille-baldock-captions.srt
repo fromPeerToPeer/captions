@@ -586,7 +586,7 @@ So if we have an array of cards
 
 134
 00:09:53,450 --> 00:09:56,450
-and has 5 things, then
+and it has 5 things, then what
 I want to do is create a hand
 
 135
