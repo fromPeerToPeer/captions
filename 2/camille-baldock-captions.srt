@@ -969,7 +969,8 @@ it's not going to fail loudly.
 
 222
 00:14:46,540 --> 00:14:48,650
-But, I'm not entirely inaudible,
+But, I'm not in a statically typed
+language
 
 223
 00:14:49,540 --> 00:14:52,440
