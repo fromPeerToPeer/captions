@@ -454,11 +454,11 @@ and check the class of it.
 
 104
 00:07:35,170 --> 00:07:39,880
-I expect my hand cards.count.
+I expect my hand.cards.count
 
 105
 00:07:40,400 --> 00:07:42,370
-2 or 5 for example,
+to equal 5 for example,
 
 106
 00:07:45,710 --> 00:07:51,040
