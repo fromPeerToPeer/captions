@@ -4835,7 +4835,7 @@ because this is getting too crowded.
 
 1120
 01:13:15,110 --> 01:13:17,810
-Number of Pips equals this now.
+Number of Pips equals this for now.
 
 1121
 01:13:18,400 --> 01:13:21,690
