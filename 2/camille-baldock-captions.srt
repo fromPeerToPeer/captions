@@ -883,7 +883,7 @@ TS: How are you going to make it fall over?
 
 202
 00:13:47,220 --> 00:13:50,500
-With 'fetch'. It means that if I put
+With fetch. It means that if I put
 
 203
 00:13:51,200 --> 00:13:54,570
