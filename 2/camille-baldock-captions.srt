@@ -4944,7 +4944,7 @@ the pip string only has digits in it,
 1146
 01:14:50,600 --> 01:14:54,940
 before I cast it to an integer
-which will save me the worry of
+which will save me the pain of
 
 1147
 01:14:54,970 --> 01:14:58,080
