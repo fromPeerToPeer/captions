@@ -4532,7 +4532,7 @@ I want to know if they are consecutive.
 
 1049
 01:08:35,370 --> 01:08:37,480
-Is there something that does that for me ?
+Is there something that does that in ruby
 
 1050
 01:08:37,480 --> 01:08:38,970
