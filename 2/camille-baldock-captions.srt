@@ -824,16 +824,16 @@ and this is 'd' give me :diamond.
 
 188
 00:12:52,360 --> 00:12:55,850
-Actually, this could be
-variable, hash Y might do it
+Actually, this could very well live in a
+hash, why am I doing a terrible
 
 189
 00:12:56,240 --> 00:13:01,310
-and switch.  Let's have a hash sitting here.
+switch? Let's have a hash sitting here.
 
 190
 00:13:02,050 --> 00:13:06,020
-We have other suits, so we have
+We have all the suits, so we have
 
 191
 00:13:07,910 --> 00:13:11,290
@@ -861,11 +861,12 @@ So, this goes bye bye.
 
 197
 00:13:33,690 --> 00:13:35,460
-TS: So now you can just look up with hash
+TS: So now you can just look up with a
+hash
 
 198
 00:13:35,460 --> 00:13:37,310
-rather than using a inaudibleible set.
+rather than using a switch statement.
 
 199
 00:13:39,310 --> 00:13:42,270
