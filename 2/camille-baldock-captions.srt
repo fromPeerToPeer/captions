@@ -4088,12 +4088,12 @@ No it's called card string
 
 946
 01:01:12,130 --> 01:01:13,940
-inaudible
+I would suspect that it's a string
 
 947
 01:01:14,000 --> 01:01:18,960
-so one inaudible for zero, why
-does it think it has an argument?
+so wrong number of arguments one for zero
+why does it think it has an argument?
 
 948
 01:01:19,120 --> 01:01:20,740
@@ -4101,7 +4101,7 @@ because parenthesis
 
 949
 01:01:25,400 --> 01:01:29,420
-Ah, inaudible method, this is terrible.
+Ah, extract method, this is terrible.
 
 950
 01:01:31,260 --> 01:01:33,280
@@ -4194,7 +4194,8 @@ Why is old code popping up ?
 
 971
 01:03:04,430 --> 01:03:08,140
-It has been returning inaudible laughter.
+So now that it has been determined
+that I am terrible at array indexing
 
 972
 01:03:09,570 --> 01:03:12,150
@@ -4224,7 +4225,7 @@ quite as we'll as I would like to
 
 978
 01:03:36,080 --> 01:03:39,990
-so inaudible flush, type flush.
+so elsif flush, type flush.
 
 979
 01:03:43,510 --> 01:03:46,260
@@ -4263,7 +4264,7 @@ correctly classified that's OK.
 
 987
 01:04:09,800 --> 01:04:12,510
-CB: Yes, so let's implement inaudible very quick flush.
+CB: Yes, so let's implement a very quick flush.
 
 988
 01:04:18,450 --> 01:04:19,560
@@ -4302,11 +4303,13 @@ that does this but with suits.
 
 996
 01:04:41,000 --> 01:04:51,020
-and here I'm going to do the dupe flag which is inaudible. this
+and here I'm going to do the dupe flag 
+which means I've copy/pasted this
 
 997
 01:04:51,620 --> 01:04:54,940
-inaudible a better abstraction to use here.
+maybe there's a better abstraction
+to use here.
 
 998
 01:04:55,250 --> 01:04:57,240
@@ -4357,7 +4360,7 @@ This is the expected failure
 
 1009
 01:05:43,020 --> 01:05:44,650
-inaudible method suit.
+expected method suits.
 
 1010
 01:05:46,200 --> 01:05:49,520
@@ -4399,7 +4402,8 @@ Very quickly a straight
 
 1019
 01:06:38,310 --> 01:06:41,040
-inaudible was more interesting and more complicated
+This should be more interesting and
+more complicated
 
 1020
 01:06:41,570 --> 01:06:44,880
@@ -4442,11 +4446,13 @@ Let's have a look and see if those ones
 
 1029
 01:07:19,680 --> 01:07:22,410
-what I care about is the inaudible and not the suits.
+what I care about is the straight
+and not the suits.
 
 1030
 01:07:22,540 --> 01:07:25,800
-inaudible list of cards and their face values
+I'm going to look at the cards
+and their face values
 
 1031
 01:07:25,820 --> 01:07:28,200
@@ -4514,11 +4520,11 @@ doing it in a destructive way.
 
 1046
 01:08:22,020 --> 01:08:25,850
-I just like inaudible a bit silly.
+I just like bangs, but that's a bit silly.
 
 1047
 01:08:26,440 --> 01:08:27,880
-So I have a inaudible card
+So I have sorted card values
 
 1048
 01:08:28,280 --> 01:08:31,280
@@ -4530,7 +4536,7 @@ Is there something that does that for me ?
 
 1050
 01:08:37,480 --> 01:08:38,970
-inaudible to re-implement it.
+or do I need to re-implement it?
 
 1051
 01:08:40,560 --> 01:08:41,480
@@ -4565,11 +4571,13 @@ in Ace 2345, that's a straight
 
 1058
 01:09:03,250 --> 01:09:07,220
-but I can also inaudible the high card, the King.
+but I can also count Ace as the high card,
+so after King.
 
 1059
 01:09:08,170 --> 01:09:11,800
-inaudible I could just have a bunch of numbers
+My initial idea was I could just
+have a bunch of numbers
 
 1060
 01:09:12,080 --> 01:09:14,330
@@ -4698,7 +4706,7 @@ at where's my high card, on hand.
 
 1089
 01:10:57,880 --> 01:10:59,780
-then that's also going to inaudible
+then that's also going to come into play
 
 1090
 01:10:59,880 --> 01:11:03,090
@@ -4726,7 +4734,8 @@ No particular reason.
 
 1096
 01:11:18,600 --> 01:11:23,820
-My special case is going to be inaudible sting with a low Ace
+My special case is going to be it works
+with straight with a low Ace
 
 1097
 01:11:32,620 --> 01:11:36,540
@@ -4781,7 +4790,7 @@ TS: What does that mean?
 
 1109
 01:12:23,310 --> 01:12:27,050
-CB: this is terrible English I think inaudible
+CB: this is me being terrible at English
 
 1110
 01:12:28,480 --> 01:12:31,720
@@ -4793,7 +4802,7 @@ Let's say, if you get a Q card.
 
 1112
 01:12:36,200 --> 01:12:41,660
-then inaudible assign it the value of 12 explicitly.
+then I'm going to assign it the value 12
 
 1113
 01:12:46,510 --> 01:12:49,550
@@ -4883,7 +4892,7 @@ and I fetch my Pips string
 
 1134
 01:14:13,200 --> 01:14:16,200
-So, if it's in there inaudible forward.
+So, if it's in there we can go forward
 
 1135
 01:14:16,680 --> 01:14:19,680
