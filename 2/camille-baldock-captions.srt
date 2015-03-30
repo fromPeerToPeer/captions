@@ -4048,7 +4048,8 @@ I reckon I've got this wrong.
 
 937
 01:00:24,200 --> 01:00:27,420
-inaudible arguments, what have we done now,
+Wrong number of arguments,
+what have we done now?
 
 938
 01:00:35,000 --> 01:00:36,200
