@@ -4684,8 +4684,8 @@ look at the array and count it as a one,
 
 1084
 01:10:41,170 --> 01:10:43,780
-and then look at the
-other array and count it as 14.
+and then look at the array
+and count it as 14.
 
 1085
 01:10:44,340 --> 01:10:46,170
