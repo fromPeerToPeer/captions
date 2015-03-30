@@ -4097,7 +4097,7 @@ why does it think it has an argument?
 
 948
 01:01:19,120 --> 01:01:20,740
-because parenthesis
+because parentheses
 
 949
 01:01:25,400 --> 01:01:29,420
