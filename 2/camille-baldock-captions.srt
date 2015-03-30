@@ -4856,7 +4856,7 @@ the beginning of that string
 
 1125
 01:13:32,610 --> 01:13:35,030
-is one of those special cases',
+is one of those special cases,
 
 1126
 01:13:35,330 --> 01:13:38,120
