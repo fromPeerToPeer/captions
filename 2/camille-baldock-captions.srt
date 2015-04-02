@@ -5456,7 +5456,7 @@ TS: It looks like it's got stuck in a loop
 
 1272
 01:23:01,880 --> 01:23:03,970
-CB: Maybe because I have an internet loop.
+CB: Maybe because I have an infinite loop.
 
 1273
 01:23:05,800 --> 01:23:08,880
