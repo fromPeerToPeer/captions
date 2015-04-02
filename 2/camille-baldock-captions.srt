@@ -5409,7 +5409,7 @@ And now what I want to do is....
 
 1261
 01:22:17,880 --> 01:22:20,680
-maybe initialise that,
+maybe initialize that,
 that seems like a good idea.
 
 1262
