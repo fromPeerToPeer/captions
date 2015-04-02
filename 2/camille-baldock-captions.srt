@@ -5384,7 +5384,7 @@ and difference_always_1 is ....
 
 1255
 01:21:55,250 --> 01:21:58,250
-and the new difference between Pips is one.inaudible
+and the new difference_between_pips is one.
 
 1256
 01:21:59,940 --> 01:22:01,320
