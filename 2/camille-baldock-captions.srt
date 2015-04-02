@@ -5553,7 +5553,7 @@ Now let's walk through this.
 
 1296
 01:24:22,220 --> 01:24:24,480
-So difference is always one is always true.
+So difference_always_1 is true.
 
 1297
 01:24:24,940 --> 01:24:28,150
