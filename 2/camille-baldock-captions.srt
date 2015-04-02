@@ -5767,7 +5767,7 @@ This is just odd.
 
 1347
 01:27:48,450 --> 01:27:55,220
-If I had more time I would want to move this to inaudible somewhere.
+If I had more time I would want to move this to a helper somewhere.
 
 1348
 01:27:55,710 --> 01:27:57,600
