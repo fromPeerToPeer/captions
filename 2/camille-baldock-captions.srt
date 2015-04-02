@@ -5169,7 +5169,7 @@ So magic number 4 ....
 
 1202
 01:18:17,250 --> 01:18:21,330
-OK 5 inaudible
+OK always 5 cards per hand
 
 1203
 01:18:22,680 --> 01:18:24,790
