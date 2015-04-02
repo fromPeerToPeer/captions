@@ -5639,7 +5639,7 @@ Oh yes, one of my test cases is a straight
 1317
 01:25:31,650 --> 01:25:37,310
 I'm feeling really clever
-now because it enters a flush,
+now because...
 
 1318
 01:25:37,310 --> 01:25:41,310
