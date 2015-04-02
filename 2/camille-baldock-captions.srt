@@ -5376,7 +5376,7 @@ While difference_always_one we do that.
 
 1253
 01:21:48,650 --> 01:21:50,620
-So if difference between Pips is that
+So if difference_between_pips is that
 
 1254
 01:21:50,620 --> 01:21:52,310
