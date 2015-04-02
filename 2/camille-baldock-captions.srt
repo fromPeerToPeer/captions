@@ -5364,7 +5364,7 @@ And my index is below 4
 
 1250
 01:21:28,710 --> 01:21:30,170
-on sorted card values.count
+or sorted_card_values.count
 
 1251
 01:21:41,170 --> 01:21:42,870
