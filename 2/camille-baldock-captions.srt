@@ -5161,7 +5161,7 @@ going to production
 
 1200
 01:18:05,850 --> 01:18:10,520
-you have something that defines what 5 is somewhere and inaudible
+you have a thing that defines what 5 is somewhere
 
 1201
 01:18:10,620 --> 01:18:12,290
