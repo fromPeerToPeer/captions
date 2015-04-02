@@ -5414,7 +5414,7 @@ that seems like a good idea.
 
 1262
 01:22:24,110 --> 01:22:26,260
-I still haven't inaudible zero
+I start at index zero
 
 1263
 01:22:26,480 --> 01:22:28,750
