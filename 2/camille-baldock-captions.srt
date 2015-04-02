@@ -5380,7 +5380,7 @@ So if difference_between_pips is that
 
 1254
 01:21:50,620 --> 01:21:52,310
-and difference is always one is ....
+and difference_always_1 is ....
 
 1255
 01:21:55,250 --> 01:21:58,250
