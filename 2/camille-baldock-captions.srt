@@ -5396,8 +5396,8 @@ Those we no longer need.
 
 1258
 01:22:04,110 --> 01:22:07,680
-This is called 'I' because I don't
-want to remember all the variables.
+This is called 'i' because I don't
+want to rename all the variables.
 
 1259
 01:22:09,450 --> 01:22:11,020
