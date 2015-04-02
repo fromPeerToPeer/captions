@@ -5578,7 +5578,7 @@ equals to one
 
 1302
 01:24:39,250 --> 01:24:41,190
-Yes, this returns as false.
+Yet, this returns as false.
 
 1303
 01:24:47,370 --> 01:24:49,650
