@@ -5477,7 +5477,7 @@ but this is OK.
 
 1277
 01:23:23,970 --> 01:23:25,140
-Still seeing failure.
+Still the same failure.
 
 1278
 01:23:25,970 --> 01:23:27,350
