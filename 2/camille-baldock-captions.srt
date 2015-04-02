@@ -5574,7 +5574,7 @@ difference_always_1, this is
 
 1301
 01:24:34,110 --> 01:24:34,910
-It goes to one
+equals to one
 
 1302
 01:24:39,250 --> 01:24:41,190
