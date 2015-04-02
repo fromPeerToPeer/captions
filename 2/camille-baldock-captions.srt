@@ -5460,8 +5460,8 @@ CB: Maybe because I have an infinite loop.
 
 1273
 01:23:05,800 --> 01:23:08,880
-I think I have an increment
-in being dense, but there we go
+I think I haven't incremented
+the index, there we go
 
 1274
 01:23:15,250 --> 01:23:17,560
