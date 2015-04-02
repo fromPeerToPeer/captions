@@ -5726,7 +5726,7 @@ Now if I have an Ace in my hand,
 1337
 01:26:54,000 --> 01:26:58,480
 I want it to work out,
-is this a straight if inaudible 14 ?
+is this a straight if it behaves like a 14 ?
 
 1338
 01:26:58,480 --> 01:27:00,880
