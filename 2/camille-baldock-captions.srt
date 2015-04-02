@@ -5857,7 +5857,7 @@ something naive, if it includes 14
 1368
 01:29:26,650 --> 01:29:31,930
 This is where I want to know
-what my array let's me do.
+what my Array lets me do.
 
 1369
 01:29:37,340 --> 01:29:39,690
