@@ -5103,7 +5103,7 @@ I have my value and my index
 1186
 01:17:11,530 --> 01:17:13,810
 and I am looking at
-my assorted card values
+my sorted card values
 
 1187
 01:17:13,820 --> 01:17:15,680
