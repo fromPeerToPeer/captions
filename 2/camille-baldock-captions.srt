@@ -5312,7 +5312,7 @@ A slightly misguided abstraction.
 
 1237
 01:20:48,400 --> 01:20:51,360
-If my difference between Pips is one,
+If my difference_between_pips is one,
 
 1238
 01:20:52,450 --> 01:20:53,520
