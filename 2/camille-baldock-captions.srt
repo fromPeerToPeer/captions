@@ -5847,7 +5847,7 @@ and then check if it's a straight.
 
 1366
 01:29:03,540 --> 01:29:07,280
-So let's say assorted card values.
+So let's say sorted card values.
 
 1367
 01:29:13,620 --> 01:29:17,060
