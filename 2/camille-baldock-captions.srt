@@ -5296,7 +5296,7 @@ CB: Yes, I absolutely don't like this.
 
 1233
 01:20:31,940 --> 01:20:37,850
-For now inaudible unnecessary.
+For now use a variable before I do something silly and unnecessary.
 
 1234
 01:20:40,000 --> 01:20:41,740
