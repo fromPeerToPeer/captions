@@ -2969,7 +2969,8 @@ you're unhappy with your code
 
 688
 00:45:07,900 --> 00:45:10,080
-you're going to hold off from re-factoring it
+you're going to hold off from
+refactoring it
 
 689
 00:45:10,140 --> 00:45:13,450
@@ -3305,7 +3306,7 @@ What I want to try doing is...........
 762
 00:50:03,620 --> 00:50:06,400
 TS: It sounds like you're
-switching into re-factoring.
+switching into refactoring.
 
 763
 00:50:06,420 --> 00:50:06,940
@@ -3336,7 +3337,7 @@ where you have sufficient confidence
 769
 00:50:18,970 --> 00:50:21,710
 in your implementation
-so far to start factoring it ?
+so far to start refactoring it ?
 
 770
 00:50:21,710 --> 00:50:25,220
@@ -3659,7 +3660,7 @@ This is still verbose.
 
 844
 00:54:58,400 --> 00:55:01,050
-I start re-factoring
+I start refactoring
 and then usually I think
 
 845
