@@ -3904,7 +3904,7 @@ that it's definitely failing.
 
 900
 00:58:24,020 --> 00:58:25,400
-TS: What does it think it is
+TS: What does it think it is ?
 
 901
 00:58:27,480 --> 00:58:30,400
