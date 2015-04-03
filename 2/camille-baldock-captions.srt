@@ -3556,7 +3556,7 @@ that we have those magical
 
 818
 00:53:40,650 --> 00:53:43,970
-methods. It has 4, has 3 has 2
+methods: has_four, has_three, has_two
 
 819
 00:53:44,170 --> 00:53:45,970
@@ -3577,11 +3577,11 @@ it means there happens to be
 
 823
 00:53:57,420 --> 00:53:59,790
-So if we have 'has 4', then this is
+So if we have 'has_four', then this is
 
 824
 00:53:59,820 --> 00:54:02,880
-still include 4 and in much the same way
+still include(4) and in much the same way
 
 825
 00:54:03,020 --> 00:54:06,000
@@ -3619,7 +3619,7 @@ It feels like the 4 of a kind type
 
 833
 00:54:27,680 --> 00:54:29,200
-It has the Haskell check.
+has the has_four check.
 
 834
 00:54:29,200 --> 00:54:32,740
@@ -3632,7 +3632,7 @@ to be true and this needs to be true.
 
 836
 00:54:35,450 --> 00:54:37,500
-Pair has pair needs to be true.
+Pair has_pair needs to be true.
 
 837
 00:54:37,620 --> 00:54:41,360
@@ -3656,7 +3656,7 @@ CB: So the easy way of doing it would be:
 
 842
 00:54:54,330 --> 00:54:56,410
-If has 4 then that.
+If has_four then that.
 
 843
 00:54:56,910 --> 00:54:58,080
@@ -3681,7 +3681,7 @@ So elsif full_house
 
 848
 00:55:10,110 --> 00:55:11,600
-then type full house.
+then :type => :full_house.
 
 849
 00:55:13,420 --> 00:55:16,830
@@ -3702,7 +3702,7 @@ missing def here.
 
 853
 00:55:28,740 --> 00:55:31,600
-Here we go, it has 3 and ....
+Here we go, it's has_three and ....
 
 854
 00:55:34,340 --> 00:55:35,710
@@ -3834,7 +3834,7 @@ But yes you're right, may be a bit optimistic.
 884
 00:57:15,170 --> 00:57:19,340
 In much the same way that full house
-has 2 or 3 situations of straight flushes in
+is a has_two and has_three situation,
 
 885
 00:57:19,820 --> 00:57:21,740
