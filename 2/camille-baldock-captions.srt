@@ -3025,7 +3025,7 @@ will implement full house,
 700
 00:45:41,580 --> 00:45:44,370
 which is going to create
-more inaudible in this code,
+more cruft in this code,
 
 701
 00:45:44,380 --> 00:45:47,680
@@ -3034,7 +3034,8 @@ me finding the right abstraction.
 
 702
 00:45:47,680 --> 00:45:50,460
-if there is such a thing as inaudible structure,
+I think there is such a thing as
+premature abstraction,
 
 703
 00:45:50,540 --> 00:45:52,970
@@ -3061,7 +3062,8 @@ This is going to fail nicely.
 
 708
 00:46:21,530 --> 00:46:26,280
-because we haven't inaudible that yet and it's detecting a Pair.
+because we haven't implemented that yet
+and it's detecting a Pair.
 
 709
 00:46:26,600 --> 00:46:29,480
@@ -3528,7 +3530,8 @@ CB: Yes.
 
 812
 00:53:03,450 --> 00:53:07,820
-I'm going to start doing inaudible method.
+I'm going to start doing a tiny bit of
+extract method.
 
 813
 00:53:18,310 --> 00:53:20,400
@@ -3582,7 +3585,7 @@ still include 4 and in much the same way
 
 825
 00:54:03,020 --> 00:54:06,000
-inaudible has 3 and has 2
+let's assume I have has_three and has_two
 
 826
 00:54:07,020 --> 00:54:10,300
@@ -3599,7 +3602,8 @@ but I'm not so bothered about that
 
 829
 00:54:13,280 --> 00:54:16,710
-because it's inad private methods and I can get round to it later
+because it's hidden away in private
+methods and I can get round to it later
 
 830
 00:54:17,020 --> 00:54:20,430
@@ -3673,7 +3677,7 @@ then start compressing later.
 
 847
 00:55:06,000 --> 00:55:07,960
-So inaudible full house
+So elsif full_house
 
 848
 00:55:10,110 --> 00:55:11,600
@@ -3681,11 +3685,11 @@ then type full house.
 
 849
 00:55:13,420 --> 00:55:16,830
-inaudible has 3 then....
+elsif has_three then....
 
 850
 00:55:17,140 --> 00:55:19,430
-3 of a kind, inaudible has Pair, then Pair
+3 of a kind, elsif has_pair, then Pair
 
 851
 00:55:21,680 --> 00:55:26,980
@@ -3710,7 +3714,7 @@ I don't know what that does actually.
 
 856
 00:55:38,970 --> 00:55:40,570
-inaudible methods.
+if you multiply two methods.
 
 857
 00:55:40,570 --> 00:55:42,600
@@ -3722,7 +3726,7 @@ This feels more readable.
 
 859
 00:55:48,050 --> 00:55:52,570
-That's kind of what I would like inaudible
+That's kind of what I would like to check
 
 860
 00:55:53,280 --> 00:55:54,490
@@ -3734,11 +3738,13 @@ That's because question marks are nice
 
 862
 00:56:00,170 --> 00:56:07,020
-it's maybe not the day to invent new methods in inaudible
+it's maybe not the day to invent new
+methods in Ruby
 
 863
 00:56:07,020 --> 00:56:13,890
-undefined inaud has Pair simply because I called it has 2 and has Pair
+undefined local variable or method
+has_pair simply because I called it has_two
 
 864
 00:56:18,170 --> 00:56:19,390
@@ -3775,7 +3781,8 @@ and I can drive out something a bit better.
 
 872
 00:56:37,340 --> 00:56:40,420
-inaudible with the ranking but I'm quite happy with it yet.
+i had an idea with a ranking but I'm not
+quite happy with it yet.
 
 873
 00:56:40,420 --> 00:56:40,830
@@ -3861,7 +3868,7 @@ This file is getting verbose.
 892
 00:57:46,080 --> 00:57:49,820
 TS: It's a good job you've got that
-hand parser otherwise it would be inaudible
+hand parser otherwise it would be even worse
 
 893
 00:57:51,450 --> 00:57:53,970
@@ -3934,11 +3941,12 @@ There's two ways we can solve this
 909
 00:58:50,620 --> 00:58:54,510
 I represent 10 in another
-way, like zero or something.
+way, like zero or something silly.
 
 910
 00:58:54,710 --> 00:58:57,680
-inaudible that very quickly change the parser
+I don't want to do that,
+we can just very quickly change the parser
 
 911
 00:58:58,450 --> 00:59:01,000
@@ -3971,7 +3979,7 @@ who knows what would happen in that
 
 918
 00:59:12,970 --> 00:59:16,450
-inaudible fail loudly.
+#TODO: fail loudly.
 
 919
 00:59:16,450 --> 00:59:17,910
@@ -3999,7 +4007,8 @@ take the last one.
 
 925
 00:59:34,080 --> 00:59:38,970
-inaudible I can do something along the lines of:
+so how do I get the last char out of a string?
+I can do something along the lines of:
 
 926
 00:59:44,020 --> 00:59:45,460
