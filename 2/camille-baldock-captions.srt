@@ -3086,7 +3086,7 @@ intuitive because in Poker,
 713
 00:46:46,110 --> 00:46:49,880
 what I want to check is do I
-have an array or flush, or a straight flush etc.
+have a royal flush, or a straight flush etc.
 
 714
 00:46:51,620 --> 00:46:54,200
