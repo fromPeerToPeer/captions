@@ -2969,7 +2969,7 @@ you're unhappy with your code
 
 688
 00:45:07,900 --> 00:45:10,080
-you're going to hold of from re-factoring it
+you're going to hold off from re-factoring it
 
 689
 00:45:10,140 --> 00:45:13,450
@@ -3072,7 +3072,7 @@ Right now with my code I'm saying
 
 711
 00:46:38,880 --> 00:46:43,170
-if there's 2 let's go there, if there'
+if there's 2 let's go there, if there's
 three let's go there, if there's four let's go there.
 
 712
@@ -3421,7 +3421,7 @@ And a straight flush is as high as it gets.
 788
 00:51:31,310 --> 00:51:34,320
 What I am creating in
-my head is some kind of 'thing.
+my head is some kind of thing.
 
 789
 00:51:34,390 --> 00:51:41,070
