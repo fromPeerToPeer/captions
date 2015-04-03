@@ -3577,7 +3577,7 @@ it means there happens to be
 
 823
 00:53:57,420 --> 00:53:59,790
-So if we have 'has_four', then this is
+So if we have has_four, then this is
 
 824
 00:53:59,820 --> 00:54:02,880
