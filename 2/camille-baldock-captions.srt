@@ -2965,11 +2965,11 @@ certainty where I'm heading.
 687
 00:45:05,640 --> 00:45:07,900
 TS: So even though
-your unhappy with your code
+you're unhappy with your code
 
 688
 00:45:07,900 --> 00:45:10,080
-your going to hold of from re-factoring it
+you're going to hold of from re-factoring it
 
 689
 00:45:10,140 --> 00:45:13,450
@@ -2987,7 +2987,8 @@ an abstraction that won't fit.
 
 692
 00:45:20,140 --> 00:45:22,420
-Your worried that if you extract it at this point,
+You're worried that if you extract it at
+this point,
 
 693
 00:45:22,420 --> 00:45:24,120
@@ -3161,7 +3162,7 @@ because you were expecting it ....
 
 731
 00:47:53,870 --> 00:47:56,240
-then your saying
+then you were saying
 there is this implied thing.
 
 732
@@ -3748,7 +3749,7 @@ Go ....
 
 866
 00:56:24,170 --> 00:56:26,040
-and now were back in action.
+and now we're back in action.
 
 867
 00:56:26,080 --> 00:56:28,060
@@ -3820,7 +3821,7 @@ drive out the changes quickly.
 
 883
 00:57:09,280 --> 00:57:12,010
-But yes your right, may be a bit optimistic.
+But yes you're right, may be a bit optimistic.
 
 884
 00:57:15,170 --> 00:57:19,340
