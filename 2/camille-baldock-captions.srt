@@ -3044,7 +3044,7 @@ TS: Ok.
 
 704
 00:45:59,930 --> 00:46:04,510
-CB: I'm going to do a quick
+CB: I'm going to create a quick
 test for my full house hand.
 
 705
@@ -3161,7 +3161,7 @@ there is burn into your code
 
 730
 00:47:52,260 --> 00:47:53,850
-because you were expecting it ....
+because you were explaining it ....
 
 731
 00:47:53,870 --> 00:47:56,240
@@ -3698,7 +3698,7 @@ implement full house quickly,
 
 852
 00:55:27,140 --> 00:55:28,590
-missing def here.
+missing a def here.
 
 853
 00:55:28,740 --> 00:55:31,600
@@ -3791,7 +3791,7 @@ TS: Ok.
 874
 00:56:45,620 --> 00:56:48,510
 CB: Do you have a favorite
-hand that you want to go next.
+hand that you want to implement next ?
 
 875
 00:56:48,510 --> 00:56:50,420
