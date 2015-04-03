@@ -3976,7 +3976,7 @@ and I had put a default value.
 
 917
 00:59:11,080 --> 00:59:12,970
-who knows what would happen in that
+who knows what would happen in that parser
 
 918
 00:59:12,970 --> 00:59:16,450
