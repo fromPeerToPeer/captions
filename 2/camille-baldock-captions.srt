@@ -3157,7 +3157,7 @@ which is less wrong but still pretty wrong !
 729
 00:47:46,400 --> 00:47:50,800
 TS: But what you've done
-there is burn into your code
+there is you've built into your code
 
 730
 00:47:52,260 --> 00:47:53,850
@@ -3268,7 +3268,7 @@ First let's check that I didn't get this one wrong.
 
 753
 00:49:15,910 --> 00:49:19,590
-so now that parses nicely and this looks awful !
+so now that passes nicely and this looks awful !
 
 754
 00:49:26,600 --> 00:49:30,440
@@ -3460,7 +3460,7 @@ and then we have a 4 of a kind
 
 796
 00:51:59,970 --> 00:52:03,800
-and that would be a rating line, and then
+and that would be a rating 9, and then
 
 797
 00:52:04,000 --> 00:52:04,880
@@ -3590,7 +3590,7 @@ let's assume I have has_three and has_two
 826
 00:54:07,020 --> 00:54:10,300
 and that's going to be
-pretty much what the pick is.
+pretty much what you think it is.
 
 827
 00:54:10,340 --> 00:54:11,570
@@ -3838,7 +3838,8 @@ is a has_two and has_three situation,
 
 885
 00:57:19,820 --> 00:57:21,740
-there's a straight and there's flush
+a straight flush is a straight and is
+a flush.
 
 886
 00:57:21,850 --> 00:57:24,270
@@ -3983,7 +3984,7 @@ who knows what would happen in that
 
 919
 00:59:16,450 --> 00:59:17,910
-TS: Yes, it's already coming on.
+TS: Yes, it's already paying off.
 
 920
 00:59:18,040 --> 00:59:19,910
