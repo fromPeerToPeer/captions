@@ -2298,19 +2298,19 @@ CB: I could map on that quite easily.
 
 529
 00:35:02,220 --> 00:35:05,960
-let's do a 'group by' and see how that works.
+let's do a group_by and see how that works.
 
 530
 00:35:11,220 --> 00:35:12,400
-So group by ....
+So group_by ....
 
 531
 00:35:20,200 --> 00:35:21,790
-inaudible an array.
+It's not in Array.
 
 532
 00:35:21,820 --> 00:35:27,860
-TS: It will be in the new model I expect.
+TS: It will be in Enumerable I expect.
 
 533
 00:35:27,970 --> 00:35:29,700
@@ -2326,11 +2326,11 @@ I'm in the wrong scope for it.
 
 536
 00:35:39,510 --> 00:35:42,380
-Numerable group by .... no, no no.
+Enumerable group_by .... no, no no.
 
 537
 00:35:43,400 --> 00:35:45,340
-It's just giving me answerable stuff.
+It's just giving me Ansible stuff.
 
 538
 00:35:46,700 --> 00:35:48,120
