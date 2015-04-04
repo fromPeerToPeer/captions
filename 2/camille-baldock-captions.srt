@@ -6154,7 +6154,12 @@ CB: Correct.
 
 1424
 01:33:44,050 --> 01:33:47,650
+<<<<<<< HEAD
 So this is you cant inaudible and insert. Yes.
+=======
+So this is you can't add
+and I expect it's insert. Yes.
+>>>>>>> s/inaud/add and I expect it\'s insert
 
 1425
 01:33:54,480 --> 01:33:57,660
