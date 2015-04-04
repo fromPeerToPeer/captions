@@ -2437,11 +2437,11 @@ Now we can just have a 'thing'.
 
 562
 00:37:06,130 --> 00:37:11,400
-This is my grouped cards, and then I can
+This is my grouped_cards, and then I can
 
 563
 00:37:12,200 --> 00:37:16,720
-say group cards and
+say grouped_cards and
 then for each of my things,
 
 564
