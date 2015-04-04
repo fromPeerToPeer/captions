@@ -1958,7 +1958,7 @@ CB: Yes, I want some kind of Pip counter
 449
 00:30:17,180 --> 00:30:20,650
 that sort of mashes them up in
-some structure they can read nicely.
+some structure it can read nicely.
 
 450
 00:30:24,650 --> 00:30:28,800
