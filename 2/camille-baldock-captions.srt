@@ -2467,7 +2467,7 @@ CB: Yes so let's see how that works.
 569
 00:37:34,680 --> 00:37:40,110
 It's not very elegant
-but it should meet the test.
+but it should make the test pass.
 
 570
 00:37:40,140 --> 00:37:42,360
