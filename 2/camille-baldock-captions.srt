@@ -6046,9 +6046,15 @@ I could do it in a better way by inaudible
 I could do it in a better way by concatenating
 >>>>>>> fix spelling of concatenate
 
+<<<<<<< HEAD
 1402
 01:32:07,480 --> 01:32:11,520
 two card values in an array of exactly
+=======
+1378
+01:32:07,480 --> 01:32:09,480
+two sorted card values in an array of exactly
+>>>>>>> add adjective that adds to sentence
 
 1403
 01:32:14,200 --> 01:32:15,540
