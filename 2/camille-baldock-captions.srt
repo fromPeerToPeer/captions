@@ -6018,8 +6018,13 @@ and if my number of Aces is bigger than one.
 01:31:49,200 --> 01:31:51,480
 then I want to delete all the Aces.
 
+<<<<<<< HEAD
 1399
 01:31:53,560 --> 01:31:57,910
+=======
+1375
+01:31:52,140 --> 01:31:53,970
+>>>>>>> fix pluralization issue
 and add two sorted card values once,
 
 1400
