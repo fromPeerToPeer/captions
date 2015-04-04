@@ -5965,10 +5965,16 @@ delete 14.
 According to the Ruby
 documentation this is deleted.
 
+<<<<<<< HEAD
 1388
 01:30:56,340 --> 01:31:00,970
 This gives me back all the
 documentation that's it deleted.
+=======
+1364
+01:30:56,342 --> 01:30:59,600
+This gives me back all that it's deleted.
+>>>>>>> fix a misunderstanding in text
 
 1389
 01:31:02,050 --> 01:31:03,910
