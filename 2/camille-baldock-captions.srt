@@ -2746,7 +2746,7 @@ I do have a failure because it is assuming
 
 636
 00:42:00,250 --> 00:42:03,340
-that I have type highest and not type 3.
+that I have type :highest and not type :three.
 
 637
 00:42:03,510 --> 00:42:06,240
@@ -2791,7 +2791,7 @@ Shameless green ....
 
 647
 00:42:34,480 --> 00:42:39,290
-so if I have 3 then it becomes 3 of a kind
+so if I have 3 then it becomes :three_of_a_kind
 
 648
 00:42:40,830 --> 00:42:42,670
@@ -2799,7 +2799,7 @@ and if I have 4 then
 
 649
 00:42:42,940 --> 00:42:52,590
-suddenly it becomes 4 of of a kind.
+suddenly it becomes :four_of_a_kind
 
 650
 00:42:54,480 --> 00:42:56,410
@@ -2812,11 +2812,11 @@ that my tests do pass nicely.
 
 652
 00:43:03,940 --> 00:43:06,530
-And as they don't .... it is 3 of a kind.
+And as they don't .... it is :three_of_a_kind
 
 653
 00:43:06,940 --> 00:43:10,020
-This is 3, so this should now parser inaudible.
+This is 3, so this should now pass.
 
 654
 00:43:10,590 --> 00:43:13,130
@@ -2843,7 +2843,7 @@ that I'm not breaking things
 659
 00:43:29,000 --> 00:43:33,970
 let's just create some
-test data with a 4 of a kind hand.
+test data with a four_of_a_kind_hand.
 
 660
 00:43:34,370 --> 00:43:36,040
