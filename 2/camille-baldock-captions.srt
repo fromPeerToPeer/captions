@@ -6036,9 +6036,15 @@ and add two sorted card values ones,
 but I want to do that
 exactly the number of aces times.
 
+<<<<<<< HEAD
 1401
 01:32:04,220 --> 01:32:07,000
 I could do it in a better way by inaudible
+=======
+1377
+01:32:04,220 --> 01:32:06,600
+I could do it in a better way by concatenating
+>>>>>>> fix spelling of concatenate
 
 1402
 01:32:07,480 --> 01:32:11,520
