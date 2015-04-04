@@ -2928,7 +2928,7 @@ What I would like to try doing now is
 678
 00:44:44,400 --> 00:44:48,010
 try implementing full house
-which has 3 of a kind, two of a kind
+which has 3 of a kind, 2 of a kind
 
 679
 00:44:48,480 --> 00:44:50,170
