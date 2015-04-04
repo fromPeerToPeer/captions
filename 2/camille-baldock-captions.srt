@@ -2548,7 +2548,7 @@ TS: Yes (laughter).
 
 589
 00:39:00,200 --> 00:39:03,000
-I want to inaudible group of cards.
+Undefined local variable grouped_cards.
 
 590
 00:39:04,170 --> 00:39:06,130
