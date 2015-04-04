@@ -6161,9 +6161,16 @@ So this is you can't add
 and I expect it's insert. Yes.
 >>>>>>> s/inaud/add and I expect it\'s insert
 
+<<<<<<< HEAD
 1425
 01:33:54,480 --> 01:33:57,660
 it's going in the loop which is good news.
+=======
+1401
+01:33:53,800 --> 01:34:01,170
+So now it's actually going in
+the loop which is good news.
+>>>>>>> s/inaud/So now it's
 
 1426
 01:34:01,170 --> 01:34:03,450
