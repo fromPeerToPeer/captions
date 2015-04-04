@@ -2087,7 +2087,7 @@ when I'm finishing off an object.
 
 479
 00:32:03,000 --> 00:32:05,250
-So let's say it's a Pip counter thing, for now.
+So let's say it's pip_count, for now.
 
 480
 00:32:06,510 --> 00:32:06,820
@@ -2095,11 +2095,11 @@ TS: Ok.
 
 481
 00:32:08,510 --> 00:32:09,970
-So what does my Pip count do,
+So what does my pip_count do,
 
 482
 00:32:10,250 --> 00:32:11,220
-Hey, we've run a test !
+Hey, we can write a test !
 
 483
 00:32:14,170 --> 00:32:15,770
@@ -2107,7 +2107,7 @@ That is going to do that for me.
 
 484
 00:32:17,480 --> 00:32:18,680
-So if I have a Pip count ....
+So if I have a pip_count ....
 
 485
 00:32:22,850 --> 00:32:26,370
@@ -2128,7 +2128,7 @@ As I don't yet know where we're going.
 
 489
 00:32:33,140 --> 00:32:34,710
-So if I have a pip count and I am ...
+So if I have a pip_count and I am ...
 
 490
 00:32:39,000 --> 00:32:42,370
