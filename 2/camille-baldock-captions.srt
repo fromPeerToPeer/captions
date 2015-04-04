@@ -2717,12 +2717,11 @@ going to return a Pair, I presume.
 
 629
 00:41:34,970 --> 00:41:37,080
-but actually we want to return 3 of a kind,
+but actually we want it to return 3 of a kind,
 
 630
 00:41:37,280 --> 00:41:40,330
-so this, if I have the
-rank, should be type 3.
+so this, should be .....
 
 631
 00:41:45,000 --> 00:41:47,850
