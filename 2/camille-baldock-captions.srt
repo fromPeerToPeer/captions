@@ -6024,8 +6024,12 @@ then I want to delete all the Aces.
 =======
 1375
 01:31:52,140 --> 01:31:53,970
+<<<<<<< HEAD
 >>>>>>> fix pluralization issue
 and add two sorted card values once,
+=======
+and add two sorted card values ones,
+>>>>>>> s/once/ones
 
 1400
 01:31:58,080 --> 01:32:00,970
