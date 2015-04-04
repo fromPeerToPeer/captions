@@ -2194,7 +2194,7 @@ It's a documentation tool that I like to use.
 
 505
 00:33:45,050 --> 00:33:48,370
-TS: So you have all of the Ruby inaudible.
+TS: So you have all of the Ruby API documentation.
 
 506
 00:33:49,710 --> 00:33:52,920
