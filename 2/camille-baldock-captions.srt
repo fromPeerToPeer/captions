@@ -6174,7 +6174,11 @@ the loop which is good news.
 
 1426
 01:34:01,170 --> 01:34:03,450
+<<<<<<< HEAD
 I want to find my inaudible pass
+=======
+Undefined '-' method class.
+>>>>>>> whole sentence incorrect
 
 1427
 01:34:04,480 --> 01:34:06,140
