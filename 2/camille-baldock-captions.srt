@@ -5920,6 +5920,7 @@ In order to add that exact
 number of 1s on the other side
 >>>>>>> add some missing text
 
+<<<<<<< HEAD
 1382
 01:30:19,140 --> 01:30:23,960
 Otherwise I might end up with such
@@ -5929,6 +5930,17 @@ as an array and maybe three cards
 01:30:26,280 --> 01:30:28,960
 It's expecting a certain
 number of things in there
+=======
+1358
+01:30:19,140 --> 01:30:22,740
+otherwise I might end up with something
+crazy such as an array with only three cards
+
+1359
+01:30:26,650 --> 01:30:29,110
+which will explode because it is
+expecting a certain number of things in there
+>>>>>>> add more missing context
 
 1384
 01:30:29,110 --> 01:30:30,910
