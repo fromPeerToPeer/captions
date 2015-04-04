@@ -5913,7 +5913,12 @@ how many 14s I'm deleting
 
 1381
 01:30:17,000 --> 01:30:19,140
+<<<<<<< HEAD
 That exact number of 1s on the other side.
+=======
+In order to add that exact
+number of 1s on the other side
+>>>>>>> add some missing text
 
 1382
 01:30:19,140 --> 01:30:23,960
