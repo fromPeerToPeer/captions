@@ -2583,7 +2583,7 @@ a hand with nothing in it,
 
 597
 00:39:36,370 --> 00:39:39,790
-which I will call highest, as a type.
+which I will call 'highest', as a type.
 
 598
 00:39:42,850 --> 00:39:44,740
