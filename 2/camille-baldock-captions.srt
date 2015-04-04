@@ -2620,12 +2620,12 @@ the scope of the problem
 
 606
 00:40:08,020 --> 00:40:10,570
-to solving a very small type 'thing'.
+to solving a very small 'thing'.
 
 607
 00:40:10,620 --> 00:40:14,320
-TS: Like you said before,
-your imagining  a smaller version
+TS: Yes, you said before,
+you're imagining a smaller version
 
 608
 00:40:14,420 --> 00:40:18,400
