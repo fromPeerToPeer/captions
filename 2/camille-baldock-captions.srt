@@ -6121,7 +6121,11 @@ To prove my point I'm going to write
 
 1418
 01:33:24,770 --> 01:33:26,680
+<<<<<<< HEAD
 There we go inaudible, high ace.
+=======
+There we go straight_hand_high_ace.
+>>>>>>> s/inaud/straight_hand_hight_ace
 
 1419
 01:33:31,850 --> 01:33:35,400
