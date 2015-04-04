@@ -2699,16 +2699,16 @@ if I create a 3 of a kind,
 
 625
 00:41:12,740 --> 00:41:14,740
-let's call it a '3 hand'.
+let's call it a three_of_a_kind_hand
 
 626
 00:41:19,220 --> 00:41:23,170
-So if we have a 3 of a
-kind hand, it's going to be ....
+So if we have a three_of_a_kind_hand,
+it's going to be ....
 
 627
 00:41:25,770 --> 00:41:29,840
-I need 5 of Hearts Diamonds and Spades.
+I need 5 of Hearts, Diamonds and Spades.
 
 628
 00:41:30,280 --> 00:41:34,660
