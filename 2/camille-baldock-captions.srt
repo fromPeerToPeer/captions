@@ -2285,11 +2285,12 @@ The key in the hash would be
 
 526
 00:34:52,450 --> 00:34:54,480
-all of the 5 pip cards there.
+all of the 5 Pip cards that it had found.
 
 527
 00:34:54,490 --> 00:34:57,040
-and then it would be six and the array inaudible.
+and then the key would be 6
+and the value would be .....
 
 528
 00:34:57,480 --> 00:34:59,610
