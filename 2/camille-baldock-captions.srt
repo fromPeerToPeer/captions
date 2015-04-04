@@ -2380,7 +2380,8 @@ TS: It depends what you want.
 
 549
 00:36:17,200 --> 00:36:19,940
-CB: Group by, I was very excited by this.
+CB: I want to use group_by,
+I was very excited by this.
 
 550
 00:36:24,680 --> 00:36:27,060
