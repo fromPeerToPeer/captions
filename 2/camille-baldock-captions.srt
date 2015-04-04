@@ -6182,7 +6182,7 @@ Undefined '-' method class.
 
 1427
 01:34:04,480 --> 01:34:06,140
-Let's de-bug our way through this
+Let's debug our way through this
 
 1428
 01:34:08,220 --> 01:34:10,220
