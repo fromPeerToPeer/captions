@@ -2246,7 +2246,7 @@ the only thing that comes to mind is
 
 517
 00:34:30,600 --> 00:34:32,970
-a 'group by' method,
+a group_by method,
 which won't do what you want
 
 518
