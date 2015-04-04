@@ -6198,7 +6198,12 @@ Which is here.
 
 1431
 01:34:21,420 --> 01:34:23,510
+<<<<<<< HEAD
 TS: What does the document for insert say?
+=======
+TS: What does the documentation
+for insert say?
+>>>>>>> s/document/documentation
 
 1432
 01:34:25,110 --> 01:34:26,620
