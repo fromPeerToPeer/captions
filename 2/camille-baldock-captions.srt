@@ -6133,7 +6133,12 @@ What I mean by that... and do that.
 
 1420
 01:33:36,540 --> 01:33:38,800
+<<<<<<< HEAD
 inaudible add for array.  Interesting.
+=======
+Undefined method `add` for array.
+Interesting.
+>>>>>>> s/inaud/Undefined method
 
 1421
 01:33:39,200 --> 01:33:40,540
