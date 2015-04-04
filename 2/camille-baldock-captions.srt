@@ -2424,7 +2424,7 @@ it might be the default for that.
 
 559
 00:36:54,620 --> 00:36:58,080
-Let's run a test and
+Let's run the tests and
 see what that returns.
 
 560
