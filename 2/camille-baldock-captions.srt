@@ -2145,7 +2145,7 @@ There we go...
 
 493
 00:32:52,170 --> 00:32:54,570
-That should fail quite loudly, let's this test.
+That should fail quite loudly, let's run this test.
 
 494
 00:32:57,510 --> 00:32:58,080
