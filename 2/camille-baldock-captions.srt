@@ -2049,7 +2049,7 @@ terrible name for a thing,
 
 470
 00:31:38,520 --> 00:31:39,820
-I just put a hash hash bob.
+I just put a ##bob.
 
 471
 00:31:41,050 --> 00:31:45,100
