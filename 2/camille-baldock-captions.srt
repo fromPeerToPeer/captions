@@ -6251,8 +6251,12 @@ CB: No, so many things going wrong right now.
 
 1440
 01:35:05,680 --> 01:35:08,220
+<<<<<<< HEAD
 This is take my sorted
 card values and give me
+=======
+This is take my sorted card values and give me
+>>>>>>> s/of//
 
 1441
 01:35:10,200 --> 01:35:15,110
