@@ -6211,7 +6211,12 @@ CB: it's not destructive is it ?
 
 1433
 01:34:28,280 --> 01:34:31,020
+<<<<<<< HEAD
 TS: it's not inaudible the values with an index
+=======
+TS: it sets the given value with
+the given index
+>>>>>>> fix whole sentence about array#index
 
 1434
 01:34:31,240 --> 01:34:32,930
