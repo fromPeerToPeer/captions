@@ -6218,9 +6218,15 @@ TS: it sets the given value with
 the given index
 >>>>>>> fix whole sentence about array#index
 
+<<<<<<< HEAD
 1434
 01:34:31,240 --> 01:34:32,930
 so you have to inaudible an index.
+=======
+1410
+01:34:31,020 --> 01:34:32,514
+so you have to provide an index.
+>>>>>>> s/inaud/provide
 
 1435
 01:34:32,930 --> 01:34:33,650
