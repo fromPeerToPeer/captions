@@ -6367,7 +6367,7 @@ my hand I would like
 
 1487
 01:38:30,560 --> 01:38:32,680
-to have is, better than other hand.
+to have, is_better? than other hand.
 
 1488
 01:38:34,200 --> 01:38:36,280
