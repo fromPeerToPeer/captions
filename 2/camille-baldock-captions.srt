@@ -6638,7 +6638,7 @@ I'm just assuming there is a type.
 
 1551
 01:43:18,950 --> 01:43:22,340
-If there is a type then I should
+If there isn't a type then I should
 be wary so I'm going to let that fail.
 
 1552
