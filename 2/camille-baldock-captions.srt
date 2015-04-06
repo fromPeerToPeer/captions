@@ -1546,7 +1546,7 @@ to have some kind of rank method
 
 354
 00:23:12,440 --> 00:23:14,900
-on the hand that is going to return a
+on the Hand that is going to return a
 
 355
 00:23:14,910 --> 00:23:17,640
