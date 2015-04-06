@@ -6403,7 +6403,7 @@ We know, for example, the 4 of a kind hand
 
 1496
 01:39:15,420 --> 01:39:17,560
-It should be better than full house.
+should be better than full house.
 
 1497
 01:39:18,420 --> 01:39:19,600
