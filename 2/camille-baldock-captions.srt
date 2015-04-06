@@ -5913,34 +5913,18 @@ how many 14s I'm deleting
 
 1381
 01:30:17,000 --> 01:30:19,140
-<<<<<<< HEAD
-That exact number of 1s on the other side.
-=======
 In order to add that exact
 number of 1s on the other side
->>>>>>> add some missing text
 
-<<<<<<< HEAD
 1382
 01:30:19,140 --> 01:30:23,960
-Otherwise I might end up with such
-as an array and maybe three cards
-
-1383
-01:30:26,280 --> 01:30:28,960
-It's expecting a certain
-number of things in there
-=======
-1358
-01:30:19,140 --> 01:30:22,740
 otherwise I might end up with something
 crazy such as an array with only three cards
 
-1359
-01:30:26,650 --> 01:30:29,110
+1383
+01:30:26,280 --> 01:30:28,960
 which will explode because it is
 expecting a certain number of things in there
->>>>>>> add more missing context
 
 1384
 01:30:29,110 --> 01:30:30,910
@@ -5950,31 +5934,18 @@ remember my magic number in there?
 01:30:30,910 --> 01:30:32,250
 It would not be a good idea.
 
-<<<<<<< HEAD
 1386
 01:30:41,770 --> 01:30:42,320
-delete ....
-=======
-1362
-01:30:41,740 --> 01:30:42,250
 delete 14.
->>>>>>> s/40/14
 
 1387
 01:30:46,000 --> 01:30:48,820
 According to the Ruby
 documentation this is deleted.
 
-<<<<<<< HEAD
 1388
 01:30:56,340 --> 01:31:00,970
-This gives me back all the
-documentation that's it deleted.
-=======
-1364
-01:30:56,342 --> 01:30:59,600
 This gives me back all that it's deleted.
->>>>>>> fix a misunderstanding in text
 
 1389
 01:31:02,050 --> 01:31:03,910
@@ -6018,43 +5989,22 @@ and if my number of Aces is bigger than one.
 01:31:49,200 --> 01:31:51,480
 then I want to delete all the Aces.
 
-<<<<<<< HEAD
 1399
 01:31:53,560 --> 01:31:57,910
-=======
-1375
-01:31:52,140 --> 01:31:53,970
-<<<<<<< HEAD
->>>>>>> fix pluralization issue
-and add two sorted card values once,
-=======
 and add two sorted card values ones,
->>>>>>> s/once/ones
 
 1400
 01:31:58,080 --> 01:32:00,970
 but I want to do that
 exactly the number of aces times.
 
-<<<<<<< HEAD
 1401
 01:32:04,220 --> 01:32:07,000
-I could do it in a better way by inaudible
-=======
-1377
-01:32:04,220 --> 01:32:06,600
 I could do it in a better way by concatenating
->>>>>>> fix spelling of concatenate
 
-<<<<<<< HEAD
 1402
 01:32:07,480 --> 01:32:11,520
-two card values in an array of exactly
-=======
-1378
-01:32:07,480 --> 01:32:09,480
 two sorted card values in an array of exactly
->>>>>>> add adjective that adds to sentence
 
 1403
 01:32:14,200 --> 01:32:15,540
@@ -6121,11 +6071,7 @@ To prove my point I'm going to write
 
 1418
 01:33:24,770 --> 01:33:26,680
-<<<<<<< HEAD
-There we go inaudible, high ace.
-=======
 There we go straight_hand_high_ace.
->>>>>>> s/inaud/straight_hand_hight_ace
 
 1419
 01:33:31,850 --> 01:33:35,400
@@ -6133,12 +6079,8 @@ What I mean by that... and do that.
 
 1420
 01:33:36,540 --> 01:33:38,800
-<<<<<<< HEAD
-inaudible add for array.  Interesting.
-=======
 Undefined method `add` for array.
 Interesting.
->>>>>>> s/inaud/Undefined method
 
 1421
 01:33:39,200 --> 01:33:40,540
@@ -6154,31 +6096,17 @@ CB: Correct.
 
 1424
 01:33:44,050 --> 01:33:47,650
-<<<<<<< HEAD
-So this is you cant inaudible and insert. Yes.
-=======
 So this is you can't add
 and I expect it's insert. Yes.
->>>>>>> s/inaud/add and I expect it\'s insert
 
-<<<<<<< HEAD
 1425
 01:33:54,480 --> 01:33:57,660
-it's going in the loop which is good news.
-=======
-1401
-01:33:53,800 --> 01:34:01,170
 So now it's actually going in
 the loop which is good news.
->>>>>>> s/inaud/So now it's
 
 1426
 01:34:01,170 --> 01:34:03,450
-<<<<<<< HEAD
-I want to find my inaudible pass
-=======
 Undefined '-' method class.
->>>>>>> whole sentence incorrect
 
 1427
 01:34:04,480 --> 01:34:06,140
@@ -6198,12 +6126,8 @@ Which is here.
 
 1431
 01:34:21,420 --> 01:34:23,510
-<<<<<<< HEAD
-TS: What does the document for insert say?
-=======
 TS: What does the documentation
 for insert say?
->>>>>>> s/document/documentation
 
 1432
 01:34:25,110 --> 01:34:26,620
@@ -6211,22 +6135,12 @@ CB: it's not destructive is it ?
 
 1433
 01:34:28,280 --> 01:34:31,020
-<<<<<<< HEAD
-TS: it's not inaudible the values with an index
-=======
 TS: it sets the given value with
 the given index
->>>>>>> fix whole sentence about array#index
 
-<<<<<<< HEAD
 1434
 01:34:31,240 --> 01:34:32,930
-so you have to inaudible an index.
-=======
-1410
-01:34:31,020 --> 01:34:32,514
 so you have to provide an index.
->>>>>>> s/inaud/provide
 
 1435
 01:34:32,930 --> 01:34:33,650
@@ -6251,12 +6165,7 @@ CB: No, so many things going wrong right now.
 
 1440
 01:35:05,680 --> 01:35:08,220
-<<<<<<< HEAD
-This is take my sorted
-card values and give me
-=======
 This is take my sorted card values and give me
->>>>>>> s/of//
 
 1441
 01:35:10,200 --> 01:35:15,110
