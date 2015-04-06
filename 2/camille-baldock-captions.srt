@@ -1836,7 +1836,7 @@ that handles things like that.
 
 421
 00:28:16,810 --> 00:28:20,930
-and my hand.new can take a hand parser
+and my hand.new can take a HandParser
 
 422
 00:28:20,970 --> 00:28:27,700
