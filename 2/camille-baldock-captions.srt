@@ -1258,7 +1258,7 @@ so it returns the right cards.
 290
 00:19:27,370 --> 00:19:33,810
 as a test, and if my
-array of cards is just the one,
+array_of_cards is just the one,
 
 291
 00:19:34,110 --> 00:19:37,490
