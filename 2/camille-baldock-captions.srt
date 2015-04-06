@@ -1182,11 +1182,11 @@ And make that cards available.
 
 273
 00:18:18,540 --> 00:18:22,160
-this should hopefully stop complaining
+this should hopefully stop complaining.
 
 274
 00:18:24,200 --> 00:18:28,620
-because it did a zero failure,
+No, because it did a zero failure,
 so that is the one I want.
 
 275
