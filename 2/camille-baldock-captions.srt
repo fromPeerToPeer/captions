@@ -6590,7 +6590,8 @@ Let's go back here ....
 
 1540
 01:42:21,570 --> 01:42:25,220
-Go and define method inaudible. excellent.
+Go and define method something for nil class.
+Excellent.
 
 1541
 01:42:32,680 --> 01:42:35,760
