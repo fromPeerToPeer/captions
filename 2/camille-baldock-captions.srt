@@ -1563,7 +1563,7 @@ which we can half implement for now.
 358
 00:23:25,510 --> 00:23:28,540
 The first thing I'm going to
-do is create a spec for my hand
+do is create a spec for my Hand
 
 359
 00:23:28,540 --> 00:23:31,210
