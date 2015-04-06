@@ -1068,7 +1068,7 @@ on my string, which it isn't.
 
 247
 00:16:15,450 --> 00:16:18,190
-TS: You want to make it available.
+TS: You don't want to make it available.
 
 248
 00:16:18,770 --> 00:16:21,700
