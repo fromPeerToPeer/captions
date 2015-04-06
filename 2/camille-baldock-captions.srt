@@ -5991,7 +5991,7 @@ then I want to delete all the Aces.
 
 1399
 01:31:53,560 --> 01:31:57,910
-and add two sorted card values ones,
+and add two sorted card values, ones,
 
 1400
 01:31:58,080 --> 01:32:00,970
