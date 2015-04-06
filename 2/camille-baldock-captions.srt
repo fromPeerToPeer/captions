@@ -1894,7 +1894,7 @@ So that's parsing, and that's failing.
 
 434
 00:29:22,170 --> 00:29:23,110
-inaudible returns nil
+rank returns nil
 
 435
 00:29:23,110 --> 00:29:25,140
