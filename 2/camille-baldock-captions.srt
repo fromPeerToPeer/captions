@@ -1809,7 +1809,7 @@ silly shortcuts here (laughter).
 
 415
 00:27:51,800 --> 00:27:54,600
-I also don't have my hand parser.
+I also don't have my HandParser.
 
 416
 00:27:55,910 --> 00:27:57,870
