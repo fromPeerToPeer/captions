@@ -1227,7 +1227,7 @@ it has the right number of things.
 283
 00:19:02,580 --> 00:19:06,700
 I don't actually know that
-it does pars the cards correctly.
+it does parse the cards correctly.
 
 284
 00:19:07,250 --> 00:19:11,680
