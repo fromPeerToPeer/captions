@@ -6315,8 +6315,8 @@ what would you like to do to wrap this up.
 
 1475
 01:37:43,680 --> 01:37:47,320
-I was going to run hand
-comparer, and about to write hand ranker,
+I was supposed to write a hand comparer,
+and now I've written a hand ranker,
 
 1476
 01:37:47,800 --> 01:37:52,270
