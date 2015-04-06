@@ -6672,7 +6672,7 @@ There's an obvious refactoring step
 
 1559
 01:43:43,710 --> 01:43:47,110
-which is, well, now I have a list of things.
+which is, well, now I have a list of things
 
 1560
 01:43:47,140 --> 01:43:48,800
@@ -6686,7 +6686,7 @@ and checking for things in a certain order.
 1562
 01:43:56,740 --> 01:43:59,510
 The order that I'm
-defining in this Poker ranks array
+defining in this POKER_RANKS array
 
 1563
 01:44:00,100 --> 01:44:03,200
