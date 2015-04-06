@@ -6411,7 +6411,7 @@ let's start with those
 
 1498
 01:39:19,650 --> 01:39:25,480
-so full house.better than 4 of a kind hand
+so full_house.better_than? 4 of a kind hand
 
 1499
 01:39:25,850 --> 01:39:27,040
