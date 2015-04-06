@@ -6668,7 +6668,7 @@ have all the rankings in nice order.
 
 1558
 01:43:41,250 --> 01:43:43,220
-There's an obvious re-factoring step
+There's an obvious refactoring step
 
 1559
 01:43:43,710 --> 01:43:47,110
