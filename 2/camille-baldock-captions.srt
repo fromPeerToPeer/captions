@@ -1650,7 +1650,7 @@ I have some kind of hand around.
 
 379
 00:25:14,850 --> 00:25:17,240
-For now I'm going to use the hand parser
+For now I'm going to use the HandParser
 
 380
 00:25:17,620 --> 00:25:20,900
