@@ -6663,7 +6663,7 @@ And there's a bit of work left in terms of:
 
 1557
 01:43:37,770 --> 01:43:41,050
-we should probably
+well, we should probably
 have all the rankings in nice order.
 
 1558
