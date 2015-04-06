@@ -6515,7 +6515,7 @@ I can just get the index of rank
 
 1523
 01:41:00,650 --> 01:41:03,080
-and compare that to the Poker rank.
+and compare that to the POKER_RANKS
 
 1524
 01:41:04,050 --> 01:41:05,400
