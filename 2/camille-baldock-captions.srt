@@ -6063,7 +6063,7 @@ is going to fail in the case of
 
 1416
 01:33:13,110 --> 01:33:17,570
-highest, because of how I've implemented it.
+high ace, because of how I've implemented it.
 
 1417
 01:33:18,770 --> 01:33:21,620
