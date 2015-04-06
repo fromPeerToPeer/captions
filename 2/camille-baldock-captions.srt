@@ -6740,7 +6740,7 @@ kind of straight that I have.
 
 1574
 01:44:42,650 --> 01:44:44,870
-and I would return that as inaudible rank.
+and I would return that as the type of rank.
 
 1575
 01:44:45,370 --> 01:44:48,740
