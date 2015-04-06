@@ -1307,11 +1307,11 @@ Since we're going to compare them,
 301
 00:20:12,010 --> 00:20:16,830
 it's a lot easier to
-look at if they're integers.
+look at if they're integers,
 
 302
 00:20:17,200 --> 00:20:20,520
-That's strings - expected an
+than strings - expected an
 integer and got a string !
 
 303
