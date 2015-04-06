@@ -5924,7 +5924,7 @@ crazy such as an array with only three cards
 1383
 01:30:26,280 --> 01:30:28,960
 which will explode because it is
-expecting a certain number of things in there
+expecting a certain number of things in there;
 
 1384
 01:30:29,110 --> 01:30:30,910
