@@ -6672,7 +6672,7 @@ There's an obvious refactoring step
 
 1559
 01:43:43,710 --> 01:43:47,110
-which is, we'll now I have a list of things.
+which is, well, now I have a list of things.
 
 1560
 01:43:47,140 --> 01:43:48,800
