@@ -1007,12 +1007,12 @@ I would probably be happy having
 
 231
 00:15:18,960 --> 00:15:24,570
-to do a fail nicely when not 5.
+#TODO: fail nicely when not 5.
 
 232
 00:15:28,420 --> 00:15:33,220
 There's other things .... of there's
-two 5 of Hearts .... you have cheat.
+two 5 of Hearts .... you have a cheat.
 
 233
 00:15:33,310 --> 00:15:35,850
@@ -1070,7 +1070,7 @@ Oh of course, I did something here ...
 245
 00:16:09,680 --> 00:16:12,170
 Here I'm assuming
-that make card is available
+that make_card is available
 
 246
 00:16:12,170 --> 00:16:14,520
@@ -1078,7 +1078,7 @@ on my string, which it isn't.
 
 247
 00:16:15,450 --> 00:16:18,190
-TS: You want to make it available.
+TS: You don't want to make it available.
 
 248
 00:16:18,770 --> 00:16:21,700
@@ -1101,7 +1101,7 @@ to do that to myself.
 
 252
 00:16:42,940 --> 00:16:46,640
-inaudible,
+[inaudible]
 
 253
 00:16:46,640 --> 00:16:49,880
@@ -1153,7 +1153,7 @@ Separate words for separate ideas.
 
 264
 00:17:26,850 --> 00:17:29,440
-I believe that's helpful. (laughter)
+I hear that's helpful. (laughter)
 
 265
 00:17:33,570 --> 00:17:38,060
@@ -1171,7 +1171,7 @@ And let's go back to our spec.
 
 268
 00:17:50,020 --> 00:17:54,170
-Excellent, we still have nothing and that is simply inaudible
+Excellent, we still have nothing and that is simply
 
 269
 00:17:54,490 --> 00:17:56,580
@@ -1179,7 +1179,8 @@ because I still haven't implemented it.
 
 270
 00:18:02,860 --> 00:18:05,890
-we're just going to initialise it with cards.
+Now Hand takes cards and we're just going
+to initialize it with cards.
 
 271
 00:18:07,870 --> 00:18:09,130
@@ -1191,11 +1192,11 @@ And make that cards available.
 
 273
 00:18:18,540 --> 00:18:22,160
-this should hopefully stop complaining
+this should hopefully stop complaining.
 
 274
 00:18:24,200 --> 00:18:28,620
-because it did a zero failure,
+No, because it did a zero failure,
 so that is the one I want.
 
 275
@@ -1217,12 +1218,12 @@ and then I spent 2 minutes thinking
 
 279
 00:18:48,740 --> 00:18:50,940
-it's all American spelling.
+oh, American spelling.
 TS: Yes.
 
 280
 00:18:54,000 --> 00:18:56,400
-Yes, good, certainly more convincing isn't it?
+Yes, good, slightly more convincing isn't it?
 
 281
 00:18:56,420 --> 00:18:57,450
@@ -1236,7 +1237,7 @@ it has the right number of things.
 283
 00:19:02,580 --> 00:19:06,700
 I don't actually know that
-it does pars the cards correctly.
+it does parse the cards correctly.
 
 284
 00:19:07,250 --> 00:19:11,680
@@ -1267,7 +1268,7 @@ so it returns the right cards.
 290
 00:19:27,370 --> 00:19:33,810
 as a test, and if my
-array of cards is just the one,
+array_of_cards is just the one,
 
 291
 00:19:34,110 --> 00:19:37,490
@@ -1275,7 +1276,7 @@ let's say 6 of Diamonds.
 
 292
 00:19:38,050 --> 00:19:41,540
-then I go inaudible exact same.
+then I go for exact the same test.
 
 293
 00:19:43,570 --> 00:19:45,450
@@ -1316,11 +1317,11 @@ Since we're going to compare them,
 301
 00:20:12,010 --> 00:20:16,830
 it's a lot easier to
-look at if they're integers.
+look at if they're integers,
 
 302
 00:20:17,200 --> 00:20:20,520
-That's strings - expected an
+than strings - expected an
 integer and got a string !
 
 303
@@ -1455,7 +1456,8 @@ I have a card that has, for example,
 
 332
 00:21:54,420 --> 00:21:59,080
-inaudible which isn't very nice (laughter)
+which I'm assuming you know,
+which isn't very nice (laughter)
 
 333
 00:22:00,340 --> 00:22:03,490
@@ -1514,7 +1516,7 @@ you can get in Poker.
 
 345
 00:22:36,050 --> 00:22:39,400
-so if I have 4 fours then I can't inaudible
+so if I have 4 fours then
 
 346
 00:22:39,710 --> 00:22:43,070
@@ -1554,7 +1556,7 @@ to have some kind of rank method
 
 354
 00:23:12,440 --> 00:23:14,900
-on the hand that is going to return a
+on the Hand that is going to return a
 
 355
 00:23:14,910 --> 00:23:17,640
@@ -1571,7 +1573,7 @@ which we can half implement for now.
 358
 00:23:25,510 --> 00:23:28,540
 The first thing I'm going to
-do is create a spec for my hand
+do is create a spec for my Hand
 
 359
 00:23:28,540 --> 00:23:31,210
@@ -1585,11 +1587,11 @@ TS: Yes.
 
 361
 00:23:38,680 --> 00:23:42,670
-CB: And I'm going to be describing my hand
+CB: And I'm going to be describing my Hand
 
 362
 00:23:42,850 --> 00:23:48,710
-And, I want some kind of method inaudible
+And, I want some kind of method
 
 363
 00:23:48,830 --> 00:23:51,400
@@ -1646,7 +1648,7 @@ I'm not sure where I'm going.
 
 376
 00:24:49,980 --> 00:24:53,650
-So, I have a hand and .......
+So, I have a Hand and .......
 
 377
 00:24:58,090 --> 00:25:00,680
@@ -1658,7 +1660,7 @@ I have some kind of hand around.
 
 379
 00:25:14,850 --> 00:25:17,240
-For now I'm going to use the hand parser
+For now I'm going to use the HandParser
 
 380
 00:25:17,620 --> 00:25:20,900
@@ -1817,7 +1819,7 @@ silly shortcuts here (laughter).
 
 415
 00:27:51,800 --> 00:27:54,600
-I also don't have my hand parser.
+I also don't have my HandParser.
 
 416
 00:27:55,910 --> 00:27:57,870
@@ -1844,7 +1846,7 @@ that handles things like that.
 
 421
 00:28:16,810 --> 00:28:20,930
-and my hand.new can take a hand parser
+and my hand.new can take a HandParser
 
 422
 00:28:20,970 --> 00:28:27,700
@@ -1871,7 +1873,7 @@ stopping in the middle of a 'thing'
 
 427
 00:28:46,570 --> 00:28:47,500
-to do .........
+#TODO .........
 
 428
 00:28:48,400 --> 00:28:52,810
@@ -1902,7 +1904,7 @@ So that's parsing, and that's failing.
 
 434
 00:29:22,170 --> 00:29:23,110
-inaudible returns nil
+rank returns nil
 
 435
 00:29:23,110 --> 00:29:25,140
