@@ -4074,16 +4074,17 @@ I reckon I've got this wrong.
 
 937
 01:00:24,200 --> 01:00:27,420
-inaudible arguments, what have we done now,
+Wrong number of arguments,
+what have we done now?
 
 938
 01:00:35,000 --> 01:00:36,200
-This is still a string.
+This is still fetching a string.
 
 939
 01:00:38,000 --> 01:00:41,830
 I will make sure I've got a
-test that does the 10 again
+test that does the 10
 
 940
 01:00:43,850 --> 01:00:44,960
@@ -4095,8 +4096,8 @@ let's just run this file now.
 
 942
 01:00:50,000 --> 01:00:55,360
-Now we have a hand
-parser 20 length, so that's not right.
+Now we have a hand parser...
+line 20...length, so that's not right.
 
 943
 01:00:56,420 --> 01:00:59,370
@@ -4113,20 +4114,20 @@ No it's called card string
 
 946
 01:01:12,130 --> 01:01:13,940
-inaudible
+I would suspect that it's a string
 
 947
 01:01:14,000 --> 01:01:18,960
-so one inaudible for zero, why
-does it think it has an argument?
+so wrong number of arguments one for zero
+why does it think it has an argument?
 
 948
 01:01:19,120 --> 01:01:20,740
-because parenthesis
+because parentheses
 
 949
 01:01:25,400 --> 01:01:29,420
-Ah, inaudible method, this is terrible.
+Ah, extract method, this is terrible.
 
 950
 01:01:31,260 --> 01:01:33,280
@@ -4135,7 +4136,7 @@ so last number of ....
 951
 01:01:36,310 --> 01:01:39,330
 This is terrible, I
-should just do it in minus ones.
+should just do it with minus ones.
 
 952
 01:01:41,080 --> 01:01:42,970
@@ -4149,7 +4150,7 @@ an imaginary space between
 954
 01:01:47,050 --> 01:01:50,630
 the start and end of your
-row, but I might be wrong.
+array, but I might be wrong.
 
 955
 01:01:51,000 --> 01:01:52,600
@@ -4170,7 +4171,7 @@ to the end of card number index
 
 959
 01:02:07,080 --> 01:02:10,250
-and here I want to go front
+and here I want to go from
 zero to the end card index minus
 
 960
@@ -4195,7 +4196,7 @@ CB: We have key not found
 
 965
 01:02:37,880 --> 01:02:39,280
-that's just failing again.
+fetch is failing again.
 
 966
 01:02:42,050 --> 01:02:46,870
@@ -4219,7 +4220,8 @@ Why is old code popping up ?
 
 971
 01:03:04,430 --> 01:03:08,140
-It has been returning inaudible laughter.
+So now that it has been determined
+that I am terrible at array indexing
 
 972
 01:03:09,570 --> 01:03:12,150
@@ -4249,7 +4251,7 @@ quite as we'll as I would like to
 
 978
 01:03:36,080 --> 01:03:39,990
-so inaudible flush, type flush.
+so elsif flush, type flush.
 
 979
 01:03:43,510 --> 01:03:46,260
@@ -4278,7 +4280,7 @@ TS: At the moment you don't have any code
 
 985
 01:04:04,280 --> 01:04:07,140
-that compares your hand
+that compares two hands
 to find out which one is better.
 
 986
@@ -4288,7 +4290,7 @@ correctly classified that's OK.
 
 987
 01:04:09,800 --> 01:04:12,510
-CB: Yes, so let's implement inaudible very quick flush.
+CB: Yes, so let's implement a very quick flush.
 
 988
 01:04:18,450 --> 01:04:19,560
@@ -4296,8 +4298,8 @@ so what my flush is ....
 
 989
 01:04:19,710 --> 01:04:22,940
-in much the same way as I'm
-asking do I have two of the same thing.
+in much the same way as I'm doing
+do I have two cards of the same thing.
 
 990
 01:04:23,480 --> 01:04:26,100
@@ -4327,15 +4329,17 @@ that does this but with suits.
 
 996
 01:04:41,000 --> 01:04:51,020
-and here I'm going to do the dupe flag which is inaudible. this
+and here I'm going to do the dupe flag 
+which means I've copy/pasted this
 
 997
 01:04:51,620 --> 01:04:54,940
-inaudible a better abstraction to use here.
+maybe there's a better abstraction
+to use here.
 
 998
 01:04:55,250 --> 01:04:57,240
-so here I'm grouping my suits.
+so here I'm grouping it by suits.
 
 999
 01:04:59,650 --> 01:05:03,680
@@ -4382,7 +4386,7 @@ This is the expected failure
 
 1009
 01:05:43,020 --> 01:05:44,650
-inaudible method suit.
+expected method suits.
 
 1010
 01:05:46,200 --> 01:05:49,520
@@ -4407,7 +4411,7 @@ but now if I have some kind of flush count
 
 1015
 01:06:06,340 --> 01:06:12,160
-rather than suit count then
+oh no, suit count, then
 suddenly my life is quite a lot easier.
 
 1016
@@ -4424,16 +4428,17 @@ Very quickly a straight
 
 1019
 01:06:38,310 --> 01:06:41,040
-inaudible was more interesting and more complicated
+This should be more interesting and
+more complicated
 
 1020
 01:06:41,570 --> 01:06:44,880
-not something we've done so far
+It's not something we've done so far
 
 1021
 01:06:45,370 --> 01:06:48,270
 so I have 5 of Hearts,
-6 of Hearts 7, of Hearts, Ace of Hearts
+6 of Hearts 7, of Hearts, 8 of Hearts
 
 1022
 01:06:48,480 --> 01:06:50,530
@@ -4463,15 +4468,17 @@ in much the same way
 
 1028
 01:07:15,680 --> 01:07:18,270
-Let's have a look and see if those ones
+Let's have a look and see if those...
 
 1029
 01:07:19,680 --> 01:07:22,410
-what I care about is the inaudible and not the suits.
+what I care about is the straight
+and not the suits.
 
 1030
 01:07:22,540 --> 01:07:25,800
-inaudible list of cards and their face values
+I'm going to look at the cards
+and their face values
 
 1031
 01:07:25,820 --> 01:07:28,200
@@ -4497,7 +4504,7 @@ probably want to do is extract out
 
 1036
 01:07:37,600 --> 01:07:40,680
-or if the cards are just the array of values.
+of the cards array just the array of values.
 
 1037
 01:07:40,940 --> 01:07:42,650
@@ -4513,7 +4520,7 @@ What I want is this:
 
 1040
 01:07:50,910 --> 01:07:56,200
-Now I have a sort of array
+Now I have some kind of array
 that is 3567, something like that.
 
 1041
@@ -4530,7 +4537,7 @@ so let's just sort that really quickly.
 
 1044
 01:08:07,710 --> 01:08:14,680
-and we have a sorted card that leaves
+and we have sorted card values
 
 1045
 01:08:17,000 --> 01:08:19,570
@@ -4539,23 +4546,23 @@ doing it in a destructive way.
 
 1046
 01:08:22,020 --> 01:08:25,850
-I just like inaudible a bit silly.
+I just like bangs, but that's a bit silly.
 
 1047
 01:08:26,440 --> 01:08:27,880
-So I have a inaudible card
+So I have sorted card values
 
 1048
 01:08:28,280 --> 01:08:31,280
-What I want to know is are they consecutive.
+I want to know if they are consecutive.
 
 1049
 01:08:35,370 --> 01:08:37,480
-Is there something that does that for me ?
+Is there something that does that in ruby
 
 1050
 01:08:37,480 --> 01:08:38,970
-inaudible to re-implement it.
+or do I need to re-implement it?
 
 1051
 01:08:40,560 --> 01:08:41,480
@@ -4590,11 +4597,13 @@ in Ace 2345, that's a straight
 
 1058
 01:09:03,250 --> 01:09:07,220
-but I can also inaudible the high card, the King.
+but I can also count Ace as the high card,
+so after King.
 
 1059
 01:09:08,170 --> 01:09:11,800
-inaudible I could just have a bunch of numbers
+My initial idea was I could just
+have a bunch of numbers
 
 1060
 01:09:12,080 --> 01:09:14,330
@@ -4621,7 +4630,8 @@ then I've won and it's a straight.
 
 1065
 01:09:26,720 --> 01:09:30,160
-but I can't re-do that if I'm doing Ace because
+but I can't really do that if
+I'm doing Aces because
 
 1066
 01:09:30,280 --> 01:09:34,470
@@ -4680,7 +4690,7 @@ So then 10 is 10, Jack is 11, Queen is 12, King is 13.
 
 1079
 01:10:27,510 --> 01:10:29,680
-then this is both one and 14.
+then ace is both one and 14.
 
 1080
 01:10:29,880 --> 01:10:30,400
@@ -4700,8 +4710,8 @@ look at the array and count it as a one,
 
 1084
 01:10:41,170 --> 01:10:43,780
-and then look at the
-other array and count it as 14.
+and then look at the array
+and count it as 14.
 
 1085
 01:10:44,340 --> 01:10:46,170
@@ -4718,16 +4728,16 @@ so that should sort us out nicely.
 
 1088
 01:10:53,380 --> 01:10:57,840
-We might be looking later
-at where's my high card, on hand.
+We might be looking later at
+what is my high card, on a hand.
 
 1089
 01:10:57,880 --> 01:10:59,780
-then that's also going to inaudible
+then that's also going to come into play
 
 1090
 01:10:59,880 --> 01:11:03,090
-this is both 1, and 14 type of thing
+this both 1 and 14 type of thing
 
 1091
 01:11:05,050 --> 01:11:08,530
@@ -4751,7 +4761,8 @@ No particular reason.
 
 1096
 01:11:18,600 --> 01:11:23,820
-My special case is going to be inaudible sting with a low Ace
+My special case is going to be it works
+with straight with a low Ace
 
 1097
 01:11:32,620 --> 01:11:36,540
@@ -4806,11 +4817,11 @@ TS: What does that mean?
 
 1109
 01:12:23,310 --> 01:12:27,050
-CB: this is terrible English I think inaudible
+CB: this is me being terrible at English
 
 1110
 01:12:28,480 --> 01:12:31,720
-If it has only now Jack, Queen and Ace.
+for heads I mean Jack, Queen, King, Ace.
 
 1111
 01:12:32,740 --> 01:12:35,560
@@ -4818,7 +4829,7 @@ Let's say, if you get a Q card.
 
 1112
 01:12:36,200 --> 01:12:41,660
-then inaudible assign it the value of 12 explicitly.
+then I'm going to assign it the value 12
 
 1113
 01:12:46,510 --> 01:12:49,550
@@ -4850,7 +4861,7 @@ because this is getting too crowded.
 
 1120
 01:13:15,110 --> 01:13:17,810
-Number of Pips equals this now.
+Number of Pips equals this for now.
 
 1121
 01:13:18,400 --> 01:13:21,690
@@ -4871,7 +4882,7 @@ the beginning of that string
 
 1125
 01:13:32,610 --> 01:13:35,030
-is one of those special cases',
+is one of those special cases,
 
 1126
 01:13:35,330 --> 01:13:38,120
@@ -4883,11 +4894,11 @@ so I can have something like
 
 1128
 01:13:41,850 --> 01:13:46,080
-Pips for heads and dot fetch.
+Pips for heads dot fetch.
 
 1129
 01:13:51,000 --> 01:13:53,960
-This is what we said at the beginning,
+This is what I said at the beginning,
 
 1130
 01:13:53,970 --> 01:13:55,740
@@ -4908,7 +4919,7 @@ and I fetch my Pips string
 
 1134
 01:14:13,200 --> 01:14:16,200
-So, if it's in there inaudible forward.
+So, if it's in there we can go forward
 
 1135
 01:14:16,680 --> 01:14:19,680
@@ -4953,13 +4964,13 @@ I would put something along the lines of
 
 1145
 01:14:46,940 --> 01:14:50,450
-and by the way 'can you check that
+and by the way can you check that
 the pip string only has digits in it,
 
 1146
 01:14:50,600 --> 01:14:54,940
 before I cast it to an integer
-which will save me the worry of
+which will save me the pain of
 
 1147
 01:14:54,970 --> 01:14:58,080
