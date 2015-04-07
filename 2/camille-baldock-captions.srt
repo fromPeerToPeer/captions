@@ -113,7 +113,7 @@ do is enter some kind of array 'thing'
 
 26
 00:02:11,780 --> 00:02:15,490
-and it creates .... I don't know what it creates.
+and it creates... I don't know what it creates.
 
 27
 00:02:16,990 --> 00:02:20,100
@@ -152,7 +152,7 @@ of Card object in which I can put 'things'
 
 35
 00:02:47,650 --> 00:02:51,650
-So the first thing I want to do is .....
+So the first thing I want to do is...
 
 36
 00:02:51,820 --> 00:02:54,520
@@ -177,7 +177,7 @@ TS: Are you talking about an array of strings?
 
 41
 00:03:06,920 --> 00:03:09,150
-CB: As an input or .....
+CB: As an input or...
 TS: Yes
 
 42
@@ -284,7 +284,7 @@ So far so good.
 
 65
 00:04:45,710 --> 00:04:47,890
-What I probably want to do is ....
+What I probably want to do is...
 
 66
 00:04:48,840 --> 00:04:54,030
@@ -423,7 +423,7 @@ But at least it's not erroring any more
 
 97
 00:06:57,770 --> 00:07:01,450
-On the other hand - I want it to be a hand and ....
+On the other hand - I want it to be a hand and...
 
 98
 00:07:05,680 --> 00:07:09,200
@@ -532,7 +532,7 @@ at Sublime, beautiful. (laughter)
 
 122
 00:08:57,710 --> 00:09:00,100
-OK, so if it has that then ......
+OK, so if it has that then...
 
 123
 00:09:02,000 --> 00:09:05,570
@@ -595,7 +595,7 @@ with some cards in it.
 
 136
 00:09:59,060 --> 00:10:00,440
-So if we have ....
+So if we have...
 
 137
 00:10:02,380 --> 00:10:05,820
@@ -612,7 +612,7 @@ or however you want to call that.
 
 140
 00:10:15,040 --> 00:10:20,590
-And I want it to basically ....
+And I want it to basically...
 
 141
 00:10:23,060 --> 00:10:24,400
@@ -775,7 +775,7 @@ my card string has 5 H or something like that.
 
 177
 00:12:06,440 --> 00:12:08,620
-So what I'm going to do is ....
+So what I'm going to do is...
 
 178
 00:12:09,800 --> 00:12:14,580
@@ -1011,8 +1011,8 @@ I would probably be happy having
 
 232
 00:15:28,420 --> 00:15:33,220
-There's other things .... of there's
-two 5 of Hearts .... you have a cheat.
+There's other things... of there's
+two 5 of Hearts... you have a cheat.
 
 233
 00:15:33,310 --> 00:15:35,850
@@ -1061,11 +1061,11 @@ But let's see where it's failing.
 
 243
 00:16:03,390 --> 00:16:05,210
-So, undefined method ....
+So, undefined method...
 
 244
 00:16:05,310 --> 00:16:09,070
-Oh of course, I did something here ...
+Oh of course, I did something here...
 
 245
 00:16:09,680 --> 00:16:12,170
@@ -1083,7 +1083,7 @@ TS: You don't want to make it available.
 248
 00:16:18,770 --> 00:16:21,700
 I thought you were going to
-do some monkey patching and ....
+do some monkey patching and...
 
 249
 00:16:24,050 --> 00:16:27,640
@@ -1118,7 +1118,7 @@ To be honest I don't see it doing anything really smart
 
 256
 00:17:00,110 --> 00:17:02,850
-so it's just going to have ....
+so it's just going to have...
 
 257
 00:17:03,420 --> 00:17:05,420
@@ -1205,7 +1205,7 @@ Let's have a look.
 
 276
 00:18:35,640 --> 00:18:36,930
-I'm creating my hand ...
+I'm creating my hand...
 
 277
 00:18:43,730 --> 00:18:46,610
@@ -1246,7 +1246,7 @@ looks like I want it to look.
 
 285
 00:19:11,680 --> 00:19:14,920
-so what I can do is ....
+so what I can do is...
 
 286
 00:19:15,540 --> 00:19:18,560
@@ -1280,7 +1280,7 @@ then I go for exact the same test.
 
 293
 00:19:43,570 --> 00:19:45,450
-And what I want is ...
+And what I want is...
 
 294
 00:19:46,080 --> 00:19:48,200
@@ -1382,7 +1382,7 @@ thing, that is good enough.
 
 315
 00:21:01,250 --> 00:21:04,370
-Now I'm going to start focusing on ....
+Now I'm going to start focusing on...
 
 316
 00:21:05,510 --> 00:21:07,170
@@ -1611,7 +1611,7 @@ So I'll keep it as it is.
 
 367
 00:23:58,290 --> 00:24:00,200
-And what it does is ....
+And what it does is...
 
 368
 00:24:00,690 --> 00:24:08,200
@@ -1648,7 +1648,7 @@ I'm not sure where I'm going.
 
 376
 00:24:49,980 --> 00:24:53,650
-So, I have a Hand and .......
+So, I have a Hand and...
 
 377
 00:24:58,090 --> 00:25:00,680
@@ -1775,7 +1775,7 @@ So 'expect' hand.rank.
 
 405
 00:26:50,400 --> 00:26:52,780
-to equal, and then ...
+to equal, and then...
 
 406
 00:26:57,910 --> 00:27:03,920
@@ -1797,7 +1797,7 @@ mind about what this should look like.
 
 410
 00:27:26,050 --> 00:27:28,170
-So if I expect the hand equals that .......
+So if I expect the hand equals that...
 
 411
 00:27:31,260 --> 00:27:32,540
@@ -1805,7 +1805,7 @@ Not that.
 
 412
 00:27:34,590 --> 00:27:37,520
-This is failing quite nicely ....
+This is failing quite nicely...
 
 413
 00:27:37,780 --> 00:27:42,180
@@ -1873,7 +1873,7 @@ stopping in the middle of a 'thing'
 
 427
 00:28:46,570 --> 00:28:47,500
-#TODO .........
+#TODO...
 
 428
 00:28:48,400 --> 00:28:52,810
@@ -1896,7 +1896,7 @@ and go to fix all the things.
 
 432
 00:29:04,410 --> 00:29:07,390
-So let's just have a quick ....
+So let's just have a quick...
 
 433
 00:29:17,310 --> 00:29:21,160
@@ -1979,12 +1979,12 @@ like that then I would have
 
 451
 00:30:28,910 --> 00:30:31,250
-something along the lines of .....
+something along the lines of...
 
 452
 00:30:31,250 --> 00:30:31,260
 I'm going to do that as a hash
-something along the lines of .....
+something along the lines of...
 
 453
 00:30:31,260 --> 00:30:32,650
@@ -2040,7 +2040,7 @@ but it's not a great word for it.
 
 465
 00:31:22,170 --> 00:31:25,300
-I'm going to call it Pip counter and ............
+I'm going to call it Pip counter and...
 
 466
 00:31:29,740 --> 00:31:31,690
@@ -2119,7 +2119,7 @@ That is going to do that for me.
 
 484
 00:32:17,480 --> 00:32:18,680
-So if I have a pip_count ....
+So if I have a pip_count...
 
 485
 00:32:22,850 --> 00:32:26,370
@@ -2140,7 +2140,7 @@ As I don't yet know where we're going.
 
 489
 00:32:33,140 --> 00:32:34,710
-So if I have a pip_count and I am ...
+So if I have a pip_count and I am...
 
 490
 00:32:39,000 --> 00:32:42,370
@@ -2161,7 +2161,7 @@ That should fail quite loudly, let's run this test.
 
 494
 00:32:57,510 --> 00:32:58,080
-There we go ....
+There we go...
 
 495
 00:32:59,000 --> 00:33:00,450
@@ -2178,7 +2178,7 @@ And for each of those cards I have Pips.
 
 498
 00:33:08,480 --> 00:33:11,920
-I can just .....
+I can just...
 
 499
 00:33:13,080 --> 00:33:15,930
@@ -2198,7 +2198,7 @@ There is a Ruby collect on Ruby array
 
 503
 00:33:38,540 --> 00:33:39,200
-This is dash ....
+This is dash...
 
 504
 00:33:39,200 --> 00:33:43,230
@@ -2302,7 +2302,7 @@ all of the 5 Pip cards that it had found.
 527
 00:34:54,490 --> 00:34:57,040
 and then the key would be 6
-and the value would be .....
+and the value would be...
 
 528
 00:34:57,480 --> 00:34:59,610
@@ -2314,7 +2314,7 @@ let's do a group_by and see how that works.
 
 530
 00:35:11,220 --> 00:35:12,400
-So group_by ....
+So group_by...
 
 531
 00:35:20,200 --> 00:35:21,790
@@ -2326,7 +2326,7 @@ TS: It will be in Enumerable I expect.
 
 533
 00:35:27,970 --> 00:35:29,700
-CB: Let's just search ....
+CB: Let's just search...
 
 534
 00:35:29,970 --> 00:35:33,120
@@ -2338,7 +2338,7 @@ I'm in the wrong scope for it.
 
 536
 00:35:39,510 --> 00:35:42,380
-Enumerable group_by .... no, no no.
+Enumerable group_by... no, no no.
 
 537
 00:35:43,400 --> 00:35:45,340
@@ -2420,7 +2420,7 @@ be an array of those cards.
 
 555
 00:36:39,140 --> 00:36:44,560
-CB: I'm just wondering .....
+CB: I'm just wondering...
 
 556
 00:36:45,770 --> 00:36:47,680
@@ -2458,7 +2458,7 @@ then for each of my things,
 
 564
 00:37:17,720 --> 00:37:19,130
-I can say ....
+I can say...
 
 565
 00:37:25,170 --> 00:37:26,350
@@ -2528,11 +2528,11 @@ This is my minimal viable code,
 
 581
 00:38:23,000 --> 00:38:26,130
-it's something along the lines of ....
+it's something along the lines of...
 
 582
 00:38:26,850 --> 00:38:29,520
-so this should return ....
+so this should return...
 
 583
 00:38:29,880 --> 00:38:33,700
@@ -2548,7 +2548,7 @@ I'm not quite sure about line 10 now.
 
 586
 00:38:42,510 --> 00:38:47,010
-So I have all the values, I need to find ....
+So I have all the values, I need to find...
 
 587
 00:38:53,110 --> 00:38:55,690
@@ -2568,7 +2568,7 @@ I've done something silly.
 
 591
 00:39:06,130 --> 00:39:10,190
-Of course ..... this is called Pip count.
+Of course... this is called Pip count.
 
 592
 00:39:12,370 --> 00:39:13,840
@@ -2716,7 +2716,7 @@ let's call it a three_of_a_kind_hand
 626
 00:41:19,220 --> 00:41:23,170
 So if we have a three_of_a_kind_hand,
-it's going to be ....
+it's going to be...
 
 627
 00:41:25,770 --> 00:41:29,840
@@ -2733,7 +2733,7 @@ but actually we want it to return 3 of a kind,
 
 630
 00:41:37,280 --> 00:41:40,330
-so this, should be .....
+so this, should be...
 
 631
 00:41:45,000 --> 00:41:47,850
@@ -2750,7 +2750,7 @@ and not like this either.
 634
 00:41:52,800 --> 00:41:56,040
 I think I'm doing
-something wrong .... there we go.
+something wrong... there we go.
 
 635
 00:41:56,310 --> 00:42:00,120
@@ -2799,7 +2799,7 @@ some pretty terrible code now.
 
 646
 00:42:29,210 --> 00:42:31,940
-Shameless green ....
+Shameless green...
 
 647
 00:42:34,480 --> 00:42:39,290
@@ -2824,7 +2824,7 @@ that my tests do pass nicely.
 
 652
 00:43:03,940 --> 00:43:06,530
-And as they don't .... it is :three_of_a_kind
+And as they don't... it is :three_of_a_kind
 
 653
 00:43:06,940 --> 00:43:10,020
@@ -2882,7 +2882,7 @@ smarter way of doing this.
 665
 00:43:56,680 --> 00:44:00,620
 I could jump in right there
-and try to do some kind of ....
+and try to do some kind of...
 
 666
 00:44:01,200 --> 00:44:02,920
@@ -3175,7 +3175,7 @@ there is you've built into your code
 
 730
 00:47:52,260 --> 00:47:53,850
-because you were explaining it ....
+because you were explaining it...
 
 731
 00:47:53,870 --> 00:47:56,240
@@ -3456,7 +3456,7 @@ The most desirable
 
 792
 00:51:50,680 --> 00:51:52,030
-Let's give that a rating of .....
+Let's give that a rating of...
 
 793
 00:51:52,040 --> 00:51:53,070
@@ -3561,7 +3561,7 @@ I'm going to quickly go through those
 
 816
 00:53:32,620 --> 00:53:33,760
-That was a bit odd ......
+That was a bit odd...
 
 817
 00:53:36,600 --> 00:53:40,420
@@ -3716,7 +3716,7 @@ missing a def here.
 
 853
 00:55:28,740 --> 00:55:31,600
-Here we go, it's has_three and ....
+Here we go, it's has_three and...
 
 854
 00:55:34,340 --> 00:55:35,710
@@ -3766,7 +3766,7 @@ let's keep it that way.
 
 865
 00:56:22,630 --> 00:56:23,040
-Go ....
+Go...
 
 866
 00:56:24,170 --> 00:56:26,040
@@ -4002,7 +4002,7 @@ TS: Yes, it's already paying off.
 
 920
 00:59:18,040 --> 00:59:19,910
-CB: It is failing loudly, so OK ....
+CB: It is failing loudly, so OK...
 
 921
 00:59:23,140 --> 00:59:25,400
@@ -4102,7 +4102,7 @@ line 20...length, so that's not right.
 943
 01:00:56,420 --> 01:00:59,370
 So hand parser on
-line 20 calling length on ....
+line 20 calling length on...
 
 944
 01:01:06,220 --> 01:01:08,380
@@ -4131,7 +4131,7 @@ Ah, extract method, this is terrible.
 
 950
 01:01:31,260 --> 01:01:33,280
-so last number of ....
+so last number of...
 
 951
 01:01:36,310 --> 01:01:39,330
@@ -4294,7 +4294,7 @@ CB: Yes, so let's implement a very quick flush.
 
 988
 01:04:18,450 --> 01:04:19,560
-so what my flush is ....
+so what my flush is...
 
 989
 01:04:19,710 --> 01:04:22,940
@@ -4416,7 +4416,7 @@ suddenly my life is quite a lot easier.
 
 1016
 01:06:21,170 --> 01:06:23,520
-I can implement this .... let's see
+I can implement this... let's see
 
 1017
 01:06:25,080 --> 01:06:26,000
@@ -4588,7 +4588,7 @@ TS: Ok.
 
 1056
 01:08:53,970 --> 01:08:56,760
-CB: Because Aces .... no I don't want to go there
+CB: Because Aces... no I don't want to go there
 
 1057
 01:08:57,080 --> 01:09:02,860
@@ -4607,7 +4607,7 @@ have a bunch of numbers
 
 1060
 01:09:12,080 --> 01:09:14,330
-and all I need to care about is ....
+and all I need to care about is...
 
 1061
 01:09:15,720 --> 01:09:18,110
@@ -4702,7 +4702,7 @@ Which might be how I implement it.
 
 1082
 01:10:36,090 --> 01:10:38,360
-If you see an Ace in there ....
+If you see an Ace in there...
 
 1083
 01:10:39,200 --> 01:10:41,170
@@ -4741,7 +4741,7 @@ this both 1 and 14 type of thing
 
 1091
 01:11:05,050 --> 01:11:08,530
-Let's assume that we are taking Aces as ....
+Let's assume that we are taking Aces as...
 
 1092
 01:11:09,850 --> 01:11:12,120
@@ -5165,7 +5165,7 @@ and I only want to go....
 
 1192
 01:17:33,620 --> 01:17:35,920
-this is going to throw a very ....
+this is going to throw a very...
 
 1193
 01:17:35,940 --> 01:17:38,320
@@ -5202,7 +5202,7 @@ you have a thing that defines what 5 is somewhere
 
 1201
 01:18:10,620 --> 01:18:12,290
-So magic number 4 ....
+So magic number 4...
 
 1202
 01:18:17,250 --> 01:18:21,330
@@ -5251,7 +5251,7 @@ This is it.
 
 1213
 01:18:56,620 --> 01:18:58,710
-Let's try something like ....
+Let's try something like...
 
 1214
 01:18:59,330 --> 01:19:04,150
@@ -5280,7 +5280,7 @@ They are sorted.
 
 1220
 01:19:26,080 --> 01:19:26,800
-What I want is ....
+What I want is...
 
 1221
 01:19:34,710 --> 01:19:36,300
@@ -5288,7 +5288,7 @@ So the first naive thing is...
 
 1222
 01:19:40,250 --> 01:19:41,690
-actually the result is ......
+actually the result is...
 
 1223
 01:19:43,820 --> 01:19:48,220
@@ -5309,7 +5309,7 @@ because it's getting verbose.
 1227
 01:19:58,420 --> 01:20:02,540
 What this chuck of code
-is doing there is saying ....
+is doing there is saying...
 
 1228
 01:20:07,220 --> 01:20:10,220
@@ -5325,7 +5325,7 @@ Dislike.
 
 1231
 01:20:27,080 --> 01:20:28,970
-TS: Yes, it's getting the value of that ....
+TS: Yes, it's getting the value of that...
 
 1232
 01:20:29,400 --> 01:20:31,220
@@ -5417,7 +5417,7 @@ So if difference_between_pips is that
 
 1254
 01:21:50,620 --> 01:21:52,310
-and difference_always_1 is ....
+and difference_always_1 is...
 
 1255
 01:21:55,250 --> 01:21:58,250
@@ -6218,7 +6218,7 @@ If the number of Aces is bigger than one
 
 1444
 01:35:29,420 --> 01:35:32,190
-then I want to have ....
+then I want to have...
 
 1445
 01:35:36,140 --> 01:35:39,040
@@ -6308,7 +6308,7 @@ my sort again.
 
 1465
 01:36:55,140 --> 01:37:00,990
-How about .... we just don't sort them here
+How about... we just don't sort them here
 
 1466
 01:37:01,170 --> 01:37:04,450
@@ -6623,7 +6623,7 @@ so just index would have worked better.
 
 1539
 01:42:14,310 --> 01:42:15,490
-Let's go back here ....
+Let's go back here...
 
 1540
 01:42:21,570 --> 01:42:25,220
@@ -6736,7 +6736,7 @@ so I should be doing something really clever here.
 
 1565
 01:44:08,200 --> 01:44:10,710
-The big piece of functionality that's missing is ....
+The big piece of functionality that's missing is...
 
 1566
 01:44:11,850 --> 01:44:14,760
