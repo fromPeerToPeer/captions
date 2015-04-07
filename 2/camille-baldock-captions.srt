@@ -4991,7 +4991,7 @@ If I was shipping this then yes, but no.
 1151
 01:15:11,450 --> 01:15:15,540
 Assumes correct
-capitalisation,
+capitalization,
 
 1152
 01:15:15,760 --> 01:15:20,600
@@ -5032,7 +5032,7 @@ that leaves us.
 
 1161
 01:15:43,370 --> 01:15:46,330
-TS:  Is your policy now
+TS:  Is your priority now
 to implement ordinary straights
 
 1162
@@ -5075,12 +5075,12 @@ This is a more sensible place to be in.
 
 1171
 01:16:22,820 --> 01:16:29,090
-I have assorted card values
+I have sorted card values
 and I want to look at each of the things
 
 1172
 01:16:29,250 --> 01:16:30,940
-They are in assorted order and I'm
+They are in a sorted order and I'm
 
 1173
 01:16:30,940 --> 01:16:33,800
@@ -5127,11 +5127,11 @@ Actually that's not what I want to do.
 
 1183
 01:17:03,480 --> 01:17:05,280
-I want to know each of the decks
+I want to use each_with_index
 
 1184
 01:17:05,400 --> 01:17:08,800
-because I want to know where I am in that inaudible.
+because I want to know where I am in that array.
 
 1185
 01:17:08,970 --> 01:17:11,490
@@ -5140,7 +5140,7 @@ I have my value and my index
 1186
 01:17:11,530 --> 01:17:13,810
 and I am looking at
-my assorted card values
+my sorted card values
 
 1187
 01:17:13,820 --> 01:17:15,680
@@ -5148,7 +5148,7 @@ and what I want is....
 
 1188
 01:17:18,740 --> 01:17:20,040
-inaudible
+so I have my card in sorted_card_values
 
 1189
 01:17:20,370 --> 01:17:24,340
@@ -5193,12 +5193,12 @@ TS: No, no.
 
 1199
 01:18:02,680 --> 01:18:05,850
-This is the kind of thing that
-you would have in productions
+This is the kind of thing where
+going to production
 
 1200
 01:18:05,850 --> 01:18:10,520
-you have something that defines what 5 is somewhere and inaudible
+you have a thing that defines what 5 is somewhere
 
 1201
 01:18:10,620 --> 01:18:12,290
@@ -5206,7 +5206,7 @@ So magic number 4 ....
 
 1202
 01:18:17,250 --> 01:18:21,330
-OK 5 inaudible
+OK always 5 cards per hand
 
 1203
 01:18:22,680 --> 01:18:24,790
@@ -5227,7 +5227,7 @@ and then I have some kind of integer.
 
 1207
 01:18:40,820 --> 01:18:42,120
-and then, Oh ....
+and then....
 
 1208
 01:18:42,200 --> 01:18:44,420
@@ -5239,7 +5239,7 @@ but this is the first thing that comes to mind.
 
 1210
 01:18:47,080 --> 01:18:49,110
-So I'm looking at my sorted card values
+So I'm looking at my sorted card value
 
 1211
 01:18:49,110 --> 01:18:52,080
@@ -5292,7 +5292,7 @@ actually the result is ......
 
 1223
 01:19:43,820 --> 01:19:48,220
-inaudible
+old result and
 
 1224
 01:19:49,220 --> 01:19:52,190
@@ -5308,7 +5308,7 @@ because it's getting verbose.
 
 1227
 01:19:58,420 --> 01:20:02,540
-What this chock of code
+What this chuck of code
 is doing there is saying ....
 
 1228
@@ -5333,7 +5333,7 @@ CB: Yes, I absolutely don't like this.
 
 1233
 01:20:31,940 --> 01:20:37,850
-For now inaudible unnecessary.
+For now use a variable before I do something silly and unnecessary.
 
 1234
 01:20:40,000 --> 01:20:41,740
@@ -5349,7 +5349,7 @@ A slightly misguided abstraction.
 
 1237
 01:20:48,400 --> 01:20:51,360
-If my difference between Pips is one,
+If my difference_between_pips is one,
 
 1238
 01:20:52,450 --> 01:20:53,520
@@ -5401,7 +5401,7 @@ And my index is below 4
 
 1250
 01:21:28,710 --> 01:21:30,170
-on sorted card values.count
+or sorted_card_values.count
 
 1251
 01:21:41,170 --> 01:21:42,870
@@ -5409,19 +5409,19 @@ Magic number 4 that's fine.
 
 1252
 01:21:43,680 --> 01:21:46,370
-While difference is always one we do that.
+While difference_always_one we do that.
 
 1253
 01:21:48,650 --> 01:21:50,620
-So if difference between Pips is that
+So if difference_between_pips is that
 
 1254
 01:21:50,620 --> 01:21:52,310
-and difference is always one is ....
+and difference_always_1 is ....
 
 1255
 01:21:55,250 --> 01:21:58,250
-and the new difference between Pips is one.inaudible
+and the new difference_between_pips is one.
 
 1256
 01:21:59,940 --> 01:22:01,320
@@ -5433,12 +5433,12 @@ Those we no longer need.
 
 1258
 01:22:04,110 --> 01:22:07,680
-This is called 'I' because I don't
-want to remember all the variables.
+This is called 'i' because I don't
+want to rename all the variables.
 
 1259
 01:22:09,450 --> 01:22:11,020
-Where is my loops.
+I need to close my loops.
 
 1260
 01:22:12,370 --> 01:22:15,070
@@ -5446,12 +5446,12 @@ And now what I want to do is....
 
 1261
 01:22:17,880 --> 01:22:20,680
-maybe initialise that,
+maybe initialize that,
 that seems like a good idea.
 
 1262
 01:22:24,110 --> 01:22:26,260
-I still haven't inaudible zero
+I start at index zero
 
 1263
 01:22:26,480 --> 01:22:28,750
@@ -5477,7 +5477,7 @@ So if it's not equal to one it should be false.
 
 1268
 01:22:42,480 --> 01:22:44,480
-inaudible quite nice.
+and then exit and it's all quite nice.
 
 1269
 01:22:45,050 --> 01:22:47,000
@@ -5493,12 +5493,12 @@ TS: It looks like it's got stuck in a loop
 
 1272
 01:23:01,880 --> 01:23:03,970
-CB: Maybe because I have an internet loop.
+CB: Maybe because I have an infinite loop.
 
 1273
 01:23:05,800 --> 01:23:08,880
-I think I have an increment
-in being dense, but there we go
+I think I haven't incremented
+the index, there we go
 
 1274
 01:23:15,250 --> 01:23:17,560
@@ -5514,11 +5514,11 @@ but this is OK.
 
 1277
 01:23:23,970 --> 01:23:25,140
-Still seeing failure.
+Still the same failure.
 
 1278
 01:23:25,970 --> 01:23:27,350
-So different strait.
+So different straight.
 
 1279
 01:23:27,680 --> 01:23:29,880
@@ -5590,7 +5590,7 @@ Now let's walk through this.
 
 1296
 01:24:22,220 --> 01:24:24,480
-So difference is always one is always true.
+So difference_always_1 is true.
 
 1297
 01:24:24,940 --> 01:24:28,150
@@ -5607,15 +5607,15 @@ this should be one
 
 1300
 01:24:31,200 --> 01:24:33,480
-inaudible is one, this is
+difference_always_1, this is
 
 1301
 01:24:34,110 --> 01:24:34,910
-It goes to one
+equals to one
 
 1302
 01:24:39,250 --> 01:24:41,190
-Yes, this returns as false.
+Yet, this returns as false.
 
 1303
 01:24:47,370 --> 01:24:49,650
@@ -5671,16 +5671,16 @@ Should be a highest and it got a straight.
 
 1316
 01:25:26,850 --> 01:25:30,510
-Oh yes, one of my test cases inaudible
+Oh yes, one of my test cases is a straight
 
 1317
 01:25:31,650 --> 01:25:37,310
 I'm feeling really clever
-now because it enters a flush,
+now because...
 
 1318
 01:25:37,310 --> 01:25:41,310
-but it's not a flush so it's not
+and it's not a flush so it's not
 going to cause me sorrow at any point.
 
 1319
@@ -5698,7 +5698,7 @@ but it's also a 1 when I want it to be
 
 1322
 01:25:58,400 --> 01:26:02,760
-So straight hand no Ace,
+So straight hand low Ace,
 still straight, same result.
 
 1323
@@ -5763,7 +5763,7 @@ Now if I have an Ace in my hand,
 1337
 01:26:54,000 --> 01:26:58,480
 I want it to work out,
-is this a straight if inaudible 14 ?
+is this a straight if it behaves like a 14 ?
 
 1338
 01:26:58,480 --> 01:27:00,880
@@ -5804,7 +5804,7 @@ This is just odd.
 
 1347
 01:27:48,450 --> 01:27:55,220
-If I had more time I would want to move this to inaudible somewhere.
+If I had more time I would want to move this to a helper somewhere.
 
 1348
 01:27:55,710 --> 01:27:57,600
@@ -5884,7 +5884,7 @@ and then check if it's a straight.
 
 1366
 01:29:03,540 --> 01:29:07,280
-So let's say assorted card values.
+So let's say sorted card values.
 
 1367
 01:29:13,620 --> 01:29:17,060
@@ -5894,7 +5894,7 @@ something naive, if it includes 14
 1368
 01:29:26,650 --> 01:29:31,930
 This is where I want to know
-what my array let's me do.
+what my Array lets me do.
 
 1369
 01:29:37,340 --> 01:29:39,690
@@ -5906,7 +5906,7 @@ I want to delete a thing from an array.
 
 1371
 01:29:43,310 --> 01:29:47,970
-inaudible the array, documentation
+that is not the array documentation
 
 1372
 01:29:50,080 --> 01:29:51,200
