@@ -2979,11 +2979,12 @@ certainty where I'm heading.
 687
 00:45:05,640 --> 00:45:07,900
 TS: So even though
-your unhappy with your code
+you're unhappy with your code
 
 688
 00:45:07,900 --> 00:45:10,080
-your going to hold of from re-factoring it
+you're going to hold off from
+refactoring it
 
 689
 00:45:10,140 --> 00:45:13,450
@@ -3001,7 +3002,8 @@ an abstraction that won't fit.
 
 692
 00:45:20,140 --> 00:45:22,420
-Your worried that if you extract it at this point,
+You're worried that if you extract it at
+this point,
 
 693
 00:45:22,420 --> 00:45:24,120
@@ -3037,7 +3039,7 @@ will implement full house,
 700
 00:45:41,580 --> 00:45:44,370
 which is going to create
-more inaudible in this code,
+more cruft in this code,
 
 701
 00:45:44,380 --> 00:45:47,680
@@ -3046,7 +3048,8 @@ me finding the right abstraction.
 
 702
 00:45:47,680 --> 00:45:50,460
-if there is such a thing as inaudible structure,
+I think there is such a thing as
+premature abstraction,
 
 703
 00:45:50,540 --> 00:45:52,970
@@ -3055,7 +3058,7 @@ TS: Ok.
 
 704
 00:45:59,930 --> 00:46:04,510
-CB: I'm going to do a quick
+CB: I'm going to create a quick
 test for my full house hand.
 
 705
@@ -3065,7 +3068,7 @@ and it has 5 of Hearts, 5 of Diamonds,
 
 706
 00:46:14,970 --> 00:46:18,790
-So we have inaudible 6s, and here we go.
+So we have [inaudible] 6s, and here we go.
 
 707
 00:46:19,080 --> 00:46:21,350
@@ -3073,7 +3076,8 @@ This is going to fail nicely.
 
 708
 00:46:21,530 --> 00:46:26,280
-because we haven't inaudible that yet and it's detecting a Pair.
+because we haven't implemented that yet
+and it's detecting a Pair.
 
 709
 00:46:26,600 --> 00:46:29,480
@@ -3085,7 +3089,7 @@ Right now with my code I'm saying
 
 711
 00:46:38,880 --> 00:46:43,170
-if there's 2 let's go there, if there'
+if there's 2 let's go there, if there's
 three let's go there, if there's four let's go there.
 
 712
@@ -3096,7 +3100,7 @@ intuitive because in Poker,
 713
 00:46:46,110 --> 00:46:49,880
 what I want to check is do I
-have an array or flush, or a straight flush etc.
+have a royal flush, or a straight flush etc.
 
 714
 00:46:51,620 --> 00:46:54,200
@@ -3158,7 +3162,7 @@ desirable outcomes from my hand.
 727
 00:47:37,280 --> 00:47:41,560
 then that would have given
-me 3 of a kind, as a full house
+me a 3 of a kind, as a full house
 
 728
 00:47:42,000 --> 00:47:45,960
@@ -3167,15 +3171,15 @@ which is less wrong but still pretty wrong !
 729
 00:47:46,400 --> 00:47:50,800
 TS: But what you've done
-there is burn into your code
+there is you've built into your code
 
 730
 00:47:52,260 --> 00:47:53,850
-because you were expecting it ....
+because you were explaining it ....
 
 731
 00:47:53,870 --> 00:47:56,240
-then your saying
+then you were saying
 there is this implied thing.
 
 732
@@ -3185,12 +3189,12 @@ But if you're explaining what a 3 of a kind is
 733
 00:47:59,170 --> 00:48:02,770
 there's this implication,
-well it's not 4 of a kind
+well it's not a 4 of a kind
 
 734
 00:48:03,220 --> 00:48:06,720
-a Pair is not 4 of a kind,
-nor 3 of a kind, and so it seems
+a Pair is not a 4 of a kind,
+nor a 3 of a kind, and so it seems
 
 735
 00:48:07,080 --> 00:48:09,810
@@ -3278,7 +3282,7 @@ First let's check that I didn't get this one wrong.
 
 753
 00:49:15,910 --> 00:49:19,590
-so now that parses nicely and this looks awful !
+so now that passes nicely and this looks awful !
 
 754
 00:49:26,600 --> 00:49:30,440
@@ -3318,7 +3322,7 @@ What I want to try doing is...........
 762
 00:50:03,620 --> 00:50:06,400
 TS: It sounds like you're
-switching into re-factoring.
+switching into refactoring.
 
 763
 00:50:06,420 --> 00:50:06,940
@@ -3349,7 +3353,7 @@ where you have sufficient confidence
 769
 00:50:18,970 --> 00:50:21,710
 in your implementation
-so far to start factoring it ?
+so far to start refactoring it ?
 
 770
 00:50:21,710 --> 00:50:25,220
@@ -3434,7 +3438,7 @@ And a straight flush is as high as it gets.
 788
 00:51:31,310 --> 00:51:34,320
 What I am creating in
-my head is some kind of 'thing.
+my head is some kind of thing.
 
 789
 00:51:34,390 --> 00:51:41,070
@@ -3466,11 +3470,11 @@ there are in Poker. Let's say 10
 795
 00:51:56,200 --> 00:51:59,820
 but I think that's wrong,
-and then we have 4 of a kind
+and then we have a 4 of a kind
 
 796
 00:51:59,970 --> 00:52:03,800
-and that would be a rating line, and then
+and that would be a rating 9, and then
 
 797
 00:52:04,000 --> 00:52:04,880
@@ -3540,7 +3544,8 @@ CB: Yes.
 
 812
 00:53:03,450 --> 00:53:07,820
-I'm going to start doing inaudible method.
+I'm going to start doing a tiny bit of
+extract method.
 
 813
 00:53:18,310 --> 00:53:20,400
@@ -3565,7 +3570,7 @@ that we have those magical
 
 818
 00:53:40,650 --> 00:53:43,970
-methods. It has 4, has 3 has 2
+methods: has_four, has_three, has_two
 
 819
 00:53:44,170 --> 00:53:45,970
@@ -3586,20 +3591,20 @@ it means there happens to be
 
 823
 00:53:57,420 --> 00:53:59,790
-So if we have 'has 4', then this is
+So if we have has_four, then this is
 
 824
 00:53:59,820 --> 00:54:02,880
-still include 4 and in much the same way
+still include(4) and in much the same way
 
 825
 00:54:03,020 --> 00:54:06,000
-inaudible has 3 and has 2
+let's assume I have has_three and has_two
 
 826
 00:54:07,020 --> 00:54:10,300
 and that's going to be
-pretty much what the pick is.
+pretty much what you think it is.
 
 827
 00:54:10,340 --> 00:54:11,570
@@ -3611,7 +3616,8 @@ but I'm not so bothered about that
 
 829
 00:54:13,280 --> 00:54:16,710
-because it's inad private methods and I can get round to it later
+because it's hidden away in private
+methods and I can get round to it later
 
 830
 00:54:17,020 --> 00:54:20,430
@@ -3623,11 +3629,11 @@ This feels more readable to me.
 
 832
 00:54:23,300 --> 00:54:26,540
-It feels like a 4 kind type
+It feels like the 4 of a kind type
 
 833
 00:54:27,680 --> 00:54:29,200
-It has the Haskell check.
+has the has_four check.
 
 834
 00:54:29,200 --> 00:54:32,740
@@ -3640,7 +3646,7 @@ to be true and this needs to be true.
 
 836
 00:54:35,450 --> 00:54:37,500
-Pair has pair needs to be true.
+Pair has_pair needs to be true.
 
 837
 00:54:37,620 --> 00:54:41,360
@@ -3664,7 +3670,7 @@ CB: So the easy way of doing it would be:
 
 842
 00:54:54,330 --> 00:54:56,410
-If has 4 then that.
+If has_four then that.
 
 843
 00:54:56,910 --> 00:54:58,080
@@ -3672,8 +3678,8 @@ This is still verbose.
 
 844
 00:54:58,400 --> 00:55:01,050
-I start re-factoring
-and then usually I think
+I start refactoring
+and then usually I
 
 845
 00:55:01,080 --> 00:55:03,140
@@ -3685,19 +3691,19 @@ then start compressing later.
 
 847
 00:55:06,000 --> 00:55:07,960
-So inaudible full house
+So elsif full_house
 
 848
 00:55:10,110 --> 00:55:11,600
-then type full house.
+then :type => :full_house.
 
 849
 00:55:13,420 --> 00:55:16,830
-inaudible has 3 then....
+elsif has_three then....
 
 850
 00:55:17,140 --> 00:55:19,430
-3 of a kind, inaudible has Pair, then Pair
+3 of a kind, elsif has_pair, then Pair
 
 851
 00:55:21,680 --> 00:55:26,980
@@ -3706,11 +3712,11 @@ implement full house quickly,
 
 852
 00:55:27,140 --> 00:55:28,590
-missing def here.
+missing a def here.
 
 853
 00:55:28,740 --> 00:55:31,600
-Here we go, it has 3 and ....
+Here we go, it's has_three and ....
 
 854
 00:55:34,340 --> 00:55:35,710
@@ -3722,7 +3728,7 @@ I don't know what that does actually.
 
 856
 00:55:38,970 --> 00:55:40,570
-inaudible methods.
+if you multiply two methods.
 
 857
 00:55:40,570 --> 00:55:42,600
@@ -3734,7 +3740,7 @@ This feels more readable.
 
 859
 00:55:48,050 --> 00:55:52,570
-That's kind of what I would like inaudible
+That's kind of what I would like to check
 
 860
 00:55:53,280 --> 00:55:54,490
@@ -3746,11 +3752,13 @@ That's because question marks are nice
 
 862
 00:56:00,170 --> 00:56:07,020
-it's maybe not the day to invent new methods in inaudible
+it's maybe not the day to invent new
+methods in Ruby
 
 863
 00:56:07,020 --> 00:56:13,890
-undefined inaud has Pair simply because I called it has 2 and has Pair
+undefined local variable or method
+has_pair simply because I called it has_two
 
 864
 00:56:18,170 --> 00:56:19,390
@@ -3762,7 +3770,7 @@ Go ....
 
 866
 00:56:24,170 --> 00:56:26,040
-and now were back in action.
+and now we're back in action.
 
 867
 00:56:26,080 --> 00:56:28,060
@@ -3787,7 +3795,8 @@ and I can drive out something a bit better.
 
 872
 00:56:37,340 --> 00:56:40,420
-inaudible with the ranking but I'm quite happy with it yet.
+I had an idea with a ranking but I'm not
+quite happy with it yet.
 
 873
 00:56:40,420 --> 00:56:40,830
@@ -3796,7 +3805,7 @@ TS: Ok.
 874
 00:56:45,620 --> 00:56:48,510
 CB: Do you have a favorite
-hand that you want to go next.
+hand that you want to implement next ?
 
 875
 00:56:48,510 --> 00:56:50,420
@@ -3834,16 +3843,17 @@ drive out the changes quickly.
 
 883
 00:57:09,280 --> 00:57:12,010
-But yes your right, may be a bit optimistic.
+But yes you're right, may be a bit optimistic.
 
 884
 00:57:15,170 --> 00:57:19,340
 In much the same way that full house
-has 2 or 3 situations of straight flushes in
+is a has_two and has_three situation,
 
 885
 00:57:19,820 --> 00:57:21,740
-there's a straight and there's flush
+a straight flush is a straight and is
+a flush.
 
 886
 00:57:21,850 --> 00:57:24,270
@@ -3873,7 +3883,7 @@ This file is getting verbose.
 892
 00:57:46,080 --> 00:57:49,820
 TS: It's a good job you've got that
-hand parser otherwise it would be inaudible
+hand parser otherwise it would be even worse
 
 893
 00:57:51,450 --> 00:57:53,970
@@ -3908,7 +3918,7 @@ that it's definitely failing.
 
 900
 00:58:24,020 --> 00:58:25,400
-TS: What does it think it is
+TS: What does it think it is ?
 
 901
 00:58:27,480 --> 00:58:30,400
@@ -3920,7 +3930,7 @@ We have a new problem now.
 
 903
 00:58:33,910 --> 00:58:34,800
-TS: What's going on?
+TS: What's gone wrong?
 
 904
 00:58:35,820 --> 00:58:39,450
@@ -3946,11 +3956,12 @@ There's two ways we can solve this
 909
 00:58:50,620 --> 00:58:54,510
 I represent 10 in another
-way, like zero or something.
+way, like zero or something silly.
 
 910
 00:58:54,710 --> 00:58:57,680
-inaudible that very quickly change the parser
+I don't want to do that,
+we can just very quickly change the parser
 
 911
 00:58:58,450 --> 00:59:01,000
@@ -3979,15 +3990,15 @@ and I had put a default value.
 
 917
 00:59:11,080 --> 00:59:12,970
-who knows what would happen in that
+who knows what would happen in that parser
 
 918
 00:59:12,970 --> 00:59:16,450
-inaudible fail loudly.
+#TODO: fail loudly.
 
 919
 00:59:16,450 --> 00:59:17,910
-TS: Yes, it's already coming on.
+TS: Yes, it's already paying off.
 
 920
 00:59:18,040 --> 00:59:19,910
@@ -4011,7 +4022,8 @@ take the last one.
 
 925
 00:59:34,080 --> 00:59:38,970
-inaudible I can do something along the lines of:
+so how do I get the last char out of a string?
+I can do something along the lines of:
 
 926
 00:59:44,020 --> 00:59:45,460
