@@ -10,7 +10,7 @@ Our guest today is Camille Baldock
 3
 00:00:09,600 --> 00:00:12,970
 who by day writes Ruby and
-Java script for the British Government.
+JavaScript for the British Government.
 
 4
 00:00:13,060 --> 00:00:18,260
@@ -79,8 +79,9 @@ that says I have a 5 of Hearts and the 6 of Diamonds
 
 19
 00:01:26,140 --> 00:01:33,710
-I could put that in an array or
-represent that as 4H5D. (4 Hearts 5 Diamonds).
+I could put that in an array or represent
+that as ['4H', '5D']. (4 Hearts 5
+Diamonds).
 
 20
 00:01:33,820 --> 00:01:36,980
@@ -93,7 +94,7 @@ So we'll get started with that.
 
 22
 00:01:44,420 --> 00:01:47,570
-So, I want to switch to input code.
+So, I'm just going to switch to where I put code.
 
 23
 00:01:54,110 --> 00:01:58,110
@@ -102,7 +103,7 @@ I've got a couple of things in place
 
 24
 00:01:58,110 --> 00:02:02,690
-Like a spec helper.
+Like a spec_helper.rb
 And then, we can get started.
 
 25
@@ -112,7 +113,7 @@ do is enter some kind of array 'thing'
 
 26
 00:02:11,780 --> 00:02:15,490
-and it creates .... we'll I don't know what it creates.
+and it creates .... I don't know what it creates.
 
 27
 00:02:16,990 --> 00:02:20,100
@@ -146,8 +147,8 @@ to have in place is some kind of
 
 34
 00:02:36,970 --> 00:02:42,100
-hand object and some kind
-of card object in which I can put 'things'
+Hand object and some kind
+of Card object in which I can put 'things'
 
 35
 00:02:47,650 --> 00:02:51,650
@@ -159,8 +160,8 @@ I have an array that says 5H and 6 Diamond
 
 37
 00:02:54,570 --> 00:02:58,820
-And in the other hand, and
-this is my hand object with those
+And on the other end, and
+this is my Hand object with those
 
 38
 00:02:59,110 --> 00:03:00,970
@@ -220,16 +221,16 @@ Ok, so this is the 'I can't type moment'. (laughter)
 51
 00:03:42,250 --> 00:03:46,770
 So if we have some kind
-of object called hand parser
+of object called HandParser
 
 52
 00:03:51,770 --> 00:03:58,200
-It probably should parses
+It probably should 'parses
 the array of strings representing
 
 53
 00:03:58,820 --> 00:04:02,930
-the cards (this is quite
+the cards' (this is quite
 verbose), but let's get to that.
 
 54
@@ -239,7 +240,8 @@ fail so how about we run this
 
 55
 00:04:08,570 --> 00:04:12,200
-And this is not very happy and inaudibleible
+And this is not very happy and
+'uninitialized constant HandParser'
 
 56
 00:04:13,420 --> 00:04:16,890
@@ -248,7 +250,7 @@ Yes, this is my first failure - here we go !
 57
 00:04:18,450 --> 00:04:22,020
 So I'm going to have to have
-a hand parser sitting somewhere
+a HandParser sitting somewhere
 
 58
 00:04:22,530 --> 00:04:25,090
@@ -269,12 +271,12 @@ unless I don't require it, obviously
 
 62
 00:04:36,080 --> 00:04:39,140
-inaudibleible - know where to look
+because otherwise it wouldn't know where to look
 
 63
 00:04:40,020 --> 00:04:43,780
 So let's give that a try....
-OK zero example zero failures.
+OK, zero examples, zero failures.
 
 64
 00:04:43,780 --> 00:04:45,080
@@ -286,7 +288,7 @@ What I probably want to do is ....
 
 66
 00:04:48,840 --> 00:04:54,030
-If I create a hand parser
+If I create a HandParser
 and I give it the array of cards.
 
 67
@@ -301,20 +303,20 @@ to check what the output of that is.
 
 69
 00:05:04,510 --> 00:05:06,650
-So the subject is hand parser, so if we have
+So the subject is HandParser, so if we have
 
 70
 00:05:08,250 --> 00:05:09,490
-describe class.
+described_class.
 
 71
 00:05:10,340 --> 00:05:14,700
-If create hand parser and
+If I create HandParser and
 hopefully have some kind of thing
 
 72
 00:05:14,700 --> 00:05:19,870
-that says pars and
+that says parse and
 it will take the array of cards
 
 73
@@ -400,11 +402,11 @@ run my tests and this should fail nicely,
 
 92
 00:06:30,700 --> 00:06:32,850
-because I don't have method parts.
+because I don't have a method parse.
 
 93
 00:06:39,080 --> 00:06:44,260
-I have a group of cards that
+If I have a method parse that
 takes an array of things (cards).
 
 94
@@ -417,7 +419,7 @@ well - this test tests nothing.
 
 96
 00:06:55,050 --> 00:06:57,240
-But at least it's not giving error any more
+But at least it's not erroring any more
 
 97
 00:06:57,770 --> 00:07:01,450
@@ -426,12 +428,12 @@ On the other hand - I want it to be a hand and ....
 98
 00:07:05,680 --> 00:07:09,200
 I want this to be some
-kind of hand 'object' type of thing.
+kind of Hand object type of thing.
 
 99
 00:07:13,000 --> 00:07:15,450
 So, I want to create a
-hand object type of thing.
+Hand object type of thing.
 
 100
 00:07:15,450 --> 00:07:16,320
@@ -439,7 +441,7 @@ TS: OK.
 
 101
 00:07:20,250 --> 00:07:22,080
-Oh, how do we even do this in our spec.
+Oh, how do we even do this in RSpec.
 
 102
 00:07:23,480 --> 00:07:25,740
@@ -452,11 +454,11 @@ and check the class of it.
 
 104
 00:07:35,170 --> 00:07:39,880
-I expect my hand cards.count.
+I expect my hand.cards.count
 
 105
 00:07:40,400 --> 00:07:42,370
-2 or 5 for example,
+to equal 5 for example,
 
 106
 00:07:45,710 --> 00:07:51,040
@@ -499,7 +501,7 @@ We'll just assume that our users
 
 115
 00:08:13,630 --> 00:08:15,920
-are going to put correct the things in there.
+are going to put correct things in there.
 
 116
 00:08:15,930 --> 00:08:16,430
@@ -517,7 +519,7 @@ Right, excellent.
 119
 00:08:31,620 --> 00:08:36,690
 This needs to return a
-thing that quacks dot cards.
+thing that quacks .cards.
 
 120
 00:08:37,050 --> 00:08:37,460
@@ -525,8 +527,8 @@ TS: OK.
 
 121
 00:08:51,680 --> 00:08:55,050
-CB: Look at me failing,
-that's sublime, beautiful. (laughter)
+CB: Look at me failing
+at Sublime, beautiful. (laughter)
 
 122
 00:08:57,710 --> 00:09:00,100
@@ -539,16 +541,17 @@ for different reasons now.
 
 124
 00:09:05,780 --> 00:09:07,480
-No shortcut, OK
+No, wrong shortcut, OK
 
 125
 00:09:08,770 --> 00:09:13,050
-inaudible parser hand ... so far so good.
+uninitialized constant HandParser::Hand
+... so far so good.
 
 126
 00:09:16,050 --> 00:09:19,970
-This doesn't know what hand
-it is so let's quickly acquire it.
+This doesn't know what Hand
+is so let's quickly require it.
 
 127
 00:09:21,760 --> 00:09:23,570
@@ -556,7 +559,7 @@ And now back to our tests.
 
 128
 00:09:27,970 --> 00:09:30,440
-And if I make the count, it has nothing in it.
+undefined method count, it has nothing in it.
 
 129
 00:09:36,510 --> 00:09:39,900
@@ -565,12 +568,13 @@ a slightly nicer reason now.
 
 130
 00:09:43,140 --> 00:09:45,650
-So here we have an
+So now we have an
 array that has nothing in it.
 
 131
 00:09:45,650 --> 00:09:47,710
-And we should have 5 things, inaudible
+And we should have 5 things and now I'll
+actually implement the things because
 
 132
 00:09:49,700 --> 00:09:50,700
@@ -582,7 +586,7 @@ So if we have an array of cards
 
 134
 00:09:53,450 --> 00:09:56,450
-and has 5 things, then
+and it has 5 things, then what
 I want to do is create a hand
 
 135
@@ -612,12 +616,12 @@ And I want it to basically ....
 
 141
 00:10:23,060 --> 00:10:24,400
-find that string of cards
+from that string of card
 
 142
 00:10:24,600 --> 00:10:28,300
-and say, make me
-a card object type 'thing'.
+be able to say, make me
+a Card object type 'thing'.
 
 143
 00:10:28,400 --> 00:10:28,970
@@ -625,7 +629,8 @@ TS: Right.
 
 144
 00:10:29,850 --> 00:10:32,460
-and then eventually I'll want to inaudible hand.
+and then eventually I'll want to feed it
+into Hand.
 
 145
 00:10:32,580 --> 00:10:33,720
@@ -637,11 +642,11 @@ OK, so that can live here.
 
 147
 00:10:38,140 --> 00:10:40,570
-So if I  have make a card thing,
+So if I have make_card thing,
 
 148
 00:10:43,200 --> 00:10:45,540
-this is going to move to card object later.
+this is going to move to Card object later.
 
 149
 00:10:45,540 --> 00:10:46,970
@@ -658,7 +663,8 @@ of this, it is quite unnatural.
 
 152
 00:10:53,540 --> 00:10:55,850
-I quite like the fact that my parsing object
+I quite like the fact that my parsing
+logic
 
 153
 00:10:55,850 --> 00:10:57,510
@@ -667,7 +673,7 @@ is going to sit somewhere else.
 154
 00:10:57,510 --> 00:11:00,510
 I don't want to have to do
-crazy inaudible and things like that
+crazy regexes and things like that
 
 155
 00:11:00,510 --> 00:11:01,800
@@ -689,7 +695,7 @@ approaching it in this particular way ?
 
 159
 00:11:10,930 --> 00:11:13,720
-if your saying you don't
+if you're saying you don't
 want this method to be here,
 
 160
@@ -702,7 +708,7 @@ CB: I'm not quite sure how much logic
 
 162
 00:11:20,080 --> 00:11:23,850
-what my card.new type
+what my Card.new type
 method should be accepting.
 
 163
@@ -712,8 +718,8 @@ like it to say 'if it's a 5 of Diamond' it takes
 
 164
 00:11:28,480 --> 00:11:32,600
-card.move 5 and a
-diamond symbol type thing.
+Card.new 5 and a
+Diamond symbol type thing.
 
 165
 00:11:33,200 --> 00:11:36,180
@@ -740,11 +746,11 @@ this to live. I'm not quite sure yet.
 
 170
 00:11:46,100 --> 00:11:47,570
-TS: So your expecting later on
+TS: So you're expecting later on
 
 171
 00:11:47,570 --> 00:11:49,360
-that your going to have a better idea
+that you're going to have a better idea
 
 172
 00:11:49,360 --> 00:11:50,960
@@ -773,12 +779,12 @@ So what I'm going to do is ....
 
 178
 00:12:09,800 --> 00:12:14,580
-create card.new and I'm
-taking card string zero
+create Card.new and I'm
+taking card_string[0]
 
 179
 00:12:14,640 --> 00:12:17,340
-card string one but actually not.
+card_string[1] but actually not.
 
 180
 00:12:20,880 --> 00:12:24,160
@@ -809,25 +815,25 @@ I just want to do a very quick pre-parsing
 
 186
 00:12:42,710 --> 00:12:47,570
-if this is H then just
-give me a Heart symbol.
+if this is 'h' then just
+give me :heart.
 
 187
 00:12:50,110 --> 00:12:52,360
-and this is D give me a Diamond symbol.
+and this is 'd' give me :diamond.
 
 188
 00:12:52,360 --> 00:12:55,850
-Actually, this could be
-variable, hash Y might do it
+Actually, this could very well live in a
+hash, why am I doing a terrible
 
 189
 00:12:56,240 --> 00:13:01,310
-and switch.  Let's have a hash sitting here.
+switch? Let's have a hash sitting here.
 
 190
 00:13:02,050 --> 00:13:06,020
-We have other suits, so we have
+We have all the suits, so we have
 
 191
 00:13:07,910 --> 00:13:11,290
@@ -855,11 +861,12 @@ So, this goes bye bye.
 
 197
 00:13:33,690 --> 00:13:35,460
-TS: So now you can just look up with hash
+TS: So now you can just look up with a
+hash
 
 198
 00:13:35,460 --> 00:13:37,310
-rather than using a inaudibleible set.
+rather than using a switch statement.
 
 199
 00:13:39,310 --> 00:13:42,270
@@ -876,7 +883,7 @@ TS: How are you going to make it fall over?
 
 202
 00:13:47,220 --> 00:13:50,500
-With 'fetch'. It means that if I put
+With fetch. It means that if I put
 
 203
 00:13:51,200 --> 00:13:54,570
@@ -885,7 +892,7 @@ fetch is going to complain.
 
 204
 00:13:54,570 --> 00:13:57,720
-because there is no suits with key A
+because there is no suit with key A
 
 205
 00:13:58,200 --> 00:14:00,450
@@ -932,11 +939,12 @@ TS: So your motivation here sounds like
 
 215
 00:14:24,510 --> 00:14:27,370
-you don't want it to 'silently' fail ?
+you don't want it to silently fail ?
 
 216
 00:14:29,220 --> 00:14:30,600
-But you want it to complain.
+If there's bad input, you want it to
+complain.
 
 217
 00:14:30,600 --> 00:14:31,910
@@ -961,7 +969,8 @@ it's not going to fail loudly.
 
 222
 00:14:46,540 --> 00:14:48,650
-But, I'm not entirely inaudible,
+But, I'm not in a statically typed
+language
 
 223
 00:14:49,540 --> 00:14:52,440
@@ -981,7 +990,8 @@ If I'm writing things I want to ship.
 
 227
 00:15:02,140 --> 00:15:09,340
-I would put fail loudly and with better
+I would put a TODO and 'fail loudly and
+with better
 
 228
 00:15:09,800 --> 00:15:11,780
@@ -989,7 +999,7 @@ errors with unexpected
 
 229
 00:15:13,970 --> 00:15:15,930
-inputs, much in the same way
+inputs', much in the same way
 
 230
 00:15:16,480 --> 00:15:18,890
