@@ -5950,17 +5950,18 @@ how many 14s I'm deleting
 
 1381
 01:30:17,000 --> 01:30:19,140
-That exact number of 1s on the other side.
+In order to add that exact
+number of 1s on the other side
 
 1382
 01:30:19,140 --> 01:30:23,960
-Otherwise I might end up with such
-as an array and maybe three cards
+otherwise I might end up with something
+crazy such as an array with only three cards
 
 1383
 01:30:26,280 --> 01:30:28,960
-It's expecting a certain
-number of things in there
+which will explode because it is
+expecting a certain number of things in there;
 
 1384
 01:30:29,110 --> 01:30:30,910
@@ -5972,7 +5973,7 @@ It would not be a good idea.
 
 1386
 01:30:41,770 --> 01:30:42,320
-delete ....
+delete 14.
 
 1387
 01:30:46,000 --> 01:30:48,820
@@ -5981,8 +5982,7 @@ documentation this is deleted.
 
 1388
 01:30:56,340 --> 01:31:00,970
-This gives me back all the
-documentation that's it deleted.
+This gives me back all that it's deleted.
 
 1389
 01:31:02,050 --> 01:31:03,910
@@ -6028,7 +6028,7 @@ then I want to delete all the Aces.
 
 1399
 01:31:53,560 --> 01:31:57,910
-and add two sorted card values once,
+and add two sorted card values, ones,
 
 1400
 01:31:58,080 --> 01:32:00,970
@@ -6037,11 +6037,11 @@ exactly the number of aces times.
 
 1401
 01:32:04,220 --> 01:32:07,000
-I could do it in a better way by inaudible
+I could do it in a better way by concatenating
 
 1402
 01:32:07,480 --> 01:32:11,520
-two card values in an array of exactly
+two sorted card values in an array of exactly
 
 1403
 01:32:14,200 --> 01:32:15,540
@@ -6100,7 +6100,7 @@ is going to fail in the case of
 
 1416
 01:33:13,110 --> 01:33:17,570
-highest, because of how I've implemented it.
+high ace, because of how I've implemented it.
 
 1417
 01:33:18,770 --> 01:33:21,620
@@ -6108,7 +6108,7 @@ To prove my point I'm going to write
 
 1418
 01:33:24,770 --> 01:33:26,680
-There we go inaudible, high ace.
+There we go straight_hand_high_ace.
 
 1419
 01:33:31,850 --> 01:33:35,400
@@ -6116,7 +6116,8 @@ What I mean by that... and do that.
 
 1420
 01:33:36,540 --> 01:33:38,800
-inaudible add for array.  Interesting.
+Undefined method `add` for array.
+Interesting.
 
 1421
 01:33:39,200 --> 01:33:40,540
@@ -6132,19 +6133,21 @@ CB: Correct.
 
 1424
 01:33:44,050 --> 01:33:47,650
-So this is you cant inaudible and insert. Yes.
+So this is you can't add
+and I expect it's insert. Yes.
 
 1425
 01:33:54,480 --> 01:33:57,660
-it's going in the loop which is good news.
+So now it's actually going in
+the loop which is good news.
 
 1426
 01:34:01,170 --> 01:34:03,450
-I want to find my inaudible pass
+Undefined '-' method class.
 
 1427
 01:34:04,480 --> 01:34:06,140
-Let's de-bug our way through this
+Let's debug our way through this
 
 1428
 01:34:08,220 --> 01:34:10,220
@@ -6152,7 +6155,7 @@ It's happening on consecutive cards
 
 1429
 01:34:12,340 --> 01:34:14,310
-and it's happening on my eighty three
+and it's happening on line eighty three
 
 1430
 01:34:15,600 --> 01:34:16,310
@@ -6160,7 +6163,8 @@ Which is here.
 
 1431
 01:34:21,420 --> 01:34:23,510
-TS: What does the document for insert say?
+TS: What does the documentation
+for insert say?
 
 1432
 01:34:25,110 --> 01:34:26,620
@@ -6168,11 +6172,12 @@ CB: it's not destructive is it ?
 
 1433
 01:34:28,280 --> 01:34:31,020
-TS: it's not inaudible the values with an index
+TS: it sets the given value with
+the given index
 
 1434
 01:34:31,240 --> 01:34:32,930
-so you have to inaudible an index.
+so you have to provide an index.
 
 1435
 01:34:32,930 --> 01:34:33,650
@@ -6197,8 +6202,7 @@ CB: No, so many things going wrong right now.
 
 1440
 01:35:05,680 --> 01:35:08,220
-This is take my sorted
-card values and give me
+This is take my sorted card values and give me
 
 1441
 01:35:10,200 --> 01:35:15,110
@@ -6230,7 +6234,7 @@ I want to manipulate that.
 
 1448
 01:35:46,610 --> 01:35:49,140
-TS: So your going to
+TS: So you're going to
 leave the original one alone?
 
 1449
@@ -6249,7 +6253,7 @@ with the usual way of doing it.
 
 1452
 01:35:59,280 --> 01:36:05,200
-Or it works out with using
+Or it works out with the using
 Ace as ones, way of doing it.
 
 1453
@@ -6262,7 +6266,7 @@ If the number of Aces is none,
 
 1455
 01:36:15,600 --> 01:36:17,480
-then its the usual check ....
+then it's the usual check:
 
 1456
 01:36:18,400 --> 01:36:19,860
@@ -6338,8 +6342,8 @@ so it should be less angry at me.
 
 1473
 01:37:33,460 --> 01:37:35,930
-Straits with high Aces
-straights with low Aces.
+Good, straights with low Aces
+and straights with high Aces.
 
 1474
 01:37:37,280 --> 01:37:41,250
@@ -6348,8 +6352,8 @@ what would you like to do to wrap this up.
 
 1475
 01:37:43,680 --> 01:37:47,320
-I was going to run hand
-comparer, and about to write hand ranker,
+I was supposed to write a hand comparer,
+and now I've written a hand ranker,
 
 1476
 01:37:47,800 --> 01:37:52,270
@@ -6357,7 +6361,8 @@ I'd like to try that out and see what happens
 
 1477
 01:37:52,420 --> 01:37:54,220
-TS: So ranking the hands you've inaudible
+TS: So ranking the hands you've
+already implemented
 
 1478
 01:37:55,680 --> 01:37:57,220
@@ -6373,7 +6378,7 @@ Let me just correct this
 
 1481
 01:38:08,420 --> 01:38:13,050
-inaudible
+so that we are following the rules of poker.
 
 1482
 01:38:14,540 --> 01:38:16,820
@@ -6399,7 +6404,7 @@ my hand I would like
 
 1487
 01:38:30,560 --> 01:38:32,680
-to have is, better than other hand.
+to have, is_better? than other hand.
 
 1488
 01:38:34,200 --> 01:38:36,280
@@ -6431,11 +6436,11 @@ We already have some very handy hands
 
 1495
 01:39:10,680 --> 01:39:13,070
-We know, for example, 4 of a kind hand
+We know, for example, the 4 of a kind hand
 
 1496
 01:39:15,420 --> 01:39:17,560
-It should be better than full house.
+should be better than full house.
 
 1497
 01:39:18,420 --> 01:39:19,600
@@ -6443,7 +6448,7 @@ let's start with those
 
 1498
 01:39:19,650 --> 01:39:25,480
-so full house.better than 4 of a kind hand
+so full_house.better_than? 4 of a kind hand
 
 1499
 01:39:25,850 --> 01:39:27,040
@@ -6488,7 +6493,7 @@ let's run this
 
 1509
 01:40:01,400 --> 01:40:03,710
-and now it's inaudible excellent
+and now it's getting nil, excellent
 
 1510
 01:40:06,680 --> 01:40:11,410
@@ -6539,7 +6544,7 @@ kind, full house and straight.
 
 1521
 01:40:50,540 --> 01:40:56,110
-What I could do is inaudible
+What I could do is in POKER_RANKS
 
 1522
 01:40:57,650 --> 01:41:00,360
@@ -6547,7 +6552,7 @@ I can just get the index of rank
 
 1523
 01:41:00,650 --> 01:41:03,080
-and compare that to the Poker rank.
+and compare that to the POKER_RANKS
 
 1524
 01:41:04,050 --> 01:41:05,400
@@ -6555,7 +6560,7 @@ index of the other hand
 
 1525
 01:41:05,820 --> 01:41:09,220
-and that would give me a straightforward answer for inaudible
+and that would give me a straightforward answer for [inaudible]
 
 1526
 01:41:12,970 --> 01:41:15,740
@@ -6569,11 +6574,11 @@ my rank, and this is confusing.
 
 1528
 01:41:26,340 --> 01:41:28,530
-TS: Your putting the worst first
+TS: You're putting the worst first
 
 1529
 01:41:29,220 --> 01:41:31,850
-CB: Yes because inaudible
+CB: Yes because it's a lower rank
 
 1530
 01:41:32,420 --> 01:41:35,070
@@ -6596,7 +6601,7 @@ I'll get back to that in a second
 
 1534
 01:41:47,940 --> 01:41:51,450
-Yes, index one doesn't exist obviously.
+but yes, index one doesn't exist obviously.
 
 1535
 01:41:52,220 --> 01:41:55,790
@@ -6622,7 +6627,8 @@ Let's go back here ....
 
 1540
 01:42:21,570 --> 01:42:25,220
-Go and define method inaudible. excellent.
+Go and define method something for nil class.
+Excellent.
 
 1541
 01:42:32,680 --> 01:42:35,760
@@ -6669,7 +6675,7 @@ I'm just assuming there is a type.
 
 1551
 01:43:18,950 --> 01:43:22,340
-If there is a type then I should
+If there isn't a type then I should
 be wary so I'm going to let that fail.
 
 1552
@@ -6694,16 +6700,16 @@ And there's a bit of work left in terms of:
 
 1557
 01:43:37,770 --> 01:43:41,050
-we should probably
+well, we should probably
 have all the rankings in nice order.
 
 1558
 01:43:41,250 --> 01:43:43,220
-There's an obvious re-factoring step
+There's an obvious refactoring step
 
 1559
 01:43:43,710 --> 01:43:47,110
-which is, we'll now I have a list of things.
+which is, well, now I have a list of things
 
 1560
 01:43:47,140 --> 01:43:48,800
@@ -6717,7 +6723,7 @@ and checking for things in a certain order.
 1562
 01:43:56,740 --> 01:43:59,510
 The order that I'm
-defining in this Poker ranks array
+defining in this POKER_RANKS array
 
 1563
 01:44:00,100 --> 01:44:03,200
@@ -6726,7 +6732,7 @@ I want to be ranking those cards
 
 1564
 01:44:03,200 --> 01:44:05,830
-so I should be something really clever here.
+so I should be doing something really clever here.
 
 1565
 01:44:08,200 --> 01:44:10,710
@@ -6771,7 +6777,7 @@ kind of straight that I have.
 
 1574
 01:44:42,650 --> 01:44:44,870
-and I would return that as inaudible rank.
+and I would return that as the type of rank.
 
 1575
 01:44:45,370 --> 01:44:48,740
