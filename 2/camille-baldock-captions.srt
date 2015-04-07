@@ -1947,7 +1947,7 @@ TS: Ok.
 
 444
 00:29:53,770 --> 00:30:00,680
-So if I have say, 5678 here.
+So if I have say, 55678 here.
 
 445
 00:30:01,970 --> 00:30:04,910
@@ -1955,13 +1955,13 @@ There was 2 x 5s, 1 x 6, 1 x7 and 1 x 8
 
 446
 00:30:05,110 --> 00:30:09,800
-TS: I see so your counting them
-barring how many Pips they have.
+TS: I see so you're counting them
+by how many Pips they have.
 
 447
 00:30:09,910 --> 00:30:13,810
-you want to somehow say
-I've got 2x5s, I've got 1x6 etc.
+You want to somehow say
+I've got 2 x 5s, I've got 1 x 6 etc.
 
 448
 00:30:14,370 --> 00:30:16,830
@@ -1970,7 +1970,7 @@ CB: Yes, I want some kind of Pip counter
 449
 00:30:17,180 --> 00:30:20,650
 that sort of mashes them up in
-some structure they can read nicely.
+some structure it can read nicely.
 
 450
 00:30:24,650 --> 00:30:28,800
@@ -2061,7 +2061,7 @@ terrible name for a thing,
 
 470
 00:31:38,520 --> 00:31:39,820
-I just put a hash hash bob.
+I just put a ##bob.
 
 471
 00:31:41,050 --> 00:31:45,100
@@ -2087,11 +2087,11 @@ that, so I always put a bob
 
 476
 00:31:54,500 --> 00:31:56,360
-when I have bad name thing, and I usually
+when I have bad naming thing, and I usually
 
 477
 00:31:56,420 --> 00:32:00,200
-have fun, inaudible my interface.
+have fun figuring out the interface
 
 478
 00:32:01,370 --> 00:32:03,000
@@ -2099,7 +2099,7 @@ when I'm finishing off an object.
 
 479
 00:32:03,000 --> 00:32:05,250
-So let's say it's a Pip counter thing, for now.
+So let's say it's pip_count, for now.
 
 480
 00:32:06,510 --> 00:32:06,820
@@ -2107,11 +2107,11 @@ TS: Ok.
 
 481
 00:32:08,510 --> 00:32:09,970
-So what does my Pip count do,
+So what does my pip_count do,
 
 482
 00:32:10,250 --> 00:32:11,220
-Hey, we've run a test !
+Hey, we can write a test !
 
 483
 00:32:14,170 --> 00:32:15,770
@@ -2119,7 +2119,7 @@ That is going to do that for me.
 
 484
 00:32:17,480 --> 00:32:18,680
-So if I have a Pip count ....
+So if I have a pip_count ....
 
 485
 00:32:22,850 --> 00:32:26,370
@@ -2140,7 +2140,7 @@ As I don't yet know where we're going.
 
 489
 00:32:33,140 --> 00:32:34,710
-So if I have a pip count and I am ...
+So if I have a pip_count and I am ...
 
 490
 00:32:39,000 --> 00:32:42,370
@@ -2157,7 +2157,7 @@ There we go...
 
 493
 00:32:52,170 --> 00:32:54,570
-That should fail quite loudly, let's this test.
+That should fail quite loudly, let's run this test.
 
 494
 00:32:57,510 --> 00:32:58,080
@@ -2178,7 +2178,7 @@ And for each of those cards I have Pips.
 
 498
 00:33:08,480 --> 00:33:11,920
-I can just inaudible
+I can just .....
 
 499
 00:33:13,080 --> 00:33:15,930
@@ -2190,7 +2190,7 @@ For a thing like this I need my documentation,
 
 501
 00:33:29,310 --> 00:33:31,170
-in case I don't remember everything
+because I don't remember everything.
 
 502
 00:33:32,720 --> 00:33:36,360
@@ -2206,7 +2206,7 @@ It's a documentation tool that I like to use.
 
 505
 00:33:45,050 --> 00:33:48,370
-TS: So you have all of the Ruby inaudible.
+TS: So you have all of the Ruby API documentation.
 
 506
 00:33:49,710 --> 00:33:52,920
@@ -2258,7 +2258,7 @@ the only thing that comes to mind is
 
 517
 00:34:30,600 --> 00:34:32,970
-a 'group by' method,
+a group_by method,
 which won't do what you want
 
 518
@@ -2267,11 +2267,11 @@ but will do a related thing, which is
 
 519
 00:34:35,200 --> 00:34:36,620
-group together all of them
+group together all of
 
 520
 00:34:36,620 --> 00:34:38,740
-All of the 5s, all of the 6s and all of the 7s,
+the 5s, all of the 6s and all of the 7s,
 
 521
 00:34:39,880 --> 00:34:41,850
@@ -2284,12 +2284,12 @@ an array of arrays then ?
 
 523
 00:34:44,170 --> 00:34:46,940
-TS: It gives you a hash,
-where the keys of the hash are
+TS: It gives you a hash.
+
 
 524
 00:34:47,800 --> 00:34:49,370
-So the key in the hash would be
+The key in the hash would be
 
 525
 00:34:50,310 --> 00:34:52,400
@@ -2297,11 +2297,12 @@ So the key in the hash would be
 
 526
 00:34:52,450 --> 00:34:54,480
-all of the 5 pip cards there.
+all of the 5 Pip cards that it had found.
 
 527
 00:34:54,490 --> 00:34:57,040
-and then it would be six and the array inaudible.
+and then the key would be 6
+and the value would be .....
 
 528
 00:34:57,480 --> 00:34:59,610
@@ -2309,19 +2310,19 @@ CB: I could map on that quite easily.
 
 529
 00:35:02,220 --> 00:35:05,960
-let's do a 'group by' and see how that works.
+let's do a group_by and see how that works.
 
 530
 00:35:11,220 --> 00:35:12,400
-So group by ....
+So group_by ....
 
 531
 00:35:20,200 --> 00:35:21,790
-inaudible an array.
+It's not in Array.
 
 532
 00:35:21,820 --> 00:35:27,860
-TS: It will be in the new model I expect.
+TS: It will be in Enumerable I expect.
 
 533
 00:35:27,970 --> 00:35:29,700
@@ -2337,11 +2338,11 @@ I'm in the wrong scope for it.
 
 536
 00:35:39,510 --> 00:35:42,380
-Numerable group by .... no, no no.
+Enumerable group_by .... no, no no.
 
 537
 00:35:43,400 --> 00:35:45,340
-It's just giving me answerable stuff.
+It's just giving me Ansible stuff.
 
 538
 00:35:46,700 --> 00:35:48,120
@@ -2391,7 +2392,8 @@ TS: It depends what you want.
 
 549
 00:36:17,200 --> 00:36:19,940
-CB: Group by, I was very excited by this.
+CB: I want to use group_by,
+I was very excited by this.
 
 550
 00:36:24,680 --> 00:36:27,060
@@ -2408,7 +2410,7 @@ in that you would get the right keys
 
 553
 00:36:34,110 --> 00:36:36,420
-but your values
+but for the values,
 instead of being how many
 
 554
@@ -2418,7 +2420,7 @@ be an array of those cards.
 
 555
 00:36:39,140 --> 00:36:44,560
-CB: I'm just wondering inaudible which is
+CB: I'm just wondering .....
 
 556
 00:36:45,770 --> 00:36:47,680
@@ -2434,7 +2436,7 @@ it might be the default for that.
 
 559
 00:36:54,620 --> 00:36:58,080
-Let's run a test and
+Let's run the tests and
 see what that returns.
 
 560
@@ -2447,11 +2449,11 @@ Now we can just have a 'thing'.
 
 562
 00:37:06,130 --> 00:37:11,400
-This is my grouped cards, and then I can
+This is my grouped_cards, and then I can
 
 563
 00:37:12,200 --> 00:37:16,720
-say group cards and
+say grouped_cards and
 then for each of my things,
 
 564
@@ -2477,7 +2479,7 @@ CB: Yes so let's see how that works.
 569
 00:37:34,680 --> 00:37:40,110
 It's not very elegant
-but it should meet the test.
+but it should make the test pass.
 
 570
 00:37:40,140 --> 00:37:42,360
@@ -2494,7 +2496,7 @@ We are in the magical world
 
 573
 00:37:51,640 --> 00:37:53,340
-where only 1 rank exists.
+where only 2 rankings exists.
 
 574
 00:37:55,020 --> 00:37:57,840
@@ -2558,7 +2560,7 @@ TS: Yes (laughter).
 
 589
 00:39:00,200 --> 00:39:03,000
-I want to inaudible group of cards.
+Undefined local variable grouped_cards.
 
 590
 00:39:04,170 --> 00:39:06,130
@@ -2593,7 +2595,7 @@ a hand with nothing in it,
 
 597
 00:39:36,370 --> 00:39:39,790
-which I will call highest, as a type.
+which I will call 'highest', as a type.
 
 598
 00:39:42,850 --> 00:39:44,740
@@ -2605,7 +2607,7 @@ I essentially want it to be pretty much this,
 
 600
 00:39:48,740 --> 00:39:50,880
-but I'm just going to put something there,
+but I'm just going to put something in there,
 
 601
 00:39:50,880 --> 00:39:52,910
@@ -2630,12 +2632,12 @@ the scope of the problem
 
 606
 00:40:08,020 --> 00:40:10,570
-to solving a very small type 'thing'.
+to solving a very small 'thing'.
 
 607
 00:40:10,620 --> 00:40:14,320
-TS: Like you said before,
-your imagining  a smaller version
+TS: Yes, you said before,
+you're imagining a smaller version
 
 608
 00:40:14,420 --> 00:40:18,400
@@ -2656,7 +2658,8 @@ arrays and then suddenly
 
 612
 00:40:30,650 --> 00:40:34,380
-I have one Pair, inaudible and another with nothing
+I have 'one pair', 'one thing with a pair'
+and 'another with nothing'
 
 613
 00:40:34,400 --> 00:40:37,260
@@ -2708,16 +2711,16 @@ if I create a 3 of a kind,
 
 625
 00:41:12,740 --> 00:41:14,740
-let's call it a '3 hand'.
+let's call it a three_of_a_kind_hand
 
 626
 00:41:19,220 --> 00:41:23,170
-So if we have a 3 of a
-kind hand, it's going to be ....
+So if we have a three_of_a_kind_hand,
+it's going to be ....
 
 627
 00:41:25,770 --> 00:41:29,840
-I need 5 of Hearts Diamonds and Spades.
+I need 5 of Hearts, Diamonds and Spades.
 
 628
 00:41:30,280 --> 00:41:34,660
@@ -2726,12 +2729,11 @@ going to return a Pair, I presume.
 
 629
 00:41:34,970 --> 00:41:37,080
-but actually we want to return 3 of a kind,
+but actually we want it to return 3 of a kind,
 
 630
 00:41:37,280 --> 00:41:40,330
-so this, if I have the
-rank, should be type 3.
+so this, should be .....
 
 631
 00:41:45,000 --> 00:41:47,850
@@ -2756,7 +2758,7 @@ I do have a failure because it is assuming
 
 636
 00:42:00,250 --> 00:42:03,340
-that I have type highest and not type 3.
+that I have type :highest and not type :three.
 
 637
 00:42:03,510 --> 00:42:06,240
@@ -2792,7 +2794,7 @@ let's get to that when we get to that.
 
 645
 00:42:24,890 --> 00:42:27,600
-I'm staring to write
+I'm starting to write
 some pretty terrible code now.
 
 646
@@ -2801,7 +2803,7 @@ Shameless green ....
 
 647
 00:42:34,480 --> 00:42:39,290
-so if I have 3 then it becomes 3 of a kind
+so if I have 3 then it becomes :three_of_a_kind
 
 648
 00:42:40,830 --> 00:42:42,670
@@ -2809,7 +2811,7 @@ and if I have 4 then
 
 649
 00:42:42,940 --> 00:42:52,590
-suddenly it becomes 4 of of a kind.
+suddenly it becomes :four_of_a_kind
 
 650
 00:42:54,480 --> 00:42:56,410
@@ -2822,11 +2824,11 @@ that my tests do pass nicely.
 
 652
 00:43:03,940 --> 00:43:06,530
-And as they don't .... it is 3 of a kind.
+And as they don't .... it is :three_of_a_kind
 
 653
 00:43:06,940 --> 00:43:10,020
-This is 3, so this should now parser inaudible.
+This is 3, so this should now pass.
 
 654
 00:43:10,590 --> 00:43:13,130
@@ -2842,7 +2844,7 @@ that we haven't covered for the future
 
 657
 00:43:19,620 --> 00:43:21,770
-when we're going to
+where we're going to
 be adding more things.
 
 658
@@ -2853,7 +2855,7 @@ that I'm not breaking things
 659
 00:43:29,000 --> 00:43:33,970
 let's just create some
-test data with a 4 of a kind hand.
+test data with a four_of_a_kind_hand.
 
 660
 00:43:34,370 --> 00:43:36,040
@@ -2897,7 +2899,7 @@ What I'm thinking now is that it matters
 
 669
 00:44:09,880 --> 00:44:14,680
-about things along the lines of for example
+about things along the lines of, for example
 
 670
 00:44:14,680 --> 00:44:18,940
@@ -2924,7 +2926,7 @@ now is making an abstraction
 
 675
 00:44:32,380 --> 00:44:35,510
-on this logic of pit counts, when actually,
+on this logic of Pip counts, when actually,
 
 676
 00:44:38,510 --> 00:44:42,000
@@ -2938,7 +2940,7 @@ What I would like to try doing now is
 678
 00:44:44,400 --> 00:44:48,010
 try implementing full house
-which has 3 of a kind, two of a kind
+which has 3 of a kind, 2 of a kind
 
 679
 00:44:48,480 --> 00:44:50,170
