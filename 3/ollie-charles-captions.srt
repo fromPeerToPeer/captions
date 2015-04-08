@@ -4274,90 +4274,90 @@ So we've got go so I'll try ...
 to bring the dictionary back into scope.
 
 993
-01:04:23,940 --> 01:04:25,914
+01:04:24,308 --> 01:04:26,874
 Word chains plus words, so I'll try cat
 
 994
-01:04:27,340 --> 01:04:29,571
-and it needs
-a dictionary in there as well.
+01:04:30,491 --> 01:04:32,714
+and it needs a
+dictionary in there as well.
 
 995
 01:04:35,280 --> 01:04:37,080
 And we'll start with just that one.
 
 996
-01:04:37,170 --> 01:04:41,080
+01:04:37,410 --> 01:04:42,028
 And that's going to expand forever (inaudible) go
 
 997
-01:04:41,080 --> 01:04:42,370
+01:04:42,140 --> 01:04:42,485
 SP: Ok.
 
 998
-01:04:42,370 --> 01:04:43,820
+01:04:42,491 --> 01:04:43,908
 OC: And take the head of that.
 
 999
-01:04:44,850 --> 01:04:46,450
+01:04:45,262 --> 01:04:46,971
 There's a lot of possibilities ...
 
 1000
-01:04:46,480 --> 01:04:47,910
+01:04:47,697 --> 01:04:49,085
 because of the dictionary.
 
 1001
-01:04:52,340 --> 01:04:54,540
-We'll just take the word chains out of that
+01:04:52,508 --> 01:04:54,777
+We'll just take the word chains out of that.
 
 1002
 01:04:54,770 --> 01:04:59,050
 (inaudible)
 
 1003
-01:05:09,020 --> 01:05:10,540
+01:05:09,420 --> 01:05:11,691
 So every time we take one more
 
 1004
-01:05:10,540 --> 01:05:12,000
-our chains get a bit longer
+01:05:11,710 --> 01:05:13,114
+our chains get a bit longer.
 
 1005
-01:05:12,000 --> 01:05:13,342
+01:05:13,114 --> 01:05:14,491
 SP: Can you see the next one?
 
 1006
-01:05:15,020 --> 01:05:17,110
+01:05:16,542 --> 01:05:18,605
 Oh ! that's because we've flattened it, yes.
 
 1007
-01:05:19,280 --> 01:05:22,540
+01:05:20,171 --> 01:05:23,691
 SP: That's not the level
 that's just the chains as they change.
 
 1008
-01:05:23,820 --> 01:05:24,140
+01:05:23,691 --> 01:05:24,320
 OC: Yes
 
 1009
-01:05:24,140 --> 01:05:27,250
+01:05:24,325 --> 01:05:27,250
 SP: (inaudible)
 
 1010
-01:05:30,680 --> 01:05:34,250
-OC: So gradually they're
-going to start getting bigger at some point
+01:05:30,680 --> 01:05:34,565
+OC: So gradually they're going
+to start getting bigger at some point.
 
 1011
-01:05:35,250 --> 01:05:37,250
+01:05:35,542 --> 01:05:37,250
 (inaudible)
 
 1012
-01:05:44,370 --> 01:05:45,457
+01:05:45,062 --> 01:05:46,314
 That's not re cursing.
 
 1013
-01:05:46,680 --> 01:05:48,620
+01:05:47,165 --> 01:05:49,080
 Actually go is never calling itself,
 
 1014
@@ -4365,1749 +4365,1748 @@ Actually go is never calling itself,
 which is the problem here.
 
 1015
-01:05:50,680 --> 01:05:53,250
+01:05:50,554 --> 01:05:53,554
 So were only ever
 looking at one level expansion.
 
 1016
-01:05:54,050 --> 01:05:56,340
+01:05:55,120 --> 01:05:57,325
 so if we take the original pairs and what we
 
 1017
-01:05:56,340 --> 01:05:58,400
+01:05:57,331 --> 01:06:02,450
 need to do is go again on the concat map.
 
 1018
-01:06:02,880 --> 01:06:03,340
+01:06:03,085 --> 01:06:03,617
 SP: Right
 
 1019
-01:06:03,340 --> 01:06:06,280
-So we're going to
-keep going to bigger and bigger chains.
+01:06:04,680 --> 01:06:07,280
+So we're going to keep
+going to bigger and bigger chains.
 
 1020
-01:06:06,280 --> 01:06:08,340
-But we're always putting these chains
+01:06:07,470 --> 01:06:10,697
+But we're always putting these
+chains on the end of the list.
 
 1021
-01:06:08,370 --> 01:06:09,480
-on the end of the list.
-
-1022
-01:06:18,710 --> 01:06:20,828
+01:06:18,880 --> 01:06:21,954
 So if we go back to taking 20 we should be
 
+1022
+01:06:21,954 --> 01:06:23,085
+back to where we were.
+
 1023
-01:06:20,828 --> 01:06:21,942
-back to where we were
+01:06:23,400 --> 01:06:26,782
+And as I take more, you can see we are
 
 1024
-01:06:23,400 --> 01:06:25,257
-and as I take more, you can see we are
+01:06:26,780 --> 01:06:29,114
+starting to get bigger and bigger chains now.
 
 1025
-01:06:26,770 --> 01:06:29,110
-starting to get
-bigger and bigger chains now.
-
-1026
-01:06:29,110 --> 01:06:31,020
+01:06:29,110 --> 01:06:31,680
 SP: Right, and all of them ending on cat.
 
-1027
-01:06:31,600 --> 01:06:32,000
-OC: Yes
+1026
+01:06:31,857 --> 01:06:32,268
+OC: Yes.
 
-1028
-01:06:34,800 --> 01:06:36,680
+1027
+01:06:35,022 --> 01:06:36,891
 SP: That's because that was our start.
 
-1029
-01:06:37,280 --> 01:06:38,820
+1028
+01:06:36,902 --> 01:06:39,222
 OC: Yes, were going out from cat
 
-1030
+1029
 01:06:39,480 --> 01:06:43,000
 SP: (inaudible)
 
-1031
-01:06:44,850 --> 01:06:47,940
+1030
+01:06:44,850 --> 01:06:48,554
 OC: So now were ready
 to put this back into the  word puzzle
 
-1032
-01:06:47,970 --> 01:06:49,850
+1031
+01:06:48,554 --> 01:06:50,525
 to solve the puzzle properly .. again !
 
-1033
-01:06:52,880 --> 01:06:54,970
-So we need to
-call go and we're going to be
+1032
+01:06:52,880 --> 01:06:56,360
+So we need to call
+go and we're going to be
 
-1034
-01:06:56,050 --> 01:06:57,828
+1033
+01:06:56,365 --> 01:06:58,377
 using the (inaudible) dictionary.
 
+1034
+01:06:58,771 --> 01:07:02,417
+But were going to have
+to delete our starting word
+
 1035
-01:06:58,050 --> 01:07:00,800
-But were going
-to have to delete our starting word
+01:07:02,410 --> 01:07:03,508
+from the dictionary.
 
 1036
-01:07:00,800 --> 01:07:02,450
-from the dictionary.
-SP: Right
-
-1037
-01:07:03,420 --> 01:07:05,857
+01:07:03,502 --> 01:07:05,897
 OC: Because we don't
 want to go back to the start.
 
-1038
-01:07:05,857 --> 01:07:08,000
+1037
+01:07:05,902 --> 01:07:08,045
 And we're going to
 start with a word chain
 
-1039
-01:07:08,028 --> 01:07:09,314
+1038
+01:07:08,045 --> 01:07:09,765
 that begins at the word A.
 
-1040
-01:07:11,200 --> 01:07:13,420
+1039
+01:07:11,582 --> 01:07:13,771
 And this is going to give us all the chains
 
-1041
-01:07:13,420 --> 01:07:14,340
+1040
+01:07:13,771 --> 01:07:14,514
 that start from A.
 
-1042
-01:07:14,340 --> 01:07:16,800
+1041
+01:07:14,514 --> 01:07:16,902
 But we're interested
 in chains that start at A
 
-1043
-01:07:16,828 --> 01:07:17,600
+1042
+01:07:16,908 --> 01:07:17,857
 and finish at B.
 
-1044
-01:07:17,940 --> 01:07:19,650
+1043
+01:07:18,491 --> 01:07:21,234
 So we filter the result of chains
 
-1045
-01:07:21,370 --> 01:07:22,680
+1044
+01:07:21,370 --> 01:07:24,748
 by  taking ... for each chain.
 
-1046
-01:07:26,080 --> 01:07:28,110
+1045
+01:07:26,257 --> 01:07:29,020
 Sorry, first we should just throw away
 
-1047
-01:07:29,450 --> 01:07:30,710
+1046
+01:07:29,022 --> 01:07:30,988
 the extra dictionaries.
 
-1048
-01:07:30,710 --> 01:07:33,420
+1047
+01:07:31,302 --> 01:07:33,897
 SP: Because the two (inaudible) will come back from go.
 
-1049
-01:07:33,540 --> 01:07:35,570
+1048
+01:07:33,891 --> 01:07:36,177
 OC: Yes, so it will give us two word chains
 
-1050
-01:07:35,570 --> 01:07:36,800
+1049
+01:07:36,171 --> 01:07:37,365
 from the dictionaries,
 
-1051
-01:07:37,250 --> 01:07:39,685
+1050
+01:07:37,417 --> 01:07:39,805
 whereas we're
 only interested in word chains.
 
-1052
-01:07:39,685 --> 01:07:42,080
+1051
+01:07:39,805 --> 01:07:42,080
 (inaudible)
 
-1053
-01:07:42,080 --> 01:07:43,857
+1052
+01:07:42,200 --> 01:07:44,022
 Now we've got a list of word chains.
 
+1053
+01:07:44,080 --> 01:07:49,205
+I can filter the list for
+ones whose first element
+
 1054
-01:07:44,080 --> 01:07:46,771
-I can filter the list for ones whose first element
+01:07:50,434 --> 01:07:52,845
+is equal to our target. (inaudible)
 
 1055
-01:07:48,820 --> 01:07:54,050
-is equal to our target. (inaudible)
-SP: Right
+01:07:54,022 --> 01:07:57,205
+And I think that's all we need
 
 1056
-01:07:54,050 --> 01:07:55,710
-OC: And I think that's what we need
+01:07:57,205 --> 01:07:59,988
+to solve the puzzle ... so that all compiles
 
 1057
-01:07:56,910 --> 01:07:59,110
-to solve the puzzle..so that all compiles
+01:08:04,651 --> 01:08:06,388
+Bring the dictionary back in
 
 1058
-01:08:04,370 --> 01:08:05,820
-Put that dictionary back in
-
-1059
-01:08:05,820 --> 01:08:08,800
+01:08:06,388 --> 01:08:08,942
 (inaudible) word puzzle using the dictionary
 
-1060
-01:08:08,800 --> 01:08:10,800
+1059
+01:08:08,948 --> 01:08:10,891
 it will go from dog to cat.
 
-1061
-01:08:15,620 --> 01:08:17,420
+1060
+01:08:15,742 --> 01:08:17,502
 And we are indeed getting result.
 
-1062
+1061
 01:08:19,000 --> 01:08:21,080
 The interesting thing we're seeing here
 
-1063
-01:08:21,080 --> 01:08:23,142
+1062
+01:08:21,080 --> 01:08:23,685
 is as it's gradually printing results,
 
-1064
-01:08:23,142 --> 01:08:25,220
-we are seeing how Haskells' (inaudible)
-
-1065
-01:08:25,220 --> 01:08:27,050
+1063
+01:08:23,970 --> 01:08:27,714
+we are seeing Haskells' lazy
 evaluation works to our advantage.
 
-1066
-01:08:27,850 --> 01:08:30,340
+1064
+01:08:27,850 --> 01:08:30,491
 So if I only wanted
 to get the very first result,
 
-1067
-01:08:30,340 --> 01:08:33,020
+1065
+01:08:30,491 --> 01:08:30,502
+I could simply
+take the head of all the solutions
+So if I only wanted
+to get the very first result,
+
+1066
+01:08:30,502 --> 01:08:33,020
 I could simply
 take the head of all the solutions
 
-1068
+1067
 01:08:33,020 --> 01:08:34,650
 and the result is already done,
 
-1069
+1068
 01:08:34,650 --> 01:08:37,310
 it didn't bother
 computing all the extra values.
 
-1070
+1069
 01:08:37,420 --> 01:08:39,680
 But if I needed the extra results, maybe if I
 
-1071
+1070
 01:08:39,680 --> 01:08:42,110
 wanted to find
 the first ten shortest chains
 
-1072
+1071
 01:08:43,220 --> 01:08:45,770
 I could just take10
 and that's going to give you
 
-1073
+1072
 01:08:45,770 --> 01:08:47,570
 10 word chains and then terminate,
 
-1074
+1073
 01:08:48,970 --> 01:08:50,600
 which is really nice.
 SP: Right.
 
-1075
+1074
 01:08:52,600 --> 01:08:55,080
 OC: I think that
 solves the problem that we had
 
-1076
+1075
 01:08:57,370 --> 01:08:58,970
 in the original problem spec.
 
-1077
+1076
 01:08:59,910 --> 01:09:01,650
 SP: Shall we try it on longer input ?
 
-1078
+1077
 01:09:02,400 --> 01:09:04,200
 How about the words Ruby and Code.
 
-1079
+1078
 01:09:05,800 --> 01:09:07,650
 OC: Ok so I'll take the first of those.
 
-1080
+1079
 01:09:24,050 --> 01:09:25,910
 It's certainly a lot slower but we do
 
-1081
+1080
 01:09:25,910 --> 01:09:27,280
 get a word chain in the end.
 
-1082
+1081
 01:09:32,050 --> 01:09:34,600
 So it might be worth trying to improve the forms
 
-1083
+1082
 01:09:34,620 --> 01:09:36,050
 of this text (inaudible).
 
-1084
+1083
 01:09:36,050 --> 01:09:38,257
 SP: Absolutely,
 there are longer examples
 
-1085
+1084
 01:09:39,310 --> 01:09:40,770
 such as from house to shout,
 
-1086
+1085
 01:09:42,110 --> 01:09:43,710
 we could see if that completes
 
-1087
+1086
 01:09:43,710 --> 01:09:45,370
 in a reasonable amount of time.
 
-1088
+1087
 01:09:45,880 --> 01:09:48,510
 This one's quite
 tricky because the search space
 
-1089
+1088
 01:09:48,880 --> 01:09:51,000
 for it is quite large in the dictionary
 
-1090
+1089
 01:09:51,000 --> 01:09:51,970
 that I've given you.
 
-1091
+1090
 01:09:53,650 --> 01:09:56,280
 OC: This looks like
 it's terminating any time soon.
 
-1092
+1091
 01:09:58,140 --> 01:10:00,370
 SP: So maybe we
 can have a look to determine
 
-1093
+1092
 01:10:02,170 --> 01:10:03,480
 where the bottle neck is ?
 
-1094
+1093
 01:10:04,370 --> 01:10:06,370
 OC: Yes, well I'm going to leave that one
 
-1095
+1094
 01:10:06,370 --> 01:10:09,310
 running in the
 background anyway, see if we get a result
 
-1096
+1095
 01:10:09,310 --> 01:10:11,310
 while we start looking for some (inaudible).
 
-1097
+1096
 01:10:11,310 --> 01:10:13,200
 To me, the biggest source of expense
 
-1098
+1097
 01:10:14,540 --> 01:10:16,540
 feels like this neighbors function.
 
-1099
+1098
 01:10:17,450 --> 01:10:19,480
 We're filtering twice and the map twice
 
-1100
+1099
 01:10:20,510 --> 01:10:22,280
 and we are doing this repeatedly
 
-1101
+1100
 01:10:22,280 --> 01:10:23,800
 every single time we expand.
 
-1102
+1101
 01:10:23,800 --> 01:10:26,000
 And the set of
 neighbors around a word
 
-1103
+1102
 01:10:27,020 --> 01:10:28,220
 doesn't really change.
 
-1104
+1103
 01:10:28,228 --> 01:10:30,571
 There may be
 potential neighbors that we
 
-1105
+1104
 01:10:30,650 --> 01:10:33,620
 can't consider because
 we've already looked at them once.
 
-1106
+1105
 01:10:33,620 --> 01:10:35,370
 and we would go back on ourselves.
 
-1107
+1106
 01:10:36,280 --> 01:10:39,540
 But we can probably prune
 the set of neighbors afterwards
 
-1108
+1107
 01:10:39,540 --> 01:10:42,050
 I'm thinking maybe
 we can have an optimisation
 
-1109
+1108
 01:10:42,050 --> 01:10:43,742
 where we have a map of neighbors
 
-1110
+1109
 01:10:48,220 --> 01:10:51,114
 It's going to be a map
 from text to its set of neighbors.
 
-1111
+1110
 01:10:55,285 --> 01:10:56,485
 And we should be able to
 
-1112
+1111
 01:10:56,485 --> 01:10:58,714
 pre-compute this against the dictionary .
 
-1113
+1112
 01:10:59,340 --> 01:11:01,220
 We're going to need the map data type
 
-1114
+1113
 01:11:01,850 --> 01:11:03,250
 which comes from Data.Map,
 
-1115
+1114
 01:11:06,340 --> 01:11:08,620
 again I'll be importing this from qualified.
 
-1116
+1115
 01:11:15,370 --> 01:11:17,250
 Now we look up the list of neighbors.
 
-1117
+1116
 01:11:21,220 --> 01:11:23,420
 We can still take the dictionary as input
 
-1118
+1117
 01:11:23,770 --> 01:11:26,080
 but rather than just taking that, we can also
 
-1119
+1118
 01:11:26,450 --> 01:11:27,770
 take in a neighbors map
 
-1120
+1119
 01:11:29,110 --> 01:11:30,310
 and the word to look up
 
-1121
+1120
 01:11:30,310 --> 01:11:32,940
 and it's going to
 give us a set of neighbors again.
 
-1122
+1121
 01:11:32,940 --> 01:11:35,200
 And the reason I'm taking that dictionary
 
-1123
+1122
 01:11:35,200 --> 01:11:37,400
 is because we keep making that dictionary
 
-1124
+1123
 01:11:37,400 --> 01:11:39,480
 smaller and smaller. We want to make sure
 
-1125
+1124
 01:11:39,480 --> 01:11:41,510
 the neighbors we look up from this map
 
-1126
+1125
 01:11:41,510 --> 01:11:43,657
 are actually in the dictionary because
 
-1127
+1126
 01:11:43,650 --> 01:11:45,600
 we might have made the dictionary smaller
 
-1128
+1127
 01:11:45,600 --> 01:11:47,420
 and removed possible names
 
-1129
+1128
 01:11:47,428 --> 01:11:49,200
 so we're going to filter those out.
 
-1130
+1129
 01:11:49,228 --> 01:11:50,971
 OK, so we've got, I'll call that M and W.
 
-1131
+1130
 01:11:52,510 --> 01:11:54,370
 And this becomes straightforward,
 
-1132
+1131
 01:11:54,370 --> 01:12:01,080
 we simply do a map look-up (inaudible)
 
-1133
+1132
 01:12:01,110 --> 01:12:04,020
 which will throw up an error
 if the word isn't in the map
 
-1134
+1133
 01:12:04,740 --> 01:12:07,314
 but we'll have to
 gloss over that for now I guess.
 
-1135
+1134
 01:12:08,420 --> 01:12:09,600
 SP: yes,  (inaud) maybes'.
 
-1136
+1135
 01:12:10,200 --> 01:12:12,200
 OC: If I was doing this production code
 
-1137
+1136
 01:12:12,200 --> 01:12:14,714
 I would probably want
 to keep the maybes' and the
 
-1138
+1137
 01:12:14,710 --> 01:12:16,171
 chance of possibly failing
 
-1139
+1138
 01:12:16,171 --> 01:12:17,680
 and reflect that in the types
 
-1140
+1139
 01:12:17,685 --> 01:12:19,620
 that would add up, but for our purposes
 
-1141
+1140
 01:12:19,910 --> 01:12:21,340
 this should be sufficient.
 
-1142
+1141
 01:12:21,910 --> 01:12:23,400
 So, this is saying in the map M
 
-1143
+1142
 01:12:25,400 --> 01:12:26,310
 look up the word W.
 
-1144
+1143
 01:12:28,770 --> 01:12:30,510
 We need to take the intersection
 
-1145
+1144
 01:12:31,280 --> 01:12:33,080
 of the set of possible neighbors.
 
-1146
+1145
 01:12:37,170 --> 01:12:38,620
 We take the set into section
 
-1147
+1146
 01:12:40,200 --> 01:12:42,114
 SP: Is it (inaudible), ?
 I can't remember.
 
-1148
+1147
 01:12:43,540 --> 01:12:46,571
 OC: From map I believe
 it's just a single exclamation mark,
 
-1149
+1148
 01:12:46,742 --> 01:12:49,140
 whereas for lists it's two exclamation marks.
 
-1150
+1149
 01:12:55,850 --> 01:12:58,020
 So we don't seem to have any compile errors
 
-1151
+1150
 01:12:58,020 --> 01:12:59,850
 around this neighbors function.
 
-1152
+1151
 01:13:00,680 --> 01:13:02,250
 That's quite straightforward.
 
-1153
+1152
 01:13:02,250 --> 01:13:04,570
 We also need a
 way to pre-compute neighbors.
 
-1154
+1153
 01:13:06,880 --> 01:13:09,680
 So that takes the
 dictionary and turns it into a map,
 
-1155
+1154
 01:13:12,770 --> 01:13:15,540
 SP: So here your
 starting from saying; from right down
 
-1156
+1155
 01:13:15,540 --> 01:13:17,620
 in the lowest level of this computation
 
-1157
+1156
 01:13:17,620 --> 01:13:20,800
 you would like to have
 that extra information available
 
-1158
+1157
 01:13:21,280 --> 01:13:24,050
 in a neighbour map.
 and you're working your way back up
 
-1159
+1158
 01:13:24,680 --> 01:13:27,340
 to the (inaudible) levels to see
 
-1160
+1159
 01:13:27,340 --> 01:13:29,340
 how to pass that down into it.
 
-1161
+1160
 01:13:32,000 --> 01:13:34,050
 OC: Yes.  We've got a neighbors function.
 
-1162
+1161
 01:13:34,050 --> 01:13:36,310
 I would like to be able to test that in GHCi
 
-1163
+1162
 01:13:36,310 --> 01:13:38,857
 but we don't have
 a way to build a neighbour map yet.
 
-1164
+1163
 01:13:38,857 --> 01:13:40,600
 So I'm going to work on this (inaudible)
 
-1165
+1164
 01:13:40,628 --> 01:13:42,710
 neighbors function then I can (inaud)
 
-1166
+1165
 01:13:43,400 --> 01:13:44,850
 GCHi so I can actually see if
 
-1167
+1166
 01:13:44,850 --> 01:13:46,740
 the neighbour map seems to be working
 
-1168
+1167
 01:13:46,740 --> 01:13:47,710
 as we would expect.
 
-1169
+1168
 01:13:47,710 --> 01:13:50,714
 Then we can work
 through the rest of the compile errors
 
-1170
+1169
 01:13:50,714 --> 01:13:54,371
 (inaud).  That's what we do.
 
-1171
+1170
 01:13:55,540 --> 01:13:58,140
 So this looks like
 it should be straightforward,
 
-1172
+1171
 01:13:58,170 --> 01:14:00,940
 we just take
 our dictionary, which is a set of words,
 
-1173
+1172
 01:14:02,280 --> 01:14:03,370
 so if we go set to list.
 
-1174
+1173
 01:14:05,080 --> 01:14:07,340
 and  for every word
 in here we can map over ...
 
-1175
+1174
 01:14:12,200 --> 01:14:14,820
 Ah ! We did need our
 original neighbors function
 
-1176
+1175
 01:14:14,850 --> 01:14:16,340
 which I have thrown away now
 
-1177
+1176
 01:14:16,970 --> 01:14:18,370
 because we want to use that.
 
-1178
+1177
 01:14:19,740 --> 01:14:21,620
 OC: So let's see if I can go back to that.
 
-1179
+1178
 01:14:26,450 --> 01:14:27,510
 So I'll call this one ...
 
-1180
+1179
 01:14:30,570 --> 01:14:31,620
 neighborsLookup
 
-1181
+1180
 01:14:37,620 --> 01:14:39,080
 and this is back to how it was.
 
-1182
+1181
 01:14:53,080 --> 01:14:56,080
 SP: We could also call this
 neighbors and could the old
 
-1183
+1182
 01:14:56,080 --> 01:14:58,970
 neighbors function
 simply be a function returning
 
-1184
+1183
 01:15:01,370 --> 01:15:04,220
 a list of the words
 with the neighbors and distances?
 
-1185
+1184
 01:15:05,140 --> 01:15:06,880
 OC: In the neighbors function or ...
 
-1186
+1185
 01:15:08,050 --> 01:15:09,940
 SP: Yes, so you could - at this level here
 
-1187
+1186
 01:15:12,620 --> 01:15:14,650
 where your returning W with distance,
 
-1188
+1187
 01:15:18,340 --> 01:15:21,485
 in order to avoid having two similar (inaudible) functions.
 
-1189
+1188
 01:15:21,971 --> 01:15:23,342
 Maybe we should continue ...
 
-1190
+1189
 01:15:23,342 --> 01:15:25,742
 OC: It's probably worth renaming this though
 
-1191
+1190
 01:15:25,771 --> 01:15:27,371
 because we want compile error,
 
-1192
+1191
 01:15:27,370 --> 01:15:29,828
 well we're going to get compile errors anyway
 
-1193
+1192
 01:15:29,828 --> 01:15:31,371
 because the types different.
 
-1194
+1193
 01:15:31,770 --> 01:15:34,428
 I'm going to move this
 into preview of neighbors
 
-1195
+1194
 01:15:38,000 --> 01:15:38,942
 whatever I do ...
 
-1196
+1195
 01:15:39,428 --> 01:15:42,110
 because we don't
 have any reason to ever call this
 
-1197
+1196
 01:15:42,110 --> 01:15:43,770
 other than inside string names.
 
-1198
+1197
 01:15:48,740 --> 01:15:50,450
 SP: And you can rename the top one.
 
-1199
+1198
 01:15:50,457 --> 01:15:52,685
 OC: Exactly,
 The dictionary is going to be
 
-1200
+1199
 01:15:54,457 --> 01:15:55,820
 available up here anyway,
 
-1201
+1200
 01:16:01,000 --> 01:16:03,657
 We need to turn our
 dictionary into a list of words
 
-1202
+1201
 01:16:04,740 --> 01:16:06,480
 move that neighbors over there.
 
-1203
+1202
 01:16:12,110 --> 01:16:14,940
 So I need to pair
 them up with the original word as well.
 
-1204
+1203
 01:16:17,770 --> 01:16:20,910
 There's a fairly nice
 function in the Control.Arrow module
 
-1205
+1204
 01:16:22,710 --> 01:16:25,510
 which lets us run two
 functions on the same argument.
 
-1206
+1205
 01:16:27,400 --> 01:16:29,080
 I can say that it and neighbors
 
-1207
+1206
 01:16:29,770 --> 01:16:33,110
 so that's the identity
 function and the neighbors function
 
-1208
+1207
 01:16:33,114 --> 01:16:35,171
 and it's going to Tootle (inaudible) those up for me.
 
-1209
+1208
 01:16:35,171 --> 01:16:35,680
 SP: OK.
 
-1210
+1209
 01:16:37,400 --> 01:16:38,970
 OC: I think I'll just import that ...
 
-1211
+1210
 01:16:42,480 --> 01:16:44,110
 We've got a lot of compile errors.
 
-1212
+1211
 01:17:12,110 --> 01:17:14,680
 We apparently need the word A as well. (inaudible)
 
-1213
+1212
 01:17:17,710 --> 01:17:28,200
 (inaudible)
 
-1214
+1213
 01:17:31,480 --> 01:17:33,880
 OC: So now we have
 prelude neighbors but that's
 
-1215
+1214
 01:17:33,880 --> 01:17:36,050
 not returning the neighbors from there.
 
-1216
+1215
 01:17:41,420 --> 01:17:44,050
 We don't really need to (inaudible)
 
-1217
+1216
 01:17:44,050 --> 01:17:47,140
 because were using that in neighbors
 
-1218
+1217
 01:17:48,910 --> 01:17:52,110
 Now this is going to be a list of tootles (inaudible)
 
-1219
+1218
 01:17:52,110 --> 01:17:54,910
 OC: We can turn that into a map. (inaud)
 
-1220
+1219
 01:17:58,140 --> 01:18:00,680
 So we've turned our
 dictionary into a list of text
 
-1221
+1220
 01:18:00,680 --> 01:18:02,910
 and for every text and for every text value
 
-1222
+1221
 01:18:02,910 --> 01:18:04,970
 turned that into the text word itself
 
-1223
+1222
 01:18:06,000 --> 01:18:07,400
 and its set of neighbors.
 
-1224
+1223
 01:18:08,000 --> 01:18:10,680
 SP: And each word will
 be distinct so you don't need
 
-1225
+1224
 01:18:10,970 --> 01:18:12,740
 to worry about combining entries.
 
-1226
+1225
 01:18:13,850 --> 01:18:14,480
 OC: Right, yes
 
-1227
+1226
 01:18:17,600 --> 01:18:19,310
 OC: Let's see what we get from that.
 
-1228
+1227
 01:18:23,370 --> 01:18:25,800
 neighbors is
 going to be neighbors look up
 
-1229
+1228
 01:18:28,080 --> 01:18:31,171
 so that's ... well, yes
 let's keep it as neighborsLookup
 
-1230
+1229
 01:18:38,220 --> 01:18:41,280
 OC: I'm just checking to
 see if that's the only compile error
 
-1231
+1230
 01:18:41,280 --> 01:18:42,942
 we've got, and it looks like it is,
 
-1232
+1231
 01:18:42,942 --> 01:18:44,800
 so we've just got two arrows up here.
 
-1233
+1232
 01:18:46,370 --> 01:18:49,340
 That means expand
 rather than just take the dictionary
 
-1234
+1233
 01:18:49,340 --> 01:18:50,742
 it also need to take a nMap.
 
-1235
+1234
 01:19:02,220 --> 01:19:04,340
 The order here is dictionary, nMap
 
-1236
+1235
 01:19:10,250 --> 01:19:11,650
 I just had a thought there,
 
-1237
+1236
 01:19:11,650 --> 01:19:15,000
 because we're always
 passing these two things together maybe
 
-1238
+1237
 01:19:15,000 --> 01:19:16,450
 I should be combining these.
 
-1239
+1238
 01:19:16,450 --> 01:19:18,142
 SP: I was having the same thought.
 
-1240
+1239
 01:19:18,228 --> 01:19:20,220
 OC: So I think maybe our neighbour map
 
-1241
+1240
 01:19:20,220 --> 01:19:23,310
 could be a data type
 containing the full pre-computed map,
 
-1242
+1241
 01:19:24,510 --> 01:19:26,020
 but also a set of exclusions.
 
-1243
+1242
 01:19:26,820 --> 01:19:29,510
 And every time we
 need to drop something out of the
 
-1244
+1243
 01:19:29,510 --> 01:19:32,110
 neighbour map
 we can do that quite efficiently.
 
-1245
+1244
 01:19:33,250 --> 01:19:33,710
 SP: Right.
 
-1246
+1245
 01:19:33,710 --> 01:19:36,000
 OC: Or we maybe (inaud) but we'll see
 
-1247
+1246
 01:19:36,000 --> 01:19:37,420
 I'll come back to that later,
 
-1248
+1247
 01:19:37,600 --> 01:19:39,770
 but it certainly does feel suspect so far.
 
-1249
+1248
 01:19:42,420 --> 01:19:44,850
 So I think I better
 put this the right way round
 
-1250
+1249
 01:19:46,480 --> 01:19:48,080
 ...dictionary and neighbour map
 
-1251
+1250
 01:19:50,080 --> 01:19:52,200
 This is the dictionary and neighbour map
 
-1252
+1251
 01:19:59,740 --> 01:20:02,340
 and now expand
 needs that neighbour map as well.
 
-1253
+1252
 01:20:05,000 --> 01:20:07,880
 But interestingly,
 this doesn't have to be added to go.
 
-1254
+1253
 01:20:07,880 --> 01:20:10,371
 Because the neighbour map doesn't ever change
 
-1255
+1254
 01:20:11,257 --> 01:20:13,771
 from what we've got so far. So that's just a constant. (inaudible)
 
-1256
+1255
 01:20:19,742 --> 01:20:22,600
 SP: (inaudible)the first one.
 
-1257
+1256
 01:20:22,600 --> 01:20:23,250
 OC: Yes it did.
 
-1258
+1257
 01:20:28,280 --> 01:20:30,314
 And, we need to call that recurser map (inaudible
 
-1259
+1258
 01:20:36,200 --> 01:20:38,020
 and you can use pass in here as well.
 
-1260
+1259
 01:20:38,600 --> 01:20:43,200
 So here (inaudible)
 
-1261
+1260
 01:20:58,970 --> 01:21:01,800
 So now our word puzzle
 should be using this preview as
 
-1262
+1261
 01:21:01,820 --> 01:21:03,200
 neighbors map.
 SP: Right.
 
-1263
+1262
 01:21:03,820 --> 01:21:06,280
 And were using
 our more efficient neighbors
 
-1264
+1263
 01:21:06,280 --> 01:21:07,880
 look-up function. So hopefully
 
-1265
+1264
 01:21:07,880 --> 01:21:09,510
 we are going to see some results.
 
-1266
+1265
 01:21:10,450 --> 01:21:13,600
 Impressively its still
 trying to find solutions between
 
-1267
+1266
 01:21:13,600 --> 01:21:15,220
 house and shout, on the old code.
 
-1268
+1267
 01:21:16,250 --> 01:21:18,020
 So let's see what we get out of this.
 
-1269
+1268
 01:21:20,850 --> 01:21:23,220
 We didn't really
 look at seeing a pre-compute
 
-1270
+1269
 01:21:24,540 --> 01:21:27,600
 preview of neighbors,
 so let's have a quick look at that.
 
-1271
+1270
 01:21:35,310 --> 01:21:40,940
 OK, so (inaud) type checks.
 
-1272
+1271
 01:21:44,628 --> 01:21:46,800
 Let's bind that to it, something like that.
 
-1273
+1272
 01:21:47,428 --> 01:21:48,142
 We can do nMap ...
 
-1274
+1273
 01:21:54,340 --> 01:21:55,942
 SP: Jellow and hells. (laughter)
 
-1275
+1274
 01:21:56,914 --> 01:21:59,428
 OC: So bringing in
 neighbors does seem to be working.
 
-1276
+1275
 01:21:59,428 --> 01:22:01,510
 We seem to be getting some actual neighbors,
 
-1277
+1276
 01:22:01,514 --> 01:22:04,857
 so let's see what happens
 with the others, let's do ruby code then.
 
-1278
+1277
 01:22:08,942 --> 01:22:11,628
 It doesn't seem to
 be a huge amount more efficient
 
-1279
+1278
 01:22:14,428 --> 01:22:17,142
 But maybe we'll
 actually get a result from this now
 
-1280
+1279
 01:22:24,400 --> 01:22:26,114
 We've still got a little bit to go.
 
-1281
+1280
 01:22:30,000 --> 01:22:32,657
 SP: Does it take long
 to re-compute the entire map ?
 
-1282
+1281
 01:22:33,000 --> 01:22:34,914
 can you force that computation on c. ?
 
-1283
+1282
 01:22:36,400 --> 01:22:38,857
 OC: We can try
 forcing that and see what happens.
 
-1284
+1283
 01:22:40,110 --> 01:22:42,942
 SP: So of course here
 your going to be pre-computing the
 
-1285
+1284
 01:22:45,600 --> 01:22:48,680
 neighbors across
 the full dictionary, not necessarily
 
-1286
+1285
 01:22:48,680 --> 01:22:51,914
 the dictionary
 pruned down to only the the words (inaudible)
 
-1287
+1286
 01:22:52,880 --> 01:22:55,200
 OC: Yes that's probably worth doing already.
 
-1288
+1287
 01:22:57,140 --> 01:22:59,857
 Rather than ridding
 the dictionary of everything.
 
-1289
+1288
 01:23:01,080 --> 01:23:03,457
 We're using a
 lazy map here which means that
 
-1290
+1289
 01:23:04,250 --> 01:23:07,342
 we'll get a map back
 that contains all of the words as keys,
 
-1291
+1290
 01:23:09,340 --> 01:23:12,480
 but the values underneath
 that map won't be fully evaluated.
 
-1292
+1291
 01:23:12,480 --> 01:23:14,940
 So it's only when we
 look up those keys in the map
 
-1293
+1292
 01:23:14,940 --> 01:23:16,257
 that we will do that work.
 
-1294
+1293
 01:23:17,110 --> 01:23:19,742
 So hopefully
 having the full dictionary in there
 
-1295
+1294
 01:23:19,742 --> 01:23:21,200
 doesn't make any difference.
 
-1296
+1295
 01:23:21,710 --> 01:23:24,485
 But I think for clarity
 that's slightly nicer if we
 
-1297
+1296
 01:23:25,000 --> 01:23:27,085
 just say filter, length, equal to length
 
-1298
+1297
 01:23:36,514 --> 01:23:38,885
 SP: Of course, this way your run length across...
 
-1299
+1298
 01:23:40,257 --> 01:23:42,228
 is it hundreds of thousands of words ?
 
-1300
+1299
 01:23:42,570 --> 01:23:42,914
 OC: Yes.
 
-1301
+1300
 01:23:44,570 --> 01:23:45,600
 SP: So its a tradeoff.
 
-1302
+1301
 01:24:06,542 --> 01:24:07,771
 OC. So we take the length...
 
-1303
+1302
 01:24:11,940 --> 01:24:14,457
 I think that's
 because we have text values here.
 
-1304
+1303
 01:24:16,220 --> 01:24:19,285
 We've already seen
 this type of function before anyway.
 
-1305
+1304
 01:24:21,740 --> 01:24:25,171
 So (inaudible) here.
 Maybe we could do something about that.
 
-1306
+1305
 01:24:29,020 --> 01:24:31,850
 The maybe neighbors
 doesn't have to worry about that,
 
-1307
+1306
 01:24:31,850 --> 01:24:33,314
 we've already done that once.
 
-1308
+1307
 01:24:33,850 --> 01:24:36,280
 I think I'll just
 leave that for now, see if that
 
-1309
+1308
 01:24:36,280 --> 01:24:37,457
 has made a difference.
 
-1310
+1309
 01:24:44,770 --> 01:24:46,742
 It seems a bit saggy doesn't it?
 SP: Yes
 
-1311
+1310
 01:24:49,771 --> 01:24:51,280
 SP:: So the acid test. (laughter)
 
-1312
+1311
 01:24:55,970 --> 01:24:58,571
 There's still no
 results between house and shout.
 
-1313
+1312
 01:25:03,800 --> 01:25:05,942
 SP: So that's great, we've reached a point now
 
-1314
+1313
 01:25:05,942 --> 01:25:08,542
 were we're able to
 find chains quite efficiently,
 
-1315
+1314
 01:25:08,571 --> 01:25:11,142
 Not just from cat to dog
 but also from rude to code.
 
-1316
+1315
 01:25:15,371 --> 01:25:17,885
 SP: Where do you
 think you would go next with this ?
 
-1317
+1316
 01:25:19,940 --> 01:25:23,457
 OC: One thing that's always (inaud) quite a bit is
 
-1318
+1317
 01:25:24,280 --> 01:25:26,028
 in go we are using  foss boss (inaud)
 
-1319
+1318
 01:25:27,828 --> 01:25:30,400
 which means that
 because were always having to
 
-1320
+1319
 01:25:30,400 --> 01:25:32,085
 put things on the end of the list.
 
-1321
+1320
 01:25:32,085 --> 01:25:34,914
 we're always have to
 walk through the start of the list
 
-1322
+1321
 01:25:34,914 --> 01:25:37,857
 to get to the end.
 And we're having to do that repeatedly.
 
-1323
+1322
 01:25:39,257 --> 01:25:41,857
 There's a couple of
 well known ways we can go about
 
-1324
+1323
 01:25:41,857 --> 01:25:43,314
 optimising that at Haskell.
 
-1325
+1324
 01:25:43,314 --> 01:25:45,257
 Difference lists are one possiblity.
 
-1326
+1325
 01:25:45,942 --> 01:25:48,571
 Which means that
 appending has much less of a cost
 
-1327
+1326
 01:25:50,020 --> 01:25:53,085
 provided we don't
 ever try to inspect the front early on
 
-1328
+1327
 01:25:53,085 --> 01:25:55,142
 but we don't need to do that, we only need
 
-1329
+1328
 01:25:55,142 --> 01:25:58,485
 to start inspecting
 once we've built up this big computation
 
-1330
+1329
 01:25:58,480 --> 01:26:00,514
 of all possible solutions, and then we can
 
-1331
+1330
 01:26:00,514 --> 01:26:02,480
 start filtering things off the front.
 
-1332
+1331
 01:26:02,485 --> 01:26:05,371
 So that could be
 an interesting optimisation to see.
 
-1333
+1332
 01:26:05,371 --> 01:26:06,942
 Maybe we'll be able to allocate
 
-1334
+1333
 01:26:06,942 --> 01:26:08,542
 a bit less than the go function.
 
-1335
+1334
 01:26:08,542 --> 01:26:11,710
 Beyond that I'd probably
 want to look at the code profiling.
 
-1336
+1335
 01:26:11,714 --> 01:26:13,200
 Try and work out (inaudible)
 
-1337
+1336
 01:26:13,800 --> 01:26:15,510
 a little too frequently, and see
 
-1338
+1337
 01:26:15,510 --> 01:26:17,000
 if we can do something there
 
-1339
+1338
 01:26:20,020 --> 01:26:22,740
 Obvious strategies
 and any graph search problem
 
-1340
+1339
 01:26:22,740 --> 01:26:24,000
 would be memorisation.
 
-1341
+1340
 01:26:26,057 --> 01:26:28,085
 Which works really nicely at Haskell.
 
-1342
+1341
 01:26:28,085 --> 01:26:29,885
 That wouldn't be too hard to add in.
 
-1343
+1342
 01:26:29,885 --> 01:26:33,457
 It's just a case of
 working out exactly what needs to be optimised.
 
-1344
+1343
 01:26:34,000 --> 01:26:35,480
 And a couple of other things.
 
-1345
+1344
 01:26:35,480 --> 01:26:37,480
 Just in terms of the feel of this code,
 
-1346
+1345
 01:26:37,480 --> 01:26:38,740
 that I'd want to clean up.
 
-1347
+1346
 01:26:38,740 --> 01:26:40,971
 As I pointed out earlier, the neighbour map
 
-1348
+1347
 01:26:40,970 --> 01:26:43,885
 always has to be
 paired with the dictionary so forcing
 
-1349
+1348
 01:26:43,885 --> 01:26:46,685
 the user to pass the
 dictionary and the neighbour map
 
-1350
+1349
 01:26:46,685 --> 01:26:48,228
 around felt a bit cumbersome.
 
-1351
+1350
 01:26:48,370 --> 01:26:51,880
 It would be nice if
 we could work out some sort of abstraction there.
 
-1352
+1351
 01:26:51,880 --> 01:26:55,000
 A neighbour map
 data type that has an operation like look - up
 
-1353
+1352
 01:26:55,000 --> 01:26:55,571
 and remove ...
 
-1354
+1353
 01:26:57,000 --> 01:26:59,310
 SP: Or the dictionary itself is more complex
 
-1355
+1354
 01:26:59,310 --> 01:27:02,650
 and opaque structure
 which can provide you with neighbors.
 
-1356
+1355
 01:27:02,650 --> 01:27:03,457
 OC: Absolutely,
 
-1357
+1356
 01:27:04,650 --> 01:27:06,600
 SP:  Because that's the only operation
 
-1358
+1357
 01:27:07,710 --> 01:27:09,828
 we have on the (inaudible)
 
-1359
+1358
 01:27:09,820 --> 01:27:12,371
 OC: Yes, it needs
 efficient look up and efficient
 
-1360
+1359
 01:27:12,371 --> 01:27:14,400
 removal of the things you've already seen.
 
-1361
+1360
 01:27:14,457 --> 01:27:17,028
 Beyond that,
 we don't have any other requirements.
 
-1362
+1361
 01:27:17,020 --> 01:27:19,085
 I think were using a new (inaudible) set...
 
-1363
+1362
 01:27:23,171 --> 01:27:23,685
 we did yes.
 
-1364
+1363
 01:27:24,114 --> 01:27:26,885
 so the set does
 have efficient look up and deletion.
 
-1365
+1364
 01:27:27,250 --> 01:27:29,285
 But if we were able to combine that with
 
-1366
+1365
 01:27:31,714 --> 01:27:33,342
 the pre-computed neighbour map
 
-1367
+1366
 01:27:33,620 --> 01:27:35,620
 we would probably get a much nicer api.
 
-1368
+1367
 01:27:35,620 --> 01:27:37,400
 SP: And having worked through this,
 
-1369
+1368
 01:27:37,942 --> 01:27:41,400
 the overall approach of using
 lists to represent the word chains
 
-1370
+1369
 01:27:42,514 --> 01:27:43,914
 and  expanding those lists.
 
-1371
+1370
 01:27:48,000 --> 01:27:50,085
 Is that the approach you would use again ?
 
-1372
+1371
 01:27:50,657 --> 01:27:53,142
 OC: I think, now that we've got more familiar with
 
-1373
+1372
 01:27:53,140 --> 01:27:54,485
 the problem,and its clear
 
-1374
+1373
 01:27:54,480 --> 01:27:56,028
 that it has this tree structure
 
-1375
+1374
 01:27:56,028 --> 01:27:57,800
 when you do a breadth-first search.
 
-1376
+1375
 01:27:57,800 --> 01:28:00,257
 It would have been
 nice to make that explicit
 
-1377
+1376
 01:28:00,257 --> 01:28:01,542
 in the types themselves.
 
-1378
+1377
 01:28:01,542 --> 01:28:03,910
 So use some
 sort of tree structure to represent
 
-1379
+1378
 01:28:03,910 --> 01:28:05,657
 the branching out, because I think
 
-1380
+1379
 01:28:05,650 --> 01:28:07,771
 a couple of times we've confused ourselves
 
-1381
+1380
 01:28:07,771 --> 01:28:10,400
 with lists of lists of text,
 when we actually wanted
 
-1382
+1381
 01:28:10,400 --> 01:28:12,142
 a list of texts, and it was  unclear
 
-1383
+1382
 01:28:12,142 --> 01:28:13,657
 how we actually got them from
 
-1384
+1383
 01:28:13,657 --> 01:28:15,514
 that nest of lists to a single list.
 
-1385
+1384
 01:28:15,685 --> 01:28:17,940
 Was compact
 the right version to be using
 
-1386
+1385
 01:28:17,940 --> 01:28:20,085
 or have we
 made a mistake somewhere else.
 
-1387
+1386
 01:28:20,085 --> 01:28:22,540
 So we didn't really (inaudible) on the types there,
 
-1388
+1387
 01:28:22,540 --> 01:28:25,420
 it would have  been nice
 if we could have taken a bit more
 
-1389
+1388
 01:28:25,420 --> 01:28:27,110
 advantage from the type system.
 
-1390
+1389
 01:28:27,110 --> 01:28:29,514
 I think if I
 were to do it again I would choose
 
-1391
+1390
 01:28:29,514 --> 01:28:31,280
 a slightly better data structure
 
-1392
+1391
 01:28:32,028 --> 01:28:33,857
 for word chains in the first place
 
-1393
+1392
 01:28:34,028 --> 01:28:36,420
 SP: So there's a built in tree type,
 isn't there?
 
-1394
+1393
 01:28:36,420 --> 01:28:38,740
 OC: Yes, its not
 one that I'm very familiar with.
 
-1395
+1394
 01:28:38,740 --> 01:28:41,200
 It's in the same library
 as data.set and data.map.
 
-1396
+1395
 01:28:42,910 --> 01:28:44,685
 It doesn't have a hugh avi/api(inaud)
 
-1397
+1396
 01:28:46,400 --> 01:28:48,371
 but it does avoid me (inaud) in terms of
 
-1398
+1397
 01:28:49,110 --> 01:28:50,857
 just coming up with the data type.
 
-1399
+1398
 01:28:51,110 --> 01:28:54,050
 And the other thing
 that I might be interested in doing
 
-1400
+1399
 01:28:54,050 --> 01:28:56,057
 there's a lot of hidden recursion here.
 
-1401
+1400
 01:28:57,000 --> 01:28:58,771
 It's quite hard to follow this code,
 
-1402
+1401
 01:28:59,940 --> 01:29:01,710
 it calls itself in different ways.
 
-1403
+1402
 01:29:02,914 --> 01:29:04,628
 It's more of a (inaudible) Haskell
 
-1404
+1403
 01:29:06,828 --> 01:29:08,914
 where you can
 split that recursion out
 
-1405
+1404
 01:29:08,914 --> 01:29:10,280
 and make it very explicit.
 
-1406
+1405
 01:29:10,280 --> 01:29:12,371
 You have some
 N functions that operate
 
-1407
+1406
 01:29:12,370 --> 01:29:14,114
 on just one thing, and then you have
 
-1408
+1407
 01:29:14,114 --> 01:29:16,085
 a recursion scheme you can apply to that.
 
-1409
+1408
 01:29:16,085 --> 01:29:18,828
 And that might
 come out with some slightly cleaner code,
 
-1410
+1409
 01:29:18,828 --> 01:29:21,314
 but it's going to
 take a lot more work to get that.
 
-1411
+1410
 01:29:23,200 --> 01:29:24,680
 But I think maybe (inaudible)
 
-1412
+1411
 01:29:24,680 --> 01:29:26,371
 could clear up a lot of this code.
 
-1413
+1412
 01:29:27,420 --> 01:29:29,857
 SP: Right, that seems like a successful session.
 
-1414
+1413
 01:29:30,770 --> 01:29:32,457
 OC: I think so - got there in the end.
 
-1415
+1414
 01:29:32,770 --> 01:29:33,485
 SP: Yes, thanks.
 
-1416
+1415
 01:29:36,280 --> 01:29:36,542
 OC: OK
 
