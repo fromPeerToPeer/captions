@@ -3678,602 +3678,599 @@ So we have a function in the Prelude to do that
 which is unfoldr.
 
 853
-00:57:13,800 --> 00:57:16,480
-But that requires
-for this function that we have
+00:57:14,290 --> 00:57:16,897
+But that requires for
+this function that we have
 
 854
-00:57:16,480 --> 00:57:18,880
+00:57:16,891 --> 00:57:18,971
 something that returns maybe any value.
-SP: OK
 
 855
-00:57:18,880 --> 00:57:20,940
+00:57:19,228 --> 00:57:21,514
 OC: But this actually looks quite a lot
 
 856
-00:57:20,940 --> 00:57:22,600
+00:57:21,514 --> 00:57:23,285
 like what we have in expand here.
 
 857
-00:57:22,940 --> 00:57:24,600
+00:57:23,565 --> 00:57:25,182
 OC: But we don't have a maybe here,
 
 858
-00:57:24,940 --> 00:57:26,910
+00:57:25,754 --> 00:57:27,445
 so the maybe represents the fact that
 
 859
-00:57:26,910 --> 00:57:28,600
+00:57:27,445 --> 00:57:29,131
 you can't actually go any bigger,
 
 860
-00:57:28,710 --> 00:57:31,940
+00:57:29,131 --> 00:57:32,434
 which is what we were
 modeling here with this pattern match,
 
 861
-00:57:32,200 --> 00:57:35,450
+00:57:32,691 --> 00:57:35,480
 where we simply said
 we have an endless list of word chains,
 
 862
-00:57:35,450 --> 00:57:37,650
-but that felt a bit weird, so maybe let's try
+00:57:35,485 --> 00:57:37,650
+but that felt a bit weird,
 
 863
-00:57:38,800 --> 00:57:40,170
-bringing in a "maybe" there.
+00:57:37,840 --> 00:57:40,971
+so maybe let's try bringing in a maybe there.
 
 864
-00:57:42,200 --> 00:57:43,740
-SP: Maybe let's maybe (laughter)
+00:57:42,200 --> 00:57:44,171
+SP: Maybe let's maybe (laughter).
 
 865
-00:57:45,540 --> 00:57:47,940
+00:57:45,540 --> 00:57:49,685
 OC: Ok, so in this case
 there's nothing we can do,
 
 866
-00:57:49,650 --> 00:57:50,820
-so we just say nothing
+00:57:50,057 --> 00:57:51,245
+so we just say nothing.
 
 867
-00:57:51,310 --> 00:57:52,420
-whereas in this case,
+00:57:51,428 --> 00:57:52,565
+Whereas in this case,
 
 868
-00:57:54,000 --> 00:57:56,020
-we have just that result  of word chains.
+00:57:53,937 --> 00:57:56,782
+we have just that result of word chains.
 
 869
-00:57:57,140 --> 00:57:59,850
+00:57:57,691 --> 00:57:59,850
 NARRATOR: We're going to speed through this section
 
 870
-00:57:59,850 --> 00:58:02,050
+00:57:59,850 --> 00:58:01,577
 because Ollie and Steve found themselves
 
 871
-00:58:02,050 --> 00:58:03,280
+00:58:01,577 --> 00:58:03,280
 deep into a Rabbit hole.
 
 872
-00:58:03,680 --> 00:58:05,250
+00:58:03,860 --> 00:58:07,280
 They eventually backtracked
-
-873
-00:58:05,250 --> 00:58:06,800
 on this idea of using unfoldr,
 
-874
-00:58:07,600 --> 00:58:09,370
+873
+00:58:07,897 --> 00:58:09,674
 so let's skip ahead to the section
 
-875
-00:58:09,420 --> 00:58:10,880
+874
+00:58:09,674 --> 00:58:11,080
 where they changed course.
 
-876
+875
 00:58:14,740 --> 00:58:17,450
-SP: You are typing faster than I can think.
-(laughter)
+SP: You are typing faster
+than I can think (laughter).
 
-877
-00:58:18,370 --> 00:58:20,170
+876
+00:58:18,370 --> 00:58:20,422
 OC: Even though we're using unfold,
 
-878
-00:58:20,170 --> 00:58:22,710
+877
+00:58:20,422 --> 00:58:23,542
 which does feel
 like the right thing to be using
 
-879
-00:58:23,450 --> 00:58:25,370
-I think we're getting ourselves into
+878
+00:58:23,540 --> 00:58:26,388
+I think we're getting
+ourselves into a bit of a muddle here.
 
-880
-00:58:25,370 --> 00:58:27,910
-a bit of a muddle here.
+879
+00:58:26,382 --> 00:58:28,000
 And one of the big culprits
 
-881
-00:58:27,910 --> 00:58:30,200
+880
+00:58:28,011 --> 00:58:30,308
 is what we're doing
 in this expand function
 
-882
-00:58:30,250 --> 00:58:32,170
+881
+00:58:30,302 --> 00:58:32,171
 so I'm going to try and simplify that
 
-883
-00:58:32,170 --> 00:58:34,400
-and see if a
-nice solution comes out there.
+882
+00:58:32,170 --> 00:58:34,834
+and see if a nice
+solution comes out there.
 
-884
-00:58:35,000 --> 00:58:36,710
+883
+00:58:35,417 --> 00:58:36,891
 What I'm going to go with instead ..
 
-885
-00:58:36,820 --> 00:58:40,170
-expands going to take
-a single word chain and the dictionary
+884
+00:58:38,160 --> 00:58:41,577
+expands going to take a single
+word chain and the dictionary,
 
-886
-00:58:41,310 --> 00:58:43,250
+885
+00:58:42,100 --> 00:58:44,365
 and it's going to expand that to a list
 
-887
-00:58:44,200 --> 00:58:47,000
+886
+00:58:44,360 --> 00:58:47,640
 of possible word
 chains and smaller dictionaries.
 
-888
-00:58:48,080 --> 00:58:48,340
+887
+00:58:48,160 --> 00:58:48,531
 SP:OK
 
-889
+888
 00:58:48,540 --> 00:58:50,400
 OC: So whenever I make one expansion,
 
-890
+889
 00:58:50,400 --> 00:58:52,680
 I consider all of the neighbors around the
 
-891
-00:58:52,680 --> 00:58:54,140
+890
+00:58:52,890 --> 00:58:54,622
 first word of the word chain.
 
-892
-00:58:54,140 --> 00:58:56,080
+891
+00:58:54,760 --> 00:58:56,582
 And for each of those new word chains,
 
+892
+00:58:56,582 --> 00:58:58,080
+I'll have the neighbor at the front,
+
 893
-00:58:56,080 --> 00:58:57,910
-I'll have the neighbour at the front,
+00:58:58,080 --> 00:59:00,062
+and we will remove
+that word from the dictionary,
 
 894
-00:58:57,910 --> 00:58:59,680
-and we're going to remove that word
+00:59:00,080 --> 00:59:02,354
+because we don't want to go back on ourselves.
 
 895
-00:58:59,680 --> 00:59:01,885
-from the dictionary because we don't want
+00:59:03,737 --> 00:59:05,540
+So I have a word chain with nothing in
 
 896
-00:59:01,880 --> 00:59:03,171
-to go back on ourselves.
-
-897
-00:59:03,514 --> 00:59:05,542
-OC: So I have a word chain with nothing in
-
-898
-00:59:05,542 --> 00:59:07,000
+00:59:05,540 --> 00:59:07,714
 but there's nothing I can do.
 
+897
+00:59:08,560 --> 00:59:10,457
+We have (inaudible)
+
+898
+00:59:10,490 --> 00:59:12,417
+but otherwise if we have a chain.
+
 899
-00:59:07,510 --> 00:59:10,310
-We have to
-(inaudible) but otherwise if we have a chain
+00:59:12,891 --> 00:59:15,028
+It starts with the word W,
 
 900
-00:59:12,200 --> 00:59:13,600
-that starts with the word W,
-
-901
-00:59:14,820 --> 00:59:16,542
+00:59:15,171 --> 00:59:18,148
 we have the dictionary and then
 
+901
+00:59:18,280 --> 00:59:24,348
+we need to take the neighbors around W
+
 902
-00:59:18,110 --> 00:59:20,220
-we need to take
-the neighbors around W
+00:59:24,577 --> 00:59:25,520
+which will equal N.
 
 903
-00:59:24,310 --> 00:59:26,200
-which will equal N, and put that on the
+00:59:26,120 --> 00:59:28,034
+and put that on the front of the chain.
 
 904
-00:59:26,200 --> 00:59:28,080
-front of the chain, so N is going to be
+00:59:28,030 --> 00:59:30,611
+So N is going to be the neighbors
 
 905
-00:59:29,080 --> 00:59:31,914
-the neighbors using the
-same dictionary around W.
+00:59:34,228 --> 00:59:36,371
+using the same dictionary around W.
 
 906
-00:59:37,540 --> 00:59:38,940
+00:59:37,820 --> 00:59:41,045
 But we also need to return
-
-907
-00:59:38,940 --> 00:59:40,820
 this slightly smaller dictionary.
 
-908
+907
 00:59:43,740 --> 00:59:45,370
-Tootle (inaudible) that up with...
+Tootle that up
+
+908
+00:59:45,428 --> 00:59:49,651
+with the same dictionary ...
 
 909
-00:59:48,280 --> 00:59:49,400
-the same dictionary ...
+00:59:52,485 --> 00:59:54,540
+but we'll delete N from the dictionary.
 
 910
-00:59:52,540 --> 00:59:54,540
-but  we'll delete N from the dictionary.
+00:59:54,720 --> 00:59:55,388
+SP: Right.
 
 911
-00:59:54,540 --> 00:59:55,000
-SP: Right
-
-912
-00:59:55,170 --> 00:59:56,000
+00:59:56,417 --> 00:59:57,874
 OC: Lets try that...
 
-913
-00:59:59,800 --> 01:00:01,400
+912
+00:59:59,902 --> 01:00:01,451
 get rid of our old definition.
 
+913
+01:00:02,714 --> 01:00:04,417
+You can see this is very similar to what we had
+
 914
-01:00:02,400 --> 01:00:04,080
-You can see this is very similar
+01:00:04,411 --> 01:00:05,874
+in pattern (inaud) one.
 
 915
-01:00:04,080 --> 01:00:05,885
-to what we had in pattern (inaud) one.
-
-916
 01:00:05,885 --> 01:00:07,828
 OC: (inaudible) from there smaller one
 
-917
-01:00:12,910 --> 01:00:13,680
+916
+01:00:13,697 --> 01:00:15,194
 So ignore this ...
 
+917
+01:00:15,840 --> 01:00:19,542
+let's keep that (inaudible) there.
+
 918
-01:00:15,510 --> 01:00:17,140
-lets keep that (inaudible) there
+01:00:22,050 --> 01:00:24,910
+And that's expecting a list
+of text from the other set
 
 919
-01:00:22,050 --> 01:00:24,910
-and that's expecting
-a list of text from the other set
+01:00:24,910 --> 01:00:26,577
+(inaudible) list
 
 920
-01:00:24,910 --> 01:00:25,510
-(inaud) list
-
-921
-01:00:36,480 --> 01:00:37,280
+01:00:36,571 --> 01:00:37,577
 we're back - good!
 
+921
+01:00:41,720 --> 01:00:43,740
+I guess if we load the dictionary in
+
 922
-01:00:41,570 --> 01:00:43,740
-So if we load
-the dictionary in we should
+01:00:45,462 --> 01:00:50,970
+then we should be able to use expand with (inaudible)
 
 923
-01:00:49,000 --> 01:00:50,970
-be able to use expand with (inaudible)
-
-924
-01:00:50,970 --> 01:00:52,080
+01:00:50,970 --> 01:00:52,485
 one expansion of cat.
 
-925
-01:00:54,340 --> 01:00:55,710
+924
+01:00:54,862 --> 01:00:55,880
 So what we're doing here is
 
-926
-01:00:55,710 --> 01:00:58,085
+925
+01:00:55,880 --> 01:00:58,080
 we end up printing the out dictionary as well.
 
-927
+926
 01:00:58,085 --> 01:01:00,114
 SP: Yes. (inaudible)
 
-928
-01:01:00,140 --> 01:01:01,280
+927
+01:01:02,005 --> 01:01:03,222
 OC: Map first over that,
 
-929
-01:01:06,480 --> 01:01:08,600
+928
+01:01:06,571 --> 01:01:08,777
 and we see just the one level expansion.
 
-930
-01:01:08,600 --> 01:01:09,485
+929
+01:01:08,771 --> 01:01:10,382
 (inaudible)
 
-931
+930
 01:01:11,771 --> 01:01:13,971
-So we're going
-to repeatedly apply this
+So we're going to repeatedly apply this
 
-932
-01:01:13,971 --> 01:01:15,542
+931
+01:01:14,200 --> 01:01:15,731
 but we'll keep the small chains.
 
-933
-01:01:15,542 --> 01:01:17,850
+932
+01:01:15,731 --> 01:01:17,850
 Then we will have the
 bigger chains on the end.
 
+933
+01:01:17,850 --> 01:01:21,028
+So that's basically giving
+us a flattening of a tree,
+
 934
-01:01:17,850 --> 01:01:20,000
-So that's giving us a flattening of a tree
+01:01:21,022 --> 01:01:22,365
+of a breadth-first search.
 
 935
-01:01:20,000 --> 01:01:22,020
-of a breadth-first search. Which I think
+01:01:22,777 --> 01:01:26,520
+Which I think is going to be
+better than the depth first search
 
 936
-01:01:22,020 --> 01:01:24,620
-is going to be better
-than the depth first search
-
-937
-01:01:24,620 --> 01:01:25,650
+01:01:27,085 --> 01:01:28,148
 that we saw earlier.
 
+937
+01:01:28,142 --> 01:01:28,650
+SP:  Yes.
+
 938
-01:01:28,110 --> 01:01:28,657
-SP: Ok
+01:01:30,680 --> 01:01:34,897
+I'm going to do a little
+function up here called go.
 
 939
-01:01:30,680 --> 01:01:33,220
-I'm going to do a little function up here called go.
+01:01:38,620 --> 01:01:44,371
+Go is going to take
+a list of word word chains
 
 940
-01:01:37,740 --> 01:01:40,170
-Go is going to
-take a list of word word chains
-
-941
-01:01:44,170 --> 01:01:45,370
+01:01:44,371 --> 01:01:45,588
 and the dictionaries.
 
-942
-01:01:46,480 --> 01:01:47,910
+941
+01:01:46,817 --> 01:01:48,840
 And this becomes apparent
 
-943
-01:01:47,910 --> 01:01:50,710
+942
+01:01:48,931 --> 01:01:51,480
 you can see how I'm
-going to pull the cursor backwards
+going to pull the cursor back.
+
+943
+01:01:51,480 --> 01:01:54,685
+And it's going to give us back a 
+list of word chains and the dictionary.
 
 944
-01:01:51,310 --> 01:01:53,910
-And it's going to
-give us back a list of word chains.
+01:01:54,685 --> 01:01:57,880
+and that's going to let us
+repeatedly apply this to ourselves.
 
 945
-01:01:55,110 --> 01:01:57,310
-and that's going to let us repeatedly apply
+01:01:57,880 --> 01:02:00,491
+OC: So if we have nothing in the first (inaudible)
 
 946
-01:01:57,310 --> 01:01:58,250
-that to ourselves
+01:02:00,770 --> 01:02:03,220
+There's nothing we can do, we simply return that
 
 947
-01:01:58,250 --> 01:02:00,770
-OC: So if we have
-nothing in the first (inaudible)
+01:02:03,925 --> 01:02:08,308
+Otherwise we have some
+chains so what we can do ...
 
 948
-01:02:00,770 --> 01:02:03,220
-There's nothing we
-can do, we simply return that
-
-949
-01:02:03,800 --> 01:02:06,310
-Otherwise we have
-some chains so what we can do
-
-950
-01:02:08,050 --> 01:02:11,110
+01:02:08,697 --> 01:02:11,120
 SP: We have some
 combinations of chains and dictionaries.
 
+949
+01:02:11,302 --> 01:02:12,994
+OC: Yes, some chains and dictionaries indeed.
+
+950
+01:02:12,994 --> 01:02:14,634
+but for every word chain in the dictionary 
+
 951
-01:02:11,110 --> 01:02:13,650
-OC: Yes, but for every word chain in the dictionary
+01:02:14,634 --> 01:02:17,880
+we want to expand that word
+chain using its own dictionary.
 
 952
-01:02:13,650 --> 01:02:15,400
-we want to expand that word chain
-
-953
-01:02:15,400 --> 01:02:16,740
-using its own dictionary.
-
-954
 01:02:17,880 --> 01:02:19,450
 So I'm going to map over chains,
 
-955
-01:02:20,940 --> 01:02:22,940
+953
+01:02:21,240 --> 01:02:23,491
 and what we'll have here is a word chain
 
+954
+01:02:23,491 --> 01:02:25,697
+and the dictionary, which we want to expand
+
+955
+01:02:26,017 --> 01:02:27,497
+the chain in the dictionary.
+
 956
-01:02:22,940 --> 01:02:24,540
-and the dictionary. We want to
-
-957
-01:02:25,050 --> 01:02:26,940
-expand the chain in the dictionary.
-
-958
-01:02:28,050 --> 01:02:30,400
+01:02:28,217 --> 01:02:30,571
 We're going to have
 to concat on that because
 
-959
-01:02:30,400 --> 01:02:32,370
+957
+01:02:30,577 --> 01:02:32,457
 expand gives us a list of word chains.
 
-960
-01:02:34,820 --> 01:02:36,450
-SP: Can you rename chains there ?
+958
+01:02:35,794 --> 01:02:37,474
+SP: Can we rename chains there?
 
-961
-01:02:37,450 --> 01:02:38,400
+959
+01:02:37,868 --> 01:02:41,668
 OC: Sure (inaudible)
 
-962
-01:02:41,600 --> 01:02:43,428
+960
+01:02:42,000 --> 01:02:43,954
 or did you want to drop it entirely?
 
-963
-01:02:47,080 --> 01:02:49,250
-We're not going to
-be able to because we've
+961
+01:02:43,954 --> 01:02:45,950
+Because we could just ...
 
-964
-01:02:49,250 --> 01:02:50,710
+962
+01:02:47,250 --> 01:02:50,594
+No, we cant because we've
 pattern matched on one here.
 
-965
-01:02:50,710 --> 01:02:51,620
-SP: Maybe in pairs
+963
+01:02:50,668 --> 01:02:51,620
+SP: Maybe in pairs.
 
-966
-01:02:51,770 --> 01:02:53,450
+964
+01:02:51,770 --> 01:02:53,817
 OC: Ok, because of the dictionary.
 
+965
+01:03:11,777 --> 01:03:12,897
+So that's OK ...
+
+966
+01:03:12,970 --> 01:03:16,502
+But what we've done
+now is, we've throw away
+
 967
-01:03:11,680 --> 01:03:12,280
-So that's ok ...
+01:03:16,502 --> 01:03:17,740
+these original chains.
 
 968
-01:03:12,970 --> 01:03:15,140
-but what we've
-done now is, we've throw away
+01:03:17,740 --> 01:03:19,325
+we need to retain those as well.
 
 969
-01:03:16,540 --> 01:03:17,740
-these original chains
-
-970
-01:03:17,740 --> 01:03:19,800
-we need to retain those as well.
+01:03:19,325 --> 01:03:19,771
 SP: Right.
 
-971
-01:03:25,110 --> 01:03:26,370
+970
+01:03:25,110 --> 01:03:27,394
 OC: So we'll keep the pairs,
 
-972
-01:03:27,770 --> 01:03:30,000
+971
+01:03:27,770 --> 01:03:30,428
 and then add on
 the expansions afterwards.
 
-973
-01:03:30,000 --> 01:03:30,340
+972
+01:03:30,422 --> 01:03:30,845
 SP: Yes.
 
+973
+01:03:30,862 --> 01:03:33,114
+So for the smaller chains
+that might have already finished,
+
 974
-01:03:30,650 --> 01:03:33,000
-So for the smaller
-chains that might already
+01:03:33,125 --> 01:03:33,977
+we'll keep those.
 
 975
-01:03:33,020 --> 01:03:34,620
-have finished, we'll keep those.
+01:03:35,360 --> 01:03:37,811
+SP: And then later you
+would look at all the chains
 
 976
-01:03:34,940 --> 01:03:37,510
-SP: So then later
-you would look at all the chains
+01:03:37,817 --> 01:03:39,862
+starting with the smallest first,
 
 977
-01:03:37,510 --> 01:03:39,310
-starting with the smallest first
-
-978
-01:03:42,510 --> 01:03:44,420
+01:03:42,834 --> 01:03:45,040
 and try to select only the ones that
 
+978
+01:03:45,040 --> 01:03:46,485
+finish on the target word. 
+
 979
-01:03:44,420 --> 01:03:46,250
-finish on the target word.
+01:03:46,480 --> 01:03:46,994
 OC: Right.
 
 980
-01:03:46,770 --> 01:03:49,570
+01:03:47,148 --> 01:03:50,605
 OC: And because in
 expand we're putting neighbors
 
 981
-01:03:50,450 --> 01:03:52,710
-at the front of the list, were going to have to
+01:03:50,611 --> 01:03:52,925
+at the front of the list, were going to need to
 
 982
-01:03:52,710 --> 01:03:55,200
+01:03:52,925 --> 01:03:55,714
 filter word chains that start with our target
 
 983
-01:03:55,710 --> 01:03:58,771
+01:03:56,017 --> 01:03:59,588
 It's a bit weird but
 obviously cons is a lot more efficient
 
 984
-01:03:59,620 --> 01:04:01,420
-to the (inaudible) because we don't
+01:03:59,582 --> 01:04:01,674
+than append,  because we don't
 
 985
-01:04:01,420 --> 01:04:03,050
+01:04:01,674 --> 01:04:03,337
 have to traverse the list at all.
 
 986
-01:04:03,050 --> 01:04:05,000
+01:04:03,331 --> 01:04:05,200
 SP: We can always reverse the solution.
 
 987
-01:04:05,020 --> 01:04:05,650
+01:04:05,200 --> 01:04:06,474
 OC: We can yes.
 
 988
-01:04:08,880 --> 01:04:11,480
+01:04:08,880 --> 01:04:12,228
 I'll just check that
 that's all the compiling done.
 
 989
-01:04:11,480 --> 01:04:13,820
+01:04:12,380 --> 01:04:14,702
 We should be able
 to have a play with this now.
 
 990
-01:04:13,828 --> 01:04:15,571
+01:04:14,700 --> 01:04:15,760
 (inaudible) GHCi
 
 991
-01:04:15,828 --> 01:04:17,028
+01:04:15,820 --> 01:04:19,531
 So we've got go so I'll try ...
 
 992
-01:04:19,971 --> 01:04:22,050
+01:04:20,217 --> 01:04:22,331
 to bring the dictionary back into scope.
 
 993
