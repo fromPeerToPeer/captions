@@ -3315,356 +3315,354 @@ That should probably just return.
 like that ...
 
 768
-00:51:41,280 --> 00:51:45,050
+00:51:41,440 --> 00:51:47,106
 The filter is for lists but we
 have a set so we ask S.filter to filter a set.
 
 769
-00:51:55,970 --> 00:51:57,770
+00:51:56,240 --> 00:51:58,306
 I'll check the type of that in there.
 
 770
-00:52:05,370 --> 00:52:07,742
+00:52:05,370 --> 00:52:08,533
 OK, I've some idea
 of where that error came up.
 
 771
-00:52:10,540 --> 00:52:12,480
+00:52:10,800 --> 00:52:15,920
 Ah yes,  we can't map over a set like that.
 
 772
-00:52:17,480 --> 00:52:20,570
-Do we have that.. yes we do ...
+00:52:17,813 --> 00:52:23,813
+Do we have that ... yes we do ...
 so we just change that to S.dot map
 
 773
-00:52:24,220 --> 00:52:29,510
-(inaudible)
+00:52:24,866 --> 00:52:29,510
+(inaudible) filter, S.map.
 
 774
-00:52:29,510 --> 00:52:31,880
+00:52:29,866 --> 00:52:32,173
 Now this is not going to give us a list of text,
 
 775
-00:52:31,940 --> 00:52:33,620
+00:52:32,186 --> 00:52:33,826
 it's going to give us a set of text.
 
 776
-00:52:39,885 --> 00:52:42,514
+00:52:39,880 --> 00:52:46,893
 SP: There are built in facilities like traversible.
 
 777
-00:52:46,910 --> 00:52:49,510
+00:52:47,826 --> 00:52:49,866
 Does that help with
-this sort of code where you
+this sort of code
 
 778
-00:52:49,510 --> 00:52:51,400
-change from one data type to another?
+00:52:49,866 --> 00:52:53,346
+where you change from one data type to another?
 
 779
 00:52:53,400 --> 00:52:55,710
 There are some gereralised forms of some of
 
 780
-00:52:55,710 --> 00:52:57,200
-these functions arn't there.
+00:52:55,710 --> 00:52:57,506
+these functions aren't there?
 
 781
-00:52:57,540 --> 00:52:59,850
-OC: Right. We can't generalise map I dont think
+00:52:57,540 --> 00:53:00,706
+OC: Right. We can't generalize map I don't think
 
 782
-00:53:00,620 --> 00:53:03,340
-because this is a set and sets have the constraint
+00:53:00,706 --> 00:53:03,373
+because this is a set
+and sets have the constraint
 
 783
-00:53:03,340 --> 00:53:05,850
-that the things inside the set must be orderable.
+00:53:03,373 --> 00:53:05,906
+that the things inside
+the set must be order-able.
 
 784
-00:53:05,850 --> 00:53:06,110
+00:53:05,906 --> 00:53:06,200
 SP: Ok
 
 785
-00:53:06,110 --> 00:53:08,220
-We can't map between our 3 types because
+00:53:06,213 --> 00:53:08,480
+So we can't map between our 3 types because
 
 786
-00:53:08,220 --> 00:53:10,820
+00:53:08,493 --> 00:53:10,840
 we wouldn't necessarily map the same (inaudible)
 
 787
-00:53:10,850 --> 00:53:13,740
-The filter - there's probably something in Data. Foldable
+00:53:10,850 --> 00:53:15,906
+The filter - there's probably
+something in Data. Foldable
 
 788
-00:53:15,710 --> 00:53:17,910
+00:53:15,906 --> 00:53:18,026
 that will probably let us filter the set.
 
 789
-00:53:17,910 --> 00:53:20,571
-But I think I'm quite happy working with sets here.
+00:53:18,546 --> 00:53:22,933
+But I think I'm quite
+happy working with sets here.
 
 790
-00:53:23,000 --> 00:53:23,710
+00:53:22,933 --> 00:53:23,626
 SP: That's fine.
 
 791
 00:53:23,710 --> 00:53:25,250
-OC: I don't think generalising
+OC: I don't think generalizing
 
 792
 00:53:25,250 --> 00:53:27,170
 would give us much of a benefit here.
 
 793
-00:53:27,170 --> 00:53:30,228
+00:53:27,170 --> 00:53:31,093
 SP: Why I was wondering
 is because I like to use that myself.
 
 794
-00:53:33,142 --> 00:53:36,971
+00:53:33,440 --> 00:53:38,280
 OC: Now we may not be able to
 use the list comprehension anymore.
 
 795
-00:53:39,110 --> 00:53:41,370
+00:53:38,280 --> 00:53:39,160
+Because inaudible list.
+
+796
+00:53:39,170 --> 00:53:42,466
 what we could do
 though is just go to a list.
 
-796
-00:53:44,770 --> 00:53:46,310
+797
+00:53:44,770 --> 00:53:47,680
 We could turn this into a list.
 
-797
-00:53:51,880 --> 00:53:53,970
-And now were back to trying to solve this.
-
 798
-00:53:54,370 --> 00:53:56,450
-To recap where
-we were, we wanted to have
+00:53:52,194 --> 00:53:54,500
+OK, and now were back to trying to solve this.
 
 799
-00:53:57,140 --> 00:53:59,140
-the dictionary smaller and smaller
+00:53:55,348 --> 00:53:57,354
+To recap where we were, we wanted to have
 
 800
-00:53:59,140 --> 00:54:01,400
+00:53:57,354 --> 00:53:59,662
+the dictionary smaller and smaller inaudible
+
+801
+00:54:00,228 --> 00:54:02,142
 we return the
 word chain and now we need to
 
-801
-00:54:01,940 --> 00:54:04,600
+802
+00:54:02,148 --> 00:54:06,708
 return the dictionary
 but without a set of words
 
-802
-00:54:06,370 --> 00:54:08,020
+803
+00:54:06,702 --> 00:54:08,308
 that we've already considered.
 
-803
-00:54:08,400 --> 00:54:11,800
-I believe those are going
-to be to the head of the list of chains
-
 804
-00:54:13,540 --> 00:54:16,970
-that we just expanded
-to so that will be all the neighbors again.
+00:54:09,302 --> 00:54:15,091
+I believe those are going to be the head of chains
 
 805
-00:54:19,570 --> 00:54:23,050
+00:54:15,097 --> 00:54:18,417
+that we just expanded to so that
+will be all the neighbors again.
+
+806
+00:54:19,570 --> 00:54:25,462
 Although maybe it's more
 beneficial to bring more neighbors out
 
-806
-00:54:25,310 --> 00:54:26,310
+807
+00:54:25,462 --> 00:54:26,697
 as a set of binding.
 
-807
-00:54:27,820 --> 00:54:28,140
-SP: Yes.
-
 808
-00:54:33,400 --> 00:54:36,770
-So now we can take
-the dictionary without any of the neighbors.
+00:54:33,680 --> 00:54:36,702
+So now we can take the
+dictionary without any of the neighbors.
 
 809
-00:54:36,770 --> 00:54:39,020
+00:54:36,702 --> 00:54:39,020
 I've got a slightly smaller dictionary now.
 
 810
-00:54:39,020 --> 00:54:40,420
+00:54:39,330 --> 00:54:40,748
 And let's start type checks.
 
 811
-00:54:44,710 --> 00:54:47,050
-We certainly want to call in expand and then
+00:54:45,794 --> 00:54:47,257
+We certainly want to call expand.
 
 812
-00:54:47,050 --> 00:54:48,057
-we need to work out
+00:54:47,251 --> 00:54:47,954
+We need to work out
 
 813
-00:54:48,057 --> 00:54:50,114
+00:54:47,950 --> 00:54:49,360
 what were going to do with that result.
 
 814
-00:54:50,114 --> 00:54:52,571
-We have to write
-a function that's going to take
+00:54:49,360 --> 00:54:51,942
+We have to write a
+function that's going to take
 
 815
-00:54:52,570 --> 00:54:54,457
+00:54:51,942 --> 00:54:53,771
 a list of word chains, the dictionary,
 
 816
-00:54:54,457 --> 00:54:56,285
+00:54:53,771 --> 00:54:55,708
 and eventually gets to a word chain.
 
 817
-00:54:59,280 --> 00:55:01,400
+00:54:59,280 --> 00:55:03,371
 I think we'll end up using some functions
 
 818
-00:55:02,940 --> 00:55:04,770
+00:55:03,371 --> 00:55:04,845
 that are already in prelude anyway
 
 819
-00:55:04,770 --> 00:55:06,910
-but let's just follow the types manually.
+00:55:04,845 --> 00:55:07,622
+but let's just follow the types manually,
 
 820
-00:55:06,910 --> 00:55:08,250
+00:55:07,622 --> 00:55:08,942
 and see what we end up with.
 
 821
-00:55:08,514 --> 00:55:11,280
+00:55:09,194 --> 00:55:11,491
 OC: We have some function
-F that's going to take a chain
+F that's going to take a chain ...
 
 822
-00:55:11,291 --> 00:55:14,914
-and a new dictionary (inaudible) something
+00:55:11,491 --> 00:55:14,910
+and a new dictionary (inaudible) something,
 
 823
-00:55:16,850 --> 00:55:18,250
+00:55:16,850 --> 00:55:18,325
 and pull that there as well.
 
 824
-00:55:22,510 --> 00:55:25,370
+00:55:22,725 --> 00:55:26,102
 Now we want to expand
 every single one of these chains
 
 825
-00:55:26,080 --> 00:55:27,680
+00:55:26,102 --> 00:55:27,680
 using the smaller dictionary.
 
 826
-00:55:28,770 --> 00:55:33,200
-So do something with chain and chain is (inaud).
+00:55:30,200 --> 00:55:33,480
+So do something with chain and chain is (inaudible).
 
 827
-00:55:33,220 --> 00:55:35,800
+00:55:34,060 --> 00:55:36,920
 These type holes are not going to help (inaudible)
 
 828
-00:55:35,800 --> 00:55:38,200
-just have to
-trust our intuition a bit more.
+00:55:37,030 --> 00:55:39,240
+Just have to trust our intuition a bit more.
 
 829
-00:55:38,970 --> 00:55:40,740
+00:55:39,450 --> 00:55:41,622
 but I should be able to map expand.
 
 830
-00:55:48,480 --> 00:55:50,370
+00:55:48,782 --> 00:55:50,725
 I should bring this down a little bit.
 
 831
-00:55:54,680 --> 00:55:57,285
-Expand takes
-the dictionary in first position
+00:55:54,920 --> 00:55:57,280
+Expand takes the dictionary in first position,
 
 832
-00:55:57,370 --> 00:55:59,800
-and word chain (inaudible) second
+00:55:57,285 --> 00:55:59,800
+and a word chain to expand second,
 
 833
-00:55:59,800 --> 00:56:01,680
-so that's going to work quite nicely,
+00:56:00,142 --> 00:56:02,102
+so that's going to work quite nicely.
 
 834
-00:56:01,680 --> 00:56:02,850
+00:56:03,068 --> 00:56:04,668
 Apart from (inaudible)
 
 835
-00:56:05,050 --> 00:56:06,480
-so that was a list of chains.
+00:56:05,382 --> 00:56:07,691
+So that was a list of chains.
 
 836
-00:56:16,000 --> 00:56:17,880
+00:56:16,085 --> 00:56:18,154
 Going in the right direction there.
 
 837
-00:56:19,850 --> 00:56:22,450
+00:56:20,217 --> 00:56:23,205
 We need to go from
 a list of a list of word chains.
 
 838
-00:56:23,050 --> 00:56:25,000
-to (inaudible) word chain
+00:56:23,794 --> 00:56:26,537
+to (inaudible) word chain.
 
 839
-00:56:27,880 --> 00:56:29,050
-So, expand every chain.
+00:56:27,880 --> 00:56:30,628
+So, expanded every chain.
 
 840
-00:56:31,200 --> 00:56:33,310
-I'm going to
-have to call F on that again.
+00:56:32,085 --> 00:56:34,348
+I'm going to have to call F on that again.
 
 841
-00:56:42,820 --> 00:56:45,600
+00:56:42,994 --> 00:56:45,960
 So, I think we're
 struggling to find a nice kind of way
 
 842
-00:56:45,620 --> 00:56:47,850
+00:56:45,960 --> 00:56:48,320
 to repeatedly apply this expand function,
 
 843
-00:56:47,850 --> 00:56:49,400
+00:56:49,010 --> 00:56:50,325
 and what comes to mind here is,
 
 844
-00:56:49,400 --> 00:56:52,220
-it looks like an
-unfold which is like the dual to fold,
+00:56:50,325 --> 00:56:54,177
+it looks like an unfold
+which is like the dual to fold,
 
 845
-00:56:52,220 --> 00:56:54,310
+00:56:54,171 --> 00:56:55,382
 which a lot of people are familiar with.
 
 846
-00:56:54,310 --> 00:56:56,450
-When you fold
-you have a list and you keep
+00:56:55,382 --> 00:56:56,668
+When you fold you have a list
 
 847
-00:56:56,450 --> 00:56:58,340
-reducing it into something smaller.
+00:56:56,660 --> 00:56:59,125
+and you keep reducing it into something smaller.
 
 848
-00:56:58,570 --> 00:57:01,850
-Whereas in this case
-we actually want to get something bigger.
+00:56:59,125 --> 00:57:01,977
+Whereas in this case we
+actually want to get something bigger.
 
 849
-00:57:01,850 --> 00:57:03,710
+00:57:01,971 --> 00:57:03,710
 Which as unfolding until the point
 
 850
@@ -3672,12 +3670,11 @@ Which as unfolding until the point
 where we maybe can't go any bigger.
 
 851
-00:57:05,400 --> 00:57:07,850
-So we have a
-function in the Prelude to do that
+00:57:06,200 --> 00:57:10,222
+So we have a function in the Prelude to do that
 
 852
-00:57:09,620 --> 00:57:10,742
+00:57:10,222 --> 00:57:12,148
 which is unfoldr.
 
 853
