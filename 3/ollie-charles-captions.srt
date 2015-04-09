@@ -309,7 +309,8 @@ I'm going to need to add it to my nix file as well
 
 73
 00:05:06,971 --> 00:05:09,085
-so that's going to just pull down.
+so that's going to just pull down
+my dependencies
 
 74
 00:05:21,540 --> 00:05:25,154
@@ -628,6 +629,10 @@ so why don't we try:
 145
 00:09:35,748 --> 00:09:41,051
 I'm going to bind that into - no I'm not
+When emacs cooperates
+
+I'm going to bind that into a variable
+called dict
 
 146
 00:09:48,274 --> 00:09:50,354
@@ -759,7 +764,8 @@ which are going to be our start and end strings,
 
 176
 00:11:37,340 --> 00:11:39,714
-and the dictionary. I think I'll bring that in.
+and the dictionary. I think I'll bring that in
+as the first argument
 
 177
 00:11:44,080 --> 00:11:46,880
@@ -863,6 +869,7 @@ I'll get that case out of the way.
 00:12:45,740 --> 00:12:47,657
 I'm going to use a pattern guard for that:
 
+If the length of a is not the length of b
 
 200
 00:12:54,880 --> 00:12:57,188
