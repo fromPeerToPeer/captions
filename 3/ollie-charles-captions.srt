@@ -199,15 +199,16 @@ SP: Yes it will probably become executable
 
 47
 00:03:02,045 --> 00:03:07,200
-OC: And we'll go with word puzzle (inaudible) the main part
+OC: And we'll go with WordPuzzle.hs as the main part
 
 48
 00:03:11,897 --> 00:03:16,342
-So now I believe I have my spell bar (inaud)
+So now I believe I have my cabal file
 
 49
 00:03:16,537 --> 00:03:19,960
-So I should be able to use the space bar (inaudible)
+So I should be able to do some
+basic builds now
 
 50
 00:03:30,880 --> 00:03:33,600
@@ -231,7 +232,7 @@ And it looks like we've got something.
 
 55
 00:03:45,645 --> 00:03:49,257
-I'm going to have to (inaudible)
+I'm going to have to rename this to main
 
 56
 00:03:54,090 --> 00:03:57,634
@@ -547,7 +548,7 @@ we can have a play with that.
 128
 00:08:28,537 --> 00:08:34,902
 I need to refresh my shell to
-bring down that text. (inaudible)
+bring down that text dependency
 
 129
 00:08:38,000 --> 00:08:42,034
@@ -585,7 +586,8 @@ I can work around the fact that
 
 137
 00:08:59,850 --> 00:09:02,320
-I've got an incomplete bit of code in there (inaudible).
+I've got an incomplete bit of code
+and I can run the bits I'm working on.
 
 138
 00:09:02,880 --> 00:09:05,462
@@ -593,7 +595,8 @@ SP: So does it effectively replace that code
 
 139
 00:09:05,474 --> 00:09:07,531
-with undefined (inaudible)
+with undefined and then compile it all
+anyway
 
 140
 00:09:07,542 --> 00:09:09,520
@@ -610,7 +613,7 @@ terminate at all (laughter).
 
 143
 00:09:17,720 --> 00:09:22,708
-But we do have the dictionary (inaudible)
+But we do have readDictionary
 
 144
 00:09:24,502 --> 00:09:25,942
@@ -903,7 +906,7 @@ called overloaded strings.
 
 211
 00:13:36,628 --> 00:13:38,250
-Normally when we inaud a string,
+Normally when we quote a string,
 
 212
 00:13:38,320 --> 00:13:40,400
