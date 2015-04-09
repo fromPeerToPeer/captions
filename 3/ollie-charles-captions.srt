@@ -175,7 +175,7 @@ OC: So I've got a terminal here,
 
 41
 00:02:35,782 --> 00:02:38,440
-I should be able to run kabal in it.
+I should be able to run cabal init
 
 42
 00:02:38,520 --> 00:02:41,165
