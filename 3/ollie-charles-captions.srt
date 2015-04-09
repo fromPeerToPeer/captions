@@ -421,7 +421,7 @@ So I'm going to import Data.Text as T.
 
 99
 00:06:42,285 --> 00:06:44,297
-SP: So your just avoiding the confusion
+SP: So you're just avoiding the confusion
 
 100
 00:06:44,290 --> 00:06:46,777
