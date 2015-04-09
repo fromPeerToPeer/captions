@@ -162,7 +162,7 @@ I'm going to be using nix  shell
 38
 00:02:26,365 --> 00:02:28,540
 to work with that
-kabal file to do builds
+cabal file to do builds
 
 39
 00:02:28,540 --> 00:02:31,177
@@ -215,7 +215,7 @@ OC: I'm using the UNIX compile command there
 
 51
 00:03:33,600 --> 00:03:36,514
-to use the kabal file to do a build
+to use the cabal file and do a build
 
 52
 00:03:36,811 --> 00:03:38,902
