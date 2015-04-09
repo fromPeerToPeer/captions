@@ -212,7 +212,7 @@ basic builds now
 
 50
 00:03:30,880 --> 00:03:33,600
-OC: I'm using the UNIX compile command there
+OC: I'm using the Emacs compile command there
 
 51
 00:03:33,600 --> 00:03:36,514
@@ -237,11 +237,11 @@ I'm going to have to rename this to main
 56
 00:03:54,090 --> 00:03:57,634
 OK, so that seems to be happy
-compiling something like that
+compiling and stuff like that
 
 57
 00:03:57,810 --> 00:04:01,725
-and we can also subject that to the terminal
+and we can also switch over to the terminal
 
 58
 00:04:02,457 --> 00:04:05,382
@@ -278,7 +278,8 @@ And the text there is the type from Data.Text
 
 66
 00:04:32,570 --> 00:04:35,314
-And I think I'll make a new function, dictionary
+And I think I'll make a new function,
+readDictionary
 
 67
 00:04:35,310 --> 00:04:40,034
@@ -312,7 +313,8 @@ so that's going to just pull down.
 
 74
 00:05:21,540 --> 00:05:25,154
-Let's scrub that out for now.
+OK. We do need a main, so
+let's stub that out for now.
 
 75
 00:05:27,634 --> 00:05:30,445
@@ -321,7 +323,8 @@ you're leaving there is the hole?
 
 76
 00:05:30,445 --> 00:05:33,394
-OC: Yes, so if we expand the compilation
+OC: Yes, so if we expand the 
+compilation buffer
 
 77
 00:05:33,474 --> 00:05:36,160
@@ -334,7 +337,7 @@ We need to provide some type of computation
 79
 00:05:38,700 --> 00:05:41,680
 that's going to be an io action
-that will return the dictionary.
+that will return a dictionary.
 
 80
 00:05:41,691 --> 00:05:43,910
@@ -350,7 +353,7 @@ OC: yes. I think this came in GHC 7.8
 
 83
 00:05:50,140 --> 00:05:53,245
-So  I'll leave the hole name for now,
+So  I'll leave the hole in main for now,
 
 84
 00:05:53,245 --> 00:05:55,080
@@ -410,7 +413,7 @@ The text library tends to work best
 
 97
 00:06:35,542 --> 00:06:37,142
-if you use qualified inputs.
+if you use qualified imports.
 
 98
 00:06:37,851 --> 00:06:41,680
@@ -422,7 +425,7 @@ SP: So your just avoiding the confusion
 
 100
 00:06:44,290 --> 00:06:46,777
-of clobbering the built ins in the mode.
+of clobbering the built-ins in the prelude
 
 101
 00:06:46,788 --> 00:06:48,582
@@ -439,11 +442,12 @@ but text also has length and filter.
 104
 00:06:52,537 --> 00:06:56,205
 So to avoid ambiguous names
-I'm going to call that entirely qualified.
+I'm going to import that entirely qualified.
 
 105
 00:06:57,611 --> 00:07:00,850
-SP: So it's about hiding the symbols.
+SP: So it's about hiding the prelude
+symbols, explicitly.
 
 106
 00:07:00,857 --> 00:07:02,657
@@ -468,12 +472,12 @@ so I've got some well formed syntax.
 111
 00:07:14,011 --> 00:07:18,034
 And now I have a hole
-that needs to be in the dictionary
+that needs to be a dictionary
 
 112
 00:07:18,434 --> 00:07:22,114
-and I have available
-dictionary contents which is a piece of text.
+and I have available dictionary
+contents which is a piece of text.
 
 113
 00:07:22,377 --> 00:07:26,480
@@ -513,12 +517,12 @@ except the string type is quite inefficient.
 
 121
 00:07:48,542 --> 00:07:50,370
-It's just a link list of characters,
+It's just a linked list of characters,
 
 122
 00:07:50,370 --> 00:07:53,828
-whereas text type is more
-efficient in terms of representation.
+whereas the text type is more
+efficient in terms of its representation.
 
 123
 00:07:53,820 --> 00:07:57,200
@@ -537,8 +541,8 @@ a way to read the dictionary.
 
 126
 00:08:18,220 --> 00:08:24,205
-I'm going to switch back
-over to the terminal at GCHi
+I'm going to switch back to my terminal
+and load that up into GCHi
 
 127
 00:08:24,205 --> 00:08:26,200
@@ -557,11 +561,12 @@ which prevents me from using GHCi.
 
 130
 00:08:42,045 --> 00:08:44,525
-But, I can use another feature of a list
+But, I can use another feature of
 
 131
 00:08:44,525 --> 00:08:47,234
-produced at GHC called defer-type errors.
+a later version of GHC called 
+defer-type errors.
 
 132
 00:08:47,988 --> 00:08:50,994
@@ -604,7 +609,8 @@ OC: We can find out.
 
 141
 00:09:09,620 --> 00:09:12,354
-It's the main function that we have to find
+It's the main function that we haven't 
+defined, so if I call main
 
 142
 00:09:14,180 --> 00:09:17,348
@@ -633,7 +639,7 @@ OC: No, because of the size of the dictionary,
 
 148
 00:09:52,640 --> 00:09:54,720
-I want to put that in the variable so I can
+I want to put that in a variable so I can
 
 149
 00:09:54,720 --> 00:09:57,257
@@ -649,7 +655,7 @@ it's a pretty large dictionary,
 
 152
 00:10:10,420 --> 00:10:12,500
-We have to be quite efficient in the way
+So we have to be quite efficient in the way
 
 153
 00:10:12,500 --> 00:10:13,710
@@ -666,7 +672,7 @@ But we do seem to have got some stuff.
 156
 00:10:18,571 --> 00:10:22,274
 I guess we've got some
-windows and other things there.
+windows line endings there.
 
 157
 00:10:22,730 --> 00:10:24,011
@@ -689,7 +695,7 @@ line endings that's fine with me.
 161
 00:10:32,540 --> 00:10:38,022
 OC: Maybe if we just
-filter those character terms out
+filter those carriage returns out
 
 162
 00:10:38,480 --> 00:10:40,662
@@ -705,7 +711,7 @@ So I'm happy with that.
 
 165
 00:10:55,080 --> 00:10:57,380
-We're just filtering out character returns
+We're just filtering out carriage returns
 
 166
 00:10:57,380 --> 00:10:59,874
@@ -723,12 +729,12 @@ So now we're ready to start solving the problem.
 169
 00:11:12,110 --> 00:11:15,588
 There's no real reason
-to restrict ourselves to the IO here,
+to restrict ourselves to the IO monad here,
 
 170
 00:11:15,748 --> 00:11:19,268
 this feels like it should
-be solvable by pure functions.
+be solvable just with pure functions.
 
 171
 00:11:19,260 --> 00:11:19,965
@@ -737,7 +743,7 @@ SP: Yes.
 172
 00:11:19,970 --> 00:11:23,462
 So I'm going to introduce
-a top little function called ...
+a top level function called ...
 
 173
 00:11:25,748 --> 00:11:27,097
@@ -772,7 +778,7 @@ problems so I'm going to return
 
 180
 00:11:52,250 --> 00:11:53,748
-a list of list of words.
+a list of lists of words.
 
 181
 00:11:53,748 --> 00:11:56,000
@@ -781,7 +787,7 @@ that's getting a bit confusing
 
 182
 00:11:56,010 --> 00:11:58,697
-we'll introduce a types in there called solution.
+we'll introduce a type in there called solution.
 
 183
 00:11:58,697 --> 00:12:00,342
@@ -797,7 +803,7 @@ Which is going to be a list of text.
 
 186
 00:12:09,485 --> 00:12:11,710
-SP: So you'll have
+SP: So you'll get back
 a list of possible chains
 
 187
@@ -815,7 +821,7 @@ then we can just return the empty list.
 
 190
 00:12:18,714 --> 00:12:21,142
-that there are no possible word chains at all.
+which says there are no possible word chains at all.
 
 191
 00:12:28,720 --> 00:12:31,268
@@ -855,7 +861,8 @@ I'll get that case out of the way.
 
 199
 00:12:45,740 --> 00:12:47,657
-I'm going to use a pattern after that:
+I'm going to use a pattern guard for that:
+
 
 200
 00:12:54,880 --> 00:12:57,188
@@ -863,11 +870,11 @@ Then I'll just return nothing.
 
 201
 00:12:59,540 --> 00:13:01,200
-Otherwise I'll leave that.
+Otherwise...
 
 202
 00:13:03,480 --> 00:13:04,600
-It seems to be solved.
+I'll leave that to be solved.
 
 203
 00:13:07,480 --> 00:13:08,910
@@ -879,8 +886,8 @@ It seems to be happy with that,
 
 205
 00:13:12,740 --> 00:13:15,977
-we've got a hole on
-line 19 but that's not a problem
+we've got a hole on line 19 but that's
+actually the problem we've got to solve
 
 206
 00:13:15,980 --> 00:13:21,131
@@ -894,11 +901,11 @@ between Hello and Haskell.
 208
 00:13:26,205 --> 00:13:29,668
 Whoops the dictionary
-escaped, I'll just put that back in.
+escaped, I'll just bring that back in.
 
 209
 00:13:31,710 --> 00:13:35,131
-I need to use an extension here from GHC
+I need to use an extension here for GHC
 
 210
 00:13:35,140 --> 00:13:36,617
@@ -910,8 +917,8 @@ Normally when we quote a string,
 
 212
 00:13:38,320 --> 00:13:40,400
-it's as the type
-strength but obviously
+it has the type
+string but obviously
 
 213
 00:13:40,400 --> 00:13:42,057
@@ -945,7 +952,7 @@ We can move on now ...
 
 220
 00:13:56,050 --> 00:13:58,811
-so you actually try to find some solutions.
+to actually try and find some solutions.
 
 221
 00:13:59,740 --> 00:14:02,971
@@ -954,7 +961,7 @@ SP:  Might I suggest another case where we
 222
 00:14:02,970 --> 00:14:05,451
 might be able to rule
-out other possible solutions?
+out possible solutions?
 
 223
 00:14:05,451 --> 00:14:06,457
@@ -989,7 +996,7 @@ but we'll come to that later.
 
 230
 00:14:24,948 --> 00:14:27,325
-So were giving two words A and B:
+So we're given two words A and B:
 
 231
 00:14:55,520 --> 00:14:56,845
@@ -1023,7 +1030,7 @@ probably need to deal with case,
 
 238
 00:15:29,540 --> 00:15:32,331
-or maybe I should case sensitive an A.
+or maybe I should be case sensitive
 
 239
 00:15:32,740 --> 00:15:34,770
