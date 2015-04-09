@@ -4573,33 +4573,32 @@ we are seeing Haskells' lazy
 evaluation works to our advantage.
 
 1064
-01:08:27,850 --> 01:08:30,491
+01:08:27,850 --> 01:08:30,502
 So if I only wanted
 to get the very first result,
 
 1065
-01:08:30,491 --> 01:08:30,502
-I could simply
-take the head of all the solutions
-So if I only wanted
-to get the very first result,
+01:08:30,508 --> 01:08:33,074
+I could simply take
+the head of all the solutions
 
 1066
-01:08:30,502 --> 01:08:33,020
-I could simply
-take the head of all the solutions
-
-1067
-01:08:33,020 --> 01:08:34,650
+01:08:33,502 --> 01:08:35,131
 and the result is already done,
 
+1067
+01:08:35,131 --> 01:08:37,420
+it didn't bother
+computing all the extra values.
+
 1068
-01:08:34,650 --> 01:08:37,310
+01:08:37,420 --> 01:08:37,645
+But if I needed the extra results, maybe if I
 it didn't bother
 computing all the extra values.
 
 1069
-01:08:37,420 --> 01:08:39,680
+01:08:37,645 --> 01:08:39,680
 But if I needed the extra results, maybe if I
 
 1070
