@@ -3284,7 +3284,7 @@ re-evaluate all the time.
 
 763
 01:05:12,230 --> 01:05:15,410
-OC: This is because the lookup has
+OC: This is because the look up has
 returned an Expr.
 
 764
@@ -3294,7 +3294,7 @@ JW: Yes.
 765
 01:05:15,880 --> 01:05:18,000
 And we're storing
-expression in our map.
+expressions in our map.
 
 766
 01:05:20,110 --> 01:05:22,000
