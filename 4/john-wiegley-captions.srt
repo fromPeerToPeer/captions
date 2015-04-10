@@ -3255,7 +3255,7 @@ using a new environment.
 756
 01:04:22,705 --> 01:04:25,058
 JW: So I need a new
-thing which we'll call evar,
+thing which we'll call EVar,
 
 757
 01:04:26,700 --> 01:04:28,580
