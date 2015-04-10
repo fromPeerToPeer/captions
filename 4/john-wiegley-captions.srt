@@ -3697,7 +3697,7 @@ We're going to say:
 
 859
 01:12:26,580 --> 01:12:28,470
-We're going to go from identity to io.
+We're going to go from Identity to IO.
 
 860
 01:12:33,880 --> 01:12:35,760
