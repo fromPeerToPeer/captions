@@ -2007,7 +2007,7 @@ but I'm going to ignore that for now,
 464
 00:30:16,880 --> 00:30:19,657
 maybe we can
-optimise that later, but for now
+optimize that later, but for now
 
 465
 00:30:19,657 --> 00:30:21,680
