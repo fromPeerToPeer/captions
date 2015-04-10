@@ -3668,19 +3668,19 @@ OC: Sounds like it should be possible
 852
 01:11:37,640 --> 01:11:39,760
 to do that without
-having to run state.
+having to runState.
 
 853
 01:11:41,760 --> 01:11:43,050
-JW: This state T is over io,
+JW: This StateT is over IO,
 
 854
 01:11:44,350 --> 01:11:45,880
-and our function is a state T
+and our function is a StateT
 
 855
 01:11:45,880 --> 01:11:47,050
-that's over identity.
+that's over Identity.
 
 856
 01:11:48,350 --> 01:11:52,000
