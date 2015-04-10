@@ -3233,7 +3233,7 @@ I have one warning left which is
 
 751
 01:04:08,000 --> 01:04:09,640
-the import of token redundant.
+the import of token is redundant.
 
 752
 01:04:10,820 --> 01:04:11,640
