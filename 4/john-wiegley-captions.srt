@@ -3302,11 +3302,13 @@ Because Haskell is a lazy language
 
 767
 01:05:22,940 --> 01:05:25,520
-we want to get the map to inaudible in it.
+we want to get the map to have thunks in
+it.
 
 768
 01:05:26,000 --> 01:05:28,230
-So that the first time you touch the inaudible,
+So that the first time you touch the
+thunk,
 
 769
 01:05:28,940 --> 01:05:31,410
