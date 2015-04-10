@@ -3155,7 +3155,7 @@ because you want to pass on this
 733
 01:02:59,880 --> 01:03:02,470
 mutated environment
-for every step of the rebel.
+for every step of the REPL.
 
 734
 01:03:03,640 --> 01:03:05,520
