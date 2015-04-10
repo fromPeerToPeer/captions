@@ -3705,7 +3705,8 @@ It should be just a matter of return.
 
 861
 01:12:52,110 --> 01:12:54,230
-Get line is still will forcing us inaudible.
+getLine is still will forcing us into the
+wrong monad.
 
 862
 01:13:02,820 --> 01:13:05,050
