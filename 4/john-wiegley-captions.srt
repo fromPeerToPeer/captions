@@ -3711,7 +3711,7 @@ wrong monad.
 862
 01:13:02,820 --> 01:13:05,050
 OC: You might have
-data.text on io.get line
+Data.Text.IO.getLine
 
 863
 01:13:07,050 --> 01:13:08,352
