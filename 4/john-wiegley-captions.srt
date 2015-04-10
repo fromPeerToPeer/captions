@@ -3061,11 +3061,11 @@ We're in the monad now.
 711
 01:00:35,520 --> 01:00:37,640
 So for example if
-you we're to say 1 plus
+we were to say 1 plus
 
 712
 01:00:37,640 --> 01:00:38,941
-let feed equal 10 .....
+let phi equal 10 .....
 
 713
 01:00:43,290 --> 01:00:44,700
