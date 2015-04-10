@@ -3723,15 +3723,16 @@ OC: And you have got T.readFile here.
 
 865
 01:13:41,050 --> 01:13:42,941
-OC: Another problem is exact state is 
+OC: Another problem is execState is
 
 866
 01:13:43,170 --> 01:13:45,411
-apparently going to give you back the file.
+apparently going to give you back the
+file.
 
 867
 01:14:00,580 --> 01:14:03,170
-JW: Exact state is giving us back a ....
+JW: execState is giving us back a ....
 
 868
 01:14:17,640 --> 01:14:20,000
