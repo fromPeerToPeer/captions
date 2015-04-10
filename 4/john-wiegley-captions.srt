@@ -3772,11 +3772,11 @@ We have let phi equals 20.
 
 876
 01:14:58,110 --> 01:14:59,529
-Now I should be able to say  
+Now I should be able to say
 
 877
 01:14:59,647 --> 01:15:00,941
-T plus 5 and I get no parse.
+phi plus 5 and I get no parse.
 
 878
 01:15:03,760 --> 01:15:06,000
