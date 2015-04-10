@@ -3742,7 +3742,7 @@ of what monad we're in.
 869
 01:14:42,580 --> 01:14:44,940
 Oh I always get a
-surprise when that checks!
+surprise when that type checks!
 
 870
 01:14:44,940 --> 01:14:47,050
