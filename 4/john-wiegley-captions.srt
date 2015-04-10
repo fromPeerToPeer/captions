@@ -3180,7 +3180,8 @@ So we're going to say ....
 
 739
 01:03:21,058 --> 01:03:27,411
-inaudible a function just call eval.
+We're going to have a new function called
+eval.
 
 740
 01:03:33,760 --> 01:03:35,410
