@@ -3590,7 +3590,7 @@ Let me expand this out.
 834
 01:09:52,940 --> 01:09:55,410
 We want to run this
-forever loop within state.
+forever loop within State.
 
 835
 01:10:01,647 --> 01:10:03,882
