@@ -3364,7 +3364,8 @@ What is a variable ?
 
 781
 01:06:16,470 --> 01:06:19,640
-variable has the same definition as inaudible
+variable has the same definition as a
+name.
 
 782
 01:06:30,940 --> 01:06:32,820
