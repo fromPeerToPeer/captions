@@ -3768,7 +3768,7 @@ JW: So we have 1 plus 4.
 
 875
 01:14:56,117 --> 01:14:57,529
-We have let feed equals 20.
+We have let phi equals 20.
 
 876
 01:14:58,110 --> 01:14:59,529
