@@ -2185,7 +2185,7 @@ these two things together... Concat map
 
 504
 00:32:33,770 --> 00:32:35,570
-that just such a common operation.
+because it's such a common operation.
 
 505
 00:32:36,160 --> 00:32:39,531
