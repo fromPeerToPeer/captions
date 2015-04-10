@@ -3373,7 +3373,8 @@ OC: So this is the same parser we used
 
 783
 01:06:32,820 --> 01:06:34,820
-when we introduced the inaudible
+when we introduced a name in the let
+binding.
 
 784
 01:06:35,290 --> 01:06:35,764
