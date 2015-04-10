@@ -2158,7 +2158,7 @@ had a function that went from
 
 498
 00:32:17,400 --> 00:32:20,285
-a list of lists word
+a list of lists of word
 chains to just a list of word chains.
 
 499
