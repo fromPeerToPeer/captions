@@ -3595,7 +3595,7 @@ forever loop within State.
 835
 01:10:01,647 --> 01:10:03,882
 We're going to do
-exact state T on this one.
+execStateT on this one.
 
 836
 01:10:04,580 --> 01:10:05,880
