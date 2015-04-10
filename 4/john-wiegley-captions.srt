@@ -3736,7 +3736,7 @@ JW: execState is giving us back a ....
 
 868
 01:14:17,640 --> 01:14:20,000
-It's loosing the sense
+It's losing the sense
 of what monad we're in.
 
 869
