@@ -2443,7 +2443,7 @@ if this will actually terminate
 
 565
 00:36:52,530 --> 00:36:55,600
-at the same length for
+and be the same length as
 all the neighbors of cot.
 
 566
