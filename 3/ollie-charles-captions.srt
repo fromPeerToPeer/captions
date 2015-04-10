@@ -2145,7 +2145,7 @@ problem here is that if we
 495
 00:32:11,017 --> 00:32:13,622
 put another
-type hole there, well see that this
+type hole there, we'll see that this
 
 496
 00:32:13,622 --> 00:32:15,080
