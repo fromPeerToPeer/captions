@@ -2189,7 +2189,7 @@ because it's such a common operation.
 
 505
 00:32:36,160 --> 00:32:39,531
-Concat that there... and
+concatMap that there... and
 
 506
 00:32:41,400 --> 00:32:43,253
