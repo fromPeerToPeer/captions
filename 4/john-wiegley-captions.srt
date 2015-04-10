@@ -3642,7 +3642,7 @@ to have to parse it.
 846
 01:10:43,520 --> 01:10:45,520
 I'm getting a lot
-of implication here.
+of duplication here.
 
 847
 01:10:47,050 --> 01:10:49,410
