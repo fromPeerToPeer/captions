@@ -3128,7 +3128,8 @@ Now I want to:
 
 727
 01:01:32,110 --> 01:01:35,760
-Maybe not self return because that isn't inaudible
+I do not need to return because that is
+itself monadic.
 
 728
 01:01:36,580 --> 01:01:38,580
