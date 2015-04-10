@@ -3624,7 +3624,7 @@ there was was the getLine
 
 842
 01:10:24,580 --> 01:10:26,350
-is forcing you to inaudible
+is forcing you to be in the IO monad.
 
 843
 01:10:33,880 --> 01:10:34,820
