@@ -3684,7 +3684,8 @@ that's over Identity.
 
 856
 01:11:48,350 --> 01:11:52,000
-We could use the inaudible flag hoist routine.
+We could use the mmorph library's hoist
+routine.
 
 857
 01:11:52,940 --> 01:11:54,350
