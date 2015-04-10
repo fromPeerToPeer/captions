@@ -3444,7 +3444,7 @@ because trace has to yield a value.
 
 800
 01:07:56,350 --> 01:07:58,000
-Sometimes I use print out more
+Sometimes I use printf more
 
 801
 01:07:58,000 --> 01:07:59,640
