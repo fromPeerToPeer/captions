@@ -2121,7 +2121,7 @@ That's probably not going to type check.
 
 490
 00:31:57,600 --> 00:31:59,970
-We could have matched a list of text with text.
+We couldn't match a list of text with text.
 
 491
 00:32:01,040 --> 00:32:03,714
