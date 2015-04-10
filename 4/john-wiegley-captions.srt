@@ -3481,11 +3481,11 @@ OC: We do have trace lines above which
 809
 01:08:29,520 --> 01:08:32,110
 seem to indicate we
-have got something to add on.
+have gone into addop
 
 810
 01:08:32,110 --> 01:08:34,110
- inaudible.
+and mulop.
 
 811
 01:08:35,410 --> 01:08:37,640
