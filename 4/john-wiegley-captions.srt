@@ -3615,7 +3615,7 @@ so we want to go here.
 
 840
 01:10:20,000 --> 01:10:21,764
-OC: Forever should work on any line.
+OC: Forever should work on any monad.
 
 841
 01:10:22,000 --> 01:10:24,580
