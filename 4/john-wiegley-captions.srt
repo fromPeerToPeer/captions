@@ -3220,7 +3220,7 @@ I'm using flycheck which is
 
 748
 01:03:57,290 --> 01:04:00,580
-talking to both GHC and inaudible.
+talking to both GHC and hlint.
 
 749
 01:04:03,050 --> 01:04:05,640
