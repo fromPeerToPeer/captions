@@ -2327,8 +2327,8 @@ we know that it will eventually
 
 537
 00:34:52,514 --> 00:34:54,542
-deliver and so give us the right answer.
-
+deliver an answer even if it
+is the wrong answer.
 538
 00:34:54,910 --> 00:34:56,826
 So what I want to check now,
