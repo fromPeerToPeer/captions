@@ -3284,7 +3284,8 @@ re-evaluate all the time.
 
 763
 01:05:12,230 --> 01:05:15,410
-OC: This is because the look up has returned inaudible.
+OC: This is because the lookup has
+returned an Expr.
 
 764
 01:05:15,410 --> 01:05:15,880
