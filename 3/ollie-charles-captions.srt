@@ -2301,7 +2301,7 @@ So let's filter the dictionary
 
 531
 00:34:20,680 --> 00:34:23,000
-for stuff that's not to equal to N.
+for stuff that's not equal to N.
 
 532
 00:34:28,280 --> 00:34:31,880
