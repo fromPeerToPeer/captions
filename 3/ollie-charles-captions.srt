@@ -2193,11 +2193,11 @@ concatMap that there... and
 
 506
 00:32:41,400 --> 00:32:43,253
-I guess we'll leave that.
+I guess we'll leave that
 
 507
 00:32:43,480 --> 00:32:46,540
-there's a hole for now (inaudible) GCHi again.
+as a hole for now and play with it GHCi again.
 
 508
 00:32:47,400 --> 00:32:50,280
