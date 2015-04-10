@@ -3576,7 +3576,7 @@ let's wrap that as well.
 
 831
 01:09:40,700 --> 01:09:42,700
-The rebel creates a new environment.
+The REPL creates a new environment.
 
 832
 01:09:44,350 --> 01:09:46,940
