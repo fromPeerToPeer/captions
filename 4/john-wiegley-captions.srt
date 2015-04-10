@@ -3056,7 +3056,7 @@ These guys all become 'Justs'.
 
 710
 01:00:27,880 --> 01:00:28,940
-we're into monad now.
+We're in the monad now.
 
 711
 01:00:35,520 --> 01:00:37,640
