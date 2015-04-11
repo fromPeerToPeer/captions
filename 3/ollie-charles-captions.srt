@@ -5382,7 +5382,7 @@ OC: Indeed, yes.
 
 1251
 01:20:28,280 --> 01:20:32,297
-And, we need to call that recurser map.
+And, we need to call that recursively.
 
 1252
 01:20:36,262 --> 01:20:38,554
