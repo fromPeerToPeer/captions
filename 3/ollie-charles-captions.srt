@@ -5105,7 +5105,7 @@ errors anyway because the types are different.
 1188
 01:15:34,165 --> 01:15:38,417
 I'm going to move this
-into preview of neighbors list
+into precomputeNeighbours,
 
 1189
 01:15:38,411 --> 01:15:39,474
