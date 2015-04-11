@@ -2734,7 +2734,7 @@ ones that are the shortest.
 
 633
 00:41:44,480 --> 00:41:47,573
-OC: Right so reading the
+OC: Right so a greedier
 search, as we go through.
 
 634
