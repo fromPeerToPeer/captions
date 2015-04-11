@@ -5386,7 +5386,7 @@ And, we need to call that recursively.
 
 1252
 01:20:36,262 --> 01:20:38,554
-and you can use pass in here as well.
+and we need to pass it in here as well.
 
 1253
 01:20:39,028 --> 01:20:43,200
