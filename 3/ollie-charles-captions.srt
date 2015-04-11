@@ -2181,7 +2181,7 @@ in the standard library that does
 
 503
 00:32:31,820 --> 00:32:33,770
-these two things together... Concat map
+these two things together... concatMap
 
 504
 00:32:33,770 --> 00:32:35,570
