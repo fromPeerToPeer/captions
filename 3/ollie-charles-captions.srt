@@ -5796,12 +5796,12 @@ felt a bit cumbersome.
 
 1344
 01:26:47,986 --> 01:26:51,880
-It would be nice if\we could work
+It would be nice if we could work
 out some sort of abstraction there.
 
 1345
 01:26:51,880 --> 01:26:54,293
-A neighbor map data type that has an operation
+A NeighbourMap data type that has an operation
 
 1346
 01:26:54,293 --> 01:26:56,680
