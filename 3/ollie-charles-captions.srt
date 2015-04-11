@@ -5159,7 +5159,7 @@ functions on the same argument.
 
 1200
 01:16:27,400 --> 01:16:29,668
-I can say that it and neighbors,
+I can say that id and neighbors,
 
 1201
 01:16:29,770 --> 01:16:33,110
