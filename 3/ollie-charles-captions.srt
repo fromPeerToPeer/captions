@@ -5439,7 +5439,7 @@ let's have a quick look at that.
 
 1264
 01:21:38,725 --> 01:21:40,845
-OK, so (inaud) type checks.
+OK, so that certainly type checks.
 
 1265
 01:21:44,708 --> 01:21:46,800
