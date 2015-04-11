@@ -5852,7 +5852,7 @@ we did yes.
 
 1357
 01:27:24,373 --> 01:27:27,893
-so the set does have
+so Set does have
 efficient look up and deletion.
 
 1358
