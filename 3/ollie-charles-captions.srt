@@ -5211,7 +5211,7 @@ because were using that in neighbors
 
 1212
 01:17:48,910 --> 01:17:52,110
-Now this is going to be a list of tootles.
+Now this is going to be a list of tuples.
 
 1213
 01:17:52,382 --> 01:17:54,257
