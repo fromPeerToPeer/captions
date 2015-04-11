@@ -5988,7 +5988,7 @@ It doesn't have a hugh API,
 
 1388
 01:28:45,610 --> 01:28:48,893
-but it does avoid me (inaud) in terms of
+but it does avoid me reinventing the wheel in terms of
 
 1389
 01:28:49,110 --> 01:28:50,857
