@@ -5329,7 +5329,8 @@ do that quite efficiently.
 
 1239
 01:19:33,645 --> 01:19:36,182
-OC: Or we maybe (inaudible) but we'll see.
+OC: Or we may not even need to carry
+the dictionary around but we'll see.
 
 1240
 01:19:36,182 --> 01:19:37,651
