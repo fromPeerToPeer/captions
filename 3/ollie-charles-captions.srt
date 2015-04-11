@@ -5722,7 +5722,7 @@ an interesting optimization to see.
 
 1327
 01:26:04,280 --> 01:26:08,693
-But maybe we'll be able to
+That maybe we'll be able to
 allocate a bit less in the go function.
 
 1328
