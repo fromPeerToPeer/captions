@@ -6013,11 +6013,11 @@ it calls itself in different ways.
 
 1394
 01:29:03,066 --> 01:29:07,266
-It's more of a (inaudible) Haskell
+It's more of an advanced way of writing Haskell
 
 1395
 01:29:07,266 --> 01:29:09,320
-where you can
+but you can
 split that recursion out
 
 1396
