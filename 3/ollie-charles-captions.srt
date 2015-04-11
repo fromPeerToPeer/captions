@@ -2943,7 +2943,8 @@ invariant I want to have in the code.
 
 681
 00:44:35,720 --> 00:44:39,740
-Inaudible in which case there's no expansions on that.
+But we should probably deal with it anyway
+in which case there's no expansions on that.
 
 682
 00:44:40,960 --> 00:44:47,920
