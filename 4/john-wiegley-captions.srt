@@ -1192,7 +1192,7 @@ going to return the function
 
 273
 00:22:29,700 --> 00:22:33,200
-OC: I think you want inaudible there rather than addition.
+OC: I think you want EAdd there rather than addition.
 
 274
 00:22:35,300 --> 00:22:38,100
