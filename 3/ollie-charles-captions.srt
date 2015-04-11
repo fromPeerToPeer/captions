@@ -5347,16 +5347,16 @@ this the right way round
 
 1243
 01:19:46,531 --> 01:19:48,565
-it's dictionary and neighbor map
+it's dictionary and NeighbourMap
 
 1244
 01:19:50,188 --> 01:19:52,588
-This is the dictionary and neighbor map
+This is the dictionary and NeighbourMap
 
 1245
 01:19:59,740 --> 01:20:02,340
 and now expand
-needs that neighbor map as well.
+needs that NeighbourMap as well.
 
 1246
 01:20:05,131 --> 01:20:08,034
@@ -5365,7 +5365,7 @@ doesn't have to be added to go.
 
 1247
 01:20:08,034 --> 01:20:10,370
-Because the neighbor map doesn't ever change
+Because the NeighbourMap doesn't ever change
 
 1248
 01:20:11,250 --> 01:20:14,640
