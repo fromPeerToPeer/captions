@@ -5486,7 +5486,7 @@ to pre-compute the entire map?
 
 1275
 01:22:34,228 --> 01:22:36,480
-can you force that computation on c. ?
+can you force that computation and see?
 
 1276
 01:22:36,485 --> 01:22:39,382
