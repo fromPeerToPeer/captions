@@ -5395,7 +5395,7 @@ So here, I think I'll use another let binding.
 1254
 01:20:58,970 --> 01:21:03,137
 So now our word puzzle should
-be using this preview as neighbors map.
+be using this precomputed NeighbourMap.
 
 1255
 01:21:03,154 --> 01:21:03,937
