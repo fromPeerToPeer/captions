@@ -1131,7 +1131,7 @@ Unrecognised operator ....
 
 259
 00:20:54,900 --> 00:20:56,700
-OC: Maybe use 'just' for the operator
+OC: Maybe use Just for the operator
 
 260
 00:20:59,100 --> 00:21:00,700
