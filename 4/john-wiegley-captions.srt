@@ -1119,7 +1119,7 @@ We can have plus or we can have eof
 
 256
 00:20:33,100 --> 00:20:34,900
-but eof is going to return nothing.
+but eof is going to return Nothing.
 
 257
 00:20:35,700 --> 00:20:36,500
