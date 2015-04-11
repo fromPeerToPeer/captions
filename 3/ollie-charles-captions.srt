@@ -5140,7 +5140,7 @@ dictionary into a list of words
 
 1196
 01:16:06,462 --> 01:16:10,165
-move that neighbors over there.
+and map neighbors over that.
 
 1197
 01:16:12,668 --> 01:16:16,382
