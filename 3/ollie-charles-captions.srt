@@ -5202,7 +5202,8 @@ not returning the neighbors now.
 
 1210
 01:17:42,320 --> 01:17:45,177
-We don't really need to (inaudible)
+We don't really need to keep dict...
+Oh we do
 
 1211
 01:17:45,170 --> 01:17:47,342
