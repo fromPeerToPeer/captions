@@ -5931,7 +5931,7 @@ how we actually got from
 
 1375
 01:28:13,650 --> 01:28:15,813
-that nest of lists to a single list.
+that nested list to a single list.
 
 1376
 01:28:15,826 --> 01:28:18,040
