@@ -1135,7 +1135,7 @@ OC: Maybe use Just for the operator
 
 260
 00:20:59,100 --> 00:21:00,700
-and use nothing for end of file.
+and use Nothing for end-of-file.
 
 261
 00:21:01,100 --> 00:21:02,100
