@@ -2168,7 +2168,7 @@ Which is of course 'concat',
 500
 00:32:22,800 --> 00:32:25,462
 And we have a
-function in the standard library
+function in the standard library...
 
 501
 00:32:25,474 --> 00:32:29,000
