@@ -5522,7 +5522,7 @@ the dictionary of everything.
 
 1283
 01:23:01,531 --> 01:23:04,165
-We're using a lazy map
+Though we're using a lazy map
 here which means that
 
 1284
