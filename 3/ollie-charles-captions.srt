@@ -5083,7 +5083,7 @@ where your returning W with distance,
 
 1183
 01:15:18,817 --> 01:15:22,177
-in order to avoid having two similar (inaudible) functions.
+in order to avoid having two similarly named functions.
 
 1184
 01:15:22,348 --> 01:15:23,994
