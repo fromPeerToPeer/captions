@@ -1211,7 +1211,7 @@ deal with white space.
 277
 00:22:54,900 --> 00:22:57,600
 I believe that symbol
-gives trailing white space,
+skips trailing white space,
 
 278
 00:23:02,100 --> 00:23:04,800
