@@ -5788,7 +5788,7 @@ with the dictionary, so forcing
 1342
 01:26:44,100 --> 01:26:46,413
 the user to pass the dictionary
-and the neighbor map around,
+and the NeighbourMap around,
 
 1343
 01:26:46,413 --> 01:26:47,986
