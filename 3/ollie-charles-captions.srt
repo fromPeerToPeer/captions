@@ -5980,7 +5980,7 @@ that I'm very familiar with.
 1386
 01:28:39,986 --> 01:28:42,906
 It's in the same library
-as data.set and data.map.
+as Data.Set and Data.Map.
 
 1387
 01:28:42,910 --> 01:28:45,613
