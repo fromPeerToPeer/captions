@@ -5654,7 +5654,7 @@ me quite a bit is
 
 1312
 01:25:25,840 --> 01:25:28,640
-in go we are using foss boss,
+in go we are using ++,
 
 1313
 01:25:28,680 --> 01:25:32,680
