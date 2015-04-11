@@ -5109,7 +5109,7 @@ into precomputeNeighbours,
 
 1189
 01:15:38,411 --> 01:15:39,474
-whatever I do ...
+as a where binding
 
 1190
 01:15:39,485 --> 01:15:42,110
