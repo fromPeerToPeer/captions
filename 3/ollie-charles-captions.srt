@@ -2712,7 +2712,7 @@ to sort by the length descending.
 628
 00:41:23,173 --> 00:41:26,000
 But this now because
-if we're sorting the entire list
+we're sorting the entire list
 
 629
 00:41:26,000 --> 00:41:29,600
