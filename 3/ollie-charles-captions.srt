@@ -5100,7 +5100,7 @@ because we want compile error,
 1187
 01:15:27,194 --> 01:15:30,140
 we're going to get compile
-errors anyway because the types different.
+errors anyway because the types are different.
 
 1188
 01:15:34,165 --> 01:15:38,417
