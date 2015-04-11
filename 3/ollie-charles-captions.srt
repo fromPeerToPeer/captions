@@ -5895,7 +5895,7 @@ that it has this tree structure
 
 1367
 01:27:55,930 --> 01:27:57,786
-when you do a breadth-first search.
+and you're doing a breadth-first search.
 
 1368
 01:27:57,800 --> 01:27:59,426
