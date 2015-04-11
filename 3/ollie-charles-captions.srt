@@ -5048,7 +5048,7 @@ So I'll call this one ...
 
 1175
 01:14:31,925 --> 01:14:32,908
-neighborsLookup.
+neighboursLookup.
 
 1176
 01:14:37,748 --> 01:14:41,320
