@@ -2197,7 +2197,7 @@ I guess we'll leave that
 
 507
 00:32:43,480 --> 00:32:46,540
-as a hole for now and play with it GHCi again.
+as a hole for now and play with it in GHCi again.
 
 508
 00:32:47,400 --> 00:32:50,280
