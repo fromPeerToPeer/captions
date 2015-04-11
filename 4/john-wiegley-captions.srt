@@ -1258,8 +1258,8 @@ as a function to expression
 
 288
 00:23:37,300 --> 00:23:40,080
-to expression, to expression,
-to expression, in addop
+to expression to expression,
+in addop
 
 289
 00:23:41,840 --> 00:23:46,320
