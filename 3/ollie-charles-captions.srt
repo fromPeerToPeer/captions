@@ -5168,7 +5168,7 @@ function and the neighbors function
 
 1202
 01:16:33,110 --> 01:16:35,497
-and it's going to Tootle those up for me.
+and it's going to tuple those up for me.
 
 1203
 01:16:35,771 --> 01:16:36,285
