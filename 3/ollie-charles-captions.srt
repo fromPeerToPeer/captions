@@ -2938,8 +2938,8 @@ no words at all in the chain.
 
 680
 00:44:32,560 --> 00:44:35,666
-That's not really the
-environment I want to have in the code.
+That's not really an
+invariant I want to have in the code.
 
 681
 00:44:35,720 --> 00:44:39,740
