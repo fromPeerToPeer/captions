@@ -1007,7 +1007,7 @@ And that again is breaking it for you.
 230
 00:18:21,800 --> 00:18:25,300
 JW: We left off here trying to
-break the internet recursion we have.
+break the infinite recursion we have.
 
 231
 00:18:27,000 --> 00:18:29,360
