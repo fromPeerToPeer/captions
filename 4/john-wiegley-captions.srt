@@ -1263,7 +1263,7 @@ in addop
 
 289
 00:23:41,840 --> 00:23:46,320
-because you have inaudible in your return type.
+because you have EAdd as your return type.
 
 290
 00:23:59,300 --> 00:24:01,800
