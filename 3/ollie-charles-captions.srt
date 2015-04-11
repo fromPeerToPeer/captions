@@ -5736,7 +5736,7 @@ Try and work out if maybe something is being
 
 1330
 01:26:14,386 --> 01:26:15,920
-here a little too frequently.
+hit a little too frequently.
 
 1331
 01:26:16,080 --> 01:26:19,453
