@@ -5324,7 +5324,7 @@ to drop something out of the
 
 1238
 01:19:29,510 --> 01:19:33,405
-neighbor map we can
+NeighbourMap we can
 do that quite efficiently.
 
 1239
