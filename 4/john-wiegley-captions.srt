@@ -1197,7 +1197,7 @@ OC: I think you want EAdd there rather than addition.
 274
 00:22:35,300 --> 00:22:38,100
 That's right because I'm
-not doing evaluation Parser.
+not doing evaluation in the Parser.
 
 275
 00:22:41,800 --> 00:22:43,300
