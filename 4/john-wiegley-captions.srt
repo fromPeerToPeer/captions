@@ -1157,7 +1157,7 @@ which I have not used yet.
 
 265
 00:21:45,800 --> 00:21:48,200
-But Parsec is designed
+But in Parsec is designed
 to solve this problem.
 
 266
