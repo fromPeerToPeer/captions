@@ -5259,7 +5259,7 @@ be neighboursLookup,
 1223
 01:18:29,497 --> 01:18:33,805
 so that's ... well, yes
-let's keep it as neighborsLookup.
+let's keep it as neighboursLookup.
 
 1224
 01:18:39,080 --> 01:18:42,537
