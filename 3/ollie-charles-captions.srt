@@ -5556,7 +5556,7 @@ that's slightly nicer if we
 
 1290
 01:23:26,262 --> 01:23:35,445
-just say filter, length, equal to length inaudible.
+just say filter, length, equal to length of A.
 
 1291
 01:23:36,980 --> 01:23:40,194
