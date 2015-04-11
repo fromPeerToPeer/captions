@@ -984,7 +984,7 @@ all the way back to the top.
 
 225
 00:17:58,600 --> 00:18:00,600
-This is the problem we're running into.
+This is the problem we're running into,
 
 226
 00:18:00,600 --> 00:18:03,200
