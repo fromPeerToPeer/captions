@@ -5984,7 +5984,7 @@ as Data.Set and Data.Map.
 
 1387
 01:28:42,910 --> 01:28:45,613
-It doesn't have a hugh api,
+It doesn't have a hugh API,
 
 1388
 01:28:45,610 --> 01:28:48,893
