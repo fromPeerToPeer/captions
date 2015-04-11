@@ -928,7 +928,7 @@ recurs within parens here.
 
 213
 00:16:30,700 --> 00:16:33,300
-OC: Maybe look up chain L
+OC: Maybe look up chainl
 and see what that's doing.
 
 214
