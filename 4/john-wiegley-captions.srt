@@ -1351,7 +1351,7 @@ Now we have to make three more versions of addop
 
 309
 00:25:20,000 --> 00:25:22,000
-We only have to worry about presence
+We only have to worry about precedence
 
 310
 00:25:23,900 --> 00:25:26,100
