@@ -5517,7 +5517,7 @@ OC: Yes that's probably worth doing already.
 
 1282
 01:22:57,700 --> 01:23:00,897
-Rather than ridding
+Rather than precomputing
 the dictionary of everything.
 
 1283
