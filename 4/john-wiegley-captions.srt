@@ -1245,11 +1245,11 @@ Now the add Parser is going to go away.
 
 285
 00:23:27,000 --> 00:23:28,600
-And we're going to have a Parser
+And we're going to have
 
 286
 00:23:28,600 --> 00:23:30,600
-for the new inaudible expressions.
+a new Parser for expressions.
 
 287
 00:23:34,600 --> 00:23:37,300
