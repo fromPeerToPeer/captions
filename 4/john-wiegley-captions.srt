@@ -1401,7 +1401,7 @@ is going to be equally trivial.
 320
 00:25:55,500 --> 00:25:57,700
 OC: Can we not just
-work with 'int 'anymore
+work with 'int' anymore
 
 321
 00:25:58,300 --> 00:26:00,500
