@@ -1419,7 +1419,8 @@ to use doubles everywhere.
 
 324
 00:26:21,600 --> 00:26:25,600
-In some of the later codes it assumes you can assign to inaudible.
+In some of the later codes it assumes you can
+assign to floating point numbers.
 
 325
 00:26:32,100 --> 00:26:33,000
