@@ -1080,7 +1080,7 @@ what the next token is.
 
 247
 00:19:16,800 --> 00:19:18,200
-We know that it could be say:
+We know that it could be, say:
 
 248
 00:19:55,300 --> 00:19:57,900
