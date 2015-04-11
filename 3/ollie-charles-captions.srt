@@ -5640,7 +5640,7 @@ find chains quite efficiently,
 1309
 01:25:09,320 --> 01:25:15,066
 Not just from cat to dog
-but also from rude to code.
+but also from ruby to code.
 
 1310
 01:25:15,370 --> 01:25:20,146
