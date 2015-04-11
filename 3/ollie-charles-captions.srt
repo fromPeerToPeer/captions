@@ -5728,7 +5728,7 @@ allocate a bit less in the go function.
 1328
 01:26:08,693 --> 01:26:12,133
 Beyond that I'd probably want
-to look doing some code profiling.
+to look at doing some code profiling.
 
 1329
 01:26:12,130 --> 01:26:14,386
