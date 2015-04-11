@@ -5778,7 +5778,7 @@ that I'd want to clean up.
 
 1340
 01:26:38,740 --> 01:26:40,971
-As I pointed out earlier, the neighbor map
+As I pointed out earlier, the NeighbourMap
 
 1341
 01:26:40,970 --> 01:26:44,106
