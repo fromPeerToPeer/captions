@@ -1148,7 +1148,7 @@ infinite left recursion problem.
 
 263
 00:21:40,700 --> 00:21:43,700
-Now you we're telling me
+Now you were telling me
 about a function called chainl,
 
 264
