@@ -1580,7 +1580,7 @@ Because we haven't tied in the Parser.
 
 362
 00:29:27,700 --> 00:29:30,200
-OC: These are all doing inaudible as well.
+OC: These are all doing EAdd as well.
 
 363
 00:29:30,200 --> 00:29:35,700
