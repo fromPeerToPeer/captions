@@ -5281,11 +5281,11 @@ than just take the dictionary.
 
 1228
 01:18:49,697 --> 01:18:52,730
-This also need to take a nMap.
+This also need to take a NeighbourMap.
 
 1229
 01:19:02,220 --> 01:19:05,240
-The order here is dictionary, nMap.
+The order here is dictionary, NeighbourMap.
 
 1230
 01:19:10,250 --> 01:19:11,650
@@ -5306,7 +5306,7 @@ SP: I was having the same thought.
 
 1234
 01:19:19,068 --> 01:19:20,600
-OC: So I think maybe our neighbor map
+OC: So I think maybe our NeighbourMap
 
 1235
 01:19:20,605 --> 01:19:24,325
