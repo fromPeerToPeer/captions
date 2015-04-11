@@ -1144,7 +1144,7 @@ JW: Excellent.
 262
 00:21:36,080 --> 00:21:39,120
 Now we've got rid of our
-internet left recursion problem.
+infinite left recursion problem.
 
 263
 00:21:40,700 --> 00:21:43,700
