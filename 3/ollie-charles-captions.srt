@@ -5713,7 +5713,7 @@ of all possible solutions, and then we can
 
 1325
 01:26:00,170 --> 01:26:02,133
-start filtering things off the front.
+start pulling things off the front.
 
 1326
 01:26:02,133 --> 01:26:04,280
