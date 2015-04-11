@@ -5443,7 +5443,7 @@ OK, so that certainly type checks.
 
 1265
 01:21:44,708 --> 01:21:46,800
-Let's bind that to it, something like that.
+Let's bind that to... something like that.
 
 1266
 01:21:47,420 --> 01:21:48,862
