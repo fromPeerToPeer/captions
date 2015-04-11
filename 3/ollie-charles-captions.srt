@@ -5194,7 +5194,7 @@ Oh, I must have originally called it A.
 1208
 01:17:31,548 --> 01:17:33,880
 OC: So now we have
-prelude neighbors but that's
+precomputeNeighbours but that's
 
 1209
 01:17:33,880 --> 01:17:36,050
