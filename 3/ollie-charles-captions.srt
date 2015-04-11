@@ -5861,7 +5861,7 @@ But if we were able to combine that with
 
 1359
 01:27:32,546 --> 01:27:34,026
-the pre-computed neighbor map
+the pre-computed NeighbourMap
 
 1360
 01:27:34,026 --> 01:27:36,466
