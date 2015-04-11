@@ -5744,7 +5744,7 @@ And see if we can do something there.
 
 1332
 01:26:20,020 --> 01:26:22,933
-Obvious strategies and
+Obvious strategies in
 any graph search problem
 
 1333
