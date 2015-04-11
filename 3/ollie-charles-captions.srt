@@ -5935,8 +5935,8 @@ that nested list to a single list.
 
 1376
 01:28:15,826 --> 01:28:18,040
-Was compact the
-right version to be using
+Was concat the
+right operation to be using
 
 1377
 01:28:18,050 --> 01:28:20,853
