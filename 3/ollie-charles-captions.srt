@@ -5431,11 +5431,10 @@ So let's see what we get out of this.
 1262
 01:21:20,850 --> 01:21:24,942
 We didn't really look
-at seeing a pre-compute 
+at seeing precomputeNeighbours work, so
 
 1263
 01:21:24,942 --> 01:21:30,577
-preview of neighbors, so
 let's have a quick look at that.
 
 1264
