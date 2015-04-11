@@ -5254,7 +5254,7 @@ OC: Let's see what we get from that.
 1222
 01:18:23,502 --> 01:18:27,805
 neighbors is going to
-be neighbors look up,
+be neighboursLookup,
 
 1223
 01:18:29,497 --> 01:18:33,805
