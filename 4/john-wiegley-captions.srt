@@ -1066,7 +1066,7 @@ And for example, if it's a plus,
 
 244
 00:19:01,800 --> 00:19:05,400
-we know it's inaudible to addition
+we know it's a descendant to addition
 
 245
 00:19:05,400 --> 00:19:08,000
