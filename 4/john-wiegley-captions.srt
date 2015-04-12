@@ -2561,7 +2561,7 @@ And that definition defines these things.
 
 593
 00:50:33,840 --> 00:50:35,120
-How do they begin and end.
+How do comments begin and end.
 
 594
 00:50:35,120 --> 00:50:37,360
