@@ -2898,7 +2898,7 @@ Which is the perfect job for state.
 
 670
 00:57:28,400 --> 00:57:30,400
-Which means we need to bring in state.
+Which means we need to bring in State.
 
 671
 00:57:35,920 --> 00:57:37,520
