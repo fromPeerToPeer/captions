@@ -2548,7 +2548,7 @@ of a language definition.
 
 590
 00:50:22,720 --> 00:50:24,560
-Which you call maybe token Parser
+Which you call makeTokenParser
 
 591
 00:50:26,560 --> 00:50:28,960
