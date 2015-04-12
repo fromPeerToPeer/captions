@@ -2914,11 +2914,11 @@ Now we are going to say:
 
 674
 00:57:53,520 --> 00:57:55,200
-OC: Modify is from control.state.
+OC: modify is from Control.Monad.State.
 
 675
 00:57:57,600 --> 00:57:59,920
-Env is going to be
+env is going to be
 the modified environment.
 
 676
@@ -2927,15 +2927,16 @@ I'm going to say:
 
 677
 00:58:11,840 --> 00:58:16,080
-Parsec again has its own inaudible
+Parsec again has its own keyword named
+State
 
 678
 00:58:23,280 --> 00:58:24,160
-I need to get env.
+I need to getEnv.
 
 679
 00:58:29,680 --> 00:58:31,280
-OC: Because the env is a new type.
+OC: Because Env is a new type.
 
 680
 00:58:31,520 --> 00:58:32,160
