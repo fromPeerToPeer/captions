@@ -2674,12 +2674,13 @@ I'm going to go ahead and commit this.
 
 619
 00:53:05,520 --> 00:53:07,360
-JW: How inaudible
+JW: How are we going to handle let
+binding?
 
 620
 00:53:07,360 --> 00:53:10,080
 We will start by writing
-a Parser for let bindings.
+a parser for let bindings.
 
 621
 00:53:13,360 --> 00:53:14,960
