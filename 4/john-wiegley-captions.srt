@@ -2839,12 +2839,12 @@ if anyone makes a reference to it.
 
 656
 00:56:29,280 --> 00:56:30,960
-We want to have data map in scope.
+We want to have Data.Map in scope.
 
 657
 00:56:38,160 --> 00:56:40,560
 We don't JUST want a
-map of text to expression
+map of text to expressions
 
 658
 00:56:40,880 --> 00:56:42,800
