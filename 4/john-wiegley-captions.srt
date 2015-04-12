@@ -2640,7 +2640,7 @@ And get a little further this time.
 611
 00:52:30,160 --> 00:52:32,640
 Previously we were
-using test file on test.bc
+using testFile on test.bc
 
 612
 00:52:35,760 --> 00:52:36,960
@@ -2652,12 +2652,13 @@ There we go.
 
 614
 00:52:38,160 --> 00:52:40,160
-OC: It looks like it's inaudible
+OC: It looks like it gets all the way to
+the end there.
 
 615
 00:52:40,160 --> 00:52:42,160
 JW: Right. Now we're
-going to test our bc
+going to test.bc
 
 616
 00:52:42,160 --> 00:52:43,440
