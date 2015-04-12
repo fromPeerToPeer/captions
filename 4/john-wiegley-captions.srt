@@ -2436,7 +2436,7 @@ It's in the combinators library.
 
 564
 00:48:43,760 --> 00:48:45,200
-Its called 'between' I think.
+It's called 'between' I think.
 
 565
 00:48:46,720 --> 00:48:46,960
