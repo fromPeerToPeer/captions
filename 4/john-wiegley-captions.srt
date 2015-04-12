@@ -2733,7 +2733,8 @@ letter returns a character,
 
 632
 00:54:18,160 --> 00:54:20,560
-the aggregate raise a string and then pack it
+the aggregate raises a string and then
+pack it
 
 633
 00:54:20,560 --> 00:54:21,760
