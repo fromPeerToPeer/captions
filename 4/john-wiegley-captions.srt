@@ -2574,11 +2574,11 @@ Can they be nested etc. etc.
 
 596
 00:50:41,200 --> 00:50:43,040
-And finally you have reserve names
+And finally you have reservedNames
 
 597
 00:50:43,040 --> 00:50:44,800
-and reserve inaudible names.
+and reservedOpNames.
 
 598
 00:50:44,800 --> 00:50:46,880
