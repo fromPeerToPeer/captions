@@ -2592,12 +2592,12 @@ something from ....
 600
 00:50:48,960 --> 00:50:51,840
 I don't think it has to be
-from your reserve names list,
+from your reservedNames list,
 
 601
 00:50:51,840 --> 00:50:54,480
 but it won't confuse
-that as an identifier phrase.
+that as an identifier name.
 
 602
 00:50:56,800 --> 00:50:57,760
