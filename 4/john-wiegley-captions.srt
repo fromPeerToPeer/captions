@@ -2329,7 +2329,7 @@ We can be a little bit fancier now.
 538
 00:46:13,520 --> 00:46:16,640
 I have to add in an
-extension called 'overloaded strings'.
+extension called OverloadedStrings.
 
 539
 00:46:19,520 --> 00:46:20,800
