@@ -2868,8 +2868,8 @@ We want our evaluator to be recursive.
 
 663
 00:56:59,680 --> 00:57:02,240
-I will have to have
-this made a little trickier.
+I will need to have
+this be a little trickier.
 
 664
 00:57:07,280 --> 00:57:08,880
