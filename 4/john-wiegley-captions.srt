@@ -2944,11 +2944,11 @@ JW: Right
 
 681
 00:58:32,560 --> 00:58:33,440
-OC: That's a back up.
+OC: We need to wrap it back up.
 
 682
 00:58:38,800 --> 00:58:40,080
-Modify returns no value,
+modify returns no value,
 
 683
 00:58:40,480 --> 00:58:42,080
@@ -2956,11 +2956,11 @@ yet we have been saying things
 
 684
 00:58:42,080 --> 00:58:43,520
-return double all the time.
+return as Double all the time.
 
 685
 00:58:49,200 --> 00:58:49,840
-Lets say:
+Let's say:
 
 686
 00:58:55,920 --> 00:58:57,920
