@@ -2369,7 +2369,8 @@ Here it is.
 
 548
 00:47:00,160 --> 00:47:03,600
-inaudible language it requires and then it says Haskell inaudible.
+It inserts language, it requires and then
+it says haskell-yas-ghc-language-pragmas
 
 549
 00:47:05,760 --> 00:47:08,400
