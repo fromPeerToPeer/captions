@@ -2378,15 +2378,16 @@ That is a function that will go out to GHC,
 
 550
 00:47:14,400 --> 00:47:16,960
-and ask "what are all your extensions inaudible".
+and ask "what are all your extensions?"
+Actually I think the command was
 
 551
 00:47:18,240 --> 00:47:20,160
-Right there GHC - support extension.
+Right there: ghc --supported-extensions.
 
 552
 00:47:22,160 --> 00:47:26,720
-And that will tell you .... inaudible
+And that will tell you what you can use.
 
 553
 00:47:31,760 --> 00:47:33,040
