@@ -2315,12 +2315,12 @@ type.
 
 535
 00:45:13,040 --> 00:45:14,640
-So I want an input from get line.
+So we want our input to come from getLine.
 
 536
 00:45:22,000 --> 00:45:24,640
-Now that we're in io
-I can run the test on the input.
+Now that we're in IO
+we can just run test on the input.
 
 537
 00:45:33,360 --> 00:45:35,120
