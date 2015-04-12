@@ -3004,7 +3004,8 @@ OC: Well, you could still put this
 
 695
 00:59:25,600 --> 00:59:29,200
-in the evaluator inaudible may double.
+in the evaluator but then the evaluator
+could return Maybe Double
 
 696
 00:59:29,200 --> 00:59:30,800
@@ -3052,7 +3053,7 @@ JW: I like that idea more,
 706
 00:59:56,400 --> 00:59:58,480
 but for now let's
-go with the maybe idea.
+go with the Maybe idea.
 
 707
 01:00:01,410 --> 01:00:02,820
