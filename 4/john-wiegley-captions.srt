@@ -2765,8 +2765,9 @@ your specification said
 
 639
 00:54:56,320 --> 00:54:58,800
-It's starting to go a
-little out in to space here.
+It's starting to go a little out in to
+space here so let's write it more
+monadically
 
 640
 00:55:34,640 --> 00:55:35,840
