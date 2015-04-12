@@ -2457,11 +2457,12 @@ OC: Maybe it would be better
 
 569
 00:49:07,200 --> 00:49:08,960
-if we passed the Parser in as well.
+if we passed a Parser in as well.
 
 570
 00:49:09,680 --> 00:49:12,320
- inaudible Parser transformer that takes a Parser
+so symbol is a kind of Parser transformer
+that takes a Parser
 
 571
 00:49:13,760 --> 00:49:15,360
