@@ -2609,11 +2609,12 @@ This is a very handy thing to use
 
 604
 00:51:02,880 --> 00:51:04,720
-but we're not going to go into it now.
+but we're not going to be using it right
+now because
 
 605
 00:51:05,200 --> 00:51:06,400
-Our language is simple.
+Our language is so simple.
 
 606
 00:51:22,320 --> 00:51:24,960
