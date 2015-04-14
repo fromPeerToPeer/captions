@@ -3403,12 +3403,13 @@ So we can't map between our 3 types because
 
 786
 00:53:08,493 --> 00:53:10,840
-we wouldn't necessarily map the same (inaudible)
+we wouldn't necessarily
+map them to something that's order-able.
 
 787
 00:53:10,850 --> 00:53:15,906
-The filter - there's probably
-something in Data. Foldable
+For filter, there's probably
+some stuff in Data.Foldable
 
 788
 00:53:15,906 --> 00:53:18,026
