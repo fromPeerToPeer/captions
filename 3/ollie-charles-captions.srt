@@ -3561,11 +3561,12 @@ F that's going to take a chain ...
 
 822
 00:55:11,491 --> 00:55:14,910
-and a new dictionary (inaudible) something,
+and a new dictionary
+and it needs to do something,
 
 823
 00:55:16,850 --> 00:55:18,325
-and pull that there as well.
+and call f there as well.
 
 824
 00:55:22,725 --> 00:55:26,102
