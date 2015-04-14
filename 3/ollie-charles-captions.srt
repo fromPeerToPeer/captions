@@ -3058,7 +3058,7 @@ word a and we need
 
 707
 00:47:12,986 --> 00:47:14,373
-to reach word B.
+to reach word b.
 
 708
 00:47:15,200 --> 00:47:16,850
@@ -3066,7 +3066,7 @@ So we'll start with a word chain
 
 709
 00:47:18,680 --> 00:47:20,520
-which is just the word A
+which is just the word a
 
 710
 00:47:20,613 --> 00:47:21,933
@@ -3270,7 +3270,7 @@ So rather than having a list of text,
 
 755
 00:50:30,893 --> 00:50:32,813
-let's go with A set text,
+let's go with a set text,
 
 756
 00:50:33,613 --> 00:50:35,580
@@ -3557,7 +3557,7 @@ and see what we end up with.
 821
 00:55:09,194 --> 00:55:11,491
 OC: We have some function
-F that's going to take a chain ...
+f that's going to take a chain ...
 
 822
 00:55:11,491 --> 00:55:14,910
@@ -3891,7 +3891,7 @@ but otherwise if we have a chain.
 
 899
 00:59:12,891 --> 00:59:15,028
-It starts with the word W,
+and it starts with the word w,
 
 900
 00:59:15,171 --> 00:59:18,148
@@ -3899,11 +3899,11 @@ we have the dictionary and then
 
 901
 00:59:18,280 --> 00:59:24,348
-we need to take the neighbors around W
+we need to take the neighbors around w
 
 902
 00:59:24,577 --> 00:59:25,520
-which will equal N.
+which will equal n.
 
 903
 00:59:26,120 --> 00:59:28,034
@@ -3911,11 +3911,11 @@ and put that on the front of the chain.
 
 904
 00:59:28,030 --> 00:59:30,611
-So N is going to be the neighbors
+So n is going to be the neighbors
 
 905
 00:59:34,228 --> 00:59:36,371
-using the same dictionary around W.
+using the same dictionary around w.
 
 906
 00:59:37,820 --> 00:59:41,045
@@ -3932,7 +3932,7 @@ with the same dictionary ...
 
 909
 00:59:52,485 --> 00:59:54,540
-but we'll delete N from the dictionary.
+but we'll delete n from the dictionary.
 
 910
 00:59:54,720 --> 00:59:55,388
