@@ -3511,7 +3511,7 @@ I've got a slightly smaller dictionary now.
 
 810
 00:54:39,330 --> 00:54:40,748
-And let's start type checks.
+And that still type checks.
 
 811
 00:54:45,794 --> 00:54:47,257
