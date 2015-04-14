@@ -3192,7 +3192,8 @@ make the dictionary smaller
 
 738
 00:49:17,946 --> 00:49:20,910
-then our neighbors gradually become smaller.
+then our neighbors
+gradually become smaller.
 
 739
 00:49:21,000 --> 00:49:24,373
