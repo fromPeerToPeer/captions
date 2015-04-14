@@ -2969,11 +2969,12 @@ that's already a list of word chains.
 
 687
 00:45:15,770 --> 00:45:22,173
-I find the neighbors of W but I need to use a  list
+I find the neighbors of w
+but I need to use a
 
 688
 00:45:22,173 --> 00:45:24,050
-(inaudible) there.
+list cons there.
 
 689
 00:45:34,000 --> 00:45:36,453
