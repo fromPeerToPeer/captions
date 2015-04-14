@@ -2978,7 +2978,8 @@ list cons there.
 
 689
 00:45:34,000 --> 00:45:36,453
-I'm going to move away from putting this there.
+I'm going to move away from
+putting this there.
 Just map over these.
 
 690
@@ -3035,7 +3036,8 @@ I just start with the word cat.
 
 702
 00:46:50,620 --> 00:46:52,940
-So that seems to be doing what t I would expect,
+So that seems to be doing
+what I would expect,
 
 703
 00:46:52,940 --> 00:46:54,770
@@ -3119,7 +3121,8 @@ SP: Yes.
 
 721
 00:48:11,110 --> 00:48:13,786
-OC: We can probably use iterate to do that.
+OC: We can probably use
+iterate to do that.
 
 722
 00:48:13,786 --> 00:48:16,213
@@ -3172,11 +3175,13 @@ you keep the dictionary the same
 
 733
 00:49:04,760 --> 00:49:07,440
-each time, but you don't allow the addition
+each time, but you
+don't allow the addition
 
 734
 00:49:07,453 --> 00:49:10,160
-into the chain of a word that's already in it.
+into the chain of
+a word that's already in it.
 
 735
 00:49:11,310 --> 00:49:14,426
@@ -3249,11 +3254,13 @@ the containments library for that.
 
 750
 00:50:06,400 --> 00:50:08,946
-And to get that I need to put that in there.
+And to get that
+I need to put that in there.
 
 751
 00:50:11,110 --> 00:50:13,893
-Actually, it looks as if we already have that.
+Actually, it looks as if
+we already have that.
 
 752
 00:50:17,120 --> 00:50:18,786
@@ -3287,11 +3294,13 @@ is return a set rather than a list.
 
 759
 00:50:43,260 --> 00:50:48,160
-That's easy enough, we can just say S.fromList.
+That's easy enough,
+we can just say S.fromList.
 
 760
 00:50:48,680 --> 00:50:50,820
-which takes a list and turns it into a set.
+which takes a list
+and turns it into a set.
 
 761
 00:50:51,893 --> 00:50:57,373
@@ -3300,7 +3309,8 @@ a list to see if an element's there,
 
 762
 00:50:57,420 --> 00:51:03,080
-use S.member, which checks to see if an element
+use S.member,
+which checks to see if an element
 
 763
 00:51:03,093 --> 00:51:04,520
@@ -3325,7 +3335,8 @@ like that ...
 768
 00:51:41,440 --> 00:51:47,106
 The filter is for lists but we
-have a set so we ask S.filter to filter a set.
+have a set so
+we ask S.filter to filter a set.
 
 769
 00:51:56,240 --> 00:51:58,306
@@ -3351,7 +3362,8 @@ and again to S.filter, S.map.
 
 774
 00:52:29,866 --> 00:52:32,173
-Now this is not going to give us a list of text,
+Now this is not going
+to give us a list of text,
 
 775
 00:52:32,186 --> 00:52:33,826
@@ -3359,7 +3371,8 @@ it's going to give us a set of text.
 
 776
 00:52:39,880 --> 00:52:46,893
-SP: There are built in facilities like traversible.
+SP: There are built in facilities
+like traversible.
 
 777
 00:52:47,826 --> 00:52:49,866
@@ -3368,7 +3381,8 @@ this sort of code
 
 778
 00:52:49,866 --> 00:52:53,346
-where you change from one data type to another?
+where you change
+from one data type to another?
 
 779
 00:52:53,400 --> 00:52:55,710
@@ -3381,7 +3395,8 @@ these functions aren't there?
 
 781
 00:52:57,540 --> 00:53:00,706
-OC: Right. We can't generalize map I don't think
+OC: Right. We can't
+generalize map I don't think
 
 782
 00:53:00,706 --> 00:53:03,373
@@ -3399,7 +3414,8 @@ SP: Ok
 
 785
 00:53:06,213 --> 00:53:08,480
-So we can't map between our 3 types because
+So we can't map between
+our 3 types because
 
 786
 00:53:08,493 --> 00:53:10,840
@@ -3457,7 +3473,8 @@ We could turn this into a list.
 
 798
 00:53:52,194 --> 00:53:54,500
-OK, and now were back to trying to solve this.
+OK, and now were back to
+trying to solve this.
 
 799
 00:53:55,348 --> 00:53:57,354
@@ -3484,7 +3501,8 @@ that we've already considered.
 
 804
 00:54:09,302 --> 00:54:15,091
-I believe those are going to be the head of chains
+I believe those are
+going to be the head of chains
 
 805
 00:54:15,097 --> 00:54:18,417
@@ -3507,7 +3525,8 @@ dictionary without any of the neighbors.
 
 809
 00:54:36,702 --> 00:54:39,020
-I've got a slightly smaller dictionary now.
+I've got a slightly smaller
+dictionary now.
 
 810
 00:54:39,330 --> 00:54:40,748
@@ -3589,7 +3608,8 @@ aren't really helping us anymore
 
 828
 00:55:37,030 --> 00:55:39,240
-Just have to trust our intuition a bit more.
+Just have to trust
+our intuition a bit more.
 
 829
 00:55:39,450 --> 00:55:41,622
@@ -3601,7 +3621,8 @@ I should bring this down a little bit.
 
 831
 00:55:54,920 --> 00:55:57,280
-Expand takes the dictionary in first position,
+Expand takes the dictionary
+in first position,
 
 832
 00:55:57,285 --> 00:55:59,800
@@ -3668,7 +3689,8 @@ When you fold you have a list
 
 847
 00:56:56,660 --> 00:56:59,125
-and you keep reducing it into something smaller.
+and you keep reducing it
+into something smaller.
 
 848
 00:56:59,125 --> 00:57:01,977
@@ -3686,7 +3708,8 @@ where we maybe can't go any bigger.
 
 851
 00:57:06,200 --> 00:57:10,222
-So we have a function in the Prelude to do that
+So we have a function in
+the Prelude to do that
 
 852
 00:57:10,222 --> 00:57:12,148
@@ -3737,7 +3760,8 @@ but that felt a bit weird,
 
 863
 00:57:37,840 --> 00:57:40,971
-so maybe let's try bringing in a maybe there.
+so maybe let's try
+bringing in a maybe there.
 
 864
 00:57:42,200 --> 00:57:44,171
@@ -3762,7 +3786,8 @@ we have just that result of word chains.
 
 869
 00:57:57,691 --> 00:57:59,850
-NARRATOR: We're going to speed through this section
+NARRATOR: We're going to speed through
+this section
 
 870
 00:57:59,850 --> 00:58:01,577
@@ -3871,7 +3896,8 @@ that word from the dictionary,
 
 894
 00:59:00,080 --> 00:59:02,354
-because we don't want to go back on ourselves.
+because we don't want
+to go back on ourselves.
 
 895
 00:59:03,737 --> 00:59:05,540
