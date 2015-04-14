@@ -3295,7 +3295,8 @@ which takes a list and turns it into a set.
 
 761
 00:50:51,893 --> 00:50:57,373
-Next, rather than checking a list to see if (inaudible)
+Next, rather than checking
+a list to see if an element's there,
 
 762
 00:50:57,420 --> 00:51:03,080
