@@ -3286,7 +3286,7 @@ is return a set rather than a list.
 
 759
 00:50:43,260 --> 00:50:48,160
-That's easy enough, we can just say S.list.
+That's easy enough, we can just say S.fromList.
 
 760
 00:50:48,680 --> 00:50:50,820
