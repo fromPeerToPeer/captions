@@ -3343,7 +3343,7 @@ Ah yes,  we can't map over a set like that.
 772
 00:52:17,813 --> 00:52:23,813
 Do we have that ... yes we do ...
-so we just change that to S.dot map
+so we just change that to S.map
 
 773
 00:52:24,866 --> 00:52:29,510
