@@ -3729,7 +3729,7 @@ modeling here with this pattern match,
 861
 00:57:32,691 --> 00:57:35,480
 where we simply said
-we have an endless list of word chains,
+we have an empty list of word chains,
 
 862
 00:57:35,485 --> 00:57:37,650
