@@ -3673,7 +3673,8 @@ and you keep reducing it into something smaller.
 848
 00:56:59,125 --> 00:57:01,977
 Whereas in this case we
-actually want to get something bigger.
+actually have something
+and want to get something bigger.
 
 849
 00:57:01,971 --> 00:57:03,710
