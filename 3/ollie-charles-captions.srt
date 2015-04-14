@@ -3100,7 +3100,7 @@ level breadth-first search.
 
 717
 00:47:51,580 --> 00:47:54,533
-we need to go a bit further
+We need to go a bit further
 than that to find something useful,
 
 718
