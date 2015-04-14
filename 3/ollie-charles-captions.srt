@@ -3048,7 +3048,8 @@ feed this back in to our word puzzle.
 
 705
 00:47:01,620 --> 00:47:03,866
-I think I'll leave this around for now.
+I think I'll leave this around for now
+and just comment that out.
 
 706
 00:47:09,880 --> 00:47:12,986
