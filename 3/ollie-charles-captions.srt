@@ -3005,7 +3005,7 @@ the neighbors and dict and w
 
 695
 00:46:08,370 --> 00:46:11,920
-and we'll put that into (inaudible) N.
+and we'll put that into binding n.
 
 696
 00:46:14,050 --> 00:46:17,613
