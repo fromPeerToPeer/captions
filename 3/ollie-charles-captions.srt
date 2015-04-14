@@ -3417,8 +3417,8 @@ that will probably let us filter the set.
 
 789
 00:53:18,546 --> 00:53:22,933
-But I think I'm quite
-happy working with sets here.
+But I think I'm quite happy being explicit
+that we're working with sets here.
 
 790
 00:53:22,933 --> 00:53:23,626
