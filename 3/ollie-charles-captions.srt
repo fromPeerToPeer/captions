@@ -3022,7 +3022,7 @@ And we're back to compiling again - good.
 
 699
 00:46:31,493 --> 00:46:35,040
-I should be able to load the dictionary in ...
+I should be able to load the dictionary in
 
 700
 00:46:39,370 --> 00:46:44,573
