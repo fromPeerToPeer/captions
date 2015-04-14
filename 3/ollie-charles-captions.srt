@@ -3224,7 +3224,8 @@ SP: Yes.
 
 745
 00:49:41,346 --> 00:49:43,426
-OC: So that's going to be a bit of a back jump
+OC: So that's going to be
+a bit of a backtrace
 
 746
 00:49:43,426 --> 00:49:45,226
