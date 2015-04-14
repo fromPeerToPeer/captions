@@ -3498,7 +3498,7 @@ beneficial to bring more neighbors out
 
 807
 00:54:25,462 --> 00:54:26,697
-as a set of binding.
+as a separate binding.
 
 808
 00:54:33,680 --> 00:54:36,702
