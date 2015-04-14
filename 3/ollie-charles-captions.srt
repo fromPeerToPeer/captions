@@ -3532,7 +3532,7 @@ function that's going to take
 
 815
 00:54:51,942 --> 00:54:53,771
-a list of word chains, the dictionary,
+a list of word chains in the dictionary,
 
 816
 00:54:53,771 --> 00:54:55,708
