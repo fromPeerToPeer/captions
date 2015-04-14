@@ -3797,7 +3797,7 @@ OC: Even though we're using unfold,
 877
 00:58:20,422 --> 00:58:23,542
 which does feel
-like the right thing to be using
+like the right tool to be using
 
 878
 00:58:23,540 --> 00:58:26,388
