@@ -3828,7 +3828,7 @@ What I'm going to go with instead ..
 
 884
 00:58:38,160 --> 00:58:41,577
-expands going to take a single
+expand's going to take a single
 word chain and the dictionary,
 
 885
