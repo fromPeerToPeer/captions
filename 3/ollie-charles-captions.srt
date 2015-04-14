@@ -3207,7 +3207,7 @@ it would be nice if we had
 
 741
 00:49:31,280 --> 00:49:33,053
-a bridger type for our dictionary.
+a richer type for our dictionary.
 
 742
 00:49:33,053 --> 00:49:36,413
