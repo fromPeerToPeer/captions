@@ -3347,7 +3347,7 @@ so we just change that to S.map
 
 773
 00:52:24,866 --> 00:52:29,510
-(inaudible) filter, S.map.
+and again to S.filter, S.map.
 
 774
 00:52:29,866 --> 00:52:32,173
