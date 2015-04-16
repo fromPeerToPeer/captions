@@ -5643,7 +5643,8 @@ whitespace causing the problem ?
 
 1322
 01:50:16,230 --> 01:50:18,350
-or are we stripping the leading whitespace inaudible.
+or are we stripping the leading whitespace
+out as well.
 
 1323
 01:50:18,350 --> 01:50:20,580
