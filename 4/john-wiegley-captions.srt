@@ -5400,7 +5400,8 @@ I'm ignoring that parameter.
 
 1265
 01:45:58,000 --> 01:46:00,000
-I still have an error  inaudible language.
+I still have an error, saying
+I'm not using that language pragma.
 
 1266
 01:46:04,470 --> 01:46:05,170
