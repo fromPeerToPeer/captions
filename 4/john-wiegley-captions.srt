@@ -5792,7 +5792,7 @@ it's expecting to see
 
 1356
 01:54:40,000 --> 01:54:41,882
-unexpected F wanted a map operator.
+unexpected F wanted a math operator.
 
 1357
 01:54:44,580 --> 01:54:46,940
