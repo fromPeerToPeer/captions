@@ -5978,7 +5978,7 @@ JW: Not quite !
 
 1399
 01:57:25,880 --> 01:57:28,940
-OC: I guess our record
+OC: I guess our repl
 doesn't deal with comments like that
 
 1400
