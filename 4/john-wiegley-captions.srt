@@ -6179,7 +6179,7 @@ evaluators get easier to write.
 
 1444
 01:59:53,880 --> 01:59:55,520
-inaudible
+Make a pretty printer.
 
 1445
 01:59:56,940 --> 02:00:00,470
