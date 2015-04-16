@@ -5657,7 +5657,7 @@ that occurs before the brace
 
 1325
 01:50:22,110 --> 01:50:23,050
-and after the race.
+and after the brace.
 
 1326
 01:50:33,290 --> 01:50:34,940
