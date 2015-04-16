@@ -5727,7 +5727,7 @@ JW: Let's try parsing the single expression.
 1341
 01:53:39,410 --> 01:53:42,110
 JW: It's trying to parse
-the bun binding and failing.
+the funBinding and failing.
 
 1342
 01:53:44,110 --> 01:53:46,117
