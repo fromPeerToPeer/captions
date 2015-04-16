@@ -5697,7 +5697,7 @@ name
 1334
 01:51:31,290 --> 01:51:33,529
 and it's trying to
-do addition on that row.
+do addition on that variable.
 
 1335
 01:51:41,170 --> 01:51:42,470
