@@ -5686,7 +5686,7 @@ funBinding seven
 
 1332
 01:51:15,050 --> 01:51:22,117
-so it's not liking the closing inaudible.
+so it's not liking the closing brace.
 
 1333
 01:51:27,050 --> 01:51:29,880
