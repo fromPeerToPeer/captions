@@ -6144,7 +6144,7 @@ and easier to see.
 1436
 01:59:30,580 --> 01:59:33,880
 You also have the ability to
-see define languages in parsec
+define languages in parsec
 
 1437
 01:59:33,880 --> 01:59:35,760
