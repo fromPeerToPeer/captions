@@ -6126,7 +6126,7 @@ Too easy not to do it.
 1432
 01:59:20,470 --> 01:59:23,050
 I would switch to using
-a real tokeniser parsec
+a real tokeniser for parsec
 
 1433
 01:59:24,000 --> 01:59:26,820
