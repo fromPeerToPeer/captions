@@ -5961,7 +5961,7 @@ If I now:
 1395
 01:57:09,050 --> 01:57:11,640
 OC: This is also reading
-from a standard input map ?
+from standard input then ?
 
 1396
 01:57:11,640 --> 01:57:14,823
