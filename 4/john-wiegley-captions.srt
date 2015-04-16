@@ -5511,7 +5511,7 @@ we've got phi and psi ....
 
 1291
 01:47:54,580 --> 01:47:57,520
-A global inaudible and a local inaudible.
+A global phi and a local inaudible.
 
 1292
 01:47:57,520 --> 01:47:58,470
