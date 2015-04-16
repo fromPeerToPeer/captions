@@ -6170,7 +6170,7 @@ functor fixed point representation
 
 1442
 01:59:48,580 --> 01:59:50,110
-of my expert data type here
+of my Expr data type here
 
 1443
 01:59:50,580 --> 01:59:52,820
