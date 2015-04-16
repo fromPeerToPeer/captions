@@ -6093,7 +6093,8 @@ and that would achieve what I want.
 
 1425
 01:58:52,110 --> 01:58:54,820
-OC: You would be basically be doing a inaudible then ?
+OC: You would basically be doing a kind of
+memoization then ?
 
 1426
 01:58:54,820 --> 01:58:57,290
