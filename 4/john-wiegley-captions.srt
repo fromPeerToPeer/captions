@@ -5681,7 +5681,8 @@ We need to bring some tracing back in:
 
 1331
 01:51:13,050 --> 01:51:15,050
-We're getting as far as parsing seven
+We're getting as far as parsing
+funBinding seven
 
 1332
 01:51:15,050 --> 01:51:22,117
