@@ -5391,7 +5391,8 @@ We can call this a singleton.
 
 1263
 01:45:45,290 --> 01:45:55,882
-inaudible
+See I have hlint down here suggesting
+that I could say const sqrt because
 
 1264
 01:45:56,470 --> 01:45:58,000
