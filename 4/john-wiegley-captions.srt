@@ -5780,7 +5780,7 @@ And the next thing to do
 
 1353
 01:54:30,230 --> 01:54:32,580
-is to look for a map operator.
+is to look for a math operator.
 
 1354
 01:54:36,940 --> 01:54:38,820
