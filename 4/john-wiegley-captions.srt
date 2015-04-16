@@ -5469,7 +5469,7 @@ tracing from our parser
 
 1281
 01:47:07,640 --> 01:47:10,350
-wherever inaudible was
+wherever EMul was
 
 1282
 01:47:21,520 --> 01:47:23,290
