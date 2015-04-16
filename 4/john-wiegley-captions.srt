@@ -5966,7 +5966,7 @@ from standard input then ?
 1396
 01:57:11,640 --> 01:57:14,823
 JW: Yes, in theory, we can pipe
-that file we have been working on.
+that file we have been working on into it.
 
 1397
 01:57:16,580 --> 01:57:18,470
