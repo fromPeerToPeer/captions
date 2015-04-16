@@ -5722,7 +5722,7 @@ OC: Or maybe trace it ?
 
 1340
 01:53:05,050 --> 01:53:07,170
-JW: Let's try parsing the same expression.
+JW: Let's try parsing the single expression.
 
 1341
 01:53:39,410 --> 01:53:42,110
