@@ -6055,7 +6055,7 @@ So as I mentioned earlier,
 1416
 01:58:19,410 --> 01:58:21,640
 we would always
-be evaluating variables.
+be re-evaluating variables.
 
 1417
 01:58:24,820 --> 01:58:26,820
