@@ -5653,7 +5653,7 @@ stripping any white space
 
 1324
 01:50:20,580 --> 01:50:22,110
-that occurs before the race
+that occurs before the brace
 
 1325
 01:50:22,110 --> 01:50:23,050
