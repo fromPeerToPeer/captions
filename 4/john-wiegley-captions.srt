@@ -5947,7 +5947,7 @@ If I go into my parser and look at
 
 1392
 01:56:36,470 --> 01:56:38,700
-this rebel function
+this repl function
 we have been calling.
 
 1393
