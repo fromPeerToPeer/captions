@@ -5611,7 +5611,8 @@ get rid of these ones that are before it.
 
 1315
 01:49:27,050 --> 01:49:31,520
-OC: Let binding is definitely working inaudible that
+OC: The let binding is definitely working 
+because we're seeing that
 
 1316
 01:49:38,580 --> 01:49:41,410
