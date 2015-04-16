@@ -5489,7 +5489,7 @@ Do you really want the return keyword ?
 
 1286
 01:47:42,700 --> 01:47:44,820
-So the last
+Since the last
 expression of the function
 
 1287
