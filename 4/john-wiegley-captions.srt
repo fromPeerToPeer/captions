@@ -6025,7 +6025,7 @@ get rid of all the repetition
 
 1409
 01:58:02,580 --> 01:58:04,470
-in dealing with calling the parsecs.
+in dealing with calling of parsec.
 
 1410
 01:58:05,050 --> 01:58:07,640
