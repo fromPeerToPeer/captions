@@ -5849,7 +5849,7 @@ and then put the lines back together.
 1369
 01:55:25,520 --> 01:55:27,880
 OC:  If we just modify
-our test pc file for now
+our test bc file for now
 
 1370
 01:55:27,880 --> 01:55:30,230
