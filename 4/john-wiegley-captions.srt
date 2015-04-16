@@ -5549,7 +5549,8 @@ When we defined ....
 
 1300
 01:48:19,520 --> 01:48:22,000
-OC: When we went into the lambda inaudible.
+OC: When we went into the lambda we
+don't seem to be extending the environment.
 
 1301
 01:48:22,000 --> 01:48:23,760
