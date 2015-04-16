@@ -6081,7 +6081,7 @@ into the map, we could evaluate it
 
 1422
 01:58:47,050 --> 01:58:48,470
-stick it in an enum.
+stick it in an ENum.
 
 1423
 01:58:48,940 --> 01:58:50,350
@@ -6107,7 +6107,7 @@ So we will just say this:
 
 1428
 01:59:10,110 --> 01:59:12,470
-Enum wants a double
+ENum wants a double
 and it got an expression
 
 1429
