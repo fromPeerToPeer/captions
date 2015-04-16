@@ -6183,7 +6183,8 @@ Make a pretty printer.
 
 1445
 01:59:56,940 --> 02:00:00,470
-The tool inaudible bc
+The tool that we're modeling this
+after is bc.
 
 1446
 02:00:01,760 --> 02:00:03,880
