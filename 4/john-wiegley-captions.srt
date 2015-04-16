@@ -5801,7 +5801,7 @@ expression is failing,
 
 1358
 01:54:51,410 --> 01:54:53,520
-because of a failure of inaudible.
+because of a failure to parse "d".
 
 1359
 01:54:59,520 --> 01:55:00,470
