@@ -5649,7 +5649,7 @@ out as well.
 1323
 01:50:18,350 --> 01:50:20,580
 JW: We should be
-stripping any white space
+stripping any whitespace
 
 1324
 01:50:20,580 --> 01:50:22,110
