@@ -5426,7 +5426,7 @@ work in this little scratch file)
 
 1271
 01:46:19,176 --> 01:46:20,235
-Feed should be fine.
+Phi should be fine.
 
 1272
 01:46:20,700 --> 01:46:22,350
