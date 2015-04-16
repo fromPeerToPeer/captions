@@ -5691,7 +5691,8 @@ so it's not liking the closing brace.
 1333
 01:51:27,050 --> 01:51:29,880
 OC: That expected F
-assumes that the file is variable
+assumes that the define is a variable
+name
 
 1334
 01:51:31,290 --> 01:51:33,529
