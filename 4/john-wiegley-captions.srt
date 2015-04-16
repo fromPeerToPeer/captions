@@ -6148,7 +6148,7 @@ define languages in parsec
 
 1437
 01:59:33,880 --> 01:59:35,760
-so you can see what's the precedence
+so you can say what's the precedence
 
 1438
 01:59:35,760 --> 01:59:37,410
