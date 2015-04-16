@@ -5591,7 +5591,7 @@ that seems to be having the problem.
 
 1310
 01:48:55,410 --> 01:48:56,588
-Calling 3 or calling 8.
+Column 3 or column 8.
 
 1311
 01:48:59,290 --> 01:49:00,941
