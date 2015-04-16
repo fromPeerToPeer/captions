@@ -5607,7 +5607,7 @@ Let's reduce the problem here,
 
 1314
 01:49:19,880 --> 01:49:22,580
-get rid of these ones that are inaudible.
+get rid of these ones that are before it.
 
 1315
 01:49:27,050 --> 01:49:31,520
