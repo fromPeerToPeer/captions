@@ -5634,7 +5634,7 @@ We want it to be space or tab,
 
 1320
 01:50:06,000 --> 01:50:07,764
-or return of inaud..
+or return or newline..
 
 1321
 01:50:12,000 --> 01:50:14,820
