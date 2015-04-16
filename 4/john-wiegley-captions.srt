@@ -6067,7 +6067,8 @@ that immediately reduce to doubles.
 
 1419
 01:58:34,940 --> 01:58:37,880
-At the point where we're evaluating our inaudible.
+At the point where we're evaluating our
+when we see an EVar.
 
 1420
 01:58:42,350 --> 01:58:45,290
