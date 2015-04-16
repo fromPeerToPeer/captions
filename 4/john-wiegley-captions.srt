@@ -5907,7 +5907,7 @@ And since you're probably going to be
 
 1383
 01:56:07,760 --> 01:56:09,760
-typing these inaudible anyway
+typing these at a repl anyway
 
 1384
 01:56:09,760 --> 01:56:12,940
