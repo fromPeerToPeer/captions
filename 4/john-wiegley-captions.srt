@@ -6188,8 +6188,8 @@ after is bc.
 
 1446
 02:00:01,760 --> 02:00:03,880
-In bc I go back
-out to do the expression
+In bc it will echo back
+out to you the expression
 
 1447
 02:00:03,880 --> 02:00:06,000
