@@ -31,7 +31,7 @@ Our host is Ollie Charles.
 8
 00:00:19,400 --> 00:00:21,920
 And the challenge that
-we set for John is called ...
+he set for John is called ...
 
 9
 00:00:26,300 --> 00:00:28,080
@@ -49,7 +49,7 @@ a couple of example files
 12
 00:00:57,800 --> 00:01:00,400
 which we're going to
-aim to pars in this session.
+aim to parse in this session.
 
 13
 00:01:00,800 --> 00:01:02,000
@@ -84,7 +84,7 @@ is keep these files in this directory
 20
 00:01:30,500 --> 00:01:33,500
 and I'm going to turn this
-into a git repository up here.
+into a git repository in here.
 
 21
 00:01:35,400 --> 00:01:37,400
@@ -102,7 +102,7 @@ is an addition operation.
 24
 00:01:49,900 --> 00:01:52,600
 I want to model this after
-I  parse it into a data type
+I parse it into a data type
 
 25
 00:01:54,200 --> 00:01:56,200
@@ -124,7 +124,7 @@ be sub expressions in the future.
 
 29
 00:02:09,800 --> 00:02:11,920
-So I will say: the additional operation
+So I will say: the addition operation
 
 30
 00:02:12,560 --> 00:02:13,760
@@ -141,7 +141,7 @@ To parse that I'm going to use Parsec.
 33
 00:02:24,900 --> 00:02:27,700
 Which is a library
-designed for parsing at Haskell.
+designed for parsing in Haskell.
 
 34
 00:02:31,900 --> 00:02:33,500
@@ -175,16 +175,16 @@ the whole Parsec interface is.
 
 41
 00:02:57,100 --> 00:02:59,360
-It's telling me one of
-them is not in scope,
+It's telling me oneOf
+is not in scope,
 
 42
 00:02:59,360 --> 00:03:01,200
-so I'm going to hit inaudible.
+so I'm going to hit [inaudible].
 
 43
 00:03:05,700 --> 00:03:08,700
-You can see I have  the
+You can see I have the
 syntax checking behind the scenes.
 
 44
@@ -217,11 +217,11 @@ so if I go up here and add Char,
 
 50
 00:03:25,700 --> 00:03:27,300
-then one option should be fine.
+then oneOf should be fine.
 
 51
 00:03:27,900 --> 00:03:29,200
-Same with many, many as in ....
+Same with many, many is in ....
 
 52
 00:03:31,800 --> 00:03:33,000
@@ -229,8 +229,8 @@ looks like Parsec.Prim.
 
 53
 00:03:42,960 --> 00:03:45,500
-I've said I want the
-Parser to return an integer.
+I've said I want a
+Parser that returns an integer.
 
 54
 00:03:45,500 --> 00:03:47,500
@@ -243,11 +243,13 @@ to turn that into an integer.
 
 56
 00:03:50,800 --> 00:03:51,900
-Which I can do like so ....
+Which I can do using an
+applicative form of fmap
 
 57
 00:03:59,500 --> 00:04:05,200
-Actually, I can use the applicative inaudible fine.
+Actually, I can use the applicative
+definition, it will be fine.
 
 58
 00:04:05,200 --> 00:04:06,900
@@ -259,11 +261,11 @@ Let me see if I can load this in ....
 
 60
 00:04:12,900 --> 00:04:16,000
-GCI inaudible
+GHCi REPL
 
 61
 00:04:16,000 --> 00:04:18,300
-I want to run this Parser on several inputs.
+I want to run this Parser on sample input.
 
 62
 00:04:18,300 --> 00:04:20,900
@@ -285,7 +287,7 @@ that may be easier to find.
 
 66
 00:04:41,700 --> 00:04:43,100
-JW: It's in the Prim modules
+JW: It's in the Prim module
 
 67
 00:04:43,900 --> 00:04:45,700
@@ -305,7 +307,7 @@ I may have to import the Prim module.
 
 71
 00:04:54,400 --> 00:04:56,900
-If I say parse test,
+If I say parseTest,
 then I should get my integer.
 
 72
@@ -338,7 +340,7 @@ I'm going to say:
 78
 00:05:53,100 --> 00:05:56,000
 You always have a long
-setup with imports from Parsec.
+setup of imports with Parsec.
 
 79
 00:05:58,000 --> 00:06:00,400
@@ -347,8 +349,8 @@ OK, so num says
 
 80
 00:06:02,500 --> 00:06:04,500
-I don't want 'read'
-here, I want 'just read'.
+I don't want to 'read'
+here, I don't want to 'just read'.
 
 81
 00:06:05,400 --> 00:06:07,520
@@ -361,7 +363,7 @@ OC: So what we're saying here is
 
 83
 00:06:14,600 --> 00:06:16,720
-inaudible is a Parser that can either
+expr is a Parser that can either
 
 84
 00:06:16,880 --> 00:06:18,700
@@ -417,7 +419,7 @@ Now if I do 1 plus 2.
 
 96
 00:07:00,700 --> 00:07:02,600
-The Parsers work, it's not re-cursing.
+The Parser is [inaudible], it's not recursive.
 
 97
 00:07:06,500 --> 00:07:09,200
@@ -439,11 +441,11 @@ num Parser should be first,
 
 101
 00:07:20,100 --> 00:07:21,900
-and then choice only Parsers once.
+and then choice only parses once.
 
 102
 00:07:22,400 --> 00:07:25,400
-So I  could say "many choice"
+So I could say "many choice"
 to get a list of expressions,
 
 103
@@ -452,7 +454,7 @@ but that's not quite what I want.
 
 104
 00:07:27,000 --> 00:07:28,900
-I want a chance to parse add at least,
+I want a chance to parse add first,
 
 105
 00:07:30,000 --> 00:07:31,600
@@ -460,21 +462,21 @@ but it's still not accepting it.
 
 106
 00:07:33,360 --> 00:07:36,080
-It's trying to go to add
+It's trying to go into add
 and it's failing to parse it.
 
 107
 00:07:38,700 --> 00:07:40,240
-OC:  GCHi white space inaudible add.
+OC: let's try GCHi without the white space 
 
 108
 00:07:49,840 --> 00:07:51,900
-JW: Oh ! I'm  still
-passing the num Parser.
+JW: Oh ! I'm still
+passing the num Parser to parseTest.
 
 109
 00:07:54,600 --> 00:07:56,000
-Here I have an import loop,
+Here I have an infinite loop,
 
 110
 00:07:57,600 --> 00:07:59,800
@@ -483,32 +485,35 @@ termination condition.
 
 111
 00:07:59,800 --> 00:08:03,200
-Let's see if the add expression is also inaudible
+Let's see if the add expression is also
+an infinite loop
 
 112
 00:08:04,300 --> 00:08:07,000
-OC: What if we change the inaudible to none.
+OC: What if we change the expr that you
+have in add to num??
 
 113
 00:08:07,800 --> 00:08:11,700
-So we don't have any inaudible
+So we don't have any kind of possibility
 
 114
 00:08:12,600 --> 00:08:15,400
-I imagine inaudible
+I imagine you're right and we
+are going to need two expr
 
 115
 00:08:15,400 --> 00:08:17,300
-JW: We have the correct Parsing there.
+JW: We have the correct parsing there.
 
 116
 00:08:17,300 --> 00:08:20,200
-inaudible recursion.
+but we want our recursion.
 
 117
 00:08:20,200 --> 00:08:23,400
 Let me think about why
-this is infinitely re cursing here.
+this is infinitely recursing here.
 
 118
 00:08:29,700 --> 00:08:33,300
@@ -539,13 +544,13 @@ what the next step will be.
 
 124
 00:08:48,400 --> 00:08:51,200
-OC: I think you where right
+OC: I think you were right
 by doing num first before,
 
 125
 00:08:51,200 --> 00:08:54,400
 but we were simply calling
-parse test for the wrong Parser.
+parseTest with the wrong Parser.
 
 126
 00:08:57,000 --> 00:09:00,000
@@ -568,7 +573,7 @@ So I want to have a Parser that says:
 
 130
 00:09:16,800 --> 00:09:20,100
-(It's not going to become a value,
+(It's not going to return a value,
 we're just going to throw it away).
 
 131
@@ -596,11 +601,12 @@ whether or not I have it.
 136
 00:09:54,900 --> 00:09:57,800
 We still have the problem
-that choice is not correct.
+that the choice is not correct.
 
 137
 00:09:57,800 --> 00:10:01,700
-But if I remove them inaudible.
+But if I remove them I have an
+infinite loop.
 
 138
 00:10:03,200 --> 00:10:06,000
@@ -609,7 +615,7 @@ top level expression Parser.
 
 139
 00:10:11,800 --> 00:10:13,600
-OC: So it did re-curse again, I take it ?
+OC: So it did recurse again, I take it ?
 
 140
 00:10:13,600 --> 00:10:14,300
@@ -626,7 +632,7 @@ which tells me when I'm at the end.
 143
 00:10:20,900 --> 00:10:22,880
 So we're going to
-have a requirement 'B'
+have a requirement be
 
 144
 00:10:23,500 --> 00:10:25,900
@@ -658,11 +664,12 @@ because we parsed a number
 150
 00:10:38,700 --> 00:10:41,040
 and it thought it
-should be at the add space.
+should be at space.
 
 151
 00:10:44,400 --> 00:10:49,400
-We wanted to have space inaudible.
+We wanted to have space or the end of
+the input.
 
 152
 00:10:54,700 --> 00:10:55,900
@@ -670,11 +677,12 @@ Why is this happening ?
 
 153
 00:10:58,900 --> 00:11:00,500
-OC: Would just parse test inaudible
+OC: What does parseTest with just add
+do now ?
 
 154
 00:11:00,500 --> 00:11:02,400
-Have we got the
+Now that we've got the
 white space in there ?
 
 155
@@ -683,16 +691,16 @@ JW: It is not parsing correctly.
 
 156
 00:11:06,700 --> 00:11:10,400
-inaudible
+it did call expr
 
 157
 00:11:19,400 --> 00:11:22,000
 OC: Usually when I'm
-parsing randoms like these,
+parsing grammars like this,
 
 158
 00:11:22,000 --> 00:11:23,500
-I use something like chain L
+I use something like chainl
 
 159
 00:11:23,500 --> 00:11:26,500
@@ -775,7 +783,7 @@ addition between two things,
 177
 00:12:09,700 --> 00:12:12,500
 we have to recursively
-evaluate those expressions.
+evaluate those expressions and add them.
 
 178
 00:12:26,900 --> 00:12:27,900
@@ -783,7 +791,7 @@ Could not match.
 
 179
 00:12:30,800 --> 00:12:36,200
-Oh! because inaudible in io.
+Oh! because [inaudible] in IO.
 
 180
 00:12:43,600 --> 00:12:45,200
@@ -822,12 +830,13 @@ So we're going to call this test.
 
 188
 00:13:25,800 --> 00:13:29,800
-OC: I would have used the exact same code inaudible file.
+OC: we are probably going to need the exact
+same code when we read from the file.
 
 189
 00:13:30,200 --> 00:13:33,000
 JW: So for now our test
-is just going to take a string.
+is just going to take a String.
 
 190
 00:13:33,000 --> 00:13:34,300
@@ -835,11 +844,11 @@ And it's going to parse it.
 
 191
 00:14:01,200 --> 00:14:02,100
-Oh! it wanted text.
+Oh! it wanted Text.
 
 192
 00:14:07,300 --> 00:14:19,200
-inaudible
+[inaudible]
 
 193
 00:14:21,600 --> 00:14:26,600
