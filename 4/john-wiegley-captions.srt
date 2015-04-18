@@ -4154,7 +4154,7 @@ There can be no automatically
 
 968
 01:20:28,110 --> 01:20:29,880
-derived show instance for these.
+derived Show instance for these.
 
 969
 01:20:30,110 --> 01:20:31,410
@@ -4186,7 +4186,7 @@ So I'm going to say what that means.
 
 976
 01:20:50,820 --> 01:20:52,580
-OC: Do we still need show instance ?
+OC: Do we still need Show instance ?
 
 977
 01:20:53,410 --> 01:20:55,170
@@ -4239,7 +4239,7 @@ OC: I think we're OK using show.
 988
 01:22:34,941 --> 01:22:37,529
 Oh yes ! because we're
-defining a show instance.
+defining a Show instance.
 
 989
 01:22:38,000 --> 01:22:40,235
