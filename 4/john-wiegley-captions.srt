@@ -476,7 +476,7 @@ passing the num Parser to parseTest.
 
 109
 00:07:54,600 --> 00:07:56,000
-Here I have an import loop,
+Here I have an infinite loop,
 
 110
 00:07:57,600 --> 00:07:59,800
@@ -573,7 +573,7 @@ So I want to have a Parser that says:
 
 130
 00:09:16,800 --> 00:09:20,100
-(It's not going to become a value,
+(It's not going to return a value,
 we're just going to throw it away).
 
 131
@@ -632,7 +632,7 @@ which tells me when I'm at the end.
 143
 00:10:20,900 --> 00:10:22,880
 So we're going to
-have a requirement 'B'
+have a requirement be
 
 144
 00:10:23,500 --> 00:10:25,900
@@ -696,7 +696,7 @@ it did call expr
 157
 00:11:19,400 --> 00:11:22,000
 OC: Usually when I'm
-parsing randoms like these,
+parsing grammars like this,
 
 158
 00:11:22,000 --> 00:11:23,500
