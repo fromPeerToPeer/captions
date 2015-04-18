@@ -3052,20 +3052,20 @@ And here we'll have ....
 
 709
 01:00:09,170 --> 01:00:10,700
-These guys all become 'justs'.
+These guys all become 'Justs'.
 
 710
 01:00:27,880 --> 01:00:28,940
-we're into monad now.
+We're in the monad now.
 
 711
 01:00:35,520 --> 01:00:37,640
 So for example if
-you we're to say 1 plus
+we were to say 1 plus
 
 712
 01:00:37,640 --> 01:00:38,941
-let feed equal 10 .....
+let phi equal 10 .....
 
 713
 01:00:43,290 --> 01:00:44,700
@@ -3111,7 +3111,8 @@ Can't do that in Haskell yet.
 
 723
 01:01:04,470 --> 01:01:07,410
-OC: So that's the start of the inaudible that you were referring to
+OC: So that's the style of banana brackets
+that you were referring to
 
 724
 01:01:08,580 --> 01:01:10,700
@@ -3127,7 +3128,8 @@ Now I want to:
 
 727
 01:01:32,110 --> 01:01:35,760
-Maybe not self return because that isn't inaudible
+I do not need to return because that is
+itself monadic.
 
 728
 01:01:36,580 --> 01:01:38,580
@@ -3153,7 +3155,7 @@ because you want to pass on this
 733
 01:02:59,880 --> 01:03:02,470
 mutated environment
-for every step of the rebel.
+for every step of the REPL.
 
 734
 01:03:03,640 --> 01:03:05,520
@@ -3178,7 +3180,8 @@ So we're going to say ....
 
 739
 01:03:21,058 --> 01:03:27,411
-inaudible a function just call eval.
+We're going to have a new function called
+eval.
 
 740
 01:03:33,760 --> 01:03:35,410
@@ -3217,7 +3220,7 @@ I'm using flycheck which is
 
 748
 01:03:57,290 --> 01:04:00,580
-talking to both GHC and inaudible.
+talking to both GHC and hlint.
 
 749
 01:04:03,050 --> 01:04:05,640
@@ -3230,7 +3233,7 @@ I have one warning left which is
 
 751
 01:04:08,000 --> 01:04:09,640
-the import of token redundant.
+the import of token is redundant.
 
 752
 01:04:10,820 --> 01:04:11,640
@@ -3252,7 +3255,7 @@ using a new environment.
 756
 01:04:22,705 --> 01:04:25,058
 JW: So I need a new
-thing which we'll call evar,
+thing which we'll call EVar,
 
 757
 01:04:26,700 --> 01:04:28,580
@@ -3281,7 +3284,8 @@ re-evaluate all the time.
 
 763
 01:05:12,230 --> 01:05:15,410
-OC: This is because the look up has returned inaudible.
+OC: This is because the look up has
+returned an Expr.
 
 764
 01:05:15,410 --> 01:05:15,880
@@ -3290,7 +3294,7 @@ JW: Yes.
 765
 01:05:15,880 --> 01:05:18,000
 And we're storing
-expression in our map.
+expressions in our map.
 
 766
 01:05:20,110 --> 01:05:22,000
@@ -3298,11 +3302,13 @@ Because Haskell is a lazy language
 
 767
 01:05:22,940 --> 01:05:25,520
-we want to get the map to inaudible in it.
+we want to get the map to have thunks in
+it.
 
 768
 01:05:26,000 --> 01:05:28,230
-So that the first time you touch the inaudible,
+So that the first time you touch the
+thunk,
 
 769
 01:05:28,940 --> 01:05:31,410
@@ -3358,7 +3364,8 @@ What is a variable ?
 
 781
 01:06:16,470 --> 01:06:19,640
-variable has the same definition as inaudible
+variable has the same definition as a
+name.
 
 782
 01:06:30,940 --> 01:06:32,820
@@ -3366,7 +3373,8 @@ OC: So this is the same parser we used
 
 783
 01:06:32,820 --> 01:06:34,820
-when we introduced the inaudible
+when we introduced a name in the let
+binding.
 
 784
 01:06:35,290 --> 01:06:35,764
@@ -3416,11 +3424,11 @@ Actually, I don't need to do that
 
 795
 01:07:36,230 --> 01:07:37,760
-because I have a key binding.
+because I have a key binding
 
 796
 01:07:39,760 --> 01:07:42,820
-the auto insert inaudible
+I use that auto inserts.
 
 797
 01:07:43,760 --> 01:07:45,050
@@ -3436,7 +3444,7 @@ because trace has to yield a value.
 
 800
 01:07:56,350 --> 01:07:58,000
-Sometimes I use print out more
+Sometimes I use printf more
 
 801
 01:07:58,000 --> 01:07:59,640
@@ -3473,11 +3481,11 @@ OC: We do have trace lines above which
 809
 01:08:29,520 --> 01:08:32,110
 seem to indicate we
-have got something to add on.
+have gone into addop
 
 810
 01:08:32,110 --> 01:08:34,110
- inaudible.
+and mulop.
 
 811
 01:08:35,410 --> 01:08:37,640
@@ -3568,7 +3576,7 @@ let's wrap that as well.
 
 831
 01:09:40,700 --> 01:09:42,700
-The rebel creates a new environment.
+The REPL creates a new environment.
 
 832
 01:09:44,350 --> 01:09:46,940
@@ -3582,12 +3590,12 @@ Let me expand this out.
 834
 01:09:52,940 --> 01:09:55,410
 We want to run this
-forever loop within state.
+forever loop within State.
 
 835
 01:10:01,647 --> 01:10:03,882
 We're going to do
-exact state T on this one.
+execStateT on this one.
 
 836
 01:10:04,580 --> 01:10:05,880
@@ -3599,7 +3607,7 @@ and do it with a new environment.
 
 838
 01:10:11,760 --> 01:10:12,700
-Forever runs an io,
+Forever runs an IO,
 
 839
 01:10:15,640 --> 01:10:16,700
@@ -3607,16 +3615,16 @@ so we want to go here.
 
 840
 01:10:20,000 --> 01:10:21,764
-OC: Forever should work on any line.
+OC: Forever should work on any monad.
 
 841
 01:10:22,000 --> 01:10:24,580
 I think your problem
-there was was the get line
+there was was the getLine
 
 842
 01:10:24,580 --> 01:10:26,350
-is forcing you to inaudible
+is forcing you to be in the IO monad.
 
 843
 01:10:33,880 --> 01:10:34,820
@@ -3634,7 +3642,7 @@ to have to parse it.
 846
 01:10:43,520 --> 01:10:45,520
 I'm getting a lot
-of implication here.
+of duplication here.
 
 847
 01:10:47,050 --> 01:10:49,410
@@ -3660,23 +3668,24 @@ OC: Sounds like it should be possible
 852
 01:11:37,640 --> 01:11:39,760
 to do that without
-having to run state.
+having to runState.
 
 853
 01:11:41,760 --> 01:11:43,050
-JW: This state T is over io,
+JW: This StateT is over IO,
 
 854
 01:11:44,350 --> 01:11:45,880
-and our function is a state T
+and our function is a StateT
 
 855
 01:11:45,880 --> 01:11:47,050
-that's over identity.
+that's over Identity.
 
 856
 01:11:48,350 --> 01:11:52,000
-We could use the inaudible flag hoist routine.
+We could use the mmorph library's hoist
+routine.
 
 857
 01:11:52,940 --> 01:11:54,350
@@ -3688,7 +3697,7 @@ We're going to say:
 
 859
 01:12:26,580 --> 01:12:28,470
-We're going to go from identity to io.
+We're going to go from Identity to IO.
 
 860
 01:12:33,880 --> 01:12:35,760
@@ -3696,12 +3705,13 @@ It should be just a matter of return.
 
 861
 01:12:52,110 --> 01:12:54,230
-Get line is still will forcing us inaudible.
+getLine is still will forcing us into the
+wrong monad.
 
 862
 01:13:02,820 --> 01:13:05,050
 OC: You might have
-data.text on io.get line
+Data.Text.IO.getLine
 
 863
 01:13:07,050 --> 01:13:08,352
@@ -3713,25 +3723,26 @@ OC: And you have got T.readFile here.
 
 865
 01:13:41,050 --> 01:13:42,941
-OC: Another problem is exact state is 
+OC: Another problem is execState is
 
 866
 01:13:43,170 --> 01:13:45,411
-apparently going to give you back the file.
+apparently going to give you back the
+file.
 
 867
 01:14:00,580 --> 01:14:03,170
-JW: Exact state is giving us back a ....
+JW: execState is giving us back a ....
 
 868
 01:14:17,640 --> 01:14:20,000
-It's loosing the sense
+It's losing the sense
 of what monad we're in.
 
 869
 01:14:42,580 --> 01:14:44,940
 Oh I always get a
-surprise when that checks!
+surprise when that type checks!
 
 870
 01:14:44,940 --> 01:14:47,050
@@ -3744,28 +3755,28 @@ but I guess it was.
 
 872
 01:14:49,290 --> 01:14:51,050
-OC: You we're pretty quick so maybe
+OC: You were pretty quick so maybe
 
 873
 01:14:51,050 --> 01:14:53,764
-you we're running ahead
-of your flight check again !
+you were running ahead
+of your flycheck again !
 
 874
 01:14:54,000 --> 01:14:55,170
-JW: So we have one plus 4.
+JW: So we have 1 plus 4.
 
 875
 01:14:56,117 --> 01:14:57,529
-We have let feed equals 20.
+We have let phi equals 20.
 
 876
 01:14:58,110 --> 01:14:59,529
-Now I should be able to say  
+Now I should be able to say
 
 877
 01:14:59,647 --> 01:15:00,941
-T plus 5 and I get no parse.
+phi plus 5 and I get no parse.
 
 878
 01:15:03,760 --> 01:15:06,000
