@@ -102,7 +102,7 @@ is an addition operation.
 24
 00:01:49,900 --> 00:01:52,600
 I want to model this after
-I  parse it into a data type
+I parse it into a data type
 
 25
 00:01:54,200 --> 00:01:56,200
@@ -184,7 +184,7 @@ so I'm going to hit inaudible.
 
 43
 00:03:05,700 --> 00:03:08,700
-You can see I have  the
+You can see I have the
 syntax checking behind the scenes.
 
 44
@@ -443,7 +443,7 @@ and then choice only Parsers once.
 
 102
 00:07:22,400 --> 00:07:25,400
-So I  could say "many choice"
+So I could say "many choice"
 to get a list of expressions,
 
 103
@@ -469,7 +469,7 @@ OC:  GCHi white space inaudible add.
 
 108
 00:07:49,840 --> 00:07:51,900
-JW: Oh ! I'm  still
+JW: Oh ! I'm still
 passing the num Parser.
 
 109
