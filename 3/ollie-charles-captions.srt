@@ -1694,7 +1694,7 @@ inaudible strings so we need to use T.length.
 
 388
 00:26:40,540 --> 00:26:44,000
-So hopefully were back to compiling that.
+So hopefully we're back to compiling that.
 
 389
 00:26:44,400 --> 00:26:46,114
@@ -3497,7 +3497,7 @@ We could turn this into a list.
 
 798
 00:53:52,194 --> 00:53:54,500
-OK, and now were back to
+OK, and now we're back to
 trying to solve this.
 
 799
