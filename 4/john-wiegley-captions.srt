@@ -31,7 +31,7 @@ Our host is Ollie Charles.
 8
 00:00:19,400 --> 00:00:21,920
 And the challenge that
-we set for John is called ...
+he set for John is called ...
 
 9
 00:00:26,300 --> 00:00:28,080
@@ -84,7 +84,7 @@ is keep these files in this directory
 20
 00:01:30,500 --> 00:01:33,500
 and I'm going to turn this
-into a git repository up here.
+into a git repository in here.
 
 21
 00:01:35,400 --> 00:01:37,400
@@ -124,7 +124,7 @@ be sub expressions in the future.
 
 29
 00:02:09,800 --> 00:02:11,920
-So I will say: the additional operation
+So I will say: the addition operation
 
 30
 00:02:12,560 --> 00:02:13,760
@@ -141,7 +141,7 @@ To parse that I'm going to use Parsec.
 33
 00:02:24,900 --> 00:02:27,700
 Which is a library
-designed for parsing at Haskell.
+designed for parsing in Haskell.
 
 34
 00:02:31,900 --> 00:02:33,500
@@ -221,7 +221,7 @@ then oneOf should be fine.
 
 51
 00:03:27,900 --> 00:03:29,200
-Same with many, many as in ....
+Same with many, many is in ....
 
 52
 00:03:31,800 --> 00:03:33,000
@@ -229,8 +229,8 @@ looks like Parsec.Prim.
 
 53
 00:03:42,960 --> 00:03:45,500
-I've said I want the
-Parser to return an integer.
+I've said I want a
+Parser that returns an integer.
 
 54
 00:03:45,500 --> 00:03:47,500
@@ -264,7 +264,7 @@ GHCi REPL
 
 61
 00:04:16,000 --> 00:04:18,300
-I want to run this Parser on several inputs.
+I want to run this Parser on sample input.
 
 62
 00:04:18,300 --> 00:04:20,900
@@ -339,7 +339,7 @@ I'm going to say:
 78
 00:05:53,100 --> 00:05:56,000
 You always have a long
-setup with imports from Parsec.
+setup of imports with Parsec.
 
 79
 00:05:58,000 --> 00:06:00,400
@@ -461,7 +461,7 @@ but it's still not accepting it.
 
 106
 00:07:33,360 --> 00:07:36,080
-It's trying to go to add
+It's trying to go into add
 and it's failing to parse it.
 
 107
@@ -600,7 +600,7 @@ whether or not I have it.
 136
 00:09:54,900 --> 00:09:57,800
 We still have the problem
-that choice is not correct.
+that the choice is not correct.
 
 137
 00:09:57,800 --> 00:10:01,700
