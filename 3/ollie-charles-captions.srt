@@ -2218,12 +2218,12 @@ as a hole for now and play with it in GHCi again.
 
 508
 00:32:47,400 --> 00:32:50,280
-By loading the dictionary,
-I should be able to know
+If I load the dictionary,
+I should be able to now
 
 509
 00:32:50,413 --> 00:32:52,600
-[inaudible] of one of the example problems.
+try of one of the example problems.
 
 510
 00:32:52,600 --> 00:32:53,693
