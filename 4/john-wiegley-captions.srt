@@ -791,7 +791,7 @@ Could not match.
 
 179
 00:12:30,800 --> 00:12:36,200
-Oh! because [inaudible] in IO.
+Oh! because parseTest is not in IO.
 
 180
 00:12:43,600 --> 00:12:45,200
