@@ -5113,7 +5113,7 @@ So I'll call this one ...
 
 1175
 01:14:31,925 --> 01:14:32,908
-neighborsLookup.
+neighboursLookup.
 
 1176
 01:14:37,748 --> 01:14:41,320
@@ -5122,7 +5122,7 @@ And this is back to how it was.
 1177
 01:14:53,380 --> 01:14:57,422
 SP: We could also call this
-neighbors and could the old
+neighbors and have the old
 
 1178
 01:14:57,420 --> 01:15:01,680
@@ -5132,11 +5132,11 @@ simply be a function returning
 1179
 01:15:01,685 --> 01:15:05,171
 a list of the words
-with the neighbors and distances?
+with the neighbors and distances.
 
 1180
 01:15:06,388 --> 01:15:08,337
-OC: In the neighbors function or ...
+OC: In the neighbors function or ...?
 
 1181
 01:15:09,257 --> 01:15:12,685
@@ -5148,7 +5148,7 @@ where your returning W with distance,
 
 1183
 01:15:18,817 --> 01:15:22,177
-in order to avoid having two similar (inaudible) functions.
+in order to avoid having two similarly named functions.
 
 1184
 01:15:22,348 --> 01:15:23,994
@@ -5165,16 +5165,16 @@ because we want compile error,
 1187
 01:15:27,194 --> 01:15:30,140
 we're going to get compile
-errors anyway because the types different.
+errors anyway because the types are different.
 
 1188
 01:15:34,165 --> 01:15:38,417
 I'm going to move this
-into preview of neighbors list
+into precomputeNeighbours,
 
 1189
 01:15:38,411 --> 01:15:39,474
-whatever I do ...
+as a where binding
 
 1190
 01:15:39,485 --> 01:15:42,110
@@ -5183,11 +5183,11 @@ have any reason to ever call this
 
 1191
 01:15:42,110 --> 01:15:43,988
-other than inside string names.
+other than inside precomputeNeighbours.
 
 1192
 01:15:48,451 --> 01:15:50,450
-SP: inaudible And you can rename the top.
+SP: [inaudible] And you can rename the top.
 
 1193
 01:15:50,590 --> 01:15:51,822
@@ -5205,7 +5205,7 @@ dictionary into a list of words
 
 1196
 01:16:06,462 --> 01:16:10,165
-move that neighbors over there.
+and map neighbors over that.
 
 1197
 01:16:12,668 --> 01:16:16,382
@@ -5224,7 +5224,7 @@ functions on the same argument.
 
 1200
 01:16:27,400 --> 01:16:29,668
-I can say that it and neighbors,
+I can say that id and neighbors,
 
 1201
 01:16:29,770 --> 01:16:33,110
@@ -5233,7 +5233,7 @@ function and the neighbors function
 
 1202
 01:16:33,110 --> 01:16:35,497
-and it's going to Tootle those up for me.
+and it's going to tuple those up for me.
 
 1203
 01:16:35,771 --> 01:16:36,285
@@ -5253,20 +5253,22 @@ We apparently need the word A as well.
 
 1207
 01:17:17,925 --> 01:17:28,200
-(inaudible) I must have originally called it A.
+I think that's meant to be...
+Oh, I must have originally called it A.
 
 1208
 01:17:31,548 --> 01:17:33,880
 OC: So now we have
-prelude neighbors but that's
+precomputeNeighbours but that's
 
 1209
 01:17:33,880 --> 01:17:36,050
-not returning the neighbors from there.
+not returning the neighbors now.
 
 1210
 01:17:42,320 --> 01:17:45,177
-We don't really need to (inaudible)
+We don't really need to keep dict...
+Oh we do
 
 1211
 01:17:45,170 --> 01:17:47,342
@@ -5274,7 +5276,7 @@ because were using that in neighbors
 
 1212
 01:17:48,910 --> 01:17:52,110
-Now this is going to be a list of tootles.
+Now this is going to be a list of tuples.
 
 1213
 01:17:52,382 --> 01:17:54,257
@@ -5317,12 +5319,12 @@ OC: Let's see what we get from that.
 1222
 01:18:23,502 --> 01:18:27,805
 neighbors is going to
-be neighbors look up,
+be neighboursLookup,
 
 1223
 01:18:29,497 --> 01:18:33,805
 so that's ... well, yes
-let's keep it as neighborsLookup.
+let's keep it as neighboursLookup.
 
 1224
 01:18:39,080 --> 01:18:42,537
@@ -5344,11 +5346,11 @@ than just take the dictionary.
 
 1228
 01:18:49,697 --> 01:18:52,730
-This also need to take a nMap.
+This also need to take a NeighbourMap.
 
 1229
 01:19:02,220 --> 01:19:05,240
-The order here is dictionary, nMap.
+The order here is dictionary, NeighbourMap.
 
 1230
 01:19:10,250 --> 01:19:11,650
@@ -5369,7 +5371,7 @@ SP: I was having the same thought.
 
 1234
 01:19:19,068 --> 01:19:20,600
-OC: So I think maybe our neighbor map
+OC: So I think maybe our NeighbourMap
 
 1235
 01:19:20,605 --> 01:19:24,325
@@ -5387,12 +5389,13 @@ to drop something out of the
 
 1238
 01:19:29,510 --> 01:19:33,405
-neighbor map we can
+NeighbourMap we can
 do that quite efficiently.
 
 1239
 01:19:33,645 --> 01:19:36,182
-OC: Or we maybe (inaudible) but we'll see.
+OC: Or we may not even need to carry
+the dictionary around but we'll see.
 
 1240
 01:19:36,182 --> 01:19:37,651
@@ -5409,16 +5412,16 @@ this the right way round
 
 1243
 01:19:46,531 --> 01:19:48,565
-it's dictionary and neighbor map
+it's dictionary and NeighbourMap
 
 1244
 01:19:50,188 --> 01:19:52,588
-This is the dictionary and neighbor map
+This is the dictionary and NeighbourMap
 
 1245
 01:19:59,740 --> 01:20:02,340
 and now expand
-needs that neighbor map as well.
+needs that NeighbourMap as well.
 
 1246
 01:20:05,131 --> 01:20:08,034
@@ -5427,7 +5430,7 @@ doesn't have to be added to go.
 
 1247
 01:20:08,034 --> 01:20:10,370
-Because the neighbor map doesn't ever change
+Because the NeighbourMap doesn't ever change
 
 1248
 01:20:11,250 --> 01:20:14,640
@@ -5436,19 +5439,19 @@ far. So that's just a constant.
 
 1249
 01:20:20,925 --> 01:20:22,600
-SP: (inaudible)the first one.
+SP: You could underscore it in the first one.
 
 1250
 01:20:22,748 --> 01:20:23,988
-OC: Yes it did.
+OC: Indeed, yes.
 
 1251
 01:20:28,280 --> 01:20:32,297
-And, we need to call that recurser map.
+And, we need to call that recursively.
 
 1252
 01:20:36,262 --> 01:20:38,554
-and you can use pass in here as well.
+and we need to pass it in here as well.
 
 1253
 01:20:39,028 --> 01:20:43,200
@@ -5457,7 +5460,7 @@ So here, I think I'll use another let binding.
 1254
 01:20:58,970 --> 01:21:03,137
 So now our word puzzle should
-be using this preview as neighbors map.
+be using this precomputed NeighbourMap.
 
 1255
 01:21:03,154 --> 01:21:03,937
@@ -5493,20 +5496,19 @@ So let's see what we get out of this.
 1262
 01:21:20,850 --> 01:21:24,942
 We didn't really look
-at seeing a pre-compute 
+at seeing precomputeNeighbours work, so
 
 1263
 01:21:24,942 --> 01:21:30,577
-preview of neighbors, so
 let's have a quick look at that.
 
 1264
 01:21:38,725 --> 01:21:40,845
-OK, so (inaud) type checks.
+OK, so that certainly type checks.
 
 1265
 01:21:44,708 --> 01:21:46,800
-Let's bind that to it, something like that.
+Let's bind that to... something like that.
 
 1266
 01:21:47,420 --> 01:21:48,862
@@ -5518,8 +5520,7 @@ SP: Jellow and hells. (laughter).
 
 1268
 01:21:57,234 --> 01:21:59,420
-OC: So bringing in
-neighbors does seem to be working.
+OC: So precomputeNeighbours seems to be working.
 
 1269
 01:21:59,428 --> 01:22:01,510
@@ -5527,8 +5528,7 @@ We seem to be getting some actual neighbors,
 
 1270
 01:22:01,691 --> 01:22:05,860
-so let's see what happens
-with the others, let's do ruby code then.
+so let's do ruby and code again.
 
 1271
 01:22:08,942 --> 01:22:11,628
@@ -5547,11 +5547,11 @@ We've still got a little bit to go.
 1274
 01:22:30,000 --> 01:22:33,228
 SP: Does it take long
-to re-compute the entire map?
+to pre-compute the entire map?
 
 1275
 01:22:34,228 --> 01:22:36,480
-can you force that computation on c. ?
+can you force that computation and see?
 
 1276
 01:22:36,485 --> 01:22:39,382
@@ -5574,7 +5574,7 @@ pruned down to only the the words
 
 1280
 01:22:51,902 --> 01:22:53,200
-inaudible
+of the length we're interested in.
 
 1281
 01:22:53,571 --> 01:22:57,234
@@ -5582,12 +5582,12 @@ OC: Yes that's probably worth doing already.
 
 1282
 01:22:57,700 --> 01:23:00,897
-Rather than ridding
+Rather than precomputing
 the dictionary of everything.
 
 1283
 01:23:01,531 --> 01:23:04,165
-We're using a lazy map
+Though we're using a lazy map
 here which means that
 
 1284
@@ -5621,7 +5621,7 @@ that's slightly nicer if we
 
 1290
 01:23:26,262 --> 01:23:35,445
-just say filter, length, equal to length inaudible.
+just say filter, length, equal to length of A.
 
 1291
 01:23:36,980 --> 01:23:40,194
@@ -5663,7 +5663,7 @@ Maybe we could do something with that.
 
 1300
 01:24:29,020 --> 01:24:31,850
-The maybe neighbors
+Maybe neighbors now
 doesn't have to worry about that,
 
 1301
@@ -5672,7 +5672,8 @@ we've already done that once.
 
 1302
 01:24:34,102 --> 01:24:36,280
-I think I'll just leave that inaudible, see if that
+I think I'll just leave that duplication for now,
+and see if that
 
 1303
 01:24:36,280 --> 01:24:37,565
@@ -5680,7 +5681,7 @@ has made a difference.
 
 1304
 01:24:44,770 --> 01:24:46,742
-It seems a bit saggy doesn't it?
+It seems a bit snappier doesn't it?
 SP: Yes
 
 1305
@@ -5704,7 +5705,7 @@ find chains quite efficiently,
 1309
 01:25:09,320 --> 01:25:15,066
 Not just from cat to dog
-but also from rude to code.
+but also from ruby to code.
 
 1310
 01:25:15,370 --> 01:25:20,146
@@ -5713,11 +5714,12 @@ you would go next with this?
 
 1311
 01:25:20,413 --> 01:25:25,680
-OC: One thing that's always (inaud) quite a bit is
+OC: One thing that's always been sticking with
+me quite a bit is
 
 1312
 01:25:25,840 --> 01:25:28,640
-in go we are using foss boss,
+in go we are using ++,
 
 1313
 01:25:28,680 --> 01:25:32,680
@@ -5776,7 +5778,7 @@ of all possible solutions, and then we can
 
 1325
 01:26:00,170 --> 01:26:02,133
-start filtering things off the front.
+start pulling things off the front.
 
 1326
 01:26:02,133 --> 01:26:04,280
@@ -5785,21 +5787,21 @@ an interesting optimization to see.
 
 1327
 01:26:04,280 --> 01:26:08,693
-But maybe we'll be able to
+That maybe we'll be able to
 allocate a bit less in the go function.
 
 1328
 01:26:08,693 --> 01:26:12,133
 Beyond that I'd probably want
-to look doing some code profiling.
+to look at doing some code profiling.
 
 1329
 01:26:12,130 --> 01:26:14,386
-Try and work out (inaudible)
+Try and work out if maybe something is being
 
 1330
 01:26:14,386 --> 01:26:15,920
-here a little too frequently.
+hit a little too frequently.
 
 1331
 01:26:16,080 --> 01:26:19,453
@@ -5807,7 +5809,7 @@ And see if we can do something there.
 
 1332
 01:26:20,020 --> 01:26:22,933
-Obvious strategies and
+Obvious strategies in
 any graph search problem
 
 1333
@@ -5841,7 +5843,7 @@ that I'd want to clean up.
 
 1340
 01:26:38,740 --> 01:26:40,971
-As I pointed out earlier, the neighbor map
+As I pointed out earlier, the NeighbourMap
 
 1341
 01:26:40,970 --> 01:26:44,106
@@ -5851,7 +5853,7 @@ with the dictionary, so forcing
 1342
 01:26:44,100 --> 01:26:46,413
 the user to pass the dictionary
-and the neighbor map around,
+and the NeighbourMap around,
 
 1343
 01:26:46,413 --> 01:26:47,986
@@ -5859,12 +5861,12 @@ felt a bit cumbersome.
 
 1344
 01:26:47,986 --> 01:26:51,880
-It would be nice if\we could work
+It would be nice if we could work
 out some sort of abstraction there.
 
 1345
 01:26:51,880 --> 01:26:54,293
-A neighbor map data type that has an operation
+A NeighbourMap data type that has an operation
 
 1346
 01:26:54,293 --> 01:26:56,680
@@ -5889,7 +5891,7 @@ SP:  Because that's the only operation
 
 1351
 01:27:09,040 --> 01:27:09,840
-we have on the (inaudible)
+we have on the [inaudible]
 
 1352
 01:27:09,853 --> 01:27:12,370
@@ -5907,7 +5909,7 @@ have any other requirements.
 
 1355
 01:27:17,973 --> 01:27:22,560
-I think were using a new (inaudible) set...
+I think were moved it to a Set...
 
 1356
 01:27:23,480 --> 01:27:24,360
@@ -5915,7 +5917,7 @@ we did yes.
 
 1357
 01:27:24,373 --> 01:27:27,893
-so the set does have
+so Set does have
 efficient look up and deletion.
 
 1358
@@ -5924,7 +5926,7 @@ But if we were able to combine that with
 
 1359
 01:27:32,546 --> 01:27:34,026
-the pre-computed neighbor map
+the pre-computed NeighbourMap
 
 1360
 01:27:34,026 --> 01:27:36,466
@@ -5958,7 +5960,7 @@ that it has this tree structure
 
 1367
 01:27:55,930 --> 01:27:57,786
-when you do a breadth-first search.
+and you're doing a breadth-first search.
 
 1368
 01:27:57,800 --> 01:27:59,426
@@ -5990,16 +5992,16 @@ a list of texts, and it was unclear
 
 1374
 01:28:12,142 --> 01:28:13,657
-how we actually got them from
+how we actually got from
 
 1375
 01:28:13,650 --> 01:28:15,813
-that nest of lists to a single list.
+that nested list to a single list.
 
 1376
 01:28:15,826 --> 01:28:18,040
-Was compact the
-right version to be using
+Was concat the
+right operation to be using
 
 1377
 01:28:18,050 --> 01:28:20,853
@@ -6008,7 +6010,7 @@ mistake somewhere else.
 
 1378
 01:28:20,853 --> 01:28:22,973
-So we didn't really (inaudible) on the types there,
+So we didn't really lean on the types there,
 
 1379
 01:28:22,980 --> 01:28:25,013
@@ -6043,15 +6045,15 @@ that I'm very familiar with.
 1386
 01:28:39,986 --> 01:28:42,906
 It's in the same library
-as data.set and data.map.
+as Data.Set and Data.Map.
 
 1387
 01:28:42,910 --> 01:28:45,613
-It doesn't have a hugh api,
+It doesn't have a hugh API,
 
 1388
 01:28:45,610 --> 01:28:48,893
-but it does avoid me (inaud) in terms of
+but it does avoid me reinventing the wheel in terms of
 
 1389
 01:28:49,110 --> 01:28:50,857
@@ -6076,11 +6078,11 @@ it calls itself in different ways.
 
 1394
 01:29:03,066 --> 01:29:07,266
-It's more of a (inaudible) Haskell
+It's more of an advanced way of writing Haskell
 
 1395
 01:29:07,266 --> 01:29:09,320
-where you can
+but you can
 split that recursion out
 
 1396
@@ -6108,7 +6110,7 @@ lot more work to get that.
 
 1401
 01:29:23,200 --> 01:29:25,226
-But I think maybe (inaudible)
+But I think making that recursion clear
 
 1402
 01:29:25,226 --> 01:29:26,960
