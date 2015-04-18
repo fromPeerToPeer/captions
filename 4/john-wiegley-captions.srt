@@ -5388,7 +5388,7 @@ insert into square root.
 
 1261
 01:45:40,700 --> 01:45:42,940
-inaudible
+And we need to do this on an empty map.
 
 1262
 01:45:43,760 --> 01:45:45,290
@@ -5396,7 +5396,8 @@ We can call this a singleton.
 
 1263
 01:45:45,290 --> 01:45:55,882
-inaudible
+See I have hlint down here suggesting
+that I could say const sqrt because
 
 1264
 01:45:56,470 --> 01:45:58,000
@@ -5404,7 +5405,8 @@ I'm ignoring that parameter.
 
 1265
 01:45:58,000 --> 01:46:00,000
-I still have an error  inaudible language.
+I still have an error, saying
+I'm not using that language pragma.
 
 1266
 01:46:04,470 --> 01:46:05,170
@@ -5429,7 +5431,7 @@ work in this little scratch file)
 
 1271
 01:46:19,176 --> 01:46:20,235
-Feed should be fine.
+Phi should be fine.
 
 1272
 01:46:20,700 --> 01:46:22,350
@@ -5472,7 +5474,7 @@ tracing from our parser
 
 1281
 01:47:07,640 --> 01:47:10,350
-wherever inaudible was
+wherever EMul was
 
 1282
 01:47:21,520 --> 01:47:23,290
@@ -5488,11 +5490,11 @@ I will take a look at this file again.
 
 1285
 01:47:40,940 --> 01:47:42,700
-Do you really want the return here ?
+Do you really want the return keyword ?
 
 1286
 01:47:42,700 --> 01:47:44,820
-So the last
+Since the last
 expression of the function
 
 1287
@@ -5510,11 +5512,11 @@ and we've got division.
 
 1290
 01:47:52,700 --> 01:47:53,410
-we've got vnc ....
+we've got phi and psi ....
 
 1291
 01:47:54,580 --> 01:47:57,520
-A global inaudible and a local inaudible.
+A global phi and a local psi.
 
 1292
 01:47:57,520 --> 01:47:58,470
@@ -5552,7 +5554,8 @@ When we defined ....
 
 1300
 01:48:19,520 --> 01:48:22,000
-OC: When we went into the lambda inaudible.
+OC: When we went into the lambda we
+don't seem to be extending the environment.
 
 1301
 01:48:22,000 --> 01:48:23,760
@@ -5593,7 +5596,7 @@ that seems to be having the problem.
 
 1310
 01:48:55,410 --> 01:48:56,588
-Calling 3 or calling 8.
+Column 3 or column 8.
 
 1311
 01:48:59,290 --> 01:49:00,941
@@ -5609,16 +5612,17 @@ Let's reduce the problem here,
 
 1314
 01:49:19,880 --> 01:49:22,580
-get rid of these ones that are inaudible.
+get rid of these ones that are before it.
 
 1315
 01:49:27,050 --> 01:49:31,520
-OC: Let binding is definitely working inaudible that
+OC: The let binding is definitely working 
+because we're seeing that
 
 1316
 01:49:38,580 --> 01:49:41,410
 OC: This isn't a problem
-with comment dropping those.
+with the comment dropping those ?...
 
 1317
 01:49:53,880 --> 01:49:55,760
@@ -5635,7 +5639,7 @@ We want it to be space or tab,
 
 1320
 01:50:06,000 --> 01:50:07,764
-or return of inaud..
+or return or newline..
 
 1321
 01:50:12,000 --> 01:50:14,820
@@ -5644,20 +5648,21 @@ whitespace causing the problem ?
 
 1322
 01:50:16,230 --> 01:50:18,350
-or are we stripping whitespace inaudible.
+or are we stripping the leading whitespace
+out as well.
 
 1323
 01:50:18,350 --> 01:50:20,580
 JW: We should be
-stripping any white space
+stripping any whitespace
 
 1324
 01:50:20,580 --> 01:50:22,110
-that occurs before the race
+that occurs before the brace
 
 1325
 01:50:22,110 --> 01:50:23,050
-and after the race.
+and after the brace.
 
 1326
 01:50:33,290 --> 01:50:34,940
@@ -5681,21 +5686,23 @@ We need to bring some tracing back in:
 
 1331
 01:51:13,050 --> 01:51:15,050
-We're getting as far as parsing seven
+We're getting as far as parsing
+funBinding seven
 
 1332
 01:51:15,050 --> 01:51:22,117
-so it's not liking the closing inaudible.
+so it's not liking the closing brace.
 
 1333
 01:51:27,050 --> 01:51:29,880
 OC: That expected F
-assumes that the file is variable
+assumes that the define is a variable
+name
 
 1334
 01:51:31,290 --> 01:51:33,529
 and it's trying to
-do addition on that row.
+do addition on that variable.
 
 1335
 01:51:41,170 --> 01:51:42,470
@@ -5716,16 +5723,16 @@ JW: We're getting as far as seven.
 
 1339
 01:52:25,170 --> 01:52:26,230
-OC: Or maybe tracer ?
+OC: Or maybe trace it ?
 
 1340
 01:53:05,050 --> 01:53:07,170
-JW: Let's try parsing the same expression.
+JW: Let's try parsing the single expression.
 
 1341
 01:53:39,410 --> 01:53:42,110
 JW: It's trying to parse
-the bun binding and failing.
+the funBinding and failing.
 
 1342
 01:53:44,110 --> 01:53:46,117
@@ -5778,7 +5785,7 @@ And the next thing to do
 
 1353
 01:54:30,230 --> 01:54:32,580
-is to look for a map operator.
+is to look for a math operator.
 
 1354
 01:54:36,940 --> 01:54:38,820
@@ -5790,7 +5797,7 @@ it's expecting to see
 
 1356
 01:54:40,000 --> 01:54:41,882
-unexpected F wanted a map operator.
+unexpected F wanted a math operator.
 
 1357
 01:54:44,580 --> 01:54:46,940
@@ -5799,7 +5806,7 @@ expression is failing,
 
 1358
 01:54:51,410 --> 01:54:53,520
-becaus of a failure of inaudible.
+because of a failure to parse "d".
 
 1359
 01:54:59,520 --> 01:55:00,470
@@ -5847,7 +5854,7 @@ and then put the lines back together.
 1369
 01:55:25,520 --> 01:55:27,880
 OC:  If we just modify
-our test pc file for now
+our test bc file for now
 
 1370
 01:55:27,880 --> 01:55:30,230
@@ -5888,7 +5895,7 @@ So it's 1,2 and 55, correct.
 
 1379
 01:55:53,170 --> 01:55:54,580
-OC: Yes, almost inaudible anyway.
+OC: Yes, almost 55 anyway.
 
 1380
 01:56:01,050 --> 01:56:03,410
@@ -5901,11 +5908,11 @@ but we do have a way to do separators.
 
 1382
 01:56:05,880 --> 01:56:07,760
-And since your probably going to be
+And since you're probably going to be
 
 1383
 01:56:07,760 --> 01:56:09,760
-typing these inaudible anyway
+typing these at a repl anyway
 
 1384
 01:56:09,760 --> 01:56:12,940
@@ -5945,12 +5952,12 @@ If I go into my parser and look at
 
 1392
 01:56:36,470 --> 01:56:38,700
-this rebel function
+this repl function
 we have been calling.
 
 1393
 01:56:38,700 --> 01:56:39,880
-Really that IS our aim.
+Really that IS our main.
 
 1394
 01:56:40,820 --> 01:56:41,290
@@ -5959,12 +5966,12 @@ If I now:
 1395
 01:57:09,050 --> 01:57:11,640
 OC: This is also reading
-from a standard input map ?
+from standard input then ?
 
 1396
 01:57:11,640 --> 01:57:14,823
 JW: Yes, in theory, we can pipe
-that file we have been working on.
+that file we have been working on into it.
 
 1397
 01:57:16,580 --> 01:57:18,470
@@ -5976,7 +5983,7 @@ JW: Not quite !
 
 1399
 01:57:25,880 --> 01:57:28,940
-OC: I guess our record
+OC: I guess our repl
 doesn't deal with comments like that
 
 1400
@@ -5990,7 +5997,7 @@ JW:  No.
 
 1402
 01:57:37,760 --> 01:57:40,470
-OC: I think our rebel isn't
+OC: I think our repl isn't
 dealing with the comments
 
 1403
@@ -6008,7 +6015,8 @@ OC: What are the kind of things
 
 1406
 01:57:52,110 --> 01:57:54,230
-that stand out to you inaudible
+that stand out to you: the itches
+you want to scratch?
 
 1407
 01:57:55,410 --> 01:57:58,230
@@ -6022,7 +6030,7 @@ get rid of all the repetition
 
 1409
 01:58:02,580 --> 01:58:04,470
-in dealing with calling the parsecs.
+in dealing with calling of parsec.
 
 1410
 01:58:05,050 --> 01:58:07,640
@@ -6052,7 +6060,7 @@ So as I mentioned earlier,
 1416
 01:58:19,410 --> 01:58:21,640
 we would always
-be evaluating variables.
+be re-evaluating variables.
 
 1417
 01:58:24,820 --> 01:58:26,820
@@ -6064,7 +6072,8 @@ that immediately reduce to doubles.
 
 1419
 01:58:34,940 --> 01:58:37,880
-At the point we're we're evaluating our inaudible.
+At the point where we're evaluating our
+when we see an EVar.
 
 1420
 01:58:42,350 --> 01:58:45,290
@@ -6077,7 +6086,7 @@ into the map, we could evaluate it
 
 1422
 01:58:47,050 --> 01:58:48,470
-stick it in an enum.
+stick it in an ENum.
 
 1423
 01:58:48,940 --> 01:58:50,350
@@ -6089,7 +6098,8 @@ and that would achieve what I want.
 
 1425
 01:58:52,110 --> 01:58:54,820
-OC: You would be basically be doing a inaudible then ?
+OC: You would basically be doing a kind of
+memoization then ?
 
 1426
 01:58:54,820 --> 01:58:57,290
@@ -6102,7 +6112,7 @@ So we will just say this:
 
 1428
 01:59:10,110 --> 01:59:12,470
-Enum wants a double
+ENum wants a double
 and it got an expression
 
 1429
@@ -6121,7 +6131,7 @@ Too easy not to do it.
 1432
 01:59:20,470 --> 01:59:23,050
 I would switch to using
-a real tokeniser parsec
+a real tokeniser for parsec
 
 1433
 01:59:24,000 --> 01:59:26,820
@@ -6130,7 +6140,7 @@ up some problems we ran into
 
 1434
 01:59:26,820 --> 01:59:28,820
- inaudible code
+and make the code briefer
 
 1435
 01:59:28,820 --> 01:59:29,760
@@ -6139,11 +6149,11 @@ and easier to see.
 1436
 01:59:30,580 --> 01:59:33,880
 You also have the ability to
-see define languages in parsec
+define languages in parsec
 
 1437
 01:59:33,880 --> 01:59:35,760
-so you can see what's the precedence
+so you can say what's the precedence
 
 1438
 01:59:35,760 --> 01:59:37,410
@@ -6161,11 +6171,11 @@ in the correct order.
 1441
 01:59:43,410 --> 01:59:46,580
 I might move to a
-fixed point of representation
+functor fixed point representation
 
 1442
 01:59:48,580 --> 01:59:50,110
-of my expert data type here
+of my Expr data type here
 
 1443
 01:59:50,580 --> 01:59:52,820
@@ -6174,20 +6184,21 @@ evaluators get easier to write.
 
 1444
 01:59:53,880 --> 01:59:55,520
-inaudible
+Make a pretty printer.
 
 1445
 01:59:56,940 --> 02:00:00,470
-The tool inaudible bc
+The tool that we're modeling this
+after is bc.
 
 1446
 02:00:01,760 --> 02:00:03,880
-In bc I go back
-out to do the expression
+In bc it will echo back
+out to you the expression
 
 1447
 02:00:03,880 --> 02:00:06,000
-and inaudible
+and [inaudible]
 
 1448
 02:00:08,820 --> 02:00:11,294
@@ -6210,15 +6221,16 @@ where I would go with this.
 
 1452
 02:00:20,350 --> 02:00:21,880
-But if I was trying to compete
+But I don't know if I'm trying
+to compete
 
 1453
 02:00:21,880 --> 02:00:23,520
-with a mathematics professor
+with mathematica, so
 
 1454
 02:00:23,880 --> 02:00:25,880
-I wouldn't be too happy with something
+I would be happy with something
 
 1455
 02:00:25,880 --> 02:00:28,230
