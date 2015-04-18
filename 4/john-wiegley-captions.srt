@@ -247,7 +247,8 @@ Which I can do like so ....
 
 57
 00:03:59,500 --> 00:04:05,200
-Actually, I can use the applicative inaudible fine.
+Actually, I can use the applicative
+definition, it will be fine.
 
 58
 00:04:05,200 --> 00:04:06,900
@@ -259,7 +260,7 @@ Let me see if I can load this in ....
 
 60
 00:04:12,900 --> 00:04:16,000
-GCI inaudible
+GHCi REPL
 
 61
 00:04:16,000 --> 00:04:18,300
@@ -361,7 +362,7 @@ OC: So what we're saying here is
 
 83
 00:06:14,600 --> 00:06:16,720
-inaudible is a Parser that can either
+expr is a Parser that can either
 
 84
 00:06:16,880 --> 00:06:18,700
@@ -465,7 +466,7 @@ and it's failing to parse it.
 
 107
 00:07:38,700 --> 00:07:40,240
-OC:  GCHi white space inaudible add.
+OC: let's try GCHi without the white space 
 
 108
 00:07:49,840 --> 00:07:51,900
@@ -483,19 +484,22 @@ termination condition.
 
 111
 00:07:59,800 --> 00:08:03,200
-Let's see if the add expression is also inaudible
+Let's see if the add expression is also
+an infinite loop
 
 112
 00:08:04,300 --> 00:08:07,000
-OC: What if we change the inaudible to none.
+OC: What if we change the expr that you
+have in add to num??
 
 113
 00:08:07,800 --> 00:08:11,700
-So we don't have any inaudible
+So we don't have any kind of possibility
 
 114
 00:08:12,600 --> 00:08:15,400
-I imagine inaudible
+I imagine you're right and we
+are going to need two expr
 
 115
 00:08:15,400 --> 00:08:17,300
@@ -503,7 +507,7 @@ JW: We have the correct Parsing there.
 
 116
 00:08:17,300 --> 00:08:20,200
-inaudible recursion.
+but we want our recursion.
 
 117
 00:08:20,200 --> 00:08:23,400
@@ -600,7 +604,8 @@ that choice is not correct.
 
 137
 00:09:57,800 --> 00:10:01,700
-But if I remove them inaudible.
+But if I remove them I have an
+infinite loop.
 
 138
 00:10:03,200 --> 00:10:06,000
@@ -662,7 +667,8 @@ should be at the add space.
 
 151
 00:10:44,400 --> 00:10:49,400
-We wanted to have space inaudible.
+We wanted to have space or the end of
+the input.
 
 152
 00:10:54,700 --> 00:10:55,900
@@ -670,7 +676,8 @@ Why is this happening ?
 
 153
 00:10:58,900 --> 00:11:00,500
-OC: Would just parse test inaudible
+OC: What does parseTest with just add
+do now ?
 
 154
 00:11:00,500 --> 00:11:02,400
@@ -683,7 +690,7 @@ JW: It is not parsing correctly.
 
 156
 00:11:06,700 --> 00:11:10,400
-inaudible
+it did call expr
 
 157
 00:11:19,400 --> 00:11:22,000
@@ -822,7 +829,8 @@ So we're going to call this test.
 
 188
 00:13:25,800 --> 00:13:29,800
-OC: I would have used the exact same code inaudible file.
+OC: we are probably going to need the exact
+same code when we read from the file.
 
 189
 00:13:30,200 --> 00:13:33,000
