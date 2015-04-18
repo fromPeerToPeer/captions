@@ -873,7 +873,7 @@ might cause us some problems....
 
 200
 00:15:08,700 --> 00:15:10,700
-on the inaudible Parser.
+on the expr Parser.
 
 201
 00:15:12,600 --> 00:15:14,800
@@ -911,7 +911,7 @@ if there's going to be a plus there.
 209
 00:15:43,800 --> 00:15:46,300
 Another thing I could
-do is go ask the internet.
+do is go ask the Internet.
 
 210
 00:15:51,400 --> 00:15:52,100
@@ -928,7 +928,7 @@ recurs within parens here.
 
 213
 00:16:30,700 --> 00:16:33,300
-OC: Maybe look up chain L
+OC: Maybe look up chainl
 and see what that's doing.
 
 214
@@ -937,7 +937,8 @@ JW: I will try that.
 
 215
 00:17:12,100 --> 00:17:15,900
-I also want to find out what the non  inaudible, chain L
+I also want to find out what
+the non-chainl [inaudible] is
 
 216
 00:17:17,500 --> 00:17:19,400
@@ -983,11 +984,11 @@ all the way back to the top.
 
 225
 00:17:58,600 --> 00:18:00,600
-This is the problem we're running into.
+This is the problem we're running into,
 
 226
 00:18:00,600 --> 00:18:03,200
-inaudible
+as you indicated.
 
 227
 00:18:04,200 --> 00:18:06,600
@@ -1006,7 +1007,7 @@ And that again is breaking it for you.
 230
 00:18:21,800 --> 00:18:25,300
 JW: We left off here trying to
-break the internet recursion we have.
+break the infinite recursion we have.
 
 231
 00:18:27,000 --> 00:18:29,360
@@ -1065,7 +1066,7 @@ And for example, if it's a plus,
 
 244
 00:19:01,800 --> 00:19:05,400
-we know it's inaudible to addition
+we know it's a descendant to addition
 
 245
 00:19:05,400 --> 00:19:08,000
@@ -1079,7 +1080,7 @@ what the next token is.
 
 247
 00:19:16,800 --> 00:19:18,200
-We know that it could be say:
+We know that it could be, say:
 
 248
 00:19:55,300 --> 00:19:57,900
@@ -1130,11 +1131,11 @@ Unrecognised operator ....
 
 259
 00:20:54,900 --> 00:20:56,700
-OC: Maybe use 'just' for the operator
+OC: Maybe use Just for the operator
 
 260
 00:20:59,100 --> 00:21:00,700
-and use nothing for end of file.
+and use Nothing for end-of-file.
 
 261
 00:21:01,100 --> 00:21:02,100
@@ -1143,12 +1144,12 @@ JW: Excellent.
 262
 00:21:36,080 --> 00:21:39,120
 Now we've got rid of our
-internet left recursion problem.
+infinite left recursion problem.
 
 263
 00:21:40,700 --> 00:21:43,700
-Now you we're telling me
-about a function called chain L,
+Now you were telling me
+about a function called chainl,
 
 264
 00:21:44,500 --> 00:21:45,800
@@ -1156,12 +1157,12 @@ which I have not used yet.
 
 265
 00:21:45,800 --> 00:21:48,200
-But Parsec is designed
+But in Parsec is designed
 to solve this problem.
 
 266
 00:21:49,800 --> 00:21:51,000
-OC: inaudible telling you.
+OC: That's what I'm telling you.
 
 267
 00:21:51,600 --> 00:21:53,200
@@ -1169,11 +1170,11 @@ JW: That's right, but we will say
 
 268
 00:21:54,200 --> 00:21:55,680
-we want term, chain on one and ....
+we want term, chainl1 and ....
 
 269
 00:22:06,500 --> 00:22:07,700
-The add op is going to be ......
+The addop is going to be ......
 
 270
 00:22:11,000 --> 00:22:13,800
@@ -1191,12 +1192,12 @@ going to return the function
 
 273
 00:22:29,700 --> 00:22:33,200
-OC: I think you want inaudible there rather than addition.
+OC: I think you want EAdd there rather than addition.
 
 274
 00:22:35,300 --> 00:22:38,100
 That's right because I'm
-not doing evaluation Parser.
+not doing evaluation in the Parser.
 
 275
 00:22:41,800 --> 00:22:43,300
@@ -1210,7 +1211,7 @@ deal with white space.
 277
 00:22:54,900 --> 00:22:57,600
 I believe that symbol
-gives trailing white space,
+skips trailing white space,
 
 278
 00:23:02,100 --> 00:23:04,800
@@ -1223,7 +1224,7 @@ OC: Do you need to worry about that
 
 280
 00:23:07,200 --> 00:23:09,000
-if your using symbol everywhere ?
+if you're using symbol everywhere ?
 
 281
 00:23:10,000 --> 00:23:11,100
@@ -1244,11 +1245,11 @@ Now the add Parser is going to go away.
 
 285
 00:23:27,000 --> 00:23:28,600
-And we're going to have a Parser
+And we're going to have
 
 286
 00:23:28,600 --> 00:23:30,600
-for the new inaudible expressions.
+a new Parser for expressions.
 
 287
 00:23:34,600 --> 00:23:37,300
@@ -1257,12 +1258,12 @@ as a function to expression
 
 288
 00:23:37,300 --> 00:23:40,080
-to expression, to expression,
-to expression, in addop
+to expression to expression,
+in addop
 
 289
 00:23:41,840 --> 00:23:46,320
-because you have inaudible in your return type.
+because you have EAdd as your return type.
 
 290
 00:23:59,300 --> 00:24:01,800
@@ -1346,11 +1347,11 @@ It's all still going to be on numbers.
 
 308
 00:25:10,160 --> 00:25:13,760
-Now we have to make three more inaudible add up
+Now we have to make three more versions of addop
 
 309
 00:25:20,000 --> 00:25:22,000
-We only have to worry about presence
+We only have to worry about precedence
 
 310
 00:25:23,900 --> 00:25:26,100
@@ -1400,7 +1401,7 @@ is going to be equally trivial.
 320
 00:25:55,500 --> 00:25:57,700
 OC: Can we not just
-work with 'int 'anymore
+work with 'int' anymore
 
 321
 00:25:58,300 --> 00:26:00,500
@@ -1409,7 +1410,7 @@ want the fractional numbers...
 
 322
 00:26:11,500 --> 00:26:13,200
-And know our num will have to say ....
+And now our num will have to say ....
 
 323
 00:26:18,900 --> 00:26:21,600
@@ -1418,7 +1419,8 @@ to use doubles everywhere.
 
 324
 00:26:21,600 --> 00:26:25,600
-In some of the later codes it assumes you can assign to inaudible.
+In some of the later codes it assumes you can
+assign to floating point numbers.
 
 325
 00:26:32,100 --> 00:26:33,000
@@ -1443,7 +1445,7 @@ a pre-built Parser for doubles.
 
 330
 00:26:47,500 --> 00:26:50,200
-JW: True, but I want us to inaudible
+JW: True, but I want us to [inaudible] around
 
 331
 00:26:50,200 --> 00:26:52,100
@@ -1477,7 +1479,7 @@ Then we will take our X
 
 338
 00:27:24,700 --> 00:27:27,100
-and append it with inaudible number.
+and append it with yet another number.
 
 339
 00:27:29,500 --> 00:27:31,200
@@ -1493,7 +1495,7 @@ two definitions of optional.
 
 342
 00:27:42,500 --> 00:27:46,700
-OC: inaudible definitions completely equivalent
+OC: The definitions are completely equivalent
 
 343
 00:27:46,700 --> 00:27:48,100
@@ -1539,7 +1541,7 @@ but we're ignoring it
 
 353
 00:28:42,200 --> 00:28:43,300
-when we omit a string.
+when we emit a string.
 
 354
 00:28:44,900 --> 00:28:46,600
@@ -1578,11 +1580,11 @@ Because we haven't tied in the Parser.
 
 362
 00:29:27,700 --> 00:29:30,200
-OC: These are all doing inaudible as well.
+OC: These are all doing EAdd as well.
 
 363
 00:29:30,200 --> 00:29:35,700
-JW: True inaudible
+JW: True, they're not plugged in.
 
 364
 00:29:37,700 --> 00:29:39,800
