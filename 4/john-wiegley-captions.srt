@@ -441,7 +441,7 @@ num Parser should be first,
 
 101
 00:07:20,100 --> 00:07:21,900
-and then choice only Parsers once.
+and then choice only parses once.
 
 102
 00:07:22,400 --> 00:07:25,400
@@ -504,7 +504,7 @@ are going to need two expr
 
 115
 00:08:15,400 --> 00:08:17,300
-JW: We have the correct Parsing there.
+JW: We have the correct parsing there.
 
 116
 00:08:17,300 --> 00:08:20,200
