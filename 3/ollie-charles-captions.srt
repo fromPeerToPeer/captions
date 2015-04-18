@@ -506,15 +506,15 @@ of the lines in the prelude.
 
 118
 00:07:41,610 --> 00:07:44,045
-OC: Exactly. The text type itself is very
+OC: Exactly. The Text type itself is very
 
 119
 00:07:44,045 --> 00:07:46,200
-similar to the string type in the prelude
+similar to the String type in the prelude
 
 120
 00:07:46,228 --> 00:07:48,542
-except the string type is quite inefficient.
+except the String type is quite inefficient.
 
 121
 00:07:48,542 --> 00:07:50,370
@@ -522,13 +522,13 @@ It's just a linked list of characters,
 
 122
 00:07:50,370 --> 00:07:53,828
-whereas the text type is more
+whereas the Text type is more
 efficient in terms of its representation.
 
 123
 00:07:53,820 --> 00:07:57,200
 SP: So you make a point
-of defaulting to the text type.
+of defaulting to the Text type.
 
 124
 00:08:04,200 --> 00:08:07,634
