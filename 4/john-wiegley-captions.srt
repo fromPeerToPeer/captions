@@ -175,8 +175,8 @@ the whole Parsec interface is.
 
 41
 00:02:57,100 --> 00:02:59,360
-It's telling me one of
-them is not in scope,
+It's telling me oneOf
+is not in scope,
 
 42
 00:02:59,360 --> 00:03:01,200
@@ -217,7 +217,7 @@ so if I go up here and add Char,
 
 50
 00:03:25,700 --> 00:03:27,300
-then one option should be fine.
+then oneOf should be fine.
 
 51
 00:03:27,900 --> 00:03:29,200
@@ -306,7 +306,7 @@ I may have to import the Prim module.
 
 71
 00:04:54,400 --> 00:04:56,900
-If I say parse test,
+If I say parseTest,
 then I should get my integer.
 
 72
@@ -549,7 +549,7 @@ by doing num first before,
 125
 00:08:51,200 --> 00:08:54,400
 but we were simply calling
-parse test for the wrong Parser.
+parseTest with the wrong Parser.
 
 126
 00:08:57,000 --> 00:09:00,000
@@ -699,7 +699,7 @@ parsing randoms like these,
 
 158
 00:11:22,000 --> 00:11:23,500
-I use something like chain L
+I use something like chainl
 
 159
 00:11:23,500 --> 00:11:26,500
@@ -835,7 +835,7 @@ same code when we read from the file.
 189
 00:13:30,200 --> 00:13:33,000
 JW: So for now our test
-is just going to take a string.
+is just going to take a String.
 
 190
 00:13:33,000 --> 00:13:34,300
@@ -843,7 +843,7 @@ And it's going to parse it.
 
 191
 00:14:01,200 --> 00:14:02,100
-Oh! it wanted text.
+Oh! it wanted Text.
 
 192
 00:14:07,300 --> 00:14:19,200
