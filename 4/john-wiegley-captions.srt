@@ -243,7 +243,8 @@ to turn that into an integer.
 
 56
 00:03:50,800 --> 00:03:51,900
-Which I can do like so ....
+Which I can do using an
+applicative form of fmap
 
 57
 00:03:59,500 --> 00:04:05,200
@@ -471,7 +472,7 @@ OC: let's try GCHi without the white space
 108
 00:07:49,840 --> 00:07:51,900
 JW: Oh ! I'm still
-passing the num Parser.
+passing the num Parser to parseTest.
 
 109
 00:07:54,600 --> 00:07:56,000
@@ -782,7 +783,7 @@ addition between two things,
 177
 00:12:09,700 --> 00:12:12,500
 we have to recursively
-evaluate those expressions.
+evaluate those expressions and add them.
 
 178
 00:12:26,900 --> 00:12:27,900
