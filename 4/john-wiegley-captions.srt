@@ -3774,7 +3774,8 @@ stricken by this num parser
 
 879
 01:15:06,940 --> 01:15:09,058
-OC: So maybe we can just do the same tricks.
+OC: So maybe we can just do the same
+trick twice
 
 880
 01:15:11,290 --> 01:15:12,588
@@ -3805,7 +3806,7 @@ I want to do this trick
 886
 01:15:27,410 --> 01:15:29,520
 where we do not
-re-evaluate expression.
+re-evaluate expressions.
 
 887
 01:15:32,470 --> 01:15:33,760
@@ -3821,7 +3822,7 @@ And the reason we can do that
 
 890
 01:15:40,352 --> 01:15:42,000
-is because there are constants.
+is because they are constants.
 
 891
 01:15:42,580 --> 01:15:44,700
@@ -3843,7 +3844,7 @@ into the map we we are going to insert.....
 
 895
 01:15:56,700 --> 01:15:58,580
-Oh I have to evaluate inaudible.
+Oh I have to evaluate that outside.
 
 896
 01:16:00,352 --> 01:16:02,000
@@ -3851,11 +3852,11 @@ OC: Because that might refer to
 
 897
 01:16:02,000 --> 01:16:04,000
-previously evaluated variables.
+previously bound variables.
 
 898
 01:16:06,820 --> 01:16:09,290
-This is not using any inaudible laziness type trick
+This is not using any kind of laziness type trick
 
 899
 01:16:10,350 --> 01:16:12,230
@@ -3863,7 +3864,8 @@ it's just evaluating at that moment.
 
 900
 01:16:13,290 --> 01:16:15,640
-OC: So if you change that inaudible as well
+OC: Should we change that last evalExpr b
+as well
 
 901
 01:16:15,640 --> 01:16:16,820
@@ -3884,7 +3886,7 @@ parse this in our test.
 
 905
 01:16:37,520 --> 01:16:39,640
-OC:  I imagine we're
+OC: I imagine we're
 going to get a problem
 
 906
@@ -3897,11 +3899,11 @@ That's my guess.
 
 908
 01:16:45,640 --> 01:16:47,410
-JW: That number equals square root.
+JW: Unknown variable square root.
 
 909
 01:16:49,760 --> 01:16:51,410
-We have no inaudible functions yet.
+We have no way of defining functions yet.
 
 910
 01:16:52,000 --> 01:16:54,700
@@ -3927,7 +3929,7 @@ So we got two but we didn't get 30
 915
 01:17:07,170 --> 01:17:09,294
 Let's do this now
-ourselves, at the rebel.
+ourselves, at the REPL.
 
 916
 01:17:12,110 --> 01:17:14,230
@@ -3935,13 +3937,13 @@ We definitely have a regression there.
 
 917
 01:17:19,290 --> 01:17:22,110
-I don't think the vision
+I don't think division
 is being handled correctly.
 
 918
 01:17:26,940 --> 01:17:29,411
 I have a feeling that
-with any other operator
+if it's any other operator
 
 919
 01:17:29,640 --> 01:17:30,470
@@ -3953,12 +3955,12 @@ Yes, so it's just division.
 
 921
 01:17:35,760 --> 01:17:38,230
-OC: You maybe forgot
+OC: We maybe forgot
 to put a line in our parser.
 
 922
 01:18:06,000 --> 01:18:07,520
-OC: Is it because we are using
+OC: Is it because we should be using
 
 923
 01:18:07,520 --> 01:18:08,940
@@ -3974,7 +3976,7 @@ Thank you.
 
 926
 01:18:13,050 --> 01:18:14,110
-Yes there we have it.
+Yes now we have it.
 
 927
 01:18:18,110 --> 01:18:20,230
@@ -3983,7 +3985,8 @@ go back to that read file.
 
 928
 01:18:23,640 --> 01:18:26,820
-inaudible
+we have all of our current lines
+no square root
 
 929
 01:18:28,000 --> 01:18:29,520
@@ -4025,7 +4028,7 @@ at my expression tree.
 
 938
 01:19:01,410 --> 01:19:02,940
-This is a lot like let binding,
+This is a lot like a let binding,
 
 939
 01:19:04,470 --> 01:19:06,700
@@ -4051,7 +4054,7 @@ to be that lambda abstraction.
 
 944
 01:19:25,880 --> 01:19:27,640
-So we'll call that inaudible.
+So we'll call that ELam.
 
 945
 01:19:28,470 --> 01:19:30,230
@@ -4096,7 +4099,7 @@ OC: Yes,
 
 955
 01:19:50,230 --> 01:19:51,520
-JW: So we can have a lambda
+JW: So we can have our lambda
 
 956
 01:19:53,520 --> 01:19:54,940
@@ -4121,12 +4124,12 @@ JW: Because it's a lambda in there
 961
 01:20:08,580 --> 01:20:10,820
 and this would be
-the higher order syntax
+the higher order abstract syntax
 
 962
 01:20:11,520 --> 01:20:13,520
 where we're using
-the host languages'
+the host language's
 
 963
 01:20:14,940 --> 01:20:17,290
@@ -4143,7 +4146,7 @@ to represent functions as values.
 
 966
 01:20:24,110 --> 01:20:25,640
-That's the high order nature.
+That's the higher order nature.
 
 967
 01:20:26,470 --> 01:20:28,110
@@ -4159,7 +4162,7 @@ This is the tedious part
 
 970
 01:20:31,410 --> 01:20:33,410
-where we have to do a lot of inaudible.
+where we have to do a lot of boilerplate.
 
 971
 01:20:36,470 --> 01:20:37,880
@@ -4200,7 +4203,8 @@ Lambda is not going to be there.
 
 980
 01:21:58,110 --> 01:22:01,760
-It's not  inaudible it's the fact that this has to be modeled.
+It's not the show it's complaining about
+it's the fact that this has to be monoid.
 
 981
 01:22:08,580 --> 01:22:10,700
@@ -4208,11 +4212,12 @@ Pretty soon this is going to be 300 lines
 
 982
 01:22:11,640 --> 01:22:13,290
-as usually happens at Haskell !
+as usually happens in Haskell !
 
 983
 01:22:13,290 --> 01:22:15,290
-OC: inaudible strings here right ?
+OC: but we do want to be working
+with strings here right ?
 
 984
 01:22:15,290 --> 01:22:17,410
@@ -4225,16 +4230,16 @@ from something to string.
 
 986
 01:22:18,940 --> 01:22:20,000
-JW: Your right.
+JW: You're right.
 
 987
 01:22:31,760 --> 01:22:33,520
-OC: I think your alright using show.
+OC: I think we're OK using show.
 
 988
 01:22:34,941 --> 01:22:37,529
 Oh yes ! because we're
-defining a show of instance.
+defining a show instance.
 
 989
 01:22:38,000 --> 01:22:40,235
@@ -4272,7 +4277,7 @@ I need a double.
 
 997
 01:23:14,940 --> 01:23:18,820
-I need a body inaudible
+I need a body for my lambda
 
 998
 01:23:22,000 --> 01:23:24,235
@@ -4285,7 +4290,7 @@ What it means to call a function.
 
 1000
 01:23:26,000 --> 01:23:27,640
-That's how it gets it's argument.
+That's how it gets its argument.
 
 1001
 01:23:29,170 --> 01:23:31,410
@@ -4315,7 +4320,7 @@ being nothing fancy
 
 1007
 01:23:57,410 --> 01:23:59,290
-like a restriction that evaluates
+like an expression that evaluates
 
 1008
 01:24:01,290 --> 01:24:03,647
@@ -4328,12 +4333,12 @@ That would be cool but for now
 
 1010
 01:24:05,760 --> 01:24:08,000
-we'll have functions
-referenced by name.
+we'll have functions be only
+referenceable by name.
 
 1011
 01:24:11,520 --> 01:24:12,941
-So we have EApp be the name 
+So we have EApp be a name
 
 1012
 01:24:14,823 --> 01:24:17,411
@@ -4342,11 +4347,11 @@ going to be the expression.
 
 1013
 01:24:17,411 --> 01:24:18,823
-So we only allow arguments.
+So we only allow one argument.
 
 1014
 01:24:19,880 --> 01:24:20,820
-We want unpack  in.
+We want unpack n.
 
 1015
 01:24:29,170 --> 01:24:30,110
@@ -4375,11 +4380,11 @@ OC: That's basically a type error.
 
 1021
 01:26:26,580 --> 01:26:28,580
-inaudible language
+in our little language
 
 1022
 01:27:04,470 --> 01:27:06,470
-Now I need to define these two things
+Now we need a way to define these two things
 
 1023
 01:27:07,170 --> 01:27:09,647
@@ -4409,7 +4414,7 @@ We want the name and the open parens
 
 1029
 01:27:35,050 --> 01:27:36,941
-We want also, the argument to be name.
+We want also, the argument to be a name.
 
 1030
 01:27:43,640 --> 01:27:45,170
@@ -4434,7 +4439,7 @@ Now, expressions that could end
 
 1035
 01:28:05,880 --> 01:28:06,580
-in new lines.
+in newlines.
 
 1036
 01:28:11,290 --> 01:28:13,050
@@ -4442,19 +4447,19 @@ And there is a thing we can use from
 
 1037
 01:28:15,050 --> 01:28:16,470
-parser called text set-by.
+parser called text sep-by.
 
 1038
 01:28:20,580 --> 01:28:21,640
-So we want set-by one.
+So we want sep-by one.
 
 1039
 01:28:24,350 --> 01:28:25,760
-OC: So that at least one line
+OC: So that parses at least one expression
 
 1040
 01:28:27,760 --> 01:28:29,170
-is separated by new lines.
+that is separated by new lines.
 
 1041
 01:28:29,170 --> 01:28:30,000
@@ -4466,7 +4471,7 @@ This is our body.
 
 1043
 01:28:34,820 --> 01:28:35,760
-And now I'm going to:
+And now we're going to return ELam
 
 1044
 01:28:38,230 --> 01:28:40,000
@@ -4490,12 +4495,12 @@ that has let bindings in it ?
 
 1049
 01:28:54,350 --> 01:28:56,580
-Because let
-bindings should not escape
+Those let bindings should
+probably not escape
 
 1050
 01:28:56,940 --> 01:28:58,580
-out of the function should they ?
+outside of the function should they ?
 
 1051
 01:28:58,580 --> 01:29:00,470
@@ -4503,7 +4508,7 @@ And every time you run the function,
 
 1052
 01:29:01,050 --> 01:29:03,050
-it should remove the let bindings.
+it should renew the let bindings.
 
 1053
 01:29:05,760 --> 01:29:08,580
@@ -4529,8 +4534,8 @@ that it was executed in each time.
 
 1058
 01:29:23,760 --> 01:29:26,820
-OC: So we can refer to let
-bindings outside the function.
+OC: So we can refer to let bindings
+outside the function definition.
 
 1059
 01:29:31,170 --> 01:29:33,760
@@ -4548,7 +4553,7 @@ OC: Sure.
 
 1062
 01:29:40,700 --> 01:29:43,290
-JW: We have our inaudible
+JW: We have our env
 
 1063
 01:29:44,230 --> 01:29:45,290
