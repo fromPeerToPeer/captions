@@ -2024,7 +2024,7 @@ but I'm going to ignore that for now,
 464
 00:30:16,880 --> 00:30:19,657
 maybe we can
-optimise that later, but for now
+optimize that later, but for now
 
 465
 00:30:19,657 --> 00:30:21,680
@@ -2059,7 +2059,8 @@ See if any of them gets us to B.
 
 472
 00:30:40,800 --> 00:30:42,510
-In which case (inaudible) solutions.
+In which case those will be our
+possible solutions.
 
 473
 00:30:42,510 --> 00:30:44,857
@@ -2067,7 +2068,7 @@ OC: So we'll start by taking the neighbors of A.
 
 474
 00:30:44,850 --> 00:30:49,770
-(inaudible) dictionary (inaudible).
+and the same dictionary [inaudible].
 
 475
 00:30:53,540 --> 00:30:54,600
@@ -2120,7 +2121,7 @@ OC: So how is best to do this.
 486
 00:31:38,940 --> 00:31:42,085
 Even though this has
-the same type I want to see what we get to.
+the same type, I want to see what we get to.
 
 487
 00:31:42,080 --> 00:31:44,285
@@ -2128,7 +2129,8 @@ We're going to be using the same dictionary
 
 488
 00:31:44,777 --> 00:31:52,731
-and were going to go to B and  (inaudible) and N to B.
+and were going to go to B and go on to N
+and N to B.
 
 489
 00:31:52,850 --> 00:31:55,120
@@ -2136,7 +2138,7 @@ That's probably not going to type check.
 
 490
 00:31:57,600 --> 00:31:59,970
-We could have matched a list of text with text.
+We couldn't match a list of text with text.
 
 491
 00:32:01,040 --> 00:32:03,714
@@ -2160,7 +2162,7 @@ problem here is that if we
 495
 00:32:11,017 --> 00:32:13,622
 put another
-type hole there, well see that this
+type hole there, we'll see that this
 
 496
 00:32:13,622 --> 00:32:15,080
@@ -2173,7 +2175,7 @@ had a function that went from
 
 498
 00:32:17,400 --> 00:32:20,285
-a list of lists word
+a list of lists of word
 chains to just a list of word chains.
 
 499
@@ -2183,11 +2185,11 @@ Which is of course 'concat',
 500
 00:32:22,800 --> 00:32:25,462
 And we have a
-function in the standard library
+function in the standard library...
 
 501
 00:32:25,474 --> 00:32:29,000
-(inaudible) that hole.
+I'm gonna remove that hole.
 
 502
 00:32:29,000 --> 00:32:31,800
@@ -2196,23 +2198,23 @@ in the standard library that does
 
 503
 00:32:31,820 --> 00:32:33,770
-these two things together... Concat map
+these two things together... concatMap
 
 504
 00:32:33,770 --> 00:32:35,570
-that just such a common operation.
+because it's such a common operation.
 
 505
 00:32:36,160 --> 00:32:39,531
-Concat that there... and
+concatMap that there... and
 
 506
 00:32:41,400 --> 00:32:43,253
-I guess we'll leave that.
+I guess we'll leave that
 
 507
 00:32:43,480 --> 00:32:46,540
-there's a hole for now (inaudible) GCHi again.
+as a hole for now and play with it in GHCi again.
 
 508
 00:32:47,400 --> 00:32:50,280
@@ -2221,7 +2223,7 @@ I should be able to know
 
 509
 00:32:50,413 --> 00:32:52,600
-(inaudible) problems.
+[inaudible] of one of the example problems.
 
 510
 00:32:52,600 --> 00:32:53,693
@@ -2238,11 +2240,11 @@ because this doesn't terminate
 
 513
 00:33:10,920 --> 00:33:13,000
-or because were being so inefficient.
+or because we're being so inefficient.
 
 514
 00:33:13,013 --> 00:33:16,400
-SP: No. By the time you go from dog to dot
+SP: Now... By the time you go from dog to dot
 
 515
 00:33:17,020 --> 00:33:19,613
@@ -2255,7 +2257,7 @@ going back on ourselves probably
 
 517
 00:33:22,460 --> 00:33:24,346
-SP: In terms of what's happening.
+SP: That's potentially what's happening.
 
 518
 00:33:24,370 --> 00:33:26,370
@@ -2316,12 +2318,11 @@ So let's filter the dictionary
 
 531
 00:34:20,680 --> 00:34:23,000
-for stuff that's not to equal to N.
+for stuff that's not equal to N.
 
 532
 00:34:28,280 --> 00:34:31,880
-It's still having (inaudible)
-
+It's still compiling...
 533
 00:34:38,080 --> 00:34:41,257
 That's better but apparently
@@ -2333,7 +2334,7 @@ at least we do terminate. (laughter)
 
 535
 00:34:46,546 --> 00:34:49,680
-SP: So termination we're wrong
+SP: So termination but wrong
 is better than no termination.
 
 536
@@ -2343,8 +2344,8 @@ we know that it will eventually
 
 537
 00:34:52,514 --> 00:34:54,542
-deliver and so give us the right answer.
-
+deliver an answer even if it
+is the wrong answer.
 538
 00:34:54,910 --> 00:34:56,826
 So what I want to check now,
@@ -2359,12 +2360,11 @@ cot to cat, so maybe if we just try cot to cat
 
 541
 00:35:03,660 --> 00:35:05,373
-see if we get that solution.
+and see if we get that solution.
 
 542
 00:35:05,533 --> 00:35:07,240
-OC: For the smallest (inaudible)
-
+OC: For the smallest thing I can think of
 543
 00:35:09,386 --> 00:35:11,880
 that was cot to cat.
@@ -2389,7 +2389,7 @@ So let's see:
 548
 00:35:29,280 --> 00:35:34,133
 The neighbors around
-A and for each of those
+A... and for each of those
 
 549
 00:35:34,400 --> 00:35:35,800
@@ -2397,11 +2397,11 @@ we call a word puzzle.
 
 550
 00:35:42,626 --> 00:35:43,986
-Save target ...
+The same target ...
 
 551
 00:35:50,880 --> 00:35:55,746
-SP: So here your excluding
+SP: So here you're excluding
 words that are the neighbor
 
 552
@@ -2423,8 +2423,7 @@ You know that you've got that one.
 
 556
 00:36:11,310 --> 00:36:15,680
-OC: (inaudible)
-
+OC: Great job!
 557
 00:36:15,880 --> 00:36:20,520
 So we don't want to
@@ -2440,7 +2439,7 @@ And now we go from cot to cat.
 
 560
 00:36:35,333 --> 00:36:37,426
-OC: Were certainly finding some solutions
+OC: We're certainly finding some solutions
 
 561
 00:36:37,426 --> 00:36:41,653
@@ -2461,7 +2460,7 @@ if this will actually terminate
 
 565
 00:36:52,530 --> 00:36:55,600
-at the same length for
+and be the same length as
 all the neighbors of cot.
 
 566
@@ -2474,15 +2473,18 @@ OK, maybe not (laughter).
 
 568
 00:37:09,540 --> 00:37:13,310
-SP: The (inaudible) indicated that some where (inaudible) (laughter)
+SP: The fan indicated that some work
+was being done (laughter)
 
 569
 00:37:13,310 --> 00:37:18,570
-OC: (inaud) we certainly are OK.
+OC: Although, are we actually able to fully
+compute all of the neighbors around "cot"?
+We certainly are OK.
 
 570
 00:37:20,020 --> 00:37:23,413
-So, we're not hitting our base case problem,
+So, we're not hitting our base case properly,
 
 571
 00:37:23,450 --> 00:37:24,600
@@ -2528,7 +2530,7 @@ So I think that's largely OK.
 
 581
 00:38:33,386 --> 00:38:35,213
-We've got an error on that somewhere.
+We've got an error there somewhere.
 
 582
 00:38:36,220 --> 00:38:40,506
@@ -2553,8 +2555,7 @@ so do you not need to prepend
 
 587
 00:38:56,866 --> 00:38:59,626
-each of the items in that list (inaudible)
-
+each of the items in that list of solutions?
 588
 00:38:59,640 --> 00:39:00,800
 OC: Ah! of course, yes.
@@ -2573,7 +2574,7 @@ which is not much different,
 
 592
 00:39:10,080 --> 00:39:12,450
-(inaudible) something like that
+but we could also do something like that
 
 593
 00:39:12,450 --> 00:39:15,453
@@ -2608,7 +2609,7 @@ I guess that is a valid word chain (laughter).
 600
 00:39:49,080 --> 00:39:52,466
 Is it just that there are this
-many possible word chains ? I guess
+many possible word chains I guess
 
 601
 00:39:53,066 --> 00:39:55,133
@@ -2644,7 +2645,7 @@ SP: Yes
 
 609
 00:40:19,370 --> 00:40:26,080
-OC: So what's going on on that first one though?
+OC: So what's going wrong on that first one though?
 
 610
 00:40:27,053 --> 00:40:28,386
@@ -2728,7 +2729,7 @@ to sort by the length descending.
 628
 00:41:23,173 --> 00:41:26,000
 But this now because
-if we're sorting the entire list
+we're sorting the entire list
 
 629
 00:41:26,000 --> 00:41:29,600
@@ -2750,7 +2751,7 @@ ones that are the shortest.
 
 633
 00:41:44,480 --> 00:41:47,573
-OC: Right so reading the
+OC: Right so a greedier
 search, as we go through.
 
 634
@@ -2785,7 +2786,7 @@ We have comparing.
 
 641
 00:42:14,570 --> 00:42:21,453
-So we can say comparing on length (inaudible)
+So we can say comparing on length [inaudible]
 
 642
 00:42:22,680 --> 00:42:24,013
@@ -2805,7 +2806,7 @@ and it's certainly not a good solution.
 
 646
 00:42:37,520 --> 00:42:40,770
-In the original spec of the (inaudible) it said
+In the original spec of the [inaudible] it said
 
 647
 00:42:40,770 --> 00:42:43,600
@@ -2814,7 +2815,7 @@ results in less than a second
 
 648
 00:42:43,600 --> 00:42:44,973
-but were well over that.
+but we're well over that.
 
 649
 00:42:59,080 --> 00:43:03,733
@@ -2889,7 +2890,7 @@ At least to get the shortest path.
 
 665
 00:43:40,000 --> 00:43:42,420
-SP: And since your removing the word each time
+SP: And since you're removing the word each time
 
 666
 00:43:42,420 --> 00:43:44,573
@@ -2954,12 +2955,13 @@ no words at all in the chain.
 
 680
 00:44:32,560 --> 00:44:35,666
-That's not really the
-environment I want to have in the code.
+That's not really an
+invariant I want to have in the code.
 
 681
 00:44:35,720 --> 00:44:39,740
-Inaudible in which case there's no expansions on that.
+But we should probably deal with it anyway
+in which case there's no expansions on that.
 
 682
 00:44:40,960 --> 00:44:47,920
