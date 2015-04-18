@@ -2993,15 +2993,18 @@ that's already a list of word chains.
 
 687
 00:45:15,770 --> 00:45:22,173
-I find the neighbors of W but I need to use a  list
+I find the neighbors of w
+but I need to use a
 
 688
 00:45:22,173 --> 00:45:24,050
-(inaudible) there.
+list cons there.
 
 689
 00:45:34,000 --> 00:45:36,453
-I'm going to move away from the inaudible there.
+I'm going to move away from
+putting this there.
+Just map over these.
 
 690
 00:45:41,680 --> 00:45:46,426
@@ -3023,11 +3026,11 @@ we need to ... go over there.
 
 694
 00:45:56,910 --> 00:46:01,200
-(inaudible) neighbors dict. W
+the neighbors and dict and w
 
 695
 00:46:08,370 --> 00:46:11,920
-and we'll put that into (inaudible) N.
+and we'll put that into binding n.
 
 696
 00:46:14,050 --> 00:46:17,613
@@ -3036,7 +3039,7 @@ produce a single word chain here,
 
 697
 00:46:18,906 --> 00:46:22,173
-that will be NW dot something.
+that will be n, w, ws, I think.
 
 698
 00:46:26,340 --> 00:46:28,400
@@ -3044,7 +3047,7 @@ And we're back to compiling again - good.
 
 699
 00:46:31,493 --> 00:46:35,040
-I should be able to load the dictionary in ...
+I should be able to load the dictionary in
 
 700
 00:46:39,370 --> 00:46:44,573
@@ -3057,7 +3060,8 @@ I just start with the word cat.
 
 702
 00:46:50,620 --> 00:46:52,940
-So that seems to be doing what t I would expect,
+So that seems to be doing
+what I would expect,
 
 703
 00:46:52,940 --> 00:46:54,770
@@ -3070,15 +3074,17 @@ feed this back in to our word puzzle.
 
 705
 00:47:01,620 --> 00:47:03,866
-I think I'll leave this around for now.
+I think I'll leave this around for now
+and just comment that out.
 
 706
 00:47:09,880 --> 00:47:12,986
-So we're going to start at word A and we need
+So we're going to start at
+word a and we need
 
 707
 00:47:12,986 --> 00:47:14,373
-to reach word B.
+to reach word b.
 
 708
 00:47:15,200 --> 00:47:16,850
@@ -3086,7 +3092,7 @@ So we'll start with a word chain
 
 709
 00:47:18,680 --> 00:47:20,520
-which is just the word A
+which is just the word a
 
 710
 00:47:20,613 --> 00:47:21,933
@@ -3121,7 +3127,7 @@ level breadth-first search.
 
 717
 00:47:51,580 --> 00:47:54,533
-we need to go a bit further
+We need to go a bit further
 than that to find something useful,
 
 718
@@ -3139,7 +3145,8 @@ SP: Yes.
 
 721
 00:48:11,110 --> 00:48:13,786
-OC: We can probably use iterate to do that.
+OC: We can probably use
+iterate to do that.
 
 722
 00:48:13,786 --> 00:48:16,213
@@ -3148,7 +3155,7 @@ have any further expansions.
 
 723
 00:48:16,213 --> 00:48:18,906
-OC: Ah ! that's one
+OC: Ah! that's one
 thing we've not done so far
 
 724
@@ -3192,11 +3199,13 @@ you keep the dictionary the same
 
 733
 00:49:04,760 --> 00:49:07,440
-each time, but you don't allow the addition
+each time, but you
+don't allow the addition
 
 734
 00:49:07,453 --> 00:49:10,160
-into the chain of a word that's already in it.
+into the chain of
+a word that's already in it.
 
 735
 00:49:11,310 --> 00:49:14,426
@@ -3213,7 +3222,8 @@ make the dictionary smaller
 
 738
 00:49:17,946 --> 00:49:20,910
-then our neighbors gradually become smaller.
+then our neighbors
+gradually become smaller.
 
 739
 00:49:21,000 --> 00:49:24,373
@@ -3222,11 +3232,12 @@ possible word chains as before.
 
 740
 00:49:27,940 --> 00:49:31,280
-Now I'm thinking it would be nice if we had
+Now I'm thinking
+it would be nice if we had
 
 741
 00:49:31,280 --> 00:49:33,053
-a bridger type for our dictionary.
+a richer type for our dictionary.
 
 742
 00:49:33,053 --> 00:49:36,413
@@ -3243,7 +3254,8 @@ SP: Yes.
 
 745
 00:49:41,346 --> 00:49:43,426
-OC: So that's going to be a bit of a back jump
+OC: So that's going to be
+a bit of a backtrace
 
 746
 00:49:43,426 --> 00:49:45,226
@@ -3266,11 +3278,13 @@ the containments library for that.
 
 750
 00:50:06,400 --> 00:50:08,946
-And to get that I need to put that in there.
+And to get that
+I need to put that in there.
 
 751
 00:50:11,110 --> 00:50:13,893
-Actually, it looks as if we already have that.
+Actually, it looks as if
+we already have that.
 
 752
 00:50:17,120 --> 00:50:18,786
@@ -3287,7 +3301,7 @@ So rather than having a list of text,
 
 755
 00:50:30,893 --> 00:50:32,813
-let's go with A set text,
+let's go with a set text,
 
 756
 00:50:33,613 --> 00:50:35,580
@@ -3304,19 +3318,23 @@ is return a set rather than a list.
 
 759
 00:50:43,260 --> 00:50:48,160
-That's easy enough, we can just say S.list.
+That's easy enough,
+we can just say S.fromList.
 
 760
 00:50:48,680 --> 00:50:50,820
-which takes a list and turns it into a set.
+which takes a list
+and turns it into a set.
 
 761
 00:50:51,893 --> 00:50:57,373
-Next, rather than checking a list to see if (inaudible)
+Next, rather than checking
+a list to see if an element's there,
 
 762
 00:50:57,420 --> 00:51:03,080
-use S.member, which checks to see if an element
+use S.member,
+which checks to see if an element
 
 763
 00:51:03,093 --> 00:51:04,520
@@ -3324,7 +3342,7 @@ is a member of a set.
 
 764
 00:51:05,573 --> 00:51:07,600
-(inaudible) the same here. ...
+Likewise going to do the same here. ...
 
 765
 00:51:17,640 --> 00:51:21,066
@@ -3341,7 +3359,8 @@ like that ...
 768
 00:51:41,440 --> 00:51:47,106
 The filter is for lists but we
-have a set so we ask S.filter to filter a set.
+have a set so
+we ask S.filter to filter a set.
 
 769
 00:51:56,240 --> 00:51:58,306
@@ -3359,15 +3378,16 @@ Ah yes,  we can't map over a set like that.
 772
 00:52:17,813 --> 00:52:23,813
 Do we have that ... yes we do ...
-so we just change that to S.dot map
+so we just change that to S.map
 
 773
 00:52:24,866 --> 00:52:29,510
-(inaudible) filter, S.map.
+and again to S.filter, S.map.
 
 774
 00:52:29,866 --> 00:52:32,173
-Now this is not going to give us a list of text,
+Now this is not going
+to give us a list of text,
 
 775
 00:52:32,186 --> 00:52:33,826
@@ -3375,7 +3395,8 @@ it's going to give us a set of text.
 
 776
 00:52:39,880 --> 00:52:46,893
-SP: There are built in facilities like traversible.
+SP: There are built in facilities
+like traversible.
 
 777
 00:52:47,826 --> 00:52:49,866
@@ -3384,11 +3405,13 @@ this sort of code
 
 778
 00:52:49,866 --> 00:52:53,346
-where you change from one data type to another?
+where you change
+from one data type to another?
 
 779
 00:52:53,400 --> 00:52:55,710
-There are some gereralised forms of some of
+There are some
+generalized forms of some of
 
 780
 00:52:55,710 --> 00:52:57,506
@@ -3396,7 +3419,8 @@ these functions aren't there?
 
 781
 00:52:57,540 --> 00:53:00,706
-OC: Right. We can't generalize map I don't think
+OC: Right. We can't
+generalize map I don't think
 
 782
 00:53:00,706 --> 00:53:03,373
@@ -3414,16 +3438,18 @@ SP: Ok
 
 785
 00:53:06,213 --> 00:53:08,480
-So we can't map between our 3 types because
+So we can't map between
+our 3 types because
 
 786
 00:53:08,493 --> 00:53:10,840
-we wouldn't necessarily map the same (inaudible)
+we wouldn't necessarily
+map them to something that's order-able.
 
 787
 00:53:10,850 --> 00:53:15,906
-The filter - there's probably
-something in Data. Foldable
+For filter, there's probably
+some stuff in Data.Foldable
 
 788
 00:53:15,906 --> 00:53:18,026
@@ -3431,8 +3457,8 @@ that will probably let us filter the set.
 
 789
 00:53:18,546 --> 00:53:22,933
-But I think I'm quite
-happy working with sets here.
+But I think I'm quite happy being explicit
+that we're working with sets here.
 
 790
 00:53:22,933 --> 00:53:23,626
@@ -3458,7 +3484,7 @@ use the list comprehension anymore.
 
 795
 00:53:38,280 --> 00:53:39,160
-Because inaudible list.
+because we certainly don't have the list.
 
 796
 00:53:39,170 --> 00:53:42,466
@@ -3471,7 +3497,8 @@ We could turn this into a list.
 
 798
 00:53:52,194 --> 00:53:54,500
-OK, and now were back to trying to solve this.
+OK, and now were back to
+trying to solve this.
 
 799
 00:53:55,348 --> 00:53:57,354
@@ -3479,7 +3506,8 @@ To recap where we were, we wanted to have
 
 800
 00:53:57,354 --> 00:53:59,662
-the dictionary smaller and smaller inaudible
+the dictionary become
+smaller and smaller so
 
 801
 00:54:00,228 --> 00:54:02,142
@@ -3497,7 +3525,8 @@ that we've already considered.
 
 804
 00:54:09,302 --> 00:54:15,091
-I believe those are going to be the head of chains
+I believe those are
+going to be the head of chains
 
 805
 00:54:15,097 --> 00:54:18,417
@@ -3511,7 +3540,7 @@ beneficial to bring more neighbors out
 
 807
 00:54:25,462 --> 00:54:26,697
-as a set of binding.
+as a separate binding.
 
 808
 00:54:33,680 --> 00:54:36,702
@@ -3520,11 +3549,12 @@ dictionary without any of the neighbors.
 
 809
 00:54:36,702 --> 00:54:39,020
-I've got a slightly smaller dictionary now.
+I've got a slightly smaller
+dictionary now.
 
 810
 00:54:39,330 --> 00:54:40,748
-And let's start type checks.
+And that still type checks.
 
 811
 00:54:45,794 --> 00:54:47,257
@@ -3545,7 +3575,7 @@ function that's going to take
 
 815
 00:54:51,942 --> 00:54:53,771
-a list of word chains, the dictionary,
+a list of word chains in the dictionary,
 
 816
 00:54:53,771 --> 00:54:55,708
@@ -3570,15 +3600,16 @@ and see what we end up with.
 821
 00:55:09,194 --> 00:55:11,491
 OC: We have some function
-F that's going to take a chain ...
+f that's going to take a chain ...
 
 822
 00:55:11,491 --> 00:55:14,910
-and a new dictionary (inaudible) something,
+and a new dictionary
+and it needs to do something,
 
 823
 00:55:16,850 --> 00:55:18,325
-and pull that there as well.
+and call f there as well.
 
 824
 00:55:22,725 --> 00:55:26,102
@@ -3591,15 +3622,18 @@ using the smaller dictionary.
 
 826
 00:55:30,200 --> 00:55:33,480
-So do something with chain and chain is (inaudible).
+So do something with chain
+and chain is of course not...
 
 827
 00:55:34,060 --> 00:55:36,920
-These type holes are not going to help (inaudible)
+These type holes
+aren't really helping us anymore
 
 828
 00:55:37,030 --> 00:55:39,240
-Just have to trust our intuition a bit more.
+Just have to trust
+our intuition a bit more.
 
 829
 00:55:39,450 --> 00:55:41,622
@@ -3611,7 +3645,8 @@ I should bring this down a little bit.
 
 831
 00:55:54,920 --> 00:55:57,280
-Expand takes the dictionary in first position,
+Expand takes the dictionary
+in first position,
 
 832
 00:55:57,285 --> 00:55:59,800
@@ -3640,7 +3675,7 @@ a list of a list of word chains.
 
 838
 00:56:23,794 --> 00:56:26,537
-to (inaudible) word chain.
+to probably a single word chain.
 
 839
 00:56:27,880 --> 00:56:30,628
@@ -3678,12 +3713,14 @@ When you fold you have a list
 
 847
 00:56:56,660 --> 00:56:59,125
-and you keep reducing it into something smaller.
+and you keep reducing it
+into something smaller.
 
 848
 00:56:59,125 --> 00:57:01,977
 Whereas in this case we
-actually want to get something bigger.
+actually have something
+and want to get something bigger.
 
 849
 00:57:01,971 --> 00:57:03,710
@@ -3695,7 +3732,8 @@ where we maybe can't go any bigger.
 
 851
 00:57:06,200 --> 00:57:10,222
-So we have a function in the Prelude to do that
+So we have a function in
+the Prelude to do that
 
 852
 00:57:10,222 --> 00:57:12,148
@@ -3738,7 +3776,7 @@ modeling here with this pattern match,
 861
 00:57:32,691 --> 00:57:35,480
 where we simply said
-we have an endless list of word chains,
+we have an empty list of word chains,
 
 862
 00:57:35,485 --> 00:57:37,650
@@ -3746,7 +3784,8 @@ but that felt a bit weird,
 
 863
 00:57:37,840 --> 00:57:40,971
-so maybe let's try bringing in a maybe there.
+so maybe let's try
+bringing in a maybe there.
 
 864
 00:57:42,200 --> 00:57:44,171
@@ -3771,7 +3810,8 @@ we have just that result of word chains.
 
 869
 00:57:57,691 --> 00:57:59,850
-NARRATOR: We're going to speed through this section
+NARRATOR: We're going to speed through
+this section
 
 870
 00:57:59,850 --> 00:58:01,577
@@ -3806,7 +3846,7 @@ OC: Even though we're using unfold,
 877
 00:58:20,422 --> 00:58:23,542
 which does feel
-like the right thing to be using
+like the right tool to be using
 
 878
 00:58:23,540 --> 00:58:26,388
@@ -3837,7 +3877,7 @@ What I'm going to go with instead ..
 
 884
 00:58:38,160 --> 00:58:41,577
-expands going to take a single
+expand's going to take a single
 word chain and the dictionary,
 
 885
@@ -3880,7 +3920,8 @@ that word from the dictionary,
 
 894
 00:59:00,080 --> 00:59:02,354
-because we don't want to go back on ourselves.
+because we don't want
+to go back on ourselves.
 
 895
 00:59:03,737 --> 00:59:05,540
@@ -3892,7 +3933,7 @@ but there's nothing I can do.
 
 897
 00:59:08,560 --> 00:59:10,457
-We have (inaudible)
+We have seen this one before,
 
 898
 00:59:10,490 --> 00:59:12,417
@@ -3900,7 +3941,7 @@ but otherwise if we have a chain.
 
 899
 00:59:12,891 --> 00:59:15,028
-It starts with the word W,
+and it starts with the word w,
 
 900
 00:59:15,171 --> 00:59:18,148
@@ -3908,11 +3949,11 @@ we have the dictionary and then
 
 901
 00:59:18,280 --> 00:59:24,348
-we need to take the neighbors around W
+we need to take the neighbors around w
 
 902
 00:59:24,577 --> 00:59:25,520
-which will equal N.
+which will equal n.
 
 903
 00:59:26,120 --> 00:59:28,034
@@ -3920,11 +3961,11 @@ and put that on the front of the chain.
 
 904
 00:59:28,030 --> 00:59:30,611
-So N is going to be the neighbors
+So n is going to be the neighbors
 
 905
 00:59:34,228 --> 00:59:36,371
-using the same dictionary around W.
+using the same dictionary around w.
 
 906
 00:59:37,820 --> 00:59:41,045
@@ -3933,7 +3974,7 @@ this slightly smaller dictionary.
 
 907
 00:59:43,740 --> 00:59:45,370
-Tootle that up
+Tuple that up
 
 908
 00:59:45,428 --> 00:59:49,651
@@ -3941,7 +3982,7 @@ with the same dictionary ...
 
 909
 00:59:52,485 --> 00:59:54,540
-but we'll delete N from the dictionary.
+but we'll delete n from the dictionary.
 
 910
 00:59:54,720 --> 00:59:55,388
