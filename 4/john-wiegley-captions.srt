@@ -4447,11 +4447,11 @@ And there is a thing we can use from
 
 1037
 01:28:15,050 --> 01:28:16,470
-parser called text sep-by.
+parser called text sepBy.
 
 1038
 01:28:20,580 --> 01:28:21,640
-So we want sep-by one.
+So we want sepBy1.
 
 1039
 01:28:24,350 --> 01:28:25,760
