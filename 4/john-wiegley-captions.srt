@@ -513,7 +513,7 @@ but we want our recursion.
 117
 00:08:20,200 --> 00:08:23,400
 Let me think about why
-this is infinitely re cursing here.
+this is infinitely recursing here.
 
 118
 00:08:29,700 --> 00:08:33,300
@@ -615,7 +615,7 @@ top level expression Parser.
 
 139
 00:10:11,800 --> 00:10:13,600
-OC: So it did re-curse again, I take it ?
+OC: So it did recurse again, I take it ?
 
 140
 00:10:13,600 --> 00:10:14,300
