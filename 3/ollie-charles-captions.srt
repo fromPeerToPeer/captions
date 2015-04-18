@@ -2323,6 +2323,7 @@ for stuff that's not equal to N.
 532
 00:34:28,280 --> 00:34:31,880
 It's still compiling...
+
 533
 00:34:38,080 --> 00:34:41,257
 That's better but apparently
@@ -2346,6 +2347,7 @@ we know that it will eventually
 00:34:52,514 --> 00:34:54,542
 deliver an answer even if it
 is the wrong answer.
+
 538
 00:34:54,910 --> 00:34:56,826
 So what I want to check now,
@@ -2365,6 +2367,7 @@ and see if we get that solution.
 542
 00:35:05,533 --> 00:35:07,240
 OC: For the smallest thing I can think of
+
 543
 00:35:09,386 --> 00:35:11,880
 that was cot to cat.
@@ -2424,6 +2427,7 @@ You know that you've got that one.
 556
 00:36:11,310 --> 00:36:15,680
 OC: Great job!
+
 557
 00:36:15,880 --> 00:36:20,520
 So we don't want to
@@ -2556,6 +2560,7 @@ so do you not need to prepend
 587
 00:38:56,866 --> 00:38:59,626
 each of the items in that list of solutions?
+
 588
 00:38:59,640 --> 00:39:00,800
 OC: Ah! of course, yes.
