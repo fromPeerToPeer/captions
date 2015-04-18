@@ -2309,17 +2309,18 @@ That's not really what I want.
 
 534
 00:45:07,300 --> 00:45:09,800
-I want to see the
-result of every line as I type.
+I want to have my own forever because I
+want to see the result of every line as I
+type.
 
 535
 00:45:13,040 --> 00:45:14,640
-So I want an input from get line.
+So we want our input to come from getLine.
 
 536
 00:45:22,000 --> 00:45:24,640
-Now that we're in io
-I can run the test on the input.
+Now that we're in IO
+we can just run test on the input.
 
 537
 00:45:33,360 --> 00:45:35,120
@@ -2328,7 +2329,7 @@ We can be a little bit fancier now.
 538
 00:46:13,520 --> 00:46:16,640
 I have to add in an
-extension called 'overloaded strings'.
+extension called OverloadedStrings.
 
 539
 00:46:19,520 --> 00:46:20,800
@@ -2336,7 +2337,7 @@ OC: And when you type that
 
 540
 00:46:20,800 --> 00:46:22,480
-have you got a template for Emacs?
+have you got a templating thing for Emacs?
 
 541
 00:46:26,800 --> 00:46:28,960
@@ -2368,7 +2369,8 @@ Here it is.
 
 548
 00:47:00,160 --> 00:47:03,600
-inaudible language it requires and then it says Haskell inaudible.
+It inserts language, it requires and then
+it says haskell-yas-ghc-language-pragmas
 
 549
 00:47:05,760 --> 00:47:08,400
@@ -2376,15 +2378,16 @@ That is a function that will go out to GHC,
 
 550
 00:47:14,400 --> 00:47:16,960
-and ask "what are all your extensions inaudible".
+and ask "what are all your extensions?"
+Actually I think the command was
 
 551
 00:47:18,240 --> 00:47:20,160
-Right there GHC - support extension.
+Right there: ghc --supported-extensions.
 
 552
 00:47:22,160 --> 00:47:26,720
-And that will tell you .... inaudible
+And that will tell you what you can use.
 
 553
 00:47:31,760 --> 00:47:33,040
@@ -2408,15 +2411,16 @@ Oh! I don't want to use return.
 
 558
 00:48:07,760 --> 00:48:09,840
-It was interpreting it in the inaudible
+It was interpreting it in the List monad
 
 559
 00:48:11,840 --> 00:48:13,760
-Right, so now we have a inaudible I can say:
+Right, so now if we have a REPL I can say:
 
 560
 00:48:17,760 --> 00:48:20,880
-This makes it a little easier for me to do inaudible.
+This makes it a little easier for me to do
+little tests.
 
 561
 00:48:22,240 --> 00:48:23,120
@@ -2432,7 +2436,7 @@ It's in the combinators library.
 
 564
 00:48:43,760 --> 00:48:45,200
-Its called 'between' I think.
+It's called 'between' I think.
 
 565
 00:48:46,720 --> 00:48:46,960
@@ -2453,11 +2457,12 @@ OC: Maybe it would be better
 
 569
 00:49:07,200 --> 00:49:08,960
-if we passed the Parser in as well.
+if we passed a Parser in as well.
 
 570
 00:49:09,680 --> 00:49:12,320
- inaudible Parser transformer that takes a Parser
+so symbol is a kind of Parser transformer
+that takes a Parser
 
 571
 00:49:13,760 --> 00:49:15,360
@@ -2543,7 +2548,7 @@ of a language definition.
 
 590
 00:50:22,720 --> 00:50:24,560
-Which you call maybe token Parser
+Which you call makeTokenParser
 
 591
 00:50:26,560 --> 00:50:28,960
@@ -2556,7 +2561,7 @@ And that definition defines these things.
 
 593
 00:50:33,840 --> 00:50:35,120
-How do they begin and end.
+How do comments begin and end.
 
 594
 00:50:35,120 --> 00:50:37,360
@@ -2569,11 +2574,11 @@ Can they be nested etc. etc.
 
 596
 00:50:41,200 --> 00:50:43,040
-And finally you have reserve names
+And finally you have reservedNames
 
 597
 00:50:43,040 --> 00:50:44,800
-and reserve inaudible names.
+and reservedOpNames.
 
 598
 00:50:44,800 --> 00:50:46,880
@@ -2587,12 +2592,12 @@ something from ....
 600
 00:50:48,960 --> 00:50:51,840
 I don't think it has to be
-from your reserve names list,
+from your reservedNames list,
 
 601
 00:50:51,840 --> 00:50:54,480
 but it won't confuse
-that as an identifier phrase.
+that as an identifier name.
 
 602
 00:50:56,800 --> 00:50:57,760
@@ -2604,11 +2609,12 @@ This is a very handy thing to use
 
 604
 00:51:02,880 --> 00:51:04,720
-but we're not going to go into it now.
+but we're not going to be using it right
+now because
 
 605
 00:51:05,200 --> 00:51:06,400
-Our language is simple.
+Our language is so simple.
 
 606
 00:51:22,320 --> 00:51:24,960
@@ -2634,7 +2640,7 @@ And get a little further this time.
 611
 00:52:30,160 --> 00:52:32,640
 Previously we were
-using test file on test.bc
+using testFile on test.bc
 
 612
 00:52:35,760 --> 00:52:36,960
@@ -2646,12 +2652,13 @@ There we go.
 
 614
 00:52:38,160 --> 00:52:40,160
-OC: It looks like it's inaudible
+OC: It looks like it gets all the way to
+the end there.
 
 615
 00:52:40,160 --> 00:52:42,160
 JW: Right. Now we're
-going to test our bc
+going to test.bc
 
 616
 00:52:42,160 --> 00:52:43,440
@@ -2667,12 +2674,13 @@ I'm going to go ahead and commit this.
 
 619
 00:53:05,520 --> 00:53:07,360
-JW: How inaudible
+JW: How are we going to handle let
+binding?
 
 620
 00:53:07,360 --> 00:53:10,080
 We will start by writing
-a Parser for let bindings.
+a parser for let bindings.
 
 621
 00:53:13,360 --> 00:53:14,960
@@ -2707,7 +2715,8 @@ I want letter.
 
 628
 00:53:59,200 --> 00:54:02,880
-OC: So some is like many but it requires at least inaudible.
+OC: So some is like many but it requires
+one or more
 
 629
 00:54:03,840 --> 00:54:04,960
@@ -2724,7 +2733,8 @@ letter returns a character,
 
 632
 00:54:18,160 --> 00:54:20,560
-the aggregate raise a string and then pack it
+the aggregate raises a string and then
+pack it
 
 633
 00:54:20,560 --> 00:54:21,760
@@ -2746,7 +2756,7 @@ JW: Excellent point.
 
 637
 00:54:39,600 --> 00:54:41,440
-OC: Then equals between the keyword .....
+OC: Is there an equals between the keyword .....
 
 638
 00:54:42,080 --> 00:54:44,720
@@ -2755,8 +2765,9 @@ your specification said
 
 639
 00:54:56,320 --> 00:54:58,800
-It's starting to go a
-little out in to space here.
+It's starting to go a little out in to
+space here so let's write it more
+monadically
 
 640
 00:55:34,640 --> 00:55:35,840
@@ -2769,7 +2780,7 @@ that the type of body ....
 
 642
 00:55:43,760 --> 00:55:45,360
-OC: Have you an error out of date
+OC: Is that error out of date
 
 643
 00:55:46,400 --> 00:55:47,600
@@ -2786,7 +2797,7 @@ the background syntax checker
 
 646
 00:55:55,280 --> 00:55:56,240
- inaudible
+Ah
 
 647
 00:55:57,200 --> 00:55:58,800
@@ -2828,12 +2839,12 @@ if anyone makes a reference to it.
 
 656
 00:56:29,280 --> 00:56:30,960
-We want to have data map in scope.
+We want to have Data.Map in scope.
 
 657
 00:56:38,160 --> 00:56:40,560
 We don't JUST want a
-map of text to expression
+map of text to expressions
 
 658
 00:56:40,880 --> 00:56:42,800
@@ -2857,8 +2868,8 @@ We want our evaluator to be recursive.
 
 663
 00:56:59,680 --> 00:57:02,240
-I will have to have
-this made a little trickier.
+I will need to have
+this be a little trickier.
 
 664
 00:57:07,280 --> 00:57:08,880
@@ -2887,7 +2898,7 @@ Which is the perfect job for state.
 
 670
 00:57:28,400 --> 00:57:30,400
-Which means we need to bring in state.
+Which means we need to bring in State.
 
 671
 00:57:35,920 --> 00:57:37,520
@@ -2903,11 +2914,11 @@ Now we are going to say:
 
 674
 00:57:53,520 --> 00:57:55,200
-OC: Modify is from control.state.
+OC: modify is from Control.Monad.State.
 
 675
 00:57:57,600 --> 00:57:59,920
-Env is going to be
+env is going to be
 the modified environment.
 
 676
@@ -2916,15 +2927,16 @@ I'm going to say:
 
 677
 00:58:11,840 --> 00:58:16,080
-Parsec again has its own inaudible
+Parsec again has its own keyword named
+State
 
 678
 00:58:23,280 --> 00:58:24,160
-I need to get env.
+I need to getEnv.
 
 679
 00:58:29,680 --> 00:58:31,280
-OC: Because the env is a new type.
+OC: Because Env is a new type.
 
 680
 00:58:31,520 --> 00:58:32,160
@@ -2932,11 +2944,11 @@ JW: Right
 
 681
 00:58:32,560 --> 00:58:33,440
-OC: That's a back up.
+OC: We need to wrap it back up.
 
 682
 00:58:38,800 --> 00:58:40,080
-Modify returns no value,
+modify returns no value,
 
 683
 00:58:40,480 --> 00:58:42,080
@@ -2944,11 +2956,11 @@ yet we have been saying things
 
 684
 00:58:42,080 --> 00:58:43,520
-return double all the time.
+return as Double all the time.
 
 685
 00:58:49,200 --> 00:58:49,840
-Lets say:
+Let's say:
 
 686
 00:58:55,920 --> 00:58:57,920
@@ -2992,7 +3004,8 @@ OC: Well, you could still put this
 
 695
 00:59:25,600 --> 00:59:29,200
-in the evaluator inaudible may double.
+in the evaluator but then the evaluator
+could return Maybe Double
 
 696
 00:59:29,200 --> 00:59:30,800
@@ -3040,7 +3053,7 @@ JW: I like that idea more,
 706
 00:59:56,400 --> 00:59:58,480
 but for now let's
-go with the maybe idea.
+go with the Maybe idea.
 
 707
 01:00:01,410 --> 01:00:02,820
