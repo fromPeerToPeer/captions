@@ -180,7 +180,7 @@ is not in scope,
 
 42
 00:02:59,360 --> 00:03:01,200
-so I'm going to hit inaudible.
+so I'm going to hit [inaudible].
 
 43
 00:03:05,700 --> 00:03:08,700
@@ -419,7 +419,7 @@ Now if I do 1 plus 2.
 
 96
 00:07:00,700 --> 00:07:02,600
-The Parsers work, it's not re-cursing.
+The Parser is [inaudible], it's not recursive.
 
 97
 00:07:06,500 --> 00:07:09,200
@@ -791,7 +791,7 @@ Could not match.
 
 179
 00:12:30,800 --> 00:12:36,200
-Oh! because inaudible in io.
+Oh! because [inaudible] in IO.
 
 180
 00:12:43,600 --> 00:12:45,200
@@ -848,7 +848,7 @@ Oh! it wanted Text.
 
 192
 00:14:07,300 --> 00:14:19,200
-inaudible
+[inaudible]
 
 193
 00:14:21,600 --> 00:14:26,600
