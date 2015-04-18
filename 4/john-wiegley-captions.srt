@@ -419,7 +419,7 @@ Now if I do 1 plus 2.
 
 96
 00:07:00,700 --> 00:07:02,600
-The Parser is [inaudible], it's not recursive.
+The Parser is aborting, it's not recursing.
 
 97
 00:07:06,500 --> 00:07:09,200
