@@ -349,8 +349,8 @@ OK, so num says
 
 80
 00:06:02,500 --> 00:06:04,500
-I don't want 'read'
-here, I want 'just read'.
+I don't want to 'read'
+here, I don't want to 'just read'.
 
 81
 00:06:05,400 --> 00:06:07,520
@@ -454,7 +454,7 @@ but that's not quite what I want.
 
 104
 00:07:27,000 --> 00:07:28,900
-I want a chance to parse add at least,
+I want a chance to parse add first,
 
 105
 00:07:30,000 --> 00:07:31,600
@@ -664,7 +664,7 @@ because we parsed a number
 150
 00:10:38,700 --> 00:10:41,040
 and it thought it
-should be at the add space.
+should be at space.
 
 151
 00:10:44,400 --> 00:10:49,400
@@ -682,7 +682,7 @@ do now ?
 
 154
 00:11:00,500 --> 00:11:02,400
-Have we got the
+Now that we've got the
 white space in there ?
 
 155
