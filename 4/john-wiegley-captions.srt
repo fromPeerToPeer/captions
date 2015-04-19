@@ -2154,7 +2154,7 @@ I can't remember what the function is
 
 492
 00:42:16,800 --> 00:42:18,600
-to get  input from the command line
+to get input from the command line
 
 493
 00:42:18,600 --> 00:42:19,300
