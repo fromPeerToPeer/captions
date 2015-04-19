@@ -1864,7 +1864,8 @@ infinite loop (laughter).
 
 425
 00:34:56,000 --> 00:34:58,600
-inaudible tracing.
+It'd be nice to know why,
+so let's add some tracing.
 
 426
 00:35:00,600 --> 00:35:02,100
