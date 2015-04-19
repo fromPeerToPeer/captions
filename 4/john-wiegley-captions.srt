@@ -2076,7 +2076,7 @@ First we'll say:
 
 474
 00:39:38,320 --> 00:39:39,760
-I'll go to data.Text library
+I'll go to Data.Text library
 
 475
 00:39:39,760 --> 00:39:41,680
@@ -2084,7 +2084,7 @@ to find out how to partition a string.
 
 476
 00:39:49,900 --> 00:39:52,500
-Partition is not what I
+partition is not what I
 want, I want break or split.
 
 477
