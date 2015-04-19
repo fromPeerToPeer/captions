@@ -1615,32 +1615,35 @@ we're going to follow suit.
 
 368
 00:30:09,600 --> 00:30:11,000
-Now we want chain and add up ....
+Now we want chain in the addop...
 
 369
 00:30:18,200 --> 00:30:20,700
-A lot of good coding can
-come from just copying.
+A lot of good coding can come
+from just copying. (laughter)
 
 370
 00:30:25,600 --> 00:30:26,800
-We don't have parens in ....
+We don't have parens yet...
 
 371
 00:30:28,900 --> 00:30:30,100
-so instead we will call ....
+so instead we will call...
 
 372
 00:30:56,400 --> 00:30:59,000
-If I say that I get inaudible verification,
+If I say that I get
+correct multiplication.
 
 373
 00:30:59,000 --> 00:31:00,400
-and I have five to the front.
+If I add the 5 to the back
+it works as we'd thought.
 
 374
 00:31:00,400 --> 00:31:06,100
-inaudible the back but should also work....
+It also works the same
+if we add it to the front.
 
 375
 00:31:09,500 --> 00:31:11,200
@@ -1648,11 +1651,11 @@ I would like to have parenthesis
 
 376
 00:31:11,700 --> 00:31:13,200
-to see what I can do with this.
+so that we can do this...
 
 377
 00:31:13,800 --> 00:31:15,400
-and if we have them, we will have
+and if we add them, we will have
 
 378
 00:31:16,200 --> 00:31:18,600
@@ -1660,21 +1663,22 @@ satisfied the first three lines of our file.
 
 379
 00:31:19,000 --> 00:31:21,100
-OC: I wonder if now we could inaudible this in
+OC: I wonder now if we
+could try to hook this in
 
 380
 00:31:21,100 --> 00:31:24,000
-to read the file and
-maybe try to parse the entire file
+to read from a file and
+try to parse the entire file
 
 381
 00:31:26,000 --> 00:31:28,000
-and watch the Parser eventually fail
+and watch the Parser eventually fail.
 
 382
 00:31:30,600 --> 00:31:33,500
 We should be ready to
-pars the first two lines I think.
+parse the first two lines I think.
 
 383
 00:31:33,500 --> 00:31:36,400
@@ -1683,15 +1687,16 @@ start emitting some evaluation.
 
 384
 00:31:37,300 --> 00:31:40,500
-JW: inaudible rebel.
+JW: So let's write a function
+that we can call from the REPL...
 
 385
 00:31:40,500 --> 00:31:41,900
-called Test File,
+called testFile...
 
 386
 00:31:42,600 --> 00:31:44,300
-and that will take your file path,
+and that will take a FilePath,
 
 387
 00:31:44,300 --> 00:31:45,600
@@ -1736,7 +1741,7 @@ JW: Right.
 
 397
 00:32:18,200 --> 00:32:19,600
-This will be a series of Xs.
+This will be a series of xs.
 
 398
 00:32:27,700 --> 00:32:28,800
@@ -1744,30 +1749,31 @@ So we're going to say:
 
 399
 00:32:37,800 --> 00:32:41,600
-inaudible is not in scope, this comes from inaudible
+forM_ is not in scope,
+this comes from Control.Monad
 
 400
 00:32:46,100 --> 00:32:48,700
 If I didn't do this, if I
-said control C and Control M
+said Control-c and Control-m...
 
 401
 00:32:49,600 --> 00:32:52,700
-It would suggest to me all
+it would suggest to me all
 the modules that it knows about.
 
 402
 00:32:53,200 --> 00:32:55,500
-inaudible control monad,
+If I select Control.Monad...
 
 403
 00:32:56,500 --> 00:32:58,200
-It will put it with the explicit.
+it will put it with the explicit.
 
 404
 00:33:01,200 --> 00:33:04,000
 OC: Is that coming from
-the normal Haskell mode for emacs
+the normal Haskell mode for Emacs
 
 405
 00:33:04,400 --> 00:33:06,300
@@ -1775,15 +1781,16 @@ or is it an extra extension you have ?
 
 406
 00:33:07,000 --> 00:33:07,900
-JW: Let's see .....
+JW: Let's see...
 
 407
 00:33:11,600 --> 00:33:13,400
-GHC ins-mod is providing that feature.
+ghc-ins-mod is providing that feature.
 
 408
 00:33:17,100 --> 00:33:22,000
-I use Haskell mode and I use GHC mod and hdevtools.
+I use Haskell mode and I use
+ghc-mod and hdevtools.
 
 409
 00:33:22,700 --> 00:33:25,000
@@ -1792,11 +1799,11 @@ jumps to the local Hoogle
 
 410
 00:33:25,000 --> 00:33:26,800
-is a patch that I did on GHC mod code
+is a patch that I did on ghc-mod's code
 
 411
 00:33:29,300 --> 00:33:32,500
-To jump over to the Hoogle I
+to jump over to the Hoogle I
 have running on my local machine.
 
 412
@@ -1810,7 +1817,7 @@ to the Parser.
 
 414
 00:33:41,200 --> 00:33:42,800
-Get contents .... I want read file.
+getContents... Ahh, I want readFile.
 
 415
 00:33:56,600 --> 00:33:58,200
@@ -1827,7 +1834,7 @@ I need to pack the string.
 
 418
 00:34:19,500 --> 00:34:29,700
-inaudible
+[inaudible]
 
 419
 00:34:38,200 --> 00:34:40,800
@@ -1836,19 +1843,19 @@ this is going to do (laughter).
 
 420
 00:34:40,800 --> 00:34:42,400
-not all of this file will parse
+Not all of this file will parse
 
 421
 00:34:44,200 --> 00:34:45,500
-so we will cut it out of it
+so we will take a cut out of it
 
 422
 00:34:46,200 --> 00:34:47,200
-and call it 'Test BC'
+and call it test.bc
 
 423
 00:34:48,000 --> 00:34:49,200
-Then I'm going to write:
+Then I'm going to run this on test.bc
 
 424
 00:34:51,800 --> 00:34:54,000
@@ -1857,7 +1864,8 @@ infinite loop (laughter).
 
 425
 00:34:56,000 --> 00:34:58,600
-inaudible tracing.
+It'd be nice to know why,
+so let's add some tracing.
 
 426
 00:35:00,600 --> 00:35:02,100
@@ -1870,7 +1878,7 @@ when I'm initially developing.
 428
 00:35:09,200 --> 00:35:11,700
 I want to know when
-expression is being called.
+expr is being called.
 
 429
 00:35:17,000 --> 00:35:19,000
@@ -1878,7 +1886,8 @@ The tricky thing about doing traces
 
 430
 00:35:19,000 --> 00:35:21,300
-is that it's not like print in inaudible language.
+is that it's not like 'print'
+in an imperative language.
 
 431
 00:35:22,900 --> 00:35:24,700
@@ -1886,7 +1895,7 @@ It's not going to print a statement
 
 432
 00:35:24,700 --> 00:35:26,400
-as soon as it enters expression.
+as soon as it enters expr.
 
 433
 00:35:28,400 --> 00:35:30,500
@@ -1895,8 +1904,7 @@ string to be printed
 
 434
 00:35:30,500 --> 00:35:32,700
-when expressions
-result gets evaluated.
+when expr's result gets evaluated.
 
 435
 00:35:33,500 --> 00:35:35,600
@@ -1909,20 +1917,21 @@ Debugging at a distance.
 
 437
 00:35:40,500 --> 00:35:42,900
-OC: So this is more
-down to Haskells laziness
+OC: So this is where Haskell's laziness
 
 438
 00:35:42,900 --> 00:35:44,900
-rather than a inaudible.
+is more of a pain point than a benefit.
 
 439
 00:35:44,900 --> 00:35:47,800
-JW: It makes it harder to find out inaudible.
+JW: It makes it harder to find out
+when things are happening.
 
 440
 00:35:47,800 --> 00:35:49,500
-So we are seeing the expression
+So we are seeing that
+the expression is
 
 441
 00:35:49,500 --> 00:35:50,700
@@ -1930,17 +1939,17 @@ only being called once.
 
 442
 00:35:51,100 --> 00:35:53,800
-Our internet recursion
+Our infinite recursion
 is happening elsewhere.
 
 443
 00:35:58,500 --> 00:36:01,200
-My first version of many
-parsers will have tracers.
+My first version of many parsers will
+have tracers on every function (laughter)
 
 444
 00:36:02,900 --> 00:36:05,300
-So I can watch what's
+so I can watch what's
 happening as it's going.
 
 445
@@ -1950,7 +1959,7 @@ I have a keyboard macro.
 
 446
 00:36:26,100 --> 00:36:27,600
-So we get to 'addop' and we stop.
+So we get to addop and we stop.
 
 447
 00:36:27,600 --> 00:36:28,500
@@ -1962,7 +1971,7 @@ We don't have a minus symbol.
 
 449
 00:37:06,000 --> 00:37:07,900
-we're getting no output whatsoever.
+We're getting no output whatsoever.
 
 450
 00:37:08,700 --> 00:37:10,000
@@ -1970,7 +1979,7 @@ Oh! there we go, same place.
 
 451
 00:37:12,800 --> 00:37:18,400
-OC: And if we run our test again inaudible one plus.
+OC: And if we run our test again ?
 
 452
 00:37:21,400 --> 00:37:22,300
@@ -2012,12 +2021,13 @@ recursion happening somewhere.
 
 461
 00:37:58,000 --> 00:38:03,600
-Let's look for the file inaudible
+Let's split the file up into lines
+and do this differently:
 
 462
 00:38:20,100 --> 00:38:22,500
- Now we would expect
-that we would get the two
+Now we would expect
+that we would get the 2.0
 
 463
 00:38:23,100 --> 00:38:24,000
@@ -2029,7 +2039,7 @@ If we go back to what we had before
 
 465
 00:38:29,500 --> 00:38:32,700
-It's failing parse inaudible comments.
+It's failing parse these comments.
 
 466
 00:38:34,400 --> 00:38:36,200
@@ -2041,15 +2051,15 @@ JW: Yes.
 
 468
 00:38:39,100 --> 00:38:41,600
-OC: Cool, we don't have inaudible.
+OC: Cool, we don't have parentheses.
 
 469
 00:38:43,600 --> 00:38:45,920
-We definitely want to strip out  the comments.
+We definitely want to strip out the comments.
 
 470
 00:38:50,200 --> 00:38:52,200
-Let's write a function called visage.
+Let's write a function called massage.
 
 471
 00:38:54,200 --> 00:38:55,800
@@ -2066,7 +2076,7 @@ First we'll say:
 
 474
 00:39:38,320 --> 00:39:39,760
-I'll go to data.Text library
+I'll go to Data.Text library
 
 475
 00:39:39,760 --> 00:39:41,680
@@ -2074,13 +2084,13 @@ to find out how to partition a string.
 
 476
 00:39:49,900 --> 00:39:52,500
-Partition is not what I
+partition is not what I
 want, I want break or split.
 
 477
 00:40:15,400 --> 00:40:18,160
-we're never going to have
-the hash B a valid character.
+We're never going to have
+the hash be a valid character.
 
 478
 00:40:19,600 --> 00:40:20,640
@@ -2088,7 +2098,7 @@ So we're going to say:
 
 479
 00:41:32,000 --> 00:41:33,600
-OC: Plus the parenthesis again.
+OC: That's the parentheses again.
 
 480
 00:41:35,300 --> 00:41:37,300
@@ -2115,7 +2125,7 @@ We know we have to do parens
 
 485
 00:41:51,600 --> 00:41:52,960
-and a mass of other things.
+and a couple of other things.
 
 486
 00:41:53,600 --> 00:41:55,000
@@ -2123,15 +2133,16 @@ What I would like to do next
 
 487
 00:41:57,000 --> 00:41:58,160
-is do it in Rebel style.
+is do it in a REPL style.
 
 488
 00:41:59,100 --> 00:42:03,000
-So that I can use this on the command line for inaudible.
+So that I could use this on
+the command line for example.
 
 489
 00:42:03,000 --> 00:42:05,100
-We want to have a function called rebel.
+We want to have a function called repl.
 
 490
 00:42:05,100 --> 00:42:06,800
@@ -2143,11 +2154,11 @@ I can't remember what the function is
 
 492
 00:42:16,800 --> 00:42:18,600
-to get  input from the command line
+to get input from the command line
 
 493
 00:42:18,600 --> 00:42:19,300
-Is it get line ?
+Is it getLine ?
 
 494
 00:42:22,300 --> 00:42:23,500
@@ -2163,7 +2174,7 @@ That would be interesting to look at.
 
 497
 00:42:27,700 --> 00:42:29,700
-Let's hop over to interact inaudible.
+Let's hop over to interact:
 
 498
 00:42:32,200 --> 00:42:34,700
@@ -2180,12 +2191,12 @@ and run it against our test.
 
 501
 00:42:45,100 --> 00:42:47,100
-This one is in io, which is unfortunate.
+This one is in IO, which is unfortunate.
 
 502
 00:42:51,000 --> 00:42:53,200
 There's no reason this
-function should be in io
+function should be in IO
 
 503
 00:42:53,200 --> 00:42:54,600
@@ -2201,33 +2212,34 @@ Let this be:
 
 506
 00:43:23,000 --> 00:43:25,300
-I guess it would be more appropriate inaudible
+I guess it would be more appropriate
+to call it evalText.
 
 507
 00:43:25,600 --> 00:43:26,800
-And our test is going to ....
+And our test is going to...
 
 508
 00:43:38,400 --> 00:43:40,900
-That inaudible not actually a unit code character.
+That's not really a unicode character.
 
 509
 00:43:40,900 --> 00:43:42,400
-OC: That's the inaudible dot
+OC: That's actually the ASCII 'dot'.
 
 510
 00:43:42,400 --> 00:43:44,100
-JW: Yes but UNIX has this way to say
+JW: Yes but Emacs has this way to say
 
 511
 00:43:45,500 --> 00:43:48,300
-when you see this type
-of character in this context,
+'when you see this type
+of character in this context,'
 
 512
 00:43:48,800 --> 00:43:51,000
-then show me
-this other character instead.
+then, 'show me
+this other character instead.'
 
 513
 00:43:52,700 --> 00:43:53,300
@@ -2235,12 +2247,12 @@ When I type:
 
 514
 00:43:57,900 --> 00:44:00,100
-I like to see the
+I'd like to see the
 mathematical notations
 
 515
 00:44:01,100 --> 00:44:03,280
-OC: And your doing
+OC: And you're doing
 the same with the arrow
 
 516
@@ -2249,33 +2261,34 @@ and the double colon above.
 
 517
 00:44:04,600 --> 00:44:05,500
-JW: And this arrow,
+JW: And this arrow and a
+few other things.
 
 518
 00:44:07,500 --> 00:44:12,000
-I have a few things inaudible incoming arrow.
+I have one for the proc incoming arrow.
 
 519
 00:44:14,800 --> 00:44:16,200
-I interact with eval text,
+I interact with evalText,
 
 520
 00:44:17,500 --> 00:44:21,500
-which simply needs to pack inaudible
+which simply needs to pack and unpack.
 
 521
 00:44:22,500 --> 00:44:25,100
 There's no particular
-reason I'm using data.text.
+reason I'm using Data.Text.
 
 522
 00:44:28,900 --> 00:44:30,900
-OC: I think interact already runs for a ....
+OC: I think interact already runs forever.
 
 523
 00:44:32,900 --> 00:44:35,500
-The idea with interact
-is you get a lazy strain
+The idea of interact
+is you get a lazy string
 
 524
 00:44:35,500 --> 00:44:36,800
@@ -2283,16 +2296,16 @@ of all of standard input.
 
 525
 00:44:37,700 --> 00:44:39,800
-And you deliver a lazy string with that.
+And you deliver a lazy string of output.
 
 526
 00:44:40,200 --> 00:44:42,800
 So you might want to
-split that into lines again.
+split that into lines again
 
 527
 00:44:44,300 --> 00:44:45,600
-Eval text over each line.
+then evalText over each line.
 
 528
 00:44:47,400 --> 00:44:48,000
@@ -2300,19 +2313,19 @@ JW: Right.
 
 529
 00:44:49,300 --> 00:44:50,900
-Well if I'm going to be on a rebel....
+Well if I'm going to be on a REPL...
 
 530
 00:44:51,400 --> 00:44:52,300
-Lets take a look....
+Lets take a look...
 
 531
 00:44:56,500 --> 00:44:57,400
-Oh yes your right.
+Oh yes you're right.
 
 532
 00:44:58,000 --> 00:44:59,400
-it takes the entire input.
+It takes the entire input.
 
 533
 00:45:02,800 --> 00:45:04,300
