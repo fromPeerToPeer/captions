@@ -4861,11 +4861,13 @@ we're going to parse a sub-expression.
 
 1124
 01:34:53,290 --> 01:34:54,470
-Then we're going to say:
+Then we're going to say: return that
+as an application of name to arg.
 
 1125
 01:35:07,640 --> 01:35:11,760
-inaudible
+"Type error says Ollie!"
+OC: [Laughs] Well I didn't say it but...
 
 1126
 01:35:11,760 --> 01:35:13,410
