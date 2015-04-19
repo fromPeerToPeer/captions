@@ -4647,7 +4647,7 @@ Now we want to sequence through.
 
 1075
 01:31:08,000 --> 01:31:09,520
- We want to fold down the body.
+We want to fold down the body.
 
 1076
 01:31:11,520 --> 01:31:13,290
@@ -4879,7 +4879,7 @@ does define evaluate to.
 
 1130
 01:35:27,760 --> 01:35:30,000
- It evaluates to the
+It evaluates to the
 body of the function.
 
 1131
@@ -5318,7 +5318,7 @@ good place for us to check in.
 
 1235
 01:44:00,230 --> 01:44:00,940
- OC: Awesome!
+OC: Awesome!
 
 1236
 01:44:07,410 --> 01:44:10,000
