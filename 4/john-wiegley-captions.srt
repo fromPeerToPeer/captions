@@ -2229,7 +2229,7 @@ OC: That's actually the ASCII 'dot'.
 
 510
 00:43:42,400 --> 00:43:44,100
-JW: Yes but UNIX has this way to say
+JW: Yes but Emacs has this way to say
 
 511
 00:43:45,500 --> 00:43:48,300
