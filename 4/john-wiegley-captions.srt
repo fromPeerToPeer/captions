@@ -5230,16 +5230,18 @@ I think we have to use data.foldable
 
 1208
 01:42:09,640 --> 01:42:12,000
-which in real
-world projects is very useful.
+which in real world projects
+that's exactly what I do.
 
 1209
 01:42:15,410 --> 01:42:18,230
-Look at that inaudible
+Look at that! We evaled it.
+OC: Wonderful.
 
 1210
 01:42:20,110 --> 01:42:21,529
-So we have 5 equaling 1 plus...
+JC: So we have Phi equaling
+1 plus double...
 
 1211
 01:42:24,470 --> 01:42:25,640
@@ -5252,10 +5254,11 @@ We are missing a parenthesis
 1213
 01:42:28,350 --> 01:42:30,110
 and yet we didn't get a syntax there.
+OC: [Laughs]
 
 1214
 01:42:31,410 --> 01:42:33,760
-Let me see what
+JC: Let me see what
 happens if I do that directly.
 
 1215
