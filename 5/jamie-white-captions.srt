@@ -263,7 +263,7 @@ trail in this local project.
 62
 00:04:42,530 --> 00:04:48,830
 You'll find this sim-link
-here going to user local modules. 
+here going to user local modules.
 
 63
 00:04:52,370 --> 00:04:56,780
@@ -1219,7 +1219,7 @@ which is that our list of episodes are in order of time,
 
 288
 00:26:50,754 --> 00:26:53,188
-and therefore a prequel isn't going to appear 
+and therefore a prequel isn't going to appear
 
 289
 00:26:53,188 --> 00:26:57,611
@@ -5359,7 +5359,7 @@ I would be inclined to reach for inaudible
 
 1269
 01:50:30,057 --> 01:50:34,100
-or potentially D3 which has some 
+or potentially D3 which has some
 
 1270
 01:50:34,100 --> 01:50:38,217
@@ -5434,7 +5434,7 @@ hurt too much at this point.
 1286
 01:51:38,460 --> 01:51:40,754
 DN: The ideal promise
-will spring into your head 
+will spring into your head
 
 1287
 01:51:40,754 --> 01:51:42,697
