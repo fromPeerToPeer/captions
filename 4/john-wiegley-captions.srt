@@ -2221,11 +2221,11 @@ And our test is going to...
 
 508
 00:43:38,400 --> 00:43:40,900
-That inaudible not actually a unit code character.
+That's not really a unicode character.
 
 509
 00:43:40,900 --> 00:43:42,400
-OC: That's the inaudible dot
+OC: That's actually the ASCII 'dot'.
 
 510
 00:43:42,400 --> 00:43:44,100
