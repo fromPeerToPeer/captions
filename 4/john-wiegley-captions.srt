@@ -4968,7 +4968,7 @@ JW: Unknown function double.
 
 1148
 01:36:34,940 --> 01:36:37,170
-But we did just
+OC: But we did just
 define a function double.
 
 1149
@@ -4981,7 +4981,8 @@ We need to go to define and find out
 
 1151
 01:36:46,230 --> 01:36:48,110
-why it did not get inserted into the...
+why it did not get
+inserted into the environment
 
 1152
 01:36:52,820 --> 01:36:53,760
@@ -4997,7 +4998,7 @@ JW: And the blue line is telling us
 
 1155
 01:36:58,580 --> 01:37:00,230
-"your not doing anything with me".
+"your not doing anything with name".
 
 1156
 01:37:03,764 --> 01:37:04,700
