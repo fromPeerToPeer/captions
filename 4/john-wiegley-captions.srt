@@ -5093,7 +5093,8 @@ it can elide out the rest.
 
 1177
 01:39:16,350 --> 01:39:18,000
-OC: It should be forcing us inaudible
+OC: But we're in a monad, so it
+should be forcing us to be [inaudible].
 
 1178
 01:39:18,000 --> 01:39:19,050
