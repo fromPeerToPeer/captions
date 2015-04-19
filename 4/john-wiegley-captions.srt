@@ -5102,11 +5102,13 @@ JW:  Your right.
 
 1179
 01:39:22,110 --> 01:39:25,050
-OC: Maybe in our inaudible file
+OC: Maybe in our function
+that reads from the file
 
 1180
 01:39:26,820 --> 01:39:28,940
-we print environment after every step.
+we could print the environment
+after every step.
 
 1181
 01:39:28,940 --> 01:39:30,235
