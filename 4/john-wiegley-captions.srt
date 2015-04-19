@@ -5089,7 +5089,7 @@ If it's just returning zero
 
 1176
 01:39:12,820 --> 01:39:15,410
-it can inaudible out the rest.
+it can elide out the rest.
 
 1177
 01:39:16,350 --> 01:39:18,000
