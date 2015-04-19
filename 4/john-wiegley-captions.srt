@@ -1834,7 +1834,9 @@ I need to pack the string.
 
 418
 00:34:19,500 --> 00:34:29,700
-[inaudible]
+OC: I guess parse is a pure function.
+JW: Yeah, we're working with pure functions here
+Good thing!
 
 419
 00:34:38,200 --> 00:34:40,800
