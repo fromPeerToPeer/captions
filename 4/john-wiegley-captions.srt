@@ -1764,7 +1764,7 @@ the modules that it knows about.
 
 402
 00:32:53,200 --> 00:32:55,500
-inaudible control monad,
+If I select Control.Monad...
 
 403
 00:32:56,500 --> 00:32:58,200
