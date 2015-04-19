@@ -1687,7 +1687,8 @@ start emitting some evaluation.
 
 384
 00:31:37,300 --> 00:31:40,500
-JW: inaudible rebel.
+JW: So let's write a function
+that we can call from the REPL...
 
 385
 00:31:40,500 --> 00:31:41,900
