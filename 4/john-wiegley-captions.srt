@@ -2137,7 +2137,8 @@ is do it in a REPL style.
 
 488
 00:41:59,100 --> 00:42:03,000
-So that I can use this on the command line for inaudible.
+So that I could use this on
+the command line for example.
 
 489
 00:42:03,000 --> 00:42:05,100
