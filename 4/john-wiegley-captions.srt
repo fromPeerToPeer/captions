@@ -5042,15 +5042,16 @@ Elam should have two arguments.
 
 1165
 01:38:03,170 --> 01:38:05,760
-Oh ! the inaud..
+Oh! The Show-er
 
 1166
 01:38:06,700 --> 01:38:07,640
 We're going to say:
+I like the way Lisp does it.
 
 1167
 01:38:24,350 --> 01:38:26,000
-Yehey ! unknown function double.
+Yehey! Unknown function double.
 
 1168
 01:38:26,820 --> 01:38:29,410
