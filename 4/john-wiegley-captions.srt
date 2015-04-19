@@ -4763,15 +4763,20 @@ Which makes sense.
 
 1102
 01:33:08,940 --> 01:33:13,050
-inaudible first argument.
+Couldn't match expected type
+first argument.
 
 1103
 01:33:14,580 --> 01:33:16,580
-This is now just going to be the value.
+This is now just going to be the value
+we wanted, so we can just return it.
 
 1104
 01:33:22,820 --> 01:33:23,640
-Type check time.
+It type checked!
+OC: [Laughs]
+JC: I continue to be
+perhaps incorrectly amazed.
 
 1105
 01:33:36,350 --> 01:33:38,230
