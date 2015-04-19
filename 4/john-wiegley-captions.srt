@@ -2212,7 +2212,8 @@ Let this be:
 
 506
 00:43:23,000 --> 00:43:25,300
-I guess it would be more appropriate inaudible
+I guess it would be more appropriate
+to call it evalText.
 
 507
 00:43:25,600 --> 00:43:26,800
