@@ -1895,7 +1895,7 @@ It's not going to print a statement
 
 432
 00:35:24,700 --> 00:35:26,400
-as soon as it enters expression.
+as soon as it enters expr.
 
 433
 00:35:28,400 --> 00:35:30,500
@@ -1904,8 +1904,7 @@ string to be printed
 
 434
 00:35:30,500 --> 00:35:32,700
-when expressions
-result gets evaluated.
+when expr's result gets evaluated.
 
 435
 00:35:33,500 --> 00:35:35,600
