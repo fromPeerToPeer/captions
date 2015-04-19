@@ -2217,7 +2217,7 @@ to call it evalText.
 
 507
 00:43:25,600 --> 00:43:26,800
-And our test is going to ....
+And our test is going to...
 
 508
 00:43:38,400 --> 00:43:40,900
