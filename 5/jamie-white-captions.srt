@@ -194,11 +194,11 @@ directions to go in once you set up.
 
 46
 00:03:32,260 --> 00:03:34,960
-Let me see what version of Ember.cli I'm running.
+Let me see what version of Ember CLI I'm running.
 
 47
 00:03:35,250 --> 00:03:38,040
-Cool... bleeding edge Ember.cli.
+Cool... Bleeding edge Ember CLI.
 
 48
 00:03:39,420 --> 00:03:40,560
@@ -206,7 +206,7 @@ Let's call this:
 
 49
 00:03:48,900 --> 00:03:52,450
-Ember.cli will provide all the
+Ember CLI will provide all the
 tools and dependencies we need.
 
 50
@@ -220,7 +220,7 @@ there's quite a few of them.
 
 52
 00:04:04,260 --> 00:04:08,525
-Because I'm using a local copy of Ember.cli inaudible.
+Because I'm using a local copy of Ember CLI inaudible.
 
 53
 00:04:08,925 --> 00:04:10,137
@@ -228,7 +228,7 @@ I got it off Github.
 
 54
 00:04:11,300 --> 00:04:13,460
-With mpm, what you tend to do
+With npm, what you tend to do
 
 55
 00:04:13,460 --> 00:04:17,550
@@ -236,7 +236,7 @@ when working on packages that you're adapting.
 
 56
 00:04:17,600 --> 00:04:20,990
-Is to... you do mpm link and it will simlink up
+Is to... You do npm link and it will symlink up
 
 57
 00:04:22,390 --> 00:04:27,657
@@ -249,7 +249,7 @@ I cant use it straight away,
 
 59
 00:04:30,050 --> 00:04:32,050
-I need to first enter the Ember mpm link cli.
+I need to first enter the Ember npm link cli.
 
 60
 00:04:33,260 --> 00:04:35,680
@@ -262,16 +262,16 @@ trail in this local project.
 
 62
 00:04:42,530 --> 00:04:48,830
-You'll find this sim-link
+You'll find this symlink
 here going to user local modules.
 
 63
 00:04:52,370 --> 00:04:56,780
-The modules at cli links to my very own copy of it.
+The modules at CLI links to my very own copy of it.
 
 64
 00:04:57,810 --> 00:04:59,120
-It's a nicety of mpm.
+It's a nicety of npm.
 
 65
 00:05:14,520 --> 00:05:16,100
@@ -325,7 +325,7 @@ some significant improvements and this
 
 77
 00:06:16,420 --> 00:06:19,090
-Cli and inaudible use the future
+CLI and inaudible use the future
 
 78
 00:06:23,700 --> 00:06:26,660
@@ -454,7 +454,7 @@ all these differences.
 
 108
 00:08:29,990 --> 00:08:33,142
-So beeding edge Ember in the future...
+So bleeding edge Ember in the future...
 
 109
 00:08:33,220 --> 00:08:36,340
@@ -633,11 +633,11 @@ So we'll put them in.
 150
 00:11:56,130 --> 00:12:01,634
 So we now should be able to
-fetch down from lol host\API\episodes
+fetch down from lolhost/api/episodes
 
 151
 00:12:01,890 --> 00:12:06,045
-lol host is because a inaudible
+lolhost is because a inaudible
 
 152
 00:12:12,777 --> 00:12:14,571
@@ -731,7 +731,7 @@ JW: Yes (laughter).
 
 174
 00:14:18,620 --> 00:14:20,754
-DN: The episode of json I think is already...
+DN: The episode of JSON I think is already...
 
 175
 00:14:20,840 --> 00:14:23,200
@@ -1532,7 +1532,7 @@ and I'm going to try to use it here.
 
 361
 00:33:09,140 --> 00:33:11,920
-This is all using the s6 module syntax
+This is all using the ES6 module syntax
 
 362
 00:33:12,590 --> 00:33:15,760
@@ -1625,7 +1625,7 @@ might be a good thing to do...
 
 382
 00:34:36,890 --> 00:34:40,080
-a way to represent this in HGML,
+a way to represent this in HTML,
 
 383
 00:34:40,710 --> 00:34:42,080
@@ -1704,7 +1704,7 @@ who have played a part in Peer to Peer
 
 401
 00:36:02,160 --> 00:36:04,570
-click on somebodys
+click on somebody's
 name and see the episode
 
 402
@@ -1713,8 +1713,7 @@ they first appeared in.
 
 403
 00:36:05,980 --> 00:36:08,990
-And then see the
-the sequels
+And then see the sequels
 
 404
 00:36:09,810 --> 00:36:11,460
@@ -1851,7 +1850,7 @@ Toms episode has no prequel
 
 436
 00:38:34,020 --> 00:38:36,020
-and Ollies episode has no prequel.
+and Ollie's episode has no prequel.
 
 437
 00:38:37,580 --> 00:38:39,530
@@ -2281,7 +2280,7 @@ Oh that's curious...
 
 537
 00:48:06,380 --> 00:48:07,460
-Oh that's interesing.
+Oh that's interesting.
 
 538
 00:48:08,620 --> 00:48:09,830
@@ -2505,7 +2504,7 @@ I'll just check out...
 
 590
 00:52:40,830 --> 00:52:43,428
-DN: Switch to different Ember cli.
+DN: Switch to different Ember CLI.
 
 591
 00:52:43,428 --> 00:52:46,980
@@ -2528,7 +2527,7 @@ We spent almost 10 minutes troubleshooting this issue.
 595
 00:52:57,850 --> 00:53:01,090
 But, switching to the
-latest stable release of Ember cli
+latest stable release of Ember CLI
 
 596
 00:53:01,090 --> 00:53:02,530
@@ -3043,7 +3042,7 @@ but the data that we're working with
 719
 01:04:14,290 --> 01:04:17,860
 looks quite a lot like what
-active model serialiser would yield.
+active model serializer would yield.
 
 720
 01:04:18,560 --> 01:04:19,860
@@ -3196,7 +3195,7 @@ from one format to the other?
 
 755
 01:07:47,330 --> 01:07:49,280
-It's all happening in the serialiser
+It's all happening in the serializer
 
 756
 01:07:49,490 --> 01:07:50,180
@@ -3241,7 +3240,7 @@ So let's say:
 
 766
 01:08:19,080 --> 01:08:21,050
-We don't want a serialiser
+We don't want a serializer
 
 767
 01:08:21,330 --> 01:08:22,780
@@ -3487,7 +3486,7 @@ by quite a lot all at once.
 
 824
 01:13:06,850 --> 01:13:11,510
-inaudible serialiser change the template a bit.
+inaudible serializer change the template a bit.
 
 825
 01:13:11,510 --> 01:13:13,510
@@ -3772,7 +3771,7 @@ Which is the central book keeping object.
 
 892
 01:17:49,570 --> 01:17:51,600
-And it makes sure your always geting
+And it makes sure your always getting
 
 893
 01:17:51,800 --> 01:17:53,910
@@ -3916,7 +3915,7 @@ anywhere it's used in the template.
 
 926
 01:21:29,070 --> 01:21:30,980
-Camelcase challenge name,
+CamelCase challenge name,
 
 927
 01:21:31,530 --> 01:21:33,050
@@ -3953,7 +3952,7 @@ and I feel that it's going to be
 
 935
 01:22:01,660 --> 01:22:04,060
-more fun just to play in the ui,
+more fun just to play in the UI,
 
 936
 01:22:04,110 --> 01:22:06,330
@@ -4141,7 +4140,7 @@ But maybe it's OK.
 981
 01:26:03,500 --> 01:26:06,020
 A bunch of cosmetic
-stuff... let's just add that.
+stuff... Let's just add that.
 
 982
 01:26:14,050 --> 01:26:17,700
@@ -4583,11 +4582,11 @@ this would be the hard part.
 
 1087
 01:35:16,050 --> 01:35:18,050
-It's a suprise.
+It's a surprise.
 
 1088
 01:35:24,909 --> 01:35:27,772
-What is it... when we start with a list
+What is it... When we start with a list
 
 1089
 01:35:27,770 --> 01:35:30,964
@@ -4840,7 +4839,7 @@ Building a Basic Calculator.
 
 1147
 01:40:15,110 --> 01:40:18,509
-And back there and... for good measure:
+And back there and... For good measure:
 
 1148
 01:40:20,680 --> 01:40:22,548
@@ -5182,7 +5181,7 @@ Let's say:
 
 1227
 01:46:28,624 --> 01:46:30,680
-CN: I would say featuring guest name.
+DN: I would say featuring guest name.
 
 1228
 01:46:34,656 --> 01:46:37,560
@@ -5216,7 +5215,7 @@ so I've lost that new episode.
 
 1235
 01:46:57,192 --> 01:47:00,000
-Featuring... there's no name, so I'll add that.
+Featuring... There's no name, so I'll add that.
 
 1236
 01:47:21,832 --> 01:47:24,232
@@ -5256,7 +5255,7 @@ in one central place.
 
 1245
 01:48:04,296 --> 01:48:05,824
-DN: OK... check it in.
+DN: OK... Check it in.
 
 1246
 01:48:05,820 --> 01:48:06,440
@@ -5396,7 +5395,7 @@ essence it's because of this odd
 
 1278
 01:51:09,771 --> 01:51:15,737
-thing of needing to... in the
+thing of needing to... In the
 same way you want to carry a monad,
 
 1279
