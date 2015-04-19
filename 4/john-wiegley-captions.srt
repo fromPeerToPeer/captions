@@ -2301,7 +2301,7 @@ And you deliver a lazy string of output.
 526
 00:44:40,200 --> 00:44:42,800
 So you might want to
-split that into lines again.
+split that into lines again
 
 527
 00:44:44,300 --> 00:44:45,600
