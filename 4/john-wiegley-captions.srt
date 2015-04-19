@@ -31,7 +31,7 @@ Our host is Ollie Charles.
 8
 00:00:19,400 --> 00:00:21,920
 And the challenge that
-he set for John is called ...
+he set for John is called...
 
 9
 00:00:26,300 --> 00:00:28,080
@@ -132,7 +132,7 @@ takes two expressions.
 
 31
 00:02:14,000 --> 00:02:15,700
-Which means I will need a number ....
+Which means I will need a number...
 
 32
 00:02:21,900 --> 00:02:23,800
@@ -158,7 +158,7 @@ We'll call this num.
 
 37
 00:02:39,800 --> 00:02:41,500
-And the number a Parser will take ....
+And the number a Parser will take...
 
 38
 00:02:45,500 --> 00:02:47,100
@@ -221,7 +221,7 @@ then oneOf should be fine.
 
 51
 00:03:27,900 --> 00:03:29,200
-Same with many, many is in ....
+Same with many, many is in...
 
 52
 00:03:31,800 --> 00:03:33,000
@@ -253,11 +253,11 @@ definition, it will be fine.
 
 58
 00:04:05,200 --> 00:04:06,900
-There we are.... everything parses.
+There we are... everything parses.
 
 59
 00:04:08,500 --> 00:04:10,100
-Let me see if I can load this in ....
+Let me see if I can load this in...
 
 60
 00:04:12,900 --> 00:04:16,000
@@ -322,7 +322,7 @@ And that will yield an expression.
 74
 00:05:11,700 --> 00:05:14,400
 Again, I'm using the
-applicative style to call ....
+applicative style to call...
 
 75
 00:05:19,400 --> 00:05:21,200
@@ -375,7 +375,7 @@ JW: Correct.
 
 86
 00:06:20,000 --> 00:06:21,840
-I've forgotten the plus symbol here ....
+I've forgotten the plus symbol here...
 
 87
 00:06:29,200 --> 00:06:31,400
@@ -878,7 +878,7 @@ OC: I wonder if that trailing white space
 
 199
 00:15:07,100 --> 00:15:08,700
-might cause us some problems....
+might cause us some problems...
 
 200
 00:15:08,700 --> 00:15:10,700
@@ -1136,7 +1136,7 @@ So in that case:
 
 258
 00:20:46,600 --> 00:20:47,900
-Unrecognised operator ....
+Unrecognised operator...
 
 259
 00:20:54,900 --> 00:20:56,700
@@ -1179,11 +1179,11 @@ JW: That's right, but we will say
 
 268
 00:21:54,200 --> 00:21:55,680
-we want term, chainl1 and ....
+we want term, chainl1 and...
 
 269
 00:22:06,500 --> 00:22:07,700
-The addop is going to be ......
+The addop is going to be...
 
 270
 00:22:11,000 --> 00:22:13,800
@@ -1322,7 +1322,7 @@ JW: Much cleaner.
 
 300
 00:24:44,700 --> 00:24:46,600
-Based on the example that they gave ...
+Based on the example that they gave...
 
 301
 00:24:48,600 --> 00:24:50,900
@@ -1344,11 +1344,11 @@ we're going to say:
 
 305
 00:24:59,500 --> 00:25:00,600
-We want subtraction ....
+We want subtraction...
 
 306
 00:25:04,200 --> 00:25:05,800
-multiplication and division ....
+multiplication and division...
 
 307
 00:25:08,200 --> 00:25:10,080
@@ -1419,7 +1419,7 @@ want the fractional numbers...
 
 322
 00:26:11,500 --> 00:26:13,200
-And now our num will have to say ....
+And now our num will have to say...
 
 323
 00:26:18,900 --> 00:26:21,600
@@ -1433,11 +1433,11 @@ assign to floating point numbers.
 
 325
 00:26:32,100 --> 00:26:33,000
-We want a number .....
+We want a number...
 
 326
 00:26:34,800 --> 00:26:35,500
-followed by ....
+followed by...
 
 327
 00:26:37,500 --> 00:26:40,400
@@ -1615,7 +1615,7 @@ we're going to follow suit.
 
 368
 00:30:09,600 --> 00:30:11,000
-Now we want chain and add up ....
+Now we want chain and add up...
 
 369
 00:30:18,200 --> 00:30:20,700
@@ -1624,11 +1624,11 @@ come from just copying.
 
 370
 00:30:25,600 --> 00:30:26,800
-We don't have parens in ....
+We don't have parens in...
 
 371
 00:30:28,900 --> 00:30:30,100
-so instead we will call ....
+so instead we will call...
 
 372
 00:30:56,400 --> 00:30:59,000
@@ -1640,7 +1640,7 @@ and I have five to the front.
 
 374
 00:31:00,400 --> 00:31:06,100
-inaudible the back but should also work....
+inaudible the back but should also work...
 
 375
 00:31:09,500 --> 00:31:11,200
@@ -1775,7 +1775,7 @@ or is it an extra extension you have ?
 
 406
 00:33:07,000 --> 00:33:07,900
-JW: Let's see .....
+JW: Let's see...
 
 407
 00:33:11,600 --> 00:33:13,400
@@ -1810,7 +1810,7 @@ to the Parser.
 
 414
 00:33:41,200 --> 00:33:42,800
-Get contents .... I want read file.
+Get contents... I want read file.
 
 415
 00:33:56,600 --> 00:33:58,200
@@ -2205,7 +2205,7 @@ I guess it would be more appropriate inaudible
 
 507
 00:43:25,600 --> 00:43:26,800
-And our test is going to ....
+And our test is going to...
 
 508
 00:43:38,400 --> 00:43:40,900
@@ -2270,7 +2270,7 @@ reason I'm using data.text.
 
 522
 00:44:28,900 --> 00:44:30,900
-OC: I think interact already runs for a ....
+OC: I think interact already runs for a...
 
 523
 00:44:32,900 --> 00:44:35,500
@@ -2300,11 +2300,11 @@ JW: Right.
 
 529
 00:44:49,300 --> 00:44:50,900
-Well if I'm going to be on a rebel....
+Well if I'm going to be on a rebel...
 
 530
 00:44:51,400 --> 00:44:52,300
-Lets take a look....
+Lets take a look...
 
 531
 00:44:56,500 --> 00:44:57,400
@@ -2364,7 +2364,7 @@ So if I type 'lang' and hit tab
 
 544
 00:46:37,760 --> 00:46:39,200
-It will expand and then ask ....
+It will expand and then ask...
 
 545
 00:46:39,680 --> 00:46:41,680
@@ -2477,7 +2477,7 @@ that takes a Parser
 
 571
 00:49:13,760 --> 00:49:15,360
-and gives you ...
+and gives you...
 
 572
 00:49:15,600 --> 00:49:18,880
@@ -2526,7 +2526,7 @@ pre - input to the Parser.
 582
 00:49:54,400 --> 00:49:56,960
 Parsec does have the
-ability to say this is what .....
+ability to say this is what...
 
 583
 00:49:59,600 --> 00:50:01,680
@@ -2598,7 +2598,7 @@ say symbol it has to be,
 
 599
 00:50:47,200 --> 00:50:48,080
-something from ....
+something from...
 
 600
 00:50:48,960 --> 00:50:51,840
@@ -2731,7 +2731,7 @@ one or more
 
 629
 00:54:03,840 --> 00:54:04,960
-And we want, of course ....
+And we want, of course...
 
 630
 00:54:10,640 --> 00:54:12,560
@@ -2767,7 +2767,7 @@ JW: Excellent point.
 
 637
 00:54:39,600 --> 00:54:41,440
-OC: Is there an equals between the keyword .....
+OC: Is there an equals between the keyword...
 
 638
 00:54:42,080 --> 00:54:44,720
@@ -2787,7 +2787,7 @@ What is going on there ?
 641
 00:55:40,400 --> 00:55:42,480
 Why would it think
-that the type of body ....
+that the type of body...
 
 642
 00:55:43,760 --> 00:55:45,360
@@ -3072,7 +3072,7 @@ So in this case we have this.
 
 708
 01:00:04,700 --> 01:00:05,640
-And here we'll have ....
+And here we'll have...
 
 709
 01:00:09,170 --> 01:00:10,700
@@ -3089,7 +3089,7 @@ we were to say 1 plus
 
 712
 01:00:37,640 --> 01:00:38,941
-let phi equal 10 .....
+let phi equal 10...
 
 713
 01:00:43,290 --> 01:00:44,700
@@ -3166,7 +3166,7 @@ to our evaluator wherever we use it.
 730
 01:01:42,350 --> 01:01:44,940
 So let's have a way of
-creating a new environment ....
+creating a new environment...
 
 731
 01:02:55,170 --> 01:02:56,470
@@ -3200,7 +3200,7 @@ and don't have to worry like this.
 
 738
 01:03:14,350 --> 01:03:15,411
-So we're going to say ....
+So we're going to say...
 
 739
 01:03:21,058 --> 01:03:27,411
@@ -3406,7 +3406,7 @@ JW: Yes.
 
 785
 01:06:41,176 --> 01:06:42,117
-Let's have our name ....
+Let's have our name...
 
 786
 01:06:52,230 --> 01:06:54,700
@@ -3484,7 +3484,7 @@ We never even get to our let.
 
 804
 01:08:08,820 --> 01:08:09,880
-It's trying to parse ....
+It's trying to parse...
 
 805
 01:08:17,880 --> 01:08:19,170
@@ -3756,7 +3756,7 @@ file.
 
 867
 01:14:00,580 --> 01:14:03,170
-JW: execState is giving us back a ....
+JW: execState is giving us back a...
 
 868
 01:14:17,640 --> 01:14:20,000
@@ -3875,7 +3875,7 @@ inserting our expression,
 
 894
 01:15:49,410 --> 01:15:51,410
-into the map we we are going to insert.....
+into the map we we are going to insert...
 
 895
 01:15:56,700 --> 01:15:58,580
@@ -3947,7 +3947,7 @@ a couple of loop regressions.
 
 911
 01:16:55,170 --> 01:16:56,000
-Oh, look at that ....
+Oh, look at that...
 
 912
 01:16:59,520 --> 01:17:01,176
@@ -4034,7 +4034,7 @@ that to be from a library ?
 931
 01:18:34,110 --> 01:18:36,230
 There's a prelude in
-scope and I assumed ....
+scope and I assumed...
 
 932
 01:18:36,580 --> 01:18:38,230
@@ -4042,7 +4042,7 @@ JW: Let's call it double instead,
 
 933
 01:18:39,170 --> 01:18:40,588
-and let's say that double ....
+and let's say that double...
 
 934
 01:18:41,640 --> 01:18:44,000
@@ -4205,7 +4205,7 @@ We have to say for every one
 
 972
 01:20:38,940 --> 01:20:39,760
-of these things.....
+of these things...
 
 973
 01:20:43,880 --> 01:20:45,290
@@ -4334,7 +4334,7 @@ form and an argument.
 
 1002
 01:23:36,700 --> 01:23:38,230
-And we're going to show that as ....
+And we're going to show that as...
 
 1003
 01:23:46,230 --> 01:23:47,880
@@ -4394,7 +4394,7 @@ We'll say:
 
 1016
 01:24:43,290 --> 01:24:44,470
-Then look up in the map ....
+Then look up in the map...
 
 1017
 01:24:58,470 --> 01:25:00,470
@@ -4514,7 +4514,7 @@ We want a function that's going to
 
 1045
 01:28:40,000 --> 01:28:41,640
-take in some number and return.....
+take in some number and return...
 
 1046
 01:28:47,050 --> 01:28:48,580
@@ -4596,7 +4596,7 @@ JW: We're going to say:
 
 1064
 01:30:00,110 --> 01:30:01,410
-Oh, we can bind our name to ....
+Oh, we can bind our name to...
 
 1065
 01:30:04,000 --> 01:30:06,470
@@ -4737,7 +4737,7 @@ the right identity here.
 
 1097
 01:32:49,760 --> 01:32:51,050
-OC: Yes, cool, everything ...
+OC: Yes, cool, everything...
 
 1098
 01:32:54,580 --> 01:32:57,290
@@ -4925,7 +4925,7 @@ we're having a problem with.
 
 1142
 01:36:11,640 --> 01:36:12,820
-expecting define ....
+expecting define...
 
 1143
 01:36:12,820 --> 01:36:15,050
@@ -4938,7 +4938,7 @@ starts with a D.
 
 1145
 01:36:17,880 --> 01:36:19,640
-And when it sees D it presumes it's ....
+And when it sees D it presumes it's...
 
 1146
 01:36:24,700 --> 01:36:26,700
@@ -4963,7 +4963,7 @@ We need to go to define and find out
 
 1151
 01:36:46,230 --> 01:36:48,110
-why it did not get inserted into the ...
+why it did not get inserted into the...
 
 1152
 01:36:52,820 --> 01:36:53,760
@@ -4971,7 +4971,7 @@ Ah, that's what it is.
 
 1153
 01:36:54,820 --> 01:36:56,000
-OC: Define gave us Elam ....
+OC: Define gave us Elam...
 
 1154
 01:36:56,820 --> 01:36:58,580
@@ -5038,11 +5038,11 @@ a little bit of our tracing.
 
 1169
 01:38:50,940 --> 01:38:52,820
-It never showed it, so we get to there ....
+It never showed it, so we get to there...
 
 1170
 01:38:55,290 --> 01:38:56,230
-We must have done ....
+We must have done...
 
 1171
 01:38:58,230 --> 01:38:59,520
@@ -5050,7 +5050,7 @@ Oh, nobody used the value,
 
 1172
 01:39:00,000 --> 01:39:01,520
-that's why the trace didn't get ....
+that's why the trace didn't get...
 
 1173
 01:39:02,700 --> 01:39:04,470
@@ -5185,7 +5185,7 @@ Except that it's going to be a maybe.
 1204
 01:41:45,290 --> 01:41:47,410
 So we have to lift
-one level out, and say ....
+one level out, and say...
 
 1205
 01:41:56,470 --> 01:41:58,000
@@ -5210,7 +5210,7 @@ Look at that inaudible
 
 1210
 01:42:20,110 --> 01:42:21,529
-So we have 5 equaling 1 plus ....
+So we have 5 equaling 1 plus...
 
 1211
 01:42:24,470 --> 01:42:25,640
@@ -5381,11 +5381,11 @@ what we would call a inaudible in our language.
 
 1251
 01:44:47,880 --> 01:44:49,050
-All we need is a parser ....
+All we need is a parser...
 
 1252
 01:44:51,520 --> 01:44:52,470
-and have an option ....
+and have an option...
 
 1253
 01:44:53,050 --> 01:44:54,230
@@ -5547,7 +5547,7 @@ and we've got division.
 
 1290
 01:47:52,700 --> 01:47:53,410
-we've got phi and psi ....
+we've got phi and psi...
 
 1291
 01:47:54,580 --> 01:47:57,520
@@ -5555,7 +5555,7 @@ A global phi and a local psi.
 
 1292
 01:47:57,520 --> 01:47:58,470
-Let's give it a try ....
+Let's give it a try...
 
 1293
 01:47:58,470 --> 01:48:00,000
@@ -5571,7 +5571,7 @@ I don't think it will work (laughter).
 
 1296
 01:48:06,580 --> 01:48:07,880
-JW:  So unknown variable N ....
+JW:  So unknown variable N...
 
 1297
 01:48:09,880 --> 01:48:12,470
@@ -5585,7 +5585,7 @@ check why isn't that happening.
 
 1299
 01:48:17,290 --> 01:48:18,110
-When we defined ....
+When we defined...
 
 1300
 01:48:19,520 --> 01:48:22,000
@@ -5607,7 +5607,7 @@ we extended the environment.
 1304
 01:48:30,230 --> 01:48:32,820
 We evaluate within
-that extended environment ....
+that extended environment...
 
 1305
 01:48:34,820 --> 01:48:36,470
@@ -5789,7 +5789,7 @@ it tries to do it as a variable
 
 1346
 01:53:58,110 --> 01:53:59,760
-I'm surprised it's not telling us ....
+I'm surprised it's not telling us...
 
 1347
 01:54:01,760 --> 01:54:02,700
@@ -5845,7 +5845,7 @@ because of a failure to parse "d".
 
 1359
 01:54:59,520 --> 01:55:00,470
-Ah, you know what ....
+Ah, you know what...
 
 1360
 01:55:02,230 --> 01:55:04,000
