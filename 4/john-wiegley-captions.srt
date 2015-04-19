@@ -2191,12 +2191,12 @@ and run it against our test.
 
 501
 00:42:45,100 --> 00:42:47,100
-This one is in io, which is unfortunate.
+This one is in IO, which is unfortunate.
 
 502
 00:42:51,000 --> 00:42:53,200
 There's no reason this
-function should be in io
+function should be in IO
 
 503
 00:42:53,200 --> 00:42:54,600
