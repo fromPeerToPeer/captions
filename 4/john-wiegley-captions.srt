@@ -2283,7 +2283,7 @@ reason I'm using Data.Text.
 
 522
 00:44:28,900 --> 00:44:30,900
-OC: I think interact already runs for a ....
+OC: I think interact already runs forever.
 
 523
 00:44:32,900 --> 00:44:35,500
