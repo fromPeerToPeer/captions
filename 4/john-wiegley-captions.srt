@@ -2233,13 +2233,13 @@ JW: Yes but Emacs has this way to say
 
 511
 00:43:45,500 --> 00:43:48,300
-when you see this type
-of character in this context,
+'when you see this type
+of character in this context,'
 
 512
 00:43:48,800 --> 00:43:51,000
-then show me
-this other character instead.
+then, 'show me
+this other character instead.'
 
 513
 00:43:52,700 --> 00:43:53,300
