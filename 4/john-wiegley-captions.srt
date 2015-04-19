@@ -5117,7 +5117,7 @@ JW: Oh! Is that our problem ?
 1182
 01:39:32,705 --> 01:39:35,058
 OC: Yes, the file doesn't
-do what the rebel does.
+do what the REPL does.
 
 1183
 01:39:36,470 --> 01:39:37,290
