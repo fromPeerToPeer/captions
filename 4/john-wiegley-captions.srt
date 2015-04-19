@@ -5218,11 +5218,11 @@ otherwise we have some String.
 
 1205
 01:41:56,470 --> 01:41:58,000
-OC: We could use 4 M again there.
+OC: We could use forM_ again there.
 
 1206
 01:41:59,050 --> 01:42:00,470
-You can use 4 M over a maybe.
+You can use forM_ over a maybe.
 
 1207
 01:42:01,290 --> 01:42:03,170
