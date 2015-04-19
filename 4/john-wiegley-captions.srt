@@ -1851,11 +1851,11 @@ so we will take a cut out of it
 
 422
 00:34:46,200 --> 00:34:47,200
-and call it 'Test BC'
+and call it test.bc
 
 423
 00:34:48,000 --> 00:34:49,200
-Then I'm going to write:
+Then I'm going to run this on test.bc
 
 424
 00:34:51,800 --> 00:34:54,000
