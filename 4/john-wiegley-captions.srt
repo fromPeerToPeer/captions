@@ -1878,7 +1878,7 @@ when I'm initially developing.
 428
 00:35:09,200 --> 00:35:11,700
 I want to know when
-expression is being called.
+expr is being called.
 
 429
 00:35:17,000 --> 00:35:19,000
