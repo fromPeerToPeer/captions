@@ -1944,8 +1944,8 @@ is happening elsewhere.
 
 443
 00:35:58,500 --> 00:36:01,200
-My first version of many
-parsers will have tracers.
+My first version of many parsers will
+have tracers on every function (laughter)
 
 444
 00:36:02,900 --> 00:36:05,300
