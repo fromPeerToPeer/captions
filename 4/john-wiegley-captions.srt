@@ -1917,12 +1917,11 @@ Debugging at a distance.
 
 437
 00:35:40,500 --> 00:35:42,900
-OC: So this is more
-down to Haskells laziness
+OC: So this is where Haskell's laziness
 
 438
 00:35:42,900 --> 00:35:44,900
-rather than a inaudible.
+is more of a pain point than a benefit.
 
 439
 00:35:44,900 --> 00:35:47,800
