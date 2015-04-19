@@ -1663,16 +1663,17 @@ satisfied the first three lines of our file.
 
 379
 00:31:19,000 --> 00:31:21,100
-OC: I wonder if now we could inaudible this in
+OC: I wonder now if we
+could try to hook this in
 
 380
 00:31:21,100 --> 00:31:24,000
-to read the file and
-maybe try to parse the entire file
+to read from a file and
+try to parse the entire file
 
 381
 00:31:26,000 --> 00:31:28,000
-and watch the Parser eventually fail
+and watch the Parser eventually fail.
 
 382
 00:31:30,600 --> 00:31:33,500
