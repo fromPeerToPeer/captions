@@ -2026,8 +2026,8 @@ and do this differently:
 
 462
 00:38:20,100 --> 00:38:22,500
- Now we would expect
-that we would get the two
+Now we would expect
+that we would get the 2.0
 
 463
 00:38:23,100 --> 00:38:24,000
