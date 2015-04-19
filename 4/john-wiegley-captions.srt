@@ -1768,7 +1768,7 @@ If I select Control.Monad...
 
 403
 00:32:56,500 --> 00:32:58,200
-It will put it with the explicit.
+it will put it with the explicit.
 
 404
 00:33:01,200 --> 00:33:04,000
