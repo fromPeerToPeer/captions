@@ -2270,7 +2270,7 @@ I have one for the proc incoming arrow.
 
 519
 00:44:14,800 --> 00:44:16,200
-I interact with eval text,
+I interact with evalText,
 
 520
 00:44:17,500 --> 00:44:21,500
