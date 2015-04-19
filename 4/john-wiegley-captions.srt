@@ -4945,7 +4945,7 @@ expecting define...
 
 1143
 01:36:12,820 --> 01:36:15,050
-OC: The problem here
+OC: Ah, so I think the problem here
 is our function name
 
 1144
@@ -4954,11 +4954,13 @@ starts with a D.
 
 1145
 01:36:17,880 --> 01:36:19,640
-And when it sees D it presumes it's...
+And when it sees D it assumes
+that it must be going to...
+JW: Oh right!
 
 1146
 01:36:24,700 --> 01:36:26,700
-We'll probably have to try unbinding.
+OC: We'll probably have to try unbinding.
 
 1147
 01:36:32,110 --> 01:36:33,640
