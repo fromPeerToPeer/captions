@@ -1939,7 +1939,7 @@ only being called once.
 
 442
 00:35:51,100 --> 00:35:53,800
-Our internet recursion
+Our infinite recursion
 is happening elsewhere.
 
 443
