@@ -4741,11 +4741,11 @@ the right identity here.
 
 1097
 01:32:49,760 --> 01:32:51,050
-OC: Yes, cool, everything...
+OC: Cool, everything typechecks?
 
 1098
 01:32:54,580 --> 01:32:57,290
-JW: Now the functions
+JW: No! Now the functions
 are differently expressed.
 
 1099
