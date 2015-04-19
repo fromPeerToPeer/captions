@@ -1755,7 +1755,7 @@ this comes from Control.Monad
 400
 00:32:46,100 --> 00:32:48,700
 If I didn't do this, if I
-said control C and Control M
+said Control-c and Control-m...
 
 401
 00:32:49,600 --> 00:32:52,700
