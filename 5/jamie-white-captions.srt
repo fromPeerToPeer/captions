@@ -98,7 +98,7 @@ to should have been host.
 
 24
 00:02:07,820 --> 00:02:10,090
-DW: Unfortunately Camille was ill today
+DN: Unfortunately Camille was ill today
 
 25
 00:02:10,480 --> 00:02:12,400
@@ -106,7 +106,7 @@ so I'm standing in as host.
 
 26
 00:02:14,270 --> 00:02:19,600
-DW: In fact, this data is slightly stale.
+DN: In fact, this data is slightly stale.
 
 27
 00:02:21,340 --> 00:02:25,660
@@ -1231,7 +1231,7 @@ DN: Yes, that's true.
 
 291
 00:26:58,537 --> 00:27:01,250
-DW: Although if they did come in
+JW: Although if they did come in
 a different order this would break down.
 
 292
