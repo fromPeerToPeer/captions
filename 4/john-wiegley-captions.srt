@@ -4702,7 +4702,7 @@ over the body.
 
 1088
 01:32:00,700 --> 01:32:02,000
-So inaudible expected type.
+So Env, expected type Double.
 
 1089
 01:32:13,640 --> 01:32:15,880
@@ -4715,7 +4715,7 @@ I don't need to fold M that way.
 
 1091
 01:32:32,350 --> 01:32:33,170
-Pass in a double
+We're going to pass in a double
 
 1092
 01:32:34,470 --> 01:32:35,410
