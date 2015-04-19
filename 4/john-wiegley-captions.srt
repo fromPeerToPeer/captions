@@ -2142,7 +2142,7 @@ the command line for example.
 
 489
 00:42:03,000 --> 00:42:05,100
-We want to have a function called repl.
+We want to have a function called REPL.
 
 490
 00:42:05,100 --> 00:42:06,800
@@ -5996,7 +5996,7 @@ And since you're probably going to be
 
 1383
 01:56:07,760 --> 01:56:09,760
-typing these at a repl anyway
+typing these at a REPL anyway
 
 1384
 01:56:09,760 --> 01:56:12,940
@@ -6036,7 +6036,7 @@ If I go into my parser and look at
 
 1392
 01:56:36,470 --> 01:56:38,700
-this repl function
+this REPL function
 we have been calling.
 
 1393
@@ -6067,7 +6067,7 @@ JW: Not quite !
 
 1399
 01:57:25,880 --> 01:57:28,940
-OC: I guess our repl
+OC: I guess our REPL
 doesn't deal with comments like that
 
 1400
@@ -6081,7 +6081,7 @@ JW:  No.
 
 1402
 01:57:37,760 --> 01:57:40,470
-OC: I think our repl isn't
+OC: I think our REPL isn't
 dealing with the comments
 
 1403
