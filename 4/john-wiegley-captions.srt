@@ -5279,7 +5279,7 @@ it doesn't recognise, it ends.
 
 1219
 01:42:50,700 --> 01:42:53,520
-Other parsers like inaudible,
+Other parsers like Trifecta,
 
 1220
 01:42:54,230 --> 01:42:55,520
@@ -5312,8 +5312,8 @@ we want it to terminate at EOF.
 
 1227
 01:43:21,050 --> 01:43:23,410
-OC: So that requires
-successful parser line ?
+OC: So that requires that we 
+successfully parse a line?
 
 1228
 01:43:25,410 --> 01:43:27,050
