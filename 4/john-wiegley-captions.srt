@@ -1773,7 +1773,7 @@ it will put it with the explicit.
 404
 00:33:01,200 --> 00:33:04,000
 OC: Is that coming from
-the normal Haskell mode for emacs
+the normal Haskell mode for Emacs
 
 405
 00:33:04,400 --> 00:33:06,300
