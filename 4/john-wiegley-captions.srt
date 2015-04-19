@@ -4610,6 +4610,7 @@ JW: Right.
 1067
 01:30:08,230 --> 01:30:09,170
 We have to say:
+"insert at arg"
 
 1068
 01:30:27,880 --> 01:30:28,940
@@ -4622,7 +4623,10 @@ it up as an expression.
 
 1070
 01:30:40,940 --> 01:30:44,000
-inaudible wrapped.
+And then this has to be getEnv
+and then rewrapped.
+Because type-wrapping is just as much
+fun as you expect it to be.
 
 1071
 01:30:51,176 --> 01:30:53,411
