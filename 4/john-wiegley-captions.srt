@@ -4610,6 +4610,7 @@ JW: Right.
 1067
 01:30:08,230 --> 01:30:09,170
 We have to say:
+"insert at arg"
 
 1068
 01:30:27,880 --> 01:30:28,940
@@ -4622,7 +4623,10 @@ it up as an expression.
 
 1070
 01:30:40,940 --> 01:30:44,000
-inaudible wrapped.
+And then this has to be getEnv
+and then rewrapped.
+Because type-wrapping is just as much
+fun as you expect it to be.
 
 1071
 01:30:51,176 --> 01:30:53,411
@@ -4643,7 +4647,7 @@ Now we want to sequence through.
 
 1075
 01:31:08,000 --> 01:31:09,520
- We want to fold down the body.
+We want to fold down the body.
 
 1076
 01:31:11,520 --> 01:31:13,290
@@ -4698,7 +4702,7 @@ over the body.
 
 1088
 01:32:00,700 --> 01:32:02,000
-So inaudible expected type.
+So Env, expected type Double.
 
 1089
 01:32:13,640 --> 01:32:15,880
@@ -4711,7 +4715,7 @@ I don't need to fold M that way.
 
 1091
 01:32:32,350 --> 01:32:33,170
-Pass in a double
+We're going to pass in a double
 
 1092
 01:32:34,470 --> 01:32:35,410
@@ -4737,11 +4741,11 @@ the right identity here.
 
 1097
 01:32:49,760 --> 01:32:51,050
-OC: Yes, cool, everything...
+OC: Cool, everything typechecks?
 
 1098
 01:32:54,580 --> 01:32:57,290
-JW: Now the functions
+JW: No! Now the functions
 are differently expressed.
 
 1099
@@ -4759,15 +4763,20 @@ Which makes sense.
 
 1102
 01:33:08,940 --> 01:33:13,050
-inaudible first argument.
+Couldn't match expected type
+first argument.
 
 1103
 01:33:14,580 --> 01:33:16,580
-This is now just going to be the value.
+This is now just going to be the value
+we wanted, so we can just return it.
 
 1104
 01:33:22,820 --> 01:33:23,640
-Type check time.
+It type checked!
+OC: [Laughs]
+JC: I continue to be
+perhaps incorrectly amazed.
 
 1105
 01:33:36,350 --> 01:33:38,230
@@ -4784,6 +4793,7 @@ Unknown variable, fine.
 1108
 01:33:50,580 --> 01:33:52,230
 We haven't tied it in yet so we need:
+letBinding followed by funBinding.
 
 1109
 01:33:56,000 --> 01:33:57,290
@@ -4811,7 +4821,8 @@ OC: I think all function calls
 
 1115
 01:34:11,170 --> 01:34:13,410
-are immediately followed by parenthesis
+are a variable name immediately
+followed by parentheses
 
 1116
 01:34:14,470 --> 01:34:16,230
@@ -4823,7 +4834,7 @@ JW:  Right.
 
 1118
 01:34:17,760 --> 01:34:19,760
-So we're going to try to parse a fun-cal.
+So we're going to try to parse a funCall.
 
 1119
 01:34:27,880 --> 01:34:30,000
@@ -4841,19 +4852,22 @@ the function to come in.
 
 1122
 01:34:48,820 --> 01:34:51,290
-Except instead of parsing a inaudible,
+And then we're going to look for this guy
+except instead of parsing a varname,
 
 1123
 01:34:51,290 --> 01:34:53,290
-we're going to parse a sub expression.
+we're going to parse a sub-expression.
 
 1124
 01:34:53,290 --> 01:34:54,470
-Then we're going to say:
+Then we're going to say: return that
+as an application of name to arg.
 
 1125
 01:35:07,640 --> 01:35:11,760
-inaudible
+"Type error says Ollie!"
+OC: [Laughs] Well I didn't say it but...
 
 1126
 01:35:11,760 --> 01:35:13,410
@@ -4875,7 +4889,7 @@ does define evaluate to.
 
 1130
 01:35:27,760 --> 01:35:30,000
- It evaluates to the
+It evaluates to the
 body of the function.
 
 1131
@@ -4904,15 +4918,17 @@ I guess the error is on the let.
 
 1137
 01:35:55,640 --> 01:35:57,520
-JW: Yes, we put some boundary on there.
+JW: Yes, let me put some
+boundary on there.
 
 1138
 01:35:59,170 --> 01:36:00,700
-OC: so tracing  inaudible
+OC: so you're now tracing
+in our language!
 
 1139
 01:36:01,520 --> 01:36:03,294
-JW:  Yes. I see the two, three and zero.
+JW: Yes! I see the two, three and zero.
 
 1140
 01:36:04,940 --> 01:36:05,640
@@ -4929,7 +4945,7 @@ expecting define...
 
 1143
 01:36:12,820 --> 01:36:15,050
-OC: The problem here
+OC: Ah, so I think the problem here
 is our function name
 
 1144
@@ -4938,11 +4954,13 @@ starts with a D.
 
 1145
 01:36:17,880 --> 01:36:19,640
-And when it sees D it presumes it's...
+And when it sees D it assumes
+that it must be going to...
+JW: Oh right!
 
 1146
 01:36:24,700 --> 01:36:26,700
-We'll probably have to try unbinding.
+OC: We'll probably have to try unbinding.
 
 1147
 01:36:32,110 --> 01:36:33,640
@@ -4950,7 +4968,7 @@ JW: Unknown function double.
 
 1148
 01:36:34,940 --> 01:36:37,170
-But we did just
+OC: But we did just
 define a function double.
 
 1149
@@ -4963,7 +4981,8 @@ We need to go to define and find out
 
 1151
 01:36:46,230 --> 01:36:48,110
-why it did not get inserted into the...
+why it did not get
+inserted into the environment
 
 1152
 01:36:52,820 --> 01:36:53,760
@@ -4979,7 +4998,7 @@ JW: And the blue line is telling us
 
 1155
 01:36:58,580 --> 01:37:00,230
-"your not doing anything with me".
+"your not doing anything with name".
 
 1156
 01:37:03,764 --> 01:37:04,700
@@ -4991,8 +5010,8 @@ Just as let did, Elam needs a name.
 
 1158
 01:37:14,470 --> 01:37:16,941
-Now when we go, we
-won't just have the type error
+Now when we go, we won't just
+have Ollie's type error
 
 1159
 01:37:24,470 --> 01:37:27,050
@@ -5001,7 +5020,7 @@ new to go into our map, right ?
 
 1160
 01:37:27,880 --> 01:37:29,410
-We can just put Elam in there.
+We can just put ELam in there.
 
 1161
 01:37:30,580 --> 01:37:31,640
@@ -5009,11 +5028,13 @@ So we're going to say:
 
 1162
 01:37:33,640 --> 01:37:35,290
-OC: It's exactly the same as Elet
+OC: It's exactly the same as ELet
 
 1163
 01:37:35,880 --> 01:37:37,760
 but without the evaluation I guess.
+JC: Right. It's just going to return 0.
+OC: Bit of a hack, but oh well!
 
 1164
 01:38:01,170 --> 01:38:02,820
@@ -5021,15 +5042,16 @@ Elam should have two arguments.
 
 1165
 01:38:03,170 --> 01:38:05,760
-Oh ! the inaud..
+Oh! The Show-er
 
 1166
 01:38:06,700 --> 01:38:07,640
 We're going to say:
+I like the way Lisp does it.
 
 1167
 01:38:24,350 --> 01:38:26,000
-Yehey ! unknown function double.
+Yehey! Unknown function double.
 
 1168
 01:38:26,820 --> 01:38:29,410
@@ -5067,11 +5089,12 @@ If it's just returning zero
 
 1176
 01:39:12,820 --> 01:39:15,410
-it can inaudible out the rest.
+it can elide out the rest.
 
 1177
 01:39:16,350 --> 01:39:18,000
-OC: It should be forcing us inaudible
+OC: But we're in a monad, so it
+should be forcing us to be [inaudible].
 
 1178
 01:39:18,000 --> 01:39:19,050
@@ -5079,11 +5102,13 @@ JW:  Your right.
 
 1179
 01:39:22,110 --> 01:39:25,050
-OC: Maybe in our inaudible file
+OC: Maybe in our function
+that reads from the file
 
 1180
 01:39:26,820 --> 01:39:28,940
-we print environment after every step.
+we could print the environment
+after every step.
 
 1181
 01:39:28,940 --> 01:39:30,235
@@ -5092,7 +5117,7 @@ JW: Oh! Is that our problem ?
 1182
 01:39:32,705 --> 01:39:35,058
 OC: Yes, the file doesn't
-do what the rebel does.
+do what the REPL does.
 
 1183
 01:39:36,470 --> 01:39:37,290
@@ -5109,7 +5134,8 @@ we we're doing before
 
 1186
 01:39:46,110 --> 01:39:46,700
-Which is :
+Which is: to call...
+Let's just copy and paste.
 
 1187
 01:40:06,588 --> 01:40:07,529
@@ -5154,7 +5180,8 @@ the code we were using previously.
 
 1197
 01:41:17,760 --> 01:41:20,350
-We're not using the inaudible.
+Oh, the massager!
+We're not using the massager.
 
 1198
 01:41:21,640 --> 01:41:24,230
@@ -5176,24 +5203,26 @@ JW: Yes.
 
 1202
 01:41:31,640 --> 01:41:35,170
-I could just do that inaudible silly use of a pattern.
+I could just do this. That's actually
+a silly use of view patterns.
 
 1203
 01:41:40,000 --> 01:41:41,760
-Except that it's going to be a maybe.
+Except that it's going to be a Maybe.
 
 1204
 01:41:45,290 --> 01:41:47,410
-So we have to lift
-one level out, and say...
+So we have to lift one level out and say:
+if it's Nothing, do nothing
+otherwise we have some String.
 
 1205
 01:41:56,470 --> 01:41:58,000
-OC: We could use 4 M again there.
+OC: We could use forM_ again there.
 
 1206
 01:41:59,050 --> 01:42:00,470
-You can use 4 M over a maybe.
+You can use forM_ over a maybe.
 
 1207
 01:42:01,290 --> 01:42:03,170
@@ -5201,16 +5230,18 @@ I think we have to use data.foldable
 
 1208
 01:42:09,640 --> 01:42:12,000
-which in real
-world projects is very useful.
+which in real world projects
+that's exactly what I do.
 
 1209
 01:42:15,410 --> 01:42:18,230
-Look at that inaudible
+Look at that! We evaled it.
+OC: Wonderful.
 
 1210
 01:42:20,110 --> 01:42:21,529
-So we have 5 equaling 1 plus...
+JC: So we have Phi equaling
+1 plus double...
 
 1211
 01:42:24,470 --> 01:42:25,640
@@ -5223,10 +5254,11 @@ We are missing a parenthesis
 1213
 01:42:28,350 --> 01:42:30,110
 and yet we didn't get a syntax there.
+OC: [Laughs]
 
 1214
 01:42:31,410 --> 01:42:33,760
-Let me see what
+JC: Let me see what
 happens if I do that directly.
 
 1215
@@ -5247,7 +5279,7 @@ it doesn't recognise, it ends.
 
 1219
 01:42:50,700 --> 01:42:53,520
-Other parsers like inaudible,
+Other parsers like Trifecta,
 
 1220
 01:42:54,230 --> 01:42:55,520
@@ -5280,8 +5312,8 @@ we want it to terminate at EOF.
 
 1227
 01:43:21,050 --> 01:43:23,410
-OC: So that requires
-successful parser line ?
+OC: So that requires that we 
+successfully parse a line?
 
 1228
 01:43:25,410 --> 01:43:27,050
@@ -5297,24 +5329,26 @@ because we do this line by line.
 
 1231
 01:43:34,820 --> 01:43:35,640
-There we go.
+There we go!
 
 1232
 01:43:40,000 --> 01:43:41,290
-five times five is 25 OK,
+5 times 5 is 25 OK,
 
 1233
 01:43:42,000 --> 01:43:43,640
-So 26 divided by two should be 13.
+So 26 divided by 2 should be 13.
+Alright!
 
 1234
 01:43:46,350 --> 01:43:48,940
 I would say that's a
 good place for us to check in.
+Function definitions and calling now work.
 
 1235
 01:44:00,230 --> 01:44:00,940
- OC: Awesome!
+OC: Awesome!
 
 1236
 01:44:07,410 --> 01:44:10,000
@@ -5335,7 +5369,7 @@ It's in one of these example files.
 
 1240
 01:44:17,050 --> 01:44:19,050
-We should only need to redefine feed,
+We should only need to redefine phi,
 
 1241
 01:44:21,640 --> 01:44:23,760
@@ -5364,7 +5398,7 @@ to the bottom of this file.
 JW: We should be able to do that easily.
 
 1247
-01:44:34,352 --> 01:44:36,352
+01:44:34,352 --> 01:44:36,340
 Because we chose the higher order 
 
 1248
@@ -5377,15 +5411,16 @@ That makes it easier for us to inject
 
 1250
 01:44:44,940 --> 01:44:47,290
-what we would call a inaudible in our language.
+what we would call built-ins
+into our language.
 
 1251
 01:44:47,880 --> 01:44:49,050
-All we need is a parser...
+All we need then is a parser
 
 1252
 01:44:51,520 --> 01:44:52,470
-and have an option...
+and we're going to have an option...
 
 1253
 01:44:53,050 --> 01:44:54,230
@@ -5394,6 +5429,7 @@ Let's extend funCall.
 1254
 01:44:55,290 --> 01:44:56,235
 FunCall will say:
+if name is 'sqrt'...
 
 1255
 01:45:08,230 --> 01:45:10,350
