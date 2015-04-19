@@ -4793,6 +4793,7 @@ Unknown variable, fine.
 1108
 01:33:50,580 --> 01:33:52,230
 We haven't tied it in yet so we need:
+letBinding followed by funBinding.
 
 1109
 01:33:56,000 --> 01:33:57,290
