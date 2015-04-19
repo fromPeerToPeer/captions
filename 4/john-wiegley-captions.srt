@@ -467,7 +467,7 @@ and it's failing to parse it.
 
 107
 00:07:38,700 --> 00:07:40,240
-OC: let's try GCHi without the white space 
+OC: let's try GCHi without the white space
 
 108
 00:07:49,840 --> 00:07:51,900
@@ -4746,7 +4746,7 @@ the last double that's produced.
 
 1095
 01:32:44,588 --> 01:32:45,882
-JW: Right, and then we need 
+JW: Right, and then we need
 
 1096
 01:32:45,882 --> 01:32:47,176
@@ -5185,7 +5185,7 @@ we have regressed.
 
 1195
 01:40:44,110 --> 01:40:45,529
-Let me see what version of 
+Let me see what version of
 
 1196
 01:40:45,520 --> 01:40:47,294
@@ -5325,7 +5325,7 @@ we want it to terminate at EOF.
 
 1227
 01:43:21,050 --> 01:43:23,410
-OC: So that requires that we 
+OC: So that requires that we
 successfully parse a line?
 
 1228
@@ -5412,7 +5412,7 @@ JW: We should be able to do that easily.
 
 1247
 01:44:34,352 --> 01:44:36,340
-Because we chose the higher order 
+Because we chose the higher order
 
 1248
 01:44:36,350 --> 01:44:37,764
@@ -5700,7 +5700,7 @@ get rid of these ones that are before it.
 
 1315
 01:49:27,050 --> 01:49:31,520
-OC: The let binding is definitely working 
+OC: The let binding is definitely working
 because we're seeing that
 
 1316
@@ -5790,7 +5790,7 @@ do addition on that variable.
 
 1335
 01:51:41,170 --> 01:51:42,470
-Maybe if we just try to do 
+Maybe if we just try to do
 
 1336
 01:51:42,470 --> 01:51:44,235
@@ -5877,7 +5877,7 @@ JW: That's right. That's what it's saying
 
 1355
 01:54:38,823 --> 01:54:40,000
-it's expecting to see 
+it's expecting to see
 
 1356
 01:54:40,000 --> 01:54:41,882
