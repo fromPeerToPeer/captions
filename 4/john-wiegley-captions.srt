@@ -2055,7 +2055,7 @@ OC: Cool, we don't have parentheses.
 
 469
 00:38:43,600 --> 00:38:45,920
-We definitely want to strip out  the comments.
+We definitely want to strip out the comments.
 
 470
 00:38:50,200 --> 00:38:52,200
