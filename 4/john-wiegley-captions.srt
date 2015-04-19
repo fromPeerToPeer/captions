@@ -4852,11 +4852,12 @@ the function to come in.
 
 1122
 01:34:48,820 --> 01:34:51,290
-Except instead of parsing a inaudible,
+And then we're going to look for this guy
+except instead of parsing a varname,
 
 1123
 01:34:51,290 --> 01:34:53,290
-we're going to parse a sub expression.
+we're going to parse a sub-expression.
 
 1124
 01:34:53,290 --> 01:34:54,470
