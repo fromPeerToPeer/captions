@@ -2142,7 +2142,7 @@ the command line for example.
 
 489
 00:42:03,000 --> 00:42:05,100
-We want to have a function called rebel.
+We want to have a function called repl.
 
 490
 00:42:05,100 --> 00:42:06,800
