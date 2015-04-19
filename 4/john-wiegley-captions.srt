@@ -2089,8 +2089,8 @@ want, I want break or split.
 
 477
 00:40:15,400 --> 00:40:18,160
-we're never going to have
-the hash B a valid character.
+We're never going to have
+the hash be a valid character.
 
 478
 00:40:19,600 --> 00:40:20,640
