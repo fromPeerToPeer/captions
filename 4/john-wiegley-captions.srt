@@ -1817,7 +1817,7 @@ to the Parser.
 
 414
 00:33:41,200 --> 00:33:42,800
-Get contents .... I want read file.
+getContents... Ahh, I want readFile.
 
 415
 00:33:56,600 --> 00:33:58,200
