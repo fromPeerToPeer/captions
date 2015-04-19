@@ -5010,8 +5010,8 @@ Just as let did, Elam needs a name.
 
 1158
 01:37:14,470 --> 01:37:16,941
-Now when we go, we
-won't just have the type error
+Now when we go, we won't just
+have Ollie's type error
 
 1159
 01:37:24,470 --> 01:37:27,050
@@ -5020,7 +5020,7 @@ new to go into our map, right ?
 
 1160
 01:37:27,880 --> 01:37:29,410
-We can just put Elam in there.
+We can just put ELam in there.
 
 1161
 01:37:30,580 --> 01:37:31,640
@@ -5028,11 +5028,13 @@ So we're going to say:
 
 1162
 01:37:33,640 --> 01:37:35,290
-OC: It's exactly the same as Elet
+OC: It's exactly the same as ELet
 
 1163
 01:37:35,880 --> 01:37:37,760
 but without the evaluation I guess.
+JC: Right. It's just going to return 0.
+OC: Bit of a hack, but oh well!
 
 1164
 01:38:01,170 --> 01:38:02,820
