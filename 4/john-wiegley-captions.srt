@@ -1678,7 +1678,7 @@ and watch the Parser eventually fail.
 382
 00:31:30,600 --> 00:31:33,500
 We should be ready to
-pars the first two lines I think.
+parse the first two lines I think.
 
 383
 00:31:33,500 --> 00:31:36,400
