@@ -4821,7 +4821,8 @@ OC: I think all function calls
 
 1115
 01:34:11,170 --> 01:34:13,410
-are immediately followed by parenthesis
+are a variable name immediately
+followed by parentheses
 
 1116
 01:34:14,470 --> 01:34:16,230
