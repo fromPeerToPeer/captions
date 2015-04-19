@@ -2059,7 +2059,7 @@ We definitely want to strip out the comments.
 
 470
 00:38:50,200 --> 00:38:52,200
-Let's write a function called visage.
+Let's write a function called massage.
 
 471
 00:38:54,200 --> 00:38:55,800
