@@ -1803,7 +1803,7 @@ is a patch that I did on ghc-mod's code
 
 411
 00:33:29,300 --> 00:33:32,500
-To jump over to the Hoogle I
+to jump over to the Hoogle I
 have running on my local machine.
 
 412
