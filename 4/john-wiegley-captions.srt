@@ -424,7 +424,7 @@ The Parser is aborting, it's not recursing.
 97
 00:07:06,500 --> 00:07:09,200
 OC: Is that because it's
-hitting white space in here ?
+hitting white space in here?
 
 98
 00:07:12,800 --> 00:07:14,640
@@ -471,7 +471,7 @@ OC: let's try GCHi without the white space
 
 108
 00:07:49,840 --> 00:07:51,900
-JW: Oh ! I'm still
+JW: Oh! I'm still
 passing the num Parser to parseTest.
 
 109
@@ -615,7 +615,7 @@ top level expression Parser.
 
 139
 00:10:11,800 --> 00:10:13,600
-OC: So it did recurse again, I take it ?
+OC: So it did recurse again, I take it?
 
 140
 00:10:13,600 --> 00:10:14,300
@@ -673,17 +673,17 @@ the input.
 
 152
 00:10:54,700 --> 00:10:55,900
-Why is this happening ?
+Why is this happening?
 
 153
 00:10:58,900 --> 00:11:00,500
 OC: What does parseTest with just add
-do now ?
+do now?
 
 154
 00:11:00,500 --> 00:11:02,400
 Now that we've got the
-white space in there ?
+white space in there?
 
 155
 00:11:02,400 --> 00:11:04,000
@@ -1233,7 +1233,7 @@ OC: Do you need to worry about that
 
 280
 00:23:07,200 --> 00:23:09,000
-if you're using symbol everywhere ?
+if you're using symbol everywhere?
 
 281
 00:23:10,000 --> 00:23:11,100
@@ -1516,7 +1516,7 @@ about which ones we hide.
 
 345
 00:27:49,400 --> 00:27:50,700
-Fairly arbitrary, right ?
+Fairly arbitrary, right?
 
 346
 00:28:03,900 --> 00:28:05,900
@@ -1572,7 +1572,7 @@ deduce this being double.
 358
 00:29:11,700 --> 00:29:14,160
 OC: Can we try to parse
-1.5, something like that ?
+1.5, something like that?
 
 359
 00:29:18,800 --> 00:29:20,900
@@ -1777,7 +1777,7 @@ the normal Haskell mode for Emacs
 
 405
 00:33:04,400 --> 00:33:06,300
-or is it an extra extension you have ?
+or is it an extra extension you have?
 
 406
 00:33:07,000 --> 00:33:07,900
@@ -1979,7 +1979,7 @@ Oh! there we go, same place.
 
 451
 00:37:12,800 --> 00:37:18,400
-OC: And if we run our test again ?
+OC: And if we run our test again?
 
 452
 00:37:21,400 --> 00:37:22,300
@@ -2158,7 +2158,7 @@ to get input from the command line
 
 493
 00:42:18,600 --> 00:42:19,300
-Is it getLine ?
+Is it getLine?
 
 494
 00:42:22,300 --> 00:42:23,500
@@ -2427,7 +2427,7 @@ It still didn't like that.
 
 556
 00:47:49,360 --> 00:47:50,480
-It wants a character !
+It wants a character!
 
 557
 00:48:04,320 --> 00:48:05,760
@@ -2795,7 +2795,7 @@ monadically
 
 640
 00:55:34,640 --> 00:55:35,840
-What is going on there ?
+What is going on there?
 
 641
 00:55:40,400 --> 00:55:42,480
@@ -2989,7 +2989,7 @@ Let's say:
 686
 00:58:55,920 --> 00:58:57,920
 Let has one more
-component doesn't it ?
+component doesn't it?
 
 687
 00:58:59,840 --> 00:59:02,000
@@ -3136,7 +3136,7 @@ we would not name names.
 
 720
 01:00:57,050 --> 01:00:58,705
-I could have said this couldn't I ?
+I could have said this couldn't I?
 
 721
 01:00:59,520 --> 01:01:01,290
@@ -3397,7 +3397,7 @@ and we'll call them:
 
 780
 01:06:10,470 --> 01:06:11,410
-What is a variable ?
+What is a variable?
 
 781
 01:06:16,470 --> 01:06:19,640
@@ -3797,7 +3797,7 @@ OC: You were pretty quick so maybe
 873
 01:14:51,050 --> 01:14:53,764
 you were running ahead
-of your flycheck again !
+of your flycheck again!
 
 874
 01:14:54,000 --> 01:14:55,170
@@ -4042,7 +4042,7 @@ JW: I guess you we're expecting
 
 930
 01:18:29,520 --> 01:18:30,820
-that to be from a library ?
+that to be from a library?
 
 931
 01:18:34,110 --> 01:18:36,230
@@ -4163,7 +4163,7 @@ OC: Why expression to expression
 
 959
 01:20:02,700 --> 01:20:04,230
-and not double to expression ?
+and not double to expression?
 
 960
 01:20:06,940 --> 01:20:08,580
@@ -4234,7 +4234,7 @@ So I'm going to say what that means.
 
 976
 01:20:50,820 --> 01:20:52,580
-OC: Do we still need Show instance ?
+OC: Do we still need Show instance?
 
 977
 01:20:53,410 --> 01:20:55,170
@@ -4260,12 +4260,12 @@ Pretty soon this is going to be 300 lines
 
 982
 01:22:11,640 --> 01:22:13,290
-as usually happens in Haskell !
+as usually happens in Haskell!
 
 983
 01:22:13,290 --> 01:22:15,290
 OC: but we do want to be working
-with strings here right ?
+with strings here right?
 
 984
 01:22:15,290 --> 01:22:17,410
@@ -4286,7 +4286,7 @@ OC: I think we're OK using show.
 
 988
 01:22:34,941 --> 01:22:37,529
-Oh yes ! because we're
+Oh yes! because we're
 defining a Show instance.
 
 989
@@ -4355,7 +4355,7 @@ OC: Is F here going to be the name
 
 1004
 01:23:48,940 --> 01:23:50,350
-of the lambda abstraction ?
+of the lambda abstraction?
 
 1005
 01:23:51,410 --> 01:23:51,880
@@ -4539,7 +4539,7 @@ What if we evaluate a function
 
 1048
 01:28:52,940 --> 01:28:54,350
-that has let bindings in it ?
+that has let bindings in it?
 
 1049
 01:28:54,350 --> 01:28:56,580
@@ -4548,7 +4548,7 @@ probably not escape
 
 1050
 01:28:56,940 --> 01:28:58,580
-outside of the function should they ?
+outside of the function should they?
 
 1051
 01:28:58,580 --> 01:29:00,470
@@ -4810,7 +4810,7 @@ letBinding followed by funBinding.
 
 1109
 01:33:56,000 --> 01:33:57,290
-What else did we define ?
+What else did we define?
 
 1110
 01:33:57,290 --> 01:33:58,700
@@ -4893,7 +4893,7 @@ lambda in our syntax tree
 
 1128
 01:35:18,940 --> 01:35:19,880
-Why did we do that ?
+Why did we do that?
 
 1129
 01:35:24,110 --> 01:35:26,470
@@ -5029,7 +5029,7 @@ have Ollie's type error
 1159
 01:37:24,470 --> 01:37:27,050
 Now we need something
-new to go into our map, right ?
+new to go into our map, right?
 
 1160
 01:37:27,880 --> 01:37:29,410
@@ -5125,7 +5125,7 @@ after every step.
 
 1181
 01:39:28,940 --> 01:39:30,235
-JW: Oh! Is that our problem ?
+JW: Oh! Is that our problem?
 
 1182
 01:39:32,705 --> 01:39:35,058
@@ -5280,7 +5280,7 @@ Might as well do it this way.
 
 1216
 01:42:41,640 --> 01:42:42,580
-Ah ! the parse stops.
+Ah! the parse stops.
 
 1217
 01:42:46,820 --> 01:42:48,470
@@ -5562,7 +5562,7 @@ wherever EMul was
 
 1282
 01:47:21,520 --> 01:47:23,290
-Is that appropriate for doubles ?
+Is that appropriate for doubles?
 
 1283
 01:47:23,760 --> 01:47:24,700
@@ -5574,7 +5574,7 @@ I will take a look at this file again.
 
 1285
 01:47:40,940 --> 01:47:42,700
-Do you really want the return keyword ?
+Do you really want the return keyword?
 
 1286
 01:47:42,700 --> 01:47:44,820
@@ -5608,7 +5608,7 @@ Let's give it a try...
 
 1293
 01:47:58,470 --> 01:48:00,000
-Do you think it's going to work ?
+Do you think it's going to work?
 
 1294
 01:48:02,820 --> 01:48:03,880
@@ -5664,7 +5664,7 @@ OC: Are we able to see which line
 
 1306
 01:48:36,470 --> 01:48:38,000
-it's having this trouble with ?
+it's having this trouble with?
 
 1307
 01:48:41,880 --> 01:48:43,640
@@ -5706,7 +5706,7 @@ because we're seeing that
 1316
 01:49:38,580 --> 01:49:41,410
 OC: This isn't a problem
-with the comment dropping those ?...
+with the comment dropping those?...
 
 1317
 01:49:53,880 --> 01:49:55,760
@@ -5728,7 +5728,7 @@ or return or newline..
 1321
 01:50:12,000 --> 01:50:14,820
 OC: Is it the leading
-whitespace causing the problem ?
+whitespace causing the problem?
 
 1322
 01:50:16,230 --> 01:50:18,350
@@ -5807,7 +5807,7 @@ JW: We're getting as far as seven.
 
 1339
 01:52:25,170 --> 01:52:26,230
-OC: Or maybe trace it ?
+OC: Or maybe trace it?
 
 1340
 01:53:05,050 --> 01:53:07,170
@@ -5856,7 +5856,7 @@ we're failing in the parsing.
 1350
 01:54:21,640 --> 01:54:24,110
 JW: It should read it
-as a variable shouldn't it ?
+as a variable shouldn't it?
 
 1351
 01:54:25,760 --> 01:54:28,000
@@ -5947,7 +5947,7 @@ join four lines into one.
 
 1371
 01:55:30,700 --> 01:55:31,640
-JW: You mean in here ?
+JW: You mean in here?
 
 1372
 01:55:31,640 --> 01:55:32,110
@@ -5971,7 +5971,7 @@ Oh I did keep it.
 
 1377
 01:55:48,700 --> 01:55:49,290
-Very good !
+Very good!
 
 1378
 01:55:50,580 --> 01:55:51,880
@@ -6050,7 +6050,7 @@ If I now:
 1395
 01:57:09,050 --> 01:57:11,640
 OC: This is also reading
-from standard input then ?
+from standard input then?
 
 1396
 01:57:11,640 --> 01:57:14,823
@@ -6059,11 +6059,11 @@ that file we have been working on into it.
 
 1397
 01:57:16,580 --> 01:57:18,470
-Maybe let's see what we get with that ?
+Maybe let's see what we get with that?
 
 1398
 01:57:24,000 --> 01:57:24,941
-JW: Not quite !
+JW: Not quite!
 
 1399
 01:57:25,880 --> 01:57:28,940
@@ -6183,7 +6183,7 @@ and that would achieve what I want.
 1425
 01:58:52,110 --> 01:58:54,820
 OC: You would basically be doing a kind of
-memoization then ?
+memoization then?
 
 1426
 01:58:54,820 --> 01:58:57,290
