@@ -2287,8 +2287,8 @@ OC: I think interact already runs forever.
 
 523
 00:44:32,900 --> 00:44:35,500
-The idea with interact
-is you get a lazy strain
+The idea of interact
+is you get a lazy string
 
 524
 00:44:35,500 --> 00:44:36,800
