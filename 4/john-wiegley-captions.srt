@@ -1886,7 +1886,8 @@ The tricky thing about doing traces
 
 430
 00:35:19,000 --> 00:35:21,300
-is that it's not like print in inaudible language.
+is that it's not like 'print'
+in an imperative language.
 
 431
 00:35:22,900 --> 00:35:24,700
