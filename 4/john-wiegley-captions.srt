@@ -2133,7 +2133,7 @@ What I would like to do next
 
 487
 00:41:57,000 --> 00:41:58,160
-is do it in Rebel style.
+is do it in a REPL style.
 
 488
 00:41:59,100 --> 00:42:03,000
