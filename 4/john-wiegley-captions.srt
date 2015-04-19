@@ -5203,16 +5203,18 @@ JW: Yes.
 
 1202
 01:41:31,640 --> 01:41:35,170
-I could just do that inaudible silly use of a pattern.
+I could just do this. That's actually
+a silly use of view patterns.
 
 1203
 01:41:40,000 --> 01:41:41,760
-Except that it's going to be a maybe.
+Except that it's going to be a Maybe.
 
 1204
 01:41:45,290 --> 01:41:47,410
-So we have to lift
-one level out, and say...
+So we have to lift one level out and say:
+if it's Nothing, do nothing
+otherwise we have some String.
 
 1205
 01:41:56,470 --> 01:41:58,000
