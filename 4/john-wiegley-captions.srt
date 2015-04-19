@@ -1759,7 +1759,7 @@ said Control-c and Control-m...
 
 401
 00:32:49,600 --> 00:32:52,700
-It would suggest to me all
+it would suggest to me all
 the modules that it knows about.
 
 402
