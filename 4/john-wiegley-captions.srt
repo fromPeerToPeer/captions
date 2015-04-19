@@ -1637,11 +1637,13 @@ correct multiplication.
 
 373
 00:30:59,000 --> 00:31:00,400
-and I have five to the front.
+If I add the 5 to the back
+it works as we'd thought.
 
 374
 00:31:00,400 --> 00:31:06,100
-inaudible the back but should also work....
+It also works the same
+if we add it to the front.
 
 375
 00:31:09,500 --> 00:31:11,200
