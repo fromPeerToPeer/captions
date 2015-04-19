@@ -5329,20 +5329,22 @@ because we do this line by line.
 
 1231
 01:43:34,820 --> 01:43:35,640
-There we go.
+There we go!
 
 1232
 01:43:40,000 --> 01:43:41,290
-five times five is 25 OK,
+5 times 5 is 25 OK,
 
 1233
 01:43:42,000 --> 01:43:43,640
-So 26 divided by two should be 13.
+So 26 divided by 2 should be 13.
+Alright!
 
 1234
 01:43:46,350 --> 01:43:48,940
 I would say that's a
 good place for us to check in.
+Function definitions and calling now work.
 
 1235
 01:44:00,230 --> 01:44:00,940
