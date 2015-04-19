@@ -2039,7 +2039,7 @@ If we go back to what we had before
 
 465
 00:38:29,500 --> 00:38:32,700
-It's failing parse inaudible comments.
+It's failing parse these comments.
 
 466
 00:38:34,400 --> 00:38:36,200
@@ -2051,7 +2051,7 @@ JW: Yes.
 
 468
 00:38:39,100 --> 00:38:41,600
-OC: Cool, we don't have inaudible.
+OC: Cool, we don't have parentheses.
 
 469
 00:38:43,600 --> 00:38:45,920
