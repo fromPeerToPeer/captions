@@ -2296,7 +2296,7 @@ of all of standard input.
 
 525
 00:44:37,700 --> 00:44:39,800
-And you deliver a lazy string with that.
+And you deliver a lazy string of output.
 
 526
 00:44:40,200 --> 00:44:42,800
