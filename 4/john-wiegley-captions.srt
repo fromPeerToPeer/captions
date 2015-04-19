@@ -5369,7 +5369,7 @@ It's in one of these example files.
 
 1240
 01:44:17,050 --> 01:44:19,050
-We should only need to redefine feed,
+We should only need to redefine phi,
 
 1241
 01:44:21,640 --> 01:44:23,760
@@ -5398,7 +5398,7 @@ to the bottom of this file.
 JW: We should be able to do that easily.
 
 1247
-01:44:34,352 --> 01:44:36,352
+01:44:34,352 --> 01:44:36,340
 Because we chose the higher order 
 
 1248
@@ -5411,15 +5411,16 @@ That makes it easier for us to inject
 
 1250
 01:44:44,940 --> 01:44:47,290
-what we would call a inaudible in our language.
+what we would call built-ins
+into our language.
 
 1251
 01:44:47,880 --> 01:44:49,050
-All we need is a parser...
+All we need then is a parser
 
 1252
 01:44:51,520 --> 01:44:52,470
-and have an option...
+and we're going to have an option...
 
 1253
 01:44:53,050 --> 01:44:54,230
@@ -5428,6 +5429,7 @@ Let's extend funCall.
 1254
 01:44:55,290 --> 01:44:56,235
 FunCall will say:
+if name is 'sqrt'...
 
 1255
 01:45:08,230 --> 01:45:10,350
