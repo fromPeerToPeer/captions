@@ -1785,11 +1785,12 @@ JW: Let's see...
 
 407
 00:33:11,600 --> 00:33:13,400
-GHC ins-mod is providing that feature.
+ghc-ins-mod is providing that feature.
 
 408
 00:33:17,100 --> 00:33:22,000
-I use Haskell mode and I use GHC mod and hdevtools.
+I use Haskell mode and I use
+ghc-mod and hdevtools.
 
 409
 00:33:22,700 --> 00:33:25,000
@@ -1798,7 +1799,7 @@ jumps to the local Hoogle
 
 410
 00:33:25,000 --> 00:33:26,800
-is a patch that I did on GHC mod code
+is a patch that I did on ghc-mod's code
 
 411
 00:33:29,300 --> 00:33:32,500
