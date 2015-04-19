@@ -1971,7 +1971,7 @@ We don't have a minus symbol.
 
 449
 00:37:06,000 --> 00:37:07,900
-we're getting no output whatsoever.
+We're getting no output whatsoever.
 
 450
 00:37:08,700 --> 00:37:10,000
