@@ -5131,7 +5131,7 @@ neighbours and have the old
 
 1178
 01:14:57,420 --> 01:15:01,680
-neighbors function
+neighbours function
 simply be a function returning
 
 1179
