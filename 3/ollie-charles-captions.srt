@@ -4552,7 +4552,7 @@ in chains that start at a
 
 1042
 01:07:16,908 --> 01:07:17,857
-and finish at B.
+and finish at b
 
 1043
 01:07:18,491 --> 01:07:21,234
