@@ -4994,7 +4994,7 @@ So we don't seem to have any compile errors
 
 1147
 01:12:58,020 --> 01:12:59,850
-around this neighbors function.
+around this neighbours function.
 
 1148
 01:13:00,680 --> 01:13:02,250
