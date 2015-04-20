@@ -4121,7 +4121,7 @@ And this becomes apparent
 942
 01:01:48,931 --> 01:01:51,480
 you can see how I'm
-going to pull the cursor back.
+going to pull recursively.
 
 943
 01:01:51,480 --> 01:01:54,685
