@@ -5088,7 +5088,7 @@ dictionary, which is a set of words,
 
 1168
 01:14:02,668 --> 01:14:04,800
-so if we go set to list.
+so if we go from set to list.
 
 1169
 01:14:05,885 --> 01:14:10,354
