@@ -4174,7 +4174,7 @@ and what we'll have here is a word chain
 
 954
 01:02:23,491 --> 01:02:25,697
-and the dictionary, which we want to expand
+and a dictionary, which we will expand
 
 955
 01:02:26,017 --> 01:02:27,497
