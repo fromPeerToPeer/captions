@@ -4548,7 +4548,7 @@ that start from a
 1041
 01:07:14,514 --> 01:07:16,902
 But we're interested
-in chains that start at A
+in chains that start at a
 
 1042
 01:07:16,908 --> 01:07:17,857
