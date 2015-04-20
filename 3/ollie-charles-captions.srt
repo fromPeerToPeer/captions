@@ -4976,7 +4976,8 @@ We take the set intersection ...
 
 1143
 01:12:41,380 --> 01:12:43,817
-SP: Is it (inaudible), ? I can't remember.
+SP: Is it bang or double-bang for the
+lookup operator? I can't remember.
 
 1144
 01:12:44,205 --> 01:12:47,165
