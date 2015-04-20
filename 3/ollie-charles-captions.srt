@@ -5047,7 +5047,7 @@ I would like to be able to test that in GHCi
 1159
 01:13:36,622 --> 01:13:38,862
 but we don't have a way
-to build a neighbor map yet.
+to build a NeighbourMap yet.
 
 1160
 01:13:38,860 --> 01:13:41,937
