@@ -4864,7 +4864,7 @@ but rather than just taking that, we can also
 
 1116
 01:11:26,531 --> 01:11:28,440
-take in a neighbor map.
+take in a NeighbourMap.
 
 1117
 01:11:29,462 --> 01:11:30,628
