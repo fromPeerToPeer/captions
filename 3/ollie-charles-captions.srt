@@ -4444,7 +4444,7 @@ so if we take the original pairs and what we
 
 1017
 01:05:57,331 --> 01:06:02,450
-need to do is go again on the concat map.
+need to do is go again on the concatMap.
 
 1018
 01:06:03,085 --> 01:06:03,617
