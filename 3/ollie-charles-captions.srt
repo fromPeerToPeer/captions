@@ -4781,7 +4781,7 @@ feels like this neighbours function.
 
 1096
 01:10:16,902 --> 01:10:20,620
-We're filtering twice and the map twice
+We're filtering twice and we map twice
 
 1097
 01:10:20,634 --> 01:10:22,280
