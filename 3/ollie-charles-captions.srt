@@ -4328,7 +4328,7 @@ to have a play with this now.
 
 990
 01:04:14,700 --> 01:04:15,760
-(inaudible) GHCi
+In our GHCi
 
 991
 01:04:15,820 --> 01:04:19,531
