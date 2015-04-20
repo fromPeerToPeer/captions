@@ -6581,523 +6581,472 @@ But designing it this way means we
 are gradually reducing the surface area
 
 1494
-01:53:37,857 --> 01:53:39,450
+01:53:37,857 --> 01:53:39,555
 of what we expect from children.
 
 1495
-01:53:39,450 --> 01:53:39,555
-All we require
-from children is that
-of what we expect from children.
+01:53:39,550 --> 01:53:43,697
+All we require from children is that we
+can call each on it, to get an enumerator back,
 
 1496
-01:53:39,555 --> 01:53:41,450
-All we require
-from children is that
+01:53:43,706 --> 01:53:47,208
+and the rest of the functionality
+sits on top of that single assumption
 
 1497
-01:53:41,450 --> 01:53:43,000
-we can call each
-on it, to get an
+01:53:47,200 --> 01:53:49,742
+about what we can do with the children.
 
 1498
-01:53:43,000 --> 01:53:44,880
-enumerator back,
-and the rest of the
+01:53:52,340 --> 01:53:57,004
+I'm not changing the tests at all here.
+I'm just getting a chance to re-factor.
 
 1499
-01:53:44,880 --> 01:53:46,880
-functionality sits
-on top of that single
+01:53:57,022 --> 01:54:07,013
+Use enumerable_count to count
+the children through the enumerator.
 
 1500
-01:53:46,880 --> 01:53:49,510
-assumption about what
-we can do with  the children.
+01:54:07,031 --> 01:54:10,170
+And then, (this one is a bit tricky).
 
 1501
-01:53:52,340 --> 01:53:54,310
-I'm not changing
-the tests at all here.
-
-1502
-01:53:54,680 --> 01:53:56,680
-I'm just getting a
-chance to re-factor:
-
-1503
-01:54:08,450 --> 01:54:10,170
-And then,
-(this one is a bit tricky).
-
-1504
-01:54:10,540 --> 01:54:12,200
+01:54:10,540 --> 01:54:12,622
 There are two ways of doing this.
 
-1505
-01:54:13,420 --> 01:54:14,880
-I'll show you the stupid way.
+1502
+01:54:13,420 --> 01:54:17,946
+I'll show you the stupid way... well, you
+don't need me to show you stupid way
 
-1506
-01:54:14,880 --> 01:54:17,200
-Well, you don't need me
-to show you stupid way.
+1503
+01:54:18,140 --> 01:54:27,146
+It's just each child inaudible entries and add that child to the end.
 
-1507
-01:54:18,140 --> 01:54:19,000
-It's just:
-
-1508
-01:54:27,480 --> 01:54:28,400
+1504
+01:54:27,480 --> 01:54:29,333
 Run all the tests.
 
-1509
-01:54:29,370 --> 01:54:30,510
+1505
+01:54:29,370 --> 01:54:31,066
 Run all the cucumbers.
 
-1510
+1506
 01:54:31,110 --> 01:54:31,710
 That's fine.
 
-1511
-01:54:32,110 --> 01:54:32,770
+1507
+01:54:32,110 --> 01:54:33,724
 DN: Yes.
 
-1512
-01:54:34,570 --> 01:54:36,370
+1508
+01:54:34,570 --> 01:54:40,693
 TS: I think a better way is to build
-
-1513
-01:54:36,370 --> 01:54:38,250
 an enumeration of the new children
 
-1514
-01:54:40,910 --> 01:54:42,650
+1509
+01:54:40,702 --> 01:54:44,017
 by adapting the old enumeration.
 
-1515
-01:54:44,020 --> 01:54:44,740
-I can say here:
+1510
+01:54:44,020 --> 01:54:51,182
+I can say here children equals a new enumerator.
 
-1516
-01:54:51,280 --> 01:54:53,280
-An enumerator
-works by providing an
+1511
+01:54:51,250 --> 01:54:58,195
+An enumerator works by providing
+an object called a yielder to this block.
 
-1517
-01:54:56,140 --> 01:54:57,800
-object called a yielder to this
+1512
+01:54:58,195 --> 01:55:03,102
+that you pass in the constructor.
+And every time you call yielder.yield
 
-1518
-01:54:57,800 --> 01:54:59,800
-block that you
-pass in the constructor.
-
-1519
-01:54:59,800 --> 01:55:01,770
-and every time you call yielder.yield
-
-1520
-01:55:03,110 --> 01:55:04,400
+1513
+01:55:03,110 --> 01:55:04,720
 It will yield that value.
 
-1521
-01:55:08,400 --> 01:55:09,710
+1514
+01:55:08,400 --> 01:55:11,164
 Let's look at it on irb:
 
-1522
-01:55:11,170 --> 01:55:11,570
-If I say:
+1515
+01:55:11,170 --> 01:55:29,191
+If I say enum equals enumerator.new
+do yeilder. Yeilder.yeild one, two, three, end.
 
-1523
-01:55:29,200 --> 01:55:30,910
-First you can step through them
+1516
+01:55:29,200 --> 01:55:31,795
+First you can step through them one at a time.
 
-1524
-01:55:31,020 --> 01:55:31,680
-one at a time.
-
-1525
+1517
 01:55:31,800 --> 01:55:34,220
 You can say give me the
 next value, and the next .....
 
-1526
-01:55:34,220 --> 01:55:36,850
-It's using fibers to suspend
-execution of that block
+1518
+01:55:34,220 --> 01:55:40,631
+It's using fibers to suspend execution of
+that block after every yield until I say I'm ready.
 
-1527
-01:55:37,710 --> 01:55:39,800
-after every yield
-until I say I'm ready.
+1519
+01:55:40,630 --> 01:55:43,635
+If I enumerate off the end it says reached an end.
 
-1528
-01:55:40,650 --> 01:55:42,450
-If I enumerate
-off the end it says ....
+1520
+01:55:43,650 --> 01:55:47,493
+I think I can re-wind. Yes.
 
-1529
-01:55:43,650 --> 01:55:44,680
-I think I can re-wind.
+1521
+01:55:48,910 --> 01:55:55,671
+It's enumerable so I can also say enum.entries, enum.each.
 
-1530
-01:55:46,680 --> 01:55:47,020
-Yes.
-
-1531
-01:55:48,910 --> 01:55:50,650
-It's enumerable
-so I can also say:
-
-1532
-01:55:54,140 --> 01:55:54,540
-I can do:
-
-1533
+1522
 01:55:59,680 --> 01:56:01,850
 It works like a
 normal enumerable 'thing'
 
-1534
+1523
 01:56:01,880 --> 01:56:03,880
 but you've
 built it programmatically.
 
-1535
+1524
 01:56:04,340 --> 01:56:06,370
 I can take
 advantage of that by saying:
 
-1536
+1525
 01:56:15,850 --> 01:56:17,850
 So yield all of the existing children
 
-1537
+1526
 01:56:17,850 --> 01:56:19,740
 to the yielder,
 and then afterwards,
 
-1538
+1527
 01:56:21,540 --> 01:56:22,310
 Yield a new one.
 
-1539
+1528
 01:56:25,970 --> 01:56:27,800
 I need to do
 some variable re-names.
 
-1540
+1529
 01:56:29,740 --> 01:56:31,570
 It's fine but
 I think it's confusing.
 
-1541
+1530
 01:56:32,970 --> 01:56:33,880
 So add a new child.
 
-1542
+1531
 01:56:34,740 --> 01:56:36,800
 And then I'll say,
 make a new enumerator.
 
-1543
+1532
 01:56:38,600 --> 01:56:40,050
 It will not create an array.
 
-1544
+1533
 01:56:40,540 --> 01:56:42,740
 This piece of code
 will just spin over the
 
-1545
+1534
 01:56:42,740 --> 01:56:44,220
 old children and yield them.
 
-1546
+1535
 01:56:44,740 --> 01:56:46,540
 And then will
 yield the new child.
 
-1547
+1536
 01:56:46,540 --> 01:56:48,570
 Rather than
 building a new array here.
 
-1548
+1537
 01:56:49,220 --> 01:56:51,020
 I can pass in
 my new enumeration
 
-1549
+1538
 01:56:54,450 --> 01:56:55,310
 of the children.
 
-1550
+1539
 01:56:56,880 --> 01:56:57,650
 And that works.
 
-1551
+1540
 01:56:59,510 --> 01:57:01,170
 I think that's
 an efficient way
 
-1552
+1541
 01:57:01,170 --> 01:57:02,450
 of mutating these trees.
 
-1553
+1542
 01:57:03,540 --> 01:57:05,450
 To think of the
 children as being
 
-1554
+1543
 01:57:05,450 --> 01:57:06,880
 enumerations of children.
 
-1555
+1544
 01:57:09,850 --> 01:57:11,880
 If we had some
 kind of 'insert before'
 
-1556
+1545
 01:57:13,170 --> 01:57:15,020
 You could do a
 thing here that says
 
-1557
+1546
 01:57:17,510 --> 01:57:19,420
 "if child equals
 the one I'm supposed
 
-1558
+1547
 01:57:19,650 --> 01:57:20,910
 to be inserting before,
 
-1559
+1548
 01:57:21,420 --> 01:57:22,480
 then yield the new one.
 
-1560
+1549
 01:57:23,200 --> 01:57:25,220
 And after that
 yield the existing one."
 
-1561
+1550
 01:57:26,400 --> 01:57:28,200
 If it's 'insert after' you can
 yield the old child
 
-1562
+1551
 01:57:28,200 --> 01:57:30,020
 and then immediately
 yield the new one.
 
-1563
+1552
 01:57:30,450 --> 01:57:32,340
 Adding it on to the
 end is the easiest
 
-1564
+1553
 01:57:32,340 --> 01:57:33,800
 because we
 know where it goes.
 
-1565
+1554
 01:57:33,820 --> 01:57:35,800
 But enumerating
 over the old collection
 
-1566
+1555
 01:57:36,510 --> 01:57:38,680
 and inserting the new
 one at the right time
 
-1567
+1556
 01:57:40,280 --> 01:57:42,800
 allows us to ....
 
-1568
+1557
 01:57:44,650 --> 01:57:47,250
 If we wanted to insert a copy of this
 after every existing child.
 
-1569
+1558
 01:57:47,250 --> 01:57:48,800
 We can say
 "yield the old child
 
-1570
+1559
 01:57:48,800 --> 01:57:50,140
 and then yield the new one",
 
-1571
+1560
 01:57:50,140 --> 01:57:51,480
 each time around the loop.
 
-1572
+1561
 01:57:52,970 --> 01:57:54,970
 We can do any modification
 
-1573
+1562
 01:57:55,000 --> 01:57:56,510
 to the tree
 that we want here.
 
-1574
+1563
 01:57:56,510 --> 01:57:58,740
 But we're not
 actually modifying anything.
 
-1575
+1564
 01:57:59,280 --> 01:58:01,710
 This has the nice
 structural sharing property
 
-1576
+1565
 01:58:01,710 --> 01:58:03,800
 where this new
 new node that we are getting
 
-1577
+1566
 01:58:05,570 --> 01:58:07,680
 is re-using the
 collection of children
 
-1578
+1567
 01:58:08,170 --> 01:58:09,280
 that the old node had.
 
-1579
+1568
 01:58:09,710 --> 01:58:12,020
 It isn't copying that
 array and adding to it.
 
-1580
+1569
 01:58:12,020 --> 01:58:14,140
 It's holding on to
 it through each_child.
 
-1581
+1570
 01:58:16,200 --> 01:58:18,770
 The new node has a
 child enumerator that calls
 
-1582
+1571
 01:58:20,140 --> 01:58:21,480
 each_child on the old node,
 
-1583
+1572
 01:58:21,800 --> 01:58:23,680
 and when it's
 finished enumerating all
 
-1584
+1573
 01:58:23,680 --> 01:58:25,680
 of its children, it
 yields the new one.
 
-1585
+1574
 01:58:25,680 --> 01:58:27,420
 That feels close to optimal to me.
 
-1586
+1575
 01:58:32,020 --> 01:58:33,710
 It's not super efficient because
 
-1587
+1576
 01:58:34,140 --> 01:58:36,540
 when you are doing
 things non-destructively,
 
-1588
+1577
 01:58:36,540 --> 01:58:38,480
 you're expecting
 the garbage collector
 
-1589
+1578
 01:58:38,480 --> 01:58:41,280
 to do the work of cleaning
 up all the old stuff for you.
 
-1590
+1579
 01:58:42,400 --> 01:58:44,540
 But after the
 garbage collector has run,
 
-1591
+1580
 01:58:44,540 --> 01:58:46,800
 we're not going to be
 using lots more memory.
 
-1592
+1581
 01:58:50,850 --> 01:58:53,340
 If you want to
 compose a lot of trees together,
 
-1593
+1582
 01:58:53,620 --> 01:58:55,310
 which this API
 allows you to do.
 
-1594
+1583
 01:58:55,570 --> 01:58:57,880
 Every time you compose
 a tree into a new one,
 
-1595
+1584
 01:58:57,880 --> 01:58:59,480
 you are not taking a copy of it.
 
-1596
+1585
 01:59:01,340 --> 01:59:03,400
 You are holding on
 to a reference to it.
 
-1597
+1586
 01:59:03,400 --> 01:59:05,680
 Which you would do
 anyway if it was mutable
 
-1598
+1587
 01:59:08,370 --> 01:59:10,800
 And every time you
 make a change it's creating
 
-1599
+1588
 01:59:10,820 --> 01:59:13,020
 just enough new stuff
 and holding on to as
 
-1600
+1589
 01:59:13,020 --> 01:59:15,820
 much of the old stuff as is
 necessary to make use of it.
 
-1601
+1590
 01:59:17,740 --> 01:59:20,370
 I feel good that we have
 been able to do that there.
 
-1602
+1591
 01:59:21,800 --> 01:59:22,510
 So I shall say:
 
-1603
+1592
 01:59:32,770 --> 01:59:33,620
 How are we doing?
 
-1604
+1593
 01:59:33,620 --> 01:59:35,680
 DN: I think that's a
 good place to wrap up.
 
-1605
+1594
 01:59:36,280 --> 01:59:39,310
 Thanks Tom, it's been very
 interesting watching you work.
 
-1606
+1595
 01:59:41,020 --> 01:59:43,800
 TS: Thanks for having me,
 it has been really good fun.
