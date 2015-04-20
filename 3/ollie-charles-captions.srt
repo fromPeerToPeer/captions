@@ -5141,7 +5141,7 @@ with the neighbors and distances.
 
 1180
 01:15:06,388 --> 01:15:08,337
-OC: In the neighbors function or ...?
+OC: In the neighbours function or ...?
 
 1181
 01:15:09,257 --> 01:15:12,685
