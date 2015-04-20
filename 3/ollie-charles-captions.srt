@@ -4960,7 +4960,7 @@ So, this is saying in the map M
 
 1139
 01:12:25,697 --> 01:12:27,011
-look up the word W.
+look up the word w.
 
 1140
 01:12:28,725 --> 01:12:31,474
