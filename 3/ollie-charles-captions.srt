@@ -4126,7 +4126,7 @@ going to pull recursively.
 943
 01:01:51,480 --> 01:01:54,685
 And it's going to give us back a 
-list of word chains and the dictionary.
+list of word chains and dictionaries.
 
 944
 01:01:54,685 --> 01:01:57,880
