@@ -4183,7 +4183,7 @@ in a chain and a dictionary.
 956
 01:02:28,217 --> 01:02:30,571
 We're going to have
-to concat on that because
+to concat like that because
 
 957
 01:02:30,577 --> 01:02:32,457
