@@ -5064,7 +5064,7 @@ so I can actually see if
 
 1163
 01:13:45,020 --> 01:13:47,262
-the neighbor map seems to
+the NeighbourMap seems to
 be working as we would expect.
 
 1164
