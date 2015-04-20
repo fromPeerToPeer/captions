@@ -4535,7 +4535,7 @@ start with a word chain
 
 1038
 01:07:08,045 --> 01:07:09,765
-that begins at the word A.
+that begins at the word a
 
 1039
 01:07:11,582 --> 01:07:13,771
