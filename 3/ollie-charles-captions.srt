@@ -4187,7 +4187,7 @@ to concat like that because
 
 957
 01:02:30,577 --> 01:02:32,457
-expand gives us a list of word chains.
+expand gives us a list of word chains an dictionaries.
 
 958
 01:02:35,794 --> 01:02:37,474
