@@ -4856,7 +4856,7 @@ Now we look up the list of neighbors.
 
 1114
 01:11:21,891 --> 01:11:24,131
-We can still take the dictionary as input
+We can still take the Dictionary as input
 
 1115
 01:11:24,137 --> 01:11:26,531
