@@ -4618,7 +4618,7 @@ Read the dictionary back in
 
 1058
 01:08:06,388 --> 01:08:08,942
-(inaudible) word puzzle using the dictionary
+I can do a wordPuzzle using the dictionary
 
 1059
 01:08:08,948 --> 01:08:10,891
