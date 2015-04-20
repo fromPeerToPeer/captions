@@ -5007,7 +5007,7 @@ We also need a way to precomputeNeighbours.
 1150
 01:13:06,988 --> 01:13:11,817
 So that takes the
-dictionary and turns it into a map,
+dictionary and turns it into a NeighbourMap,
 
 1151
 01:13:12,770 --> 01:13:15,540
