@@ -5052,7 +5052,7 @@ to build a NeighbourMap yet.
 1160
 01:13:38,860 --> 01:13:41,937
 So I'm going to work on this
-pre-compute neighbors function
+precomputeNeighbours function
 
 1161
 01:13:41,937 --> 01:13:43,794
