@@ -4802,7 +4802,7 @@ doesn't really change.
 1101
 01:10:28,720 --> 01:10:31,434
 There may be potential
-neighbors that we can't consider 
+neighbors that we can't consider
 
 1102
 01:10:31,434 --> 01:10:33,620
