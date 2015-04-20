@@ -5002,7 +5002,7 @@ That's quite straightforward.
 
 1149
 01:13:02,440 --> 01:13:05,440
-We also need a way to pre-compute neighbors.
+We also need a way to precomputeNeighbours.
 
 1150
 01:13:06,988 --> 01:13:11,817
