@@ -5038,7 +5038,7 @@ to see how to pass that down into it.
 
 1157
 01:13:29,342 --> 01:13:34,325
-OC: Yes.  We've got a neighbors function.
+OC: Yes.  We've got a neighbours function.
 
 1158
 01:13:34,320 --> 01:13:36,622
