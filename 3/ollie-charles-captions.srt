@@ -4840,7 +4840,7 @@ pre-compute this against the dictionary.
 
 1110
 01:10:59,340 --> 01:11:01,840
-We're going to need the map data type
+We're going to need the Map data type
 
 1111
 01:11:01,850 --> 01:11:06,000
