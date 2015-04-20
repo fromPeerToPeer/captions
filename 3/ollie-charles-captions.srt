@@ -5098,7 +5098,7 @@ in here we can map over ...
 1170
 01:14:12,370 --> 01:14:15,005
 Ah ! We did need our
-original neighbors function
+original neighbours function
 
 1171
 01:14:15,000 --> 01:14:17,142
