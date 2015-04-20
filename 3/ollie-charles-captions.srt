@@ -4836,7 +4836,7 @@ And we should be able to
 
 1109
 01:10:56,485 --> 01:10:58,714
-pre-compute this against the dictionary .
+pre-compute this against the dictionary.
 
 1110
 01:10:59,340 --> 01:11:01,840
