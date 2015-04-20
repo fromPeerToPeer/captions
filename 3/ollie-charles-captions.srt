@@ -4622,7 +4622,7 @@ I can do a wordPuzzle using the dictionary
 
 1059
 01:08:08,948 --> 01:08:10,891
-it will go from dog to cat.
+and we'll go from dog to cat.
 
 1060
 01:08:15,742 --> 01:08:17,502
