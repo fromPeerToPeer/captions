@@ -4909,7 +4909,7 @@ so we're going to filter those out.
 
 1127
 01:11:48,708 --> 01:11:52,205
-OK, so I'll call that M and W.
+OK, so I'll call that m and w.
 
 1128
 01:11:52,731 --> 01:11:54,370
