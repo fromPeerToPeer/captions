@@ -4543,7 +4543,7 @@ And this is going to give us all the chains
 
 1040
 01:07:13,771 --> 01:07:14,514
-that start from A.
+that start from a
 
 1041
 01:07:14,514 --> 01:07:16,902
