@@ -4917,7 +4917,7 @@ And this becomes straightforward,
 
 1129
 01:11:54,370 --> 01:12:01,080
-we simply do a map look-up (inaudible)
+we simply do a map look-up which is the exclamation operator
 
 1130
 01:12:01,110 --> 01:12:04,634
