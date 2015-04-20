@@ -4423,7 +4423,7 @@ to start getting bigger at some point.
 
 1012
 01:05:45,062 --> 01:05:46,314
-That's not re cursing.
+That's not recursing.
 
 1013
 01:05:47,165 --> 01:05:49,080
