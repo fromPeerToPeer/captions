@@ -4576,7 +4576,7 @@ SP: Because the tuples will come back from go.
 
 1048
 01:07:33,891 --> 01:07:36,177
-OC: Yes, so it will give us two word chains
+OC: Yes, so it will give us a tuple of word chains
 
 1049
 01:07:36,171 --> 01:07:37,365
