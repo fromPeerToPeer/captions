@@ -4108,7 +4108,7 @@ function up here called go.
 939
 01:01:38,620 --> 01:01:44,371
 Go is going to take
-a list of word word chains
+a list of word chains
 
 940
 01:01:44,371 --> 01:01:45,588
