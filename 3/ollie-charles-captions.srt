@@ -4580,7 +4580,7 @@ OC: Yes, so it will give us a tuple of word chains
 
 1049
 01:07:36,171 --> 01:07:37,365
-from the dictionaries,
+and dictionaries,
 
 1050
 01:07:37,417 --> 01:07:39,805
