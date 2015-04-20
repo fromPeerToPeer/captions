@@ -6027,1343 +6027,1222 @@ To say "if you want to iterate
 over my children, then you may do so".
 
 1370
-01:43:47,322 --> 01:43:50,766
-If I just pop open irb:
+01:43:47,320 --> 01:43:54,817
+If I just pop open irb ... "if I have an array".
 
 1371
-01:43:51,000 --> 01:43:52,837
-"if I have an array".
+01:44:00,097 --> 01:44:02,890
+There are a variety of ways
+to make an enumerator out of that
 
 1372
-01:44:00,160 --> 01:44:02,892
-There are a variety of
-ways to make an enumerator out of that
+01:44:02,900 --> 01:44:08,471
+you can call to_enum, or you can
+just call each and that also returns enumerator.
 
 1373
-01:44:02,901 --> 01:44:05,473
-you can call to_enum, or
-you can just call each
+01:44:08,510 --> 01:44:12,648
+I think here I would like to define an iterator.
 
 1374
-01:44:05,510 --> 01:44:07,340
-and that also returns enumerator.
+01:44:12,650 --> 01:44:16,711
+So if we can iterate over each
+child, and I can provide a block.
 
 1375
-01:44:08,510 --> 01:44:11,000
-I think here I would
-like to define an iterator.
+01:44:17,050 --> 01:44:22,471
+Then I will call each on the children for you.
 
 1376
-01:44:12,650 --> 01:44:14,570
-So if we can
-iterate over each child,
-
-1377
-01:44:15,200 --> 01:44:16,480
-and I can provide a block.
-
-1378
-01:44:17,050 --> 01:44:19,420
-Then I will call each
-on the children for you.
-
-1379
-01:44:23,510 --> 01:44:24,710
+01:44:23,510 --> 01:44:25,653
 And that's nice because ....
 
-1380
-01:44:29,170 --> 01:44:30,200
+1377
+01:44:29,048 --> 01:44:31,671
 if I have some class,
 
-1381
-01:44:35,510 --> 01:44:35,970
-If I call:
+1378
+01:44:35,510 --> 01:44:37,493
+If I call ...
 
-1382
-01:44:42,280 --> 01:44:44,450
+1379
+01:44:42,222 --> 01:44:44,702
 If I pass on the block argument like that.
 
-1383
-01:44:44,740 --> 01:44:46,110
+1380
+01:44:44,711 --> 01:44:46,551
 And make a new one of these.
 
-1384
-01:44:52,310 --> 01:44:53,220
+1381
+01:44:48,746 --> 01:44:52,222
+each child inaudible
+
+1382
+01:44:52,310 --> 01:44:54,186
 Then it will work.
 
+1383
+01:44:54,364 --> 01:44:59,060
+If I don't pass in a block, each will
+behave as if I haven't passed in a block,
+
+1384
+01:44:59,060 --> 01:45:04,622
+which gives you an iterator back.
+This gives you the same as doing 10.times.each:
+
 1385
-01:44:54,220 --> 01:44:56,000
-If I don't pass in
-a block, each will
+01:45:10,080 --> 01:45:14,826
+Or I've just been using 10.times
+and then not passing it a block,
 
 1386
-01:44:57,200 --> 01:44:59,200
-behave as if I
-haven't passed in a block,
+01:45:15,822 --> 01:45:18,480
+and then calling something like map on the end of it.
 
 1387
-01:44:59,200 --> 01:45:00,970
-which gives you
-an iterator back.
+01:45:18,710 --> 01:45:24,497
+The reason that works is because these
+methods in the standard library return an enumerator.
 
 1388
-01:45:00,970 --> 01:45:03,140
-This gives you the
-same as doing 10.times.each:
+01:45:24,500 --> 01:45:29,315
+The opportunity to return an
+enumerator here is a nicer interface.
 
 1389
-01:45:10,080 --> 01:45:12,000
-Or I've just been
-using 10.times and then
+01:45:29,448 --> 01:45:32,170
+It's more constrained, and gives you what you want.
 
 1390
-01:45:12,680 --> 01:45:14,370
-not passing it
-a block, and then
+01:45:35,140 --> 01:45:37,250
+And, you don't even know that it's an array.
 
 1391
-01:45:15,820 --> 01:45:18,140
-calling something like
-map on the end of it.
+01:45:37,250 --> 01:45:42,124
+The enumerator itself doesn't
+let you reach inside it and say
 
 1392
-01:45:18,710 --> 01:45:21,170
-The reason that works
-is because these methods
+01:45:42,133 --> 01:45:46,000
+"what kind of thing are you iterating over"?
 
 1393
-01:45:21,170 --> 01:45:23,620
-in the standard
-library return an enumerator.
-
-1394
-01:45:24,540 --> 01:45:27,050
-The opportunity to
-return an enumerator here
-
-1395
-01:45:27,280 --> 01:45:28,400
-is a nicer interface.
-
-1396
-01:45:29,570 --> 01:45:32,170
-It's more constrained,
-and gives you what you want.
-
-1397
-01:45:35,140 --> 01:45:37,250
-And, you don't even
-know that it's an array.
-
-1398
-01:45:37,250 --> 01:45:39,280
-The enumerator
-itself doesn't let you
-
-1399
-01:45:39,280 --> 01:45:40,480
-reach inside it and say
-
-1400
-01:45:42,680 --> 01:45:45,000
-"what kind of thing
-are you iterating over"?
-
-1401
-01:45:47,420 --> 01:45:48,620
+01:45:47,420 --> 01:45:49,653
 So that feels quite nice.
 
-1402
+1394
 01:45:49,820 --> 01:45:53,020
 The problem is that that's
 going to break all of our examples,
 
-1403
-01:45:53,020 --> 01:45:55,280
-or just this one
-that asks for the children.
+1395
+01:45:53,020 --> 01:45:55,297
+or just this one that asks for the children.
 
-1404
+1396
 01:45:55,310 --> 01:45:57,570
-DN: So we still don't
-have a children method.
+DN: So we still don't have a children method.
 
-1405
-01:45:57,570 --> 01:45:59,450
-TS: No. We just have
-a way of iterating
+1397
+01:45:57,570 --> 01:46:03,760
+TS: No. We just have a way of
+iterating over all of the children.
 
-1406
-01:46:00,220 --> 01:46:01,540
-over all of the children.
+1398
+01:46:03,770 --> 01:46:06,560
+So we need to change our spec slightly.
 
-1407
-01:46:03,770 --> 01:46:05,800
-So we need to
-change our spec slightly.
-
-1408
-01:46:08,620 --> 01:46:10,340
-So I can't call
-children any more,
-
-1409
-01:46:10,340 --> 01:46:11,200
+1399
+01:46:08,620 --> 01:46:12,417
+So I can't call children any more,
 I can only call each_child.
 
-1410
-01:46:12,420 --> 01:46:14,250
-Which gives me
-an enumerator back.
+1400
+01:46:12,420 --> 01:46:15,573
+Which gives me an enumerator back.
 
-1411
-01:46:15,570 --> 01:46:17,570
-If I want to
-check all the things that
+1401
+01:46:15,570 --> 01:46:21,822
+If I want to check all the things
+that are yielded by that enumerator.
 
-1412
-01:46:20,370 --> 01:46:22,020
-are yielded by that enumerator.
+1402
+01:46:21,820 --> 01:46:26,071
+I could write some code that says ...
 
-1413
-01:46:22,020 --> 01:46:23,680
-I could write some code that says:
+1403
+01:46:26,110 --> 01:46:29,368
+I could pass this a block and then say ...
 
-1414
-01:46:26,110 --> 01:46:28,050
-I could pass this
-a block and then say:
+1404
+01:46:29,360 --> 01:46:34,942
+actual children append_child
+if I had already initialized one.
 
-1415
-01:46:31,250 --> 01:46:33,740
-append_child if I
-had already initialized one.
+1405
+01:46:34,940 --> 01:46:39,075
+But fortunately enumerators
+include the enumerable module
 
-1416
-01:46:34,910 --> 01:46:37,310
-But fortunately
-enumerators include the
+1406
+01:46:39,080 --> 01:46:42,124
+which already has a method
+called that. It's called entries.
 
-1417
-01:46:37,310 --> 01:46:39,110
-enumerable module which already
+1407
+01:46:42,120 --> 01:46:46,711
+So I can say "if I get an
+enumeration of all the children,
 
-1418
-01:46:39,110 --> 01:46:40,400
-has a method called that.
-
-1419
-01:46:40,450 --> 01:46:41,510
-It's called entries.
-
-1420
-01:46:42,170 --> 01:46:44,200
-So I can say "if I get
-an enumeration of all
-
-1421
-01:46:45,420 --> 01:46:47,600
-the children, and
-turn that into an array
-
-1422
-01:46:48,420 --> 01:46:49,940
+1408
+01:46:46,737 --> 01:46:50,035
+and turn that into an array
 by accumulating all of them.
 
-1423
-01:46:49,940 --> 01:46:52,450
-That should be the
-same as the array of children".
+1409
+01:46:50,035 --> 01:46:53,422
+That should be the same as the array of children".
 
-1424
-01:46:59,940 --> 01:47:01,540
+1410
+01:46:59,940 --> 01:47:03,066
 What's that complaining about?
 
-1425
-01:47:03,140 --> 01:47:04,970
-Node line 9.
-Oh it's because I forgot
+1411
+01:47:03,140 --> 01:47:09,235
+Node line 9. Oh it's because I
+forgot to refer to it as an instance variable.
 
-1426
-01:47:07,170 --> 01:47:09,200
-to refer to it
-as an instance variable.
-
-1427
-01:47:14,480 --> 01:47:15,370
+1412
+01:47:14,480 --> 01:47:17,075
 So that's all fine.
 
-1428
-01:47:17,110 --> 01:47:18,910
-If I now run
-my cucumber features.
+1413
+01:47:17,110 --> 01:47:24,364
+If I now run my cucumber features. I've got
+a failure because that's calling children as well.
 
-1429
-01:47:19,570 --> 01:47:21,280
-I've got a
-failure because that's
+1414
+01:47:27,075 --> 01:47:30,986
+This is all about designing the API.
 
-1430
-01:47:22,680 --> 01:47:24,050
-calling children as well.
+1415
+01:47:31,000 --> 01:47:34,720
+I've got an opportunity to shape the API,
 
-1431
-01:47:27,200 --> 01:47:29,080
-This is all
-about designing the API.
+1416
+01:47:37,840 --> 01:47:43,831
+and those changes to the API need
+to propagate out of the cucumber feature
 
-1432
-01:47:31,000 --> 01:47:33,110
-I've got an
-opportunity to shape the API,
+1417
+01:47:43,830 --> 01:47:48,826
+because in the world where the
+customer is the person using the API,
 
-1433
-01:47:37,910 --> 01:47:39,800
-and those changes
-to the API need to
+1418
+01:47:48,826 --> 01:47:52,800
+we need to make sure that all the things
+they want to do have been designed out.
 
-1434
-01:47:41,680 --> 01:47:43,770
-propagate out of
-the cucumber feature
+1419
+01:47:52,817 --> 01:47:58,088
+And I think that exposing an iterator, although
+it's not as nice as being able to call children.
 
-1435
-01:47:43,770 --> 01:47:45,970
-because in the
-world where the customer
+1420
+01:47:58,090 --> 01:48:04,951
+In fact, we could add a children method
+that does each_child.entries if we wanted to.
 
-1436
-01:47:47,080 --> 01:47:49,050
-is the person using
-the API, we need to
+1421
+01:48:04,951 --> 01:48:09,822
+But this is nice. It's low level but it exposes the ....
 
-1437
-01:47:49,050 --> 01:47:51,400
-make sure that all the
-things they want to do
+1422
+01:48:09,850 --> 01:48:17,040
+The essence of the interface, is
+that you can iterate over all of the children.
 
-1438
-01:47:51,620 --> 01:47:52,850
-have been designed out.
+1423
+01:48:19,217 --> 01:48:22,888
+I will just commit that.
 
-1439
-01:47:52,850 --> 01:47:54,880
-And I think that
-exposing an iterator,
-
-1440
-01:47:55,220 --> 01:47:58,220
-although it's not as nice
-as being able to call children.
-
-1441
-01:47:58,220 --> 01:48:00,310
-In fact, we could
-add a children method
-
-1442
-01:48:01,050 --> 01:48:02,620
-that does each_child.entries
-
-1443
-01:48:04,110 --> 01:48:05,740
-if we wanted to,
-but this is nice.
-
-1444
-01:48:06,450 --> 01:48:08,200
-It's low level
-but it exposes the ....
-
-1445
-01:48:09,940 --> 01:48:12,570
-This is like the essence
-of the interface, is that
-
-1446
-01:48:13,740 --> 01:48:15,910
-you can iterate
-over all of the children.
-
-1447
-01:48:19,250 --> 01:48:20,250
-I will commit that:
-
-1448
+1424
 01:48:35,540 --> 01:48:39,684
 DN: If you did call each_child.entries
 and the array that you get back
 
-1449
+1425
 01:48:39,680 --> 01:48:42,113
 if you then changed
 that, it wouldn't affect it.
 
-1450
+1426
 01:48:42,110 --> 01:48:43,940
 TS: Right. Because that's your array
 
-1451
+1427
 01:48:43,940 --> 01:48:44,570
 DN: It's a copy.
 
-1452
+1428
 01:48:45,710 --> 01:48:47,620
 TS: The tree doesn't
 even know that you
 
-1453
+1429
 01:48:47,620 --> 01:48:49,600
 have called entries
 on that enumerator.
 
-1454
+1430
 01:48:49,600 --> 01:48:50,540
 You've just got one.
 
-1455
+1431
 01:48:53,220 --> 01:48:54,420
 In fact, that reminds me.
 
-1456
+1432
 01:48:56,820 --> 01:48:58,620
 In terms of
 designing the API of
 
-1457
+1433
 01:48:58,620 --> 01:49:00,420
 this thing or
 doing some re-factoring.
 
-1458
+1434
 01:49:00,420 --> 01:49:02,450
 You can see there
 are a few places where
 
-1459
+1435
 01:49:02,450 --> 01:49:04,110
 we want to
 know if this is empty.
 
-1460
+1436
 01:49:06,420 --> 01:49:07,820
 Here's the clearest point.
 
-1461
+1437
 01:49:07,820 --> 01:49:09,200
 What we are asking here is
 
-1462
+1438
 01:49:09,200 --> 01:49:10,310
 whether we are a leaf.
 
-1463
+1439
 01:49:10,710 --> 01:49:11,220
 "Am I a leaf?"
 
-1464
+1440
 01:49:12,140 --> 01:49:13,570
 That's what it really means.
 
-1465
+1441
 01:49:15,800 --> 01:49:17,510
 If we're a leaf
 do this otherwise
 
-1466
+1442
 01:49:17,510 --> 01:49:18,570
 do this other thing.
 
-1467
+1443
 01:49:20,820 --> 01:49:22,140
 We can have a method here.
 
-1468
+1444
 01:49:22,910 --> 01:49:24,110
 Which is "are you a leaf"?
 
-1469
+1445
 01:49:26,650 --> 01:49:28,140
 Because I've got access to it
 
-1470
+1446
 01:49:28,140 --> 01:49:29,650
 I can just say children.empty?
 
-1471
+1447
 01:49:31,970 --> 01:49:34,110
 But I'm nervous
 about all of these places
 
-1472
+1448
 01:49:34,480 --> 01:49:37,050
 where we're referring
 to the instance variable.
 
-1473
+1449
 01:49:38,220 --> 01:49:40,740
 I would much rather
 have the instance variable
 
-1474
+1450
 01:49:41,140 --> 01:49:42,600
 in as few places as possible.
 
-1475
+1451
 01:49:50,340 --> 01:49:52,250
 Instead of all
 these places where
 
-1476
+1452
 01:49:52,880 --> 01:49:54,310
 I'm accessing the children
 
-1477
+1453
 01:49:54,570 --> 01:49:56,280
 For example, in
 this leaf method,
 
-1478
+1454
 01:49:56,280 --> 01:49:58,680
 instead of saying
 children.empty?, I could say:
 
-1479
+1455
 01:50:01,770 --> 01:50:03,310
 So build me an
 array, and then
 
-1480
+1456
 01:50:04,140 --> 01:50:05,540
 tell me whether it's empty.
 
-1481
+1457
 01:50:05,540 --> 01:50:07,540
 But there's an even
 better way of doing that.
 
-1482
+1458
 01:50:07,540 --> 01:50:09,540
 Enumerable has
 a method called 'none?'.
 
-1483
+1459
 01:50:11,540 --> 01:50:13,910
 So if I call each_child
 to get the enumerator ....
 
-1484
+1460
 01:50:13,910 --> 01:50:14,370
 I can say:
 
-1485
+1461
 01:50:15,080 --> 01:50:17,020
 That is saying
 "are there no children?".
 
-1486
+1462
 01:50:18,510 --> 01:50:21,020
 In fact it will tell me if there
 are any children that are nil or false,
 
-1487
+1463
 01:50:22,140 --> 01:50:24,000
 but in this case,
 none takes a block
 
-1488
+1464
 01:50:25,480 --> 01:50:27,740
 and you can say
 "are there no children that
 
-1489
+1465
 01:50:27,740 --> 01:50:28,913
 satisfy this condition?"
 
-1490
+1466
 01:50:28,910 --> 01:50:30,650
 If you don't provide the block, it says:
 
-1491
+1467
 01:50:30,650 --> 01:50:32,600
 "are there no children that are truthy?",
 
-1492
+1468
 01:50:33,620 --> 01:50:36,200
 which in our case is the
 same as there being none.
 
-1493
+1469
 01:50:36,200 --> 01:50:38,480
 If I run all of the unit
 tests, that still works.
 
-1494
+1470
 01:50:39,250 --> 01:50:41,480
 And all the
 cucumber features still work.
 
-1495
+1471
 01:50:42,540 --> 01:50:44,420
 That gives me
 an opportunity to say:
 
-1496
+1472
 01:50:55,510 --> 01:50:57,370
 And there are
 several other places
 
-1497
+1473
 01:50:57,370 --> 01:50:58,400
 where I could do this.
 
-1498
+1474
 01:50:58,400 --> 01:51:00,170
 I'm only using
 children here  to map
 
-1499
+1475
 01:51:00,170 --> 01:51:03,140
 over something, which
 each_child will do quite nicely.
 
-1500
+1476
 01:51:06,420 --> 01:51:07,110
 And same here.
 
-1501
+1477
 01:51:12,480 --> 01:51:14,800
 All I am doing with
 this instance variable
 
-1502
+1478
 01:51:14,820 --> 01:51:16,770
 using it to remember the
 value that was passed
 
-1503
+1479
 01:51:16,770 --> 01:51:18,480
 into the constructor,
 and then I am
 
-1504
+1480
 01:51:18,480 --> 01:51:20,050
 exposing a way of iterating over it.
 
-1505
+1481
 01:51:21,280 --> 01:51:23,370
 So the only state
 that is stored in here,
 
-1506
+1482
 01:51:25,770 --> 01:51:27,710
 allows you to
 expose it in iteration,
 
-1507
+1483
 01:51:27,710 --> 01:51:30,420
 and some of the work is
 done by doing that iteration.
 
-1508
+1484
 01:51:31,540 --> 01:51:32,820
 So if I run all of my tests.
 
-1509
+1485
 01:51:33,600 --> 01:51:34,250
 They're fine.
 
-1510
+1486
 01:51:34,250 --> 01:51:36,170
 And the cucumber features are fine.
 
-1511
+1487
 01:51:37,570 --> 01:51:38,620
 I can change this to:
 
-1512
+1488
 01:51:46,370 --> 01:51:48,080
 The only frustrating thing is
 
-1513
+1489
 01:51:48,080 --> 01:51:49,140
 because we did this children.size ....
 
-1514
+1490
 01:51:54,800 --> 01:51:56,680
 When you create
 an enumerator, it is
 
-1515
+1491
 01:51:56,680 --> 01:51:58,770
 possible to tell it
 how to find the size
 
-1516
+1492
 01:51:58,940 --> 01:52:00,540
 of the underlying collection.
 
-1517
+1493
 01:52:00,540 --> 01:52:01,710
 Some enumerators can.
 
-1518
+1494
 01:52:02,800 --> 01:52:04,450
 It has always
 got a size method,
 
-1519
+1495
 01:52:04,450 --> 01:52:06,450
 but sometimes it returns nil if the
 
-1520
+1496
 01:52:06,450 --> 01:52:09,080
 enumerator has been
 created without providing
 
-1521
+1497
 01:52:09,080 --> 01:52:11,680
 what the size of the
 underlying enumeration is.
 
-1522
+1498
 01:52:14,910 --> 01:52:17,170
 If I say each and
 then ask that for its size.
 
-1523
+1499
 01:52:18,570 --> 01:52:20,970
 In the case where
 the underlying collection
 
-1524
+1500
 01:52:20,970 --> 01:52:23,250
 that you've provided,
 does report the size,
 
-1525
+1501
 01:52:24,880 --> 01:52:26,400
 you can get the size back out.
 
-1526
+1502
 01:52:28,420 --> 01:52:30,310
 I feel slightly nervous about that.
 
-1527
+1503
 01:52:31,620 --> 01:52:33,020
 Oh! But, I've just remembered!
 
-1528
+1504
 01:52:35,540 --> 01:52:37,940
 I think enumerable
 has a method called count.
 
-1529
+1505
 01:52:41,650 --> 01:52:43,700
 Which does
 something like 'all' or 'none'.
 
-1530
+1506
 01:52:45,220 --> 01:52:47,740
 You can give it a block
 and it will tell you for
 
-1531
+1507
 01:52:47,740 --> 01:52:49,370
 how many
 items in the enumeration,
 
-1532
+1508
 01:52:49,370 --> 01:52:50,310
 that block is true.
 
-1533
+1509
 01:52:53,170 --> 01:52:55,200
 But I'm not sure
 if this is going to work.
 
-1534
+1510
 01:52:56,310 --> 01:52:56,940
 It does, good.
 
-1535
+1511
 01:53:01,650 --> 01:53:03,970
 In all these cases
 I have avoided building
 
-1536
+1512
 01:53:04,570 --> 01:53:06,080
 an array of all the children.
 
-1537
+1513
 01:53:11,480 --> 01:53:13,400
 Now that we
 are only accessing that
 
-1538
+1514
 01:53:14,080 --> 01:53:16,400
 children collection....
 (we have got to do this).
 
-1539
+1515
 01:53:16,940 --> 01:53:19,250
 Apart from that we
 are only accessing that
 
-1540
+1516
 01:53:19,250 --> 01:53:21,340
 children collection
 through the iterator,
 
-1541
+1517
 01:53:21,340 --> 01:53:22,880
 which means
 that children can be
 
-1542
+1518
 01:53:22,910 --> 01:53:24,250
 anything that's enumerable,
 
-1543
+1519
 01:53:24,250 --> 01:53:25,949
 anything that
 responds to each.
 
-1544
+1520
 01:53:25,957 --> 01:53:27,397
 It doesn't have to be an array.
 
-1545
+1521
 01:53:27,630 --> 01:53:30,450
 It could be some
 sort of 'lazy collection',
 
-1546
+1522
 01:53:31,510 --> 01:53:32,970
 which you haven't specified.
 
-1547
+1523
 01:53:33,280 --> 01:53:34,970
 But designing it
 this way means
 
-1548
+1524
 01:53:35,370 --> 01:53:37,770
 we are gradually
 reducing the surface area
 
-1549
+1525
 01:53:37,770 --> 01:53:39,450
 of what we expect from children.
 
-1550
+1526
 01:53:39,450 --> 01:53:41,450
 All we require
 from children is that
 
-1551
+1527
 01:53:41,450 --> 01:53:43,000
 we can call each
 on it, to get an
 
-1552
+1528
 01:53:43,000 --> 01:53:44,880
 enumerator back,
 and the rest of the
 
-1553
+1529
 01:53:44,880 --> 01:53:46,880
 functionality sits
 on top of that single
 
-1554
+1530
 01:53:46,880 --> 01:53:49,510
 assumption about what
 we can do with  the children.
 
-1555
+1531
 01:53:52,340 --> 01:53:54,310
 I'm not changing
 the tests at all here.
 
-1556
+1532
 01:53:54,680 --> 01:53:56,680
 I'm just getting a
 chance to re-factor:
 
-1557
+1533
 01:54:08,450 --> 01:54:10,170
 And then,
 (this one is a bit tricky).
 
-1558
+1534
 01:54:10,540 --> 01:54:12,200
 There are two ways of doing this.
 
-1559
+1535
 01:54:13,420 --> 01:54:14,880
 I'll show you the stupid way.
 
-1560
+1536
 01:54:14,880 --> 01:54:17,200
 Well, you don't need me
 to show you stupid way.
 
-1561
+1537
 01:54:18,140 --> 01:54:19,000
 It's just:
 
-1562
+1538
 01:54:27,480 --> 01:54:28,400
 Run all the tests.
 
-1563
+1539
 01:54:29,370 --> 01:54:30,510
 Run all the cucumbers.
 
-1564
+1540
 01:54:31,110 --> 01:54:31,710
 That's fine.
 
-1565
+1541
 01:54:32,110 --> 01:54:32,770
 DN: Yes.
 
-1566
+1542
 01:54:34,570 --> 01:54:36,370
 TS: I think a better way is to build
 
-1567
+1543
 01:54:36,370 --> 01:54:38,250
 an enumeration of the new children
 
-1568
+1544
 01:54:40,910 --> 01:54:42,650
 by adapting the old enumeration.
 
-1569
+1545
 01:54:44,020 --> 01:54:44,740
 I can say here:
 
-1570
+1546
 01:54:51,280 --> 01:54:53,280
 An enumerator
 works by providing an
 
-1571
+1547
 01:54:56,140 --> 01:54:57,800
 object called a yielder to this
 
-1572
+1548
 01:54:57,800 --> 01:54:59,800
 block that you
 pass in the constructor.
 
-1573
+1549
 01:54:59,800 --> 01:55:01,770
 and every time you call yielder.yield
 
-1574
+1550
 01:55:03,110 --> 01:55:04,400
 It will yield that value.
 
-1575
+1551
 01:55:08,400 --> 01:55:09,710
 Let's look at it on irb:
 
-1576
+1552
 01:55:11,170 --> 01:55:11,570
 If I say:
 
-1577
+1553
 01:55:29,200 --> 01:55:30,910
 First you can step through them
 
-1578
+1554
 01:55:31,020 --> 01:55:31,680
 one at a time.
 
-1579
+1555
 01:55:31,800 --> 01:55:34,220
 You can say give me the
 next value, and the next .....
 
-1580
+1556
 01:55:34,220 --> 01:55:36,850
 It's using fibers to suspend
 execution of that block
 
-1581
+1557
 01:55:37,710 --> 01:55:39,800
 after every yield
 until I say I'm ready.
 
-1582
+1558
 01:55:40,650 --> 01:55:42,450
 If I enumerate
 off the end it says ....
 
-1583
+1559
 01:55:43,650 --> 01:55:44,680
 I think I can re-wind.
 
-1584
+1560
 01:55:46,680 --> 01:55:47,020
 Yes.
 
-1585
+1561
 01:55:48,910 --> 01:55:50,650
 It's enumerable
 so I can also say:
 
-1586
+1562
 01:55:54,140 --> 01:55:54,540
 I can do:
 
-1587
+1563
 01:55:59,680 --> 01:56:01,850
 It works like a
 normal enumerable 'thing'
 
-1588
+1564
 01:56:01,880 --> 01:56:03,880
 but you've
 built it programmatically.
 
-1589
+1565
 01:56:04,340 --> 01:56:06,370
 I can take
 advantage of that by saying:
 
-1590
+1566
 01:56:15,850 --> 01:56:17,850
 So yield all of the existing children
 
-1591
+1567
 01:56:17,850 --> 01:56:19,740
 to the yielder,
 and then afterwards,
 
-1592
+1568
 01:56:21,540 --> 01:56:22,310
 Yield a new one.
 
-1593
+1569
 01:56:25,970 --> 01:56:27,800
 I need to do
 some variable re-names.
 
-1594
+1570
 01:56:29,740 --> 01:56:31,570
 It's fine but
 I think it's confusing.
 
-1595
+1571
 01:56:32,970 --> 01:56:33,880
 So add a new child.
 
-1596
+1572
 01:56:34,740 --> 01:56:36,800
 And then I'll say,
 make a new enumerator.
 
-1597
+1573
 01:56:38,600 --> 01:56:40,050
 It will not create an array.
 
-1598
+1574
 01:56:40,540 --> 01:56:42,740
 This piece of code
 will just spin over the
 
-1599
+1575
 01:56:42,740 --> 01:56:44,220
 old children and yield them.
 
-1600
+1576
 01:56:44,740 --> 01:56:46,540
 And then will
 yield the new child.
 
-1601
+1577
 01:56:46,540 --> 01:56:48,570
 Rather than
 building a new array here.
 
-1602
+1578
 01:56:49,220 --> 01:56:51,020
 I can pass in
 my new enumeration
 
-1603
+1579
 01:56:54,450 --> 01:56:55,310
 of the children.
 
-1604
+1580
 01:56:56,880 --> 01:56:57,650
 And that works.
 
-1605
+1581
 01:56:59,510 --> 01:57:01,170
 I think that's
 an efficient way
 
-1606
+1582
 01:57:01,170 --> 01:57:02,450
 of mutating these trees.
 
-1607
+1583
 01:57:03,540 --> 01:57:05,450
 To think of the
 children as being
 
-1608
+1584
 01:57:05,450 --> 01:57:06,880
 enumerations of children.
 
-1609
+1585
 01:57:09,850 --> 01:57:11,880
 If we had some
 kind of 'insert before'
 
-1610
+1586
 01:57:13,170 --> 01:57:15,020
 You could do a
 thing here that says
 
-1611
+1587
 01:57:17,510 --> 01:57:19,420
 "if child equals
 the one I'm supposed
 
-1612
+1588
 01:57:19,650 --> 01:57:20,910
 to be inserting before,
 
-1613
+1589
 01:57:21,420 --> 01:57:22,480
 then yield the new one.
 
-1614
+1590
 01:57:23,200 --> 01:57:25,220
 And after that
 yield the existing one."
 
-1615
+1591
 01:57:26,400 --> 01:57:28,200
 If it's 'insert after' you can
 yield the old child
 
-1616
+1592
 01:57:28,200 --> 01:57:30,020
 and then immediately
 yield the new one.
 
-1617
+1593
 01:57:30,450 --> 01:57:32,340
 Adding it on to the
 end is the easiest
 
-1618
+1594
 01:57:32,340 --> 01:57:33,800
 because we
 know where it goes.
 
-1619
+1595
 01:57:33,820 --> 01:57:35,800
 But enumerating
 over the old collection
 
-1620
+1596
 01:57:36,510 --> 01:57:38,680
 and inserting the new
 one at the right time
 
-1621
+1597
 01:57:40,280 --> 01:57:42,800
 allows us to ....
 
-1622
+1598
 01:57:44,650 --> 01:57:47,250
 If we wanted to insert a copy of this
 after every existing child.
 
-1623
+1599
 01:57:47,250 --> 01:57:48,800
 We can say
 "yield the old child
 
-1624
+1600
 01:57:48,800 --> 01:57:50,140
 and then yield the new one",
 
-1625
+1601
 01:57:50,140 --> 01:57:51,480
 each time around the loop.
 
-1626
+1602
 01:57:52,970 --> 01:57:54,970
 We can do any modification
 
-1627
+1603
 01:57:55,000 --> 01:57:56,510
 to the tree
 that we want here.
 
-1628
+1604
 01:57:56,510 --> 01:57:58,740
 But we're not
 actually modifying anything.
 
-1629
+1605
 01:57:59,280 --> 01:58:01,710
 This has the nice
 structural sharing property
 
-1630
+1606
 01:58:01,710 --> 01:58:03,800
 where this new
 new node that we are getting
 
-1631
+1607
 01:58:05,570 --> 01:58:07,680
 is re-using the
 collection of children
 
-1632
+1608
 01:58:08,170 --> 01:58:09,280
 that the old node had.
 
-1633
+1609
 01:58:09,710 --> 01:58:12,020
 It isn't copying that
 array and adding to it.
 
-1634
+1610
 01:58:12,020 --> 01:58:14,140
 It's holding on to
 it through each_child.
 
-1635
+1611
 01:58:16,200 --> 01:58:18,770
 The new node has a
 child enumerator that calls
 
-1636
+1612
 01:58:20,140 --> 01:58:21,480
 each_child on the old node,
 
-1637
+1613
 01:58:21,800 --> 01:58:23,680
 and when it's
 finished enumerating all
 
-1638
+1614
 01:58:23,680 --> 01:58:25,680
 of its children, it
 yields the new one.
 
-1639
+1615
 01:58:25,680 --> 01:58:27,420
 That feels close to optimal to me.
 
-1640
+1616
 01:58:32,020 --> 01:58:33,710
 It's not super efficient because
 
-1641
+1617
 01:58:34,140 --> 01:58:36,540
 when you are doing
 things non-destructively,
 
-1642
+1618
 01:58:36,540 --> 01:58:38,480
 you're expecting
 the garbage collector
 
-1643
+1619
 01:58:38,480 --> 01:58:41,280
 to do the work of cleaning
 up all the old stuff for you.
 
-1644
+1620
 01:58:42,400 --> 01:58:44,540
 But after the
 garbage collector has run,
 
-1645
+1621
 01:58:44,540 --> 01:58:46,800
 we're not going to be
 using lots more memory.
 
-1646
+1622
 01:58:50,850 --> 01:58:53,340
 If you want to
 compose a lot of trees together,
 
-1647
+1623
 01:58:53,620 --> 01:58:55,310
 which this API
 allows you to do.
 
-1648
+1624
 01:58:55,570 --> 01:58:57,880
 Every time you compose
 a tree into a new one,
 
-1649
+1625
 01:58:57,880 --> 01:58:59,480
 you are not taking a copy of it.
 
-1650
+1626
 01:59:01,340 --> 01:59:03,400
 You are holding on
 to a reference to it.
 
-1651
+1627
 01:59:03,400 --> 01:59:05,680
 Which you would do
 anyway if it was mutable
 
-1652
+1628
 01:59:08,370 --> 01:59:10,800
 And every time you
 make a change it's creating
 
-1653
+1629
 01:59:10,820 --> 01:59:13,020
 just enough new stuff
 and holding on to as
 
-1654
+1630
 01:59:13,020 --> 01:59:15,820
 much of the old stuff as is
 necessary to make use of it.
 
-1655
+1631
 01:59:17,740 --> 01:59:20,370
 I feel good that we have
 been able to do that there.
 
-1656
+1632
 01:59:21,800 --> 01:59:22,510
 So I shall say:
 
-1657
+1633
 01:59:32,770 --> 01:59:33,620
 How are we doing?
 
-1658
+1634
 01:59:33,620 --> 01:59:35,680
 DN: I think that's a
 good place to wrap up.
 
-1659
+1635
 01:59:36,280 --> 01:59:39,310
 Thanks Tom, it's been very
 interesting watching you work.
 
-1660
+1636
 01:59:41,020 --> 01:59:43,800
 TS: Thanks for having me,
 it has been really good fun.
