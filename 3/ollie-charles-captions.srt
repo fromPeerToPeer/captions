@@ -5074,7 +5074,7 @@ through the rest of the compile errors
 
 1165
 01:13:50,011 --> 01:13:54,370
-(inaud).  That's what we do.
+And thread in the proper code as we need to.
 
 1166
 01:13:55,777 --> 01:13:57,902
