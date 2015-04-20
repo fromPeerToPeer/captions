@@ -4002,7 +4002,7 @@ You can see this is very similar to what we had
 
 914
 01:00:04,411 --> 01:00:05,874
-in pattern (inaud) one.
+in expandOne.
 
 915
 01:00:05,885 --> 01:00:07,828
