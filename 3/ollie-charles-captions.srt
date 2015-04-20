@@ -4828,7 +4828,7 @@ where we have a map of neighbors
 1107
 01:10:48,800 --> 01:10:54,257
 It's going to be a map
-from text to its set of neighbors.
+from Text to its set of neighbors.
 
 1108
 01:10:55,285 --> 01:10:56,485
