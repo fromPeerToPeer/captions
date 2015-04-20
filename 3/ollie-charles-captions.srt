@@ -4039,7 +4039,7 @@ then we should be able to use expand with...
 
 923
 01:00:50,970 --> 01:00:52,485
-one expansion of cat.
+let's just look at the one expansion of cat. Oops.
 
 924
 01:00:54,862 --> 01:00:55,880
