@@ -4769,7 +4769,7 @@ background anyway, see if we get a result
 
 1093
 01:10:09,091 --> 01:10:11,310
-while we start looking for some (inaudible).
+while we start looking for some optimizations.
 
 1094
 01:10:11,310 --> 01:10:15,080
