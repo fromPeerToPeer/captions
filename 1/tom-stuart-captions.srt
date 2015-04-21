@@ -3156,11 +3156,12 @@ no descendants" for the empty one.
 723
 00:47:08,740 --> 00:47:10,540
 because I can avoid that problem.
+I can just say:
 
 724
 00:47:10,540 --> 00:47:29,480
-I can just say expect no.new
-children.descendant_count to be equal to zero:
+expect Node.new(children).descendant_count
+to be equal to zero
 
 725
 00:47:30,400 --> 00:47:34,480
