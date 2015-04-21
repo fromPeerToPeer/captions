@@ -3746,7 +3746,7 @@ this function that we have
 
 854
 00:57:16,891 --> 00:57:18,971
-something that returns maybe any value.
+something that returns Maybe any value.
 
 855
 00:57:19,228 --> 00:57:21,514
@@ -3758,11 +3758,11 @@ like what we have in expand here.
 
 857
 00:57:23,565 --> 00:57:25,182
-OC: But we don't have a maybe here,
+OC: But we don't have a Maybe here,
 
 858
 00:57:25,754 --> 00:57:27,445
-so the maybe represents the fact that
+so the Maybe represents the fact that
 
 859
 00:57:27,445 --> 00:57:29,131
@@ -3785,11 +3785,11 @@ but that felt a bit weird,
 863
 00:57:37,840 --> 00:57:40,971
 so maybe let's try
-bringing in a maybe there.
+bringing in a Maybe there.
 
 864
 00:57:42,200 --> 00:57:44,171
-SP: Maybe let's maybe (laughter).
+SP: Maybe let's Maybe (laughter).
 
 865
 00:57:45,540 --> 00:57:49,685
@@ -4931,7 +4931,7 @@ over that for now I guess.
 
 1132
 01:12:08,420 --> 01:12:09,600
-SP: Avoiding the maybes.
+SP: Avoiding the Maybes.
 
 1133
 01:12:10,200 --> 01:12:12,965
@@ -4940,7 +4940,7 @@ OC: If I was doing this production code
 1134
 01:12:12,960 --> 01:12:14,291
 I would probably want
-to keep the maybes
+to keep the Maybes
 
 1135
 01:12:14,291 --> 01:12:16,320
