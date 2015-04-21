@@ -1795,7 +1795,7 @@ I know, because I've written Ruby before,
 412
 00:24:26,020 --> 00:24:31,000
 that I can do that by doing
-children, map, method, build tree.
+children.map(&method(:build_tree))
 
 413
 00:24:31,960 --> 00:24:36,973
