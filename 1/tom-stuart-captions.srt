@@ -4165,16 +4165,17 @@ TS: Yes, sure.
 
 951
 01:05:00,050 --> 01:05:08,586
-I'm going to add this change and just say
-consolidate descendent_count and node count.
+I'm going to add this change and say:
+Consolidate descendent_count and node count
 
 952
 01:05:10,653 --> 01:05:18,146
-And say add extra example of descendant_count.
+And say: "Add extra example
+of descendant_count"
 
 953
 01:05:20,253 --> 01:05:27,266
-and here I'm going to change expected inaudible names.
+And here: "Change expected method names"
 
 954
 01:05:31,650 --> 01:05:34,080
