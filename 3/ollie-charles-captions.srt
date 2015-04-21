@@ -4931,7 +4931,7 @@ over that for now I guess.
 
 1132
 01:12:08,420 --> 01:12:09,600
-SP: Avoiding the maybes'.
+SP: Avoiding the maybes.
 
 1133
 01:12:10,200 --> 01:12:12,965
@@ -4940,7 +4940,7 @@ OC: If I was doing this production code
 1134
 01:12:12,960 --> 01:12:14,291
 I would probably want
-to keep the maybes'
+to keep the maybes
 
 1135
 01:12:14,291 --> 01:12:16,320
