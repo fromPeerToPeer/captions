@@ -1092,7 +1092,7 @@ A and B, and they are the same,
 
 251
 00:16:02,570 --> 00:16:05,977
-and were done..
+then we're done..
 so that has one possible solution,
 
 252
@@ -1116,7 +1116,7 @@ which contains just the word hello.
 
 256
 00:16:16,710 --> 00:16:19,188
-so we can try that on two.
+so we can try that one two.
 
 257
 00:16:22,570 --> 00:16:24,662
@@ -1210,7 +1210,7 @@ So how we going to do this next...let's see.
 
 278
 00:17:32,890 --> 00:17:35,451
-Yes, I'm probably
+I'm probably
 going to break the string apart
 
 279
@@ -1266,7 +1266,7 @@ the kind of thing we could do.
 
 290
 00:18:12,940 --> 00:18:14,740
-I think now because were zipping,
+I think now because we're zipping,
 
 291
 00:18:14,740 --> 00:18:16,571
@@ -1340,7 +1340,7 @@ which have to produce something.
 
 307
 00:19:30,620 --> 00:19:37,291
-So if x is equal to y ... then zero provides ...
+So if x is equal to y ... then zero otherwise one ...
 
 308
 00:19:37,474 --> 00:19:39,910
@@ -1387,13 +1387,13 @@ That's what you would expect. A basic example.
 
 318
 00:20:18,765 --> 00:20:22,000
-Let's see if we can
+Let's see how we can
 fit this into our word puzzle.
 
 319
 00:20:22,971 --> 00:20:28,540
 We're certainly going
-to need the dictionary. (inaudible)
+to need the dictionary and our two words
 
 320
 00:20:32,080 --> 00:20:34,262
@@ -1488,7 +1488,7 @@ Bit of a hole there, we can come back to that,
 
 341
 00:22:39,970 --> 00:22:44,710
-so (inaudible) build.
+so does that build.
 
 342
 00:22:45,474 --> 00:22:47,120
@@ -1509,7 +1509,7 @@ and once more, and take just the word
 
 346
 00:23:00,740 --> 00:23:03,680
-and the (inaudible) distance.
+and ignore its distance.
 
 347
 00:23:03,988 --> 00:23:06,994
@@ -1517,7 +1517,7 @@ SP: Is there a function for that, is it fst?
 
 348
 00:23:07,680 --> 00:23:10,057
-OC: Yes, we can use first now.
+OC: Yes, we can use fst there.
 
 349
 00:23:23,400 --> 00:23:26,205
@@ -1599,7 +1599,7 @@ going to use the Applicative Syntax
 
 366
 00:24:56,970 --> 00:24:59,428
-to combine 2 operations together
+to combine 2 boolean operations together
 
 367
 00:24:59,450 --> 00:25:01,880
@@ -1608,7 +1608,7 @@ things that are not equal to A.
 
 368
 00:25:03,940 --> 00:25:06,331
-SP: And also the slash equals operator?
+SP: And also the /= operator?
 
 369
 00:25:06,450 --> 00:25:07,885
@@ -1616,7 +1616,7 @@ OC: Oh yes, of course,
 
 370
 00:25:09,740 --> 00:25:12,370
-in fact we'll put that (inaudible) in there.
+in fact we'll put that directly in there.
 
 371
 00:25:15,680 --> 00:25:18,697
