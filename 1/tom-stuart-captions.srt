@@ -6113,7 +6113,8 @@ behave as if I haven't passed in a block,
 1384
 01:44:59,060 --> 01:45:04,622
 which gives you an iterator back.
-This gives you the same as doing 10.times.each:
+This works the same as when
+I've been doing: 10.times.each:
 
 1385
 01:45:10,080 --> 01:45:14,826
@@ -6122,12 +6123,13 @@ and then not passing it a block,
 
 1386
 01:45:15,822 --> 01:45:18,480
-and then calling something like map on the end of it.
+and then calling something like
+map on the end of it.
 
 1387
 01:45:18,710 --> 01:45:24,497
-The reason that works is because these
-methods in the standard library return an enumerator.
+That works because these methods in the
+standard library return an enumerator.
 
 1388
 01:45:24,500 --> 01:45:29,315
@@ -6136,20 +6138,23 @@ enumerator here is a nicer interface.
 
 1389
 01:45:29,448 --> 01:45:32,170
-It's more constrained, and gives you what you want.
+It's more constrained and
+gives you what you want.
 
 1390
 01:45:35,140 --> 01:45:37,250
-And, you don't even know that it's an array.
+And, you don't even know
+that it's an array.
 
 1391
 01:45:37,250 --> 01:45:42,124
 The enumerator itself doesn't
-let you reach inside it and say
+let you reach inside it and say:
 
 1392
 01:45:42,133 --> 01:45:46,000
-"what kind of thing are you iterating over"?
+"what kind of thing are
+you iterating over"?
 
 1393
 01:45:47,420 --> 01:45:49,653
