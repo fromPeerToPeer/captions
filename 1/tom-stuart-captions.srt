@@ -5913,12 +5913,13 @@ What did I do here?
 
 1340
 01:40:30,168 --> 01:40:43,591
-Oh this was actually check
-children in cucumber feature.
+Oh this was: "Actually check
+children in Cucumber feature"
 
 1341
 01:40:49,182 --> 01:40:51,777
-Again I've raced ahead and done two things ...
+Again I've raced ahead
+and done two things.
 
 1342
 01:40:52,195 --> 01:40:55,591
