@@ -4789,13 +4789,14 @@ and implement terminal count.
 That's slightly frustrating ...
 
 1092
-01:18:12,310 --> 01:18:15,453
+01:18:12,310 --> 01:18:15,990
 The best I can do here is to express our intent.
+I should say:
 
 1093
-01:18:15,450 --> 01:18:33,720
-I should say expect the first two trees to
-contain exactly just one node and wide tree.
+01:18:16,000 --> 01:18:33,720
+expect the first two trees to contain
+exactly @just_one_node and @wide_tree
 
 1094
 01:18:35,570 --> 01:18:43,053
