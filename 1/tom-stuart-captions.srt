@@ -4667,8 +4667,8 @@ I can't read this output and
 see what the difference is.
 
 1065
-01:15:50,400 --> 01:15:59,173
-My intuition is that when you sort by terminal count,
+01:15:50,400 --> 01:15:59,160
+My intuition is that when you sort by terminal_count,
 given we've got two nodes that have no terminals,
 
 1066
