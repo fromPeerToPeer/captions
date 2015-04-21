@@ -5688,7 +5688,7 @@ And this is:
 
 1290
 01:35:50,930 --> 01:35:55,030
-implement then step for qualified tree.
+"Implement Then step for modified tree"
 
 1291
 01:36:02,650 --> 01:36:05,870
