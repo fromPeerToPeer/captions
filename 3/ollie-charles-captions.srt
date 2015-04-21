@@ -324,7 +324,7 @@ you're leaving there is the hole?
 
 76
 00:05:30,445 --> 00:05:33,394
-OC: Yes, so if we expand the 
+OC: Yes, so if we expand the
 compilation buffer
 
 77
@@ -566,7 +566,7 @@ But, I can use another feature of
 
 131
 00:08:44,525 --> 00:08:47,234
-a later version of GHC called 
+a later version of GHC called
 defer-type errors.
 
 132
@@ -610,7 +610,7 @@ OC: We can find out.
 
 141
 00:09:09,620 --> 00:09:12,354
-It's the main function that we haven't 
+It's the main function that we haven't
 defined, so if I call main
 
 142
@@ -4157,7 +4157,7 @@ OC: Yes, some chains and dictionaries indeed.
 
 950
 01:02:12,994 --> 01:02:14,634
-but for every word chain in the dictionary 
+but for every word chain in the dictionary
 
 951
 01:02:14,634 --> 01:02:17,880
@@ -4276,7 +4276,7 @@ and try to select only the ones that
 
 978
 01:03:45,040 --> 01:03:46,485
-finish on the target word. 
+finish on the target word.
 
 979
 01:03:46,480 --> 01:03:46,994
@@ -5576,7 +5576,7 @@ across the full dictionary,
 1279
 01:22:48,680 --> 01:22:51,834
 not necessarily the dictionary
-pruned down to only the the words 
+pruned down to only the the words
 
 1280
 01:22:51,902 --> 01:22:53,200
