@@ -5085,26 +5085,26 @@ up with an API for being able to modify these trees.
 Let's say there is a modifying feature.
 
 1158
-01:24:06,650 --> 01:24:07,560
-Let's say ...
+01:24:06,650 --> 01:24:14,790
+Let's say... features/modifying
 
 1159
-01:24:14,770 --> 01:24:27,230
-features modifying, this will be
-scenario feature, modifying trees
+01:24:15,000 --> 01:24:27,230
+this will be Feature: modifying trees
 
 1160
-01:24:27,230 --> 01:24:30,490
-and then ... that's not right for a preamble ...
+01:24:27,240 --> 01:24:30,490
+and then...
 
 1161
-01:24:32,330 --> 01:24:36,260
-scenario adding node to tree.
+01:24:32,330 --> 01:24:42,400
+Scenario: adding node to a tree.
+Given I have a tree,
 
 1162
-01:24:38,380 --> 01:24:51,540
-So given, I have a tree, when I add a
-node to it the tree should contain that node.
+01:24:42,500 --> 01:24:51,540
+When I add a node to it
+Then the tree should contain that node
 
 1163
 01:24:51,570 --> 01:24:54,990
