@@ -7,11 +7,11 @@
 
 Proofreading by:
 
-* Jon Ruano
 * [Chris Patuzzo](https://github.com/tuzz)
 * [David Salgado](https://github.com/digitalronin)
 * [Drew Neil](https://github.com/nelstrom)
 * [Jacob Chae](https://github.com/jbcden)
+* [Jon Ruano](https://github.com/ruanoj)
 * [Nicolas Dermine](https://github.com/nicoder)
 * [Paul Mucur](https://github.com/mudge)
 * [Shaun Sharples](https://github.com/bflyblue)
