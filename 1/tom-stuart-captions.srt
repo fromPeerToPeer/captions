@@ -4951,7 +4951,8 @@ Let me make a commit before I do anything.
 
 1128
 01:21:04,080 --> 01:21:27,573
-So this is fix terminal ordering then step to accommodate unstable inaudible
+So this is: "fix terminal ordering
+Then step to accommodate unstable sort"
 
 1129
 01:21:29,570 --> 01:21:32,466
