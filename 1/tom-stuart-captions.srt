@@ -4585,7 +4585,8 @@ in places where I was calling real methods.
 
 1046
 01:14:21,540 --> 01:14:25,770
-They were for the purpose of creating the ...
+Those were just for the purposes
+of creating the...
 
 1047
 01:14:28,910 --> 01:14:31,973
