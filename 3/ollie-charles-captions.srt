@@ -1116,7 +1116,7 @@ which contains just the word hello.
 
 256
 00:16:16,710 --> 00:16:19,188
-so we can try that on two.
+so we can try that one two.
 
 257
 00:16:22,570 --> 00:16:24,662
