@@ -5421,7 +5421,7 @@ rather just return a new one.
 
 1232
 01:30:41,370 --> 01:30:44,880
-Assuming there's a way to append the child there, 
+Assuming there's a way to append the child there,
 
 1233
 01:30:46,450 --> 01:30:49,790
@@ -5457,7 +5457,7 @@ to happen in the feature here
 
 1240
 01:31:24,290 --> 01:31:26,410
- but let's go down to the unit test.
+but let's go down to the unit test.
 
 1241
 01:31:32,510 --> 01:31:35,570
@@ -5500,7 +5500,7 @@ Let's think about doing that.
 
 1250
 01:32:05,680 --> 01:32:14,610
-Let's say describe adding a child. 
+Let's say describe adding a child.
 
 1251
 01:32:17,740 --> 01:32:23,860
@@ -5843,7 +5843,7 @@ Here we could do it.
 
 1327
 01:39:22,310 --> 01:39:27,980
-That says let node be no.newchildren, 
+That says let node be no.newchildren,
 
 1328
 01:39:27,990 --> 01:39:32,410
@@ -5866,7 +5866,7 @@ That's not what I wanted.
 1332
 01:39:45,600 --> 01:39:51,946
 Oh, it's because this is nonsense.
-It should be no.newchildren. 
+It should be no.newchildren.
 
 1333
 01:39:52,320 --> 01:39:55,075
@@ -5904,7 +5904,7 @@ children in cucumber feature.
 
 1341
 01:40:49,182 --> 01:40:51,777
-Again I've raced ahead and done two things ... 
+Again I've raced ahead and done two things ...
 
 1342
 01:40:52,195 --> 01:40:55,591
@@ -6475,7 +6475,7 @@ because we did this children.size ....
 1470
 01:51:54,800 --> 01:51:59,146
 When you create an enumerator,
-it is possible to tell it how to find the size 
+it is possible to tell it how to find the size
 
 1471
 01:51:59,150 --> 01:52:02,666
@@ -6855,94 +6855,68 @@ all of its children, it yields the new one.
 That feels close to optimal to me.
 
 1555
-01:58:32,020 --> 01:58:36,542
+01:58:32,020 --> 01:58:36,311
 It's not super efficient because when
 you are doing things non-destructively,
 
 1556
-01:58:36,540 --> 01:58:42,373
+01:58:36,311 --> 01:58:42,370
 you're expecting the garbage collector to do
 the work of cleaning up all the old stuff for you.
 
 1557
-01:58:42,400 --> 01:58:44,540
-But after the
-garbage collector has run,
+01:58:42,435 --> 01:58:50,810
+But after the garbage collector has run,
+we're not going to be using lots more memory.
 
 1558
-01:58:44,540 --> 01:58:46,800
-we're not going to be
-using lots more memory.
+01:58:50,850 --> 01:58:55,493
+If you want to compose a lot of trees
+together, which this API allows you to do.
 
 1559
-01:58:50,850 --> 01:58:53,340
-If you want to
-compose a lot of trees together,
+01:58:55,570 --> 01:59:01,315
+Every time you compose a tree into a
+new one, you are not taking a copy of it.
 
 1560
-01:58:53,620 --> 01:58:55,310
-which this API
-allows you to do.
+01:59:01,310 --> 01:59:08,337
+You are holding on to a reference to it.
+Which you would do anyway if it was mutable
 
 1561
-01:58:55,570 --> 01:58:57,880
-Every time you compose
-a tree into a new one,
+01:59:08,337 --> 01:59:12,533
+And every time you make a change
+it's creating just enough new stuff
 
 1562
-01:58:57,880 --> 01:58:59,480
-you are not taking a copy of it.
+01:59:12,550 --> 01:59:17,715
+and holding on to as much of the
+old stuff as is necessary to make use of it.
 
 1563
-01:59:01,340 --> 01:59:03,400
-You are holding on
-to a reference to it.
+01:59:17,715 --> 01:59:21,680
+I feel good that we have been able to do that there.
 
 1564
-01:59:03,400 --> 01:59:05,680
-Which you would do
-anyway if it was mutable
+01:59:21,760 --> 01:59:32,728
+So use an enumerator to
+create a add_children, I suppose.
 
 1565
-01:59:08,370 --> 01:59:10,800
-And every time you
-make a change it's creating
-
-1566
-01:59:10,820 --> 01:59:13,020
-just enough new stuff
-and holding on to as
-
-1567
-01:59:13,020 --> 01:59:15,820
-much of the old stuff as is
-necessary to make use of it.
-
-1568
-01:59:17,740 --> 01:59:20,370
-I feel good that we have
-been able to do that there.
-
-1569
-01:59:21,800 --> 01:59:22,510
-So I shall say:
-
-1570
-01:59:32,770 --> 01:59:33,620
+01:59:32,770 --> 01:59:33,608
 How are we doing?
 
-1571
-01:59:33,620 --> 01:59:35,680
-DN: I think that's a
-good place to wrap up.
+1566
+01:59:33,620 --> 01:59:36,266
+DN: I think that's a good place to wrap up.
 
-1572
-01:59:36,280 --> 01:59:39,310
+1567
+01:59:36,275 --> 01:59:41,004
 Thanks Tom, it's been very
 interesting watching you work.
 
-1573
-01:59:41,020 --> 01:59:43,800
-TS: Thanks for having me,
-it has been really good fun.
+1568
+01:59:41,004 --> 01:59:43,800
+TS: Thanks for having me, it has been really good fun.
 
