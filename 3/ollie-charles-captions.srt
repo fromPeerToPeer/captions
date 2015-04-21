@@ -71,7 +71,7 @@ And I see that some of these are different case.
 
 18
 00:01:17,880 --> 00:01:20,171
-Is that going to have any impact on the problem ?
+Is that going to have any impact on the problem?
 
 19
 00:01:20,182 --> 00:01:21,588
@@ -107,7 +107,7 @@ word list file in order to be considered valid.
 26
 00:01:40,620 --> 00:01:44,800
 OC: OK.  And is changing case
-going to be considered an operation ?
+going to be considered an operation?
 
 27
 00:01:45,097 --> 00:01:47,748
@@ -116,7 +116,7 @@ that starts with a lower case A
 
 28
 00:01:47,740 --> 00:01:52,400
-and an upper case A is that a difference of one ?
+and an upper case A is that a difference of one?
 
 29
 00:01:53,000 --> 00:01:55,028
@@ -1024,11 +1024,11 @@ OC: OK well we can check that...
 
 235
 00:15:17,600 --> 00:15:19,394
-It is in the dictionary ! (laughter)
+It is in the dictionary! (laughter)
 
 236
 00:15:19,965 --> 00:15:22,308
-SP: It's a respectable word !
+SP: It's a respectable word!
 
 237
 00:15:25,880 --> 00:15:29,474
@@ -4397,7 +4397,7 @@ SP: Can you see the next one?
 
 1006
 01:05:16,542 --> 01:05:18,605
-Oh ! that's because we've flattened it, yes.
+Oh! that's because we've flattened it, yes.
 
 1007
 01:05:20,171 --> 01:05:23,691
@@ -4693,7 +4693,7 @@ in the original problem spec.
 
 1075
 01:08:59,910 --> 01:09:02,097
-SP: Shall we try it on longer input ?
+SP: Shall we try it on longer input?
 
 1076
 01:09:02,400 --> 01:09:05,771
@@ -5097,7 +5097,7 @@ in here we can map over...
 
 1170
 01:14:12,370 --> 01:14:15,005
-Ah ! We did need our
+Ah! We did need our
 original neighbours function
 
 1171
