@@ -2842,13 +2842,13 @@ Let's be a bit more meticulous.
 
 652
 00:41:14,066 --> 00:41:23,293
-So this is add estantiation
-example for Node with children.
+So this is: "Add instantiation
+example for Node with children"
 
 653
 00:41:26,373 --> 00:41:37,666
-And this is load Node class
-for duration of cucumber features.
+And this is: "Load Node class
+for duration of cucumber features"
 
 654
 00:41:37,660 --> 00:41:42,880
