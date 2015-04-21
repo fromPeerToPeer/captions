@@ -2286,7 +2286,6 @@ an array of arrays then ?
 00:34:44,170 --> 00:34:46,940
 TS: It gives you a hash.
 
-
 524
 00:34:47,800 --> 00:34:49,370
 The key in the hash would be
@@ -4329,7 +4328,7 @@ that does this but with suits.
 
 996
 01:04:41,000 --> 01:04:51,020
-and here I'm going to do the dupe flag 
+and here I'm going to do the dupe flag
 which means I've copy/pasted this
 
 997

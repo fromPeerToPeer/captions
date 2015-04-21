@@ -1604,12 +1604,13 @@ I will make a file and put it in support.
 I'll call it trees helper.
 
 369
-00:21:41,370 --> 00:21:44,106
-And so I don't forget I'm also going to make
+00:21:37,902 --> 00:21:41,155
+And put build tree method in here.
 
 370
-00:21:44,106 --> 00:21:46,520
-that method available to Cucumber,
+00:21:41,370 --> 00:21:46,586
+And so I don't forget, I'm also going
+to make that method available to Cucumber,
 
 371
 00:21:46,620 --> 00:21:50,786
@@ -3988,7 +3989,8 @@ call size on the collection of children.
 
 912
 01:01:14,250 --> 01:01:17,613
-Whereas, previously we didn't have to do that, you got that for free,
+Whereas, previously we didn't
+have to do that, you got that for free,
 
 913
 01:01:17,626 --> 01:01:22,786
