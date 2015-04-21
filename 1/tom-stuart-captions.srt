@@ -5887,16 +5887,17 @@ Sorry, don't know what I was thinking.
 
 1334
 01:39:58,755 --> 01:40:00,613
-You must pass an argument.
+"You must pass an argument"
 
 1335
 01:40:01,360 --> 01:40:07,706
-Oh yes, what am I doing ... I was reading the one above.
+Oh yes, what am I doing?
+I was reading the one above.
 
 1336
 01:40:07,820 --> 01:40:12,168
-This is not supposed to be a
-block. This is an argument to expect.
+This is not supposed to be a block.
+This is just an argument to expect.
 
 1337
 01:40:12,551 --> 01:40:16,133
