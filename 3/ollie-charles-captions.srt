@@ -4002,11 +4002,11 @@ You can see this is very similar to what we had
 
 914
 01:00:04,411 --> 01:00:05,874
-in pattern (inaud) one.
+in expandOne.
 
 915
 01:00:05,885 --> 01:00:07,828
-OC: (inaudible) from there smaller one
+OC: so breaking the problem into a smaller one
 
 916
 01:00:13,697 --> 01:00:15,194
@@ -4014,7 +4014,7 @@ So ignore this ...
 
 917
 01:00:15,840 --> 01:00:19,542
-let's keep that (inaudible) there.
+let's keep that.
 
 918
 01:00:22,050 --> 01:00:24,910
@@ -4023,7 +4023,7 @@ of text from the other set
 
 919
 01:00:24,910 --> 01:00:26,577
-(inaudible) list
+So we need to turn that into a list
 
 920
 01:00:36,571 --> 01:00:37,577
@@ -4035,11 +4035,11 @@ I guess if we load the dictionary in
 
 922
 01:00:45,462 --> 01:00:50,970
-then we should be able to use expand with (inaudible)
+then we should be able to use expand with...
 
 923
 01:00:50,970 --> 01:00:52,485
-one expansion of cat.
+let's just look at the one expansion of cat. Oops.
 
 924
 01:00:54,862 --> 01:00:55,880
@@ -4051,7 +4051,7 @@ we end up printing the out dictionary as well.
 
 926
 01:00:58,085 --> 01:01:00,114
-SP: Yes. (inaudible)
+SP: Yes, because it was in the (inaudible)
 
 927
 01:01:02,005 --> 01:01:03,222
@@ -4063,7 +4063,7 @@ and we see just the one level expansion.
 
 929
 01:01:08,771 --> 01:01:10,382
-(inaudible)
+SP: Fantastic
 
 930
 01:01:11,771 --> 01:01:13,971
@@ -4108,11 +4108,11 @@ function up here called go.
 939
 01:01:38,620 --> 01:01:44,371
 Go is going to take
-a list of word word chains
+a list of word chains
 
 940
 01:01:44,371 --> 01:01:45,588
-and the dictionaries.
+and dictionaries.
 
 941
 01:01:46,817 --> 01:01:48,840
@@ -4121,12 +4121,12 @@ And this becomes apparent
 942
 01:01:48,931 --> 01:01:51,480
 you can see how I'm
-going to pull the cursor back.
+going to pull recursively.
 
 943
 01:01:51,480 --> 01:01:54,685
-And it's going to give us back a 
-list of word chains and the dictionary.
+And it's going to give us back a
+list of word chains and dictionaries.
 
 944
 01:01:54,685 --> 01:01:57,880
@@ -4135,7 +4135,7 @@ repeatedly apply this to ourselves.
 
 945
 01:01:57,880 --> 01:02:00,491
-OC: So if we have nothing in the first (inaudible)
+OC: So if we have nothing in the first [inaudible]
 
 946
 01:02:00,770 --> 01:02:03,220
@@ -4174,20 +4174,20 @@ and what we'll have here is a word chain
 
 954
 01:02:23,491 --> 01:02:25,697
-and the dictionary, which we want to expand
+and a dictionary, which we will expand
 
 955
 01:02:26,017 --> 01:02:27,497
-the chain in the dictionary.
+in a chain and a dictionary.
 
 956
 01:02:28,217 --> 01:02:30,571
 We're going to have
-to concat on that because
+to concat like that because
 
 957
 01:02:30,577 --> 01:02:32,457
-expand gives us a list of word chains.
+expand gives us a list of word chains and dictionaries.
 
 958
 01:02:35,794 --> 01:02:37,474
@@ -4195,7 +4195,7 @@ SP: Can we rename chains there?
 
 959
 01:02:37,868 --> 01:02:41,668
-OC: Sure (inaudible)
+OC: Sure, anything you're up to, a tad smaller
 
 960
 01:02:42,000 --> 01:02:43,954
@@ -4225,7 +4225,7 @@ So that's OK ...
 966
 01:03:12,970 --> 01:03:16,502
 But what we've done
-now is, we've throw away
+now is, we've thrown away
 
 967
 01:03:16,502 --> 01:03:17,740
@@ -4314,12 +4314,12 @@ SP: We can always reverse the solution.
 
 987
 01:04:05,200 --> 01:04:06,474
-OC: We can yes.
+OC: We could yes.
 
 988
 01:04:08,880 --> 01:04:12,228
 I'll just check that
-that's all the compiling done.
+that's all compiling, it does.
 
 989
 01:04:12,380 --> 01:04:14,702
@@ -4328,7 +4328,7 @@ to have a play with this now.
 
 990
 01:04:14,700 --> 01:04:15,760
-(inaudible) GHCi
+In our GHCi
 
 991
 01:04:15,820 --> 01:04:19,531
@@ -4353,7 +4353,8 @@ And we'll start with just that one.
 
 996
 01:04:37,410 --> 01:04:42,028
-And that's going to expand forever (inaudible) go
+And that's going to expand forever,
+so lets go one level into it with go
 
 997
 01:04:42,140 --> 01:04:42,485
@@ -4377,10 +4378,13 @@ We'll just take the word chains out of that.
 
 1002
 01:04:54,770 --> 01:04:59,050
-(inaudible)
+SP: Just the first of head
+OC: Oh yes
 
 1003
 01:05:09,420 --> 01:05:11,691
+OC: So maybe,... rather than the head
+SP: Now it's map first
 So every time we take one more
 
 1004
@@ -4406,7 +4410,7 @@ OC: Yes
 
 1009
 01:05:24,325 --> 01:05:27,250
-SP: (inaudible)
+SP: How about the first ten
 
 1010
 01:05:30,680 --> 01:05:34,565
@@ -4415,11 +4419,11 @@ to start getting bigger at some point.
 
 1011
 01:05:35,542 --> 01:05:37,250
-(inaudible)
+[inaudible]
 
 1012
 01:05:45,062 --> 01:05:46,314
-That's not re cursing.
+That's not recursing.
 
 1013
 01:05:47,165 --> 01:05:49,080
@@ -4440,7 +4444,7 @@ so if we take the original pairs and what we
 
 1017
 01:05:57,331 --> 01:06:02,450
-need to do is go again on the concat map.
+need to do is go again on the concatMap.
 
 1018
 01:06:03,085 --> 01:06:03,617
@@ -4490,16 +4494,16 @@ OC: Yes, were going out from cat
 
 1029
 01:06:39,480 --> 01:06:43,000
-SP: (inaudible)
+SP: Suffering from the reverse order of reading
 
 1030
 01:06:44,850 --> 01:06:48,554
 OC: So now were ready
-to put this back into the  word puzzle
+to put this back into the wordPuzzle
 
 1031
 01:06:48,554 --> 01:06:50,525
-to solve the puzzle properly .. again !
+to solve the puzzle properly ... again!
 
 1032
 01:06:52,880 --> 01:06:56,360
@@ -4508,7 +4512,7 @@ go and we're going to be
 
 1033
 01:06:56,365 --> 01:06:58,377
-using the (inaudible) dictionary.
+using the input-dictionary.
 
 1034
 01:06:58,771 --> 01:07:02,417
@@ -4531,7 +4535,7 @@ start with a word chain
 
 1038
 01:07:08,045 --> 01:07:09,765
-that begins at the word A.
+that begins at the word a
 
 1039
 01:07:11,582 --> 01:07:13,771
@@ -4539,16 +4543,16 @@ And this is going to give us all the chains
 
 1040
 01:07:13,771 --> 01:07:14,514
-that start from A.
+that start from a
 
 1041
 01:07:14,514 --> 01:07:16,902
 But we're interested
-in chains that start at A
+in chains that start at a
 
 1042
 01:07:16,908 --> 01:07:17,857
-and finish at B.
+and finish at b
 
 1043
 01:07:18,491 --> 01:07:21,234
@@ -4568,15 +4572,15 @@ the extra dictionaries.
 
 1047
 01:07:31,302 --> 01:07:33,897
-SP: Because the two (inaudible) will come back from go.
+SP: Because the tuples will come back from go.
 
 1048
 01:07:33,891 --> 01:07:36,177
-OC: Yes, so it will give us two word chains
+OC: Yes, so go will give us a tuple of word chains
 
 1049
 01:07:36,171 --> 01:07:37,365
-from the dictionaries,
+and dictionaries,
 
 1050
 01:07:37,417 --> 01:07:39,805
@@ -4585,7 +4589,7 @@ only interested in word chains.
 
 1051
 01:07:39,805 --> 01:07:42,080
-(inaudible)
+So I'm mapping first over those.
 
 1052
 01:07:42,200 --> 01:07:44,022
@@ -4598,7 +4602,7 @@ ones whose first element
 
 1054
 01:07:50,434 --> 01:07:52,845
-is equal to our target. (inaudible)
+is equal to our target. [inaudible]
 
 1055
 01:07:54,022 --> 01:07:57,205
@@ -4610,15 +4614,15 @@ to solve the puzzle ... so that all compiles
 
 1057
 01:08:04,651 --> 01:08:06,388
-Bring the dictionary back in
+Read the dictionary back in
 
 1058
 01:08:06,388 --> 01:08:08,942
-(inaudible) word puzzle using the dictionary
+I can do a wordPuzzle using the dictionary
 
 1059
 01:08:08,948 --> 01:08:10,891
-it will go from dog to cat.
+and we'll go from dog to cat.
 
 1060
 01:08:15,742 --> 01:08:17,502
@@ -4713,7 +4717,7 @@ So it might be worth trying to improve the forms
 
 1081
 01:09:34,940 --> 01:09:36,022
-of this text (inaudible).
+of this next.
 
 1082
 01:09:36,050 --> 01:09:39,314
@@ -4743,12 +4747,12 @@ dictionary that I've given you.
 
 1088
 01:09:53,805 --> 01:09:56,857
-OC: This looks like
+OC: This doesn't look like
 it's terminating any time soon.
 
 1089
 01:09:58,274 --> 01:10:01,194
-SP: Maybe we can have a look and see 
+SP: Maybe we can have a look and see
 
 1090
 01:10:01,194 --> 01:10:04,370
@@ -4765,7 +4769,7 @@ background anyway, see if we get a result
 
 1093
 01:10:09,091 --> 01:10:11,310
-while we start looking for some (inaudible).
+while we start looking for some optimizations.
 
 1094
 01:10:11,310 --> 01:10:15,080
@@ -4773,11 +4777,11 @@ To me, the biggest source of expense
 
 1095
 01:10:15,250 --> 01:10:16,902
-feels like this neighbors function.
+feels like this neighbours function.
 
 1096
 01:10:16,902 --> 01:10:20,620
-We're filtering twice and the map twice
+We're filtering twice and we map twice
 
 1097
 01:10:20,634 --> 01:10:22,280
@@ -4798,7 +4802,7 @@ doesn't really change.
 1101
 01:10:28,720 --> 01:10:31,434
 There may be potential
-neighbors that we can't consider 
+neighbors that we can't consider
 
 1102
 01:10:31,434 --> 01:10:33,620
@@ -4824,7 +4828,7 @@ where we have a map of neighbors
 1107
 01:10:48,800 --> 01:10:54,257
 It's going to be a map
-from text to its set of neighbors.
+from Text to its set of neighbors.
 
 1108
 01:10:55,285 --> 01:10:56,485
@@ -4832,11 +4836,11 @@ And we should be able to
 
 1109
 01:10:56,485 --> 01:10:58,714
-pre-compute this against the dictionary .
+pre-compute this against the dictionary.
 
 1110
 01:10:59,340 --> 01:11:01,840
-We're going to need the map data type
+We're going to need the Map data type
 
 1111
 01:11:01,850 --> 01:11:06,000
@@ -4852,7 +4856,7 @@ Now we look up the list of neighbors.
 
 1114
 01:11:21,891 --> 01:11:24,131
-We can still take the dictionary as input
+We can still take the Dictionary as input
 
 1115
 01:11:24,137 --> 01:11:26,531
@@ -4860,7 +4864,7 @@ but rather than just taking that, we can also
 
 1116
 01:11:26,531 --> 01:11:28,440
-take in a neighbor map.
+take in a NeighbourMap.
 
 1117
 01:11:29,462 --> 01:11:30,628
@@ -4905,7 +4909,7 @@ so we're going to filter those out.
 
 1127
 01:11:48,708 --> 01:11:52,205
-OK, so I'll call that M and W.
+OK, so I'll call that m and w.
 
 1128
 01:11:52,731 --> 01:11:54,370
@@ -4913,7 +4917,7 @@ And this becomes straightforward,
 
 1129
 01:11:54,370 --> 01:12:01,080
-we simply do a map look-up (inaudible)
+we simply do a map look-up which is the exclamation operator
 
 1130
 01:12:01,110 --> 01:12:04,634
@@ -4927,7 +4931,7 @@ over that for now I guess.
 
 1132
 01:12:08,420 --> 01:12:09,600
-SP: yes,  (inaud) maybes'.
+SP: Avoiding the maybes'.
 
 1133
 01:12:10,200 --> 01:12:12,965
@@ -4936,7 +4940,7 @@ OC: If I was doing this production code
 1134
 01:12:12,960 --> 01:12:14,291
 I would probably want
-to keep the maybes' 
+to keep the maybes'
 
 1135
 01:12:14,291 --> 01:12:16,320
@@ -4956,7 +4960,7 @@ So, this is saying in the map M
 
 1139
 01:12:25,697 --> 01:12:27,011
-look up the word W.
+look up the word w.
 
 1140
 01:12:28,725 --> 01:12:31,474
@@ -4972,7 +4976,8 @@ We take the set intersection ...
 
 1143
 01:12:41,380 --> 01:12:43,817
-SP: Is it (inaudible), ? I can't remember.
+SP: Is it bang or double-bang for the
+lookup operator? I can't remember.
 
 1144
 01:12:44,205 --> 01:12:47,165
@@ -4989,7 +4994,7 @@ So we don't seem to have any compile errors
 
 1147
 01:12:58,020 --> 01:12:59,850
-around this neighbors function.
+around this neighbours function.
 
 1148
 01:13:00,680 --> 01:13:02,250
@@ -4997,12 +5002,12 @@ That's quite straightforward.
 
 1149
 01:13:02,440 --> 01:13:05,440
-We also need a way to pre-compute neighbors.
+We also need a way to precomputeNeighbours.
 
 1150
 01:13:06,988 --> 01:13:11,817
 So that takes the
-dictionary and turns it into a map,
+dictionary and turns it into a NeighbourMap,
 
 1151
 01:13:12,770 --> 01:13:15,540
@@ -5020,12 +5025,12 @@ that extra information available
 
 1154
 01:13:21,622 --> 01:13:24,857
-in a neighbor map and you're
+in that NeighbourMap and you're
 working your way back up
 
 1155
 01:13:24,965 --> 01:13:27,340
-to the (inaudible) levels
+to the calling levels
 
 1156
 01:13:27,340 --> 01:13:29,340
@@ -5033,7 +5038,7 @@ to see how to pass that down into it.
 
 1157
 01:13:29,342 --> 01:13:34,325
-OC: Yes.  We've got a neighbors function.
+OC: Yes. We've got a neighbours function.
 
 1158
 01:13:34,320 --> 01:13:36,622
@@ -5042,12 +5047,12 @@ I would like to be able to test that in GHCi
 1159
 01:13:36,622 --> 01:13:38,862
 but we don't have a way
-to build a neighbor map yet.
+to build a NeighbourMap yet.
 
 1160
 01:13:38,860 --> 01:13:41,937
 So I'm going to work on this
-pre-compute neighbors function
+precomputeNeighbours function
 
 1161
 01:13:41,937 --> 01:13:43,794
@@ -5059,7 +5064,7 @@ so I can actually see if
 
 1163
 01:13:45,020 --> 01:13:47,262
-the neighbor map seems to
+the NeighbourMap seems to
 be working as we would expect.
 
 1164
@@ -5069,7 +5074,7 @@ through the rest of the compile errors
 
 1165
 01:13:50,011 --> 01:13:54,370
-(inaud).  That's what we do.
+And thread in the proper code as we need to.
 
 1166
 01:13:55,777 --> 01:13:57,902
@@ -5083,7 +5088,7 @@ dictionary, which is a set of words,
 
 1168
 01:14:02,668 --> 01:14:04,800
-so if we go set to list.
+so if we go from set to list.
 
 1169
 01:14:05,885 --> 01:14:10,354
@@ -5093,7 +5098,7 @@ in here we can map over ...
 1170
 01:14:12,370 --> 01:14:15,005
 Ah ! We did need our
-original neighbors function
+original neighbours function
 
 1171
 01:14:15,000 --> 01:14:17,142
@@ -5122,11 +5127,11 @@ And this is back to how it was.
 1177
 01:14:53,380 --> 01:14:57,422
 SP: We could also call this
-neighbors and have the old
+neighbours and have the old
 
 1178
 01:14:57,420 --> 01:15:01,680
-neighbors function
+neighbours function
 simply be a function returning
 
 1179
@@ -5136,7 +5141,7 @@ with the neighbors and distances.
 
 1180
 01:15:06,388 --> 01:15:08,337
-OC: In the neighbors function or ...?
+OC: In the neighbours function or ...?
 
 1181
 01:15:09,257 --> 01:15:12,685
