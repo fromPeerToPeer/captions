@@ -5959,23 +5959,27 @@ then you would be able to modify it.
 1350
 01:41:40,170 --> 01:41:45,751
 The simplest thing I can do to make
-the test pass is to say def children children.
+the test pass is to [create a method].
 
 1351
 01:41:45,751 --> 01:41:53,004
-In fact I don't even need to do that, I can say inaud accesor reader children.
+In fact I don't even need to do that!
+I can just say attr_reader :children
 
 1352
 01:41:53,820 --> 01:41:58,257
-I think that will make all of my tests pass, and hopefully
+I think that will make all my tests pass
+and then hopefully
 
 1353
 01:41:58,257 --> 01:42:01,395
-when I run all my cucumber features, it will make them all pass.
+when I run all my cucumber features,
+it will make them all pass.
 
 1354
 01:42:01,420 --> 01:42:06,568
-So I will commit that and say implement.
+So I will commit that and say:
+"Implement..."
 
 1355
 01:42:10,420 --> 01:42:13,448
