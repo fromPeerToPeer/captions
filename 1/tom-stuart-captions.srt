@@ -4200,28 +4200,28 @@ putting some code in here which says:
 
 958
 01:05:42,506 --> 01:05:49,626
-expect trees to be equal to something.
+expect(@trees).to be equal to something.
 
 959
 01:05:49,620 --> 01:05:57,693
 So if we've sorted them by
-descendant_count we expect to see just one node
+descendant_count we expect to see
 
 960
 01:05:58,710 --> 01:06:00,320
-which has no descendants.
+@just_one_node which has no descendants.
 
 961
 01:06:01,050 --> 01:06:03,453
-A deep tree which has four.
+A @deep_tree which has four.
 
 962
 01:06:04,173 --> 01:06:06,520
-A wide tree which has five.
+A @wide_tree which has five.
 
 963
 01:06:08,250 --> 01:06:10,413
-and deep wide tree which has twelve.
+and @deep_wide_tree which has twelve.
 
 964
 01:06:10,910 --> 01:06:12,040
