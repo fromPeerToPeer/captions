@@ -3056,7 +3056,8 @@ here is something like:
 
 701
 00:45:01,906 --> 00:45:10,586
-context when the Node has five descendants.
+context 'when the Node
+has five descendants'
 
 702
 00:45:11,340 --> 00:45:15,986
