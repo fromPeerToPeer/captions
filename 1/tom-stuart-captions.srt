@@ -2459,7 +2459,7 @@ of actual code and I'm nervous about it.
 564
 00:34:50,310 --> 00:34:54,400
 I'm going to deal with
-that by opening a new screen.
+that by opening a GNU screen.
 
 565
 00:34:55,970 --> 00:34:59,066
@@ -2472,7 +2472,8 @@ where I'm going to make some commits.
 
 567
 00:35:01,250 --> 00:35:07,026
-inaudible
+Of course, this isn't even
+a git repository!
 
 568
 00:35:07,813 --> 00:35:10,546
