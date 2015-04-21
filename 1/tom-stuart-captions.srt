@@ -5855,12 +5855,13 @@ Here we could do it.
 
 1327
 01:39:22,310 --> 01:39:27,980
-That says let node be no.newchildren,
+That says let(:node)
+be Node.new(children)
 
 1328
 01:39:27,990 --> 01:39:32,410
 That means that all of these places
-where I've got node.new children,
+where I've got Node.new(children),
 
 1329
 01:39:32,450 --> 01:39:34,540
