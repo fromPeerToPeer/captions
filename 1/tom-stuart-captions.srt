@@ -2874,7 +2874,7 @@ I'm going to commit this change.
 
 659
 00:41:56,960 --> 00:42:00,746
-Mark men step as pending.
+"Mark then step as pending."
 
 660
 00:42:01,386 --> 00:42:04,370
