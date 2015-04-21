@@ -6099,7 +6099,7 @@ And make a new one of these.
 
 1381
 01:44:48,746 --> 01:44:52,222
-each child inaudible
+each_child { |n| puts n }
 
 1382
 01:44:52,310 --> 01:44:54,186
