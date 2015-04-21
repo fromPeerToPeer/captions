@@ -1608,7 +1608,7 @@ things that are not equal to A.
 
 368
 00:25:03,940 --> 00:25:06,331
-SP: And also the slash equals operator?
+SP: And also the /= operator?
 
 369
 00:25:06,450 --> 00:25:07,885
