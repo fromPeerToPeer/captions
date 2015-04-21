@@ -1517,7 +1517,7 @@ SP: Is there a function for that, is it fst?
 
 348
 00:23:07,680 --> 00:23:10,057
-OC: Yes, we can use first now.
+OC: Yes, we can use fst there.
 
 349
 00:23:23,400 --> 00:23:26,205
