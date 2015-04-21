@@ -5578,7 +5578,8 @@ Whoops .....
 
 1265
 01:33:51,910 --> 01:33:54,310
-That's a nice simple implementation I think.
+That's a nice simple implementation
+I think.
 
 1266
 01:33:56,600 --> 01:33:58,610
@@ -5591,20 +5592,22 @@ DN: I like it.
 1268
 01:34:03,140 --> 01:34:11,850
 TS: Let's go back to the step definitions
-and finish off, because we're still not done.
+and finish off because we're not done.
 
 1269
 01:34:13,740 --> 01:34:18,080
-That's made that step work. And now we have to say
+That's made that step work.
+And now we have to say:
 
 1270
 01:34:19,020 --> 01:34:32,710
-expect the trees descendant_count to be equal to ...
+expect(@tree.descendant_count)
+to be equal to...
 
 1271
 01:34:32,770 --> 01:34:36,410
-because that one was two ...
-so we expect it to be equal to three.
+I guess that one was two?
+So we expect it to be equal to three.
 
 1272
 01:34:36,420 --> 01:34:39,520
