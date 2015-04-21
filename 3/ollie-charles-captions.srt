@@ -1340,7 +1340,7 @@ which have to produce something.
 
 307
 00:19:30,620 --> 00:19:37,291
-So if x is equal to y ... then zero provides ...
+So if x is equal to y ... then zero otherwise one ...
 
 308
 00:19:37,474 --> 00:19:39,910
