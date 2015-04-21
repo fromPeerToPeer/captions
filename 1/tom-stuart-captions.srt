@@ -5405,8 +5405,8 @@ responds to changes in the structure of the tree
 
 1227
 01:30:21,110 --> 01:30:25,040
-gets very difficult, if not impossible.
-If I expose that array of children.
+gets very difficult, if not impossible
+if I expose that array of children.
 
 1228
 01:30:25,050 --> 01:30:28,810
