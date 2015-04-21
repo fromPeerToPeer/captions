@@ -3302,11 +3302,11 @@ And then this is going to say check that it does.
 756
 00:49:41,340 --> 00:49:44,786
 If I already knew how
-descendant count was going to work ...
+descendant_count was going to work ...
 
 757
 00:49:52,613 --> 00:49:54,213
-I'm in conflict about this ....
+I'm really conflicted about this!
 
 758
 00:49:54,210 --> 00:49:56,573
