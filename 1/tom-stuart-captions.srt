@@ -5817,17 +5817,18 @@ This would be a good place for it.
 
 1319
 01:38:28,230 --> 01:38:34,970
-It contains its children, or something like that.
+It "contains its children",
+or something like that.
 
 1320
-01:38:36,880 --> 01:38:42,110
-Maybe it exposes that it's
-possible to 'get at' the children:
+01:38:35,880 --> 01:38:42,110
+Maybe "exposes" that it's
+possible to "get at" the children:
 
 1321
 01:38:42,450 --> 01:38:59,230
-I would say I would expect
-no.newchildren.children to be equal to ...
+I would expect Node.new(children)
+.children to be equal to... that!
 
 1322
 01:38:59,240 --> 01:39:03,430
