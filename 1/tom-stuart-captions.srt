@@ -5927,7 +5927,8 @@ But I just want to add that.
 
 1343
 01:40:57,740 --> 01:41:07,795
-That is still not added but all the rest of it which is extract node inaudable.
+Which is:
+'Extract "node" accessor in spec'
 
 1344
 01:41:10,020 --> 01:41:12,346
