@@ -5997,29 +5997,33 @@ you re-assign the children collection,
 
 1358
 01:42:21,137 --> 01:42:26,444
-but once you have an array you can
-remove everything from it and re-populate it.
+but once you have an array you can remove
+everything from it and re-populate it.
 
 1359
-01:42:26,453 --> 01:42:33,226
-The identity of the array is not a useful thing
-to protect. It's the contents of it that we care about.
+01:42:26,453 --> 01:42:34,900
+The actual identity of the array
+isn't a very useful thing to protect.
+It's the contents of it
+that we care about.
 
 1360
-01:42:35,528 --> 01:42:38,791
+01:42:35,000 --> 01:42:38,791
 We could freeze the array.
 
 1361
 01:42:38,820 --> 01:42:43,920
-We can make an accessor here that says children ....
+We could make an accessor here that says:
+children... I guess actually...
 
 1362
 01:42:47,510 --> 01:42:49,262
-Can we freeze it here?
+Could we freeze it here?
 
 1363
 01:42:51,650 --> 01:42:59,066
-I think if we do that, it will still work.
+I think if we do that
+then it all still works.
 
 1364
 01:42:59,066 --> 01:42:59,733
@@ -6027,7 +6031,7 @@ DN: Yes, right.
 
 1365
 01:42:59,733 --> 01:43:03,093
-TS: Our cucumber features will still work.
+TS: Our cucumber features all still work.
 
 1366
 01:43:03,100 --> 01:43:04,915
