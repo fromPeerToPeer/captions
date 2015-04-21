@@ -5709,12 +5709,12 @@ At the moment there's no API for getting to them.
 
 1295
 01:36:18,770 --> 01:36:31,900
-I would like to bring that out a bit by saying
-something like expect tree.children to include ...
+I'd like to bring that out by saying:
+expect(@tree.children).to include...
 
 1296
 01:36:34,250 --> 01:36:41,790
-I think that to not do that
+It seems like: to not do that
 is to slightly dodge the issue.
 
 1297
