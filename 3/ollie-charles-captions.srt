@@ -1599,7 +1599,7 @@ going to use the Applicative Syntax
 
 366
 00:24:56,970 --> 00:24:59,428
-to combine 2 operations together
+to combine 2 boolean operations together
 
 367
 00:24:59,450 --> 00:25:01,880
