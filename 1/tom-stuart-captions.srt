@@ -5878,8 +5878,8 @@ That's not what I wanted.
 
 1332
 01:39:45,600 --> 01:39:51,946
-Oh, it's because this is nonsense.
-It should be no.newchildren.
+Oh, it's because this is nonsense!
+That should be Node.new(children).
 
 1333
 01:39:52,320 --> 01:39:55,075
