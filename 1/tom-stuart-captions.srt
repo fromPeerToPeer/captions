@@ -5157,10 +5157,11 @@ that involves adding a node to the tree.
 
 1174
 01:26:02,950 --> 01:26:05,200
-And then I want to do something that checks it's ...
+And then I want to do something
+that checks that it's...
 
 1175
-01:26:08,610 --> 01:26:11,750
+01:26:08,610 --> 01:26:11,790
 I guess, this is the point
 where we need to make a decision.
 
