@@ -191,7 +191,7 @@ and I'll just use another license.
 
 45
 00:02:52,560 --> 00:02:56,594
-I'll leave that blank ... and all this blank.
+I'll leave that blank... and all this blank.
 
 46
 00:02:57,908 --> 00:03:01,371
@@ -245,7 +245,7 @@ and we can also switch over to the terminal
 
 58
 00:04:02,457 --> 00:04:05,382
-and run that ... yes.
+and run that... yes.
 
 59
 00:04:08,594 --> 00:04:10,640
@@ -406,7 +406,7 @@ that up into a dictionary later.
 
 95
 00:06:22,251 --> 00:06:24,834
-The first thing I'm going to do ...
+The first thing I'm going to do...
 
 96
 00:06:33,710 --> 00:06:35,542
@@ -748,7 +748,7 @@ SP: Yes.
 172
 00:11:19,970 --> 00:11:23,462
 So I'm going to introduce
-a top level function called ...
+a top level function called...
 
 173
 00:11:25,748 --> 00:11:27,097
@@ -955,7 +955,7 @@ so there's no solution at all
 
 219
 00:13:54,697 --> 00:13:55,931
-We can move on now ...
+We can move on now...
 
 220
 00:13:56,050 --> 00:13:58,811
@@ -1020,7 +1020,7 @@ Haskell will not be in the dictionary.
 
 234
 00:15:08,910 --> 00:15:11,794
-OC: OK well we can check that ...
+OC: OK well we can check that...
 
 235
 00:15:17,600 --> 00:15:19,394
@@ -1284,7 +1284,7 @@ a zip function already
 
 294
 00:18:21,370 --> 00:18:26,708
-in the text library ... we do.
+in the text library... we do.
 
 295
 00:18:26,800 --> 00:18:29,628
@@ -1340,7 +1340,7 @@ which have to produce something.
 
 307
 00:19:30,620 --> 00:19:37,291
-So if x is equal to y ... then zero otherwise one ...
+So if x is equal to y... then zero otherwise one...
 
 308
 00:19:37,474 --> 00:19:39,910
@@ -1354,7 +1354,7 @@ a list of things like a number.
 
 310
 00:19:47,280 --> 00:19:51,462
-I don't know why it hasn't ...
+I don't know why it hasn't...
 Oh, because B could be any type of numeric.
 
 311
@@ -1918,11 +1918,11 @@ So we're certainly going to be doing 'on'
 
 439
 00:28:58,685 --> 00:29:00,331
-well it takes 2 arguments
+well it takes 2 arguments and...
 
 440
 00:29:00,620 --> 00:29:04,754
-and: ...it takes a function of two arguments
+It takes a function of two arguments
 
 441
 00:29:04,765 --> 00:29:06,422
@@ -2400,7 +2400,7 @@ we call a word puzzle.
 
 550
 00:35:42,626 --> 00:35:43,986
-The same target ...
+The same target...
 
 551
 00:35:50,880 --> 00:35:55,746
@@ -2455,7 +2455,7 @@ which is interesting. So, what's going on there?
 
 563
 00:36:46,740 --> 00:36:49,373
-when we loop over there this  ...
+when we loop over there this...
 
 564
 00:36:49,380 --> 00:36:52,533
@@ -2659,7 +2659,7 @@ We have cat.
 611
 00:40:30,773 --> 00:40:33,653
 The problem is I think
-we should have been prepending ...
+we should have been prepending...
 
 612
 00:40:35,466 --> 00:40:38,906
@@ -3022,7 +3022,7 @@ another one of those conventions
 
 693
 00:45:53,480 --> 00:45:56,910
-we need to ... go over there.
+we need to... go over there.
 
 694
 00:45:56,910 --> 00:46:01,200
@@ -3051,7 +3051,7 @@ I should be able to load the dictionary in
 
 700
 00:46:39,370 --> 00:46:44,573
-and expand and type that back up ...
+and expand and type that back up...
 
 701
 00:46:45,720 --> 00:46:49,520
@@ -3118,7 +3118,7 @@ not going to be the solution.
 
 715
 00:47:38,173 --> 00:47:40,333
-Now I should be able to ...
+Now I should be able to...
 
 716
 00:47:47,880 --> 00:47:51,586
@@ -3293,7 +3293,7 @@ Bit of a misnomer there I reckon.
 753
 00:50:21,200 --> 00:50:28,106
 So now that we've got set
-imported maybe we can make this ...
+imported maybe we can make this...
 
 754
 00:50:28,146 --> 00:50:30,110
@@ -3342,7 +3342,7 @@ is a member of a set.
 
 764
 00:51:05,573 --> 00:51:07,600
-Likewise going to do the same here. ...
+Likewise going to do the same here...
 
 765
 00:51:17,640 --> 00:51:21,066
@@ -3354,7 +3354,7 @@ That should probably just return.
 
 767
 00:51:34,866 --> 00:51:36,493
-like that ...
+like that...
 
 768
 00:51:41,440 --> 00:51:47,106
@@ -3377,7 +3377,7 @@ Ah yes,  we can't map over a set like that.
 
 772
 00:52:17,813 --> 00:52:23,813
-Do we have that ... yes we do ...
+Do we have that... yes we do...
 so we just change that to S.map
 
 773
@@ -3600,7 +3600,7 @@ and see what we end up with.
 821
 00:55:09,194 --> 00:55:11,491
 OC: We have some function
-f that's going to take a chain ...
+f that's going to take a chain...
 
 822
 00:55:11,491 --> 00:55:14,910
@@ -3978,7 +3978,7 @@ Tuple that up
 
 908
 00:59:45,428 --> 00:59:49,651
-with the same dictionary ...
+with the same dictionary.
 
 909
 00:59:52,485 --> 00:59:54,540
@@ -4010,7 +4010,7 @@ OC: so breaking the problem into a smaller one
 
 916
 01:00:13,697 --> 01:00:15,194
-So ignore this ...
+So ignore this...
 
 917
 01:00:15,840 --> 01:00:19,542
@@ -4144,7 +4144,7 @@ There's nothing we can do, we simply return that
 947
 01:02:03,925 --> 01:02:08,308
 Otherwise we have some
-chains so what we can do ...
+chains so what we can do...
 
 948
 01:02:08,697 --> 01:02:11,120
@@ -4203,7 +4203,7 @@ or did you want to drop it entirely?
 
 961
 01:02:43,954 --> 01:02:45,950
-Because we could just ...
+Because we could just...
 
 962
 01:02:47,250 --> 01:02:50,594
@@ -4220,7 +4220,7 @@ OC: Ok, because of the dictionary.
 
 965
 01:03:11,777 --> 01:03:12,897
-So that's OK ...
+So that's OK...
 
 966
 01:03:12,970 --> 01:03:16,502
@@ -4332,7 +4332,7 @@ In our GHCi
 
 991
 01:04:15,820 --> 01:04:19,531
-So we've got go so I'll try ...
+So we've got go so I'll try...
 
 992
 01:04:20,217 --> 01:04:22,331
@@ -4366,7 +4366,7 @@ OC: And take the head of that.
 
 999
 01:04:45,262 --> 01:04:46,971
-There's a lot of possibilities ...
+There's a lot of possibilities...
 
 1000
 01:04:47,697 --> 01:04:49,085
@@ -4503,7 +4503,7 @@ to put this back into the wordPuzzle
 
 1031
 01:06:48,554 --> 01:06:50,525
-to solve the puzzle properly ... again!
+to solve the puzzle properly... again!
 
 1032
 01:06:52,880 --> 01:06:56,360
@@ -4560,7 +4560,7 @@ So we filter the result of chains
 
 1044
 01:07:21,370 --> 01:07:24,748
-by  taking ... for each chain.
+by  taking... for each chain.
 
 1045
 01:07:26,257 --> 01:07:29,020
@@ -4610,7 +4610,7 @@ And I think that's all we need
 
 1056
 01:07:57,205 --> 01:07:59,988
-to solve the puzzle ... so that all compiles
+to solve the puzzle... so that all compiles
 
 1057
 01:08:04,651 --> 01:08:06,388
@@ -4972,7 +4972,7 @@ of the set of possible neighbors.
 
 1142
 01:12:37,170 --> 01:12:40,171
-We take the set intersection ...
+We take the set intersection...
 
 1143
 01:12:41,380 --> 01:12:43,817
@@ -5093,7 +5093,7 @@ so if we go from set to list.
 1169
 01:14:05,885 --> 01:14:10,354
 and for every word
-in here we can map over ...
+in here we can map over...
 
 1170
 01:14:12,370 --> 01:14:15,005
@@ -5114,7 +5114,7 @@ OC: So let's see if I can go back to that.
 
 1174
 01:14:26,450 --> 01:14:27,942
-So I'll call this one ...
+So I'll call this one...
 
 1175
 01:14:31,925 --> 01:14:32,908
@@ -5141,7 +5141,7 @@ with the neighbors and distances.
 
 1180
 01:15:06,388 --> 01:15:08,337
-OC: In the neighbours function or ...?
+OC: In the neighbours function or...?
 
 1181
 01:15:09,257 --> 01:15:12,685
@@ -5157,7 +5157,7 @@ in order to avoid having two similarly named functions.
 
 1184
 01:15:22,348 --> 01:15:23,994
-Maybe we should continue ...
+Maybe we should continue...
 
 1185
 01:15:23,994 --> 01:15:25,740
@@ -5247,7 +5247,7 @@ SP: OK.
 
 1204
 01:16:37,400 --> 01:16:38,970
-OC: I think I'll just import that ...
+OC: I think I'll just import that...
 
 1205
 01:16:42,748 --> 01:16:44,497
@@ -5329,7 +5329,7 @@ be neighboursLookup,
 
 1223
 01:18:29,497 --> 01:18:33,805
-so that's ... well, yes
+so that's... well, yes
 let's keep it as neighboursLookup.
 
 1224
@@ -5480,7 +5480,7 @@ efficient neighbors look-up function.
 
 1257
 01:21:07,230 --> 01:21:08,931
- So hopefully ...
+ So hopefully...
 
 1258
 01:21:08,960 --> 01:21:10,594
@@ -5518,7 +5518,7 @@ Let's bind that to... something like that.
 
 1266
 01:21:47,420 --> 01:21:48,862
-We can do nMap ...
+We can do nMap...
 
 1267
 01:21:54,440 --> 01:21:56,908
@@ -5631,7 +5631,7 @@ just say filter, length, equal to length of A.
 
 1291
 01:23:36,980 --> 01:23:40,194
-SP: Of course, this way your run length across ...
+SP: Of course, this way your run length across...
 
 1292
 01:23:40,257 --> 01:23:42,228
