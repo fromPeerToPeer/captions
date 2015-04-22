@@ -1414,7 +1414,7 @@ Let's see what's the difference here.
 
 333
 00:30:39,330 --> 00:30:41,500
-DN: It's only the prequel id inaudible.
+DN: It's only the "prequel_id": null.
 
 334
 00:30:44,940 --> 00:30:48,708
