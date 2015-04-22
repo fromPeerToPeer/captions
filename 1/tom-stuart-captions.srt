@@ -6930,12 +6930,13 @@ old stuff as is necessary to make use of it.
 
 1563
 01:59:17,715 --> 01:59:21,680
-I feel good that we have been able to do that there.
+I feel good that we have been
+able to do that there.
 
 1564
 01:59:21,760 --> 01:59:32,728
-So use an enumerator to
-create a add_children, I suppose.
+So: "Use an enumerator to
+create a add_children" I suppose.
 
 1565
 01:59:32,770 --> 01:59:33,608
