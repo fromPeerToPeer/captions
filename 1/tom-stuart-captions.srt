@@ -6705,8 +6705,8 @@ Let's look at it on irb:
 
 1515
 01:55:11,170 --> 01:55:29,191
-If I say enum equals enumerator.new
-do yeilder. Yeilder.yeild one, two, three, end.
+If I say: enum=Enumerator.new do |yeilder|
+yeilder.yeild one, two, three, end.
 
 1516
 01:55:29,200 --> 01:55:31,795
