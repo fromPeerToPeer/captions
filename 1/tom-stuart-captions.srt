@@ -6631,12 +6631,12 @@ about what we can do with the children.
 1498
 01:53:52,340 --> 01:53:57,004
 I'm not changing the tests at all here.
-I'm just getting a chance to re-factor.
+I'm just getting a chance to refactor.
 
 1499
 01:53:57,022 --> 01:54:07,013
-Use enumerable_count to count
-the children through the enumerator.
+"Use Enumerable#count to count
+the children through the enumerator"
 
 1500
 01:54:07,031 --> 01:54:10,170
