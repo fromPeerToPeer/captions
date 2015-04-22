@@ -2097,7 +2097,7 @@ We need to deliver this data down
 494
 00:42:39,870 --> 00:42:42,640
 DN: So do we need
-a root episodes function?
+a rootEpisodes function?
 
 495
 00:42:46,040 --> 00:42:49,634
