@@ -1443,7 +1443,7 @@ I fixed a JSHint error so I'll:
 
 340
 00:31:36,900 --> 00:31:39,230
-DN: Your making your
+DN: You're making your
 commits granular there.
 
 341
