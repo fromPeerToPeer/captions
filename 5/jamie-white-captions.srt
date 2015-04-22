@@ -1682,7 +1682,7 @@ You'll notice, it's trying to look up
 
 395
 00:35:29,500 --> 00:35:31,800
-URL walking sequence.
+the URL walking sequence.
 
 396
 00:35:33,550 --> 00:35:35,760
