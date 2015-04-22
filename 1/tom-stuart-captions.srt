@@ -6653,7 +6653,8 @@ don't need me to show you stupid way
 
 1503
 01:54:18,140 --> 01:54:27,146
-It's just each child inaudible entries and add that child to the end.
+It's just: each_child.entries
+and add that child to the end.
 
 1504
 01:54:27,480 --> 01:54:29,333
@@ -6661,7 +6662,7 @@ Run all the tests.
 
 1505
 01:54:29,370 --> 01:54:31,066
-Run all the cucumbers.
+Run all the cukes.
 
 1506
 01:54:31,110 --> 01:54:31,710
