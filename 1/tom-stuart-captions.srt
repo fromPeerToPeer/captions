@@ -6737,19 +6737,19 @@ It's enumerable so I can also say:
 enum.entries. I can do: enum.each.
 
 1522
-01:55:59,680 --> 01:56:04,346
+01:55:59,680 --> 01:56:04,330
 It works like a normal enumerable
 'thing' but you've built it programmatically.
 
 1523
 01:56:04,340 --> 01:56:15,848
-I can take advantage of that by
-saying each child do child yeilder.yeild child.
+I can take advantage of that by saying:
+each_child do |child| yeilder.yeild child
 
 1524
 01:56:15,850 --> 01:56:22,506
-So yield all of the existing children to the
-yielder, and then afterwards, yield a new one.
+So yield all existing children to the
+yielder, and then yield a new one.
 
 1525
 01:56:25,946 --> 01:56:32,720
