@@ -6443,13 +6443,14 @@ which in our case is the same as there being none.
 If I run all of the unit tests, that still works.
 
 1457
-01:50:39,250 --> 01:50:42,515
+01:50:39,250 --> 01:50:43,990
 And all the cucumber features still work.
+That gives me an opportunity to say:
 
 1458
-01:50:42,540 --> 01:50:55,466
-That gives me an opportunity to say extract
-leaf and use enumerator instead of instance variable.
+01:50:44,000 --> 01:50:55,466
+"Extract leaf and use enumerator
+instead of instance variable"
 
 1459
 01:50:55,580 --> 01:50:58,391
