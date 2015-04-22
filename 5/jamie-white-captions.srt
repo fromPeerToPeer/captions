@@ -1601,8 +1601,8 @@ can only search after this point.
 
 376
 00:33:57,600 --> 00:33:59,680
-But that's not
-what we need in this case.
+But there's very
+little need in this case.
 
 377
 00:34:00,730 --> 00:34:01,680
