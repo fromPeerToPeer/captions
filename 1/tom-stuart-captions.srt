@@ -6713,26 +6713,28 @@ yeilder.yeild one, two, three, end.
 First you can step through them one at a time.
 
 1517
-01:55:31,800 --> 01:55:34,220
-You can say give me the
-next value, and the next .....
+01:55:31,800 --> 01:55:34,990
+You can say give me the next value,
+and the next... It's using fibers
 
 1518
-01:55:34,220 --> 01:55:40,631
-It's using fibers to suspend execution of
-that block after every yield until I say I'm ready.
+01:55:35,000 --> 01:55:40,620
+to suspend execution of that block after
+every yield until I say I'm ready.
 
 1519
 01:55:40,630 --> 01:55:43,635
-If I enumerate off the end it says reached an end.
+If I enumerate off the end
+it says: reached an end.
 
 1520
 01:55:43,650 --> 01:55:47,493
-I think I can re-wind. Yes.
+I think I can rewind. Yes.
 
 1521
 01:55:48,910 --> 01:55:55,671
-It's enumerable so I can also say enum.entries, enum.each.
+It's enumerable so I can also say:
+enum.entries. I can do: enum.each.
 
 1522
 01:55:59,680 --> 01:56:04,346
