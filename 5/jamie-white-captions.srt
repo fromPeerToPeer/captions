@@ -1390,7 +1390,7 @@ So a sequel is an episode whose host id,
 
 327
 00:30:00,740 --> 00:30:02,080
-is equal to our guest id.
+is equal to our guest ID.
 
 328
 00:30:10,730 --> 00:30:12,340
