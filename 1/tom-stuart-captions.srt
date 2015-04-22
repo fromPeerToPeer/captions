@@ -6371,13 +6371,13 @@ But I'm nervous about all of these places
 where we're referring to the instance variable.
 
 1441
-01:49:38,220 --> 01:49:42,942
+01:49:38,220 --> 01:49:42,930
 I would much rather have the
 instance variable in as few places as possible.
 
 1442
 01:49:42,940 --> 01:49:48,613
-If I think that each child is a
+If I think that each_child is a
 reasonable API for accessing the children.
 
 1443
