@@ -1486,7 +1486,7 @@ help us work out what the algorithm is
 
 350
 00:32:04,890 --> 00:32:06,890
-and what its trying to produce.
+and what it's trying to produce.
 
 351
 00:32:08,240 --> 00:32:09,120
