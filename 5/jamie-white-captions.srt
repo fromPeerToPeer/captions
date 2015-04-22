@@ -1418,7 +1418,7 @@ DN: It's only the "prequel_id": null.
 
 334
 00:30:44,940 --> 00:30:48,708
-JW: Yes, its undefined instead rather than null.
+JW: Yes, it's undefined instead rather than null.
 
 335
 00:30:55,080 --> 00:30:57,990
