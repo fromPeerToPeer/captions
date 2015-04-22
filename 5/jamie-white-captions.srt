@@ -2140,8 +2140,8 @@ It should be the same for each episode.
 
 504
 00:43:57,560 --> 00:44:01,577
-DN: Ah yes, because build
-collaborators does return the full list.
+DN: Ah yes, because buildCollaborators
+does return the full list.
 
 505
 00:44:02,030 --> 00:44:04,990
