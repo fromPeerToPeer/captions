@@ -23,7 +23,7 @@ I'm your host Drew Neil,
 6
 00:00:15,170 --> 00:00:17,450
 and the challenge
-I've set for Tom is called ...
+I've set for Tom is called
 
 7
 00:00:17,450 --> 00:00:19,450
@@ -70,7 +70,7 @@ DN: Is that clear?
 
 17
 00:00:43,240 --> 00:00:45,320
-TS: Well ... I'm not entirely sure
+TS: Well... I'm not entirely sure
 
 18
 00:00:45,333 --> 00:00:48,386
@@ -229,7 +229,7 @@ DN: So you're looking upward.
 52
 00:02:37,280 --> 00:02:41,466
 OC: But this is looking
-at the root as being .....
+at the root as being...
 
 53
 00:02:45,680 --> 00:02:47,626
@@ -242,7 +242,7 @@ better word. (laughter)
 
 55
 00:02:50,173 --> 00:02:53,440
-It doesn't matter ....
+It doesn't matter...
 
 56
 00:02:55,510 --> 00:02:57,370
@@ -388,7 +388,7 @@ DN: Let's do that.
 
 88
 00:04:22,220 --> 00:04:23,680
-OK, I'm going to make a ....
+OK, I'm going to make a...
 
 89
 00:04:23,820 --> 00:04:25,630
@@ -396,7 +396,7 @@ let's call it trees.
 
 90
 00:04:34,310 --> 00:04:36,170
-I would like to start by ...
+I would like to start by...
 
 91
 00:04:40,410 --> 00:04:43,310
@@ -412,7 +412,7 @@ So I'm going to use cucumber for that.
 
 94
 00:04:47,810 --> 00:04:51,530
-Let me be strange about this ...
+Let me be strange about this...
 
 95
 00:04:57,650 --> 00:05:00,000
@@ -467,7 +467,7 @@ before I start thinking about it.
 106
 00:05:29,600 --> 00:05:32,390
 So to crystallize that
-conversation we just had ...
+conversation we just had...
 
 107
 00:05:32,390 --> 00:05:33,420
@@ -484,7 +484,7 @@ hopefully run zero scenarios.
 
 110
 00:05:48,710 --> 00:05:49,830
-I'm going to make ....
+I'm going to make...
 
 111
 00:05:52,570 --> 00:05:55,120
@@ -504,7 +504,7 @@ So I'll call that sorting feature.
 
 115
 00:06:03,080 --> 00:06:05,510
-So feature sorting trees ....
+So feature sorting trees...
 
 116
 00:06:05,730 --> 00:06:07,490
@@ -526,9 +526,9 @@ you would be thinking
 about a particular kind of user,
 
 120
-00:06:17,920 --> 00:06:22,880
-From the perspective of
-a client of an API
+00:06:16,200 --> 00:06:22,880
+But the problem you've given me is from
+the perspective of a client of an API.
 
 121
 00:06:22,930 --> 00:06:26,120
@@ -553,7 +553,7 @@ by various criteria.
 
 126
 00:06:40,940 --> 00:06:42,150
-so that ...
+so that...
 
 127
 00:06:42,150 --> 00:06:43,650
@@ -759,7 +759,7 @@ I'm going to look it up.
 172
 00:10:03,420 --> 00:10:06,630
 I'm sure that's
-right but to be sure ....
+right but to be sure...
 
 173
 00:10:06,740 --> 00:10:10,350
@@ -941,7 +941,7 @@ So I would like this to be something like trees equals
 
 213
 00:12:28,020 --> 00:12:30,826
-small tree, large tree ...
+small tree, large tree...
 
 214
 00:12:30,826 --> 00:12:32,770
@@ -949,7 +949,7 @@ DN:  We could also have a shallow tree,
 
 215
 00:12:32,770 --> 00:12:35,226
-one that has no terminals or ...
+one that has no terminals or...
 
 216
 00:12:35,310 --> 00:12:38,440
@@ -1036,7 +1036,8 @@ through my hesitation here!
 
 235
 00:14:02,970 --> 00:14:05,110
-I'm going to have to make a decision about ...
+I'm going to have to make
+a decision about...
 
 236
 00:14:05,110 --> 00:14:07,800
@@ -1264,7 +1265,7 @@ We could have one that's just got 5 children.
 
 287
 00:17:10,050 --> 00:17:11,310
-Like this ...
+Like this...
 
 288
 00:17:11,310 --> 00:17:13,310
@@ -1390,11 +1391,12 @@ What other kinds of tree could we have?
 
 317
 00:18:38,373 --> 00:18:43,106
-DN: We could have a deep wide tree that has ...
+DN: We could have a deep wide
+tree that has...
 
 318
 00:18:43,106 --> 00:18:45,440
-perhaps 2 descendants ...
+perhaps 2 descendants...
 
 319
 00:18:46,890 --> 00:18:50,373
@@ -1411,19 +1413,20 @@ DN: That's right.
 
 322
 00:18:57,910 --> 00:18:59,480
-TS: We can have ....
+TS: We can have...
 
 323
 00:19:03,080 --> 00:19:05,333
-So I think that's ... I don't know why ....
+So I think that's...
+I don't know why...
 
 324
 00:19:05,333 --> 00:19:08,493
-DN: Your missing the final ....
+DN: Your missing the final...
 
 325
 00:19:09,373 --> 00:19:11,120
-TS: I don't know why vim isn't ...
+TS: I don't know why vim isn't...
 
 326
 00:19:11,140 --> 00:19:12,800
@@ -1480,7 +1483,8 @@ Just a sanity check this!
 
 339
 00:19:49,250 --> 00:19:51,733
-Would we expect that these two things would ....
+Would we expect that
+these two things would...
 
 340
 00:19:52,110 --> 00:19:55,280
@@ -1501,7 +1505,7 @@ If we sort them by the number of descendants
 
 344
 00:20:01,306 --> 00:20:05,066
-then we have none ... 4,5 many.
+then we have none... 4, 5 many.
 
 345
 00:20:05,080 --> 00:20:08,746
@@ -1539,11 +1543,11 @@ order so we can see the sort work.
 
 353
 00:20:32,220 --> 00:20:33,293
-So let's say ....
+So let's say...
 
 354
 00:20:36,120 --> 00:20:39,306
-Deep tree, just one ....
+Deep tree, just one...
 
 355
 00:20:39,320 --> 00:20:41,720
@@ -1577,7 +1581,7 @@ TS: I'm hoping that's enough to get us started.
 
 362
 00:21:00,680 --> 00:21:02,640
-I'll just check that, by running ....
+I'll just check that, by running...
 
 363
 00:21:03,853 --> 00:21:06,986
@@ -1589,7 +1593,7 @@ That's the failure I was expecting.
 
 365
 00:21:09,970 --> 00:21:18,413
-I will quickly make a features ...
+I will quickly make a features...
 
 366
 00:21:20,880 --> 00:21:23,000
@@ -1627,11 +1631,11 @@ it's just what I'm used to calling them.
 
 374
 00:21:59,200 --> 00:22:01,533
-So in here I want to require ....
+So in here I want to require...
 
 375
 00:22:05,650 --> 00:22:07,760
-just trying to think ....
+just trying to think...
 
 376
 00:22:09,140 --> 00:22:13,146
@@ -1661,7 +1665,8 @@ then if it hasn't already been loaded,
 
 382
 00:22:27,080 --> 00:22:29,310
-it will load it because I want to say world ....
+it will load it because
+I want to say world...
 
 383
 00:22:32,050 --> 00:22:38,053
@@ -1702,15 +1707,16 @@ what children it's going to have.
 
 391
 00:23:07,910 --> 00:23:09,540
-If that children array is empty ....
+If that children array is empty...
 
 392
 00:23:10,400 --> 00:23:12,973
-let me think in code ...
+let me think in code...
 
 393
 00:23:12,973 --> 00:23:18,600
-If the children is empty then it's fine to just do ....
+If the children is empty then
+it's fine to just do...
 
 394
 00:23:20,146 --> 00:23:23,746
@@ -1763,7 +1769,7 @@ If there are no children we make an empty one,
 
 405
 00:24:01,970 --> 00:24:04,626
-if there are children then ....
+if there are children then...
 
 406
 00:24:04,626 --> 00:24:07,200
@@ -1796,7 +1802,7 @@ I know, because I've written Ruby before,
 412
 00:24:26,020 --> 00:24:31,000
 that I can do that by doing
-children, map, method, build tree.
+children.map(&method(:build_tree))
 
 413
 00:24:31,960 --> 00:24:36,973
@@ -1933,7 +1939,7 @@ been running Cucumber scenarios.
 
 443
 00:26:49,346 --> 00:26:52,240
-Are you suspending Vim or .....?
+Are you suspending Vim or...?
 
 444
 00:26:52,280 --> 00:26:54,160
@@ -1958,7 +1964,7 @@ but I'm just typing leader 'C' to run Cucumber,
 449
 00:27:07,450 --> 00:27:11,960
 and because I've got
-cucumber set up to use bin stubs ....
+cucumber set up to use bin stubs...
 
 450
 00:27:13,480 --> 00:27:15,170
@@ -2127,7 +2133,7 @@ TS: I am using the vim-rspec plugin.
 
 488
 00:29:42,270 --> 00:29:44,000
-So if I grep ...
+So if I grep...
 
 489
 00:29:49,080 --> 00:29:50,340
@@ -2216,7 +2222,7 @@ It has no children.
 
 509
 00:31:17,453 --> 00:31:19,450
-I'm already jumping slightly ahead but ...
+I'm already jumping slightly ahead but...
 
 510
 00:31:21,420 --> 00:31:26,266
@@ -2392,7 +2398,7 @@ but in this kind of setting we have to be explicit and it's nice
 
 549
 00:33:43,093 --> 00:33:44,666
-because it means that I can ....
+because it means that I can...
 
 550
 00:33:44,680 --> 00:33:47,773
@@ -2460,7 +2466,7 @@ of actual code and I'm nervous about it.
 564
 00:34:50,310 --> 00:34:54,400
 I'm going to deal with
-that by opening a new screen.
+that by opening a GNU screen.
 
 565
 00:34:55,970 --> 00:34:59,066
@@ -2473,7 +2479,8 @@ where I'm going to make some commits.
 
 567
 00:35:01,250 --> 00:35:07,026
-inaudible
+Of course, this isn't even
+a git repository!
 
 568
 00:35:07,813 --> 00:35:10,546
@@ -2690,7 +2697,7 @@ That's not supposed to be green.
 
 617
 00:38:46,220 --> 00:38:50,773
-These step definitions, tree steps ...
+These step definitions, tree steps...
 
 618
 00:38:50,773 --> 00:38:53,213
@@ -2770,11 +2777,12 @@ that I can call that would give me a number back,
 
 635
 00:39:54,690 --> 00:40:04,640
-that would say how many ... trees equals trees sort ... by something ....
+that would say how many... trees equals
+trees sort... by something...
 
 636
 00:40:05,266 --> 00:40:07,440
-it will either be number of ....
+it will either be number of...
 
 637
 00:40:07,710 --> 00:40:11,240
@@ -2803,7 +2811,7 @@ I might revisit that later.
 
 643
 00:40:37,000 --> 00:40:40,346
-I would like it so that ...
+I would like it so that...
 
 644
 00:40:40,800 --> 00:40:47,800
@@ -2842,13 +2850,13 @@ Let's be a bit more meticulous.
 
 652
 00:41:14,066 --> 00:41:23,293
-So this is add estantiation
-example for Node with children.
+So this is: "Add instantiation
+example for Node with children"
 
 653
 00:41:26,373 --> 00:41:37,666
-And this is load Node class
-for duration of cucumber features.
+And this is: "Load Node class
+for duration of cucumber features"
 
 654
 00:41:37,660 --> 00:41:42,880
@@ -2874,7 +2882,7 @@ I'm going to commit this change.
 
 659
 00:41:56,960 --> 00:42:00,746
-Mark men step as pending.
+"Mark then step as pending."
 
 660
 00:42:01,386 --> 00:42:04,370
@@ -2882,8 +2890,8 @@ Which should have been pending in the first place.
 
 661
 00:42:06,520 --> 00:42:15,146
-Now this is implement
-when step for sorting collections
+Now this: "Is implement
+when step for sorting collections"
 
 662
 00:42:16,760 --> 00:42:18,773
@@ -3006,7 +3014,7 @@ I'd rather just look at this one.
 
 690
 00:44:06,140 --> 00:44:07,450
-I'm going to temporarily ...
+I'm going to temporarily...
 
 691
 00:44:11,746 --> 00:44:18,260
@@ -3018,8 +3026,8 @@ There are better ways of doing that.
 
 693
 00:44:20,420 --> 00:44:23,986
-With Cucumber you can tag
-scenarios so you don't have to run them but ....
+With Cucumber you can tag scenarios
+so you don't have to run them but...
 
 694
 00:44:24,540 --> 00:44:27,626
@@ -3056,7 +3064,8 @@ here is something like:
 
 701
 00:45:01,906 --> 00:45:10,586
-context when the Node has five descendants.
+context 'when the Node
+has five descendants'
 
 702
 00:45:11,340 --> 00:45:15,986
@@ -3155,11 +3164,12 @@ no descendants" for the empty one.
 723
 00:47:08,740 --> 00:47:10,540
 because I can avoid that problem.
+I can just say:
 
 724
 00:47:10,540 --> 00:47:29,480
-I can just say expect no.new
-children.descendant_count to be equal to zero:
+expect Node.new(children).descendant_count
+to be equal to zero
 
 725
 00:47:30,400 --> 00:47:34,480
@@ -3173,7 +3183,8 @@ method descendant_count for node'
 
 727
 00:47:37,470 --> 00:47:42,360
-and then I can easily go in here and say ...
+and then I can easily
+go in here and say...
 
 728
 00:47:44,773 --> 00:47:46,453
@@ -3270,7 +3281,7 @@ this wide tree.
 
 749
 00:49:16,620 --> 00:49:21,986
-So I can go here and say ...
+So I can go here and say...
 
 750
 00:49:24,050 --> 00:49:25,170
@@ -3300,15 +3311,16 @@ And then this is going to say check that it does.
 756
 00:49:41,340 --> 00:49:44,786
 If I already knew how
-descendant count was going to work ...
+descendant_count was going to work...
 
 757
 00:49:52,613 --> 00:49:54,213
-I'm in conflict about this ....
+I'm really conflicted about this!
 
 758
 00:49:54,210 --> 00:49:56,573
-Let's just see what happens if I say let node be ...
+Let's just see what happens
+if I say let node be...
 
 759
 00:50:02,530 --> 00:50:07,413
@@ -3369,7 +3381,8 @@ need is to remember what the children are.
 
 772
 00:50:57,800 --> 00:51:00,160
-And I guess this could be something like ...
+And I guess this could be
+something like...
 
 773
 00:51:01,853 --> 00:51:07,586
@@ -3377,16 +3390,16 @@ If children is empty, then zero.
 
 774
 00:51:08,420 --> 00:51:11,213
-Is that right? Oh well ...
+Is that right? Oh well...
 
 775
 00:51:11,373 --> 00:51:15,040
-Yes .... No.... (laughter).
+Yes... No... (laughter).
 
 776
 00:51:20,506 --> 00:51:24,386
 It's a little difficult
-because this method needs to ....
+because this method needs to...
 
 777
 00:51:26,800 --> 00:51:29,320
@@ -3526,7 +3539,7 @@ because all the children are just test doubles.
 808
 00:53:25,880 --> 00:53:30,253
 They've all just returned... in
-fact I haven't made any effort to ...
+fact I haven't made any effort to...
 
 809
 00:53:30,250 --> 00:53:34,080
@@ -3540,11 +3553,11 @@ that looks like the tree we had here.
 
 811
 00:53:41,450 --> 00:53:44,053
-Which was .... there would be five of these
+Which was... there would be five of these
 
 812
 00:53:47,940 --> 00:53:49,853
-It would be quicker to just say ...
+It would be quicker to just say...
 
 813
 00:53:52,450 --> 00:53:57,786
@@ -3590,7 +3603,7 @@ to stub out descendant_count.
 
 822
 00:54:32,800 --> 00:54:35,840
-and I want that to be .... new style
+and I want that to be... new style
 
 823
 00:54:35,866 --> 00:54:40,026
@@ -3629,7 +3642,8 @@ Ah yes, of course, it's reporting to its parent.
 
 831
 00:55:10,800 --> 00:55:13,973
-TS: Yes, so this is the problem, is that ....
+TS: Yes, so this is the problem,
+is that...
 
 832
 00:55:14,770 --> 00:55:18,746
@@ -3748,7 +3762,7 @@ huge trees of real objects.
 
 858
 00:57:00,640 --> 00:57:02,546
-But .... that's what we've got.
+But... that's what we've got.
 
 859
 00:57:06,520 --> 00:57:08,053
@@ -3787,7 +3801,7 @@ which is going to be descendant_count.
 
 867
 00:57:29,986 --> 00:57:32,760
-And a different method that is used ....
+And a different method that is used...
 
 868
 00:57:35,440 --> 00:57:37,910
@@ -3808,11 +3822,11 @@ DN: OK.
 872
 00:57:47,710 --> 00:57:54,840
 Because when you call this you want
-it to count all the .... what did we call them?
+it to count all the... what did we call them?
 
 873
 00:57:56,000 --> 00:57:58,400
-This is almost like .... 'node count'.
+This is almost like... 'node count'.
 
 874
 00:57:58,880 --> 00:58:04,933
@@ -3857,12 +3871,12 @@ and at the end you subtract one.
 
 883
 00:58:39,360 --> 00:58:44,146
-So if I run my unit tests ... expected five, got zero.
+So if I run my unit tests... expected five, got zero.
 
 884
 00:58:47,053 --> 00:58:50,653
 That's not what I was expecting.
-Ah .... it's because I forgot to change this.
+Ah... it's because I forgot to change this.
 
 885
 00:58:52,140 --> 00:58:55,240
@@ -3875,7 +3889,7 @@ Now, it will correctly count all of the nodes.
 
 887
 00:58:59,420 --> 00:59:05,200
-Now is this silly ... I don't think so.
+Now is this silly... I don't think so.
 
 888
 00:59:08,020 --> 00:59:11,280
@@ -3893,12 +3907,12 @@ have these two ways of doing it.
 
 891
 00:59:23,226 --> 00:59:28,613
-But I think this is sort of an inevitable
-consequence of saying that the root node is not ....
+But this is an inevitable consequence
+of saying that the root node is not...
 
 892
 00:59:28,613 --> 00:59:29,786
-Actually ....
+Actually...
 
 893
 00:59:33,740 --> 00:59:36,173
@@ -3923,8 +3937,8 @@ So I will just say implement node descendant_count.
 
 898
 00:59:59,540 --> 01:00:05,613
-I think there is a smarter way of doing it which is
-to always think about the descendant count as being ....
+There is a smarter way which is to always
+think about the descendant count being...
 
 899
 01:00:06,740 --> 01:00:09,226
@@ -3952,7 +3966,7 @@ children there are, not counting myself.
 
 904
 01:00:31,850 --> 01:00:33,933
-If I do this descendant count ...
+If I do this descendant count...
 
 905
 01:00:33,940 --> 01:00:38,333
@@ -4164,16 +4178,17 @@ TS: Yes, sure.
 
 951
 01:05:00,050 --> 01:05:08,586
-I'm going to add this change and just say
-consolidate descendent_count and node count.
+I'm going to add this change and say:
+Consolidate descendent_count and node count
 
 952
 01:05:10,653 --> 01:05:18,146
-And say add extra example of descendant_count.
+And say: "Add extra example
+of descendant_count"
 
 953
 01:05:20,253 --> 01:05:27,266
-and here I'm going to change expected inaudible names.
+And here: "Change expected method names"
 
 954
 01:05:31,650 --> 01:05:34,080
@@ -4198,28 +4213,28 @@ putting some code in here which says:
 
 958
 01:05:42,506 --> 01:05:49,626
-expect trees to be equal to something.
+expect(@trees).to be equal to something.
 
 959
 01:05:49,620 --> 01:05:57,693
 So if we've sorted them by
-descendant_count we expect to see just one node
+descendant_count we expect to see
 
 960
 01:05:58,710 --> 01:06:00,320
-which has no descendants.
+@just_one_node which has no descendants.
 
 961
 01:06:01,050 --> 01:06:03,453
-A deep tree which has four.
+A @deep_tree which has four.
 
 962
 01:06:04,173 --> 01:06:06,520
-A wide tree which has five.
+A @wide_tree which has five.
 
 963
 01:06:08,250 --> 01:06:10,413
-and deep wide tree which has twelve.
+and @deep_wide_tree which has twelve.
 
 964
 01:06:10,910 --> 01:06:12,040
@@ -4240,11 +4255,12 @@ So, I think we finished that.
 
 968
 01:06:40,710 --> 01:06:47,013
-I'll just go back here and ... un-comment  that
+I'll just go back here and...
+uncomment that
 
 969
 01:06:48,450 --> 01:06:49,573
-and now we've got ....
+and now we've got...
 
 970
 01:06:50,340 --> 01:06:53,240
@@ -4294,7 +4310,7 @@ Now we have to do something more difficult.
 
 981
 01:08:07,370 --> 01:08:10,440
-Which is ... how does this work ...
+Which is... how does this work...
 
 982
 01:08:10,440 --> 01:08:13,493
@@ -4431,7 +4447,7 @@ I can define leaf count recursively.
 1012
 01:11:28,250 --> 01:11:38,346
 If we don't have any children
-then ... If the depth argument is 1
+then... If the depth argument is 1
 
 1013
 01:11:44,946 --> 01:11:48,540
@@ -4560,7 +4576,7 @@ What was actually the source of that?
 
 1041
 01:13:59,060 --> 01:14:02,200
-This says ... this is line 38.
+This says... this is line 38.
 
 1042
 01:14:05,240 --> 01:14:06,600
@@ -4583,7 +4599,8 @@ in places where I was calling real methods.
 
 1046
 01:14:21,540 --> 01:14:25,770
-They were for the purpose of creating the ...
+Those were just for the purposes
+of creating the...
 
 1047
 01:14:28,910 --> 01:14:31,973
@@ -4613,7 +4630,7 @@ Perhaps we should have done that first.
 
 1053
 01:14:59,386 --> 01:15:03,000
-This is expecting the trees to be ...
+This is expecting the trees to be...
 what order do we want these to be in?
 
 1054
@@ -4647,7 +4664,7 @@ TS: Yes.
 
 1061
 01:15:32,310 --> 01:15:33,250
-TS: Oh dear ...
+TS: Oh dear...
 
 1062
 01:15:37,620 --> 01:15:39,220
@@ -4664,8 +4681,8 @@ I can't read this output and
 see what the difference is.
 
 1065
-01:15:50,400 --> 01:15:59,173
-My intuition is that when you sort by terminal count,
+01:15:50,400 --> 01:15:59,160
+My intuition is that when you sort by terminal_count,
 given we've got two nodes that have no terminals,
 
 1066
@@ -4747,7 +4764,7 @@ It's been too long since I committed.
 
 1083
 01:17:19,740 --> 01:17:22,813
-So let's say ...
+So let's say...
 
 1084
 01:17:22,826 --> 01:17:27,740
@@ -4783,16 +4800,17 @@ and implement terminal count.
 
 1091
 01:18:07,890 --> 01:18:11,533
-That's slightly frustrating ...
+That's slightly frustrating...
 
 1092
-01:18:12,310 --> 01:18:15,453
+01:18:12,310 --> 01:18:15,990
 The best I can do here is to express our intent.
+I should say:
 
 1093
-01:18:15,450 --> 01:18:33,720
-I should say expect the first two trees to
-contain exactly just one node and wide tree.
+01:18:16,000 --> 01:18:33,720
+expect the first two trees to contain
+exactly @just_one_node and @wide_tree
 
 1094
 01:18:35,570 --> 01:18:43,053
@@ -4849,7 +4867,7 @@ I want to go back and look at this.
 
 1106
 01:19:23,540 --> 01:19:25,310
-We have definitely done this bit ....
+We have definitely done this bit...
 
 1107
 01:19:25,310 --> 01:19:29,053
@@ -4858,7 +4876,7 @@ let me sort by these properties.
 
 1108
 01:19:29,586 --> 01:19:31,050
-We haven't modeled ...
+We haven't modeled...
 
 1109
 01:19:31,050 --> 01:19:35,106
@@ -4947,7 +4965,8 @@ Let me make a commit before I do anything.
 
 1128
 01:21:04,080 --> 01:21:27,573
-So this is fix terminal ordering then step to accommodate unstable inaudible
+So this is: "fix terminal ordering
+Then step to accommodate unstable sort"
 
 1129
 01:21:29,570 --> 01:21:32,466
@@ -4960,7 +4979,7 @@ but I think there's probably a way of doing it.
 
 1131
 01:21:39,600 --> 01:21:41,640
-It seems like ...
+It seems like...
 
 1132
 01:21:41,693 --> 01:21:44,080
@@ -5080,26 +5099,26 @@ up with an API for being able to modify these trees.
 Let's say there is a modifying feature.
 
 1158
-01:24:06,650 --> 01:24:07,560
-Let's say ...
+01:24:06,650 --> 01:24:14,790
+Let's say... features/modifying
 
 1159
-01:24:14,770 --> 01:24:27,230
-features modifying, this will be
-scenario feature, modifying trees
+01:24:15,000 --> 01:24:27,230
+this will be Feature: modifying trees
 
 1160
-01:24:27,230 --> 01:24:30,490
-and then ... that's not right for a preamble ...
+01:24:27,240 --> 01:24:30,490
+and then...
 
 1161
-01:24:32,330 --> 01:24:36,260
-scenario adding node to tree.
+01:24:32,330 --> 01:24:42,400
+Scenario: adding node to a tree.
+Given I have a tree,
 
 1162
-01:24:38,380 --> 01:24:51,540
-So given, I have a tree, when I add a
-node to it the tree should contain that node.
+01:24:42,500 --> 01:24:51,540
+When I add a node to it
+Then the tree should contain that node
 
 1163
 01:24:51,570 --> 01:24:54,990
@@ -5126,7 +5145,7 @@ going to say you don't have any of this.
 
 1168
 01:25:30,020 --> 01:25:31,980
-Let's say my tree is ...
+Let's say my tree is...
 
 1169
 01:25:40,850 --> 01:25:43,010
@@ -5152,10 +5171,11 @@ that involves adding a node to the tree.
 
 1174
 01:26:02,950 --> 01:26:05,200
-And then I want to do something that checks it's ...
+And then I want to do something
+that checks that it's...
 
 1175
-01:26:08,610 --> 01:26:11,750
+01:26:08,610 --> 01:26:11,790
 I guess, this is the point
 where we need to make a decision.
 
@@ -5176,7 +5196,7 @@ I guess it could be
 
 1179
 01:26:32,280 --> 01:26:41,000
-I could say ... additional node is something here.
+I could say... additional node is something here.
 
 1180
 01:26:41,050 --> 01:26:46,800
@@ -5220,7 +5240,7 @@ TS: Ok.
 
 1189
 01:27:17,450 --> 01:27:18,870
-Well in that case ....
+Well in that case...
 
 1190
 01:27:20,450 --> 01:27:24,720
@@ -5258,7 +5278,7 @@ emanating out from the center.
 1197
 01:27:51,570 --> 01:27:56,920
 You can clarify whether or not you
-care.  But for the purpose of this ...
+care.  But for the purpose of this...
 
 1198
 01:27:57,310 --> 01:28:00,560
@@ -5399,8 +5419,8 @@ responds to changes in the structure of the tree
 
 1227
 01:30:21,110 --> 01:30:25,040
-gets very difficult, if not impossible.
-If I expose that array of children.
+gets very difficult, if not impossible
+if I expose that array of children.
 
 1228
 01:30:25,050 --> 01:30:28,810
@@ -5534,7 +5554,7 @@ based on the API that's available to us.
 
 1257
 01:32:55,140 --> 01:32:58,940
-Let's try running that example ...
+Let's try running that example...
 undefined method add_child.
 
 1258
@@ -5544,7 +5564,8 @@ method here that adds a child.
 
 1259
 01:33:11,280 --> 01:33:13,310
-There's a very easy thing we can do here ...
+There's a very easy thing
+we can do here...
 
 1260
 01:33:13,710 --> 01:33:26,970
@@ -5564,15 +5585,16 @@ have passed if that didn't work.
 1263
 01:33:39,000 --> 01:33:46,670
 So I'll make a commit there and
-I'll say something like ... implement add child
+I'll say: "implement add child"
 
 1264
 01:33:50,080 --> 01:33:50,730
-Whoops .....
+Whoops...
 
 1265
 01:33:51,910 --> 01:33:54,310
-That's a nice simple implementation I think.
+That's a nice simple implementation
+I think.
 
 1266
 01:33:56,600 --> 01:33:58,610
@@ -5585,20 +5607,22 @@ DN: I like it.
 1268
 01:34:03,140 --> 01:34:11,850
 TS: Let's go back to the step definitions
-and finish off, because we're still not done.
+and finish off because we're not done.
 
 1269
 01:34:13,740 --> 01:34:18,080
-That's made that step work. And now we have to say
+That's made that step work.
+And now we have to say:
 
 1270
 01:34:19,020 --> 01:34:32,710
-expect the trees descendant_count to be equal to ...
+expect(@tree.descendant_count)
+to be equal to...
 
 1271
 01:34:32,770 --> 01:34:36,410
-because that one was two ...
-so we expect it to be equal to three.
+I guess that one was two?
+So we expect it to be equal to three.
 
 1272
 01:34:36,420 --> 01:34:39,520
@@ -5679,7 +5703,7 @@ And this is:
 
 1290
 01:35:50,930 --> 01:35:55,030
-implement then step for qualified tree.
+"Implement Then step for modified tree"
 
 1291
 01:36:02,650 --> 01:36:05,870
@@ -5700,12 +5724,12 @@ At the moment there's no API for getting to them.
 
 1295
 01:36:18,770 --> 01:36:31,900
-I would like to bring that out a bit by saying
-something like expect tree.children to include ...
+I'd like to bring that out by saying:
+expect(@tree.children).to include...
 
 1296
 01:36:34,250 --> 01:36:41,790
-I think that to not do that
+It seems like: to not do that
 is to slightly dodge the issue.
 
 1297
@@ -5736,8 +5760,8 @@ children, so that's going to say
 
 1303
 01:37:02,510 --> 01:37:09,210
-In the specification, you didn't say explicitly,
-but I think implicit in all of this stuff is ...
+In the spec, you didn't say explicitly,
+but implicit in all of this stuff is...
 
 1304
 01:37:09,270 --> 01:37:13,580
@@ -5759,7 +5783,8 @@ verify that the children of the tree are inclusive.
 
 1308
 01:37:28,890 --> 01:37:32,980
-I want to check this ... If it was an empty array,
+I want to check this...
+If it was an empty array,
 
 1309
 01:37:35,370 --> 01:37:37,400
@@ -5781,7 +5806,7 @@ That's to verify that my rspec expectation is right.
 1313
 01:37:51,310 --> 01:37:56,440
 Because I always spell include or
-includes .... or does it have a question mark.
+includes... or does it have a '?'
 
 1314
 01:37:56,450 --> 01:37:59,450
@@ -5800,7 +5825,7 @@ which is how do we get at the children of the tree?
 1317
 01:38:18,200 --> 01:38:22,470
 I guess that means we
-need a test here that says ....
+need a test here that says...
 
 1318
 01:38:24,050 --> 01:38:26,380
@@ -5808,17 +5833,18 @@ This would be a good place for it.
 
 1319
 01:38:28,230 --> 01:38:34,970
-It contains its children, or something like that.
+It "contains its children",
+or something like that.
 
 1320
-01:38:36,880 --> 01:38:42,110
-Maybe it exposes that it's
-possible to 'get at' the children:
+01:38:35,880 --> 01:38:42,110
+Maybe "exposes" that it's
+possible to "get at" the children:
 
 1321
 01:38:42,450 --> 01:38:59,230
-I would say I would expect
-no.newchildren.children to be equal to ...
+I would expect Node.new(children)
+.children to be equal to... that!
 
 1322
 01:38:59,240 --> 01:39:03,430
@@ -5845,12 +5871,13 @@ Here we could do it.
 
 1327
 01:39:22,310 --> 01:39:27,980
-That says let node be no.newchildren,
+That says let(:node)
+be Node.new(children)
 
 1328
 01:39:27,990 --> 01:39:32,410
 That means that all of these places
-where I've got node.new children,
+where I've got Node.new(children),
 
 1329
 01:39:32,450 --> 01:39:34,540
@@ -5867,8 +5894,8 @@ That's not what I wanted.
 
 1332
 01:39:45,600 --> 01:39:51,946
-Oh, it's because this is nonsense.
-It should be no.newchildren.
+Oh, it's because this is nonsense!
+That should be Node.new(children).
 
 1333
 01:39:52,320 --> 01:39:55,075
@@ -5876,16 +5903,17 @@ Sorry, don't know what I was thinking.
 
 1334
 01:39:58,755 --> 01:40:00,613
-You must pass an argument.
+"You must pass an argument"
 
 1335
 01:40:01,360 --> 01:40:07,706
-Oh yes, what am I doing ... I was reading the one above.
+Oh yes, what am I doing?
+I was reading the one above.
 
 1336
 01:40:07,820 --> 01:40:12,168
-This is not supposed to be a
-block. This is an argument to expect.
+This is not supposed to be a block.
+This is just an argument to expect.
 
 1337
 01:40:12,551 --> 01:40:16,133
@@ -5901,12 +5929,13 @@ What did I do here?
 
 1340
 01:40:30,168 --> 01:40:43,591
-Oh this was actually check
-children in cucumber feature.
+Oh this was: "Actually check
+children in Cucumber feature"
 
 1341
 01:40:49,182 --> 01:40:51,777
-Again I've raced ahead and done two things ...
+Again I've raced ahead
+and done two things.
 
 1342
 01:40:52,195 --> 01:40:55,591
@@ -5914,7 +5943,8 @@ But I just want to add that.
 
 1343
 01:40:57,740 --> 01:41:07,795
-That is still not added but all the rest of it which is extract node inaudable.
+Which is:
+'Extract "node" accessor in spec'
 
 1344
 01:41:10,020 --> 01:41:12,346
@@ -5945,23 +5975,27 @@ then you would be able to modify it.
 1350
 01:41:40,170 --> 01:41:45,751
 The simplest thing I can do to make
-the test pass is to say def children children.
+the test pass is to [create a method].
 
 1351
 01:41:45,751 --> 01:41:53,004
-In fact I don't even need to do that, I can say inaud accesor reader children.
+In fact I don't even need to do that!
+I can just say attr_reader :children
 
 1352
 01:41:53,820 --> 01:41:58,257
-I think that will make all of my tests pass, and hopefully
+I think that will make all my tests pass
+and then hopefully
 
 1353
 01:41:58,257 --> 01:42:01,395
-when I run all my cucumber features, it will make them all pass.
+when I run all my cucumber features,
+it will make them all pass.
 
 1354
 01:42:01,420 --> 01:42:06,568
-So I will commit that and say implement.
+So I will commit that and say:
+"Implement..."
 
 1355
 01:42:10,420 --> 01:42:13,448
@@ -5979,29 +6013,33 @@ you re-assign the children collection,
 
 1358
 01:42:21,137 --> 01:42:26,444
-but once you have an array you can
-remove everything from it and re-populate it.
+but once you have an array you can remove
+everything from it and re-populate it.
 
 1359
-01:42:26,453 --> 01:42:33,226
-The identity of the array is not a useful thing
-to protect. It's the contents of it that we care about.
+01:42:26,453 --> 01:42:34,900
+The actual identity of the array
+isn't a very useful thing to protect.
+It's the contents of it
+that we care about.
 
 1360
-01:42:35,528 --> 01:42:38,791
+01:42:35,000 --> 01:42:38,791
 We could freeze the array.
 
 1361
 01:42:38,820 --> 01:42:43,920
-We can make an accessor here that says children ....
+We could make an accessor here that says:
+children... I guess actually...
 
 1362
 01:42:47,510 --> 01:42:49,262
-Can we freeze it here?
+Could we freeze it here?
 
 1363
 01:42:51,650 --> 01:42:59,066
-I think if we do that, it will still work.
+I think if we do that
+then it all still works.
 
 1364
 01:42:59,066 --> 01:42:59,733
@@ -6009,7 +6047,7 @@ DN: Yes, right.
 
 1365
 01:42:59,733 --> 01:43:03,093
-TS: Our cucumber features will still work.
+TS: Our cucumber features all still work.
 
 1366
 01:43:03,100 --> 01:43:04,915
@@ -6017,7 +6055,8 @@ So that's one way of dealing with it.
 
 1367
 01:43:04,920 --> 01:43:11,324
-I think a more interesting way is ... to expose an enumerator.
+I think a more interesting way is...
+to expose an enumerator.
 
 1368
 01:43:38,622 --> 01:43:40,817
@@ -6030,7 +6069,8 @@ over my children, then you may do so".
 
 1370
 01:43:47,320 --> 01:43:54,817
-If I just pop open irb ... "if I have an array".
+If I just pop open irb...
+"if I have an array".
 
 1371
 01:44:00,097 --> 01:44:02,890
@@ -6057,7 +6097,7 @@ Then I will call each on the children for you.
 
 1376
 01:44:23,510 --> 01:44:25,653
-And that's nice because ....
+And that's nice because...
 
 1377
 01:44:29,048 --> 01:44:31,671
@@ -6065,7 +6105,7 @@ if I have some class,
 
 1378
 01:44:35,510 --> 01:44:37,493
-If I call ...
+If I call...
 
 1379
 01:44:42,222 --> 01:44:44,702
@@ -6077,7 +6117,7 @@ And make a new one of these.
 
 1381
 01:44:48,746 --> 01:44:52,222
-each child inaudible
+each_child { |n| puts n }
 
 1382
 01:44:52,310 --> 01:44:54,186
@@ -6091,7 +6131,8 @@ behave as if I haven't passed in a block,
 1384
 01:44:59,060 --> 01:45:04,622
 which gives you an iterator back.
-This gives you the same as doing 10.times.each:
+This works the same as when
+I've been doing: 10.times.each:
 
 1385
 01:45:10,080 --> 01:45:14,826
@@ -6100,12 +6141,13 @@ and then not passing it a block,
 
 1386
 01:45:15,822 --> 01:45:18,480
-and then calling something like map on the end of it.
+and then calling something like
+map on the end of it.
 
 1387
 01:45:18,710 --> 01:45:24,497
-The reason that works is because these
-methods in the standard library return an enumerator.
+That works because these methods in the
+standard library return an enumerator.
 
 1388
 01:45:24,500 --> 01:45:29,315
@@ -6114,20 +6156,23 @@ enumerator here is a nicer interface.
 
 1389
 01:45:29,448 --> 01:45:32,170
-It's more constrained, and gives you what you want.
+It's more constrained and
+gives you what you want.
 
 1390
 01:45:35,140 --> 01:45:37,250
-And, you don't even know that it's an array.
+And, you don't even know
+that it's an array.
 
 1391
 01:45:37,250 --> 01:45:42,124
 The enumerator itself doesn't
-let you reach inside it and say
+let you reach inside it and say:
 
 1392
 01:45:42,133 --> 01:45:46,000
-"what kind of thing are you iterating over"?
+"what kind of thing are
+you iterating over"?
 
 1393
 01:45:47,420 --> 01:45:49,653
@@ -6156,41 +6201,41 @@ iterating over all of the children.
 So we need to change our spec slightly.
 
 1399
-01:46:08,620 --> 01:46:12,417
+01:46:08,620 --> 01:46:12,410
 So I can't call children any more,
 I can only call each_child.
 
 1400
-01:46:12,420 --> 01:46:15,573
+01:46:12,420 --> 01:46:15,560
 Which gives me an enumerator back.
 
 1401
-01:46:15,570 --> 01:46:21,822
+01:46:15,570 --> 01:46:21,820
 If I want to check all the things
 that are yielded by that enumerator.
 
 1402
-01:46:21,820 --> 01:46:26,071
-I could write some code that says ...
+01:46:21,820 --> 01:46:26,100
+I could write some code that says...
 
 1403
-01:46:26,110 --> 01:46:29,368
-I could pass this a block and then say ...
+01:46:26,110 --> 01:46:29,350
+I could pass this a block and then say:
 
 1404
-01:46:29,360 --> 01:46:34,942
-actual children append_child
+01:46:29,360 --> 01:46:34,930
+actual_children << child
 if I had already initialized one.
 
 1405
 01:46:34,940 --> 01:46:39,075
 But fortunately enumerators
-include the enumerable module
+include the Enumerable module
 
 1406
 01:46:39,080 --> 01:46:42,124
 which already has a method
-called that. It's called entries.
+called entries.
 
 1407
 01:46:42,120 --> 01:46:46,711
@@ -6259,7 +6304,8 @@ that does each_child.entries if we wanted to.
 
 1421
 01:48:04,951 --> 01:48:09,822
-But this is nice. It's low level but it exposes the ....
+But this is nice. It's low level but it
+exposes the...
 
 1422
 01:48:09,850 --> 01:48:17,040
@@ -6344,14 +6390,14 @@ But I'm nervous about all of these places
 where we're referring to the instance variable.
 
 1441
-01:49:38,220 --> 01:49:42,942
+01:49:38,220 --> 01:49:42,930
 I would much rather have the
 instance variable in as few places as possible.
 
 1442
 01:49:42,940 --> 01:49:48,613
-If I think that each child is a
-reasonable API for accessing the children.
+If I think that each_child is a
+reasonable API for accessing the children
 
 1443
 01:49:48,620 --> 01:49:50,435
@@ -6365,11 +6411,11 @@ where I'm accessing the children
 1445
 01:49:54,570 --> 01:49:59,066
 For example, in this leaf method,
-instead of saying children.empty, I could say
+instead of saying children.empty?
 
 1446
-01:50:00,220 --> 01:50:01,804
-each child.entry is not empty.
+01:50:00,220 --> 01:50:01,790
+I could say: each child.entries.empty?
 
 1447
 01:50:01,800 --> 01:50:05,431
@@ -6383,7 +6429,8 @@ that. Enumerable has a method called 'none?'.
 
 1449
 01:50:11,540 --> 01:50:15,075
-So if I call each_child to get the enumerator I can say ...
+So if I call each_child to get the
+enumerator I can say...
 
 1450
 01:50:15,080 --> 01:50:18,462
@@ -6416,13 +6463,14 @@ which in our case is the same as there being none.
 If I run all of the unit tests, that still works.
 
 1457
-01:50:39,250 --> 01:50:42,515
+01:50:39,250 --> 01:50:43,990
 And all the cucumber features still work.
+That gives me an opportunity to say:
 
 1458
-01:50:42,540 --> 01:50:55,466
-That gives me an opportunity to say extract
-leaf and use enumerator instead of instance variable.
+01:50:44,000 --> 01:50:55,466
+"Extract leaf and use enumerator
+instead of instance variable"
 
 1459
 01:50:55,580 --> 01:50:58,391
@@ -6465,14 +6513,14 @@ So if I run all of my tests. They're fine.
 And the cucumber features are fine.
 
 1468
-01:51:37,537 --> 01:51:45,804
-I can change this to use each
-child instead of children when iterating.
+01:51:37,537 --> 01:51:45,990
+I can change this to: 'Use #each_child
+instead of @children when iterating'
 
 1469
 01:51:46,370 --> 01:51:54,666
 The only frustrating thing is
-because we did this children.size ....
+because we did this children.size...
 
 1470
 01:51:54,800 --> 01:51:59,146
@@ -6603,12 +6651,12 @@ about what we can do with the children.
 1498
 01:53:52,340 --> 01:53:57,004
 I'm not changing the tests at all here.
-I'm just getting a chance to re-factor.
+I'm just getting a chance to refactor.
 
 1499
 01:53:57,022 --> 01:54:07,013
-Use enumerable_count to count
-the children through the enumerator.
+"Use Enumerable#count to count
+the children through the enumerator"
 
 1500
 01:54:07,031 --> 01:54:10,170
@@ -6625,7 +6673,8 @@ don't need me to show you stupid way
 
 1503
 01:54:18,140 --> 01:54:27,146
-It's just each child inaudible entries and add that child to the end.
+It's just: each_child.entries
+and add that child to the end.
 
 1504
 01:54:27,480 --> 01:54:29,333
@@ -6633,7 +6682,7 @@ Run all the tests.
 
 1505
 01:54:29,370 --> 01:54:31,066
-Run all the cucumbers.
+Run all the cukes.
 
 1506
 01:54:31,110 --> 01:54:31,710
@@ -6676,49 +6725,51 @@ Let's look at it on irb:
 
 1515
 01:55:11,170 --> 01:55:29,191
-If I say enum equals enumerator.new
-do yeilder. Yeilder.yeild one, two, three, end.
+If I say: enum=Enumerator.new do |yielder|
+yielder.yield one, two, three, end.
 
 1516
 01:55:29,200 --> 01:55:31,795
 First you can step through them one at a time.
 
 1517
-01:55:31,800 --> 01:55:34,220
-You can say give me the
-next value, and the next .....
+01:55:31,800 --> 01:55:34,990
+You can say give me the next value,
+and the next... It's using fibers
 
 1518
-01:55:34,220 --> 01:55:40,631
-It's using fibers to suspend execution of
-that block after every yield until I say I'm ready.
+01:55:35,000 --> 01:55:40,620
+to suspend execution of that block after
+every yield until I say I'm ready.
 
 1519
 01:55:40,630 --> 01:55:43,635
-If I enumerate off the end it says reached an end.
+If I enumerate off the end
+it says: reached an end.
 
 1520
 01:55:43,650 --> 01:55:47,493
-I think I can re-wind. Yes.
+I think I can rewind. Yes.
 
 1521
 01:55:48,910 --> 01:55:55,671
-It's enumerable so I can also say enum.entries, enum.each.
+It's enumerable so I can also say:
+enum.entries. I can do: enum.each.
 
 1522
-01:55:59,680 --> 01:56:04,346
+01:55:59,680 --> 01:56:04,330
 It works like a normal enumerable
 'thing' but you've built it programmatically.
 
 1523
 01:56:04,340 --> 01:56:15,848
-I can take advantage of that by
-saying each child do child yeilder.yeild child.
+I can take advantage of that by saying:
+each_child do |child| yielder.yield child
 
 1524
 01:56:15,850 --> 01:56:22,506
-So yield all of the existing children to the
-yielder, and then afterwards, yield a new one.
+So yield all existing children to the
+yielder, and then yield a new one.
 
 1525
 01:56:25,946 --> 01:56:32,720
@@ -6764,13 +6815,14 @@ I think that's an efficient
 way of mutating these trees.
 
 1535
-01:57:03,617 --> 01:57:07,564
+01:57:03,617 --> 01:57:07,550
 To think of the children as
 being enumerations of children.
 
 1536
 01:57:07,560 --> 01:57:10,000
-And you can imagine doing something similar ...
+And you can imagine
+doing something similar...
 
 1537
 01:57:10,008 --> 01:57:13,146
@@ -6803,7 +6855,7 @@ But enumerating over the old collection
 1543
 01:57:36,510 --> 01:57:41,493
 and inserting the new one
-at the right time ... allows us to ...
+at the right time... allows us to...
 
 1544
 01:57:41,911 --> 01:57:47,250
@@ -6898,12 +6950,13 @@ old stuff as is necessary to make use of it.
 
 1563
 01:59:17,715 --> 01:59:21,680
-I feel good that we have been able to do that there.
+I feel good that we have been
+able to do that there.
 
 1564
 01:59:21,760 --> 01:59:32,728
-So use an enumerator to
-create a add_children, I suppose.
+So: "Use an enumerator to
+create a add_children" I suppose.
 
 1565
 01:59:32,770 --> 01:59:33,608
