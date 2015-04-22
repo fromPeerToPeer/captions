@@ -1946,7 +1946,7 @@ That is episode 1 itself.
 458
 00:40:00,490 --> 00:40:04,640
 So wouldn't we end up with
-current path being episode \1.
+currentPath() being /episodes/1.
 
 459
 00:40:05,050 --> 00:40:06,640
