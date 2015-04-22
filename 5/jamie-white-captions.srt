@@ -2163,7 +2163,8 @@ That's curious, I wonder if...
 
 509
 00:44:28,080 --> 00:44:31,600
-Let me find this malfunction inaudible
+undefined is not a function: what's the
+exact stacktrace of that?
 
 510
 00:44:46,290 --> 00:44:49,970
