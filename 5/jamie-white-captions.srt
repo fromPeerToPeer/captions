@@ -1653,7 +1653,7 @@ I'm going to side step the problem of
 
 388
 00:35:01,170 --> 00:35:03,010
-mocking out the data for every test
+mocking out the data under test
 
 389
 00:35:03,010 --> 00:35:04,450
