@@ -6493,9 +6493,9 @@ So if I run all of my tests. They're fine.
 And the cucumber features are fine.
 
 1468
-01:51:37,537 --> 01:51:45,804
-I can change this to use each
-child instead of children when iterating.
+01:51:37,537 --> 01:51:45,990
+I can change this to: 'Use #each_child
+instead of @children when iterating'
 
 1469
 01:51:46,370 --> 01:51:54,666
