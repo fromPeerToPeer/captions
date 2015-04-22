@@ -527,8 +527,8 @@ about a particular kind of user,
 
 120
 00:06:16,200 --> 00:06:22,880
-But the problem you've given me is from
-the perspective of a client of an API.
+But the problem you've given me is
+from the perspective of a client of an API.
 
 121
 00:06:22,930 --> 00:06:26,120
@@ -4964,2014 +4964,2032 @@ I'm not entirely sure how to address that.
 Let me make a commit before I do anything.
 
 1128
-01:21:04,080 --> 01:21:27,573
-So this is: "fix terminal ordering
-Then step to accommodate unstable sort"
+01:21:04,080 --> 01:21:10,826
+So this is: "fix terminal ordering.
 
 1129
-01:21:29,570 --> 01:21:32,466
+01:21:10,930 --> 01:21:15,955
+Then step to accommodate unstable sort"
+
+1130
+01:21:15,950 --> 01:21:22,900
+(TS dithers)
+
+1131
+01:21:22,920 --> 01:21:31,771
 This is more difficult to
 accommodate in a cucumber feature,
 
-1130
-01:21:32,466 --> 01:21:36,013
+1132
+01:21:31,777 --> 01:21:36,010
 but I think there's probably a way of doing it.
 
-1131
+1133
 01:21:39,600 --> 01:21:41,640
 It seems like...
 
-1132
+1134
 01:21:41,693 --> 01:21:44,080
 this is implicitly a requirement.
 
-1133
+1135
 01:21:44,910 --> 01:21:45,706
 DN: Yes.
 
-1134
+1136
 01:21:45,706 --> 01:21:49,733
 TS: What this implies is that firstly
 you should be able to add or remove a node.
 
-1135
+1137
 01:21:49,740 --> 01:21:55,906
 and secondly, when you do so it
 shouldn't change what's going on here.
 
-1136
+1138
 01:21:55,906 --> 01:21:56,946
 DN: Yes.
 
-1137
+1139
 01:21:58,280 --> 01:22:00,866
 TS: You should be able to change one of these trees,
 
-1138
+1140
 01:22:00,866 --> 01:22:04,666
 and then if I order the
 collection again, it should change.
 
-1139
+1141
 01:22:04,666 --> 01:22:05,613
 DN: Exactly.
 
-1140
+1142
 01:22:08,400 --> 01:22:11,746
 TS: So that necessitates firstly
 some kind of acceptance test
 
-1141
+1143
 01:22:11,746 --> 01:22:15,266
 that tells us what it is we want.
 
-1142
+1144
 01:22:15,920 --> 01:22:20,413
 And then some kind of implementation
 that allows us to mutate these trees.
 
-1143
+1145
 01:22:23,466 --> 01:22:27,853
 Or add and remove nodes from them.
 
-1144
+1146
 01:22:27,910 --> 01:22:31,306
 I'm trying to think of the easiest way to test that.
 
-1145
+1147
 01:22:36,050 --> 01:22:44,493
 Maybe we need a new feature which
 is adding and removing and updating it.
 
-1146
+1148
 01:22:47,020 --> 01:22:51,000
 It's still sort of, part of the sorting feature.
 
-1147
+1149
 01:22:51,970 --> 01:23:02,066
 Given that I have a collection of
 trees, when I add a nodes to one of them,
 
-1148
+1150
 01:23:02,520 --> 01:23:08,333
 and I sort the collection again then it should
 still be ordered by total number of descendants.
 
-1149
+1151
 01:23:10,820 --> 01:23:14,613
 DN: I had imagined that perhaps you
 would be doing some kind of caching.
 
-1150
+1152
 01:23:14,880 --> 01:23:17,920
 At the moment you're not doing anything with caching.
 
-1151
+1153
 01:23:17,930 --> 01:23:24,360
 All the counting happens on live objects,
 so if you were to create another feature
 
-1152
+1154
 01:23:24,370 --> 01:23:27,586
 maybe we could call it
 'manipulating trees' or something.
 
-1153
+1155
 01:23:27,586 --> 01:23:31,706
 It could justifiably not be
 part of the sorted trees story.
 
-1154
+1156
 01:23:31,800 --> 01:23:32,653
 TS: Ok.
 
-1155
+1157
 01:23:36,400 --> 01:23:38,306
 What's the best way to do that....
 
-1156
+1158
 01:23:46,280 --> 01:23:52,706
 I think what we are talking about here is coming
 up with an API for being able to modify these trees.
 
-1157
+1159
 01:23:57,650 --> 01:24:00,680
 Let's say there is a modifying feature.
 
-1158
+1160
 01:24:06,650 --> 01:24:14,790
 Let's say... features/modifying
 
-1159
+1161
 01:24:15,000 --> 01:24:27,230
 this will be Feature: modifying trees
 
-1160
+1162
 01:24:27,240 --> 01:24:30,490
 and then...
 
-1161
+1163
 01:24:32,330 --> 01:24:42,400
 Scenario: adding node to a tree.
 Given I have a tree,
 
-1162
+1164
 01:24:42,500 --> 01:24:51,540
 When I add a node to it
 Then the tree should contain that node
 
-1163
+1165
 01:24:51,570 --> 01:24:54,990
 I'm not sure what I want to say
 here. But something like that.
 
-1164
+1166
 01:24:54,990 --> 01:24:59,660
 You start out with one of these things,
 and then you change it and get a new one.
 
-1165
+1167
 01:25:07,880 --> 01:25:09,250
 We don't need that anymore.
 
-1166
+1168
 01:25:11,140 --> 01:25:14,510
 I think I can keep putting this stuff in tree steps.
 
-1167
+1169
 01:25:14,540 --> 01:25:18,700
 If I run these cucumber features it's
 going to say you don't have any of this.
 
-1168
+1170
 01:25:30,020 --> 01:25:31,980
 Let's say my tree is...
 
-1169
+1171
 01:25:40,850 --> 01:25:43,010
 It doesn't matter really.
 
-1170
+1172
 01:25:43,050 --> 01:25:48,460
 I guess we just need to think
 about what it is that goes in.
 
-1171
+1173
 01:25:49,650 --> 01:25:50,910
 Now I've built 'some' tree.
 
-1172
+1174
 01:25:52,600 --> 01:25:57,950
 I've got one pending scenario.
 
-1173
+1175
 01:25:58,420 --> 01:26:02,300
 I need to put something in here
 that involves adding a node to the tree.
 
-1174
+1176
 01:26:02,950 --> 01:26:05,200
 And then I want to do something
 that checks that it's...
 
-1175
+1177
 01:26:08,610 --> 01:26:11,790
 I guess, this is the point
 where we need to make a decision.
 
-1176
+1178
 01:26:11,800 --> 01:26:16,380
 To someone using this from the outside,
 what does adding a node to a tree mean?
 
-1177
+1179
 01:26:18,970 --> 01:26:25,020
 I think the simplest thing is
 to add another child at the root.
 
-1178
+1180
 01:26:28,700 --> 01:26:32,280
 I guess it could be
 "I've got a node that is already a tree".
 
-1179
+1181
 01:26:32,280 --> 01:26:41,000
 I could say... additional node is something here.
 
-1180
+1182
 01:26:41,050 --> 01:26:46,800
 It could be a node with no
 children or something like this:
 
-1181
+1183
 01:26:46,800 --> 01:26:48,240
 DN: Ah yes.
 
-1182
+1184
 01:26:48,240 --> 01:26:54,710
 TS: And then I want to somehow
 add that as a child of the tree, right?
 
-1183
+1185
 01:26:55,650 --> 01:26:59,480
 DN: I don't think it would be
 necessary to compose trees like that.
 
-1184
+1186
 01:26:59,540 --> 01:27:02,020
 You would only ever be adding one node at a time.
 
-1185
+1187
 01:27:02,030 --> 01:27:08,620
 For example, when you leave a comment on a blog,
 
-1186
+1188
 01:27:09,520 --> 01:27:11,630
 they sometimes have a 'nest it' type thing.
 
-1187
+1189
 01:27:11,630 --> 01:27:16,600
 Imagine each node is
 something that one user has added.
 
-1188
+1190
 01:27:16,770 --> 01:27:17,450
 TS: Ok.
 
-1189
+1191
 01:27:17,450 --> 01:27:18,870
 Well in that case...
 
-1190
+1192
 01:27:20,450 --> 01:27:24,720
 That's just making an empty node.
 
-1191
+1193
 01:27:24,770 --> 01:27:30,340
 So I can add that, and then I have
 to do something to my tree to add it.
 
-1192
+1194
 01:27:30,350 --> 01:27:34,150
 So it could be that there's some kind of add_child.
 
-1193
+1195
 01:27:34,220 --> 01:27:37,220
 You haven't said anything
 about the ordering of nodes.
 
-1194
+1196
 01:27:37,220 --> 01:27:40,770
 Your diagram suggests that
 you might not care about the ordering.
 
-1195
+1197
 01:27:40,780 --> 01:27:45,120
 You haven't drawn this as a
 top to bottom, left to right tree.
 
-1196
+1198
 01:27:45,130 --> 01:27:49,160
 You just say there are nodes
 emanating out from the center.
 
-1197
+1199
 01:27:51,570 --> 01:27:56,920
 You can clarify whether or not you
 care.  But for the purpose of this...
 
-1198
+1200
 01:27:57,310 --> 01:28:00,560
 we're just going to add a child
 on to the end of this node.
 
-1199
+1201
 01:28:04,470 --> 01:28:08,480
 And then when we get to this step
 there is something that is going to check
 
-1200
+1202
 01:28:08,480 --> 01:28:11,310
 that this node has been added to the tree.
 
-1201
+1203
 01:28:18,760 --> 01:28:21,820
 We can go ahead and
 start writing unit tests here
 
-1202
+1204
 01:28:22,710 --> 01:28:31,600
 but my personal preference would
 be for making these trees immutable.
 
-1203
+1205
 01:28:32,020 --> 01:28:34,370
 Having this return a new tree.
 
-1204
+1206
 01:28:39,400 --> 01:28:43,120
 I don't think this example
 is going to illustrate this.
 
-1205
+1207
 01:28:43,480 --> 01:28:48,550
 But making these structures
 immutable makes it a lot easier to keep track
 
-1206
+1208
 01:28:48,560 --> 01:28:50,710
 of what can possibly happen.
 
-1207
+1209
 01:28:50,720 --> 01:28:54,960
 Because if I did want to start caching
 stuff, which we wont have time to do today.
 
-1208
+1210
 01:28:54,960 --> 01:29:02,210
 But if I did, having these be immutable means
 that I don't have to deal with the caching problem.
 
-1209
+1211
 01:29:02,210 --> 01:29:06,030
 If I want to memoize the
 result of those recursive calls,
 
-1210
+1212
 01:29:06,030 --> 01:29:10,890
 then I could just memoize them and then next
 time I call them you just get the memoized result.
 
-1211
+1213
 01:29:10,890 --> 01:29:14,960
 And if you change the tree,
 that just means you have a new one.
 
-1212
+1214
 01:29:14,970 --> 01:29:19,740
 And if you had some kind of structural
 sharing, so that when you add an extra child,
 
-1213
+1215
 01:29:19,750 --> 01:29:24,580
 you get a new tree back but all of the
 previous children are literally the same objects.
 
-1214
+1216
 01:29:24,600 --> 01:29:29,090
 But the parent node is new and has a new child.
 
-1215
+1217
 01:29:29,090 --> 01:29:32,910
 And all of the cached stuff would be
 shared from the old parts of the tree
 
-1216
+1218
 01:29:32,910 --> 01:29:35,880
 that haven't changed. And then
 you would have to re-build the cache
 
-1217
+1219
 01:29:35,890 --> 01:29:37,770
 for the new parts of the tree. DN: I see.
 
-1218
+1220
 01:29:37,770 --> 01:29:41,210
 TS: Driving all of that stuff out with
 tests is going to be time consuming.
 
-1219
+1221
 01:29:41,220 --> 01:29:46,960
 In my view, it's going to make
 for an easier system to deal with
 
-1220
+1222
 01:29:47,040 --> 01:29:49,640
 without these things being mutable.
 
-1221
+1223
 01:29:51,600 --> 01:29:58,810
 What I don't want, in my capacity as a consumer
 of this API, is to be able to only do tree.children.
 
-1222
+1224
 01:30:00,920 --> 01:30:02,380
 Like do that:
 
-1223
+1225
 01:30:06,110 --> 01:30:09,610
 If there was just an accessor on tree
 that returned an array of children
 
-1224
+1226
 01:30:09,620 --> 01:30:11,920
 and I concatenated that on to the end.
 
-1225
+1227
 01:30:12,010 --> 01:30:15,260
 The root node of that tree
 doesn't even know it's happened.
 
-1226
+1228
 01:30:16,800 --> 01:30:21,110
 And so for me to do anything that
 responds to changes in the structure of the tree
 
-1227
+1229
 01:30:21,110 --> 01:30:25,040
 gets very difficult, if not impossible
 if I expose that array of children.
 
-1228
+1230
 01:30:25,050 --> 01:30:28,810
 Because now you have that array in your
 hand and you can do whatever you like to it.
 
-1229
+1231
 01:30:28,810 --> 01:30:31,830
 I don't really like the idea of exposing it directly.
 
-1230
+1232
 01:30:32,020 --> 01:30:38,070
 For the same reason I don't like the
 idea of this being something that mutates
 
-1231
+1233
 01:30:38,070 --> 01:30:41,260
 the underlying tree. I would
 rather just return a new one.
 
-1232
+1234
 01:30:41,370 --> 01:30:44,880
 Assuming there's a way to append the child there,
 
-1233
+1235
 01:30:46,450 --> 01:30:49,790
 Which there isn't. So we're going
 to see a failure in our features.
 
-1234
+1236
 01:30:52,080 --> 01:30:53,970
 When I scroll off the top you can see:
 
-1235
+1237
 01:30:54,110 --> 01:30:56,910
 when I add a node to it
 undefined method append_child.
 
-1236
+1238
 01:30:56,910 --> 01:30:58,370
 So let's make a commit there.
 
-1237
+1239
 01:31:08,400 --> 01:31:11,850
 I'd like to make that work.
 
-1238
+1240
 01:31:11,910 --> 01:31:19,570
 I think this is an opportunity to do
 some tidying up at the implementation level.
 
-1239
+1241
 01:31:20,910 --> 01:31:24,290
 We've expressed what we want
 to happen in the feature here
 
-1240
+1242
 01:31:24,290 --> 01:31:26,410
 but let's go down to the unit test.
 
-1241
+1243
 01:31:32,510 --> 01:31:35,570
 So let's pick one of these.
 
-1242
+1244
 01:31:35,890 --> 01:31:39,590
 This is quite a nice one, where
 the node has five descendants.
 
-1243
+1245
 01:31:45,220 --> 01:31:48,820
 In this unit test we have to
 decide, and in the acceptance test,
 
-1244
+1246
 01:31:48,830 --> 01:31:51,800
 how do we know if it's done the right thing.
 
-1245
+1247
 01:31:51,800 --> 01:31:53,800
 DN: Yes.
 
-1246
+1248
 01:31:53,800 --> 01:31:56,140
 TS: I don't really know how we are going to do that.
 
-1247
+1249
 01:31:56,140 --> 01:31:59,060
 DN: You could check the number of descendants.
 
-1248
+1250
 01:31:59,070 --> 01:32:02,940
 TS: At the moment that's the
 only visibility we have on to the tree.
 
-1249
+1251
 01:32:02,950 --> 01:32:05,510
 Let's think about doing that.
 
-1250
+1252
 01:32:05,680 --> 01:32:14,610
 Let's say describe adding a child.
 
-1251
+1253
 01:32:17,740 --> 01:32:23,860
 It increases the descendant count to six.
 
-1252
+1254
 01:32:23,880 --> 01:32:30,650
 So whatever that's worth, we
 would say expect node and child.
 
-1253
+1255
 01:32:34,240 --> 01:32:35,530
 (Let's make a new one).
 
-1254
+1256
 01:32:39,000 --> 01:32:45,100
 And this would be the
 descendant count to be equal to six.
 
-1255
+1257
 01:32:45,820 --> 01:32:50,400
 I think that would give us some
 confidence that the right thing has happened.
 
-1256
+1258
 01:32:50,400 --> 01:32:55,140
 That's the best we can do at the moment,
 based on the API that's available to us.
 
-1257
+1259
 01:32:55,140 --> 01:32:58,940
 Let's try running that example...
 undefined method add_child.
 
-1258
+1260
 01:33:02,970 --> 01:33:08,740
 Now we're going to need a
 method here that adds a child.
 
-1259
+1261
 01:33:11,280 --> 01:33:13,310
 There's a very easy thing
 we can do here...
 
-1260
+1262
 01:33:13,710 --> 01:33:26,970
 Which is to say make a new one of me with
 my children but then add on that new child.
 
-1261
+1263
 01:33:27,020 --> 01:33:35,200
 And that's enough to make the test
 pass. That's moderately convincing I think.
 
-1262
+1264
 01:33:35,340 --> 01:33:38,880
 I don't think that spec would
 have passed if that didn't work.
 
-1263
+1265
 01:33:39,000 --> 01:33:46,670
 So I'll make a commit there and
 I'll say: "implement add child"
 
-1264
+1266
 01:33:50,080 --> 01:33:50,730
 Whoops...
 
-1265
+1267
 01:33:51,910 --> 01:33:54,310
 That's a nice simple implementation
 I think.
 
-1266
+1268
 01:33:56,600 --> 01:33:58,610
 How did you feel about that?
 
-1267
+1269
 01:33:58,650 --> 01:34:00,440
 DN: I like it.
 
-1268
+1270
 01:34:03,140 --> 01:34:11,850
 TS: Let's go back to the step definitions
 and finish off because we're not done.
 
-1269
+1271
 01:34:13,740 --> 01:34:18,080
 That's made that step work.
 And now we have to say:
 
-1270
+1272
 01:34:19,020 --> 01:34:32,710
 expect(@tree.descendant_count)
 to be equal to...
 
-1271
+1273
 01:34:32,770 --> 01:34:36,410
 I guess that one was two?
 So we expect it to be equal to three.
 
-1272
+1274
 01:34:36,420 --> 01:34:39,520
 DN: Just before you move on,
 I notice you used append_child there
 
-1273
+1275
 01:34:39,520 --> 01:34:41,600
 but it's add_child in the implementation.
 
-1274
+1276
 01:34:42,820 --> 01:34:43,970
 TS: Thank you.
 
-1275
+1277
 01:34:44,020 --> 01:34:53,770
 Well that's stupid, why didn't that fail?
 Oh it did fail, I just didn't read it.
 
-1276
+1278
 01:34:53,770 --> 01:34:58,340
 Yes you're right, append_child is a better name.
 
-1277
+1279
 01:34:58,350 --> 01:35:01,340
 DN: For the immutable nature of it?
 
-1278
+1280
 01:35:01,340 --> 01:35:03,650
 TS: Because it tells you where it's going to go.
 
-1279
+1281
 01:35:04,490 --> 01:35:06,440
 DN: Right: 'Add child below me'.
 
-1280
+1282
 01:35:06,440 --> 01:35:11,790
 TS: Yes, and the fact that it goes
 on the end, after the existing children.
 
-1281
+1283
 01:35:11,790 --> 01:35:15,110
 At the moment you can't tell.
 
-1282
+1284
 01:35:16,420 --> 01:35:19,420
 So yes, let's call it add_child because at the moment
 
-1283
+1285
 01:35:19,440 --> 01:35:23,980
 there's no way of knowing where it's gone.
 
-1284
+1286
 01:35:23,990 --> 01:35:28,100
 If at some point we decide we're going
 to be able to expose the collection of children
 
-1285
+1287
 01:35:28,100 --> 01:35:31,240
 and now we care about where
 it comes when you have it,
 
-1286
+1288
 01:35:31,280 --> 01:35:33,420
 that would be the point at which to make it.
 
-1287
+1289
 01:35:33,420 --> 01:35:35,800
 But right now you can't make that distinction.
 
-1288
+1290
 01:35:40,280 --> 01:35:43,030
 Let's just commit that fix. That looks annoying.
 
-1289
+1291
 01:35:47,620 --> 01:35:48,500
 And this is:
 
-1290
+1292
 01:35:50,930 --> 01:35:55,030
 "Implement Then step for modified tree"
 
-1291
+1293
 01:36:02,650 --> 01:36:05,870
 That's fine.
 
-1292
+1294
 01:36:05,910 --> 01:36:10,280
 We are ignoring the fact that
 presumably the whole point of these trees
 
-1293
+1295
 01:36:10,280 --> 01:36:13,380
 is that you can at some point get to the nodes.
 
-1294
+1296
 01:36:13,420 --> 01:36:16,330
 At the moment there's no API for getting to them.
 
-1295
+1297
 01:36:18,770 --> 01:36:31,900
 I'd like to bring that out by saying:
 expect(@tree.children).to include...
 
-1296
+1298
 01:36:34,250 --> 01:36:41,790
 It seems like: to not do that
 is to slightly dodge the issue.
 
-1297
+1299
 01:36:41,800 --> 01:36:43,380
 DN: Sure
 
-1298
+1300
 01:36:44,330 --> 01:36:46,950
 TS: We don't have a way of doing this yet.
 
-1299
+1301
 01:36:46,970 --> 01:36:50,390
 DN: So at the moment children is a private attribute.
 
-1300
+1302
 01:36:50,420 --> 01:36:53,130
 TS: Well it's an instance
 variable. There is no children.
 
-1301
+1303
 01:36:53,140 --> 01:36:57,220
 Not even a private method called
 children, so that's going to say
 
-1302
+1304
 01:36:57,240 --> 01:37:02,310
 "I don't know what you're talking about".
 
-1303
+1305
 01:37:02,510 --> 01:37:09,210
 In the spec, you didn't say explicitly,
 but implicit in all of this stuff is...
 
-1304
+1306
 01:37:09,270 --> 01:37:13,580
 Where you say model a tree.
 
-1305
+1307
 01:37:13,580 --> 01:37:18,770
 It is implied that you want
 access to the contents of the tree?
 
-1306
+1308
 01:37:18,780 --> 01:37:20,710
 DN: Sure, it would be nice.
 
-1307
+1309
 01:37:21,570 --> 01:37:28,880
 TS: So this gives us a way in and
 verify that the children of the tree are inclusive.
 
-1308
+1310
 01:37:28,890 --> 01:37:32,980
 I want to check this...
 If it was an empty array,
 
-1309
+1311
 01:37:35,370 --> 01:37:37,400
 then that step should fail.
 
-1310
+1312
 01:37:37,420 --> 01:37:39,450
 We expected that to include that node.
 
-1311
+1313
 01:37:39,910 --> 01:37:45,750
 If I just had an array that had additional
 node in there then I think that my... Yeah!
 
-1312
+1314
 01:37:45,800 --> 01:37:51,280
 That's to verify that my rspec expectation is right.
 
-1313
+1315
 01:37:51,310 --> 01:37:56,440
 Because I always spell include or
 includes... or does it have a '?'
 
-1314
+1316
 01:37:56,450 --> 01:37:59,450
 Every time I type include in Ruby, I get it wrong.
 
-1315
+1317
 01:37:59,450 --> 01:38:03,190
 So that has given me confidence
 that my test is testing the right thing.
 
-1316
+1318
 01:38:03,200 --> 01:38:08,570
 Now, that introduces a new requirement
 which is how do we get at the children of the tree?
 
-1317
+1319
 01:38:18,200 --> 01:38:22,470
 I guess that means we
 need a test here that says...
 
-1318
+1320
 01:38:24,050 --> 01:38:26,380
 This would be a good place for it.
 
-1319
+1321
 01:38:28,230 --> 01:38:34,970
 It "contains its children",
 or something like that.
 
-1320
+1322
 01:38:35,880 --> 01:38:42,110
 Maybe "exposes" that it's
 possible to "get at" the children:
 
-1321
+1323
 01:38:42,450 --> 01:38:59,230
 I would expect Node.new(children)
 .children to be equal to... that!
 
-1322
+1324
 01:38:59,240 --> 01:39:03,430
 I can round trip that collection
 of children through the node.
 
-1323
+1325
 01:39:07,680 --> 01:39:10,430
 There's some duplication here but I'll leave  it.
 
-1324
+1326
 01:39:10,450 --> 01:39:13,710
 All over here we've got places
 where we're making node.new children.
 
-1325
+1327
 01:39:13,720 --> 01:39:17,430
 There's a temptation to have
 one of these let things that says:
 
-1326
+1328
 01:39:18,620 --> 01:39:20,430
 Here we could do it.
 
-1327
+1329
 01:39:22,310 --> 01:39:27,980
 That says let(:node)
 be Node.new(children)
 
-1328
+1330
 01:39:27,990 --> 01:39:32,410
 That means that all of these places
 where I've got Node.new(children),
 
-1329
+1331
 01:39:32,450 --> 01:39:34,540
 I can replace that with just node.
 
-1330
+1332
 01:39:36,970 --> 01:39:43,380
 And I think that those tests
 will... Wow! completely explode.
 
-1331
+1333
 01:39:43,440 --> 01:39:44,970
 That's not what I wanted.
 
-1332
+1334
 01:39:45,600 --> 01:39:51,946
 Oh, it's because this is nonsense!
 That should be Node.new(children).
 
-1333
+1335
 01:39:52,320 --> 01:39:55,075
 Sorry, don't know what I was thinking.
 
-1334
+1336
 01:39:58,755 --> 01:40:00,613
 "You must pass an argument"
 
-1335
+1337
 01:40:01,360 --> 01:40:07,706
 Oh yes, what am I doing?
 I was reading the one above.
 
-1336
+1338
 01:40:07,820 --> 01:40:12,168
 This is not supposed to be a block.
 This is just an argument to expect.
 
-1337
+1339
 01:40:12,551 --> 01:40:16,133
 That's the one failure I wanted.
 
-1338
+1340
 01:40:23,680 --> 01:40:25,671
 That is not what I wanted.
 
-1339
+1341
 01:40:28,310 --> 01:40:30,160
 What did I do here?
 
-1340
+1342
 01:40:30,168 --> 01:40:43,591
 Oh this was: "Actually check
 children in Cucumber feature"
 
-1341
+1343
 01:40:49,182 --> 01:40:51,777
 Again I've raced ahead
 and done two things.
 
-1342
+1344
 01:40:52,195 --> 01:40:55,591
 But I just want to add that.
 
-1343
+1345
 01:40:57,740 --> 01:41:07,795
 Which is:
 'Extract "node" accessor in spec'
 
-1344
+1346
 01:41:10,020 --> 01:41:12,346
 That has cleaned up my spec a bit.
 
-1345
+1347
 01:41:12,346 --> 01:41:16,702
 And now I've just got this new example which is failing.
 
-1346
+1348
 01:41:16,702 --> 01:41:18,700
 DN: Yes.
 
-1347
+1349
 01:41:26,220 --> 01:41:28,960
 TS: I'm not going to spend
 time writing examples around this,
 
-1348
+1350
 01:41:28,960 --> 01:41:33,342
 but I don't want to expose just that children array.
 
-1349
+1351
 01:41:33,400 --> 01:41:39,004
 I think that would be bad. Because
 then you would be able to modify it.
 
-1350
+1352
 01:41:40,170 --> 01:41:45,751
 The simplest thing I can do to make
 the test pass is to [create a method].
 
-1351
+1353
 01:41:45,751 --> 01:41:53,004
 In fact I don't even need to do that!
 I can just say attr_reader :children
 
-1352
+1354
 01:41:53,820 --> 01:41:58,257
 I think that will make all my tests pass
 and then hopefully
 
-1353
+1355
 01:41:58,257 --> 01:42:01,395
 when I run all my cucumber features,
 it will make them all pass.
 
-1354
+1356
 01:42:01,420 --> 01:42:06,568
 So I will commit that and say:
 "Implement..."
 
-1355
+1357
 01:42:10,420 --> 01:42:13,448
 But, I'm not really happy about it.
 
-1356
+1358
 01:42:13,480 --> 01:42:16,906
 DN: Even though it's a reader,
 you can take that object and modify it.
 
-1357
+1359
 01:42:16,940 --> 01:42:21,128
 TS: Exactly.  It doesn't let
 you re-assign the children collection,
 
-1358
+1360
 01:42:21,137 --> 01:42:26,444
-but once you have an array you can remove
-everything from it and re-populate it.
+but once you have an array you can
+remove everything from it and re-populate it.
 
-1359
-01:42:26,453 --> 01:42:34,900
+1361
+01:42:26,450 --> 01:42:31,057
 The actual identity of the array
-isn't a very useful thing to protect.
+isn't a very useful thing to protect. 
+
+1362
+01:42:31,057 --> 01:42:33,653
 It's the contents of it
 that we care about.
 
-1360
+1363
 01:42:35,000 --> 01:42:38,791
 We could freeze the array.
 
-1361
-01:42:38,820 --> 01:42:43,920
-We could make an accessor here that says:
+1364
+01:42:38,820 --> 01:42:42,568
+We could make an accessor here that says: 
+
+1365
+01:42:42,568 --> 01:42:46,071
 children... I guess actually...
 
-1362
+1366
 01:42:47,510 --> 01:42:49,262
 Could we freeze it here?
 
-1363
-01:42:51,650 --> 01:42:59,066
-I think if we do that
+1367
+01:42:51,650 --> 01:42:53,466
+I think if we do that 
+
+1368
+01:42:55,857 --> 01:42:58,924
 then it all still works.
 
-1364
-01:42:59,066 --> 01:42:59,733
+1369
+01:42:58,924 --> 01:42:59,720
 DN: Yes, right.
 
-1365
+1370
 01:42:59,733 --> 01:43:03,093
 TS: Our cucumber features all still work.
 
-1366
+1371
 01:43:03,100 --> 01:43:04,915
 So that's one way of dealing with it.
 
-1367
+1372
 01:43:04,920 --> 01:43:11,324
 I think a more interesting way is...
 to expose an enumerator.
 
-1368
+1373
 01:43:38,622 --> 01:43:40,817
 I think that would feel more natural to me.
 
-1369
+1374
 01:43:40,810 --> 01:43:45,120
 To say "if you want to iterate
 over my children, then you may do so".
 
-1370
+1375
 01:43:47,320 --> 01:43:54,817
 If I just pop open irb...
 "if I have an array".
 
-1371
+1376
 01:44:00,097 --> 01:44:02,890
 There are a variety of ways
 to make an enumerator out of that
 
-1372
+1377
 01:44:02,900 --> 01:44:08,471
 you can call to_enum, or you can
 just call each and that also returns enumerator.
 
-1373
+1378
 01:44:08,510 --> 01:44:12,648
 I think here I would like to define an iterator.
 
-1374
+1379
 01:44:12,650 --> 01:44:16,711
 So if we can iterate over each
 child, and I can provide a block.
 
-1375
+1380
 01:44:17,050 --> 01:44:22,471
 Then I will call each on the children for you.
 
-1376
+1381
 01:44:23,510 --> 01:44:25,653
 And that's nice because...
 
-1377
+1382
 01:44:29,048 --> 01:44:31,671
 if I have some class,
 
-1378
+1383
 01:44:35,510 --> 01:44:37,493
 If I call...
 
-1379
+1384
 01:44:42,222 --> 01:44:44,702
 If I pass on the block argument like that.
 
-1380
+1385
 01:44:44,711 --> 01:44:46,551
 And make a new one of these.
 
-1381
+1386
 01:44:48,746 --> 01:44:52,222
-each_child { |n| puts n }
+each_child 
 
-1382
+1387
 01:44:52,310 --> 01:44:54,186
 Then it will work.
 
-1383
+1388
 01:44:54,364 --> 01:44:59,060
 If I don't pass in a block, each will
 behave as if I haven't passed in a block,
 
-1384
-01:44:59,060 --> 01:45:04,622
-which gives you an iterator back.
+1389
+01:44:59,060 --> 01:45:00,702
+which gives you an iterator back. 
+
+1390
+01:45:00,702 --> 01:45:04,320
 This works the same as when
 I've been doing: 10.times.each:
 
-1385
+1391
 01:45:10,080 --> 01:45:14,826
 Or I've just been using 10.times
 and then not passing it a block,
 
-1386
+1392
 01:45:15,822 --> 01:45:18,480
 and then calling something like
 map on the end of it.
 
-1387
+1393
 01:45:18,710 --> 01:45:24,497
 That works because these methods in the
 standard library return an enumerator.
 
-1388
+1394
 01:45:24,500 --> 01:45:29,315
 The opportunity to return an
 enumerator here is a nicer interface.
 
-1389
+1395
 01:45:29,448 --> 01:45:32,170
 It's more constrained and
 gives you what you want.
 
-1390
+1396
 01:45:35,140 --> 01:45:37,250
 And, you don't even know
 that it's an array.
 
-1391
+1397
 01:45:37,250 --> 01:45:42,124
 The enumerator itself doesn't
 let you reach inside it and say:
 
-1392
+1398
 01:45:42,133 --> 01:45:46,000
-"what kind of thing are
-you iterating over"?
+"what kind of thing are you iterating over"?
 
-1393
+1399
 01:45:47,420 --> 01:45:49,653
 So that feels quite nice.
 
-1394
+1400
 01:45:49,820 --> 01:45:53,020
 The problem is that that's
 going to break all of our examples,
 
-1395
+1401
 01:45:53,020 --> 01:45:55,297
 or just this one that asks for the children.
 
-1396
+1402
 01:45:55,310 --> 01:45:57,570
 DN: So we still don't have a children method.
 
-1397
+1403
 01:45:57,570 --> 01:46:03,760
 TS: No. We just have a way of
 iterating over all of the children.
 
-1398
+1404
 01:46:03,770 --> 01:46:06,560
 So we need to change our spec slightly.
 
-1399
+1405
 01:46:08,620 --> 01:46:12,410
 So I can't call children any more,
 I can only call each_child.
 
-1400
+1406
 01:46:12,420 --> 01:46:15,560
 Which gives me an enumerator back.
 
-1401
+1407
 01:46:15,570 --> 01:46:21,820
 If I want to check all the things
 that are yielded by that enumerator.
 
-1402
+1408
 01:46:21,820 --> 01:46:26,100
 I could write some code that says...
 
-1403
+1409
 01:46:26,110 --> 01:46:29,350
 I could pass this a block and then say:
 
-1404
+1410
 01:46:29,360 --> 01:46:34,930
 actual_children << child
 if I had already initialized one.
 
-1405
+1411
 01:46:34,940 --> 01:46:39,075
 But fortunately enumerators
 include the Enumerable module
 
-1406
+1412
 01:46:39,080 --> 01:46:42,124
 which already has a method
 called entries.
 
-1407
+1413
 01:46:42,120 --> 01:46:46,711
 So I can say "if I get an
 enumeration of all the children,
 
-1408
+1414
 01:46:46,737 --> 01:46:50,035
 and turn that into an array
 by accumulating all of them.
 
-1409
+1415
 01:46:50,035 --> 01:46:53,422
 That should be the same as the array of children".
 
-1410
+1416
 01:46:59,940 --> 01:47:03,066
 What's that complaining about?
 
-1411
+1417
 01:47:03,140 --> 01:47:09,235
 Node line 9. Oh it's because I
 forgot to refer to it as an instance variable.
 
-1412
+1418
 01:47:14,480 --> 01:47:17,075
 So that's all fine.
 
-1413
+1419
 01:47:17,110 --> 01:47:24,364
 If I now run my cucumber features. I've got
 a failure because that's calling children as well.
 
-1414
+1420
 01:47:27,075 --> 01:47:30,986
 This is all about designing the API.
 
-1415
+1421
 01:47:31,000 --> 01:47:34,720
 I've got an opportunity to shape the API,
 
-1416
+1422
 01:47:37,840 --> 01:47:43,831
 and those changes to the API need
 to propagate out of the cucumber feature
 
-1417
+1423
 01:47:43,830 --> 01:47:48,826
 because in the world where the
 customer is the person using the API,
 
-1418
+1424
 01:47:48,826 --> 01:47:52,800
 we need to make sure that all the things
 they want to do have been designed out.
 
-1419
+1425
 01:47:52,817 --> 01:47:58,088
 And I think that exposing an iterator, although
 it's not as nice as being able to call children.
 
-1420
+1426
 01:47:58,090 --> 01:48:04,951
 In fact, we could add a children method
 that does each_child.entries if we wanted to.
 
-1421
+1427
 01:48:04,951 --> 01:48:09,822
 But this is nice. It's low level but it
 exposes the...
 
-1422
+1428
 01:48:09,850 --> 01:48:17,040
 The essence of the interface, is
 that you can iterate over all of the children.
 
-1423
+1429
 01:48:19,217 --> 01:48:22,888
 I will just commit that.
 
-1424
+1430
 01:48:35,540 --> 01:48:39,662
 DN: If you did call each_child.entries
 and the array that you get back
 
-1425
+1431
 01:48:39,680 --> 01:48:42,113
 if you then changed that, it wouldn't affect it ?
 
-1426
+1432
 01:48:42,110 --> 01:48:43,940
 TS: Right. Because that's your array
 
-1427
+1433
 01:48:43,940 --> 01:48:45,688
 DN: It's a copy.
 
-1428
+1434
 01:48:45,697 --> 01:48:49,591
 TS: Yes, the tree doesn't even know
 that you have called entries on that enumerator.
 
-1429
+1435
 01:48:49,591 --> 01:48:53,146
 You've just got one.
 
-1430
+1436
 01:48:53,146 --> 01:48:55,982
 In fact, that reminds me.
 
-1431
+1437
 01:48:56,820 --> 01:49:00,453
 In terms of designing the API of
 this thing or doing some re-factoring.
 
-1432
+1438
 01:49:00,450 --> 01:49:06,364
 You can see there are a few places
 where we want to know if this is empty.
 
-1433
+1439
 01:49:06,373 --> 01:49:07,820
 Here's the clearest point.
 
-1434
+1440
 01:49:07,820 --> 01:49:10,382
 What we are asking here is whether we are a leaf.
 
-1435
+1441
 01:49:10,710 --> 01:49:11,831
 "Am I a leaf?"
 
-1436
+1442
 01:49:12,017 --> 01:49:15,768
 Because that's what it really means.
 
-1437
+1443
 01:49:15,866 --> 01:49:19,368
 If we're a leaf do this otherwise do this other thing.
 
-1438
+1444
 01:49:20,820 --> 01:49:24,506
 We can have a method here. Which is "are you a leaf"?
 
-1439
+1445
 01:49:26,650 --> 01:49:31,955
 Because I've got access to it I can just say children.empty
 
-1440
+1446
 01:49:31,970 --> 01:49:37,537
 But I'm nervous about all of these places
 where we're referring to the instance variable.
 
-1441
+1447
 01:49:38,220 --> 01:49:42,930
 I would much rather have the
 instance variable in as few places as possible.
 
-1442
+1448
 01:49:42,940 --> 01:49:48,613
 If I think that each_child is a
 reasonable API for accessing the children
 
-1443
+1449
 01:49:48,620 --> 01:49:50,435
 I should be able to consume that internally
 
-1444
+1450
 01:49:50,453 --> 01:49:54,420
 Instead of having all these places
 where I'm accessing the children
 
-1445
+1451
 01:49:54,570 --> 01:49:59,066
 For example, in this leaf method,
 instead of saying children.empty?
 
-1446
+1452
 01:50:00,220 --> 01:50:01,790
 I could say: each child.entries.empty?
 
-1447
+1453
 01:50:01,800 --> 01:50:05,431
 So build me an array, and
 then tell me whether it's empty.
 
-1448
+1454
 01:50:05,440 --> 01:50:11,537
 But there's an even better way of doing
 that. Enumerable has a method called 'none?'.
 
-1449
+1455
 01:50:11,540 --> 01:50:15,075
 So if I call each_child to get the
 enumerator I can say...
 
-1450
+1456
 01:50:15,080 --> 01:50:18,462
 That is saying "are there no children?".
 
-1451
+1457
 01:50:18,471 --> 01:50:22,106
 In fact it will tell me if there
 are any children that are nil or false,
 
-1452
+1458
 01:50:22,100 --> 01:50:25,422
 but in this case, none takes a block
 
-1453
+1459
 01:50:25,480 --> 01:50:28,871
 and you can say "are there no children that satisfy this condition?"
 
-1454
+1460
 01:50:28,871 --> 01:50:33,520
 If you don't provide the block, it says
 "are there no children that are truthy?",
 
-1455
+1461
 01:50:33,620 --> 01:50:36,200
 which in our case is the same as there being none.
 
-1456
+1462
 01:50:36,200 --> 01:50:39,200
 If I run all of the unit tests, that still works.
 
-1457
+1463
 01:50:39,250 --> 01:50:43,990
 And all the cucumber features still work.
 That gives me an opportunity to say:
 
-1458
+1464
 01:50:44,000 --> 01:50:55,466
 "Extract leaf and use enumerator
 instead of instance variable"
 
-1459
+1465
 01:50:55,580 --> 01:50:58,391
 And there are several
 other places where I could do this.
 
-1460
+1466
 01:50:58,400 --> 01:51:06,355
 I'm only using children here  to map over
 something, which each_child will do quite nicely.
 
-1461
+1467
 01:51:06,355 --> 01:51:08,008
 And same here.
 
-1462
+1468
 01:51:12,480 --> 01:51:17,893
 All I am doing with this instance variable is
 remember the value that was passed into the constructor,
 
-1463
+1469
 01:51:17,900 --> 01:51:21,271
 and then I am exposing a way of iterating over it.
 
-1464
+1470
 01:51:21,280 --> 01:51:27,653
 So the only state that is stored in
 here, allows you to expose it in iteration,
 
-1465
+1471
 01:51:27,662 --> 01:51:31,413
 and some of the work is done by doing that iteration.
 
-1466
+1472
 01:51:31,440 --> 01:51:34,213
 So if I run all of my tests. They're fine.
 
-1467
+1473
 01:51:34,250 --> 01:51:37,137
 And the cucumber features are fine.
 
-1468
+1474
 01:51:37,537 --> 01:51:45,990
 I can change this to: 'Use #each_child
 instead of @children when iterating'
 
-1469
+1475
 01:51:46,370 --> 01:51:54,666
 The only frustrating thing is
 because we did this children.size...
 
-1470
+1476
 01:51:54,800 --> 01:51:59,146
 When you create an enumerator,
 it is possible to tell it how to find the size
 
-1471
+1477
 01:51:59,150 --> 01:52:02,666
 of the underlying collection. Some enumerators can.
 
-1472
+1478
 01:52:02,740 --> 01:52:05,644
 It has always got a size
 method, but sometimes it returns nil
 
-1473
+1479
 01:52:05,653 --> 01:52:09,431
 if the enumerator has
 been created without providing
 
-1474
+1480
 01:52:09,448 --> 01:52:12,817
 what the size of the underlying enumeration is.
 
-1475
+1481
 01:52:14,910 --> 01:52:18,453
 If I say each and then ask that for its size.
 
-1476
+1482
 01:52:18,570 --> 01:52:22,480
 In the case where the
 underlying collection that you've provided,
 
-1477
+1483
 01:52:22,480 --> 01:52:26,391
 does report the size, you can get the size back out.
 
-1478
+1484
 01:52:28,420 --> 01:52:31,591
 I feel slightly nervous about that.
 
-1479
+1485
 01:52:31,620 --> 01:52:35,546
 Oh! But, I've just remembered!
 
-1480
+1486
 01:52:35,540 --> 01:52:41,564
 I think enumerable has a method called count.
 
-1481
+1487
 01:52:41,650 --> 01:52:45,226
 Which does something like 'all' or 'none'.
 
-1482
+1488
 01:52:45,220 --> 01:52:49,333
 You can give it a block and it will tell
 you for how many items in the enumeration,
 
-1483
+1489
 01:52:49,370 --> 01:52:51,688
 that block is true.
 
-1484
+1490
 01:52:53,170 --> 01:52:55,200
 But I'm not sure if this is going to work.
 
-1485
+1491
 01:52:56,310 --> 01:52:57,893
 It does, good.
 
-1486
+1492
 01:53:01,650 --> 01:53:05,928
 In all these cases I have avoided
 building an array of all the children.
 
-1487
+1493
 01:53:11,480 --> 01:53:14,888
 Now that we are only
 accessing that children collection....
 
-1488
+1494
 01:53:14,888 --> 01:53:16,888
 (we have got to do this).
 
-1489
+1495
 01:53:16,880 --> 01:53:20,480
 Apart from that we are only accessing
 that children collection through the iterator,
 
-1490
+1496
 01:53:20,480 --> 01:53:24,222
 which means that children
 can be anything that's enumerable.
 
-1491
+1497
 01:53:24,220 --> 01:53:27,617
 Anything that responds to each.
 It doesn't have to be an array.
 
-1492
+1498
 01:53:27,630 --> 01:53:33,244
 It could be some sort of 'lazy
 collection', which you haven't specified.
 
-1493
+1499
 01:53:33,240 --> 01:53:37,848
 But designing it this way means we
 are gradually reducing the surface area
 
-1494
+1500
 01:53:37,857 --> 01:53:39,555
 of what we expect from children.
 
-1495
+1501
 01:53:39,550 --> 01:53:43,697
 All we require from children is that we
 can call each on it, to get an enumerator back,
 
-1496
+1502
 01:53:43,706 --> 01:53:47,208
 and the rest of the functionality
 sits on top of that single assumption
 
-1497
+1503
 01:53:47,200 --> 01:53:49,742
 about what we can do with the children.
 
-1498
+1504
 01:53:52,340 --> 01:53:57,004
 I'm not changing the tests at all here.
 I'm just getting a chance to refactor.
 
-1499
+1505
 01:53:57,022 --> 01:54:07,013
 "Use Enumerable#count to count
 the children through the enumerator"
 
-1500
+1506
 01:54:07,031 --> 01:54:10,170
 And then, (this one is a bit tricky).
 
-1501
+1507
 01:54:10,540 --> 01:54:12,622
 There are two ways of doing this.
 
-1502
+1508
 01:54:13,420 --> 01:54:17,946
 I'll show you the stupid way... well, you
 don't need me to show you stupid way
 
-1503
+1509
 01:54:18,140 --> 01:54:27,146
 It's just: each_child.entries
 and add that child to the end.
 
-1504
+1510
 01:54:27,480 --> 01:54:29,333
 Run all the tests.
 
-1505
+1511
 01:54:29,370 --> 01:54:31,066
 Run all the cukes.
 
-1506
+1512
 01:54:31,110 --> 01:54:31,710
 That's fine.
 
-1507
+1513
 01:54:32,110 --> 01:54:33,724
 DN: Yes.
 
-1508
+1514
 01:54:34,570 --> 01:54:40,693
 TS: I think a better way is to build
 an enumeration of the new children
 
-1509
+1515
 01:54:40,702 --> 01:54:44,017
 by adapting the old enumeration.
 
-1510
+1516
 01:54:44,020 --> 01:54:51,182
 I can say here children equals a new enumerator.
 
-1511
+1517
 01:54:51,250 --> 01:54:58,195
 An enumerator works by providing
 an object called a yielder to this block.
 
-1512
+1518
 01:54:58,195 --> 01:55:03,102
 that you pass in the constructor.
 And every time you call yielder.yield
 
-1513
+1519
 01:55:03,110 --> 01:55:04,720
 It will yield that value.
 
-1514
+1520
 01:55:08,400 --> 01:55:11,164
 Let's look at it on irb:
 
-1515
+1521
 01:55:11,170 --> 01:55:29,191
 If I say: enum=Enumerator.new do |yielder|
 yielder.yield one, two, three, end.
 
-1516
+1522
 01:55:29,200 --> 01:55:31,795
 First you can step through them one at a time.
 
-1517
+1523
 01:55:31,800 --> 01:55:34,990
 You can say give me the next value,
 and the next... It's using fibers
 
-1518
+1524
 01:55:35,000 --> 01:55:40,620
 to suspend execution of that block after
 every yield until I say I'm ready.
 
-1519
+1525
 01:55:40,630 --> 01:55:43,635
 If I enumerate off the end
 it says: reached an end.
 
-1520
+1526
 01:55:43,650 --> 01:55:47,493
 I think I can rewind. Yes.
 
-1521
+1527
 01:55:48,910 --> 01:55:55,671
 It's enumerable so I can also say:
 enum.entries. I can do: enum.each.
 
-1522
+1528
 01:55:59,680 --> 01:56:04,330
 It works like a normal enumerable
 'thing' but you've built it programmatically.
 
-1523
+1529
 01:56:04,340 --> 01:56:15,848
 I can take advantage of that by saying:
 each_child do |child| yielder.yield child
 
-1524
+1530
 01:56:15,850 --> 01:56:22,506
 So yield all existing children to the
 yielder, and then yield a new one.
 
-1525
+1531
 01:56:25,946 --> 01:56:32,720
 I need to do some variable
 re-names. It's fine but I think it's confusing.
 
-1526
+1532
 01:56:32,942 --> 01:56:34,750
 So add a new child.
 
-1527
+1533
 01:56:34,764 --> 01:56:37,795
 And then I'll say make a new enumerator.
 
-1528
+1534
 01:56:38,570 --> 01:56:40,533
 It will not create an array.
 
-1529
+1535
 01:56:40,540 --> 01:56:44,720
 This piece of code will just spin
 over the old children and yield them.
 
-1530
+1536
 01:56:44,740 --> 01:56:46,540
 And then will yield the new child.
 
-1531
+1537
 01:56:46,540 --> 01:56:49,191
 Rather than building a new array here.
 
-1532
+1538
 01:56:49,220 --> 01:56:55,502
 I can pass in my new enumeration of the children.
 
-1533
+1539
 01:56:56,880 --> 01:56:59,262
 And that works.  DN: Very nice.
 
-1534
+1540
 01:56:59,431 --> 01:57:03,617
 I think that's an efficient
 way of mutating these trees.
 
-1535
+1541
 01:57:03,617 --> 01:57:07,550
 To think of the children as
 being enumerations of children.
 
-1536
+1542
 01:57:07,560 --> 01:57:10,000
 And you can imagine
 doing something similar...
 
-1537
+1543
 01:57:10,008 --> 01:57:13,146
 If we had some kind of 'insert before'
 
-1538
+1544
 01:57:13,170 --> 01:57:21,395
 You could do a thing here that says "if child
 equals the one I'm supposed to be inserting before,
 
-1539
+1545
 01:57:21,390 --> 01:57:25,644
 then yield the new one. And
 after that yield the existing one."
 
-1540
+1546
 01:57:25,650 --> 01:57:30,408
 If it's 'insert after' you can yield the old
 child and then immediately yield the new one.
 
-1541
+1547
 01:57:30,480 --> 01:57:33,760
 Adding it on to the end is the
 easiest because we know where it goes.
 
-1542
+1548
 01:57:33,768 --> 01:57:36,488
 But enumerating over the old collection
 
-1543
+1549
 01:57:36,510 --> 01:57:41,493
 and inserting the new one
 at the right time... allows us to...
 
-1544
+1550
 01:57:41,911 --> 01:57:47,250
 If we wanted to insert a copy
 of this after every existing child.
 
-1545
+1551
 01:57:47,250 --> 01:57:52,897
 We can say "yield the old child and then
 yield the new one", each time around the loop.
 
-1546
+1552
 01:57:52,970 --> 01:57:56,506
 We can do any modification
 to the tree that we want here.
 
-1547
+1553
 01:57:56,613 --> 01:57:58,740
 But we're not actually modifying anything.
 
-1548
+1554
 01:57:59,280 --> 01:58:01,706
 This has the nice structural sharing property
 
-1549
+1555
 01:58:01,710 --> 01:58:05,546
 where this new new node that we are getting
 
-1550
+1556
 01:58:05,570 --> 01:58:09,688
 is re-using the collection of
 children that the old node had.
 
-1551
+1557
 01:58:09,710 --> 01:58:16,177
 It isn't copying that array and adding
 to it. It's holding on to it through each_child.
 
-1552
+1558
 01:58:16,170 --> 01:58:21,733
 The new node has a child enumerator
 that calls each_child on the old node,
 
-1553
+1559
 01:58:21,800 --> 01:58:25,724
 and when it's finished enumerating
 all of its children, it yields the new one.
 
-1554
+1560
 01:58:25,724 --> 01:58:29,217
 That feels close to optimal to me.
 
-1555
+1561
 01:58:32,020 --> 01:58:36,311
 It's not super efficient because when
 you are doing things non-destructively,
 
-1556
+1562
 01:58:36,311 --> 01:58:42,370
 you're expecting the garbage collector to do
 the work of cleaning up all the old stuff for you.
 
-1557
+1563
 01:58:42,435 --> 01:58:50,810
 But after the garbage collector has run,
 we're not going to be using lots more memory.
 
-1558
+1564
 01:58:50,850 --> 01:58:55,493
 If you want to compose a lot of trees
 together, which this API allows you to do.
 
-1559
+1565
 01:58:55,570 --> 01:59:01,315
 Every time you compose a tree into a
 new one, you are not taking a copy of it.
 
-1560
+1566
 01:59:01,310 --> 01:59:08,337
 You are holding on to a reference to it.
 Which you would do anyway if it was mutable
 
-1561
+1567
 01:59:08,337 --> 01:59:12,533
 And every time you make a change
 it's creating just enough new stuff
 
-1562
+1568
 01:59:12,550 --> 01:59:17,715
 and holding on to as much of the
 old stuff as is necessary to make use of it.
 
-1563
+1569
 01:59:17,715 --> 01:59:21,680
 I feel good that we have been
 able to do that there.
 
-1564
+1570
 01:59:21,760 --> 01:59:32,728
 So: "Use an enumerator to
 create a add_children" I suppose.
 
-1565
+1571
 01:59:32,770 --> 01:59:33,608
 How are we doing?
 
-1566
+1572
 01:59:33,620 --> 01:59:36,266
 DN: I think that's a good place to wrap up.
 
-1567
+1573
 01:59:36,275 --> 01:59:41,004
 Thanks Tom, it's been very
 interesting watching you work.
 
-1568
+1574
 01:59:41,004 --> 01:59:43,800
 TS: Thanks for having me, it has been really good fun.
 
