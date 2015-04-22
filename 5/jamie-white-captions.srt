@@ -1539,7 +1539,7 @@ This is all using the ES6 module syntax
 362
 00:33:12,590 --> 00:33:15,760
 which assumes you don't
-want things on a global scope.
+want things off the global scope.
 
 363
 00:33:15,760 --> 00:33:18,030
