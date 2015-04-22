@@ -2127,7 +2127,7 @@ So let's say:
 
 501
 00:43:34,770 --> 00:43:36,720
-The first test has passing so let's
+The first test is passing so let's
 
 502
 00:43:37,650 --> 00:43:39,950
