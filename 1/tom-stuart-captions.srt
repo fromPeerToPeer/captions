@@ -6795,13 +6795,14 @@ I think that's an efficient
 way of mutating these trees.
 
 1535
-01:57:03,617 --> 01:57:07,564
+01:57:03,617 --> 01:57:07,550
 To think of the children as
 being enumerations of children.
 
 1536
 01:57:07,560 --> 01:57:10,000
-And you can imagine doing something similar ...
+And you can imagine
+doing something similar...
 
 1537
 01:57:10,008 --> 01:57:13,146
