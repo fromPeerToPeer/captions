@@ -6183,41 +6183,41 @@ iterating over all of the children.
 So we need to change our spec slightly.
 
 1399
-01:46:08,620 --> 01:46:12,417
+01:46:08,620 --> 01:46:12,410
 So I can't call children any more,
 I can only call each_child.
 
 1400
-01:46:12,420 --> 01:46:15,573
+01:46:12,420 --> 01:46:15,560
 Which gives me an enumerator back.
 
 1401
-01:46:15,570 --> 01:46:21,822
+01:46:15,570 --> 01:46:21,820
 If I want to check all the things
 that are yielded by that enumerator.
 
 1402
-01:46:21,820 --> 01:46:26,071
-I could write some code that says ...
+01:46:21,820 --> 01:46:26,100
+I could write some code that says...
 
 1403
-01:46:26,110 --> 01:46:29,368
-I could pass this a block and then say ...
+01:46:26,110 --> 01:46:29,350
+I could pass this a block and then say:
 
 1404
-01:46:29,360 --> 01:46:34,942
-actual children append_child
+01:46:29,360 --> 01:46:34,930
+actual_children << child
 if I had already initialized one.
 
 1405
 01:46:34,940 --> 01:46:39,075
 But fortunately enumerators
-include the enumerable module
+include the Enumerable module
 
 1406
 01:46:39,080 --> 01:46:42,124
 which already has a method
-called that. It's called entries.
+called entries.
 
 1407
 01:46:42,120 --> 01:46:46,711
