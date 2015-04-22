@@ -6378,7 +6378,7 @@ instance variable in as few places as possible.
 1442
 01:49:42,940 --> 01:49:48,613
 If I think that each_child is a
-reasonable API for accessing the children.
+reasonable API for accessing the children
 
 1443
 01:49:48,620 --> 01:49:50,435
@@ -6392,11 +6392,11 @@ where I'm accessing the children
 1445
 01:49:54,570 --> 01:49:59,066
 For example, in this leaf method,
-instead of saying children.empty, I could say
+instead of saying children.empty?
 
 1446
-01:50:00,220 --> 01:50:01,804
-each child.entry is not empty.
+01:50:00,220 --> 01:50:01,790
+I could say: each child.entries.empty?
 
 1447
 01:50:01,800 --> 01:50:05,431
