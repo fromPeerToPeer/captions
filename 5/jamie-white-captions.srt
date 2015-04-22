@@ -1494,11 +1494,11 @@ I'll commit this.
 
 352
 00:32:22,210 --> 00:32:25,140
-I fancy giving it a quick re-factor,
+I fancy giving it a quick refactor,
 
 353
 00:32:25,140 --> 00:32:27,280
-to make sure that they can be re-factored.
+to make sure that they can be refactored.
 
 354
 00:32:31,190 --> 00:32:34,180
