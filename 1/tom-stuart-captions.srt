@@ -527,8 +527,8 @@ about a particular kind of user,
 
 120
 00:06:16,200 --> 00:06:22,880
-But the problem you've given me is
-from the perspective of a client of an API.
+But the problem you've given me is from
+the perspective of a client of an API.
 
 121
 00:06:22,930 --> 00:06:26,120
