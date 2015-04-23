@@ -796,7 +796,7 @@ Let's emit a little more data about this.
 
 188
 00:15:02,640 --> 00:15:04,690
-See what else we have to work with here.
+So, what else do we have to work with here?
 
 189
 00:15:33,710 --> 00:15:35,990
@@ -813,7 +813,8 @@ Interestingly ....
 
 192
 00:15:42,190 --> 00:15:46,060
-inaudible, leave off the closing dl tag.
+you won't find this in current Ember,
+I'm going to leave off the closing dl tag.
 
 193
 00:15:46,680 --> 00:15:48,200
@@ -847,7 +848,7 @@ JW: Great.
 200
 00:16:35,830 --> 00:16:41,120
 DN: I don't have a
-poster frame yet for todays episode.
+poster frame yet for today's episode.
 
 201
 00:16:49,300 --> 00:16:50,740
@@ -868,11 +869,11 @@ What I would like to do is be able to ....
 
 205
 00:17:17,970 --> 00:17:21,560
-If I'm going to create this collaborator data structure.
+If I'm going to create this collaborators data structure.
 
 206
 00:17:21,560 --> 00:17:25,010
-I feel like I want to inaudible test.
+I feel like I want to do it in a nice, clean unit test.
 
 207
 00:17:25,200 --> 00:17:28,240
@@ -880,7 +881,7 @@ Now that I've got that rendering of the data
 
 208
 00:17:28,240 --> 00:17:29,700
-this is a good place to start.
+just as a good place to start.
 
 209
 00:17:30,970 --> 00:17:32,610
@@ -889,7 +890,7 @@ Let's just commit that.
 210
 00:17:35,140 --> 00:17:40,290
 So I've added a route,
-which brings in the same data.
+which brings in the episodes data.
 
 211
 00:17:41,520 --> 00:17:44,370
@@ -902,12 +903,12 @@ I fully understand it.
 
 213
 00:17:48,580 --> 00:17:50,617
-And I'll generate some inaudible tests which
+And I've generated some boilerplate tests which
 
 214
 00:17:50,620 --> 00:17:53,542
 I'll leave alone. I don't care
-too much about at the moment.
+too much about them at the moment.
 
 215
 00:18:12,850 --> 00:18:15,940
@@ -921,7 +922,7 @@ taking these two data sources
 
 217
 00:18:22,060 --> 00:18:25,600
-and produces all the right things as the output.
+and producing all the right things as the output.
 
 218
 00:18:27,460 --> 00:18:29,150
@@ -930,7 +931,7 @@ If I generate ....
 219
 00:18:47,350 --> 00:18:52,680
 So that's going to generate
-a function in it's own module.
+a function in its own module.
 
 220
 00:19:01,440 --> 00:19:05,040
@@ -994,7 +995,7 @@ Jamie reads from screen.
 
 234
 00:19:59,420 --> 00:20:01,600
-Are there any left after 2 sequels?
+Are there any that have 2 sequels?
 
 235
 00:20:02,040 --> 00:20:04,070
@@ -1010,8 +1011,8 @@ to accommodate that later.
 
 238
 00:20:09,270 --> 00:20:15,310
-JW: OK. So let's take a
-sum of what's in this data here.
+JW: OK. So let's take
+some of what's in this data here.
 
 239
 00:20:19,140 --> 00:20:21,750
@@ -1034,7 +1035,7 @@ on the ids to begin with.
 243
 00:21:15,790 --> 00:21:22,090
 I want to know when
-I build collaborators as this:
+I build collaborators out of this:
 
 244
 00:21:29,150 --> 00:21:31,540
@@ -1055,11 +1056,11 @@ I'll just take away this OK.
 248
 00:21:53,350 --> 00:21:56,360
 What I'm expecting to get
-at the end of the road is episode .....
+at the other end is episode .....
 
 249
 00:21:57,780 --> 00:22:00,350
-Its going to look a bit like .....
+It's going to look a bit like .....
 
 250
 00:22:08,330 --> 00:22:09,040
@@ -1096,7 +1097,8 @@ going to point to the next one.
 
 258
 00:22:48,380 --> 00:22:53,062
-inaudible sequel back to this one, a prequel.
+via sequel which is going to point 
+back to this one, via prequel.
 
 259
 00:22:53,131 --> 00:22:56,068
@@ -1105,7 +1107,7 @@ So I can't really expand out that,
 260
 00:22:56,068 --> 00:22:59,370
 they will have to refer
-to each one by an id I think.
+to each other by an id I think.
 
 261
 00:22:59,390 --> 00:23:00,070
@@ -1114,7 +1116,7 @@ DN: Right.
 262
 00:23:00,360 --> 00:23:03,540
 So you don't want this
-one containing it's sequels?
+one containing its sequels?
 
 263
 00:23:03,670 --> 00:23:04,700
@@ -1145,7 +1147,7 @@ to simply append the id
 269
 00:23:48,740 --> 00:23:51,810
 of the prequel and ids
-of sequels into these episodes.
+of sequels onto these episodes.
 
 270
 00:23:53,300 --> 00:23:56,370
@@ -1168,15 +1170,15 @@ some tests against this.
 274
 00:25:03,820 --> 00:25:06,610
 Let's ditch that server
-for now and get test server.
+for now and get a test server.
 
 275
 00:25:15,350 --> 00:25:18,160
-I've got inaudible just now.
+I've got no need to see the container just now.
 
 276
 00:25:19,360 --> 00:25:22,457
-That's interesting, I'm being told I've got js inaudible now.
+That's interesting, I'm being told I've got a jshint error
 
 277
 00:25:36,330 --> 00:25:42,060
@@ -1197,15 +1199,15 @@ Let's start by ....
 
 281
 00:25:51,840 --> 00:25:54,560
-rather than inserting true in this let's go:
+rather than returning true from this let's go:
 
 282
 00:25:57,020 --> 00:25:58,610
-Let's return the episodes back.
+Let's return the episodes back
 
 283
 00:25:58,710 --> 00:26:00,560
-inaudible density function.
+and make it an identity function.
 
 284
 00:26:02,380 --> 00:26:04,130
@@ -1213,7 +1215,7 @@ Let's see what the diff looks like.
 
 285
 00:26:05,250 --> 00:26:08,182
-I can see in the prequel and sequel ids.
+I'm missing the prequel and sequel ids.
 
 286
 00:26:08,230 --> 00:26:09,890
@@ -1238,7 +1240,7 @@ Each time we hit an episode ....
 
 291
 00:26:36,420 --> 00:26:38,270
-We can figure out what it's ....
+We can figure out what its ....
 
 292
 00:26:43,680 --> 00:26:45,250
@@ -1254,7 +1256,7 @@ and therefore a prequel isn't going to appear
 
 295
 00:26:53,188 --> 00:26:57,611
-the moment after one of it's sequels.
+after one of its sequels.
 
 296
 00:26:57,611 --> 00:26:58,530
@@ -1280,7 +1282,7 @@ JW: Yes. So let's say:
 301
 00:27:12,750 --> 00:27:16,660
 I need to figure out
-what it's prequel id is.
+what its prequel id is.
 
 302
 00:27:17,140 --> 00:27:21,330
@@ -1294,7 +1296,7 @@ I'll pseudo code this for a second.
 304
 00:27:24,834 --> 00:27:28,780
 it's a prequel if my current
-host was quest on that episode.
+host was guest on that episode.
 
 305
 00:27:52,030 --> 00:27:55,330
@@ -1315,7 +1317,7 @@ an episode whose guest id
 
 309
 00:28:05,810 --> 00:28:08,220
-matches this episode.
+matches this episode's host id.
 
 310
 00:28:22,860 --> 00:28:26,420
@@ -1324,7 +1326,7 @@ going to return a record isn't it?
 
 311
 00:28:26,420 --> 00:28:29,380
-You were inaudible to prequel id.
+You're assigning that to prequel id.
 
 312
 00:28:29,960 --> 00:28:32,205
@@ -1342,7 +1344,7 @@ episode that has been passed in
 
 315
 00:28:47,460 --> 00:28:50,880
-I want to make a shell and copy of it.
+I want to make a shallow copy of it.
 
 316
 00:28:51,200 --> 00:28:53,010
@@ -1350,7 +1352,7 @@ But we'll deal with that in a second.
 
 317
 00:29:01,290 --> 00:29:04,377
-See what effect that has.
+Let's see what effect that has.
 
 318
 00:29:04,388 --> 00:29:08,480
@@ -1371,7 +1373,7 @@ JW: Yes, I think this is cool.
 
 322
 00:29:18,300 --> 00:29:21,380
-I've got prequeliser, it's
+I've got prequel id, it's
 just commas it's confused about.
 
 323
