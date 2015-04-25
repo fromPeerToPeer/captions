@@ -129,7 +129,7 @@ to should have been host.
 
 30
 00:02:07,820 --> 00:02:10,090
-DW: Unfortunately Camille was ill today
+DN: Unfortunately Camille was ill today
 
 31
 00:02:10,480 --> 00:02:12,400
@@ -137,7 +137,7 @@ so I'm standing in as host.
 
 32
 00:02:14,270 --> 00:02:19,600
-DW: In fact, this data is slightly stale.
+DN: In fact, this data is slightly stale.
 
 33
 00:02:21,340 --> 00:02:25,660
@@ -225,11 +225,11 @@ directions to go in once you set up.
 
 52
 00:03:32,260 --> 00:03:34,960
-Let me see what version of Ember.cli I'm running.
+Let me see what version of Ember CLI I'm running.
 
 53
 00:03:35,250 --> 00:03:38,040
-Cool .... bleeding edge Ember.cli.
+Cool... Bleeding edge Ember CLI.
 
 54
 00:03:39,420 --> 00:03:40,560
@@ -237,7 +237,7 @@ Let's call this:
 
 55
 00:03:48,900 --> 00:03:52,450
-Ember.cli will provide all the
+Ember CLI will provide all the
 tools and dependencies we need.
 
 56
@@ -251,7 +251,7 @@ there's quite a few of them.
 
 58
 00:04:04,260 --> 00:04:08,525
-Because I'm using a local copy of Ember.cli inaudible.
+Because I'm using a local copy of Ember CLI inaudible.
 
 59
 00:04:08,925 --> 00:04:10,137
@@ -259,7 +259,7 @@ I got it off Github.
 
 60
 00:04:11,300 --> 00:04:13,460
-With mpm, what you tend to do
+With npm, what you tend to do
 
 61
 00:04:13,460 --> 00:04:17,550
@@ -267,7 +267,7 @@ when working on packages that you're adapting.
 
 62
 00:04:17,600 --> 00:04:20,990
-Is to .... you do mpm link and it will simlink up
+Is to... You do npm link and it will symlink up
 
 63
 00:04:22,390 --> 00:04:27,657
@@ -280,7 +280,7 @@ I cant use it straight away,
 
 65
 00:04:30,050 --> 00:04:32,050
-I need to first enter the Ember mpm link cli.
+I need to first enter the Ember npm link cli.
 
 66
 00:04:33,260 --> 00:04:35,680
@@ -293,16 +293,16 @@ trail in this local project.
 
 68
 00:04:42,530 --> 00:04:48,830
-You'll find this sim-link
+You'll find this symlink
 here going to user local modules.
 
 69
 00:04:52,370 --> 00:04:56,780
-The modules at cli links to my very own copy of it.
+The modules at CLI links to my very own copy of it.
 
 70
 00:04:57,810 --> 00:04:59,120
-It's a nicety of mpm.
+It's a nicety of npm.
 
 71
 00:05:14,520 --> 00:05:16,100
@@ -319,7 +319,7 @@ OK, it seems to work.
 
 74
 00:05:33,540 --> 00:05:35,760
-I am inclined to ....
+I am inclined to...
 
 75
 00:05:38,690 --> 00:05:41,800
@@ -340,7 +340,7 @@ until some way to handle it emerges.
 
 79
 00:05:54,710 --> 00:05:57,570
-Before we get going, I'm going to ....
+Before we get going, I'm going to...
 
 80
 00:05:58,070 --> 00:06:00,030
@@ -348,7 +348,7 @@ store another dependency.
 
 81
 00:06:09,560 --> 00:06:11,880
-So Ember is about to undergo ....
+So Ember is about to undergo...
 
 82
 00:06:12,900 --> 00:06:15,060
@@ -356,7 +356,7 @@ some significant improvements and this
 
 83
 00:06:16,420 --> 00:06:19,090
-Cli and inaudible use the future
+CLI and inaudible use the future
 
 84
 00:06:23,700 --> 00:06:26,660
@@ -372,7 +372,7 @@ inaudible and anyway it's wrong.
 
 87
 00:06:47,520 --> 00:06:48,900
-parser once and ....
+parser once and...
 
 88
 00:06:50,140 --> 00:06:51,330
@@ -426,7 +426,7 @@ So I want those three things,
 
 100
 00:07:34,170 --> 00:07:35,760
-and the other thing I want is ....
+and the other thing I want is...
 
 101
 00:07:38,800 --> 00:07:40,750
@@ -477,7 +477,7 @@ Yes that's taken.
 
 112
 00:08:22,460 --> 00:08:25,070
-I'll just have a look at ....
+I'll just have a look at...
 
 113
 00:08:27,300 --> 00:08:28,670
@@ -485,7 +485,7 @@ all these differences.
 
 114
 00:08:29,990 --> 00:08:33,142
-So beeding edge Ember in the future ....
+So bleeding edge Ember in the future...
 
 115
 00:08:33,220 --> 00:08:36,340
@@ -493,7 +493,7 @@ opting in to these new features
 
 116
 00:08:36,340 --> 00:08:38,340
-and including inaudible bars, which is the ....
+and including inaudible bars, which is the...
 
 117
 00:08:39,190 --> 00:08:41,260
@@ -558,7 +558,7 @@ to what would be most useful.
 
 131
 00:09:36,940 --> 00:09:39,260
-Let's say for the beginning ....
+Let's say for the beginning...
 
 132
 00:09:40,350 --> 00:09:42,770
@@ -664,11 +664,11 @@ So we'll put them in.
 156
 00:11:56,130 --> 00:12:01,634
 So we now should be able to
-fetch down from lol host\API\episodes
+fetch down from lolhost/api/episodes
 
 157
 00:12:01,890 --> 00:12:06,045
-lol host is because a inaudible
+lolhost is because a inaudible
 
 158
 00:12:12,777 --> 00:12:14,571
@@ -676,7 +676,7 @@ I'll concentrate on episodes for now,
 
 159
 00:12:14,590 --> 00:12:16,230
-because it looks the most like ....
+because it looks the most like...
 
 160
 00:12:17,840 --> 00:12:22,502
@@ -750,7 +750,7 @@ that looks a bit more like the guides.
 
 177
 00:14:02,180 --> 00:14:03,130
-Ajax ....
+Ajax...
 
 178
 00:14:10,630 --> 00:14:12,640
@@ -762,7 +762,7 @@ JW: Yes (laughter).
 
 180
 00:14:18,620 --> 00:14:20,754
-DN: The episode of json I think is already ....
+DN: The episode of JSON I think is already...
 
 181
 00:14:20,840 --> 00:14:23,200
@@ -779,7 +779,7 @@ We need to do, to bring in the model,
 
 184
 00:14:31,680 --> 00:14:34,274
-for this template to render its ....
+for this template to render its...
 
 185
 00:14:34,857 --> 00:14:37,531
@@ -809,7 +809,7 @@ a good way to move forward.
 
 191
 00:15:40,120 --> 00:15:41,070
-Interestingly ....
+Interestingly...
 
 192
 00:15:42,190 --> 00:15:46,060
@@ -818,7 +818,7 @@ I'm going to leave off the closing dl tag.
 
 193
 00:15:46,680 --> 00:15:48,200
-And then what you'll find here ....
+And then what you'll find here...
 
 194
 00:15:48,980 --> 00:15:52,900
@@ -835,7 +835,7 @@ in not closing my dl.
 
 197
 00:16:13,120 --> 00:16:14,480
-I guess I could just ....
+I guess I could just...
 
 198
 00:16:29,470 --> 00:16:31,550
@@ -865,7 +865,7 @@ how to determine a sequence.
 
 204
 00:17:12,340 --> 00:17:15,540
-What I would like to do is be able to ....
+What I would like to do is be able to...
 
 205
 00:17:17,970 --> 00:17:21,560
@@ -895,7 +895,7 @@ which brings in the episodes data.
 211
 00:17:41,520 --> 00:17:44,370
 I've added some of that data
-to my template to make sure .....
+to my template to make sure...
 
 212
 00:17:45,000 --> 00:17:46,180
@@ -926,7 +926,7 @@ and producing all the right things as the output.
 
 218
 00:18:27,460 --> 00:18:29,150
-If I generate ....
+If I generate...
 
 219
 00:18:47,350 --> 00:18:52,680
@@ -1025,7 +1025,7 @@ side of things working first.
 
 241
 00:20:38,420 --> 00:20:39,850
-The challenge being ....
+The challenge being...
 
 242
 00:20:42,400 --> 00:20:45,200
@@ -1056,7 +1056,7 @@ I'll just take away this OK.
 248
 00:21:53,350 --> 00:21:56,360
 What I'm expecting to get
-at the other end is episode .....
+at the end of the road is episode...
 
 249
 00:21:57,780 --> 00:22:00,350
@@ -1076,7 +1076,7 @@ This is an interesting aspect,
 
 253
 00:22:30,800 --> 00:22:32,760
-If they point at each other ....
+If they point at each other...
 
 254
 00:22:34,820 --> 00:22:36,150
@@ -1129,11 +1129,11 @@ it would have this one sequel.
 
 265
 00:23:28,050 --> 00:23:29,810
-But then this would have ....
+But then this would have...
 
 266
 00:23:31,440 --> 00:23:33,330
-a prequel, which is ....
+a prequel, which is...
 
 267
 00:23:34,580 --> 00:23:36,640
@@ -1155,7 +1155,7 @@ Otherwise it will become this cyclic thing.
 
 271
 00:24:01,840 --> 00:24:04,388
-Say instead that I do get episodes back ....
+Say instead that I do get episodes back...
 
 272
 00:24:04,388 --> 00:24:07,600
@@ -1195,7 +1195,7 @@ and this is the data that's expected.
 
 280
 00:25:46,331 --> 00:25:48,280
-Let's start by ....
+Let's start by...
 
 281
 00:25:51,840 --> 00:25:54,560
@@ -1236,11 +1236,11 @@ The result is another list.
 
 290
 00:26:34,210 --> 00:26:35,660
-Each time we hit an episode ....
+Each time we hit an episode...
 
 291
 00:26:36,420 --> 00:26:38,270
-We can figure out what its ....
+We can figure out what it's...
 
 292
 00:26:43,680 --> 00:26:45,250
@@ -1264,7 +1264,7 @@ DN: Yes, that's true.
 
 297
 00:26:58,537 --> 00:27:01,250
-DW: Although if they did come in
+JW: Although if they did come in
 a different order this would break down.
 
 298
@@ -1287,7 +1287,7 @@ what its prequel id is.
 302
 00:27:17,140 --> 00:27:21,330
 I'm looking for something in
-the list of episodes, that has ....
+the list of episodes, that has...
 
 303
 00:27:22,000 --> 00:27:23,874
@@ -1427,7 +1427,7 @@ is equal to our guest id.
 
 334
 00:30:10,730 --> 00:30:12,340
-And with this one ....
+And with this one...
 
 335
 00:30:14,260 --> 00:30:15,970
@@ -1471,7 +1471,7 @@ See what new stuff we've got.
 
 345
 00:31:12,880 --> 00:31:15,520
-I fixed inaudible error so I'll :
+I fixed inaudible error so I'll:
 
 346
 00:31:36,900 --> 00:31:39,230
@@ -1500,7 +1500,7 @@ Let's have a quick look at what this did.
 
 352
 00:31:53,650 --> 00:31:54,580
-So I've got this ....
+So I've got this...
 
 353
 00:31:55,170 --> 00:31:58,100
@@ -1537,7 +1537,7 @@ Avoid this nasty mutation.
 
 361
 00:32:35,090 --> 00:32:37,420
-Ideally, what I want is ....
+Ideally, what I want is...
 
 362
 00:32:39,830 --> 00:32:42,620
@@ -1565,7 +1565,7 @@ and I'm going to try to use it here.
 
 367
 00:33:09,140 --> 00:33:11,920
-This is all using the s6 module syntax
+This is all using the ES6 module syntax
 
 368
 00:33:12,590 --> 00:33:15,760
@@ -1594,7 +1594,7 @@ I think there isn't.
 373
 00:33:33,650 --> 00:33:36,340
 I was talking about
-the temporal problem earlier ....
+the temporal problem earlier...
 
 374
 00:33:38,180 --> 00:33:40,570
@@ -1641,7 +1641,7 @@ So let's just add:
 
 384
 00:34:20,160 --> 00:34:22,210
-So now we've got that let's ....
+So now we've got that let's...
 
 385
 00:34:24,910 --> 00:34:26,490
@@ -1649,16 +1649,16 @@ Let's go for another test.
 
 386
 00:34:27,350 --> 00:34:29,300
-I want to know that ....
+I want to know that...
 
 387
 00:34:32,250 --> 00:34:34,740
 I guess that what
-might be a good thing to do ....
+might be a good thing to do...
 
 388
 00:34:36,890 --> 00:34:40,080
-a way to represent this in HGML,
+a way to represent this in HTML,
 
 389
 00:34:40,710 --> 00:34:42,080
@@ -1721,7 +1721,7 @@ DN: It wants to live in a world of URLs.
 
 403
 00:35:46,940 --> 00:35:48,750
-JW: The way to prove this works is ....
+JW: The way to prove this works is...
 
 404
 00:35:54,730 --> 00:35:57,920
@@ -1737,7 +1737,7 @@ who have played a part in Peer to Peer
 
 407
 00:36:02,160 --> 00:36:04,570
-click on somebodys
+click on somebody's
 name and see the episode
 
 408
@@ -1746,8 +1746,7 @@ they first appeared in.
 
 409
 00:36:05,980 --> 00:36:08,990
-And then see the
-the sequels
+And then see the sequels
 
 410
 00:36:09,810 --> 00:36:11,460
@@ -1760,7 +1759,7 @@ Yes I think that makes sense.
 412
 00:36:17,230 --> 00:36:21,650
 So I want to be able
-to click on Tom and see the ....
+to click on Tom and see the...
 
 413
 00:36:25,220 --> 00:36:27,880
@@ -1773,7 +1772,7 @@ Counting Tree Nodes, where he was the host,
 
 415
 00:36:32,720 --> 00:36:34,450
-and be able to see ....
+and be able to see...
 
 416
 00:36:36,560 --> 00:36:38,180
@@ -1817,7 +1816,7 @@ In one visual set up.
 
 426
 00:37:02,820 --> 00:37:06,040
-But this is a useful way to ....
+But this is a useful way to...
 
 427
 00:37:06,340 --> 00:37:08,330
@@ -1838,11 +1837,11 @@ A link that contains the words Tom Stuart.
 
 431
 00:37:41,410 --> 00:37:43,630
-What we are expecting that .....
+What we are expecting that...
 
 432
 00:37:48,290 --> 00:37:50,180
-At that point we should see ....
+At that point we should see...
 
 433
 00:37:55,170 --> 00:37:57,170
@@ -1884,7 +1883,7 @@ Toms episode has no prequel
 
 442
 00:38:34,020 --> 00:38:36,020
-and Ollies episode has no prequel.
+and Ollie's episode has no prequel.
 
 443
 00:38:37,580 --> 00:38:39,530
@@ -1935,7 +1934,7 @@ When we've clicked on Counting Tree Nodes
 
 454
 00:39:08,710 --> 00:39:11,100
-we expect to end up on .....
+we expect to end up on...
 
 455
 00:39:12,250 --> 00:39:13,840
@@ -2077,7 +2076,7 @@ JW: Yes.
 
 488
 00:41:17,730 --> 00:41:19,530
-See what kind of errors .....
+See what kind of errors...
 
 489
 00:41:21,680 --> 00:41:24,520
@@ -2128,7 +2127,7 @@ We need to deliver this data down
 500
 00:42:39,870 --> 00:42:42,640
 DN: So do we need
-a root episodes function ?
+a root episodes function?
 
 501
 00:42:46,040 --> 00:42:49,634
@@ -2145,7 +2144,7 @@ Now it's getting stuck.
 
 504
 00:42:55,310 --> 00:42:56,820
-For some reason .....
+For some reason...
 
 505
 00:43:00,400 --> 00:43:03,542
@@ -2190,7 +2189,7 @@ it that it doesn't understand.
 
 514
 00:44:24,750 --> 00:44:27,170
-That's good, I wonder if ....
+That's good, I wonder if...
 
 515
 00:44:28,080 --> 00:44:31,600
@@ -2260,7 +2259,7 @@ those together as one commit.
 
 530
 00:46:45,740 --> 00:46:47,420
-There's no root just yet so ....
+There's no root just yet so...
 
 531
 00:46:47,810 --> 00:46:49,230
@@ -2310,11 +2309,11 @@ DN: OK.
 
 542
 00:47:48,450 --> 00:47:49,340
-Oh that's curious ....
+Oh that's curious...
 
 543
 00:48:06,380 --> 00:48:07,460
-Oh that's interesing.
+Oh that's interesting.
 
 544
 00:48:08,620 --> 00:48:09,830
@@ -2401,7 +2400,7 @@ JW: It is yes, but that is probably because
 
 563
 00:49:25,330 --> 00:49:26,190
-we're on a ....
+we're on a...
 
 564
 00:49:27,880 --> 00:49:30,070
@@ -2472,7 +2471,7 @@ What we ideally want is to be able
 
 580
 00:50:58,060 --> 00:50:59,040
-to go from episode .....
+to go from episode...
 
 581
 00:51:00,530 --> 00:51:03,100
@@ -2526,19 +2525,19 @@ inaudible collaborators function might
 
 593
 00:52:09,805 --> 00:52:12,045
-not be the thing I wanted after all, but ....
+not be the thing I wanted after all, but...
 
 594
 00:52:20,400 --> 00:52:21,490
-I might just ....
+I might just...
 
 595
 00:52:27,550 --> 00:52:28,930
-I'll just check out ....
+I'll just check out...
 
 596
 00:52:40,830 --> 00:52:43,428
-DN: Switch to different Ember cli.
+DN: Switch to different Ember CLI.
 
 597
 00:52:43,428 --> 00:52:46,980
@@ -2547,7 +2546,7 @@ to last stable releases of inaudible
 
 598
 00:52:47,040 --> 00:52:49,150
-This is the cause of my problem so ....
+This is the cause of my problem so...
 
 599
 00:52:52,160 --> 00:52:54,870
@@ -2561,7 +2560,7 @@ We spent almost 10 minutes troubleshooting this issue.
 601
 00:52:57,850 --> 00:53:01,090
 But, switching to the
-latest stable release of Ember cli
+latest stable release of Ember CLI
 
 602
 00:53:01,090 --> 00:53:02,530
@@ -2626,7 +2625,7 @@ So it's not working at the moment.
 
 617
 00:53:39,280 --> 00:53:41,540
-And the reason is that the inaudible .....
+And the reason is that the inaudible...
 
 618
 00:53:44,940 --> 00:53:47,050
@@ -2638,7 +2637,7 @@ the correct ids.
 
 620
 00:53:48,720 --> 00:53:50,620
-What we won't have here is ....
+What we won't have here is...
 
 621
 00:53:51,977 --> 00:53:53,580
@@ -2811,7 +2810,7 @@ So it's quite happy.
 
 662
 00:56:39,850 --> 00:56:42,860
-What this let's us do is ....
+What this let's us do is...
 
 663
 00:56:45,860 --> 00:56:47,010
@@ -2856,7 +2855,7 @@ The store we get for free,
 
 673
 00:57:20,680 --> 00:57:22,340
-but what we do need is ....
+but what we do need is...
 
 674
 00:57:22,650 --> 00:57:24,090
@@ -2865,7 +2864,7 @@ To begin with, some models,
 675
 00:57:44,390 --> 00:57:47,310
 So right now this is
-going to be complaining I need ... that:
+going to be complaining I need... that:
 
 676
 00:57:47,510 --> 00:57:49,490
@@ -2900,11 +2899,11 @@ that's what JavaScript looks like.
 
 683
 00:58:28,240 --> 00:58:30,491
-inaudible string ....
+inaudible string...
 
 684
 00:58:30,670 --> 00:58:31,714
-What else have we got ....
+What else have we got...
 
 685
 00:58:31,714 --> 00:58:33,400
@@ -2913,7 +2912,7 @@ we've got host name and guest name.
 686
 00:58:33,405 --> 00:58:35,965
 We should be able
-to infer those from the ....
+to infer those from the...
 
 687
 00:58:36,040 --> 00:58:37,560
@@ -3030,7 +3029,7 @@ This isn't quite inaudible.
 
 714
 01:02:37,870 --> 01:02:39,620
-And then this change ....
+And then this change...
 
 715
 01:02:49,490 --> 01:02:51,280
@@ -3076,7 +3075,7 @@ but the data that we're working with
 725
 01:04:14,290 --> 01:04:17,860
 looks quite a lot like what
-active model serialiser would yield.
+active model serializer would yield.
 
 726
 01:04:18,560 --> 01:04:19,860
@@ -3229,7 +3228,7 @@ from one format to the other?
 
 761
 01:07:47,330 --> 01:07:49,280
-It's all happening in the serialiser
+It's all happening in the serializer
 
 762
 01:07:49,490 --> 01:07:50,180
@@ -3274,7 +3273,7 @@ So let's say:
 
 772
 01:08:19,080 --> 01:08:21,050
-We don't want a serialiser
+We don't want a serializer
 
 773
 01:08:21,330 --> 01:08:22,780
@@ -3448,7 +3447,7 @@ the records that have been loaded.
 
 813
 01:12:06,590 --> 01:12:08,210
-I should also be able to see ...
+I should also be able to see...
 
 814
 01:12:09,725 --> 01:12:12,068
@@ -3520,7 +3519,7 @@ by quite a lot all at once.
 
 830
 01:13:06,850 --> 01:13:11,510
-inaudible serialiser change the template a bit.
+inaudible serializer change the template a bit.
 
 831
 01:13:11,510 --> 01:13:13,510
@@ -3592,7 +3591,7 @@ no such models as those
 
 847
 01:14:25,220 --> 01:14:26,140
-It's just partner ....
+It's just partner...
 
 848
 01:14:27,450 --> 01:14:28,410
@@ -3688,7 +3687,7 @@ click on Ranking Poker Hands.
 
 870
 01:16:00,630 --> 01:16:02,070
-So that is ....
+So that is...
 
 871
 01:16:02,280 --> 01:16:05,600
@@ -3739,7 +3738,7 @@ to nil, or the value you want.
 
 882
 01:16:46,800 --> 01:16:48,710
-I think what I need to to is .....
+I think what I need to to is...
 
 883
 01:16:49,800 --> 01:16:51,620
@@ -3805,7 +3804,7 @@ Which is the central book keeping object.
 
 898
 01:17:49,570 --> 01:17:51,600
-And it makes sure your always geting
+And it makes sure your always getting
 
 899
 01:17:51,800 --> 01:17:53,910
@@ -3911,7 +3910,7 @@ JW: Yes.
 
 923
 01:20:49,770 --> 01:20:51,320
-I think it might be just my ....
+I think it might be just my...
 
 924
 01:21:01,900 --> 01:21:03,720
@@ -3949,7 +3948,7 @@ anywhere it's used in the template.
 
 932
 01:21:29,070 --> 01:21:30,980
-Camelcase challenge name,
+CamelCase challenge name,
 
 933
 01:21:31,530 --> 01:21:33,050
@@ -3986,7 +3985,7 @@ and I feel that it's going to be
 
 941
 01:22:01,660 --> 01:22:04,060
-more fun just to play in the ui,
+more fun just to play in the UI,
 
 942
 01:22:04,110 --> 01:22:06,330
@@ -4161,7 +4160,7 @@ It should just silently inaudible not very much.
 
 984
 01:25:38,450 --> 01:25:42,114
-Notice the silence there ....
+Notice the silence there...
 
 985
 01:25:42,150 --> 01:25:43,760
@@ -4174,7 +4173,7 @@ But maybe it's OK.
 987
 01:26:03,500 --> 01:26:06,020
 A bunch of cosmetic
-stuff .... let's just add that.
+stuff... Let's just add that.
 
 988
 01:26:14,050 --> 01:26:17,700
@@ -4224,7 +4223,7 @@ JW: Yes.
 
 999
 01:27:24,480 --> 01:27:27,190
-There is one little thing about this ....
+There is one little thing about this...
 
 1000
 01:27:30,600 --> 01:27:32,200
@@ -4269,7 +4268,7 @@ Oh, don't know what I've done there, oh well.
 
 1010
 01:28:04,990 --> 01:28:06,450
-DN: So that second argument ....
+DN: So that second argument...
 
 1011
 01:28:07,150 --> 01:28:08,720
@@ -4302,7 +4301,7 @@ Excellent.
 
 1018
 01:28:32,450 --> 01:28:34,170
-Right, so that second argument .....
+Right, so that second argument...
 
 1019
 01:28:37,680 --> 01:28:40,240
@@ -4427,7 +4426,7 @@ perform that transformation is here.
 
 1048
 01:30:48,100 --> 01:30:49,380
-Let's think ....
+Let's think...
 
 1049
 01:30:53,430 --> 01:30:55,760
@@ -4496,7 +4495,7 @@ So:
 
 1065
 01:32:26,530 --> 01:32:27,920
-This is a ....
+This is a...
 
 1066
 01:32:31,440 --> 01:32:32,570
@@ -4590,7 +4589,7 @@ We'll call this:
 
 1087
 01:34:28,623 --> 01:34:30,282
-And this is true ....
+And this is true...
 
 1088
 01:34:36,548 --> 01:34:39,268
@@ -4599,15 +4598,15 @@ It's run into kind of the same problem.
 1089
 01:34:39,326 --> 01:34:42,437
 DN: If they were
-prequels rather than sequels ....
+prequels rather than sequels...
 
 1090
 01:34:42,680 --> 01:34:43,578
-JW: Yes ....
+JW: Yes...
 
 1091
 01:34:49,503 --> 01:34:51,566
-So let's see ....
+So let's see...
 
 1092
 01:35:13,040 --> 01:35:16,050
@@ -4616,11 +4615,11 @@ this would be the hard part.
 
 1093
 01:35:16,050 --> 01:35:18,050
-It's a suprise.
+It's a surprise.
 
 1094
 01:35:24,909 --> 01:35:27,772
-What is it .... when we start with a list
+What is it... When we start with a list
 
 1095
 01:35:27,770 --> 01:35:30,964
@@ -4641,7 +4640,7 @@ And then if we go back.
 
 1099
 01:35:41,751 --> 01:35:42,821
-JW: Yes so ....
+JW: Yes so...
 
 1100
 01:35:43,035 --> 01:35:43,894
@@ -4649,7 +4648,7 @@ DN: Now it's OK.
 
 1101
 01:35:45,709 --> 01:35:46,572
-JW: At this point ....
+JW: At this point...
 
 1102
 01:35:52,757 --> 01:35:54,934
@@ -4682,7 +4681,7 @@ we're saying get host.
 
 1109
 01:36:15,024 --> 01:36:17,008
-sorry, rather we're saying ....
+sorry, rather we're saying...
 
 1110
 01:36:21,888 --> 01:36:23,544
@@ -4695,7 +4694,7 @@ the full list in this one.
 
 1112
 01:36:46,000 --> 01:36:49,040
-What we are not doing is ....
+What we are not doing is...
 
 1113
 01:36:49,040 --> 01:36:51,789
@@ -4731,7 +4730,7 @@ do something before the model loads?
 
 1120
 01:37:12,734 --> 01:37:14,760
-Maybe on initialization or ....?
+Maybe on initialization or...?
 
 1121
 01:37:15,061 --> 01:37:16,247
@@ -4745,7 +4744,7 @@ would be to do something like this:
 1123
 01:37:35,447 --> 01:37:37,941
 DN: And that forces the
-computer property to be ....?
+computer property to be...?
 
 1124
 01:37:39,149 --> 01:37:41,723
@@ -4775,7 +4774,7 @@ Unfortunately, because the model is a little inaudible.
 1130
 01:38:26,580 --> 01:38:31,345
 To account for the fact that
-you may have data landing later on ....
+you may have data landing later on...
 
 1131
 01:38:33,469 --> 01:38:37,258
@@ -4818,7 +4817,7 @@ that you don't know when data will arrive.
 
 1140
 01:39:00,829 --> 01:39:04,232
-I have a feeling there probably is a way to ....
+I have a feeling there probably is a way to...
 
 1141
 01:39:10,770 --> 01:39:16,458
@@ -4844,7 +4843,7 @@ We shouldn't need to have to worry about that.
 
 1146
 01:39:34,669 --> 01:39:37,512
-It's a shame having to do that but ....
+It's a shame having to do that but...
 
 1147
 01:39:38,000 --> 01:39:40,894
@@ -4864,7 +4863,7 @@ JW: So let's make that very explicit:
 
 1151
 01:40:10,050 --> 01:40:12,014
-So, Solving Word Chain puzzles ....
+So, Solving Word Chain puzzles...
 
 1152
 01:40:12,203 --> 01:40:15,112
@@ -4873,7 +4872,7 @@ Building a Basic Calculator.
 
 1153
 01:40:15,110 --> 01:40:18,509
-And back there and .... for good measure:
+And back there and... For good measure:
 
 1154
 01:40:20,680 --> 01:40:22,548
@@ -4889,7 +4888,7 @@ Something like that.
 
 1157
 01:40:54,385 --> 01:40:58,490
-JW: Cool, so now I would be interested to know ....
+JW: Cool, so now I would be interested to know...
 
 1158
 01:41:00,300 --> 01:41:02,334
@@ -5008,7 +5007,7 @@ Peer was produced so often,
 1184
 01:42:38,990 --> 01:42:42,000
 that you had a web socket,
-telling the browser that the episode .....
+telling the browser that the episode...
 
 1185
 01:42:42,040 --> 01:42:44,736
@@ -5024,7 +5023,7 @@ chunk of data coming into the store.
 
 1188
 01:42:54,024 --> 01:42:55,464
-Let's see ....
+Let's see...
 
 1189
 01:42:57,392 --> 01:43:00,864
@@ -5105,7 +5104,7 @@ going to be Tom, who is 2.
 
 1207
 01:44:08,832 --> 01:44:11,176
-and guest id is going to be Steve ....
+and guest id is going to be Steve...
 
 1208
 01:44:13,448 --> 01:44:15,080
@@ -5119,7 +5118,7 @@ I'll have to wrap it in an episode:
 
 1210
 01:44:24,864 --> 01:44:25,920
-Namespace .....
+Namespace...
 
 1211
 01:44:26,900 --> 01:44:28,920
@@ -5202,7 +5201,7 @@ to enrich this.
 
 1230
 01:45:55,424 --> 01:45:57,056
-I'm going to drop ....
+I'm going to drop...
 
 1231
 01:46:00,416 --> 01:46:03,448
@@ -5215,7 +5214,7 @@ Let's say:
 
 1233
 01:46:28,624 --> 01:46:30,680
-CN: I would say featuring guest name.
+DN: I would say featuring guest name.
 
 1234
 01:46:34,656 --> 01:46:37,560
@@ -5249,7 +5248,7 @@ so I've lost that new episode.
 
 1241
 01:46:57,192 --> 01:47:00,000
-Featuring .... there's no name, so I'll add that.
+Featuring... There's no name, so I'll add that.
 
 1242
 01:47:21,832 --> 01:47:24,232
@@ -5265,7 +5264,7 @@ inaudible
 
 1245
 01:47:34,650 --> 01:47:39,032
-This gives us the other nicety which is ....
+This gives us the other nicety which is...
 
 1246
 01:47:44,424 --> 01:47:48,248
@@ -5289,7 +5288,7 @@ in one central place.
 
 1251
 01:48:04,296 --> 01:48:05,824
-DN: OK .... check it in.
+DN: OK... Check it in.
 
 1252
 01:48:05,820 --> 01:48:06,440
@@ -5367,7 +5366,7 @@ now, linking between them
 
 1269
 01:50:03,737 --> 01:50:07,508
-I feel like it's the ....
+I feel like it's the...
 
 1270
 01:50:07,560 --> 01:50:10,514
@@ -5429,7 +5428,7 @@ essence it's because of this odd
 
 1284
 01:51:09,771 --> 01:51:15,737
-thing of needing to .... in the
+thing of needing to... In the
 same way you want to carry a monad,
 
 1285
@@ -5475,7 +5474,7 @@ just as we turn the camera off (laughter).
 
 1294
 01:51:42,708 --> 01:51:46,110
-JW: In terms of the UI, it would be ....
+JW: In terms of the UI, it would be...
 
 1295
 01:51:48,868 --> 01:51:53,131
