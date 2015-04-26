@@ -532,7 +532,7 @@ Let's say for the beginning...
 
 126
 00:09:40,350 --> 00:09:42,770
-Let's just display a display
+Let's just a display
 a list of episodes.
 
 127
