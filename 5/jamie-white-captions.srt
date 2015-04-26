@@ -2954,8 +2954,8 @@ by the description of the challenge.
 
 698
 01:01:26,350 --> 01:01:31,131
-But I have a feeling that using it
-in the data like this is going to
+But I have a feeling that using Ember
+Data like this is going to
 
 699
 01:01:32,240 --> 01:01:35,170
@@ -3028,7 +3028,7 @@ so we call this the application adapter.
 
 715
 01:03:52,050 --> 01:03:54,290
-DN: Ah, forgot to save the universe.
+DN: Ah, forgot to save the inverse.
 
 716
 01:03:54,290 --> 01:03:54,770
@@ -3082,7 +3082,7 @@ Now we're getting the right path
 
 728
 01:05:05,860 --> 01:05:07,480
-but without the tracer on the end.
+but without the .json on the end.
 
 729
 01:05:08,160 --> 01:05:09,940
@@ -3164,7 +3164,7 @@ That's episodes, it's expecting to see
 
 747
 01:07:20,530 --> 01:07:22,530
-guest name, host name, poster name
+guest name, host name, poster frame url
 
 748
 01:07:23,150 --> 01:07:25,211
@@ -3262,7 +3262,7 @@ these into what it's expecting.
 770
 01:09:04,550 --> 01:09:08,060
 I've got normalize which
-takes, type has and crop
+takes type, hash and prop
 
 771
 01:09:08,800 --> 01:09:10,460
@@ -3317,7 +3317,7 @@ to dodge a mutation here
 783
 01:10:43,860 --> 01:10:47,960
 because I think you
-get past a safe cache
+get passed a safe hash
 
 784
 01:10:47,965 --> 01:10:48,910
@@ -3424,7 +3424,7 @@ I should also be able to see...
 808
 01:12:09,725 --> 01:12:12,068
 There will be some
-computer properties here.
+computed properties here.
 
 809
 01:12:12,060 --> 01:12:15,090
@@ -3534,7 +3534,7 @@ I could just remove them
 
 834
 01:13:52,270 --> 01:13:55,070
-I feel I want parsing
+I feel I want to get them passing
 to have a clean environment
 
 835
@@ -3551,7 +3551,7 @@ I said that it had these two relationships
 
 838
 01:14:15,200 --> 01:14:19,270
-and the world they test
+and the boilerplate test
 has these two dependencies in it
 
 839
