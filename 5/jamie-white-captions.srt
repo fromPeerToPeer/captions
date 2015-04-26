@@ -3726,7 +3726,7 @@ how do I find it's sequel?
 
 881
 01:17:07,920 --> 01:17:11,000
-I'm going to add a computer property
+I'm going to add a computed property
 
 882
 01:17:11,770 --> 01:17:12,780
@@ -3840,7 +3840,7 @@ These are fully materialized records.
 908
 01:19:38,440 --> 01:19:41,640
 I forgot to declare
-that this is a computer property.
+that this is a computed property.
 
 909
 01:19:42,480 --> 01:19:44,800
@@ -3848,7 +3848,8 @@ There we go, so that's my sequel.
 
 910
 01:19:46,460 --> 01:19:48,411
-DN: Does that give us a passing inaudible test.
+DN: Does that give us a passing acceptance
+test.
 
 911
 01:19:48,411 --> 01:19:49,420
@@ -3856,7 +3857,8 @@ JW: Well, let's find out.
 
 912
 01:19:55,880 --> 01:19:58,605
-I think I might have inaudible there,
+I think I might have messed up my link-to
+helper there,
 
 913
 01:19:58,640 --> 01:19:59,550
@@ -3890,7 +3892,7 @@ JW: So we see what happened there.
 920
 01:21:07,770 --> 01:21:10,290
 We've added a
-computer property called sequels,
+computed property called sequels,
 
 921
 01:21:10,560 --> 01:21:13,070
@@ -4202,7 +4204,8 @@ If the host of either episode was changed
 
 996
 01:27:35,810 --> 01:27:40,080
-on the inaudible, so if this became an editing interface.
+on the fly, so if this became an editing
+interface.
 
 997
 01:27:41,220 --> 01:27:44,210
@@ -4211,7 +4214,7 @@ these would stop being in sync with things.
 998
 01:27:44,210 --> 01:27:47,360
 So I have to declare
-that this is a computer property
+that this is a computed property
 
 999
 01:27:47,360 --> 01:27:49,150
