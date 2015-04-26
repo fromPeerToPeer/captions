@@ -229,7 +229,7 @@ I cloned it off Github...
 
 54
 00:04:11,300 --> 00:04:13,460
-With NPM, what you tend to do
+With npm, what you tend to do
 
 55
 00:04:13,460 --> 00:04:17,550
@@ -273,7 +273,7 @@ my very own copy of it.
 
 64
 00:04:57,810 --> 00:04:59,120
-It's a nicety of NPM.
+It's a nicety of npm.
 
 65
 00:05:14,520 --> 00:05:16,100
