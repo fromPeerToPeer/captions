@@ -4003,7 +4003,7 @@ and maybe a poster frame.
 
 947
 01:22:50,830 --> 01:22:56,430
-JW: inaudible looks surplus to
+JW: [inaudible] looks surplus to
 requirements now, so let's ditch that.
 
 948
@@ -4013,11 +4013,11 @@ of cosmetic changes all at once.
 
 949
 01:23:06,820 --> 01:23:09,050
-And then bundle them in to commit.
+And then bundle them in to a commit.
 
 950
 01:23:14,500 --> 01:23:16,950
-DN: So we've got an inaudible branch for each
+DN: So we've got an else branch for each
 
 951
 01:23:17,050 --> 01:23:17,620
@@ -4025,7 +4025,7 @@ JW: Yes.
 
 952
 01:23:19,030 --> 01:23:21,160
-I forget where inaudible inherited this from.
+I forget where Ember inherited this from.
 
 953
 01:23:21,580 --> 01:23:23,160
@@ -4033,7 +4033,8 @@ It's not unique to Ember
 
 954
 01:23:25,980 --> 01:23:32,080
-It's a little like a list, handlebars inaudible language.
+It's a little like a LISP, handlebars
+templating language.
 
 955
 01:23:33,100 --> 01:23:36,050
