@@ -3696,7 +3696,7 @@ As a general principle it's best to
 
 874
 01:16:34,388 --> 01:16:38,045
-treat these values as inaudible,
+treat these values as monadic,
 
 875
 01:16:39,920 --> 01:16:43,730
