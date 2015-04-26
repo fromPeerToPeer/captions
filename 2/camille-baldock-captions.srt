@@ -809,7 +809,7 @@ and therefore it will throw an exception.
 
 181
 00:14:00,290 --> 00:14:02,057
-This is a bit... 
+This is a bit...
 
 182
 00:14:02,057 --> 00:14:05,970
@@ -831,5905 +831,5865 @@ do I want capital H in
 there and little things like that.
 
 186
-00:14:15,890 --> 00:14:18,420
-But for now I'm doing
-it with the minimum viable
+00:14:15,890 --> 00:14:20,891
+But for now I'm doing it with
+the minimum viable array string parser.
 
 187
-00:14:18,820 --> 00:14:19,910
-array string parser.
-
-188
-00:14:20,920 --> 00:14:22,400
+00:14:20,902 --> 00:14:22,400
 And see where that takes me.
 
+188
+00:14:22,410 --> 00:14:28,548
+TS: So your motivation here sounds
+like you don't want it to silently fail ?
+
 189
-00:14:22,410 --> 00:14:24,510
-TS: So your motivation here sounds like
+00:14:28,548 --> 00:14:30,600
+If there's bad input, you want it to complain.
 
 190
-00:14:24,510 --> 00:14:27,370
-you don't want it to silently fail ?
-
-191
-00:14:29,220 --> 00:14:30,600
-If there's bad input, you want it to
-complain.
-
-192
 00:14:30,600 --> 00:14:31,910
 CB: Yes, that's it.
 
+191
+00:14:31,910 --> 00:14:36,937
+In the same way here for
+example, it takes the first symbol.
+
+192
+00:14:36,960 --> 00:14:41,634
+So if someone puts H5 for
+example, that would also fail quite loudly.
+
 193
-00:14:31,910 --> 00:14:35,620
-In the same way here, for example,
-
-194
-00:14:36,820 --> 00:14:39,540
-So if someone puts H5 for example,
-
-195
-00:14:39,680 --> 00:14:41,520
-That would also fail quite loudly.
-
-196
-00:14:41,790 --> 00:14:45,470
+00:14:41,702 --> 00:14:45,470
 If someone puts HH however,
 it's not going to fail loudly.
 
-197
-00:14:46,540 --> 00:14:48,650
-But, I'm not in a statically typed
-language
-
-198
-00:14:49,540 --> 00:14:52,440
+194
+00:14:46,540 --> 00:14:52,308
+But, I'm not in a statically typed language
 and I don't want to spend time on it now.
 
-199
+195
 00:14:52,540 --> 00:14:55,260
-I'll clean it up a bit later,
+I'll clean it up a bit later.
+
+196
+00:14:56,280 --> 00:15:00,308
+What I would usually do If I'm
+writing things I want to ship is ...
+
+197
+00:15:02,140 --> 00:15:14,445
+I would put a TODO and 'fail loudly and
+with better errors with unexpected inputs'.
+
+198
+00:15:14,440 --> 00:15:24,068
+much in the same way I would probably
+be happy having #TODO: fail nicely when not 5.
+
+199
+00:15:25,177 --> 00:15:26,491
+TS: Right.
 
 200
-00:14:56,280 --> 00:14:57,480
-what I would usually do
-
-201
-00:14:57,480 --> 00:14:59,480
-If I'm writing things I want to ship.
-
-202
-00:15:02,140 --> 00:15:09,340
-I would put a TODO and 'fail loudly and
-with better
-
-203
-00:15:09,800 --> 00:15:11,780
-errors with unexpected
-
-204
-00:15:13,970 --> 00:15:15,930
-inputs', much in the same way
-
-205
-00:15:16,480 --> 00:15:18,890
-I would probably be happy having
-
-206
-00:15:18,960 --> 00:15:24,570
-#TODO: fail nicely when not 5.
-
-207
-00:15:28,420 --> 00:15:33,220
+00:15:28,420 --> 00:15:33,188
 There's other things... of there's
 two 5 of Hearts... you have a cheat.
 
-208
+201
 00:15:33,310 --> 00:15:35,850
-and things like that,
-but let's not even go there !
+And things like that, but let's not even go there !
 
-209
-00:15:35,850 --> 00:15:37,650
+202
+00:15:35,850 --> 00:15:39,691
 Let's assume that that our players
-
-210
-00:15:37,760 --> 00:15:39,410
 are trying to be honest, at least.
 
-211
-00:15:39,710 --> 00:15:41,620
+203
+00:15:39,710 --> 00:15:45,428
 TS: we'll, I don't know enough about the
+variance of Poker to say whether that's illegal.
 
-212
-00:15:41,620 --> 00:15:44,330
-variance of Poker to
-say whether that's illegal.
-
-213
-00:15:45,480 --> 00:15:48,480
+204
+00:15:45,480 --> 00:15:48,514
 CB: I think if you have one deck
 and you have 2 x 5 of Hearts
 
-214
-00:15:48,570 --> 00:15:51,970
+205
+00:15:48,570 --> 00:15:52,228
 you can reasonably assume that
 somebody's messing with the game.
 
-215
-00:15:54,170 --> 00:15:56,050
-So that's going to fail quite nicely
+206
+00:15:52,220 --> 00:15:54,000
+TS: Fair enough.
 
-216
-00:15:56,050 --> 00:15:58,840
-because I'm obviously
-missing quite a lot of objects.
+207
+00:15:54,170 --> 00:15:59,062
+CB: So that's going to fail quite nicely because
+I'm obviously missing quite a lot of objects.
 
-217
-00:15:59,390 --> 00:16:01,400
+208
+00:15:59,325 --> 00:16:03,074
 But let's see where it's failing.
 
-218
-00:16:03,390 --> 00:16:05,210
-So, undefined method...
+209
+00:16:03,390 --> 00:16:08,662
+So, undefined method... Oh of course, I did something...
 
-219
-00:16:05,310 --> 00:16:09,070
-Oh of course, I did something here...
+210
+00:16:09,680 --> 00:16:15,131
+Here I'm assuming that make_card
+is available on my string, which it isn't.
 
-220
-00:16:09,680 --> 00:16:12,170
-Here I'm assuming
-that make_card is available
-
-221
-00:16:12,170 --> 00:16:14,520
-on my string, which it isn't.
-
-222
+211
 00:16:15,450 --> 00:16:18,190
 TS: You don't want to make it available.
 
-223
+212
 00:16:18,770 --> 00:16:21,700
 I thought you were going to
 do some monkey patching and...
 
-224
+213
 00:16:24,050 --> 00:16:27,640
 we'll, if you want to do it for
 fun, to do crazy things. (laughter)
 
-225
+214
 00:16:27,680 --> 00:16:31,550
 and then see how I fail later, then sure, but
 
-226
+215
 00:16:34,990 --> 00:16:37,400
 I love myself too much
 to do that to myself.
 
-227
+216
 00:16:42,940 --> 00:16:46,640
 [inaudible]
 
-228
+217
 00:16:46,640 --> 00:16:49,880
 Now it's complaining that
 we don't have whatever that is.
 
-229
+218
 00:16:49,950 --> 00:16:52,500
 so we should re-create a 'whatever that is'.
 
-230
+219
 00:16:54,650 --> 00:17:00,110
 To be honest I don't see it doing anything really smart
 
-231
+220
 00:17:00,110 --> 00:17:02,850
 so it's just going to have...
 
-232
+221
 00:17:03,420 --> 00:17:05,420
 It's called 'Pips' in English,
 
-233
+222
 00:17:05,420 --> 00:17:09,530
 that's the number on the
 face of the card, is it not ?
 
-234
+223
 00:17:09,820 --> 00:17:13,690
 TS: I think I've heard the word
 'rank' but 'Pips' also seems sensible
 
-235
+224
 00:17:14,800 --> 00:17:16,200
 I'm going to stick with 'Pips'
 
-236
+225
 00:17:17,910 --> 00:17:21,280
 Since I'm also doing hand ranker,
 rank is going to confuse things.
 
-237
+226
 00:17:21,280 --> 00:17:22,660
 TS: Oh .. that's a good point.
 
-238
+227
 00:17:23,100 --> 00:17:25,140
 Separate words for separate ideas.
 
-239
+228
 00:17:26,850 --> 00:17:29,440
 I hear that's helpful. (laughter)
 
-240
+229
 00:17:33,570 --> 00:17:38,060
 OK, so I have some kind of
 silly strap that doesn't do much here.
 
-241
+230
 00:17:39,250 --> 00:17:42,820
 I just want to acquire it -
 rather than leave it sitting around here.
 
-242
+231
 00:17:43,400 --> 00:17:45,680
 And let's go back to our spec.
 
-243
+232
 00:17:50,020 --> 00:17:54,170
 Excellent, we still have nothing and that is simply
 
-244
+233
 00:17:54,490 --> 00:17:56,580
 because I still haven't implemented it.
 
-245
+234
 00:18:02,860 --> 00:18:05,890
 Now Hand takes cards and we're just going
 to initialize it with cards.
 
-246
+235
 00:18:07,870 --> 00:18:09,130
 I can get rid of that.
 
-247
+236
 00:18:11,020 --> 00:18:14,530
 And make that cards available.
 
-248
+237
 00:18:18,540 --> 00:18:22,160
 this should hopefully stop complaining.
 
-249
+238
 00:18:24,200 --> 00:18:28,620
 No, because it did a zero failure,
 so that is the one I want.
 
-250
+239
 00:18:33,080 --> 00:18:34,570
 Let's have a look.
 
-251
+240
 00:18:35,640 --> 00:18:36,930
 I'm creating my hand...
 
-252
+241
 00:18:43,730 --> 00:18:46,610
 My favorite way is
 also to spell initialize with 's'.
 
-253
+242
 00:18:46,820 --> 00:18:48,740
 and then I spent 2 minutes thinking
 
-254
+243
 00:18:48,740 --> 00:18:50,940
 oh, American spelling.
 TS: Yes.
 
-255
+244
 00:18:54,000 --> 00:18:56,400
 Yes, good, slightly more convincing isn't it?
 
-256
+245
 00:18:56,420 --> 00:18:57,450
 TS: Yes, very good.
 
-257
+246
 00:18:59,290 --> 00:19:02,520
 CB: I now have some 'thing' and
 it has the right number of things.
 
-258
+247
 00:19:02,580 --> 00:19:06,700
 I don't actually know that
 it does parse the cards correctly.
 
-259
+248
 00:19:07,250 --> 00:19:11,680
 And if the array
 looks like I want it to look.
 
-260
+249
 00:19:11,680 --> 00:19:14,920
 so what I can do is...
 
-261
+250
 00:19:15,540 --> 00:19:18,560
 because, currently
 my parser doesn't care
 
-262
+251
 00:19:18,600 --> 00:19:20,570
 how many cards I'm parsing in
 
-263
+252
 00:19:21,110 --> 00:19:22,880
 I can do a very quick check.
 
-264
+253
 00:19:23,250 --> 00:19:26,890
 so it returns the right cards.
 
-265
+254
 00:19:27,370 --> 00:19:33,810
 as a test, and if my
 array_of_cards is just the one,
 
-266
+255
 00:19:34,110 --> 00:19:37,490
 let's say 6 of Diamonds.
 
-267
+256
 00:19:38,050 --> 00:19:41,540
 then I go for exact the same test.
 
-268
+257
 00:19:43,570 --> 00:19:45,450
 And what I want is...
 
-269
+258
 00:19:46,080 --> 00:19:48,200
 I take my hand,
 I take the cards in there,
 
-270
+259
 00:19:48,680 --> 00:19:54,840
 I take the first one and I
 want to check the suit is Diamonds
 
-271
+260
 00:19:56,200 --> 00:19:59,540
 I also want to check that
 my Pips are equal to six.
 
-272
+261
 00:19:59,690 --> 00:20:00,210
 TS: OK.
 
-273
+262
 00:20:00,620 --> 00:20:03,960
 And I reckon that we're going
 to have a surprising 'thing'
 
-274
+263
 00:20:04,030 --> 00:20:06,050
 because I haven't cast it to an integer.
 
-275
+264
 00:20:10,220 --> 00:20:12,000
 Since we're going to compare them,
 
-276
+265
 00:20:12,010 --> 00:20:16,830
 it's a lot easier to
 look at if they're integers,
 
-277
+266
 00:20:17,200 --> 00:20:20,520
 than strings - expected an
 integer and got a string !
 
-278
+267
 00:20:21,280 --> 00:20:26,210
 What I'm going to do
 is not really good practice,
 
-279
+268
 00:20:26,340 --> 00:20:29,320
 but that should please it for now.
 
-280
+269
 00:20:30,400 --> 00:20:35,470
 So now I can have a 'thing'
 and when I put several things in there,
 
-281
+270
 00:20:35,620 --> 00:20:38,500
 it puts them in a hand
 with cards, and then I can
 
-282
+271
 00:20:38,800 --> 00:20:41,950
 check that if I do put
 a card it seems relatively OK.
 
-283
+272
 00:20:42,100 --> 00:20:45,070
 CB: If I wanted to be really
 exhaustive I would go through
 
-284
+273
 00:20:45,100 --> 00:20:48,450
 and check Spades,
 check Hearts, check Clubs.
 
-285
+274
 00:20:48,620 --> 00:20:51,290
 Just to see that that matching is OK.
 
-286
+275
 00:20:51,660 --> 00:20:53,780
 And that would give
 me a bit more certainty
 
-287
+276
 00:20:53,810 --> 00:20:55,690
 about what on Earth I am doing !
 
-288
+277
 00:20:55,740 --> 00:20:56,340
 TS: Ok
 
-289
+278
 00:20:57,340 --> 00:21:00,970
 But that kind of does the
 thing, that is good enough.
 
-290
+279
 00:21:01,250 --> 00:21:04,370
 Now I'm going to start focusing on...
 
-291
+280
 00:21:05,510 --> 00:21:07,170
 If I have those two hand objects
 
-292
+281
 00:21:07,280 --> 00:21:08,850
 and I can look at cards on them.
 
-293
+282
 00:21:09,110 --> 00:21:12,370
 I have a nice interface with
 my cards, it gives me Pips and Suits
 
-294
+283
 00:21:13,110 --> 00:21:14,930
 How do I compare them.
 
-295
+284
 00:21:17,370 --> 00:21:19,600
 Step away from the
 computer for a second.
 
-296
+285
 00:21:19,610 --> 00:21:23,460
 TS: Yes, it felt like this
 was an administrative thing.
 
-297
+286
 00:21:24,890 --> 00:21:28,260
 Your warmed up now,
 you can make two hands of cards.
 
-298
+287
 00:21:28,400 --> 00:21:30,050
 And now it's back to compare them ?
 
-299
+288
 00:21:30,050 --> 00:21:31,560
 CB: Yes, that's about it.
 
-300
+289
 00:21:34,400 --> 00:21:38,590
 The first thing we can do is have some way
 
-301
+290
 00:21:38,600 --> 00:21:42,110
 of having a hand, and
 it tells me 'you have a Flush'
 
-302
+291
 00:21:42,250 --> 00:21:45,520
 or 'you have a Pair' and
 that is actually your best thing.
 
-303
+292
 00:21:45,570 --> 00:21:47,660
 Not just 'you still happen to have a Pair'
 
-304
+293
 00:21:47,660 --> 00:21:49,620
 because the last thing I want to do is,
 
-305
+294
 00:21:50,170 --> 00:21:52,160
 I have a card that has, for example,
 
-306
+295
 00:21:52,280 --> 00:21:54,420
 3 of a kind which is better than 2 of a kind
 
-307
+296
 00:21:54,420 --> 00:21:59,080
 which I'm assuming you know,
 which isn't very nice (laughter)
 
-308
+297
 00:22:00,340 --> 00:22:03,490
 TS: I am roughly
 familiar with the rules of Poker.
 
-309
+298
 00:22:04,800 --> 00:22:07,880
 CB: I'm just being unnecessarily verbose.
 
-310
+299
 00:22:09,120 --> 00:22:10,450
 TS: No, no, talk me through it.
 
-311
+300
 00:22:11,970 --> 00:22:14,540
 CB: If I have 3 of a kind,
 the last thing I want to do is
 
-312
+301
 00:22:14,540 --> 00:22:17,200
 for my hand to tell me,
 "We have two of a kind, excellent".
 
-313
+302
 00:22:17,200 --> 00:22:20,120
 whereas the best thing I
 could do with this is 3 of a kind.
 
-314
+303
 00:22:20,120 --> 00:22:23,400
 ST: So for any individual hand
 there might be several possible
 
-315
+304
 00:22:23,400 --> 00:22:25,570
 classification of
 the cards in it, but we want
 
-316
+305
 00:22:25,570 --> 00:22:27,370
 to use the one that is most likely to
 
-317
+306
 00:22:27,370 --> 00:22:29,320
 cause this hand to beat another one.
 
-318
+307
 00:22:29,620 --> 00:22:34,840
 CB: Yes, you want the
 highest possible rank of things
 
-319
+308
 00:22:34,840 --> 00:22:35,940
 you can get in Poker.
 
-320
+309
 00:22:36,050 --> 00:22:39,400
 so if I have 4 fours then
 
-321
+310
 00:22:39,710 --> 00:22:43,070
 I want 4 of a kind,
 not 3 of a kind, and definitely not a Pair.
 
-322
+311
 00:22:43,710 --> 00:22:45,240
 Definitely not a high card.
 
-323
+312
 00:22:50,540 --> 00:22:57,560
 TS: It sounds like your first line
 of interest, is classifying these hands
 
-324
+313
 00:22:57,710 --> 00:22:59,740
 according to what kind they are.
 
-325
+314
 00:23:00,250 --> 00:23:02,450
 How were you expecting to approach that ?
 
-326
+315
 00:23:02,520 --> 00:23:06,220
 Essentially I want to look at a
 hand and it gives me what the rank is.
 
-327
+316
 00:23:06,220 --> 00:23:08,340
 so it tells me if it's a straight or thing
 
-328
+317
 00:23:08,970 --> 00:23:12,360
 So it feels to me like we're going
 to have some kind of rank method
 
-329
+318
 00:23:12,440 --> 00:23:14,900
 on the Hand that is going to return a
 
-330
+319
 00:23:14,910 --> 00:23:17,640
 "and this is the thing that you can do with it".
 
-331
+320
 00:23:17,720 --> 00:23:19,290
 That is the best possible one,
 
-332
+321
 00:23:22,970 --> 00:23:25,440
 which we can half implement for now.
 
-333
+322
 00:23:25,510 --> 00:23:28,540
 The first thing I'm going to
 do is create a spec for my Hand
 
-334
+323
 00:23:28,540 --> 00:23:31,210
 because we're going
 to start adding stuff to that.
 
-335
+324
 00:23:33,530 --> 00:23:35,170
 Quick housekeeping.
 TS: Yes.
 
-336
+325
 00:23:38,680 --> 00:23:42,670
 CB: And I'm going to be describing my Hand
 
-337
+326
 00:23:42,850 --> 00:23:48,710
 And, I want some kind of method
 
-338
+327
 00:23:48,830 --> 00:23:51,400
 I'll call it 'Rank'.
 
-339
+328
 00:23:52,110 --> 00:23:54,480
 I have no particular reason to know whether
 
-340
+329
 00:23:54,480 --> 00:23:55,880
 that's a good idea or not now.
 
-341
+330
 00:23:56,910 --> 00:23:58,290
 So I'll keep it as it is.
 
-342
+331
 00:23:58,290 --> 00:24:00,200
 And what it does is...
 
-343
+332
 00:24:00,690 --> 00:24:08,200
 returns the best type of hand,
 
-344
+333
 00:24:13,740 --> 00:24:15,330
 from it's own cards.
 
-345
+334
 00:24:24,050 --> 00:24:25,050
 ST: Ok. (laughter)
 
-346
+335
 00:24:32,600 --> 00:24:34,430
 Which seems easy.
 
-347
+336
 00:24:35,370 --> 00:24:38,300
 And I might regret this
 because maybe it's not
 
-348
+337
 00:24:38,440 --> 00:24:40,370
 the easiest choice I could have made.
 
-349
+338
 00:24:45,970 --> 00:24:48,020
 I'm not going to put in a context for now
 
-350
+339
 00:24:48,140 --> 00:24:49,980
 I'm not sure where I'm going.
 
-351
+340
 00:24:49,980 --> 00:24:53,650
 So, I have a Hand and...
 
-352
+341
 00:24:58,090 --> 00:25:00,680
 So this is where things get a bit annoying.
 
-353
+342
 00:25:07,800 --> 00:25:09,890
 I have some kind of hand around.
 
-354
+343
 00:25:14,850 --> 00:25:17,240
 For now I'm going to use the HandParser
 
-355
+344
 00:25:17,620 --> 00:25:20,900
 which makes me feel this is
 not the right interface for the problem,
 
-356
+345
 00:25:20,900 --> 00:25:23,680
 If I have to use it in such a way, but if I have
 
-357
+346
 00:25:23,730 --> 00:25:30,010
 say, 5 of Hearts, 5 of Diamonds,
 
-358
+347
 00:25:30,140 --> 00:25:32,500
 we're actually going to take a Pair.
 
-359
+348
 00:25:32,740 --> 00:25:34,930
 and see where it takes us.
 
-360
+349
 00:25:35,540 --> 00:25:36,780
 7 of Diamonds,
 
-361
+350
 00:25:37,470 --> 00:25:38,940
 8 of Diamonds.
 
-362
+351
 00:25:47,680 --> 00:25:52,980
 This should just say "we have a Pair
 and by the way that Pair is a Pair of 5s".
 
-363
+352
 00:25:53,620 --> 00:25:55,680
 For now let's start with 'you have a Pair'
 
-364
+353
 00:25:57,500 --> 00:26:00,480
 TS: As you said, that
 might be enough information.
 
-365
+354
 00:26:00,620 --> 00:26:02,830
 If there's another hand
 that doesn't have a Pair in it,
 
-366
+355
 00:26:02,830 --> 00:26:04,500
 you've already determined that.
 
-367
+356
 00:26:04,500 --> 00:26:04,990
 CB: Yes.
 
-368
+357
 00:26:05,570 --> 00:26:08,970
 The first thing you want to
 know is do I have a better hand?
 
-369
+358
 00:26:09,110 --> 00:26:11,510
 and then if your two
 hands are not the same rank,
 
-370
+359
 00:26:11,800 --> 00:26:13,770
 then you try calculating it.
 
-371
+360
 00:26:15,260 --> 00:26:18,910
 My initial reckoning is that
 it will be easier to calculate
 
-372
+361
 00:26:18,910 --> 00:26:22,700
 what the highest card is at the
 time I'm also establishing the rank.
 
-373
+362
 00:26:23,060 --> 00:26:28,640
 So for now I want my interface
 to just return the type of hand.
 
-374
+363
 00:26:29,170 --> 00:26:31,310
 But in the future, I also want it to say,
 
-375
+364
 00:26:31,310 --> 00:26:35,170
 this is the type of hand and
 this is the highest card that counts.
 
-376
+365
 00:26:35,530 --> 00:26:36,770
 Just in case there's a tie.
 
-377
+366
 00:26:36,820 --> 00:26:37,540
 TS: Alright.
 
-378
+367
 00:26:40,910 --> 00:26:45,300
 CB: Let's assume that's my
 hand and I want hand.rank.
 
-379
+368
 00:26:47,130 --> 00:26:49,220
 So 'expect' hand.rank.
 
-380
+369
 00:26:50,400 --> 00:26:52,780
 to equal, and then...
 
-381
+370
 00:26:57,910 --> 00:27:03,920
 It turns information about
 the winning potential of the hand.
 
-382
+371
 00:27:09,250 --> 00:27:13,460
 This is a terrible description !
 
-383
+372
 00:27:14,820 --> 00:27:17,220
 I'm just going to let it go, because in a minute,
 
-384
+373
 00:27:17,880 --> 00:27:21,280
 I will probably change my
 mind about what this should look like.
 
-385
+374
 00:27:26,050 --> 00:27:28,170
 So if I expect the hand equals that...
 
-386
+375
 00:27:31,260 --> 00:27:32,540
 Not that.
 
-387
+376
 00:27:34,590 --> 00:27:37,520
 This is failing quite nicely...
 
-388
+377
 00:27:37,780 --> 00:27:42,180
 because I haven't
 done all my requiring correctly.
 
-389
+378
 00:27:47,040 --> 00:27:50,590
 I'm doing silly thing with
 silly shortcuts here (laughter).
 
-390
+379
 00:27:51,800 --> 00:27:54,600
 I also don't have my HandParser.
 
-391
+380
 00:27:55,910 --> 00:27:57,870
 What I don't like about that
 
-392
+381
 00:27:57,870 --> 00:28:02,010
 is that now I can call this extra
 class and I have this extra thing
 
-393
+382
 00:28:02,370 --> 00:28:04,160
 that has all this logic here.
 
-394
+383
 00:28:04,310 --> 00:28:08,970
 So rethinking it now I would
 probably move that logic around
 
-395
+384
 00:28:09,000 --> 00:28:16,510
 And have my hand.new
 that handles things like that.
 
-396
+385
 00:28:16,810 --> 00:28:20,930
 and my hand.new can take a HandParser
 
-397
+386
 00:28:20,970 --> 00:28:27,700
 as one of it's attributes of the method
 
-398
+387
 00:28:28,770 --> 00:28:32,930
 and I can make sure that
 the logic of if it's H it's Hearts,
 
-399
+388
 00:28:32,970 --> 00:28:35,960
 and if it's D it's Diamonds,
 just goes somewhere else.
 
-400
+389
 00:28:36,020 --> 00:28:38,330
 I'm not happy about that interface.
 
-401
+390
 00:28:43,200 --> 00:28:46,080
 Because I don't like
 stopping in the middle of a 'thing'
 
-402
+391
 00:28:46,570 --> 00:28:47,500
 #TODO...
 
-403
+392
 00:28:48,400 --> 00:28:52,810
 This is not a nice interface,
 not what I wanted to do.
 
-404
+393
 00:28:52,940 --> 00:28:55,450
 TS: So your queuing up a
 bit of re-factoring to do ?
 
-405
+394
 00:28:56,710 --> 00:29:00,450
 CB: Yes, my tests have passed so
 I can't afford to just go off on a tangent
 
-406
+395
 00:29:00,650 --> 00:29:02,480
 and go to fix all the things.
 
-407
+396
 00:29:04,410 --> 00:29:07,390
 So let's just have a quick...
 
-408
+397
 00:29:17,310 --> 00:29:21,160
 So that's parsing, and that's failing.
 
-409
+398
 00:29:22,170 --> 00:29:23,110
 rank returns nil
 
-410
+399
 00:29:23,110 --> 00:29:25,140
 which is pretty much what you'd expect
 
-411
+400
 00:29:25,170 --> 00:29:27,070
 because it returns nil.
 
-412
+401
 00:29:27,900 --> 00:29:29,330
 OK, so I've got all my cards
 
-413
+402
 00:29:29,330 --> 00:29:31,450
 and how do I want to detect a Pair?
 
-414
+403
 00:29:33,370 --> 00:29:36,250
 Array of cards - if I want to detect a Pair,
 
-415
+404
 00:29:36,370 --> 00:29:38,720
 all I care about is the Pips on the cards.
 
-416
+405
 00:29:40,720 --> 00:29:44,980
 I have all the cards, I can look
 at how many Pips there are
 
-417
+406
 00:29:45,050 --> 00:29:50,910
 for each of those cards and
 I can count for each possible Pip value,
 
-418
+407
 00:29:51,540 --> 00:29:53,700
 how many of that Pip I have.
 TS: Ok.
 
-419
+408
 00:29:53,770 --> 00:30:00,680
 So if I have say, 55678 here.
 
-420
+409
 00:30:01,970 --> 00:30:04,910
 There was 2 x 5s, 1 x 6, 1 x7 and 1 x 8
 
-421
+410
 00:30:05,110 --> 00:30:09,800
 TS: I see so you're counting them
 by how many Pips they have.
 
-422
+411
 00:30:09,910 --> 00:30:13,810
 You want to somehow say
 I've got 2 x 5s, I've got 1 x 6 etc.
 
-423
+412
 00:30:14,370 --> 00:30:16,830
 CB: Yes, I want some kind of Pip counter
 
-424
+413
 00:30:17,180 --> 00:30:20,650
 that sort of mashes them up in
 some structure it can read nicely.
 
-425
+414
 00:30:24,650 --> 00:30:28,800
 Ideally, if I had a thing
 like that then I would have
 
-426
+415
 00:30:28,910 --> 00:30:31,250
 something along the lines of...
 
-427
+416
 00:30:31,250 --> 00:30:31,260
 I'm going to do that as a hash
 something along the lines of...
 
-428
+417
 00:30:31,260 --> 00:30:32,650
 I'm going to do that as a hash
 
-429
+418
 00:30:32,970 --> 00:30:36,680
 but I would expect my
 result to look a bit like this.
 
-430
+419
 00:30:38,970 --> 00:30:41,600
 I would like a magical
 thing that does that for me.
 
-431
+420
 00:30:43,940 --> 00:30:48,410
 And once I have that
 then I can check if I have
 
-432
+421
 00:30:48,490 --> 00:30:53,010
 any things that so
 happen to have 2 of the 'thing'.
 
-433
+422
 00:30:53,480 --> 00:30:55,460
 And if I do then it's a Pair.
 
-434
+423
 00:30:55,620 --> 00:30:58,170
 Otherwise, it's a highest card.
 
-435
+424
 00:30:59,730 --> 00:31:00,910
 So that's about it.
 
-436
+425
 00:31:02,020 --> 00:31:04,040
 I want to implement a thing that does that.
 
-437
+426
 00:31:04,850 --> 00:31:06,780
 So what does this do ?
 
-438
+427
 00:31:09,740 --> 00:31:11,610
 I would say it's a 'Pip counter',
 
-439
+428
 00:31:11,610 --> 00:31:14,170
 but it's not a great word for it.
 
-440
+429
 00:31:22,170 --> 00:31:25,300
 I'm going to call it Pip counter and...
 
-441
+430
 00:31:29,740 --> 00:31:31,690
 This is a silly thing I do,
 
-442
+431
 00:31:32,010 --> 00:31:34,850
 and I may as well do it on camera,
 
-443
+432
 00:31:34,850 --> 00:31:35,940
 (the world will laugh),
 
-444
+433
 00:31:36,340 --> 00:31:38,520
 so when I have a
 terrible name for a thing,
 
-445
+434
 00:31:38,520 --> 00:31:39,820
 I just put a ##bob.
 
-446
+435
 00:31:41,050 --> 00:31:45,100
 I was given the clean code
 thing when I started programming.
 
-447
+436
 00:31:45,100 --> 00:31:47,170
 And it has this amazing thing about how
 
-448
+437
 00:31:47,170 --> 00:31:48,910
 you should not name your methods.
 
-449
+438
 00:31:49,050 --> 00:31:51,280
 Things like holy hand grenade for destroy,
 
-450
+439
 00:31:52,170 --> 00:31:54,480
 and silly things like
 that, so I always put a bob
 
-451
+440
 00:31:54,500 --> 00:31:56,360
 when I have bad naming thing, and I usually
 
-452
+441
 00:31:56,420 --> 00:32:00,200
 have fun figuring out the interface
 
-453
+442
 00:32:01,370 --> 00:32:03,000
 when I'm finishing off an object.
 
-454
+443
 00:32:03,000 --> 00:32:05,250
 So let's say it's pip_count, for now.
 
-455
+444
 00:32:06,510 --> 00:32:06,820
 TS: Ok.
 
-456
+445
 00:32:08,510 --> 00:32:09,970
 So what does my pip_count do,
 
-457
+446
 00:32:10,250 --> 00:32:11,220
 Hey, we can write a test !
 
-458
+447
 00:32:14,170 --> 00:32:15,770
 That is going to do that for me.
 
-459
+448
 00:32:17,480 --> 00:32:18,680
 So if I have a pip_count...
 
-460
+449
 00:32:22,850 --> 00:32:26,370
 now whether that should be
 in the public interface is debatable.
 
-461
+450
 00:32:27,080 --> 00:32:27,650
 ST: Right.
 
-462
+451
 00:32:28,110 --> 00:32:30,370
 CB: But I'm just going to keep it there for now.
 
-463
+452
 00:32:30,910 --> 00:32:32,680
 As I don't yet know where we're going.
 
-464
+453
 00:32:33,140 --> 00:32:34,710
 So if I have a pip_count and I am...
 
-465
+454
 00:32:39,000 --> 00:32:42,370
 parsing exactly that hand then
 this is exactly the thing I want.
 
-466
+455
 00:32:46,020 --> 00:32:47,710
 I'm going to stop returning that.
 
-467
+456
 00:32:51,220 --> 00:32:51,820
 There we go...
 
-468
+457
 00:32:52,170 --> 00:32:54,570
 That should fail quite loudly, let's run this test.
 
-469
+458
 00:32:57,510 --> 00:32:58,080
 There we go...
 
-470
+459
 00:32:59,000 --> 00:33:00,450
 Yes, we've got nil, excellent.
 
-471
+460
 00:33:00,740 --> 00:33:03,450
 So how are we going
 implement this.  I have my cards
 
-472
+461
 00:33:04,510 --> 00:33:06,510
 And for each of those cards I have Pips.
 
-473
+462
 00:33:08,480 --> 00:33:11,920
 I can just...
 
-474
+463
 00:33:13,080 --> 00:33:15,930
 Suddenly here I have an array of numbers,
 
-475
+464
 00:33:23,710 --> 00:33:28,640
 For a thing like this I need my documentation,
 
-476
+465
 00:33:29,310 --> 00:33:31,170
 because I don't remember everything.
 
-477
+466
 00:33:32,720 --> 00:33:36,360
 There is a Ruby collect on Ruby array
 
-478
+467
 00:33:38,540 --> 00:33:39,200
 This is dash...
 
-479
+468
 00:33:39,200 --> 00:33:43,230
 It's a documentation tool that I like to use.
 
-480
+469
 00:33:45,050 --> 00:33:48,370
 TS: So you have all of the Ruby API documentation.
 
-481
+470
 00:33:49,710 --> 00:33:52,920
 CB: This is just a quick
 reminder for me because
 
-482
+471
 00:33:53,480 --> 00:33:56,740
 I reckon this has already been solved.
 
-483
+472
 00:33:57,120 --> 00:34:00,750
 But maybe not, who knows.
 
-484
+473
 00:34:00,850 --> 00:34:02,970
 Essentially I want to loop over my array
 
-485
+474
 00:34:02,970 --> 00:34:05,600
 and count the number
 of incidences of each 'thing'.
 
-486
+475
 00:34:07,310 --> 00:34:15,860
 Which actually I could
 do in any number of ways.
 
-487
+476
 00:34:16,450 --> 00:34:18,370
 I can't remember off the top of my head
 
-488
+477
 00:34:18,370 --> 00:34:22,540
 how I would do that
 in pure Ruby. Any suggestions welcome !
 
-489
+478
 00:34:24,510 --> 00:34:26,680
 TS: I don't know that there is a method in the
 
-490
+479
 00:34:26,680 --> 00:34:28,770
 array that does that.
 
-491
+480
 00:34:28,770 --> 00:34:30,600
 the only thing that comes to mind is
 
-492
+481
 00:34:30,600 --> 00:34:32,970
 a group_by method,
 which won't do what you want
 
-493
+482
 00:34:32,970 --> 00:34:34,880
 but will do a related thing, which is
 
-494
+483
 00:34:35,200 --> 00:34:36,620
 group together all of
 
-495
+484
 00:34:36,620 --> 00:34:38,740
 the 5s, all of the 6s and all of the 7s,
 
-496
+485
 00:34:39,880 --> 00:34:41,850
 but that doesn't give you what you want.
 
-497
+486
 00:34:41,850 --> 00:34:44,170
 CB: Does that give me
 an array of arrays then ?
 
-498
+487
 00:34:44,170 --> 00:34:46,940
 TS: It gives you a hash.
 
-499
+488
 00:34:47,800 --> 00:34:49,370
 The key in the hash would be
 
-500
+489
 00:34:50,310 --> 00:34:52,400
 5 and the elements in the array would be
 
-501
+490
 00:34:52,450 --> 00:34:54,480
 all of the 5 Pip cards that it had found.
 
-502
+491
 00:34:54,490 --> 00:34:57,040
 and then the key would be 6
 and the value would be...
 
-503
+492
 00:34:57,480 --> 00:34:59,610
 CB: I could map on that quite easily.
 
-504
+493
 00:35:02,220 --> 00:35:05,960
 let's do a group_by and see how that works.
 
-505
+494
 00:35:11,220 --> 00:35:12,400
 So group_by...
 
-506
+495
 00:35:20,200 --> 00:35:21,790
 It's not in Array.
 
-507
+496
 00:35:21,820 --> 00:35:27,860
 TS: It will be in Enumerable I expect.
 
-508
+497
 00:35:27,970 --> 00:35:29,700
 CB: Let's just search...
 
-509
+498
 00:35:29,970 --> 00:35:33,120
 No it's not letting me search.
 
-510
+499
 00:35:33,220 --> 00:35:35,820
 I'm in the wrong scope for it.
 
-511
+500
 00:35:39,510 --> 00:35:42,380
 Enumerable group_by... no, no no.
 
-512
+501
 00:35:43,400 --> 00:35:45,340
 It's just giving me Ansible stuff.
 
-513
+502
 00:35:46,700 --> 00:35:48,120
 TS: Maybe that was a bad idea.
 
-514
+503
 00:35:48,420 --> 00:35:49,880
 CB: All of the documentation.
 
-515
+504
 00:35:51,910 --> 00:35:53,770
 TS: If you can implement it yourself.
 
-516
+505
 00:35:53,770 --> 00:35:56,120
 CB: I shall implement it
 in the space of a minute.
 
-517
+506
 00:35:56,220 --> 00:35:58,620
 That should be fine, I've got all my Pips.
 
-518
+507
 00:35:59,000 --> 00:36:01,020
 What I'm wondering is, do I want
 
-519
+508
 00:36:01,480 --> 00:36:04,760
 just 52617181 or do I want
 
-520
+509
 00:36:04,800 --> 00:36:07,500
 all of the keys of all the possible things.
 
-521
+510
 00:36:07,880 --> 00:36:09,550
 and then how many cards I have,
 
-522
+511
 00:36:09,600 --> 00:36:12,020
 but I don't think it
 makes a lot of difference.
 
-523
+512
 00:36:13,340 --> 00:36:16,680
 TS: It depends what you want.
 
-524
+513
 00:36:17,200 --> 00:36:19,940
 CB: I want to use group_by,
 I was very excited by this.
 
-525
+514
 00:36:24,680 --> 00:36:27,060
 OK, yes fair enough.
 
-526
+515
 00:36:27,820 --> 00:36:32,040
 TS: That's not quite what
 you said, but it's close.
 
-527
+516
 00:36:32,170 --> 00:36:34,090
 in that you would get the right keys
 
-528
+517
 00:36:34,110 --> 00:36:36,420
 but for the values,
 instead of being how many
 
-529
+518
 00:36:36,420 --> 00:36:39,140
 cards there were it would
 be an array of those cards.
 
-530
+519
 00:36:39,140 --> 00:36:44,560
 CB: I'm just wondering...
 
-531
+520
 00:36:45,770 --> 00:36:47,680
 this is not particularly pretty
 
-532
+521
 00:36:48,930 --> 00:36:50,990
 It probably has a better way of doing it.
 
-533
+522
 00:36:51,020 --> 00:36:54,430
 it might be the default for that.
 
-534
+523
 00:36:54,620 --> 00:36:58,080
 Let's run the tests and
 see what that returns.
 
-535
+524
 00:36:59,340 --> 00:37:02,190
 Yes, that gives me arrays.
 
-536
+525
 00:37:02,200 --> 00:37:05,150
 Now we can just have a 'thing'.
 
-537
+526
 00:37:06,130 --> 00:37:11,400
 This is my grouped_cards, and then I can
 
-538
+527
 00:37:12,200 --> 00:37:16,720
 say grouped_cards and
 then for each of my things,
 
-539
+528
 00:37:17,720 --> 00:37:19,130
 I can say...
 
-540
+529
 00:37:25,170 --> 00:37:26,350
 TS: Ah, OK,
 
-541
+530
 00:37:27,220 --> 00:37:29,300
 So you are turning each of those arrays
 
-542
+531
 00:37:29,300 --> 00:37:31,100
 into a number by counting it.
 
-543
+532
 00:37:31,800 --> 00:37:34,580
 CB: Yes so let's see how that works.
 
-544
+533
 00:37:34,680 --> 00:37:40,110
 It's not very elegant
 but it should make the test pass.
 
-545
+534
 00:37:40,140 --> 00:37:42,360
 and pass, so that's close enough.
 
-546
+535
 00:37:43,770 --> 00:37:46,770
 We still have a failure
 because we're not ranking stuff.
 
-547
+536
 00:37:50,220 --> 00:37:51,640
 We are in the magical world
 
-548
+537
 00:37:51,640 --> 00:37:53,340
 where only 2 rankings exists.
 
-549
+538
 00:37:55,020 --> 00:37:57,840
 There is Pair and high card.
 
-550
+539
 00:38:00,880 --> 00:38:03,300
 If these are all my grouped cards,
 
-551
+540
 00:38:03,370 --> 00:38:07,250
 and if I have 'anywhere',
 
-552
+541
 00:38:09,250 --> 00:38:11,080
 in the number of group cards I have
 
-553
+542
 00:38:13,050 --> 00:38:15,330
 a 2, then it's a win,
 
-554
+543
 00:38:16,220 --> 00:38:18,940
 and otherwise it's not.
 
-555
+544
 00:38:20,200 --> 00:38:23,000
 This is my minimal viable code,
 
-556
+545
 00:38:23,000 --> 00:38:26,130
 it's something along the lines of...
 
-557
+546
 00:38:26,850 --> 00:38:29,520
 so this should return...
 
-558
+547
 00:38:29,880 --> 00:38:33,700
 I have a rank of type Pair, otherwise
 
-559
+548
 00:38:34,050 --> 00:38:37,280
 I have a rank of type highest.
 
-560
+549
 00:38:37,420 --> 00:38:42,020
 I'm not quite sure about line 10 now.
 
-561
+550
 00:38:42,510 --> 00:38:47,010
 So I have all the values, I need to find...
 
-562
+551
 00:38:53,110 --> 00:38:55,690
 I think this is where tests help me.
 
-563
+552
 00:38:55,720 --> 00:38:58,280
 TS: Yes (laughter).
 
-564
+553
 00:39:00,200 --> 00:39:03,000
 Undefined local variable grouped_cards.
 
-565
+554
 00:39:04,170 --> 00:39:06,130
 I've done something silly.
 
-566
+555
 00:39:06,130 --> 00:39:10,190
 Of course... this is called Pip count.
 
-567
+556
 00:39:12,370 --> 00:39:13,840
 Let's try that again.
 
-568
+557
 00:39:14,680 --> 00:39:17,640
 So it does something,
 and for the sake of completeness
 
-569
+558
 00:39:17,680 --> 00:39:25,140
 I also want to start
 using better names now.
 
-570
+559
 00:39:29,010 --> 00:39:30,730
 Here I have a hand with a Pair.
 
-571
+560
 00:39:32,020 --> 00:39:36,160
 and here I will have
 a hand with nothing in it,
 
-572
+561
 00:39:36,370 --> 00:39:39,790
 which I will call 'highest', as a type.
 
-573
+562
 00:39:42,850 --> 00:39:44,740
 So if I have a highest hand,
 
-574
+563
 00:39:44,860 --> 00:39:48,370
 I essentially want it to be pretty much this,
 
-575
+564
 00:39:48,740 --> 00:39:50,880
 but I'm just going to put something in there,
 
-576
+565
 00:39:50,880 --> 00:39:52,910
 which as you see actually is a straight.
 
-577
+566
 00:39:55,420 --> 00:39:57,480
 So, this shouldn't be ranking as highest.
 
-578
+567
 00:39:57,810 --> 00:39:59,500
 TS: Does that matter at this point?
 
-579
+568
 00:40:00,030 --> 00:40:02,610
 CB: No I'm quite happy about that.
 
-580
+569
 00:40:03,910 --> 00:40:06,710
 It's fine, it's just setting
 the scope of the problem
 
-581
+570
 00:40:08,020 --> 00:40:10,570
 to solving a very small 'thing'.
 
-582
+571
 00:40:10,620 --> 00:40:14,320
 TS: Yes, you said before,
 you're imagining a smaller version
 
-583
+572
 00:40:14,420 --> 00:40:18,400
 of Poker that only has 5 cards right?
 
-584
+573
 00:40:18,450 --> 00:40:22,100
 CB: Yes, a simpler and more boring world.
 
-585
+574
 00:40:24,480 --> 00:40:25,910
 And now we have no failures.
 
-586
+575
 00:40:26,110 --> 00:40:30,440
 I have a way of getting
 arrays and then suddenly
 
-587
+576
 00:40:30,650 --> 00:40:34,380
 I have 'one pair', 'one thing with a pair'
 and 'another with nothing'
 
-588
+577
 00:40:34,400 --> 00:40:37,260
 and it does rankings.
 
-589
+578
 00:40:38,740 --> 00:40:40,660
 So now we have some kind of way,
 
-590
+579
 00:40:40,710 --> 00:40:42,570
 in an oversimplified game of Poker
 
-591
+580
 00:40:42,970 --> 00:40:46,480
 to say I have a Pair and I have a highest.
 
-592
+581
 00:40:49,770 --> 00:40:52,480
 So what I would really like to do
 
-593
+582
 00:40:53,200 --> 00:40:55,890
 is start implementing a few more things.
 
-594
+583
 00:40:56,570 --> 00:40:59,580
 So I think the super easy way to go is
 
-595
+584
 00:40:59,580 --> 00:41:01,170
 we're not going to do just Pairs
 
-596
+585
 00:41:01,170 --> 00:41:03,570
 but we're going to find 3 of a kind, and 4 of a kind.
 
-597
+586
 00:41:03,570 --> 00:41:05,600
 and make sure the right thing comes out,
 
-598
+587
 00:41:05,600 --> 00:41:06,480
 and by that I mean,
 
-599
+588
 00:41:08,740 --> 00:41:12,740
 if I create a 3 of a kind,
 
-600
+589
 00:41:12,740 --> 00:41:14,740
 let's call it a three_of_a_kind_hand
 
-601
+590
 00:41:19,220 --> 00:41:23,170
 So if we have a three_of_a_kind_hand,
 it's going to be...
 
-602
+591
 00:41:25,770 --> 00:41:29,840
 I need 5 of Hearts, Diamonds and Spades.
 
-603
+592
 00:41:30,280 --> 00:41:34,660
 and that at the moment it's
 going to return a Pair, I presume.
 
-604
+593
 00:41:34,970 --> 00:41:37,080
 but actually we want it to return 3 of a kind,
 
-605
+594
 00:41:37,280 --> 00:41:40,330
 so this, should be...
 
-606
+595
 00:41:45,000 --> 00:41:47,850
 so if I start running this file now....
 
-607
+596
 00:41:49,200 --> 00:41:51,050
 Not like this,
 
-608
+597
 00:41:51,220 --> 00:41:52,770
 and not like this either.
 
-609
+598
 00:41:52,800 --> 00:41:56,040
 I think I'm doing
 something wrong... there we go.
 
-610
+599
 00:41:56,310 --> 00:42:00,120
 I do have a failure because it is assuming
 
-611
+600
 00:42:00,250 --> 00:42:03,340
 that I have type :highest and not type :three.
 
-612
+601
 00:42:03,510 --> 00:42:06,240
 because I am matching for exactly 2,
 
-613
+602
 00:42:06,570 --> 00:42:07,960
 and obviously it's 3.
 
-614
+603
 00:42:08,110 --> 00:42:10,510
 This might make my life a bit easier
 
-615
+604
 00:42:10,600 --> 00:42:12,280
 because I don't need to make sure
 
-616
+605
 00:42:12,310 --> 00:42:14,510
 that I'm doing things in the right order,
 
-617
+606
 00:42:14,570 --> 00:42:17,010
 for that specific comparison.
 
-618
+607
 00:42:17,080 --> 00:42:19,850
 I reckon it does matter for other things but,
 
-619
+608
 00:42:19,970 --> 00:42:21,820
 let's get to that when we get to that.
 
-620
+609
 00:42:24,890 --> 00:42:27,600
 I'm starting to write
 some pretty terrible code now.
 
-621
+610
 00:42:29,210 --> 00:42:31,940
 Shameless green...
 
-622
+611
 00:42:34,480 --> 00:42:39,290
 so if I have 3 then it becomes :three_of_a_kind
 
-623
+612
 00:42:40,830 --> 00:42:42,670
 and if I have 4 then
 
-624
+613
 00:42:42,940 --> 00:42:52,590
 suddenly it becomes :four_of_a_kind
 
-625
+614
 00:42:54,480 --> 00:42:56,410
 but that is pretty bad.
 
-626
+615
 00:42:58,800 --> 00:43:03,710
 I'm just going to check
 that my tests do pass nicely.
 
-627
+616
 00:43:03,940 --> 00:43:06,530
 And as they don't... it is :three_of_a_kind
 
-628
+617
 00:43:06,940 --> 00:43:10,020
 This is 3, so this should now pass.
 
-629
+618
 00:43:10,590 --> 00:43:13,130
 This now knows what a 3 of a kind is.
 
-630
+619
 00:43:14,030 --> 00:43:16,930
 I could write a quick 4 of a kind
 
-631
+620
 00:43:16,930 --> 00:43:19,520
 that we haven't covered for the future
 
-632
+621
 00:43:19,620 --> 00:43:21,770
 where we're going to
 be adding more things.
 
-633
+622
 00:43:21,770 --> 00:43:25,260
 I want to make sure
 that I'm not breaking things
 
-634
+623
 00:43:29,000 --> 00:43:33,970
 let's just create some
 test data with a four_of_a_kind_hand.
 
-635
+624
 00:43:34,370 --> 00:43:36,040
 This is terribly verbose,
 
-636
+625
 00:43:39,200 --> 00:43:43,910
 but we should have here
 5 of Clubs and that should pass.
 
-637
+626
 00:43:45,340 --> 00:43:46,960
 This is working out fine,
 
-638
+627
 00:43:47,140 --> 00:43:50,150
 This however, looks pretty terrible.
 
-639
+628
 00:43:50,650 --> 00:43:53,240
 So there must be a
 smarter way of doing this.
 
-640
+629
 00:43:56,680 --> 00:44:00,620
 I could jump in right there
 and try to do some kind of...
 
-641
+630
 00:44:01,200 --> 00:44:02,920
 look at the Pip count and the values
 
-642
+631
 00:44:02,920 --> 00:44:06,090
 and then if it's 2 it's a Pair,
 3 of a kind, 4 four of a kind.
 
-643
+632
 00:44:06,280 --> 00:44:09,720
 What I'm thinking now is that it matters
 
-644
+633
 00:44:09,880 --> 00:44:14,680
 about things along the lines of, for example
 
-645
+634
 00:44:14,680 --> 00:44:18,940
 I'm going to take a problematic
 example of the full house, where
 
-646
+635
 00:44:20,400 --> 00:44:23,080
 at the moment my code
 would give me back a 3 of a kind.
 
-647
+636
 00:44:23,080 --> 00:44:25,080
 I definitely don't want it to say that.
 
-648
+637
 00:44:25,080 --> 00:44:26,480
 I want it to be a full house.
 
-649
+638
 00:44:27,110 --> 00:44:32,110
 What I want to avoid
 now is making an abstraction
 
-650
+639
 00:44:32,380 --> 00:44:35,510
 on this logic of Pip counts, when actually,
 
-651
+640
 00:44:38,510 --> 00:44:42,000
 it's not clear to me as
 to where that should live.
 
-652
+641
 00:44:42,000 --> 00:44:43,820
 What I would like to try doing now is
 
-653
+642
 00:44:44,400 --> 00:44:48,010
 try implementing full house
 which has 3 of a kind, 2 of a kind
 
-654
+643
 00:44:48,480 --> 00:44:50,170
 in the same hand.
 
-655
+644
 00:44:50,370 --> 00:44:52,450
 Get that working and then at that point
 
-656
+645
 00:44:52,450 --> 00:44:54,050
 hopefully, I will know
 
-657
+646
 00:44:54,080 --> 00:44:57,050
 how I want to look at those card counts.
 
-658
+647
 00:44:57,080 --> 00:44:57,680
 TS: Ok.
 
-659
+648
 00:44:57,720 --> 00:44:58,970
 CB: So I can extract that.
 
-660
+649
 00:44:58,970 --> 00:45:02,410
 I'm going to leave this
 horror in a tiny bit longer
 
-661
+650
 00:45:02,510 --> 00:45:05,420
 until I know with more
 certainty where I'm heading.
 
-662
+651
 00:45:05,640 --> 00:45:07,900
 TS: So even though
 you're unhappy with your code
 
-663
+652
 00:45:07,900 --> 00:45:10,080
 you're going to hold off from
 refactoring it
 
-664
+653
 00:45:10,140 --> 00:45:13,450
 because you're not
 confident that your solution to it
 
-665
+654
 00:45:13,450 --> 00:45:15,000
 is complete yet.
 
-666
+655
 00:45:15,020 --> 00:45:18,020
 You don't want to introduce
 an abstraction that won't fit.
 
-667
+656
 00:45:20,140 --> 00:45:22,420
 You're worried that if you extract it at
 this point,
 
-668
+657
 00:45:22,420 --> 00:45:24,120
 then you will end up with something
 
-669
+658
 00:45:24,120 --> 00:45:25,620
 that won't support full house.
 
-670
+659
 00:45:25,680 --> 00:45:26,660
 CB: Yes, absolutely.
 
-671
+660
 00:45:27,140 --> 00:45:29,820
 My initial premature abstraction is
 
-672
+661
 00:45:30,340 --> 00:45:33,890
 I just map the number
 of pip count values to a type.
 
-673
+662
 00:45:34,080 --> 00:45:38,230
 and I can sense that that's
 going to fail when I get to full house.
 
-674
+663
 00:45:39,120 --> 00:45:41,440
 I want to see how I
 will implement full house,
 
-675
+664
 00:45:41,580 --> 00:45:44,370
 which is going to create
 more cruft in this code,
 
-676
+665
 00:45:44,380 --> 00:45:47,680
 but I think it would help
 me finding the right abstraction.
 
-677
+666
 00:45:47,680 --> 00:45:50,460
 I think there is such a thing as
 premature abstraction,
 
-678
+667
 00:45:50,540 --> 00:45:52,970
 I find myself guilty of it a lot of times.
 TS: Ok.
 
-679
+668
 00:45:59,930 --> 00:46:04,510
 CB: I'm going to create a quick
 test for my full house hand.
 
-680
+669
 00:46:04,940 --> 00:46:14,600
 and it has 5 of Hearts, 5 of Diamonds,
 5 of Spades, 6 of Clubs and 6 of Hearts.
 
-681
+670
 00:46:14,970 --> 00:46:18,790
 So we have [inaudible] 6s, and here we go.
 
-682
+671
 00:46:19,080 --> 00:46:21,350
 This is going to fail nicely.
 
-683
+672
 00:46:21,530 --> 00:46:26,280
 because we haven't implemented that yet
 and it's detecting a Pair.
 
-684
+673
 00:46:26,600 --> 00:46:29,480
 which is not what we want.
 
-685
+674
 00:46:37,170 --> 00:46:38,860
 Right now with my code I'm saying
 
-686
+675
 00:46:38,880 --> 00:46:43,170
 if there's 2 let's go there, if there's
 three let's go there, if there's four let's go there.
 
-687
+676
 00:46:43,540 --> 00:46:46,110
 This feels counter
 intuitive because in Poker,
 
-688
+677
 00:46:46,110 --> 00:46:49,880
 what I want to check is do I
 have a royal flush, or a straight flush etc.
 
-689
+678
 00:46:51,620 --> 00:46:54,200
 There is an order in which you would check
 
-690
+679
 00:46:54,370 --> 00:46:57,540
 because you would start
 (in your head) with the highest hand
 
-691
+680
 00:46:57,570 --> 00:47:00,280
 and if you don't have the best possible thing,
 
-692
+681
 00:47:00,280 --> 00:47:02,960
 you would lower the expectations of your hand
 
-693
+682
 00:47:03,110 --> 00:47:05,900
 and try to get as far down as you can.
 
-694
+683
 00:47:07,340 --> 00:47:10,170
 The way I have written
 this code is wrong in terms of
 
-695
+684
 00:47:10,170 --> 00:47:12,710
 how a human would try to solve the problem.
 
-696
+685
 00:47:12,820 --> 00:47:15,000
 I can also see it as part of a full house.
 
-697
+686
 00:47:15,150 --> 00:47:19,810
 so if we do a bit of reshuffling,
 
-698
+687
 00:47:19,810 --> 00:47:22,960
 and by that I mean check things,
 
-699
+688
 00:47:23,110 --> 00:47:27,480
 (this is terrible code by
 the way), but check things in a way
 
-700
+689
 00:47:28,430 --> 00:47:31,840
 so I start with
 the nicest possible outcome.
 
-701
+690
 00:47:31,880 --> 00:47:37,050
 and as I go along I get less
 desirable outcomes from my hand.
 
-702
+691
 00:47:37,280 --> 00:47:41,560
 then that would have given
 me a 3 of a kind, as a full house
 
-703
+692
 00:47:42,000 --> 00:47:45,960
 which is less wrong but still pretty wrong !
 
-704
+693
 00:47:46,400 --> 00:47:50,800
 TS: But what you've done
 there is you've built into your code
 
-705
+694
 00:47:52,260 --> 00:47:53,850
 because you were explaining it...
 
-706
+695
 00:47:53,870 --> 00:47:56,240
 then you were saying
 there is this implied thing.
 
-707
+696
 00:47:56,510 --> 00:47:59,110
 But if you're explaining what a 3 of a kind is
 
-708
+697
 00:47:59,170 --> 00:48:02,770
 there's this implication,
 well it's not a 4 of a kind
 
-709
+698
 00:48:03,220 --> 00:48:06,720
 a Pair is not a 4 of a kind,
 nor a 3 of a kind, and so it seems
 
-710
+699
 00:48:07,080 --> 00:48:09,810
 now your code
 more accurately reflects that.
 
-711
+700
 00:48:10,370 --> 00:48:15,190
 whereas before it was
 just working what by accident?
 
-712
+701
 00:48:15,420 --> 00:48:20,040
 CB: It was working only in
 the case where a specific hand
 
-713
+702
 00:48:20,200 --> 00:48:23,020
 only has for example, only
 3 of a kind and nothing else.
 
-714
+703
 00:48:23,250 --> 00:48:26,620
 TS: I see, it's the full house
 that's going to bring this out.
 
-715
+704
 00:48:26,770 --> 00:48:28,640
 CB: The full house is bringing this out
 
-716
+705
 00:48:28,650 --> 00:48:32,110
 and I think that other hands
 are going to bring this out anyway
 
-717
+706
 00:48:32,110 --> 00:48:35,770
 because if you have a flush that
 also happens to have a Pair in there
 
-718
+707
 00:48:35,770 --> 00:48:39,200
 you want to check flush first,
 it doesn't matter if you have a Pair.
 
-719
+708
 00:48:42,080 --> 00:48:46,850
 In the case of a full house,
 terrible code would go along the lines of
 
-720
+709
 00:48:46,940 --> 00:48:49,950
 if I happen to have 3 in my pip count values
 
-721
+710
 00:48:50,080 --> 00:48:51,720
 then two things can happen.
 
-722
+711
 00:48:51,820 --> 00:48:55,560
 Either I have also in my
 pip count a value that is
 
-723
+712
 00:48:55,650 --> 00:48:59,580
 2, so I have a 3 and a
 2 and therefore a full house.
 
-724
+713
 00:48:59,650 --> 00:49:02,910
 Otherwise, the best thing I do have
 
-725
+714
 00:49:02,970 --> 00:49:05,760
 is 3 of a kind.
 
-726
+715
 00:49:05,850 --> 00:49:11,640
 So that would make my
 test pass, but it's beginning to look terrible
 
-727
+716
 00:49:11,740 --> 00:49:15,210
 First let's check that I didn't get this one wrong.
 
-728
+717
 00:49:15,910 --> 00:49:19,590
 so now that passes nicely and this looks awful !
 
-729
+718
 00:49:26,600 --> 00:49:30,440
 I believe there's a
 problem in how I'm testing those
 
-730
+719
 00:49:32,920 --> 00:49:34,660
 TS: What's the problem ?
 
-731
+720
 00:49:34,800 --> 00:49:39,120
 CB: I'm checking that an
 array includes a certain number.
 
-732
+721
 00:49:39,250 --> 00:49:41,250
 and what I want to know is does my array,
 
-733
+722
 00:49:41,880 --> 00:49:45,680
 in the case of 4 of a kind it includes 4, for sure.
 
-734
+723
 00:49:46,010 --> 00:49:47,600
 and I don't need to look at the rest,
 
-735
+724
 00:49:47,600 --> 00:49:53,120
 but in the others there are a
 number of things that we want to look at.
 
-736
+725
 00:49:57,080 --> 00:49:59,990
 What I want to try doing is...........
 
-737
+726
 00:50:03,620 --> 00:50:06,400
 TS: It sounds like you're
 switching into refactoring.
 
-738
+727
 00:50:06,420 --> 00:50:06,940
 CB: Yes.
 
-739
+728
 00:50:07,640 --> 00:50:09,430
 TS: Why have you chosen this point.
 
-740
+729
 00:50:09,950 --> 00:50:12,310
 because you said
 there are some other hands
 
-741
+730
 00:50:12,310 --> 00:50:14,310
 that you haven't implemented yet.
 
-742
+731
 00:50:14,600 --> 00:50:16,910
 Do you feel that you
 have come to a point now
 
-743
+732
 00:50:16,910 --> 00:50:18,970
 where you have sufficient confidence
 
-744
+733
 00:50:18,970 --> 00:50:21,710
 in your implementation
 so far to start refactoring it ?
 
-745
+734
 00:50:21,710 --> 00:50:25,220
 CB: I think I have sufficient
 confidence to start thinking about it.
 
-746
+735
 00:50:25,220 --> 00:50:28,250
 But I might hit a mental
 block in a few seconds (laughter).
 
-747
+736
 00:50:29,450 --> 00:50:38,000
 I want to see how the
 other hands are going to work out.
 
-748
+737
 00:50:38,080 --> 00:50:40,370
 All my other hands are along the lines of
 
-749
+738
 00:50:40,880 --> 00:50:44,280
 straight and flush, and we can
 assume that's already out of the way.
 
-750
+739
 00:50:45,420 --> 00:50:47,200
 By the time the code will hit those
 
-751
+740
 00:50:47,220 --> 00:50:50,310
 and now we're counting the
 cards we've already excluded.
 
-752
+741
 00:50:50,310 --> 00:50:52,600
 a couple of those things.
 
-753
+742
 00:50:54,680 --> 00:50:56,430
 I still don't like this.
 
-754
+743
 00:50:56,480 --> 00:50:59,580
 I don't like entering
 this type of code because
 
-755
+744
 00:50:59,620 --> 00:51:02,760
 if 4 of a kind is better
 than a flush, for example,
 
-756
+745
 00:51:02,850 --> 00:51:05,360
 so I want to look at those things later.
 
-757
+746
 00:51:06,220 --> 00:51:09,980
 I am starting to imagine that I am creating
 
-758
+747
 00:51:10,170 --> 00:51:12,560
 as I go along - this is a list of all the things
 
-759
+748
 00:51:12,710 --> 00:51:13,710
 you can do in Poker,
 
-760
+749
 00:51:13,710 --> 00:51:17,960
 and this is how well
 they rank in the world of poker.
 
-761
+750
 00:51:18,710 --> 00:51:21,830
 the highest and the lowest ranking.
 
-762
+751
 00:51:22,880 --> 00:51:26,330
 And a straight flush is as high as it gets.
 
-763
+752
 00:51:31,310 --> 00:51:34,320
 What I am creating in
 my head is some kind of thing.
 
-764
+753
 00:51:34,390 --> 00:51:41,070
 along the lines of
 a thing called Poker ranks
 
-765
+754
 00:51:41,620 --> 00:51:44,640
 which is something along the lines of.
 
-766
+755
 00:51:45,680 --> 00:51:49,700
 The most desirable
 'thing' is a straight flush.
 
-767
+756
 00:51:50,680 --> 00:51:52,030
 Let's give that a rating of...
 
-768
+757
 00:51:52,040 --> 00:51:53,070
 I don't know how many
 
-769
+758
 00:51:53,080 --> 00:51:56,040
 different types of cards
 there are in Poker. Let's say 10
 
-770
+759
 00:51:56,200 --> 00:51:59,820
 but I think that's wrong,
 and then we have a 4 of a kind
 
-771
+760
 00:51:59,970 --> 00:52:03,800
 and that would be a rating 9, and then
 
-772
+761
 00:52:04,000 --> 00:52:04,880
 so on and so forth.
 
-773
+762
 00:52:06,680 --> 00:52:08,310
 Each of those can have a method
 
-774
+763
 00:52:08,310 --> 00:52:11,520
 that checks the card is what it is.
 
-775
+764
 00:52:11,710 --> 00:52:13,750
 But that would re-use quite a lot of code
 
-776
+765
 00:52:13,770 --> 00:52:16,730
 and I'm not happy about that either.
 
-777
+766
 00:52:16,820 --> 00:52:18,860
 So, let's not do that.
 
-778
+767
 00:52:19,020 --> 00:52:22,410
 TS: OK, so you're
 talking about having some sort
 
-779
+768
 00:52:22,430 --> 00:52:24,070
 of scoring system.
 
-780
+769
 00:52:24,110 --> 00:52:26,940
 TS: What was your motivation
 for wanting to score them ?
 
-781
+770
 00:52:30,170 --> 00:52:34,580
 CB: I'm motivated to have
 some defined order which
 
-782
+771
 00:52:34,740 --> 00:52:39,200
 looks for the best
 and worst possible outcomes
 
-783
+772
 00:52:39,340 --> 00:52:43,700
 other than it checks for them
 in a different order in the code.
 
-784
+773
 00:52:44,050 --> 00:52:46,020
 TS: So you want to make that more explicit
 
-785
+774
 00:52:46,020 --> 00:52:48,570
 rather than writing a method that looks like
 
-786
+775
 00:52:48,620 --> 00:52:50,480
 you could do it in any order.
 CB: Yes.
 
-787
+776
 00:53:03,450 --> 00:53:07,820
 I'm going to start doing a tiny bit of
 extract method.
 
-788
+777
 00:53:18,310 --> 00:53:20,400
 Just so I can see where things are going
 
-789
+778
 00:53:20,420 --> 00:53:22,020
 This is all going to be private.
 
-790
+779
 00:53:22,940 --> 00:53:27,320
 I'm going to quickly go through those
 
-791
+780
 00:53:32,620 --> 00:53:33,760
 That was a bit odd...
 
-792
+781
 00:53:36,600 --> 00:53:40,420
 Now we are assuming
 that we have those magical
 
-793
+782
 00:53:40,650 --> 00:53:43,970
 methods: has_four, has_three, has_two
 
-794
+783
 00:53:44,170 --> 00:53:45,970
 And checks whether there is a Pair
 
-795
+784
 00:53:45,970 --> 00:53:50,370
 or a 3 or a combination of 4 in there.
 
-796
+785
 00:53:50,400 --> 00:53:52,720
 which doesn't mean it's a three of a kind.
 
-797
+786
 00:53:52,770 --> 00:53:57,290
 it means there happens to be
 3 cards of the same kind in there.
 
-798
+787
 00:53:57,420 --> 00:53:59,790
 So if we have has_four, then this is
 
-799
+788
 00:53:59,820 --> 00:54:02,880
 still include(4) and in much the same way
 
-800
+789
 00:54:03,020 --> 00:54:06,000
 let's assume I have has_three and has_two
 
-801
+790
 00:54:07,020 --> 00:54:10,300
 and that's going to be
 pretty much what you think it is.
 
-802
+791
 00:54:10,340 --> 00:54:11,570
 and that's a bit verbose
 
-803
+792
 00:54:11,570 --> 00:54:13,280
 but I'm not so bothered about that
 
-804
+793
 00:54:13,280 --> 00:54:16,710
 because it's hidden away in private
 methods and I can get round to it later
 
-805
+794
 00:54:17,020 --> 00:54:20,430
 if I feel it is necessary.
 
-806
+795
 00:54:20,570 --> 00:54:22,980
 This feels more readable to me.
 
-807
+796
 00:54:23,300 --> 00:54:26,540
 It feels like the 4 of a kind type
 
-808
+797
 00:54:27,680 --> 00:54:29,200
 has the has_four check.
 
-809
+798
 00:54:29,200 --> 00:54:32,740
 And for the full house, this needs
 to be true and this needs to be true.
 
-810
+799
 00:54:32,880 --> 00:54:35,080
 3 of a kind check this only needs to be true
 
-811
+800
 00:54:35,450 --> 00:54:37,500
 Pair has_pair needs to be true.
 
-812
+801
 00:54:37,620 --> 00:54:41,360
 So suddenly I have all my cards,
 
-813
+802
 00:54:41,570 --> 00:54:43,800
 all of the types of things I can do in Poker.
 
-814
+803
 00:54:44,050 --> 00:54:46,060
 and I have a combination of methods
 
-815
+804
 00:54:46,170 --> 00:54:49,540
 that can tell me exactly why that would be.
 
-816
+805
 00:54:50,140 --> 00:54:52,080
 CB: So the easy way of doing it would be:
 
-817
+806
 00:54:54,330 --> 00:54:56,410
 If has_four then that.
 
-818
+807
 00:54:56,910 --> 00:54:58,080
 This is still verbose.
 
-819
+808
 00:54:58,400 --> 00:55:01,050
 I start refactoring
 and then usually I
 
-820
+809
 00:55:01,080 --> 00:55:03,140
 add a lot of stuff, make it very explicit
 
-821
+810
 00:55:03,140 --> 00:55:04,770
 then start compressing later.
 
-822
+811
 00:55:06,000 --> 00:55:07,960
 So elsif full_house
 
-823
+812
 00:55:10,110 --> 00:55:11,600
 then :type => :full_house.
 
-824
+813
 00:55:13,420 --> 00:55:16,830
 elsif has_three then....
 
-825
+814
 00:55:17,140 --> 00:55:19,430
 3 of a kind, elsif has_pair, then Pair
 
-826
+815
 00:55:21,680 --> 00:55:26,980
 I'm going to have to
 implement full house quickly,
 
-827
+816
 00:55:27,140 --> 00:55:28,590
 missing a def here.
 
-828
+817
 00:55:28,740 --> 00:55:31,600
 Here we go, it's has_three and...
 
-829
+818
 00:55:34,340 --> 00:55:35,710
 maybe not multiply these.
 
-830
+819
 00:55:37,050 --> 00:55:38,970
 I don't know what that does actually.
 
-831
+820
 00:55:38,970 --> 00:55:40,570
 if you multiply two methods.
 
-832
+821
 00:55:40,570 --> 00:55:42,600
 It complains loudly but I don't know how.
 
-833
+822
 00:55:43,000 --> 00:55:46,060
 This feels more readable.
 
-834
+823
 00:55:48,050 --> 00:55:52,570
 That's kind of what I would like to check
 
-835
+824
 00:55:53,280 --> 00:55:54,490
 It doesn't.
 
-836
+825
 00:55:55,820 --> 00:55:59,910
 That's because question marks are nice
 
-837
+826
 00:56:00,170 --> 00:56:07,020
 it's maybe not the day to invent new
 methods in Ruby
 
-838
+827
 00:56:07,020 --> 00:56:13,890
 undefined local variable or method
 has_pair simply because I called it has_two
 
-839
+828
 00:56:18,170 --> 00:56:19,390
 let's keep it that way.
 
-840
+829
 00:56:22,630 --> 00:56:23,040
 Go...
 
-841
+830
 00:56:24,170 --> 00:56:26,040
 and now we're back in action.
 
-842
+831
 00:56:26,080 --> 00:56:28,060
 this is more readable.
 
-843
+832
 00:56:29,050 --> 00:56:30,680
 We're checking things in order.
 
-844
+833
 00:56:31,020 --> 00:56:33,540
 there is a better way
 of doing that but let's wait
 
-845
+834
 00:56:33,540 --> 00:56:35,170
 until I have a couple more hands
 
-846
+835
 00:56:35,170 --> 00:56:37,340
 and I can drive out something a bit better.
 
-847
+836
 00:56:37,340 --> 00:56:40,420
 I had an idea with a ranking but I'm not
 quite happy with it yet.
 
-848
+837
 00:56:40,420 --> 00:56:40,830
 TS: Ok.
 
-849
+838
 00:56:45,620 --> 00:56:48,510
 CB: Do you have a favorite
 hand that you want to implement next ?
 
-850
+839
 00:56:48,510 --> 00:56:50,420
 TS: Well I don't want to prejudice you.
 
-851
+840
 00:56:50,420 --> 00:56:51,820
 What's your favorite hand ?
 
-852
+841
 00:56:51,850 --> 00:56:52,880
 CB: A straight flush.
 
-853
+842
 00:56:52,880 --> 00:56:54,250
 TS: Then go with that.
 
-854
+843
 00:56:57,800 --> 00:56:59,270
 CB: We'll have a straight flush.
 
-855
+844
 00:56:59,280 --> 00:57:03,930
 TS: Seems a bit optimistic as you
 don't have straights or flushes yet
 
-856
+845
 00:57:04,150 --> 00:57:05,280
 but if you want to yes.
 
-857
+846
 00:57:05,280 --> 00:57:09,120
 I think that's going to
 drive out the changes quickly.
 
-858
+847
 00:57:09,280 --> 00:57:12,010
 But yes you're right, may be a bit optimistic.
 
-859
+848
 00:57:15,170 --> 00:57:19,340
 In much the same way that full house
 is a has_two and has_three situation,
 
-860
+849
 00:57:19,820 --> 00:57:21,740
 a straight flush is a straight and is
 a flush.
 
-861
+850
 00:57:21,850 --> 00:57:24,270
 TS: Is straight or flush easier to do?
 
-862
+851
 00:57:27,220 --> 00:57:28,570
 I reckon flush.
 
-863
+852
 00:57:28,740 --> 00:57:30,170
 TS: Why don't we do flush then.
 
-864
+853
 00:57:30,170 --> 00:57:30,740
 CB: Alright.
 
-865
+854
 00:57:32,880 --> 00:57:36,300
 Let's quickly create a flush hand.
 
-866
+855
 00:57:39,680 --> 00:57:43,280
 The test definition is right at the top.
 This file is getting verbose.
 
-867
+856
 00:57:46,080 --> 00:57:49,820
 TS: It's a good job you've got that
 hand parser otherwise it would be even worse
 
-868
+857
 00:57:51,450 --> 00:57:53,970
 CB: I don't want to imagine what it would look like
 
-869
+858
 00:57:53,970 --> 00:57:55,540
 if we had to do doubles for this.
 
-870
+859
 00:57:58,480 --> 00:58:02,170
 So flush, let's go for all Hearts.
 
-871
+860
 00:58:06,880 --> 00:58:12,540
 I'm going to give
 myself a very disappointing hand.
 
-872
+861
 00:58:12,910 --> 00:58:16,980
 If you had that hand
 in Poker, you would say WHY !!!
 
-873
+862
 00:58:18,850 --> 00:58:20,700
 So that should give me a flush
 
-874
+863
 00:58:20,740 --> 00:58:23,370
 and I'm going to check
 that it's definitely failing.
 
-875
+864
 00:58:24,020 --> 00:58:25,400
 TS: What does it think it is ?
 
-876
+865
 00:58:27,480 --> 00:58:30,400
 CB: That's an interesting one.
 
-877
+866
 00:58:32,480 --> 00:58:33,800
 We have a new problem now.
 
-878
+867
 00:58:33,910 --> 00:58:34,800
 TS: What's gone wrong?
 
-879
+868
 00:58:35,820 --> 00:58:39,450
 CB: well, 10, it's got two numbers.
 
-880
+869
 00:58:39,650 --> 00:58:41,720
 so it's not parsing it properly.
 
-881
+870
 00:58:42,710 --> 00:58:45,370
 I'm taking the first character only
 
-882
+871
 00:58:45,570 --> 00:58:48,880
 and in the second I'm
 taking the second character only.
 
-883
+872
 00:58:48,910 --> 00:58:50,620
 There's two ways we can solve this
 
-884
+873
 00:58:50,620 --> 00:58:54,510
 I represent 10 in another
 way, like zero or something silly.
 
-885
+874
 00:58:54,710 --> 00:58:57,680
 I don't want to do that,
 we can just very quickly change the parser
 
-886
+875
 00:58:58,450 --> 00:59:01,000
 so that it doesn't take the zero, and the one
 
-887
+876
 00:59:01,020 --> 00:59:02,940
 and it takes something a bit smarter.
 
-888
+877
 00:59:02,940 --> 00:59:04,770
 TS: The error that's coming out there
 
-889
+878
 00:59:04,770 --> 00:59:07,100
 is that because you
 did the fetch on the hash ?
 
-890
+879
 00:59:07,370 --> 00:59:09,280
 CB: Yes, if I hadn't done a fetch on a hash.
 
-891
+880
 00:59:09,280 --> 00:59:10,800
 and I had put a default value.
 
-892
+881
 00:59:11,080 --> 00:59:12,970
 who knows what would happen in that parser
 
-893
+882
 00:59:12,970 --> 00:59:16,450
 #TODO: fail loudly.
 
-894
+883
 00:59:16,450 --> 00:59:17,910
 TS: Yes, it's already paying off.
 
-895
+884
 00:59:18,040 --> 00:59:19,910
 CB: It is failing loudly, so OK...
 
-896
+885
 00:59:23,140 --> 00:59:25,400
 here we're taking only the first character,
 
-897
+886
 00:59:25,570 --> 00:59:28,610
 and here only the last character.
 
-898
+887
 00:59:28,680 --> 00:59:31,020
 What I want to do is
 
-899
+888
 00:59:31,110 --> 00:59:33,870
 take the last one.
 
-900
+889
 00:59:34,080 --> 00:59:38,970
 so how do I get the last char out of a string?
 I can do something along the lines of:
 
-901
+890
 00:59:44,020 --> 00:59:45,460
 Oh, I don't even know.
 
-902
+891
 00:59:45,510 --> 00:59:49,070
 Now how I would do that,
 and I know that's incorrect
 
-903
+892
 00:59:53,480 --> 00:59:55,450
 would be something along those lines.
 
-904
+893
 00:59:56,340 --> 00:59:58,310
 There must be a better way though.
 
-905
+894
 01:00:02,910 --> 01:00:05,340
 I know there's a way
 of doing it with minus ones
 
-906
+895
 01:00:05,340 --> 01:00:07,960
 but I don't want to do that right now.
 
-907
+896
 01:00:08,480 --> 01:00:10,140
 I'm feeling particularly lazy.
 
-908
+897
 01:00:11,170 --> 01:00:12,570
 Here, I want to go up to cards.
 
-909
+898
 01:00:15,230 --> 01:00:17,710
 String length minus
 one, take that as a string.
 
-910
+899
 01:00:18,740 --> 01:00:20,770
 I want to run the spec quickly because
 
-911
+900
 01:00:21,250 --> 01:00:22,680
 I reckon I've got this wrong.
 
-912
+901
 01:00:24,200 --> 01:00:27,420
 Wrong number of arguments,
 what have we done now?
 
-913
+902
 01:00:35,000 --> 01:00:36,200
 This is still fetching a string.
 
-914
+903
 01:00:38,000 --> 01:00:41,830
 I will make sure I've got a
 test that does the 10
 
-915
+904
 01:00:43,850 --> 01:00:44,960
 might as well....
 
-916
+905
 01:00:47,580 --> 01:00:49,050
 let's just run this file now.
 
-917
+906
 01:00:50,000 --> 01:00:55,360
 Now we have a hand parser...
 line 20...length, so that's not right.
 
-918
+907
 01:00:56,420 --> 01:00:59,370
 So hand parser on
 line 20 calling length on...
 
-919
+908
 01:01:06,220 --> 01:01:08,380
 It's an array, no.
 
-920
+909
 01:01:10,760 --> 01:01:12,080
 No it's called card string
 
-921
+910
 01:01:12,130 --> 01:01:13,940
 I would suspect that it's a string
 
-922
+911
 01:01:14,000 --> 01:01:18,960
 so wrong number of arguments one for zero
 why does it think it has an argument?
 
-923
+912
 01:01:19,120 --> 01:01:20,740
 because parentheses
 
-924
+913
 01:01:25,400 --> 01:01:29,420
 Ah, extract method, this is terrible.
 
-925
+914
 01:01:31,260 --> 01:01:33,280
 so last number of...
 
-926
+915
 01:01:36,310 --> 01:01:39,330
 This is terrible, I
 should just do it with minus ones.
 
-927
+916
 01:01:41,080 --> 01:01:42,970
 TS: How does the minus one thing work ?
 
-928
+917
 01:01:42,970 --> 01:01:46,840
 I believe it puts you in
 an imaginary space between
 
-929
+918
 01:01:47,050 --> 01:01:50,630
 the start and end of your
 array, but I might be wrong.
 
-930
+919
 01:01:51,000 --> 01:01:52,600
 So what I will do is:
 
-931
+920
 01:01:53,220 --> 01:01:58,640
 it's the end of the card number index.
 
-932
+921
 01:02:01,080 --> 01:02:03,540
 this should be something along those lines.
 
-933
+922
 01:02:03,770 --> 01:02:06,680
 and here I want to go up
 to the end of card number index
 
-934
+923
 01:02:07,080 --> 01:02:10,250
 and here I want to go from
 zero to the end card index minus
 
-935
+924
 01:02:17,140 --> 01:02:19,880
 No, I want to go to the end of card index
 
-936
+925
 01:02:20,560 --> 01:02:22,250
 and here I want to go to this.
 
-937
+926
 01:02:26,050 --> 01:02:27,780
 So this should still fail.
 
-938
+927
 01:02:30,880 --> 01:02:32,410
 TS: That's not very optimistic.
 
-939
+928
 01:02:32,420 --> 01:02:33,960
 CB: We have key not found
 
-940
+929
 01:02:37,880 --> 01:02:39,280
 fetch is failing again.
 
-941
+930
 01:02:42,050 --> 01:02:46,870
 so my card string of this is not working out.
 
-942
+931
 01:02:46,970 --> 01:02:49,330
 So this is nil because
 
-943
+932
 01:02:49,450 --> 01:02:51,950
 end of card number plus one is
 
-944
+933
 01:02:56,570 --> 01:02:58,500
 not quite what I want it to be.
 
-945
+934
 01:02:59,480 --> 01:03:00,820
 Why is old code popping up ?
 
-946
+935
 01:03:04,430 --> 01:03:08,140
 So now that it has been determined
 that I am terrible at array indexing
 
-947
+936
 01:03:09,570 --> 01:03:12,150
 Let's get back to our tests
 
-948
+937
 01:03:12,510 --> 01:03:15,040
 It's lucky that I spotted that when I did.
 
-949
+938
 01:03:19,770 --> 01:03:23,400
 this is the failure which led us
 to another failure.
 
-950
+939
 01:03:23,850 --> 01:03:25,400
 But this is good.
 
-951
+940
 01:03:27,080 --> 01:03:29,000
 Now, where is our flush ?
 
-952
+941
 01:03:29,490 --> 01:03:35,480
 This is where I don't know Poker
 quite as we'll as I would like to
 
-953
+942
 01:03:36,080 --> 01:03:39,990
 so elsif flush, type flush.
 
-954
+943
 01:03:43,510 --> 01:03:46,260
 Where does flush
 belong on this sort of thing
 
-955
+944
 01:03:47,020 --> 01:03:49,940
 It is above full house. Yes.
 
-956
+945
 01:03:53,710 --> 01:03:55,220
 TS: It doesn't actually matter.
 
-957
+946
 01:03:55,220 --> 01:03:58,390
 No, that's right but it would matter
 
-958
+947
 01:03:58,480 --> 01:04:01,110
 to someone who plays Poker perhaps.
 
-959
+948
 01:04:02,280 --> 01:04:04,280
 TS: At the moment you don't have any code
 
-960
+949
 01:04:04,280 --> 01:04:07,140
 that compares two hands
 to find out which one is better.
 
-961
+950
 01:04:07,140 --> 01:04:09,770
 as long as they are
 correctly classified that's OK.
 
-962
+951
 01:04:09,800 --> 01:04:12,510
 CB: Yes, so let's implement a very quick flush.
 
-963
+952
 01:04:18,450 --> 01:04:19,560
 so what my flush is...
 
-964
+953
 01:04:19,710 --> 01:04:22,940
 in much the same way as I'm doing
 do I have two cards of the same thing.
 
-965
+954
 01:04:23,480 --> 01:04:26,100
 I'm saying can you look at all my suits
 
-966
+955
 01:04:26,620 --> 01:04:28,370
 and tell me if they're all the same.
 
-967
+956
 01:04:28,370 --> 01:04:29,370
 and that's about it.
 
-968
+957
 01:04:31,370 --> 01:04:33,570
 Much in the same way
 I'm doing the pip count,
 
-969
+958
 01:04:33,570 --> 01:04:37,160
 I probably want something
 along the lines of a suit count.
 
-970
+959
 01:04:38,510 --> 01:04:40,580
 that does this but with suits.
 
-971
+960
 01:04:41,000 --> 01:04:51,020
 and here I'm going to do the dupe flag
 which means I've copy/pasted this
 
-972
+961
 01:04:51,620 --> 01:04:54,940
 maybe there's a better abstraction
 to use here.
 
-973
+962
 01:04:55,250 --> 01:04:57,240
 so here I'm grouping it by suits.
 
-974
+963
 01:04:59,650 --> 01:05:03,680
 I'm going to write a quick test to
 make sure this is doing what I think it is
 
-975
+964
 01:05:04,740 --> 01:05:10,310
 because I'm not confident enough
 to reckon that it's all going to be fine.
 
-976
+965
 01:05:11,600 --> 01:05:13,230
 So in this hand I have
 
-977
+966
 01:05:15,450 --> 01:05:17,680
 my Pair hand which I am using
 
-978
+967
 01:05:19,850 --> 01:05:21,760
 It has 4 Diamonds and 1 Heart.
 
-979
+968
 01:05:22,740 --> 01:05:28,480
 so I should have Heart 1 and Diamonds 4.
 
-980
+969
 01:05:28,910 --> 01:05:33,160
 It shouldn't be the pip
 count, it should be the suit count
 
-981
+970
 01:05:33,600 --> 01:05:35,480
 I believe that's what I called it. Yes.
 
-982
+971
 01:05:39,770 --> 01:05:41,020
 Now I have two failures.
 
-983
+972
 01:05:41,020 --> 01:05:42,620
 This is the expected failure
 
-984
+973
 01:05:43,020 --> 01:05:44,650
 expected method suits.
 
-985
+974
 01:05:46,200 --> 01:05:49,520
 Not the interface I was programming to
 
-986
+975
 01:05:50,820 --> 01:05:54,640
 So this should be suit and not suits.
 
-987
+976
 01:05:56,970 --> 01:06:00,590
 And now it seems to be
 working and we're back on our problem.
 
-988
+977
 01:06:00,680 --> 01:06:02,540
 which is permitting flush.
 
-989
+978
 01:06:03,000 --> 01:06:06,280
 but now if I have some kind of flush count
 
-990
+979
 01:06:06,340 --> 01:06:12,160
 oh no, suit count, then
 suddenly my life is quite a lot easier.
 
-991
+980
 01:06:21,170 --> 01:06:23,520
 I can implement this... let's see
 
-992
+981
 01:06:25,080 --> 01:06:26,000
 Now I have a flush.
 
-993
+982
 01:06:34,710 --> 01:06:35,970
 Very quickly a straight
 
-994
+983
 01:06:38,310 --> 01:06:41,040
 This should be more interesting and
 more complicated
 
-995
+984
 01:06:41,570 --> 01:06:44,880
 It's not something we've done so far
 
-996
+985
 01:06:45,370 --> 01:06:48,270
 so I have 5 of Hearts,
 6 of Hearts 7, of Hearts, 8 of Hearts
 
-997
+986
 01:06:48,480 --> 01:06:50,530
 and a 9 of Diamonds.
 
-998
+987
 01:06:50,540 --> 01:06:54,430
 because it's not a straight flush.
 
-999
+988
 01:06:54,650 --> 01:06:57,140
 Let's check if this is failing nicely. Yes.
 
-1000
+989
 01:06:59,420 --> 01:07:01,850
 And let's put our
 straight somewhere in there.
 
-1001
+990
 01:07:08,680 --> 01:07:09,890
 There we go.
 
-1002
+991
 01:07:10,000 --> 01:07:13,100
 and if flush and straight
 in much the same way
 
-1003
+992
 01:07:15,680 --> 01:07:18,270
 Let's have a look and see if those...
 
-1004
+993
 01:07:19,680 --> 01:07:22,410
 what I care about is the straight
 and not the suits.
 
-1005
+994
 01:07:22,540 --> 01:07:25,800
 I'm going to look at the cards
 and their face values
 
-1006
+995
 01:07:25,820 --> 01:07:28,200
 and I need to make
 sure they are consecutive.
 
-1007
+996
 01:07:28,350 --> 01:07:28,840
 TS: Ok.
 
-1008
+997
 01:07:30,250 --> 01:07:31,800
 CB: How will I do that?
 
-1009
+998
 01:07:32,170 --> 01:07:33,120
 TS: Good question.
 
-1010
+999
 01:07:34,110 --> 01:07:37,570
 The first thing I would
 probably want to do is extract out
 
-1011
+1000
 01:07:37,600 --> 01:07:40,680
 of the cards array just the array of values.
 
-1012
+1001
 01:07:40,940 --> 01:07:42,650
 because this is what I care about.
 
-1013
+1002
 01:07:46,000 --> 01:07:47,790
 Let's see, where are our cards ?
 
-1014
+1003
 01:07:48,650 --> 01:07:50,120
 What I want is this:
 
-1015
+1004
 01:07:50,910 --> 01:07:56,200
 Now I have some kind of array
 that is 3567, something like that.
 
-1016
+1005
 01:07:56,450 --> 01:08:00,050
 In all likelihood it could be 47892
 
-1017
+1006
 01:08:00,420 --> 01:08:01,800
 and completely unsorted.
 
-1018
+1007
 01:08:05,600 --> 01:08:07,670
 so let's just sort that really quickly.
 
-1019
+1008
 01:08:07,710 --> 01:08:14,680
 and we have sorted card values
 
-1020
+1009
 01:08:17,000 --> 01:08:19,570
 I don't know why I'm
 doing it in a destructive way.
 
-1021
+1010
 01:08:22,020 --> 01:08:25,850
 I just like bangs, but that's a bit silly.
 
-1022
+1011
 01:08:26,440 --> 01:08:27,880
 So I have sorted card values
 
-1023
+1012
 01:08:28,280 --> 01:08:31,280
 I want to know if they are consecutive.
 
-1024
+1013
 01:08:35,370 --> 01:08:37,480
 Is there something that does that in ruby
 
-1025
+1014
 01:08:37,480 --> 01:08:38,970
 or do I need to re-implement it?
 
-1026
+1015
 01:08:40,560 --> 01:08:41,480
 TS: I'm not sure.
 
-1027
+1016
 01:08:41,540 --> 01:08:43,720
 CB: OK, so what I care about
 
-1028
+1017
 01:08:43,770 --> 01:08:47,270
 if I'm trying to determine
 if things are consecutive
 
-1029
+1018
 01:08:47,280 --> 01:08:50,920
 Let's assume we live in
 a world where Aces don't exist.
 
-1030
+1019
 01:08:51,370 --> 01:08:51,870
 TS: Ok.
 
-1031
+1020
 01:08:53,970 --> 01:08:56,760
 CB: Because Aces... no I don't want to go there
 
-1032
+1021
 01:08:57,080 --> 01:09:02,860
 So if I have 12345 as
 in Ace 2345, that's a straight
 
-1033
+1022
 01:09:03,250 --> 01:09:07,220
 but I can also count Ace as the high card,
 so after King.
 
-1034
+1023
 01:09:08,170 --> 01:09:11,800
 My initial idea was I could just
 have a bunch of numbers
 
-1035
+1024
 01:09:12,080 --> 01:09:14,330
 and all I need to care about is...
 
-1036
+1025
 01:09:15,720 --> 01:09:18,110
 I look at the face
 value on there and on there,
 
-1037
+1026
 01:09:18,280 --> 01:09:21,040
 they are sorted, so
 if the difference between
 
-1038
+1027
 01:09:21,110 --> 01:09:23,740
 this Pair and this Pair
 and this Pair is always one,
 
-1039
+1028
 01:09:24,220 --> 01:09:25,820
 then I've won and it's a straight.
 
-1040
+1029
 01:09:26,720 --> 01:09:30,160
 but I can't really do that if
 I'm doing Aces because
 
-1041
+1030
 01:09:30,280 --> 01:09:34,470
 my Ace would potentially sit on
 one side or other of the array.
 
-1042
+1031
 01:09:38,110 --> 01:09:41,000
 Let's assume Aces are just ones for now.
 
-1043
+1032
 01:09:41,910 --> 01:09:45,240
 and then I'm going to make sure that I
 
-1044
+1033
 01:09:45,280 --> 01:09:52,360
 write a test which is
 "it works with a straight with high Ace".
 
-1045
+1034
 01:09:57,420 --> 01:10:00,620
 and it works with a straight with low ace.
 
-1046
+1035
 01:10:01,000 --> 01:10:03,440
 TS: Which one of those is the special case ?
 
-1047
+1036
 01:10:04,170 --> 01:10:07,080
 CB: It depends how I classify an Ace.
 
-1048
+1037
 01:10:07,800 --> 01:10:10,630
 If Ace is a one in the way I write it
 
-1049
+1038
 01:10:10,680 --> 01:10:12,760
 then low Ace isn't my special case.
 
-1050
+1039
 01:10:12,800 --> 01:10:15,000
 But if I write Ace as an A for example,
 
-1051
+1040
 01:10:15,040 --> 01:10:18,920
 which then puts it in
 the category of King Queen....
 
-1052
+1041
 01:10:18,970 --> 01:10:22,450
 which I would assign a higher point value.
 
-1053
+1042
 01:10:22,750 --> 01:10:26,920
 So then 10 is 10, Jack is 11, Queen is 12, King is 13.
 
-1054
+1043
 01:10:27,510 --> 01:10:29,680
 then ace is both one and 14.
 
-1055
+1044
 01:10:29,880 --> 01:10:30,400
 TS: Ok.
 
-1056
+1045
 01:10:33,220 --> 01:10:35,640
 Which might be how I implement it.
 
-1057
+1046
 01:10:36,090 --> 01:10:38,360
 If you see an Ace in there...
 
-1058
+1047
 01:10:39,200 --> 01:10:41,170
 look at the array and count it as a one,
 
-1059
+1048
 01:10:41,170 --> 01:10:43,780
 and then look at the array
 and count it as 14.
 
-1060
+1049
 01:10:44,340 --> 01:10:46,170
 and see where it takes you.
 
-1061
+1050
 01:10:47,820 --> 01:10:50,740
 You can't really have a
 straight that takes both anyway
 
-1062
+1051
 01:10:50,740 --> 01:10:52,480
 so that should sort us out nicely.
 
-1063
+1052
 01:10:53,380 --> 01:10:57,840
 We might be looking later at
 what is my high card, on a hand.
 
-1064
+1053
 01:10:57,880 --> 01:10:59,780
 then that's also going to come into play
 
-1065
+1054
 01:10:59,880 --> 01:11:03,090
 this both 1 and 14 type of thing
 
-1066
+1055
 01:11:05,050 --> 01:11:08,530
 Let's assume that we are taking Aces as...
 
-1067
+1056
 01:11:09,850 --> 01:11:12,120
 (do I have any examples here?) No.
 
-1068
+1057
 01:11:12,310 --> 01:11:14,020
 So I'm going to write Aces with an A
 
-1069
+1058
 01:11:14,020 --> 01:11:16,250
 because of just personal preference.
 
-1070
+1059
 01:11:16,280 --> 01:11:17,680
 No particular reason.
 
-1071
+1060
 01:11:18,600 --> 01:11:23,820
 My special case is going to be it works
 with straight with a low Ace
 
-1072
+1061
 01:11:32,620 --> 01:11:36,540
 I've just realized something
 that I had completely forgotten about
 
-1073
+1062
 01:11:38,080 --> 01:11:40,560
 right now if we look at the hand parser....
 
-1074
+1063
 01:11:40,840 --> 01:11:46,160
 I've chosen cards that
 translate in a lovely way
 
-1075
+1064
 01:11:47,200 --> 01:11:50,510
 to integers, but if I do something like that....
 
-1076
+1065
 01:11:52,880 --> 01:11:55,030
 Let's say Queen of Diamonds.
 
-1077
+1066
 01:11:56,570 --> 01:11:59,810
 Let's say 10 is 10 Jack is 11, Queen is 12
 
-1078
+1067
 01:12:00,140 --> 01:12:02,080
 I actually would want this to happen.
 
-1079
+1068
 01:12:04,570 --> 01:12:06,540
 number 12, got zero, excellent.
 
-1080
+1069
 01:12:08,050 --> 01:12:09,710
 Let's go back into my hand parser
 
-1081
+1070
 01:12:09,820 --> 01:12:12,650
 this is going to be another
 one of those special cases.
 
-1082
+1071
 01:12:15,710 --> 01:12:19,530
 So let's say Pips for heads.
 
-1083
+1072
 01:12:22,110 --> 01:12:23,310
 TS: What does that mean?
 
-1084
+1073
 01:12:23,310 --> 01:12:27,050
 CB: this is me being terrible at English
 
-1085
+1074
 01:12:28,480 --> 01:12:31,720
 for heads I mean Jack, Queen, King, Ace.
 
-1086
+1075
 01:12:32,740 --> 01:12:35,560
 Let's say, if you get a Q card.
 
-1087
+1076
 01:12:36,200 --> 01:12:41,660
 then I'm going to assign it the value 12
 
-1088
+1077
 01:12:46,510 --> 01:12:49,550
 Let's start with a Jack, and that's an 11
 
-1089
+1078
 01:12:49,570 --> 01:12:52,080
 and then I have Queen and that's 12,
 
-1090
+1079
 01:12:53,080 --> 01:12:55,150
 and that's a King and that's 13
 
-1091
+1080
 01:12:56,420 --> 01:12:57,880
 and the Ace is 14.
 
-1092
+1081
 01:13:04,540 --> 01:13:07,810
 So this is number of Pips.
 
-1093
+1082
 01:13:08,340 --> 01:13:10,620
 I'm going to put it into a different variable.
 
-1094
+1083
 01:13:11,620 --> 01:13:13,540
 because this is getting too crowded.
 
-1095
+1084
 01:13:15,110 --> 01:13:17,810
 Number of Pips equals this for now.
 
-1096
+1085
 01:13:18,400 --> 01:13:21,690
 Just to check I haven't done something stupid.
 
-1097
+1086
 01:13:21,850 --> 01:13:22,760
 There we go.
 
-1098
+1087
 01:13:22,840 --> 01:13:27,080
 So expected 12, got zero, perfect, so now
 
-1099
+1088
 01:13:27,080 --> 01:13:32,400
 what I want is "check if
 the beginning of that string
 
-1100
+1089
 01:13:32,610 --> 01:13:35,030
 is one of those special cases,
 
-1101
+1090
 01:13:35,330 --> 01:13:38,120
 otherwise you should just go with face value
 
-1102
+1091
 01:13:39,600 --> 01:13:41,720
 so I can have something like
 
-1103
+1092
 01:13:41,850 --> 01:13:46,080
 Pips for heads dot fetch.
 
-1104
+1093
 01:13:51,000 --> 01:13:53,960
 This is what I said at the beginning,
 
-1105
+1094
 01:13:53,970 --> 01:13:55,740
 before I specified suit.
 
-1106
+1095
 01:13:56,220 --> 01:13:58,900
 This is my Pips string.
 
-1107
+1096
 01:13:59,740 --> 01:14:02,240
 and this is what it looks like.
 
-1108
+1097
 01:14:05,200 --> 01:14:07,850
 I take Pips for heads
 and I fetch my Pips string
 
-1109
+1098
 01:14:13,200 --> 01:14:16,200
 So, if it's in there we can go forward
 
-1110
+1099
 01:14:16,680 --> 01:14:19,680
 and if it's not then I want it to fail gracefully
 
-1111
+1100
 01:14:20,170 --> 01:14:21,080
 and do this:
 
-1112
+1101
 01:14:21,110 --> 01:14:24,320
 Now, the issue with that is, for example
 
-1113
+1102
 01:14:24,480 --> 01:14:26,280
 if someone goes along the lines of
 
-1114
+1103
 01:14:27,540 --> 01:14:29,310
 entering a queen with a capital Q.
 
-1115
+1104
 01:14:30,000 --> 01:14:31,830
 That would not work.
 
-1116
+1105
 01:14:31,850 --> 01:14:33,770
 It will try to translate it.
 
-1117
+1106
 01:14:33,770 --> 01:14:37,750
 into an integer and that
 would not work very nicely.
 
-1118
+1107
 01:14:40,800 --> 01:14:43,800
 If I want to do something foolproof
 
-1119
+1108
 01:14:44,140 --> 01:14:46,880
 I would put something along the lines of
 
-1120
+1109
 01:14:46,940 --> 01:14:50,450
 and by the way can you check that
 the pip string only has digits in it,
 
-1121
+1110
 01:14:50,600 --> 01:14:54,940
 before I cast it to an integer
 which will save me the pain of
 
-1122
+1111
 01:14:54,970 --> 01:14:58,080
 how do I handle Queens -  a bit later on.
 
-1123
+1112
 01:14:59,080 --> 01:15:00,680
 TS: Are you worried about that ?
 
-1124
+1113
 01:15:00,680 --> 01:15:02,840
 CB: No. (laughter)
 
-1125
+1114
 01:15:03,600 --> 01:15:06,840
 If I was shipping this then yes, but no.
 
-1126
+1115
 01:15:11,450 --> 01:15:15,540
 Assumes correct
 capitalization,
 
-1127
+1116
 01:15:15,760 --> 01:15:20,600
 correct letters all kinds of assumptions.
 
-1128
+1117
 01:15:22,310 --> 01:15:23,080
 and that's fine.
 
-1129
+1118
 01:15:23,080 --> 01:15:24,940
 I'm making that compromise for now
 
-1130
+1119
 01:15:24,940 --> 01:15:29,510
 because I don't think that's part
 of the problem that I'm most interested in.
 
-1131
+1120
 01:15:30,740 --> 01:15:32,960
 So now we have a 'thing' and it parses queens
 
-1132
+1121
 01:15:32,960 --> 01:15:36,580
 12 of Diamonds and that's all working out fine
 
-1133
+1122
 01:15:36,740 --> 01:15:39,240
 Now, I've got my card values.
 
-1134
+1123
 01:15:39,250 --> 01:15:42,140
 Let's go back to our hand spec and see where
 
-1135
+1124
 01:15:42,220 --> 01:15:43,020
 that leaves us.
 
-1136
+1125
 01:15:43,370 --> 01:15:46,330
 TS:  Is your priority now
 to implement ordinary straights
 
-1137
+1126
 01:15:46,370 --> 01:15:51,080
 or are you going straight for
 the one that has an Ace in it ?
 
-1138
+1127
 01:15:51,200 --> 01:15:54,650
 CB: I'm going with an ordinary straight.
 
-1139
+1128
 01:15:54,860 --> 01:15:57,730
 So my straight hand in here just has....
 
-1140
+1129
 01:15:57,820 --> 01:16:01,050
 56789, which is quite reasonable.
 
-1141
+1130
 01:16:02,220 --> 01:16:04,370
 I've accidentally broken things because
 
-1142
+1131
 01:16:04,820 --> 01:16:08,660
 my straight is broken and
 tells me that everything is fine.
 
-1143
+1132
 01:16:08,710 --> 01:16:10,550
 but now other tests are failing.
 
-1144
+1133
 01:16:11,540 --> 01:16:17,820
 inaudible or irrelevant.
 
-1145
+1134
 01:16:18,280 --> 01:16:22,500
 This is a more sensible place to be in.
 
-1146
+1135
 01:16:22,820 --> 01:16:29,090
 I have sorted card values
 and I want to look at each of the things
 
-1147
+1136
 01:16:29,250 --> 01:16:30,940
 They are in a sorted order and I'm
 
-1148
+1137
 01:16:30,940 --> 01:16:33,800
 going to calculate the
 difference between all of them
 
-1149
+1138
 01:16:33,800 --> 01:16:37,710
 If at the end I am in an array of only ones.
 
-1150
+1139
 01:16:38,820 --> 01:16:40,170
 I will be quite happy.
 
-1151
+1140
 01:16:40,250 --> 01:16:40,960
 TS: I see.
 
-1152
+1141
 01:16:41,020 --> 01:16:45,170
 CB: And if it's not then.... I'm not happy.
 
-1153
+1142
 01:16:45,310 --> 01:16:46,620
 So far so good.
 
-1154
+1143
 01:16:51,000 --> 01:16:54,400
 I'm going to go for a
 naive implementation of this now
 
-1155
+1144
 01:16:54,400 --> 01:16:58,530
 because I don't
 quite know where I'm going yet.
 
-1156
+1145
 01:16:58,810 --> 01:17:00,840
 I look at my card values.
 
-1157
+1146
 01:17:00,930 --> 01:17:03,250
 Actually that's not what I want to do.
 
-1158
+1147
 01:17:03,480 --> 01:17:05,280
 I want to use each_with_index
 
-1159
+1148
 01:17:05,400 --> 01:17:08,800
 because I want to know where I am in that array.
 
-1160
+1149
 01:17:08,970 --> 01:17:11,490
 I have my value and my index
 
-1161
+1150
 01:17:11,530 --> 01:17:13,810
 and I am looking at
 my sorted card values
 
-1162
+1151
 01:17:13,820 --> 01:17:15,680
 and what I want is....
 
-1163
+1152
 01:17:18,740 --> 01:17:20,040
 so I have my card in sorted_card_values
 
-1164
+1153
 01:17:20,370 --> 01:17:24,340
 and I want to
 compare it to the next card value
 
-1165
+1154
 01:17:25,570 --> 01:17:27,680
 So I want to compare those two values.
 
-1166
+1155
 01:17:30,820 --> 01:17:32,600
 and I only want to go....
 
-1167
+1156
 01:17:33,620 --> 01:17:35,920
 this is going to throw a very...
 
-1168
+1157
 01:17:35,940 --> 01:17:38,320
 reached the end of the array situation.
 
-1169
+1158
 01:17:38,420 --> 01:17:40,080
 which is not where I want to be.
 
-1170
+1159
 01:17:48,400 --> 01:17:52,160
 This is silly, I always have 5 cards, it's a hand
 
-1171
+1160
 01:17:52,200 --> 01:17:55,920
 so I'm going to put a magic number in there.
 
-1172
+1161
 01:17:56,000 --> 01:17:56,680
 I'm sorry.
 
-1173
+1162
 01:17:56,740 --> 01:17:57,760
 TS: No, no.
 
-1174
+1163
 01:18:02,680 --> 01:18:05,850
 This is the kind of thing where
 going to production
 
-1175
+1164
 01:18:05,850 --> 01:18:10,520
 you have a thing that defines what 5 is somewhere
 
-1176
+1165
 01:18:10,620 --> 01:18:12,290
 So magic number 4...
 
-1177
+1166
 01:18:17,250 --> 01:18:21,330
 OK always 5 cards per hand
 
-1178
+1167
 01:18:22,680 --> 01:18:24,790
 It is reasonable for me to say,
 
-1179
+1168
 01:18:24,860 --> 01:18:26,750
 and by the way do this 4 times.
 
-1180
+1169
 01:18:33,720 --> 01:18:37,450
 I need to start with an
 assumption that's just wrong
 
-1181
+1170
 01:18:37,470 --> 01:18:40,820
 and then I have some kind of integer.
 
-1182
+1171
 01:18:40,820 --> 01:18:42,120
 and then....
 
-1183
+1172
 01:18:42,200 --> 01:18:44,420
 there's got to be a better way of doing this,
 
-1184
+1173
 01:18:44,420 --> 01:18:46,800
 but this is the first thing that comes to mind.
 
-1185
+1174
 01:18:47,080 --> 01:18:49,110
 So I'm looking at my sorted card value
 
-1186
+1175
 01:18:49,110 --> 01:18:52,080
 and also at my other sorted card value.
 
-1187
+1176
 01:18:54,080 --> 01:18:54,710
 This is it.
 
-1188
+1177
 01:18:56,620 --> 01:18:58,710
 Let's try something like...
 
-1189
+1178
 01:18:59,330 --> 01:19:04,150
 this, the zero index, and
 
-1190
+1179
 01:19:05,400 --> 01:19:06,000
 TS: I see.
 
-1191
+1180
 01:19:06,420 --> 01:19:09,180
 So these two things I want to compare.
 
-1192
+1181
 01:19:09,280 --> 01:19:11,160
 Just get rid of that.
 
-1193
+1182
 01:19:15,280 --> 01:19:18,470
 I want the absolute
 difference between the two.
 
-1194
+1183
 01:19:18,500 --> 01:19:19,350
 They are sorted.
 
-1195
+1184
 01:19:26,080 --> 01:19:26,800
 What I want is...
 
-1196
+1185
 01:19:34,710 --> 01:19:36,300
 So the first naive thing is...
 
-1197
+1186
 01:19:40,250 --> 01:19:41,690
 actually the result is...
 
-1198
+1187
 01:19:43,820 --> 01:19:48,220
 old result and
 
-1199
+1188
 01:19:49,220 --> 01:19:52,190
 This is equals to one, so now
 
-1200
+1189
 01:19:54,960 --> 01:19:56,840
 This will have to go somewhere else
 
-1201
+1190
 01:19:56,840 --> 01:19:58,400
 because it's getting verbose.
 
-1202
+1191
 01:19:58,420 --> 01:20:02,540
 What this chuck of code
 is doing there is saying...
 
-1203
+1192
 01:20:07,220 --> 01:20:10,220
 difference between cards.
 
-1204
+1193
 01:20:11,880 --> 01:20:15,140
 And different Pips on a card.
 
-1205
+1194
 01:20:23,290 --> 01:20:24,040
 Dislike.
 
-1206
+1195
 01:20:27,080 --> 01:20:28,970
 TS: Yes, it's getting the value of that...
 
-1207
+1196
 01:20:29,400 --> 01:20:31,220
 CB: Yes, I absolutely don't like this.
 
-1208
+1197
 01:20:31,940 --> 01:20:37,850
 For now use a variable before I do something silly and unnecessary.
 
-1209
+1198
 01:20:40,000 --> 01:20:41,740
 This should be the loop.
 
-1210
+1199
 01:20:43,200 --> 01:20:44,600
 Let's get rid of that.
 
-1211
+1200
 01:20:45,050 --> 01:20:46,910
 A slightly misguided abstraction.
 
-1212
+1201
 01:20:48,400 --> 01:20:51,360
 If my difference_between_pips is one,
 
-1213
+1202
 01:20:52,450 --> 01:20:53,520
 then I continue.
 
-1214
+1203
 01:20:53,740 --> 01:20:56,270
 Actually I don't like how I'm doing this
 
-1215
+1204
 01:20:56,680 --> 01:20:58,170
 inaudible
 
-1216
+1205
 01:21:00,510 --> 01:21:01,980
 difference is always one.
 
-1217
+1206
 01:21:06,880 --> 01:21:09,120
 So what I want to do is say:
 
-1218
+1207
 01:21:09,340 --> 01:21:12,380
 difference of one is true to start with
 
-1219
+1208
 01:21:12,510 --> 01:21:14,670
 and the second I get a difference that is not
 
-1220
+1209
 01:21:15,040 --> 01:21:17,160
 one between the cards, I exit out of the loop
 
-1221
+1210
 01:21:17,160 --> 01:21:18,400
 and get out of there.
 
-1222
+1211
 01:21:18,880 --> 01:21:19,940
 So I start with true
 
-1223
+1212
 01:21:20,250 --> 01:21:21,650
 and while it's true
 
-1224
+1213
 01:21:25,400 --> 01:21:28,490
 And my index is below 4
 
-1225
+1214
 01:21:28,710 --> 01:21:30,170
 or sorted_card_values.count
 
-1226
+1215
 01:21:41,170 --> 01:21:42,870
 Magic number 4 that's fine.
 
-1227
+1216
 01:21:43,680 --> 01:21:46,370
 While difference_always_one we do that.
 
-1228
+1217
 01:21:48,650 --> 01:21:50,620
 So if difference_between_pips is that
 
-1229
+1218
 01:21:50,620 --> 01:21:52,310
 and difference_always_1 is...
 
-1230
+1219
 01:21:55,250 --> 01:21:58,250
 and the new difference_between_pips is one.
 
-1231
+1220
 01:21:59,940 --> 01:22:01,320
 This we no longer need.
 
-1232
+1221
 01:22:02,310 --> 01:22:03,640
 Those we no longer need.
 
-1233
+1222
 01:22:04,110 --> 01:22:07,680
 This is called 'i' because I don't
 want to rename all the variables.
 
-1234
+1223
 01:22:09,450 --> 01:22:11,020
 I need to close my loops.
 
-1235
+1224
 01:22:12,370 --> 01:22:15,070
 And now what I want to do is....
 
-1236
+1225
 01:22:17,880 --> 01:22:20,680
 maybe initialize that,
 that seems like a good idea.
 
-1237
+1226
 01:22:24,110 --> 01:22:26,260
 I start at index zero
 
-1238
+1227
 01:22:26,480 --> 01:22:28,750
 I'm assuming that
 it is going to be a straight.
 
-1239
+1228
 01:22:28,770 --> 01:22:31,780
 and then I continue until
 something proves me wrong.
 
-1240
+1229
 01:22:31,800 --> 01:22:34,560
 so either I'm done with my calculation
 
-1241
+1230
 01:22:37,080 --> 01:22:38,360
 or that's failed.
 
-1242
+1231
 01:22:40,050 --> 01:22:42,340
 So if it's not equal to one it should be false.
 
-1243
+1232
 01:22:42,480 --> 01:22:44,480
 and then exit and it's all quite nice.
 
-1244
+1233
 01:22:45,050 --> 01:22:47,000
 So now, test time.
 
-1245
+1234
 01:22:55,820 --> 01:22:58,250
 And now the computer fails (laughter).
 
-1246
+1235
 01:22:58,510 --> 01:23:00,510
 TS: It looks like it's got stuck in a loop
 
-1247
+1236
 01:23:01,880 --> 01:23:03,970
 CB: Maybe because I have an infinite loop.
 
-1248
+1237
 01:23:05,800 --> 01:23:08,880
 I think I haven't incremented
 the index, there we go
 
-1249
+1238
 01:23:15,250 --> 01:23:17,560
 Every time, just failing.
 
-1250
+1239
 01:23:17,600 --> 01:23:20,960
 This is now still failing
 
-1251
+1240
 01:23:21,720 --> 01:23:23,210
 but this is OK.
 
-1252
+1241
 01:23:23,970 --> 01:23:25,140
 Still the same failure.
 
-1253
+1242
 01:23:25,970 --> 01:23:27,350
 So different straight.
 
-1254
+1243
 01:23:27,680 --> 01:23:29,880
 TS: When that loop finishes, how do you know
 
-1255
+1244
 01:23:30,200 --> 01:23:32,820
 whether or not it was a straight?
 
-1256
+1245
 01:23:35,560 --> 01:23:36,360
 Ah, OK.
 
-1257
+1246
 01:23:37,370 --> 01:23:38,860
 CB: I'm missing a return value
 
-1258
+1247
 01:23:42,020 --> 01:23:44,780
 By the time we get there, I want, if it's a straight
 
-1259
+1248
 01:23:44,880 --> 01:23:47,110
 to exit because of this failing.
 
-1260
+1249
 01:23:47,800 --> 01:23:49,800
 and then it should return the result.
 
-1261
+1250
 01:23:50,940 --> 01:23:52,020
 Which is still wrong.
 
-1262
+1251
 01:23:52,710 --> 01:23:53,820
 OK, so let's have a look.
 
-1263
+1252
 01:23:56,040 --> 01:23:58,660
 So I start an index here and as I go along
 
-1264
+1253
 01:23:58,880 --> 01:24:02,150
 my difference is....
 
-1265
+1254
 01:24:02,290 --> 01:24:04,650
 have I sorted them....yes.
 
-1266
+1255
 01:24:05,170 --> 01:24:07,590
 I would do something naughty now
 
-1267
+1256
 01:24:12,510 --> 01:24:15,260
 print the thing out so I know
 
-1268
+1257
 01:24:15,270 --> 01:24:16,480
 where I'm heading.
 
-1269
+1258
 01:24:16,540 --> 01:24:19,740
 I've got 56789 which seems 'straightish'
 
-1270
+1259
 01:24:20,370 --> 01:24:22,160
 Now let's walk through this.
 
-1271
+1260
 01:24:22,220 --> 01:24:24,480
 So difference_always_1 is true.
 
-1272
+1261
 01:24:24,940 --> 01:24:28,150
 While this is true,
 the difference between Pips is
 
-1273
+1262
 01:24:28,910 --> 01:24:29,770
 this minus this
 
-1274
+1263
 01:24:30,110 --> 01:24:31,110
 this should be one
 
-1275
+1264
 01:24:31,200 --> 01:24:33,480
 difference_always_1, this is
 
-1276
+1265
 01:24:34,110 --> 01:24:34,910
 equals to one
 
-1277
+1266
 01:24:39,250 --> 01:24:41,190
 Yet, this returns as false.
 
-1278
+1267
 01:24:47,370 --> 01:24:49,650
 I'm going to run one test
 
-1279
+1268
 01:24:51,050 --> 01:24:52,960
 that one 5679
 
-1280
+1269
 01:24:53,460 --> 01:24:55,280
 I'm going to shell out a few things.
 
-1281
+1270
 01:24:56,340 --> 01:24:58,530
 Because I don't know what's going on.
 
-1282
+1271
 01:24:58,620 --> 01:25:00,370
 TS: It looked like it passed there.
 
-1283
+1272
 01:25:01,000 --> 01:25:04,280
 CB: Yes, this is why I'm a bit confused.
 
-1284
+1273
 01:25:04,340 --> 01:25:06,280
 TS: Is it a different test that's failing ?
 
-1285
+1274
 01:25:06,280 --> 01:25:07,000
 CB: Good point.
 
-1286
+1275
 01:25:07,020 --> 01:25:10,920
 Maybe one of my cases is actually a straight.
 
-1287
+1276
 01:25:14,650 --> 01:25:16,360
 Let's get rid of those.
 
-1288
+1277
 01:25:17,250 --> 01:25:18,970
 I'm going to run this entire file
 
-1289
+1278
 01:25:19,710 --> 01:25:20,910
 and where is my failure?
 
-1290
+1279
 01:25:22,880 --> 01:25:25,050
 Should be a highest and it got a straight.
 
-1291
+1280
 01:25:26,850 --> 01:25:30,510
 Oh yes, one of my test cases is a straight
 
-1292
+1281
 01:25:31,650 --> 01:25:37,310
 I'm feeling really clever
 now because...
 
-1293
+1282
 01:25:37,310 --> 01:25:41,310
 and it's not a flush so it's not
 going to cause me sorrow at any point.
 
-1294
+1283
 01:25:43,540 --> 01:25:44,390
 Yes, it's all fine.
 
-1295
+1284
 01:25:44,400 --> 01:25:44,970
 TS: Great.
 
-1296
+1285
 01:25:49,200 --> 01:25:54,590
 I have an Ace which is a 14
 but it's also a 1 when I want it to be
 
-1297
+1286
 01:25:58,400 --> 01:26:02,760
 So straight hand low Ace,
 still straight, same result.
 
-1298
+1287
 01:26:08,710 --> 01:26:10,950
 If we do this, and we have a hand parser.
 
-1299
+1288
 01:26:13,820 --> 01:26:15,600
 Actually, no we don't want to do that.
 
-1300
+1289
 01:26:17,140 --> 01:26:19,400
 We have an Ace now, we don't want a one.
 
-1301
+1290
 01:26:21,880 --> 01:26:24,020
 So we have 2345 and A.
 
-1302
+1291
 01:26:25,200 --> 01:26:25,640
 TS: Ok,
 
-1303
+1292
 01:26:29,050 --> 01:26:30,310
 The order doesn't matter
 
-1304
+1293
 01:26:30,310 --> 01:26:33,520
 CB: The order shouldn't matter
 because I'm sorting them anyway.
 
-1305
+1294
 01:26:33,520 --> 01:26:35,030
 TS: So that's going to show up as
 
-1306
+1295
 01:26:35,030 --> 01:26:37,140
 just being a high card hand.
 CB: Correct.
 
-1307
+1296
 01:26:37,140 --> 01:26:40,370
 This is showing up as a highest,
 and I want it to be a straight.
 
-1308
+1297
 01:26:40,880 --> 01:26:42,980
 Let's go in there and implement that.
 
-1309
+1298
 01:26:45,420 --> 01:26:48,350
 This is a method that takes sorted card values
 
-1310
+1299
 01:26:48,680 --> 01:26:50,880
 then it can work out if it's a straight or not.
 
-1311
+1300
 01:26:51,000 --> 01:26:53,390
 Now if I have an Ace in my hand,
 
-1312
+1301
 01:26:54,000 --> 01:26:58,480
 I want it to work out,
 is this a straight if it behaves like a 14 ?
 
-1313
+1302
 01:26:58,480 --> 01:27:00,880
 and is this a straight if it behaves like a one ?
 
-1314
+1303
 01:27:05,350 --> 01:27:09,560
 If this fails, if I treat my Ace
 as a 14, then just do again with a one.
 
-1315
+1304
 01:27:12,400 --> 01:27:14,730
 let's extract that method out.
 
-1316
+1305
 01:27:16,970 --> 01:27:19,200
 and this takes an array of cards
 
-1317
+1306
 01:27:19,200 --> 01:27:21,300
 and determines if they are consecutive.
 
-1318
+1307
 01:27:22,400 --> 01:27:23,880
 So, consecutive cards
 
-1319
+1308
 01:27:36,370 --> 01:27:39,520
 This says my cards are consecutive.
 
-1320
+1309
 01:27:39,620 --> 01:27:41,710
 I don't like the fact that it's living here.
 
-1321
+1310
 01:27:43,880 --> 01:27:45,360
 This is just odd.
 
-1322
+1311
 01:27:48,450 --> 01:27:55,220
 If I had more time I would want to move this to a helper somewhere.
 
-1323
+1312
 01:27:55,710 --> 01:27:57,600
 This is a utility type function.
 
-1324
+1313
 01:27:58,820 --> 01:28:01,160
 which has no business being here.
 
-1325
+1314
 01:28:01,190 --> 01:28:03,160
 TS: It doesn't have to be an instance method?
 
-1326
+1315
 01:28:06,280 --> 01:28:08,250
 CB: it's got nothing to do with the hand.
 
-1327
+1316
 01:28:08,250 --> 01:28:10,510
 The concept of numbers being consecutive
 
-1328
+1317
 01:28:11,480 --> 01:28:13,620
 The hand needs it in order to rank itself.
 
-1329
+1318
 01:28:13,620 --> 01:28:17,240
 but the actual
 implementation of it does not live here.
 
-1330
+1319
 01:28:17,400 --> 01:28:18,800
 TS: It could be any numbers?
 
-1331
+1320
 01:28:18,850 --> 01:28:22,770
 CB: Absolutely, it could
 be just some random thing,
 
-1332
+1321
 01:28:23,020 --> 01:28:25,820
 That takes an array and
 determines whether they are
 
-1333
+1322
 01:28:25,850 --> 01:28:27,480
 in some sort of nice order.
 
-1334
+1323
 01:28:27,480 --> 01:28:27,900
 TS: OK.
 
-1335
+1324
 01:28:31,510 --> 01:28:34,080
 I'm just going to check that it is still
 
-1336
+1325
 01:28:37,880 --> 01:28:39,090
 behaving nicely.
 
-1337
+1326
 01:28:48,110 --> 01:28:51,440
 In the case where sorted card values include
 
-1338
+1327
 01:28:51,850 --> 01:28:54,960
 the value 14, which is the Ace, I also want to
 
-1339
+1328
 01:28:56,110 --> 01:29:00,420
 change that array and do
 the same thing with the one.
 
-1340
+1329
 01:29:01,110 --> 01:29:02,770
 and then check if it's a straight.
 
-1341
+1330
 01:29:03,540 --> 01:29:07,280
 So let's say sorted card values.
 
-1342
+1331
 01:29:13,620 --> 01:29:17,060
 I'm going to do
 something naive, if it includes 14
 
-1343
+1332
 01:29:26,650 --> 01:29:31,930
 This is where I want to know
 what my Array lets me do.
 
-1344
+1333
 01:29:37,340 --> 01:29:39,690
 No that's drop a certain number of things.
 
-1345
+1334
 01:29:39,740 --> 01:29:43,020
 I want to delete a thing from an array.
 
-1346
+1335
 01:29:43,310 --> 01:29:47,970
 that is not the array documentation
 
-1347
+1336
 01:29:50,080 --> 01:29:51,200
 I do this all the time.
 
-1348
+1337
 01:29:51,220 --> 01:29:54,280
 I have a bad memory,
 
-1349
+1338
 01:29:54,280 --> 01:29:56,610
 when it comes to
 remembering all the things.
 
-1350
+1339
 01:29:56,880 --> 01:29:58,830
 TS: it's probably not a good idea to try
 
-1351
+1340
 01:29:58,830 --> 01:30:00,440
 to memorize them anyway.
 
-1352
+1341
 01:30:00,540 --> 01:30:03,710
 CB: Once you start programming
 in more than three languages,
 
-1353
+1342
 01:30:03,710 --> 01:30:05,280
 it becomes a little difficult.
 
-1354
+1343
 01:30:08,360 --> 01:30:12,000
 TS: So you're going to
 delete all of the 14s from the array ?
 
-1355
+1344
 01:30:12,170 --> 01:30:16,340
 CB: Yes, and I need to know
 how many 14s I'm deleting
 
-1356
+1345
 01:30:17,000 --> 01:30:19,140
 In order to add that exact
 number of 1s on the other side
 
-1357
+1346
 01:30:19,140 --> 01:30:23,960
 otherwise I might end up with something
 crazy such as an array with only three cards
 
-1358
+1347
 01:30:26,280 --> 01:30:28,960
 which will explode because it is
 expecting a certain number of things in there;
 
-1359
+1348
 01:30:29,110 --> 01:30:30,910
 remember my magic number in there?
 
-1360
+1349
 01:30:30,910 --> 01:30:32,250
 It would not be a good idea.
 
-1361
+1350
 01:30:41,770 --> 01:30:42,320
 delete 14.
 
-1362
+1351
 01:30:46,000 --> 01:30:48,820
 According to the Ruby
 documentation this is deleted.
 
-1363
+1352
 01:30:56,340 --> 01:31:00,970
 This gives me back all that it's deleted.
 
-1364
+1353
 01:31:02,050 --> 01:31:03,910
 TS: It returns the last deleted item?
 
-1365
+1354
 01:31:04,640 --> 01:31:07,210
 CB:  Yes, but it doesn't
 tell me how many, interesting.
 
-1366
+1355
 01:31:11,820 --> 01:31:15,080
 I want to know how many 14s I have,
 
-1367
+1356
 01:31:16,600 --> 01:31:20,750
 So I want to count the
 number of things that match.
 
-1368
+1357
 01:31:25,970 --> 01:31:26,860
 How do I do that?
 
-1369
+1358
 01:31:31,600 --> 01:31:34,400
 My implementation is this.
 
-1370
+1359
 01:31:38,650 --> 01:31:40,560
 This can go somewhere else,
 
-1371
+1360
 01:31:41,020 --> 01:31:43,290
 and be called what it actually is
 
-1372
+1361
 01:31:46,540 --> 01:31:48,770
 and if my number of Aces is bigger than one.
 
-1373
+1362
 01:31:49,200 --> 01:31:51,480
 then I want to delete all the Aces.
 
-1374
+1363
 01:31:53,560 --> 01:31:57,910
 and add two sorted card values, ones,
 
-1375
+1364
 01:31:58,080 --> 01:32:00,970
 but I want to do that
 exactly the number of aces times.
 
-1376
+1365
 01:32:04,220 --> 01:32:07,000
 I could do it in a better way by concatenating
 
-1377
+1366
 01:32:07,480 --> 01:32:11,520
 two sorted card values in an array of exactly
 
-1378
+1367
 01:32:14,200 --> 01:32:15,540
 the number of aces as ones.
 
-1379
+1368
 01:32:16,000 --> 01:32:18,460
 but let's leave that for now
 
-1380
+1369
 01:32:18,460 --> 01:32:21,880
 and let's check if things have gone wrong.
 
-1381
+1370
 01:32:22,200 --> 01:32:23,000
 They have.
 
-1382
+1371
 01:32:25,480 --> 01:32:27,870
 This is terrible parenthesis use.
 
-1383
+1372
 01:32:30,450 --> 01:32:34,340
 because it turns out
 blocks don't take round brackets.
 
-1384
+1373
 01:32:39,310 --> 01:32:43,370
 It's not working but it's not failing any more.
 
-1385
+1374
 01:32:45,680 --> 01:32:48,370
 TS: Is it because your
 number of Aces is equal to one
 
-1386
+1375
 01:32:48,940 --> 01:32:50,050
 not greater than one ?
 
-1387
+1376
 01:32:54,420 --> 01:32:56,840
 CB: Yes, and there is also the fact that
 
-1388
+1377
 01:33:00,650 --> 01:33:02,540
 I think it's going to fail another way.
 
-1389
+1378
 01:33:04,420 --> 01:33:05,600
 And let me explain why,
 
-1390
+1379
 01:33:07,570 --> 01:33:12,460
 I think what I just wrote
 is going to fail in the case of
 
-1391
+1380
 01:33:13,110 --> 01:33:17,570
 high ace, because of how I've implemented it.
 
-1392
+1381
 01:33:18,770 --> 01:33:21,620
 To prove my point I'm going to write
 
-1393
+1382
 01:33:24,770 --> 01:33:26,680
 There we go straight_hand_high_ace.
 
-1394
+1383
 01:33:31,850 --> 01:33:35,400
 What I mean by that... and do that.
 
-1395
+1384
 01:33:36,540 --> 01:33:38,800
 Undefined method `add` for array.
 Interesting.
 
-1396
+1385
 01:33:39,200 --> 01:33:40,540
 TS: There are two failures,
 
-1397
+1386
 01:33:40,540 --> 01:33:41,910
 on both of those Ace tests.
 
-1398
+1387
 01:33:42,220 --> 01:33:43,110
 CB: Correct.
 
-1399
+1388
 01:33:44,050 --> 01:33:47,650
 So this is you can't add
 and I expect it's insert. Yes.
 
-1400
+1389
 01:33:54,480 --> 01:33:57,660
 So now it's actually going in
 the loop which is good news.
 
-1401
+1390
 01:34:01,170 --> 01:34:03,450
 Undefined '-' method class.
 
-1402
+1391
 01:34:04,480 --> 01:34:06,140
 Let's debug our way through this
 
-1403
+1392
 01:34:08,220 --> 01:34:10,220
 It's happening on consecutive cards
 
-1404
+1393
 01:34:12,340 --> 01:34:14,310
 and it's happening on line eighty three
 
-1405
+1394
 01:34:15,600 --> 01:34:16,310
 Which is here.
 
-1406
+1395
 01:34:21,420 --> 01:34:23,510
 TS: What does the documentation
 for insert say?
 
-1407
+1396
 01:34:25,110 --> 01:34:26,620
 CB: it's not destructive is it ?
 
-1408
+1397
 01:34:28,280 --> 01:34:31,020
 TS: it sets the given value with
 the given index
 
-1409
+1398
 01:34:31,240 --> 01:34:32,930
 so you have to provide an index.
 
-1410
+1399
 01:34:32,930 --> 01:34:33,650
 CB: OK, alright.
 
-1411
+1400
 01:34:35,600 --> 01:34:39,250
 I'm going to insert it at the
 start because it doesn't really matter
 
-1412
+1401
 01:34:45,600 --> 01:34:47,210
 I could go for the lazy option.
 
-1413
+1402
 01:34:57,770 --> 01:34:58,800
 TS: Has that fixed it?
 
-1414
+1403
 01:34:59,000 --> 01:35:02,250
 CB: No, so many things going wrong right now.
 
-1415
+1404
 01:35:05,680 --> 01:35:08,220
 This is take my sorted card values and give me
 
-1416
+1405
 01:35:10,200 --> 01:35:15,110
 other possible card values for Aces.
 
-1417
+1406
 01:35:22,740 --> 01:35:23,540
 bit premature.
 
-1418
+1407
 01:35:26,510 --> 01:35:28,720
 If the number of Aces is bigger than one
 
-1419
+1408
 01:35:29,420 --> 01:35:32,190
 then I want to have...
 
-1420
+1409
 01:35:36,140 --> 01:35:39,040
 Aces as ones.
 
-1421
+1410
 01:35:40,600 --> 01:35:42,620
 Which is just like sorted card values
 
-1422
+1411
 01:35:44,600 --> 01:35:46,350
 I want to manipulate that.
 
-1423
+1412
 01:35:46,610 --> 01:35:49,140
 TS: So you're going to
 leave the original one alone?
 
-1424
+1413
 01:35:49,140 --> 01:35:51,020
 CB: Correct. I don't want to touch that.
 
-1425
+1414
 01:35:51,020 --> 01:35:54,930
 And then in the case
 of straight I want to check
 
-1426
+1415
 01:35:55,280 --> 01:35:58,770
 either it works out fine
 with the usual way of doing it.
 
-1427
+1416
 01:35:59,280 --> 01:36:05,200
 Or it works out with the using
 Ace as ones, way of doing it.
 
-1428
+1417
 01:36:06,200 --> 01:36:07,960
 So either is true.
 
-1429
+1418
 01:36:09,000 --> 01:36:13,790
 If the number of Aces is none,
 
-1430
+1419
 01:36:15,600 --> 01:36:17,480
 then it's the usual check:
 
-1431
+1420
 01:36:18,400 --> 01:36:19,860
 do I have consecutive cards.
 
-1432
+1421
 01:36:22,050 --> 01:36:24,800
 Now that's going to fail
 nicely in places, excellent.
 
-1433
+1422
 01:36:27,110 --> 01:36:29,870
 It still doesn't work with a straight with low ace.
 
-1434
+1423
 01:36:35,770 --> 01:36:38,510
 I want to check what my Aces as ones is like.
 
-1435
+1424
 01:36:40,480 --> 01:36:44,010
 This is my best chance of
 understanding what's going on.
 
-1436
+1425
 01:36:45,110 --> 01:36:47,320
 Aces as ones looks like 123, aha !
 
-1437
+1426
 01:36:47,450 --> 01:36:48,320
 it's not sorted
 
-1438
+1427
 01:36:49,570 --> 01:36:52,670
 I'm doing my sort here and I am doing
 
-1439
+1428
 01:36:52,680 --> 01:36:53,870
 my sort again.
 
-1440
+1429
 01:36:55,140 --> 01:37:00,990
 How about... we just don't sort them here
 
-1441
+1430
 01:37:01,170 --> 01:37:04,450
 TS: And then consecutive cards
 is going to be in charge of that.
 
-1442
+1431
 01:37:04,600 --> 01:37:10,630
 I'll give it any number of cards
 in any odd number called card values
 
-1443
+1432
 01:37:11,220 --> 01:37:15,680
 and inside here my job is just to sort them.
 
-1444
+1433
 01:37:17,930 --> 01:37:18,400
 TS: OK.
 
-1445
+1434
 01:37:18,650 --> 01:37:22,080
 And then go ahead with the rest of the code.
 
-1446
+1435
 01:37:24,060 --> 01:37:27,360
 Which I have changed variable names
 
-1447
+1436
 01:37:27,390 --> 01:37:29,960
 so it should be less angry at me.
 
-1448
+1437
 01:37:33,460 --> 01:37:35,930
 Good, straights with low Aces
 and straights with high Aces.
 
-1449
+1438
 01:37:37,280 --> 01:37:41,250
 TS: Ok so we are nearly out of time now,
 what would you like to do to wrap this up.
 
-1450
+1439
 01:37:43,680 --> 01:37:47,320
 I was supposed to write a hand comparer,
 and now I've written a hand ranker,
 
-1451
+1440
 01:37:47,800 --> 01:37:52,270
 I'd like to try that out and see what happens
 
-1452
+1441
 01:37:52,420 --> 01:37:54,220
 TS: So ranking the hands you've
 already implemented
 
-1453
+1442
 01:37:55,680 --> 01:37:57,220
 There are a few hands missing
 
-1454
+1443
 01:37:58,520 --> 01:38:00,080
 but not a lot of work left to do.
 
-1455
+1444
 01:38:03,970 --> 01:38:05,990
 Let me just correct this
 
-1456
+1445
 01:38:08,420 --> 01:38:13,050
 so that we are following the rules of poker.
 
-1457
+1446
 01:38:14,540 --> 01:38:16,820
 I've got a hand, it's told me what the rank it is
 
-1458
+1447
 01:38:17,020 --> 01:38:19,020
 but if I had two cards, I want to give my
 
-1459
+1448
 01:38:19,020 --> 01:38:20,510
 hand to my other hand and say
 
-1460
+1449
 01:38:21,650 --> 01:38:24,040
 Are you better than that hand.
 TS: Ok.
 
-1461
+1450
 01:38:25,170 --> 01:38:27,720
 In my public interface with
 my hand I would like
 
-1462
+1451
 01:38:30,560 --> 01:38:32,680
 to have, is_better? than other hand.
 
-1463
+1452
 01:38:34,200 --> 01:38:36,280
 TS: And it's going to return true or false.
 
-1464
+1453
 01:38:36,280 --> 01:38:37,880
 CB: Yes, exactly.
 
-1465
+1454
 01:38:38,770 --> 01:38:41,540
 How about we have a very quick,
 
-1466
+1455
 01:38:42,400 --> 01:38:44,560
 I will describe 'better than'
 
-1467
+1456
 01:38:50,020 --> 01:38:50,910
 We can just say:
 
-1468
+1457
 01:38:57,990 --> 01:39:01,200
 It tells me if the hand is better.
 
-1469
+1458
 01:39:05,420 --> 01:39:08,520
 We already have some very handy hands
 
-1470
+1459
 01:39:10,680 --> 01:39:13,070
 We know, for example, the 4 of a kind hand
 
-1471
+1460
 01:39:15,420 --> 01:39:17,560
 should be better than full house.
 
-1472
+1461
 01:39:18,420 --> 01:39:19,600
 let's start with those
 
-1473
+1462
 01:39:19,650 --> 01:39:25,480
 so full_house.better_than? 4 of a kind hand
 
-1474
+1463
 01:39:25,850 --> 01:39:27,040
 So I expect
 
-1475
+1464
 01:39:28,820 --> 01:39:30,810
 all of this to be true.
 
-1476
+1465
 01:39:34,480 --> 01:39:37,350
 TS: Is that the right way round?
 
-1477
+1466
 01:39:37,850 --> 01:39:39,770
 A full house is better than 4 of a kind.
 
-1478
+1467
 01:39:39,770 --> 01:39:41,360
 CB: No it's not - thank you.
 
-1479
+1468
 01:39:45,420 --> 01:39:46,740
 That looks more sensible.
 
-1480
+1469
 01:39:49,940 --> 01:39:51,090
 Let's run this.
 
-1481
+1470
 01:39:52,000 --> 01:39:53,910
 I want to find a 'better than' for hand
 
-1482
+1471
 01:39:54,200 --> 01:39:57,360
 Oh that's because I've
 implemented it as a Poker method
 
-1483
+1472
 01:39:59,740 --> 01:40:00,870
 let's run this
 
-1484
+1473
 01:40:01,400 --> 01:40:03,710
 and now it's getting nil, excellent
 
-1485
+1474
 01:40:06,680 --> 01:40:11,410
 So I have the rank of both hands
 and I want to know which is the better.
 
-1486
+1475
 01:40:12,340 --> 01:40:13,820
 This comes back to the thing
 
-1487
+1476
 01:40:13,820 --> 01:40:17,370
 which I was thinking about an hour ago.
 
-1488
+1477
 01:40:17,450 --> 01:40:20,820
 If only I'd known there was a
 ranking that told me the best hand.
 
-1489
+1478
 01:40:23,620 --> 01:40:26,030
 and next possible best hand.
 
-1490
+1479
 01:40:26,400 --> 01:40:28,040
 So this is what we want.
 
-1491
+1480
 01:40:28,420 --> 01:40:31,420
 If we have big poker ranks
 
-1492
+1481
 01:40:34,200 --> 01:40:37,000
 and it's an array and ordered thing for now.
 
-1493
+1482
 01:40:40,280 --> 01:40:42,320
 and if we go forward and say.....
 
-1494
+1483
 01:40:43,140 --> 01:40:45,800
 this is a naive implementation
 
-1495
+1484
 01:40:46,080 --> 01:40:49,880
 So if we have 4 of a
 kind, full house and straight.
 
-1496
+1485
 01:40:50,540 --> 01:40:56,110
 What I could do is in POKER_RANKS
 
-1497
+1486
 01:40:57,650 --> 01:41:00,360
 I can just get the index of rank
 
-1498
+1487
 01:41:00,650 --> 01:41:03,080
 and compare that to the POKER_RANKS
 
-1499
+1488
 01:41:04,050 --> 01:41:05,400
 index of the other hand
 
-1500
+1489
 01:41:05,820 --> 01:41:09,220
 and that would give me a straightforward answer for [inaudible]
 
-1501
+1490
 01:41:12,970 --> 01:41:15,740
 I'm assuming that the
 index is here, I'm not really sure
 
-1502
+1491
 01:41:18,740 --> 01:41:23,550
 This is me, this is
 my rank, and this is confusing.
 
-1503
+1492
 01:41:26,340 --> 01:41:28,530
 TS: You're putting the worst first
 
-1504
+1493
 01:41:29,220 --> 01:41:31,850
 CB: Yes because it's a lower rank
 
-1505
+1494
 01:41:32,420 --> 01:41:35,070
 And if it's a high rank
 I want to be happier with it.
 
-1506
+1495
 01:41:35,250 --> 01:41:38,750
 TS: The the question will
 be is my index greater than
 
-1507
+1496
 01:41:40,740 --> 01:41:43,620
 CB: Yes and I am going to
 say it's strictly greater than
 
-1508
+1497
 01:41:43,620 --> 01:41:45,220
 I'll get back to that in a second
 
-1509
+1498
 01:41:47,940 --> 01:41:51,450
 but yes, index one doesn't exist obviously.
 
-1510
+1499
 01:41:52,220 --> 01:41:55,790
 Let's now assume if we
 have some method on the array
 
-1511
+1500
 01:41:56,400 --> 01:41:59,450
 That is find index, that's the
 one I probably want
 
-1512
+1501
 01:42:06,540 --> 01:42:08,310
 Yes, it returns the index of a thing,
 
-1513
+1502
 01:42:08,310 --> 01:42:12,000
 so just index would have worked better.
 
-1514
+1503
 01:42:14,310 --> 01:42:15,490
 Let's go back here...
 
-1515
+1504
 01:42:21,570 --> 01:42:25,220
 Go and define method something for nil class.
 Excellent.
 
-1516
+1505
 01:42:32,680 --> 01:42:35,760
 This is apparently nil.
 
-1517
+1506
 01:42:36,110 --> 01:42:38,850
 TS: Because it was not
 finding the rank in that array.
 
-1518
+1507
 01:42:38,850 --> 01:42:39,450
 CB: Correct.
 
-1519
+1508
 01:42:48,510 --> 01:42:52,590
 I am comparing four of a kind and full house.
 
-1520
+1509
 01:42:55,080 --> 01:43:00,280
 I'm going to print out the
 rank of the other hands because
 
-1521
+1510
 01:43:01,110 --> 01:43:04,050
 I'm running out of time so
 I don't want to spend ages
 
-1522
+1511
 01:43:04,480 --> 01:43:05,480
 debugging this.
 
-1523
+1512
 01:43:07,610 --> 01:43:09,040
 Oh of course it's a hash.
 
-1524
+1513
 01:43:13,430 --> 01:43:15,000
 So I'm not comparing that.
 
-1525
+1514
 01:43:17,290 --> 01:43:18,940
 I'm just assuming there is a type.
 
-1526
+1515
 01:43:18,950 --> 01:43:22,340
 If there isn't a type then I should
 be wary so I'm going to let that fail.
 
-1527
+1516
 01:43:25,600 --> 01:43:26,800
 And we have no failures.
 
-1528
+1517
 01:43:27,710 --> 01:43:29,470
 Now we can compare two hands.
 
-1529
+1518
 01:43:29,600 --> 01:43:31,220
 There is a tiny bit of work left
 
-1530
+1519
 01:43:31,600 --> 01:43:34,400
 there's a few hands I haven't implemented.
 
-1531
+1520
 01:43:34,940 --> 01:43:36,970
 And there's a bit of work left in terms of:
 
-1532
+1521
 01:43:37,770 --> 01:43:41,050
 well, we should probably
 have all the rankings in nice order.
 
-1533
+1522
 01:43:41,250 --> 01:43:43,220
 There's an obvious refactoring step
 
-1534
+1523
 01:43:43,710 --> 01:43:47,110
 which is, well, now I have a list of things
 
-1535
+1524
 01:43:47,140 --> 01:43:48,800
 that rank things and then
 
-1536
+1525
 01:43:49,820 --> 01:43:55,340
 my rank method is executing
 and checking for things in a certain order.
 
-1537
+1526
 01:43:56,740 --> 01:43:59,510
 The order that I'm
 defining in this POKER_RANKS array
 
-1538
+1527
 01:44:00,100 --> 01:44:03,200
 Is the exact same one which
 I want to be ranking those cards
 
-1539
+1528
 01:44:03,200 --> 01:44:05,830
 so I should be doing something really clever here.
 
-1540
+1529
 01:44:08,200 --> 01:44:10,710
 The big piece of functionality that's missing is...
 
-1541
+1530
 01:44:11,850 --> 01:44:14,760
 If I have two straights, how do I know who has one.
 
-1542
+1531
 01:44:14,850 --> 01:44:19,220
 and this is why I'm returning
 this rank as type something
 
-1543
+1532
 01:44:19,600 --> 01:44:23,880
 because I had in mind, I
 don't only care about the type of hand
 
-1544
+1533
 01:44:23,910 --> 01:44:26,790
 I also care about
 the highest card in that hand
 
-1545
+1534
 01:44:28,340 --> 01:44:30,310
 For a straight, for example,
 
-1546
+1535
 01:44:30,320 --> 01:44:34,280
 I would get the highest card in that hand.
 
-1547
+1536
 01:44:34,820 --> 01:44:39,280
 With the mix of Ace
 should be counted as 1 or 14
 
-1548
+1537
 01:44:40,200 --> 01:44:42,650
 depending on the
 kind of straight that I have.
 
-1549
+1538
 01:44:42,650 --> 01:44:44,870
 and I would return that as the type of rank.
 
-1550
+1539
 01:44:45,370 --> 01:44:48,740
 and if my rank method gives
 me back not just the type of my hand
 
-1551
+1540
 01:44:48,940 --> 01:44:52,540
 but also the highest possible tie breaker
 
-1552
+1541
 01:44:54,540 --> 01:44:57,110
 in some hands but in
 others it's different things,
 
-1553
+1542
 01:44:57,620 --> 01:45:00,970
 then I can definitely determine
 if my hand has won or not.
 
-1554
+1543
 01:45:01,450 --> 01:45:02,520
 TS: Ok, great.
 
-1555
+1544
 01:45:02,620 --> 01:45:05,400
 TS: Well I think that would
 be a good place to wrap it up.
 
-1556
+1545
 01:45:05,650 --> 01:45:08,170
 Thank  you very much
 for showing us this today
 
-1557
+1546
 01:45:08,170 --> 01:45:10,280
 It's been fascinating watching you work.
 
-1558
+1547
 01:45:10,280 --> 01:45:11,770
 So again, thank you very much.
 
-1559
+1548
 01:45:11,770 --> 01:45:12,400
 CB: Thanks.
 
