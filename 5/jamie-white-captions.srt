@@ -3016,7 +3016,8 @@ a .json on the end.
 
 712
 01:03:18,310 --> 01:03:20,930
-We need to tell it, the way to do that is:
+We need to tell it, the way to do that is
+an adapter
 
 713
 01:03:24,300 --> 01:03:27,700
@@ -3248,7 +3249,8 @@ We don't want a serializer
 
 767
 01:08:21,330 --> 01:08:22,780
-for everything, we just want:
+for everything, we just want
+a serializer for partner
 
 768
 01:08:57,740 --> 01:08:59,230
@@ -3307,7 +3309,8 @@ Once we've done those manipulations
 
 781
 01:10:28,400 --> 01:10:29,190
-we just want to:
+we just want to hand it off to the
+regular class method
 
 782
 01:10:39,120 --> 01:10:43,850
