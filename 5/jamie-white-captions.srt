@@ -4322,7 +4322,7 @@ JW: I'm going to say that we're going to
 
 1023
 01:29:35,850 --> 01:29:37,280
-loop over something model.
+loop over simply the model.
 
 1024
 01:29:39,010 --> 01:29:40,560
