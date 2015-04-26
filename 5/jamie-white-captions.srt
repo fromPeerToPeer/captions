@@ -4047,7 +4047,8 @@ in a conditional, it's only a binary.
 
 957
 01:23:38,550 --> 01:23:41,820
-But it does mean you can do this kind of thing inaudible:
+But it does mean you can do this kind of
+thing with an each:
 
 958
 01:23:46,100 --> 01:23:47,560
