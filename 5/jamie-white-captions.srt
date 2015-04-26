@@ -4128,7 +4128,7 @@ in a spectacular way.
 
 977
 01:25:04,050 --> 01:25:07,748
-It should just silently inaudible not very much.
+It should just silently do not very much.
 
 978
 01:25:38,450 --> 01:25:42,114
@@ -4136,7 +4136,7 @@ Notice the silence there...
 
 979
 01:25:42,150 --> 01:25:43,760
-That indicates to me a build up.
+That indicates to me a build error.
 
 980
 01:25:45,760 --> 01:25:46,870
