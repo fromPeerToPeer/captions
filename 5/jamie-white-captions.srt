@@ -3871,7 +3871,8 @@ with my acceptance test.
 
 915
 01:20:42,780 --> 01:20:45,970
-DN: Is it the inaudible insertion checking the current URL?
+DN: Is it the exception that's failing
+where it's checking the current URL?
 
 916
 01:20:46,180 --> 01:20:46,660
