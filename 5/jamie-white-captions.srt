@@ -4334,11 +4334,11 @@ We'll go back to:
 
 1026
 01:29:46,510 --> 01:29:49,360
-So it's saying we've inaudible this thing
+So it's saying:
 
 1027
 01:29:49,380 --> 01:29:51,700
-where we're trying to inaudible over objects
+we're trying to each over an object,
 
 1028
 01:29:51,700 --> 01:29:53,040
