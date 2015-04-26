@@ -4229,7 +4229,8 @@ And this one depends on the value of guest.
 
 1001
 01:27:53,090 --> 01:27:56,210
-inaudible store not going to change.
+Technically it depends on store
+but store not going to change.
 
 1002
 01:27:58,210 --> 01:27:59,680
@@ -4237,7 +4238,7 @@ That's very interesting.
 
 1003
 01:28:01,010 --> 01:28:04,200
-Oh, don't know what I've done there, oh well.
+Oh, I know what I've done there, oh well.
 
 1004
 01:28:04,990 --> 01:28:06,450
