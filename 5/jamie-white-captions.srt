@@ -3090,7 +3090,7 @@ And I think there's another method:
 
 730
 01:05:20,660 --> 01:05:22,900
-UrlPrefix is not quite what we want.
+urlPrefix is not quite what we want.
 
 731
 01:05:24,970 --> 01:05:26,320
@@ -3107,7 +3107,7 @@ something more general than that.
 
 734
 01:05:42,230 --> 01:05:43,930
-Let's do pathFor Type:
+Let's do pathForType:
 
 735
 01:05:53,810 --> 01:05:57,310
