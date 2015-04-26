@@ -3045,7 +3045,7 @@ but the data that we're working with
 719
 01:04:14,290 --> 01:04:17,860
 looks quite a lot like what
-active model serializer would yield.
+active model serializers would yield.
 
 720
 01:04:18,560 --> 01:04:19,860
