@@ -2967,7 +2967,7 @@ I'm just going to go for:
 
 701
 01:01:52,900 --> 01:01:54,160
-What your seeing here is
+What you are seeing here is
 
 702
 01:01:54,160 --> 01:01:57,600
@@ -3130,7 +3130,7 @@ It's saying you've got this data
 739
 01:06:20,320 --> 01:06:22,594
 but you've not
-declared that your going to use it.
+declared that you're going to use it.
 
 740
 01:06:22,594 --> 01:06:25,900
@@ -3139,7 +3139,7 @@ guest episode host episode.
 
 741
 01:06:40,170 --> 01:06:43,720
-Its expecting, like that:
+It's expecting, like that:
 
 742
 01:07:02,840 --> 01:07:05,730
@@ -3176,7 +3176,7 @@ JW: Yes I guess so.
 
 750
 01:07:37,480 --> 01:07:40,400
-DN: Again, your using
+DN: Again, you're using
 camel case but the API has
 
 751
@@ -3446,7 +3446,7 @@ Here's an episode, Counting Tree Nodes.
 
 813
 01:12:26,770 --> 01:12:28,960
-These are it's properties, here on the right.
+These are its properties, here on the right.
 
 814
 01:12:39,830 --> 01:12:42,360
