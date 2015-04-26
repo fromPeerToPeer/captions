@@ -3442,7 +3442,7 @@ That was me just clicking through
 
 812
 01:12:24,570 --> 01:12:26,640
-Here's an episode, Counting Tree Nodes.
+Here's an episode, "Counting Tree Nodes".
 
 813
 01:12:26,770 --> 01:12:28,960
@@ -3467,7 +3467,7 @@ I'll go in there.
 818
 01:12:48,050 --> 01:12:51,460
 It's an array containing
-one string of Poker hands.
+one which is "Ranking Poker Hands".
 
 819
 01:12:51,510 --> 01:12:53,020
