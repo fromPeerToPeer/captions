@@ -3796,7 +3796,7 @@ be filtering on is the host id.
 
 898
 01:18:29,550 --> 01:18:31,530
-Let's see what the symmetry of this is.
+Let's see what the signature of this is.
 
 899
 01:18:31,570 --> 01:18:39,820
