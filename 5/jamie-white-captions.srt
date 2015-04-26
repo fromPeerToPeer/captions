@@ -2929,7 +2929,7 @@ If the names are substantially different.
 
 692
 01:00:36,610 --> 01:00:39,210
-Certainly here, the inverse is guest.
+So here, the inverse is guest.
 
 693
 01:00:42,880 --> 01:00:47,510
@@ -3053,7 +3053,7 @@ So let's use that instead:
 
 721
 01:04:25,360 --> 01:04:27,460
-It's expected data of this form
+It's expecting data of this form
 
 722
 01:04:27,680 --> 01:04:29,520
@@ -3282,7 +3282,7 @@ it's going to infer the type from this key,
 
 775
 01:09:29,810 --> 01:09:31,510
-over which each record lives.
+under which each record lives.
 
 776
 01:09:35,150 --> 01:09:38,900
@@ -3358,7 +3358,7 @@ which is this object here:
 
 793
 01:11:21,900 --> 01:11:24,100
-containing an episode partners.
+containing an episode's partners.
 
 794
 01:11:25,040 --> 01:11:26,180
@@ -3471,7 +3471,7 @@ one which is "Ranking Poker Hands".
 
 819
 01:12:51,510 --> 01:12:53,020
-So you can see a flow through.
+So you can see it flow through.
 
 820
 01:12:54,330 --> 01:12:55,020
@@ -3488,7 +3488,7 @@ Now that's in place, let me commit this
 
 823
 01:13:03,680 --> 01:13:05,680
-by quite a lot all at once.
+quite a lot all at once.
 
 824
 01:13:06,850 --> 01:13:11,510
@@ -3595,7 +3595,7 @@ acceptance test which is
 
 848
 01:14:56,491 --> 01:14:58,731
-the thing that was driving us towards
+the thing that is driving us towards
 
 849
 01:14:58,810 --> 01:14:59,970
