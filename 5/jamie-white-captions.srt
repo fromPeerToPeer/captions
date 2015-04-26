@@ -4167,7 +4167,7 @@ similar to sequels.
 
 986
 01:26:46,080 --> 01:26:48,130
-Here we're filtering on a quest instead.
+Here we're filtering on a guest instead.
 
 987
 01:26:48,890 --> 01:26:50,770
