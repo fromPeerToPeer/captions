@@ -2609,7 +2609,7 @@ What we won't have here is...
 
 615
 00:53:51,977 --> 00:53:53,580
-We're asking for inaudible sequels,
+We're asking for model.sequels,
 
 616
 00:53:54,308 --> 00:53:55,885
