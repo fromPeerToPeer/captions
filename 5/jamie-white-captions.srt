@@ -2750,7 +2750,7 @@ I'm going to return:
 
 649
 00:56:25,490 --> 00:56:26,780
-The promise line inaudible
+The promise library
 
 650
 00:56:27,440 --> 00:56:28,800
