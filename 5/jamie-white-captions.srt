@@ -2410,7 +2410,7 @@ So let's make a template for this route.
 
 567
 00:50:04,422 --> 00:50:05,940
-In fact, let's inaudible a root.
+In fact, let's just generate a root.
 
 568
 00:50:20,220 --> 00:50:21,810
