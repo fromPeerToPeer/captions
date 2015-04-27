@@ -2811,11 +2811,11 @@ Don't need the ajax anymore.
 
 664
 00:57:14,870 --> 00:57:16,890
-DN: Do we now have to define a store?
+DN: Do we now have to define a store
 
 665
 00:57:17,940 --> 00:57:19,250
-inaudible
+for each of those?
 
 666
 00:57:19,250 --> 00:57:20,674
