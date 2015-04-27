@@ -2199,7 +2199,7 @@ on the running application.
 
 518
 00:45:37,440 --> 00:45:39,180
-It's inaudible, but
+It's not bubbling up, but
 
 519
 00:45:39,180 --> 00:45:42,434
