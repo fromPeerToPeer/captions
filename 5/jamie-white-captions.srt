@@ -2867,7 +2867,7 @@ that's what JavaScript looks like.
 
 677
 00:58:28,240 --> 00:58:30,491
-inaudible string...
+challengeName string...
 
 678
 00:58:30,670 --> 00:58:31,714
