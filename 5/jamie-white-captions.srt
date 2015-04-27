@@ -2337,7 +2337,7 @@ for free you don't have to define it.
 
 550
 00:48:55,910 --> 00:48:58,560
-And it should inherit it's model from it's parents.
+And it should inherit its model from its parents.
 
 551
 00:48:59,450 --> 00:49:01,770
