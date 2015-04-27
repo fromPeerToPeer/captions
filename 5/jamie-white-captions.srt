@@ -1395,7 +1395,7 @@ So a sequel is an episode whose host id,
 
 327
 00:30:00,740 --> 00:30:02,080
-is equal to our guest id.
+is equal to our guest ID.
 
 328
 00:30:10,730 --> 00:30:12,340
@@ -1411,7 +1411,7 @@ we don't need to check so much.
 
 331
 00:30:29,910 --> 00:30:31,650
-I'll just break this up a bit.
+I'll just break this out a bit.
 
 332
 00:30:36,240 --> 00:30:38,171
@@ -1419,15 +1419,16 @@ Let's see what's the difference here.
 
 333
 00:30:39,330 --> 00:30:41,500
-DN: It's only the prequel id inaudible.
+DN: It's only the "prequel_id": null.
 
 334
 00:30:44,940 --> 00:30:48,708
-JW: Yes, its undefined instead rather than null.
+JW: Yes, it's undefined instead rather than null.
 
 335
 00:30:55,080 --> 00:30:57,990
-So rather than expecting null, let's inaudible there
+So rather than expecting null, let's just say
+the key isn't even there.
 
 336
 00:30:59,170 --> 00:31:02,610
@@ -1443,11 +1444,11 @@ See what new stuff we've got.
 
 339
 00:31:12,880 --> 00:31:15,520
-I fixed inaudible error so I'll:
+I fixed a JSHint error so I'll:
 
 340
 00:31:36,900 --> 00:31:39,230
-DN: Your making your
+DN: You're making your
 commits granular there.
 
 341
@@ -1464,7 +1465,8 @@ but it's such good practice.
 
 344
 00:31:46,440 --> 00:31:49,400
-It's probably the best inaudible you can get in this program.
+It's probably the best habit you can get
+into as a programmer
 
 345
 00:31:50,530 --> 00:31:52,490
@@ -1489,7 +1491,7 @@ help us work out what the algorithm is
 
 350
 00:32:04,890 --> 00:32:06,890
-and what its trying to produce.
+and what it's trying to produce.
 
 351
 00:32:08,240 --> 00:32:09,120
@@ -1497,11 +1499,11 @@ I'll commit this.
 
 352
 00:32:22,210 --> 00:32:25,140
-I fancy giving it a quick re-factor,
+I fancy giving it a quick refactor,
 
 353
 00:32:25,140 --> 00:32:27,280
-to make sure that they can be re-factored.
+to make sure that they can be refactored.
 
 354
 00:32:31,190 --> 00:32:34,180
@@ -1542,7 +1544,7 @@ This is all using the ES6 module syntax
 362
 00:33:12,590 --> 00:33:15,760
 which assumes you don't
-want things on a global scope.
+want things off the global scope.
 
 363
 00:33:15,760 --> 00:33:18,030
@@ -1604,8 +1606,8 @@ can only search after this point.
 
 376
 00:33:57,600 --> 00:33:59,680
-But that's not
-what we need in this case.
+But there's very
+little need in this case.
 
 377
 00:34:00,730 --> 00:34:01,680
@@ -1656,7 +1658,7 @@ I'm going to side step the problem of
 
 388
 00:35:01,170 --> 00:35:03,010
-mocking out the data for every test
+mocking out the data under test
 
 389
 00:35:03,010 --> 00:35:04,450
@@ -1685,7 +1687,7 @@ You'll notice, it's trying to look up
 
 395
 00:35:29,500 --> 00:35:31,800
-URL walking sequence.
+the URL walking sequence.
 
 396
 00:35:33,550 --> 00:35:35,760
@@ -1768,7 +1770,7 @@ I think the most logical way to represent
 
 415
 00:36:47,830 --> 00:36:49,830
-the sequels is probably via via links.
+the sequence is probably via via links.
 
 416
 00:36:49,920 --> 00:36:50,560
@@ -1784,7 +1786,7 @@ a way to represent the whole graph.
 
 419
 00:36:59,540 --> 00:37:02,090
-In one visual set up.
+In one visual snapshot.
 
 420
 00:37:02,820 --> 00:37:06,040
@@ -1809,7 +1811,7 @@ A link that contains the words Tom Stuart.
 
 425
 00:37:41,410 --> 00:37:43,630
-What we are expecting that...
+What we are expecting is that...
 
 426
 00:37:48,290 --> 00:37:50,180
@@ -1851,7 +1853,7 @@ which at the moment
 
 435
 00:38:32,510 --> 00:38:34,020
-Toms episode has no prequel
+Tom's episode has no prequel
 
 436
 00:38:34,020 --> 00:38:36,020
@@ -1859,7 +1861,7 @@ and Ollie's episode has no prequel.
 
 437
 00:38:37,580 --> 00:38:39,530
-JW:  That sounds good, but it sounds like
+JW:  That sounds good, that sounds like
 
 438
 00:38:40,180 --> 00:38:41,530
@@ -1872,7 +1874,7 @@ DN:  If we did have a list of all the people
 440
 00:38:46,020 --> 00:38:48,590
 JW: Some of those people
-don't have roots episodes.
+don't have root episodes.
 
 441
 00:38:49,090 --> 00:38:51,900
@@ -1885,7 +1887,7 @@ Yes, OK let's do that then.
 
 443
 00:38:55,140 --> 00:38:57,300
-We want the roots episodes,
+We want the root episodes,
 
 444
 00:38:57,300 --> 00:38:59,020
@@ -1935,7 +1937,7 @@ contain a link back to its prequel.
 
 455
 00:39:53,890 --> 00:39:55,650
-DN: So if we're stuck on the home page
+DN: So if we're starting on the home page
 
 456
 00:39:55,830 --> 00:39:58,410
@@ -1949,7 +1951,7 @@ That is episode 1 itself.
 458
 00:40:00,490 --> 00:40:04,640
 So wouldn't we end up with
-current path being episode \1.
+currentPath() being /episodes/1.
 
 459
 00:40:05,050 --> 00:40:06,640
@@ -1987,7 +1989,7 @@ We could say at certain points what
 
 467
 00:40:36,700 --> 00:40:38,260
-URL we expected it on.
+URL we expect to be on.
 
 468
 00:40:40,990 --> 00:40:42,940
@@ -1995,7 +1997,8 @@ It doesn't matter too much
 
 469
 00:40:45,150 --> 00:40:47,120
-inaudible of walking backwards and forwards
+I'm trying to tell the story of walking
+backwards and forwards
 
 470
 00:40:47,140 --> 00:40:48,410
@@ -2099,7 +2102,7 @@ We need to deliver this data down
 494
 00:42:39,870 --> 00:42:42,640
 DN: So do we need
-a root episodes function?
+a rootEpisodes function?
 
 495
 00:42:46,040 --> 00:42:49,634
@@ -2129,7 +2132,7 @@ So let's say:
 
 501
 00:43:34,770 --> 00:43:36,720
-The first test has passing so let's
+The first test is passing so let's
 
 502
 00:43:37,650 --> 00:43:39,950
@@ -2142,8 +2145,8 @@ It should be the same for each episode.
 
 504
 00:43:57,560 --> 00:44:01,577
-DN: Ah yes, because build
-collaborators does return the full list.
+DN: Ah yes, because buildCollaborators
+does return the full list.
 
 505
 00:44:02,030 --> 00:44:04,990
@@ -2161,11 +2164,12 @@ it that it doesn't understand.
 
 508
 00:44:24,750 --> 00:44:27,170
-That's good, I wonder if...
+That's curious, I wonder if...
 
 509
 00:44:28,080 --> 00:44:31,600
-Let me find this malfunction inaudible
+undefined is not a function: what's the
+exact stacktrace of that?
 
 510
 00:44:46,290 --> 00:44:49,970
@@ -2174,7 +2178,7 @@ adrift of where it really is.
 
 511
 00:44:59,870 --> 00:45:01,550
-Oh don't know what I've done, again.
+Oh, I know what I've done, again.
 
 512
 00:45:03,870 --> 00:45:04,980
