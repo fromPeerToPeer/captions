@@ -2593,11 +2593,11 @@ So it's not working at the moment.
 
 611
 00:53:39,280 --> 00:53:41,540
-And the reason is that the inaudible...
+And the reason is that
 
 612
 00:53:44,940 --> 00:53:47,050
-Although my build inaudible point to
+Although my buildCollaborators does point to
 
 613
 00:53:47,050 --> 00:53:48,410
