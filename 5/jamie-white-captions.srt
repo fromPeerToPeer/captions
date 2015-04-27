@@ -2849,7 +2849,7 @@ camel case deliberately here?
 
 673
 00:58:14,960 --> 00:58:16,220
-It uses underscore case.
+while the API uses underscore case.
 
 674
 00:58:16,220 --> 00:58:16,950
