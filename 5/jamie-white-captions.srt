@@ -3675,7 +3675,7 @@ sequels of the model.
 
 867
 01:16:13,520 --> 01:16:14,620
-I do have inaudible.
+I do have <ul>.
 
 868
 01:16:15,290 --> 01:16:16,910
@@ -3705,7 +3705,7 @@ As a general principle it's best to
 
 874
 01:16:34,388 --> 01:16:38,045
-treat these values as inaudible,
+treat these values as monadic,
 
 875
 01:16:39,920 --> 01:16:43,730
@@ -3735,7 +3735,7 @@ how do I find it's sequel?
 
 881
 01:17:07,920 --> 01:17:11,000
-I'm going to add a computer property
+I'm going to add a computed property
 
 882
 01:17:11,770 --> 01:17:12,780
@@ -3772,7 +3772,7 @@ Whenever you access records in Ember data
 
 890
 01:17:43,240 --> 01:17:45,200
-you always get inaudible store.
+you always go with the [inaudible] store.
 
 891
 01:17:45,200 --> 01:17:49,531
@@ -3805,7 +3805,7 @@ be filtering on is the host id.
 
 898
 01:18:29,550 --> 01:18:31,530
-Let's see what the symmetry of this is.
+Let's see what the signature of this is.
 
 899
 01:18:31,570 --> 01:18:39,820
@@ -3849,7 +3849,7 @@ These are fully materialized records.
 908
 01:19:38,440 --> 01:19:41,640
 I forgot to declare
-that this is a computer property.
+that this is a computed property.
 
 909
 01:19:42,480 --> 01:19:44,800
@@ -3857,7 +3857,8 @@ There we go, so that's my sequel.
 
 910
 01:19:46,460 --> 01:19:48,411
-DN: Does that give us a passing inaudible test.
+DN: Does that give us a passing acceptance
+test.
 
 911
 01:19:48,411 --> 01:19:49,420
@@ -3865,7 +3866,8 @@ JW: Well, let's find out.
 
 912
 01:19:55,880 --> 01:19:58,605
-I think I might have inaudible there,
+I think I might have messed up my link-to
+helper there,
 
 913
 01:19:58,640 --> 01:19:59,550
@@ -3878,7 +3880,8 @@ with my acceptance test.
 
 915
 01:20:42,780 --> 01:20:45,970
-DN: Is it the inaudible insertion checking the current URL?
+DN: Is it the exception that's failing
+where it's checking the current URL?
 
 916
 01:20:46,180 --> 01:20:46,660
@@ -3899,7 +3902,7 @@ JW: So we see what happened there.
 920
 01:21:07,770 --> 01:21:10,290
 We've added a
-computer property called sequels,
+computed property called sequels,
 
 921
 01:21:10,560 --> 01:21:13,070
@@ -4009,7 +4012,7 @@ and maybe a poster frame.
 
 947
 01:22:50,830 --> 01:22:56,430
-JW: inaudible looks surplus to
+JW: [inaudible] looks surplus to
 requirements now, so let's ditch that.
 
 948
@@ -4019,11 +4022,11 @@ of cosmetic changes all at once.
 
 949
 01:23:06,820 --> 01:23:09,050
-And then bundle them in to commit.
+And then bundle them in to a commit.
 
 950
 01:23:14,500 --> 01:23:16,950
-DN: So we've got an inaudible branch for each
+DN: So we've got an else branch for each
 
 951
 01:23:17,050 --> 01:23:17,620
@@ -4031,7 +4034,7 @@ JW: Yes.
 
 952
 01:23:19,030 --> 01:23:21,160
-I forget where inaudible inherited this from.
+I forget where Ember inherited this from.
 
 953
 01:23:21,580 --> 01:23:23,160
@@ -4039,7 +4042,8 @@ It's not unique to Ember
 
 954
 01:23:25,980 --> 01:23:32,080
-It's a little like a list, handlebars inaudible language.
+It's a little like a LISP, handlebars
+templating language.
 
 955
 01:23:33,100 --> 01:23:36,050
@@ -4052,7 +4056,8 @@ in a conditional, it's only a binary.
 
 957
 01:23:38,550 --> 01:23:41,820
-But it does mean you can do this kind of thing inaudible:
+But it does mean you can do this kind of
+thing with an each:
 
 958
 01:23:46,100 --> 01:23:47,560
@@ -4132,7 +4137,7 @@ in a spectacular way.
 
 977
 01:25:04,050 --> 01:25:07,748
-It should just silently inaudible not very much.
+It should just silently do not very much.
 
 978
 01:25:38,450 --> 01:25:42,114
@@ -4140,7 +4145,7 @@ Notice the silence there...
 
 979
 01:25:42,150 --> 01:25:43,760
-That indicates to me a build up.
+That indicates to me a build error.
 
 980
 01:25:45,760 --> 01:25:46,870
@@ -4171,7 +4176,7 @@ similar to sequels.
 
 986
 01:26:46,080 --> 01:26:48,130
-Here we're filtering on a quest instead.
+Here we're filtering on a guest instead.
 
 987
 01:26:48,890 --> 01:26:50,770
@@ -4211,7 +4216,8 @@ If the host of either episode was changed
 
 996
 01:27:35,810 --> 01:27:40,080
-on the inaudible, so if this became an editing interface.
+on the fly, so if this became an editing
+interface.
 
 997
 01:27:41,220 --> 01:27:44,210
@@ -4220,7 +4226,7 @@ these would stop being in sync with things.
 998
 01:27:44,210 --> 01:27:47,360
 So I have to declare
-that this is a computer property
+that this is a computed property
 
 999
 01:27:47,360 --> 01:27:49,150
@@ -4232,7 +4238,8 @@ And this one depends on the value of guest.
 
 1001
 01:27:53,090 --> 01:27:56,210
-inaudible store not going to change.
+Technically it depends on store
+but store not going to change.
 
 1002
 01:27:58,210 --> 01:27:59,680
@@ -4240,7 +4247,7 @@ That's very interesting.
 
 1003
 01:28:01,010 --> 01:28:04,200
-Oh, don't know what I've done there, oh well.
+Oh, I know what I've done there, oh well.
 
 1004
 01:28:04,990 --> 01:28:06,450
@@ -4324,7 +4331,7 @@ JW: I'm going to say that we're going to
 
 1023
 01:29:35,850 --> 01:29:37,280
-loop over something model.
+loop over simply the model.
 
 1024
 01:29:39,010 --> 01:29:40,560
@@ -4336,11 +4343,11 @@ We'll go back to:
 
 1026
 01:29:46,510 --> 01:29:49,360
-So it's saying we've inaudible this thing
+So it's saying:
 
 1027
 01:29:49,380 --> 01:29:51,700
-where we're trying to inaudible over objects
+we're trying to each over an object,
 
 1028
 01:29:51,700 --> 01:29:53,040
