@@ -2509,11 +2509,12 @@ DN: Switch to different Ember CLI.
 591
 00:52:43,428 --> 00:52:46,980
 JW: Yes, I'm going to go
-to last stable releases of inaudible
+to last stable releases.
 
 592
 00:52:47,040 --> 00:52:49,150
-This is the cause of my problem so...
+I have a feeling this is
+the cause of my problem so...
 
 593
 00:52:52,160 --> 00:52:54,870
