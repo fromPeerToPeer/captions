@@ -1,36 +1,37 @@
 ﻿1
 00:00:01,270 --> 00:00:02,660
-Welcome to Peer to Peer.
+Welcome to Peer to Peer,
 
 2
 00:00:03,190 --> 00:00:06,480
-Where you can hone your
+where you can hone your
 skills by watching live coding videos.
 
 3
 00:00:07,730 --> 00:00:09,550
-Our guest today is Jamie White.
+Our guest today is Jamie White,
 
 4
 00:00:10,020 --> 00:00:13,140
-Who's a Ruby a JavaScript
-developer at With Associates.
+who's a Ruby and JavaScript
+developer at With Associates
 
 5
 00:00:13,760 --> 00:00:16,040
-And a co-organizer of the London Ember inaudible
+and a co-organizer of the London Ember meetup.
 
 6
 00:00:17,150 --> 00:00:18,860
-I'm your host Drew Neil
+I'm your host, Drew Neil,
 
 7
 00:00:19,300 --> 00:00:21,750
-And the challenge that I set for Jamie is called
+and the challenge that I set for Jamie is called
+Deducing Collaborations.
 
 8
 00:00:24,110 --> 00:00:27,670
-DN: OK Jamie, would you like to
+DN: OK, Jamie, would you like to
 start by reading out the challenge?
 
 9
@@ -57,16 +58,16 @@ I've already got this stuff.
 
 14
 00:01:36,450 --> 00:01:38,590
-I'm looking at past episodes to begin with.
+Let's look at past episodes to begin with.
 
 15
 00:01:38,880 --> 00:01:44,170
 I'm interested in the ones that
-do form parser sequences already.
+do form parts of sequences already.
 
 16
 00:01:45,750 --> 00:01:49,560
-We have episode one where the host was you
+We have episode one, where the host was you
 
 17
 00:01:49,560 --> 00:01:50,740
@@ -82,11 +83,11 @@ where Tom the guest becomes Tom the host
 
 20
 00:01:57,930 --> 00:02:00,220
-Camille becomes the guest.
+and Camille becomes the guest.
 
 21
 00:02:00,840 --> 00:02:04,000
-And then this one leads on to here
+And then this one leads on to here,
 
 22
 00:02:04,000 --> 00:02:06,340
@@ -115,11 +116,11 @@ it so that we have a branch
 
 28
 00:02:25,920 --> 00:02:29,480
-where I interview Tom and also you.
+where I interview Tom and also you,
 
 29
 00:02:29,485 --> 00:02:32,810
-But we're going to pretend
+but we're going to pretend
 that Camille is acting as host today
 
 30
@@ -133,11 +134,11 @@ We can always adapt it later.
 
 32
 00:02:40,080 --> 00:02:42,320
-Thinking of the nouns in this description
+JW: Thinking of the nouns in this description,
 
 33
 00:02:43,080 --> 00:02:46,160
-The data structure is
+the data structure is
 composed of collaborations.
 
 34
@@ -147,7 +148,7 @@ quite explicit about that.
 
 35
 00:02:48,630 --> 00:02:51,180
-Now, at the moment an episode
+Now, at the moment, an episode
 
 36
 00:02:51,220 --> 00:02:53,940
@@ -181,16 +182,16 @@ I am going to use Ember for this
 
 43
 00:03:18,300 --> 00:03:20,800
-A bit like reaching for rails,
+A bit like reaching for Rails,
 
 44
 00:03:20,860 --> 00:03:23,150
-I won't use all of it to begin with
+I won't use all of it to begin with,
 
 45
 00:03:23,154 --> 00:03:26,320
 but it gives you plenty of
-directions to go in once you set up.
+directions to go in once you're set up.
 
 46
 00:03:32,260 --> 00:03:34,960
@@ -202,12 +203,12 @@ Cool... Bleeding edge Ember CLI.
 
 48
 00:03:39,420 --> 00:03:40,560
-Let's call this:
+Let's call this peertopeer.
 
 49
 00:03:48,900 --> 00:03:52,450
-Ember CLI will provide all the
-tools and dependencies we need.
+Ember CLI is installing all the tooling
+dependencies we need.
 
 50
 00:03:52,540 --> 00:03:52,930
@@ -220,11 +221,11 @@ there's quite a few of them.
 
 52
 00:04:04,260 --> 00:04:08,525
-Because I'm using a local copy of Ember CLI inaudible.
+Because I'm using a local copy of Ember CLI–
 
 53
 00:04:08,925 --> 00:04:10,137
-I got it off Github.
+I cloned it off Github...
 
 54
 00:04:11,300 --> 00:04:13,460
@@ -232,42 +233,43 @@ With npm, what you tend to do
 
 55
 00:04:13,460 --> 00:04:17,550
-when working on packages that you're adapting.
+when working on packages that you're adapting
 
 56
 00:04:17,600 --> 00:04:20,990
-Is to... You do npm link and it will symlink up
+is to... You do npm link and it will symlink up
 
 57
 00:04:22,390 --> 00:04:27,657
 your copy of the repository
-to the node modules or directory.
+to the node_modules global directory.
 
 58
 00:04:28,651 --> 00:04:30,050
-I cant use it straight away,
+I can't use it straight away,
 
 59
 00:04:30,050 --> 00:04:32,050
-I need to first enter the Ember npm link cli.
+I need to first enter npm link ember-cli,
 
 60
 00:04:33,260 --> 00:04:35,680
-And that says also use it inside this project.
+and that says also use it inside this project.
 
 61
 00:04:37,630 --> 00:04:42,530
 Now, if you follow the
-trail in this local project.
+trail in this local project,
 
 62
 00:04:42,530 --> 00:04:48,830
-You'll find this symlink
-here going to user local modules.
+you'll find this symlink
+here going to /usr/local/lib/node_modules.
 
 63
 00:04:52,370 --> 00:04:56,780
-The modules at CLI links to my very own copy of it.
+You'll find Ember CLI linked to
+my very own copy of it.
 
 64
 00:04:57,810 --> 00:04:59,120
@@ -279,7 +281,7 @@ Let's just make a quick change
 
 66
 00:05:16,960 --> 00:05:20,330
-and make sure we're
+to make sure we're
 doing what we think we're doing.
 
 67
@@ -288,20 +290,20 @@ OK, it seems to work.
 
 68
 00:05:33,540 --> 00:05:35,760
-I am inclined to...
+I am inclined to
 
 69
 00:05:38,690 --> 00:05:41,800
-get the data in first, and get it in the browser,
+get the data in first and get it in the browser
 
 70
 00:05:41,800 --> 00:05:43,800
-and think about it that way.
+and to think about it that way.
 
 71
 00:05:45,420 --> 00:05:48,400
 Pick up the data and put
-it down again as much as possible
+it down again as many times as possible
 
 72
 00:05:48,400 --> 00:05:50,930
@@ -309,15 +311,15 @@ until some way to handle it emerges.
 
 73
 00:05:54,710 --> 00:05:57,570
-Before we get going, I'm going to...
+Before we get going, I'm going to
 
 74
 00:05:58,070 --> 00:06:00,030
-store another dependency.
+install another dependency.
 
 75
 00:06:09,560 --> 00:06:11,880
-So Ember is about to undergo...
+So Ember is about to undergo
 
 76
 00:06:12,900 --> 00:06:15,060
@@ -325,11 +327,11 @@ some significant improvements and this
 
 77
 00:06:16,420 --> 00:06:19,090
-CLI and inaudible use the future
+Ember CLI add-on will let us use the future.
 
 78
 00:06:23,700 --> 00:06:26,660
-And so you just opt in to the future.
+And then I need to opt-in to the future.
 
 79
 00:06:37,350 --> 00:06:38,860
@@ -337,11 +339,10 @@ I just want to do a quick check.
 
 80
 00:06:45,131 --> 00:06:47,520
-inaudible and anyway it's wrong.
 
 81
 00:06:47,520 --> 00:06:48,900
-parser once and...
+ember-htmlbars I want.
 
 82
 00:06:50,140 --> 00:06:51,330
@@ -350,7 +351,7 @@ There is another one.
 83
 00:06:56,530 --> 00:06:59,460
 DN: Did you just
-switch to repository for Ember.js?
+switch to the repository for ember.js?
 
 84
 00:06:59,460 --> 00:06:59,960
@@ -366,7 +367,7 @@ If you're running on Canary
 
 87
 00:07:12,331 --> 00:07:14,640
-the latest inaudible of Ember.
+at the latest build off of master of Ember,
 
 88
 00:07:16,050 --> 00:07:18,320
@@ -374,28 +375,28 @@ the new things that are coming down the pipe
 
 89
 00:07:18,320 --> 00:07:20,270
-are hidden behind the feature flags.
+are hidden behind feature flags.
 
 90
 00:07:20,820 --> 00:07:27,657
 That allows the core team
-to release things incrementally.
+to release things incrementally,
 
 91
 00:07:28,470 --> 00:07:30,300
-That allows people to try them out.
+but it also allows people to try them out
 
 92
 00:07:30,937 --> 00:07:32,685
-without breaking the inaudible
+without breaking the past.
 
 93
 00:07:32,690 --> 00:07:34,170
-So I want those three things,
+So I want those three things.
 
 94
 00:07:34,170 --> 00:07:35,760
-and the other thing I want is...
+And the other thing I want is...
 
 95
 00:07:38,800 --> 00:07:40,750
@@ -403,15 +404,15 @@ I don't want this stable build of Ember,
 
 96
 00:07:40,790 --> 00:07:44,180
-I want the Canary build components.
+I want the Canary build.
 
 97
 00:07:51,050 --> 00:07:53,280
-DN: OK, so this is bleeding edge, all the way.
+DN: OK, so this is bleeding edge all the way.
 
 98
 00:07:53,500 --> 00:07:54,120
-JW: Yes
+JW: Yes.
 
 99
 00:07:54,120 --> 00:07:58,490
@@ -420,7 +421,7 @@ going to be worth while is that
 
 100
 00:07:59,780 --> 00:08:02,250
-Ember will be changing shortly after you record this,
+Ember will be changing shortly after we record this,
 
 101
 00:08:02,250 --> 00:08:04,840
@@ -434,7 +435,7 @@ DN: OK.
 103
 00:08:07,190 --> 00:08:09,890
 JW: So I think I want
-that version of handlebars.
+that version of Handlebars.
 
 104
 00:08:11,820 --> 00:08:13,160
@@ -442,11 +443,11 @@ And that version of Ember.
 
 105
 00:08:17,030 --> 00:08:17,870
-Yes that's taken.
+Let's check that has taken.
 
 106
 00:08:22,460 --> 00:08:25,070
-I'll just have a look at...
+I'll just have a look at
 
 107
 00:08:27,300 --> 00:08:28,670
@@ -454,15 +455,15 @@ all these differences.
 
 108
 00:08:29,990 --> 00:08:33,142
-So bleeding edge Ember in the future...
+Bleeding edge Ember
 
 109
 00:08:33,220 --> 00:08:36,340
-opting in to these new features
+opted in to these new features
 
 110
 00:08:36,340 --> 00:08:38,340
-and including inaudible bars, which is the...
+and included HTMLBars, which is the...
 
 111
 00:08:39,190 --> 00:08:41,260
@@ -475,15 +476,15 @@ all that actually works.
 
 113
 00:08:52,571 --> 00:08:54,370
-inaudible this side of bower.
+I've never quite understood this side of Bower.
 
 114
 00:08:54,370 --> 00:08:55,817
-It doesn't have a locked file.
+Because it doesn't have a lockfile
 
 115
 00:08:59,600 --> 00:09:02,450
-It keeps the dependency
+it keeps the dependency
 resolutions in the same file
 
 116
@@ -493,21 +494,21 @@ in which they were specified in the first place.
 117
 00:09:11,020 --> 00:09:13,870
 There's not a lot of
-difference to notice at the moment.
+difference to notice at the moment
 
 118
 00:09:13,870 --> 00:09:17,280
-But things are better under
+but things are better under
 the hood for various reasons.
 
 119
 00:09:20,570 --> 00:09:22,450
-I'm not going to begin to test just yet,
+I'm not going to in to tests just yet
 
 120
 00:09:22,450 --> 00:09:25,760
 because I don't know
-quite what the target is yet.
+quite what the target is at the moment.
 
 121
 00:09:25,760 --> 00:09:27,370
@@ -515,7 +516,7 @@ I know I want a data structure.
 
 122
 00:09:27,880 --> 00:09:29,440
-But if it's something I want to display,
+But if it's something I want to display
 
 123
 00:09:29,450 --> 00:09:32,834
@@ -531,11 +532,12 @@ Let's say for the beginning...
 
 126
 00:09:40,350 --> 00:09:42,770
-display a list of episodes.
+Let's just a display
+a list of episodes.
 
 127
 00:10:11,730 --> 00:10:16,160
-Thinking back to Toms Peer to Peer
+Thinking back to Tom's Peer to Peer
 
 128
 00:10:16,160 --> 00:10:18,830
@@ -543,29 +545,30 @@ and how often he commits,
 
 129
 00:10:18,830 --> 00:10:21,770
-and I realise that I'm
+I realise that I'm
 already several changes
 
 130
 00:10:21,770 --> 00:10:23,940
-into that without committing
+in without committing.
 
 131
 00:10:24,980 --> 00:10:29,222
-my bits of bleeding edge stuff.
+Let me just commit my bits of bleeding
+edge stuff.
 
 132
 00:10:30,102 --> 00:10:32,045
-DN: I didn't see you create a git repository,
+DN: I didn't see you create a Git repository.
 
 133
 00:10:32,057 --> 00:10:34,274
-was that done for
-you by the Ember inaudible?
+Was that done for
+you by the ember generate command?
 
 134
 00:10:34,340 --> 00:10:37,360
-JW: Yes, Ember as a new creates a repo.
+JW: Yes, ember new creates a repo.
 
 135
 00:10:37,470 --> 00:10:41,530
@@ -574,7 +577,7 @@ up on the latest Ember.
 
 136
 00:10:50,530 --> 00:10:52,354
-And partly to demonstrate how easy
+And partly I want to demonstrate how easy
 
 137
 00:10:52,360 --> 00:10:54,331
@@ -582,15 +585,17 @@ it is to use the bleeding edge of Ember.
 
 138
 00:10:54,670 --> 00:10:59,460
-inaudible rails, and command line inaudible
+It's modelled after Rails and Rails's command
+line tooling,
 
 139
 00:10:59,820 --> 00:11:01,590
-It should feel familiar to anyone.
+so it should feel familiar to anyone
+who knows that.
 
 140
 00:11:03,870 --> 00:11:05,270
-Check in that check as well.
+Check in that change as well.
 
 141
 00:11:09,330 --> 00:11:11,040
@@ -602,16 +607,16 @@ So that at the moment is fine.
 
 143
 00:11:17,211 --> 00:11:19,120
-It's compiling, it's just
-that there's nothing to replicate
+It's compiling. It's just
+that there's nothing to render
 
 144
 00:11:19,120 --> 00:11:20,670
-It just says there is no data.
+because there is no data.
 
 145
 00:11:22,000 --> 00:11:23,370
-So I'm going to commit that
+So I'm going to commit that.
 
 146
 00:11:31,000 --> 00:11:32,290
@@ -619,7 +624,8 @@ Let's pull in those files.
 
 147
 00:11:34,430 --> 00:11:35,810
-I've got men next door.
+I've got them next door.
+Let's pull them in...
 
 148
 00:11:40,130 --> 00:11:43,190
@@ -628,20 +634,20 @@ coming from an API of some sort.
 
 149
 00:11:44,520 --> 00:11:46,080
-So we'll put them in.
+So we'll put them in there.
 
 150
 00:11:56,130 --> 00:12:01,634
-So we now should be able to
-fetch down from lolhost/api/episodes
+DN: So we now should be able to
+fetch them from lolhost/api/episodes.
 
 151
 00:12:01,890 --> 00:12:06,045
-lolhost is because a inaudible
+JW: lolhost is because I always mistype it.
 
 152
 00:12:12,777 --> 00:12:14,571
-I'll concentrate on episodes for now,
+I'll concentrate on episodes for now
 
 153
 00:12:14,590 --> 00:12:16,230
@@ -649,24 +655,24 @@ because it looks the most like...
 
 154
 00:12:17,840 --> 00:12:22,502
-I don't have application roots yet,
-the roots of where data gets loaded in,
+I don't have an applcation route yet.
+Routes are where data gets loaded in,
 
 155
 00:12:22,502 --> 00:12:23,150
-so I will:
+so I will generate one of those.
 
 156
 00:12:29,380 --> 00:12:31,497
-I don't want to change the template
+I don't want to change the template,
 
 157
 00:12:31,540 --> 00:12:32,910
-but  I do want the rest of it.
+but I do want the rest of it.
 
 158
 00:12:39,740 --> 00:12:40,920
-In my template,
+In my template
 
 159
 00:12:42,240 --> 00:12:44,210
@@ -674,32 +680,32 @@ I wasn't referring to model directly,
 
 160
 00:12:44,210 --> 00:12:46,720
-I'm referring to the episodes.
+I'm referring to the episodes
 
 161
 00:12:48,780 --> 00:12:50,210
-I'm going to stick with that.
+and I'm going to stick with that.
 
 162
 00:12:50,400 --> 00:12:52,210
-So what I want to return from here,
+So what I want to return from here is...
 
 163
 00:12:53,700 --> 00:12:57,840
-is set up some aliases.
+I'm just going to set up some aliases.
 
 164
 00:13:01,360 --> 00:13:04,250
 I want to return a
-promise to load in that data.
+Promise to load in that data.
 
 165
 00:13:20,388 --> 00:13:23,954
-I think I have the ic.ajax library handy.
+I think I have the ic-ajax library handy.
 
 166
 00:13:33,810 --> 00:13:35,330
-That should I think, be enough.
+I think that should be enough.
 
 167
 00:13:37,290 --> 00:13:38,990
@@ -711,7 +717,7 @@ Yes, it seems to.
 
 169
 00:13:57,060 --> 00:13:59,050
-I'm going to go a step back to something
+I'm going to step back to something
 
 170
 00:13:59,440 --> 00:14:01,330
@@ -719,7 +725,6 @@ that looks a bit more like the guides.
 
 171
 00:14:02,180 --> 00:14:03,130
-Ajax...
 
 172
 00:14:10,630 --> 00:14:12,640
@@ -731,11 +736,11 @@ JW: Yes (laughter).
 
 174
 00:14:18,620 --> 00:14:20,754
-DN: The episode of JSON I think is already...
+DN: The episodes.json is already namespaced.
 
 175
 00:14:20,840 --> 00:14:23,200
-JW: Yes, its already in main space.
+JW: Yes.
 
 176
 00:14:23,280 --> 00:14:27,462
@@ -744,16 +749,16 @@ that but it's actually way better.
 
 177
 00:14:29,290 --> 00:14:31,630
-We need to do, to bring in the model,
+All you need to do to bring in the model
 
 178
 00:14:31,680 --> 00:14:34,274
-for this template to render its...
+for this template to render is
 
 179
 00:14:34,857 --> 00:14:37,531
-promise that you get to
-load it somewhere in the future
+promise that you're going to
+load it at some point in the future
 
 180
 00:14:37,560 --> 00:14:39,330
