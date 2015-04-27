@@ -2696,7 +2696,7 @@ Let's say:
 
 636
 00:55:29,540 --> 00:55:31,170
-inaudible branch.
+Let's checkout a branch.
 
 637
 00:55:34,500 --> 00:55:36,540
