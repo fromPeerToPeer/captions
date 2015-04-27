@@ -4348,19 +4348,19 @@ We are one down in the index root.
 
 1031
 01:30:00,960 --> 01:30:02,940
-So if I generate:
+So if I generate a route:
 
 1032
 01:30:04,790 --> 01:30:06,630
-That's like  a real live root for that.
+That's like  a real live route for that.
 
 1033
 01:30:14,610 --> 01:30:17,130
-So by default a root will take a model
+So by default a route will take a model
 
 1034
 01:30:17,130 --> 01:30:19,130
-of it's parent roots, as its own.
+of its parent routes, as its own.
 
 1035
 01:30:22,530 --> 01:30:25,270
@@ -4430,7 +4430,7 @@ So let's say:
 
 1051
 01:31:53,420 --> 01:31:55,310
-The problem with that is that it is
+The problem with that is that this is
 
 1052
 01:31:55,310 --> 01:31:57,600
@@ -4505,7 +4505,7 @@ have to ask some question
 
 1069
 01:33:17,330 --> 01:33:20,240
-before it becomes completely operational.
+before it completes the operation.
 
 1070
 01:33:25,140 --> 01:33:32,250
@@ -4548,7 +4548,7 @@ for doing this kind of thing.
 1079
 01:34:15,696 --> 01:34:20,294
 Maybe we ought to add a
-computer property to the episode model
+computed property to the episode model
 
 1080
 01:34:23,898 --> 01:34:24,762
@@ -4560,7 +4560,8 @@ And this is true...
 
 1082
 01:34:36,548 --> 01:34:39,268
-It's run into kind of the same problem.
+This is going to run into
+kind of the same problem.
 
 1083
 01:34:39,326 --> 01:34:42,437
@@ -4599,7 +4600,7 @@ and then go back again.
 
 1091
 01:35:32,960 --> 01:35:34,960
-What is it that's changed in that line?
+What is it that's changed at that point?
 
 1092
 01:35:40,480 --> 01:35:41,578
@@ -4620,11 +4621,11 @@ JW: At this point...
 1096
 01:35:52,757 --> 01:35:54,934
 We've got these
-two computer properties.
+two computed properties.
 
 1097
 01:35:55,270 --> 01:35:57,376
-And the way they are bound into the inaudible
+And the way they are bound into the DOM
 
 1098
 01:35:57,372 --> 01:35:59,264
@@ -4636,11 +4637,12 @@ To turn from promise to a real value.
 
 1100
 01:36:03,896 --> 01:36:07,168
-Whereas in our root,
+Whereas in our route,
 
 1101
 01:36:07,160 --> 01:36:10,496
-(sort of) inherited root environment,
+(sort of) inherited route environment,
+we don't
 
 1102
 01:36:11,440 --> 01:36:13,848
@@ -4657,7 +4659,7 @@ I've still got all that to save.
 1105
 01:36:24,896 --> 01:36:27,352
 I was expecting to see
-the full list in this one.
+the full list at this point.
 
 1106
 01:36:46,000 --> 01:36:49,040
@@ -4711,7 +4713,7 @@ would be to do something like this:
 1117
 01:37:35,447 --> 01:37:37,941
 DN: And that forces the
-computer property to be...?
+computed property to be...?
 
 1118
 01:37:39,149 --> 01:37:41,723
@@ -4736,11 +4738,12 @@ DN: Oh that does it.
 
 1123
 01:38:20,800 --> 01:38:24,843
-Unfortunately, because the model is a little inaudible.
+Unfortunately, because the model is
+a little state machine,
 
 1124
 01:38:26,580 --> 01:38:31,345
-To account for the fact that
+to account for the fact that
 you may have data landing later on...
 
 1125
@@ -4764,7 +4767,7 @@ You end up with these sort of situations,
 1129
 01:38:45,447 --> 01:38:49,360
 where your having to wait
-for a model to get to the right state.
+for a model to get into the right state.
 
 1130
 01:38:49,850 --> 01:38:51,854
@@ -4776,7 +4779,7 @@ we know that we have all the data up front.
 
 1132
 01:38:54,210 --> 01:38:56,203
-And the data is so keyed up for the idea
+But Ember Data is so geared up for the idea
 
 1133
 01:38:56,203 --> 01:38:58,632
@@ -4793,11 +4796,12 @@ There are extra properties you can add.
 1136
 01:39:17,860 --> 01:39:22,770
 So you could say explicitly that
-these are asynchronous entities.
+these are asynchronous dependencies.
 
 1137
 01:39:23,701 --> 01:39:27,360
-But for us, because inaudible the application root,
+But for us, because up in
+the application route,
 
 1138
 01:39:28,218 --> 01:39:31,636
@@ -4806,11 +4810,12 @@ loaded in an entire store of data.
 
 1139
 01:39:31,723 --> 01:39:34,072
-We shouldn't need to have to worry about that.
+We shouldn't need to ever worry about that.
 
 1140
 01:39:34,669 --> 01:39:37,512
-It's a shame having to do that but...
+It's a shame that we're
+having to do that but...
 
 1141
 01:39:38,000 --> 01:39:40,894
@@ -4843,7 +4848,7 @@ And back there and... For good measure:
 
 1148
 01:40:20,680 --> 01:40:22,548
-DN: We can link back to the inaudible?
+DN: We can link back to the top one?
 
 1149
 01:40:22,574 --> 01:40:23,207
@@ -4917,7 +4922,8 @@ on everything in your living system.
 
 1165
 01:41:53,560 --> 01:41:56,928
-These little ebuns will emit an object now
+These little $E buttons
+will emit an object out
 
 1166
 01:41:56,928 --> 01:41:59,816
@@ -4929,16 +4935,17 @@ So this is my store.
 
 1168
 01:42:06,768 --> 01:42:09,640
-I could do create record,
+I could do createRecord,
 
 1169
 01:42:11,848 --> 01:42:14,912
-I could use store.create record, let's try this.
+I could use store.createRecord,
+let's try this.
 
 1170
 01:42:17,136 --> 01:42:19,800
 Create record implies
-that your going to pass in
+that you're going to pass in
 
 1171
 01:42:19,800 --> 01:42:21,120
@@ -4978,7 +4985,7 @@ telling the browser that the episode...
 
 1179
 01:42:42,040 --> 01:42:44,736
-You can use, I believe it's pushPayLoad.
+You can use, I believe it's pushPayload.
 
 1180
 01:42:45,410 --> 01:42:47,584
@@ -4994,12 +5001,12 @@ Let's see...
 
 1183
 01:42:57,392 --> 01:43:00,864
-We've got pushPayLoad there,
+We've got pushPayload there,
 I think we can get it on store as well.
 
 1184
 01:43:13,640 --> 01:43:15,024
-Let's pushPayLoad,
+Let's pushPayload,
 
 1185
 01:43:15,768 --> 01:43:18,120
@@ -5031,11 +5038,11 @@ We can re-use the ones that exist.
 
 1192
 01:43:33,370 --> 01:43:36,472
-JW: We're saying it will have an id of us, of 6.
+JW: We're saying it will have an id of 6.
 
 1193
 01:43:38,376 --> 01:43:44,304
-Challenge name: something
+Challenge name: some challenge
 that Tom would set for Steve
 
 1194
@@ -5066,7 +5073,7 @@ Let's just say there's inaudible for this one.
 
 1200
 01:44:04,590 --> 01:44:08,176
-So we'll say host id is
+So we'll say host_id is
 going to be Tom, who is 2.
 
 1201
@@ -5089,7 +5096,7 @@ Namespace...
 
 1205
 01:44:26,900 --> 01:44:28,920
-DN: You didn't just loose all that did you?
+DN: You didn't just lose all that did you?
 
 1206
 01:44:28,920 --> 01:44:29,952
@@ -5109,7 +5116,7 @@ Maybe not, let's try episodes plural:
 
 1210
 01:44:57,928 --> 01:44:59,632
-That is in the array.
+That is the end of the array.
 
 1211
 01:45:09,848 --> 01:45:12,456
@@ -5126,7 +5133,7 @@ Very nice.
 1214
 01:45:15,680 --> 01:45:19,008
 JW: And we should be able
-to have a look in data here.
+to have a look in Data here.
 
 1215
 01:45:19,000 --> 01:45:20,544
@@ -5135,7 +5142,7 @@ There we go, yes.
 1216
 01:45:24,200 --> 01:45:26,640
 These aren't the
-computer guest and host names,
+computed guest and host names,
 
 1217
 01:45:26,640 --> 01:45:29,224
@@ -5160,7 +5167,8 @@ and Tom the host.
 
 1222
 01:45:44,216 --> 01:45:46,352
-I'm just going to add one more inaudible thing
+I'm just going to add one
+more little cosmetic thing
 
 1223
 01:45:46,350 --> 01:45:50,552
@@ -5185,7 +5193,7 @@ DN: I would say featuring guest name.
 
 1228
 01:46:34,656 --> 01:46:37,560
-JW: There is a result thing
+JW: There is a little thing
 which is going to happen here
 
 1229
@@ -5227,7 +5235,7 @@ JW: Correct.
 
 1238
 01:47:27,992 --> 01:47:30,096
-inaudible
+Then, with a little bit of luck ....
 
 1239
 01:47:34,650 --> 01:47:39,032
@@ -5235,7 +5243,8 @@ This gives us the other nicety which is...
 
 1240
 01:47:44,424 --> 01:47:48,248
-inaudible, can you see the MI?
+How does Camille spell her name,
+is it CAMI?
 
 1241
 01:47:49,144 --> 01:47:50,632
@@ -5271,7 +5280,8 @@ DN: We've got the root, that's a major change.
 
 1249
 01:48:55,680 --> 01:48:58,904
-DN: I inaudible after the inaudible (laughter)
+DN: You misspelled featuring
+I'm afraid (laughter)
 
 1250
 01:49:10,072 --> 01:49:14,872
@@ -5289,12 +5299,13 @@ For anyone familiar with building this style of
 
 1253
 01:49:27,017 --> 01:49:31,097
-Do you want data inaudible, it probably seems relatively simplistic.
+view on data in Rails, it probably
+seems relatively simplistic.
 
 1254
 01:49:32,860 --> 01:49:35,222
 If wouldn't be too
-hard to do this with rails.
+hard to do this with Rails.
 
 1255
 01:49:35,220 --> 01:49:39,828
@@ -5306,7 +5317,8 @@ data sources into memory and turning them into
 
 1257
 01:49:43,310 --> 01:49:45,977
-a data structure that we can then inaudible around in
+a data structure that we can then
+wander around in
 
 1258
 01:49:45,980 --> 01:49:48,525
@@ -5337,7 +5349,7 @@ I feel like it's the...
 
 1264
 01:50:07,560 --> 01:50:10,514
-These are the simplest ways to represent
+simplest way to represent
 
 1265
 01:50:10,514 --> 01:50:13,108
@@ -5345,7 +5357,8 @@ a graph of different entities.
 
 1266
 01:50:13,100 --> 01:50:19,428
-That's (kind of) the web way, it's most basic form.
+That's (kind of) the web way,
+its most basic form.
 
 1267
 01:50:19,420 --> 01:50:23,771
@@ -5354,7 +5367,7 @@ out a visual graph of this stuff.
 
 1268
 01:50:24,240 --> 01:50:29,737
-I would be inclined to reach for inaudible
+I would be inclined to reach for Graphviz
 
 1269
 01:50:30,057 --> 01:50:34,100
@@ -5362,11 +5375,13 @@ or potentially D3 which has some
 
 1270
 01:50:34,100 --> 01:50:38,217
-modules in it for rendering inaudible graphs.
+modules in it for rendering
+directed graphs.
 
 1271
 01:50:38,308 --> 01:50:44,320
-I know inaudible language better than I know D3
+I know Graphviz and its dot language
+better than I know D3
 
 1272
 01:50:44,320 --> 01:50:48,537
@@ -5382,7 +5397,7 @@ but I just can't think of how you go about it,
 
 1275
 01:50:56,750 --> 01:50:59,405
-is something like inaudible on this here.
+is the reliance on this here.
 
 1276
 01:50:59,400 --> 01:51:01,451
@@ -5432,7 +5447,7 @@ hurt too much at this point.
 
 1286
 01:51:38,460 --> 01:51:40,754
-DN: The ideal promise
+DN: The idea will probably
 will spring into your head
 
 1287
@@ -5445,7 +5460,8 @@ JW: In terms of the UI, it would be...
 
 1289
 01:51:48,868 --> 01:51:53,131
-You could render a tree out here of inaudible.
+You could render a tree out here of
+blobs connected by sticks.
 
 1290
 01:51:55,314 --> 01:51:58,285
