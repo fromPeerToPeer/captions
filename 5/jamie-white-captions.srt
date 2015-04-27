@@ -2672,7 +2672,7 @@ At this point I'm inclined to lean on
 
 630
 00:54:55,370 --> 00:54:57,080
-Ember data to do some of the
+Ember.Data to do some of the
 
 631
 00:54:57,700 --> 00:54:59,860
