@@ -2406,7 +2406,7 @@ because there's no template just yet.
 
 566
 00:49:59,220 --> 00:50:04,411
-So let's make an A template for this route.
+So let's make a template for this route.
 
 567
 00:50:04,422 --> 00:50:05,940
