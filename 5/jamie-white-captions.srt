@@ -2488,7 +2488,7 @@ And the model we want for that route.
 
 586
 00:52:06,720 --> 00:52:09,790
-inaudible collaborators function might
+I think my buildCollaborators function might
 
 587
 00:52:09,805 --> 00:52:12,045
