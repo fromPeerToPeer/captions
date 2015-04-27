@@ -2633,7 +2633,7 @@ it may be possible to do something like:
 
 621
 00:54:23,260 --> 00:54:25,090
-We know from the old collaborators
+We know from buildCollaborators
 
 622
 00:54:25,090 --> 00:54:29,920
