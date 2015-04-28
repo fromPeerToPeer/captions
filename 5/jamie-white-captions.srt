@@ -2421,7 +2421,7 @@ So let's make a template for this route.
 
 567
 00:50:04,422 --> 00:50:05,940
-In fact, let's just generate a root.
+In fact, let's just generate a route.
 
 568
 00:50:20,220 --> 00:50:21,810
@@ -4372,11 +4372,11 @@ just a hash.
 1029
 01:29:55,920 --> 01:29:58,320
 Right now, we are
-not in the application root.
+not in the application route.
 
 1030
 01:29:58,420 --> 01:30:00,680
-We are one down in the index root.
+We are one down in the index route.
 
 1031
 01:30:00,960 --> 01:30:02,940
