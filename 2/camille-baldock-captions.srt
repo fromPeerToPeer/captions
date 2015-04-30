@@ -2469,7 +2469,7 @@ matters about things along the lines of,
 
 552
 00:44:14,240 --> 00:44:19,634
- for example I'm going to take a
+for example I'm going to take a
 problematic example of the full house,
 
 553
@@ -2537,7 +2537,7 @@ an abstraction that won't fit.
 566
 00:45:19,580 --> 00:45:23,017
 You're worried that if you extract
-it at this point, then you will end up 
+it at this point, then you will end up
 
 567
 00:45:23,028 --> 00:45:25,620
@@ -2685,7 +2685,7 @@ there's this implication, well it's not a 4 of a kind
 
 598
 00:48:03,220 --> 00:48:06,274
-a Pair is not a 4 of a kind,nor a 3 of a kind, 
+a Pair is not a 4 of a kind,nor a 3 of a kind,
 
 599
 00:48:06,297 --> 00:48:10,354
@@ -2879,7 +2879,7 @@ and this is how well they rank in the world of poker.
 640
 00:51:18,710 --> 00:51:25,085
 The highest and the lowest ranking
- And a straight flush is as high as it gets.
+And a straight flush is as high as it gets.
 
 641
 00:51:31,310 --> 00:51:41,325
@@ -2901,11 +2901,11 @@ Let's give that a rating of...
 645
 00:51:52,040 --> 00:51:54,731
 I don't know how many different
-types of cards there are in Poker. 
+types of cards there are in Poker.
 
 646
 00:51:54,730 --> 00:51:57,554
-Let's say 10, but I think that's wrong. 
+Let's say 10, but I think that's wrong.
 
 647
 00:51:57,550 --> 00:52:05,165
@@ -3023,7 +3023,7 @@ and that's going to be pretty much what you think it is.
 672
 00:54:10,340 --> 00:54:13,337
 and that's a bit verbose but
-I'm not so bothered about that 
+I'm not so bothered about that
 
 673
 00:54:13,371 --> 00:54:16,710
@@ -3641,7 +3641,7 @@ and that's about it.
 814
 01:04:31,490 --> 01:04:34,662
 Much in the same way I'm doing
-the pip count, I probably want something 
+the pip count, I probably want something
 
 815
 01:04:34,674 --> 01:04:40,910
@@ -4010,7 +4010,7 @@ that I had completely forgotten about.
 
 896
 01:11:38,080 --> 01:11:40,285
-Right now if we look at the hand parser. 
+Right now if we look at the hand parser.
 
 897
 01:11:40,285 --> 01:11:48,354
@@ -4019,7 +4019,7 @@ translate in a lovely way to integers,
 
 898
 01:11:48,354 --> 01:11:50,510
- but if I do something like that....
+but if I do something like that....
 
 899
 01:11:52,880 --> 01:11:59,805
@@ -5456,368 +5456,294 @@ full_house.better_than? 4 of a kind hand.
 So I expect all of this to be true.
 
 1228
-01:39:34,480 --> 01:39:37,350
-TS: Is that the right way round?
+01:39:34,480 --> 01:39:39,577
+TS: Is that the right way round.
+A full house is better than 4 of a kind?
 
 1229
-01:39:37,850 --> 01:39:39,770
-A full house is better than 4 of a kind.
-
-1230
-01:39:39,770 --> 01:39:41,360
+01:39:39,600 --> 01:39:43,302
 CB: No it's not - thank you.
 
-1231
+1230
 01:39:45,420 --> 01:39:46,740
 That looks more sensible.
 
-1232
-01:39:49,940 --> 01:39:51,090
+1231
+01:39:49,940 --> 01:39:51,588
 Let's run this.
 
+1232
+01:39:51,840 --> 01:39:54,171
+I want to find a 'better than' for hand.
+
 1233
-01:39:52,000 --> 01:39:53,910
-I want to find a 'better than' for hand
+01:39:54,200 --> 01:39:57,771
+Oh, that's because I've
+implemented it as a Poker method.
 
 1234
-01:39:54,200 --> 01:39:57,360
-Oh that's because I've
-implemented it as a Poker method
+01:39:59,740 --> 01:40:01,337
+Let's run this...
 
 1235
-01:39:59,740 --> 01:40:00,870
-let's run this
+01:40:01,400 --> 01:40:03,710
+and now it's getting nil, excellent.
 
 1236
-01:40:01,400 --> 01:40:03,710
-and now it's getting nil, excellent
-
-1237
-01:40:06,680 --> 01:40:11,410
+01:40:06,680 --> 01:40:11,920
 So I have the rank of both hands
 and I want to know which is the better.
 
-1238
-01:40:12,340 --> 01:40:13,820
+1237
+01:40:12,274 --> 01:40:16,845
 This comes back to the thing
-
-1239
-01:40:13,820 --> 01:40:17,370
 which I was thinking about an hour ago.
 
-1240
-01:40:17,450 --> 01:40:20,820
-If only I'd known there was a
-ranking that told me the best hand.
+1238
+01:40:17,450 --> 01:40:25,805
+If only I'd known there was a ranking that
+told me the best hand. and next possible best hand.
 
-1241
-01:40:23,620 --> 01:40:26,030
-and next possible best hand.
-
-1242
+1239
 01:40:26,400 --> 01:40:28,040
 So this is what we want.
 
-1243
-01:40:28,420 --> 01:40:31,420
-If we have big poker ranks
+1240
+01:40:28,420 --> 01:40:32,754
+If we have big poker ranks...
 
-1244
-01:40:34,200 --> 01:40:37,000
+1241
+01:40:34,200 --> 01:40:39,462
 and it's an array and ordered thing for now.
 
-1245
+1242
 01:40:40,280 --> 01:40:42,320
 and if we go forward and say.....
 
+1243
+01:40:43,140 --> 01:40:50,525
+This is a naive implementation. So if
+we have 4 of a kind, full house and straight.
+
+1244
+01:40:50,540 --> 01:40:56,110
+What I could do is in
+POKER_RANKS I can just get the index of rank,
+
+1245
+01:41:00,650 --> 01:41:05,474
+and compare that to the
+POKER_RANKS index of the other hand.
+
 1246
-01:40:43,140 --> 01:40:45,800
-this is a naive implementation
+01:41:05,820 --> 01:41:12,788
+And that would give me a
+straightforward answer for [inaudible].
 
 1247
-01:40:46,080 --> 01:40:49,880
-So if we have 4 of a
-kind, full house and straight.
+01:41:12,970 --> 01:41:15,740
+I'm assuming that the 
+index is here, I'm not really sure.
 
 1248
-01:40:50,540 --> 01:40:56,110
-What I could do is in POKER_RANKS
+01:41:18,740 --> 01:41:23,550
+This is me, this is my rank, and this is confusing.
 
 1249
-01:40:57,650 --> 01:41:00,360
-I can just get the index of rank
+01:41:26,340 --> 01:41:29,188
+TS: You're putting the worst first.
 
 1250
-01:41:00,650 --> 01:41:03,080
-and compare that to the POKER_RANKS
+01:41:29,220 --> 01:41:35,234
+CB: Yes because it's a lower rank. And if it's
+a high rank I want to be happier with it.
 
 1251
-01:41:04,050 --> 01:41:05,400
-index of the other hand
+01:41:35,250 --> 01:41:38,750
+TS: The the question will be is my index greater than?
 
 1252
-01:41:05,820 --> 01:41:09,220
-and that would give me a straightforward answer for [inaudible]
+01:41:38,750 --> 01:41:45,817
+CB: Yes and I am going to say it's strictly
+greater than. I'll get back to that in a second.
 
 1253
-01:41:12,970 --> 01:41:15,740
-I'm assuming that the
-index is here, I'm not really sure
+01:41:47,940 --> 01:41:51,450
+But yes, index one doesn't exist obviously.
 
 1254
-01:41:18,740 --> 01:41:23,550
-This is me, this is
-my rank, and this is confusing.
+01:41:52,220 --> 01:41:56,365
+Let's now assume if we have some method on the array,
 
 1255
-01:41:26,340 --> 01:41:28,530
-TS: You're putting the worst first
+01:41:56,400 --> 01:42:01,085
+that is find index, that's
+the one I probably want... Is it?
 
 1256
-01:41:29,220 --> 01:41:31,850
-CB: Yes because it's a lower rank
-
-1257
-01:41:32,420 --> 01:41:35,070
-And if it's a high rank
-I want to be happier with it.
-
-1258
-01:41:35,250 --> 01:41:38,750
-TS: The the question will
-be is my index greater than
-
-1259
-01:41:40,740 --> 01:41:43,620
-CB: Yes and I am going to
-say it's strictly greater than
-
-1260
-01:41:43,620 --> 01:41:45,220
-I'll get back to that in a second
-
-1261
-01:41:47,940 --> 01:41:51,450
-but yes, index one doesn't exist obviously.
-
-1262
-01:41:52,220 --> 01:41:55,790
-Let's now assume if we
-have some method on the array
-
-1263
-01:41:56,400 --> 01:41:59,450
-That is find index, that's the
-one I probably want
-
-1264
-01:42:06,540 --> 01:42:08,310
+01:42:06,540 --> 01:42:12,640
 Yes, it returns the index of a thing,
-
-1265
-01:42:08,310 --> 01:42:12,000
 so just index would have worked better.
 
-1266
-01:42:14,310 --> 01:42:15,490
+1257
+01:42:13,177 --> 01:42:15,885
 Let's go back here...
 
-1267
+1258
 01:42:21,570 --> 01:42:25,220
-Go and define method something for nil class.
-Excellent.
+Go and define method
+something for nil class, excellent.
 
-1268
+1259
 01:42:32,680 --> 01:42:35,760
 This is apparently nil.
 
-1269
+1260
 01:42:36,110 --> 01:42:38,850
-TS: Because it was not
-finding the rank in that array.
+TS: Because it was not finding the rank in that array?
 
-1270
+1261
 01:42:38,850 --> 01:42:39,450
 CB: Correct.
 
-1271
+1262
+01:42:44,194 --> 01:42:48,445
+Do I not have... what am I comparing in my hand spec?
+
+1263
 01:42:48,510 --> 01:42:52,590
 I am comparing four of a kind and full house.
 
-1272
-01:42:55,080 --> 01:43:00,280
-I'm going to print out the
-rank of the other hands because
+1264
+01:42:55,080 --> 01:43:02,320
+I'm going to print out the rank of the
+other hands because I'm running out of time 
 
-1273
-01:43:01,110 --> 01:43:04,050
-I'm running out of time so
-I don't want to spend ages
+1265
+01:43:02,331 --> 01:43:05,588
+so I don't want to spend ages debugging this.
 
-1274
-01:43:04,480 --> 01:43:05,480
-debugging this.
+1266
+01:43:07,610 --> 01:43:10,937
+Oh of course it's a hash (laughter).
 
-1275
-01:43:07,610 --> 01:43:09,040
-Oh of course it's a hash.
-
-1276
-01:43:13,430 --> 01:43:15,000
+1267
+01:43:13,430 --> 01:43:18,811
 So I'm not comparing that.
-
-1277
-01:43:17,290 --> 01:43:18,940
 I'm just assuming there is a type.
 
-1278
-01:43:18,950 --> 01:43:22,340
+1268
+01:43:18,822 --> 01:43:22,914
 If there isn't a type then I should
 be wary so I'm going to let that fail.
 
-1279
-01:43:25,600 --> 01:43:26,800
-And we have no failures.
+1269
+01:43:25,520 --> 01:43:29,428
+And we have no failures, so
+now we can compare two hands.
 
-1280
-01:43:27,710 --> 01:43:29,470
-Now we can compare two hands.
+1270
+01:43:30,102 --> 01:43:34,765
+There is a tiny bit of work left.
+There's a few hands I haven't implemented.
 
-1281
-01:43:29,600 --> 01:43:31,220
-There is a tiny bit of work left
-
-1282
-01:43:31,600 --> 01:43:34,400
-there's a few hands I haven't implemented.
-
-1283
+1271
 01:43:34,940 --> 01:43:36,970
-And there's a bit of work left in terms of:
+And there's a bit of work left in terms of...
 
-1284
-01:43:37,770 --> 01:43:41,050
+1272
+01:43:37,497 --> 01:43:41,050
 well, we should probably
 have all the rankings in nice order.
 
-1285
-01:43:41,250 --> 01:43:43,220
-There's an obvious refactoring step
+1273
+01:43:41,250 --> 01:43:49,062
+There's an obvious refactoring step which is,
+well, now I have a list of things that rank things
 
-1286
-01:43:43,710 --> 01:43:47,110
-which is, well, now I have a list of things
-
-1287
-01:43:47,140 --> 01:43:48,800
-that rank things and then
-
-1288
-01:43:49,820 --> 01:43:55,340
-my rank method is executing
+1274
+01:43:49,291 --> 01:43:56,571
+and then my rank method is executing
 and checking for things in a certain order.
 
-1289
+1275
 01:43:56,740 --> 01:43:59,510
-The order that I'm
-defining in this POKER_RANKS array
+The order that I'm defining in this POKER_RANKS array
 
-1290
-01:44:00,100 --> 01:44:03,200
+1276
+01:43:59,565 --> 01:44:03,062
 Is the exact same one which
-I want to be ranking those cards
+I want to be ranking those cards.
 
-1291
+1277
 01:44:03,200 --> 01:44:05,830
-so I should be doing something really clever here.
+So I should be doing something really clever here.
 
-1292
-01:44:08,200 --> 01:44:10,710
+1278
+01:44:06,342 --> 01:44:10,710
 The big piece of functionality that's missing is...
 
-1293
-01:44:11,850 --> 01:44:14,760
-If I have two straights, how do I know who has one.
+1279
+01:44:11,588 --> 01:44:14,760
+If I have two straights, how do I know who has one?
 
-1294
-01:44:14,850 --> 01:44:19,220
-and this is why I'm returning
-this rank as type something
+1280
+01:44:14,850 --> 01:44:21,005
+And this is why I'm returning this rank
+as type something because I had in mind,
 
-1295
-01:44:19,600 --> 01:44:23,880
-because I had in mind, I
-don't only care about the type of hand
+1281
+01:44:21,010 --> 01:44:27,977
+I don't only care about the type of hand.
+I also care about the highest card in that hand.
 
-1296
-01:44:23,910 --> 01:44:26,790
-I also care about
-the highest card in that hand
+1282
+01:44:28,340 --> 01:44:34,708
+For a straight, for example, I
+would get the highest card in that hand.
 
-1297
-01:44:28,340 --> 01:44:30,310
-For a straight, for example,
+1283
+01:44:34,740 --> 01:44:42,411
+With the mix of Ace should be counted as
+1 or 14 depending on the kind of straight that I have.
 
-1298
-01:44:30,320 --> 01:44:34,280
-I would get the highest card in that hand.
+1284
+01:44:42,411 --> 01:44:45,348
+And I would return that as the type of rank.
 
-1299
-01:44:34,820 --> 01:44:39,280
-With the mix of Ace
-should be counted as 1 or 14
-
-1300
-01:44:40,200 --> 01:44:42,650
-depending on the
-kind of straight that I have.
-
-1301
-01:44:42,650 --> 01:44:44,870
-and I would return that as the type of rank.
-
-1302
+1285
 01:44:45,370 --> 01:44:48,740
-and if my rank method gives
+And if my rank method gives
 me back not just the type of my hand
 
-1303
-01:44:48,940 --> 01:44:52,540
-but also the highest possible tie breaker
+1286
+01:44:48,940 --> 01:44:57,245
+but also the highest possible tie breaker in
+some hands but in others it's different things,
 
-1304
-01:44:54,540 --> 01:44:57,110
-in some hands but in
-others it's different things,
-
-1305
-01:44:57,620 --> 01:45:00,970
+1287
+01:44:57,257 --> 01:45:01,428
 then I can definitely determine
 if my hand has won or not.
 
-1306
+1288
 01:45:01,450 --> 01:45:02,520
 TS: Ok, great.
 
-1307
+1289
 01:45:02,620 --> 01:45:05,400
-TS: Well I think that would
-be a good place to wrap it up.
+Well I think that would be a good place to wrap it up.
 
-1308
-01:45:05,650 --> 01:45:08,170
-Thank  you very much
-for showing us this today
+1290
+01:45:05,740 --> 01:45:08,148
+Thank  you very much for showing us this today.
 
-1309
-01:45:08,170 --> 01:45:10,280
-It's been fascinating watching you work.
+1291
+01:45:08,148 --> 01:45:11,560
+It's been fascinating watching
+you work. So again, thank you very much.
 
-1310
-01:45:10,280 --> 01:45:11,770
-So again, thank you very much.
-
-1311
-01:45:11,770 --> 01:45:12,400
+1292
+01:45:11,565 --> 01:45:12,400
 CB: Thanks.
 
