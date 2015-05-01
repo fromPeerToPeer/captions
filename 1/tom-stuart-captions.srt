@@ -6026,7 +6026,7 @@ remove everything from it and re-populate it.
 1361
 01:42:26,450 --> 01:42:31,057
 The actual identity of the array
-isn't a very useful thing to protect. 
+isn't a very useful thing to protect.
 
 1362
 01:42:31,057 --> 01:42:33,653
@@ -6039,7 +6039,7 @@ We could freeze the array.
 
 1364
 01:42:38,820 --> 01:42:42,568
-We could make an accessor here that says: 
+We could make an accessor here that says:
 
 1365
 01:42:42,568 --> 01:42:46,071
@@ -6051,7 +6051,7 @@ Could we freeze it here?
 
 1367
 01:42:51,650 --> 01:42:53,466
-I think if we do that 
+I think if we do that
 
 1368
 01:42:55,857 --> 01:42:58,924
@@ -6133,7 +6133,7 @@ And make a new one of these.
 
 1386
 01:44:48,746 --> 01:44:52,222
-each_child 
+each_child
 
 1387
 01:44:52,310 --> 01:44:54,186
@@ -6146,7 +6146,7 @@ behave as if I haven't passed in a block,
 
 1389
 01:44:59,060 --> 01:45:00,702
-which gives you an iterator back. 
+which gives you an iterator back.
 
 1390
 01:45:00,702 --> 01:45:04,320
@@ -6159,12 +6159,12 @@ Or I've just been using 10.times
 and then not passing it a block,
 
 1392
-01:45:15,822 --> 01:45:18,480
-and then calling something like
-map on the end of it.
+01:45:15,820 --> 01:45:18,675
+and then calling something
+like map on the end of it.
 
 1393
-01:45:18,710 --> 01:45:24,497
+01:45:18,675 --> 01:45:24,490
 That works because these methods in the
 standard library return an enumerator.
 
@@ -6180,8 +6180,7 @@ gives you what you want.
 
 1396
 01:45:35,140 --> 01:45:37,250
-And, you don't even know
-that it's an array.
+And, you don't even know that it's an array.
 
 1397
 01:45:37,250 --> 01:45:42,124
