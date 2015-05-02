@@ -5537,7 +5537,7 @@ straightforward answer for [inaudible].
 
 1246
 01:41:12,970 --> 01:41:15,740
-I'm assuming that the 
+I'm assuming that the
 index is here, I'm not really sure.
 
 1247
@@ -5612,7 +5612,7 @@ I am comparing four of a kind and full house.
 1263
 01:42:55,080 --> 01:43:02,320
 I'm going to print out the rank of the
-other hands because I'm running out of time 
+other hands because I'm running out of time
 
 1264
 01:43:02,331 --> 01:43:05,588
