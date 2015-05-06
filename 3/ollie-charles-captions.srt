@@ -801,35 +801,34 @@ we might be able to rule out possible solutions?
 OC: Sure.
 
 178
-00:14:06,570 --> 00:14:09,668
+00:14:06,570 --> 00:14:09,851
 SP: So if either of the
-words are not in the dictionary
+words are not in the dictionary.
 
 179
 00:14:09,885 --> 00:14:12,994
-I don't know if you
-want to handle that now.
+I don't know if you want to handle that now?
 
 180
 00:14:13,131 --> 00:14:14,960
 OC: No that seems reasonable.
 
 181
-00:14:19,382 --> 00:14:21,062
-I've just had a thought that
+00:14:19,380 --> 00:14:23,394
+I've just had a thought that I might
+want to have a more efficient dictionary type,
 
 182
-00:14:21,062 --> 00:14:23,540
-I might want to have
-a more efficient dictionary type,
-
-183
-00:14:23,542 --> 00:14:24,942
+00:14:23,394 --> 00:14:24,940
 but we'll come to that later.
 
-184
+183
 00:14:24,948 --> 00:14:27,325
 So we're given two words A and B:
+
+184
+00:14:27,320 --> 00:14:48,354
+Let's see inaudible
 
 185
 00:14:55,520 --> 00:14:56,845
@@ -837,7 +836,7 @@ I think that's what we want.
 
 186
 00:14:57,291 --> 00:15:00,765
-See if that compiles:
+See if that compiles.
 
 187
 00:15:02,450 --> 00:15:08,205
@@ -853,5114 +852,5066 @@ OC: OK well we can check that...
 It is in the dictionary! (laughter)
 
 190
-00:15:19,965 --> 00:15:22,308
+00:15:19,960 --> 00:15:21,302
 SP: It's a respectable word!
 
 191
-00:15:25,880 --> 00:15:29,474
-I guess then we
-probably need to deal with case,
+00:15:21,300 --> 00:15:23,508
+OC: But inaudible isn't in the dictionary, so...
 
 192
-00:15:29,540 --> 00:15:32,331
-or maybe I should be case sensitive
+00:15:25,880 --> 00:15:32,560
+I guess then we probably need to deal
+with case, or maybe I should be case sensitive.
 
 193
-00:15:32,740 --> 00:15:34,770
+00:15:32,740 --> 00:15:38,034
 Capital Hello is not in the dictionary.
+Lower case however, will be... Yes.
 
 194
-00:15:35,050 --> 00:15:38,080
-Lower case however, will be. Yes
-
-195
 00:15:38,710 --> 00:15:40,280
 I think I'll leave that for now.
 
-196
-00:15:40,285 --> 00:15:42,720
+195
+00:15:40,280 --> 00:15:42,834
 SP: I think that's how it should work. Yes.
 
-197
-00:15:42,822 --> 00:15:43,600
-OC: OK
-
-198
-00:15:43,820 --> 00:15:46,370
-SP: Let's presume
-that the input would be exactly
-
-199
-00:15:46,370 --> 00:15:47,710
-as it is in the dictionary
-
-200
-00:15:47,710 --> 00:15:49,931
-or it's strictly considered invalid.
-
-201
-00:15:49,942 --> 00:15:51,085
+196
+00:15:42,834 --> 00:15:43,600
 OC: OK.
 
+197
+00:15:43,748 --> 00:15:47,497
+SP: Let's presume that the input
+would be exactly as it is in the dictionary
+
+198
+00:15:47,497 --> 00:15:49,930
+or it's strictly considered invalid.
+
+199
+00:15:49,940 --> 00:15:51,668
+OC: OK, seems reasonable.
+
+200
+00:15:53,950 --> 00:15:59,862
+And I expect there's another obvious
+pattern, which is regardless of the dictionary,
+
+201
+00:16:00,160 --> 00:16:03,897
+we have two words A and B, and
+they are the same, then we're done.
+
 202
-00:15:53,950 --> 00:15:57,165
-And I expect
-there's another obvious pattern,
+00:16:03,900 --> 00:16:09,874
+So that has one possible solution, and I think
+I'm still going to put that solution in the word chain.
 
 203
-00:15:57,200 --> 00:16:00,114
-which is, regardless of the dictionary,
+00:16:09,970 --> 00:16:11,485
+So if we go from hello to hello, 
 
 204
-00:16:00,160 --> 00:16:02,570
-we have two words
-A and B, and they are the same,
+00:16:11,497 --> 00:16:15,634
+the solution will be one word
+chain which contains just the word hello.
 
 205
-00:16:02,570 --> 00:16:05,977
-then we're done..
-so that has one possible solution,
+00:16:16,710 --> 00:16:19,188
+So we can try that one too.
 
 206
-00:16:06,000 --> 00:16:08,457
-and I think I'm still
-going to put that solution
+00:16:19,180 --> 00:16:22,434
+(Ollie types)
 
 207
-00:16:08,480 --> 00:16:09,931
-in the word chain.
+00:16:22,788 --> 00:16:24,660
+Whoops! so let's see:
 
 208
-00:16:09,970 --> 00:16:12,680
-So if we go from
-hello to hello, the solution will be
+00:16:24,660 --> 00:16:30,742
+Word puzzle, inaudible dictionary inaudible.
 
 209
-00:16:12,680 --> 00:16:15,370
-one word chain
-which contains just the word hello.
-
-210
-00:16:16,710 --> 00:16:19,188
-so we can try that one two.
-
-211
-00:16:22,570 --> 00:16:24,662
-So let's see:
-
-212
-00:16:30,800 --> 00:16:32,731
+00:16:30,800 --> 00:16:35,577
 It does indeed have one solution
-
-213
-00:16:32,731 --> 00:16:34,777
 which is the word chain hello. Good!
 
+210
+00:16:35,660 --> 00:16:41,702
+So, beyond that we've ruled out the obvious
+case and we need to start doing some real work.
+
+211
+00:16:41,960 --> 00:16:45,177
+And I think a useful function that we're going to need 
+
+212
+00:16:45,188 --> 00:16:49,154
+is something that's going to
+determine the distance between two words.
+
+213
+00:16:49,154 --> 00:16:53,540
+Which is going to be the amount of
+changes you have to make to get between two words.
+
 214
-00:16:35,668 --> 00:16:39,577
-So, beyond that
-we've ruled out the obvious case
+00:16:53,540 --> 00:16:58,628
+SP: Yes, or at least whether they
+are one step apart from each other.
 
 215
-00:16:39,570 --> 00:16:41,862
-and we need to start doing some real work.
+00:16:58,620 --> 00:17:03,840
+OC: Yes because once we have a function
+that gives us metric and distance between words 
 
 216
-00:16:41,880 --> 00:16:44,571
-And I think a useful
-function that we're going
+00:17:03,862 --> 00:17:08,891
+I'm hoping I can map over all of these
+words and find the neighbors of any word.
 
 217
-00:16:44,582 --> 00:16:47,740
-to need is something that's
-going to determine the distance
+00:17:08,890 --> 00:17:13,085
+The neighbors are going to be
+words some distance away... by one.
 
 218
-00:16:47,748 --> 00:16:48,811
-between two words.
+00:17:13,150 --> 00:17:18,480
+So let's have... distance which is going to
+take two text values and give us back a number.
 
 219
-00:16:49,108 --> 00:16:51,165
-Which is going to
-be the amount of changes
+00:17:20,360 --> 00:17:24,274
+So if they are the same then
+of course, the distance is just zero.
 
 220
-00:16:51,177 --> 00:16:53,360
-you have to make
-to get between two words.
-
-221
-00:16:53,497 --> 00:16:55,931
-SP: Yes, or at least whether they are
-
-222
-00:16:56,651 --> 00:16:58,570
-one step apart from each other.
-
-223
-00:16:58,582 --> 00:16:59,805
-OC: Yes
-
-224
-00:17:08,890 --> 00:17:10,880
-The neighbors are going to be words
-
-225
-00:17:10,914 --> 00:17:12,731
-some distance away... by one
-
-226
-00:17:13,154 --> 00:17:13,805
-So let's have:
-
-227
-00:17:13,828 --> 00:17:17,310
-Distance is going to take two text values
-
-228
-00:17:17,310 --> 00:17:18,620
-and give us back a number.
-
-229
-00:17:20,365 --> 00:17:22,422
-So if they are the
-same then of course,
-
-230
-00:17:22,480 --> 00:17:24,125
-the distance is just zero.
-
-231
-00:17:27,340 --> 00:17:29,314
+00:17:27,340 --> 00:17:29,622
 So how we going to do this next...let's see.
 
-232
-00:17:32,890 --> 00:17:35,451
-I'm probably
-going to break the string apart
+221
+00:17:29,620 --> 00:17:33,062
+(Ollie thinks).
 
-233
-00:17:35,451 --> 00:17:37,474
-and treat it as if it were a list,
+222
+00:17:33,074 --> 00:17:37,542
+I'm probably going to break the
+string apart and treat it as if it were a list.
 
-234
-00:17:37,474 --> 00:17:38,811
-and I will compare the head,
+223
+00:17:37,620 --> 00:17:40,365
+And I will compare the
+head, and see if they're different.
 
-235
-00:17:38,811 --> 00:17:41,782
-and see if they're
-different, and if they're not
+224
+00:17:40,365 --> 00:17:43,610
+and if they're not the distance there is zero.
 
-236
-00:17:41,782 --> 00:17:43,622
-the distance there is zero
+225
+00:17:43,620 --> 00:17:45,782
+But if they are different the difference will be one.
 
-237
-00:17:43,622 --> 00:17:45,790
-but if they're different
-the difference will be one.
-
-238
+226
 00:17:45,794 --> 00:17:49,097
 SP: Are you once again assuming
 that A and B are the same length?
 
-239
-00:17:49,130 --> 00:17:53,211
+227
+00:17:49,130 --> 00:17:54,160
 OC: Yes I'm going to assume
 for this function they are the same length.
 
-240
-00:17:53,210 --> 00:18:00,537
-and if not, well it might actually
+228
+00:17:54,160 --> 00:18:00,530
+And if not, well it might actually
 work even if they're different lengths.
 
-241
+229
 00:18:03,085 --> 00:18:06,765
 SP:  What comes to my mind is
 zipping the characters of the two together
 
-242
-00:18:06,777 --> 00:18:09,565
+230
+00:18:06,770 --> 00:18:09,620
 and seeing how many pairs are not identical.
 
-243
-00:18:09,620 --> 00:18:12,902
+231
+00:18:09,620 --> 00:18:09,737
+OC: Yes, that sounds like
+the kind of thing we could do.
+and seeing how many pairs are not identical.
+
+232
+00:18:09,737 --> 00:18:12,902
 OC: Yes, that sounds like
 the kind of thing we could do.
 
-244
-00:18:12,940 --> 00:18:14,740
-I think now because we're zipping,
+233
+00:18:12,940 --> 00:18:15,920
+I think now because we're
+zipping, even if they're different lengths
 
-245
-00:18:14,740 --> 00:18:16,571
-even if they're different lengths
+234
+00:18:15,920 --> 00:18:18,102
+we can probably just drop the extra characters.
 
-246
-00:18:16,571 --> 00:18:19,110
-we can probably just
-drop the extra characters.
+235
+00:18:18,110 --> 00:18:24,022
+And I think we have a zip
+function already in the text library...
 
-247
-00:18:19,110 --> 00:18:21,370
-And I think we have
-a zip function already
+236
+00:18:25,897 --> 00:18:29,620
+We do... that's going to compare characters.
 
-248
-00:18:21,370 --> 00:18:26,708
-in the text library... we do.
-
-249
-00:18:26,800 --> 00:18:29,628
-that's going to compare characters.
-
-250
+237
 00:18:30,030 --> 00:18:36,102
 It works on text so we can only
 use it to zip two pieces of text
 
-251
+238
 00:18:36,102 --> 00:18:38,140
 which is not so useful.
 
-252
+239
 00:18:38,600 --> 00:18:44,331
 So take A and B and
 we will zip A and B
 
-253
+240
 00:18:45,200 --> 00:18:49,170
 so I'm going to use type (inaudible) here.
 
-254
+241
 00:18:49,910 --> 00:18:54,377
 OK, So we need to have
 a function which takes a list
 
-255
+242
 00:18:54,377 --> 00:18:56,902
 of pairs of characters to a number.
 
-256
+243
 00:19:02,377 --> 00:19:06,560
 I think first thing we'll do is map over those,
 
-257
+244
 00:19:06,674 --> 00:19:09,862
 so we can consider each
 pair of characters independently.
 
-258
+245
 00:19:12,548 --> 00:19:18,594
 Oh dear, I'll ignore that for now, next type hole
 
-259
+246
 00:19:18,594 --> 00:19:20,140
 we have a pair of characters,
 
-260
+247
 00:19:20,140 --> 00:19:21,910
 which have to produce something.
 
-261
+248
 00:19:30,620 --> 00:19:37,291
 So if x is equal to y... then zero otherwise one...
 
-262
+249
 00:19:37,474 --> 00:19:39,910
 That's one possible
 correction we have to do.
 
-263
+250
 00:19:44,710 --> 00:19:47,280
 Now we need to take
 a list of things like a number.
 
-264
+251
 00:19:47,280 --> 00:19:51,462
 I don't know why it hasn't...
 Oh, because B could be any type of numeric.
 
-265
+252
 00:19:56,600 --> 00:19:58,457
 Ok, so that's good.
 
-266
+253
 00:19:58,600 --> 00:20:00,880
 So it's hacking into our distance functions
 
-267
+254
 00:20:00,910 --> 00:20:02,582
 we can switch back to GHCi
 
-268
+255
 00:20:02,600 --> 00:20:04,434
 and see what it makes of that.
 
-269
+256
 00:20:05,740 --> 00:20:07,714
 So let's see if the difference between
 
-270
+257
 00:20:07,710 --> 00:20:10,320
 dog and cog is indeed one.
 
-271
+258
 00:20:12,617 --> 00:20:15,794
 That's what you would expect. A basic example.
 
-272
+259
 00:20:18,765 --> 00:20:22,000
 Let's see how we can
 fit this into our word puzzle.
 
-273
+260
 00:20:22,971 --> 00:20:28,540
 We're certainly going
 to need the dictionary and our two words
 
-274
+261
 00:20:32,080 --> 00:20:34,262
 So I'm going to start with the word A
 
-275
+262
 00:20:34,274 --> 00:20:36,708
 and we need to
 find the neighbors of word A.
 
-276
+263
 00:20:42,068 --> 00:20:49,714
 Let's filter the dictionary
 so we don't have A in it.
 
-277
+264
 00:21:03,680 --> 00:21:07,211
 That's going to give me a
 dictionary that doesn't have A in it.
 
-278
+265
 00:21:10,740 --> 00:21:14,240
 Maybe if we pair
 every word with its distance
 
-279
+266
 00:21:14,765 --> 00:21:17,005
 so I can take every word in the dictionary
 
-280
+267
 00:21:17,000 --> 00:21:19,280
 and find its distance against word A,
 
-281
+268
 00:21:19,302 --> 00:21:22,777
 and then I can take
 the ones that just have a distance of 1
 
-282
+269
 00:21:23,017 --> 00:21:26,651
 and that again feels like
 I'm zipping 2 lists together.
 
-283
+270
 00:21:26,650 --> 00:21:28,217
 SP: OK.
 
-284
+271
 00:21:29,820 --> 00:21:34,114
 OC:  First we need to map that for every word.
 
-285
+272
 00:21:34,770 --> 00:21:37,531
 We're going to keep
 the word and I'm also going to keep
 
-286
+273
 00:21:37,531 --> 00:21:39,817
 the distance between A and W.
 
-287
+274
 00:21:43,510 --> 00:21:46,331
 Actually this is like what I'm saying.
 
-288
+275
 00:21:46,340 --> 00:21:47,222
 Let's say:
 
-289
+276
 00:22:04,445 --> 00:22:07,085
 And now we've got this map
 
-290
+277
 00:22:07,097 --> 00:22:09,222
 and we need to filter this for all things
 
-291
+278
 00:22:09,245 --> 00:22:11,977
 that have a distance of exactly 1.
 
-292
+279
 00:22:11,988 --> 00:22:13,394
 So let's filter:
 
-293
+280
 00:22:23,177 --> 00:22:27,862
 It's a bit long there... I'll re-format that slightly.
 
-294
+281
 00:22:37,000 --> 00:22:39,954
 Bit of a hole there, we can come back to that,
 
-295
+282
 00:22:39,970 --> 00:22:44,710
 so does that build.
 
-296
+283
 00:22:45,474 --> 00:22:47,120
 OK, so what have we got here?
 
-297
+284
 00:22:49,771 --> 00:22:54,685
 Ah, OK, so I've filtered this
 but I also need to map it
 
-298
+285
 00:22:54,680 --> 00:22:56,445
 just so it will take the word, so that's A.
 
-299
+286
 00:22:57,280 --> 00:23:00,468
 and once more, and take just the word
 
-300
+287
 00:23:00,740 --> 00:23:03,680
 and ignore its distance.
 
-301
+288
 00:23:03,988 --> 00:23:06,994
 SP: Is there a function for that, is it fst?
 
-302
+289
 00:23:07,680 --> 00:23:10,057
 OC: Yes, we can use fst there.
 
-303
+290
 00:23:23,400 --> 00:23:26,205
 Good, so we're
 back to compiling once more.
 
-304
+291
 00:23:27,600 --> 00:23:28,994
 So I'll give that a try.
 
-305
+292
 00:23:41,600 --> 00:23:44,685
 Let's find neighbors of dog.
 
-306
+293
 00:23:44,845 --> 00:23:46,800
 We need the dictionary there as well.
 
-307
+294
 00:23:49,760 --> 00:23:52,011
 It doesn't seem quite right to me (laughter)
 
-308
+295
 00:23:52,011 --> 00:23:55,668
 SP: I think this is probably a result of zipping,
 
-309
+296
 00:23:55,820 --> 00:24:00,754
 and not taking into
 consideration that if the lengths
 
-310
+297
 00:24:00,765 --> 00:24:05,870
 of the two words are
 different, then zip would finish
 
-311
+298
 00:24:05,940 --> 00:24:08,525
 at the shortest sequence. OC: Right.
 
-312
+299
 00:24:09,931 --> 00:24:12,228
 SP: And so, all of these like 'downfall'
 
-313
+300
 00:24:13,897 --> 00:24:16,571
 would be only
 one letter away from 'dog',
 
-314
+301
 00:24:16,570 --> 00:24:19,040
 so maybe you should
 only look at the first one.
 
-315
+302
 00:24:19,051 --> 00:24:21,940
 OC: Maybe we should be
 filtering the dictionary first
 
-316
+303
 00:24:21,942 --> 00:24:24,428
 on getting words
 that are only the same length.
 
-317
+304
 00:24:24,428 --> 00:24:26,510
 We certainly have done that here.
 SP: Yes
 
-318
+305
 00:24:35,874 --> 00:24:40,540
 OC: I'm going to bring
 in some smaller functions there.
 
-319
+306
 00:24:53,570 --> 00:24:56,971
 The idea here is I'm probably
 going to use the Applicative Syntax
 
-320
+307
 00:24:56,970 --> 00:24:59,428
 to combine 2 boolean operations together
 
-321
+308
 00:24:59,450 --> 00:25:01,880
 so I want to take
 things that are not equal to A.
 
-322
+309
 00:25:03,940 --> 00:25:06,331
 SP: And also the /= operator?
 
-323
+310
 00:25:06,450 --> 00:25:07,885
 OC: Oh yes, of course,
 
-324
+311
 00:25:09,740 --> 00:25:12,370
 in fact we'll put that directly in there.
 
-325
+312
 00:25:15,680 --> 00:25:18,697
 So we need it to satisfy 2 conditions.
 
-326
+313
 00:25:23,400 --> 00:25:24,820
 We should be able to do this:
 
-327
+314
 00:25:36,340 --> 00:25:40,194
 I think we'll probably be
 able to tidy that function up as well.
 
-328
+315
 00:25:40,280 --> 00:25:42,137
 So I'll take those back out,
 
-329
+316
 00:25:43,020 --> 00:25:47,600
 and we're going to
 need to import Control.Applicative.
 
-330
+317
 00:25:47,874 --> 00:25:50,662
 SP: So I notice here that
 even though you presumably knew
 
-331
+318
 00:25:50,660 --> 00:25:55,085
 that you were going
 to import Control.Applicative
 
-332
+319
 00:25:55,188 --> 00:25:59,108
 your habit is to immediately try compiling
 
-333
+320
 00:25:59,108 --> 00:26:01,420
 and have the compiler to tell you that.
 OC: Yes.
 
-334
+321
 00:26:01,420 --> 00:26:05,188
 SP: So this is really an
 analogue of the TDD work-flow
 
-335
+322
 00:26:05,188 --> 00:26:07,405
 where you are going for the failing test?
 
-336
+323
 00:26:07,405 --> 00:26:08,902
 OC: That's right yes,
 
-337
+324
 00:26:22,450 --> 00:26:24,280
 And I have to context switch again.
 
-338
+325
 00:26:26,370 --> 00:26:28,400
 I've used length from the prelude here,
 
-339
+326
 00:26:28,420 --> 00:26:29,620
 but we have text values
 
-340
+327
 00:26:29,770 --> 00:26:33,771
 and length cannot be used on text values.
 
-341
+328
 00:26:33,771 --> 00:26:36,731
 inaudible strings so we need to use T.length.
 
-342
+329
 00:26:40,540 --> 00:26:44,000
 So hopefully we're back to compiling that.
 
-343
+330
 00:26:44,400 --> 00:26:46,114
 So let's try that one again.
 
-344
+331
 00:26:46,114 --> 00:26:49,428
 See if it makes more sense this time.
 
-345
+332
 00:26:51,620 --> 00:26:53,080
 That looks a lot better to me.
 
-346
+333
 00:26:54,020 --> 00:26:54,925
 OK!
 
-347
+334
 00:26:59,097 --> 00:27:01,805
 SP: Now Ollie could
 you explain this section here
 
-348
+335
 00:27:01,817 --> 00:27:06,217
 where you've used
 the operators from Control.Applicative.
 
-349
+336
 00:27:06,910 --> 00:27:10,262
 OC:  We're working
 under the reader applicative here,
 
-350
+337
 00:27:10,310 --> 00:27:13,200
 which is basically
 an applicative functor
 
-351
+338
 00:27:13,250 --> 00:27:14,970
 that works for function arrows.
 
-352
+339
 00:27:15,250 --> 00:27:17,620
 So what I want to
 do is, take the same argument
 
-353
+340
 00:27:17,620 --> 00:27:19,280
 as I filter over the dictionary
 
-354
+341
 00:27:19,280 --> 00:27:20,885
 for every word in the dictionary.
 
-355
+342
 00:27:20,914 --> 00:27:23,220
 I need to check  that
 that word is not equal to A.
 
-356
+343
 00:27:23,220 --> 00:27:25,280
 And I also need to check that its length
 
-357
+344
 00:27:25,280 --> 00:27:26,680
 is equal to the length of A.
 
-358
+345
 00:27:27,080 --> 00:27:30,217
 So I need to do an
 operation on the same value.
 
-359
+346
 00:27:30,228 --> 00:27:31,165
 SP: Right
 
-360
+347
 00:27:31,165 --> 00:27:33,462
 OC: So I could have introduced a lambda here
 
-361
+348
 00:27:33,470 --> 00:27:35,542
 and banged that to a variable called W
 
-362
+349
 00:27:35,542 --> 00:27:38,022
 and said W is not equal to A
 
-363
+350
 00:27:38,022 --> 00:27:41,462
 and that the length
 of W is the length of A.
 
-364
+351
 00:27:41,570 --> 00:27:44,902
 But by using this syntax here, it's going to
 
-365
+352
 00:27:44,902 --> 00:27:48,210
 implicitly thread that argument
 through to both the functions for me.
 
-366
+353
 00:27:48,210 --> 00:27:51,040
 So I don't have to worry
 about passing the right argument in.
 
-367
+354
 00:27:51,050 --> 00:27:54,331
 By using the right structure
 here that kind of comes for free.
 
-368
+355
 00:27:55,280 --> 00:27:57,600
 And there's one other
 thing I want to tidy up
 
-369
+356
 00:27:57,600 --> 00:27:59,085
 this is looking a bit weird,
 
-370
+357
 00:27:59,211 --> 00:28:00,594
 and we've got some helpful
 
-371
+358
 00:28:00,617 --> 00:28:02,982
 functions in the Data.Function library,
 
-372
+359
 00:28:02,982 --> 00:28:05,611
 that comes in the base library of Haskell,
 
-373
+360
 00:28:05,988 --> 00:28:08,370
 so I'm wondering if
 we can use something there.
 
-374
+361
 00:28:08,370 --> 00:28:11,020
 I'm going to have a quick look at the base library
 
-375
+362
 00:28:11,020 --> 00:28:13,220
 just to see if anything looks useful there.
 
-376
+363
 00:28:15,540 --> 00:28:17,417
 SP: Do you tend to use Hoogle?
 
-377
+364
 00:28:18,300 --> 00:28:20,777
 OC: I do use Hoogle occasionally but that's more
 
-378
+365
 00:28:20,788 --> 00:28:23,310
 when I know the function
 that I'm going to work with,
 
-379
+366
 00:28:23,314 --> 00:28:25,400
 whereas in this case
 I just want to look at the types
 
-380
+367
 00:28:25,417 --> 00:28:27,340
 and see if anything stands out.
 
-381
+368
 00:28:27,342 --> 00:28:29,910
 SP: Because in Hoogle
 you can search by the type.
 
-382
+369
 00:28:29,940 --> 00:28:33,405
 OC: Right yes, but here
 I suppose I'm not entirely sure
 
-383
+370
 00:28:33,725 --> 00:28:36,370
 what type I'm
 going to be looking for.
 
-384
+371
 00:28:36,370 --> 00:28:39,177
 I want to just look through it
 and see if anything comes intuitively.
 
-385
+372
 00:28:39,170 --> 00:28:41,611
 But if we don't find
 anything then I will leave it for now.
 
-386
+373
 00:28:41,611 --> 00:28:43,737
 But it's these combinates down here, like 'on'
 
-387
+374
 00:28:43,737 --> 00:28:47,740
 which is probably going to be the most useful.
 
-388
+375
 00:28:47,740 --> 00:28:49,770
 So, you can see that 'on' as a typical usage
 
-389
+376
 00:28:49,770 --> 00:28:51,450
 lets you call the same function
 
-390
+377
 00:28:51,450 --> 00:28:52,910
 on two different arguments.
 
-391
+378
 00:28:53,885 --> 00:28:55,394
 So let's see if we can use that.
 
-392
+379
 00:28:55,874 --> 00:28:58,240
 So we're certainly going to be doing 'on'
 
-393
+380
 00:28:58,685 --> 00:29:00,331
 well it takes 2 arguments and...
 
-394
+381
 00:29:00,620 --> 00:29:04,754
 It takes a function of two arguments
 
-395
+382
 00:29:04,765 --> 00:29:06,422
 and also a function of one argument.
 
-396
+383
 00:29:06,420 --> 00:29:09,360
 Well our function one argument is T.length,
 
-397
+384
 00:29:11,650 --> 00:29:14,605
 and our function two arguments is just equality.
 
-398
+385
 00:29:15,820 --> 00:29:19,028
 So we need the check for equality on length.
 
-399
+386
 00:29:26,450 --> 00:29:27,800
 So you can normally use it
 
-400
+387
 00:29:27,800 --> 00:29:31,360
 with infix notation like this,
 
-401
+388
 00:29:31,810 --> 00:29:35,062
 but that's when you've
 got two arguments to supply.
 
-402
+389
 00:29:35,062 --> 00:29:36,765
 We're only going to supply one argument,
 
-403
+390
 00:29:36,765 --> 00:29:39,600
 so I think I'm actually
 going to switch this back round
 
-404
+391
 00:29:39,620 --> 00:29:41,280
 and do a normal prefix notation.
 
-405
+392
 00:29:41,280 --> 00:29:44,308
 So 'on' equality, T.length against 'A'
 
-406
+393
 00:29:44,340 --> 00:29:47,020
 and it's going to
 supply us with  a second argument
 
-407
+394
 00:29:47,394 --> 00:29:49,170
 for each word in the dictionary.
 
-408
+395
 00:29:49,170 --> 00:29:50,280
 SP: Right.
 
-409
+396
 00:29:50,868 --> 00:29:52,650
 OC: So compile that
 and we're going to be told
 
-410
+397
 00:29:52,650 --> 00:29:53,940
 that we need to import it,
 
-411
+398
 00:29:54,240 --> 00:30:01,657
 so let's bring that in... and that's in... Data.Function.
 
-412
+399
 00:30:04,845 --> 00:30:06,800
 Good! So that's back to compiling
 
-413
+400
 00:30:06,811 --> 00:30:08,994
 and we're back in the hole here.
 
-414
+401
 00:30:08,994 --> 00:30:10,137
 So I think I'm happy with that,
 
-415
+402
 00:30:10,137 --> 00:30:13,017
 it's a fairly
 clean readable description.
 
-416
+403
 00:30:13,028 --> 00:30:15,074
 We do have quite a lot of loops going on there,
 
-417
+404
 00:30:15,074 --> 00:30:16,880
 but I'm going to ignore that for now,
 
-418
+405
 00:30:16,880 --> 00:30:19,657
 maybe we can
 optimize that later, but for now
 
-419
+406
 00:30:19,657 --> 00:30:21,680
 that's certainly solved the problem.
 
-420
+407
 00:30:26,620 --> 00:30:28,940
 For our actual
 word puzzle problem, we know
 
-421
+408
 00:30:28,940 --> 00:30:31,540
 that the words
 are different, but the same length.
 
-422
+409
 00:30:31,570 --> 00:30:34,340
 I'm going to find all the
 neighbors around the word A,
 
-423
+410
 00:30:34,340 --> 00:30:36,540
 and then try and find all of the solutions
 
-424
+411
 00:30:36,540 --> 00:30:38,982
 from all of the neighbors of A.
 
-425
+412
 00:30:38,982 --> 00:30:40,640
 See if any of them gets us to B.
 
-426
+413
 00:30:40,800 --> 00:30:42,510
 In which case those will be our
 possible solutions.
 
-427
+414
 00:30:42,510 --> 00:30:44,857
 OC: So we'll start by taking the neighbors of A.
 
-428
+415
 00:30:44,850 --> 00:30:49,770
 and the same dictionary [inaudible].
 
-429
+416
 00:30:53,540 --> 00:30:54,600
 I've got a hole here
 
-430
+417
 00:30:54,600 --> 00:30:56,771
 so I'm going to write some sort of function
 
-431
+418
 00:30:56,771 --> 00:30:58,680
 that will take all these neighbors.
 
-432
+419
 00:30:58,680 --> 00:31:00,510
 Let's have a look at the type of that.
 
-433
+420
 00:31:02,000 --> 00:31:04,340
 We're going to
 have a list of text and we need
 
-434
+421
 00:31:04,340 --> 00:31:05,800
 to go to a list of word chains.
 
-435
+422
 00:31:06,940 --> 00:31:09,657
 so that list of text
 is all the possible neighbors
 
-436
+423
 00:31:09,650 --> 00:31:12,377
 So I'm going
 to map over that and now
 
-437
+424
 00:31:12,370 --> 00:31:18,057
 I have the function that
 goes from  text to word chain.
 
-438
+425
 00:31:18,142 --> 00:31:18,628
 SP: OK.
 
-439
+426
 00:31:20,600 --> 00:31:23,211
 OC: So how is best to do this.
 
-440
+427
 00:31:38,940 --> 00:31:42,085
 Even though this has
 the same type, I want to see what we get to.
 
-441
+428
 00:31:42,080 --> 00:31:44,285
 We're going to be using the same dictionary
 
-442
+429
 00:31:44,777 --> 00:31:52,731
 and were going to go to B and go on to N
 and N to B.
 
-443
+430
 00:31:52,850 --> 00:31:55,120
 That's probably not going to type check.
 
-444
+431
 00:31:57,600 --> 00:31:59,970
 We couldn't match a list of text with text.
 
-445
+432
 00:32:01,040 --> 00:32:03,714
 Oh! that's because
 the word chain is a list of text
 
-446
+433
 00:32:04,148 --> 00:32:05,897
 It's expecting a single word chain
 
-447
+434
 00:32:05,908 --> 00:32:07,940
 but we've actually
 got many word chains.
 
-448
+435
 00:32:07,942 --> 00:32:11,017
 So I think the
 problem here is that if we
 
-449
+436
 00:32:11,017 --> 00:32:13,622
 put another
 type hole there, we'll see that this
 
-450
+437
 00:32:13,622 --> 00:32:15,080
 could actually typecheck,
 
-451
+438
 00:32:15,110 --> 00:32:17,400
 provided we
 had a function that went from
 
-452
+439
 00:32:17,400 --> 00:32:20,285
 a list of lists of word
 chains to just a list of word chains.
 
-453
+440
 00:32:20,297 --> 00:32:21,680
 Which is of course 'concat',
 
-454
+441
 00:32:22,800 --> 00:32:25,462
 And we have a
 function in the standard library...
 
-455
+442
 00:32:25,474 --> 00:32:29,000
 I'm gonna remove that hole.
 
-456
+443
 00:32:29,000 --> 00:32:31,800
 There's a function
 in the standard library that does
 
-457
+444
 00:32:31,820 --> 00:32:33,770
 these two things together... concatMap
 
-458
+445
 00:32:33,770 --> 00:32:35,570
 because it's such a common operation.
 
-459
+446
 00:32:36,160 --> 00:32:39,531
 concatMap that there... and
 
-460
+447
 00:32:41,400 --> 00:32:43,253
 I guess we'll leave that
 
-461
+448
 00:32:43,480 --> 00:32:46,540
 as a hole for now and play with it in GHCi again.
 
-462
+449
 00:32:47,400 --> 00:32:50,280
 If I load the dictionary,
 I should be able to now
 
-463
+450
 00:32:50,413 --> 00:32:52,600
 try of one of the example problems.
 
-464
+451
 00:32:52,600 --> 00:32:53,693
 Let's try:
 
-465
+452
 00:33:04,450 --> 00:33:07,693
 That is impressively slow right now (laughter)
 
-466
+453
 00:33:07,920 --> 00:33:10,920
 And I'm not sure if that's
 because this doesn't terminate
 
-467
+454
 00:33:10,920 --> 00:33:13,000
 or because we're being so inefficient.
 
-468
+455
 00:33:13,013 --> 00:33:16,400
 SP: Now... By the time you go from dog to dot
 
-469
+456
 00:33:17,020 --> 00:33:19,613
 one of the neighbors of dot is dog.
 
-470
+457
 00:33:19,613 --> 00:33:22,466
 OC: So we're actually
 going back on ourselves probably
 
-471
+458
 00:33:22,460 --> 00:33:24,346
 SP: That's potentially what's happening.
 
-472
+459
 00:33:24,370 --> 00:33:26,370
 That sounds very reasonable to me. Yes.
 
-473
+460
 00:33:28,370 --> 00:33:32,653
 so we need to probably
 carry some extra state around.
 
-474
+461
 00:33:33,986 --> 00:33:36,440
 So I'm going to put this down here.
 
-475
+462
 00:33:39,800 --> 00:33:43,946
 We probably need to remove
 something from the dictionary
 
-476
+463
 00:33:43,970 --> 00:33:48,786
 which I guess is going
 to be when we go here:
 
-477
+464
 00:33:49,253 --> 00:33:51,333
 It will probably want to be a dictionary
 
-478
+465
 00:33:51,346 --> 00:33:53,310
 without the word N itself.
 
-479
+466
 00:33:54,293 --> 00:33:56,213
 And also not A.
 
-480
+467
 00:33:59,650 --> 00:34:01,600
 I've already removed A here
 
-481
+468
 00:34:01,650 --> 00:34:04,160
 so I'm wondering
 if maybe that should be done
 
-482
+469
 00:34:04,173 --> 00:34:05,373
 further up here.
 
-483
+470
 00:34:07,800 --> 00:34:09,880
 We'll try it anyway,
 let's just try it here.
 
-484
+471
 00:34:18,253 --> 00:34:20,586
 So let's filter the dictionary
 
-485
+472
 00:34:20,680 --> 00:34:23,000
 for stuff that's not equal to N.
 
-486
+473
 00:34:28,280 --> 00:34:31,880
 It's still compiling...
 
-487
+474
 00:34:38,080 --> 00:34:41,257
 That's better but apparently
 we now have no solutions at all,
 
-488
+475
 00:34:41,250 --> 00:34:44,813
 at least we do terminate. (laughter)
 
-489
+476
 00:34:46,546 --> 00:34:49,680
 SP: So termination but wrong
 is better than no termination.
 
-490
+477
 00:34:49,680 --> 00:34:52,514
 OC: I think so. At least
 we know that it will eventually
 
-491
+478
 00:34:52,514 --> 00:34:54,542
 deliver an answer even if it
 is the wrong answer.
 
-492
+479
 00:34:54,910 --> 00:34:56,826
 So what I want to check now,
 
-493
+480
 00:34:56,910 --> 00:34:59,373
 we expected this sort of chain dog, cog,
 
-494
+481
 00:34:59,386 --> 00:35:03,666
 cot to cat, so maybe if we just try cot to cat
 
-495
+482
 00:35:03,660 --> 00:35:05,373
 and see if we get that solution.
 
-496
+483
 00:35:05,533 --> 00:35:07,240
 OC: For the smallest thing I can think of
 
-497
+484
 00:35:09,386 --> 00:35:11,880
 that was cot to cat.
 
-498
+485
 00:35:12,186 --> 00:35:14,800
 Again that seems to have no solutions.
 
-499
+486
 00:35:19,760 --> 00:35:21,910
 It does indeed contain
 cat it's right there at the start,
 
-500
+487
 00:35:21,910 --> 00:35:24,542
 so we should certainly be seeing that.
 
-501
+488
 00:35:24,542 --> 00:35:26,540
 So let's see:
 
-502
+489
 00:35:29,280 --> 00:35:34,133
 The neighbors around
 A... and for each of those
 
-503
+490
 00:35:34,400 --> 00:35:35,800
 we call a word puzzle.
 
-504
+491
 00:35:42,626 --> 00:35:43,986
 The same target...
 
-505
+492
 00:35:50,880 --> 00:35:55,746
 SP: So here you're excluding
 words that are the neighbor
 
-506
+493
 00:35:56,020 --> 00:35:57,000
 OC: Yes
 
-507
+494
 00:35:57,026 --> 00:36:00,613
 SP: Perhaps instead you should be excluding A.
 
-508
+495
 00:36:03,466 --> 00:36:06,960
 Because that's the one you
 don't want to return to later.
 
-509
+496
 00:36:09,000 --> 00:36:10,942
 You know that you've got that one.
 
-510
+497
 00:36:11,310 --> 00:36:15,680
 OC: Great job!
 
-511
+498
 00:36:15,880 --> 00:36:20,520
 So we don't want to
 come back to where we started
 
-512
+499
 00:36:20,546 --> 00:36:22,200
 that certainly does make sense.
 
-513
+500
 00:36:30,110 --> 00:36:33,653
 And now we go from cot to cat.
 
-514
+501
 00:36:35,333 --> 00:36:37,426
 OC: We're certainly finding some solutions
 
-515
+502
 00:36:37,426 --> 00:36:41,653
 but never stopping the search (laughter).
 
-516
+503
 00:36:41,653 --> 00:36:44,080
 which is interesting. So, what's going on there?
 
-517
+504
 00:36:46,740 --> 00:36:49,373
 when we loop over there this...
 
-518
+505
 00:36:49,380 --> 00:36:52,533
 Well I'm interested to see
 if this will actually terminate
 
-519
+506
 00:36:52,530 --> 00:36:55,600
 and be the same length as
 all the neighbors of cot.
 
-520
+507
 00:36:59,066 --> 00:37:00,733
 But maybe this won't terminate.
 
-521
+508
 00:37:07,426 --> 00:37:09,253
 OK, maybe not (laughter).
 
-522
+509
 00:37:09,540 --> 00:37:13,310
 SP: The fan indicated that some work
 was being done (laughter)
 
-523
+510
 00:37:13,310 --> 00:37:18,570
 OC: Although, are we actually able to fully
 compute all of the neighbors around "cot"?
 We certainly are OK.
 
-524
+511
 00:37:20,020 --> 00:37:23,413
 So, we're not hitting our base case properly,
 
-525
+512
 00:37:23,450 --> 00:37:24,600
 which is interesting.
 
-526
+513
 00:37:34,533 --> 00:37:36,450
 We're certainly getting here
 
-527
+514
 00:37:37,573 --> 00:37:39,853
 because that's where we return the result.
 
-528
+515
 00:37:49,480 --> 00:37:54,053
 Maybe if we take all
 the solutions of neighbor.
 
-529
+516
 00:37:59,160 --> 00:38:03,373
 So if we couldn't find any
 solutions there then we won't
 
-530
+517
 00:38:03,373 --> 00:38:05,280
 be able to find any bigger solutions.
 
-531
+518
 00:38:15,170 --> 00:38:17,226
 If we did find a solution
 
-532
+519
 00:38:17,373 --> 00:38:20,306
 then we should be able to go for it.
 
-533
+520
 00:38:24,253 --> 00:38:26,013
 Yes, that seems reasonable.
 
-534
+521
 00:38:27,600 --> 00:38:29,320
 So I think that's largely OK.
 
-535
+522
 00:38:33,386 --> 00:38:35,213
 We've got an error there somewhere.
 
-536
+523
 00:38:36,220 --> 00:38:40,506
 So N is expecting a word chain
 
-537
+524
 00:38:40,533 --> 00:38:42,240
 that's actually a piece of text.
 
-538
+525
 00:38:43,540 --> 00:38:45,080
 That seems somewhat odd.
 
-539
+526
 00:38:49,770 --> 00:38:53,600
 SP: So the word puzzle
 will return a list of solutions
 
-540
+527
 00:38:53,620 --> 00:38:56,866
 so do you not need to prepend
 
-541
+528
 00:38:56,866 --> 00:38:59,626
 each of the items in that list of solutions?
 
-542
+529
 00:38:59,640 --> 00:39:00,800
 OC: Ah! of course, yes.
 
-543
+530
 00:39:02,050 --> 00:39:05,293
 SP: So I think it would be just 'map of' prepend.
 
-544
+531
 00:39:05,306 --> 00:39:08,146
 OC: Yes. We could also use Applicative Syntax
 
-545
+532
 00:39:08,386 --> 00:39:10,020
 which is not much different,
 
-546
+533
 00:39:10,080 --> 00:39:12,450
 but we could also do something like that
 
-547
+534
 00:39:12,450 --> 00:39:15,453
 for every S we're going to prepend it with N.
 
-548
+535
 00:39:15,533 --> 00:39:16,050
 SP: Right
 
-549
+536
 00:39:18,973 --> 00:39:21,413
 OC: OK, so we're back to compiling again
 
-550
+537
 00:39:33,600 --> 00:39:37,346
 Let's see if we can make any sense of that.
 
-551
+538
 00:39:37,680 --> 00:39:40,626
 Cat to cat and then
 every other word in the dictionary.
 
-552
+539
 00:39:40,680 --> 00:39:43,940
 We're eventually getting to
 cat. That's certainly happening.
 
-553
+540
 00:39:45,826 --> 00:39:48,986
 I guess that is a valid word chain (laughter).
 
-554
+541
 00:39:49,080 --> 00:39:52,466
 Is it just that there are this
 many possible word chains I guess
 
-555
+542
 00:39:53,066 --> 00:39:55,133
 The first one is certainly wrong though.
 
-556
+543
 00:39:55,333 --> 00:39:57,520
 That's certainly not a chain from cat to cat.
 
-557
+544
 00:39:57,546 --> 00:39:58,970
 That should be cot to cat.
 
-558
+545
 00:40:01,360 --> 00:40:04,080
 I better start fixing that bug:
 
-559
+546
 00:40:08,453 --> 00:40:09,940
 SP: They are very long chains
 
-560
+547
 00:40:09,940 --> 00:40:11,920
 Cod to cat was the next one.
 
-561
+548
 00:40:12,866 --> 00:40:15,110
 OC: They're certainly valid chains though.
 
-562
+549
 00:40:15,110 --> 00:40:15,640
 SP: Yes
 
-563
+550
 00:40:19,370 --> 00:40:26,080
 OC: So what's going wrong on that first one though?
 
-564
+551
 00:40:27,053 --> 00:40:28,386
 We have cat.
 
-565
+552
 00:40:30,773 --> 00:40:33,653
 The problem is I think
 we should have been prepending...
 
-566
+553
 00:40:35,466 --> 00:40:38,906
 A rather than N - or possibly both of them.
 
-567
+554
 00:40:38,906 --> 00:40:41,400
 Let's just see what that
 is, because we want to go
 
-568
+555
 00:40:41,400 --> 00:40:42,970
 from the word we're starting at.
 
-569
+556
 00:40:48,910 --> 00:40:52,080
 and now we certainly have
 the right solution at the front.
 
-570
+557
 00:40:52,080 --> 00:40:54,506
 And we can of course exploit laziness,
 
-571
+558
 00:40:54,500 --> 00:40:56,546
 hopefully just see the very first solution
 
-572
+559
 00:40:56,546 --> 00:40:57,986
 and it terminates.
 
-573
+560
 00:40:58,480 --> 00:41:00,285
 And finally that's one word chain
 
-574
+561
 00:41:00,280 --> 00:41:01,942
 that has certainly got us there.
 
-575
+562
 00:41:01,940 --> 00:41:03,013
 SP: OK.
 
-576
+563
 00:41:03,800 --> 00:41:05,850
 OC: So we need to decide
 where we want to go next.
 
-577
+564
 00:41:05,850 --> 00:41:08,110
 If we want to find
 all possible word chains,
 
-578
+565
 00:41:08,110 --> 00:41:10,680
 in a short amount of time,
 or if we want to make sure
 
-579
+566
 00:41:10,680 --> 00:41:12,940
 that this is definitely the shortest chain.
 
-580
+567
 00:41:15,220 --> 00:41:18,986
 At this point, finding the
 shortest chain we just need
 
-581
+568
 00:41:18,986 --> 00:41:21,773
 to sort by the length descending.
 
-582
+569
 00:41:23,173 --> 00:41:26,000
 But this now because
 we're sorting the entire list
 
-583
+570
 00:41:26,000 --> 00:41:29,600
 Is going to have to consider
 the entire set of possible solutions.
 
-584
+571
 00:41:31,066 --> 00:41:32,880
 SP: We probably need to think about
 
-585
+572
 00:41:32,893 --> 00:41:35,626
 expanding the chains progressively,
 
-586
+573
 00:41:39,533 --> 00:41:44,480
 and returning first the
 ones that are the shortest.
 
-587
+574
 00:41:44,480 --> 00:41:47,573
 OC: Right so a greedier
 search, as we go through.
 
-588
+575
 00:41:50,250 --> 00:41:53,000
 I'm going to try and see how long it takes
 
-589
+576
 00:41:53,110 --> 00:41:55,946
 to solve the whole list of solutions.
 
-590
+577
 00:41:56,386 --> 00:41:58,893
 We have a function here, 'sort by' which takes
 
-591
+578
 00:41:59,106 --> 00:42:02,306
 a list of type A and if we
 have a way to compare them
 
-592
+579
 00:42:02,306 --> 00:42:04,146
 for an ordering we can do something.
 
-593
+580
 00:42:04,386 --> 00:42:10,426
 So Data.Function also has,
 or it might be in Data.Ord
 
-594
+581
 00:42:12,400 --> 00:42:14,200
 We have comparing.
 
-595
+582
 00:42:14,570 --> 00:42:21,453
 So we can say comparing on length [inaudible]
 
-596
+583
 00:42:22,680 --> 00:42:24,013
 which is just what we want
 
-597
+584
 00:42:24,013 --> 00:42:25,946
 a word chain as a  list of texts.
 
-598
+585
 00:42:27,493 --> 00:42:31,840
 So sort by comparing length
 
-599
+586
 00:42:35,333 --> 00:42:37,480
 and it's certainly not a good solution.
 
-600
+587
 00:42:37,520 --> 00:42:40,770
 In the original spec of the kata it said
 
-601
+588
 00:42:40,770 --> 00:42:43,600
 it should be returning
 results in less than a second
 
-602
+589
 00:42:43,600 --> 00:42:44,973
 but we're well over that.
 
-603
+590
 00:42:59,080 --> 00:43:03,733
 So I think we got our one
 solution there from cog to cat,
 
-604
+591
 00:43:04,260 --> 00:43:07,546
 purely by chance because
 cat comes first in the dictionary.
 
-605
+592
 00:43:07,546 --> 00:43:10,866
 What we're doing here is
 basically a depth first search.
 
-606
+593
 00:43:10,866 --> 00:43:12,693
 OC: So the moment we hit that one neighbor,
 
-607
+594
 00:43:12,693 --> 00:43:13,920
 we go as far away as we can
 
-608
+595
 00:43:13,933 --> 00:43:15,520
 to try and get all the way to cat which is
 
-609
+596
 00:43:15,520 --> 00:43:18,133
 not really the most efficient use of our time.
 
-610
+597
 00:43:18,133 --> 00:43:20,506
 We're going to need to
 change this from a depth first solution
 
-611
+598
 00:43:20,506 --> 00:43:22,650
 to a breadth first solution.
 
-612
+599
 00:43:23,080 --> 00:43:25,933
 What we're going to do
 is go over each of the neighbors
 
-613
+600
 00:43:25,933 --> 00:43:28,520
 and try to expand that
 word chain of the neighbor
 
-614
+601
 00:43:28,546 --> 00:43:29,386
 to go one bigger,
 
-615
+602
 00:43:29,640 --> 00:43:33,253
 and hopefully we will eventually end at B.
 
-616
+603
 00:43:33,900 --> 00:43:35,693
 B is certainly in the dictionary,
 
-617
+604
 00:43:35,706 --> 00:43:37,613
 in which case we've
 finished our breadth first search.
 
-618
+605
 00:43:37,613 --> 00:43:40,000
 At least to get the shortest path.
 
-619
+606
 00:43:40,000 --> 00:43:42,420
 SP: And since you're removing the word each time
 
-620
+607
 00:43:42,420 --> 00:43:44,573
 eventually you won't be able to expand
 
-621
+608
 00:43:45,080 --> 00:43:46,586
 your search any further
 
-622
+609
 00:43:46,580 --> 00:43:49,546
 because you'll run out of
 neighbors for the next word.
 
-623
+610
 00:43:50,320 --> 00:43:53,706
 OC, Yes. So I'm going to leave
 word puzzle alone for the moment
 
-624
+611
 00:43:53,770 --> 00:43:57,320
 Instead let's try and use some kind of
 
-625
+612
 00:43:57,626 --> 00:43:58,546
 expand function.
 
-626
+613
 00:43:58,540 --> 00:44:02,320
 So that's going to take a
 word chain and give us back
 
-627
+614
 00:44:02,346 --> 00:44:04,640
 all possible expansions of the word chain,
 
-628
+615
 00:44:05,360 --> 00:44:07,746
 We need the dictionary there as well.
 
-629
+616
 00:44:09,170 --> 00:44:10,770
 I think that's what I want to do.
 
-630
+617
 00:44:20,840 --> 00:44:22,820
 We're going to work
 from the head of the chain
 
-631
+618
 00:44:22,820 --> 00:44:24,020
 and try to expand that.
 
-632
+619
 00:44:26,600 --> 00:44:29,546
 There is obviously the
 case where we've got
 
-633
+620
 00:44:30,120 --> 00:44:32,346
 no words at all in the chain.
 
-634
+621
 00:44:32,560 --> 00:44:35,666
 That's not really an
 invariant I want to have in the code.
 
-635
+622
 00:44:35,720 --> 00:44:39,740
 But we should probably deal with it anyway
 in which case there's no expansions on that.
 
-636
+623
 00:44:40,960 --> 00:44:47,920
 Otherwise we have a
 word on some other words
 
-637
+624
 00:44:48,026 --> 00:44:51,000
 and now by all the
 neighbors in the dictionary.
 
-638
+625
 00:44:51,050 --> 00:44:56,920
 W and put those on the
 word chain we've got so far.
 
-639
+626
 00:45:04,370 --> 00:45:08,400
 So neighbors gives us a list of words and
 
-640
+627
 00:45:08,680 --> 00:45:11,106
 that's already a list of word chains.
 
-641
+628
 00:45:15,770 --> 00:45:22,173
 I find the neighbors of w
 but I need to use a
 
-642
+629
 00:45:22,173 --> 00:45:24,050
 list cons there.
 
-643
+630
 00:45:34,000 --> 00:45:36,453
 I'm going to move away from
 putting this there.
 Just map over these.
 
-644
+631
 00:45:41,680 --> 00:45:46,426
 SP: That's not a bad example
 of a case for a miscomprehension.
 
-645
+632
 00:45:46,573 --> 00:45:47,373
 OC: OK.
 
-646
+633
 00:45:49,340 --> 00:45:52,280
 OC: Sure well let's try
 another one of those conventions
 
-647
+634
 00:45:53,480 --> 00:45:56,910
 we need to... go over there.
 
-648
+635
 00:45:56,910 --> 00:46:01,200
 the neighbors and dict and w
 
-649
+636
 00:46:08,370 --> 00:46:11,920
 and we'll put that into binding n.
 
-650
+637
 00:46:14,050 --> 00:46:17,613
 Now I need to
 produce a single word chain here,
 
-651
+638
 00:46:18,906 --> 00:46:22,173
 that will be n, w, ws, I think.
 
-652
+639
 00:46:26,340 --> 00:46:28,400
 And we're back to compiling again - good.
 
-653
+640
 00:46:31,493 --> 00:46:35,040
 I should be able to load the dictionary in
 
-654
+641
 00:46:39,370 --> 00:46:44,573
 and expand and type that back up...
 
-655
+642
 00:46:45,720 --> 00:46:49,520
 And word chains, so why don't
 I just start with the word cat.
 
-656
+643
 00:46:50,620 --> 00:46:52,940
 So that seems to be doing
 what I would expect,
 
-657
+644
 00:46:52,940 --> 00:46:54,770
 the expansion is on the front.
 
-658
+645
 00:46:55,740 --> 00:46:59,680
 So now let's see if we can
 feed this back in to our word puzzle.
 
-659
+646
 00:47:01,620 --> 00:47:03,866
 I think I'll leave this around for now
 and just comment that out.
 
-660
+647
 00:47:09,880 --> 00:47:12,986
 So we're going to start at
 word a and we need
 
-661
+648
 00:47:12,986 --> 00:47:14,373
 to reach word b.
 
-662
+649
 00:47:15,200 --> 00:47:16,850
 So we'll start with a word chain
 
-663
+650
 00:47:18,680 --> 00:47:20,520
 which is just the word a
 
-664
+651
 00:47:20,613 --> 00:47:21,933
 That's a chain of one word.
 
-665
+652
 00:47:22,280 --> 00:47:26,253
 I will expand that to
 a list of possible word chains.
 
-666
+653
 00:47:27,050 --> 00:47:29,986
 Let's see what I need to do with that.
 
-667
+654
 00:47:31,510 --> 00:47:33,370
 Well that one actually works so far,
 
-668
+655
 00:47:33,370 --> 00:47:36,013
 but it's certainly
 not going to be the solution.
 
-669
+656
 00:47:38,173 --> 00:47:40,333
 Now I should be able to...
 
-670
+657
 00:47:47,880 --> 00:47:51,586
 So that's just a one
 level breadth-first search.
 
-671
+658
 00:47:51,580 --> 00:47:54,533
 We need to go a bit further
 than that to find something useful,
 
-672
+659
 00:47:54,546 --> 00:48:00,133
 so I think now
 we just need to keep expanding
 
-673
+660
 00:48:00,946 --> 00:48:08,120
 until we have B at the front of the list.
 
-674
+661
 00:48:08,120 --> 00:48:08,786
 SP: Yes.
 
-675
+662
 00:48:11,110 --> 00:48:13,786
 OC: We can probably use
 iterate to do that.
 
-676
+663
 00:48:13,786 --> 00:48:16,213
 SP: Or until you don't
 have any further expansions.
 
-677
+664
 00:48:16,213 --> 00:48:18,906
 OC: Ah! that's one
 thing we've not done so far
 
-678
+665
 00:48:19,413 --> 00:48:21,960
 is reducing this dictionary.
 
-679
+666
 00:48:26,493 --> 00:48:27,826
 Where would I put that in?
 
-680
+667
 00:48:27,820 --> 00:48:33,160
 so after one expansion,
 this is probably returning me
 
-681
+668
 00:48:33,170 --> 00:48:34,770
 a smaller dictionary as well.
 
-682
+669
 00:48:36,020 --> 00:48:39,220
 When I expand a word chain
 the dictionary becomes smaller.
 
-683
+670
 00:48:45,480 --> 00:48:46,940
 SP: That would be reasonable.
 
-684
+671
 00:48:46,940 --> 00:48:49,373
 OC: Let's see what we get with that...
 
-685
+672
 00:48:52,650 --> 00:48:55,226
 so word chain and the dictionary.
 
-686
+673
 00:49:00,620 --> 00:49:04,760
 SP: The alternative is that
 you keep the dictionary the same
 
-687
+674
 00:49:04,760 --> 00:49:07,440
 each time, but you
 don't allow the addition
 
-688
+675
 00:49:07,453 --> 00:49:10,160
 into the chain of
 a word that's already in it.
 
-689
+676
 00:49:11,310 --> 00:49:14,426
 OC: Yes, but we're going to keep searching
 
-690
+677
 00:49:14,426 --> 00:49:15,760
 through a word chain every time,
 
-691
+678
 00:49:15,770 --> 00:49:17,946
 it feels like we just
 make the dictionary smaller
 
-692
+679
 00:49:17,946 --> 00:49:20,910
 then our neighbors
 gradually become smaller.
 
-693
+680
 00:49:21,000 --> 00:49:24,373
 So we return the list of
 possible word chains as before.
 
-694
+681
 00:49:27,940 --> 00:49:31,280
 Now I'm thinking
 it would be nice if we had
 
-695
+682
 00:49:31,280 --> 00:49:33,053
 a richer type for our dictionary.
 
-696
+683
 00:49:33,053 --> 00:49:36,413
 Like a set or something like
 that, so I can do a set difference
 
-697
+684
 00:49:36,413 --> 00:49:39,306
 and easily remove a set of words from it.
 
-698
+685
 00:49:39,306 --> 00:49:40,306
 SP: Yes.
 
-699
+686
 00:49:41,346 --> 00:49:43,426
 OC: So that's going to be
 a bit of a backtrace
 
-700
+687
 00:49:43,426 --> 00:49:45,226
 but I think it's going to be worth it.
 
-701
+688
 00:49:45,333 --> 00:49:51,960
 so I'm going to import
 the Data.Set library as well
 
-702
+689
 00:49:54,080 --> 00:49:57,040
 and that also works best
 when you import qualified.
 
-703
+690
 00:50:00,973 --> 00:50:03,946
 We need to depend on
 the containments library for that.
 
-704
+691
 00:50:06,400 --> 00:50:08,946
 And to get that
 I need to put that in there.
 
-705
+692
 00:50:11,110 --> 00:50:13,893
 Actually, it looks as if
 we already have that.
 
-706
+693
 00:50:17,120 --> 00:50:18,786
 Bit of a misnomer there I reckon.
 
-707
+694
 00:50:21,200 --> 00:50:28,106
 So now that we've got set
 imported maybe we can make this...
 
-708
+695
 00:50:28,146 --> 00:50:30,110
 So rather than having a list of text,
 
-709
+696
 00:50:30,893 --> 00:50:32,813
 let's go with a set text,
 
-710
+697
 00:50:33,613 --> 00:50:35,580
 and we'll just ask the compiler to tell us
 
-711
+698
 00:50:35,586 --> 00:50:38,720
 everything we need to update, to change.
 
-712
+699
 00:50:40,746 --> 00:50:43,260
 The first thing we need to do
 is return a set rather than a list.
 
-713
+700
 00:50:43,260 --> 00:50:48,160
 That's easy enough,
 we can just say S.fromList.
 
-714
+701
 00:50:48,680 --> 00:50:50,820
 which takes a list
 and turns it into a set.
 
-715
+702
 00:50:51,893 --> 00:50:57,373
 Next, rather than checking
 a list to see if an element's there,
 
-716
+703
 00:50:57,420 --> 00:51:03,080
 use S.member,
 which checks to see if an element
 
-717
+704
 00:51:03,093 --> 00:51:04,520
 is a member of a set.
 
-718
+705
 00:51:05,573 --> 00:51:07,600
 Likewise going to do the same here...
 
-719
+706
 00:51:17,640 --> 00:51:21,066
 That has put a hole back there.
 
-720
+707
 00:51:25,820 --> 00:51:31,960
 That should probably just return.
 
-721
+708
 00:51:34,866 --> 00:51:36,493
 like that...
 
-722
+709
 00:51:41,440 --> 00:51:47,106
 The filter is for lists but we
 have a set so
 we ask S.filter to filter a set.
 
-723
+710
 00:51:56,240 --> 00:51:58,306
 I'll check the type of that in there.
 
-724
+711
 00:52:05,370 --> 00:52:08,533
 OK, I've some idea
 of where that error came up.
 
-725
+712
 00:52:10,800 --> 00:52:15,920
 Ah yes,  we can't map over a set like that.
 
-726
+713
 00:52:17,813 --> 00:52:23,813
 Do we have that... yes we do...
 so we just change that to S.map
 
-727
+714
 00:52:24,866 --> 00:52:29,510
 and again to S.filter, S.map.
 
-728
+715
 00:52:29,866 --> 00:52:32,173
 Now this is not going
 to give us a list of text,
 
-729
+716
 00:52:32,186 --> 00:52:33,826
 it's going to give us a set of text.
 
-730
+717
 00:52:39,880 --> 00:52:46,893
 SP: There are built in facilities
 like traversible.
 
-731
+718
 00:52:47,826 --> 00:52:49,866
 Does that help with
 this sort of code
 
-732
+719
 00:52:49,866 --> 00:52:53,346
 where you change
 from one data type to another?
 
-733
+720
 00:52:53,400 --> 00:52:55,710
 There are some
 generalized forms of some of
 
-734
+721
 00:52:55,710 --> 00:52:57,506
 these functions aren't there?
 
-735
+722
 00:52:57,540 --> 00:53:00,706
 OC: Right. We can't
 generalize map I don't think
 
-736
+723
 00:53:00,706 --> 00:53:03,373
 because this is a set
 and sets have the constraint
 
-737
+724
 00:53:03,373 --> 00:53:05,906
 that the things inside
 the set must be order-able.
 
-738
+725
 00:53:05,906 --> 00:53:06,200
 SP: Ok
 
-739
+726
 00:53:06,213 --> 00:53:08,480
 So we can't map between
 our 3 types because
 
-740
+727
 00:53:08,493 --> 00:53:10,840
 we wouldn't necessarily
 map them to something that's order-able.
 
-741
+728
 00:53:10,850 --> 00:53:15,906
 For filter, there's probably
 some stuff in Data.Foldable
 
-742
+729
 00:53:15,906 --> 00:53:18,026
 that will probably let us filter the set.
 
-743
+730
 00:53:18,546 --> 00:53:22,933
 But I think I'm quite happy being explicit
 that we're working with sets here.
 
-744
+731
 00:53:22,933 --> 00:53:23,626
 SP: That's fine.
 
-745
+732
 00:53:23,710 --> 00:53:25,250
 OC: I don't think generalizing
 
-746
+733
 00:53:25,250 --> 00:53:27,170
 would give us much of a benefit here.
 
-747
+734
 00:53:27,170 --> 00:53:31,093
 SP: Why I was wondering
 is because I like to use that myself.
 
-748
+735
 00:53:33,440 --> 00:53:38,280
 OC: Now we may not be able to
 use the list comprehension anymore.
 
-749
+736
 00:53:38,280 --> 00:53:39,160
 because we certainly don't have the list.
 
-750
+737
 00:53:39,170 --> 00:53:42,466
 what we could do
 though is just go to a list.
 
-751
+738
 00:53:44,770 --> 00:53:47,680
 We could turn this into a list.
 
-752
+739
 00:53:52,194 --> 00:53:54,500
 OK, and now we're back to
 trying to solve this.
 
-753
+740
 00:53:55,348 --> 00:53:57,354
 To recap where we were, we wanted to have
 
-754
+741
 00:53:57,354 --> 00:53:59,662
 the dictionary become
 smaller and smaller so
 
-755
+742
 00:54:00,228 --> 00:54:02,142
 we return the
 word chain and now we need to
 
-756
+743
 00:54:02,148 --> 00:54:06,708
 return the dictionary
 but without a set of words
 
-757
+744
 00:54:06,702 --> 00:54:08,308
 that we've already considered.
 
-758
+745
 00:54:09,302 --> 00:54:15,091
 I believe those are
 going to be the head of chains
 
-759
+746
 00:54:15,097 --> 00:54:18,417
 that we just expanded to so that
 will be all the neighbors again.
 
-760
+747
 00:54:19,570 --> 00:54:25,462
 Although maybe it's more
 beneficial to bring more neighbors out
 
-761
+748
 00:54:25,462 --> 00:54:26,697
 as a separate binding.
 
-762
+749
 00:54:33,680 --> 00:54:36,702
 So now we can take the
 dictionary without any of the neighbors.
 
-763
+750
 00:54:36,702 --> 00:54:39,020
 I've got a slightly smaller
 dictionary now.
 
-764
+751
 00:54:39,330 --> 00:54:40,748
 And that still type checks.
 
-765
+752
 00:54:45,794 --> 00:54:47,257
 We certainly want to call expand.
 
-766
+753
 00:54:47,251 --> 00:54:47,954
 We need to work out
 
-767
+754
 00:54:47,950 --> 00:54:49,360
 what were going to do with that result.
 
-768
+755
 00:54:49,360 --> 00:54:51,942
 We have to write a
 function that's going to take
 
-769
+756
 00:54:51,942 --> 00:54:53,771
 a list of word chains in the dictionary,
 
-770
+757
 00:54:53,771 --> 00:54:55,708
 and eventually gets to a word chain.
 
-771
+758
 00:54:59,280 --> 00:55:03,371
 I think we'll end up using some functions
 
-772
+759
 00:55:03,371 --> 00:55:04,845
 that are already in prelude anyway
 
-773
+760
 00:55:04,845 --> 00:55:07,622
 but let's just follow the types manually,
 
-774
+761
 00:55:07,622 --> 00:55:08,942
 and see what we end up with.
 
-775
+762
 00:55:09,194 --> 00:55:11,491
 OC: We have some function
 f that's going to take a chain...
 
-776
+763
 00:55:11,491 --> 00:55:14,910
 and a new dictionary
 and it needs to do something,
 
-777
+764
 00:55:16,850 --> 00:55:18,325
 and call f there as well.
 
-778
+765
 00:55:22,725 --> 00:55:26,102
 Now we want to expand
 every single one of these chains
 
-779
+766
 00:55:26,102 --> 00:55:27,680
 using the smaller dictionary.
 
-780
+767
 00:55:30,200 --> 00:55:33,480
 So do something with chain
 and chain is of course not...
 
-781
+768
 00:55:34,060 --> 00:55:36,920
 These type holes
 aren't really helping us anymore
 
-782
+769
 00:55:37,030 --> 00:55:39,240
 Just have to trust
 our intuition a bit more.
 
-783
+770
 00:55:39,450 --> 00:55:41,622
 but I should be able to map expand.
 
-784
+771
 00:55:48,782 --> 00:55:50,725
 I should bring this down a little bit.
 
-785
+772
 00:55:54,920 --> 00:55:57,280
 Expand takes the dictionary
 in first position,
 
-786
+773
 00:55:57,285 --> 00:55:59,800
 and a word chain to expand second,
 
-787
+774
 00:56:00,142 --> 00:56:02,102
 so that's going to work quite nicely.
 
-788
+775
 00:56:03,068 --> 00:56:04,668
 Apart from (inaudible)
 
-789
+776
 00:56:05,382 --> 00:56:07,691
 So that was a list of chains.
 
-790
+777
 00:56:16,085 --> 00:56:18,154
 Going in the right direction there.
 
-791
+778
 00:56:20,217 --> 00:56:23,205
 We need to go from
 a list of a list of word chains.
 
-792
+779
 00:56:23,794 --> 00:56:26,537
 to probably a single word chain.
 
-793
+780
 00:56:27,880 --> 00:56:30,628
 So, expanded every chain.
 
-794
+781
 00:56:32,085 --> 00:56:34,348
 I'm going to have to call F on that again.
 
-795
+782
 00:56:42,994 --> 00:56:45,960
 So, I think we're
 struggling to find a nice kind of way
 
-796
+783
 00:56:45,960 --> 00:56:48,320
 to repeatedly apply this expand function,
 
-797
+784
 00:56:49,010 --> 00:56:50,325
 and what comes to mind here is,
 
-798
+785
 00:56:50,325 --> 00:56:54,177
 it looks like an unfold
 which is like the dual to fold,
 
-799
+786
 00:56:54,171 --> 00:56:55,382
 which a lot of people are familiar with.
 
-800
+787
 00:56:55,382 --> 00:56:56,668
 When you fold you have a list
 
-801
+788
 00:56:56,660 --> 00:56:59,125
 and you keep reducing it
 into something smaller.
 
-802
+789
 00:56:59,125 --> 00:57:01,977
 Whereas in this case we
 actually have something
 and want to get something bigger.
 
-803
+790
 00:57:01,971 --> 00:57:03,710
 Which as unfolding until the point
 
-804
+791
 00:57:03,710 --> 00:57:05,400
 where we maybe can't go any bigger.
 
-805
+792
 00:57:06,200 --> 00:57:10,222
 So we have a function in
 the Prelude to do that
 
-806
+793
 00:57:10,222 --> 00:57:12,148
 which is unfoldr.
 
-807
+794
 00:57:14,290 --> 00:57:16,897
 But that requires for
 this function that we have
 
-808
+795
 00:57:16,891 --> 00:57:18,971
 something that returns Maybe any value.
 
-809
+796
 00:57:19,228 --> 00:57:21,514
 OC: But this actually looks quite a lot
 
-810
+797
 00:57:21,514 --> 00:57:23,285
 like what we have in expand here.
 
-811
+798
 00:57:23,565 --> 00:57:25,182
 OC: But we don't have a Maybe here,
 
-812
+799
 00:57:25,754 --> 00:57:27,445
 so the Maybe represents the fact that
 
-813
+800
 00:57:27,445 --> 00:57:29,131
 you can't actually go any bigger,
 
-814
+801
 00:57:29,131 --> 00:57:32,434
 which is what we were
 modeling here with this pattern match,
 
-815
+802
 00:57:32,691 --> 00:57:35,480
 where we simply said
 we have an empty list of word chains,
 
-816
+803
 00:57:35,485 --> 00:57:37,650
 but that felt a bit weird,
 
-817
+804
 00:57:37,840 --> 00:57:40,971
 so maybe let's try
 bringing in a Maybe there.
 
-818
+805
 00:57:42,200 --> 00:57:44,171
 SP: Maybe let's Maybe (laughter).
 
-819
+806
 00:57:45,540 --> 00:57:49,685
 OC: Ok, so in this case
 there's nothing we can do,
 
-820
+807
 00:57:50,057 --> 00:57:51,245
 so we just say nothing.
 
-821
+808
 00:57:51,428 --> 00:57:52,565
 Whereas in this case,
 
-822
+809
 00:57:53,937 --> 00:57:56,782
 we have just that result of word chains.
 
-823
+810
 00:57:57,691 --> 00:57:59,850
 NARRATOR: We're going to speed through
 this section
 
-824
+811
 00:57:59,850 --> 00:58:01,577
 because Ollie and Steve found themselves
 
-825
+812
 00:58:01,577 --> 00:58:03,280
 deep into a Rabbit hole.
 
-826
+813
 00:58:03,860 --> 00:58:07,280
 They eventually backtracked
 on this idea of using unfoldr,
 
-827
+814
 00:58:07,897 --> 00:58:09,674
 so let's skip ahead to the section
 
-828
+815
 00:58:09,674 --> 00:58:11,080
 where they changed course.
 
-829
+816
 00:58:14,740 --> 00:58:17,450
 SP: You are typing faster
 than I can think (laughter).
 
-830
+817
 00:58:18,370 --> 00:58:20,422
 OC: Even though we're using unfold,
 
-831
+818
 00:58:20,422 --> 00:58:23,542
 which does feel
 like the right tool to be using
 
-832
+819
 00:58:23,540 --> 00:58:26,388
 I think we're getting
 ourselves into a bit of a muddle here.
 
-833
+820
 00:58:26,382 --> 00:58:28,000
 And one of the big culprits
 
-834
+821
 00:58:28,011 --> 00:58:30,308
 is what we're doing
 in this expand function
 
-835
+822
 00:58:30,302 --> 00:58:32,171
 so I'm going to try and simplify that
 
-836
+823
 00:58:32,170 --> 00:58:34,834
 and see if a nice
 solution comes out there.
 
-837
+824
 00:58:35,417 --> 00:58:36,891
 What I'm going to go with instead ..
 
-838
+825
 00:58:38,160 --> 00:58:41,577
 expand's going to take a single
 word chain and the dictionary,
 
-839
+826
 00:58:42,100 --> 00:58:44,365
 and it's going to expand that to a list
 
-840
+827
 00:58:44,360 --> 00:58:47,640
 of possible word
 chains and smaller dictionaries.
 
-841
+828
 00:58:48,160 --> 00:58:48,531
 SP:OK
 
-842
+829
 00:58:48,540 --> 00:58:50,400
 OC: So whenever I make one expansion,
 
-843
+830
 00:58:50,400 --> 00:58:52,680
 I consider all of the neighbors around the
 
-844
+831
 00:58:52,890 --> 00:58:54,622
 first word of the word chain.
 
-845
+832
 00:58:54,760 --> 00:58:56,582
 And for each of those new word chains,
 
-846
+833
 00:58:56,582 --> 00:58:58,080
 I'll have the neighbor at the front,
 
-847
+834
 00:58:58,080 --> 00:59:00,062
 and we will remove
 that word from the dictionary,
 
-848
+835
 00:59:00,080 --> 00:59:02,354
 because we don't want
 to go back on ourselves.
 
-849
+836
 00:59:03,737 --> 00:59:05,540
 So I have a word chain with nothing in
 
-850
+837
 00:59:05,540 --> 00:59:07,714
 but there's nothing I can do.
 
-851
+838
 00:59:08,560 --> 00:59:10,457
 We have seen this one before,
 
-852
+839
 00:59:10,490 --> 00:59:12,417
 but otherwise if we have a chain.
 
-853
+840
 00:59:12,891 --> 00:59:15,028
 and it starts with the word w,
 
-854
+841
 00:59:15,171 --> 00:59:18,148
 we have the dictionary and then
 
-855
+842
 00:59:18,280 --> 00:59:24,348
 we need to take the neighbors around w
 
-856
+843
 00:59:24,577 --> 00:59:25,520
 which will equal n.
 
-857
+844
 00:59:26,120 --> 00:59:28,034
 and put that on the front of the chain.
 
-858
+845
 00:59:28,030 --> 00:59:30,611
 So n is going to be the neighbors
 
-859
+846
 00:59:34,228 --> 00:59:36,371
 using the same dictionary around w.
 
-860
+847
 00:59:37,820 --> 00:59:41,045
 But we also need to return
 this slightly smaller dictionary.
 
-861
+848
 00:59:43,740 --> 00:59:45,370
 Tuple that up
 
-862
+849
 00:59:45,428 --> 00:59:49,651
 with the same dictionary.
 
-863
+850
 00:59:52,485 --> 00:59:54,540
 but we'll delete n from the dictionary.
 
-864
+851
 00:59:54,720 --> 00:59:55,388
 SP: Right.
 
-865
+852
 00:59:56,417 --> 00:59:57,874
 OC: Lets try that...
 
-866
+853
 00:59:59,902 --> 01:00:01,451
 get rid of our old definition.
 
-867
+854
 01:00:02,714 --> 01:00:04,417
 You can see this is very similar to what we had
 
-868
+855
 01:00:04,411 --> 01:00:05,874
 in expandOne.
 
-869
+856
 01:00:05,885 --> 01:00:07,828
 OC: so breaking the problem into a smaller one
 
-870
+857
 01:00:13,697 --> 01:00:15,194
 So ignore this...
 
-871
+858
 01:00:15,840 --> 01:00:19,542
 let's keep that.
 
-872
+859
 01:00:22,050 --> 01:00:24,910
 And that's expecting a list
 of text from the other set
 
-873
+860
 01:00:24,910 --> 01:00:26,577
 So we need to turn that into a list
 
-874
+861
 01:00:36,571 --> 01:00:37,577
 we're back - good!
 
-875
+862
 01:00:41,720 --> 01:00:43,740
 I guess if we load the dictionary in
 
-876
+863
 01:00:45,462 --> 01:00:50,970
 then we should be able to use expand with...
 
-877
+864
 01:00:50,970 --> 01:00:52,485
 let's just look at the one expansion of cat. Oops.
 
-878
+865
 01:00:54,862 --> 01:00:55,880
 So what we're doing here is
 
-879
+866
 01:00:55,880 --> 01:00:58,080
 we end up printing the out dictionary as well.
 
-880
+867
 01:00:58,085 --> 01:01:00,114
 SP: Yes, because it was in the (inaudible)
 
-881
+868
 01:01:02,005 --> 01:01:03,222
 OC: Map first over that,
 
-882
+869
 01:01:06,571 --> 01:01:08,777
 and we see just the one level expansion.
 
-883
+870
 01:01:08,771 --> 01:01:10,382
 SP: Fantastic
 
-884
+871
 01:01:11,771 --> 01:01:13,971
 So we're going to repeatedly apply this
 
-885
+872
 01:01:14,200 --> 01:01:15,731
 but we'll keep the small chains.
 
-886
+873
 01:01:15,731 --> 01:01:17,850
 Then we will have the
 bigger chains on the end.
 
-887
+874
 01:01:17,850 --> 01:01:21,028
 So that's basically giving
 us a flattening of a tree,
 
-888
+875
 01:01:21,022 --> 01:01:22,365
 of a breadth-first search.
 
-889
+876
 01:01:22,777 --> 01:01:26,520
 Which I think is going to be
 better than the depth first search
 
-890
+877
 01:01:27,085 --> 01:01:28,148
 that we saw earlier.
 
-891
+878
 01:01:28,142 --> 01:01:28,650
 SP:  Yes.
 
-892
+879
 01:01:30,680 --> 01:01:34,897
 I'm going to do a little
 function up here called go.
 
-893
+880
 01:01:38,620 --> 01:01:44,371
 Go is going to take
 a list of word chains
 
-894
+881
 01:01:44,371 --> 01:01:45,588
 and dictionaries.
 
-895
+882
 01:01:46,817 --> 01:01:48,840
 And this becomes apparent
 
-896
+883
 01:01:48,931 --> 01:01:51,480
 you can see how I'm
 going to pull recursively.
 
-897
+884
 01:01:51,480 --> 01:01:54,685
 And it's going to give us back a
 list of word chains and dictionaries.
 
-898
+885
 01:01:54,685 --> 01:01:57,880
 and that's going to let us
 repeatedly apply this to ourselves.
 
-899
+886
 01:01:57,880 --> 01:02:00,491
 OC: So if we have nothing in the first [inaudible]
 
-900
+887
 01:02:00,770 --> 01:02:03,220
 There's nothing we can do, we simply return that
 
-901
+888
 01:02:03,925 --> 01:02:08,308
 Otherwise we have some
 chains so what we can do...
 
-902
+889
 01:02:08,697 --> 01:02:11,120
 SP: We have some
 combinations of chains and dictionaries.
 
-903
+890
 01:02:11,302 --> 01:02:12,994
 OC: Yes, some chains and dictionaries indeed.
 
-904
+891
 01:02:12,994 --> 01:02:14,634
 but for every word chain in the dictionary
 
-905
+892
 01:02:14,634 --> 01:02:17,880
 we want to expand that word
 chain using its own dictionary.
 
-906
+893
 01:02:17,880 --> 01:02:19,450
 So I'm going to map over chains,
 
-907
+894
 01:02:21,240 --> 01:02:23,491
 and what we'll have here is a word chain
 
-908
+895
 01:02:23,491 --> 01:02:25,697
 and a dictionary, which we will expand
 
-909
+896
 01:02:26,017 --> 01:02:27,497
 in a chain and a dictionary.
 
-910
+897
 01:02:28,217 --> 01:02:30,571
 We're going to have
 to concat like that because
 
-911
+898
 01:02:30,577 --> 01:02:32,457
 expand gives us a list of word chains and dictionaries.
 
-912
+899
 01:02:35,794 --> 01:02:37,474
 SP: Can we rename chains there?
 
-913
+900
 01:02:37,868 --> 01:02:41,668
 OC: Sure, anything you're up to, a tad smaller
 
-914
+901
 01:02:42,000 --> 01:02:43,954
 or did you want to drop it entirely?
 
-915
+902
 01:02:43,954 --> 01:02:45,950
 Because we could just...
 
-916
+903
 01:02:47,250 --> 01:02:50,594
 No, we cant because we've
 pattern matched on one here.
 
-917
+904
 01:02:50,668 --> 01:02:51,620
 SP: Maybe in pairs.
 
-918
+905
 01:02:51,770 --> 01:02:53,817
 OC: Ok, because of the dictionary.
 
-919
+906
 01:03:11,777 --> 01:03:12,897
 So that's OK...
 
-920
+907
 01:03:12,970 --> 01:03:16,502
 But what we've done
 now is, we've thrown away
 
-921
+908
 01:03:16,502 --> 01:03:17,740
 these original chains.
 
-922
+909
 01:03:17,740 --> 01:03:19,325
 we need to retain those as well.
 
-923
+910
 01:03:19,325 --> 01:03:19,771
 SP: Right.
 
-924
+911
 01:03:25,110 --> 01:03:27,394
 OC: So we'll keep the pairs,
 
-925
+912
 01:03:27,770 --> 01:03:30,428
 and then add on
 the expansions afterwards.
 
-926
+913
 01:03:30,422 --> 01:03:30,845
 SP: Yes.
 
-927
+914
 01:03:30,862 --> 01:03:33,114
 So for the smaller chains
 that might have already finished,
 
-928
+915
 01:03:33,125 --> 01:03:33,977
 we'll keep those.
 
-929
+916
 01:03:35,360 --> 01:03:37,811
 SP: And then later you
 would look at all the chains
 
-930
+917
 01:03:37,817 --> 01:03:39,862
 starting with the smallest first,
 
-931
+918
 01:03:42,834 --> 01:03:45,040
 and try to select only the ones that
 
-932
+919
 01:03:45,040 --> 01:03:46,485
 finish on the target word.
 
-933
+920
 01:03:46,480 --> 01:03:46,994
 OC: Right.
 
-934
+921
 01:03:47,148 --> 01:03:50,605
 OC: And because in
 expand we're putting neighbors
 
-935
+922
 01:03:50,611 --> 01:03:52,925
 at the front of the list, were going to need to
 
-936
+923
 01:03:52,925 --> 01:03:55,714
 filter word chains that start with our target
 
-937
+924
 01:03:56,017 --> 01:03:59,588
 It's a bit weird but
 obviously cons is a lot more efficient
 
-938
+925
 01:03:59,582 --> 01:04:01,674
 than append,  because we don't
 
-939
+926
 01:04:01,674 --> 01:04:03,337
 have to traverse the list at all.
 
-940
+927
 01:04:03,331 --> 01:04:05,200
 SP: We can always reverse the solution.
 
-941
+928
 01:04:05,200 --> 01:04:06,474
 OC: We could yes.
 
-942
+929
 01:04:08,880 --> 01:04:12,228
 I'll just check that
 that's all compiling, it does.
 
-943
+930
 01:04:12,380 --> 01:04:14,702
 We should be able
 to have a play with this now.
 
-944
+931
 01:04:14,700 --> 01:04:15,760
 In our GHCi
 
-945
+932
 01:04:15,820 --> 01:04:19,531
 So we've got go so I'll try...
 
-946
+933
 01:04:20,217 --> 01:04:22,331
 to bring the dictionary back into scope.
 
-947
+934
 01:04:24,308 --> 01:04:26,874
 Word chains plus words, so I'll try cat
 
-948
+935
 01:04:30,491 --> 01:04:32,714
 and it needs a
 dictionary in there as well.
 
-949
+936
 01:04:35,280 --> 01:04:37,080
 And we'll start with just that one.
 
-950
+937
 01:04:37,410 --> 01:04:42,028
 And that's going to expand forever,
 so lets go one level into it with go
 
-951
+938
 01:04:42,140 --> 01:04:42,485
 SP: Ok.
 
-952
+939
 01:04:42,491 --> 01:04:43,908
 OC: And take the head of that.
 
-953
+940
 01:04:45,262 --> 01:04:46,971
 There's a lot of possibilities...
 
-954
+941
 01:04:47,697 --> 01:04:49,085
 because of the dictionary.
 
-955
+942
 01:04:52,508 --> 01:04:54,777
 We'll just take the word chains out of that.
 
-956
+943
 01:04:54,770 --> 01:04:59,050
 SP: Just the first of head
 OC: Oh yes
 
-957
+944
 01:05:09,420 --> 01:05:11,691
 OC: So maybe,... rather than the head
 SP: Now it's map first
 OC: So every time we take one more
 
-958
+945
 01:05:11,710 --> 01:05:13,114
 our chains get a bit longer.
 
-959
+946
 01:05:13,114 --> 01:05:14,491
 SP: Can you see the next one?
 
-960
+947
 01:05:16,542 --> 01:05:18,605
 Oh! that's because we've flattened it, yes.
 
-961
+948
 01:05:20,171 --> 01:05:23,691
 SP: That's not the level
 that's just the chains as they change.
 
-962
+949
 01:05:23,691 --> 01:05:24,320
 OC: Yes
 
-963
+950
 01:05:24,325 --> 01:05:27,250
 SP: How about the first ten
 
-964
+951
 01:05:30,680 --> 01:05:34,565
 OC: So gradually they're going
 to start getting bigger at some point.
 
-965
+952
 01:05:35,542 --> 01:05:37,250
 [inaudible]
 
-966
+953
 01:05:45,062 --> 01:05:46,314
 That's not recursing.
 
-967
+954
 01:05:47,165 --> 01:05:49,080
 Actually go is never calling itself,
 
-968
+955
 01:05:49,080 --> 01:05:50,480
 which is the problem here.
 
-969
+956
 01:05:50,554 --> 01:05:53,554
 So were only ever
 looking at one level expansion.
 
-970
+957
 01:05:55,120 --> 01:05:57,325
 so if we take the original pairs and what we
 
-971
+958
 01:05:57,331 --> 01:06:02,450
 need to do is go again on the concatMap.
 
-972
+959
 01:06:03,085 --> 01:06:03,617
 SP: Right
 
-973
+960
 01:06:04,680 --> 01:06:07,280
 So we're going to keep
 going to bigger and bigger chains.
 
-974
+961
 01:06:07,470 --> 01:06:10,697
 But we're always putting these
 chains on the end of the list.
 
-975
+962
 01:06:18,880 --> 01:06:21,954
 So if we go back to taking 20 we should be
 
-976
+963
 01:06:21,954 --> 01:06:23,085
 back to where we were.
 
-977
+964
 01:06:23,400 --> 01:06:26,782
 And as I take more, you can see we are
 
-978
+965
 01:06:26,780 --> 01:06:29,114
 starting to get bigger and bigger chains now.
 
-979
+966
 01:06:29,110 --> 01:06:31,680
 SP: Right, and all of them ending on cat.
 
-980
+967
 01:06:31,857 --> 01:06:32,268
 OC: Yes.
 
-981
+968
 01:06:35,022 --> 01:06:36,891
 SP: That's because that was our start.
 
-982
+969
 01:06:36,902 --> 01:06:39,222
 OC: Yes, were going out from cat
 
-983
+970
 01:06:39,480 --> 01:06:43,000
 SP: Suffering from the reverse order of reading
 
-984
+971
 01:06:44,850 --> 01:06:48,554
 OC: So now were ready
 to put this back into the wordPuzzle
 
-985
+972
 01:06:48,554 --> 01:06:50,525
 to solve the puzzle properly... again!
 
-986
+973
 01:06:52,880 --> 01:06:56,360
 So we need to call
 go and we're going to be
 
-987
+974
 01:06:56,365 --> 01:06:58,377
 using the input-dictionary.
 
-988
+975
 01:06:58,771 --> 01:07:02,417
 But were going to have
 to delete our starting word
 
-989
+976
 01:07:02,410 --> 01:07:03,508
 from the dictionary.
 
-990
+977
 01:07:03,502 --> 01:07:05,897
 OC: Because we don't
 want to go back to the start.
 
-991
+978
 01:07:05,902 --> 01:07:08,045
 And we're going to
 start with a word chain
 
-992
+979
 01:07:08,045 --> 01:07:09,765
 that begins at the word a
 
-993
+980
 01:07:11,582 --> 01:07:13,771
 And this is going to give us all the chains
 
-994
+981
 01:07:13,771 --> 01:07:14,514
 that start from a
 
-995
+982
 01:07:14,514 --> 01:07:16,902
 But we're interested
 in chains that start at a
 
-996
+983
 01:07:16,908 --> 01:07:17,857
 and finish at b
 
-997
+984
 01:07:18,491 --> 01:07:21,234
 So we filter the result of chains
 
-998
+985
 01:07:21,370 --> 01:07:24,748
 by  taking... for each chain.
 
-999
+986
 01:07:26,257 --> 01:07:29,020
 Sorry, first we should just throw away
 
-1000
+987
 01:07:29,022 --> 01:07:30,988
 the extra dictionaries.
 
-1001
+988
 01:07:31,302 --> 01:07:33,897
 SP: Because the tuples will come back from go.
 
-1002
+989
 01:07:33,891 --> 01:07:36,177
 OC: Yes, so go will give us a tuple of word chains
 
-1003
+990
 01:07:36,171 --> 01:07:37,365
 and dictionaries,
 
-1004
+991
 01:07:37,417 --> 01:07:39,805
 whereas we're
 only interested in word chains.
 
-1005
+992
 01:07:39,805 --> 01:07:42,080
 So I'm mapping first over those.
 
-1006
+993
 01:07:42,200 --> 01:07:44,022
 Now we've got a list of word chains.
 
-1007
+994
 01:07:44,080 --> 01:07:49,205
 I can filter the list for
 ones whose first element
 
-1008
+995
 01:07:50,434 --> 01:07:52,845
 is equal to our target. [inaudible]
 
-1009
+996
 01:07:54,022 --> 01:07:57,205
 And I think that's all we need
 
-1010
+997
 01:07:57,205 --> 01:07:59,988
 to solve the puzzle... so that all compiles
 
-1011
+998
 01:08:04,651 --> 01:08:06,388
 Read the dictionary back in
 
-1012
+999
 01:08:06,388 --> 01:08:08,942
 I can do a wordPuzzle using the dictionary
 
-1013
+1000
 01:08:08,948 --> 01:08:10,891
 and we'll go from dog to cat.
 
-1014
+1001
 01:08:15,742 --> 01:08:17,502
 And we are indeed getting result.
 
-1015
+1002
 01:08:19,000 --> 01:08:21,080
 The interesting thing we're seeing here
 
-1016
+1003
 01:08:21,080 --> 01:08:23,685
 is as it's gradually printing results,
 
-1017
+1004
 01:08:23,970 --> 01:08:27,714
 we are seeing Haskells' lazy
 evaluation works to our advantage.
 
-1018
+1005
 01:08:27,850 --> 01:08:30,502
 So if I only wanted
 to get the very first result,
 
-1019
+1006
 01:08:30,508 --> 01:08:33,074
 I could simply take
 the head of all the solutions
 
-1020
+1007
 01:08:33,502 --> 01:08:35,131
 and the result is already done,
 
-1021
+1008
 01:08:35,131 --> 01:08:37,645
 it didn't bother
 computing all the extra values.
 
-1022
+1009
 01:08:37,760 --> 01:08:39,748
 But if I needed the extra results, maybe if I
 
-1023
+1010
 01:08:39,742 --> 01:08:43,460
 wanted to find
 the first ten shortest chains
 
-1024
+1011
 01:08:43,462 --> 01:08:46,434
 I could just take10
 and that's going to give you
 
-1025
+1012
 01:08:46,434 --> 01:08:49,091
 10 word chains and then terminate,
 
-1026
+1013
 01:08:49,674 --> 01:08:50,868
 which is really nice.
 
-1027
+1014
 01:08:52,730 --> 01:08:56,337
 OC: I think that solves
 the problem that we had
 
-1028
+1015
 01:08:57,370 --> 01:08:59,274
 in the original problem spec.
 
-1029
+1016
 01:08:59,910 --> 01:09:02,097
 SP: Shall we try it on longer input?
 
-1030
+1017
 01:09:02,400 --> 01:09:05,771
 How about the words Ruby and Code.
 
-1031
+1018
 01:09:05,988 --> 01:09:08,497
 OC: OK so I'll take the first of those.
 
-1032
+1019
 01:09:24,240 --> 01:09:26,120
 It's certainly a lot slower but we do
 
-1033
+1020
 01:09:26,120 --> 01:09:27,634
 get a word chain in the end.
 
-1034
+1021
 01:09:32,050 --> 01:09:34,948
 So it might be worth trying to improve the forms
 
-1035
+1022
 01:09:34,940 --> 01:09:36,022
 of this next.
 
-1036
+1023
 01:09:36,050 --> 01:09:39,314
 SP: Absolutely, and there are longer examples
 
-1037
+1024
 01:09:39,310 --> 01:09:41,182
 such as from house to shout,
 
-1038
+1025
 01:09:42,110 --> 01:09:43,982
 we could see if that completes
 
-1039
+1026
 01:09:43,988 --> 01:09:45,680
 in a reasonable amount of time.
 
-1040
+1027
 01:09:47,005 --> 01:09:49,542
 This one's quite tricky
 because the search space
 
-1041
+1028
 01:09:49,540 --> 01:09:52,622
 for it is quite large in the
 dictionary that I've given you.
 
-1042
+1029
 01:09:53,805 --> 01:09:56,857
 OC: This doesn't look like
 it's terminating any time soon.
 
-1043
+1030
 01:09:58,274 --> 01:10:01,194
 SP: Maybe we can have a look and see
 
-1044
+1031
 01:10:01,194 --> 01:10:04,370
 if we can determine where the bottleneck is?
 
-1045
+1032
 01:10:04,657 --> 01:10:06,560
 OC: Yes, well I'm going to leave that one
 
-1046
+1033
 01:10:06,560 --> 01:10:09,085
 running in the
 background anyway, see if we get a result
 
-1047
+1034
 01:10:09,091 --> 01:10:11,310
 while we start looking for some optimizations.
 
-1048
+1035
 01:10:11,310 --> 01:10:15,080
 To me, the biggest source of expense
 
-1049
+1036
 01:10:15,250 --> 01:10:16,902
 feels like this neighbours function.
 
-1050
+1037
 01:10:16,902 --> 01:10:20,620
 We're filtering twice and we map twice
 
-1051
+1038
 01:10:20,634 --> 01:10:22,280
 and we are doing this repeatedly
 
-1052
+1039
 01:10:22,280 --> 01:10:23,800
 every single time we expand.
 
-1053
+1040
 01:10:23,800 --> 01:10:26,965
 And the set of neighbors around a word
 
-1054
+1041
 01:10:27,325 --> 01:10:28,468
 doesn't really change.
 
-1055
+1042
 01:10:28,720 --> 01:10:31,434
 There may be potential
 neighbors that we can't consider
 
-1056
+1043
 01:10:31,434 --> 01:10:33,620
 because we've already looked at them once.
 
-1057
+1044
 01:10:33,620 --> 01:10:35,370
 and we would go back on ourselves.
 
-1058
+1045
 01:10:36,565 --> 01:10:39,657
 But we can probably prune
 the set of neighbors afterwards
 
-1059
+1046
 01:10:39,651 --> 01:10:43,600
 I'm thinking maybe we can have an optimization
 
-1060
+1047
 01:10:43,611 --> 01:10:45,331
 where we have a map of neighbors
 
-1061
+1048
 01:10:48,800 --> 01:10:54,257
 It's going to be a map
 from Text to its set of neighbors.
 
-1062
+1049
 01:10:55,285 --> 01:10:56,485
 And we should be able to
 
-1063
+1050
 01:10:56,485 --> 01:10:58,714
 pre-compute this against the dictionary.
 
-1064
+1051
 01:10:59,340 --> 01:11:01,840
 We're going to need the Map data type
 
-1065
+1052
 01:11:01,850 --> 01:11:06,000
 which comes from Data.Map.
 
-1066
+1053
 01:11:06,617 --> 01:11:08,942
 again I'll be importing this from qualified.
 
-1067
+1054
 01:11:15,520 --> 01:11:19,925
 Now we look up the list of neighbors.
 
-1068
+1055
 01:11:21,891 --> 01:11:24,131
 We can still take the Dictionary as input
 
-1069
+1056
 01:11:24,137 --> 01:11:26,531
 but rather than just taking that, we can also
 
-1070
+1057
 01:11:26,531 --> 01:11:28,440
 take in a NeighbourMap.
 
-1071
+1058
 01:11:29,462 --> 01:11:30,628
 And the word to look up
 
-1072
+1059
 01:11:30,620 --> 01:11:33,142
 and it's going to give
 us a set of neighbors again.
 
-1073
+1060
 01:11:33,360 --> 01:11:34,897
 And the reason I'm taking the dictionary
 
-1074
+1061
 01:11:34,891 --> 01:11:36,251
 is because we keep making that dictionary
 
-1075
+1062
 01:11:36,251 --> 01:11:38,331
 smaller and smaller. We want to make sure
 
-1076
+1063
 01:11:38,337 --> 01:11:41,510
 the neighbors we look up from this map
 
-1077
+1064
 01:11:41,510 --> 01:11:43,657
 are actually in the dictionary because
 
-1078
+1065
 01:11:43,650 --> 01:11:45,177
 we might have made the dictionary smaller
 
-1079
+1066
 01:11:45,171 --> 01:11:46,971
 and removed possible neighbors.
 
-1080
+1067
 01:11:46,971 --> 01:11:48,708
 so we're going to filter those out.
 
-1081
+1068
 01:11:48,708 --> 01:11:52,205
 OK, so I'll call that m and w.
 
-1082
+1069
 01:11:52,731 --> 01:11:54,370
 And this becomes straightforward,
 
-1083
+1070
 01:11:54,370 --> 01:12:01,080
 we simply do a map look-up which is the exclamation operator
 
-1084
+1071
 01:12:01,110 --> 01:12:04,634
 which will throw up an error
 if the word isn't in the map
 
-1085
+1072
 01:12:04,885 --> 01:12:07,954
 but we'll have to gloss
 over that for now I guess.
 
-1086
+1073
 01:12:08,420 --> 01:12:09,600
 SP: Avoiding the Maybes.
 
-1087
+1074
 01:12:10,200 --> 01:12:12,965
 OC: If I was doing this production code
 
-1088
+1075
 01:12:12,960 --> 01:12:14,291
 I would probably want
 to keep the Maybes
 
-1089
+1076
 01:12:14,291 --> 01:12:16,320
 and the chance of it possibly failing,
 
-1090
+1077
 01:12:16,320 --> 01:12:18,542
 and reflect that in the types better.
 
-1091
+1078
 01:12:18,540 --> 01:12:21,628
 But for our purposes this should be sufficient.
 
-1092
+1079
 01:12:23,091 --> 01:12:25,691
 So, this is saying in the map M
 
-1093
+1080
 01:12:25,697 --> 01:12:27,011
 look up the word w.
 
-1094
+1081
 01:12:28,725 --> 01:12:31,474
 We need to take the intersection
 
-1095
+1082
 01:12:31,474 --> 01:12:33,840
 of the set of possible neighbors.
 
-1096
+1083
 01:12:37,170 --> 01:12:40,171
 We take the set intersection...
 
-1097
+1084
 01:12:41,380 --> 01:12:43,817
 SP: Is it bang or double-bang for the
 lookup operator? I can't remember.
 
-1098
+1085
 01:12:44,205 --> 01:12:47,165
 OC: From map I believe
 it's just a single exclamation mark,
 
-1099
+1086
 01:12:47,160 --> 01:12:49,520
 whereas for lists it's two exclamation marks.
 
-1100
+1087
 01:12:55,850 --> 01:12:58,020
 So we don't seem to have any compile errors
 
-1101
+1088
 01:12:58,020 --> 01:12:59,850
 around this neighbours function.
 
-1102
+1089
 01:13:00,680 --> 01:13:02,250
 That's quite straightforward.
 
-1103
+1090
 01:13:02,440 --> 01:13:05,440
 We also need a way to precomputeNeighbours.
 
-1104
+1091
 01:13:06,988 --> 01:13:11,817
 So that takes the
 dictionary and turns it into a NeighbourMap,
 
-1105
+1092
 01:13:12,770 --> 01:13:15,540
 SP: So here your
 starting from saying; from right down
 
-1106
+1093
 01:13:15,540 --> 01:13:18,594
 in the lowest level of this computation
 
-1107
+1094
 01:13:18,594 --> 01:13:21,622
 you would like to have
 that extra information available
 
-1108
+1095
 01:13:21,622 --> 01:13:24,857
 in that NeighbourMap and you're
 working your way back up
 
-1109
+1096
 01:13:24,965 --> 01:13:27,340
 to the calling levels
 
-1110
+1097
 01:13:27,340 --> 01:13:29,340
 to see how to pass that down into it.
 
-1111
+1098
 01:13:29,342 --> 01:13:34,325
 OC: Yes. We've got a neighbours function.
 
-1112
+1099
 01:13:34,320 --> 01:13:36,622
 I would like to be able to test that in GHCi
 
-1113
+1100
 01:13:36,622 --> 01:13:38,862
 but we don't have a way
 to build a NeighbourMap yet.
 
-1114
+1101
 01:13:38,860 --> 01:13:41,937
 So I'm going to work on this
 precomputeNeighbours function
 
-1115
+1102
 01:13:41,937 --> 01:13:43,794
 then I can have a test from GHCi
 
-1116
+1103
 01:13:43,790 --> 01:13:45,022
 so I can actually see if
 
-1117
+1104
 01:13:45,020 --> 01:13:47,262
 the NeighbourMap seems to
 be working as we would expect.
 
-1118
+1105
 01:13:47,260 --> 01:13:50,011
 Then we can work
 through the rest of the compile errors
 
-1119
+1106
 01:13:50,011 --> 01:13:54,370
 And thread in the proper code as we need to.
 
-1120
+1107
 01:13:55,777 --> 01:13:57,902
 So this looks like it
 should be straightforward,
 
-1121
+1108
 01:13:57,902 --> 01:14:02,194
 we just take our
 dictionary, which is a set of words,
 
-1122
+1109
 01:14:02,668 --> 01:14:04,800
 so if we go from set to list.
 
-1123
+1110
 01:14:05,885 --> 01:14:10,354
 and for every word
 in here we can map over...
 
-1124
+1111
 01:14:12,370 --> 01:14:15,005
 Ah! We did need our
 original neighbours function
 
-1125
+1112
 01:14:15,000 --> 01:14:17,142
 which I have thrown away now (laughter)
 
-1126
+1113
 01:14:17,160 --> 01:14:18,914
 because we want to use that.
 
-1127
+1114
 01:14:19,740 --> 01:14:21,620
 OC: So let's see if I can go back to that.
 
-1128
+1115
 01:14:26,450 --> 01:14:27,942
 So I'll call this one...
 
-1129
+1116
 01:14:31,925 --> 01:14:32,908
 neighboursLookup.
 
-1130
+1117
 01:14:37,748 --> 01:14:41,320
 And this is back to how it was.
 
-1131
+1118
 01:14:53,380 --> 01:14:57,422
 SP: We could also call this
 neighbours and have the old
 
-1132
+1119
 01:14:57,420 --> 01:15:01,680
 neighbours function
 simply be a function returning
 
-1133
+1120
 01:15:01,685 --> 01:15:05,171
 a list of the words
 with the neighbors and distances.
 
-1134
+1121
 01:15:06,388 --> 01:15:08,337
 OC: In the neighbours function or...?
 
-1135
+1122
 01:15:09,257 --> 01:15:12,685
 SP: Yes, so you could - at this level here
 
-1136
+1123
 01:15:12,685 --> 01:15:15,742
 where your returning W with distance,
 
-1137
+1124
 01:15:18,817 --> 01:15:22,177
 in order to avoid having two similarly named functions.
 
-1138
+1125
 01:15:22,348 --> 01:15:23,994
 Maybe we should continue...
 
-1139
+1126
 01:15:23,994 --> 01:15:25,740
 OC: It's probably worth renaming this though
 
-1140
+1127
 01:15:25,740 --> 01:15:27,194
 because we want compile error,
 
-1141
+1128
 01:15:27,194 --> 01:15:30,140
 we're going to get compile
 errors anyway because the types are different.
 
-1142
+1129
 01:15:34,165 --> 01:15:38,417
 I'm going to move this
 into precomputeNeighbours,
 
-1143
+1130
 01:15:38,411 --> 01:15:39,474
 as a where binding
 
-1144
+1131
 01:15:39,485 --> 01:15:42,110
 because we don't
 have any reason to ever call this
 
-1145
+1132
 01:15:42,110 --> 01:15:43,988
 other than inside precomputeNeighbours.
 
-1146
+1133
 01:15:48,451 --> 01:15:50,450
 SP: And it does mean
 you can rename the top level.
 
-1147
+1134
 01:15:50,590 --> 01:15:51,822
 OC: Exactly.
 
-1148
+1135
 01:15:53,542 --> 01:15:56,457
 The dictionary is going
 to be available up here anyway,
 
-1149
+1136
 01:16:00,937 --> 01:16:05,731
 We need to turn our
 dictionary into a list of words
 
-1150
+1137
 01:16:06,462 --> 01:16:10,165
 and map neighbors over that.
 
-1151
+1138
 01:16:12,668 --> 01:16:16,382
 So I need to pair them up
 with the original word as well.
 
-1152
+1139
 01:16:17,982 --> 01:16:21,371
 There's a fairly nice function
 in the Control.Arrow module
 
-1153
+1140
 01:16:22,710 --> 01:16:26,257
 which lets us run two
 functions on the same argument.
 
-1154
+1141
 01:16:27,400 --> 01:16:29,668
 I can say that id and neighbors,
 
-1155
+1142
 01:16:29,770 --> 01:16:33,110
 so that's the identity
 function and the neighbors function
 
-1156
+1143
 01:16:33,110 --> 01:16:35,497
 and it's going to tuple those up for me.
 
-1157
+1144
 01:16:35,771 --> 01:16:36,285
 SP: OK.
 
-1158
+1145
 01:16:37,400 --> 01:16:38,970
 OC: I think I'll just import that...
 
-1159
+1146
 01:16:42,748 --> 01:16:44,497
 We've got a lot of compile errors.
 
-1160
+1147
 01:17:12,110 --> 01:17:17,377
 We apparently need the word A as well.
 
-1161
+1148
 01:17:17,925 --> 01:17:28,200
 I think that's meant to be...
 Oh, I must have originally called it A.
 
-1162
+1149
 01:17:31,548 --> 01:17:33,880
 OC: So now we have
 precomputeNeighbours but that's
 
-1163
+1150
 01:17:33,880 --> 01:17:36,050
 not returning the neighbors now.
 
-1164
+1151
 01:17:42,320 --> 01:17:45,177
 We don't really need to keep dict...
 Oh we do
 
-1165
+1152
 01:17:45,170 --> 01:17:47,342
 because were using that in neighbors
 
-1166
+1153
 01:17:48,910 --> 01:17:52,110
 Now this is going to be a list of tuples.
 
-1167
+1154
 01:17:52,382 --> 01:17:54,257
 OC: We can turn that into a map.
 
-1168
+1155
 01:17:58,537 --> 01:18:01,485
 So we've turned our
 dictionary into a list of text
 
-1169
+1156
 01:18:01,788 --> 01:18:04,251
 and for every text value we turn that into
 
-1170
+1157
 01:18:04,491 --> 01:18:06,154
 the text word itself
 
-1171
+1158
 01:18:06,154 --> 01:18:08,965
 and its set of neighbors.
 
-1172
+1159
 01:18:09,371 --> 01:18:11,651
 SP: And each word will
 be distinct so you don't need
 
-1173
+1160
 01:18:11,650 --> 01:18:14,634
 to worry about combining entries.
 
-1174
+1161
 01:18:14,634 --> 01:18:15,485
 OC: Right, yes
 
-1175
+1162
 01:18:17,988 --> 01:18:19,657
 OC: Let's see what we get from that.
 
-1176
+1163
 01:18:23,502 --> 01:18:27,805
 neighbors is going to
 be neighboursLookup,
 
-1177
+1164
 01:18:29,497 --> 01:18:33,805
 so that's... well, yes
 let's keep it as neighboursLookup.
 
-1178
+1165
 01:18:39,080 --> 01:18:42,537
 OC: I'm just checking that's
 the only compile error we've got,
 
-1179
+1166
 01:18:42,868 --> 01:18:44,188
 and it looks like it is,
 
-1180
+1167
 01:18:44,188 --> 01:18:46,622
 so we've just got two arrows up here.
 
-1181
+1168
 01:18:46,820 --> 01:18:49,691
 That means expand rather
 than just take the dictionary.
 
-1182
+1169
 01:18:49,697 --> 01:18:52,730
 This also need to take a NeighbourMap.
 
-1183
+1170
 01:19:02,220 --> 01:19:05,240
 The order here is dictionary, NeighbourMap.
 
-1184
+1171
 01:19:10,250 --> 01:19:11,650
 I just had a thought there,
 
-1185
+1172
 01:19:11,650 --> 01:19:15,000
 because we're always
 passing these two things together maybe
 
-1186
+1173
 01:19:15,000 --> 01:19:16,520
 I should be combining these.
 
-1187
+1174
 01:19:16,702 --> 01:19:18,657
 SP: I was having the same thought.
 
-1188
+1175
 01:19:19,068 --> 01:19:20,600
 OC: So I think maybe our NeighbourMap
 
-1189
+1176
 01:19:20,605 --> 01:19:24,325
 could be a data type
 containing the full pre-computed map,
 
-1190
+1177
 01:19:24,510 --> 01:19:27,240
 but also a set of exclusions.
 
-1191
+1178
 01:19:27,245 --> 01:19:29,510
 And every time we need
 to drop something out of the
 
-1192
+1179
 01:19:29,510 --> 01:19:33,405
 NeighbourMap we can
 do that quite efficiently.
 
-1193
+1180
 01:19:33,645 --> 01:19:36,182
 OC: Or we may not even need to carry
 the dictionary around but we'll see.
 
-1194
+1181
 01:19:36,182 --> 01:19:37,651
 I'll come back to that later.
 
-1195
+1182
 01:19:38,062 --> 01:19:40,634
 but it certainly does feel suspect so far.
 
-1196
+1183
 01:19:42,805 --> 01:19:46,508
 So I think I better put
 this the right way round
 
-1197
+1184
 01:19:46,531 --> 01:19:48,565
 it's dictionary and NeighbourMap
 
-1198
+1185
 01:19:50,188 --> 01:19:52,588
 This is the dictionary and NeighbourMap
 
-1199
+1186
 01:19:59,740 --> 01:20:02,340
 and now expand
 needs that NeighbourMap as well.
 
-1200
+1187
 01:20:05,131 --> 01:20:08,034
 But interestingly, this
 doesn't have to be added to go.
 
-1201
+1188
 01:20:08,034 --> 01:20:10,370
 Because the NeighbourMap doesn't ever change
 
-1202
+1189
 01:20:11,250 --> 01:20:14,640
 from what we've got so
 far. So that's just a constant.
 
-1203
+1190
 01:20:20,925 --> 01:20:22,600
 SP: You could underscore it in the first one.
 
-1204
+1191
 01:20:22,748 --> 01:20:23,988
 OC: Indeed, yes.
 
-1205
+1192
 01:20:28,280 --> 01:20:32,297
 And, we need to call that recursively.
 
-1206
+1193
 01:20:36,262 --> 01:20:38,554
 and we need to pass it in here as well.
 
-1207
+1194
 01:20:39,028 --> 01:20:43,200
 So here, I think I'll use another let binding.
 
-1208
+1195
 01:20:58,970 --> 01:21:03,137
 So now our word puzzle should
 be using this precomputed NeighbourMap.
 
-1209
+1196
 01:21:03,154 --> 01:21:03,937
 
 SP: Right.
 
-1210
+1197
 01:21:04,091 --> 01:21:07,222
 And were using our more
 efficient neighbors look-up function.
 
-1211
+1198
 01:21:07,230 --> 01:21:08,931
 So hopefully...
 
-1212
+1199
 01:21:08,960 --> 01:21:10,594
 we are going to see some results.
 
-1213
+1200
 01:21:10,594 --> 01:21:12,965
 Impressively its still
 trying to find solutions between
 
-1214
+1201
 01:21:12,960 --> 01:21:14,925
 house and shout, on the old code.
 
-1215
+1202
 01:21:16,548 --> 01:21:19,880
 So let's see what we get out of this.
 
-1216
+1203
 01:21:20,850 --> 01:21:24,942
 We didn't really look
 at seeing precomputeNeighbours work, so
 
-1217
+1204
 01:21:24,942 --> 01:21:30,577
 let's have a quick look at that.
 
-1218
+1205
 01:21:38,725 --> 01:21:40,845
 OK, so that certainly type checks.
 
-1219
+1206
 01:21:44,708 --> 01:21:46,800
 Let's bind that to... something like that.
 
-1220
+1207
 01:21:47,420 --> 01:21:48,862
 We can do nMap...
 
-1221
+1208
 01:21:54,440 --> 01:21:56,908
 SP: Jellow and hells. (laughter).
 
-1222
+1209
 01:21:57,234 --> 01:21:59,420
 OC: So precomputeNeighbours seems to be working.
 
-1223
+1210
 01:21:59,428 --> 01:22:01,510
 We seem to be getting some actual neighbors,
 
-1224
+1211
 01:22:01,691 --> 01:22:05,860
 so let's do ruby and code again.
 
-1225
+1212
 01:22:08,942 --> 01:22:11,628
 It doesn't seem to
 be a huge amount more efficient
 
-1226
+1213
 01:22:14,428 --> 01:22:17,142
 But maybe we'll actually
 get a result from this now
 
-1227
+1214
 01:22:24,400 --> 01:22:26,114
 We've still got a little bit to go.
 
-1228
+1215
 01:22:30,000 --> 01:22:33,228
 SP: Does it take long
 to pre-compute the entire map?
 
-1229
+1216
 01:22:34,228 --> 01:22:36,480
 can you force that computation and see?
 
-1230
+1217
 01:22:36,485 --> 01:22:39,382
 OC: We can try forcing
 that and see what happens.
 
-1231
+1218
 01:22:42,034 --> 01:22:44,840
 SP: And of course here your
 going to be pre-computing the neighbors
 
-1232
+1219
 01:22:45,600 --> 01:22:47,268
 across the full dictionary,
 
-1233
+1220
 01:22:48,680 --> 01:22:51,834
 not necessarily the dictionary
 pruned down to only the the words
 
-1234
+1221
 01:22:51,902 --> 01:22:53,200
 of the length we're interested in.
 
-1235
+1222
 01:22:53,571 --> 01:22:57,234
 OC: Yes that's probably worth doing already.
 
-1236
+1223
 01:22:57,700 --> 01:23:00,897
 Rather than precomputing
 the dictionary of everything.
 
-1237
+1224
 01:23:01,531 --> 01:23:04,165
 Though we're using a lazy map
 here which means that
 
-1238
+1225
 01:23:05,857 --> 01:23:09,148
 we'll get a map back that
 contains all of the words as keys,
 
-1239
+1226
 01:23:09,340 --> 01:23:12,862
 but the values underneath
 that map won't be fully evaluated.
 
-1240
+1227
 01:23:13,205 --> 01:23:15,594
 So it's only when we
 look up those keys in the map
 
-1241
+1228
 01:23:15,600 --> 01:23:17,588
 that we will do that work.
 
-1242
+1229
 01:23:17,620 --> 01:23:21,760
 So hopefully having the full dictionary
 in there doesn't make any difference.
 
-1243
+1230
 01:23:21,771 --> 01:23:26,262
 But I think for clarity
 that's slightly nicer if we
 
-1244
+1231
 01:23:26,262 --> 01:23:35,445
 just say filter, length, equal to length of A.
 
-1245
+1232
 01:23:36,980 --> 01:23:40,194
 SP: Of course, this way your run length across...
 
-1246
+1233
 01:23:40,257 --> 01:23:42,228
 is it hundreds of thousands of words?
 
-1247
+1234
 01:23:42,570 --> 01:23:43,222
 OC: Yes.
 
-1248
+1235
 01:23:44,777 --> 01:23:46,171
 SP: So its a tradeoff.
 
-1249
+1236
 01:24:06,540 --> 01:24:08,194
 OC. So we take the length...
 
-1250
+1237
 01:24:12,234 --> 01:24:15,331
 I think that's
 because we have text values here.
 
-1251
+1238
 01:24:16,220 --> 01:24:19,285
 We've already seen this
 type of function before anyway.
 
-1252
+1239
 01:24:22,525 --> 01:24:24,708
 We still have it down here.
 
-1253
+1240
 01:24:24,708 --> 01:24:26,700
 Maybe we could do something with that.
 
-1254
+1241
 01:24:29,020 --> 01:24:31,850
 Maybe neighbors now
 doesn't have to worry about that,
 
-1255
+1242
 01:24:31,850 --> 01:24:34,108
 we've already done that once.
 
-1256
+1243
 01:24:34,102 --> 01:24:36,280
 I think I'll just leave that duplication for now,
 and see if that
 
-1257
+1244
 01:24:36,280 --> 01:24:37,565
 has made a difference.
 
-1258
+1245
 01:24:44,770 --> 01:24:46,742
 It seems a bit snappier doesn't it?
 SP: Yes
 
-1259
+1246
 01:24:49,600 --> 01:24:51,462
 SP: So the acid test. (laughter).
 
-1260
+1247
 01:24:55,970 --> 01:24:59,834
 There's still no results
 between house and shout.
 
-1261
+1248
 01:25:03,800 --> 01:25:05,942
 SP: So that's great, we've reached a point now
 
-1262
+1249
 01:25:05,940 --> 01:25:09,251
 were we're able to
 find chains quite efficiently,
 
-1263
+1250
 01:25:09,320 --> 01:25:15,066
 Not just from cat to dog
 but also from ruby to code.
 
-1264
+1251
 01:25:15,370 --> 01:25:20,146
 SP: Where do you think
 you would go next with this?
 
-1265
+1252
 01:25:20,413 --> 01:25:25,680
 OC: One thing that's always been sticking with
 me quite a bit is
 
-1266
+1253
 01:25:25,840 --> 01:25:28,640
 in go we are using ++,
 
-1267
+1254
 01:25:28,680 --> 01:25:32,680
 which means that
 because were always having
 
-1268
+1255
 01:25:32,706 --> 01:25:33,920
 to put things on the end of the list.
 
-1269
+1256
 01:25:33,933 --> 01:25:35,733
 We're always have to
 walk through the start of the list
 
-1270
+1257
 01:25:35,733 --> 01:25:38,733
 to get to the end. And we're
 having to do that repeatedly.
 
-1271
+1258
 01:25:38,906 --> 01:25:41,573
 There's a couple of
 well known ways we can go about
 
-1272
+1259
 01:25:41,586 --> 01:25:43,310
 optimising that at Haskell.
 
-1273
+1260
 01:25:43,310 --> 01:25:45,786
 Difference lists are one possibility.
 
-1274
+1261
 01:25:45,940 --> 01:25:50,346
 Which means that
 appending has much less of a cost
 
-1275
+1262
 01:25:50,346 --> 01:25:53,720
 provided we don't ever try
 to inspect the front early on
 
-1276
+1263
 01:25:53,733 --> 01:25:55,186
 but we don't need to do that, we only need
 
-1277
+1264
 01:25:55,186 --> 01:25:57,986
 to start inspecting once
 we've built up this big computation
 
-1278
+1265
 01:25:58,013 --> 01:26:00,160
 of all possible solutions, and then we can
 
-1279
+1266
 01:26:00,170 --> 01:26:02,133
 start pulling things off the front.
 
-1280
+1267
 01:26:02,133 --> 01:26:04,280
 So that could be
 an interesting optimization to see.
 
-1281
+1268
 01:26:04,280 --> 01:26:08,693
 That maybe we'll be able to
 allocate a bit less in the go function.
 
-1282
+1269
 01:26:08,693 --> 01:26:12,133
 Beyond that I'd probably want
 to look at doing some code profiling.
 
-1283
+1270
 01:26:12,130 --> 01:26:14,386
 Try and work out if maybe something is being
 
-1284
+1271
 01:26:14,386 --> 01:26:15,920
 hit a little too frequently.
 
-1285
+1272
 01:26:16,080 --> 01:26:19,453
 And see if we can do something there.
 
-1286
+1273
 01:26:20,020 --> 01:26:22,933
 Obvious strategies in
 any graph search problem
 
-1287
+1274
 01:26:22,960 --> 01:26:24,866
 would be memoisation.
 
-1288
+1275
 01:26:26,057 --> 01:26:28,085
 Which works really nicely at Haskell.
 
-1289
+1276
 01:26:28,085 --> 01:26:29,885
 That wouldn't be too hard to add in.
 
-1290
+1277
 01:26:29,885 --> 01:26:33,457
 It's just a case of working out
 exactly what needs to be optimised.
 
-1291
+1278
 01:26:33,880 --> 01:26:35,440
 And a couple of other things.
 
-1292
+1279
 01:26:35,453 --> 01:26:37,466
 Just in terms of the feel of this code,
 
-1293
+1280
 01:26:37,466 --> 01:26:38,740
 that I'd want to clean up.
 
-1294
+1281
 01:26:38,740 --> 01:26:40,971
 As I pointed out earlier, the NeighbourMap
 
-1295
+1282
 01:26:40,970 --> 01:26:44,106
 always has to be paired
 with the dictionary, so forcing
 
-1296
+1283
 01:26:44,100 --> 01:26:46,413
 the user to pass the dictionary
 and the NeighbourMap around,
 
-1297
+1284
 01:26:46,413 --> 01:26:47,986
 felt a bit cumbersome.
 
-1298
+1285
 01:26:47,986 --> 01:26:51,880
 It would be nice if we could work
 out some sort of abstraction there.
 
-1299
+1286
 01:26:51,880 --> 01:26:54,293
 A NeighbourMap data type that has an operation
 
-1300
+1287
 01:26:54,293 --> 01:26:56,680
 like look-up and remove.
 
-1301
+1288
 01:26:56,693 --> 01:27:00,800
 SP: Or the dictionary itself is more complex
 
-1302
+1289
 01:27:00,813 --> 01:27:05,666
 and opaque structure which
 can provide you with neighbors.
 
-1303
+1290
 01:27:05,666 --> 01:27:07,106
 OC: Absolutely,
 
-1304
+1291
 01:27:07,106 --> 01:27:09,026
 SP:  Because that's the only operation
 
-1305
+1292
 01:27:09,040 --> 01:27:09,840
 we have on the [inaudible]
 
-1306
+1293
 01:27:09,853 --> 01:27:12,370
 OC: Yes, it needs
 efficient look up and efficient
 
-1307
+1294
 01:27:12,371 --> 01:27:14,400
 removal of the things you've already seen.
 
-1308
+1295
 01:27:14,450 --> 01:27:17,840
 Beyond that, we don't
 have any other requirements.
 
-1309
+1296
 01:27:17,973 --> 01:27:22,560
 I think were moved it to a Set...
 
-1310
+1297
 01:27:23,480 --> 01:27:24,360
 we did yes.
 
-1311
+1298
 01:27:24,373 --> 01:27:27,893
 so Set does have
 efficient look up and deletion.
 
-1312
+1299
 01:27:27,893 --> 01:27:32,520
 But if we were able to combine that with
 
-1313
+1300
 01:27:32,546 --> 01:27:34,026
 the pre-computed NeighbourMap
 
-1314
+1301
 01:27:34,026 --> 01:27:36,466
 we would probably get a much nicer API.
 
-1315
+1302
 01:27:36,466 --> 01:27:38,013
 SP: And having worked through this,
 
-1316
+1303
 01:27:38,013 --> 01:27:42,600
 the overall approach of using
 lists to represent the word chains
 
-1317
+1304
 01:27:42,613 --> 01:27:46,080
 and  expanding those lists.
 
-1318
+1305
 01:27:48,493 --> 01:27:51,040
 Is that the approach you would use again?
 
-1319
+1306
 01:27:51,173 --> 01:27:53,440
 OC: I think, now that we've got more familiar with
 
-1320
+1307
 01:27:53,440 --> 01:27:55,920
 the problem, and it's clear
 that it has this tree structure
 
-1321
+1308
 01:27:55,930 --> 01:27:57,786
 and you're doing a breadth-first search.
 
-1322
+1309
 01:27:57,800 --> 01:27:59,426
 It would have been
 nice to make that explicit
 
-1323
+1310
 01:27:59,426 --> 01:28:00,720
 in the types themselves.
 
-1324
+1311
 01:28:00,720 --> 01:28:04,560
 So use some sort of tree structure
 to represent the branching out,
 
-1325
+1312
 01:28:04,640 --> 01:28:07,360
 because I think a couple of
 times we've confused ourselves
 
-1326
+1313
 01:28:07,386 --> 01:28:10,400
 with lists of lists of text,
 when we actually wanted
 
-1327
+1314
 01:28:10,400 --> 01:28:12,142
 a list of texts, and it was unclear
 
-1328
+1315
 01:28:12,142 --> 01:28:13,657
 how we actually got from
 
-1329
+1316
 01:28:13,650 --> 01:28:15,813
 that nested list to a single list.
 
-1330
+1317
 01:28:15,826 --> 01:28:18,040
 Was concat the
 right operation to be using
 
-1331
+1318
 01:28:18,050 --> 01:28:20,853
 or have we made a
 mistake somewhere else.
 
-1332
+1319
 01:28:20,853 --> 01:28:22,973
 So we didn't really lean on the types there,
 
-1333
+1320
 01:28:22,980 --> 01:28:25,013
 it would have  been nice if we could have taken more
 
-1334
+1321
 01:28:25,013 --> 01:28:27,110
 advantage from the type system.
 
-1335
+1322
 01:28:27,110 --> 01:28:30,666
 I think if I were to do
 it again I would choose
 
-1336
+1323
 01:28:30,666 --> 01:28:33,306
 a slightly better data structure for word chains
 
-1337
+1324
 01:28:33,306 --> 01:28:34,080
 in the first place.
 
-1338
+1325
 01:28:34,080 --> 01:28:37,773
 SP: So there's a built in tree type, isn't there, there?
 
-1339
+1326
 01:28:38,000 --> 01:28:39,986
 OC: Yes, its not one
 that I'm very familiar with.
 
-1340
+1327
 01:28:39,986 --> 01:28:42,906
 It's in the same library
 as Data.Set and Data.Map.
 
-1341
+1328
 01:28:42,910 --> 01:28:45,613
 It doesn't have a hugh API,
 
-1342
+1329
 01:28:45,610 --> 01:28:48,893
 but it does avoid me reinventing the wheel in terms of
 
-1343
+1330
 01:28:49,110 --> 01:28:50,857
 just coming up with the data type.
 
-1344
+1331
 01:28:51,110 --> 01:28:54,050
 And the other thing
 that I might be interested in doing
 
-1345
+1332
 01:28:54,050 --> 01:28:58,266
 there's a lot of hidden recursion here.
 
-1346
+1333
 01:28:58,320 --> 01:29:00,080
 It's quite hard to follow this code,
 
-1347
+1334
 01:29:00,093 --> 01:29:01,973
 it calls itself in different ways.
 
-1348
+1335
 01:29:03,066 --> 01:29:07,266
 It's more of an advanced way of writing Haskell
 
-1349
+1336
 01:29:07,266 --> 01:29:09,320
 but you can
 split that recursion out
 
-1350
+1337
 01:29:09,340 --> 01:29:10,293
 and make it very explicit.
 
-1351
+1338
 01:29:10,293 --> 01:29:13,266
 So you pass around functions
 that operate on just one thing,
 
-1352
+1339
 01:29:13,266 --> 01:29:15,906
 and then you have a recursion scheme you can apply to that.
 
-1353
+1340
 01:29:16,080 --> 01:29:18,960
 And that might come out
 with some slightly cleaner code,
 
-1354
+1341
 01:29:18,986 --> 01:29:22,706
 but it's going to take a
 lot more work to get that.
 
-1355
+1342
 01:29:23,200 --> 01:29:25,226
 But I think making that recursion clear
 
-1356
+1343
 01:29:25,226 --> 01:29:26,960
 could clear up a lot of this code.
 
-1357
+1344
 01:29:27,480 --> 01:29:31,293
 SP: Right, that seems like a successful session.
 
-1358
+1345
 01:29:31,293 --> 01:29:32,973
 OC: I think so - got there in the end.
 
-1359
+1346
 01:29:32,973 --> 01:29:36,226
 SP: Yes, thanks.
 
-1360
+1347
 01:29:36,226 --> 01:29:36,880
 OC: OK.
 
