@@ -3123,12 +3123,14 @@ actually, if you multiply two methods.
 It complains loudly but I don't know how.
 
 693
-00:55:43,000 --> 00:55:46,060
+00:55:43,000 --> 00:55:47,900
 This feels more readable.
+TS: Does it work?
 
 694
 00:55:48,050 --> 00:55:52,570
-That's kind of what I would like to check.
+CB: That's what I would like to check!
+[Laughter]
 
 695
 00:55:52,571 --> 00:55:54,490
@@ -3139,7 +3141,7 @@ No it absolutely doesn't.
 That's because question marks are nice
 
 697
-00:55:59,960 --> 00:56:03,497
+00:55:59,960 --> 00:56:03,990
 [Camille ponders]
 
 698
