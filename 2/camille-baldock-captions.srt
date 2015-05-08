@@ -384,7 +384,7 @@ TS: OK.
 
 86
 00:06:33,220 --> 00:06:34,331
-(Camille types).
+[Camille types]
 
 87
 00:06:39,080 --> 00:06:44,661
@@ -769,7 +769,7 @@ TS: That's all of them yes.
 
 172
 00:13:16,540 --> 00:13:17,691
-(Camille types).
+[Camille types]
 
 173
 00:13:20,910 --> 00:13:23,908
@@ -2198,7 +2198,7 @@ So I have all the values, I need to find...
 
 490
 00:38:45,250 --> 00:38:46,422
-(Camille types).
+[Camille types]
 
 491
 00:38:53,110 --> 00:38:55,520
@@ -3276,7 +3276,7 @@ So flush, let's go for all Hearts.
 
 729
 00:58:02,170 --> 00:58:03,314
-(Camille types).
+[Camille types]
 
 730
 00:58:06,880 --> 00:58:12,540
@@ -3394,7 +3394,7 @@ There must be a better way though.
 
 756
 00:59:58,320 --> 00:59:59,508
-(Camille types).
+[Camille types]
 
 757
 01:00:02,910 --> 01:00:08,137
@@ -3744,7 +3744,7 @@ Now I have a flush.
 
 836
 01:06:26,000 --> 01:06:27,154
-(Camille types).
+[Camille types]
 
 837
 01:06:33,828 --> 01:06:35,970
@@ -4346,7 +4346,7 @@ TS: No, no.
 
 970
 01:17:57,760 --> 01:17:58,880
-(Camille types).
+[Camille types]
 
 971
 01:18:02,125 --> 01:18:05,108
@@ -4878,7 +4878,7 @@ So, consecutive cards...
 
 1095
 01:27:23,880 --> 01:27:25,051
-(Camille types).
+[Camille types]
 
 1096
 01:27:36,370 --> 01:27:41,668
@@ -5080,7 +5080,7 @@ My implementation is this...
 
 1140
 01:31:34,400 --> 01:31:35,520
-(Camille types).
+[Camille types]
 
 1141
 01:31:38,650 --> 01:31:45,737
