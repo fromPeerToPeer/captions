@@ -3505,16 +3505,16 @@ array, but I might be wrong.
 
 780
 01:01:50,720 --> 01:02:00,800
-So what I will do is... it's the end of the
-card number index, that's where I want to be.
+So the end_of_the_card_number_index
+is where I want to be.
 
 781
 01:02:01,360 --> 01:02:06,902
-This should be something along those lines, and
-here I want to go up to the end of card number index
+And here I want to go up to the
+end_of_card_number_index
 
 782
-01:02:09,017 --> 01:02:12,468
+01:02:08,017 --> 01:02:12,468
 [Silence]
 
 783
