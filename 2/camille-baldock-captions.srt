@@ -1287,8 +1287,8 @@ TS: I am roughly familiar with the rules of Poker.
 
 286
 00:22:04,800 --> 00:22:09,097
-CB: I'm just being unnecessarily
-verbose, if you get bored you can stop me.
+CB: I'll keep being unnecessarily verbose,
+if you get bored you can stop me.
 
 287
 00:22:09,120 --> 00:22:11,680
@@ -1297,15 +1297,15 @@ TS: No, no, talk me through it.
 288
 00:22:11,970 --> 00:22:15,245
 CB: If I have 3 of a kind, the last thing
-I want to do is for my hand to tell me,
+I want is for my hand to tell me
 
 289
 00:22:15,257 --> 00:22:20,114
-"We have two of a kind, excellent", whereas
-the best thing I could do with this is 3 of a kind.
+"We have 2 of a kind, excellent!"
+when the best I could do is 3 of a kind.
 
 290
-00:22:20,120 --> 00:22:24,331
+00:22:20,120 --> 00:22:24,330
 TS: So for any individual hand there
 might be several possible classifications
 
