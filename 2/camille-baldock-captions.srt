@@ -4961,7 +4961,7 @@ include the value 14, which is the Ace,
 1111
 01:28:53,725 --> 01:29:00,628
 I also want to change that array
-and do the same thing with the one.
+and do the same thing with the 1.
 
 1112
 01:29:01,110 --> 01:29:02,770
