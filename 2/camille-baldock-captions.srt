@@ -1003,7 +1003,8 @@ but I love myself too much to do that to myself.
 
 215
 00:16:42,940 --> 00:16:46,640
-[inaudible] here we go.
+So, "uninitialized constant..."
+Here we go.
 
 216
 00:16:46,640 --> 00:16:49,880
@@ -1017,7 +1018,7 @@ so we should re-create a
 
 218
 00:16:54,240 --> 00:16:57,817
-inaudible B and for now, to be honest
+card.rb and for now, to be honest
 
 219
 00:16:57,828 --> 00:17:02,580
@@ -2161,7 +2162,8 @@ an array of those cards.
 
 466
 00:36:39,230 --> 00:36:45,657
-CB: I'm just wondering... inaudible
+CB: I'm just wondering...
+I basically need group_by...
 
 467
 00:36:45,714 --> 00:36:51,017
@@ -2679,7 +2681,8 @@ and it has 5 of Hearts, 5 of Diamonds,
 
 577
 00:46:14,970 --> 00:46:18,790
-So we have inaudible 6s, and here we go.
+So we have three 5s and two 6s,
+and here we go.
 
 578
 00:46:19,080 --> 00:46:25,462
@@ -4369,7 +4372,7 @@ CB: I'm going with an ordinary straight.
 944
 01:15:54,910 --> 01:16:01,714
 So my straight hand in here just
-has 56789, which is quite reasonable.
+has 5,6,7,8,9, which is quite reasonable.
 
 945
 01:16:02,220 --> 01:16:04,370
@@ -4386,11 +4389,13 @@ But now other tests are failing.
 
 948
 01:16:11,540 --> 01:16:17,820
-Inaudible.
+So I could do something like that.
+TS: Now you'll only have 1 failing test!
 
 949
-01:16:18,280 --> 01:16:22,500
-This is a more sensible place to be in.
+01:16:18,000 --> 01:16:22,500
+CB: Yes. This is a slightly
+more sensible place to be in.
 
 950
 01:16:22,820 --> 01:16:29,090
@@ -5203,7 +5208,7 @@ Delete 14.
 1131
 01:30:45,005 --> 01:30:54,697
 According to the Ruby
-documentation this is deleted inaudible.
+documentation this is deleted_aces.
 
 1132
 01:30:56,340 --> 01:31:01,360
@@ -5722,8 +5727,8 @@ POKER_RANKS index of the other hand.
 
 1245
 01:41:05,820 --> 01:41:12,788
-And that would give me a
-straightforward answer for [inaudible].
+And that would give me a straightforward
+answer for hands that, you know...
 
 1246
 01:41:12,970 --> 01:41:15,740
