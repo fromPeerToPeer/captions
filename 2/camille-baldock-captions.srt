@@ -225,7 +225,7 @@ So, if I have a hand parser 'thing'.
 
 51
 00:03:36,340 --> 00:03:41,440
-Ok, so this is the 'I can't type moment'. (laughter)
+Ok, so this is the 'I can't type moment'. [laughter]
 
 52
 00:03:42,250 --> 00:03:46,770
@@ -323,7 +323,7 @@ So we can have those as 5 Hearts 6 of Diamonds.
 
 72
 00:05:32,545 --> 00:05:35,258
-That's not an array (Laughter).
+That's not an array [Laughter].
 
 73
 00:05:38,370 --> 00:05:40,436
@@ -508,7 +508,7 @@ TS: OK.
 114
 00:08:51,600 --> 00:08:55,396
 Look at me failing... that's
-sublime, beautiful. (laughter)
+sublime, beautiful. [laughter]
 
 115
 00:08:57,710 --> 00:09:04,560
@@ -958,7 +958,7 @@ do some monkey patching and...
 213
 00:16:24,050 --> 00:16:27,611
 Well, if you want to do it
-for fun, to do crazy things, (laughter)
+for fun, to do crazy things, [laughter]
 
 214
 00:16:27,680 --> 00:16:37,245
@@ -1013,7 +1013,7 @@ Separate words for separate ideas.
 
 225
 00:17:26,850 --> 00:17:29,771
-CB: I hear that's helpful. (laughter)
+CB: I hear that's helpful. [laughter]
 
 226
 00:17:33,570 --> 00:17:38,060
@@ -1279,7 +1279,7 @@ I have a card that has, for example,
 284
 00:21:54,594 --> 00:22:00,308
 which I'm assuming you know,
-which isn't very nice (laughter)
+which isn't very nice [laughter]
 
 285
 00:22:00,340 --> 00:22:04,720
@@ -1408,7 +1408,7 @@ just one test, all the rules of Poker.
 
 312
 00:24:24,110 --> 00:24:25,245
-TS: OK. (laughter)
+TS: OK. [laughter]
 
 313
 00:24:25,245 --> 00:24:32,410
@@ -1587,7 +1587,7 @@ I haven't done all my requiring correctly.
 352
 00:27:47,040 --> 00:27:50,590
 I'm doing silly thing with
-silly shortcuts here (laughter).
+silly shortcuts here [laughter].
 
 353
 00:27:51,800 --> 00:27:54,600
@@ -1765,7 +1765,7 @@ but it's not a great word for it.
 
 391
 00:31:14,260 --> 00:31:22,068
-It's a... who knows (laughter).
+It's a... who knows [laughter].
 
 392
 00:31:22,170 --> 00:31:25,300
@@ -2205,7 +2205,7 @@ I think this is where tests help me.
 
 492
 00:38:55,554 --> 00:38:58,280
-TS: Yes (laughter).
+TS: Yes [laughter].
 
 493
 00:39:00,200 --> 00:39:05,954
@@ -2826,7 +2826,7 @@ confidence to start thinking about it.
 627
 00:50:25,220 --> 00:50:29,382
 But I might hit a mental
-block in a few seconds (laughter).
+block in a few seconds [laughter].
 
 628
 00:50:29,382 --> 00:50:32,388
@@ -3107,7 +3107,7 @@ Missing a def here. Here we go, it's has_three and...
 
 690
 00:55:33,680 --> 00:55:35,710
-Maybe not multiply these (laughter).
+Maybe not multiply these [laughter].
 
 691
 00:55:37,050 --> 00:55:40,457
@@ -3731,7 +3731,7 @@ suddenly my life is quite a lot easier.
 
 833
 01:06:12,970 --> 01:06:20,914
-Because, if I can type... (laughter).
+Because, if I can type... [laughter].
 
 834
 01:06:20,937 --> 01:06:24,948
@@ -4173,7 +4173,7 @@ TS: Are you worried about that?
 
 931
 01:15:00,680 --> 01:15:02,840
-CB: No. (laughter)
+CB: No. [laughter]
 
 932
 01:15:03,600 --> 01:15:06,840
@@ -4600,7 +4600,7 @@ No...
 
 1030
 01:22:55,820 --> 01:22:58,250
-And now the computer fails (laughter).
+And now the computer fails [laughter].
 
 1031
 01:22:58,510 --> 01:23:00,510
@@ -5226,7 +5226,7 @@ start because it doesn't really matter
 
 1174
 01:34:41,650 --> 01:34:47,520
-Or I could go for the lazy option (laughter).
+Or I could go for the lazy option [laughter].
 
 1175
 01:34:57,770 --> 01:34:58,800
@@ -5625,7 +5625,7 @@ so I don't want to spend ages debugging this.
 
 1265
 01:43:07,610 --> 01:43:10,937
-Oh of course it's a hash (laughter).
+Oh of course it's a hash [laughter].
 
 1266
 01:43:13,430 --> 01:43:18,811
