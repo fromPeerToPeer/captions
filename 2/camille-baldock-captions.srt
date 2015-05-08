@@ -503,7 +503,7 @@ TS: OK.
 
 113
 00:08:38,770 --> 00:08:42,843
-(Silence)
+[Silence]
 
 114
 00:08:51,600 --> 00:08:55,396
@@ -539,7 +539,7 @@ OK, undefined method count, it has nothing in it.
 
 121
 00:09:30,780 --> 00:09:36,298
-Right, so... (silence)
+Right, so... [Silence]
 
 122
 00:09:36,510 --> 00:09:39,900
@@ -547,7 +547,7 @@ This should fail for a slightly nicer reason now.
 
 123
 00:09:39,900 --> 00:09:43,112
-(Silence)
+[Silence]
 
 124
 00:09:43,130 --> 00:09:46,487
@@ -1083,7 +1083,7 @@ TS: Yes.
 
 241
 00:18:50,940 --> 00:18:53,954
-(silence)
+[Silence]
 
 242
 00:18:54,000 --> 00:18:56,468
@@ -1421,7 +1421,7 @@ it's not the easiest choice I could have made.
 
 316
 00:24:41,400 --> 00:24:45,920
-(silence)
+[Silence]
 
 317
 00:24:45,931 --> 00:24:49,977
@@ -1547,7 +1547,7 @@ This is a terrible description !
 
 344
 00:27:11,140 --> 00:27:14,022
-(silence)
+[Silence]
 
 345
 00:27:14,820 --> 00:27:17,782
@@ -1654,7 +1654,7 @@ So let's just have a quick...
 
 368
 00:29:07,010 --> 00:29:16,937
-(silence)
+[Silence]
 
 369
 00:29:16,940 --> 00:29:22,217
@@ -1768,7 +1768,7 @@ I'm going to call it Pip counter and...
 
 393
 00:31:25,300 --> 00:31:29,611
-(silence)
+[Silence]
 
 394
 00:31:29,740 --> 00:31:36,240
@@ -2981,7 +2981,7 @@ I'm going to quickly go through those...
 
 663
 00:53:27,320 --> 00:53:32,594
-(silence)
+[Silence]
 
 664
 00:53:32,605 --> 00:53:33,942
@@ -3419,7 +3419,7 @@ what have we done now?
 
 763
 01:00:27,710 --> 01:00:32,228
-(silence)
+[Silence]
 
 764
 01:00:35,000 --> 01:00:37,554
@@ -3504,7 +3504,7 @@ here I want to go up to the end of card number index
 
 782
 01:02:09,017 --> 01:02:12,468
-(silence)
+[Silence]
 
 783
 01:02:12,514 --> 01:02:17,108
@@ -3571,7 +3571,7 @@ It's lucky that I spotted that when I did.
 
 798
 01:03:15,040 --> 01:03:17,954
-(silence)
+[Silence]
 
 799
 01:03:19,770 --> 01:03:23,400
@@ -4121,7 +4121,7 @@ I take Pips for heads and I fetch my Pips string.
 
 921
 01:14:08,270 --> 01:14:13,040
-(silence)
+[Silence]
 
 922
 01:14:13,200 --> 01:14:19,828
@@ -4611,7 +4611,7 @@ I think I haven't incremented the index... there we go.
 
 1034
 01:23:08,880 --> 01:23:09,520
-(silence)
+[Silence]
 
 1035
 01:23:15,250 --> 01:23:17,371
