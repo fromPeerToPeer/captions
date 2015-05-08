@@ -4129,7 +4129,7 @@ This is my Pips string. And this is what it looks like.
 So what I'm going to do is...
 
 920
-01:14:05,200 --> 01:14:08,274
+01:14:05,200 --> 01:14:08,270
 I take Pips for heads and I fetch my Pips string.
 
 921
@@ -4352,7 +4352,7 @@ I'm sorry.
 TS: No, no.
 
 970
-01:17:57,760 --> 01:17:58,880
+01:17:57,760 --> 01:18:01,125
 [Camille types]
 
 971
@@ -4429,7 +4429,7 @@ They are sorted, so actually
 So what I want is...
 
 988
-01:19:27,320 --> 01:19:28,720
+01:19:27,320 --> 01:19:33,720
 [Camille ponders]
 
 989
