@@ -813,8 +813,8 @@ This is a bit...
 
 182
 00:14:02,057 --> 00:14:05,970
-I should probably be handling this
-in a different way if I'm doing that.
+I should probably be handling this in a
+more graceful way than doing that.
 
 183
 00:14:05,970 --> 00:14:10,308
