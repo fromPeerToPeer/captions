@@ -444,12 +444,12 @@ of it? No, I care about how it quacks.
 
 100
 00:07:34,407 --> 00:07:42,807
-So I expect my
-hand.cards.count to equal 5 for example,
+So I expect:
+(hand.cards.count).to equal 5
 
 101
 00:07:42,800 --> 00:07:45,432
-And actually ...
+And actually...
 
 102
 00:07:45,454 --> 00:07:51,687
