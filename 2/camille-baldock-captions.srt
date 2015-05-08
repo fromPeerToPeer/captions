@@ -917,7 +917,7 @@ variance of Poker to say whether that's illegal.
 204
 00:15:45,480 --> 00:15:48,514
 CB: I think if you have one deck
-and you have 2 x 5 of Hearts
+and you have two 5 of Hearts
 
 205
 00:15:48,570 --> 00:15:52,228
@@ -925,7 +925,7 @@ you can reasonably assume that
 somebody's messing with the game.
 
 206
-00:15:52,220 --> 00:15:54,000
+00:15:52,230 --> 00:15:54,000
 TS: Fair enough.
 
 207
