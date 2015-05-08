@@ -3378,8 +3378,8 @@ So how do I get the last char out
 of a string? I can do something along the lines of:
 
 751
-00:59:39,400 --> 00:59:40,868
-(Camille thinking).
+00:59:39,400 --> 00:59:43,868
+[Camille ponders]
 
 752
 00:59:44,020 --> 00:59:45,460
@@ -3398,7 +3398,7 @@ would be something along those lines.
 There must be a better way though.
 
 756
-00:59:58,320 --> 00:59:59,508
+00:59:58,320 --> 01:00:01,910
 [Camille types]
 
 757
@@ -3429,7 +3429,7 @@ Wrong number of arguments,
 what have we done now?
 
 763
-01:00:27,710 --> 01:00:32,228
+01:00:27,710 --> 01:00:34,228
 [Silence]
 
 764
@@ -3456,7 +3456,7 @@ So hand parser on
 line 20 calling length on...
 
 769
-01:01:01,000 --> 01:01:02,354
+01:01:01,000 --> 01:01:05,354
 [Camille ponders]
 
 770
