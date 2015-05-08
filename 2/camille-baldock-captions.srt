@@ -4854,12 +4854,13 @@ Now if I have an Ace in my hand,
 
 1088
 01:26:54,000 --> 01:26:58,480
-I want it to work out, is this
-a straight if it behaves like a 14?
+I want it to work out: is this a straight
+if it behaves like a 14?
 
 1089
-01:26:58,480 --> 01:27:01,725
-and is this a straight if it behaves like a one?
+01:26:58,480 --> 01:27:01,720
+and: is this a straight
+if it behaves like a 1?
 
 1090
 01:27:01,720 --> 01:27:04,617
@@ -4867,8 +4868,8 @@ So what I want to do is basically...
 
 1091
 01:27:05,350 --> 01:27:09,560
-If this fails, if I treat my Ace
-as a 14, then just do again with a one.
+If this fails when I treat my Ace
+as a 14, then just do again with a 1.
 
 1092
 01:27:12,342 --> 01:27:14,730
