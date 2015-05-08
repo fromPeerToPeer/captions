@@ -3552,7 +3552,8 @@ CB: We have key not found.
 
 791
 01:02:37,880 --> 01:02:41,360
-Fetch is failing again. That's relatively good news.
+Fetch is failing again.
+That's relatively good news.
 
 792
 01:02:42,050 --> 01:02:46,914
