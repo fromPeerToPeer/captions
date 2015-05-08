@@ -2331,7 +2331,8 @@ let's call it a three_of_a_kind_hand.
 
 520
 00:41:19,220 --> 00:41:23,170
-So if we have a three_of_a_kind_hand, it's going to be...
+So if we have a three_of_a_kind_hand, it's
+going to be...
 
 521
 00:41:25,770 --> 00:41:29,840
@@ -2345,11 +2346,12 @@ going to return a Pair, I presume.
 523
 00:41:34,970 --> 00:41:40,228
 but actually we want it to
-return 3 of a kind, so this, should be...
+return 3 of a kind, so this should be...
 
 524
 00:41:42,594 --> 00:41:44,925
-If I have a rank there should be a type three.
+If I have a rank there should be
+a type three.
 
 525
 00:41:45,000 --> 00:41:48,011
@@ -2365,12 +2367,13 @@ and not like this either.
 
 528
 00:41:52,800 --> 00:41:56,040
-I think I'm doing something wrong... there we go.
+I think I'm doing something wrong...
+There we go.
 
 529
 00:41:56,310 --> 00:42:03,314
 I do have a failure because it is assuming
-that I have type :highest and not type :three.
+I have type :highest and not type :three.
 
 530
 00:42:03,510 --> 00:42:08,057
