@@ -4904,18 +4904,18 @@ to move this to a helper somewhere.
 
 1099
 01:27:55,710 --> 01:28:01,051
-This is a utility type function...
+This is a utility type function
 which has no business being here.
 
 1100
 01:28:01,120 --> 01:28:04,251
 TS: It doesn't have to be
-an instance method? CB: Correct.
+an instance method?
 
 1101
-01:28:06,280 --> 01:28:11,268
-CB: It's got nothing to do with the hand.
-The concept of numbers being consecutive.
+01:28:04,280 --> 01:28:11,268
+CB: Correct. The concept of consecutive
+numbers has nothing to do with the hand.
 
 1102
 01:28:11,480 --> 01:28:13,620
@@ -4923,8 +4923,8 @@ The hand needs it in order to rank itself.
 
 1103
 01:28:13,620 --> 01:28:17,394
-But the actual
-implementation of it does not live here.
+But the actual implementation
+should not live here.
 
 1104
 01:28:17,400 --> 01:28:18,800
