@@ -2610,17 +2610,17 @@ Which is not what we want.
 
 580
 00:46:30,925 --> 00:46:35,702
-So a couple of things to start
-with, the first thing is, OK, so...
+So a couple of things to start with,
+the first thing is...
 
 581
 00:46:37,170 --> 00:46:38,860
-Right now with my code I'm saying
+Right now in my code I'm saying:
 
 582
 00:46:38,880 --> 00:46:43,170
-if there's 2 let's go there, if there's
-three let's go there, if there's four let's go there.
+If there's 2: let's go there. If there's
+3: go there. If there's 4: go there.
 
 583
 00:46:43,540 --> 00:46:46,110
