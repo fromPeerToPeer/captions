@@ -790,8 +790,8 @@ hash rather than using a switch statement.
 
 177
 00:13:39,310 --> 00:13:44,994
-CB: And I actually want it to fall over
-quite loudly, if I have something crazy as my suit.
+CB: I want it to fall over quite loudly,
+if I have something crazy as my suit.
 
 178
 00:13:45,110 --> 00:13:47,220
@@ -799,12 +799,12 @@ TS: How are you going to make it fall over?
 
 179
 00:13:47,220 --> 00:13:54,548
-CB: With fetch. It means that if I put
-say 5 A in there that, fetch is going to complain,
+CB: With fetch. If I put, say, '5a' in
+there, fetch is going to complain
 
 180
 00:13:54,570 --> 00:14:00,297
-because there is no suit with key A
+because there is no suit with key 'a'
 and therefore it will throw an exception.
 
 181
