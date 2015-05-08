@@ -1169,8 +1169,8 @@ integer or anything like that.
 
 260
 00:20:10,220 --> 00:20:18,045
-Since I want to compare them, it's a lot
-easier to look at if they're integers, than strings
+Since I want to compare them, it's easier
+to do if they're integers than strings
 
 261
 00:20:18,045 --> 00:20:20,520
@@ -1178,7 +1178,8 @@ Yes, expected an integer and got a string!
 
 262
 00:20:21,280 --> 00:20:26,210
-What I'm going to do is not really good practice,
+What I'm going to do is not really
+good practice,
 
 263
 00:20:26,340 --> 00:20:30,320
