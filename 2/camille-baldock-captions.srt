@@ -1393,16 +1393,18 @@ whether that's a good idea or not now.
 
 309
 00:23:56,910 --> 00:24:02,011
-So I'll keep it as it is. And what it does is, it returns...
+So I'll keep it as it is.
+And what it does is
 
 310
 00:24:02,034 --> 00:24:15,330
-the best type of hand, from it's own cards.
+it returns the best type of hand
+from it's own cards.
 
 311
-00:24:19,702 --> 00:24:24,114
-There is no way I'm going to
-implement in just one test, all the rules of Poker.
+00:24:19,702 --> 00:24:24,110
+There is no way I'm going to implement in
+just one test, all the rules of Poker.
 
 312
 00:24:24,110 --> 00:24:25,245
