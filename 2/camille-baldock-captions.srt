@@ -4508,7 +4508,7 @@ Actually I don't like how I'm doing this.
 
 1007
 01:20:56,605 --> 01:21:01,980
-Sort of, while difference is always one.
+It's: while(difference_always_1)
 
 1008
 01:21:06,880 --> 01:21:12,468
