@@ -14,8 +14,8 @@ JavaScript for the British Government.
 
 4
 00:00:13,060 --> 00:00:18,260
-And by night mentors junior
-developers and teaches programming in schools.
+And by night mentors junior developers and
+teaches programming in schools.
 
 5
 00:00:18,260 --> 00:00:20,340
@@ -42,13 +42,13 @@ playing cards drawn from a standard deck.
 
 10
 00:00:34,746 --> 00:00:37,831
-Apparently today I'm going to
-implement a system which can decide
+Apparently today I'm going to implement a
+system which can decide which of two
 
 11
 00:00:37,830 --> 00:00:44,737
-which of two hands has the highest ranking,
-according to the standard poker ranking rules.
+hands has the highest ranking, according
+to standard poker ranking rules.
 
 12
 00:00:44,740 --> 00:00:46,720
@@ -75,8 +75,8 @@ hand B and the program will sort it out.
 
 17
 00:01:05,610 --> 00:01:10,684
-And I need to think of how to tell
-people to tell me what their hand looks like.
+And I need to think of how to tell people
+to tell me what their hand looks like.
 
 18
 00:01:10,693 --> 00:01:14,035
@@ -85,17 +85,17 @@ TS: OK
 19
 00:01:14,340 --> 00:01:19,822
 The first 'off the top of my head', easy
-thing, is to you have some sort of string or array
+thing, is to have and array of 5 things
 
 20
 00:01:19,822 --> 00:01:26,090
-that says you have an array of 5 things,
-that says I have a 5 of Hearts and the 6 of Diamonds.
+that says I have a 5 of Hearts
+and the 6 of Diamonds.
 
 21
 00:01:26,106 --> 00:01:33,710
-I could put that in an array or represent
-that as ['4H', '5D']. (4 Hearts 5 Diamonds).
+I could represent that as ['4H', '5D'].
+(4 Hearts 5 Diamonds).
 
 22
 00:01:33,760 --> 00:01:38,115
@@ -131,8 +131,8 @@ And then, we can get started.
 
 29
 00:02:06,110 --> 00:02:13,520
-The first thing I want to do is enter
-some kind of array 'thing' and it creates...
+The first thing I want to do is enter some
+kind of array 'thing' and it creates...
 
 30
 00:02:13,528 --> 00:02:16,977
@@ -162,8 +162,8 @@ and then somehow comparing them.
 
 36
 00:02:33,000 --> 00:02:38,862
-So the first thing I probably
-want to have in place is some kind of Hand object
+So the first thing I probably want to have
+in place is some kind of Hand object
 
 37
 00:02:38,880 --> 00:02:43,155
@@ -185,8 +185,8 @@ I have an array that says
 
 41
 00:02:54,570 --> 00:03:01,066
-And on the other end, and this is my
-Hand object with those card 'things' inside it.
+And on the other end, and this is my Hand
+object with those card 'things' inside it.
 
 42
 00:03:01,075 --> 00:03:03,050
@@ -205,16 +205,16 @@ TS: Yes
 45
 00:03:11,973 --> 00:03:16,044
 CB: I'm not too concerned about that at
-the moment. I don't think it matters that much,
+the moment. I don't think it matters much,
 
 46
 00:03:16,044 --> 00:03:20,337
 Since I don't want to keep them as an array
-of strings, but do interesting things afterwards.
+of strings, but do interesting things
 
 47
 00:03:20,330 --> 00:03:22,008
-So I don't think it should
+afterwards. So I don't think it should
 matter that much.
 
 48
@@ -282,8 +282,8 @@ that does absolutely nothing.
 
 61
 00:04:29,280 --> 00:04:35,970
-But that should make my test happy
-enough, unless I don't require it, obviously.
+But that should make my test happy enough,
+unless I don't require it, obviously.
 
 62
 00:04:36,080 --> 00:04:39,928
@@ -302,7 +302,7 @@ What I probably want to do is...
 65
 00:04:48,840 --> 00:04:56,778
 If I create a HandParser and I give it the
-array of string things that will represent cards
+array of strings that will represent cards
 
 66
 00:04:56,778 --> 00:05:02,181
@@ -353,8 +353,8 @@ the other suit? Clubs, that's the one.
 
 76
 00:05:53,370 --> 00:05:59,323
-So Queen of Clubs, and then we
-can have... let's have an annoying card in there.
+So Queen of Clubs, and then we can have...
+let's have an annoying card in there.
 
 77
 00:05:59,330 --> 00:06:01,800
@@ -366,8 +366,8 @@ Which is Ace.
 
 79
 00:06:08,280 --> 00:06:13,607
-Let's keep Ace as one and see where
-that takes us. I reckon that matters somehow.
+Let's keep Ace as one and see where that
+takes us. I reckon that matters somehow.
 
 80
 00:06:13,740 --> 00:06:17,709
@@ -380,13 +380,13 @@ some kind of 'thing'.
 
 82
 00:06:22,087 --> 00:06:26,443
-This is already going to fail so I'm
-not even going to put an expectation in there
+This is already going to fail so I'm not
+even going to put an expectation in there
 
 83
 00:06:26,440 --> 00:06:30,705
-I'm going to go ahead and
-run my tests and this should fail nicely, because
+I'm going to go ahead and run my tests and
+this should fail nicely, because
 
 84
 00:06:30,700 --> 00:06:32,414
@@ -486,13 +486,13 @@ the same number of things that we have.
 
 105
 00:08:04,250 --> 00:08:08,749
-I'm going to gloss over the issue and
-give it an array of cards that only has 4 cards.
+I'm going to gloss over the issue where I
+give it an array that only has 4 cards
 
 106
 00:08:08,749 --> 00:08:11,770
-If it falls over,
-let's just not go there for now!
+and it falls over.
+Let's just not go there for now!
 
 107
 00:08:11,780 --> 00:08:15,876
@@ -532,8 +532,8 @@ sublime, beautiful. [laughter]
 
 115
 00:08:57,710 --> 00:09:04,560
-OK, so if it has that then...
-This should complain for different reasons now.
+OK, so if it has that then... This should
+complain for different reasons now.
 
 116
 00:09:05,780 --> 00:09:08,720
@@ -573,8 +573,8 @@ nicer reason now.
 
 124
 00:09:43,130 --> 00:09:46,487
-So now we have an array that has
-nothing in it. And we should have 5 things.
+So now we have an array that has nothing
+in it. And we should have 5 things.
 
 125
 00:09:46,480 --> 00:09:51,490
@@ -630,8 +630,8 @@ OK, so that can live here.
 
 136
 00:10:38,200 --> 00:10:45,600
-So if I have make_card thing,
-this is going to move to Card object later.
+So if I have make_card thing, this is
+going to move to Card object later.
 
 137
 00:10:45,600 --> 00:10:47,062
@@ -668,18 +668,18 @@ here, I'm creating a new card.
 
 144
 00:11:07,851 --> 00:11:11,462
-TS: So why are you
-approaching it in this particular way?
+TS: So why are you approaching it in
+this particular way?
 
 145
 00:11:11,460 --> 00:11:15,382
 if you're saying you don't want this
-method to be here, why are you putting it here?
+method here, why are you putting it here?
 
 146
 00:11:15,390 --> 00:11:23,977
-CB: I'm not quite sure how much logic...
-what my Card.new type method should be accepting.
+CB: I'm not quite sure what my Card.new
+method should be accepting.
 
 147
 00:11:23,980 --> 00:11:28,468
@@ -693,8 +693,8 @@ Diamond symbol type thing.
 
 149
 00:11:33,200 --> 00:11:38,845
-So I want a tiny bit of pre-processing before hand
-to check that there are two things in this string.
+So I want a bit of pre-processing to check
+that there are 2 things in this string.
 
 150
 00:11:38,902 --> 00:11:42,000
@@ -717,8 +717,8 @@ I'm not quite sure yet.
 
 154
 00:11:46,057 --> 00:11:50,308
-TS: So you're expecting later on that you're
-going to have a better idea of what's going on here.
+TS: So you're expecting that later you'll
+have a better idea of what's going on.
 
 155
 00:11:50,308 --> 00:11:50,960
@@ -744,8 +744,8 @@ So what I'm going to do is...
 
 160
 00:12:09,800 --> 00:12:18,674
-create Card.new and I'm taking
-card_string[0] card_string[1] but actually not.
+Card.new and I'm taking card_string[0]
+card_string[1] but actually not.
 
 161
 00:12:20,971 --> 00:12:26,251
@@ -851,8 +851,8 @@ more graceful way than doing that.
 
 183
 00:14:05,970 --> 00:14:10,308
-I definitely don't want to have a
-default value because there's no such thing.
+I definitely don't want to have a default
+value because there's no such thing.
 
 184
 00:14:10,340 --> 00:14:12,420
@@ -893,8 +893,8 @@ example, it takes the first symbol.
 
 192
 00:14:36,960 --> 00:14:41,634
-So if someone puts H5 for
-example, that would also fail quite loudly.
+So if someone puts H5 for example, that
+would also fail quite loudly.
 
 193
 00:14:41,702 --> 00:14:45,470
@@ -1040,8 +1040,8 @@ I'm going to stick with 'Pips'.
 
 223
 00:17:17,120 --> 00:17:21,280
-I reckon, since I'm also doing
-hand ranker, rank is going to confuse things.
+I reckon, since I'm also doing hand
+ranker, rank is going to confuse things.
 
 224
 00:17:21,280 --> 00:17:25,177
@@ -1470,8 +1470,8 @@ Which seems easy.
 
 315
 00:24:35,370 --> 00:24:41,405
-And I might regret this because maybe
-it's not the easiest choice I could have made.
+And I might regret this because maybe it's
+not the easiest choice I could have made.
 
 316
 00:24:41,400 --> 00:24:45,920
@@ -1558,8 +1558,8 @@ know is do I have a better hand?
 
 334
 00:26:09,200 --> 00:26:14,914
-and then if your two hands are not
-the same rank, then you try calculating it.
+and then if your two hands are not the
+same rank, then you try calculating it.
 
 335
 00:26:15,260 --> 00:26:20,594
@@ -1670,8 +1670,8 @@ that handles things like that.
 
 358
 00:28:16,810 --> 00:28:28,217
-And my hand.new can take a
-HandParser as one of it's attributes of the method.
+And my hand.new can take a HandParser as
+one of it's attributes of the method.
 
 359
 00:28:28,770 --> 00:28:32,930
@@ -1787,8 +1787,8 @@ would have something along the lines of...
 
 383
 00:30:31,180 --> 00:30:38,937
-I'm going to do that as a hash but I
-would expect my result to look a bit like this.
+I'm going to do that as a hash but I would
+expect my result to look a bit like this.
 
 384
 00:30:38,970 --> 00:30:41,600
@@ -1966,8 +1966,8 @@ There is a Ruby collect on Ruby array.
 
 423
 00:33:38,540 --> 00:33:44,434
-This is dash...
-It's a documentation tool that I like to use.
+This is dash... It's a documentation tool
+that I like to use.
 
 424
 00:33:45,050 --> 00:33:48,370
@@ -2214,8 +2214,8 @@ CB: Yes so let's see how that works.
 
 478
 00:37:34,720 --> 00:37:42,422
-It's not very elegant but it should
-make the test pass... so that's close enough.
+It's not very elegant but it should make
+the test pass... so that's close enough.
 
 479
 00:37:43,462 --> 00:37:46,594
@@ -2318,8 +2318,8 @@ which I will call 'highest', as a type.
 
 501
 00:39:42,850 --> 00:39:48,434
-So if I have a highest hand,
-I essentially want it to be pretty much this,
+So if I have a highest hand, I essentially
+want it to be pretty much this,
 
 502
 00:39:48,740 --> 00:39:55,257
@@ -2368,8 +2368,8 @@ and then suddenly I have 'one pair',
 
 512
 00:40:31,782 --> 00:40:38,537
-'one thing with a pair' and
-'another with nothing' and it does rankings.
+'one thing with a pair' and 'another with
+nothing' and it does rankings.
 
 513
 00:40:38,740 --> 00:40:42,857
@@ -2538,8 +2538,8 @@ This is working out fine.
 
 548
 00:43:47,060 --> 00:43:55,074
-This however, looks pretty terrible.
-So there must be a smarter way of doing this.
+This however, looks pretty terrible. So
+there must be a smarter way of doing this.
 
 549
 00:43:56,680 --> 00:44:02,777
@@ -2711,8 +2711,8 @@ because in Poker,
 
 584
 00:46:46,110 --> 00:46:51,622
-what I want to check is do I
-have a royal flush, or a straight flush etc.
+what I want to check is do I have a royal
+flush, or a straight flush etc.
 
 585
 00:46:51,620 --> 00:46:57,302
@@ -2794,8 +2794,8 @@ just working what by accident?
 
 601
 00:48:15,420 --> 00:48:21,691
-CB: It was working only in the case
-where a specific hand only has for example,
+CB: It was working only in the case where
+a specific hand only has for example,
 
 602
 00:48:21,720 --> 00:48:23,405
