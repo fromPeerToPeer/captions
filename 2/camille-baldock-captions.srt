@@ -3582,7 +3582,7 @@ Let's get back to our tests.
 It's lucky that I spotted that when I did.
 
 798
-01:03:15,040 --> 01:03:17,954
+01:03:15,040 --> 01:03:18,954
 [Silence]
 
 799
@@ -3724,8 +3724,8 @@ TS: OK.
 
 830
 01:05:56,970 --> 01:06:02,948
-CB: And now it seems to be working and
-we're back on our problem, which is permitting flush.
+CB: Now it seems to be working and we're
+back to our problem: permitting flush.
 
 831
 01:06:03,000 --> 01:06:06,502
@@ -3738,7 +3738,8 @@ suddenly my life is quite a lot easier.
 
 833
 01:06:12,970 --> 01:06:20,914
-Because, if I can type... [laughter].
+Because...
+If I can type! [laughter]
 
 834
 01:06:20,937 --> 01:06:24,948
