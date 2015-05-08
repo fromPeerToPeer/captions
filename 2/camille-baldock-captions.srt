@@ -1542,12 +1542,12 @@ CB: Let's assume that's my hand and I want hand.rank.
 So 'expect' hand.rank  to equal, and then...
 
 342
-00:26:57,910 --> 00:27:03,920
+00:26:57,910 --> 00:27:08,920
 It turns information about
 the winning potential of the hand.
 
 343
-00:27:09,200 --> 00:27:11,142
+00:27:09,200 --> 00:27:11,140
 This is a terrible description!
 
 344
@@ -1556,7 +1556,8 @@ This is a terrible description!
 
 345
 00:27:14,820 --> 00:27:17,782
-I'm just going to let it go, because in a minute,
+I'm just going to let it go,
+because in a minute
 
 346
 00:27:17,800 --> 00:27:21,542
