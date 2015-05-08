@@ -397,7 +397,7 @@ It's not these things.
 
 89
 00:06:46,540 --> 00:06:47,897
-(Camille ponders).
+[Camille ponders]
 
 90
 00:06:53,410 --> 00:06:57,658
@@ -415,7 +415,7 @@ kind of Hand object type of thing.
 
 93
 00:07:09,330 --> 00:07:10,811
-So ... (Camille ponders).
+So... [Camille ponders]
 
 94
 00:07:13,000 --> 00:07:15,450
@@ -580,7 +580,7 @@ cards, or however you want to call that.
 
 130
 00:10:15,040 --> 00:10:20,274
-And I want it to basically... (Camille ponders).
+And I want it to basically... [Camille ponders]
 
 131
 00:10:23,060 --> 00:10:28,365
@@ -1058,7 +1058,7 @@ failure, so that is the one I want.
 
 235
 00:18:28,620 --> 00:18:29,965
-(Camille ponders).
+[Camille ponders]
 
 236
 00:18:33,080 --> 00:18:34,570
@@ -1434,7 +1434,7 @@ So, I have a Hand and...
 
 319
 00:24:54,500 --> 00:24:55,840
-(Camille ponders).
+[Camille ponders]
 
 320
 00:24:58,090 --> 00:25:03,885
@@ -1471,7 +1471,7 @@ Pair. And see where it takes us.
 
 327
 00:25:38,590 --> 00:25:39,931
-(Camille ponders).
+[Camille ponders]
 
 328
 00:25:46,811 --> 00:25:52,980
@@ -1560,7 +1560,7 @@ mind about what this should look like.
 
 347
 00:27:21,540 --> 00:27:22,948
-(Camille ponders).
+[Camille ponders]
 
 348
 00:27:26,050 --> 00:27:30,011
@@ -1577,7 +1577,7 @@ I haven't done all my requiring correctly.
 
 351
 00:27:42,030 --> 00:27:43,382
-(Camille ponders).
+[Camille ponders]
 
 352
 00:27:47,040 --> 00:27:50,590
@@ -1887,7 +1887,7 @@ Suddenly here I have an array of numbers,
 
 420
 00:33:15,950 --> 00:33:17,337
-(Camille ponders).
+[Camille ponders]
 
 421
 00:33:23,710 --> 00:33:31,314
@@ -1990,7 +1990,7 @@ So group_by...
 
 443
 00:35:12,400 --> 00:35:13,725
-(Camille ponders).
+[Camille ponders]
 
 444
 00:35:18,830 --> 00:35:20,160
@@ -2006,7 +2006,7 @@ TS: It will be in Enumerable I expect.
 
 447
 00:35:24,290 --> 00:35:25,657
-(Camille ponders).
+[Camille ponders]
 
 448
 00:35:27,862 --> 00:35:29,942
@@ -3131,7 +3131,7 @@ That's because question marks are nice
 
 697
 00:55:59,960 --> 00:56:03,497
-(Camille ponders).
+[Camille ponders]
 
 698
 00:56:04,091 --> 00:56:07,020
@@ -3446,7 +3446,7 @@ line 20 calling length on...
 
 769
 01:01:01,000 --> 01:01:02,354
-(Camille ponders).
+[Camille ponders]
 
 770
 01:01:06,220 --> 01:01:08,380
@@ -3537,7 +3537,7 @@ CB: We have key not found.
 
 790
 01:02:34,060 --> 01:02:35,440
-(Camille ponders).
+[Camille ponders]
 
 791
 01:02:37,880 --> 01:02:41,360
@@ -4417,7 +4417,7 @@ So what I want is...
 
 988
 01:19:27,320 --> 01:19:28,720
-(Camille ponders).
+[Camille ponders]
 
 989
 01:19:34,710 --> 01:19:37,954
@@ -4521,7 +4521,7 @@ And my index is below 4. Or sorted_card_values.count.
 
 1013
 01:21:30,765 --> 01:21:32,091
-(Camille ponders).
+[Camille ponders]
 
 1014
 01:21:41,234 --> 01:21:43,390
@@ -4703,7 +4703,7 @@ This should be one difference_always_1, this is equals to one.
 
 1056
 01:24:35,290 --> 01:24:36,594
-(Camille ponders).
+[Camille ponders]
 
 1057
 01:24:39,250 --> 01:24:41,405
@@ -4711,7 +4711,7 @@ Yet, this returns as false.
 
 1058
 01:24:41,400 --> 01:24:42,742
-(Camille ponders).
+[Camille ponders]
 
 1059
 01:24:47,370 --> 01:24:53,222
@@ -5054,7 +5054,7 @@ tell me how many, interesting.
 
 1135
 01:31:07,330 --> 01:31:08,628
-(Camille ponders).
+[Camille ponders]
 
 1136
 01:31:11,820 --> 01:31:15,440
