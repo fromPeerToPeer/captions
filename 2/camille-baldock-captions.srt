@@ -397,7 +397,7 @@ I don't have a method parse.
 TS: OK.
 
 86
-00:06:33,220 --> 00:06:34,331
+00:06:33,220 --> 00:06:38,594
 [Camille types]
 
 87
@@ -410,7 +410,7 @@ takes an array of things (cards).
 It's not these things.
 
 89
-00:06:46,540 --> 00:06:47,897
+00:06:46,540 --> 00:06:52,902
 [Camille ponders]
 
 90
@@ -429,7 +429,7 @@ I want this to be some
 kind of Hand object type of thing.
 
 93
-00:07:09,330 --> 00:07:10,811
+00:07:09,330 --> 00:07:12,822
 So... [Camille ponders]
 
 94
@@ -602,7 +602,7 @@ which is essentially an array of string
 cards, or however you want to call that.
 
 130
-00:10:15,040 --> 00:10:20,274
+00:10:15,040 --> 00:10:22,742
 And I want it to basically...
 [Camille ponders]
 
@@ -768,8 +768,7 @@ TS: OK
 
 165
 00:12:36,140 --> 00:12:42,651
-I just want to do a very quick
-pre-parsing of...
+I just want to do a very quick pre-parsing of...
 
 166
 00:12:42,710 --> 00:12:52,377
@@ -799,13 +798,12 @@ That seems correct.
 TS: That's all of them yes.
 
 172
-00:13:16,540 --> 00:13:17,691
+00:13:16,540 --> 00:13:20,628
 [Camille types]
 
 173
 00:13:20,910 --> 00:13:23,908
-CB: This is the slightly tedious
-typing part.
+CB: This is the slightly tedious typing part.
 
 174
 00:13:23,940 --> 00:13:30,605
@@ -1095,7 +1093,7 @@ No, because it did a zero
 failure, so that is the one I want.
 
 235
-00:18:28,620 --> 00:18:29,965
+00:18:28,620 --> 00:18:32,971
 [Camille ponders]
 
 236
@@ -1525,7 +1523,7 @@ Pair. And see where it takes us.
 7 of Diamonds, 8 of Diamonds.
 
 327
-00:25:38,590 --> 00:25:39,931
+00:25:38,590 --> 00:25:46,285
 [Camille ponders]
 
 328
@@ -1717,17 +1715,17 @@ and go to fix all the things.
 So let's just have a quick...
 
 368
-00:29:07,010 --> 00:29:16,937
+00:29:07,010 --> 00:29:16,502
 [Silence]
 
 369
-00:29:16,940 --> 00:29:22,217
+00:29:16,890 --> 00:29:22,217
 OK, so that's parsing,
 and that's failing. Cool.
 
 370
 00:29:22,217 --> 00:29:27,810
-rank returns nil which is pretty much
+Rank returns nil which is pretty much
 what you'd expect because it returns nil.
 
 371
@@ -1756,7 +1754,7 @@ TS: OK.
 
 376
 00:29:53,782 --> 00:30:00,680
-So if I have say, 55678 here.
+So if I have say, 5,5,6,7,8 here.
 
 377
 00:30:01,970 --> 00:30:05,074
@@ -2060,7 +2058,7 @@ and see how that works.
 So group_by...
 
 443
-00:35:12,400 --> 00:35:13,725
+00:35:12,400 --> 00:35:18,445
 [Camille ponders]
 
 444
@@ -2076,7 +2074,7 @@ CB: It's not in Array.
 TS: It will be in Enumerable I expect.
 
 447
-00:35:24,290 --> 00:35:25,657
+00:35:24,290 --> 00:35:27,565
 [Camille ponders]
 
 448
@@ -2271,7 +2269,7 @@ So I have all the values,
 I need to find...
 
 490
-00:38:45,250 --> 00:38:46,422
+00:38:45,250 --> 00:38:52,834
 [Camille types]
 
 491
@@ -2704,18 +2702,17 @@ Right now in my code I'm saying:
 
 582
 00:46:38,880 --> 00:46:43,170
-If there's 2: let's go there. If there's
-3: go there. If there's 4: go there.
+If there's 2: let's go there.
+If there's 3: go there. If there's 4: go there.
 
 583
 00:46:43,540 --> 00:46:46,110
-This feels counter intuitive
-because in Poker,
+This feels counter intuitive because in Poker,
 
 584
 00:46:46,110 --> 00:46:51,622
-what I want to check is do I have a royal
-flush, or a straight flush etc.
+what I want to check is do I
+have a royal flush, or a straight flush etc.
 
 585
 00:46:51,620 --> 00:46:57,302
@@ -3389,7 +3386,7 @@ look like if we had to do doubles for this.
 So flush, let's go for all Hearts.
 
 729
-00:58:02,170 --> 00:58:05,314
+00:58:02,182 --> 00:58:06,285
 [Camille types]
 
 730
@@ -3871,7 +3868,7 @@ I can implement this... let's see...
 Now I have a flush.
 
 836
-01:06:26,000 --> 01:06:27,154
+01:06:26,000 --> 01:06:33,154
 [Camille types]
 
 837
@@ -3962,12 +3959,12 @@ What I want is this:
 856
 01:07:50,910 --> 01:07:56,200
 Now I have some kind of array
-that is 3567, something like that.
+that is 3,5,6,7, something like that.
 
 857
 01:07:56,450 --> 01:08:01,748
 In all likelihood it could be
-47892 and be completely unsorted.
+4,7,8,9,2 and be completely unsorted.
 
 858
 01:08:05,600 --> 01:08:16,788
@@ -4018,8 +4015,8 @@ No I don't want to go there.
 
 868
 01:08:57,080 --> 01:09:02,860
-So if I have 12345 as
-in Ace 2345, that's a straight.
+So if I have 1,2,3,4,5 as
+in Ace 2,3,4,5, that's a straight.
 
 869
 01:09:03,250 --> 01:09:07,220
@@ -4677,7 +4674,7 @@ And my index is below 4.
 Or sorted_card_values.count.
 
 1013
-01:21:30,765 --> 01:21:32,091
+01:21:30,760 --> 01:21:41,062
 [Camille ponders]
 
 1014
@@ -4826,8 +4823,7 @@ OK, so let's have a look.
 
 1047
 01:23:56,040 --> 01:23:58,660
-So I start an index here
-and as I go along.
+So I start an index here, and as I go along.
 
 1048
 01:23:58,880 --> 01:24:02,150
@@ -4848,7 +4844,7 @@ I know where I'm heading.
 
 1052
 01:24:16,540 --> 01:24:19,740
-I've got 56789 which seems 'straightish'
+I've got 5,6,7,8,9 which seems 'straightish'.
 
 1053
 01:24:20,300 --> 01:24:24,845
@@ -4862,11 +4858,11 @@ between Pips is this minus this.
 
 1055
 01:24:30,194 --> 01:24:35,291
-This should be one difference_always_1,
-this is equals to one.
+This should be one
+difference_always_1, this is equals to one.
 
 1056
-01:24:35,290 --> 01:24:36,594
+01:24:35,325 --> 01:24:39,177
 [Camille ponders]
 
 1057
@@ -4874,13 +4870,13 @@ this is equals to one.
 Yet, this returns as false.
 
 1058
-01:24:41,400 --> 01:24:42,742
+01:24:41,400 --> 01:24:47,108
 [Camille ponders]
 
 1059
 01:24:47,370 --> 01:24:53,222
 I'm going to run one test,
-just that one 5679.
+just that one 5,6,7,9.
 
 1060
 01:24:53,460 --> 01:24:58,754
@@ -4964,7 +4960,7 @@ We have an Ace now, we don't want a one.
 
 1078
 01:26:21,782 --> 01:26:24,342
-So we have 2345 and A.
+So we have 2,3,4,5 and A.
 
 1079
 01:26:25,200 --> 01:26:25,977
@@ -5039,7 +5035,7 @@ and determines if they are consecutive.
 So, consecutive cards...
 
 1095
-01:27:23,880 --> 01:27:25,051
+01:27:23,880 --> 01:27:34,011
 [Camille types]
 
 1096
@@ -5224,7 +5220,7 @@ CB:  Yes, but it doesn't
 tell me how many, interesting.
 
 1135
-01:31:07,330 --> 01:31:08,628
+01:31:07,330 --> 01:31:11,131
 [Camille ponders]
 
 1136
@@ -5245,7 +5241,7 @@ How do I do that?
 My implementation is this...
 
 1140
-01:31:34,400 --> 01:31:35,520
+01:31:34,400 --> 01:31:38,171
 [Camille types]
 
 1141
@@ -5502,8 +5498,7 @@ understanding what's going on.
 
 1196
 01:36:44,830 --> 01:36:49,554
-So my Aces as ones looks like 123, aha!
-It's not sorted
+So my Aces as ones looks like 1,2,3. Aha! It's not sorted.
 
 1197
 01:36:49,570 --> 01:36:54,034
@@ -5512,7 +5507,7 @@ I am doing my sort again.
 
 1198
 01:36:55,142 --> 01:37:00,990
-How about... we just don't sort them here
+How about... we just don't sort them here.
 
 1199
 01:37:01,170 --> 01:37:04,450
