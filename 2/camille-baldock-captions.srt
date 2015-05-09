@@ -830,8 +830,8 @@ make it fall over?
 
 179
 00:13:47,220 --> 00:13:54,548
-CB: With fetch. If I put, say, '5a' in
-there, fetch is going to complain
+CB: With fetch. If I put, say, '5a'
+in there, fetch is going to complain
 
 180
 00:13:54,570 --> 00:14:00,297
