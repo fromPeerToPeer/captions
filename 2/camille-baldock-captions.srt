@@ -1,7 +1,7 @@
 ﻿1
 00:00:01,570 --> 00:00:07,360
 Welcome to Peer to Peer, where you
-can watch our experts solve tech problems.
+can watch how experts solve tech problems.
 
 2
 00:00:07,370 --> 00:00:09,200
@@ -14,8 +14,8 @@ JavaScript for the British Government.
 
 4
 00:00:13,060 --> 00:00:18,260
-And by night mentors junior
-developers and teaches programming in schools.
+And by night mentors junior developers and
+teaches programming in schools.
 
 5
 00:00:18,260 --> 00:00:20,340
@@ -23,7 +23,8 @@ Our host is Tom Stuart.
 
 6
 00:00:20,391 --> 00:00:22,995
-And the challenge that we set for Camille is called
+And the challenge that we set
+for Camille is called
 
 7
 00:00:22,995 --> 00:00:25,090
@@ -32,7 +33,7 @@ Ranking Poker Hands
 8
 00:00:25,910 --> 00:00:29,220
 TS: So Camille, would you like to
-read out the problem statement ?
+read out the problem statement?
 
 9
 00:00:29,490 --> 00:00:34,266
@@ -41,25 +42,26 @@ playing cards drawn from a standard deck.
 
 10
 00:00:34,746 --> 00:00:37,831
-Apparently today I'm going to
-implement a system which can decide
+Apparently today I'm going to implement a
+system which can decide which of two
 
 11
 00:00:37,830 --> 00:00:44,737
-which of two hands has the highest ranking,
-according to the standard poker ranking rules.
+hands has the highest ranking, according
+to standard poker ranking rules.
 
 12
 00:00:44,740 --> 00:00:46,720
-Do you know the standard poker ranking rules ?
+Do you know the standard
+poker ranking rules?
 
 13
 00:00:46,728 --> 00:00:48,450
-CB: I do !  Which is fortunate.
+CB: I do!  Which is fortunate.
 
 14
 00:00:48,453 --> 00:00:53,560
-CB: OK, right, so this is nice and vague !
+CB: OK, right, so this is nice and vague!
 
 15
 00:00:54,740 --> 00:01:00,480
@@ -73,8 +75,8 @@ hand B and the program will sort it out.
 
 17
 00:01:05,610 --> 00:01:10,684
-And I need to think of how to tell
-people to tell me what their hand looks like.
+And I need to think of how to tell people
+to tell me what their hand looks like.
 
 18
 00:01:10,693 --> 00:01:14,035
@@ -83,17 +85,17 @@ TS: OK
 19
 00:01:14,340 --> 00:01:19,822
 The first 'off the top of my head', easy
-thing, is to you have some sort of string or array
+thing, is to have and array of 5 things
 
 20
 00:01:19,822 --> 00:01:26,090
-that says you have an array of 5 things,
-that says I have a 5 of Hearts and the 6 of Diamonds.
+that says I have a 5 of Hearts
+and the 6 of Diamonds.
 
 21
 00:01:26,106 --> 00:01:33,710
-I could put that in an array or represent
-that as ['4H', '5D']. (4 Hearts 5 Diamonds).
+I could represent that as ['4H', '5D'].
+(4 Hearts 5 Diamonds).
 
 22
 00:01:33,760 --> 00:01:38,115
@@ -110,7 +112,8 @@ CB: So we'll get started with that.
 
 25
 00:01:44,420 --> 00:01:47,831
-So, I'm just going to switch to where I put code.
+So, I'm just going to switch to
+where I put code.
 
 26
 00:01:50,462 --> 00:01:52,497
@@ -123,12 +126,13 @@ sure I've got a couple of things in place
 
 28
 00:01:58,080 --> 00:02:02,690
-Like a spec_helper.rb. And then, we can get started.
+Like a spec_helper.rb.
+And then, we can get started.
 
 29
 00:02:06,110 --> 00:02:13,520
-The first thing I want to do is enter
-some kind of array 'thing' and it creates...
+The first thing I want to do is enter some
+kind of array 'thing' and it creates...
 
 30
 00:02:13,528 --> 00:02:16,977
@@ -158,8 +162,8 @@ and then somehow comparing them.
 
 36
 00:02:33,000 --> 00:02:38,862
-So the first thing I probably
-want to have in place is some kind of Hand object
+So the first thing I probably want to have
+in place is some kind of Hand object
 
 37
 00:02:38,880 --> 00:02:43,155
@@ -176,12 +180,13 @@ So the first thing I want to do is...
 
 40
 00:02:51,820 --> 00:02:54,520
-I have an array that says 5H and 6 Diamond.
+I have an array that says
+5H and 6 Diamond.
 
 41
 00:02:54,570 --> 00:03:01,066
-And on the other end, and this is my
-Hand object with those card 'things' inside it.
+And on the other end, and this is my Hand
+object with those card 'things' inside it.
 
 42
 00:03:01,075 --> 00:03:03,050
@@ -189,7 +194,8 @@ So we'll start with that I think.
 
 43
 00:03:04,000 --> 00:03:06,920
-TS: Are you talking about an array of strings?
+TS: Are you talking about
+an array of strings?
 
 44
 00:03:06,920 --> 00:03:09,150
@@ -199,16 +205,17 @@ TS: Yes
 45
 00:03:11,973 --> 00:03:16,044
 CB: I'm not too concerned about that at
-the moment. I don't think it matters that much,
+the moment. I don't think it matters much,
 
 46
 00:03:16,044 --> 00:03:20,337
 Since I don't want to keep them as an array
-of strings, but do interesting things afterwards.
+of strings, but do interesting things
 
 47
 00:03:20,330 --> 00:03:22,008
-So I don't think it should matter that much.
+afterwards. So I don't think it should
+matter that much.
 
 48
 00:03:22,026 --> 00:03:25,050
@@ -217,7 +224,8 @@ to be a serialisation format.
 
 49
 00:03:25,057 --> 00:03:30,250
-CB: Yes, a hand parser type thing. Let's call it that.
+CB: Yes, a hand parser type thing.
+Let's call it that.
 
 50
 00:03:31,420 --> 00:03:35,100
@@ -225,7 +233,8 @@ So, if I have a hand parser 'thing'.
 
 51
 00:03:36,340 --> 00:03:41,440
-Ok, so this is the 'I can't type moment'. (laughter)
+Ok, so this is the 'I can't type moment'.
+[laughter]
 
 52
 00:03:42,250 --> 00:03:46,770
@@ -239,7 +248,8 @@ array of strings representing the cards'
 
 54
 00:03:59,440 --> 00:04:03,848
-(this is quite verbose), but let's get to that.
+(this is quite verbose),
+but let's get to that.
 
 55
 00:04:03,840 --> 00:04:08,542
@@ -253,7 +263,8 @@ And this is not very happy and
 
 57
 00:04:13,420 --> 00:04:16,890
-Yes, this is my first failure - here we go !
+Yes, this is my first failure -
+here we go!
 
 58
 00:04:18,450 --> 00:04:22,020
@@ -271,12 +282,13 @@ that does absolutely nothing.
 
 61
 00:04:29,280 --> 00:04:35,970
-But that should make my test happy
-enough, unless I don't require it, obviously.
+But that should make my test happy enough,
+unless I don't require it, obviously.
 
 62
 00:04:36,080 --> 00:04:39,928
-Because otherwise it wouldn't know where to look.
+Because otherwise it wouldn't know
+where to look.
 
 63
 00:04:40,020 --> 00:04:44,791
@@ -290,7 +302,7 @@ What I probably want to do is...
 65
 00:04:48,840 --> 00:04:56,778
 If I create a HandParser and I give it the
-array of string things that will represent cards
+array of strings that will represent cards
 
 66
 00:04:56,778 --> 00:05:02,181
@@ -299,7 +311,7 @@ to check what the output of that is.
 
 67
 00:05:02,180 --> 00:05:10,334
-Let's have ... so the subject is
+Let's have... so the subject is
 HandParser, so if we have described_class.
 
 68
@@ -319,11 +331,12 @@ I'm going to put those cards in.
 
 71
 00:05:27,403 --> 00:05:32,058
-So we can have those as 5 Hearts 6 of Diamonds.
+So we can have those as
+5 Hearts 6 of Diamonds.
 
 72
 00:05:32,545 --> 00:05:35,258
-That's not an array (Laughter).
+That's not an array [Laughter].
 
 73
 00:05:38,370 --> 00:05:40,436
@@ -340,8 +353,8 @@ the other suit? Clubs, that's the one.
 
 76
 00:05:53,370 --> 00:05:59,323
-So Queen of Clubs, and then we
-can have ... let's have an annoying card in there.
+So Queen of Clubs, and then we can have...
+let's have an annoying card in there.
 
 77
 00:05:59,330 --> 00:06:01,800
@@ -353,8 +366,8 @@ Which is Ace.
 
 79
 00:06:08,280 --> 00:06:13,607
-Let's keep Ace as one and see where
-that takes us. I reckon that matters somehow.
+Let's keep Ace as one and see where that
+takes us. I reckon that matters somehow.
 
 80
 00:06:13,740 --> 00:06:17,709
@@ -362,17 +375,18 @@ But I have no idea, so we shall see.
 
 81
 00:06:17,700 --> 00:06:20,792
-And this should give me some kind of 'thing'.
+And this should give me
+some kind of 'thing'.
 
 82
 00:06:22,087 --> 00:06:26,443
-This is already going to fail so I'm
-not even going to put an expectation in there
+This is already going to fail so I'm not
+even going to put an expectation in there
 
 83
 00:06:26,440 --> 00:06:30,705
-I'm going to go ahead and
-run my tests and this should fail nicely, because
+I'm going to go ahead and run my tests and
+this should fail nicely, because
 
 84
 00:06:30,700 --> 00:06:32,414
@@ -384,7 +398,7 @@ TS: OK.
 
 86
 00:06:33,220 --> 00:06:34,331
-(Camille types).
+[Camille types]
 
 87
 00:06:39,080 --> 00:06:44,661
@@ -397,7 +411,7 @@ It's not these things.
 
 89
 00:06:46,540 --> 00:06:47,897
-(Camille ponders).
+[Camille ponders]
 
 90
 00:06:53,410 --> 00:06:57,658
@@ -406,7 +420,8 @@ But at least it's not erroring any more.
 
 91
 00:06:57,650 --> 00:07:01,450
-On the other hand - I want it to be a hand and...
+On the other hand -
+I want it to be a hand and...
 
 92
 00:07:05,629 --> 00:07:09,338
@@ -415,11 +430,12 @@ kind of Hand object type of thing.
 
 93
 00:07:09,330 --> 00:07:10,811
-So ... (Camille ponders).
+So... [Camille ponders]
 
 94
 00:07:13,000 --> 00:07:15,450
-So, I want to create a Hand object type of thing.
+So, I want to create
+a Hand object type of thing.
 
 95
 00:07:15,450 --> 00:07:16,320
@@ -431,25 +447,27 @@ Oh, how do we even do this in RSpec.
 
 97
 00:07:23,480 --> 00:07:26,603
-I don't want to do something like this, right.
+I don't want to do
+something like this, right.
 
 98
 00:07:26,620 --> 00:07:29,690
-How do you get a thing and check the class of it?
+How do you get a thing and
+check the class of it?
 
 99
 00:07:29,690 --> 00:07:34,400
-Actually, do I even care about the
-class of it? No I actually care about how it quacks.
+Actually, do I even care about the class
+of it? No, I care about how it quacks.
 
 100
 00:07:34,407 --> 00:07:42,807
-So I expect my
-hand.cards.count to equal 5 for example,
+So I expect:
+(hand.cards.count).to equal 5
 
 101
 00:07:42,800 --> 00:07:45,432
-And actually ...
+And actually...
 
 102
 00:07:45,454 --> 00:07:51,687
@@ -468,12 +486,13 @@ the same number of things that we have.
 
 105
 00:08:04,250 --> 00:08:08,749
-I'm going to gloss over the issue and
-give it an array of cards that only has 4 cards.
+I'm going to gloss over the issue where I
+give it an array that only has 4 cards
 
 106
 00:08:08,749 --> 00:08:11,770
-If it falls over, let's just not go there for now!
+and it falls over.
+Let's just not go there for now!
 
 107
 00:08:11,780 --> 00:08:15,876
@@ -495,7 +514,8 @@ Right, excellent.
 
 111
 00:08:31,620 --> 00:08:36,945
-This needs to return a thing that quacks .cards.
+This needs to return a thing
+that quacks .cards
 
 112
 00:08:37,050 --> 00:08:38,770
@@ -503,17 +523,17 @@ TS: OK.
 
 113
 00:08:38,770 --> 00:08:42,843
-(Silence)
+[Silence]
 
 114
 00:08:51,600 --> 00:08:55,396
-Look at me failing ... that's
-sublime, beautiful. (laughter)
+Look at me failing... that's
+sublime, beautiful. [laughter]
 
 115
 00:08:57,710 --> 00:09:04,560
-OK, so if it has that then...
-This should complain for different reasons now.
+OK, so if it has that then... This should
+complain for different reasons now.
 
 116
 00:09:05,780 --> 00:09:08,720
@@ -535,24 +555,26 @@ And now back to our tests.
 
 120
 00:09:27,512 --> 00:09:30,785
-OK, undefined method count, it has nothing in it.
+OK, undefined method count,
+it has nothing in it.
 
 121
 00:09:30,780 --> 00:09:36,298
-Right, so... (silence)
+Right, so...
 
 122
 00:09:36,510 --> 00:09:39,900
-This should fail for a slightly nicer reason now.
+This should fail for a slightly
+nicer reason now.
 
 123
 00:09:39,900 --> 00:09:43,112
-(Silence)
+[Silence]
 
 124
 00:09:43,130 --> 00:09:46,487
-So now we have an array that has
-nothing in it. And we should have 5 things.
+So now we have an array that has nothing
+in it. And we should have 5 things.
 
 125
 00:09:46,480 --> 00:09:51,490
@@ -561,7 +583,8 @@ the things because it's about time!
 
 126
 00:09:51,498 --> 00:09:54,552
-So if we have an array of cards and it has 5 things,
+So if we have an array of cards
+and it has 5 things,
 
 127
 00:09:54,552 --> 00:09:59,054
@@ -580,7 +603,8 @@ cards, or however you want to call that.
 
 130
 00:10:15,040 --> 00:10:20,274
-And I want it to basically... (Camille ponders).
+And I want it to basically...
+[Camille ponders]
 
 131
 00:10:23,060 --> 00:10:28,365
@@ -593,7 +617,8 @@ TS: Right.
 
 133
 00:10:29,850 --> 00:10:32,460
-and then eventually I'll want to feed it into Hand.
+and then eventually I'll want
+to feed it into Hand.
 
 134
 00:10:32,580 --> 00:10:34,640
@@ -605,8 +630,8 @@ OK, so that can live here.
 
 136
 00:10:38,200 --> 00:10:45,600
-So if I have make_card thing,
-this is going to move to Card object later.
+So if I have make_card thing, this is
+going to move to Card object later.
 
 137
 00:10:45,600 --> 00:10:47,062
@@ -643,18 +668,18 @@ here, I'm creating a new card.
 
 144
 00:11:07,851 --> 00:11:11,462
-TS: So why are you
-approaching it in this particular way ?
+TS: So why are you approaching it in
+this particular way?
 
 145
 00:11:11,460 --> 00:11:15,382
 if you're saying you don't want this
-method to be here, why are you putting it here?
+method here, why are you putting it here?
 
 146
 00:11:15,390 --> 00:11:23,977
-CB: I'm not quite sure how much logic...
-what my Card.new type method should be accepting.
+CB: I'm not quite sure what my Card.new
+method should be accepting.
 
 147
 00:11:23,980 --> 00:11:28,468
@@ -663,16 +688,18 @@ to say 'if it's a 5 of Diamond' it takes
 
 148
 00:11:28,480 --> 00:11:32,800
-Card.new 5 and a Diamond symbol type thing.
+Card.new 5 and a
+Diamond symbol type thing.
 
 149
 00:11:33,200 --> 00:11:38,845
-So I want a tiny bit of pre-processing before hand
-to check that there are two things in this string.
+So I want a bit of pre-processing to check
+that there are 2 things in this string.
 
 150
 00:11:38,902 --> 00:11:42,000
-And H maps to Hearts, and something like that.
+And H maps to Hearts,
+and something like that.
 
 151
 00:11:42,011 --> 00:11:42,540
@@ -685,12 +712,13 @@ TS: Fine
 
 153
 00:11:42,651 --> 00:11:46,011
-CB: So this is where I want this to live. I'm not quite sure yet.
+CB: So this is where I want this to live.
+I'm not quite sure yet.
 
 154
 00:11:46,057 --> 00:11:50,308
-TS: So you're expecting later on that you're
-going to have a better idea of what's going on here.
+TS: So you're expecting that later you'll
+have a better idea of what's going on.
 
 155
 00:11:50,308 --> 00:11:50,960
@@ -702,7 +730,8 @@ TS: OK let's see what happens.
 
 157
 00:11:54,811 --> 00:12:01,497
-CB: OK, so this is a thing, and it takes a card string.
+CB: OK, so this is a thing,
+and it takes a card string.
 
 158
 00:12:01,510 --> 00:12:06,491
@@ -715,8 +744,8 @@ So what I'm going to do is...
 
 160
 00:12:09,800 --> 00:12:18,674
-create Card.new and I'm taking
-card_string[0] card_string[1] but actually not.
+Card.new and I'm taking card_string[0]
+card_string[1] but actually not.
 
 161
 00:12:20,971 --> 00:12:26,251
@@ -730,7 +759,8 @@ human, to have my suits (as in Hearts/Diamonds etc)
 
 163
 00:12:32,777 --> 00:12:34,880
-written out in plain letters not as H and D etc.
+written out in plain letters
+not as H and D etc.
 
 164
 00:12:34,880 --> 00:12:35,942
@@ -738,7 +768,8 @@ TS: OK
 
 165
 00:12:36,140 --> 00:12:42,651
-I just want to do a very quick pre-parsing of ...
+I just want to do a very quick
+pre-parsing of...
 
 166
 00:12:42,710 --> 00:12:52,377
@@ -769,15 +800,16 @@ TS: That's all of them yes.
 
 172
 00:13:16,540 --> 00:13:17,691
-(Camille types).
+[Camille types]
 
 173
 00:13:20,910 --> 00:13:23,908
-CB: This is the slightly tedious typing part.
+CB: This is the slightly tedious
+typing part.
 
 174
 00:13:23,940 --> 00:13:30,605
-Oh right ! Spades, cool.
+Oh right! Spades, cool.
 
 175
 00:13:30,660 --> 00:13:33,668
@@ -790,36 +822,37 @@ hash rather than using a switch statement.
 
 177
 00:13:39,310 --> 00:13:44,994
-CB: And I actually want it to fall over
-quite loudly, if I have something crazy as my suit.
+CB: I want it to fall over quite loudly,
+if I have something crazy as my suit.
 
 178
 00:13:45,110 --> 00:13:47,220
-TS: How are you going to make it fall over?
+TS: How are you going to
+make it fall over?
 
 179
 00:13:47,220 --> 00:13:54,548
-CB: With fetch. It means that if I put
-say 5 A in there that, fetch is going to complain,
+CB: With fetch. If I put, say, '5a' in
+there, fetch is going to complain
 
 180
 00:13:54,570 --> 00:14:00,297
-because there is no suit with key A
+because there is no suit with key 'a'
 and therefore it will throw an exception.
 
 181
-00:14:00,290 --> 00:14:02,057
+00:14:00,298 --> 00:14:02,057
 This is a bit...
 
 182
 00:14:02,057 --> 00:14:05,970
-I should probably be handling this
-in a different way if I'm doing that.
+I should probably be handling this in a
+more graceful way than doing that.
 
 183
 00:14:05,970 --> 00:14:10,308
-I definitely don't want to have a
-default value because there's no such thing.
+I definitely don't want to have a default
+value because there's no such thing.
 
 184
 00:14:10,340 --> 00:14:12,420
@@ -842,11 +875,12 @@ And see where that takes me.
 188
 00:14:22,410 --> 00:14:28,548
 TS: So your motivation here sounds
-like you don't want it to silently fail ?
+like you don't want it to silently fail?
 
 189
 00:14:28,548 --> 00:14:30,600
-If there's bad input, you want it to complain.
+If there's bad input,
+you want it to complain.
 
 190
 00:14:30,600 --> 00:14:31,910
@@ -859,8 +893,8 @@ example, it takes the first symbol.
 
 192
 00:14:36,960 --> 00:14:41,634
-So if someone puts H5 for
-example, that would also fail quite loudly.
+So if someone puts H5 for example, that
+would also fail quite loudly.
 
 193
 00:14:41,702 --> 00:14:45,470
@@ -879,7 +913,7 @@ I'll clean it up a bit later.
 196
 00:14:56,280 --> 00:15:00,308
 What I would usually do If I'm
-writing things I want to ship is ...
+writing things I want to ship is...
 
 197
 00:15:02,140 --> 00:15:14,445
@@ -897,12 +931,13 @@ TS: Right.
 
 200
 00:15:28,420 --> 00:15:33,188
-There's other things... of there's
-two 5 of Hearts... you have a cheat.
+CB: There's other things, like: if there's
+two 5 of Hearts, you have a cheat!
 
 201
 00:15:33,310 --> 00:15:35,850
-And things like that, but let's not even go there !
+And things like that,
+but let's not even go there!
 
 202
 00:15:35,850 --> 00:15:39,691
@@ -917,7 +952,7 @@ variance of Poker to say whether that's illegal.
 204
 00:15:45,480 --> 00:15:48,514
 CB: I think if you have one deck
-and you have 2 x 5 of Hearts
+and you have two 5 of Hearts
 
 205
 00:15:48,570 --> 00:15:52,228
@@ -925,7 +960,7 @@ you can reasonably assume that
 somebody's messing with the game.
 
 206
-00:15:52,220 --> 00:15:54,000
+00:15:52,230 --> 00:15:54,000
 TS: Fair enough.
 
 207
@@ -939,7 +974,8 @@ But let's see where it's failing.
 
 209
 00:16:03,390 --> 00:16:08,662
-So, undefined method... Oh of course, I did something...
+So, undefined method...
+Oh of course, I did something...
 
 210
 00:16:09,680 --> 00:16:15,131
@@ -958,7 +994,7 @@ do some monkey patching and...
 213
 00:16:24,050 --> 00:16:27,611
 Well, if you want to do it
-for fun, to do crazy things, (laughter)
+for fun, to do crazy things, [laughter]
 
 214
 00:16:27,680 --> 00:16:37,245
@@ -967,7 +1003,8 @@ but I love myself too much to do that to myself.
 
 215
 00:16:42,940 --> 00:16:46,640
-[inaudible] here we go.
+So, "uninitialized constant..."
+Here we go.
 
 216
 00:16:46,640 --> 00:16:49,880
@@ -976,11 +1013,12 @@ we don't have whatever that is.
 
 217
 00:16:49,950 --> 00:16:52,500
-so we should re-create a 'whatever that is'.
+so we should re-create a
+'whatever that is'.
 
 218
 00:16:54,240 --> 00:16:57,817
-inaudible B and for now, to be honest
+card.rb and for now, to be honest
 
 219
 00:16:57,828 --> 00:17:02,580
@@ -1003,17 +1041,17 @@ I'm going to stick with 'Pips'.
 
 223
 00:17:17,120 --> 00:17:21,280
-I reckon, since I'm also doing
-hand ranker, rank is going to confuse things.
+I reckon, since I'm also doing hand
+ranker, rank is going to confuse things.
 
 224
 00:17:21,280 --> 00:17:25,177
-TS: Oh .. that's a good point.
+TS: Oh... that's a good point.
 Separate words for separate ideas.
 
 225
 00:17:26,850 --> 00:17:29,771
-CB: I hear that's helpful. (laughter)
+CB: I hear that's helpful. [laughter]
 
 226
 00:17:33,570 --> 00:17:38,060
@@ -1058,7 +1096,7 @@ failure, so that is the one I want.
 
 235
 00:18:28,620 --> 00:18:29,965
-(Camille ponders).
+[Camille ponders]
 
 236
 00:18:33,080 --> 00:18:34,570
@@ -1066,16 +1104,18 @@ Let's have a look.
 
 237
 00:18:35,640 --> 00:18:43,165
-I'm creating my hand... (sounds of amazement)
+I'm creating my hand...
+[sounds of realization]
 
 238
-00:18:43,730 --> 00:18:46,822
-My favorite way is also to spell initialize with 's'.
+00:18:43,730 --> 00:18:46,820
+My favorite one is also to spell
+initialize with 's'.
 
 239
 00:18:46,820 --> 00:18:49,954
-And then I spent 2 minutes
-thinking Oh! American spelling.
+And then I spend 2 minutes thinking...
+Oh! American spelling.
 
 240
 00:18:49,954 --> 00:18:50,940
@@ -1083,11 +1123,12 @@ TS: Yes.
 
 241
 00:18:50,940 --> 00:18:53,954
-(silence)
+[Silence]
 
 242
 00:18:54,000 --> 00:18:56,468
-CB: Yes, good, slightly more convincing isn't it?
+CB: Yes, good, slightly more
+convincing isn't it?
 
 243
 00:18:56,468 --> 00:18:58,605
@@ -1105,7 +1146,8 @@ it does parse the cards correctly.
 
 246
 00:19:07,250 --> 00:19:11,680
-And if the array looks like I want it to look.
+And if the array looks
+like I want it to look.
 
 247
 00:19:11,680 --> 00:19:14,920
@@ -1123,7 +1165,7 @@ it returns the right cards as a test.
 
 250
 00:19:28,410 --> 00:19:31,017
-I can just do a very quick ...
+I can just do a very quick...
 
 251
 00:19:31,051 --> 00:19:37,851
@@ -1149,7 +1191,8 @@ want to check the suit is Diamonds
 
 256
 00:19:56,200 --> 00:19:59,540
-I also want to check that my Pips are equal to six.
+I also want to check that
+my Pips are equal to six.
 
 257
 00:19:59,690 --> 00:20:00,210
@@ -1167,16 +1210,17 @@ integer or anything like that.
 
 260
 00:20:10,220 --> 00:20:18,045
-Since I want to compare them, it's a lot
-easier to look at if they're integers, than strings
+Since I want to compare them, it's easier
+to do if they're integers than strings
 
 261
 00:20:18,045 --> 00:20:20,520
-Yes, expected an integer and got a string !
+Yes, expected an integer and got a string!
 
 262
 00:20:21,280 --> 00:20:26,210
-What I'm going to do is not really good practice,
+What I'm going to do is not really
+good practice,
 
 263
 00:20:26,340 --> 00:20:30,320
@@ -1189,11 +1233,13 @@ when I put several things in there,
 
 265
 00:20:35,620 --> 00:20:39,302
-it puts them in a hand with cards, and then I can check
+it puts them in a hand with cards,
+and then I can check
 
 266
 00:20:39,314 --> 00:20:41,931
-that if I do put a card it seems relatively OK.
+that if I do put a card
+it seems relatively OK.
 
 267
 00:20:42,262 --> 00:20:48,670
@@ -1207,7 +1253,7 @@ Just to see that that matching is OK.
 269
 00:20:51,794 --> 00:20:55,737
 And that would give me a bit more
-certainty about what on Earth I am doing !
+certainty about what on Earth I am doing!
 
 270
 00:20:55,740 --> 00:20:57,302
@@ -1215,7 +1261,8 @@ TS: Ok.
 
 271
 00:20:57,340 --> 00:21:01,211
-But that kind of does the thing, that is good enough.
+But that kind of does the thing,
+that is good enough.
 
 272
 00:21:01,250 --> 00:21:04,370
@@ -1223,7 +1270,8 @@ Now I'm going to start focusing on...
 
 273
 00:21:05,510 --> 00:21:08,982
-If I have those two hand objects and I can look at cards on them.
+If I have those two hand objects
+and I can look at cards on them.
 
 274
 00:21:08,982 --> 00:21:13,051
@@ -1236,18 +1284,18 @@ How do I compare them?
 
 276
 00:21:15,554 --> 00:21:19,405
-This is a step away from
+This is time to step away from
 the computer for a second.
 
 277
 00:21:19,410 --> 00:21:24,811
-TS: Yes, it felt like this
-was an administrative thing...
+TS: Yes, it felt like this was an
+administrative thing you needed to do.
 
 278
 00:21:24,820 --> 00:21:29,965
-Your warmed up now, you can make two
-hands of cards. And now it's back to compare them ?
+Your warmed up now. You can make two hands
+of cards. Now it's time to compare them?
 
 279
 00:21:29,988 --> 00:21:31,908
@@ -1266,7 +1314,7 @@ have a Pair' and that is actually your best thing.
 282
 00:21:45,740 --> 00:21:50,171
 Not just 'you still happen to have a
-Pair' because the last thing I want to do is ...
+Pair' because the last thing I want to do is...
 
 283
 00:21:50,170 --> 00:21:54,582
@@ -1276,16 +1324,17 @@ I have a card that has, for example,
 284
 00:21:54,594 --> 00:22:00,308
 which I'm assuming you know,
-which isn't very nice (laughter)
+which isn't very nice [laughter]
 
 285
 00:22:00,340 --> 00:22:04,720
-TS: I am roughly familiar with the rules of Poker.
+TS: I am roughly familiar with
+the rules of Poker.
 
 286
 00:22:04,800 --> 00:22:09,097
-CB: I'm just being unnecessarily
-verbose, if you get bored you can stop me.
+CB: I'll keep being unnecessarily verbose,
+if you get bored you can stop me.
 
 287
 00:22:09,120 --> 00:22:11,680
@@ -1294,15 +1343,15 @@ TS: No, no, talk me through it.
 288
 00:22:11,970 --> 00:22:15,245
 CB: If I have 3 of a kind, the last thing
-I want to do is for my hand to tell me,
+I want is for my hand to tell me
 
 289
 00:22:15,257 --> 00:22:20,114
-"We have two of a kind, excellent", whereas
-the best thing I could do with this is 3 of a kind.
+"We have 2 of a kind, excellent!"
+when the best I could do is 3 of a kind.
 
 290
-00:22:20,120 --> 00:22:24,331
+00:22:20,120 --> 00:22:24,330
 TS: So for any individual hand there
 might be several possible classifications
 
@@ -1342,7 +1391,8 @@ hand and it gives me what the rank is.
 
 298
 00:23:06,220 --> 00:23:08,340
-so it tells me if it's a straight or thing.
+so it tells me if it's
+a straight or thing.
 
 299
 00:23:08,970 --> 00:23:13,668
@@ -1369,7 +1419,8 @@ do is create a spec for my Hand,
 
 304
 00:23:28,377 --> 00:23:31,245
-because we're going to start adding stuff to that.
+because we're going to start
+adding stuff to that.
 
 305
 00:23:33,530 --> 00:23:38,480
@@ -1377,11 +1428,13 @@ Quick housekeeping. TS: Yes.
 
 306
 00:23:38,680 --> 00:23:41,828
-CB: And I'm going to be describing my Hand.
+CB: And I'm going to be
+describing my Hand.
 
 307
 00:23:42,850 --> 00:23:49,862
-And, I want some kind of method - I'll call it 'Rank'.
+And, I want some kind of method
+I'll call it 'Rank'.
 
 308
 00:23:51,680 --> 00:23:56,868
@@ -1390,20 +1443,22 @@ whether that's a good idea or not now.
 
 309
 00:23:56,910 --> 00:24:02,011
-So I'll keep it as it is. And what it does is, it returns...
+So I'll keep it as it is.
+And what it does is
 
 310
 00:24:02,034 --> 00:24:15,330
-the best type of hand, from it's own cards.
+it returns the best type of hand
+from it's own cards.
 
 311
-00:24:19,702 --> 00:24:24,114
-There is no way I'm going to
-implement in just one test, all the rules of Poker.
+00:24:19,702 --> 00:24:24,110
+There is no way I'm going to implement in
+just one test, all the rules of Poker.
 
 312
 00:24:24,110 --> 00:24:25,245
-TS: OK. (laughter)
+TS: OK. [laughter]
 
 313
 00:24:25,245 --> 00:24:32,410
@@ -1416,12 +1471,12 @@ Which seems easy.
 
 315
 00:24:35,370 --> 00:24:41,405
-And I might regret this because maybe
-it's not the easiest choice I could have made.
+And I might regret this because maybe it's
+not the easiest choice I could have made.
 
 316
 00:24:41,400 --> 00:24:45,920
-(silence)
+[Silence]
 
 317
 00:24:45,931 --> 00:24:49,977
@@ -1433,18 +1488,18 @@ for now I'm not sure where I'm going.
 So, I have a Hand and...
 
 319
-00:24:54,500 --> 00:24:55,840
-(Camille ponders).
+00:24:54,500 --> 00:24:57,840
+[Camille ponders]
 
 320
 00:24:58,090 --> 00:25:03,885
 So this is where things get
-a bit annoying. What I want is ...
+a bit annoying. What I want is...
 
 321
 00:25:05,382 --> 00:25:13,280
 I have some kind of hand around.
-And what I want on that hand is ...
+And what I want on that hand is...
 
 322
 00:25:14,850 --> 00:25:17,240
@@ -1457,8 +1512,8 @@ not the right interface for the problem,
 
 324
 00:25:20,580 --> 00:25:29,851
-if I have to use it in such a way,
-but if I have say, 5 of Hearts, 5 of Diamonds.
+if I have to use it in such a way, but if
+I have say, 5 of Hearts, 5 of Diamonds.
 
 325
 00:25:30,140 --> 00:25:35,200
@@ -1471,7 +1526,7 @@ Pair. And see where it takes us.
 
 327
 00:25:38,590 --> 00:25:39,931
-(Camille ponders).
+[Camille ponders]
 
 328
 00:25:46,811 --> 00:25:52,980
@@ -1480,11 +1535,13 @@ and by the way that Pair is a Pair of 5s".
 
 329
 00:25:53,620 --> 00:25:57,405
-For now let's start with 'you have a Pair' in there.
+For now let's start with
+'you have a Pair' in there.
 
 330
 00:25:57,417 --> 00:26:00,605
-TS: As you said, that might be enough information.
+TS: As you said,
+that might be enough information.
 
 331
 00:26:00,620 --> 00:26:04,354
@@ -1502,8 +1559,8 @@ know is do I have a better hand?
 
 334
 00:26:09,200 --> 00:26:14,914
-and then if your two hands are not
-the same rank, then you try calculating it.
+and then if your two hands are not the
+same rank, then you try calculating it.
 
 335
 00:26:15,260 --> 00:26:20,594
@@ -1512,7 +1569,8 @@ easier to calculate what the highest card is
 
 336
 00:26:20,605 --> 00:26:22,754
-at the time I'm also establishing the rank.
+at the time I'm also establishing
+the rank.
 
 337
 00:26:23,060 --> 00:26:29,165
@@ -1521,8 +1579,8 @@ to just return the type of hand.
 
 338
 00:26:29,170 --> 00:26:35,382
-But in future, I also want it to say, this is the
-type of hand and this is the highest card that counts.
+But later I'll want it to say, this is the
+type of hand and this is the highest card.
 
 339
 00:26:35,530 --> 00:26:38,982
@@ -1530,37 +1588,40 @@ Just in case there's a tie. TS: Alright.
 
 340
 00:26:40,910 --> 00:26:45,737
-CB: Let's assume that's my hand and I want hand.rank.
+CB: Let's assume that's my hand
+and I want hand.rank.
 
 341
 00:26:47,130 --> 00:26:53,131
-So 'expect' hand.rank  to equal, and then...
+So 'expect' hand.rank  to equal,
+and then...
 
 342
-00:26:57,910 --> 00:27:03,920
+00:26:57,910 --> 00:27:08,920
 It turns information about
 the winning potential of the hand.
 
 343
-00:27:09,200 --> 00:27:11,142
-This is a terrible description !
+00:27:09,200 --> 00:27:11,140
+This is a terrible description!
 
 344
 00:27:11,140 --> 00:27:14,022
-(silence)
+[Silence]
 
 345
 00:27:14,820 --> 00:27:17,782
-I'm just going to let it go, because in a minute,
+I'm just going to let it go,
+because in a minute
 
 346
-00:27:17,800 --> 00:27:21,542
+00:27:17,800 --> 00:27:21,540
 I will probably change my
 mind about what this should look like.
 
 347
-00:27:21,540 --> 00:27:22,948
-(Camille ponders).
+00:27:21,540 --> 00:27:25,948
+[Camille ponders]
 
 348
 00:27:26,050 --> 00:27:30,011
@@ -1576,13 +1637,13 @@ This is failing quite nicely because
 I haven't done all my requiring correctly.
 
 351
-00:27:42,030 --> 00:27:43,382
-(Camille ponders).
+00:27:42,030 --> 00:27:46,382
+[Camille ponders]
 
 352
 00:27:47,040 --> 00:27:50,590
 I'm doing silly thing with
-silly shortcuts here (laughter).
+silly shortcuts here [laughter].
 
 353
 00:27:51,800 --> 00:27:54,600
@@ -1610,8 +1671,8 @@ that handles things like that.
 
 358
 00:28:16,810 --> 00:28:28,217
-And my hand.new can take a
-HandParser as one of it's attributes of the method.
+And my hand.new can take a HandParser as
+one of it's attributes of the method.
 
 359
 00:28:28,770 --> 00:28:32,930
@@ -1620,7 +1681,8 @@ the logic of if it's H it's Hearts,
 
 360
 00:28:32,970 --> 00:28:36,011
-and if it's D it's Diamonds, just goes somewhere else.
+and if it's D it's Diamonds,
+just goes somewhere else.
 
 361
 00:28:36,020 --> 00:28:38,330
@@ -1633,11 +1695,13 @@ the middle of a 'thing' #TODO...
 
 363
 00:28:48,400 --> 00:28:52,810
-This is not a nice interface, not what I wanted to do.
+This is not a nice interface,
+not what I wanted to do.
 
 364
 00:28:52,845 --> 00:28:55,450
-TS: So your queuing up a bit of re-factoring to do ?
+TS: So your queuing up a bit of
+re-factoring to do?
 
 365
 00:28:56,710 --> 00:29:00,450
@@ -1654,11 +1718,12 @@ So let's just have a quick...
 
 368
 00:29:07,010 --> 00:29:16,937
-(silence)
+[Silence]
 
 369
 00:29:16,940 --> 00:29:22,217
-OK, so that's parsing, and that's failing. Cool.
+OK, so that's parsing,
+and that's failing. Cool.
 
 370
 00:29:22,217 --> 00:29:27,810
@@ -1723,8 +1788,8 @@ would have something along the lines of...
 
 383
 00:30:31,180 --> 00:30:38,937
-I'm going to do that as a hash but I
-would expect my result to look a bit like this.
+I'm going to do that as a hash but I would
+expect my result to look a bit like this.
 
 384
 00:30:38,970 --> 00:30:41,600
@@ -1747,11 +1812,12 @@ So that's about it.
 
 388
 00:31:02,020 --> 00:31:04,040
-I want to implement a thing that does that.
+I want to implement a thing
+that does that.
 
 389
 00:31:04,850 --> 00:31:06,780
-So what does this do ?
+So what does this do?
 
 390
 00:31:09,740 --> 00:31:14,262
@@ -1760,7 +1826,7 @@ but it's not a great word for it.
 
 391
 00:31:14,260 --> 00:31:22,068
-It's a ... who knows (laughter).
+It's a... who knows [laughter].
 
 392
 00:31:22,170 --> 00:31:25,300
@@ -1768,7 +1834,7 @@ I'm going to call it Pip counter and...
 
 393
 00:31:25,300 --> 00:31:29,611
-(silence)
+[Silence]
 
 394
 00:31:29,740 --> 00:31:36,240
@@ -1819,7 +1885,7 @@ So what does my pip_count do,
 
 404
 00:32:10,605 --> 00:32:12,422
-Hey, we can write a test !
+Hey, we can write a test!
 
 405
 00:32:14,170 --> 00:32:17,428
@@ -1858,7 +1924,8 @@ There we go...
 
 413
 00:32:52,170 --> 00:32:56,891
-That should fail quite loudly, let's run this test.
+That should fail quite loudly,
+let's run this test.
 
 414
 00:32:57,440 --> 00:32:58,800
@@ -1886,8 +1953,8 @@ I can just...
 Suddenly here I have an array of numbers,
 
 420
-00:33:15,950 --> 00:33:17,337
-(Camille ponders).
+00:33:15,950 --> 00:33:22,337
+[Camille ponders]
 
 421
 00:33:23,710 --> 00:33:31,314
@@ -1900,12 +1967,13 @@ There is a Ruby collect on Ruby array.
 
 423
 00:33:38,540 --> 00:33:44,434
-This is dash...
-It's a documentation tool that I like to use.
+This is dash... It's a documentation tool
+that I like to use.
 
 424
 00:33:45,050 --> 00:33:48,370
-TS: So you have all of the Ruby API documentation.
+TS: So you have all of the
+Ruby API documentation.
 
 425
 00:33:49,710 --> 00:33:55,680
@@ -1923,7 +1991,8 @@ and count the number of incidences of each 'thing'.
 
 428
 00:34:07,310 --> 00:34:15,860
-Which actually I could do in any number of ways.
+Which actually I could do
+in any number of ways.
 
 429
 00:34:16,450 --> 00:34:19,668
@@ -1956,7 +2025,8 @@ but that doesn't give you what you want.
 
 435
 00:34:41,850 --> 00:34:44,170
-CB: Does that give me an array of arrays then ?
+CB: Does that give me an
+array of arrays then?
 
 436
 00:34:44,170 --> 00:34:47,588
@@ -1982,7 +2052,8 @@ CB: I could map on that quite easily.
 
 441
 00:35:02,220 --> 00:35:05,960
-Let's do a group_by and see how that works.
+Let's do a group_by
+and see how that works.
 
 442
 00:35:10,845 --> 00:35:12,400
@@ -1990,7 +2061,7 @@ So group_by...
 
 443
 00:35:12,400 --> 00:35:13,725
-(Camille ponders).
+[Camille ponders]
 
 444
 00:35:18,830 --> 00:35:20,160
@@ -2006,7 +2077,7 @@ TS: It will be in Enumerable I expect.
 
 447
 00:35:24,290 --> 00:35:25,657
-(Camille ponders).
+[Camille ponders]
 
 448
 00:35:27,862 --> 00:35:29,942
@@ -2044,7 +2115,8 @@ That should be fine, I've got all my Pips.
 
 456
 00:35:58,990 --> 00:36:03,280
-What I'm wondering is, do I want just 52617181
+What I'm wondering is,
+do I want just 52617181
 
 457
 00:36:03,310 --> 00:36:09,565
@@ -2053,7 +2125,8 @@ possible things and then how many cards I have.
 
 458
 00:36:09,600 --> 00:36:12,020
-But I don't think it makes a lot of difference.
+But I don't think it makes
+a lot of difference.
 
 459
 00:36:13,340 --> 00:36:15,542
@@ -2061,11 +2134,12 @@ TS: It depends what you want.
 
 460
 00:36:16,994 --> 00:36:20,102
-CB: I want to use group_by, I was very excited by this.
+CB: I want to use group_by,
+I was very excited by this.
 
 461
 00:36:20,674 --> 00:36:24,251
-So ... here we go...
+So... here we go...
 
 462
 00:36:24,680 --> 00:36:27,060
@@ -2073,7 +2147,8 @@ OK, yes fair enough.
 
 463
 00:36:27,820 --> 00:36:32,040
-TS: That's not quite what you said, but it's close.
+TS: That's not quite what you said,
+but it's close.
 
 464
 00:36:32,170 --> 00:36:36,388
@@ -2082,11 +2157,13 @@ for the values, instead of being how many
 
 465
 00:36:36,420 --> 00:36:39,211
-cards there were it would be an array of those cards.
+cards there were it would be
+an array of those cards.
 
 466
 00:36:39,230 --> 00:36:45,657
-CB: I'm just wondering... inaudible
+CB: I'm just wondering...
+I basically need group_by...
 
 467
 00:36:45,714 --> 00:36:51,017
@@ -2099,7 +2176,8 @@ it might be the default for that.
 
 469
 00:36:54,514 --> 00:36:58,080
-Let's run the tests and see what that returns.
+Let's run the tests and
+see what that returns.
 
 470
 00:36:59,340 --> 00:37:02,190
@@ -2115,16 +2193,17 @@ This is my grouped_cards,
 and then I can say grouped_cards
 
 473
-00:37:15,000 --> 00:37:19,165
-and then for each of my things, I can say...
+00:37:15,000 --> 00:37:19,160
+and then for each of my things,
+I can say...
 
 474
-00:37:19,160 --> 00:37:23,177
-(typing)
+00:37:19,160 --> 00:37:24,177
+[typing]
 
 475
 00:37:25,170 --> 00:37:26,822
-TS: Ah, OK,
+TS: Ah! OK,
 
 476
 00:37:27,220 --> 00:37:31,782
@@ -2137,8 +2216,8 @@ CB: Yes so let's see how that works.
 
 478
 00:37:34,720 --> 00:37:42,422
-It's not very elegant but it should
-make the test pass... so that's close enough.
+It's not very elegant but it should make
+the test pass... so that's close enough.
 
 479
 00:37:43,462 --> 00:37:46,594
@@ -2188,11 +2267,12 @@ I'm not quite sure about line 10 now.
 
 489
 00:38:42,510 --> 00:38:45,257
-So I have all the values, I need to find...
+So I have all the values,
+I need to find...
 
 490
 00:38:45,250 --> 00:38:46,422
-(Camille types).
+[Camille types]
 
 491
 00:38:53,110 --> 00:38:55,520
@@ -2200,7 +2280,7 @@ I think this is where tests help me.
 
 492
 00:38:55,554 --> 00:38:58,280
-TS: Yes (laughter).
+TS: Yes [laughter].
 
 493
 00:39:00,200 --> 00:39:05,954
@@ -2222,7 +2302,8 @@ and for the sake of completeness
 
 497
 00:39:17,680 --> 00:39:26,148
-I also want to start using better names now.
+I also want to start using
+better names now.
 
 498
 00:39:29,010 --> 00:39:31,782
@@ -2239,8 +2320,8 @@ which I will call 'highest', as a type.
 
 501
 00:39:42,850 --> 00:39:48,434
-So if I have a highest hand,
-I essentially want it to be pretty much this,
+So if I have a highest hand, I essentially
+want it to be pretty much this,
 
 502
 00:39:48,740 --> 00:39:55,257
@@ -2249,7 +2330,8 @@ there, which as you see actually is a straight.
 
 503
 00:39:55,420 --> 00:39:57,794
-This shouldn't be ranking as highest, but ...
+This shouldn't be ranking as highest,
+but...
 
 504
 00:39:57,810 --> 00:39:59,500
@@ -2288,8 +2370,8 @@ and then suddenly I have 'one pair',
 
 512
 00:40:31,782 --> 00:40:38,537
-'one thing with a pair' and
-'another with nothing' and it does rankings.
+'one thing with a pair' and 'another with
+nothing' and it does rankings.
 
 513
 00:40:38,740 --> 00:40:42,857
@@ -2317,7 +2399,8 @@ a kind and make sure the right thing comes out,
 
 518
 00:41:05,600 --> 00:41:12,628
-and by that I mean, if I create a 3 of a kind,
+and by that I mean,
+if I create a 3 of a kind,
 
 519
 00:41:13,291 --> 00:41:15,805
@@ -2325,7 +2408,8 @@ let's call it a three_of_a_kind_hand.
 
 520
 00:41:19,220 --> 00:41:23,170
-So if we have a three_of_a_kind_hand, it's going to be...
+So if we have a three_of_a_kind_hand, it's
+going to be...
 
 521
 00:41:25,770 --> 00:41:29,840
@@ -2339,11 +2423,12 @@ going to return a Pair, I presume.
 523
 00:41:34,970 --> 00:41:40,228
 but actually we want it to
-return 3 of a kind, so this, should be...
+return 3 of a kind, so this should be...
 
 524
 00:41:42,594 --> 00:41:44,925
-If I have a rank there should be a type three.
+If I have a rank there should be
+a type three.
 
 525
 00:41:45,000 --> 00:41:48,011
@@ -2359,12 +2444,13 @@ and not like this either.
 
 528
 00:41:52,800 --> 00:41:56,040
-I think I'm doing something wrong... there we go.
+I think I'm doing something wrong...
+There we go.
 
 529
 00:41:56,310 --> 00:42:03,314
 I do have a failure because it is assuming
-that I have type :highest and not type :three.
+I have type :highest and not type :three.
 
 530
 00:42:03,510 --> 00:42:08,057
@@ -2388,7 +2474,8 @@ but, let's get to that when we get to that.
 
 534
 00:42:24,890 --> 00:42:27,600
-I'm starting to write some pretty terrible code now.
+I'm starting to write some
+pretty terrible code now.
 
 535
 00:42:29,210 --> 00:42:32,331
@@ -2396,7 +2483,8 @@ Shameless green is...
 
 536
 00:42:34,480 --> 00:42:39,290
-so if I have 3 then it becomes :three_of_a_kind
+so if I have 3 then
+it becomes :three_of_a_kind
 
 537
 00:42:40,830 --> 00:42:51,817
@@ -2409,7 +2497,8 @@ But that is pretty bad.
 
 539
 00:42:58,800 --> 00:43:03,710
-I'm just going to check that my tests do pass nicely.
+I'm just going to check that
+my tests do pass nicely.
 
 540
 00:43:03,940 --> 00:43:09,851
@@ -2427,11 +2516,13 @@ that we haven't covered for the future
 
 543
 00:43:19,950 --> 00:43:21,794
-where we're going to be adding more things.
+where we're going to be
+adding more things.
 
 544
 00:43:21,817 --> 00:43:25,260
-I want to make sure that I'm not breaking things.
+I want to make sure that
+I'm not breaking things.
 
 545
 00:43:29,000 --> 00:43:33,970
@@ -2449,8 +2540,8 @@ This is working out fine.
 
 548
 00:43:47,060 --> 00:43:55,074
-This however, looks pretty terrible.
-So there must be a smarter way of doing this.
+This however, looks pretty terrible. So
+there must be a smarter way of doing this.
 
 549
 00:43:56,680 --> 00:44:02,777
@@ -2499,7 +2590,8 @@ now is try implementing full house
 
 558
 00:44:45,805 --> 00:44:50,285
-which has 3 of a kind, 2 of a kind in the same hand.
+which has 3 of a kind,
+2 of a kind in the same hand.
 
 559
 00:44:50,370 --> 00:44:57,051
@@ -2541,7 +2633,8 @@ it at this point, then you will end up
 
 567
 00:45:23,028 --> 00:45:25,620
-with something that won't support full house.
+with something that won't
+support full house.
 
 568
 00:45:25,680 --> 00:45:26,660
@@ -2588,7 +2681,8 @@ and it has 5 of Hearts, 5 of Diamonds,
 
 577
 00:46:14,970 --> 00:46:18,790
-So we have inaudible 6s, and here we go.
+So we have three 5s and two 6s,
+and here we go.
 
 578
 00:46:19,080 --> 00:46:25,462
@@ -2601,26 +2695,27 @@ Which is not what we want.
 
 580
 00:46:30,925 --> 00:46:35,702
-So a couple of things to start
-with, the first thing is, OK, so ...
+So a couple of things to start with,
+the first thing is...
 
 581
 00:46:37,170 --> 00:46:38,860
-Right now with my code I'm saying
+Right now in my code I'm saying:
 
 582
 00:46:38,880 --> 00:46:43,170
-if there's 2 let's go there, if there's
-three let's go there, if there's four let's go there.
+If there's 2: let's go there. If there's
+3: go there. If there's 4: go there.
 
 583
 00:46:43,540 --> 00:46:46,110
-This feels counter intuitive because in Poker,
+This feels counter intuitive
+because in Poker,
 
 584
 00:46:46,110 --> 00:46:51,622
-what I want to check is do I
-have a royal flush, or a straight flush etc.
+what I want to check is do I have a royal
+flush, or a straight flush etc.
 
 585
 00:46:51,620 --> 00:46:57,302
@@ -2667,7 +2762,8 @@ me a 3 of a kind, as a full house.
 
 594
 00:47:41,931 --> 00:47:46,365
-Which is less wrong but still pretty wrong !
+Which is less wrong but
+still pretty wrong!
 
 595
 00:47:46,400 --> 00:47:53,794
@@ -2676,7 +2772,8 @@ into your code because you were explaining it...
 
 596
 00:47:53,870 --> 00:47:56,240
-then you were saying there is this implied thing.
+then you were saying there is
+this implied thing.
 
 597
 00:47:56,510 --> 00:48:03,097
@@ -2685,7 +2782,8 @@ there's this implication, well it's not a 4 of a kind
 
 598
 00:48:03,220 --> 00:48:06,274
-a Pair is not a 4 of a kind,nor a 3 of a kind,
+a Pair is not a 4 of a kind,
+nor a 3 of a kind,
 
 599
 00:48:06,297 --> 00:48:10,354
@@ -2699,8 +2797,8 @@ just working what by accident?
 
 601
 00:48:15,420 --> 00:48:21,691
-CB: It was working only in the case
-where a specific hand only has for example,
+CB: It was working only in the case where
+a specific hand only has for example,
 
 602
 00:48:21,720 --> 00:48:23,405
@@ -2743,7 +2841,8 @@ is 2, so I have a 3 and a 2 and therefore a full house.
 
 610
 00:48:59,650 --> 00:49:04,628
-Otherwise, the best thing I do have is 3 of a kind.
+Otherwise, the best thing I do have
+is 3 of a kind.
 
 611
 00:49:05,850 --> 00:49:11,640
@@ -2752,15 +2851,18 @@ pass, but it's beginning to look terrible
 
 612
 00:49:11,740 --> 00:49:15,600
-First let's check that I didn't get this one wrong.
+First let's check that I didn't
+get this one wrong.
 
 613
 00:49:15,714 --> 00:49:19,590
-So now that passes nicely and this looks awful !
+So now that passes nicely and
+this looks awful!
 
 614
 00:49:26,600 --> 00:49:30,440
-I believe there's a problem in how I'm testing those.
+I believe there's a problem in
+how I'm testing those.
 
 615
 00:49:32,920 --> 00:49:34,660
@@ -2811,7 +2913,7 @@ now where you have sufficient confidence
 625
 00:50:18,685 --> 00:50:21,710
 in your implementation
-so far to start refactoring it ?
+so far to start refactoring it?
 
 626
 00:50:21,710 --> 00:50:25,220
@@ -2821,7 +2923,7 @@ confidence to start thinking about it.
 627
 00:50:25,220 --> 00:50:29,382
 But I might hit a mental
-block in a few seconds (laughter).
+block in a few seconds [laughter].
 
 628
 00:50:29,382 --> 00:50:32,388
@@ -2839,7 +2941,8 @@ along the lines of straight and flush,
 
 631
 00:50:42,171 --> 00:50:45,371
-and we can assume that's already out of the way.
+and we can assume that's already
+out of the way.
 
 632
 00:50:45,370 --> 00:50:48,491
@@ -2848,7 +2951,8 @@ those and now we're counting the cards
 
 633
 00:50:48,491 --> 00:50:52,171
-we've already excluded a couple of those things.
+we've already excluded
+a couple of those things.
 
 634
 00:50:54,680 --> 00:50:56,430
@@ -2870,11 +2974,13 @@ that I am creating as I go along,
 
 638
 00:51:11,570 --> 00:51:13,737
-this is a list of all the things you can do in Poker.
+this is a list of all the
+things you can do in Poker.
 
 639
 00:51:13,782 --> 00:51:18,605
-and this is how well they rank in the world of poker.
+and this is how well they rank
+in the world of poker.
 
 640
 00:51:18,710 --> 00:51:25,085
@@ -2892,7 +2998,8 @@ which is something along the lines of...
 
 643
 00:51:45,680 --> 00:51:49,700
-The most desirable 'thing' is a straight flush.
+The most desirable 'thing'
+is a straight flush.
 
 644
 00:51:50,680 --> 00:51:52,030
@@ -2933,11 +3040,13 @@ having some sort of scoring system.
 
 652
 00:52:24,110 --> 00:52:26,940
-What was your motivation for wanting to score them?
+What was your motivation for
+wanting to score them?
 
 653
 00:52:30,170 --> 00:52:33,680
-CB: I'm motivated to have some defined order
+CB: I'm motivated to have
+some defined order
 
 654
 00:52:33,680 --> 00:52:39,200
@@ -2981,7 +3090,7 @@ I'm going to quickly go through those...
 
 663
 00:53:27,320 --> 00:53:32,594
-(silence)
+[Silence]
 
 664
 00:53:32,605 --> 00:53:33,942
@@ -3018,7 +3127,7 @@ is still include(4) and in much the same way
 671
 00:54:03,337 --> 00:54:10,034
 let's assume I have has_three and has_two
-and that's going to be pretty much what you think it is.
+and that's going to be what you think.
 
 672
 00:54:10,340 --> 00:54:13,337
@@ -3060,7 +3169,8 @@ of the types of things I can do in Poker.
 
 680
 00:54:44,050 --> 00:54:49,714
-and I have a combination of methods that can tell me exactly why that would be.
+and I have a combination of methods that
+can tell me exactly why that would be.
 
 681
 00:54:50,140 --> 00:54:52,080
@@ -3068,7 +3178,8 @@ So the easy way of doing it would be:
 
 682
 00:54:54,330 --> 00:54:58,377
-If has_four then that. This is still verbose.
+If has_four then that.
+This is still verbose.
 
 683
 00:54:59,390 --> 00:55:02,857
@@ -3094,15 +3205,17 @@ a kind, elsif has_pair, then Pair.
 
 688
 00:55:21,680 --> 00:55:24,274
-I'm going to have to implement full house quickly.
+I'm going to have to implement
+full house quickly.
 
 689
 00:55:27,020 --> 00:55:31,760
-Missing a def here. Here we go, it's has_three and...
+Missing a def here.
+Here we go, it's has_three and...
 
 690
 00:55:33,680 --> 00:55:35,710
-Maybe not multiply these (laughter).
+Maybe not multiply these [laughter].
 
 691
 00:55:37,050 --> 00:55:40,457
@@ -3114,12 +3227,14 @@ actually, if you multiply two methods.
 It complains loudly but I don't know how.
 
 693
-00:55:43,000 --> 00:55:46,060
+00:55:43,000 --> 00:55:47,900
 This feels more readable.
+TS: Does it work?
 
 694
 00:55:48,050 --> 00:55:52,570
-That's kind of what I would like to check.
+CB: That's what I would like to check!
+[Laughter]
 
 695
 00:55:52,571 --> 00:55:54,490
@@ -3130,12 +3245,13 @@ No it absolutely doesn't.
 That's because question marks are nice
 
 697
-00:55:59,960 --> 00:56:03,497
-(Camille ponders).
+00:55:59,960 --> 00:56:03,990
+[Camille ponders]
 
 698
 00:56:04,091 --> 00:56:07,020
-It's maybe not the day to invent new methods in Ruby.
+It's maybe not the day to invent
+new methods in Ruby.
 
 699
 00:56:07,020 --> 00:56:17,931
@@ -3152,7 +3268,8 @@ Go...
 
 702
 00:56:24,170 --> 00:56:29,005
-And now we're back in action, this is more readable.
+And now we're back in action,
+this is more readable.
 
 703
 00:56:29,050 --> 00:56:30,680
@@ -3165,7 +3282,8 @@ but let's wait until I have a couple more hands
 
 705
 00:56:34,640 --> 00:56:36,845
-and I can drive out something a bit better.
+and I can drive out something
+a bit better.
 
 706
 00:56:36,845 --> 00:56:40,491
@@ -3183,12 +3301,12 @@ CB: So, what are our next hands?
 709
 00:56:45,620 --> 00:56:48,510
 Do you have a favorite
-hand that you want to implement next ?
+hand that you want to implement next?
 
 710
 00:56:48,510 --> 00:56:51,817
 TS: Well I don't want to prejudice
-you. What's your favorite hand ?
+you. What's your favorite hand?
 
 711
 00:56:51,850 --> 00:56:52,880
@@ -3218,7 +3336,8 @@ drive out the changes quickly.
 
 717
 00:57:09,280 --> 00:57:12,010
-But yes you're right, may be a bit optimistic.
+But yes you're right,
+may be a bit optimistic.
 
 718
 00:57:14,685 --> 00:57:18,420
@@ -3227,7 +3346,8 @@ house is a has_two and has_three situation.
 
 719
 00:57:18,422 --> 00:57:21,740
-a straight flush is a straight and is a flush.
+a straight flush is a straight
+and is a flush.
 
 720
 00:57:21,748 --> 00:57:24,777
@@ -3269,16 +3389,18 @@ look like if we had to do doubles for this.
 So flush, let's go for all Hearts.
 
 729
-00:58:02,170 --> 00:58:03,314
-(Camille types).
+00:58:02,170 --> 00:58:05,314
+[Camille types]
 
 730
 00:58:06,880 --> 00:58:12,540
-I'm going to give myself a very disappointing hand.
+I'm going to give myself
+a very disappointing hand.
 
 731
 00:58:12,910 --> 00:58:16,980
-If you had that hand in Poker, you would say WHY !!!
+If you had that hand in Poker,
+you would say WHY!
 
 732
 00:58:18,850 --> 00:58:23,417
@@ -3287,7 +3409,7 @@ I'm going to check that it's definitely failing.
 
 733
 00:58:24,020 --> 00:58:25,400
-TS: What does it think it is ?
+TS: What does it think it is?
 
 734
 00:58:27,480 --> 00:58:30,400
@@ -3332,7 +3454,7 @@ and it takes something a bit smarter.
 743
 00:59:02,940 --> 00:59:07,314
 TS: The error that's coming out there is
-that because you did the fetch on the hash ?
+that because you did the fetch on the hash?
 
 744
 00:59:07,310 --> 00:59:11,062
@@ -3367,8 +3489,8 @@ So how do I get the last char out
 of a string? I can do something along the lines of:
 
 751
-00:59:39,400 --> 00:59:40,868
-(Camille thinking).
+00:59:39,400 --> 00:59:43,868
+[Camille ponders]
 
 752
 00:59:44,020 --> 00:59:45,460
@@ -3376,7 +3498,8 @@ Oh! I don't even know.
 
 753
 00:59:45,510 --> 00:59:49,097
-Now how I would do that, (and I know that's incorrect),
+Now how I would do that,
+(and I know that's incorrect),
 
 754
 00:59:53,360 --> 00:59:55,450
@@ -3387,8 +3510,8 @@ would be something along those lines.
 There must be a better way though.
 
 756
-00:59:58,320 --> 00:59:59,508
-(Camille types).
+00:59:58,320 --> 01:00:01,910
+[Camille types]
 
 757
 01:00:02,910 --> 01:00:08,137
@@ -3405,7 +3528,8 @@ Here, I want to go up to cards.
 
 760
 01:00:15,230 --> 01:00:17,710
-String length minus one, take that as a string.
+String length minus one,
+take that as a string.
 
 761
 01:00:18,740 --> 01:00:23,325
@@ -3418,8 +3542,8 @@ Wrong number of arguments,
 what have we done now?
 
 763
-01:00:27,710 --> 01:00:32,228
-(silence)
+01:00:27,710 --> 01:00:34,228
+[Silence]
 
 764
 01:00:35,000 --> 01:00:37,554
@@ -3445,8 +3569,8 @@ So hand parser on
 line 20 calling length on...
 
 769
-01:01:01,000 --> 01:01:02,354
-(Camille ponders).
+01:01:01,000 --> 01:01:05,354
+[Camille ponders]
 
 770
 01:01:06,220 --> 01:01:08,380
@@ -3476,11 +3600,12 @@ So last number of...
 
 776
 01:01:36,310 --> 01:01:41,028
-This is terrible, I should just do it with minus ones.
+This is terrible,
+I should just do it with minus ones.
 
 777
 01:01:41,080 --> 01:01:42,970
-TS: How does the minus one thing work ?
+TS: How does the minus one thing work?
 
 778
 01:01:42,970 --> 01:01:46,840
@@ -3494,17 +3619,17 @@ array, but I might be wrong.
 
 780
 01:01:50,720 --> 01:02:00,800
-So what I will do is... it's the end of the
-card number index, that's where I want to be.
+So the end_of_the_card_number_index
+is where I want to be.
 
 781
 01:02:01,360 --> 01:02:06,902
-This should be something along those lines, and
-here I want to go up to the end of card number index
+And here I want to go up to the
+end_of_card_number_index
 
 782
-01:02:09,017 --> 01:02:12,468
-(silence)
+01:02:08,017 --> 01:02:12,468
+[Silence]
 
 783
 01:02:12,514 --> 01:02:17,108
@@ -3529,23 +3654,25 @@ I reckon I've got something else wrong.
 
 788
 01:02:30,891 --> 01:02:32,388
-TS: That's not very optimistic.
+TS: [Laughter] That's not very optimistic.
 
 789
-01:02:32,420 --> 01:02:34,068
+01:02:32,420 --> 01:02:34,060
 CB: We have key not found.
 
 790
-01:02:34,060 --> 01:02:35,440
-(Camille ponders).
+01:02:34,060 --> 01:02:36,440
+[Camille ponders]
 
 791
 01:02:37,880 --> 01:02:41,360
-Fetch is failing again. That's relatively good news.
+Fetch is failing again.
+That's relatively good news.
 
 792
 01:02:42,050 --> 01:02:46,914
-So my card string of this is not working out.
+So my card string of this
+is not working out.
 
 793
 01:02:46,970 --> 01:02:58,480
@@ -3554,7 +3681,7 @@ number plus one is not quite what I want it to be.
 
 794
 01:02:59,480 --> 01:03:01,737
-Why is old code popping up ?
+Why is old code popping up?
 
 795
 01:03:04,430 --> 01:03:08,140
@@ -3570,12 +3697,13 @@ Let's get back to our tests.
 It's lucky that I spotted that when I did.
 
 798
-01:03:15,040 --> 01:03:17,954
-(silence)
+01:03:15,040 --> 01:03:18,954
+[Silence]
 
 799
 01:03:19,770 --> 01:03:23,400
-This is the failure which led us to another failure.
+This is the failure which led us
+to another failure.
 
 800
 01:03:23,850 --> 01:03:25,400
@@ -3583,7 +3711,7 @@ But this is good.
 
 801
 01:03:27,080 --> 01:03:29,000
-Now, where is our flush ?
+Now, where is our flush?
 
 802
 01:03:29,490 --> 01:03:35,480
@@ -3596,7 +3724,8 @@ So elsif flush, type flush.
 
 804
 01:03:43,510 --> 01:03:46,260
-Where does flush belong on this sort of thing?
+Where does flush belong on
+this sort of thing?
 
 805
 01:03:47,020 --> 01:03:52,925
@@ -3618,11 +3747,13 @@ that compares two hands to find out which one is better.
 
 809
 01:04:06,914 --> 01:04:09,577
-as long as they are correctly classified that's OK.
+as long as they are correctly classified
+that's OK.
 
 810
 01:04:09,577 --> 01:04:15,211
-CB: Yes, so let's implement a very quick flush.
+CB: Yes, so let's implement
+a very quick flush.
 
 811
 01:04:18,217 --> 01:04:23,954
@@ -3655,7 +3786,8 @@ flag which means I've copy/pasted this.
 
 817
 01:04:51,620 --> 01:04:54,940
-Maybe there's a better abstraction to use here.
+Maybe there's a better abstraction
+to use here.
 
 818
 01:04:55,250 --> 01:04:57,394
@@ -3673,7 +3805,8 @@ to reckon that it's all going to be fine.
 
 821
 01:05:11,600 --> 01:05:17,691
-So in this hand I have my Pair hand which I am using.
+So in this hand I have my Pair hand
+which I am using.
 
 822
 01:05:17,760 --> 01:05:21,760
@@ -3712,8 +3845,8 @@ TS: OK.
 
 830
 01:05:56,970 --> 01:06:02,948
-CB: And now it seems to be working and
-we're back on our problem, which is permitting flush.
+CB: Now it seems to be working and we're
+back to our problem: permitting flush.
 
 831
 01:06:03,000 --> 01:06:06,502
@@ -3726,11 +3859,12 @@ suddenly my life is quite a lot easier.
 
 833
 01:06:12,970 --> 01:06:20,914
-Because, if I can type... (laughter).
+Because...
+If I can type! [laughter]
 
 834
 01:06:20,937 --> 01:06:24,948
-I can implement this... let's see ...
+I can implement this... let's see...
 
 835
 01:06:25,005 --> 01:06:26,000
@@ -3738,7 +3872,7 @@ Now I have a flush.
 
 836
 01:06:26,000 --> 01:06:27,154
-(Camille types).
+[Camille types]
 
 837
 01:06:33,828 --> 01:06:35,970
@@ -3760,11 +3894,13 @@ because it's not a straight flush.
 
 841
 01:06:54,650 --> 01:06:57,140
-Let's check if this is failing nicely. Yes.
+Let's check if this is failing nicely.
+Yes.
 
 842
 01:06:57,840 --> 01:07:02,308
-And let's put our straight somewhere in there.
+And let's put our straight
+somewhere in there.
 
 843
 01:07:08,605 --> 01:07:09,890
@@ -3781,7 +3917,8 @@ Let's have a look and see if those...
 
 846
 01:07:19,680 --> 01:07:22,410
-What I care about is the straight and not the suits.
+What I care about is the straight
+and not the suits.
 
 847
 01:07:22,540 --> 01:07:28,342
@@ -3807,7 +3944,8 @@ probably want to do is extract out
 
 852
 01:07:37,600 --> 01:07:40,937
-of the cards array just the array of values.
+of the cards array just the
+array of values.
 
 853
 01:07:40,940 --> 01:07:42,811
@@ -3815,7 +3953,7 @@ Because this is what I care about.
 
 854
 01:07:46,000 --> 01:07:47,790
-Let's see, where are our cards ?
+Let's see, where are our cards?
 
 855
 01:07:48,650 --> 01:07:50,120
@@ -3838,7 +3976,8 @@ quickly... And we have sorted card values
 
 859
 01:08:17,000 --> 01:08:19,570
-I don't know why I'm doing it in a destructive way.
+I don't know why I'm doing it
+in a destructive way.
 
 860
 01:08:22,020 --> 01:08:25,850
@@ -3874,7 +4013,8 @@ TS: OK.
 
 867
 01:08:53,970 --> 01:08:57,062
-CB: Because Aces... no I don't want to go there.
+CB: Because Aces...
+No I don't want to go there.
 
 868
 01:08:57,080 --> 01:09:02,860
@@ -3921,7 +4061,8 @@ Let's assume Aces are just ones for now.
 
 877
 01:09:41,910 --> 01:09:46,708
-And then I'm going to make sure that I write a test
+And then I'm going to make sure that I
+write a test
 
 878
 01:09:46,720 --> 01:10:00,765
@@ -3930,7 +4071,8 @@ Ace", and it works with a straight with low ace.
 
 879
 01:10:01,000 --> 01:10:04,102
-TS: Which one of those is the special case ?
+TS: Which one of those is
+the special case?
 
 880
 01:10:04,170 --> 01:10:07,080
@@ -4064,7 +4206,8 @@ Let's start with a Jack, and that's an
 
 908
 01:12:53,200 --> 01:12:58,411
-and that's a King and that's 13, and the Ace is 14.
+and that's a King and that's 13,
+and the Ace is 14.
 
 909
 01:13:04,540 --> 01:13:07,810
@@ -4095,7 +4238,8 @@ of that string is one of those special cases,
 
 915
 01:13:35,394 --> 01:13:38,120
-otherwise you should just go with face value.
+otherwise you should just
+go with face value.
 
 916
 01:13:39,600 --> 01:13:46,137
@@ -4109,19 +4253,21 @@ beginning, before I specified suit.
 
 918
 01:13:56,220 --> 01:14:01,360
-This is my Pips string. And this is what it looks like.
+This is my Pips string.
+And this is what it looks like.
 
 919
 01:14:01,794 --> 01:14:03,782
 So what I'm going to do is...
 
 920
-01:14:05,200 --> 01:14:08,274
-I take Pips for heads and I fetch my Pips string.
+01:14:05,200 --> 01:14:08,270
+I take Pips for heads and
+I fetch my Pips string.
 
 921
 01:14:08,270 --> 01:14:13,040
-(silence)
+[Silence]
 
 922
 01:14:13,200 --> 01:14:19,828
@@ -4164,11 +4310,11 @@ me the pain of how do I handle Queens a bit later on.
 
 930
 01:14:59,080 --> 01:15:00,680
-TS: Are you worried about that ?
+TS: Are you worried about that?
 
 931
 01:15:00,680 --> 01:15:02,840
-CB: No. (laughter)
+CB: No. [laughter]
 
 932
 01:15:03,600 --> 01:15:06,840
@@ -4217,7 +4363,7 @@ to implement ordinary straights
 942
 01:15:46,525 --> 01:15:50,022
 or are you going straight for
-the one that has an Ace in it ?
+the one that has an Ace in it?
 
 943
 01:15:51,200 --> 01:15:54,914
@@ -4226,7 +4372,7 @@ CB: I'm going with an ordinary straight.
 944
 01:15:54,910 --> 01:16:01,714
 So my straight hand in here just
-has 56789, which is quite reasonable.
+has 5,6,7,8,9, which is quite reasonable.
 
 945
 01:16:02,220 --> 01:16:04,370
@@ -4243,11 +4389,13 @@ But now other tests are failing.
 
 948
 01:16:11,540 --> 01:16:17,820
-Inaudible.
+So I could do something like that.
+TS: Now you'll only have 1 failing test!
 
 949
-01:16:18,280 --> 01:16:22,500
-This is a more sensible place to be in.
+01:16:18,000 --> 01:16:22,500
+CB: Yes. This is a slightly
+more sensible place to be in.
 
 950
 01:16:22,820 --> 01:16:29,090
@@ -4270,7 +4418,7 @@ TS: I see.
 
 954
 01:16:41,020 --> 01:16:45,170
-CB: And if it's not then.... I'm not happy.
+CB: And if it's not then... I'm not happy.
 
 955
 01:16:45,310 --> 01:16:46,620
@@ -4324,11 +4472,13 @@ situation. Which is not where I want to be.
 
 966
 01:17:48,400 --> 01:17:52,160
-This is silly, I always have 5 cards, it's a hand
+This is silly, I always have 5 cards,
+it's a hand
 
 967
 01:17:52,200 --> 01:17:55,920
-So I'm going to put a magic number in there.
+So I'm going to put
+a magic number in there.
 
 968
 01:17:56,000 --> 01:17:56,525
@@ -4339,8 +4489,8 @@ I'm sorry.
 TS: No, no.
 
 970
-01:17:57,760 --> 01:17:58,880
-(Camille types).
+01:17:57,760 --> 01:18:01,125
+[Camille types]
 
 971
 01:18:02,125 --> 01:18:05,108
@@ -4349,7 +4499,8 @@ where going to production
 
 972
 01:18:05,108 --> 01:18:10,520
-you have a thing that defines what 5 is somewhere.
+you have a thing that defines
+what 5 is somewhere.
 
 973
 01:18:10,620 --> 01:18:12,290
@@ -4366,11 +4517,13 @@ and by the way do this 4 times.
 
 976
 01:18:33,720 --> 01:18:37,360
-I need to start with an assumption that's just wrong,
+I need to start with an assumption
+that's just wrong,
 
 977
 01:18:37,370 --> 01:18:42,125
-and then I have some kind of integer and then...
+and then I have some kind of
+integer and then...
 
 978
 01:18:42,200 --> 01:18:46,800
@@ -4416,8 +4569,8 @@ They are sorted, so actually
 So what I want is...
 
 988
-01:19:27,320 --> 01:19:28,720
-(Camille ponders).
+01:19:27,320 --> 01:19:33,720
+[Camille ponders]
 
 989
 01:19:34,710 --> 01:19:37,954
@@ -4442,11 +4595,12 @@ else because it's getting verbose.
 
 994
 01:19:58,354 --> 01:20:04,240
-What this chuck of code is doing there is saying...
+What this chunk of code
+is doing there is saying:
 
 995
 01:20:07,220 --> 01:20:10,220
-Difference between cards.
+difference_between_cards.
 
 996
 01:20:11,880 --> 01:20:15,140
@@ -4454,7 +4608,7 @@ And different Pips on a card.
 
 997
 01:20:16,160 --> 01:20:19,108
-And basically ...
+And basically...
 
 998
 01:20:23,290 --> 01:20:24,040
@@ -4487,7 +4641,8 @@ A slightly misguided abstraction.
 
 1005
 01:20:48,400 --> 01:20:53,725
-If my difference_between_pips is one, then I continue.
+If my difference_between_pips is one,
+then I continue.
 
 1006
 01:20:53,740 --> 01:20:56,270
@@ -4495,7 +4650,7 @@ Actually I don't like how I'm doing this.
 
 1007
 01:20:56,605 --> 01:21:01,980
-Sort of, while difference is always one.
+It's: while(difference_always_1)
 
 1008
 01:21:06,880 --> 01:21:12,468
@@ -4509,7 +4664,8 @@ that is not one between the cards,
 
 1010
 01:21:15,988 --> 01:21:18,845
-I exit out of the loop and get out of there.
+I exit out of the loop and
+get out of there.
 
 1011
 01:21:18,880 --> 01:21:22,274
@@ -4517,11 +4673,12 @@ So I start with true and while it's true
 
 1012
 01:21:22,290 --> 01:21:30,742
-And my index is below 4. Or sorted_card_values.count.
+And my index is below 4.
+Or sorted_card_values.count.
 
 1013
 01:21:30,765 --> 01:21:32,091
-(Camille ponders).
+[Camille ponders]
 
 1014
 01:21:41,234 --> 01:21:43,390
@@ -4529,7 +4686,8 @@ Magic number 4 that's fine.
 
 1015
 01:21:43,394 --> 01:21:46,370
-OK, so while difference_always_one we do that.
+OK, so while difference_always_one
+we do that.
 
 1016
 01:21:48,650 --> 01:21:52,422
@@ -4538,7 +4696,8 @@ that and difference_always_1 is...
 
 1017
 01:21:55,250 --> 01:21:58,845
-And the new difference_between_pips is one.
+And the new difference_between_pips
+is one.
 
 1018
 01:21:59,851 --> 01:22:01,714
@@ -4563,7 +4722,8 @@ And now what I want to do is....
 
 1023
 01:22:17,880 --> 01:22:20,891
-Maybe initialize that, that seems like a good idea.
+Maybe initialize that,
+that seems like a good idea.
 
 1024
 01:22:24,110 --> 01:22:28,742
@@ -4595,11 +4755,11 @@ No...
 
 1030
 01:22:55,820 --> 01:22:58,250
-And now the computer fails (laughter).
+And now the computer fails [laughter].
 
 1031
 01:22:58,510 --> 01:23:00,510
-TS: It looks like it's got stuck in a loop.
+TS: It looks like it's stuck in a loop.
 
 1032
 01:23:01,880 --> 01:23:03,970
@@ -4607,11 +4767,12 @@ CB: Maybe because I have an infinite loop.
 
 1033
 01:23:05,800 --> 01:23:08,880
-I think I haven't incremented the index... there we go.
+I think I haven't incremented the index...
+There we go.
 
 1034
 01:23:08,880 --> 01:23:09,520
-(silence)
+[Silence]
 
 1035
 01:23:15,250 --> 01:23:17,371
@@ -4665,7 +4826,8 @@ OK, so let's have a look.
 
 1047
 01:23:56,040 --> 01:23:58,660
-So I start an index here and as I go along.
+So I start an index here
+and as I go along.
 
 1048
 01:23:58,880 --> 01:24:02,150
@@ -4681,7 +4843,8 @@ I would do something naughty now...
 
 1051
 01:24:12,510 --> 01:24:16,502
-print the thing out so I know where I'm heading.
+print the thing out so
+I know where I'm heading.
 
 1052
 01:24:16,540 --> 01:24:19,740
@@ -4699,11 +4862,12 @@ between Pips is this minus this.
 
 1055
 01:24:30,194 --> 01:24:35,291
-This should be one difference_always_1, this is equals to one.
+This should be one difference_always_1,
+this is equals to one.
 
 1056
 01:24:35,290 --> 01:24:36,594
-(Camille ponders).
+[Camille ponders]
 
 1057
 01:24:39,250 --> 01:24:41,405
@@ -4711,11 +4875,12 @@ Yet, this returns as false.
 
 1058
 01:24:41,400 --> 01:24:42,742
-(Camille ponders).
+[Camille ponders]
 
 1059
 01:24:47,370 --> 01:24:53,222
-I'm going to run one test, just that one 5679.
+I'm going to run one test,
+just that one 5679.
 
 1060
 01:24:53,460 --> 01:24:58,754
@@ -4732,7 +4897,7 @@ CB: Yes, this is why I'm a bit confused.
 
 1063
 01:25:04,340 --> 01:25:06,280
-TS: Is it a different test that's failing ?
+TS: Is it a different test that's failing?
 
 1064
 01:25:06,280 --> 01:25:11,645
@@ -4753,11 +4918,13 @@ And where is my failure?
 
 1068
 01:25:22,880 --> 01:25:25,737
-Should be a highest and it got a straight... Ah!
+Should be a highest and it got
+a straight... Ah!
 
 1069
 01:25:26,850 --> 01:25:30,510
-Oh yes, one of my test cases is a straight.
+Oh yes, one of my test cases
+is a straight.
 
 1070
 01:25:31,650 --> 01:25:37,310
@@ -4841,12 +5008,13 @@ Now if I have an Ace in my hand,
 
 1088
 01:26:54,000 --> 01:26:58,480
-I want it to work out, is this
-a straight if it behaves like a 14 ?
+I want it to work out: is this a straight
+if it behaves like a 14?
 
 1089
-01:26:58,480 --> 01:27:01,725
-and is this a straight if it behaves like a one?
+01:26:58,480 --> 01:27:01,720
+and: is this a straight
+if it behaves like a 1?
 
 1090
 01:27:01,720 --> 01:27:04,617
@@ -4854,8 +5022,8 @@ So what I want to do is basically...
 
 1091
 01:27:05,350 --> 01:27:09,560
-If this fails, if I treat my Ace
-as a 14, then just do again with a one.
+If this fails when I treat my Ace
+as a 14, then just do again with a 1.
 
 1092
 01:27:12,342 --> 01:27:14,730
@@ -4872,7 +5040,7 @@ So, consecutive cards...
 
 1095
 01:27:23,880 --> 01:27:25,051
-(Camille types).
+[Camille types]
 
 1096
 01:27:36,370 --> 01:27:41,668
@@ -4890,18 +5058,18 @@ to move this to a helper somewhere.
 
 1099
 01:27:55,710 --> 01:28:01,051
-This is a utility type function...
+This is a utility type function
 which has no business being here.
 
 1100
 01:28:01,120 --> 01:28:04,251
 TS: It doesn't have to be
-an instance method? CB: Correct.
+an instance method?
 
 1101
-01:28:06,280 --> 01:28:11,268
-CB: It's got nothing to do with the hand.
-The concept of numbers being consecutive.
+01:28:04,280 --> 01:28:11,268
+CB: Correct. The concept of consecutive
+numbers has nothing to do with the hand.
 
 1102
 01:28:11,480 --> 01:28:13,620
@@ -4909,8 +5077,8 @@ The hand needs it in order to rank itself.
 
 1103
 01:28:13,620 --> 01:28:17,394
-But the actual
-implementation of it does not live here.
+But the actual implementation
+should not live here.
 
 1104
 01:28:17,400 --> 01:28:18,800
@@ -4947,7 +5115,7 @@ include the value 14, which is the Ace,
 1111
 01:28:53,725 --> 01:29:00,628
 I also want to change that array
-and do the same thing with the one.
+and do the same thing with the 1.
 
 1112
 01:29:01,110 --> 01:29:02,770
@@ -4985,11 +5153,13 @@ That is not the array documentation.
 
 1120
 01:29:50,080 --> 01:29:54,285
-I do this all the time. I have a relatively bad memory,
+I do this all the time.
+I have a relatively bad memory,
 
 1121
 01:29:54,280 --> 01:29:56,610
-when it comes to remembering all the things.
+when it comes to remembering
+all the things.
 
 1122
 01:29:56,880 --> 01:30:00,502
@@ -5004,11 +5174,12 @@ than three languages, it becomes a little difficult.
 1124
 01:30:08,388 --> 01:30:12,000
 TS: So you're going to delete
-all of the 14s from the array ?
+all of the 14s from the array?
 
 1125
 01:30:12,170 --> 01:30:16,340
-CB: Yes, and I need to know how many 14s I'm deleting,
+CB: Yes, and I need to know
+how many 14s I'm deleting,
 
 1126
 01:30:16,354 --> 01:30:19,291
@@ -5037,7 +5208,7 @@ Delete 14.
 1131
 01:30:45,005 --> 01:30:54,697
 According to the Ruby
-documentation this is deleted inaudible.
+documentation this is deleted_aces.
 
 1132
 01:30:56,340 --> 01:31:01,360
@@ -5054,7 +5225,7 @@ tell me how many, interesting.
 
 1135
 01:31:07,330 --> 01:31:08,628
-(Camille ponders).
+[Camille ponders]
 
 1136
 01:31:11,820 --> 01:31:15,440
@@ -5062,7 +5233,8 @@ I want to know how many 14s I have,
 
 1137
 01:31:16,600 --> 01:31:20,750
-So I want to count the number of things that match.
+So I want to count the number of
+things that match.
 
 1138
 01:31:25,840 --> 01:31:26,891
@@ -5074,7 +5246,7 @@ My implementation is this...
 
 1140
 01:31:34,400 --> 01:31:35,520
-(Camille types).
+[Camille types]
 
 1141
 01:31:38,650 --> 01:31:45,737
@@ -5102,7 +5274,8 @@ concatenating two sorted card values
 
 1146
 01:32:08,834 --> 01:32:15,794
-in an array of exactly the number of aces as ones.
+in an array of exactly the
+number of aces as ones.
 
 1147
 01:32:16,000 --> 01:32:21,965
@@ -5124,16 +5297,18 @@ blocks don't take round brackets.
 
 1151
 01:32:39,310 --> 01:32:43,394
-It's not working but it's not failing any more.
+It's not working but it's not
+failing any more.
 
 1152
 01:32:45,680 --> 01:32:50,354
 TS: Is it because your number of Aces
-is equal to one not greater than one ?
+is equal to one not greater than one?
 
 1153
 01:32:54,420 --> 01:32:58,811
-CB: Yes, and there is also the fact that...here...
+CB: Yes, and there is also
+the fact that here...
 
 1154
 01:33:00,650 --> 01:33:02,540
@@ -5162,11 +5337,13 @@ What I mean by that... and do that.
 
 1160
 01:33:36,540 --> 01:33:39,405
-Undefined method `add` for array... interesting.
+Undefined method `add` for array...
+interesting.
 
 1161
 01:33:39,417 --> 01:33:42,160
-TS: There are two failures, on both of those Ace tests.
+TS: There are two failures,
+on both of those Ace tests.
 
 1162
 01:33:42,220 --> 01:33:43,110
@@ -5174,7 +5351,8 @@ CB: Correct.
 
 1163
 01:33:44,050 --> 01:33:47,650
-So this is you can't add and I expect it's insert. Yes.
+So this is you can't add and I expect
+it's insert. Yes.
 
 1164
 01:33:53,702 --> 01:33:57,725
@@ -5195,15 +5373,17 @@ It's happening on consecutive cards.
 
 1168
 01:34:12,250 --> 01:34:16,537
-And it's happening on line eighty three... Which is here.
+And it's happening on line eighty three...
+Which is here.
 
 1169
 01:34:21,420 --> 01:34:23,897
-TS: What does the documentation for insert say?
+TS: What does the documentation
+for insert say?
 
 1170
 01:34:25,062 --> 01:34:26,674
-CB: It's not destructive is it ?
+CB: It's not destructive is it?
 
 1171
 01:34:28,280 --> 01:34:32,697
@@ -5221,7 +5401,8 @@ start because it doesn't really matter
 
 1174
 01:34:41,650 --> 01:34:47,520
-Or I could go for the lazy option (laughter).
+Or I could go for the lazy option
+[laughter]
 
 1175
 01:34:57,770 --> 01:34:58,800
@@ -5229,7 +5410,8 @@ TS: Has that fixed it?
 
 1176
 01:34:59,000 --> 01:35:02,434
-CB: No, so many things going wrong right now.
+CB: No, so many things going
+wrong right now.
 
 1177
 01:35:05,680 --> 01:35:15,714
@@ -5263,7 +5445,8 @@ I want to manipulate that.
 
 1184
 01:35:46,610 --> 01:35:49,140
-TS: So you're going to leave the original one alone?
+TS: So you're going to leave
+the original one alone?
 
 1185
 01:35:49,140 --> 01:35:51,020
@@ -5271,7 +5454,8 @@ CB: Correct. I don't want to touch that.
 
 1186
 01:35:51,020 --> 01:35:54,930
-And then in the case of straight I want to check
+And then in the case of straight
+I want to check
 
 1187
 01:35:55,280 --> 01:35:58,770
@@ -5293,19 +5477,23 @@ If the number of Aces is none,
 
 1191
 01:36:15,600 --> 01:36:19,851
-then it's the usual check "do I have consecutive cards"?
+then it's the usual check
+"do I have consecutive cards"?
 
 1192
 01:36:22,050 --> 01:36:24,800
-Now that's going to fail nicely in places, excellent.
+Now that's going to fail nicely
+in places, excellent.
 
 1193
 01:36:27,110 --> 01:36:30,102
-It still doesn't work with a straight with low ace.
+It still doesn't work with
+a straight with low ace.
 
 1194
 01:36:35,770 --> 01:36:38,510
-I want to check what my Aces as ones is like.
+I want to check what my
+Aces as ones is like.
 
 1195
 01:36:40,480 --> 01:36:44,010
@@ -5314,11 +5502,13 @@ understanding what's going on.
 
 1196
 01:36:44,830 --> 01:36:49,554
-So my Aces as ones looks like 123, aha! It's not sorted
+So my Aces as ones looks like 123, aha!
+It's not sorted
 
 1197
 01:36:49,570 --> 01:36:54,034
-I'm doing my sort here and I am doing my sort again.
+I'm doing my sort here and
+I am doing my sort again.
 
 1198
 01:36:55,142 --> 01:37:00,990
@@ -5336,7 +5526,8 @@ in any odd number called card values
 
 1201
 01:37:10,742 --> 01:37:16,045
-and inside here my job is just to sort them.
+and inside here my job is
+just to sort them.
 
 1202
 01:37:17,862 --> 01:37:18,628
@@ -5344,7 +5535,8 @@ TS: OK.
 
 1203
 01:37:18,650 --> 01:37:22,320
-And then go ahead with the rest of the code.
+And then go ahead with
+the rest of the code.
 
 1204
 01:37:24,060 --> 01:37:30,228
@@ -5368,7 +5560,8 @@ comparer, and now I've written a hand ranker,
 
 1208
 01:37:47,714 --> 01:37:52,270
-I'd like to try that out and see what happens
+I'd like to try that out and
+see what happens
 
 1209
 01:37:52,308 --> 01:37:54,960
@@ -5410,7 +5603,8 @@ I would like to have, is_better? than other hand.
 
 1217
 01:38:34,200 --> 01:38:36,217
-TS: And it's going to return true or false.
+TS: And it's going to return
+true or false.
 
 1218
 01:38:36,217 --> 01:38:38,148
@@ -5509,7 +5703,8 @@ If we have big poker ranks...
 
 1240
 01:40:34,200 --> 01:40:39,462
-and it's an array and ordered thing for now.
+and it's an array and
+ordered thing for now.
 
 1241
 01:40:40,280 --> 01:40:42,320
@@ -5532,8 +5727,8 @@ POKER_RANKS index of the other hand.
 
 1245
 01:41:05,820 --> 01:41:12,788
-And that would give me a
-straightforward answer for [inaudible].
+And that would give me a straightforward
+answer for hands that, you know...
 
 1246
 01:41:12,970 --> 01:41:15,740
@@ -5542,7 +5737,8 @@ index is here, I'm not really sure.
 
 1247
 01:41:18,740 --> 01:41:23,550
-This is me, this is my rank, and this is confusing.
+This is me, this is my rank,
+and this is confusing.
 
 1248
 01:41:26,340 --> 01:41:29,188
@@ -5555,7 +5751,8 @@ a high rank I want to be happier with it.
 
 1250
 01:41:35,250 --> 01:41:38,750
-TS: The the question will be is my index greater than?
+TS: The the question will be
+is my index greater than?
 
 1251
 01:41:38,750 --> 01:41:45,817
@@ -5564,11 +5761,12 @@ greater than. I'll get back to that in a second.
 
 1252
 01:41:47,940 --> 01:41:51,450
-But yes, index one doesn't exist obviously.
+But yes, index 1 doesn't exist obviously.
 
 1253
 01:41:52,220 --> 01:41:56,365
-Let's now assume if we have some method on the array,
+Let's now assume if we have
+some method on the array,
 
 1254
 01:41:56,400 --> 01:42:01,085
@@ -5595,7 +5793,8 @@ This is apparently nil.
 
 1259
 01:42:36,110 --> 01:42:38,850
-TS: Because it was not finding the rank in that array?
+TS: Because it was not finding
+the rank in that array?
 
 1260
 01:42:38,850 --> 01:42:39,450
@@ -5603,11 +5802,13 @@ CB: Correct.
 
 1261
 01:42:44,194 --> 01:42:48,445
-Do I not have... what am I comparing in my hand spec?
+Do I not have...
+what am I comparing in my hand spec?
 
 1262
 01:42:48,510 --> 01:42:52,590
-I am comparing four of a kind and full house.
+I am comparing four of a kind
+and full house.
 
 1263
 01:42:55,080 --> 01:43:02,320
@@ -5616,11 +5817,12 @@ other hands because I'm running out of time
 
 1264
 01:43:02,331 --> 01:43:05,588
-so I don't want to spend ages debugging this.
+so I don't want to spend ages
+debugging this.
 
 1265
 01:43:07,610 --> 01:43:10,937
-Oh of course it's a hash (laughter).
+Oh of course it's a hash [laughter].
 
 1266
 01:43:13,430 --> 01:43:18,811
@@ -5644,7 +5846,8 @@ There's a few hands I haven't implemented.
 
 1270
 01:43:34,940 --> 01:43:36,970
-And there's a bit of work left in terms of...
+And there's a bit of work left
+in terms of...
 
 1271
 01:43:37,497 --> 01:43:41,050
@@ -5663,7 +5866,8 @@ and checking for things in a certain order.
 
 1274
 01:43:56,740 --> 01:43:59,510
-The order that I'm defining in this POKER_RANKS array
+The order that I'm defining
+in this POKER_RANKS array
 
 1275
 01:43:59,565 --> 01:44:03,062
@@ -5672,15 +5876,18 @@ I want to be ranking those cards.
 
 1276
 01:44:03,200 --> 01:44:05,830
-So I should be doing something really clever here.
+So I should be doing something
+really clever here.
 
 1277
 01:44:06,342 --> 01:44:10,710
-The big piece of functionality that's missing is...
+The big piece of functionality
+that's missing is...
 
 1278
 01:44:11,588 --> 01:44:14,760
-If I have two straights, how do I know who has one?
+If I have two straights,
+how do I know who has one?
 
 1279
 01:44:14,850 --> 01:44:21,005
@@ -5704,7 +5911,8 @@ With the mix of Ace should be counted as
 
 1283
 01:44:42,411 --> 01:44:45,348
-And I would return that as the type of rank.
+And I would return that as
+the type of rank.
 
 1284
 01:44:45,370 --> 01:44:48,740
@@ -5727,11 +5935,13 @@ TS: Ok, great.
 
 1288
 01:45:02,620 --> 01:45:05,400
-Well I think that would be a good place to wrap it up.
+Well I think that would be
+a good place to wrap it up.
 
 1289
 01:45:05,740 --> 01:45:08,148
-Thank  you very much for showing us this today.
+Thank you very much for
+showing us this today.
 
 1290
 01:45:08,148 --> 01:45:11,560
