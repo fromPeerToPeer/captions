@@ -2197,20 +2197,16 @@ we already have that.
 00:50:17,120 --> 00:50:18,786
 Bit of a misnomer there I reckon.
 
-00:50:21,200 --> 00:50:28,106
+00:50:21,588 --> 00:50:28,100
 So now that we've got set
 imported maybe we can make this...
 
-00:50:28,146 --> 00:50:30,110
-So rather than having a list of text,
+00:50:28,320 --> 00:50:33,371
+So rather than having a list
+of text, let's go with a set text.
 
-00:50:30,893 --> 00:50:32,813
-let's go with a set text,
-
-00:50:33,613 --> 00:50:35,580
-and we'll just ask the compiler to tell us
-
-00:50:35,586 --> 00:50:38,720
+00:50:33,610 --> 00:50:38,891
+And we'll just ask the compiler to tell us
 everything we need to update, to change.
 
 00:50:40,746 --> 00:50:43,260
@@ -2229,18 +2225,19 @@ and turns it into a set.
 Next, rather than checking
 a list to see if an element's there,
 
-00:50:57,420 --> 00:51:03,080
-use S.member,
-which checks to see if an element
-
-00:51:03,093 --> 00:51:04,520
-is a member of a set.
+00:50:57,420 --> 00:51:04,468
+use S.member, which checks to see
+if an element is a member of a set.
 
 00:51:05,573 --> 00:51:07,600
 Likewise going to do the same here...
 
-00:51:17,640 --> 00:51:21,066
-That has put a hole back there.
+00:51:17,640 --> 00:51:22,194
+That has put a hole back there,
+we'll come back to that.
+
+00:51:22,205 --> 00:51:24,211
+[Ollie types]
 
 00:51:25,820 --> 00:51:31,960
 That should probably just return.
@@ -2249,9 +2246,8 @@ That should probably just return.
 like that...
 
 00:51:41,440 --> 00:51:47,106
-The filter is for lists but we
-have a set so
-we ask S.filter to filter a set.
+The filter is for lists but we have
+a set so we ask S.filter to filter a set.
 
 00:51:56,240 --> 00:51:58,306
 I'll check the type of that in there.
@@ -2261,7 +2257,7 @@ OK, I've some idea
 of where that error came up.
 
 00:52:10,800 --> 00:52:15,920
-Ah yes,  we can't map over a set like that.
+Ah yes, we can't map over a set like that.
 
 00:52:17,813 --> 00:52:23,813
 Do we have that... yes we do...
@@ -2270,12 +2266,9 @@ so we just change that to S.map
 00:52:24,866 --> 00:52:29,510
 and again to S.filter, S.map.
 
-00:52:29,866 --> 00:52:32,173
-Now this is not going
-to give us a list of text,
-
-00:52:32,186 --> 00:52:33,826
-it's going to give us a set of text.
+00:52:29,860 --> 00:52:33,828
+Now this is not going to give us a list of
+text, it's going to give us a set of text.
 
 00:52:39,880 --> 00:52:46,893
 SP: There are built in facilities
@@ -2289,30 +2282,23 @@ this sort of code
 where you change
 from one data type to another?
 
-00:52:53,400 --> 00:52:55,710
-There are some
-generalized forms of some of
+00:52:53,771 --> 00:52:57,474
+There are some generalized forms
+of some of these functions aren't there?
 
-00:52:55,710 --> 00:52:57,506
-these functions aren't there?
+00:52:57,540 --> 00:53:01,908
+OC: Right. We can't generalize map
+I don't think because this is a set.
 
-00:52:57,540 --> 00:53:00,706
-OC: Right. We can't
-generalize map I don't think
-
-00:53:00,706 --> 00:53:03,373
-because this is a set
-and sets have the constraint
-
-00:53:03,373 --> 00:53:05,906
-that the things inside
-the set must be order-able.
+00:53:01,908 --> 00:53:05,862
+and sets have the constraint that the
+things inside the set must be order-able.
 
 00:53:05,906 --> 00:53:06,200
 SP: Ok
 
 00:53:06,213 --> 00:53:08,480
-So we can't map between
+OC: So we can't map between
 our 3 types because
 
 00:53:08,493 --> 00:53:10,840
@@ -2333,11 +2319,9 @@ that we're working with sets here.
 00:53:22,933 --> 00:53:23,626
 SP: That's fine.
 
-00:53:23,710 --> 00:53:25,250
-OC: I don't think generalizing
-
-00:53:25,250 --> 00:53:27,170
-would give us much of a benefit here.
+00:53:23,710 --> 00:53:27,131
+OC: I don't think generalizing would
+give us much of a benefit here.
 
 00:53:27,170 --> 00:53:31,093
 SP: Why I was wondering
