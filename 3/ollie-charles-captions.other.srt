@@ -3017,7 +3017,8 @@ So were only ever
 looking at one level expansion.
 
 01:05:55,120 --> 01:05:57,325
-so if we take the original pairs and what we
+so if we take the
+original pairs and what we
 
 01:05:57,331 --> 01:06:02,450
 need to do is go again on the concatMap.
@@ -3043,7 +3044,8 @@ back to where we were.
 And as I take more, you can see we are
 
 01:06:26,780 --> 01:06:29,114
-starting to get bigger and bigger chains now.
+starting to get bigger
+and bigger chains now.
 
 01:06:29,110 --> 01:06:31,680
 SP: Right, and all of them ending on cat.
