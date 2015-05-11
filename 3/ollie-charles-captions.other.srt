@@ -2042,18 +2042,16 @@ feed this back in to our word puzzle.
 I think I'll leave this around for now
 and just comment that out.
 
-00:47:09,880 --> 00:47:12,986
-So we're going to start at
-word a and we need
+00:47:05,930 --> 00:47:06,868
+[Ollie types]
 
-00:47:12,986 --> 00:47:14,373
-to reach word b.
+00:47:09,880 --> 00:47:14,057
+So we're going to start at word a
+and we need to reach word b.
 
-00:47:15,200 --> 00:47:16,850
-So we'll start with a word chain
-
-00:47:18,680 --> 00:47:20,520
-which is just the word a
+00:47:15,200 --> 00:47:20,571
+So we'll start with a word
+chain which is just the word a.
 
 00:47:20,613 --> 00:47:21,933
 That's a chain of one word.
@@ -2072,8 +2070,11 @@ Well that one actually works so far,
 but it's certainly
 not going to be the solution.
 
-00:47:38,173 --> 00:47:40,333
+00:47:38,173 --> 00:47:40,320
 Now I should be able to...
+
+00:47:40,330 --> 00:47:45,302
+[Ollie types]
 
 00:47:47,880 --> 00:47:51,586
 So that's just a one
@@ -2101,22 +2102,16 @@ iterate to do that.
 SP: Or until you don't
 have any further expansions.
 
-00:48:16,213 --> 00:48:18,906
-OC: Ah! that's one
-thing we've not done so far
-
-00:48:19,413 --> 00:48:21,960
-is reducing this dictionary.
+00:48:16,210 --> 00:48:22,125
+OC: Ah! that's one thing we've not done so
+far is reducing this dictionary.
 
 00:48:26,493 --> 00:48:27,826
 Where would I put that in?
 
-00:48:27,820 --> 00:48:33,160
-so after one expansion,
-this is probably returning me
-
-00:48:33,170 --> 00:48:34,770
-a smaller dictionary as well.
+00:48:27,820 --> 00:48:35,200
+So after one expansion, this is probably
+returning me a smaller dictionary as well.
 
 00:48:36,020 --> 00:48:39,220
 When I expand a word chain
@@ -2129,25 +2124,19 @@ SP: That would be reasonable.
 OC: Let's see what we get with that...
 
 00:48:52,650 --> 00:48:55,226
-so word chain and the dictionary.
+So word chain and the dictionary.
 
-00:49:00,620 --> 00:49:04,760
-SP: The alternative is that
-you keep the dictionary the same
+00:49:00,777 --> 00:49:05,725
+SP: The alternative is that you
+keep the dictionary the same each time,
 
-00:49:04,760 --> 00:49:07,440
-each time, but you
-don't allow the addition
+00:49:05,725 --> 00:49:10,240
+but you don't allow the addition into
+the chain of a word that's already in it.
 
-00:49:07,453 --> 00:49:10,160
-into the chain of
-a word that's already in it.
-
-00:49:11,310 --> 00:49:14,426
-OC: Yes, but we're going to keep searching
-
-00:49:14,426 --> 00:49:15,760
-through a word chain every time,
+00:49:11,310 --> 00:49:15,760
+OC: Yes, but we're going to keep
+searching through a word chain every time.
 
 00:49:15,770 --> 00:49:17,946
 it feels like we just
@@ -2195,7 +2184,7 @@ when you import qualified.
 
 00:50:00,973 --> 00:50:03,946
 We need to depend on
-the containments library for that.
+the containers library for that.
 
 00:50:06,400 --> 00:50:08,946
 And to get that
