@@ -2594,12 +2594,9 @@ like the right tool to be using
 I think we're getting
 ourselves into a bit of a muddle here.
 
-00:58:26,382 --> 00:58:28,000
-And one of the big culprits
-
-00:58:28,011 --> 00:58:30,308
-is what we're doing
-in this expand function
+00:58:26,380 --> 00:58:30,240
+And one of the big culprits is what
+we're doing in this expand function.
 
 00:58:30,302 --> 00:58:32,171
 so I'm going to try and simplify that
@@ -2609,7 +2606,7 @@ and see if a nice
 solution comes out there.
 
 00:58:35,417 --> 00:58:36,891
-What I'm going to go with instead ..
+What I'm going to go with instead...
 
 00:58:38,160 --> 00:58:41,577
 expand's going to take a single
@@ -2628,57 +2625,45 @@ SP:OK
 00:58:48,540 --> 00:58:50,400
 OC: So whenever I make one expansion,
 
-00:58:50,400 --> 00:58:52,680
-I consider all of the neighbors around the
-
-00:58:52,890 --> 00:58:54,622
-first word of the word chain.
+00:58:50,400 --> 00:58:54,720
+I consider all of the neighbors
+around the first word of the word chain.
 
 00:58:54,760 --> 00:58:56,582
 And for each of those new word chains,
 
 00:58:56,582 --> 00:58:58,080
-I'll have the neighbor at the front,
+I'll have the neighbor at the front.
 
 00:58:58,080 --> 00:59:00,062
-and we will remove
+And we will remove
 that word from the dictionary,
 
 00:59:00,080 --> 00:59:02,354
 because we don't want
 to go back on ourselves.
 
-00:59:03,737 --> 00:59:05,540
-So I have a word chain with nothing in
-
-00:59:05,540 --> 00:59:07,714
-but there's nothing I can do.
+00:59:03,730 --> 00:59:07,737
+So I have a word chain with
+nothing in but there's nothing I can do.
 
 00:59:08,560 --> 00:59:10,457
 We have seen this one before,
 
-00:59:10,490 --> 00:59:12,417
-but otherwise if we have a chain.
-
-00:59:12,891 --> 00:59:15,028
+00:59:10,490 --> 00:59:15,154
+but otherwise if we have a chain,
 and it starts with the word w,
 
-00:59:15,171 --> 00:59:18,148
-we have the dictionary and then
+00:59:15,150 --> 00:59:24,777
+We have the dictionary and then
+we need to take the neighbors around w,
 
-00:59:18,280 --> 00:59:24,348
-we need to take the neighbors around w
-
-00:59:24,577 --> 00:59:25,520
-which will equal n.
-
-00:59:26,120 --> 00:59:28,034
+00:59:24,780 --> 00:59:28,000
+which will equal n...
 and put that on the front of the chain.
 
-00:59:28,030 --> 00:59:30,611
+00:59:28,030 --> 00:59:36,194
 So n is going to be the neighbors
-
-00:59:34,228 --> 00:59:36,371
 using the same dictionary around w.
 
 00:59:37,820 --> 00:59:41,045
@@ -2686,7 +2671,8 @@ But we also need to return
 this slightly smaller dictionary.
 
 00:59:43,740 --> 00:59:50,240
-Tuple that up with the same dictionary, whoops.
+Tuple that up with the same dictionary,
+whoops.
 
 00:59:52,485 --> 00:59:54,540
 But we'll delete n from the dictionary.
@@ -2698,17 +2684,18 @@ SP: Right.
 OC: Lets try that...
 
 00:59:59,902 --> 01:00:01,451
-get rid of our old definition.
+Get rid of our old definition.
 
 01:00:02,710 --> 01:00:05,794
 You can see this is very similar to
 what we had in expandOne.
 
 01:00:05,880 --> 01:00:08,114
-So breaking the problem into a smaller one.
+So breaking the problem
+into a smaller one.
 
 01:00:08,110 --> 01:00:13,234
-[Ollie types}
+[Ollie types]
 
 01:00:13,697 --> 01:00:15,194
 So ignore this.
@@ -2737,7 +2724,8 @@ I guess if we load the dictionary in
 then we should be able to use expand with...
 
 01:00:49,828 --> 01:00:52,811
-Let's just look at the one expansion of cat. 
+Let's just look at the one
+expansion of cat. 
 
 01:00:53,028 --> 01:00:54,810
 Oops... Oh!
@@ -2746,10 +2734,11 @@ Oops... Oh!
 So what we're doing here is
 
 01:00:55,880 --> 01:00:58,080
-we end up printing the out dictionary as well.
+we end up printing the
+out dictionary as well.
 
 01:00:58,085 --> 01:01:00,114
-SP: Yes, because it was in the (inaudible)
+SP: Yes, because it was in the Tuple.
 
 01:01:02,005 --> 01:01:03,222
 OC: Map first over that,
@@ -2760,20 +2749,21 @@ and we see just the one level expansion.
 01:01:08,771 --> 01:01:10,382
 SP: Fantastic.
 
-01:01:11,770 --> 01:01:15,565
-OC: So we're going to repeatedly apply this but we'll keep the small chains.
+01:01:10,850 --> 01:01:15,668
+OC: So we're going to repeatedly
+apply this, but keeping the small chains.
 
 01:01:15,731 --> 01:01:17,850
 Then we will have the
 bigger chains on the end.
 
 01:01:17,850 --> 01:01:22,365
-So that's basically giving us a
-flattening of a tree, of a breadth-first search.
+So that's basically giving us a flattening
+of a tree, of a breadth-first search.
 
 01:01:22,770 --> 01:01:28,148
 Which I think is going to be better than
-the depth first search that we saw earlier.
+the depth-first search we saw earlier.
 
 01:01:28,142 --> 01:01:28,650
 SP:  Yes.
