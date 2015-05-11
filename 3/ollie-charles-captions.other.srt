@@ -2777,8 +2777,8 @@ Go is going to take a list
 of word chains and dictionaries.
 
 01:01:46,810 --> 01:01:51,462
-And this becomes apparent...
-you can see how I'm going to pull recursively.
+And this becomes apparent... you can see
+how I'm going to pull recursively.
 
 01:01:51,480 --> 01:01:54,685
 And it's going to give us back a
@@ -2789,10 +2789,11 @@ and that's going to let us
 repeatedly apply this to ourselves.
 
 01:01:57,880 --> 01:02:00,491
-So if we have nothing in the first [inaudible]
+So if we have nothing in the first list
 
 01:02:00,770 --> 01:02:03,220
-There's nothing we can do, we simply return that.
+There's nothing we can do,
+we simply return that.
 
 01:02:03,925 --> 01:02:08,308
 Otherwise we have some
@@ -2803,10 +2804,12 @@ SP: We have some
 combinations of chains and dictionaries.
 
 01:02:11,302 --> 01:02:12,994
-OC: Yes, some chains and dictionaries indeed.
+OC: Yes, some chains and
+dictionaries indeed.
 
 01:02:12,994 --> 01:02:14,634
-But for every word chain in the dictionary,
+But for every word chain
+in the dictionary,
 
 01:02:14,630 --> 01:02:17,885
 we want to expand that
@@ -2820,10 +2823,12 @@ and what we'll have here
 is a word chain and a dictionary,
 
 01:02:24,171 --> 01:02:28,114
-which we will expand in a chain and a dictionary.
+which we will expand in a chain
+and a dictionary.
 
 01:02:28,160 --> 01:02:30,570
-We're going to have to concat like that because
+We're going to have to concat
+like that because
 
 01:02:30,570 --> 01:02:33,508
 expand gives us a list
@@ -2833,7 +2838,8 @@ of word chains and dictionaries.
 SP: Can we rename chains there?
 
 01:02:38,468 --> 01:02:41,660
-OC: Sure, anything you're up to, a tad smaller
+OC: Sure, anything you're up to,
+a tad smaller
 
 01:02:42,000 --> 01:02:46,834
 or did you want to drop it entirely?
@@ -2879,9 +2885,12 @@ that might have already finished,
 01:03:33,462 --> 01:03:35,314
 we'll keep those.
 
-01:03:35,360 --> 01:03:39,508
-SP: And then later you would look at
-all the chains starting with the smallest first,
+01:03:35,360 --> 01:03:37,811
+SP: And then later you
+would look at all the chains
+
+01:03:37,817 --> 01:03:39,862
+starting with the smallest first,
 
 01:03:42,765 --> 01:03:46,457
 and try to select only the ones
@@ -2891,8 +2900,8 @@ that finish on the target word.
 OC: Right.
 
 01:03:47,222 --> 01:03:51,645
-And because in expand we're
-putting neighbors at the front of the list,
+And because in expand we're putting
+neighbors at the front of the list,
 
 01:03:51,660 --> 01:03:55,920
 we're going to need to filter
@@ -2903,7 +2912,8 @@ It's a bit weird but obviously cons
 is a lot more efficient than append.
 
 01:04:01,000 --> 01:04:03,302
-Because we don't have to traverse the list at all.
+Because we don't have to traverse
+the list at all.
 
 01:04:03,331 --> 01:04:05,200
 SP: We can always reverse the solution.
@@ -2912,7 +2922,8 @@ SP: We can always reverse the solution.
 OC: We could yes.
 
 01:04:08,880 --> 01:04:12,228
-I'll just check that that's all compiling... it does.
+I'll just check that
+that's all compiling, it does.
 
 01:04:12,380 --> 01:04:15,588
 We should be able to have
@@ -2929,7 +2940,8 @@ Word chains plus words, so I'll try cat.
 [Ollie thinks]
 
 01:04:30,491 --> 01:04:32,714
-And it needs a dictionary in there as well.
+And it needs a dictionary
+in there as well.
 
 01:04:35,280 --> 01:04:37,080
 And we'll start with just that one.
@@ -2949,7 +2961,8 @@ There's a lot of possibilities...
 Because of the dictionary.
 
 01:04:52,508 --> 01:04:54,777
-We'll just take the word chains out of that.
+We'll just take the word chains
+out of that.
 
 01:04:54,770 --> 01:04:59,050
 SP: Just the first of head
@@ -2970,7 +2983,8 @@ more our chains get a bit longer.
 SP: Can you see the next one?
 
 01:05:16,542 --> 01:05:18,605
-Oh! that's because we've flattened it, yes.
+Oh! that's because we've
+flattened it, yes.
 
 01:05:20,171 --> 01:05:23,691
 SP: That's not the level
@@ -2987,10 +3001,10 @@ OC: So gradually they're going
 to start getting bigger at some point.
 
 01:05:35,542 --> 01:05:37,250
-[inaudible]
+Let's take 50.
 
 01:05:45,062 --> 01:05:46,314
-That's not recursing.
+We seem to be, perhaps, not recursing?
 
 01:05:47,165 --> 01:05:49,080
 Actually go is never calling itself,
