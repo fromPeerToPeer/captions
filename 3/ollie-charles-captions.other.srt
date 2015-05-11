@@ -2341,35 +2341,31 @@ though is just go to a list.
 00:53:44,770 --> 00:53:47,680
 We could turn this into a list.
 
+00:53:47,680 --> 00:53:50,605
+[Ollie types]
+
 00:53:52,194 --> 00:53:54,500
 OK, and now we're back to
 trying to solve this.
 
-00:53:55,348 --> 00:53:57,354
+00:53:55,417 --> 00:53:58,662
 To recap where we were, we wanted to have
+the dictionary become smaller and smaller.
 
-00:53:57,354 --> 00:53:59,662
-the dictionary become
-smaller and smaller so
+00:54:00,220 --> 00:54:03,497
+So we return the word chain and
+now we need to return the dictionary.
 
-00:54:00,228 --> 00:54:02,142
-we return the
-word chain and now we need to
-
-00:54:02,148 --> 00:54:06,708
-return the dictionary
+00:54:04,480 --> 00:54:08,091
 but without a set of words
-
-00:54:06,702 --> 00:54:08,308
 that we've already considered.
 
-00:54:09,302 --> 00:54:15,091
-I believe those are
-going to be the head of chains
+00:54:09,300 --> 00:54:16,022
+I believe those are going to be the
+head of chains that we just expanded to,
 
-00:54:15,097 --> 00:54:18,417
-that we just expanded to so that
-will be all the neighbors again.
+00:54:16,022 --> 00:54:18,410
+So that will be all the neighbors again.
 
 00:54:19,570 --> 00:54:25,462
 Although maybe it's more
@@ -2392,33 +2388,27 @@ And that still type checks.
 00:54:45,794 --> 00:54:47,257
 We certainly want to call expand.
 
-00:54:47,251 --> 00:54:47,954
-We need to work out
-
-00:54:47,950 --> 00:54:49,360
-what were going to do with that result.
+00:54:47,250 --> 00:54:49,211
+We need to work out what
+were going to do with that result.
 
 00:54:49,360 --> 00:54:51,942
 We have to write a
 function that's going to take
 
-00:54:51,942 --> 00:54:53,771
+00:54:51,942 --> 00:54:53,770
 a list of word chains in the dictionary,
 
 00:54:53,771 --> 00:54:55,708
 and eventually gets to a word chain.
 
-00:54:59,280 --> 00:55:03,371
+00:54:59,371 --> 00:55:04,840
 I think we'll end up using some functions
+that are already in prelude anyway.
 
-00:55:03,371 --> 00:55:04,845
-that are already in prelude anyway
-
-00:55:04,845 --> 00:55:07,622
-but let's just follow the types manually,
-
-00:55:07,622 --> 00:55:08,942
-and see what we end up with.
+00:55:04,840 --> 00:55:08,525
+But let's just follow the types
+manually, and see what we end up with.
 
 00:55:09,194 --> 00:55:11,491
 OC: We have some function
