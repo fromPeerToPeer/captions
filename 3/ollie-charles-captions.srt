@@ -4066,13 +4066,7 @@ in terms of just coming up with the data type.
 And the other thing that I might be interested
 in doing is; there's a lot of hidden recursion here.
 
-01:28:58,320 --> 01:28:58,365
-It's quite hard to follow this
-code, it calls itself in different ways.
-And the other thing that I might be interested
-in doing is; there's a lot of hidden recursion here.
-
-01:28:58,365 --> 01:29:01,897
+01:28:58,365 --> 01:29:02,897
 It's quite hard to follow this
 code, it calls itself in different ways.
 
