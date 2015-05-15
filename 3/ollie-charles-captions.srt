@@ -3145,10 +3145,11 @@ Now we've got a list of word chains.
 
 01:07:44,080 --> 01:07:53,817
 I can filter the list for ones whose first
-element is equal to our target. [inaudible]
+element is equal to our target end element.
 
 01:07:54,020 --> 01:07:58,194
-And I think that's all we need to solve the puzzle.
+And I think that's all we need
+to solve the puzzle.
 
 01:07:58,582 --> 01:08:00,490
 So that all compiles.
