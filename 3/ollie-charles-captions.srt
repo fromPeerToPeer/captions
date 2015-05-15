@@ -3554,7 +3554,7 @@ Ah, we've got a lot of compile errors.
 [Ollie types]
 
 01:16:54,900 --> 01:16:59,314
-OK, inaudible fix.
+OK, this is an easy one to fix.
 
 01:16:59,310 --> 01:17:08,914
 [Ollie types]
