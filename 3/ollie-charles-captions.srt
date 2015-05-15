@@ -1381,13 +1381,14 @@ have the function that goes from  text to word chain.
 So how is best to do this?
 
 00:31:23,950 --> 00:31:32,594
-I feel like I probably need to go to a list of word chains inaudible, a new word puzzle again.
+I probably want to go to a list of word
+chains, because I want to recurse and use
 
 00:31:32,617 --> 00:31:35,880
-and eventually we'll reach a base
-case where the two words are equal.
+wordPuzzle again and eventually we'll reach
+a base case where the two words are equal.
 
-00:31:38,940 --> 00:31:42,085
+00:31:38,940 --> 00:31:42,080
 Even though this has the same
 type, I want to see what we get to.
 
