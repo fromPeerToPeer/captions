@@ -658,7 +658,7 @@ See if that compiles.
 
 00:15:02,450 --> 00:15:08,205
 SP: You'll probably find that
-Haskell will not be in the dictionary.
+"Haskell" will not be in the dictionary.
 
 00:15:08,910 --> 00:15:11,794
 OC: OK well we can check that...
@@ -667,18 +667,19 @@ OC: OK well we can check that...
 It is in the dictionary! (laughter)
 
 00:15:19,960 --> 00:15:21,302
-SP: It's a respectable word!
+SP: It's a respectable word list!
 
 00:15:21,300 --> 00:15:23,508
-OC: But inaudible isn't in the dictionary, so...
+OC: But "Haskello" isn't
+in the dictionary, so...
 
 00:15:25,880 --> 00:15:32,560
-I guess then we probably need to deal
-with case, or maybe I should be case sensitive.
+I guess then we probably need to deal with
+case, or maybe I should be case sensitive.
 
 00:15:32,740 --> 00:15:38,034
-Capital Hello is not in the dictionary.
-Lower case however, will be... Yes.
+Capital "Hello" is not in the dictionary,
+but lower case "hello" will be... Yes.
 
 00:15:38,710 --> 00:15:40,280
 I think I'll leave that for now.
