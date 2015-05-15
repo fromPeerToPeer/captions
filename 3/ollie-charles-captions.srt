@@ -352,9 +352,11 @@ efficient in terms of its representation.
 SP: So you make a point of defaulting to
 the Text type?
 
-00:07:57,211 --> 00:08:04,200
+00:07:57,211 --> 00:08:00,200
 OC: Yes Whenever I'm working with
 something that is human-readable text,
+
+00:08:00,200 --> 00:08:04,200
 Text is usually the type that I want to
 represent that.
 
