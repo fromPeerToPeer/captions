@@ -1353,10 +1353,11 @@ So we'll start by taking the
 neighbors of A, and the same dictionary.
 
 00:30:47,530 --> 00:30:53,268
-inaudible
+And now, we'll ask GHC
+what we need to do next.
 
 00:30:53,540 --> 00:30:54,600
-I've got a hole here.
+I've put a hole here.
 
 00:30:54,600 --> 00:30:58,628
 So I'm going to write some sort of
