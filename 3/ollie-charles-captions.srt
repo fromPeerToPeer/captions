@@ -2499,19 +2499,7 @@ When you fold you have a list
 and you keep reducing it
 into something smaller.
 
-00:56:59,051 --> 00:56:59,125
-Whereas in this case we actually have
-something and want to get something bigger.
-and you keep reducing it
-into something smaller.
-
 00:56:59,125 --> 00:57:01,971
-Whereas in this case we actually have
-something and want to get something bigger.
-
-00:57:01,971 --> 00:57:02,045
-Which as unfolding until the point
-where we maybe can't go any bigger.
 Whereas in this case we actually have
 something and want to get something bigger.
 
