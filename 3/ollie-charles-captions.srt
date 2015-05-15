@@ -353,13 +353,18 @@ SP: So you make a point of defaulting to
 the Text type?
 
 00:07:57,211 --> 00:08:04,200
-OC: Yes inaudible
+OC: Yes Whenever I'm working with
+something that is human-readable text,
+Text is usually the type that I want to
+represent that.
 
 00:08:04,200 --> 00:08:07,885
-Now I can just take the lines of dictionary contents.
+Now I can just take the
+lines of dictionary contents.
 
 00:08:14,034 --> 00:08:17,737
-Now I should have a way to read the dictionary.
+Now I should have a way
+to read the dictionary.
 
 00:08:18,220 --> 00:08:24,205
 I'm going to switch back to my
@@ -380,8 +385,8 @@ We've still got these holes here
 which prevents me from using GHCi.
 
 00:08:42,040 --> 00:08:47,782
-But, I can use another feature of a
-later version of GHC called defer-type errors.
+But, I can use another feature of a later
+version of GHC called defer-type errors.
 
 00:08:47,980 --> 00:08:53,245
 Which is going to let me load
