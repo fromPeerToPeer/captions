@@ -417,8 +417,8 @@ single text string into a list of lines.
 
 94
 00:07:26,490 --> 00:07:35,337
-I believe we have a function to do that
-in the Text Library as well, which is un-line. (Inaudible)
+I believe we have a function to do that in
+the Text Library as well, which is lines.
 
 95
 00:07:35,782 --> 00:07:38,685
