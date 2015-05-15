@@ -1453,7 +1453,7 @@ If I load the dictionary, I should be able
 to now try of one of the example problems.
 
 00:32:52,537 --> 00:32:59,314
-Let's try word puzzle inaudible dog to cat.
+Let's try wordPuzzle dict dog to cat.
 
 00:33:04,450 --> 00:33:07,693
 That is impressively slow right now (laughter)
