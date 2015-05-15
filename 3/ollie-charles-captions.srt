@@ -729,7 +729,8 @@ So we can try that one too.
 Whoops! so let's see:
 
 00:16:24,660 --> 00:16:30,742
-Word puzzle, inaudible dictionary inaudible.
+wordPuzzle, given a dictionary,
+from "hello" to "hello"
 
 00:16:30,800 --> 00:16:35,577
 It does indeed have one solution
