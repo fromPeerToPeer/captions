@@ -2531,12 +2531,6 @@ OC: But we don't have a Maybe here,
 So the Maybe represents the fact
 that you can't actually go any bigger.
 
-00:57:29,131 --> 00:57:29,417
-which is what we were
-modeling here with this pattern match,
-So the Maybe represents the fact
-that you can't actually go any bigger.
-
 00:57:29,417 --> 00:57:32,434
 which is what we were
 modeling here with this pattern match,
