@@ -1920,12 +1920,6 @@ word puzzle alone for the moment
 Instead let's try and use
 some kind of expand function.
 
-00:43:58,540 --> 00:43:58,697
-So that's going to take a
-word chain and give us back
-Instead let's try and use
-some kind of expand function.
-
 00:43:58,697 --> 00:44:02,320
 So that's going to take a
 word chain and give us back
