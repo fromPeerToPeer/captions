@@ -3748,10 +3748,6 @@ SP: Does it take long to pre-compute the entire map?
 01:22:34,220 --> 01:22:36,480
 Can you force that computation and see?
 
-01:22:36,480 --> 01:22:36,594
-OC: We can try forcing that and see what happens.
-Can you force that computation and see?
-
 01:22:36,594 --> 01:22:40,022
 OC: We can try forcing that and see what happens.
 
