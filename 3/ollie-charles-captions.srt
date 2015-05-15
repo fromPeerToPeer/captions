@@ -845,7 +845,8 @@ zip two pieces of text, which is not so useful.
 So take A and B and we will zip A and B.
 
 00:18:45,200 --> 00:18:49,170
-So I'm going to use type (inaudible) here.
+So I'm going to use type holes
+quite a bit here.
 
 00:18:49,910 --> 00:18:56,560
 OK, So we need to have a function which
