@@ -645,7 +645,10 @@ but we'll come to that later.
 So we're given two words A and B:
 
 00:14:27,320 --> 00:14:48,354
-Let's see inaudible
+A is an element in the dictionary
+and we want the negation of that.
+Or B is not an element in the dictionary,
+we'll return nothing as well.
 
 00:14:55,520 --> 00:14:56,845
 I think that's what we want.
