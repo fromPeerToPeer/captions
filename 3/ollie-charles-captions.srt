@@ -637,12 +637,14 @@ want to have a more efficient dictionary type,
 00:14:23,394 --> 00:14:24,940
 but we'll come to that later.
 
-00:14:24,948 --> 00:14:27,325
+00:14:24,948 --> 00:14:27,320
 So we're given two words A and B:
 
-00:14:27,320 --> 00:14:48,354
+00:14:27,320 --> 00:14:45,354
 A is an element in the dictionary
 and we want the negation of that.
+
+00:14:45,354 --> 00:14:54,354
 Or B is not an element in the dictionary,
 we'll return nothing as well.
 
