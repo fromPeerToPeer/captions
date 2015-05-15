@@ -1859,7 +1859,8 @@ or it might be in Data.Ord
 We have comparing.
 
 00:42:14,570 --> 00:42:21,453
-So we can say comparing on length [inaudible]
+So we can say comparing on length.
+That takes a list of a to a list of a.
 
 00:42:22,680 --> 00:42:26,217
 Which is just what we want,
