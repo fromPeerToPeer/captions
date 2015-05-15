@@ -812,11 +812,6 @@ zipping the characters of the two together
 00:18:06,770 --> 00:18:09,620
 and seeing how many pairs are not identical.
 
-00:18:09,620 --> 00:18:09,737
-OC: Yes, that sounds like
-the kind of thing we could do.
-and seeing how many pairs are not identical.
-
 00:18:09,737 --> 00:18:12,902
 OC: Yes, that sounds like
 the kind of thing we could do.
