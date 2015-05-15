@@ -1112,10 +1112,11 @@ In import Control.Applicative, I want that to
 be the last step of this bit of code I'm doing
 
 00:26:18,270 --> 00:26:22,400
-inaudible import Control.Applicative, and find out I had another syntax
+I don't want to import Control.Applicative
+and find out I had invalid syntax
 
 00:26:22,450 --> 00:26:24,280
-and I have to context switch again.
+and then I have to context switch again.
 
 00:26:26,370 --> 00:26:29,737
 I've used length from the
