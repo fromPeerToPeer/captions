@@ -3299,10 +3299,6 @@ and reflect that in the types better.
 01:12:18,540 --> 01:12:22,491
 But for our purposes this should be sufficient.
 
-01:12:22,491 --> 01:12:22,502
-So, this is saying in the map M, look up the word w.
-But for our purposes this should be sufficient.
-
 01:12:22,502 --> 01:12:27,097
 So, this is saying in the map M, look up the word w.
 
