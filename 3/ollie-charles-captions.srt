@@ -1811,11 +1811,7 @@ the entire set of possible solutions.
 SP: We probably need to think
 about expanding the chains progressively.
 
-00:41:39,530 --> 00:41:44,480
-And returning first the ones that are the shortest.
-
-00:41:44,480 --> 00:41:44,697
-OC: Right so a greedier search, as we go through.
+00:41:39,530 --> 00:41:44,580
 And returning first the ones that are the shortest.
 
 00:41:44,697 --> 00:41:47,573
