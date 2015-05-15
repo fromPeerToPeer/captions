@@ -348,13 +348,9 @@ It's just a linked list of characters,
 whereas the Text type is more
 efficient in terms of its representation.
 
-00:07:53,820 --> 00:07:54,251
-SP: So you make a point of defaulting to the Text type?
-whereas the Text type is more
-efficient in terms of its representation.
-
-00:07:54,251 --> 00:07:57,200
-SP: So you make a point of defaulting to the Text type?
+00:07:53,820 --> 00:07:57,200
+SP: So you make a point of defaulting to
+the Text type?
 
 00:07:57,211 --> 00:08:04,200
 OC: Yes inaudible
