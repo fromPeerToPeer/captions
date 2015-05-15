@@ -1016,11 +1016,6 @@ OC: Right.
 SP: And so, all of these like 'downfall'
 would be only one letter away from 'dog'.
 
-00:24:16,570 --> 00:24:16,674
-So maybe you should only look at the first one.
-SP: And so, all of these like 'downfall'
-would be only one letter away from 'dog'.
-
 00:24:16,674 --> 00:24:19,040
 So maybe you should only look at the first one.
 
@@ -1234,18 +1229,12 @@ entirely sure what type I'm going to be looking for.
 I want to just look through it
 and see if anything comes intuitively.
 
-00:28:39,170 --> 00:28:41,611
+00:28:39,170 --> 00:28:41,610
 But if we don't find anything
 then I will leave it for now.
 
 00:28:41,610 --> 00:28:45,800
-But it's these combinates down here, like
-'on' which is probably going to be the most useful.
-
-00:28:45,800 --> 00:28:45,817
-So, you can see that 'on' as a typical usage lets you
-call the same function on two different arguments.
-But it's these combinates down here, like
+But it's these combinators down here, like
 'on' which is probably going to be the most useful.
 
 00:28:45,817 --> 00:28:52,057
