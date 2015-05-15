@@ -3589,10 +3589,10 @@ Oh we do, because were using that in neighbors.
 Now this is going to be a list of tuples.
 
 01:17:52,217 --> 01:17:54,250
-We can turn that into a map.
+We can turn that into a map
 
 01:17:54,250 --> 01:17:56,250
-inaudible
+by going fromList.
 
 01:17:58,537 --> 01:18:01,485
 So we've turned our
