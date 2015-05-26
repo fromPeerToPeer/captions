@@ -2826,3531 +2826,3508 @@ And body is...
 What is going on there?
 
 648
-00:55:40,400 --> 00:55:42,480
-Why would it think
-that the type of body...
+00:55:36,660 --> 00:55:40,285
+(Silence).
 
 649
-00:55:43,760 --> 00:55:45,360
-OC: Is that error out of date
+00:55:40,400 --> 00:55:43,474
+Why would it think that the type of body...
 
 650
-00:55:46,400 --> 00:55:47,600
-because you don't have
+00:55:43,760 --> 00:55:51,200
+OC: Is that error out of date because
+you don't have that last line of code any more.
 
 651
-00:55:47,600 --> 00:55:49,200
-that last line of code any more.
+00:55:51,240 --> 00:55:56,308
+JW: Oh, that's true. Sometimes
+the background syntax checker...
 
 652
-00:55:52,160 --> 00:55:55,280
-JW: That's true. Sometimes
-the background syntax checker
+00:55:56,331 --> 00:56:01,302
+I'm getting a little ahead of it so
+it's showing a result from a while ago.
 
 653
-00:55:55,280 --> 00:55:56,240
-Ah
-
-654
-00:55:57,200 --> 00:55:58,800
-I'm getting a little ahead of it
-
-655
-00:55:58,800 --> 00:56:00,880
-so it's showing a result from a while ago.
-
-656
-00:56:02,000 --> 00:56:04,880
+00:56:01,325 --> 00:56:07,611
 In the evaluator, we need
 to do something with this let.
 
+654
+00:56:09,142 --> 00:56:13,702
+We want to take in an environment.
+
+655
+00:56:13,760 --> 00:56:21,965
+And that is going to be a map of names to expressions.
+
+656
+00:56:22,320 --> 00:56:26,834
+We want the let to add an entry into
+that map that we can later evaluate,
+
 657
-00:56:09,440 --> 00:56:11,200
-We need to take in an environment.
-
-658
-00:56:13,760 --> 00:56:15,200
-And that is going to be a map.
-
-659
-00:56:19,040 --> 00:56:20,320
-of names to expressions.
-
-660
-00:56:22,320 --> 00:56:24,640
-We want the let to
-add an entry into that map.
-
-661
-00:56:25,120 --> 00:56:26,560
-That we can later evaluate,
-
-662
-00:56:26,880 --> 00:56:28,640
+00:56:26,880 --> 00:56:29,200
 if anyone makes a reference to it.
 
-663
-00:56:29,280 --> 00:56:30,960
+658
+00:56:29,280 --> 00:56:34,411
 We want to have Data.Map in scope.
 
-664
-00:56:38,160 --> 00:56:40,560
-We don't JUST want a
-map of text to expressions
+659
+00:56:37,870 --> 00:56:41,714
+We don't JUST want a map of text to expressions because that would mean
 
-665
-00:56:40,880 --> 00:56:42,800
-because that would mean every time
+660
+00:56:41,737 --> 00:56:47,931
+every time the variable was
+referred to it would be re-evaluated.
 
-666
-00:56:42,800 --> 00:56:44,320
-the variable was referred to
-
-667
-00:56:44,320 --> 00:56:45,600
-it would be re-evaluated.
-
-668
-00:56:48,240 --> 00:56:49,680
+661
+00:56:48,240 --> 00:56:52,731
 We want a function in there.
 
-669
-00:56:54,880 --> 00:56:56,880
+662
+00:56:54,880 --> 00:56:57,611
 We want our evaluator to be recursive.
 
-670
-00:56:59,680 --> 00:57:02,240
-I will need to have
-this be a little trickier.
+663
+00:56:57,611 --> 00:56:59,610
+OC: OK.
 
-671
-00:57:07,280 --> 00:57:08,880
-Let's go with the dumb way first
+664
+00:56:59,680 --> 00:57:03,291
+JW: I will need to have this be a little trickier.
 
-672
-00:57:11,600 --> 00:57:13,360
+665
+00:57:07,280 --> 00:57:09,657
+Let's go with the dumb way first.
+
+666
+00:57:09,840 --> 00:57:13,828
 and build this up incrementally.
 
-673
-00:57:14,400 --> 00:57:16,800
-It never pays to be
-too fancy in the beginning.
+667
+00:57:14,274 --> 00:57:17,474
+It never pays to be too fancy in the beginning.
 
-674
-00:57:22,160 --> 00:57:24,000
+668
+00:57:17,470 --> 00:57:21,771
+And we will say ELet main body.
+
+669
+00:57:21,862 --> 00:57:25,580
 We need to pass in the environment
-
-675
-00:57:24,000 --> 00:57:26,000
 and return the mutated environment.
 
-676
-00:57:26,000 --> 00:57:28,400
+670
+00:57:25,611 --> 00:57:28,400
 Which is the perfect job for state.
 
-677
-00:57:28,400 --> 00:57:30,400
+671
+00:57:28,400 --> 00:57:31,371
 Which means we need to bring in State.
 
-678
-00:57:35,920 --> 00:57:37,520
-Which means now we are monadic.
+672
+00:57:32,422 --> 00:57:34,845
+And I bring in from transformers...
 
-679
-00:57:39,520 --> 00:57:41,120
+673
+00:57:35,611 --> 00:57:39,451
+OK, which means now we are monadic.
+
+674
+00:57:39,520 --> 00:57:43,234
 So all these have to do returns.
 
-680
-00:57:47,040 --> 00:57:48,240
-Now we are going to say:
+675
+00:57:44,297 --> 00:57:46,388
+Do returns.
 
-681
-00:57:53,520 --> 00:57:55,200
+676
+00:57:47,040 --> 00:57:53,268
+Now we are going to say "get the environment".
+Oh, actually this modified the environment
+
+677
+00:57:53,440 --> 00:57:57,234
 OC: modify is from Control.Monad.State.
 
+678
+00:57:57,257 --> 00:58:00,845
+JW: So env is going to be the modified environment.
+
+679
+00:58:00,868 --> 00:58:11,714
+I'm going to say insert at name body and inside
+environments, since that's the last parameter.
+
+680
+00:58:11,714 --> 00:58:16,080
+Parsec again has its own keyword named State
+
+681
+00:58:17,542 --> 00:58:22,628
+[John thinks].
+
 682
-00:57:57,600 --> 00:57:59,920
-env is going to be
-the modified environment.
-
-683
-00:58:00,560 --> 00:58:01,680
-I'm going to say:
-
-684
-00:58:11,840 --> 00:58:16,080
-Parsec again has its own keyword named
-State
-
-685
-00:58:23,280 --> 00:58:24,160
+00:58:23,177 --> 00:58:27,862
 I need to getEnv.
 
-686
-00:58:29,680 --> 00:58:31,280
-OC: Because Env is a new type.
+683
+00:58:29,417 --> 00:58:31,474
+OC: Ah, because Env is a new type.
 
-687
-00:58:31,520 --> 00:58:32,160
+684
+00:58:31,485 --> 00:58:32,525
 JW: Right
 
-688
-00:58:32,560 --> 00:58:33,440
+685
+00:58:32,560 --> 00:58:35,908
 OC: We need to wrap it back up.
 
+686
+00:58:38,280 --> 00:58:45,771
+Modify returns no value, yet we have been
+saying things return as Double all the time.
+
+687
+00:58:49,200 --> 00:58:55,600
+Yet this sub expression...
+Let's say if a let is evaluated...
+
+688
+00:58:55,782 --> 00:58:58,457
+Oh, Let has one more component doesn't it?
+
 689
-00:58:38,800 --> 00:58:40,080
-modify returns no value,
+00:58:59,840 --> 00:59:04,045
+It has the body over which the let ranges.
 
 690
-00:58:40,480 --> 00:58:42,080
-yet we have been saying things
+00:59:05,405 --> 00:59:10,148
+OC: Which in this fairly simple
+syntax, is just to the end of the file.
 
 691
-00:58:42,080 --> 00:58:43,520
-return as Double all the time.
-
-692
-00:58:49,200 --> 00:58:49,840
-Let's say:
-
-693
-00:58:55,920 --> 00:58:57,920
-Let has one more
-component doesn't it?
-
-694
-00:58:59,840 --> 00:59:02,000
-It has the body
-over which the let ranges.
-
-695
-00:59:05,440 --> 00:59:07,040
-OC: Which in this simple syntax,
-
-696
-00:59:08,320 --> 00:59:09,840
-is just to the end of the file.
-
-697
 00:59:11,200 --> 00:59:13,600
 JW: This is actually an
 imperative notion now.
 
-698
+692
 00:59:13,600 --> 00:59:15,360
 This is a statement with no result.
 
-699
+693
 00:59:15,920 --> 00:59:18,000
 That has an
 effect on the environment.
 
-700
+694
 00:59:18,800 --> 00:59:20,560
 Which is not part of our evaluator.
 
-701
+695
 00:59:23,440 --> 00:59:25,120
 OC: Well, you could still put this
 
-702
+696
 00:59:25,600 --> 00:59:29,200
 in the evaluator but then the evaluator
 could return Maybe Double
 
-703
+697
 00:59:29,200 --> 00:59:30,800
 Maybe running an expression
 
-704
+698
 00:59:31,040 --> 00:59:32,480
 doesn't give you any output.
 
-705
+699
 00:59:34,000 --> 00:59:35,600
 JW: That's one way we could do it.
 
-706
+700
 00:59:36,240 --> 00:59:36,880
 Let me think.
 
-707
+701
 00:59:40,320 --> 00:59:42,800
 OC: We could take
 the more functional approach
 
-708
+702
 00:59:43,920 --> 00:59:46,960
 and have the let binding
 scope over the rest of the file.
 
-709
+703
 00:59:48,000 --> 00:59:50,240
 And every time
 you're introducing a new let
 
-710
+704
 00:59:50,240 --> 00:59:52,000
 you're introducing some more scope
 
-711
+705
 00:59:52,000 --> 00:59:53,840
 that extends to the end of the file.
 
-712
+706
 00:59:53,840 --> 00:59:55,040
 JW: I like that idea more,
 
-713
+707
 00:59:56,400 --> 00:59:58,480
 but for now let's
 go with the Maybe idea.
 
-714
+708
 01:00:01,410 --> 01:00:02,820
 So in this case we have this.
 
-715
+709
 01:00:04,700 --> 01:00:05,640
 And here we'll have...
 
-716
+710
 01:00:09,170 --> 01:00:10,700
 These guys all become 'Justs'.
 
-717
+711
 01:00:27,880 --> 01:00:28,940
 We're in the monad now.
 
-718
+712
 01:00:35,520 --> 01:00:37,640
 So for example if
 we were to say 1 plus
 
-719
+713
 01:00:37,640 --> 01:00:38,941
 let phi equal 10...
 
-720
+714
 01:00:43,290 --> 01:00:44,700
 Let's have a let be it's body.
 
-721
+715
 01:00:44,820 --> 01:00:45,410
 OC: Sure.
 
-722
+716
 01:00:46,700 --> 01:00:48,000
 JW: That makes more sense.
 
-723
+717
 01:00:48,000 --> 01:00:48,470
 OC: Yes.
 
-724
+718
 01:00:49,170 --> 01:00:51,410
 JW: We're still monadic
 here so I'm going to
 
-725
+719
 01:00:51,410 --> 01:00:53,050
 rewrite this into monadic form.
 
-726
+720
 01:00:54,230 --> 01:00:56,588
 In another language
 we would not name names.
 
-727
+721
 01:00:57,050 --> 01:00:58,705
 I could have said this couldn't I?
 
-728
+722
 01:00:59,520 --> 01:01:01,290
 It would have meant the same thing.
 
-729
+723
 01:01:02,350 --> 01:01:03,760
 Can't do that in Haskell yet.
 
-730
+724
 01:01:04,470 --> 01:01:07,410
 OC: So that's the style of banana brackets
 that you were referring to
 
-731
+725
 01:01:08,580 --> 01:01:10,700
 Which is still somewhat controversial
 
-732
+726
 01:01:10,700 --> 01:01:12,110
 in the Haskell community.
 
-733
+727
 01:01:18,350 --> 01:01:19,290
 Now I want to:
 
-734
+728
 01:01:32,110 --> 01:01:35,760
 I do not need to return because that is
 itself monadic.
 
-735
+729
 01:01:36,580 --> 01:01:38,580
 Now we need to pass in an environment
 
-736
+730
 01:01:39,170 --> 01:01:41,050
 to our evaluator wherever we use it.
 
-737
+731
 01:01:42,350 --> 01:01:44,940
 So let's have a way of
 creating a new environment...
 
-738
+732
 01:02:55,170 --> 01:02:56,470
 OC: Do we really want that
 
-739
+733
 01:02:57,170 --> 01:02:58,820
 because you want to pass on this
 
-740
+734
 01:02:59,880 --> 01:03:02,470
 mutated environment
 for every step of the REPL.
 
-741
+735
 01:03:03,640 --> 01:03:05,520
 JW: This will be a top level function.
 
-742
+736
 01:03:06,110 --> 01:03:06,470
 OC: OK.
 
-743
+737
 01:03:09,640 --> 01:03:11,880
 JW: This is for people
 who are further down
 
-744
+738
 01:03:11,880 --> 01:03:13,520
 and don't have to worry like this.
 
-745
+739
 01:03:14,350 --> 01:03:15,411
 So we're going to say...
 
-746
+740
 01:03:21,058 --> 01:03:27,411
 We're going to have a new function called
 eval.
 
-747
+741
 01:03:33,760 --> 01:03:35,410
 It underlines warnings in blue.
 
-748
+742
 01:03:37,170 --> 01:03:39,410
 I generally tend to
 pay attention to them,
 
-749
+743
 01:03:39,410 --> 01:03:40,940
 I'm getting rid of redundancy.
 
-750
+744
 01:03:42,000 --> 01:03:43,410
 I don't need so much tracing.
 
-751
+745
 01:03:43,882 --> 01:03:46,588
 This seems like a good
 opportunity to delete some.
 
-752
+746
 01:03:48,110 --> 01:03:51,764
 OC: Those warnings about
 redundant brackets are coming from hlint?
 
-753
+747
 01:03:53,050 --> 01:03:53,880
 JW: Correct.
 
-754
+748
 01:03:55,880 --> 01:03:57,290
 I'm using flycheck which is
 
-755
+749
 01:03:57,290 --> 01:04:00,580
 talking to both GHC and hlint.
 
-756
+750
 01:04:03,050 --> 01:04:05,640
 That will give me a
 more comprehensive picture.
 
-757
+751
 01:04:06,350 --> 01:04:08,000
 I have one warning left which is
 
-758
+752
 01:04:08,000 --> 01:04:09,640
 the import of token is redundant.
 
-759
+753
 01:04:10,820 --> 01:04:11,640
 So I will drop it.
 
-760
+754
 01:04:15,050 --> 01:04:16,580
 We did this to do let bindings.
 
-761
+755
 01:04:17,176 --> 01:04:18,941
 We still can't refer our variables.
 
-762
+756
 01:04:20,117 --> 01:04:22,352
 OC: Because we're
 using a new environment.
 
-763
+757
 01:04:22,705 --> 01:04:25,058
 JW: So I need a new
 thing which we'll call EVar,
 
-764
+758
 01:04:26,700 --> 01:04:28,580
 which will be a variable reference.
 
-765
+759
 01:04:29,640 --> 01:04:31,640
 I know how I want eval to be evaluated.
 
-766
+760
 01:04:34,230 --> 01:04:36,350
 I don't yet know how
 I want it to be parsed.
 
-767
+761
 01:04:40,230 --> 01:04:42,230
 I'm going to get my environment and do:
 
-768
+762
 01:05:03,640 --> 01:05:05,520
 This is where I said we we're going to
 
-769
+763
 01:05:05,520 --> 01:05:06,820
 re-evaluate all the time.
 
-770
+764
 01:05:12,230 --> 01:05:15,410
 OC: This is because the look up has
 returned an Expr.
 
-771
+765
 01:05:15,410 --> 01:05:15,880
 JW: Yes.
 
-772
+766
 01:05:15,880 --> 01:05:18,000
 And we're storing
 expressions in our map.
 
-773
+767
 01:05:20,110 --> 01:05:22,000
 Because Haskell is a lazy language
 
-774
+768
 01:05:22,940 --> 01:05:25,520
 we want to get the map to have thunks in
 it.
 
-775
+769
 01:05:26,000 --> 01:05:28,230
 So that the first time you touch the
 thunk,
 
-776
+770
 01:05:28,940 --> 01:05:31,410
 only then will it do
 the work of evaluating it.
 
-777
+771
 01:05:32,000 --> 01:05:34,000
 From then on it
 will have that value.
 
-778
+772
 01:05:34,350 --> 01:05:34,700
 OC: OK.
 
-779
+773
 01:05:35,290 --> 01:05:36,820
 JW: we'll do that next.  Let's see.
 
-780
+774
 01:05:39,050 --> 01:05:39,640
 I need to:
 
-781
+775
 01:05:43,170 --> 01:05:46,000
 Now we have a way to
 define and reference variables.
 
-782
+776
 01:05:48,000 --> 01:05:49,640
 We just need a way to parse them.
 
-783
+777
 01:05:50,820 --> 01:05:53,410
 Variable's going to be
 a fundamental term again
 
-784
+778
 01:05:56,110 --> 01:05:57,764
 in addition to our let bindings.
 
-785
+779
 01:05:58,705 --> 01:06:00,117
 So we're going to have terms,
 
-786
+780
 01:06:02,110 --> 01:06:03,058
 and we'll call them:
 
-787
+781
 01:06:10,470 --> 01:06:11,410
 What is a variable?
 
-788
+782
 01:06:16,470 --> 01:06:19,640
 variable has the same definition as a
 name.
 
-789
+783
 01:06:30,940 --> 01:06:32,820
 OC: So this is the same parser we used
 
-790
+784
 01:06:32,820 --> 01:06:34,820
 when we introduced a name in the let
 binding.
 
-791
+785
 01:06:35,290 --> 01:06:35,764
 JW: Yes.
 
-792
+786
 01:06:41,176 --> 01:06:42,117
 Let's have our name...
 
-793
+787
 01:06:52,230 --> 01:06:54,700
 That way if we want
 to update to alphanumerics
 
-794
+788
 01:06:56,000 --> 01:06:57,882
 we only have to change it in one place.
 
-795
+789
 01:06:59,760 --> 01:07:00,470
 Let's say:
 
-796
+790
 01:07:15,050 --> 01:07:17,640
 OC: So that no parse is
 not coming from our parser.
 
-797
+791
 01:07:17,640 --> 01:07:19,170
 it's coming from our use of the
 
-798
+792
 01:07:19,170 --> 01:07:20,580
 read function somewhere.
 
-799
+793
 01:07:21,410 --> 01:07:21,880
 JW: Yes.
 
-800
+794
 01:07:30,470 --> 01:07:31,640
 We can use trace here.
 
-801
+795
 01:07:34,580 --> 01:07:36,230
 Actually, I don't need to do that
 
-802
+796
 01:07:36,230 --> 01:07:37,760
 because I have a key binding
 
-803
+797
 01:07:39,760 --> 01:07:42,820
 I use that auto inserts.
 
-804
+798
 01:07:43,760 --> 01:07:45,050
 I change it to be traces.
 
-805
+799
 01:07:48,580 --> 01:07:50,470
 I'm going to do this return at the end
 
-806
+800
 01:07:50,470 --> 01:07:52,230
 because trace has to yield a value.
 
-807
+801
 01:07:56,350 --> 01:07:58,000
 Sometimes I use printf more
 
-808
+802
 01:07:58,000 --> 01:07:59,640
 and sometimes I use trace more.
 
-809
+803
 01:07:59,640 --> 01:08:01,290
 I should have two variants of it.
 
-810
+804
 01:08:05,050 --> 01:08:06,470
 We never even get to our let.
 
-811
+805
 01:08:08,820 --> 01:08:09,880
 It's trying to parse...
 
-812
+806
 01:08:17,880 --> 01:08:19,170
 We get the same problem
 
-813
+807
 01:08:19,170 --> 01:08:20,820
 even if we just use the word let.
 
-814
+808
 01:08:22,235 --> 01:08:23,176
 (Big sigh from John)
 
-815
+809
 01:08:27,520 --> 01:08:29,520
 OC: We do have trace lines above which
 
-816
+810
 01:08:29,520 --> 01:08:32,110
 seem to indicate we
 have gone into addop
 
-817
+811
 01:08:32,110 --> 01:08:34,110
 and mulop.
 
-818
+812
 01:08:35,410 --> 01:08:37,640
 JW: I just have to
 prioritize let binding.
 
-819
+813
 01:08:40,823 --> 01:08:42,117
 This is what parsec does.
 
-820
+814
 01:08:48,230 --> 01:08:50,470
 It read in the first
 letter of the word let.
 
-821
+815
 01:08:51,520 --> 01:08:54,000
 Found that it wasn't
 a number in the num parser
 
-822
+816
 01:08:54,580 --> 01:08:55,760
 and said "this isn't me".
 
-823
+817
 01:08:56,820 --> 01:08:58,820
 Choice said, "OK whats the next parser,"
 
-824
+818
 01:08:59,290 --> 01:09:00,700
 but it didn't give back the L.
 
-825
+819
 01:09:01,640 --> 01:09:02,820
 So you have to use try
 
-826
+820
 01:09:03,290 --> 01:09:04,940
 as a wrapper around your parser
 
-827
+821
 01:09:04,940 --> 01:09:06,700
 if you want the input to be re wound
 
-828
+822
 01:09:07,520 --> 01:09:10,110
 to the beginning of
 where your last parse failed.
 
-829
+823
 01:09:10,110 --> 01:09:12,580
 But since let begins
 with a concrete key word
 
-830
+824
 01:09:12,580 --> 01:09:14,350
 that we're not going to be re-using
 
-831
+825
 01:09:14,350 --> 01:09:15,290
 as a variable name,
 
-832
+826
 01:09:15,290 --> 01:09:17,411
 it's safe for us to
 promote that higher
 
-833
+827
 01:09:17,410 --> 01:09:19,170
 OC: Because no other expressions
 
-834
+828
 01:09:19,170 --> 01:09:20,580
 are going to use that word.
 
-835
+829
 01:09:20,820 --> 01:09:21,520
 JW: Right.
 
-836
+830
 01:09:24,940 --> 01:09:27,880
 because variable is going
 to be a similar type of parser,
 
-837
+831
 01:09:27,880 --> 01:09:29,050
 let's wrap that as well.
 
-838
+832
 01:09:40,700 --> 01:09:42,700
 The REPL creates a new environment.
 
-839
+833
 01:09:44,350 --> 01:09:46,940
 So we want a different
 type of test for this to use.
 
-840
+834
 01:09:48,940 --> 01:09:50,110
 Let me expand this out.
 
-841
+835
 01:09:52,940 --> 01:09:55,410
 We want to run this
 forever loop within State.
 
-842
+836
 01:10:01,647 --> 01:10:03,882
 We're going to do
 execStateT on this one.
 
-843
+837
 01:10:04,580 --> 01:10:05,880
 And we're going to flip it
 
-844
+838
 01:10:06,350 --> 01:10:08,000
 and do it with a new environment.
 
-845
+839
 01:10:11,760 --> 01:10:12,700
 Forever runs an IO,
 
-846
+840
 01:10:15,640 --> 01:10:16,700
 so we want to go here.
 
-847
+841
 01:10:20,000 --> 01:10:21,764
 OC: Forever should work on any monad.
 
-848
+842
 01:10:22,000 --> 01:10:24,580
 I think your problem
 there was was the getLine
 
-849
+843
 01:10:24,580 --> 01:10:26,350
 is forcing you to be in the IO monad.
 
-850
+844
 01:10:33,880 --> 01:10:34,820
 So we get our input
 
-851
+845
 01:10:36,000 --> 01:10:37,640
 and we want to run our evaluator
 
-852
+846
 01:10:40,580 --> 01:10:42,700
 For that we're going
 to have to parse it.
 
-853
+847
 01:10:43,520 --> 01:10:45,520
 I'm getting a lot
 of duplication here.
 
-854
+848
 01:10:47,050 --> 01:10:49,410
 But for the time
 being we'll just let it slide.
 
-855
+849
 01:11:00,580 --> 01:11:02,110
 We need to have our evaluator.
 
-856
+850
 01:11:07,880 --> 01:11:09,640
 We're going to get the environment
 
-857
+851
 01:11:09,640 --> 01:11:10,940
 and do a sub evaluation.
 
-858
+852
 01:11:35,410 --> 01:11:37,290
 OC: Sounds like it should be possible
 
-859
+853
 01:11:37,640 --> 01:11:39,760
 to do that without
 having to runState.
 
-860
+854
 01:11:41,760 --> 01:11:43,050
 JW: This StateT is over IO,
 
-861
+855
 01:11:44,350 --> 01:11:45,880
 and our function is a StateT
 
-862
+856
 01:11:45,880 --> 01:11:47,050
 that's over Identity.
 
-863
+857
 01:11:48,350 --> 01:11:52,000
 We could use the mmorph library's hoist
 routine.
 
-864
+858
 01:11:52,940 --> 01:11:54,350
 To swap out between the two.
 
-865
+859
 01:12:01,640 --> 01:12:02,940
 We're going to say:
 
-866
+860
 01:12:26,580 --> 01:12:28,470
 We're going to go from Identity to IO.
 
-867
+861
 01:12:33,880 --> 01:12:35,760
 It should be just a matter of return.
 
-868
+862
 01:12:52,110 --> 01:12:54,230
 getLine is still will forcing us into the
 wrong monad.
 
-869
+863
 01:13:02,820 --> 01:13:05,050
 OC: You might have
 Data.Text.IO.getLine
 
-870
+864
 01:13:07,050 --> 01:13:08,352
 that you avoid packing.
 
-871
+865
 01:13:19,290 --> 01:13:21,294
 OC: And you have got T.readFile here.
 
-872
+866
 01:13:41,050 --> 01:13:42,941
 OC: Another problem is execState is
 
-873
+867
 01:13:43,170 --> 01:13:45,411
 apparently going to give you back the
 file.
 
-874
+868
 01:14:00,580 --> 01:14:03,170
 JW: execState is giving us back a...
 
-875
+869
 01:14:17,640 --> 01:14:20,000
 It's losing the sense
 of what monad we're in.
 
-876
+870
 01:14:42,580 --> 01:14:44,940
 Oh I always get a
 surprise when that type checks!
 
-877
+871
 01:14:44,940 --> 01:14:47,050
 I didn't think that
 hoist line was right
 
-878
+872
 01:14:47,760 --> 01:14:48,700
 but I guess it was.
 
-879
+873
 01:14:49,290 --> 01:14:51,050
 OC: You were pretty quick so maybe
 
-880
+874
 01:14:51,050 --> 01:14:53,764
 you were running ahead
 of your flycheck again!
 
-881
+875
 01:14:54,000 --> 01:14:55,170
 JW: So we have 1 plus 4.
 
-882
+876
 01:14:56,117 --> 01:14:57,529
 We have let phi equals 20.
 
-883
+877
 01:14:58,110 --> 01:14:59,529
 Now I should be able to say
 
-884
+878
 01:14:59,647 --> 01:15:00,941
 phi plus 5 and I get no parse.
 
-885
+879
 01:15:03,760 --> 01:15:06,000
 we have been
 stricken by this num parser
 
-886
+880
 01:15:06,940 --> 01:15:09,058
 OC: So maybe we can just do the same
 trick twice
 
-887
+881
 01:15:11,290 --> 01:15:12,588
 JW: Well it's worth trying,
 
-888
+882
 01:15:14,230 --> 01:15:16,470
 So we can define
 and reference variables.
 
-889
+883
 01:15:20,230 --> 01:15:22,000
 Now we want the ability to define
 
-890
+884
 01:15:22,110 --> 01:15:24,350
 not just sub
 expressions, but functions.
 
-891
+885
 01:15:25,170 --> 01:15:26,110
 Before we do that
 
-892
+886
 01:15:26,230 --> 01:15:27,410
 I want to do this trick
 
-893
+887
 01:15:27,410 --> 01:15:29,520
 where we do not
 re-evaluate expressions.
 
-894
+888
 01:15:32,470 --> 01:15:33,760
 We want our map to be a map
 
-895
+889
 01:15:35,760 --> 01:15:36,820
 of names to doubles.
 
-896
+890
 01:15:38,820 --> 01:15:40,350
 And the reason we can do that
 
-897
+891
 01:15:40,352 --> 01:15:42,000
 is because they are constants.
 
-898
+892
 01:15:42,580 --> 01:15:44,700
 They can only
 ever refer other things
 
-899
+893
 01:15:44,820 --> 01:15:46,110
 inside the environment.
 
-900
+894
 01:15:46,110 --> 01:15:48,580
 So here, instead of
 inserting our expression,
 
-901
+895
 01:15:49,410 --> 01:15:51,410
 into the map we we are going to insert...
 
-902
+896
 01:15:56,700 --> 01:15:58,580
 Oh I have to evaluate that outside.
 
-903
+897
 01:16:00,352 --> 01:16:02,000
 OC: Because that might refer to
 
-904
+898
 01:16:02,000 --> 01:16:04,000
 previously bound variables.
 
-905
+899
 01:16:06,820 --> 01:16:09,290
 This is not using any kind of laziness type trick
 
-906
+900
 01:16:10,350 --> 01:16:12,230
 it's just evaluating at that moment.
 
-907
+901
 01:16:13,290 --> 01:16:15,640
 OC: Should we change that last evalExpr b
 as well
 
-908
+902
 01:16:15,640 --> 01:16:16,820
 to just return B prime.
 
-909
+903
 01:16:21,880 --> 01:16:23,050
 JW: Let's check this in.
 
-910
+904
 01:16:25,640 --> 01:16:27,290
 We can now define and reference.
 
-911
+905
 01:16:31,520 --> 01:16:33,880
 Now let's see if we can
 parse this in our test.
 
-912
+906
 01:16:37,520 --> 01:16:39,640
 OC: I imagine we're
 going to get a problem
 
-913
+907
 01:16:39,640 --> 01:16:40,940
 looking up square root.
 
-914
+908
 01:16:43,410 --> 01:16:44,230
 That's my guess.
 
-915
+909
 01:16:45,640 --> 01:16:47,410
 JW: Unknown variable square root.
 
-916
+910
 01:16:49,760 --> 01:16:51,410
 We have no way of defining functions yet.
 
-917
+911
 01:16:52,000 --> 01:16:54,700
 OC: We do seem to have
 a couple of loop regressions.
 
-918
+912
 01:16:55,170 --> 01:16:56,000
 Oh, look at that...
 
-919
+913
 01:16:59,520 --> 01:17:01,176
 we're losing the sense of lines
 
-920
+914
 01:17:01,290 --> 01:17:03,050
 because we're chopping things up.
 
-921
+915
 01:17:05,050 --> 01:17:06,700
 So we got two but we didn't get 30
 
-922
+916
 01:17:07,170 --> 01:17:09,294
 Let's do this now
 ourselves, at the REPL.
 
-923
+917
 01:17:12,110 --> 01:17:14,230
 We definitely have a regression there.
 
-924
+918
 01:17:19,290 --> 01:17:22,110
 I don't think division
 is being handled correctly.
 
-925
+919
 01:17:26,940 --> 01:17:29,411
 I have a feeling that
 if it's any other operator
 
-926
+920
 01:17:29,640 --> 01:17:30,470
 it will be fine.
 
-927
+921
 01:17:30,470 --> 01:17:31,760
 Yes, so it's just division.
 
-928
+922
 01:17:35,760 --> 01:17:38,230
 OC: We maybe forgot
 to put a line in our parser.
 
-929
+923
 01:18:06,000 --> 01:18:07,520
 OC: Is it because we should be using
 
-930
+924
 01:18:07,520 --> 01:18:08,940
 symbol rather than string.
 
-931
+925
 01:18:08,940 --> 01:18:10,110
 JW: Of course that's why.
 
-932
+926
 01:18:10,470 --> 01:18:11,050
 Thank you.
 
-933
+927
 01:18:13,050 --> 01:18:14,110
 Yes now we have it.
 
-934
+928
 01:18:18,110 --> 01:18:20,230
 OC: So I  guess we
 go back to that read file.
 
-935
+929
 01:18:23,640 --> 01:18:26,820
 we have all of our current lines
 no square root
 
-936
+930
 01:18:28,000 --> 01:18:29,520
 JW: I guess you we're expecting
 
-937
+931
 01:18:29,520 --> 01:18:30,820
 that to be from a library?
 
-938
+932
 01:18:34,110 --> 01:18:36,230
 There's a prelude in
 scope and I assumed...
 
-939
+933
 01:18:36,580 --> 01:18:38,230
 JW: Let's call it double instead,
 
-940
+934
 01:18:39,170 --> 01:18:40,588
 and let's say that double...
 
-941
+935
 01:18:41,640 --> 01:18:44,000
 Let's see what the
 syntax for functions was.
 
-942
+936
 01:18:52,230 --> 01:18:53,640
 Now we need to define that.
 
-943
+937
 01:18:54,580 --> 01:18:56,350
 As usual I like to start by looking
 
-944
+938
 01:18:56,350 --> 01:18:57,520
 at my expression tree.
 
-945
+939
 01:19:01,410 --> 01:19:02,940
 This is a lot like a let binding,
 
-946
+940
 01:19:04,470 --> 01:19:06,700
 it's just one that
 needs input parameters.
 
-947
+941
 01:19:09,880 --> 01:19:11,170
 This is like saying this:
 
-948
+942
 01:19:17,290 --> 01:19:20,000
 We have an expression
 that's a lambda abstraction
 
-949
+943
 01:19:21,410 --> 01:19:22,940
 and we want to define double
 
-950
+944
 01:19:22,940 --> 01:19:24,470
 to be that lambda abstraction.
 
-951
+945
 01:19:25,880 --> 01:19:27,640
 So we'll call that ELam.
 
-952
+946
 01:19:28,470 --> 01:19:30,230
 At the moment we're going to allow
 
-953
+947
 01:19:30,230 --> 01:19:32,350
 that lambda to
 take just one variable.
 
-954
+948
 01:19:34,230 --> 01:19:35,760
 OC: Yes, that's all that happens
 
-955
+949
 01:19:35,760 --> 01:19:37,050
 in these little example scripts.
 
-956
+950
 01:19:37,050 --> 01:19:38,820
 You can assume that these are all
 
-957
+951
 01:19:38,820 --> 01:19:40,350
 functions over one variable.
 
-958
+952
 01:19:40,700 --> 01:19:41,290
 JW: Right.
 
-959
+953
 01:19:41,640 --> 01:19:43,520
 So that variable is going to itself
 
-960
+954
 01:19:46,700 --> 01:19:48,000
 evaluate down to a value.
 
-961
+955
 01:19:49,760 --> 01:19:50,230
 OC: Yes,
 
-962
+956
 01:19:50,230 --> 01:19:51,520
 JW: So we can have our lambda
 
-963
+957
 01:19:53,520 --> 01:19:54,940
 be a host language lambda.
 
-964
+958
 01:19:59,410 --> 01:20:00,940
 Of expression to expression.
 
-965
+959
 01:20:00,940 --> 01:20:02,700
 OC: Why expression to expression
 
-966
+960
 01:20:02,700 --> 01:20:04,230
 and not double to expression?
 
-967
+961
 01:20:06,940 --> 01:20:08,580
 JW: Because it's a lambda in there
 
-968
+962
 01:20:08,580 --> 01:20:10,820
 and this would be
 the higher order abstract syntax
 
-969
+963
 01:20:11,520 --> 01:20:13,520
 where we're using
 the host language's
 
-970
+964
 01:20:14,940 --> 01:20:17,290
 ability to represent
 functions as values..
 
-971
+965
 01:20:18,470 --> 01:20:20,230
 In order for our target language
 
-972
+966
 01:20:22,000 --> 01:20:23,764
 to represent functions as values.
 
-973
+967
 01:20:24,110 --> 01:20:25,640
 That's the higher order nature.
 
-974
+968
 01:20:26,470 --> 01:20:28,110
 There can be no automatically
 
-975
+969
 01:20:28,110 --> 01:20:29,880
 derived Show instance for these.
 
-976
+970
 01:20:30,110 --> 01:20:31,410
 This is the tedious part
 
-977
+971
 01:20:31,410 --> 01:20:33,410
 where we have to do a lot of boilerplate.
 
-978
+972
 01:20:36,470 --> 01:20:37,880
 We have to say for every one
 
-979
+973
 01:20:38,940 --> 01:20:39,760
 of these things...
 
-980
+974
 01:20:43,880 --> 01:20:45,290
 I need to say what it means
 
-981
+975
 01:20:45,290 --> 01:20:46,230
 to print that out.
 
-982
+976
 01:20:48,230 --> 01:20:50,000
 So I'm going to say what that means.
 
-983
+977
 01:20:50,820 --> 01:20:52,580
 OC: Do we still need Show instance?
 
-984
+978
 01:20:53,410 --> 01:20:55,170
 We could just drop that I suppose.
 
-985
+979
 01:20:58,000 --> 01:21:00,350
 JW: True, but it comes
 in handy for debugging
 
-986
+980
 01:21:10,700 --> 01:21:12,350
 Lambda is not going to be there.
 
-987
+981
 01:21:58,110 --> 01:22:01,760
 It's not the show it's complaining about
 it's the fact that this has to be monoid.
 
-988
+982
 01:22:08,580 --> 01:22:10,700
 Pretty soon this is going to be 300 lines
 
-989
+983
 01:22:11,640 --> 01:22:13,290
 as usually happens in Haskell!
 
-990
+984
 01:22:13,290 --> 01:22:15,290
 OC: but we do want to be working
 with strings here right?
 
-991
+985
 01:22:15,290 --> 01:22:17,410
 because show is
 defined as a function
 
-992
+986
 01:22:17,520 --> 01:22:18,940
 from something to string.
 
-993
+987
 01:22:18,940 --> 01:22:20,000
 JW: You're right.
 
-994
+988
 01:22:31,760 --> 01:22:33,520
 OC: I think we're OK using show.
 
-995
+989
 01:22:34,941 --> 01:22:37,529
 Oh yes! because we're
 defining a Show instance.
 
-996
+990
 01:22:38,000 --> 01:22:40,235
 Yes, so we want
 unpack in these two places.
 
-997
+991
 01:22:45,050 --> 01:22:46,230
 JW: Now I have my lambda.
 
-998
+992
 01:22:48,230 --> 01:22:49,760
 The first thing is to decide
 
-999
+993
 01:22:49,760 --> 01:22:51,170
 how I'm going to evaluate it.
 
-1000
+994
 01:22:52,230 --> 01:22:54,350
 Before I go on to how
 I'm going to parse it.
 
-1001
+995
 01:22:56,350 --> 01:22:58,000
 So I get my lambda, and I have an F
 
-1002
+996
 01:22:59,410 --> 01:23:00,580
 and now I'm going to say:
 
-1003
+997
 01:23:12,700 --> 01:23:13,760
 I need a double.
 
-1004
+998
 01:23:14,940 --> 01:23:18,820
 I need a body for my lambda
 
-1005
+999
 01:23:22,000 --> 01:23:24,235
 I need to define
 what application means.
 
-1006
+1000
 01:23:24,230 --> 01:23:25,882
 What it means to call a function.
 
-1007
+1001
 01:23:26,000 --> 01:23:27,640
 That's how it gets its argument.
 
-1008
+1002
 01:23:29,170 --> 01:23:31,410
 Application takes a
 form and an argument.
 
-1009
+1003
 01:23:36,700 --> 01:23:38,230
 And we're going to show that as...
 
-1010
+1004
 01:23:46,230 --> 01:23:47,880
 OC: Is F here going to be the name
 
-1011
+1005
 01:23:48,940 --> 01:23:50,350
 of the lambda abstraction?
 
-1012
+1006
 01:23:51,410 --> 01:23:51,880
 JW: Yes
 
-1013
+1007
 01:23:54,820 --> 01:23:56,941
 We'll restrict it to
 being nothing fancy
 
-1014
+1008
 01:23:57,410 --> 01:23:59,290
 like an expression that evaluates
 
-1015
+1009
 01:24:01,290 --> 01:24:03,647
 to a lambda that can
 be passed as an argument.
 
-1016
+1010
 01:24:03,880 --> 01:24:05,410
 That would be cool but for now
 
-1017
+1011
 01:24:05,760 --> 01:24:08,000
 we'll have functions be only
 referenceable by name.
 
-1018
+1012
 01:24:11,520 --> 01:24:12,941
 So we have EApp be a name
 
-1019
+1013
 01:24:14,823 --> 01:24:17,411
 and the argument is
 going to be the expression.
 
-1020
+1014
 01:24:17,411 --> 01:24:18,823
 So we only allow one argument.
 
-1021
+1015
 01:24:19,880 --> 01:24:20,820
 We want unpack n.
 
-1022
+1016
 01:24:29,170 --> 01:24:30,110
 We'll say:
 
-1023
+1017
 01:24:43,290 --> 01:24:44,470
 Then look up in the map...
 
-1024
+1018
 01:24:58,470 --> 01:25:00,470
 We can't store just doubles in our map.
 
-1025
+1019
 01:26:12,820 --> 01:26:14,000
 Evaluating a lambda.
 
-1026
+1020
 01:26:20,230 --> 01:26:23,050
 There should be no
 context in which it's evaluating.
 
-1027
+1021
 01:26:25,050 --> 01:26:26,580
 OC: That's basically a type error.
 
-1028
+1022
 01:26:26,580 --> 01:26:28,580
 in our little language
 
-1029
+1023
 01:27:04,470 --> 01:27:06,470
 Now we need a way to define these two things
 
-1030
+1024
 01:27:07,170 --> 01:27:09,647
 OC: There's a little
 more syntax to bring in here
 
-1031
+1025
 01:27:10,350 --> 01:27:11,760
 We had that binding before,
 
-1032
+1026
 01:27:11,760 --> 01:27:13,520
 now we're going to have fun binding.
 
-1033
+1027
 01:27:17,410 --> 01:27:19,880
 OC: We're already having
 fun binding. (laughter).
 
-1034
+1028
 01:27:26,580 --> 01:27:28,110
 So we want the symbol define.
 
-1035
+1029
 01:27:30,110 --> 01:27:32,000
 We want the name and the open parens
 
-1036
+1030
 01:27:35,050 --> 01:27:36,941
 We want also, the argument to be a name.
 
-1037
+1031
 01:27:43,640 --> 01:27:45,170
 Then we want closing parens,
 
-1038
+1032
 01:27:46,350 --> 01:27:47,880
 and then open curly (laughter).
 
-1039
+1033
 01:27:51,050 --> 01:27:53,410
 And then we can
 have up to many expressions
 
-1040
+1034
 01:27:57,520 --> 01:27:58,940
 in the body of the function.
 
-1041
+1035
 01:28:01,640 --> 01:28:03,290
 Now, expressions that could end
 
-1042
+1036
 01:28:05,880 --> 01:28:06,580
 in newlines.
 
-1043
+1037
 01:28:11,290 --> 01:28:13,050
 And there is a thing we can use from
 
-1044
+1038
 01:28:15,050 --> 01:28:16,470
 parser called text sepBy.
 
-1045
+1039
 01:28:20,580 --> 01:28:21,640
 So we want sepBy1.
 
-1046
+1040
 01:28:24,350 --> 01:28:25,760
 OC: So that parses at least one expression
 
-1047
+1041
 01:28:27,760 --> 01:28:29,170
 that is separated by new lines.
 
-1048
+1042
 01:28:29,170 --> 01:28:30,000
 JW: Right.
 
-1049
+1043
 01:28:32,000 --> 01:28:32,820
 This is our body.
 
-1050
+1044
 01:28:34,820 --> 01:28:35,760
 And now we're going to return ELam
 
-1051
+1045
 01:28:38,230 --> 01:28:40,000
 We want a function that's going to
 
-1052
+1046
 01:28:40,000 --> 01:28:41,640
 take in some number and return...
 
-1053
+1047
 01:28:47,050 --> 01:28:48,580
 Let me ask you this question:
 
-1054
+1048
 01:28:50,110 --> 01:28:51,760
 What if we evaluate a function
 
-1055
+1049
 01:28:52,940 --> 01:28:54,350
 that has let bindings in it?
 
-1056
+1050
 01:28:54,350 --> 01:28:56,580
 Those let bindings should
 probably not escape
 
-1057
+1051
 01:28:56,940 --> 01:28:58,580
 outside of the function should they?
 
-1058
+1052
 01:28:58,580 --> 01:29:00,470
 And every time you run the function,
 
-1059
+1053
 01:29:01,050 --> 01:29:03,050
 it should renew the let bindings.
 
-1060
+1054
 01:29:05,760 --> 01:29:08,580
 JW: So a function is not
 going to return an expression.
 
-1061
+1055
 01:29:09,880 --> 01:29:11,760
 An expression is going to be a mutator
 
-1062
+1056
 01:29:11,760 --> 01:29:13,050
 from doubles to doubles.
 
-1063
+1057
 01:29:16,350 --> 01:29:18,580
 But, we want it to
 inherit the environment.
 
-1064
+1058
 01:29:22,000 --> 01:29:23,760
 that it was executed in each time.
 
-1065
+1059
 01:29:23,760 --> 01:29:26,820
 OC: So we can refer to let bindings
 outside the function definition.
 
-1066
+1060
 01:29:31,170 --> 01:29:33,760
 So instead of using
 something as fancy as reader,
 
-1067
+1061
 01:29:34,470 --> 01:29:37,050
 we're going to take in
 environment as an argument.
 
-1068
+1062
 01:29:37,050 --> 01:29:37,640
 OC: Sure.
 
-1069
+1063
 01:29:40,700 --> 01:29:43,290
 JW: We have our env
 
-1070
+1064
 01:29:44,230 --> 01:29:45,290
 JW: We're going to say:
 
-1071
+1065
 01:30:00,110 --> 01:30:01,410
 Oh, we can bind our name to...
 
-1072
+1066
 01:30:04,000 --> 01:30:06,470
 OC: So we put that
 double into the environment.
 
-1073
+1067
 01:30:06,470 --> 01:30:07,170
 JW: Right.
 
-1074
+1068
 01:30:08,230 --> 01:30:09,170
 We have to say:
 "insert at arg"
 
-1075
+1069
 01:30:27,880 --> 01:30:28,940
 It can't just be that.
 
-1076
+1070
 01:30:29,760 --> 01:30:31,880
 OC: We need to wrap
 it up as an expression.
 
-1077
+1071
 01:30:40,940 --> 01:30:44,000
 And then this has to be getEnv
 and then rewrapped.
 Because type-wrapping is just as much
 fun as you expect it to be.
 
-1078
+1072
 01:30:51,176 --> 01:30:53,411
 Eval state T
 returns an identity double.
 
-1079
+1073
 01:30:55,290 --> 01:30:56,705
 Then arg is the wrong thing.
 
-1080
+1074
 01:30:59,880 --> 01:31:01,410
 It is not the body expression.
 
-1081
+1075
 01:31:02,940 --> 01:31:04,580
 Now we want to sequence through.
 
-1082
+1076
 01:31:08,000 --> 01:31:09,520
 We want to fold down the body.
 
-1083
+1077
 01:31:11,520 --> 01:31:13,290
 OC: You would probably be alright
 
-1084
+1078
 01:31:16,235 --> 01:31:18,823
 taking the last value
 of the expression for now.
 
-1085
+1079
 01:31:19,520 --> 01:31:21,170
 JW: I need to evaluate every one
 
-1086
+1080
 01:31:22,470 --> 01:31:25,170
 so that any internal
 let bindings get established.
 
-1087
+1081
 01:31:25,170 --> 01:31:25,880
 OC: Right, OK.
 
-1088
+1082
 01:31:31,880 --> 01:31:33,290
 We're going to bind this in.
 
-1089
+1083
 01:31:35,170 --> 01:31:36,940
 I'm going to do a flip binding here.
 
-1090
+1084
 01:31:40,470 --> 01:31:41,880
 And then fold M inside here.
 
-1091
+1085
 01:31:45,640 --> 01:31:48,230
 It's going to go from
 environment to environment.
 
-1092
+1086
 01:31:49,520 --> 01:31:50,940
 For every body expression.
 
-1093
+1087
 01:31:52,940 --> 01:31:54,820
 Folding down from the environment
 
-1094
+1088
 01:31:54,820 --> 01:31:55,640
 over the body.
 
-1095
+1089
 01:32:00,700 --> 01:32:02,000
 So Env, expected type Double.
 
-1096
+1090
 01:32:13,640 --> 01:32:15,880
 And fold M has the
 accumulator on the left.
 
-1097
+1091
 01:32:23,640 --> 01:32:25,170
 I don't need to fold M that way.
 
-1098
+1092
 01:32:32,350 --> 01:32:33,170
 We're going to pass in a double
 
-1099
+1093
 01:32:34,470 --> 01:32:35,410
 As it thinks I need.
 
-1100
+1094
 01:32:38,110 --> 01:32:40,230
 And we're going to
 ignore it in each step.
 
-1101
+1095
 01:32:41,640 --> 01:32:44,588
 OC: So we're just taking
 the last double that's produced.
 
-1102
+1096
 01:32:44,588 --> 01:32:45,882
 JW: Right, and then we need
 
-1103
+1097
 01:32:45,882 --> 01:32:47,176
 the right identity here.
 
-1104
+1098
 01:32:49,760 --> 01:32:51,050
 OC: Cool, everything typechecks?
 
-1105
+1099
 01:32:54,580 --> 01:32:57,290
 JW: No! Now the functions
 are differently expressed.
 
-1106
+1100
 01:32:59,290 --> 01:33:01,520
 Function application
 now has to hand in
 
-1107
+1101
 01:33:01,520 --> 01:33:02,940
 the current environment.
 
-1108
+1102
 01:33:04,000 --> 01:33:04,940
 Which makes sense.
 
-1109
+1103
 01:33:08,940 --> 01:33:13,050
 Couldn't match expected type
 first argument.
 
-1110
+1104
 01:33:14,580 --> 01:33:16,580
 This is now just going to be the value
 we wanted, so we can just return it.
 
-1111
+1105
 01:33:22,820 --> 01:33:23,640
 It type checked!
 OC: [Laughs]
 JC: I continue to be
 perhaps incorrectly amazed.
 
-1112
+1106
 01:33:36,350 --> 01:33:38,230
 I don't like excessively long lines.
 
-1113
+1107
 01:33:43,520 --> 01:33:45,290
 OK, let's try this out with test file.
 
-1114
+1108
 01:33:46,820 --> 01:33:48,110
 Unknown variable, fine.
 
-1115
+1109
 01:33:50,580 --> 01:33:52,230
 We haven't tied it in yet so we need:
 letBinding followed by funBinding.
 
-1116
+1110
 01:33:56,000 --> 01:33:57,290
 What else did we define?
 
-1117
+1111
 01:33:57,290 --> 01:33:58,700
 We need to do application.
 
-1118
+1112
 01:34:01,290 --> 01:34:02,820
 A naked variable reference
 
-1119
+1113
 01:34:03,170 --> 01:34:04,940
 could be a variable reference or
 
-1120
+1114
 01:34:04,940 --> 01:34:06,350
 it could be a function call.
 
-1121
+1115
 01:34:09,640 --> 01:34:11,170
 OC: I think all function calls
 
-1122
+1116
 01:34:11,170 --> 01:34:13,410
 are a variable name immediately
 followed by parentheses
 
-1123
+1117
 01:34:14,470 --> 01:34:16,230
 with no white space between them.
 
-1124
+1118
 01:34:16,230 --> 01:34:16,820
 JW:  Right.
 
-1125
+1119
 01:34:17,760 --> 01:34:19,760
 So we're going to try to parse a funCall.
 
-1126
+1120
 01:34:27,880 --> 01:34:30,000
 Because if there is
 no paren after that,
 
-1127
+1121
 01:34:32,000 --> 01:34:33,520
 we'll back track all the way up.
 
-1128
+1122
 01:34:42,110 --> 01:34:44,350
 We want the name of
 the function to come in.
 
-1129
+1123
 01:34:48,820 --> 01:34:51,290
 And then we're going to look for this guy
 except instead of parsing a varname,
 
-1130
+1124
 01:34:51,290 --> 01:34:53,290
 we're going to parse a sub-expression.
 
-1131
+1125
 01:34:53,290 --> 01:34:54,470
 Then we're going to say: return that
 as an application of name to arg.
 
-1132
+1126
 01:35:07,640 --> 01:35:11,760
 "Type error says Ollie!"
 OC: [Laughs] Well I didn't say it but...
 
-1133
+1127
 01:35:11,760 --> 01:35:13,410
 So we tried to evaluate a lambda
 
-1134
+1128
 01:35:13,880 --> 01:35:16,110
 because we put a
 lambda in our syntax tree
 
-1135
+1129
 01:35:18,940 --> 01:35:19,880
 Why did we do that?
 
-1136
+1130
 01:35:24,110 --> 01:35:26,470
 Oh that's right, what
 does define evaluate to.
 
-1137
+1131
 01:35:27,760 --> 01:35:30,000
 It evaluates to the
 body of the function.
 
-1138
+1132
 01:35:30,820 --> 01:35:31,760
 Which is a lambda.
 
-1139
+1133
 01:35:32,470 --> 01:35:34,000
 In that case we're going to say
 
-1140
+1134
 01:35:34,820 --> 01:35:36,580
 that functions evaluate to zero.
 
-1141
+1135
 01:35:44,940 --> 01:35:46,470
 That just did not work at all.
 
-1142
+1136
 01:35:51,290 --> 01:35:52,940
 OC: We have a zero from our define.
 
-1143
+1137
 01:35:53,520 --> 01:35:55,050
 I guess the error is on the let.
 
-1144
+1138
 01:35:55,640 --> 01:35:57,520
 JW: Yes, let me put some
 boundary on there.
 
-1145
+1139
 01:35:59,170 --> 01:36:00,700
 OC: so you're now tracing
 in our language!
 
-1146
+1140
 01:36:01,520 --> 01:36:03,294
 JW: Yes! I see the two, three and zero.
 
-1147
+1141
 01:36:04,940 --> 01:36:05,640
 We defined it.
 
-1148
+1142
 01:36:07,170 --> 01:36:09,640
 So it's the call that
 we're having a problem with.
 
-1149
+1143
 01:36:11,640 --> 01:36:12,820
 expecting define...
 
-1150
+1144
 01:36:12,820 --> 01:36:15,050
 OC: Ah, so I think the problem here
 is our function name
 
-1151
+1145
 01:36:16,110 --> 01:36:16,940
 starts with a D.
 
-1152
+1146
 01:36:17,880 --> 01:36:19,640
 And when it sees D it assumes
 that it must be going to...
 JW: Oh right!
 
-1153
+1147
 01:36:24,700 --> 01:36:26,700
 OC: We'll probably have to try unbinding.
 
-1154
+1148
 01:36:32,110 --> 01:36:33,640
 JW: Unknown function double.
 
-1155
+1149
 01:36:34,940 --> 01:36:37,170
 OC: But we did just
 define a function double.
 
-1156
+1150
 01:36:37,170 --> 01:36:38,000
 JW: Yes, right.
 
-1157
+1151
 01:36:41,520 --> 01:36:43,290
 We need to go to define and find out
 
-1158
+1152
 01:36:46,230 --> 01:36:48,110
 why it did not get
 inserted into the environment
 
-1159
+1153
 01:36:52,820 --> 01:36:53,760
 Ah, that's what it is.
 
-1160
+1154
 01:36:54,820 --> 01:36:56,000
 OC: Define gave us Elam...
 
-1161
+1155
 01:36:56,820 --> 01:36:58,580
 JW: And the blue line is telling us
 
-1162
+1156
 01:36:58,580 --> 01:37:00,230
 "your not doing anything with name".
 
-1163
+1157
 01:37:03,764 --> 01:37:04,700
 Elam needs to have:
 
-1164
+1158
 01:37:07,640 --> 01:37:09,294
 Just as let did, Elam needs a name.
 
-1165
+1159
 01:37:14,470 --> 01:37:16,941
 Now when we go, we won't just
 have Ollie's type error
 
-1166
+1160
 01:37:24,470 --> 01:37:27,050
 Now we need something
 new to go into our map, right?
 
-1167
+1161
 01:37:27,880 --> 01:37:29,410
 We can just put ELam in there.
 
-1168
+1162
 01:37:30,580 --> 01:37:31,640
 So we're going to say:
 
-1169
+1163
 01:37:33,640 --> 01:37:35,290
 OC: It's exactly the same as ELet
 
-1170
+1164
 01:37:35,880 --> 01:37:37,760
 but without the evaluation I guess.
 JC: Right. It's just going to return 0.
 OC: Bit of a hack, but oh well!
 
-1171
+1165
 01:38:01,170 --> 01:38:02,820
 Elam should have two arguments.
 
-1172
+1166
 01:38:03,170 --> 01:38:05,760
 Oh! The Show-er
 
-1173
+1167
 01:38:06,700 --> 01:38:07,640
 We're going to say:
 I like the way Lisp does it.
 
-1174
+1168
 01:38:24,350 --> 01:38:26,000
 Yehey! Unknown function double.
 
-1175
+1169
 01:38:26,820 --> 01:38:29,410
 This is where we put in
 a little bit of our tracing.
 
-1176
+1170
 01:38:50,940 --> 01:38:52,820
 It never showed it, so we get to there...
 
-1177
+1171
 01:38:55,290 --> 01:38:56,230
 We must have done...
 
-1178
+1172
 01:38:58,230 --> 01:38:59,520
 Oh, nobody used the value,
 
-1179
+1173
 01:39:00,000 --> 01:39:01,520
 that's why the trace didn't get...
 
-1180
+1174
 01:39:02,700 --> 01:39:04,470
 Since no one is forcing the value
 
-1181
+1175
 01:39:04,580 --> 01:39:07,050
 that means the insert
 is not happening either.
 
-1182
+1176
 01:39:10,470 --> 01:39:11,880
 If it's just returning zero
 
-1183
+1177
 01:39:12,820 --> 01:39:15,410
 it can elide out the rest.
 
-1184
+1178
 01:39:16,350 --> 01:39:18,000
 OC: But we're in a monad, so it
 should be forcing us to be [inaudible].
 
-1185
+1179
 01:39:18,000 --> 01:39:19,050
 JW:  Your right.
 
-1186
+1180
 01:39:22,110 --> 01:39:25,050
 OC: Maybe in our function
 that reads from the file
 
-1187
+1181
 01:39:26,820 --> 01:39:28,940
 we could print the environment
 after every step.
 
-1188
+1182
 01:39:28,940 --> 01:39:30,235
 JW: Oh! Is that our problem?
 
-1189
+1183
 01:39:32,705 --> 01:39:35,058
 OC: Yes, the file doesn't
 do what the REPL does.
 
-1190
+1184
 01:39:36,470 --> 01:39:37,290
 JW: Ah, thank you.
 
-1191
+1185
 01:39:40,470 --> 01:39:42,110
 In the file parser we need to do
 
-1192
+1186
 01:39:42,580 --> 01:39:44,820
 the exact same thing
 we we're doing before
 
-1193
+1187
 01:39:46,110 --> 01:39:46,700
 Which is: to call...
 Let's just copy and paste.
 
-1194
+1188
 01:40:06,588 --> 01:40:07,529
 That did not work.
 
-1195
+1189
 01:40:19,290 --> 01:40:20,700
 For every line in the input,
 
-1196
+1190
 01:40:20,700 --> 01:40:21,640
 we parse the line,
 
-1197
+1191
 01:40:24,110 --> 01:40:25,760
 and execute it within our state.
 
-1198
+1192
 01:40:26,820 --> 01:40:28,000
 and print the result.
 
-1199
+1193
 01:40:33,880 --> 01:40:36,470
 OC: Can we just flip back
 to the error we had again.
 
-1200
+1194
 01:40:36,470 --> 01:40:38,470
 JW: Now we have a much different error.
 
-1201
+1195
 01:40:40,470 --> 01:40:41,410
 we have regressed.
 
-1202
+1196
 01:40:44,110 --> 01:40:45,529
 Let me see what version of
 
-1203
+1197
 01:40:45,520 --> 01:40:47,294
 the code we were using previously.
 
-1204
+1198
 01:41:17,760 --> 01:41:20,350
 Oh, the massager!
 We're not using the massager.
 
-1205
+1199
 01:41:21,640 --> 01:41:24,230
 So I'm going to go
 ahead and use the view patterns.
 
-1206
+1200
 01:41:26,820 --> 01:41:29,410
 OC: So view patterns
 here let us call a function
 
-1207
+1201
 01:41:29,410 --> 01:41:30,820
 before binding a variable.
 
-1208
+1202
 01:41:31,170 --> 01:41:31,640
 JW: Yes.
 
-1209
+1203
 01:41:31,640 --> 01:41:35,170
 I could just do this. That's actually
 a silly use of view patterns.
 
-1210
+1204
 01:41:40,000 --> 01:41:41,760
 Except that it's going to be a Maybe.
 
-1211
+1205
 01:41:45,290 --> 01:41:47,410
 So we have to lift one level out and say:
 if it's Nothing, do nothing
 otherwise we have some String.
 
-1212
+1206
 01:41:56,470 --> 01:41:58,000
 OC: We could use forM_ again there.
 
-1213
+1207
 01:41:59,050 --> 01:42:00,470
 You can use forM_ over a maybe.
 
-1214
+1208
 01:42:01,290 --> 01:42:03,170
 I think we have to use data.foldable
 
-1215
+1209
 01:42:09,640 --> 01:42:12,000
 which in real world projects
 that's exactly what I do.
 
-1216
+1210
 01:42:15,410 --> 01:42:18,230
 Look at that! We evaled it.
 OC: Wonderful.
 
-1217
+1211
 01:42:20,110 --> 01:42:21,529
 JC: So we have Phi equaling
 1 plus double...
 
-1218
+1212
 01:42:24,470 --> 01:42:25,640
 We even have an error.
 
-1219
+1213
 01:42:26,820 --> 01:42:28,350
 We are missing a parenthesis
 
-1220
+1214
 01:42:28,350 --> 01:42:30,110
 and yet we didn't get a syntax there.
 OC: [Laughs]
 
-1221
+1215
 01:42:31,410 --> 01:42:33,760
 JC: Let me see what
 happens if I do that directly.
 
-1222
+1216
 01:42:38,820 --> 01:42:40,230
 Might as well do it this way.
 
-1223
+1217
 01:42:41,640 --> 01:42:42,580
 Ah! the parse stops.
 
-1224
+1218
 01:42:46,820 --> 01:42:48,470
 Because it has reached a token
 
-1225
+1219
 01:42:48,470 --> 01:42:50,000
 it doesn't recognise, it ends.
 
-1226
+1220
 01:42:50,700 --> 01:42:53,520
 Other parsers like Trifecta,
 
-1227
+1221
 01:42:54,230 --> 01:42:55,520
 I could coax it to tell me
 
-1228
+1222
 01:42:55,520 --> 01:42:57,410
 what the remainder of the input was.
 
-1229
+1223
 01:42:57,410 --> 01:42:59,290
 I don't know how that's done in parsec
 
-1230
+1224
 01:42:59,760 --> 01:43:02,350
 and I don't think we
 should worry about it just now.
 
-1231
+1225
 01:43:11,760 --> 01:43:13,170
 We can restrict our parser
 
-1232
+1226
 01:43:13,170 --> 01:43:14,940
 on the line by line parser and say
 
-1233
+1227
 01:43:14,940 --> 01:43:16,470
 we want it to terminate at EOF.
 
-1234
+1228
 01:43:21,050 --> 01:43:23,410
 OC: So that requires that we
 successfully parse a line?
 
-1235
+1229
 01:43:25,410 --> 01:43:27,050
 JW:  Right, so now I get unexpected.
 
-1236
+1230
 01:43:27,640 --> 01:43:29,640
 Of course the line numbers are all off,
 
-1237
+1231
 01:43:29,640 --> 01:43:31,290
 because we do this line by line.
 
-1238
+1232
 01:43:34,820 --> 01:43:35,640
 There we go!
 
-1239
+1233
 01:43:40,000 --> 01:43:41,290
 5 times 5 is 25 OK,
 
-1240
+1234
 01:43:42,000 --> 01:43:43,640
 So 26 divided by 2 should be 13.
 Alright!
 
-1241
+1235
 01:43:46,350 --> 01:43:48,940
 I would say that's a
 good place for us to check in.
 Function definitions and calling now work.
 
-1242
+1236
 01:44:00,230 --> 01:44:00,940
 OC: Awesome!
 
-1243
+1237
 01:44:07,410 --> 01:44:10,000
 OC: Now we're getting
 near the end of the session,
 
-1244
+1238
 01:44:10,000 --> 01:44:11,290
 I wonder if we might try
 
-1245
+1239
 01:44:11,290 --> 01:44:13,410
 to implement that Fibonacci function.
 
-1246
+1240
 01:44:13,760 --> 01:44:15,520
 It's in one of these example files.
 
-1247
+1241
 01:44:17,050 --> 01:44:19,050
 We should only need to redefine phi,
 
-1248
+1242
 01:44:21,640 --> 01:44:23,760
 but we do need
 a square root operation.
 
-1249
+1243
 01:44:23,760 --> 01:44:25,410
 Maybe we could introduce that
 
-1250
+1244
 01:44:25,410 --> 01:44:27,050
 as a primitive in the language.
 
-1251
+1245
 01:44:27,520 --> 01:44:29,640
 That should allow
 us to get all the way
 
-1252
+1246
 01:44:29,640 --> 01:44:31,050
 to the bottom of this file.
 
-1253
+1247
 01:44:32,000 --> 01:44:33,880
 JW: We should be able to do that easily.
 
-1254
+1248
 01:44:34,352 --> 01:44:36,340
 Because we chose the higher order
 
-1255
+1249
 01:44:36,350 --> 01:44:37,764
 abstract syntax notation.
 
-1256
+1250
 01:44:38,350 --> 01:44:40,350
 That makes it easier for us to inject
 
-1257
+1251
 01:44:44,940 --> 01:44:47,290
 what we would call built-ins
 into our language.
 
-1258
+1252
 01:44:47,880 --> 01:44:49,050
 All we need then is a parser
 
-1259
+1253
 01:44:51,520 --> 01:44:52,470
 and we're going to have an option...
 
-1260
+1254
 01:44:53,050 --> 01:44:54,230
 Let's extend funCall.
 
-1261
+1255
 01:44:55,290 --> 01:44:56,235
 FunCall will say:
 if name is 'sqrt'...
 
-1262
+1256
 01:45:08,230 --> 01:45:10,350
 I don't want to
 do it at call point, sorry.
 
-1263
+1257
 01:45:13,050 --> 01:45:15,520
 I want to do it when
 we define the environment.
 
-1264
+1258
 01:45:16,700 --> 01:45:17,760
 So new environment.
 
-1265
+1259
 01:45:19,290 --> 01:45:20,940
 Instead of having an empty map
 
-1266
+1260
 01:45:20,940 --> 01:45:22,230
 we want a map where we can
 
-1267
+1261
 01:45:23,410 --> 01:45:24,700
 insert into square root.
 
-1268
+1262
 01:45:40,700 --> 01:45:42,940
 And we need to do this on an empty map.
 
-1269
+1263
 01:45:43,760 --> 01:45:45,290
 We can call this a singleton.
 
-1270
+1264
 01:45:45,290 --> 01:45:55,882
 See I have hlint down here suggesting
 that I could say const sqrt because
 
-1271
+1265
 01:45:56,470 --> 01:45:58,000
 I'm ignoring that parameter.
 
-1272
+1266
 01:45:58,000 --> 01:46:00,000
 I still have an error, saying
 I'm not using that language pragma.
 
-1273
+1267
 01:46:04,470 --> 01:46:05,170
 Now we can say:
 
-1274
+1268
 01:46:10,350 --> 01:46:11,410
 OC: Excellent.
 
-1275
+1269
 01:46:11,647 --> 01:46:13,058
 JW: If we go over to our file,
 
-1276
+1270
 01:46:13,764 --> 01:46:15,176
 and we see now that we have,
 
-1277
+1271
 01:46:16,470 --> 01:46:19,176
 (I was doing a lot of
 work in this little scratch file)
 
-1278
+1272
 01:46:19,176 --> 01:46:20,235
 Phi should be fine.
 
-1279
+1273
 01:46:20,700 --> 01:46:22,350
 Oh! we have a power operator here,
 
-1280
+1274
 01:46:24,350 --> 01:46:26,110
 raising something to an exponent.
 
-1281
+1275
 01:46:26,110 --> 01:46:27,640
 We need to quickly add that in.
 
-1282
+1276
 01:46:29,050 --> 01:46:30,820
 It's rather like a multiplication.
 
-1283
+1277
 01:46:30,820 --> 01:46:33,050
 OC: You can have
 the same precedence there.
 
-1284
+1278
 01:46:33,050 --> 01:46:34,117
 JW: We're going to say:
 
-1285
+1279
 01:46:39,050 --> 01:46:40,940
 We'll use that as the same precedence.
 
-1286
+1280
 01:46:48,230 --> 01:46:50,820
 We have now reached
 a certain level of maturity
 
-1287
+1281
 01:46:50,820 --> 01:46:53,050
 where we can drop
 tracing from our parser
 
-1288
+1282
 01:47:07,640 --> 01:47:10,350
 wherever EMul was
 
-1289
+1283
 01:47:21,520 --> 01:47:23,290
 Is that appropriate for doubles?
 
-1290
+1284
 01:47:23,760 --> 01:47:24,700
 I'll just check.
 
-1291
+1285
 01:47:33,760 --> 01:47:35,640
 I will take a look at this file again.
 
-1292
+1286
 01:47:40,940 --> 01:47:42,700
 Do you really want the return keyword?
 
-1293
+1287
 01:47:42,700 --> 01:47:44,820
 Since the last
 expression of the function
 
-1294
+1288
 01:47:44,820 --> 01:47:46,820
 is defined to be the value of the call.
 
-1295
+1289
 01:47:46,820 --> 01:47:48,700
 OC: Yes, I think we're OK dropping that.
 
-1296
+1290
 01:47:50,470 --> 01:47:52,700
 JW: We've  got parens,
 and we've got division.
 
-1297
+1291
 01:47:52,700 --> 01:47:53,410
 we've got phi and psi...
 
-1298
+1292
 01:47:54,580 --> 01:47:57,520
 A global phi and a local psi.
 
-1299
+1293
 01:47:57,520 --> 01:47:58,470
 Let's give it a try...
 
-1300
+1294
 01:47:58,470 --> 01:48:00,000
 Do you think it's going to work?
 
-1301
+1295
 01:48:02,820 --> 01:48:03,880
 OC: I'm going to say no,
 
-1302
+1296
 01:48:03,880 --> 01:48:05,880
 I don't think it will work (laughter).
 
-1303
+1297
 01:48:06,580 --> 01:48:07,880
 JW:  So unknown variable N...
 
-1304
+1298
 01:48:09,880 --> 01:48:12,470
 We're now making
 reference to a local variable.
 
-1305
+1299
 01:48:13,050 --> 01:48:15,880
 That's a good thing, to
 check why isn't that happening.
 
-1306
+1300
 01:48:17,290 --> 01:48:18,110
 When we defined...
 
-1307
+1301
 01:48:19,520 --> 01:48:22,000
 OC: When we went into the lambda we
 don't seem to be extending the environment.
 
-1308
+1302
 01:48:22,000 --> 01:48:23,760
 we are extending the environment.
 
-1309
+1303
 01:48:24,230 --> 01:48:25,640
 So we got the arg, as the name,
 
-1310
+1304
 01:48:26,700 --> 01:48:28,230
 we extended the environment.
 
-1311
+1305
 01:48:30,230 --> 01:48:32,820
 We evaluate within
 that extended environment...
 
-1312
+1306
 01:48:34,820 --> 01:48:36,470
 OC: Are we able to see which line
 
-1313
+1307
 01:48:36,470 --> 01:48:38,000
 it's having this trouble with?
 
-1314
+1308
 01:48:41,880 --> 01:48:43,640
 we've got quite a few unexpecteds.
 
-1315
+1309
 01:48:50,352 --> 01:48:51,882
 JW:  It's the definition of fib
 
-1316
+1310
 01:48:53,410 --> 01:48:55,294
 that seems to be having the problem.
 
-1317
+1311
 01:48:55,410 --> 01:48:56,588
 Column 3 or column 8.
 
-1318
+1312
 01:48:59,290 --> 01:49:00,941
 It wasn't expecting the word fib.
 
-1319
+1313
 01:49:12,580 --> 01:49:13,520
 See that works.
 
-1320
+1314
 01:49:17,290 --> 01:49:18,820
 Let's reduce the problem here,
 
-1321
+1315
 01:49:19,880 --> 01:49:22,580
 get rid of these ones that are before it.
 
-1322
+1316
 01:49:27,050 --> 01:49:31,520
 OC: The let binding is definitely working
 because we're seeing that
 
-1323
+1317
 01:49:38,580 --> 01:49:41,410
 OC: This isn't a problem
 with the comment dropping those?...
 
-1324
+1318
 01:49:53,880 --> 01:49:55,760
 Let's see if whitespace is consuming.
 
-1325
+1319
 01:49:57,760 --> 01:50:00,230
 Oh! Whitespace only
 takes space into account.
 
-1326
+1320
 01:50:01,050 --> 01:50:02,470
 We want it to be space or tab,
 
-1327
+1321
 01:50:06,000 --> 01:50:07,764
 or return or newline..
 
-1328
+1322
 01:50:12,000 --> 01:50:14,820
 OC: Is it the leading
 whitespace causing the problem?
 
-1329
+1323
 01:50:16,230 --> 01:50:18,350
 or are we stripping the leading whitespace
 out as well.
 
-1330
+1324
 01:50:18,350 --> 01:50:20,580
 JW: We should be
 stripping any whitespace
 
-1331
+1325
 01:50:20,580 --> 01:50:22,110
 that occurs before the brace
 
-1332
+1326
 01:50:22,110 --> 01:50:23,050
 and after the brace.
 
-1333
+1327
 01:50:33,290 --> 01:50:34,940
 Let's see if it would help to have
 
-1334
+1328
 01:50:36,110 --> 01:50:38,000
 a semi colon in our function bodies.
 
-1335
+1329
 01:50:44,470 --> 01:50:45,640
 And that does not help.
 
-1336
+1330
 01:50:45,640 --> 01:50:47,290
 I think the problem is outside.
 
-1337
+1331
 01:50:49,880 --> 01:50:51,760
 We need to bring some tracing back in:
 
-1338
+1332
 01:51:13,050 --> 01:51:15,050
 We're getting as far as parsing
 funBinding seven
 
-1339
+1333
 01:51:15,050 --> 01:51:22,117
 so it's not liking the closing brace.
 
-1340
+1334
 01:51:27,050 --> 01:51:29,880
 OC: That expected F
 assumes that the define is a variable
 name
 
-1341
+1335
 01:51:31,290 --> 01:51:33,529
 and it's trying to
 do addition on that variable.
 
-1342
+1336
 01:51:41,170 --> 01:51:42,470
 Maybe if we just try to do
 
-1343
+1337
 01:51:42,470 --> 01:51:44,235
 one expression in the definition
 
-1344
+1338
 01:51:45,170 --> 01:51:47,290
 see if that gives
 us any more progress.
 
-1345
+1339
 01:51:58,000 --> 01:51:59,640
 JW: We're getting as far as seven.
 
-1346
+1340
 01:52:25,170 --> 01:52:26,230
 OC: Or maybe trace it?
 
-1347
+1341
 01:53:05,050 --> 01:53:07,170
 JW: Let's try parsing the single expression.
 
-1348
+1342
 01:53:39,410 --> 01:53:42,110
 JW: It's trying to parse
 the funBinding and failing.
 
-1349
+1343
 01:53:44,110 --> 01:53:46,117
 So it's trying to parse it as a funCall.
 
-1350
+1344
 01:53:48,820 --> 01:53:51,170
 OC: But that's failing
 because it doesn't see
 
-1351
+1345
 01:53:51,170 --> 01:53:53,290
 an open parenthesis right after define.
 
-1352
+1346
 01:53:54,470 --> 01:53:57,170
 JW: Exactly and then
 it tries to do it as a variable
 
-1353
+1347
 01:53:58,110 --> 01:53:59,760
 I'm surprised it's not telling us...
 
-1354
+1348
 01:54:01,760 --> 01:54:02,700
 "unknown variable".
 
-1355
+1349
 01:54:05,050 --> 01:54:07,520
 OC: It's still trying
 to evaluate at that point.
 
-1356
+1350
 01:54:10,700 --> 01:54:12,230
 we're failing in the parsing.
 
-1357
+1351
 01:54:21,640 --> 01:54:24,110
 JW: It should read it
 as a variable shouldn't it?
 
-1358
+1352
 01:54:25,760 --> 01:54:28,000
 OC: It is giving a
 variable called define.
 
-1359
+1353
 01:54:28,350 --> 01:54:29,640
 And the next thing to do
 
-1360
+1354
 01:54:30,230 --> 01:54:32,580
 is to look for a math operator.
 
-1361
+1355
 01:54:36,940 --> 01:54:38,820
 JW: That's right. That's what it's saying
 
-1362
+1356
 01:54:38,823 --> 01:54:40,000
 it's expecting to see
 
-1363
+1357
 01:54:40,000 --> 01:54:41,882
 unexpected F wanted a math operator.
 
-1364
+1358
 01:54:44,580 --> 01:54:46,940
 Because the define
 expression is failing,
 
-1365
+1359
 01:54:51,410 --> 01:54:53,520
 because of a failure to parse "d".
 
-1366
+1360
 01:54:59,520 --> 01:55:00,470
 Ah, you know what...
 
-1367
+1361
 01:55:02,230 --> 01:55:04,000
 We don't do multi line parsing yet.
 
-1368
+1362
 01:55:04,940 --> 01:55:07,410
 We're handing these
 to the parser line by line.
 
-1369
+1363
 01:55:09,410 --> 01:55:11,760
 OC: We should be able
 to put it all in one line
 
-1370
+1364
 01:55:11,760 --> 01:55:13,410
 and then our test will be simple.
 
-1371
+1365
 01:55:13,410 --> 01:55:14,470
 JW:  You would think.
 
-1372
+1366
 01:55:14,470 --> 01:55:15,640
 OC: Let's try that first.
 
-1373
+1367
 01:55:19,050 --> 01:55:21,410
 JW: So we're going to
 have to break into lines,
 
-1374
+1368
 01:55:21,410 --> 01:55:22,700
 strip out the comments,
 
-1375
+1369
 01:55:23,640 --> 01:55:25,520
 and then put the lines back together.
 
-1376
+1370
 01:55:25,520 --> 01:55:27,880
 OC:  If we just modify
 our test bc file for now
 
-1377
+1371
 01:55:27,880 --> 01:55:30,230
 we should be able to
 join four lines into one.
 
-1378
+1372
 01:55:30,700 --> 01:55:31,640
 JW: You mean in here?
 
-1379
+1373
 01:55:31,640 --> 01:55:32,110
 OC: Yes.
 
-1380
+1374
 01:55:35,880 --> 01:55:37,411
 Because we have a semi colon
 
-1381
+1375
 01:55:37,410 --> 01:55:38,941
 between them we might be OK.
 
-1382
+1376
 01:55:39,050 --> 01:55:40,940
 JW: I don't know if I kept the semi colon.
 
-1383
+1377
 01:55:43,290 --> 01:55:44,110
 Oh I did keep it.
 
-1384
+1378
 01:55:48,700 --> 01:55:49,290
 Very good!
 
-1385
+1379
 01:55:50,580 --> 01:55:51,880
 So it's 1,2 and 55, correct.
 
-1386
+1380
 01:55:53,170 --> 01:55:54,580
 OC: Yes, almost 55 anyway.
 
-1387
+1381
 01:56:01,050 --> 01:56:03,410
 JW: We don't have
 multi line working just yet
 
-1388
+1382
 01:56:03,410 --> 01:56:05,290
 but we do have a way to do separators.
 
-1389
+1383
 01:56:05,880 --> 01:56:07,760
 And since you're probably going to be
 
-1390
+1384
 01:56:07,760 --> 01:56:09,760
 typing these at a REPL anyway
 
-1391
+1385
 01:56:09,760 --> 01:56:12,940
 This probably makes more
 sense for things to fit on one line.
 
-1392
+1386
 01:56:14,940 --> 01:56:16,580
 Here's our file, we can show that...
 
-1393
+1387
 01:56:17,640 --> 01:56:20,352
 (I can get rid of that
 little devil at the beginning)
 
-1394
+1388
 01:56:22,110 --> 01:56:24,352
 we do get a close
 approximation (laughter).
 
-1395
+1389
 01:56:27,290 --> 01:56:28,823
 It's just one of those things.
 
-1396
+1390
 01:56:30,470 --> 01:56:32,820
 To wrap this up we
 need a way to execute this
 
-1397
+1391
 01:56:32,820 --> 01:56:34,000
 from the command line.
 
-1398
+1392
 01:56:34,820 --> 01:56:36,470
 If I go into my parser and look at
 
-1399
+1393
 01:56:36,470 --> 01:56:38,700
 this REPL function
 we have been calling.
 
-1400
+1394
 01:56:38,700 --> 01:56:39,880
 Really that IS our main.
 
-1401
+1395
 01:56:40,820 --> 01:56:41,290
 If I now:
 
-1402
+1396
 01:57:09,050 --> 01:57:11,640
 OC: This is also reading
 from standard input then?
 
-1403
+1397
 01:57:11,640 --> 01:57:14,823
 JW: Yes, in theory, we can pipe
 that file we have been working on into it.
 
-1404
+1398
 01:57:16,580 --> 01:57:18,470
 Maybe let's see what we get with that?
 
-1405
+1399
 01:57:24,000 --> 01:57:24,941
 JW: Not quite!
 
-1406
+1400
 01:57:25,880 --> 01:57:28,940
 OC: I guess our REPL
 doesn't deal with comments like that
 
-1407
+1401
 01:57:28,940 --> 01:57:31,411
 Let's try this outside
 of Emacs, you never know.
 
-1408
+1402
 01:57:36,700 --> 01:57:37,050
 JW:  No.
 
-1409
+1403
 01:57:37,760 --> 01:57:40,470
 OC: I think our REPL isn't
 dealing with the comments
 
-1410
+1404
 01:57:40,470 --> 01:57:42,470
 within the file, and that kind of stuff.
 
-1411
+1405
 01:57:46,820 --> 01:57:49,170
 OC: That's cool, I guess
 we should wrap up then.
 
-1412
+1406
 01:57:50,580 --> 01:57:52,110
 OC: What are the kind of things
 
-1413
+1407
 01:57:52,110 --> 01:57:54,230
 that stand out to you: the itches
 you want to scratch?
 
-1414
+1408
 01:57:55,410 --> 01:57:58,230
 JW: If I wanted to build
 this into a nice toy calculator
 
-1415
+1409
 01:57:59,290 --> 01:58:02,000
 I would first want to
 get rid of all the repetition
 
-1416
+1410
 01:58:02,580 --> 01:58:04,470
 in dealing with calling of parsec.
 
-1417
+1411
 01:58:05,050 --> 01:58:07,640
 I would factor that out
 with some other function
 
-1418
+1412
 01:58:07,640 --> 01:58:09,520
 and all these would call as helpers.
 
-1419
+1413
 01:58:11,050 --> 01:58:13,170
 There are some inefficiencies in here.
 
-1420
+1414
 01:58:13,170 --> 01:58:14,700
 The fact that in our map type,
 
-1421
+1415
 01:58:15,880 --> 01:58:17,880
 we have a map from text to expression.
 
-1422
+1416
 01:58:17,880 --> 01:58:19,294
 So as I mentioned earlier,
 
-1423
+1417
 01:58:19,410 --> 01:58:21,640
 we would always
 be re-evaluating variables.
 
-1424
+1418
 01:58:24,820 --> 01:58:26,820
 I would rather have them as constants
 
-1425
+1419
 01:58:26,820 --> 01:58:28,820
 that immediately reduce to doubles.
 
-1426
+1420
 01:58:34,940 --> 01:58:37,880
 At the point where we're evaluating our
 when we see an EVar.
 
-1427
+1421
 01:58:42,350 --> 01:58:45,290
 When we see a let, instead
 of putting the body of the let
 
-1428
+1422
 01:58:45,290 --> 01:58:47,050
 into the map, we could evaluate it
 
-1429
+1423
 01:58:47,050 --> 01:58:48,470
 stick it in an ENum.
 
-1430
+1424
 01:58:48,940 --> 01:58:50,350
 and then put that in the map
 
-1431
+1425
 01:58:50,350 --> 01:58:52,110
 and that would achieve what I want.
 
-1432
+1426
 01:58:52,110 --> 01:58:54,820
 OC: You would basically be doing a kind of
 memoization then?
 
-1433
+1427
 01:58:54,820 --> 01:58:57,290
 JW:  Yes, something like
 that, it hurts not to do it.
 
-1434
+1428
 01:58:59,290 --> 01:59:00,580
 So we will just say this:
 
-1435
+1429
 01:59:10,110 --> 01:59:12,470
 ENum wants a double
 and it got an expression
 
-1436
+1430
 01:59:13,050 --> 01:59:14,350
 because it wants B prime.
 
-1437
+1431
 01:59:15,170 --> 01:59:17,410
 That would be one
 of the things I would do
 
-1438
+1432
 01:59:17,410 --> 01:59:18,470
 Too easy not to do it.
 
-1439
+1433
 01:59:20,470 --> 01:59:23,050
 I would switch to using
 a real tokeniser for parsec
 
-1440
+1434
 01:59:24,000 --> 01:59:26,820
 because it would clear
 up some problems we ran into
 
-1441
+1435
 01:59:26,820 --> 01:59:28,820
 and make the code briefer
 
-1442
+1436
 01:59:28,820 --> 01:59:29,760
 and easier to see.
 
-1443
+1437
 01:59:30,580 --> 01:59:33,880
 You also have the ability to
 define languages in parsec
 
-1444
+1438
 01:59:33,880 --> 01:59:35,760
 so you can say what's the precedence
 
-1445
+1439
 01:59:35,760 --> 01:59:37,410
 my various operators should be
 
-1446
+1440
 01:59:37,880 --> 01:59:40,230
 and it will figure
 out how to parse them all
 
-1447
+1441
 01:59:40,230 --> 01:59:41,410
 in the correct order.
 
-1448
+1442
 01:59:43,410 --> 01:59:46,580
 I might move to a
 functor fixed point representation
 
-1449
+1443
 01:59:48,580 --> 01:59:50,110
 of my Expr data type here
 
-1450
+1444
 01:59:50,580 --> 01:59:52,820
 so that my
 evaluators get easier to write.
 
-1451
+1445
 01:59:53,880 --> 01:59:55,520
 Make a pretty printer.
 
-1452
+1446
 01:59:56,940 --> 02:00:00,470
 The tool that we're modeling this
 after is bc.
 
-1453
+1447
 02:00:01,760 --> 02:00:03,880
 In bc it will echo back
 out to you the expression
 
-1454
+1448
 02:00:03,880 --> 02:00:06,000
 in pretty-printed form,
 so I'd like to do that as well.
 
-1455
+1449
 02:00:08,820 --> 02:00:11,294
 And I would like
 tests that every expression
 
-1456
+1450
 02:00:12,470 --> 02:00:14,000
 when printed, can read back in,
 
-1457
+1451
 02:00:14,588 --> 02:00:16,823
 and then reprint
 as the same expression.
 
-1458
+1452
 02:00:17,760 --> 02:00:20,110
 That's pretty much
 where I would go with this.
 
-1459
+1453
 02:00:20,350 --> 02:00:21,880
 But I don't know if I'm trying
 to compete
 
-1460
+1454
 02:00:21,880 --> 02:00:23,520
 with mathematica, so
 
-1461
+1455
 02:00:23,880 --> 02:00:25,880
 I would be happy with something
 
-1462
+1456
 02:00:25,880 --> 02:00:28,230
 that just works nicely
 on the command line.
 
-1463
+1457
 02:00:29,640 --> 02:00:32,230
 OC: That's fantastic. Thanks a lot.
 
