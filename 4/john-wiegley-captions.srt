@@ -3637,7 +3637,7 @@ In fact let's go ahead and do that.
 
 832
 01:12:02,125 --> 01:12:09,222
-We're going to say hoist lift IO, (inaudible].
+We're going to say hoist lift IO, [inaudible].
 
 833
 01:12:26,580 --> 01:12:28,470
@@ -4891,7 +4891,7 @@ OC: Bit of a hack, but oh well!
 
 1121
 01:37:47,885 --> 01:38:01,257
-(John thinks and types)
+[John thinks and types]
 
 1122
 01:38:01,302 --> 01:38:03,165
@@ -4911,7 +4911,6 @@ I like the way Lisp does it.
 
 1126
 01:38:12,440 --> 01:38:24,274
-(Silence)
 
 1127
 01:38:24,274 --> 01:38:26,000
@@ -4986,7 +4985,7 @@ Which is: to call... Let's just copy and paste.
 
 1144
 01:39:53,550 --> 01:40:06,182
-(John types)
+[John types]
 
 1145
 01:40:06,588 --> 01:40:07,529
@@ -5123,7 +5122,7 @@ and I don't think we should worry about it just now.
 
 1176
 01:43:04,880 --> 01:43:11,028
-(John thinks about what to do).
+[John thinks about what to do].
 
 1177
 01:43:11,340 --> 01:43:19,737
@@ -5225,7 +5224,7 @@ FunCall will say: if name is 'sqrt'...
 
 1199
 01:45:00,290 --> 01:45:08,034
-(John types)
+[John types]
 
 1200
 01:45:08,230 --> 01:45:10,868
@@ -5970,76 +5969,56 @@ and it will figure out how to
 parse them all in the correct order.
 
 1369
-01:59:43,410 --> 01:59:46,580
-I might move to a
-functor fixed point representation
+01:59:43,320 --> 01:59:50,457
+I might move to a functor fixed point
+representation of my Expr data type here.
 
 1370
-01:59:48,580 --> 01:59:50,110
-of my Expr data type here
+01:59:50,491 --> 01:59:53,850
+So that my evaluators get easier to write.
 
 1371
-01:59:50,580 --> 01:59:52,820
-so that my
-evaluators get easier to write.
-
-1372
 01:59:53,880 --> 01:59:55,520
 Make a pretty printer.
 
+1372
+01:59:57,245 --> 02:00:00,470
+The tool that we're modeling this after is bc.
+
 1373
-01:59:56,940 --> 02:00:00,470
-The tool that we're modeling this
-after is bc.
+02:00:01,290 --> 02:00:05,485
+In bc it will echo back out to you
+the expression in pretty-printed form,
 
 1374
-02:00:01,760 --> 02:00:03,880
-In bc it will echo back
-out to you the expression
+02:00:06,777 --> 02:00:08,708
+So I'd like to do that as well.
 
 1375
-02:00:03,880 --> 02:00:06,000
-in pretty-printed form,
-so I'd like to do that as well.
+02:00:08,731 --> 02:00:13,428
+And I would like tests that
+every expression when printed,
 
 1376
-02:00:08,820 --> 02:00:11,294
-And I would like
-tests that every expression
+02:00:13,428 --> 02:00:17,302
+can read back in, and then
+reprint as the same expression.
 
 1377
-02:00:12,470 --> 02:00:14,000
-when printed, can read back in,
+02:00:17,440 --> 02:00:19,817
+That's pretty much where I would go with this.
 
 1378
-02:00:14,588 --> 02:00:16,823
-and then reprint
-as the same expression.
+02:00:19,810 --> 02:00:22,925
+But I don't know, if I'm trying
+to compete with mathematica,
 
 1379
-02:00:17,760 --> 02:00:20,110
-That's pretty much
-where I would go with this.
+02:00:22,948 --> 02:00:27,714
+so I would be happy with something
+that just works nicely on the command line.
 
 1380
-02:00:20,350 --> 02:00:21,880
-But I don't know if I'm trying
-to compete
-
-1381
-02:00:21,880 --> 02:00:23,520
-with mathematica, so
-
-1382
-02:00:23,880 --> 02:00:25,880
-I would be happy with something
-
-1383
-02:00:25,880 --> 02:00:28,230
-that just works nicely
-on the command line.
-
-1384
-02:00:29,640 --> 02:00:32,230
-OC: That's fantastic. Thanks a lot.
+02:00:28,114 --> 02:00:32,230
+OC: Yes, OK that's fantastic. Thanks a lot.
 
