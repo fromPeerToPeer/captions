@@ -1,48 +1,48 @@
 ﻿1
-00:00:01,270 --> 00:00:02,660
+00:00:01,270 --> 00:00:03,062
 Welcome to Peer to Peer,
 
 2
-00:00:03,190 --> 00:00:06,480
+00:00:03,190 --> 00:00:06,982
 where you can hone your
 skills by watching live coding videos.
 
 3
-00:00:07,730 --> 00:00:09,550
+00:00:07,730 --> 00:00:09,737
 Our guest today is Jamie White,
 
 4
-00:00:10,020 --> 00:00:13,140
+00:00:10,020 --> 00:00:13,725
 who's a Ruby and JavaScript
 developer at With Associates
 
 5
-00:00:13,760 --> 00:00:16,040
+00:00:13,760 --> 00:00:17,131
 and a co-organizer of the London Ember meetup.
 
 6
-00:00:17,150 --> 00:00:18,860
+00:00:17,150 --> 00:00:19,120
 I'm your host, Drew Neil,
 
 7
-00:00:19,300 --> 00:00:23,066
+00:00:19,300 --> 00:00:23,371
 And the challenge that I set for
-Jamie is called Deducing Collaborations
+Jamie is called Deducing Collaborations.
 
 8
-00:00:24,110 --> 00:00:27,670
+00:00:23,908 --> 00:00:27,160
 DN: OK, Jamie, would you like to
 start by reading out the challenge?
 
 9
-00:00:28,420 --> 00:00:31,333
-Generate a data structure
-representing the collaborations 
+00:00:27,177 --> 00:00:31,330
+JW: OK. Generate a data
+structure representing the collaborations
 
 10
 00:00:31,330 --> 00:00:34,728
 between guests and hosts
-in the Peer to Peer catalogue.
+in the Peer to Peer catalog.
 
 11
 00:00:34,720 --> 00:00:37,617
@@ -55,706 +55,710 @@ It appears in sequence, with an optional
 prequel (0 or 1) and optional sequels (0 or more).
 
 13
-00:00:45,520 --> 00:00:52,595
-Build this data structure from the data provided
-as two JSON documents: episode.json and partners.json
+00:00:45,520 --> 00:00:49,337
+Build this data structure from the
+data provided as two JSON documents: 
 
 14
-00:00:52,590 --> 00:00:56,720
-Render a simple representation of
-the data structure in a web browser.
+00:00:49,337 --> 00:00:52,590
+episode.json and partners.json.
 
 15
-00:00:56,906 --> 00:01:02,830
-JW: And on page 2, this is
-how the sequencing should look.
+00:00:52,590 --> 00:00:56,720
+Render a simple representation
+of the data structure in a web browser.
 
 16
-00:01:11,950 --> 00:01:14,990
-And a sequence is connected by guests and hosts.
+00:00:56,906 --> 00:01:02,830
+And on page 2, this is
+how the sequencing should look.
 
 17
-00:01:15,390 --> 00:01:16,430
-DN: Effectively yes.
+00:01:02,830 --> 00:01:06,697
+Episode 1 begins a sequence,
+and is follod by Episode 2.
 
 18
-00:01:17,200 --> 00:01:20,950
-JW: So let's have a look
-at the data to begin with.
+00:01:06,690 --> 00:01:09,645
+2 follows 1 followed by 5.
 
 19
-00:01:27,060 --> 00:01:28,460
-I've already got this stuff.
+00:01:09,645 --> 00:01:11,611
+3 begins a sequence followed by 4.
 
 20
-00:01:36,450 --> 00:01:38,590
-Let's look at past episodes to begin with.
+00:01:11,610 --> 00:01:15,382
+And a sequence is connected by guests and hosts.
 
 21
-00:01:38,880 --> 00:01:44,170
+00:01:15,390 --> 00:01:17,188
+DN: Effectively yes.
+
+22
+00:01:17,200 --> 00:01:22,045
+JW: So let's have a look at the data to begin with.
+
+23
+00:01:27,060 --> 00:01:29,257
+I've already got this stuff.
+
+24
+00:01:36,450 --> 00:01:38,777
+Let's look at past episodes to begin with.
+
+25
+00:01:38,777 --> 00:01:44,170
 I'm interested in the ones that
 do form parts of sequences already.
 
-22
-00:01:45,750 --> 00:01:49,560
-We have episode one, where the host was you
-
-23
-00:01:49,560 --> 00:01:50,740
-and the guest was Tom.
-
-24
-00:01:52,900 --> 00:01:54,770
-That sequence moves on to two,
-
-25
-00:01:54,900 --> 00:01:57,860
-where Tom the guest becomes Tom the host
-
 26
-00:01:57,930 --> 00:02:00,220
-and Camille becomes the guest.
+00:01:45,750 --> 00:01:51,862
+We have episode one, where the
+host was you and the guest was Tom.
 
 27
+00:01:52,900 --> 00:01:54,925
+That sequence moves on to two,
+
+28
+00:01:54,925 --> 00:02:00,594
+where Tom the guest becomes Tom
+the host and Camille becomes the guest.
+
+29
 00:02:00,840 --> 00:02:04,000
 And then this one leads on to here,
 
-28
+30
 00:02:04,000 --> 00:02:06,340
 where Camille goes from guest
 
-29
+31
 00:02:06,340 --> 00:02:07,740
 to should have been host.
 
-30
+32
 00:02:07,820 --> 00:02:10,090
 DN: Unfortunately Camille was ill today
 
-31
+33
 00:02:10,480 --> 00:02:12,400
 so I'm standing in as host.
 
-32
+34
 00:02:14,270 --> 00:02:19,600
 DN: In fact, this data is slightly stale.
 
-33
+35
 00:02:21,340 --> 00:02:25,660
 We could have changed
 it so that we have a branch
 
-34
+36
 00:02:25,920 --> 00:02:29,480
 where I interview Tom and also you,
 
-35
+37
 00:02:29,485 --> 00:02:32,810
 but we're going to pretend
 that Camille is acting as host today
 
-36
+38
 00:02:32,810 --> 00:02:35,540
 and stick with the sample
 data that we came up with.
 
-37
+39
 00:02:35,720 --> 00:02:38,560
 We can always adapt it later.
 
-38
+40
 00:02:40,080 --> 00:02:42,320
 JW: Thinking of the nouns in this description,
 
-39
+41
 00:02:43,080 --> 00:02:46,160
 the data structure is
 composed of collaborations.
 
-40
+42
 00:02:46,160 --> 00:02:48,630
 The description is
 quite explicit about that.
 
-41
+43
 00:02:48,630 --> 00:02:51,180
 Now, at the moment, an episode
 
-42
+44
 00:02:51,220 --> 00:02:53,940
 isn't strictly a collaboration.
 
-43
+45
 00:02:54,610 --> 00:02:58,411
 A collaboration should have an
 episode but not necessarily be an episode.
 
-44
+46
 00:02:58,411 --> 00:03:01,420
 And the thing that isn't explicit in this data
 
-45
+47
 00:03:01,420 --> 00:03:02,960
 is the prequels and sequels.
 
-46
+48
 00:03:03,062 --> 00:03:04,720
 But we know that we can
 
-47
+49
 00:03:04,720 --> 00:03:08,060
 determine those from
 the host and guest ids.
 
-48
+50
 00:03:13,420 --> 00:03:18,300
 I am going to use Ember for this
 
-49
+51
 00:03:18,300 --> 00:03:20,800
 A bit like reaching for Rails,
 
-50
+52
 00:03:20,860 --> 00:03:23,150
 I won't use all of it to begin with,
 
-51
+53
 00:03:23,154 --> 00:03:26,320
 but it gives you plenty of
 directions to go in once you're set up.
 
-52
+54
 00:03:32,260 --> 00:03:34,960
 Let me see what version of Ember CLI I'm running.
 
-53
+55
 00:03:35,250 --> 00:03:38,040
 Cool... Bleeding edge Ember CLI.
 
-54
+56
 00:03:39,420 --> 00:03:40,560
 Let's call this peertopeer.
 
-55
+57
 00:03:48,900 --> 00:03:52,450
 Ember CLI is installing all the tooling
 dependencies we need.
 
-56
+58
 00:03:52,540 --> 00:03:52,930
 DN: OK.
 
-57
+59
 00:03:56,200 --> 00:03:59,150
 JW: It will take a while,
 there's quite a few of them.
 
-58
+60
 00:04:04,260 --> 00:04:08,525
 Because I'm using a local copy of Ember CLI–
 
-59
+61
 00:04:08,925 --> 00:04:10,137
 I cloned it off Github...
 
-60
+62
 00:04:11,300 --> 00:04:13,460
 With npm, what you tend to do
 
-61
+63
 00:04:13,460 --> 00:04:17,550
 when working on packages that you're adapting
 
-62
+64
 00:04:17,600 --> 00:04:20,990
 is to... You do npm link and it will symlink up
 
-63
+65
 00:04:22,390 --> 00:04:27,657
 your copy of the repository
 to the node_modules global directory.
 
-64
+66
 00:04:28,651 --> 00:04:30,050
 I can't use it straight away,
 
-65
+67
 00:04:30,050 --> 00:04:32,050
 I need to first enter npm link ember-cli,
 
-66
+68
 00:04:33,260 --> 00:04:35,680
 and that says also use it inside this project.
 
-67
+69
 00:04:37,630 --> 00:04:42,530
 Now, if you follow the
 trail in this local project,
 
-68
+70
 00:04:42,530 --> 00:04:48,830
 you'll find this symlink
 here going to /usr/local/lib/node_modules.
 
-69
+71
 00:04:52,370 --> 00:04:56,780
 You'll find Ember CLI linked to
 my very own copy of it.
 
-70
+72
 00:04:57,810 --> 00:04:59,120
 It's a nicety of npm.
 
-71
+73
 00:05:14,520 --> 00:05:16,100
 Let's just make a quick change
 
-72
+74
 00:05:16,960 --> 00:05:20,330
 to make sure we're
 doing what we think we're doing.
 
-73
+75
 00:05:28,600 --> 00:05:29,700
 OK, it seems to work.
 
-74
+76
 00:05:33,540 --> 00:05:35,760
 I am inclined to
 
-75
+77
 00:05:38,690 --> 00:05:41,800
 get the data in first and get it in the browser
 
-76
+78
 00:05:41,800 --> 00:05:43,800
 and to think about it that way.
 
-77
+79
 00:05:45,420 --> 00:05:48,400
 Pick up the data and put
 it down again as many times as possible
 
-78
+80
 00:05:48,400 --> 00:05:50,930
 until some way to handle it emerges.
 
-79
+81
 00:05:54,710 --> 00:05:57,570
 Before we get going, I'm going to
 
-80
+82
 00:05:58,070 --> 00:06:00,030
 install another dependency.
 
-81
+83
 00:06:09,560 --> 00:06:11,880
 So Ember is about to undergo
 
-82
+84
 00:06:12,900 --> 00:06:15,060
 some significant improvements and this
 
-83
+85
 00:06:16,420 --> 00:06:19,090
 Ember CLI add-on will let us use the future.
 
-84
+86
 00:06:23,700 --> 00:06:26,660
 And then I need to opt-in to the future.
 
-85
+87
 00:06:37,350 --> 00:06:38,860
 I just want to do a quick check.
 
-86
-00:06:45,131 --> 00:06:47,520
-
-87
+88
 00:06:47,520 --> 00:06:48,900
 ember-htmlbars I want.
 
-88
+89
 00:06:50,140 --> 00:06:51,330
 There is another one.
 
-89
+90
 00:06:56,530 --> 00:06:59,460
 DN: Did you just
 switch to the repository for ember.js?
 
-90
+91
 00:06:59,460 --> 00:06:59,960
 JW: Yes.
 
-91
+92
 00:07:04,930 --> 00:07:07,680
 So I want these three features.
 
-92
+93
 00:07:10,380 --> 00:07:11,800
 If you're running on Canary
 
-93
+94
 00:07:12,331 --> 00:07:14,640
 at the latest build off of master of Ember,
 
-94
+95
 00:07:16,050 --> 00:07:18,320
 the new things that are coming down the pipe
 
-95
+96
 00:07:18,320 --> 00:07:20,270
 are hidden behind feature flags.
 
-96
+97
 00:07:20,820 --> 00:07:27,657
 That allows the core team
 to release things incrementally,
 
-97
+98
 00:07:28,470 --> 00:07:30,300
 but it also allows people to try them out
 
-98
+99
 00:07:30,937 --> 00:07:32,685
 without breaking the past.
 
-99
+100
 00:07:32,690 --> 00:07:34,170
 So I want those three things.
 
-100
+101
 00:07:34,170 --> 00:07:35,760
 And the other thing I want is...
 
-101
+102
 00:07:38,800 --> 00:07:40,750
 I don't want this stable build of Ember,
 
-102
+103
 00:07:40,790 --> 00:07:44,180
 I want the Canary build.
 
-103
+104
 00:07:51,050 --> 00:07:53,280
 DN: OK, so this is bleeding edge all the way.
 
-104
+105
 00:07:53,500 --> 00:07:54,120
 JW: Yes.
 
-105
+106
 00:07:54,120 --> 00:07:58,490
 And the reason I think it's
 going to be worth while is that
 
-106
+107
 00:07:59,780 --> 00:08:02,250
 Ember will be changing shortly after we record this,
 
-107
+108
 00:08:02,250 --> 00:08:04,840
 and I think it's worth
 seeing what it's about to become.
 
-108
+109
 00:08:04,840 --> 00:08:05,370
 DN: OK.
 
-109
+110
 00:08:07,190 --> 00:08:09,890
 JW: So I think I want
 that version of Handlebars.
 
-110
+111
 00:08:11,820 --> 00:08:13,160
 And that version of Ember.
 
-111
+112
 00:08:17,030 --> 00:08:17,870
 Let's check that has taken.
 
-112
+113
 00:08:22,460 --> 00:08:25,070
 I'll just have a look at
 
-113
+114
 00:08:27,300 --> 00:08:28,670
 all these differences.
 
-114
+115
 00:08:29,990 --> 00:08:33,142
 Bleeding edge Ember
 
-115
+116
 00:08:33,220 --> 00:08:36,340
 opted in to these new features
 
-116
+117
 00:08:36,340 --> 00:08:38,340
 and included HTMLBars, which is the...
 
-117
+118
 00:08:39,190 --> 00:08:41,260
 next generation template compiler.
 
-118
+119
 00:08:41,440 --> 00:08:43,760
 I'll just make sure
 all that actually works.
 
-119
+120
 00:08:52,571 --> 00:08:54,370
 I've never quite understood this side of Bower.
 
-120
+121
 00:08:54,370 --> 00:08:55,817
 Because it doesn't have a lockfile
 
-121
+122
 00:08:59,600 --> 00:09:02,450
 it keeps the dependency
 resolutions in the same file
 
-122
+123
 00:09:02,450 --> 00:09:05,040
 in which they were specified in the first place.
 
-123
+124
 00:09:11,020 --> 00:09:13,870
 There's not a lot of
 difference to notice at the moment
 
-124
+125
 00:09:13,870 --> 00:09:17,280
 but things are better under
 the hood for various reasons.
 
-125
+126
 00:09:20,570 --> 00:09:22,450
 I'm not going to in to tests just yet
 
-126
+127
 00:09:22,450 --> 00:09:25,760
 because I don't know
 quite what the target is at the moment.
 
-127
+128
 00:09:25,760 --> 00:09:27,370
 I know I want a data structure.
 
-128
+129
 00:09:27,880 --> 00:09:29,440
 But if it's something I want to display
 
-129
+130
 00:09:29,450 --> 00:09:32,834
 then I want to let the view lead me
 
-130
+131
 00:09:32,960 --> 00:09:35,120
 to what would be most useful.
 
-131
+132
 00:09:36,940 --> 00:09:39,260
 Let's say for the beginning...
 
-132
+133
 00:09:40,350 --> 00:09:42,770
 Let's just a display
 a list of episodes.
 
-133
+134
 00:10:11,730 --> 00:10:16,160
 Thinking back to Tom's Peer to Peer
 
-134
+135
 00:10:16,160 --> 00:10:18,830
 and how often he commits,
 
-135
+136
 00:10:18,830 --> 00:10:21,770
 I realise that I'm
 already several changes
 
-136
+137
 00:10:21,770 --> 00:10:23,940
 in without committing.
 
-137
+138
 00:10:24,980 --> 00:10:29,222
 Let me just commit my bits of bleeding
 edge stuff.
 
-138
+139
 00:10:30,102 --> 00:10:32,045
 DN: I didn't see you create a Git repository.
 
-139
+140
 00:10:32,057 --> 00:10:34,274
 Was that done for
 you by the ember generate command?
 
-140
+141
 00:10:34,340 --> 00:10:37,360
 JW: Yes, ember new creates a repo.
 
-141
+142
 00:10:37,470 --> 00:10:41,530
 So that's my stuff to get
 up on the latest Ember.
 
-142
+143
 00:10:50,530 --> 00:10:52,354
 And partly I want to demonstrate how easy
 
-143
+144
 00:10:52,360 --> 00:10:54,331
 it is to use the bleeding edge of Ember.
 
-144
+145
 00:10:54,670 --> 00:10:59,460
 It's modelled after Rails and Rails's command
 line tooling,
 
-145
+146
 00:10:59,820 --> 00:11:01,590
 so it should feel familiar to anyone
 who knows that.
 
-146
+147
 00:11:03,870 --> 00:11:05,270
 Check in that change as well.
 
-147
+148
 00:11:09,330 --> 00:11:11,040
 I'll just see what that is exactly.
 
-148
+149
 00:11:14,460 --> 00:11:17,200
 So that at the moment is fine.
 
-149
+150
 00:11:17,211 --> 00:11:19,120
 It's compiling. It's just
 that there's nothing to render
 
-150
+151
 00:11:19,120 --> 00:11:20,670
 because there is no data.
 
-151
+152
 00:11:22,000 --> 00:11:23,370
 So I'm going to commit that.
 
-152
+153
 00:11:31,000 --> 00:11:32,290
 Let's pull in those files.
 
-153
+154
 00:11:34,430 --> 00:11:35,810
 I've got them next door.
 Let's pull them in...
 
-154
+155
 00:11:40,130 --> 00:11:43,190
 I'm going to pretend they're
 coming from an API of some sort.
 
-155
+156
 00:11:44,520 --> 00:11:46,080
 So we'll put them in there.
 
-156
+157
 00:11:56,130 --> 00:12:01,634
 DN: So we now should be able to
 fetch them from lolhost/api/episodes.
 
-157
+158
 00:12:01,890 --> 00:12:06,045
 JW: lolhost is because I always mistype it.
 
-158
+159
 00:12:12,777 --> 00:12:14,571
 I'll concentrate on episodes for now
 
-159
+160
 00:12:14,590 --> 00:12:16,230
 because it looks the most like...
 
-160
+161
 00:12:17,840 --> 00:12:22,502
 I don't have an applcation route yet.
 Routes are where data gets loaded in,
 
-161
+162
 00:12:22,502 --> 00:12:23,150
 so I will generate one of those.
 
-162
+163
 00:12:29,380 --> 00:12:31,497
 I don't want to change the template,
 
-163
+164
 00:12:31,540 --> 00:12:32,910
 but I do want the rest of it.
 
-164
+165
 00:12:39,740 --> 00:12:40,920
 In my template
 
-165
+166
 00:12:42,240 --> 00:12:44,210
 I wasn't referring to model directly,
 
-166
+167
 00:12:44,210 --> 00:12:46,720
 I'm referring to the episodes
 
-167
+168
 00:12:48,780 --> 00:12:50,210
 and I'm going to stick with that.
 
-168
+169
 00:12:50,400 --> 00:12:52,210
 So what I want to return from here is...
 
-169
+170
 00:12:53,700 --> 00:12:57,840
 I'm just going to set up some aliases.
 
-170
+171
 00:13:01,360 --> 00:13:04,250
 I want to return a
 Promise to load in that data.
 
-171
+172
 00:13:20,388 --> 00:13:23,954
 I think I have the ic-ajax library handy.
 
-172
+173
 00:13:33,810 --> 00:13:35,330
 I think that should be enough.
 
-173
+174
 00:13:37,290 --> 00:13:38,990
 Let's just see if it compiles.
 
-174
+175
 00:13:40,850 --> 00:13:41,720
 Yes, it seems to.
 
-175
+176
 00:13:57,060 --> 00:13:59,050
 I'm going to step back to something
 
-176
+177
 00:13:59,440 --> 00:14:01,330
 that looks a bit more like the guides.
-
-177
-00:14:02,180 --> 00:14:03,130
 
 178
 00:14:10,630 --> 00:14:12,640
@@ -1101,7 +1105,7 @@ going to point to the next one.
 
 258
 00:22:48,380 --> 00:22:53,062
-via sequel which is going to point 
+via sequel which is going to point
 back to this one, via prequel.
 
 259
@@ -3720,7 +3724,7 @@ sequels of the model.
 
 873
 01:16:13,520 --> 01:16:14,620
-I do have <ul>.
+I do have <u>.</u>
 
 874
 01:16:15,290 --> 01:16:16,910
