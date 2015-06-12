@@ -1179,16 +1179,16 @@ to appear after one of its sequels.
 DN: Yes, that's true.
 
 268
-00:26:58,640 --> 00:27:01,250
+00:26:58,640 --> 00:27:01,348
 JW: Although if they did come in
 a different order this would break down.
 
 269
-00:27:01,257 --> 00:27:03,050
+00:27:01,348 --> 00:27:03,050
 But let's just go for this to start with.
 
 270
-00:27:03,051 --> 00:27:05,940
+00:27:03,050 --> 00:27:06,377
 DN: That's a safe assumption for now at least.
 
 271
@@ -1196,166 +1196,167 @@ DN: That's a safe assumption for now at least.
 JW: Yes. So let's say:
 
 272
-00:27:12,750 --> 00:27:16,660
-I need to figure out
-what its prequel id is.
+00:27:08,200 --> 00:27:12,742
+[John types].
 
 273
-00:27:17,140 --> 00:27:21,330
+00:27:12,750 --> 00:27:17,131
+I need to figure out what its prequel id is.
+
+274
+00:27:17,140 --> 00:27:21,977
 I'm looking for something in
 the list of episodes, that has...
 
-274
-00:27:22,000 --> 00:27:23,874
+275
+00:27:22,000 --> 00:27:24,800
 I'll pseudo code this for a second.
 
-275
-00:27:24,834 --> 00:27:28,780
-it's a prequel if my current
+276
+00:27:24,830 --> 00:27:29,142
+It's a prequel if my current
 host was guest on that episode.
 
-276
-00:27:52,030 --> 00:27:55,330
-This isn't going to be very efficient algorithmically
-
 277
-00:27:55,330 --> 00:27:58,060
-But it's a small list so
-it shouldn't matter too much.
+00:27:29,748 --> 00:27:34,605
+So episode host id.
 
 278
-00:27:58,180 --> 00:27:59,570
-So we want to find,
+00:27:40,994 --> 00:27:43,862
+[Inaudible].
 
 279
-00:28:00,450 --> 00:28:03,360
-an episode whose guest id
+00:27:52,030 --> 00:27:55,330
+This isn't going to be very efficient algorithmically,
 
 280
-00:28:05,810 --> 00:28:08,220
-matches this episode's host id.
+00:27:55,330 --> 00:27:58,060
+but it's a small list so it shouldn't matter too much.
 
 281
-00:28:22,860 --> 00:28:26,420
-DN: I think that find by is
-going to return a record isn't it?
+00:27:58,180 --> 00:28:10,868
+So we want to find an episode whose
+guest id matches this episode's host id.
 
 282
-00:28:26,420 --> 00:28:29,380
-You're assigning that to prequel id.
+00:28:10,860 --> 00:28:22,422
+I think that's correct at the moment,
+we will push that on to our result.
 
 283
-00:28:29,960 --> 00:28:32,205
-JW: You're absolutely right.
+00:28:22,770 --> 00:28:29,737
+DN: I think that find by is going to return
+a record isn't it? You're assigning that to prequel id.
 
 284
-00:28:33,070 --> 00:28:36,194
-Let's make sure we
-actually get a prequel first.
+00:28:29,737 --> 00:28:32,200
+JW: You're absolutely right.
 
 285
-00:28:44,410 --> 00:28:46,930
-I'm mutating the
-episode that has been passed in
+00:28:33,070 --> 00:28:36,502
+Let's make sure we actually get a prequel first.
 
 286
-00:28:47,460 --> 00:28:50,880
-I want to make a shallow copy of it.
+00:28:44,410 --> 00:28:51,062
+I'm mutating the episode that has been
+passed in. I want to make a shallow copy of it.
 
 287
-00:28:51,200 --> 00:28:53,010
+00:28:51,200 --> 00:28:53,051
 But we'll deal with that in a second.
 
 288
+00:28:53,050 --> 00:28:54,777
+So prequel_id equals...
+
+289
+00:28:54,770 --> 00:29:01,280
+[Silence].
+
+290
 00:29:01,290 --> 00:29:04,377
 Let's see what effect that has.
 
-289
+291
 00:29:04,388 --> 00:29:08,480
 Sure enough we do have
 a prequel id on one of them.
 
-290
+292
 00:29:10,491 --> 00:29:12,460
 It's a weird diff to read.
 
-291
+293
 00:29:14,110 --> 00:29:16,697
 DN: The second one looks right.
 
-292
-00:29:16,950 --> 00:29:18,300
-JW: Yes, I think this is cool.
-
-293
-00:29:18,300 --> 00:29:21,380
-I've got prequel id, it's
-just commas it's confused about.
-
 294
+00:29:16,950 --> 00:29:21,920
+JW: Yes, I think this is cool, I've got
+prequel id, it's just commas it's confused about.
+
+295
 00:29:21,940 --> 00:29:25,200
 OK, so let's try the
 same thing with sequels.
 
-295
-00:29:28,460 --> 00:29:30,640
-Rather than find
-by we will use filter by.
-
 296
-00:29:32,380 --> 00:29:34,500
-I'll refer to the docs for these methods,
+00:29:28,460 --> 00:29:32,274
+Rather than find by we will use filter by.
 
 297
-00:29:34,500 --> 00:29:37,280
-just to show you
-where I'm getting them from.
+00:29:32,380 --> 00:29:37,542
+I'll refer to the docs for these methods,
+just to show you where I'm getting them from.
 
 298
-00:29:37,550 --> 00:29:42,070
-These are extensions
-to the array prototype
+00:29:37,550 --> 00:29:43,394
+These are extensions to the
+array prototype [inaudible].
 
 299
-00:29:43,430 --> 00:29:45,360
-You don't have to opt in to extensions.
+00:29:43,430 --> 00:29:50,308
+You don't have to opt in to extensions,
+you can leave them on the floor, if you want.
 
 300
-00:29:45,360 --> 00:29:47,430
-You can leave them on the floor.
+00:29:50,320 --> 00:29:54,060
+If you don't want your core object monkey-patched.
 
 301
-00:29:50,340 --> 00:29:54,060
-If you don't want your
-core object monkey-patched.
+00:29:54,290 --> 00:29:57,965
+But they are so useful most of the time.
 
 302
-00:29:54,290 --> 00:29:57,140
-But they are so useful most of the time
+00:29:58,010 --> 00:30:03,394
+So a sequel is an episode whose
+host id, is equal to our guest ID.
 
 303
-00:29:58,010 --> 00:30:00,740
-So a sequel is an episode whose host id,
+00:30:03,428 --> 00:30:10,617
+[Silence].
 
 304
-00:30:00,740 --> 00:30:02,080
-is equal to our guest ID.
-
-305
-00:30:10,730 --> 00:30:12,340
+00:30:10,730 --> 00:30:14,205
 And with this one...
 
-306
-00:30:14,260 --> 00:30:15,970
+305
+00:30:14,260 --> 00:30:19,200
 Because we know it's always a list,
-
-307
-00:30:16,090 --> 00:30:18,260
 we don't need to check so much.
 
-308
-00:30:29,910 --> 00:30:31,650
+306
+00:30:23,657 --> 00:30:29,485
+We can do a map by,
+its another thing that Ember provides.
+
+307
+00:30:29,828 --> 00:30:32,480
 I'll just break this out a bit.
+
+308
+00:30:32,662 --> 00:30:35,577
+I'll probably one line that.
 
 309
 00:30:36,240 --> 00:30:38,171
