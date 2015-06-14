@@ -1809,3550 +1809,3520 @@ JW: Oh yes, of course, you're right.
 Then I'd expect to be able to click a link, of course.
 
 410
-00:40:13,860 --> 00:40:15,250
+00:40:13,860 --> 00:40:15,808
 I'll get there eventually.
 
 411
-00:40:15,250 --> 00:40:15,730
-DN: OK.
+00:40:15,800 --> 00:40:27,208
+[Silence]
 
 412
-00:40:27,370 --> 00:40:29,460
-We expect to be
-able to visit the home page
+00:40:27,312 --> 00:40:29,528
+We expect to be able to visit the home page, 
 
 413
-00:40:29,490 --> 00:40:30,920
+00:40:29,520 --> 00:40:32,256
 click on Counting Tree Nodes
+then click on Ranking Poker Hands.
 
 414
-00:40:30,920 --> 00:40:32,740
-then click on Ranking Poker Hands
+00:40:34,700 --> 00:40:38,784
+Maybe we could say at certain
+points what URL we expect to be on.
 
 415
-00:40:34,740 --> 00:40:36,700
-We could say at certain points what
+00:40:40,990 --> 00:40:43,592
+It doesn't matter too much.
 
 416
-00:40:36,700 --> 00:40:38,260
-URL we expect to be on.
+00:40:45,150 --> 00:40:48,904
+I'm trying to tell the story of walking
+backwards and forwards through a sequence.
 
 417
-00:40:40,990 --> 00:40:42,940
-It doesn't matter too much
+00:40:48,970 --> 00:40:53,152
+To get some confidence
+that we've set things up right.
 
 418
-00:40:45,150 --> 00:40:47,120
-I'm trying to tell the story of walking
-backwards and forwards
+00:40:53,168 --> 00:40:59,928
+[John types]
 
 419
-00:40:47,140 --> 00:40:48,410
-through a sequence.
+00:40:59,940 --> 00:41:03,288
+Let's leave it like this for now, and see where this leads.
 
 420
-00:40:48,970 --> 00:40:50,960
-to get some confidence that
+00:41:03,450 --> 00:41:09,368
+DN: So we're staring at the top level in
+the directory of episodes that have no prequel.
 
 421
-00:40:50,960 --> 00:40:52,770
-we've set things up right.
+00:41:09,380 --> 00:41:13,184
+And then we click the first one which
+is Counting Tree Nodes and that has a sequel,
 
 422
-00:40:59,940 --> 00:41:01,570
-Let's leave it like this for now,
+00:41:13,190 --> 00:41:15,168
+which is episode 2 Ranking Poker Hands?
 
 423
-00:41:01,570 --> 00:41:02,850
-and see where this leads.
-
-424
-00:41:03,450 --> 00:41:05,300
-DN: So we're staring at the top level.
-
-425
-00:41:05,300 --> 00:41:08,800
-In the directory of
-episodes that have no prequel
-
-426
-00:41:09,380 --> 00:41:10,950
-And then we click the first one
-
-427
-00:41:10,950 --> 00:41:12,490
-which is Counting Tree Nodes
-
-428
-00:41:12,490 --> 00:41:14,000
-and that has a sequel which is
-
-429
-00:41:14,000 --> 00:41:15,620
-episode 2 Ranking Poker Hands?
-
-430
-00:41:15,620 --> 00:41:16,440
+00:41:15,176 --> 00:41:16,440
 JW: Yes.
 
-431
-00:41:17,730 --> 00:41:19,530
+424
+00:41:17,730 --> 00:41:21,648
 See what kind of errors...
 
-432
-00:41:21,680 --> 00:41:24,520
-DN:  It doesn't like
-the URL walking a sequence.
+425
+00:41:21,680 --> 00:41:25,232
+DN:  It doesn't like the URL walking a sequence.
 
-433
-00:41:25,610 --> 00:41:26,520
+426
+00:41:25,496 --> 00:41:27,136
 JW: Let's find out.
 
-434
-00:41:26,520 --> 00:41:28,520
+427
+00:41:27,144 --> 00:41:28,896
 DN: How did it end up there?
 
-435
-00:41:28,910 --> 00:41:30,500
+428
+00:41:28,910 --> 00:41:31,304
 JW: That's a very good question.
 
-436
-00:41:34,130 --> 00:41:36,110
-Anyway, the failure is that there is no
+429
+00:41:34,130 --> 00:41:38,712
+Anyway, the failure is that there is
+no link containing Counting Tree Nodes.
 
-437
-00:41:36,110 --> 00:41:38,300
-link containing Counting Tree Nodes.
-
-438
-00:41:39,560 --> 00:41:42,080
+430
+00:41:39,560 --> 00:41:42,576
 So let's head over to this template
 
-439
-00:42:05,120 --> 00:42:06,840
+431
+00:42:04,880 --> 00:42:14,584
 We want to link to a root episode.
 
+432
+00:42:14,890 --> 00:42:19,000
+And the model we want to pass
+in for it is this episode here.
+
+433
+00:42:19,000 --> 00:42:34,208
+[John types and mumbles]
+
+434
+00:42:34,880 --> 00:42:39,230
+We need to deliver this data down.
+
+435
+00:42:39,870 --> 00:42:44,256
+DN: So do we need a rootEpisodes function?
+
+436
+00:42:45,970 --> 00:42:50,024
+JW: We could say that the model
+for the application is the root episodes.
+
+437
+00:42:50,030 --> 00:42:52,536
+So if we did that...
+
+438
+00:42:52,560 --> 00:42:57,528
+Now it's getting stuck for some reason and...
+
+439
+00:43:00,400 --> 00:43:04,872
+I'm going to do something to the
+model before handing it over, so let's say
+
 440
-00:42:14,890 --> 00:42:17,230
-And the model we
-want to pass in for it is this:
+00:43:04,904 --> 00:43:34,344
+[John types and mumbles]
 
 441
-00:42:17,490 --> 00:42:19,230
-This episode here.
+00:43:34,770 --> 00:43:39,800
+The first test is passing so let's see
+what the world looks like at this point.
 
 442
-00:42:34,880 --> 00:42:39,230
-We need to deliver this data down
+00:43:39,808 --> 00:43:47,144
+[Silence]
 
 443
-00:42:39,870 --> 00:42:42,640
-DN: So do we need
-a rootEpisodes function?
+00:43:47,140 --> 00:43:49,960
+So now we're expecting...
 
 444
-00:42:46,040 --> 00:42:49,634
-We could say that the model for
-the application is the root episodes.
+00:43:49,960 --> 00:43:52,560
+It should be the same list of episodes actually.
 
 445
-00:42:49,634 --> 00:42:51,610
-So if we did that:
+00:43:52,560 --> 00:43:57,544
+[Silence]
 
 446
-00:42:52,560 --> 00:42:54,580
-Now it's getting stuck.
+00:43:57,560 --> 00:44:01,577
+DN: Ah yes, because
+buildCollaborators does return the full list.
 
 447
-00:42:55,310 --> 00:42:56,820
-For some reason...
-
-448
-00:43:00,400 --> 00:43:03,542
-I'm going to do something to
-the model before handing it over.
-
-449
-00:43:03,542 --> 00:43:04,148
-So let's say:
-
-450
-00:43:34,770 --> 00:43:36,720
-The first test is passing so let's
-
-451
-00:43:37,650 --> 00:43:39,950
-See what the world
-looks like at this point.
-
-452
-00:43:49,960 --> 00:43:52,240
-It should be the same for each episode.
-
-453
-00:43:57,560 --> 00:44:01,577
-DN: Ah yes, because buildCollaborators
-does return the full list.
-
-454
-00:44:02,030 --> 00:44:04,990
+00:44:01,792 --> 00:44:05,184
 We don't yet have
 something that just returns the roots.
 
-455
-00:44:09,480 --> 00:44:10,502
-That's interesting,
+448
+00:44:05,180 --> 00:44:09,360
+[John thinks]
 
-456
-00:44:10,502 --> 00:44:13,680
-we're passing something into
-it that it doesn't understand.
+449
+00:44:09,590 --> 00:44:14,600
+That's interesting, we're passing
+something into it that it doesn't understand.
 
-457
-00:44:24,750 --> 00:44:27,170
-That's curious, I wonder if...
+450
+00:44:14,616 --> 00:44:24,432
+[Silence]
 
-458
-00:44:28,080 --> 00:44:31,600
-undefined is not a function: what's the
-exact stacktrace of that?
+451
+00:44:24,750 --> 00:44:32,136
+That's curious, I wonder if undefined is not
+a function: what's the exact stacktrace of that?
 
-459
+452
+00:44:34,960 --> 00:44:36,840
+[Inaudible]
+
+453
+00:44:36,840 --> 00:44:46,288
+[Silence]
+
+454
 00:44:46,290 --> 00:44:49,970
 That is probably slightly
 adrift of where it really is.
 
-460
-00:44:59,870 --> 00:45:01,550
+455
+00:44:50,800 --> 00:44:59,590
+So lets see...
+
+456
+00:44:59,870 --> 00:45:02,488
 Oh, I know what I've done, again.
 
-461
-00:45:03,870 --> 00:45:04,980
-Let's call this:
+457
+00:45:03,870 --> 00:45:05,976
+Let's call this data.
 
-462
-00:45:12,290 --> 00:45:12,920
+458
+00:45:12,290 --> 00:45:14,352
 DN: Unpack it.
-
-463
-00:45:12,920 --> 00:45:13,300
 JW: Yes.
 
-464
+459
 00:45:15,800 --> 00:45:17,930
-Now we've got a
-different kind of failure.
+Now we've got a different kind of failure...
+
+460
+00:45:17,930 --> 00:45:23,016
+I'm going back to the test at this point
+rather than relying on the running application.
+
+461
+00:45:23,010 --> 00:45:37,432
+[Silence]
+
+462
+00:45:37,440 --> 00:45:42,376
+It's not bubbling up, but the error is
+that we try and link to a root called episode,
+
+463
+00:45:42,370 --> 00:45:47,008
+but we've not yet said what
+that root is or where it lives. So let's do that.
+
+464
+00:45:47,240 --> 00:45:49,150
+Before we do that let's...
 
 465
-00:45:17,930 --> 00:45:19,930
-I'm going back to the test at this point
+00:45:49,160 --> 00:46:25,008
+[John types and mumbles]
 
 466
-00:45:19,930 --> 00:45:22,500
-rather than relying
-on the running application.
+00:46:25,080 --> 00:46:28,880
+I'm happy to lump all those together as one commit.
 
 467
-00:45:37,440 --> 00:45:39,180
-It's not bubbling up, but
+00:46:32,000 --> 00:46:42,224
+Use buildCollaborators and emit episode links.
 
 468
-00:45:39,180 --> 00:45:42,434
-The error is that we try
-and link to a root called episode
+00:46:45,740 --> 00:46:49,936
+There's no root just yet so let's get that working.
 
 469
-00:45:42,430 --> 00:45:45,657
-but we've not yet said what
-that root is or where it lives,
+00:46:55,760 --> 00:47:04,880
+So the path to this route... is going to be that.
 
 470
-00:45:45,657 --> 00:45:46,580
-So let's do that.
+00:47:07,070 --> 00:47:09,430
+Let's see what kind of difference that makes.
 
 471
-00:45:47,240 --> 00:45:49,150
-Before we do that let's:
-
-472
-00:46:25,260 --> 00:46:28,080
-I'm happy to lump all
-those together as one commit.
-
-473
-00:46:45,740 --> 00:46:47,420
-There's no root just yet so...
-
-474
-00:46:47,810 --> 00:46:49,230
-let's get that working.
-
-475
-00:47:07,070 --> 00:47:09,430
-Let's see what kind
-of difference that makes.
-
-476
-00:47:09,990 --> 00:47:11,630
+00:47:09,990 --> 00:47:11,984
 Cool, now on to the next.
 
-477
-00:47:15,200 --> 00:47:17,540
-Right now, there's no link to
+472
+00:47:11,980 --> 00:47:14,888
+[John thinks]
 
-478
-00:47:17,540 --> 00:47:19,000
-Counting Tree Nodes on here.
+473
+00:47:15,088 --> 00:47:19,384
+Right now, there's no visible
+link to Counting Tree Nodes on here.
 
-479
-00:47:19,390 --> 00:47:21,360
-And technically we're on root
-
-480
-00:47:22,960 --> 00:47:24,560
+474
+00:47:19,390 --> 00:47:24,912
+And technically we're on root,
 which doesn't do very much.
 
-481
+475
 00:47:24,940 --> 00:47:26,770
 And there's only the template for it.
 
-482
-00:47:29,940 --> 00:47:33,490
-I'll have a running
-version of the app to look at,
+476
+00:47:29,940 --> 00:47:34,768
+I'll have a running version of the
+app to look at, alongside the tests.
 
-483
-00:47:33,490 --> 00:47:34,650
-alongside the tests.
-
-484
-00:47:34,930 --> 00:47:35,530
+477
+00:47:34,930 --> 00:47:37,128
 DN: OK.
 
-485
-00:47:48,450 --> 00:47:49,340
-Oh that's curious...
+478
+00:47:48,450 --> 00:47:51,128
+Oh that's curious [inaudible].
 
-486
-00:48:06,380 --> 00:48:07,460
+479
+00:47:51,120 --> 00:48:06,360
+[Silence]
+
+480
+00:48:06,380 --> 00:48:08,616
 Oh that's interesting.
 
-487
-00:48:08,620 --> 00:48:09,830
+481
+00:48:08,620 --> 00:48:10,680
 Oh right yes.
 
-488
-00:48:11,990 --> 00:48:13,880
+482
+00:48:11,990 --> 00:48:17,936
 I'm going to do a bit of a maneuver here.
 
-489
-00:48:20,980 --> 00:48:23,170
-Let me have a look
-at the tree roots again.
+483
+00:48:18,520 --> 00:48:24,520
+Right now the episodes...
+let me have a look at the tree roots again.
 
-490
-00:48:24,930 --> 00:48:26,370
+484
+00:48:24,930 --> 00:48:28,968
 There's an application root
-
-491
-00:48:26,370 --> 00:48:28,980
 which is at the top root of everything.
 
-492
+485
 00:48:28,980 --> 00:48:29,550
 DN: OK.
 
-493
-00:48:29,550 --> 00:48:32,060
-The episode route will
-be rendered inside of it.
+486
+00:48:29,550 --> 00:48:32,472
+The episode route will be rendered inside of it.
 
-494
-00:48:32,490 --> 00:48:34,690
+487
+00:48:32,490 --> 00:48:39,736
 And the side where I want it rendered
+is in outlet so I will put the outlet here.
 
-495
-00:48:35,530 --> 00:48:39,110
-is in outlet so I
-will put the outlet here.
+488
+00:48:39,730 --> 00:48:45,000
+But I want the main list of episodes to
+go away when I step into an individual one.
 
-496
-00:48:39,730 --> 00:48:42,240
-But I want the main
-list of episodes to go away
+489
+00:48:45,000 --> 00:48:47,968
+[Inaudible] templates.
 
-497
-00:48:42,240 --> 00:48:44,120
-when I step into an individual one.
-
-498
+490
 00:48:48,930 --> 00:48:54,860
 Index is a route you get
 for free you don't have to define it.
 
-499
+491
 00:48:55,910 --> 00:48:58,560
 And it should inherit its model from its parents.
 
-500
+492
 00:48:59,450 --> 00:49:01,770
 That change, I wouldn't expect to do very much.
 
-501
+493
 00:49:02,840 --> 00:49:06,502
 I could be wrong, that's
 why all the tests are breaking.
 
-502
+494
 00:49:09,460 --> 00:49:12,050
 That looks the same.
 
-503
+495
 00:49:14,050 --> 00:49:16,780
 I think it might be a case
 of too many changes at once.
 
-504
+496
 00:49:19,400 --> 00:49:21,600
 DN: Your test error is quite fragile I see.
 
-505
+497
 00:49:22,110 --> 00:49:25,330
 JW: It is yes, but that is probably because
 
-506
+498
 00:49:25,330 --> 00:49:26,190
 we're on a...
 
-507
+499
 00:49:27,880 --> 00:49:30,070
 I know that at this point in time
 
-508
+500
 00:49:30,070 --> 00:49:33,720
 the CLI is operating to
 a new file watching strategy.
 
-509
+501
 00:49:34,340 --> 00:49:36,180
 so that may be part of it.
 
-510
+502
 00:49:36,180 --> 00:49:39,030
 It's probably still going
 through growing pains.
 
-511
+503
 00:49:41,950 --> 00:49:45,140
 So now we're on
 roughly the same point I think.
 
-512
+504
 00:49:52,570 --> 00:49:53,680
 I'll take one of these.
 
-513
+505
 00:49:54,290 --> 00:49:56,845
 We've got the right URL, there's nothing to display,
 
-514
+506
 00:49:56,860 --> 00:49:58,880
 because there's no template just yet.
 
-515
+507
 00:49:59,220 --> 00:50:04,411
 So let's make a template for this route.
 
-516
+508
 00:50:04,422 --> 00:50:05,940
 In fact, let's just generate a route.
 
-517
+509
 00:50:20,220 --> 00:50:21,810
 So I've added that other route.
 
-518
+510
 00:50:21,920 --> 00:50:23,531
 It doesn't want to display yet.
 
-519
+511
 00:50:23,590 --> 00:50:25,600
 That is the right direction to head in.
 
-520
+512
 00:50:39,010 --> 00:50:40,930
 I think these are all part of one step.
 
-521
+513
 00:50:54,610 --> 00:50:56,030
 So far there's not much here.
 
-522
+514
 00:50:56,320 --> 00:50:58,060
 What we ideally want is to be able
 
-523
+515
 00:50:58,060 --> 00:50:59,040
 to go from episode...
 
-524
+516
 00:51:00,530 --> 00:51:03,100
 and refer that to that acceptance test.
 
-525
+517
 00:51:06,640 --> 00:51:09,280
 We're expecting to
 find another link at this point
 
-526
+518
 00:51:09,280 --> 00:51:11,280
 with Ranking Poker Hands on it.
 
-527
+519
 00:51:14,120 --> 00:51:15,710
 DN: So the list you are doing now,
 
-528
+520
 00:51:16,520 --> 00:51:20,100
 is a list of sequels for the current episode.
 
-529
+521
 00:51:20,100 --> 00:51:25,160
 JW: Yes.
 
-530
+522
 00:51:49,600 --> 00:51:51,990
 DN; So that's the
 name of the route episode?
 
-531
+523
 00:51:53,520 --> 00:51:55,360
 JW: Yes, the name of the episode
 
-532
+524
 00:51:55,430 --> 00:51:56,340
 the route and the
 
-533
+525
 00:51:57,800 --> 00:51:59,930
 actual instance of them.
 
-534
+526
 00:52:00,100 --> 00:52:01,930
 And the model we want for that route.
 
-535
+527
 00:52:06,720 --> 00:52:09,790
 I think my buildCollaborators function might
 
-536
+528
 00:52:09,805 --> 00:52:12,045
 not be the thing I wanted after all, but...
 
-537
+529
 00:52:20,400 --> 00:52:21,490
 I might just...
 
-538
+530
 00:52:27,550 --> 00:52:28,930
 I'll just check out...
 
-539
+531
 00:52:40,830 --> 00:52:43,428
 DN: Switch to different Ember CLI.
 
-540
+532
 00:52:43,428 --> 00:52:46,980
 JW: Yes, I'm going to go
 to last stable releases.
 
-541
+533
 00:52:47,040 --> 00:52:49,150
 I have a feeling this is
 the cause of my problem so...
 
-542
+534
 00:52:52,160 --> 00:52:54,870
 Narrator: We're going to
 speak through this section
 
-543
+535
 00:52:54,870 --> 00:52:57,780
 We spent almost 10 minutes troubleshooting this issue.
 
-544
+536
 00:52:57,850 --> 00:53:01,090
 But, switching to the
 latest stable release of Ember CLI
 
-545
+537
 00:53:01,090 --> 00:53:02,530
 didn't fix the tests however.
 
-546
+538
 00:53:03,920 --> 00:53:06,020
 Narrator: We'll pick up again where Jamie
 
-547
+539
 00:53:06,020 --> 00:53:07,410
 came up with a 'workaround'.
 
-548
+540
 00:53:08,370 --> 00:53:11,350
 JW: Unfortunately, in the current build
 
-549
+541
 00:53:12,100 --> 00:53:13,950
 of Ember CLI, or rather the current
 
-550
+542
 00:53:13,960 --> 00:53:15,810
 master build of Ember CLI,
 
-551
+543
 00:53:16,770 --> 00:53:21,050
 some aspects when rapidly re-loading files,
 
-552
+544
 00:53:21,050 --> 00:53:22,800
 causes the build to fall over.
 
-553
+545
 00:53:23,490 --> 00:53:25,860
 So for the time being, instead we will run
 
-554
+546
 00:53:26,520 --> 00:53:27,890
 Ember test as a 'one off'
 
-555
+547
 00:53:27,890 --> 00:53:29,940
 Like a one shot test.
 
-556
+548
 00:53:29,940 --> 00:53:31,462
 so it will run the tests,
 
-557
+549
 00:53:31,470 --> 00:53:33,330
 then it will tear it all down again.
 
-558
+550
 00:53:33,330 --> 00:53:35,720
 That will give us
 something to work against
 
-559
+551
 00:53:37,060 --> 00:53:38,750
 So it's not working at the moment.
 
-560
+552
 00:53:39,280 --> 00:53:41,540
 And the reason is that
 
-561
+553
 00:53:44,940 --> 00:53:47,050
 Although my buildCollaborators does point to
 
-562
+554
 00:53:47,050 --> 00:53:48,410
 the correct ids.
 
-563
+555
 00:53:48,720 --> 00:53:50,620
 What we won't have here is...
 
-564
+556
 00:53:51,977 --> 00:53:53,580
 We're asking for model.sequels,
 
-565
+557
 00:53:54,308 --> 00:53:55,885
 There is no such thing right now.
 
-566
+558
 00:53:55,885 --> 00:53:56,870
 DN: Of course, right.
 
-567
+559
 00:53:56,891 --> 00:53:59,090
 JW: So we need to get those.
 
-568
+560
 00:54:04,700 --> 00:54:06,760
 You're probably thinking
 
-569
+561
 00:54:08,780 --> 00:54:10,800
 it may be possible to do something like:
 
-570
+562
 00:54:23,260 --> 00:54:25,090
 We know from buildCollaborators
 
-571
+563
 00:54:25,090 --> 00:54:29,920
 that we do have
 the sequel ids, like this:
 
-572
+564
 00:54:34,760 --> 00:54:36,920
 So based on that
 first bit of work we did
 
-573
+565
 00:54:36,920 --> 00:54:38,700
 that's as far as we got at the moment.
 
-574
+566
 00:54:39,700 --> 00:54:41,250
 Technically, that would work.
 
-575
+567
 00:54:43,290 --> 00:54:45,440
 The API doesn't
 actually have an end point
 
-576
+568
 00:54:45,440 --> 00:54:47,360
 for that you could load up all the data
 
-577
+569
 00:54:47,360 --> 00:54:49,220
 and find the one with the correct id.
 
-578
+570
 00:54:51,040 --> 00:54:54,720
 At this point I'm inclined to lean on
 
-579
+571
 00:54:55,370 --> 00:54:57,080
 Ember.Data to do some of the
 
-580
+572
 00:54:57,700 --> 00:54:59,860
 pulling together of records:
 
-581
+573
 00:55:00,150 --> 00:55:01,860
 So I'm going to:
 
-582
+574
 00:55:03,970 --> 00:55:05,810
 I'm going to put in an elbow commit.
 
-583
+575
 00:55:08,150 --> 00:55:09,820
 Let's see what I added there.
 
-584
+576
 00:55:13,410 --> 00:55:14,640
 Let's say:
 
-585
+577
 00:55:29,540 --> 00:55:31,170
 Let's checkout a branch.
 
-586
+578
 00:55:34,500 --> 00:55:36,540
 This will be quite a substantial thing
 
-587
+579
 00:55:36,540 --> 00:55:37,430
 to start to add in.
 
-588
+580
 00:55:39,410 --> 00:55:40,950
 I think that in order to prove
 
-589
+581
 00:55:40,950 --> 00:55:42,430
 that is definitely working.
 
-590
+582
 00:55:42,430 --> 00:55:44,742
 I'm going to have a play
 with the inspector to begin with,
 
-591
+583
 00:55:44,754 --> 00:55:47,030
 rather than the test environment.
 
-592
+584
 00:55:48,300 --> 00:55:50,750
 I have a gut feeling
 it will be quicker that way.
 
-593
+585
 00:55:51,900 --> 00:55:54,130
 So up top, in the application route.
 
-594
+586
 00:55:59,460 --> 00:56:01,890
 Rather than this quite manual process of
 
-595
+587
 00:56:03,040 --> 00:56:05,040
 getting the data and it pulling it out
 
-596
+588
 00:56:05,040 --> 00:56:07,350
 and building collaborators from that
 
-597
+589
 00:56:10,290 --> 00:56:11,240
 I'm going to return:
 
-598
+590
 00:56:25,490 --> 00:56:26,780
 The promise library
 
-599
+591
 00:56:27,440 --> 00:56:28,800
 It has this hash function
 
-600
+592
 00:56:28,800 --> 00:56:30,610
 which is a hash of promises.
 
-601
+593
 00:56:30,610 --> 00:56:33,300
 Where they all pass on this hash
 
-602
+594
 00:56:33,300 --> 00:56:35,560
 with the promises switched out
 
-603
+595
 00:56:35,560 --> 00:56:37,760
 for whatever they're resolved into.
 
-604
+596
 00:56:37,980 --> 00:56:39,450
 So it's quite handy.
 
-605
+597
 00:56:39,850 --> 00:56:42,860
 What this let's us do is...
 
-606
+598
 00:56:45,860 --> 00:56:47,010
 I want to do two things.
 
-607
+599
 00:56:47,010 --> 00:56:48,400
 I want to load the episodes
 
-608
+600
 00:56:57,840 --> 00:56:59,430
 And that returns the promise.
 
-609
+601
 00:57:06,354 --> 00:57:08,280
 This is going to return two promises
 
-610
+602
 00:57:08,280 --> 00:57:10,651
 and it's going to wait
 for them both to resolve
 
-611
+603
 00:57:10,651 --> 00:57:11,920
 before it finishes.
 
-612
+604
 00:57:12,020 --> 00:57:13,410
 Don't need the ajax anymore.
 
-613
+605
 00:57:14,870 --> 00:57:16,890
 DN: Do we now have to define a store
 
-614
+606
 00:57:17,940 --> 00:57:19,250
 for each of those?
 
-615
+607
 00:57:19,250 --> 00:57:20,674
 The store we get for free,
 
-616
+608
 00:57:20,680 --> 00:57:22,340
 but what we do need is...
 
-617
+609
 00:57:22,650 --> 00:57:24,090
 To begin with, some models,
 
-618
+610
 00:57:44,390 --> 00:57:47,310
 So right now this is
 going to be complaining I need... that:
 
-619
+611
 00:57:47,510 --> 00:57:49,490
 I've got no such models I think.
 
-620
+612
 00:57:51,020 --> 00:57:52,780
 No models found for episode.
 
-621
+613
 00:58:11,550 --> 00:58:13,890
 DN: You're using
 camel case deliberately here?
 
-622
+614
 00:58:14,960 --> 00:58:16,220
 while the API uses underscore case.
 
-623
+615
 00:58:16,220 --> 00:58:16,950
 JW: It does yes.
 
-624
+616
 00:58:18,340 --> 00:58:23,810
 Just by convention Ember
 tends to use camel case where possible.
 
-625
+617
 00:58:23,810 --> 00:58:26,340
 Just because
 that's what JavaScript looks like.
 
-626
+618
 00:58:28,240 --> 00:58:30,491
 challengeName string...
 
-627
+619
 00:58:30,670 --> 00:58:31,714
 What else have we got...
 
-628
+620
 00:58:31,714 --> 00:58:33,400
 we've got host name and guest name.
 
-629
+621
 00:58:33,405 --> 00:58:35,965
 We should be able
 to infer those from the...
 
-630
+622
 00:58:36,040 --> 00:58:37,560
 So let's say we've got:
 
-631
+623
 00:58:48,360 --> 00:58:50,790
 That should have
 made me a model for episode.
 
-632
+624
 00:58:57,480 --> 00:58:59,310
 Let's generate another one of these:
 
-633
+625
 00:59:15,820 --> 00:59:17,550
 Let's just have a look at the data.
 
-634
+626
 00:59:48,030 --> 00:59:50,490
 It might get
 confused about what I mean here.
 
-635
+627
 00:59:54,891 --> 00:59:57,110
 It will think there's a model with that name,
 
-636
+628
 00:59:57,110 --> 00:59:58,180
 but in fact these are:
 
-637
+629
 00:59:59,460 --> 01:00:01,860
 It's referring to the partner model.
 
-638
+630
 01:00:22,114 --> 01:00:25,291
 And just like in Rails, I'll have to tell it
 
-639
+631
 01:00:27,965 --> 01:00:30,537
 what the names of the inverse relationships are.
 
-640
+632
 01:00:30,582 --> 01:00:32,930
 If the names are substantially different.
 
-641
+633
 01:00:36,610 --> 01:00:39,210
 So here, the inverse is guest.
 
-642
+634
 01:00:42,880 --> 01:00:47,510
 And here the inverse is host.
 
-643
+635
 01:01:13,050 --> 01:01:15,960
 At this point, I'm looking at
 building collaborators
 
-644
+636
 01:01:15,960 --> 01:01:19,620
 as a way to prove to myself that
 
-645
+637
 01:01:20,530 --> 01:01:24,331
 following host and guest
 that way is what's intended
 
-646
+638
 01:01:24,670 --> 01:01:26,354
 by the description of the challenge.
 
-647
+639
 01:01:26,350 --> 01:01:31,131
 But I have a feeling that using Ember
 Data like this is going to
 
-648
+640
 01:01:32,240 --> 01:01:35,170
 shoulder a lot of the work for me.
 
-649
+641
 01:01:35,600 --> 01:01:36,790
 I'm just going to go for:
 
-650
+642
 01:01:52,900 --> 01:01:54,160
 What you are seeing here is
 
-651
+643
 01:01:54,160 --> 01:01:57,600
 It's trying to load episodes partners.
 
-652
+644
 01:01:58,180 --> 01:02:01,337
 It assumes those are the
 end points we're looking for.
 
-653
+645
 01:02:01,337 --> 01:02:03,880
 DN: We've got them in the API namespace
 haven't we?
 
-654
+646
 01:02:03,880 --> 01:02:04,880
 JW: We have indeed.
 
-655
+647
 01:02:05,820 --> 01:02:07,400
 If we add some of this:
 
-656
+648
 01:02:24,830 --> 01:02:26,530
 This isn't quite the order that things
 happened in.
 
-657
+649
 01:02:37,870 --> 01:02:39,620
 And then this change...
 
-658
+650
 01:02:49,490 --> 01:02:51,280
 It's fine, right so:
 
-659
+651
 01:03:11,170 --> 01:03:14,580
 It doesn't know about the
 namespace of the API just yet.
 
-660
+652
 01:03:14,580 --> 01:03:18,251
 And further more it doesn't know to stick
 a .json on the end.
 
-661
+653
 01:03:18,310 --> 01:03:20,930
 We need to tell it, the way to do that is
 an adapter
 
-662
+654
 01:03:24,300 --> 01:03:27,700
 We want this to be the universal rule
 
-663
+655
 01:03:27,700 --> 01:03:29,870
 so we call this the application adapter.
 
-664
+656
 01:03:52,050 --> 01:03:54,290
 DN: Ah, forgot to save the inverse.
 
-665
+657
 01:03:54,290 --> 01:03:54,770
 JW: Yes.
 
-666
+658
 01:04:08,050 --> 01:04:09,840
 At the moment it's the REST adapter
 
-667
+659
 01:04:10,450 --> 01:04:14,290
 but the data that we're working with
 
-668
+660
 01:04:14,290 --> 01:04:17,860
 looks quite a lot like what
 active model serializers would yield.
 
-669
+661
 01:04:18,560 --> 01:04:19,860
 So let's use that instead:
 
-670
+662
 01:04:25,360 --> 01:04:27,460
 It's expecting data of this form
 
-671
+663
 01:04:27,680 --> 01:04:29,520
 So it should know what to do with it.
 
-672
+664
 01:04:30,180 --> 01:04:33,160
 Then we need to tell it the namespace
 
-673
+665
 01:04:33,160 --> 01:04:38,580
 and I think it is
 just namespace like this
 
-674
+666
 01:04:59,510 --> 01:05:02,860
 DN: Does it still need to add .json?
 
-675
+667
 01:05:02,860 --> 01:05:03,370
 JW: It does.
 
-676
+668
 01:05:03,400 --> 01:05:05,480
 Now we're getting the right path
 
-677
+669
 01:05:05,860 --> 01:05:07,480
 but without the .json on the end.
 
-678
+670
 01:05:08,160 --> 01:05:09,940
 And I think there's another method:
 
-679
+671
 01:05:20,660 --> 01:05:22,900
 urlPrefix is not quite what we want.
 
-680
+672
 01:05:24,970 --> 01:05:26,320
 There's pathForType.
 
-681
+673
 01:05:29,520 --> 01:05:30,900
 Which might well do the job.
 
-682
+674
 01:05:32,340 --> 01:05:34,950
 Unless there's
 something more general than that.
 
-683
+675
 01:05:42,230 --> 01:05:43,930
 Let's do pathForType:
 
-684
+676
 01:05:53,810 --> 01:05:57,310
 Basically this calls straight
 through to the superclass method.
 
-685
+677
 01:06:07,710 --> 01:06:10,150
 Now some
 interesting things have happened.
 
-686
+678
 01:06:12,150 --> 01:06:14,148
 We've got these warnings:
 
-687
+679
 01:06:18,697 --> 01:06:20,320
 It's saying you've got this data
 
-688
+680
 01:06:20,320 --> 01:06:22,594
 but you've not
 declared that you're going to use it.
 
-689
+681
 01:06:22,594 --> 01:06:25,900
 similarly, we've got
 guest episode host episode.
 
-690
+682
 01:06:40,170 --> 01:06:43,720
 It's expecting, like that:
 
-691
+683
 01:07:02,840 --> 01:07:05,730
 Let's generate a serializer which will
 
-692
+684
 01:07:05,730 --> 01:07:09,931
 enable us to perform those kind
 of transformations on the input data.
 
-693
+685
 01:07:10,690 --> 01:07:15,110
 Before we do that let's stop it complaining
 
-694
+686
 01:07:15,110 --> 01:07:17,110
 about those missing fields.
 
-695
+687
 01:07:18,320 --> 01:07:20,530
 That's episodes, it's expecting to see
 
-696
+688
 01:07:20,530 --> 01:07:22,530
 guest name, host name, poster frame url
 
-697
+689
 01:07:23,150 --> 01:07:25,211
 DN: They can all be strings I suppose can't they?
 
-698
+690
 01:07:25,234 --> 01:07:26,250
 JW: Yes I guess so.
 
-699
+691
 01:07:37,480 --> 01:07:40,400
 DN: Again, you're using
 camel case but the API has
 
-700
+692
 01:07:40,400 --> 01:07:42,570
 snakecase underscores.
 
-701
+693
 01:07:42,570 --> 01:07:43,280
 JW: Yes.
 
-702
+694
 01:07:43,280 --> 01:07:45,430
 DN: So, where is
 that inference happening
 
-703
+695
 01:07:45,430 --> 01:07:47,280
 from one format to the other?
 
-704
+696
 01:07:47,330 --> 01:07:49,280
 It's all happening in the serializer
 
-705
+697
 01:07:49,490 --> 01:07:50,180
 DN: Ah right.
 
-706
+698
 01:07:50,800 --> 01:07:52,760
 You will find that by default
 
-707
+699
 01:07:53,530 --> 01:07:55,690
 there's this normalize method
 
-708
+700
 01:07:55,840 --> 01:07:57,470
 which does all this kind of work,
 
-709
+701
 01:07:57,850 --> 01:07:59,630
 converting snake case
 
-710
+702
 01:07:59,940 --> 01:08:01,770
 into camel case.
 
-711
+703
 01:08:01,770 --> 01:08:06,720
 converting plurals into singular,
 whatever is appropriate for the format.
 
-712
+704
 01:08:08,180 --> 01:08:10,360
 Now I've got rid of some of my warnings.
 
-713
+705
 01:08:10,890 --> 01:08:14,070
 but there's still this guest
 episode, host episodes problem.
 
-714
+706
 01:08:14,380 --> 01:08:16,070
 So let's say:
 
-715
+707
 01:08:19,080 --> 01:08:21,050
 We don't want a serializer
 
-716
+708
 01:08:21,330 --> 01:08:22,780
 for everything, we just want
 a serializer for partner
 
-717
+709
 01:08:57,740 --> 01:08:59,230
 There has got to be some hook
 
-718
+710
 01:08:59,240 --> 01:09:02,240
 where I can turn
 these into what it's expecting.
 
-719
+711
 01:09:04,550 --> 01:09:08,060
 I've got normalize which
 takes type, hash and prop
 
-720
+712
 01:09:08,800 --> 01:09:10,460
 And that's going to do this work.
 
-721
+713
 01:09:10,460 --> 01:09:11,280
 So if I:
 
-722
+714
 01:09:20,740 --> 01:09:22,980
 Type meaning: when you get the data through
 
-723
+715
 01:09:26,708 --> 01:09:28,902
 it's going to infer the type from this key,
 
-724
+716
 01:09:29,810 --> 01:09:31,510
 under which each record lives.
 
-725
+717
 01:09:35,150 --> 01:09:38,900
 But we don't care too
 much about that manipulation here.
 
-726
+718
 01:09:39,310 --> 01:09:41,520
 All we want to do is say:
 
-727
+719
 01:09:43,710 --> 01:09:47,500
 Hash is this:
 
-728
+720
 01:09:48,230 --> 01:09:52,190
 We want to move this so we're saying:
 
-729
+721
 01:10:26,510 --> 01:10:28,400
 Once we've done those manipulations
 
-730
+722
 01:10:28,400 --> 01:10:29,190
 we just want to hand it off to the
 regular class method
 
-731
+723
 01:10:39,120 --> 01:10:43,850
 I've not been so careful
 to dodge a mutation here
 
-732
+724
 01:10:43,860 --> 01:10:47,960
 because I think you
 get passed a safe hash
 
-733
+725
 01:10:47,965 --> 01:10:48,910
 DN: Oh, OK.
 
-734
+726
 01:11:01,400 --> 01:11:03,851
 My warnings have now gone.
 
-735
+727
 01:11:03,880 --> 01:11:07,325
 It's complaining that the value each
 loops over must be an array.
 
-736
+728
 01:11:07,400 --> 01:11:09,400
 We passed a record array.
 
-737
+729
 01:11:09,660 --> 01:11:10,860
 DN: So are we down to this
 
-738
+730
 01:11:10,970 --> 01:11:13,000
 thing called model.sequel
 
-739
+731
 01:11:14,150 --> 01:11:17,530
 Now I'm at template index.
 
-740
+732
 01:11:18,580 --> 01:11:19,620
 I'm calling model,
 
-741
+733
 01:11:19,870 --> 01:11:21,800
 which is this object here:
 
-742
+734
 01:11:21,900 --> 01:11:24,100
 containing an episode's partners.
 
-743
+735
 01:11:25,040 --> 01:11:26,180
 So I want to do:
 
-744
+736
 01:11:30,850 --> 01:11:34,190
 DN: Ah, because now
 your model is in that promise
 
-745
+737
 01:11:35,320 --> 01:11:37,310
 containing both models effectively.
 
-746
+738
 01:11:37,310 --> 01:11:37,720
 JW: Yes.
 
-747
+739
 01:11:38,780 --> 01:11:40,610
 So this has got me back to this point.
 
-748
+740
 01:11:41,590 --> 01:11:43,310
 But the advantage I have now,
 
-749
+741
 01:11:44,810 --> 01:11:47,760
 Before, I got to the
 point where I knew the Ids
 
-750
+742
 01:11:47,760 --> 01:11:50,450
 I wanted to get to, but
 I didn't have the data to hand.
 
-751
+743
 01:11:50,450 --> 01:11:53,360
 And the question was, where do I go
 
-752
+744
 01:11:53,360 --> 01:11:54,450
 and load in that data.
 
-753
+745
 01:11:54,450 --> 01:11:55,600
 Do I have it available?
 
-754
+746
 01:11:55,600 --> 01:11:59,500
 Whereas now Ember
 Data is doing that work for me.
 
-755
+747
 01:11:59,560 --> 01:12:03,230
 And furthermore, here I can see
 the records that have been loaded.
 
-756
+748
 01:12:06,590 --> 01:12:08,210
 I should also be able to see...
 
-757
+749
 01:12:09,725 --> 01:12:12,068
 There will be some
 computed properties here.
 
-758
+750
 01:12:12,060 --> 01:12:15,090
 So you can see,
 belongs to guest episode.
 
-759
+751
 01:12:15,660 --> 01:12:18,670
 There you can see it has
 managed to dig up the real model.
 
-760
+752
 01:12:20,430 --> 01:12:23,580
 That was me just clicking through
 
-761
+753
 01:12:24,570 --> 01:12:26,640
 Here's an episode, "Counting Tree Nodes".
 
-762
+754
 01:12:26,770 --> 01:12:28,960
 These are its properties, here on the right.
 
-763
+755
 01:12:39,830 --> 01:12:42,360
 I should be able to go to the guest,
 
-764
+756
 01:12:44,380 --> 01:12:45,860
 See what episodes Tom hosts,
 
-765
+757
 01:12:45,860 --> 01:12:46,810
 That's a many array,
 
-766
+758
 01:12:46,810 --> 01:12:47,580
 I'll go in there.
 
-767
+759
 01:12:48,050 --> 01:12:51,460
 It's an array containing
 one which is "Ranking Poker Hands".
 
-768
+760
 01:12:51,510 --> 01:12:53,020
 So you can see it flow through.
 
-769
+761
 01:12:54,330 --> 01:12:55,020
 DN: Very nice.
 
-770
+762
 01:12:55,970 --> 01:12:58,960
 JW: leaning on Ember Data makes it
 a lot quicker.
 
-771
+763
 01:13:01,280 --> 01:13:03,680
 Now that's in place, let me commit this
 
-772
+764
 01:13:03,680 --> 01:13:05,680
 quite a lot all at once.
 
-773
+765
 01:13:06,850 --> 01:13:11,510
 a new serializer, changed the template a bit.
 
-774
+766
 01:13:11,510 --> 01:13:13,510
 Oh it's not too bad, OK,
 
-775
+767
 01:13:24,220 --> 01:13:28,610
 JW: Right now we have an acceptance test.
 
-776
+768
 01:13:30,000 --> 01:13:31,980
 Which at this point is still failing.
 
-777
+769
 01:13:31,980 --> 01:13:34,180
 because we've not added the list of sequels,
 
-778
+770
 01:13:34,180 --> 01:13:36,380
 nor the prequel link yet.
 
-779
+771
 01:13:37,230 --> 01:13:39,257
 I've got some unit tests which are failing
 
-780
+772
 01:13:39,257 --> 01:13:42,190
 simply because they are just boilerplate
 that was generated for me
 
-781
+773
 01:13:43,260 --> 01:13:46,280
 They need to be told
 more about the rest of the world.
 
-782
+774
 01:13:49,580 --> 01:13:52,270
 I could just remove them
 
-783
+775
 01:13:52,270 --> 01:13:55,070
 I feel I want to get them passing
 to have a clean environment
 
-784
+776
 01:13:55,070 --> 01:13:56,680
 So I'll do that quickly:
 
-785
+777
 01:14:10,300 --> 01:14:12,430
 When I generated the episode model
 
-786
+778
 01:14:12,600 --> 01:14:15,000
 I said that it had these two relationships
 
-787
+779
 01:14:15,200 --> 01:14:19,270
 and the boilerplate test
 has these two dependencies in it
 
-788
+780
 01:14:19,270 --> 01:14:20,290
 because I said that.
 
-789
+781
 01:14:20,520 --> 01:14:25,220
 But in fact there are
 no such models as those
 
-790
+782
 01:14:25,220 --> 01:14:26,140
 It's just partner...
 
-791
+783
 01:14:27,450 --> 01:14:28,410
 So if I do that:
 
-792
+784
 01:14:30,130 --> 01:14:33,010
 I have to keep jumping back to tests.
 
-793
+785
 01:14:35,300 --> 01:14:38,800
 Now episode passes
 
-794
+786
 01:14:40,880 --> 01:14:42,920
 If we flip over to the partner test
 you'll see a similar problem.
 
-795
+787
 01:14:43,530 --> 01:14:45,874
 Really all this wants is:
 
-796
+788
 01:14:53,771 --> 01:14:56,490
 Now I'm back to my
 acceptance test which is
 
-797
+789
 01:14:56,491 --> 01:14:58,731
 the thing that is driving us towards
 
-798
+790
 01:14:58,810 --> 01:14:59,970
 the place we want to be
 
-799
+791
 01:14:59,977 --> 01:15:02,360
 which is as follows:
 
-800
+792
 01:15:06,850 --> 01:15:11,725
 Eventually what we want to see
 is a list of just the root episodes
 
-801
+793
 01:15:11,725 --> 01:15:13,942
 the episodes that begin a sequence.
 
-802
+794
 01:15:13,990 --> 01:15:15,120
 Click on one of those,
 
-803
+795
 01:15:15,120 --> 01:15:16,700
 and you see it's sequels.
 
-804
+796
 01:15:17,220 --> 01:15:17,810
 DN: Yes,
 
-805
+797
 01:15:17,810 --> 01:15:19,890
 And you click on a sequel and you see it's
 
-806
+798
 01:15:20,460 --> 01:15:22,850
 sequel, and prequel as well.
 
-807
+799
 01:15:29,800 --> 01:15:32,760
 I'm using so many
 styles of working with git.
 
-808
+800
 01:15:33,260 --> 01:15:34,790
 So let's commit those:
 
-809
+801
 01:15:37,080 --> 01:15:39,250
 DN: So this is the fugitive commit feature?
 
-810
+802
 01:15:39,250 --> 01:15:39,720
 JW: Yes.
 
-811
+803
 01:15:55,650 --> 01:15:57,240
 It's complaining at the moment
 
-812
+804
 01:15:57,240 --> 01:15:59,670
 because I can't
 click on Ranking Poker Hands.
 
-813
+805
 01:16:00,630 --> 01:16:02,070
 So that is...
 
-814
+806
 01:16:02,280 --> 01:16:05,600
 I'm in an episode, expecting to list all the
 
-815
+807
 01:16:05,690 --> 01:16:07,000
 sequels of the model.
 
-816
+808
 01:16:13,520 --> 01:16:14,620
 I do have <u>.</u>
 
-817
+809
 01:16:15,290 --> 01:16:16,910
 So it's ready to list something.
 
-818
+810
 01:16:17,380 --> 01:16:20,570
 It' not going to
 complain that this isn't an array.
 
-819
+811
 01:16:23,590 --> 01:16:26,260
 It's more useful to just fail silently,
 
-820
+812
 01:16:26,260 --> 01:16:28,810
 when your at the template point of things
 
-821
+813
 01:16:28,950 --> 01:16:32,410
 because there's so little failure
 handling you can do in template.
 
-822
+814
 01:16:32,710 --> 01:16:34,380
 As a general principle it's best to
 
-823
+815
 01:16:34,388 --> 01:16:38,045
 treat these values as monadic,
 
-824
+816
 01:16:39,920 --> 01:16:43,730
 They will resolve down
 to nil, or the value you want.
 
-825
+817
 01:16:46,800 --> 01:16:48,710
 I think what I need to to is...
 
-826
+818
 01:16:49,800 --> 01:16:51,620
 get hold of these sequels.
 
-827
+819
 01:16:51,620 --> 01:16:54,540
 That's going to change
 later on if I don't it now.
 
-828
+820
 01:16:57,450 --> 01:17:00,710
 The question is, if I take an episode
 
-829
+821
 01:17:01,200 --> 01:17:02,420
 how do I find it's sequel?
 
-830
+822
 01:17:07,920 --> 01:17:11,000
 I'm going to add a computed property
 
-831
+823
 01:17:11,770 --> 01:17:12,780
 to this episode
 
-832
+824
 01:17:13,880 --> 01:17:14,840
 called sequels:
 
-833
+825
 01:17:23,885 --> 01:17:26,697
 Effectively I want to look
 at the rest of the episodes.
 
-834
+826
 01:17:26,697 --> 01:17:28,510
 And filter them down to just a set
 
-835
+827
 01:17:28,920 --> 01:17:30,990
 where the host is my guest.
 
-836
+828
 01:17:32,750 --> 01:17:34,540
 Let's have a look at what we have
 
-837
+829
 01:17:34,540 --> 01:17:35,910
 in terms of filtering.
 
-838
+830
 01:17:41,110 --> 01:17:43,240
 Whenever you access records in Ember data
 
-839
+831
 01:17:43,240 --> 01:17:45,200
 you always go via the store.
 
-840
+832
 01:17:45,200 --> 01:17:49,531
 Which is the central book keeping object.
 
-841
+833
 01:17:49,570 --> 01:17:51,600
 And it makes sure your always getting
 
-842
+834
 01:17:51,800 --> 01:17:53,910
 the same instance you got last time.
 
-843
+835
 01:17:53,910 --> 01:17:54,480
 DN: Right.
 
-844
+836
 01:17:56,750 --> 01:17:59,610
 I do have filter here:
 
-845
+837
 01:18:06,020 --> 01:18:08,290
 I want to try asking for:
 
-846
+838
 01:18:17,930 --> 01:18:20,700
 The thing I'm going to
 be filtering on is the host id.
 
-847
+839
 01:18:29,550 --> 01:18:31,530
 Let's see what the signature of this is.
 
-848
+840
 01:18:31,570 --> 01:18:39,820
 It's just going to give
 me an episode to work with.
 
-849
+841
 01:18:41,960 --> 01:18:45,360
 Now this is going to
 return a promise of some kind.
 
-850
+842
 01:18:50,340 --> 01:18:52,480
 It says it returns a live record array.
 
-851
+843
 01:18:52,790 --> 01:18:54,990
 So hopefully we will be able to dump that
 
-852
+844
 01:18:54,990 --> 01:18:56,990
 into the template, and it will update
 
-853
+845
 01:18:57,940 --> 01:18:59,790
 Let's find out, that might not be true.
 
-854
+846
 01:19:16,670 --> 01:19:19,291
 We could go potentially have ids here,
 
-855
+847
 01:19:19,291 --> 01:19:22,040
 but I think they will be
 hidden from us by this point.
 
-856
+848
 01:19:22,040 --> 01:19:24,870
 These are fully materialized records.
 
-857
+849
 01:19:38,440 --> 01:19:41,640
 I forgot to declare
 that this is a computed property.
 
-858
+850
 01:19:42,480 --> 01:19:44,800
 There we go, so that's my sequel.
 
-859
+851
 01:19:46,460 --> 01:19:48,411
 DN: Does that give us a passing acceptance
 test.
 
-860
+852
 01:19:48,411 --> 01:19:49,420
 JW: Well, let's find out.
 
-861
+853
 01:19:55,880 --> 01:19:58,605
 I think I might have messed up my link-to
 helper there,
 
-862
+854
 01:19:58,640 --> 01:19:59,550
 let's find out.
 
-863
+855
 01:20:16,950 --> 01:20:24,180
 This may be a problem
 with my acceptance test.
 
-864
+856
 01:20:42,780 --> 01:20:45,970
 DN: Is it the exception that's failing
 where it's checking the current URL?
 
-865
+857
 01:20:46,180 --> 01:20:46,660
 JW: Yes.
 
-866
+858
 01:20:49,770 --> 01:20:51,320
 I think it might be just my...
 
-867
+859
 01:21:01,900 --> 01:21:03,720
 DN: That's why you have a commit.
 
-868
+860
 01:21:05,028 --> 01:21:07,714
 JW: So we see what happened there.
 
-869
+861
 01:21:07,770 --> 01:21:10,290
 We've added a
 computed property called sequels,
 
-870
+862
 01:21:10,560 --> 01:21:13,070
 that sets up a filter
 
-871
+863
 01:21:14,260 --> 01:21:15,770
 and these filters are live.
 
-872
+864
 01:21:15,770 --> 01:21:19,420
 So the idea is, if a
 new episode entered the store,
 
-873
+865
 01:21:20,240 --> 01:21:21,670
 this filter should update
 
-874
+866
 01:21:22,140 --> 01:21:24,030
 anywhere it's used in the template.
 
-875
+867
 01:21:29,070 --> 01:21:30,980
 CamelCase challenge name,
 
-876
+868
 01:21:31,530 --> 01:21:33,050
 and current path apparently
 
-877
+869
 01:21:33,330 --> 01:21:34,730
 really means current root.
 
-878
+870
 01:21:35,760 --> 01:21:38,430
 whereas what we want is the current URL.
 
-879
+871
 01:21:39,480 --> 01:21:40,180
 So:
 
-880
+872
 01:21:53,700 --> 01:21:55,410
 I feel that that acceptance test
 
-881
+873
 01:21:55,410 --> 01:21:57,980
 has given me enough
 confidence that things are
 
-882
+874
 01:21:58,250 --> 01:21:59,370
 working on the whole,
 
-883
+875
 01:21:59,370 --> 01:22:01,370
 and I feel that it's going to be
 
-884
+876
 01:22:01,660 --> 01:22:04,060
 more fun just to play in the UI,
 
-885
+877
 01:22:04,110 --> 01:22:06,330
 and see what other properties it has.
 
-886
+878
 01:22:06,330 --> 01:22:08,100
 And see what other things we can do.
 
-887
+879
 01:22:09,790 --> 01:22:10,960
 So jump to episode two.
 
-888
+880
 01:22:11,530 --> 01:22:13,714
 We've already got the next sequel.
 
-889
+881
 01:22:13,828 --> 01:22:15,428
 This at the moment has no sequels
 
-890
+882
 01:22:15,428 --> 01:22:17,371
 and we're not showing prequels just yet.
 
-891
+883
 01:22:17,371 --> 01:22:18,630
 So I'm going to:
 
-892
+884
 01:22:22,990 --> 01:22:27,470
 Let's give this a title.
 
-893
+885
 01:22:27,790 --> 01:22:29,750
 DN: Yes it would be nice to see the title
 
-894
+886
 01:22:30,260 --> 01:22:32,480
 of the current episode as well.
 
-895
+887
 01:22:33,040 --> 01:22:34,480
 and maybe a poster frame.
 
-896
+888
 01:22:50,830 --> 01:22:56,430
 JW: That "Welcome to Peer to Peer"
 looks surplus to requirements now,
 so let's ditch that.
 
-897
+889
 01:23:02,920 --> 01:23:06,617
 I'm going to make a bunch
 of cosmetic changes all at once.
 
-898
+890
 01:23:06,820 --> 01:23:09,050
 And then bundle them in to a commit.
 
-899
+891
 01:23:14,500 --> 01:23:16,950
 DN: So we've got an else branch for each
 
-900
+892
 01:23:17,050 --> 01:23:17,620
 JW: Yes.
 
-901
+893
 01:23:19,030 --> 01:23:21,160
 I forget where Ember inherited this from.
 
-902
+894
 01:23:21,580 --> 01:23:23,160
 It's not unique to Ember
 
-903
+895
 01:23:25,980 --> 01:23:32,080
 It's a little like a LISP, handlebars
 templating language.
 
-904
+896
 01:23:33,100 --> 01:23:36,050
 It's not really capable
 of doing multiple branches.
 
-905
+897
 01:23:36,050 --> 01:23:38,550
 in a conditional, it's only a binary.
 
-906
+898
 01:23:38,550 --> 01:23:41,820
 But it does mean you can do this kind of
 thing with an each:
 
-907
+899
 01:23:46,100 --> 01:23:47,560
 I'm just going to:
 
-908
+900
 01:23:50,090 --> 01:23:51,760
 Make it look a little different.
 
-909
+901
 01:23:57,070 --> 01:23:59,420
 I'm going to add in the rudiments
 
-910
+902
 01:24:00,610 --> 01:24:02,890
 of what the prequel looks like.
 
-911
+903
 01:24:03,480 --> 01:24:05,770
 Let's make a list as well
 
-912
+904
 01:24:06,720 --> 01:24:07,930
 to make it symmetric.
 
-913
+905
 01:24:13,450 --> 01:24:15,690
 This needs to be:
 
-914
+906
 01:24:18,560 --> 01:24:19,650
 DN: Or you could say
 
-915
+907
 01:24:20,220 --> 01:24:21,950
 "this episode starts a sequence".
 
-916
+908
 01:24:22,540 --> 01:24:23,040
 JW: Yes
 
-917
+909
 01:24:24,220 --> 01:24:25,700
 I'm going to use an each again.
 
-918
+910
 01:24:30,880 --> 01:24:32,300
 Semantically, that's wrong.
 
-919
+911
 01:24:32,860 --> 01:24:34,500
 You wouldn't have more prequels.
 
-920
+912
 01:24:35,720 --> 01:24:36,900
 At least at  the moment.
 
-921
+913
 01:24:39,950 --> 01:24:41,470
 the way we are going to filter,
 
-922
+914
 01:24:41,470 --> 01:24:43,600
 I think we are going to use the same filter.
 
-923
+915
 01:24:45,020 --> 01:24:45,600
 So:
 
-924
+916
 01:24:59,540 --> 01:25:02,040
 Right now this shouldn't fail
 
-925
+917
 01:25:02,240 --> 01:25:03,570
 in a spectacular way.
 
-926
+918
 01:25:04,050 --> 01:25:07,748
 It should just silently do not very much.
 
-927
+919
 01:25:38,450 --> 01:25:42,114
 Notice the silence there...
 
-928
+920
 01:25:42,150 --> 01:25:43,760
 That indicates to me a build error.
 
-929
+921
 01:25:45,760 --> 01:25:46,870
 But maybe it's OK.
 
-930
+922
 01:26:03,500 --> 01:26:06,020
 A bunch of cosmetic
 stuff... Let's just add that.
 
-931
+923
 01:26:14,050 --> 01:26:17,700
 Let's see if we can get
 a prequel implemented quickly.
 
-932
+924
 01:26:17,700 --> 01:26:20,820
 I'm not going to worry
 about the acceptance test for this
 
-933
+925
 01:26:21,500 --> 01:26:23,410
 I have a feeling it will be extremely
 
-934
+926
 01:26:24,690 --> 01:26:26,550
 similar to sequels.
 
-935
+927
 01:26:46,080 --> 01:26:48,130
 Here we're filtering on a guest instead.
 
-936
+928
 01:26:48,890 --> 01:26:50,770
 In the episode 2s guest is our host.
 
-937
+929
 01:27:09,220 --> 01:27:10,080
 DN: Looking good.
 
-938
+930
 01:27:11,300 --> 01:27:13,130
 So I guess the missing
 
-939
+931
 01:27:14,140 --> 01:27:17,400
 element there is that list of root.
 
-940
+932
 01:27:19,730 --> 01:27:21,550
 Those episodes without a prequel.
 
-941
+933
 01:27:21,550 --> 01:27:21,970
 JW: Yes.
 
-942
+934
 01:27:24,480 --> 01:27:27,190
 There is one little thing about this...
 
-943
+935
 01:27:30,600 --> 01:27:32,200
 these prequels and sequels
 
-944
+936
 01:27:33,360 --> 01:27:35,810
 If the host of either episode was changed
 
-945
+937
 01:27:35,810 --> 01:27:40,080
 on the fly, so if this became an editing
 interface.
 
-946
+938
 01:27:41,220 --> 01:27:44,210
 these would stop being in sync with things.
 
-947
+939
 01:27:44,210 --> 01:27:47,360
 So I have to declare
 that this is a computed property
 
-948
+940
 01:27:47,360 --> 01:27:49,150
 that depends on the value of host.
 
-949
+941
 01:27:49,860 --> 01:27:52,350
 And this one depends on the value of guest.
 
-950
+942
 01:27:53,090 --> 01:27:56,210
 Technically it depends on store
 but store not going to change.
 
-951
+943
 01:27:58,210 --> 01:27:59,680
 That's very interesting.
 
-952
+944
 01:28:01,010 --> 01:28:04,200
 Oh, I know what I've done there, oh well.
 
-953
+945
 01:28:04,990 --> 01:28:06,450
 DN: So that second argument...
 
-954
+946
 01:28:07,150 --> 01:28:08,720
 JW: Yes, I think it's if you want to
 
-955
+947
 01:28:08,720 --> 01:28:10,970
 send a different request off to the server.
 
-956
+948
 01:28:10,970 --> 01:28:11,420
 DN: I see.
 
-957
+949
 01:28:12,900 --> 01:28:16,420
 JW: It looks like it's
 requesting back and forth repeatedly.
 
-958
+950
 01:28:16,980 --> 01:28:18,720
 Let's kill that off.
 
-959
+951
 01:28:24,560 --> 01:28:25,690
 That's better.
 
-960
+952
 01:28:28,150 --> 01:28:29,100
 Excellent.
 
-961
+953
 01:28:32,450 --> 01:28:34,170
 Right, so that second argument...
 
-962
+954
 01:28:37,680 --> 01:28:40,240
 Jamie reads the last paragraph (above examples).
 
-963
+955
 01:28:49,820 --> 01:28:53,630
 So it allows you to use
 the data you already have
 
-964
+956
 01:28:53,630 --> 01:28:57,270
 and make a query in the background.
 
-965
+957
 01:28:58,100 --> 01:29:00,000
 Just covering all the bases I think.
 
-966
+958
 01:29:05,410 --> 01:29:07,520
 So let's add that:
 
-967
+959
 01:29:07,860 --> 01:29:11,990
 That implements prequels.
 
-968
+960
 01:29:21,440 --> 01:29:28,530
 Here, rather than
 looping over the episodes,
 
-969
+961
 01:29:28,530 --> 01:29:32,360
 we want to loop over
 something like root episodes.
 
-970
+962
 01:29:32,360 --> 01:29:33,440
 DN: Yes.
 
-971
+963
 01:29:34,030 --> 01:29:35,850
 JW: I'm going to say that we're going to
 
-972
+964
 01:29:35,850 --> 01:29:37,280
 loop over simply the model.
 
-973
+965
 01:29:39,010 --> 01:29:40,560
 This is going to fail at first.
 
-974
+966
 01:29:41,080 --> 01:29:42,180
 We'll go back to:
 
-975
+967
 01:29:46,510 --> 01:29:49,360
 So it's saying:
 
-976
+968
 01:29:49,380 --> 01:29:51,700
 we're trying to each over an object,
 
-977
+969
 01:29:51,700 --> 01:29:53,040
 just a hash.
 
-978
+970
 01:29:55,920 --> 01:29:58,320
 Right now, we are
 not in the application route.
 
-979
+971
 01:29:58,420 --> 01:30:00,680
 We are one down in the index route.
 
-980
+972
 01:30:00,960 --> 01:30:02,940
 So if I generate a route:
 
-981
+973
 01:30:04,790 --> 01:30:06,630
 That's like  a real live route for that.
 
-982
+974
 01:30:14,610 --> 01:30:17,130
 So by default a route will take a model
 
-983
+975
 01:30:17,130 --> 01:30:19,130
 of its parent routes, as its own.
 
-984
+976
 01:30:22,530 --> 01:30:25,270
 If we say instead, the model for this
 
-985
+977
 01:30:25,270 --> 01:30:26,180
 is going to be:
 
-986
+978
 01:30:27,680 --> 01:30:29,700
 We'll get the model for the application.
 
-987
+979
 01:30:31,100 --> 01:30:34,180
 and then we want to pluck off the
 
-988
+980
 01:30:35,970 --> 01:30:37,770
 Episodes let's say, that should be
 
-989
+981
 01:30:37,770 --> 01:30:39,770
 more or less, back to where we started.
 
-990
+982
 01:30:43,550 --> 01:30:46,690
 I think the best way to
 perform that transformation is here.
 
-991
+983
 01:30:48,100 --> 01:30:49,380
 Let's think...
 
-992
+984
 01:30:53,430 --> 01:30:55,760
 We could use that filter again
 
-993
+985
 01:30:55,760 --> 01:30:58,550
 We can say:
 
-994
+986
 01:31:00,800 --> 01:31:02,170
 Actually, do you know what,
 
-995
+987
 01:31:02,170 --> 01:31:04,610
 at this point these
 things are already loaded.
 
-996
+988
 01:31:04,910 --> 01:31:07,180
 Therefore we could do something like this:
 
-997
+989
 01:31:33,200 --> 01:31:35,000
 It's this kind of thing.
 
-998
+990
 01:31:39,410 --> 01:31:40,820
 I don't even quite call that,
 
-999
+991
 01:31:40,820 --> 01:31:41,830
 So let's say:
 
-1000
+992
 01:31:53,420 --> 01:31:55,310
 The problem with that is that this is
 
-1001
+993
 01:31:55,310 --> 01:31:57,600
 probably not quite what we think it is.
 
-1002
+994
 01:32:02,290 --> 01:32:03,220
 Let's find out.
 
-1003
+995
 01:32:04,210 --> 01:32:05,440
 At this point in time.
 
-1004
+996
 01:32:05,890 --> 01:32:08,260
 I've got a strong feeling that if we ask for
 
-1005
+997
 01:32:09,560 --> 01:32:11,680
 prequels.length, you wont get back
 
-1006
+998
 01:32:14,270 --> 01:32:16,290
 an ordinary array of ordinary length.
 
-1007
+999
 01:32:16,290 --> 01:32:17,100
 So:
 
-1008
+1000
 01:32:26,530 --> 01:32:27,920
 This is a...
 
-1009
+1001
 01:32:31,440 --> 01:32:32,570
 I don't know what it is.
 
-1010
+1002
 01:32:33,600 --> 01:32:34,570
 That seems OK.
 
-1011
+1003
 01:32:37,090 --> 01:32:39,110
 So that's true for at least one of them.
 
-1012
+1004
 01:32:52,500 --> 01:32:54,820
 DN: It seems to be
 returning true every time.
 
-1013
+1005
 01:32:54,820 --> 01:32:55,880
 JW: It does doesn't it?
 
-1014
+1006
 01:32:59,330 --> 01:33:01,670
 So Ranking Poker
 Hands should not be in here.
 
-1015
+1007
 01:33:03,350 --> 01:33:06,400
 (Some sounds of confusion)
 
-1016
+1008
 01:33:06,400 --> 01:33:10,010
 DN: Ah, it's working! (laughter)
 
-1017
+1009
 01:33:14,990 --> 01:33:17,330
 JW: It suggests you
 have to ask some question
 
-1018
+1010
 01:33:17,330 --> 01:33:20,240
 before it completes the operation.
 
-1019
+1011
 01:33:25,140 --> 01:33:32,250
 I think you may well find that it's these prequels.
 
-1020
+1012
 01:33:33,370 --> 01:33:36,000
 It might be returning
 something asynchronous.
 
-1021
+1013
 01:33:36,000 --> 01:33:37,110
 Some kind of promise.
 
-1022
+1014
 01:33:43,420 --> 01:33:46,050
 Let's think, what's the
 best way to deal with this?
 
-1023
+1015
 01:33:46,050 --> 01:33:47,010
 Let's go for:
 
-1024
+1016
 01:34:02,250 --> 01:34:03,160
 I'm going to add:
 
-1025
+1017
 01:34:07,240 --> 01:34:08,630
 See what else is available.
 
-1026
+1018
 01:34:08,630 --> 01:34:10,630
 It might be there's another primitive
 
-1027
+1019
 01:34:10,630 --> 01:34:12,100
 for doing this kind of thing.
 
-1028
+1020
 01:34:15,696 --> 01:34:20,294
 Maybe we ought to add a
 computed property to the episode model
 
-1029
+1021
 01:34:23,898 --> 01:34:24,762
 We'll call this:
 
-1030
+1022
 01:34:28,623 --> 01:34:30,282
 And this is true...
 
-1031
+1023
 01:34:36,548 --> 01:34:39,268
 This is going to run into
 kind of the same problem.
 
-1032
+1024
 01:34:39,326 --> 01:34:42,437
 DN: If they were
 prequels rather than sequels...
 
-1033
+1025
 01:34:42,680 --> 01:34:43,578
 JW: Yes...
 
-1034
+1026
 01:34:49,503 --> 01:34:51,566
 So let's see...
 
-1035
+1027
 01:35:13,040 --> 01:35:16,050
 DN: I wasn't anticipating that
 this would be the hard part.
 
-1036
+1028
 01:35:16,050 --> 01:35:18,050
 It's a surprise.
 
-1037
+1029
 01:35:24,909 --> 01:35:27,772
 What is it... When we start with a list
 
-1038
+1030
 01:35:27,770 --> 01:35:30,964
 and it's got all five
 episodes, and we click on one
 
-1039
+1031
 01:35:30,964 --> 01:35:32,960
 and then go back again.
 
-1040
+1032
 01:35:32,960 --> 01:35:34,960
 What is it that's changed at that point?
 
-1041
+1033
 01:35:40,480 --> 01:35:41,578
 And then if we go back.
 
-1042
+1034
 01:35:41,751 --> 01:35:42,821
 JW: Yes so...
 
-1043
+1035
 01:35:43,035 --> 01:35:43,894
 DN: Now it's OK.
 
-1044
+1036
 01:35:45,709 --> 01:35:46,572
 JW: At this point...
 
-1045
+1037
 01:35:52,757 --> 01:35:54,934
 We've got these
 two computed properties.
 
-1046
+1038
 01:35:55,270 --> 01:35:57,376
 And the way they are bound into the DOM
 
-1047
+1039
 01:35:57,372 --> 01:35:59,264
 gives them a chance to fully resolve.
 
-1048
+1040
 01:35:59,392 --> 01:36:03,168
 To turn from promise to a real value.
 
-1049
+1041
 01:36:03,896 --> 01:36:07,168
 Whereas in our route,
 
-1050
+1042
 01:36:07,160 --> 01:36:10,496
 (sort of) inherited route environment,
 we don't
 
-1051
+1043
 01:36:11,440 --> 01:36:13,848
 we're saying get host.
 
-1052
+1044
 01:36:15,024 --> 01:36:17,008
 sorry, rather we're saying...
 
-1053
+1045
 01:36:21,888 --> 01:36:23,544
 I've still got all that to save.
 
-1054
+1046
 01:36:24,896 --> 01:36:27,352
 I was expecting to see
 the full list at this point.
 
-1055
+1047
 01:36:46,000 --> 01:36:49,040
 What we are not doing is...
 
-1056
+1048
 01:36:49,040 --> 01:36:51,789
 giving that promise
 a chance to resolve itself.
 
-1057
+1049
 01:36:52,210 --> 01:36:54,909
 before we return the
 model data to the template.
 
-1058
+1050
 01:36:55,738 --> 01:36:58,436
 I was hoping that this filter would
 
-1059
+1051
 01:36:59,229 --> 01:37:02,814
 change dynamically, as
 new data becomes available.
 
-1060
+1052
 01:37:02,810 --> 01:37:03,374
 DN: Right.
 
-1061
+1053
 01:37:03,461 --> 01:37:05,629
 It seems that isn't quite the case.
 
-1062
+1054
 01:37:09,380 --> 01:37:12,734
 DN: Is there some way you can
 do something before the model loads?
 
-1063
+1055
 01:37:12,734 --> 01:37:14,760
 Maybe on initialization or...?
 
-1064
+1056
 01:37:15,061 --> 01:37:16,247
 JW: Yes.
 
-1065
+1057
 01:37:17,098 --> 01:37:21,040
 The dirty way to do it
 would be to do something like this:
 
-1066
+1058
 01:37:35,447 --> 01:37:37,941
 DN: And that forces the
 computed property to be...?
 
-1067
+1059
 01:37:39,149 --> 01:37:41,723
 JW: It's going to
 kick start all those promises.
 
-1068
+1060
 01:37:41,720 --> 01:37:43,927
 And change the state of all those models.
 
-1069
+1061
 01:37:47,825 --> 01:37:49,330
 What's going on there?
 
-1070
+1062
 01:37:49,338 --> 01:37:51,818
 Oh it's saying that I've still got no model.
 
-1071
+1063
 01:38:18,872 --> 01:38:20,036
 DN: Oh that does it.
 
-1072
+1064
 01:38:20,800 --> 01:38:24,843
 Unfortunately, because the model is
 a little state machine,
 
-1073
+1065
 01:38:26,580 --> 01:38:31,345
 to account for the fact that
 you may have data landing later on...
 
-1074
+1066
 01:38:33,469 --> 01:38:37,258
 other models may change around
 it, that it needs to know about.
 
-1075
+1067
 01:38:38,350 --> 01:38:40,894
 In order to get this
 richness of relationships,
 
-1076
+1068
 01:38:40,894 --> 01:38:42,807
 it can't be just a pure object.
 
-1077
+1069
 01:38:43,316 --> 01:38:45,447
 You end up with these sort of situations,
 
-1078
+1070
 01:38:45,447 --> 01:38:49,360
 where your having to wait
 for a model to get into the right state.
 
-1079
+1071
 01:38:49,850 --> 01:38:51,854
 Which is tricky, because in this case
 
-1080
+1072
 01:38:51,854 --> 01:38:54,210
 we know that we have all the data up front.
 
-1081
+1073
 01:38:54,210 --> 01:38:56,203
 But Ember Data is so geared up for the idea
 
-1082
+1074
 01:38:56,203 --> 01:38:58,632
 that you don't know when data will arrive.
 
-1083
+1075
 01:39:00,829 --> 01:39:04,232
 I have a feeling there probably is a way to...
 
-1084
+1076
 01:39:10,770 --> 01:39:16,458
 There are extra properties you can add.
 
-1085
+1077
 01:39:17,860 --> 01:39:22,770
 So you could say explicitly that
 these are asynchronous dependencies.
 
-1086
+1078
 01:39:23,701 --> 01:39:27,360
 But for us, because up in
 the application route,
 
-1087
+1079
 01:39:28,218 --> 01:39:31,636
 we have very deliberately
 loaded in an entire store of data.
 
-1088
+1080
 01:39:31,723 --> 01:39:34,072
 We shouldn't need to ever worry about that.
 
-1089
+1081
 01:39:34,669 --> 01:39:37,512
 It's a shame that we're
 having to do that but...
 
-1090
+1082
 01:39:38,000 --> 01:39:40,894
 It gets us to the point we want,
 
-1091
+1083
 01:39:40,890 --> 01:39:43,207
 which is to get these root episodes.
 
-1092
+1084
 01:39:43,381 --> 01:39:44,050
 DN: Yes.
 
-1093
+1085
 01:39:44,370 --> 01:39:47,607
 JW: So let's make that very explicit:
 
-1094
+1086
 01:40:10,050 --> 01:40:12,014
 So, Solving Word Chain puzzles...
 
-1095
+1087
 01:40:12,203 --> 01:40:15,112
 then it goes on to
 Building a Basic Calculator.
 
-1096
+1088
 01:40:15,110 --> 01:40:18,509
 And back there and... For good measure:
 
-1097
+1089
 01:40:20,680 --> 01:40:22,548
 DN: We can link back to the top one?
 
-1098
+1090
 01:40:22,574 --> 01:40:23,207
 JW: Yes.
 
-1099
+1091
 01:40:50,181 --> 01:40:51,527
 Something like that.
 
-1100
+1092
 01:40:54,385 --> 01:40:58,490
 JW: Cool, so now I would be interested to know...
 
-1101
+1093
 01:41:00,300 --> 01:41:02,334
 To see what we're getting for our money
 
-1102
+1094
 01:41:02,385 --> 01:41:04,330
 I'll quickly do this:
 
-1103
+1095
 01:41:09,030 --> 01:41:12,516
 It would be interesting
 to add another episode in.
 
-1104
+1096
 01:41:12,510 --> 01:41:17,301
 And see if our
 representation updates as we expect it to.
 
-1105
+1097
 01:41:17,510 --> 01:41:21,221
 DN: So how about we imagine an episode
 
-1106
+1098
 01:41:21,221 --> 01:41:25,425
 where Tom sets a challenge for Steve Purcell?
 
-1107
+1099
 01:41:28,218 --> 01:41:31,345
 That will mean we have
 a single root in that case.
 
-1108
+1100
 01:41:31,340 --> 01:41:35,832
 But there will be a branch where
 Tom has interviewed Camille and also Steve.
 
-1109
+1101
 01:41:35,830 --> 01:41:38,065
 JW: Yes, right.
 
-1110
+1102
 01:41:39,230 --> 01:41:41,796
 So, I want to try and do this in the inspector.
 
-1111
+1103
 01:41:41,796 --> 01:41:46,712
 It's a useful way to check that
 your app is behaving as you want.
 
-1112
+1104
 01:41:47,500 --> 01:41:51,408
 The Ember inspector
 gives you introspection
 
-1113
+1105
 01:41:51,400 --> 01:41:53,568
 on everything in your living system.
 
-1114
+1106
 01:41:53,560 --> 01:41:56,928
 These little $E buttons
 will emit an object out
 
-1115
+1107
 01:41:56,928 --> 01:41:59,816
 into the global scope, so you can play with it.
 
-1116
+1108
 01:41:59,810 --> 01:42:02,552
 So this is my store.
 
-1117
+1109
 01:42:06,768 --> 01:42:09,640
 I could do createRecord,
 
-1118
+1110
 01:42:11,848 --> 01:42:14,912
 I could use store.createRecord,
 let's try this.
 
-1119
+1111
 01:42:17,136 --> 01:42:19,800
 Create record implies
 that you're going to pass in
 
-1120
+1112
 01:42:19,800 --> 01:42:21,120
 other concrete objects.
 
-1121
+1113
 01:42:21,120 --> 01:42:22,720
 Like if there's a relationship.
 
-1122
+1114
 01:42:22,720 --> 01:42:25,816
 I'm going to literally
 give it Steve to work with.
 
-1123
+1115
 01:42:25,810 --> 01:42:29,176
 But I think it might be more
 interesting to push a new payload in.
 
-1124
+1116
 01:42:29,170 --> 01:42:32,888
 This is a case where, you would have for example,
 
-1125
+1117
 01:42:32,880 --> 01:42:35,208
 new data coming in over a socket.
 
-1126
+1118
 01:42:35,200 --> 01:42:38,992
 Imagine that Peer to
 Peer was produced so often,
 
-1127
+1119
 01:42:38,990 --> 01:42:42,000
 that you had a web socket,
 telling the browser that the episode...
 
-1128
+1120
 01:42:42,040 --> 01:42:44,736
 You can use, I believe it's pushPayload.
 
-1129
+1121
 01:42:45,410 --> 01:42:47,584
 So this is the idea of imagining a new
 
-1130
+1122
 01:42:47,768 --> 01:42:51,660
 chunk of data coming into the store.
 
-1131
+1123
 01:42:54,024 --> 01:42:55,464
 Let's see...
 
-1132
+1124
 01:42:57,392 --> 01:43:00,864
 We've got pushPayload there,
 I think we can get it on store as well.
 
-1133
+1125
 01:43:13,640 --> 01:43:15,024
 Let's pushPayload,
 
-1134
+1126
 01:43:15,768 --> 01:43:18,120
 What did we say, Tom interviewing Steve?
 
-1135
+1127
 01:43:18,120 --> 01:43:19,712
 DN: Yes.
 
-1136
+1128
 01:43:20,288 --> 01:43:22,112
 We'll go back to Counting Tree Nodes,
 
-1137
+1129
 01:43:22,110 --> 01:43:25,512
 and we'll pushPayLoad which looks like:
 
-1138
+1130
 01:43:26,260 --> 01:43:27,976
 DN: So the nice thing about this is
 
-1139
+1131
 01:43:27,976 --> 01:43:30,024
 we don't have to create any new partners.
 
-1140
+1132
 01:43:30,020 --> 01:43:33,376
 We can re-use the ones that exist.
 
-1141
+1133
 01:43:33,370 --> 01:43:36,472
 JW: We're saying it will have an id of 6.
 
-1142
+1134
 01:43:38,376 --> 01:43:44,304
 Challenge name: some challenge
 that Tom would set for Steve
 
-1143
+1135
 01:43:44,304 --> 01:43:48,640
 which would probably be
 something really hard. (laughter).
 
-1144
+1136
 01:43:51,504 --> 01:43:52,736
 Invent a new monad.
 
-1145
+1137
 01:43:53,976 --> 01:43:56,856
 DN: Sounds interesting!
 
-1146
+1138
 01:43:57,310 --> 01:44:00,184
 Guest name and host
 name we don't really use,
 
-1147
+1139
 01:44:00,184 --> 01:44:01,960
 so I'm going to leave them be.
 
-1148
+1140
 01:44:01,960 --> 01:44:04,592
 Let's just say there's no
 poster image for this one.
 
-1149
+1141
 01:44:04,590 --> 01:44:08,176
 So we'll say host_id is
 going to be Tom, who is 2.
 
-1150
+1142
 01:44:08,832 --> 01:44:11,176
 and guest id is going to be Steve...
 
-1151
+1143
 01:44:13,448 --> 01:44:15,080
 who is 4.
 DN: Yes.
 
-1152
+1144
 01:44:16,520 --> 01:44:20,480
 I think that to get this to work
 I'll have to wrap it in an episode:
 
-1153
+1145
 01:44:24,864 --> 01:44:25,920
 Namespace...
 
-1154
+1146
 01:44:26,900 --> 01:44:28,920
 DN: You didn't just lose all that did you?
 
-1155
+1147
 01:44:28,920 --> 01:44:29,952
 JW: I did.
 
-1156
+1148
 01:44:29,952 --> 01:44:31,950
 DN: Oh dear.
 
-1157
+1149
 01:44:36,032 --> 01:44:37,904
 I think it will be episode singular.
 
-1158
+1150
 01:44:37,904 --> 01:44:39,900
 Maybe not, let's try episodes plural:
 
-1159
+1151
 01:44:57,928 --> 01:44:59,632
 That is the end of the array.
 
-1160
+1152
 01:45:09,848 --> 01:45:12,456
 There we go, Inventing a New Monad.
 
-1161
+1153
 01:45:12,450 --> 01:45:14,688
 DN: And it just fits right into the sequence.
 
-1162
+1154
 01:45:15,168 --> 01:45:15,680
 Very nice.
 
-1163
+1155
 01:45:15,680 --> 01:45:19,008
 JW: And we should be able
 to have a look in Data here.
 
-1164
+1156
 01:45:19,000 --> 01:45:20,544
 There we go, yes.
 
-1165
+1157
 01:45:24,200 --> 01:45:26,640
 These aren't the
 computed guest and host names,
 
-1166
+1158
 01:45:26,640 --> 01:45:29,224
 these are the ones
 that are stored on the objects
 
-1167
+1159
 01:45:29,232 --> 01:45:31,790
 that we're not really using in this case.
 
-1168
+1160
 01:45:31,792 --> 01:45:33,440
 DN: We can probably ignore those.
 
-1169
+1161
 01:45:33,544 --> 01:45:38,368
 JW: Yes, we genuinely have Steve the guest
 
-1170
+1162
 01:45:38,504 --> 01:45:40,360
 and Tom the host.
 
-1171
+1163
 01:45:44,216 --> 01:45:46,352
 I'm just going to add one
 more little cosmetic thing
 
-1172
+1164
 01:45:46,350 --> 01:45:50,552
 to enrich this.
 
-1173
+1165
 01:45:55,424 --> 01:45:57,056
 I'm going to drop...
 
-1174
+1166
 01:46:00,416 --> 01:46:03,448
 Because this was all about
 collaborations to begin with,
 
-1175
+1167
 01:46:03,808 --> 01:46:05,440
 Let's say:
 
-1176
+1168
 01:46:28,624 --> 01:46:30,680
 DN: I would say featuring guest name.
 
-1177
+1169
 01:46:34,656 --> 01:46:37,560
 JW: There is a little thing
 which is going to happen here
 
-1178
+1170
 01:46:37,560 --> 01:46:41,210
 which is that guests don't
 have a name, I don't think.
 
-1179
+1171
 01:46:41,210 --> 01:46:45,808
 DN: Yes, that's right, first name and last name.
 
-1180
+1172
 01:46:46,768 --> 01:46:48,120
 But we could compute that.
 
-1181
+1173
 01:46:48,120 --> 01:46:48,752
 JW: Yes.
 
-1182
+1174
 01:46:51,728 --> 01:46:53,112
 That's gone from memory now,
 
-1183
+1175
 01:46:53,112 --> 01:46:56,200
 so I've lost that new episode.
 
-1184
+1176
 01:46:57,192 --> 01:47:00,000
 Featuring... There's no name, so I'll add that.
 
-1185
+1177
 01:47:21,832 --> 01:47:24,232
 DN: That one has two dependent keys then?
 
-1186
+1178
 01:47:24,448 --> 01:47:25,200
 JW: Correct.
 
-1187
+1179
 01:47:27,992 --> 01:47:30,096
 Then, with a little bit of luck ....
 
-1188
+1180
 01:47:34,650 --> 01:47:39,032
 This gives us the other nicety which is...
 
-1189
+1181
 01:47:44,424 --> 01:47:48,248
 How does Camille spell her name,
 is it CAMI?
 
-1190
+1182
 01:47:49,144 --> 01:47:50,632
 DN: Good question, I don't know,
 
-1191
+1183
 01:47:50,632 --> 01:47:52,630
 it's certainly pronounced Camille.
 
-1192
+1184
 01:47:55,712 --> 01:47:57,368
 JW: We can now edit these details
 
-1193
+1185
 01:47:57,368 --> 01:47:59,024
 in one central place.
 
-1194
+1186
 01:48:04,296 --> 01:48:05,824
 DN: OK... Check it in.
 
-1195
+1187
 01:48:05,820 --> 01:48:06,440
 JW: Yes.
 
-1196
+1188
 01:48:22,800 --> 01:48:24,960
 This is where we:
 
-1197
+1189
 01:48:35,656 --> 01:48:38,920
 DN: We've got the root, that's a major change.
 
-1198
+1190
 01:48:55,680 --> 01:48:58,904
 DN: You misspelled featuring
 I'm afraid (laughter)
 
-1199
+1191
 01:49:10,072 --> 01:49:14,872
 DN: So we've reached a
 good place to call it a day I think.
 
-1200
+1192
 01:49:14,870 --> 01:49:19,664
 But if you had more time, how
 would you like to continue with this?
 
-1201
+1193
 01:49:22,080 --> 01:49:26,496
 For anyone familiar with building this style of
 
-1202
+1194
 01:49:27,017 --> 01:49:31,097
 view on data in Rails, it probably
 seems relatively simplistic.
 
-1203
+1195
 01:49:32,860 --> 01:49:35,222
 If wouldn't be too
 hard to do this with Rails.
 
-1204
+1196
 01:49:35,220 --> 01:49:39,828
 The point is we are getting these potentially disparate
 
-1205
+1197
 01:49:39,828 --> 01:49:43,314
 data sources into memory and turning them into
 
-1206
+1198
 01:49:43,310 --> 01:49:45,977
 a data structure that we can then
 wander around in
 
-1207
+1199
 01:49:45,980 --> 01:49:48,525
 Without having to do any more re-loads
 
-1208
+1200
 01:49:48,525 --> 01:49:50,331
 or fetches of data.
 
-1209
+1201
 01:49:50,330 --> 01:49:55,062
 So now we have these
 relationships between these objects.
 
-1210
+1202
 01:49:55,097 --> 01:49:59,588
 It wouldn't be too hard to
 render them out in other ways.
 
-1211
+1203
 01:49:59,580 --> 01:50:03,737
 The way we have it right
 now, linking between them
 
-1212
+1204
 01:50:03,737 --> 01:50:07,508
 I feel like it's the...
 
-1213
+1205
 01:50:07,560 --> 01:50:10,514
 simplest way to represent
 
-1214
+1206
 01:50:10,514 --> 01:50:13,108
 a graph of different entities.
 
-1215
+1207
 01:50:13,100 --> 01:50:19,428
 That's (kind of) the web way,
 its most basic form.
 
-1216
+1208
 01:50:19,420 --> 01:50:23,771
 But we could render
 out a visual graph of this stuff.
 
-1217
+1209
 01:50:24,240 --> 01:50:29,737
 I would be inclined to reach for Graphviz
 
-1218
+1210
 01:50:30,057 --> 01:50:34,100
 or potentially D3 which has some
 
-1219
+1211
 01:50:34,100 --> 01:50:38,217
 modules in it for rendering
 directed graphs.
 
-1220
+1212
 01:50:38,308 --> 01:50:44,320
 I know Graphviz and its dot language
 better than I know D3
 
-1221
+1213
 01:50:44,320 --> 01:50:48,537
 So that's what I would err towards.
 
-1222
+1214
 01:50:48,670 --> 01:50:51,451
 The other thing I would like to get rid of,
 
-1223
+1215
 01:50:52,930 --> 01:50:56,754
 but I just can't think of how you go about it,
 
-1224
+1216
 01:50:56,750 --> 01:50:59,405
 is the reliance on this here.
 
-1225
+1217
 01:50:59,400 --> 01:51:01,451
 I'm sure there is a way, probably an
 
-1226
+1218
 01:51:01,451 --> 01:51:07,325
 idiomatic way, but in
 essence it's because of this odd
 
-1227
+1219
 01:51:09,771 --> 01:51:15,737
 thing of needing to... In the
 same way you want to carry a monad,
 
-1228
+1220
 01:51:15,900 --> 01:51:18,434
 up until the final moment, to finally unpack it,
 
-1229
+1221
 01:51:18,430 --> 01:51:20,491
 and get the value inside it.
 
-1230
+1222
 01:51:20,491 --> 01:51:24,850
 Similarly here, we want to
 be dealing just in terms of promises
 
-1231
+1223
 01:51:24,868 --> 01:51:28,857
 until the last possible moment,
 when they are put into the template.
 
-1232
+1224
 01:51:28,850 --> 01:51:32,114
 and eventually allowed to
 be unpacked and rendered.
 
-1233
+1225
 01:51:32,377 --> 01:51:34,228
 So, I'm sure there's a way around this.
 
-1234
+1226
 01:51:34,354 --> 01:51:38,057
 but, it probably doesn't
 hurt too much at this point.
 
-1235
+1227
 01:51:38,460 --> 01:51:40,754
 DN: The idea will probably
 will spring into your head
 
-1236
+1228
 01:51:40,754 --> 01:51:42,697
 just as we turn the camera off (laughter).
 
-1237
+1229
 01:51:42,708 --> 01:51:46,110
 JW: In terms of the UI, it would be...
 
-1238
+1230
 01:51:48,868 --> 01:51:53,131
 You could render a tree out here of
 blobs connected by sticks.
 
-1239
+1231
 01:51:55,314 --> 01:51:58,285
 DN: Well, it's been really interesting watching you work
 
-1240
+1232
 01:51:58,280 --> 01:51:59,371
 and how you use Ember.
 
-1241
+1233
 01:51:59,382 --> 01:52:01,470
 And thanks a lot for coming on the show.
 
-1242
+1234
 01:52:01,470 --> 01:52:02,834
 JW: Thanks for inviting me.
 
