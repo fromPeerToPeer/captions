@@ -2953,196 +2953,202 @@ Before we do that let's stop it
 complaining about those missing fields.
 
 673
-01:07:18,320 --> 01:07:20,530
-That's episodes, it's expecting to see
+01:07:18,320 --> 01:07:23,056
+That's episodes, it's expecting to see,
+guest name, host name, poster frame url.
 
 674
-01:07:20,530 --> 01:07:22,530
-guest name, host name, poster frame url
-
-675
-01:07:23,150 --> 01:07:25,211
+01:07:23,464 --> 01:07:24,840
 DN: They can all be strings I suppose can't they?
 
-676
-01:07:25,234 --> 01:07:26,250
+675
+01:07:24,848 --> 01:07:27,504
 JW: Yes I guess so.
 
+676
+01:07:37,480 --> 01:07:42,560
+DN: Again, you're using camel case
+but the API has snakecase underscores.
+
 677
-01:07:37,480 --> 01:07:40,400
-DN: Again, you're using
-camel case but the API has
-
-678
-01:07:40,400 --> 01:07:42,570
-snakecase underscores.
-
-679
 01:07:42,570 --> 01:07:43,280
 JW: Yes.
 
+678
+01:07:43,280 --> 01:07:47,336
+DN: So, where is that inference
+happening from one format to the other?
+
+679
+01:07:47,330 --> 01:07:49,520
+It's all happening in the serializer.
+
 680
-01:07:43,280 --> 01:07:45,430
-DN: So, where is
-that inference happening
-
-681
-01:07:45,430 --> 01:07:47,280
-from one format to the other?
-
-682
-01:07:47,330 --> 01:07:49,280
-It's all happening in the serializer
-
-683
-01:07:49,490 --> 01:07:50,180
+01:07:49,520 --> 01:07:50,800
 DN: Ah right.
 
+681
+01:07:50,800 --> 01:07:50,968
+JW: You will find that by default there's this
+normalize method which does all this kind of work,
+DN: Ah right.
+
+682
+01:07:50,968 --> 01:07:57,856
+JW: You will find that by default there's this
+normalize method which does all this kind of work,
+
+683
+01:07:57,850 --> 01:08:04,088
+converting snake case into camel
+case, converting plurals into singular,
+
 684
-01:07:50,800 --> 01:07:52,760
-You will find that by default
-
-685
-01:07:53,530 --> 01:07:55,690
-there's this normalize method
-
-686
-01:07:55,840 --> 01:07:57,470
-which does all this kind of work,
-
-687
-01:07:57,850 --> 01:07:59,630
-converting snake case
-
-688
-01:07:59,940 --> 01:08:01,770
-into camel case.
-
-689
-01:08:01,770 --> 01:08:06,720
-converting plurals into singular,
+01:08:04,320 --> 01:08:08,160
 whatever is appropriate for the format.
 
-690
-01:08:08,180 --> 01:08:10,360
+685
+01:08:08,180 --> 01:08:10,880
 Now I've got rid of some of my warnings.
 
-691
-01:08:10,890 --> 01:08:14,070
-but there's still this guest
+686
+01:08:10,890 --> 01:08:14,368
+But there's still this guest
 episode, host episodes problem.
 
+687
+01:08:14,380 --> 01:08:18,080
+So let's say [Jamie thinks].
+
+688
+01:08:18,090 --> 01:08:26,568
+We don't want a serializer for everything,
+we just want a serializer for partner.
+
+689
+01:08:29,824 --> 01:08:32,544
+[Inaudible]
+
+690
+01:08:40,680 --> 01:08:46,776
+[Silence]
+
+691
+01:08:46,770 --> 01:08:57,712
+Now Ive got partner serializer and
+this is again an active model serializer.
+
 692
-01:08:14,380 --> 01:08:16,070
-So let's say:
+01:08:57,720 --> 01:09:02,496
+There has got to be some hook where
+I can turn these into what it's expecting.
 
 693
-01:08:19,080 --> 01:08:21,050
-We don't want a serializer
+01:09:04,550 --> 01:09:08,232
+I've got normalize which takes type, hash and prop
 
 694
-01:08:21,330 --> 01:08:22,780
-for everything, we just want
-a serializer for partner
-
-695
-01:08:57,740 --> 01:08:59,230
-There has got to be some hook
-
-696
-01:08:59,240 --> 01:09:02,240
-where I can turn
-these into what it's expecting.
-
-697
-01:09:04,550 --> 01:09:08,060
-I've got normalize which
-takes type, hash and prop
-
-698
-01:09:08,800 --> 01:09:10,460
+01:09:08,800 --> 01:09:10,432
 And that's going to do this work.
 
-699
-01:09:10,460 --> 01:09:11,280
-So if I:
+695
+01:09:10,460 --> 01:09:19,952
+So if I normalize type has prop.
 
-700
-01:09:20,740 --> 01:09:22,980
+696
+01:09:20,740 --> 01:09:23,472
 Type meaning: when you get the data through
 
-701
-01:09:26,708 --> 01:09:28,902
-it's going to infer the type from this key,
+697
+01:09:26,700 --> 01:09:32,240
+it's going to infer the type from
+this key, under which each record lives.
 
-702
-01:09:29,810 --> 01:09:31,510
-under which each record lives.
-
-703
-01:09:35,150 --> 01:09:38,900
+698
+01:09:35,150 --> 01:09:39,264
 But we don't care too
 much about that manipulation here.
 
-704
-01:09:39,310 --> 01:09:41,520
-All we want to do is say:
+699
+01:09:39,310 --> 01:09:43,176
+All we want to do is say, let's see...
 
-705
-01:09:43,710 --> 01:09:47,500
+700
+01:09:43,710 --> 01:09:47,992
 Hash is this:
 
+701
+01:09:48,230 --> 01:09:52,464
+We want to move this so we're saying 
+
+702
+01:09:52,470 --> 01:10:02,616
+hash.host_episode_ids equals hash.host_episodes 
+
+703
+01:10:02,616 --> 01:10:06,096
+and then delete the original
+key otherwise it will complain.
+
+704
+01:10:08,544 --> 01:10:19,296
+And then to do a similar thing: hash.guest_episode_id
+similarly equals hash_guest_episode.
+
+705
+01:10:19,290 --> 01:10:25,640
+[Silence]
+
 706
-01:09:48,230 --> 01:09:52,190
-We want to move this so we're saying:
+01:10:26,510 --> 01:10:35,216
+Once we've done those manipulations we just want
+to hand it off to the regular class method.
 
 707
-01:10:26,510 --> 01:10:28,400
-Once we've done those manipulations
+01:10:35,456 --> 01:10:39,104
+[Inaudible]
 
 708
-01:10:28,400 --> 01:10:29,190
-we just want to hand it off to the
-regular class method
+01:10:39,120 --> 01:10:48,064
+I've not been so careful to dodge a mutation
+here because I think you get passed a safe hash.
 
 709
-01:10:39,120 --> 01:10:43,850
-I've not been so careful
-to dodge a mutation here
-
-710
-01:10:43,860 --> 01:10:47,960
-because I think you
-get passed a safe hash
-
-711
-01:10:47,965 --> 01:10:48,910
+01:10:48,064 --> 01:10:49,336
 DN: Oh, OK.
 
+710
+01:10:49,330 --> 01:10:51,816
+JW: I'm fairly sure that's the case.
+
+711
+01:10:53,160 --> 01:10:57,016
+Host episodes [Jamie thinks]. 
+
 712
+01:10:57,010 --> 01:10:59,400
+Oh right yes. [slight laugh]
+
+713
 01:11:01,400 --> 01:11:03,851
 My warnings have now gone.
 
-713
-01:11:03,880 --> 01:11:07,325
-It's complaining that the value each
-loops over must be an array.
-
 714
-01:11:07,400 --> 01:11:09,400
-We passed a record array.
+01:11:03,880 --> 01:11:07,325
+It's complaining that the value
+each loops over must be an array.
 
 715
-01:11:09,660 --> 01:11:10,860
-DN: So are we down to this
+01:11:07,400 --> 01:11:09,632
+We passed a record array.
 
 716
-01:11:10,970 --> 01:11:13,000
-thing called model.sequel
+01:11:09,660 --> 01:11:13,608
+DN: So are we down to this thing called model.sequels?
 
 717
-01:11:14,150 --> 01:11:17,530
-Now I'm at template index.
+01:11:14,150 --> 01:11:17,952
+JW: Now I'm at template index.
 
 718
 01:11:18,580 --> 01:11:19,620
