@@ -3043,13 +3043,13 @@ we just want a serializer for partner.
 [Inaudible]
 
 693
-01:08:40,680 --> 01:08:46,776
+01:08:40,680 --> 01:08:46,770
 [Silence]
 
 694
 01:08:46,770 --> 01:08:57,712
-Now Ive got partner serializer and
-this is again an active model serializer.
+Now I've got partner serializer and
+this is again an ActiveModelSerializer.
 
 695
 01:08:57,720 --> 01:09:02,496
@@ -3058,7 +3058,8 @@ I can turn these into what it's expecting.
 
 696
 01:09:04,550 --> 01:09:08,344
-I've got normalize which takes type, hash and prop.
+I've got normalize which takes
+type, hash and prop.
 
 697
 01:09:08,800 --> 01:09:10,432
