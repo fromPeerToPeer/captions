@@ -3089,25 +3089,28 @@ All we want to do is say, let's see...
 
 703
 01:09:43,710 --> 01:09:47,992
-Hash is this:
+Hash is this.
 
 704
 01:09:48,230 --> 01:09:52,464
-We want to move this so we're saying
+We want to move this attribute basically.
+So we're saying:
 
 705
 01:09:52,470 --> 01:10:02,616
-hash.host_episode_ids equals hash.host_episodes
+hash.host_episode_ids equals
+hash.host_episodes
 
 706
 01:10:02,616 --> 01:10:06,096
-and then delete the original
-key otherwise it will complain.
+and then delete the original key,
+otherwise it will complain.
 
 707
 01:10:08,544 --> 01:10:19,296
-And then to do a similar thing: hash.guest_episode_id
-similarly equals hash_guest_episode.
+And then to do a similar thing:
+hash.guest_episode_id (singular) equals
+hash_guest_episode.
 
 708
 01:10:19,290 --> 01:10:25,640
