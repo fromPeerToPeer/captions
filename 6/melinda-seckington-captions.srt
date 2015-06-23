@@ -353,3 +353,176 @@ This can be used [inaud] so that we can use db:seed.
 00:05:13,200 --> 00:05:14,900
 So I'll load that in.
 
+82
+00:05:16,224 --> 00:05:18,992
+So I want to use the seeds [inaud]
+
+83
+00:05:18,992 --> 00:05:22,216
+[Silence]
+
+84
+00:05:22,210 --> 00:05:29,424
+DN: So this is just a plain Ruby file. It will
+load the environments and then create models.
+
+85
+00:05:29,420 --> 00:05:30,016
+MS: Yes.
+
+86
+00:05:30,010 --> 00:05:33,496
+DN: And then you can
+execute this file with a rake task.
+
+87
+00:05:34,072 --> 00:05:35,632
+MS: Yes.
+
+88
+00:05:37,400 --> 00:05:40,104
+Let me just set up our questions.
+
+89
+00:05:43,528 --> 00:05:48,384
+So very simply we want to do question.create.
+
+90
+00:05:48,380 --> 00:05:55,952
+[Silence]
+
+91
+00:05:55,960 --> 00:05:57,736
+[Inaudible]
+
+92
+00:05:57,736 --> 00:06:01,816
+[Silence]
+
+93
+00:06:01,810 --> 00:06:09,904
+So we have, what did we say
+before... image and... description.
+
+94
+00:06:09,904 --> 00:06:15,528
+That would be the very very simple way of [inaud] it.
+
+95
+00:06:15,520 --> 00:06:18,832
+But we want to do something
+a little bit smarter I think.
+
+96
+00:06:22,136 --> 00:06:24,632
+[inaud] the image is somewhere.
+
+97
+00:06:24,630 --> 00:06:30,008
+DN: Yes, I gave them to you with your challenge,
+but I don't think they're in your rails app yet.
+
+98
+00:06:30,000 --> 00:06:32,416
+MS: No they're not.
+
+99
+00:06:33,488 --> 00:06:38,528
+DN: When I first created these
+images, I named them dog.jpeg, cat.jpeg
+
+100
+00:06:38,520 --> 00:06:43,280
+And then I realised that was a little
+opinionated so I changed it to 'Animal 1', 'Animal 2'...
+
+101
+00:06:43,280 --> 00:06:47,104
+[Melinda thinks]
+
+102
+00:06:47,100 --> 00:06:49,704
+MS: Yes, let's just throw them in the public.
+
+103
+00:06:51,552 --> 00:06:56,360
+They'll maybe come up in a lesser place later
+
+104
+00:06:56,360 --> 00:07:04,408
+[Silence]
+
+105
+00:07:04,400 --> 00:07:07,016
+How do you loop through numbers again... times.
+
+106
+00:07:07,010 --> 00:07:12,920
+[Silence]
+
+107
+00:07:12,976 --> 00:07:14,920
+I'll double check the [inaud]
+
+108
+00:07:14,920 --> 00:07:18,272
+It would be Ruby times rather than...
+
+109
+00:07:18,270 --> 00:07:26,272
+[Silence]
+
+110
+00:07:26,270 --> 00:07:30,208
+DN: That's a great way of finding
+documentation, is that something to do with Alfred.
+
+111
+00:07:30,200 --> 00:07:32,160
+MS: Yes so...
+
+112
+00:07:32,160 --> 00:07:35,752
+DN: So you've got it searching rails documentation.
+
+113
+00:07:35,750 --> 00:07:40,728
+MS: Yes, it's a work flow that's called Dev Doctor.
+
+114
+00:07:40,720 --> 00:07:46,696
+And it's not just for rails, it's for most
+programming language that you can think of.
+
+115
+00:07:47,088 --> 00:07:48,216
+DN: Oh that's good.
+
+116
+00:07:48,210 --> 00:07:50,576
+MS: Yes, it's really handy.
+
+117
+00:07:52,120 --> 00:07:54,408
+Yes I was right.
+
+118
+00:07:54,400 --> 00:07:57,488
+I have to question myself sometimes.
+
+119
+00:07:57,480 --> 00:08:19,256
+[Silence]
+
+120
+00:08:19,250 --> 00:08:20,976
+DN: Oh that's...
+
+121
+00:08:21,072 --> 00:08:25,056
+MS: Yes, sublime, like soup, try to open
+
+122
+00:08:25,568 --> 00:08:28,752
+DN: [inaud]
+
