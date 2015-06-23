@@ -277,7 +277,7 @@ here going to /usr/local/lib/node_modules.
 
 62
 00:04:48,830 --> 00:04:52,342
-[inaudible]
+In if we look at that directory
 
 63
 00:04:52,370 --> 00:04:59,965
@@ -289,17 +289,18 @@ very own copy of it. It's a nicety of npm.
 So now we should be able to do ember serve...
 
 65
-00:05:02,540 --> 00:05:09,874
+00:05:02,540 --> 00:05:09,870
 [Silence]
 
 66
 00:05:09,870 --> 00:05:13,977
-DN: [Inaudible]
+DN: That's "lolhost"?
+JW: Yup.
 
 67
 00:05:14,240 --> 00:05:21,257
-JW: Let's just make a quick change to
-make sure we're doing what we think we're doing.
+Let's just make a quick change to make sure
+we're doing what we think we're doing.
 
 68
 00:05:21,268 --> 00:05:28,491
@@ -501,7 +502,8 @@ Let's just a display a list of episodes.
 
 112
 00:09:58,900 --> 00:10:02,342
-I think that's right [inaudible]
+I think that's right.
+Oh, it might be with an underscore.
 
 113
 00:10:02,340 --> 00:10:11,680
@@ -650,15 +652,16 @@ So RSPV.hash and this is
 episodes, and we need some ajax.
 
 146
-00:13:18,594 --> 00:13:24,594
+00:13:18,594 --> 00:13:24,590
 I think I have the ic-ajax library handy.
 
 147
 00:13:24,590 --> 00:13:33,188
-So what we want to get is [inaudible]
+So what we want to get is
+/api/episodes.json
 
 148
-00:13:33,680 --> 00:13:37,291
+00:13:33,680 --> 00:13:37,290
 I think that should be enough.
 
 149
@@ -675,7 +678,8 @@ Yes, it seems to.
 
 152
 00:13:56,380 --> 00:14:03,234
-I'm going to step back to something that looks a bit more like the guides.
+I'm going to step back to something that
+looks a bit more like the guides.
 
 153
 00:14:03,234 --> 00:14:10,000
@@ -1231,7 +1235,7 @@ host was guest on that episode.
 
 280
 00:27:29,748 --> 00:27:34,605
-So episode host id.
+So episode.host_id
 
 281
 00:27:40,994 --> 00:27:43,862
@@ -1324,16 +1328,17 @@ just to show you where I'm getting them from.
 301
 00:29:37,550 --> 00:29:43,394
 These are extensions to the
-array prototype [inaudible]
+array prototype that Ember adds
 
 302
 00:29:43,430 --> 00:29:50,308
 You don't have to opt in to extensions,
-you can leave them on the floor, if you want.
+you can leave them on the floor
 
 303
 00:29:50,320 --> 00:29:54,060
-If you don't want your core object monkey-patched.
+if you don't want your
+core objects monkey-patched.
 
 304
 00:29:54,290 --> 00:29:57,965
@@ -1599,11 +1604,11 @@ out the data under test because our data is static.
 364
 00:35:04,194 --> 00:35:10,640
 and instead I'm going to say...
-[inaudible] acceptance test.
+Let's make an acceptance test
 
 365
 00:35:10,730 --> 00:35:17,314
-And we'll call this walking-a-sequence.
+and we'll call this walking-a-sequence.
 
 366
 00:35:20,560 --> 00:35:27,645
@@ -1714,7 +1719,8 @@ What we are expecting is that...
 
 390
 00:37:48,290 --> 00:37:53,520
-At that point we should see... [inaudible] episode.
+At that point we should see... 
+Maybe it should just be an episode.
 
 391
 00:37:55,170 --> 00:38:02,605
@@ -2005,7 +2011,7 @@ a function: what's the exact stacktrace of that?
 
 455
 00:44:34,960 --> 00:44:36,840
-[Inaudible]
+build-collaborators line 8
 
 456
 00:44:36,840 --> 00:44:46,288
@@ -2116,8 +2122,9 @@ app to look at, alongside the tests.
 DN: OK.
 
 481
-00:47:48,450 --> 00:47:51,128
-Oh that's curious [inaudible].
+00:47:48,450 --> 00:47:51,120
+Oh that's curious,
+I wonder whether I...
 
 482
 00:47:51,120 --> 00:48:06,360
@@ -2155,8 +2162,8 @@ The episode route will be rendered inside of it.
 
 490
 00:48:32,490 --> 00:48:39,736
-And the side where I want it rendered
-is in outlet so I will put the outlet here.
+And I decide where I want it rendered
+using outlet, so I will put the outlet here.
 
 491
 00:48:39,730 --> 00:48:45,000
@@ -2165,11 +2172,11 @@ go away when I step into an individual one.
 
 492
 00:48:45,000 --> 00:48:47,968
-[Inaudible] templates.
+So, let's say app/templates/index
 
 493
 00:48:48,872 --> 00:48:54,860
-Index is a route you get
+Which is a route you get
 for free you don't have to define it.
 
 494
@@ -2247,8 +2254,8 @@ It doesn't want to display yet.
 That is the right direction to head in.
 
 511
-00:50:28,320 --> 00:50:31,288
-[Inaudible]
+00:50:28,320 --> 00:50:31,280
+So if I add everything in app/
 
 512
 00:50:31,280 --> 00:50:38,896
@@ -2279,10 +2286,11 @@ is a list of sequels for the current episode?
 
 518
 00:51:20,304 --> 00:51:25,160
-JW: Yes, [inaudible].
+JW: Yes, so let's say
+model.sequels as |sequel|
 
 519
-00:51:25,160 --> 00:51:33,136
+00:51:25,160 --> 00:51:33,130
 [Jamie types]
 
 520
@@ -2557,8 +2565,10 @@ And that returns the promise.
 
 581
 00:56:51,176 --> 00:56:59,550
-I'll do this with this.store.find episode
-[inaudible] and that returns a promise.
+I'll do this with
+this.store.find('episode')
+meaning get the episodes
+and that returns a promise.
 
 582
 00:57:06,460 --> 00:57:11,968
@@ -2681,8 +2691,9 @@ It's referring to the partner model.
 And just like in rails I'll have to tell it...
 
 610
-01:00:09,056 --> 01:00:12,552
-[Inaudible]
+01:00:09,056 --> 01:00:12,550
+Oh sorry I'm in Partner so this is
+referring to the Episode model.
 
 611
 01:00:12,550 --> 01:00:21,840
@@ -2721,8 +2732,9 @@ But I have a feeling that using Ember Data like
 this is going to shoulder a lot of the work for me.
 
 619
-01:01:35,600 --> 01:01:42,176
-I'm just going to go for [inaudible].
+01:01:35,600 --> 01:01:42,170
+I'm just going to go for ember-data...
+I think canary has a fix for that issue.
 
 620
 01:01:42,170 --> 01:01:52,152
@@ -2752,27 +2764,27 @@ If we add some of this, lets see...
 
 626
 01:02:09,560 --> 01:02:14,776
-Firstly, use ember-data.
+Firstly, use ember-data#canary
 
 627
-01:02:15,896 --> 01:02:18,384
-Canary.
+01:02:15,896 --> 01:02:18,380
+[todo: merge this caption with predecessor]
 
 628
 01:02:18,380 --> 01:02:24,800
 [Jamie types]
 
 629
-01:02:24,830 --> 01:02:33,664
+01:02:24,830 --> 01:02:33,660
 This isn't quite the order that
-things happened in [inaudible]
+things happened in. Let's add models.
 
 630
 01:02:33,660 --> 01:02:37,872
-[Silence]
+That can be a part of that...
 
 631
-01:02:37,870 --> 01:02:40,408
+01:02:37,870 --> 01:02:40,400
 And then this change...
 
 632
@@ -2821,11 +2833,12 @@ DN: Ah, forgot to save the inverse.
 
 642
 01:03:54,290 --> 01:04:00,976
-JW: Yes, add inverses to... I shall say partner.
+JW: Yes, add inverses to...
+Which one's that? Partner.
 
 643
 01:04:03,530 --> 01:04:07,344
-So [inaudible] adapters, application.
+So app/adapters/application.
 
 644
 01:04:08,050 --> 01:04:10,440
@@ -2838,11 +2851,12 @@ lot like what active model serializers would yield.
 
 646
 01:04:18,560 --> 01:04:23,112
-So let's use that instead:
+So let's use the
+ActiveModelAdapter instead.
 
 647
 01:04:25,360 --> 01:04:30,072
-It's expecting data of this form
+Which is expecting data of this form
 so it should know what to do with it.
 
 648
@@ -2890,15 +2904,17 @@ Which might well do the job.
 658
 01:05:32,340 --> 01:05:36,576
 Unless there's something more general
-than that, which there might not be.
+than that, which there might well be.
 
 659
 01:05:38,570 --> 01:05:42,216
-[Inaudible]
+buildUrl... oh it just says to use
+pathForType anyway.
 
 660
 01:05:42,230 --> 01:05:44,840
-Let's do pathForType:
+Let's do that: pathForType
+And what we want to do is return...
 
 661
 01:05:53,810 --> 01:05:57,310
@@ -2936,8 +2952,9 @@ It's expecting simply... like that:
 DN: Yes, right.
 
 669
-01:06:44,720 --> 01:06:49,648
-So we can now use a... Lets just [inaudible] the adapter.
+01:06:44,720 --> 01:06:49,640
+So we can now use a...
+Lets just commit the adapter.
 
 670
 01:06:49,640 --> 01:06:55,104
@@ -3039,12 +3056,13 @@ We don't want a serializer for everything,
 we just want a serializer for partner.
 
 692
-01:08:29,824 --> 01:08:32,544
-[Inaudible]
+01:08:29,824 --> 01:08:39,544
+So that's generated that.
+So let me just add...
 
 693
 01:08:40,680 --> 01:08:46,770
-[Silence]
+"Add missing attrs"
 
 694
 01:08:46,770 --> 01:08:57,712
@@ -3117,13 +3135,13 @@ hash_guest_episode.
 [Silence]
 
 709
-01:10:26,510 --> 01:10:35,216
+01:10:26,510 --> 01:10:34,216
 Once we've done those manipulations we just want
-to hand it off to the regular class method.
+to hand it off to the regular superclass method.
 
 710
-01:10:35,456 --> 01:10:39,104
-[Inaudible]
+01:10:34,456 --> 01:10:39,104
+so: type, our manipulated hash, and prop.
 
 711
 01:10:39,120 --> 01:10:48,064
@@ -3233,7 +3251,8 @@ managed to dig up the real model.
 
 735
 01:12:20,430 --> 01:12:23,680
-That was me just clicking through [inaudible].
+That was me just clicking through, let me
+do that again it went real quick.
 
 736
 01:12:24,570 --> 01:12:29,112
@@ -3251,7 +3270,8 @@ DN: No, that's right.
 
 739
 01:12:37,720 --> 01:12:39,856
-[Inaudible] host [inaudible]
+JW: Oh course, yeah!
+You're the host, Drew Neil.
 
 740
 01:12:39,872 --> 01:12:42,960
@@ -3459,15 +3479,17 @@ list all the sequels of the model.
 
 786
 01:16:07,100 --> 01:16:13,120
-Now [inaudible].
+Now what you'll find here is that
 
 787
 01:16:13,520 --> 01:16:17,384
-I do have ul so it's ready to list something.
+I do have the ul,
+so it's ready to list something.
 
 788
 01:16:17,380 --> 01:16:20,992
-It' not going to complain that this isn't an array.
+It's not going to complain that
+this isn't an array.
 
 789
 01:16:23,590 --> 01:16:28,664
@@ -3580,8 +3602,8 @@ It says it returns a live record array.
 
 813
 01:18:52,820 --> 01:18:57,912
-So hopefully we will be able to dump
-that into the template, and it will update
+So hopefully we will be able to dump that
+into the template, and it will update live
 
 814
 01:18:57,940 --> 01:19:00,352
@@ -3589,7 +3611,8 @@ Let's find out... that might not be true.
 
 815
 01:19:00,350 --> 01:19:05,240
-We're saying: episode that we're looking at, host id...
+We're saying: episode that we're
+looking at...
 
 816
 01:19:06,816 --> 01:19:09,360
@@ -3597,7 +3620,8 @@ Get the host...
 
 817
 01:19:09,776 --> 01:19:13,096
-equals [inaudible].
+equals...
+Let's just pull up guest.
 
 818
 01:19:13,104 --> 01:19:16,624
@@ -3648,7 +3672,7 @@ link-to helper there, let's find out.
 
 829
 01:20:02,272 --> 01:20:06,184
-[Inaudible]
+sequel.challengeName "episode" sequel
 
 830
 01:20:06,856 --> 01:20:09,448
@@ -4904,7 +4928,8 @@ Maybe not, let's try episodes plural:
 
 1121
 01:44:41,024 --> 01:44:46,980
-Shouldn't take too long... [inaudible]challenge name...
+Shouldn't take too long...
+id, challengeName...
 
 1122
 01:44:46,980 --> 01:44:57,936
@@ -4920,11 +4945,11 @@ That is the end of the array.
 
 1125
 01:45:08,648 --> 01:45:09,840
-[inaudible] expecting.
+Tell it what it's expecting.
 
 1126
 01:45:09,848 --> 01:45:12,456
-There we go, Inventing a New Monad.
+There we go: "Invent a New Monad".
 
 1127
 01:45:12,450 --> 01:45:15,976
@@ -4933,7 +4958,8 @@ into the sequence... very nice.
 
 1128
 01:45:15,984 --> 01:45:19,000
-JW: And we should be able to have a look in Data here.
+JW: And we should be able to have a look
+in Data here.
 
 1129
 01:45:19,000 --> 01:45:21,464
@@ -5094,7 +5120,7 @@ JW: Yes.
 
 1166
 01:48:18,400 --> 01:48:21,144
-[Inaudible] the whole lot.
+I'll add the whole lot.
 
 1167
 01:48:22,800 --> 01:48:30,464
