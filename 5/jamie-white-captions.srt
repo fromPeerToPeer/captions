@@ -76,7 +76,7 @@ how the sequencing should look.
 17
 00:01:02,830 --> 00:01:06,697
 Episode 1 begins a sequence,
-and is follod by Episode 2.
+and is followed by Episode 2.
 
 18
 00:01:06,690 --> 00:01:09,645
@@ -611,7 +611,7 @@ now because it looks the most like...
 
 137
 00:12:18,171 --> 00:12:22,500
-I don't have an applcation route yet.
+I don't have an application route yet.
 Routes are where data gets loaded in,
 
 138
@@ -2474,7 +2474,7 @@ Let's say... [Jamie thinks]
 
 562
 00:55:18,280 --> 00:55:26,150
-Attempt to add list of sequals to an episode.
+Attempt to add list of sequels to an episode.
 
 563
 00:55:26,150 --> 00:55:28,952
@@ -2751,7 +2751,7 @@ If we add some of this, lets see...
 
 626
 01:02:09,560 --> 01:02:14,776
-Firstly, use emberdata.
+Firstly, use ember-data.
 
 627
 01:02:15,896 --> 01:02:18,384
@@ -3457,7 +3457,7 @@ Now [inaudible].
 
 787
 01:16:13,520 --> 01:16:17,384
-I do have <u>.</u> so it's ready to list something.
+I do have ul so it's ready to list something.
 
 788
 01:16:17,380 --> 01:16:20,992
@@ -4784,7 +4784,7 @@ I think we can get it on store as well.
 
 1095
 01:43:02,448 --> 01:43:05,712
-Push payLoad, yes... type...
+pushPayload, yes... type...
 
 1096
 01:43:05,710 --> 01:43:13,608
@@ -4802,7 +4802,7 @@ DN: Yes.
 1099
 01:43:20,280 --> 01:43:24,672
 JW: We'll go back to Counting Tree
-Nodes, and we'll pushPayLoad which looks like:
+Nodes, and we'll pushPayload which looks like:
 
 1100
 01:43:26,260 --> 01:43:28,992
@@ -4885,7 +4885,7 @@ DN: Oh dear.
 
 1118
 01:44:31,950 --> 01:44:34,688
-pushPay Load
+pushPayload
 
 1119
 01:44:36,032 --> 01:44:37,904
