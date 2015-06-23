@@ -1,12 +1,167 @@
 ﻿1
-00:00:01,450 --> 00:00:02,710
-Welcome to Peer to Peer
+00:00:01,620 --> 00:00:03,632
+NARRATOR: Welcome to Peer to Peer
 
 2
-00:00:02,820 --> 00:00:05,650
-where you can watch how
-experts solve tech problems.
+00:00:03,632 --> 00:00:06,700
+where you can hone your
+skills by watching live coding videos.
 
 3
-00:00:06,480 --> 00:00:08,640
+00:00:08,128 --> 00:00:10,168
 Our guest today is Melinda Seckington,
+
+4
+00:00:11,190 --> 00:00:16,056
+She works as a Ruby developer
+at FutureLearn, a social learning platform.
+
+5
+00:00:16,990 --> 00:00:19,552
+Melinda co-organizes BarCap London,
+
+6
+00:00:19,560 --> 00:00:24,030
+and participates regularly in
+hack days, frequently winning them.
+
+7
+00:00:24,632 --> 00:00:26,968
+I'm your host, Drew Neil.
+
+8
+00:00:26,960 --> 00:00:29,600
+And the challenge that I set for Melinda is called...
+
+9
+00:00:29,624 --> 00:00:32,180
+Building a Mechanical Turk system.
+
+10
+00:00:33,992 --> 00:00:37,184
+DREW NEIL: So Melinda would you like
+to start by reading the challenge.
+
+11
+00:00:37,700 --> 00:00:39,368
+MELINDA SECKINGTON: Build a Mechanical Turk system.
+
+12
+00:00:39,368 --> 00:00:43,696
+It should poll people for answers to yes/no
+questions that are easily answered by humans 
+
+13
+00:00:43,690 --> 00:00:45,288
+but not by machines.
+
+14
+00:00:45,280 --> 00:00:48,264
+If a certain number of people
+give the same answer to a question,
+
+15
+00:00:48,264 --> 00:00:51,710
+it's marked as resolved and
+polling for that question ceases.
+
+16
+00:00:51,710 --> 00:00:55,536
+If people give different answers to
+the same question, then polling will continue
+
+17
+00:00:55,530 --> 00:00:59,480
+until a consensus is reached and
+that question can be marked as resolved.
+
+18
+00:00:59,500 --> 00:01:04,688
+When someone has answered a question, they
+may view a summary of all answers to that question,.
+
+19
+00:01:05,056 --> 00:01:06,670
+DN: There's a little bit
+more to the question actually.
+
+20
+00:01:06,670 --> 00:01:10,192
+If you turn to the next page,
+I've provided a sample question.
+
+21
+00:01:11,728 --> 00:01:14,032
+MS: Is this a cat picture?
+
+22
+00:01:14,030 --> 00:01:17,456
+DN: So I think most human beings
+would have no trouble answering that
+
+23
+00:01:17,480 --> 00:01:21,328
+Whereas it would be difficult to write
+a program to give the right answer there.
+
+24
+00:01:21,328 --> 00:01:25,648
+With more than 50% certainty.
+
+25
+00:01:26,600 --> 00:01:28,736
+And there's another question as well.
+
+26
+00:01:28,824 --> 00:01:30,824
+MS: Is this a squirrel picture?
+
+27
+00:01:30,820 --> 00:01:33,344
+I think I can say no.
+
+28
+00:01:33,760 --> 00:01:34,872
+DN: Right.
+
+29
+00:01:34,870 --> 00:01:38,504
+So that's the kind of question I
+thought we could be working with here.
+
+30
+00:01:39,440 --> 00:01:47,832
+I've provided about 6 animal pictures, so
+we can come up with a series of yes/no answers.
+
+31
+00:01:48,464 --> 00:01:51,144
+Sorry, I mean questions where it's a yes/no answer.
+
+32
+00:01:51,344 --> 00:01:53,840
+Most of them are going to be nonsense,
+
+33
+00:01:53,840 --> 00:01:57,536
+but for each picture there
+will be one correct answer.
+
+34
+00:01:57,536 --> 00:01:59,530
+MS: Yes.
+
+35
+00:01:59,530 --> 00:02:03,560
+DN: So that's what I thought we'd use as
+a sample data set for this challenge.
+
+36
+00:02:05,400 --> 00:02:10,720
+So, I haven't said which technology
+you have to use to build this system.
+
+37
+00:02:11,080 --> 00:02:13,352
+What would be your preference here?
+
