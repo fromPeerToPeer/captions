@@ -2415,14 +2415,14 @@ DN: Of course, right.
 JW: So we need to get those.
 
 549
-00:54:04,700 --> 00:54:10,808
+00:54:04,700 --> 00:54:10,800
 You're probably thinking it may
 be possible to do something like:
 
 550
 00:54:10,800 --> 00:54:23,048
-a href equals episodes
-sequels.id, or something like that.
+<a href="episodes/{{sequel.id}}">
+or something like that.
 
 551
 00:54:23,260 --> 00:54:30,250
