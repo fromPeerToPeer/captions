@@ -3334,7 +3334,7 @@ I could just remove them. I feel I want to
 get them passing to have a clean environment
 
 758
-01:13:55,070 --> 01:13:57,504
+01:13:55,070 --> 01:13:57,500
 So I'll do that quickly:
 
 759
@@ -3343,11 +3343,12 @@ The first thing to pass is the episode.
 
 760
 01:14:01,280 --> 01:14:04,840
-[Inaudible] something useful.
+And actually you never know, they might
+tell me something useful.
 
 761
 01:14:07,200 --> 01:14:09,960
-Model guest,model host, [inaudible] so....
+model:guest, model:host, ok so....
 
 762
 01:14:10,300 --> 01:14:15,184
