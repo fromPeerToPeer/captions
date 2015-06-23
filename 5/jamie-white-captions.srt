@@ -3555,11 +3555,12 @@ And we'll be asking for episodes.
 
 807
 01:18:17,928 --> 01:18:21,168
-The thing I'm going to be filtering on is the host id.
+The thing I'm going to be
+filtering on is the host id.
 
 808
 01:18:22,360 --> 01:18:24,920
-[Inaudible]
+Or rather just the host in fact.
 
 809
 01:18:29,550 --> 01:18:31,530
