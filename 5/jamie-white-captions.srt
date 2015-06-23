@@ -2627,12 +2627,13 @@ We should be able to infer those from the...
 
 597
 00:58:36,040 --> 00:58:42,032
-Let's say we've got a
-guest that belongs to relationship
+Let's say we've got a guest,
+which is a belongs-to relationship
 
 598
 00:58:42,040 --> 00:58:45,384
-and host that belongs to relationship.
+and a host, which is another
+belongs-to relationship.
 
 599
 00:58:48,360 --> 00:58:51,776
