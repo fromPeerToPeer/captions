@@ -49,7 +49,7 @@ MELINDA SECKINGTON: Build a Mechanical Turk system.
 12
 00:00:39,368 --> 00:00:43,696
 It should poll people for answers to yes/no
-questions that are easily answered by humans 
+questions that are easily answered by humans
 
 13
 00:00:43,690 --> 00:00:45,288
@@ -525,4 +525,160 @@ MS: Yes, sublime, like soup, try to open
 122
 00:08:25,568 --> 00:08:28,752
 DN: [inaud]
+
+123
+00:08:30,880 --> 00:08:40,960
+DN: They could be called Animal-1.jpeg, Animal-2...
+I guess six times is going to be 0 to 5, isn't it?
+
+124
+00:08:40,960 --> 00:08:42,720
+MS: Yes.
+
+125
+00:08:42,720 --> 00:09:08,216
+[Silence]
+
+126
+00:09:08,210 --> 00:09:14,216
+I'm sure we can make this smarter, in the sense that...
+
+127
+00:09:15,968 --> 00:09:18,584
+Well, I guess what we can do here is...
+
+128
+00:09:18,580 --> 00:09:27,232
+[Silence]
+
+129
+00:09:27,230 --> 00:09:29,728
+Which animal shall we actually have?
+
+130
+00:09:31,136 --> 00:09:32,752
+DN: That's a good question.
+
+131
+00:09:32,750 --> 00:09:35,648
+Hedgehog, Squirrel , Goat...
+
+132
+00:09:36,104 --> 00:09:38,736
+DN: Yes, let's Goat!
+
+133
+00:09:38,736 --> 00:09:40,730
+MS: So...
+
+134
+00:09:40,730 --> 00:10:06,112
+[Silence]
+
+135
+00:10:06,110 --> 00:10:09,192
+Dog, Cat, Cow...
+
+136
+00:10:10,360 --> 00:10:15,056
+DN: You're definitely not a
+machine, you make that look easy.
+
+137
+00:10:15,050 --> 00:10:46,008
+[Silence]
+
+138
+00:10:46,000 --> 00:10:48,512
+So... I want to do that.
+
+139
+00:10:51,560 --> 00:10:54,496
+Two times.
+
+140
+00:10:55,232 --> 00:11:00,776
+So now we then get [inaud] for every single animal.
+
+141
+00:11:03,790 --> 00:11:08,576
+Basically for every image we create six questions 
+
+142
+00:11:08,584 --> 00:11:12,792
+asking whether or not it's
+all the other animals as well.
+
+143
+00:11:12,790 --> 00:11:14,056
+DN: OK.
+
+144
+00:11:14,064 --> 00:11:15,480
+MS: So I think this should work.
+
+145
+00:11:15,480 --> 00:11:17,592
+DN: So we'll end up with 36.
+
+146
+00:11:17,752 --> 00:11:20,528
+MS: Yes, 36 questions.
+
+147
+00:11:21,800 --> 00:11:23,792
+DN: Where most of them are wrong answers.
+
+148
+00:11:23,808 --> 00:11:25,720
+MS: Yes.
+
+149
+00:11:26,608 --> 00:11:30,288
+So let's see...
+
+150
+00:11:30,280 --> 00:11:32,848
+[inaud] first because we haven't done that before.
+
+151
+00:11:36,328 --> 00:11:38,928
+I only hope that this doesn't blow up.
+
+152
+00:11:38,920 --> 00:11:47,648
+[Silence]
+
+153
+00:11:47,640 --> 00:11:50,032
+36, how about that!
+
+154
+00:11:50,864 --> 00:11:53,168
+And then [inaud] the
+
+155
+00:11:54,144 --> 00:11:56,496
+No, I don't call them [inaud] image.
+
+156
+00:11:59,200 --> 00:12:01,968
+We should have 6 of each of them.
+
+157
+00:12:01,960 --> 00:12:09,144
+[Silence]
+
+158
+00:12:09,140 --> 00:12:11,832
+DN: Is this a hedgehog, is this a squirrel, goat
+
+159
+00:12:12,592 --> 00:12:15,088
+MS: And I forgot to put a question mark at the end.
+
+160
+00:12:16,952 --> 00:12:19,832
+DN: Well you could even hard
+code that. It is a question.
 
