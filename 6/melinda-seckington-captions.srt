@@ -1147,3 +1147,248 @@ I'll just change this to...
 00:21:47,496 --> 00:21:50,536
 each_with_index
 
+271
+00:21:51,456 --> 00:21:57,976
+It's for the user that we're displaying what
+question number it is, showing on the page itself.
+
+272
+00:21:57,970 --> 00:22:02,080
+[Silence]
+
+273
+00:22:02,584 --> 00:22:04,144
+Don't want to do it that way.
+
+274
+00:22:05,448 --> 00:22:08,288
+[Inaudible]
+
+275
+00:22:11,456 --> 00:22:12,648
+There we go.
+
+276
+00:22:12,640 --> 00:22:13,568
+DN: That looks good.
+
+277
+00:22:13,560 --> 00:22:16,368
+And maybe [inaud] that we don't have.
+
+278
+00:22:17,264 --> 00:22:19,024
+DN: Question zero.
+MS: Yes.
+
+279
+00:22:19,410 --> 00:22:23,408
+DN: Question zero [inaud],
+my science teacher always did that.
+
+280
+00:22:24,568 --> 00:22:27,128
+MS: Yes mine [inaud]
+
+281
+00:22:27,480 --> 00:22:31,488
+So, clicking on here won't do
+anything because we don't have a show yet.
+
+282
+00:22:32,670 --> 00:22:36,984
+We have a show, but I think we'll just leave...
+
+283
+00:22:38,272 --> 00:22:39,920
+that way.
+
+284
+00:22:42,144 --> 00:22:46,592
+So on this page... [Melinda thinks]
+
+285
+00:22:48,632 --> 00:22:50,944
+Someone [inaud] a question.
+
+286
+00:22:50,940 --> 00:23:10,920
+[Silence]
+
+287
+00:23:11,384 --> 00:23:14,480
+Let's just [inaud] for now, plus the work.
+
+288
+00:23:15,616 --> 00:23:19,352
+Yes, it would if I did that [inaud]
+
+289
+00:23:22,496 --> 00:23:26,904
+So we should check the descriptions.
+
+290
+00:23:29,424 --> 00:23:30,768
+Is this a hedgehog.
+
+291
+00:23:34,260 --> 00:23:38,552
+I must look that up, I always forget.
+
+292
+00:23:38,552 --> 00:23:53,800
+[Silence]
+
+293
+00:23:54,440 --> 00:23:56,664
+[inaud] hash tag.
+
+294
+00:23:58,488 --> 00:23:59,952
+And then I can...
+
+295
+00:23:59,950 --> 00:24:05,112
+[Silence]
+
+296
+00:24:05,488 --> 00:24:07,120
+I'll say that first.
+
+297
+00:24:07,128 --> 00:24:11,200
+[Silence]
+
+298
+00:24:11,600 --> 00:24:13,872
+Its not called URL, it's called image.
+
+299
+00:24:15,936 --> 00:24:18,376
+DN: Ah... Close.
+
+300
+00:24:21,192 --> 00:24:23,824
+MS: So because we've put it in the public...
+
+301
+00:24:23,820 --> 00:24:27,296
+DN: Yes, is it assuming that
+it's in the assets directory?
+
+302
+00:24:27,290 --> 00:24:30,784
+MS: Yes, I think it is.
+
+303
+00:24:33,032 --> 00:24:35,624
+So let's move it to the assets directory.
+
+304
+00:24:35,620 --> 00:24:48,040
+[Silence]
+
+305
+00:24:48,576 --> 00:24:50,352
+DN: OK.
+
+306
+00:24:50,880 --> 00:24:55,064
+So this [inaud] work because we need to specify...
+
+307
+00:24:55,060 --> 00:25:05,072
+[Silence]
+
+308
+00:25:05,552 --> 00:25:07,696
+DN: I thought that assumption was built in?
+
+309
+00:25:11,360 --> 00:25:13,624
+MS: I'm not sure it is.
+
+310
+00:25:14,400 --> 00:25:17,696
+DN: [inaud] to actually look at the HDL source.
+
+311
+00:25:17,690 --> 00:25:23,208
+[Silence]
+
+312
+00:25:23,648 --> 00:25:26,128
+DN: It's missing .jpeg.
+
+313
+00:25:27,776 --> 00:25:28,776
+MS: Yes, it is.
+
+314
+00:25:28,770 --> 00:25:34,072
+DN: In fact, did you move the images or
+copy them. Are they still in the public directory?
+
+315
+00:25:36,272 --> 00:25:38,424
+MS: I think I might have copied them... yes.
+
+316
+00:25:38,856 --> 00:25:42,304
+DN: Well that's good because
+that's where it's looking for them.
+
+317
+00:25:42,512 --> 00:25:44,928
+MS: So if we change this...
+
+318
+00:25:47,664 --> 00:25:49,904
+DN: Ah, there's no E.
+
+319
+00:25:50,920 --> 00:25:52,496
+That's it.
+
+320
+00:25:54,624 --> 00:26:00,112
+MS: [inaud] we're not using that at
+all but just adding .jpeg behind it.
+
+321
+00:26:03,890 --> 00:26:09,176
+I guess I left that out during the seeds.
+
+322
+00:26:10,216 --> 00:26:13,520
+I didn't actually put that in.
+
+323
+00:26:13,520 --> 00:26:15,472
+DN: Regenerate them.
+MS: Yes.
+
+324
+00:26:15,920 --> 00:26:17,470
+[inaud]
+
+325
+00:26:17,470 --> 00:26:28,776
+[Silence]
+
+326
+00:26:29,392 --> 00:26:31,936
+[inaud] previous ones.
+
+327
+00:26:31,944 --> 00:26:45,576
+[Silence]
+
+328
+00:26:46,472 --> 00:26:48,936
+DN: Oh, I think you left the quote.
+
+329
+00:26:48,930 --> 00:26:55,440
+[Silence]
+
