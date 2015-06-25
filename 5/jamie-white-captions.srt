@@ -3056,8 +3056,8 @@ There has got to be some hook where
 I can turn these into what it's expecting.
 
 696
-01:09:04,550 --> 01:09:08,232
-I've got normalize which takes type, hash and prop
+01:09:04,550 --> 01:09:08,344
+I've got normalize which takes type, hash and prop.
 
 697
 01:09:08,800 --> 01:09:10,432
@@ -4052,7 +4052,7 @@ you can pass a query which will be triggered at first.
 926
 01:28:44,000 --> 01:28:47,328
 The results returned by the
-server could then appear in the filter 
+server could then appear in the filter
 
 927
 01:28:47,328 --> 01:28:49,776
@@ -4221,7 +4221,7 @@ Let's find out.
 965
 01:32:04,240 --> 01:32:10,680
 At this point in time I've got a strong
-feeling that if we ask for prequels.length, 
+feeling that if we ask for prequels.length,
 
 966
 01:32:10,680 --> 01:32:16,192
@@ -4308,7 +4308,7 @@ Let's think, what's the best way to deal with this?
 
 986
 01:33:46,050 --> 01:33:48,504
-Let's go for... 
+Let's go for...
 
 987
 01:33:48,500 --> 01:34:02,224
@@ -5266,7 +5266,7 @@ your head just as we turn the camera off (laughter).
 
 1206
 01:51:42,712 --> 01:51:46,590
-JW: In terms of the UI, it would be... 
+JW: In terms of the UI, it would be...
 
 1207
 01:51:48,860 --> 01:51:53,416
