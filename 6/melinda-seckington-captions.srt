@@ -602,7 +602,7 @@ So now we then get [inaud] for every single animal.
 
 141
 00:11:03,790 --> 00:11:08,576
-Basically for every image we create six questions 
+Basically for every image we create six questions
 
 142
 00:11:08,584 --> 00:11:12,792
@@ -678,7 +678,110 @@ DN: Is this a hedgehog, is this a squirrel, goat
 MS: And I forgot to put a question mark at the end.
 
 160
-00:12:16,952 --> 00:12:19,832
+00:12:16,950 --> 00:12:20,136
 DN: Well you could even hard
 code that. It is a question.
+
+161
+00:12:22,240 --> 00:12:26,960
+DN: I could do that... so let's just delete them all again.
+
+162
+00:12:27,016 --> 00:12:33,536
+[Silence]
+
+163
+00:12:33,530 --> 00:12:36,440
+MS: I'll just analyze the question [inaud].
+
+164
+00:12:36,440 --> 00:12:56,344
+[Silence]
+
+165
+00:12:56,340 --> 00:12:57,888
+There we go, that's nicer.
+
+166
+00:12:58,016 --> 00:12:59,880
+DN: That does look nice.
+
+167
+00:13:01,080 --> 00:13:02,080
+[inaud]
+
+168
+00:13:02,184 --> 00:13:05,840
+It feels like being in a car with a toddler. [laughter]
+
+169
+00:13:09,216 --> 00:13:16,568
+So next up is, we want to display these to a user.
+
+170
+00:13:16,560 --> 00:13:20,488
+[Melinda thinks]
+
+171
+00:13:20,696 --> 00:13:23,144
+DN: Is that worth a commit do you think?
+
+172
+00:13:23,140 --> 00:13:25,992
+MS: Yes, it is, I keep forgetting that.
+
+173
+00:13:29,184 --> 00:13:33,408
+We've got [inaud], seeds and then a question.
+
+174
+00:13:33,400 --> 00:13:44,768
+[Silence]
+
+175
+00:13:45,368 --> 00:13:48,600
+[New Chapter}
+
+176
+00:13:49,544 --> 00:13:53,424
+DN: OK, so we've got the question
+model, what do you want to do next?
+
+177
+00:13:55,360 --> 00:14:00,928
+MS: The next thing is
+displaying the questions to users.
+
+178
+00:14:01,456 --> 00:14:07,872
+So we want to, I guess, show the image and the question,
+
+179
+00:14:07,870 --> 00:14:10,384
+like... is this a hedgehog, is this a squirrel?
+
+180
+00:14:12,000 --> 00:14:14,920
+And then maybe not quite yet...
+
+181
+00:14:15,660 --> 00:14:21,032
+do the logic of allowing a user to answer yes or no.
+
+182
+00:14:21,390 --> 00:14:23,816
+but maybe creating fake buttons initially,
+
+183
+00:14:23,832 --> 00:14:32,080
+so we just display here's the image,
+here's the question, and here are the buttons.
+
+184
+00:14:33,784 --> 00:14:35,808
+Here I guess we need to figure out,
+
+185
+00:14:37,296 --> 00:14:39,400
+how does the user get to these?
 
