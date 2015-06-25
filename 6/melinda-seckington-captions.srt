@@ -785,3 +785,192 @@ Here I guess we need to figure out,
 00:14:37,296 --> 00:14:39,400
 how does the user get to these?
 
+186
+00:14:42,696 --> 00:14:44,184
+DN:I suppose we could have...
+
+187
+00:14:44,184 --> 00:14:48,792
+when the user logs in the route page
+could be a list of questions to begin with,
+
+188
+00:14:49,160 --> 00:14:53,312
+and each item in the list
+would be a link to the question itself.
+
+189
+00:14:54,120 --> 00:14:57,312
+MS: Yes, that's probably the easiest way to do it.
+
+190
+00:14:58,784 --> 00:15:00,992
+OK, hmm...
+
+191
+00:15:03,624 --> 00:15:07,848
+So let's go to our route file and start with that.
+
+192
+00:15:10,344 --> 00:15:12,496
+So we...
+
+193
+00:15:12,490 --> 00:15:17,104
+basically we want the route
+of the page to be linked to the...
+
+194
+00:15:19,888 --> 00:15:21,424
+to our questions.
+
+195
+00:15:21,420 --> 00:15:24,072
+DN: So it's a questions index really.
+MS: Yes.
+
+196
+00:15:26,064 --> 00:15:31,008
+And we also want resources as questions.
+
+197
+00:15:32,580 --> 00:15:34,776
+Well, our questions to resources. 
+
+198
+00:15:35,176 --> 00:15:37,584
+and then  I always like doing this...
+
+199
+00:15:38,736 --> 00:15:44,016
+To make sure that we are only
+influencing the actions that we are using,
+
+200
+00:15:44,160 --> 00:15:48,344
+rather than getting all 6 of
+them and leaving those in place.
+
+201
+00:15:49,032 --> 00:15:53,848
+DN: And in any case we don't want the
+system to allow you to create questions... not yet.
+
+202
+00:15:54,240 --> 00:15:57,504
+MS: No, so only the index can show for now.
+
+203
+00:16:00,544 --> 00:16:03,528
+So let's make our questions controller.
+
+204
+00:16:03,520 --> 00:16:22,624
+[Silence]
+
+205
+00:16:22,968 --> 00:16:25,664
+As I said before, we have index...
+
+206
+00:16:28,000 --> 00:16:29,368
+and show...
+
+207
+00:16:31,688 --> 00:16:35,104
+DN: I notice you use a rails
+generator when you're creating a model.
+
+208
+00:16:35,448 --> 00:16:38,528
+[inaud] of creating a controller... is that normal?
+
+209
+00:16:38,992 --> 00:16:42,336
+Uhm... [Melinda thinks]
+
+210
+00:16:42,624 --> 00:16:45,440
+MS: I'm not sure I do that actually.
+
+211
+00:16:45,744 --> 00:16:50,024
+Uhm... [Melinda] thinks again]
+
+212
+00:16:50,020 --> 00:16:55,296
+Yes, I guess because I know
+exactly what comes back when I...
+
+213
+00:16:57,256 --> 00:17:00,800
+use generate model,
+
+214
+00:17:00,800 --> 00:17:05,728
+and I always feel that with generate
+controller I get more than I want.
+
+215
+00:17:05,752 --> 00:17:10,984
+DN: Yes, it generates the asset
+files, [inaud], JavaScripts and so on.
+
+216
+00:17:10,980 --> 00:17:13,400
+MS: Yes, normally it's like...
+
+217
+00:17:13,744 --> 00:17:17,680
+DN: More [inaud] that what you want.
+MS Yes.
+
+218
+00:17:18,136 --> 00:17:21,376
+And again I'm guessing there's an easier way
+
+219
+00:17:22,050 --> 00:17:27,232
+specify which things you exactly
+want when you generate the controller.
+
+220
+00:17:27,288 --> 00:17:31,944
+But.. I kind of like having a
+bit more control over it myself
+
+221
+00:17:31,952 --> 00:17:35,744
+and being able to see when I'm adding [inaud]
+
+222
+00:17:36,448 --> 00:17:37,272
+DN: Yes, sure.
+
+223
+00:17:37,270 --> 00:17:43,728
+MS: While with a model you
+get the rspec file, the user file and...
+
+224
+00:17:43,856 --> 00:17:47,376
+[The migration is not meant to be on there]
+
+225
+00:17:47,920 --> 00:17:50,248
+DN: So the model generator
+gives you exactly what you want, 
+
+226
+00:17:50,264 --> 00:17:53,050
+and you think the controller
+generator gives you too much.
+
+227
+00:17:53,050 --> 00:17:55,600
+MS: Yes, pretty much. [Laughter]
+
+228
+00:17:55,608 --> 00:17:57,150
+DN: Yes, I can relate to that.
+
