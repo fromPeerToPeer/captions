@@ -974,3 +974,176 @@ MS: Yes, pretty much. [Laughter]
 00:17:55,608 --> 00:17:57,150
 DN: Yes, I can relate to that.
 
+229
+00:17:58,752 --> 00:18:02,560
+So let's create [inaudible] for that as well.
+
+230
+00:18:04,616 --> 00:18:07,120
+So questions.
+
+231
+00:18:08,016 --> 00:18:10,552
+And in here we have...
+
+232
+00:18:12,136 --> 00:18:14,352
+I'll have to say index.
+
+233
+00:18:14,350 --> 00:18:24,688
+[Silence]
+
+234
+00:18:25,760 --> 00:18:27,800
+It won't show.
+
+235
+00:18:29,608 --> 00:18:30,976
+So...
+
+236
+00:18:33,472 --> 00:18:37,176
+Index is going to grab all
+the questions that we have.
+
+237
+00:18:37,170 --> 00:18:43,912
+[Silence]
+
+238
+00:18:45,040 --> 00:18:46,664
+Here.
+
+239
+00:18:46,660 --> 00:18:48,472
+DN: That should be fine.
+
+240
+00:18:50,128 --> 00:18:55,944
+I realise I never use the [inaud] with so much more data.
+
+241
+00:18:56,088 --> 00:18:59,296
+We don't need to patch any [inaud].
+
+242
+00:18:59,624 --> 00:19:18,970
+[Silence]
+
+243
+00:19:19,576 --> 00:19:24,288
+MS: So let's just show the description first.
+
+244
+00:19:27,136 --> 00:19:29,944
+That should just show up here... No.
+
+245
+00:19:31,940 --> 00:19:38,576
+[Silence]
+
+246
+00:19:43,440 --> 00:19:45,280
+DN: Lovely.
+
+247
+00:19:45,376 --> 00:19:47,620
+MS: All the questions.
+
+248
+00:19:47,620 --> 00:19:50,040
+So let's make a little nicer.
+
+249
+00:19:50,050 --> 00:20:11,880
+[Silence]
+
+250
+00:20:12,392 --> 00:20:16,144
+And let's link to...
+
+251
+00:20:20,112 --> 00:20:22,360
+Now what do we call that?
+
+252
+00:20:22,360 --> 00:20:28,000
+[Silence]
+
+253
+00:20:28,328 --> 00:20:31,216
+[inaud]
+
+254
+00:20:31,220 --> 00:20:41,592
+[Silence]
+
+255
+00:20:42,760 --> 00:20:45,368
+So do we want to show the image on this page already?
+
+256
+00:20:45,368 --> 00:20:47,848
+DN: I think that would get a bit busy.
+
+257
+00:20:48,360 --> 00:20:52,744
+Maybe even you shouldn't show the text.
+
+258
+00:20:52,740 --> 00:20:55,616
+Maybe it should be like, question 1, question 2.
+
+259
+00:20:55,880 --> 00:20:58,176
+MS: Yes, we could even change it to that.
+
+260
+00:20:58,888 --> 00:21:01,416
+It makes it a bit more serious... what we're going to get.
+
+261
+00:21:01,410 --> 00:21:05,152
+[Silence]
+
+262
+00:21:05,600 --> 00:21:09,088
+DN: I guess they have IDs already
+don't they which will [inaud] sequential
+
+263
+00:21:09,088 --> 00:21:11,080
+MS: Yes.
+
+264
+00:21:11,080 --> 00:21:23,168
+[Silence]
+
+265
+00:21:25,192 --> 00:21:31,816
+Yes, they are sequential but
+because we did the seed test twice,
+
+266
+00:21:32,608 --> 00:21:34,536
+they're not going to [inaud]
+
+267
+00:21:34,536 --> 00:21:36,530
+DN: That doesn't matter does it?
+MS: No.
+
+268
+00:21:36,856 --> 00:21:41,984
+But it might be nicer if
+they were, so we can do instead...
+
+269
+00:21:44,264 --> 00:21:46,600
+I'll just change this to...
+
+270
+00:21:47,496 --> 00:21:50,536
+each_with_index
+
