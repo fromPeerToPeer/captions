@@ -475,7 +475,7 @@ this is infinitely recursing here.
 
 108
 00:08:29,700 --> 00:08:33,300
-Ah! because the very first
+Ah! Because the very first
 thing that add does is call expression
 
 109
@@ -703,7 +703,7 @@ Could not match.
 
 159
 00:12:30,720 --> 00:12:33,988
-Oh! because parseTest is not in IO.
+Oh! Because parseTest is not in IO.
 
 160
 00:12:34,205 --> 00:12:36,651
@@ -763,7 +763,7 @@ to take a String, and it's going to parse it.
 
 173
 00:14:01,497 --> 00:14:02,640
-Oh! it wanted Text.
+Oh! It wanted Text.
 
 174
 00:14:07,300 --> 00:14:19,200
@@ -855,7 +855,7 @@ Let me check, let's see:
 
 195
 00:15:52,822 --> 00:16:00,022
-How to rate recursive math expression parcer.
+How to rate recursive math expression parser.
 
 196
 00:16:00,020 --> 00:16:03,977
@@ -1131,7 +1131,8 @@ OC: That's what I'm telling you.
 
 257
 00:21:51,600 --> 00:22:04,068
-JW: That's right, but we will say we want term, chainl1 and...
+JW: That's right, but we will say we want
+term, chainl1 and...
 
 258
 00:22:04,350 --> 00:22:06,365
@@ -1470,11 +1471,12 @@ and now we get ... inaudible zero
 
 334
 00:29:11,970 --> 00:29:15,211
-OC: Can we try to parse 1.5, something like that?
+OC: Can we try to parse 1.5,
+something like that?
 
 335
 00:29:15,210 --> 00:29:18,720
-[John trys this].
+[John tries this].
 
 336
 00:29:18,800 --> 00:29:20,900
@@ -1692,7 +1694,7 @@ JW: Let's see...
 
 385
 00:33:10,388 --> 00:33:16,491
-Ghc-ins-mod is providing that feature.
+ghc-ins-mod is providing that feature.
 
 386
 00:33:17,100 --> 00:33:22,000
@@ -1719,7 +1721,7 @@ name of the file to the Parser.
 
 391
 00:33:40,937 --> 00:33:46,811
-getContents... Ahh, I want readFile.
+getContents... Ah, I want readFile.
 
 392
 00:33:46,810 --> 00:33:56,308
@@ -1916,8 +1918,8 @@ But there are no parens in this line
 
 437
 00:37:32,000 --> 00:37:37,314
-OC: Maybe it's the new line
-that's the problem... at the end of the file.
+OC: Maybe it's the new line that's the
+problem... at the end of the file.
 
 438
 00:37:37,330 --> 00:37:43,188
@@ -2178,7 +2180,7 @@ And you can see I have this ...
 
 497
 00:43:38,502 --> 00:43:40,900
-That's not really a unicode character.
+That's not really a Unicode character.
 
 498
 00:43:40,900 --> 00:43:42,754
@@ -2673,7 +2675,7 @@ I'm going to go ahead and commit this.
 
 611
 00:52:54,377 --> 00:53:00,011
-So parser handles a simple expression in Repl
+So parser handles a simple expression in REPL
 
 612
 00:53:00,697 --> 00:53:01,942
@@ -2751,7 +2753,7 @@ And of course we're going to get some conflict here.
 
 630
 00:54:12,800 --> 00:54:17,245
-Oh! that's because letter returns a character.
+Oh! That's because letter returns a character.
 
 631
 00:54:17,240 --> 00:54:21,714
@@ -3174,7 +3176,7 @@ and I will give you back a double".
 
 728
 01:02:19,154 --> 01:02:26,891
-And [naudible] do this
+And [inaudible] do this
 I will say [inaudible] expression.
 
 729
@@ -3388,7 +3390,7 @@ when we introduced a name in the let binding.
 776
 01:06:35,290 --> 01:06:38,982
 JW: Yes, and the only difference is that
-we're going to... actually let's do it this way...
+we're going to... Actually let's do it this way...
 
 777
 01:06:38,982 --> 01:06:43,851
@@ -3724,7 +3726,7 @@ phi plus 5 and I get no parse.
 
 852
 01:15:02,270 --> 01:15:06,685
-Ao, again we have been stricken by this num parser.
+So, again we have been stricken by this num parser.
 
 853
 01:15:06,740 --> 01:15:11,165
@@ -3892,7 +3894,7 @@ Let's see what we get when we do this ourselves.
 
 890
 01:17:53,931 --> 01:17:59,070
-So we go to mulop... unexpected 5...
+So we go to mulop... Unexpected 5...
 
 891
 01:17:59,070 --> 01:18:05,691
@@ -4667,12 +4669,13 @@ This is now just going to be the
 value we wanted, so we can just return it.
 
 1070
-01:33:22,114 --> 01:33:24,491
-It type checked! OC: [Laughs].
+01:33:22,114 --> 01:33:24,490
+It type checked!
+OC: [Laughs].
 
 1071
 01:33:24,490 --> 01:33:29,794
-JC: I continue to be perhaps incorrectly amazed.
+JW: I continue to be perhaps incorrectly amazed.
 
 1072
 01:33:29,790 --> 01:33:36,502
@@ -4809,8 +4812,8 @@ We defined it.
 
 1102
 01:36:07,028 --> 01:36:12,754
-So it's the call that
-we're having a problem with... expecting define...
+So it's the call that we're having a
+problem with... expecting define...
 
 1103
 01:36:12,770 --> 01:36:17,702
@@ -4900,7 +4903,7 @@ ELet but without the evaluation I guess.
 
 1123
 01:37:37,760 --> 01:37:41,862
-JC: Right. It's just going to return 0.
+JW: Right. It's just going to return 0.
 
 1124
 01:37:42,342 --> 01:37:46,308
@@ -5093,7 +5096,7 @@ OC: Wonderful.
 
 1169
 01:42:19,977 --> 01:42:24,365
-JC: So we have Phi equaling 1 plus double...
+JW: So we have Phi equaling 1 plus double...
 
 1170
 01:42:24,470 --> 01:42:28,320
@@ -5106,7 +5109,7 @@ OC: [Laughs]
 
 1172
 01:42:31,410 --> 01:42:34,514
-JC: Let me see what happens if I do that directly.
+JW: Let me see what happens if I do that directly.
 
 1173
 01:42:38,640 --> 01:42:41,222
@@ -5114,7 +5117,7 @@ Might as well do it this way.
 
 1174
 01:42:41,640 --> 01:42:46,697
-Ah! the parse stops.
+Ah! The parse stops.
 
 1175
 01:42:46,820 --> 01:42:50,502
@@ -5238,7 +5241,7 @@ let's extend funCall.
 
 1202
 01:44:54,850 --> 01:45:00,297
-FunCall will say: if name is 'sqrt'...
+funCall will say: if name is 'sqrt'...
 
 1203
 01:45:00,290 --> 01:45:08,034
@@ -5325,7 +5328,7 @@ Phi should be fine.
 
 1223
 01:46:20,700 --> 01:46:26,080
-Oh! we have a power operator here,
+Oh! We have a power operator here,
 raising something to an exponent.
 
 1224
@@ -5454,7 +5457,7 @@ line it's having this trouble with?
 
 1253
 01:48:41,748 --> 01:48:44,720
-We've got quite a few unexpecteds.
+We've got quite a few "unexpected"s.
 
 1254
 01:48:50,350 --> 01:48:54,765
@@ -5835,7 +5838,7 @@ because there is already a system bc.
 
 1340
 01:56:59,828 --> 01:57:03,257
-And now if I call my bc...
+And now if I call mybc...
 
 1341
 01:57:08,937 --> 01:57:11,634
@@ -6029,7 +6032,7 @@ That's pretty much where I would go with this.
 1382
 02:00:19,810 --> 02:00:22,925
 But I don't know, if I'm trying
-to compete with mathematica,
+to compete with Mathematica,
 
 1383
 02:00:22,948 --> 02:00:27,714
