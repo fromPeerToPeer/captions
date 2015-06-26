@@ -835,7 +835,7 @@ And we also want resources as questions.
 
 197
 00:15:32,580 --> 00:15:34,776
-Well, our questions to resources. 
+Well, our questions to resources.
 
 198
 00:15:35,176 --> 00:15:37,584
@@ -959,7 +959,7 @@ get the rspec file, the user file and...
 225
 00:17:47,920 --> 00:17:50,248
 DN: So the model generator
-gives you exactly what you want, 
+gives you exactly what you want,
 
 226
 00:17:50,264 --> 00:17:53,050
@@ -1391,4 +1391,158 @@ DN: Oh, I think you left the quote.
 329
 00:26:48,930 --> 00:26:55,440
 [Silence]
+
+330
+00:26:55,440 --> 00:26:57,440
+There we go.
+
+331
+00:26:59,248 --> 00:27:01,328
+DN: Do you think the image is a bit big?
+
+332
+00:27:01,384 --> 00:27:03,016
+MS: Yes.
+
+333
+00:27:05,680 --> 00:27:10,024
+I think we could do that with
+size. Ah... just width and height.
+
+334
+00:27:11,576 --> 00:27:16,360
+I made use all the images are the same
+width, but they do vary slightly in height.
+
+335
+00:27:16,360 --> 00:27:18,936
+MS: Right, so let's set the width.
+
+336
+00:27:18,930 --> 00:27:23,792
+[Silence]
+
+337
+00:27:23,790 --> 00:27:26,256
+300... yes that looks good.
+
+338
+00:27:28,650 --> 00:27:30,744
+DN: That looks good.
+
+339
+00:27:31,088 --> 00:27:34,000
+MS: Let's clean this up a bit.
+
+340
+00:27:34,000 --> 00:27:43,432
+[Silence]
+
+341
+00:27:43,430 --> 00:27:46,824
+[They both speak at once]
+
+342
+00:27:46,820 --> 00:27:50,944
+[Silence]
+
+343
+00:27:51,104 --> 00:27:58,310
+DN: I guess the form with the yes/no answers would be [inaud].
+
+344
+00:27:58,450 --> 00:28:04,072
+MS: Here at the top let's add
+a link back to all the questions.
+
+345
+00:28:04,088 --> 00:28:15,872
+[Silence]
+
+346
+00:28:15,870 --> 00:28:17,776
+DN: OK.
+
+347
+00:28:17,776 --> 00:28:19,770
+MS: There we go.
+
+348
+00:28:19,770 --> 00:28:26,040
+[Silence]
+
+349
+00:28:29,024 --> 00:28:32,896
+DN: I'm sure some of them are [laughter].
+
+350
+00:28:34,528 --> 00:28:36,752
+Is that a good place to check in do you think?
+
+351
+00:28:36,928 --> 00:28:38,750
+MS: Yes.
+
+352
+00:28:42,712 --> 00:28:49,256
+So we don't actually need these,
+because in the end we did just find it.
+
+353
+00:28:49,250 --> 00:28:55,192
+[Silence]
+
+354
+00:28:55,190 --> 00:29:03,200
+So allow users to see questions.
+
+355
+00:29:03,200 --> 00:29:08,000
+[Silence]
+
+356
+00:29:08,320 --> 00:29:11,208
+[New Chapter]
+
+357
+00:29:12,392 --> 00:29:15,504
+DN: So I guess next we have the yes/no to do.
+
+358
+00:29:15,500 --> 00:29:22,648
+Would that be a yes button and a no button,
+or would it be a radio button with yes and no [inaud]?
+
+359
+00:29:22,640 --> 00:29:26,472
+[Melinda thinks]
+
+360
+00:29:26,470 --> 00:29:30,320
+MS: I think a radio button would be nicer.
+
+361
+00:29:32,544 --> 00:29:37,904
+How do we do that again? [laughter] Let's have a look.
+
+362
+00:29:39,216 --> 00:29:40,496
+[inaud]
+
+363
+00:29:40,490 --> 00:30:13,856
+[Silence]
+
+364
+00:30:14,880 --> 00:30:17,488
+DN: Now there's a thought, what is it a form for?
+
+365
+00:30:17,880 --> 00:30:21,400
+When we submit this form
+what actually happens in the system.
+
+366
+00:30:22,690 --> 00:30:26,616
+MS: Yes, so we haven't really looked at that yet.
 
