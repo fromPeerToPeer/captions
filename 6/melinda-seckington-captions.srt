@@ -1546,3 +1546,139 @@ what actually happens in the system.
 00:30:22,690 --> 00:30:26,616
 MS: Yes, so we haven't really looked at that yet.
 
+367
+00:30:26,970 --> 00:30:36,832
+But, I'm thinking we basically want a new
+level that lies between the questions and the users.
+
+368
+00:30:40,136 --> 00:30:44,360
+We could call it user
+questions but that seems wrong.
+
+369
+00:30:44,752 --> 00:30:46,880
+But, maybe just answers.
+
+370
+00:30:46,880 --> 00:30:51,496
+So an answers model that
+belongs to a user and to a question.
+
+371
+00:30:52,272 --> 00:30:54,120
+Let's see if that [inaud] now.
+
+372
+00:30:54,120 --> 00:30:59,864
+[Melinda thinks]
+
+373
+00:30:59,860 --> 00:31:03,056
+So rails join...
+
+374
+00:31:05,944 --> 00:31:08,000
+This doesn't actually show anything.
+
+375
+00:31:08,000 --> 00:31:30,192
+[Silence]
+
+376
+00:31:30,992 --> 00:31:35,592
+Its weird, I know what I'm looking for
+but I don't know what words I'm looking for.
+
+377
+00:31:40,072 --> 00:31:47,200
+Is there a through keyword that you can use on, like...
+
+378
+00:31:47,744 --> 00:31:54,360
+to join the users to the
+questions through the join table?
+
+379
+00:31:54,360 --> 00:32:00,696
+[Silence]
+
+380
+00:32:00,696 --> 00:32:02,690
+That's maybe through.
+
+381
+00:32:02,690 --> 00:32:12,728
+[Silence]
+
+382
+00:32:13,030 --> 00:32:16,824
+DN: So in our case, appointments is like an answer,
+
+383
+00:32:16,888 --> 00:32:23,544
+physicians and patients are
+like users and questions, in a sense.
+
+384
+00:32:24,264 --> 00:32:26,120
+MS: Yes.
+
+385
+00:32:26,432 --> 00:32:29,240
+Yes, they are. [laughter]
+
+386
+00:32:32,180 --> 00:32:38,664
+I normally use the generate function to create this...
+
+387
+00:32:46,568 --> 00:32:53,880
+So we want announcer to have...
+
+388
+00:32:53,880 --> 00:32:57,728
+A [inaud] value for yes or no.
+
+389
+00:32:58,750 --> 00:33:01,784
+DN: Can we call it response perhaps.
+MS: Yes, that's a good idea.
+
+390
+00:33:01,808 --> 00:33:09,312
+[Silence]
+
+391
+00:33:09,310 --> 00:33:21,648
+And then we want it to belong to both
+the questions and to the (other one)...users.
+
+392
+00:33:23,792 --> 00:33:25,248
+DN: Do you want that comma?
+
+393
+00:33:25,240 --> 00:33:26,496
+MS: No you don't.
+
+394
+00:33:26,490 --> 00:33:31,656
+[Silence]
+
+395
+00:33:31,650 --> 00:33:34,592
+DN: I think if you do user, colon, reference...
+
+396
+00:33:34,590 --> 00:33:43,336
+[Silence]
+
+397
+00:33:43,330 --> 00:33:46,744
+Or it might be references, I don't quite remember.
+
+398
+00:33:46,740 --> 00:34:09,840
+[Silence]
+
