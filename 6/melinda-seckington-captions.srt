@@ -2222,3 +2222,41 @@ DN: Answer, that's interesting.
 00:46:35,584 --> 00:46:38,136
 So they've all got [inaud].
 
+531
+00:46:40,432 --> 00:46:44,656
+DN: User is empty, and response is true
+which is good because you clicked yes.
+
+532
+00:46:45,168 --> 00:46:47,312
+MS: And the question ID is right.
+
+533
+00:46:49,064 --> 00:46:51,912
+But somehow...
+
+534
+00:46:51,910 --> 00:46:56,328
+DN: Maybe it's because... when you call radio button tag...
+
+535
+00:46:57,328 --> 00:47:00,264
+it doesn't put it inside of a [inaud] yet does it?
+
+536
+00:47:00,260 --> 00:47:04,024
+Wheras if you put f.radio button...
+
+537
+00:47:04,020 --> 00:47:21,624
+[Silence]
+
+538
+00:47:21,620 --> 00:47:26,224
+DN: Instead of radio button tag,
+I think you can just say radio button.
+
+539
+00:47:26,220 --> 00:47:41,456
+[Silence]
+
