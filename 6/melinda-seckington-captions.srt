@@ -1972,3 +1972,253 @@ form for radio buttons app.
 00:40:37,550 --> 00:40:53,704
 [Silence]
 
+470
+00:40:54,000 --> 00:41:00,784
+DN: I suppose what we really want is add...
+I suppose one is true and one is false,
+
+471
+00:41:00,780 --> 00:41:05,096
+It's [inaud] that we say anything else, but the labels can say yes or no.
+
+472
+00:41:05,472 --> 00:41:10,288
+MS: Yes, so basically something like that.
+
+473
+00:41:11,728 --> 00:41:16,224
+So we want a radio button first.
+
+474
+00:41:17,632 --> 00:41:22,616
+Which... response, true.
+
+475
+00:41:24,552 --> 00:41:27,112
+And then a label for it.
+
+476
+00:41:27,110 --> 00:41:46,328
+[Silence]
+
+477
+00:41:46,488 --> 00:41:49,944
+False...
+
+478
+00:41:51,320 --> 00:41:52,504
+No.
+
+479
+00:41:53,880 --> 00:41:57,552
+So I think that should work... No it doesn't.
+
+480
+00:41:57,550 --> 00:41:59,832
+Oh... my [inaud].
+
+481
+00:41:59,830 --> 00:42:18,920
+[Silence]
+
+482
+00:42:19,048 --> 00:42:20,920
+DN: Right.
+
+483
+00:42:23,288 --> 00:42:25,790
+That looks nice./nMS Yes.
+
+484
+00:42:25,790 --> 00:42:34,144
+But we can't do anything with it
+yet, we've got to add the submit button.
+
+485
+00:42:34,140 --> 00:42:41,144
+[Silence]
+
+486
+00:42:41,140 --> 00:42:47,232
+DN: It's interesting that the default [inaud] by the text.
+
+487
+00:42:47,230 --> 00:42:48,728
+It sort of makes sense in this case.
+
+488
+00:42:48,720 --> 00:42:53,168
+MS: Yes, but we can change it.
+
+489
+00:42:54,192 --> 00:42:55,592
+No we cant, not like that.
+
+490
+00:42:55,590 --> 00:42:59,720
+DN: I think the comma may be needed.
+
+491
+00:43:01,392 --> 00:43:03,064
+MS: Yes.
+
+492
+00:43:03,288 --> 00:43:05,664
+Let's have a look, Oh yes it is.
+
+493
+00:43:08,176 --> 00:43:08,832
+DN: OK.
+
+494
+00:43:10,104 --> 00:43:12,616
+So is it hitting the right controller?
+
+495
+00:43:15,576 --> 00:43:17,064
+MS: Yes, it is.
+
+496
+00:43:17,064 --> 00:43:19,060
+DN: That looks good.
+
+497
+00:43:19,880 --> 00:43:24,024
+MS: We haven't actually put
+anything in the controller yet.
+
+498
+00:43:24,020 --> 00:43:26,216
+So we have answer.
+
+499
+00:43:26,210 --> 00:43:46,256
+[Silence]
+
+500
+00:43:46,504 --> 00:43:48,896
+So we require an answer.
+
+501
+00:43:50,672 --> 00:43:54,920
+And that should have a...
+
+502
+00:43:58,000 --> 00:44:00,208
+response.
+
+503
+00:44:00,200 --> 00:44:03,184
+[Silence]
+
+504
+00:44:10,856 --> 00:44:13,480
+DN: Dont you just pass in answer [inaud]?
+
+505
+00:44:14,904 --> 00:44:17,592
+MS: Yes... Oh because we...
+
+506
+00:44:21,088 --> 00:44:23,504
+And then we [inaud]
+
+507
+00:44:23,520 --> 00:44:26,992
+[Silence]
+
+508
+00:44:27,088 --> 00:44:29,590
+I'm not sure that would be [inaud].
+
+509
+00:44:29,590 --> 00:44:34,792
+[Silence]
+
+510
+00:44:34,928 --> 00:44:41,936
+DN: So the user is known by the system,
+but it's not created in the format at the moment is it?
+
+511
+00:44:42,200 --> 00:44:43,930
+MS: No, the question will be.
+
+512
+00:44:45,424 --> 00:44:50,224
+DN: I suppose you could put the
+user ID in as a hidden field in the form.
+
+513
+00:44:51,088 --> 00:44:53,664
+And then it could be treated like the other fields.
+
+514
+00:44:53,984 --> 00:44:57,168
+MS: Yes, we can.
+
+515
+00:44:57,160 --> 00:45:06,400
+[Silence]
+
+516
+00:45:06,752 --> 00:45:08,688
+So just hidden filed tag... yes this.
+
+517
+00:45:08,680 --> 00:45:18,648
+[Silence]
+
+518
+00:45:19,440 --> 00:45:24,632
+DN: It is a thought... do we have a current user?
+
+519
+00:45:26,460 --> 00:45:28,592
+MS: I'm not sure.
+
+520
+00:45:29,560 --> 00:45:32,128
+I don't think we do.
+
+521
+00:45:32,120 --> 00:45:35,752
+DN: We have a logged in method
+but not a current user method.
+
+522
+00:45:36,312 --> 00:45:38,480
+MS: No, so let's create that.
+
+523
+00:45:38,512 --> 00:45:55,912
+[Silence]
+
+524
+00:45:56,304 --> 00:45:58,608
+[inaud] and session.
+
+525
+00:45:58,600 --> 00:46:05,280
+[Silence]
+
+526
+00:46:05,648 --> 00:46:08,072
+MS: That should work.
+
+527
+00:46:08,070 --> 00:46:29,648
+[Silence]
+
+528
+00:46:29,976 --> 00:46:31,920
+DN: Answer, that's interesting.
+
+529
+00:46:31,920 --> 00:46:35,288
+[Silence]
+
+530
+00:46:35,584 --> 00:46:38,136
+So they've all got [inaud].
+
