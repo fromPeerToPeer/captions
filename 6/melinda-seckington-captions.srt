@@ -2260,3 +2260,183 @@ I think you can just say radio button.
 00:47:26,220 --> 00:47:41,456
 [Silence]
 
+540
+00:47:43,304 --> 00:47:46,792
+MS: Oh actually, we were calling that anyway.
+
+541
+00:47:46,800 --> 00:47:52,824
+[Melinda thinks]
+
+542
+00:47:53,392 --> 00:47:55,144
+So current user.
+
+543
+00:47:55,140 --> 00:48:14,416
+[Silence]
+
+544
+00:48:14,496 --> 00:48:16,776
+DN: Couldn't find user with ID.
+
+545
+00:48:16,770 --> 00:48:20,672
+[Silence]
+
+546
+00:48:20,776 --> 00:48:23,040
+DN: Are we actually logged in at the moment?
+
+547
+00:48:26,264 --> 00:48:28,376
+MS: I thought we were.
+
+548
+00:48:30,368 --> 00:48:33,024
+No we're not, that explains it.
+
+549
+00:48:33,020 --> 00:48:44,136
+[Silence]
+
+550
+00:48:44,376 --> 00:48:47,256
+DN: I wonder, should the hidden field be user ID?
+
+551
+00:48:49,104 --> 00:48:50,848
+MS: Yes.
+
+552
+00:48:51,928 --> 00:48:54,048
+That's most probably better.
+
+553
+00:48:54,040 --> 00:49:13,192
+[Silence]
+
+554
+00:49:13,528 --> 00:49:15,832
+I think there's something wrong here.
+
+555
+00:49:15,830 --> 00:49:33,000
+[Silence]
+
+556
+00:49:33,360 --> 00:49:35,504
+DN: What is it calling merge anyway?
+
+557
+00:49:38,712 --> 00:49:40,960
+We're up to 73.
+
+558
+00:49:43,896 --> 00:49:46,464
+MS: Well that's because...
+
+559
+00:49:48,304 --> 00:49:50,736
+that's the only pre answer it has.
+
+560
+00:49:52,936 --> 00:49:54,904
+But, I'm going to find...
+
+561
+00:49:54,900 --> 00:50:10,128
+[Silence]
+
+562
+00:50:10,464 --> 00:50:12,896
+So our ID is 2.
+
+563
+00:50:16,496 --> 00:50:19,176
+So let's actually just try to...
+
+564
+00:50:19,170 --> 00:50:23,528
+[Silence]
+
+565
+00:50:23,896 --> 00:50:29,840
+look if we can get the current user ID because that part [inaud]
+
+566
+00:50:33,768 --> 00:50:37,440
+So find current user ID.
+
+567
+00:50:38,384 --> 00:50:40,736
+DN: So it is finding that OK?
+MS: Yes.
+
+568
+00:50:42,944 --> 00:50:49,360
+DN: I wonder, what if we were
+to hard code hidden field to user 2.
+
+569
+00:50:49,384 --> 00:50:53,528
+[Silence]
+
+570
+00:50:53,520 --> 00:50:58,552
+DN: So it's not a problem
+with current user method is it?
+
+571
+00:50:58,976 --> 00:51:02,240
+It's something about the
+way we're calling hidden field.
+
+572
+00:51:02,240 --> 00:51:05,368
+Should it be user ID rather than user?
+
+573
+00:51:05,360 --> 00:51:08,432
+MS: But we tried that... even that.
+
+574
+00:51:11,536 --> 00:51:14,240
+So there's something...
+
+575
+00:51:14,240 --> 00:51:20,400
+[Silence]
+
+576
+00:51:20,496 --> 00:51:24,928
+for and [inaud]
+
+577
+00:51:24,976 --> 00:51:32,888
+[Silence]
+
+578
+00:51:33,248 --> 00:51:35,936
+So it was a form for that we're using.
+
+579
+00:51:35,930 --> 00:51:48,856
+[Silence]
+
+580
+00:51:49,184 --> 00:51:51,880
+DN: Do we need to say value?
+
+581
+00:51:53,512 --> 00:51:55,768
+MS: Yes.
+
+582
+00:51:55,760 --> 00:52:10,416
+[Silence]
+
+583
+00:52:12,264 --> 00:52:15,024
+So now feed it yes.
+
