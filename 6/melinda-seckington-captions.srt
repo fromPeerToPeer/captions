@@ -2823,3 +2823,347 @@ DN: Ah excellent.
 00:59:37,160 --> 00:59:39,568
 MS: Well no because we already answered this.
 
+675
+00:59:39,560 --> 00:59:41,344
+DN: [inaud] branch of the 'if'.
+
+676
+00:59:41,340 --> 00:59:48,640
+So we're asking, "if present" and...
+
+677
+00:59:49,160 --> 00:59:51,664
+MS: Then we're showing a form for actually...
+
+678
+00:59:53,840 --> 00:59:56,504
+MS: So in that case... yes.
+
+679
+00:59:56,848 --> 01:00:00,072
+DN: So in there we should have some kind of a summary.
+
+680
+01:00:00,080 --> 01:00:03,432
+[Silence]
+
+681
+01:00:08,608 --> 01:00:10,424
+MS: Yeah...
+
+682
+01:00:12,160 --> 01:00:15,744
+Let's [inaud] here.
+
+683
+01:00:15,832 --> 01:00:18,856
+[Silence]
+
+684
+01:00:52,480 --> 01:00:54,792
+DN: Right.
+
+685
+01:00:54,790 --> 01:00:57,840
+[Silence]
+
+686
+01:01:12,000 --> 01:01:18,048
+MS: I have a feeling one or
+two or these are... that one, yes.
+
+687
+01:01:18,040 --> 01:01:20,928
+DN: Because its a method call isn't it... a macro.
+
+688
+01:01:20,920 --> 01:01:23,896
+[Silence]
+
+689
+01:01:38,096 --> 01:01:40,312
+DN: Nice.
+
+690
+01:01:42,536 --> 01:01:46,840
+MS: Yes, what do you want to show here. [inaud]
+
+691
+01:01:47,536 --> 01:01:50,936
+DN: I was thinking it could be...
+
+692
+01:01:54,120 --> 01:01:59,408
+Let's say the system has 100 users and
+80 of them have answered this question,
+
+693
+01:01:59,400 --> 01:02:04,856
+It could be something like,
+79 people said yes and 1 person said no,
+
+694
+01:02:04,850 --> 01:02:07,944
+[Drew thinks]
+
+695
+01:02:10,040 --> 01:02:14,280
+Or it could be a percentage
+rather than actual numbers...
+
+696
+01:02:14,280 --> 01:02:18,096
+MS: Yes, well we could play
+around with that a bit I guess.
+
+697
+01:02:18,090 --> 01:02:21,192
+So let's create...
+
+698
+01:02:21,190 --> 01:02:24,192
+[Silence]
+
+699
+01:02:30,680 --> 01:02:36,232
+I am not happy with the names, but they can do for now.
+
+700
+01:02:36,230 --> 01:02:39,272
+[Silence]
+
+701
+01:03:04,784 --> 01:03:06,800
+We'll do this on the where line first.
+
+702
+01:03:07,696 --> 01:03:11,976
+So our questions...
+
+703
+01:03:13,544 --> 01:03:15,592
+Let's do our first one.
+
+704
+01:03:15,624 --> 01:03:18,440
+[Silence]
+
+705
+01:03:19,464 --> 01:03:29,016
+So I should have one answer...
+two answers, two times true.
+
+706
+01:03:29,010 --> 01:03:31,016
+[Silence]
+
+707
+01:03:39,970 --> 01:03:42,248
+DN: Ah... that's nice.
+
+708
+01:03:43,440 --> 01:03:45,880
+MS: And then false.
+
+709
+01:03:45,880 --> 01:03:48,792
+[Silence]
+
+710
+01:03:57,080 --> 01:04:01,736
+The only problem with this is we
+don't know what the question is.
+
+711
+01:04:01,730 --> 01:04:04,656
+[inaud] extracts.
+
+712
+01:04:04,650 --> 01:04:07,520
+[Silence]
+
+713
+01:04:37,488 --> 01:04:39,448
+DN: Oh I see.
+
+714
+01:04:39,440 --> 01:04:43,456
+MS: It's not the most optimal
+because it keeps on doing this.
+
+715
+01:04:45,064 --> 01:04:47,224
+Yes, we can actually...
+
+716
+01:04:48,136 --> 01:04:49,808
+DN: Ah yes, memoise it.
+
+717
+01:04:49,800 --> 01:04:51,488
+MS: Yes.
+
+718
+01:04:53,368 --> 01:04:54,808
+DN: Alright.
+
+719
+01:04:54,800 --> 01:04:57,776
+[Silence]
+
+720
+01:04:59,192 --> 01:05:01,256
+MS: [Inaudible]
+
+721
+01:05:05,080 --> 01:05:06,520
+So now we have...
+
+722
+01:05:06,520 --> 01:05:09,496
+DN: I spotted another one on line 5 there.
+
+723
+01:05:13,576 --> 01:05:15,168
+MS: Yes...
+
+724
+01:05:15,248 --> 01:05:17,536
+Responses_count.
+
+725
+01:05:17,530 --> 01:05:20,512
+[Silence]
+
+726
+01:05:24,144 --> 01:05:25,920
+So we have 2 and zero.
+
+727
+01:05:26,280 --> 01:05:28,680
+DN: Two nil. [laughter]
+
+728
+01:05:29,432 --> 01:05:31,960
+Let's just [inaud] a little bit.
+
+729
+01:05:31,960 --> 01:05:34,832
+[Silence]
+
+730
+01:05:53,552 --> 01:05:55,360
+DN: It looks good.
+
+731
+01:05:56,920 --> 01:05:58,752
+MS: Simple, but...
+
+732
+01:06:00,008 --> 01:06:02,032
+DN: Is that worth a commit do you think?
+
+733
+01:06:03,112 --> 01:06:06,784
+MS: Yes, certainly, it's not a big commit but...
+
+734
+01:06:06,780 --> 01:06:09,824
+[Silence]
+
+735
+01:06:20,016 --> 01:06:23,544
+[New Chapter]
+
+736
+01:06:24,016 --> 01:06:28,888
+DN: So how about we go back to the
+question and look at what we've still got to cover.
+
+737
+01:06:30,952 --> 01:06:36,080
+MS: So we've got the first bit,
+allowing people to answer yes or no.
+
+738
+01:06:36,080 --> 01:06:41,224
+And we've got the last bit where we see
+the summary of how people have answered.
+
+739
+01:06:41,224 --> 01:06:46,696
+We're missing the middle bit
+where questions get reserved
+
+740
+01:06:46,690 --> 01:06:50,512
+after a certain amount of answers.
+
+741
+01:06:50,510 --> 01:06:58,224
+DN: Yes, the way I phrased that,
+it was to give you the chance 
+
+742
+01:06:58,224 --> 01:07:02,120
+to suggest how we might implement that.
+
+743
+01:07:02,120 --> 01:07:05,160
+So let's talk through some scenarios.
+
+744
+01:07:05,592 --> 01:07:10,120
+MS: I guess the most basic one is just to have a [inaud] of
+
+745
+01:07:10,120 --> 01:07:14,384
+the number of people that we want to have answered.
+
+746
+01:07:14,592 --> 01:07:17,424
+So it could be as simple as...
+
+747
+01:07:17,420 --> 01:07:19,488
+If 10 people answered this question,
+
+748
+01:07:19,496 --> 01:07:23,560
+it doesn't matter what they
+answered, the question is resolved.
+
+749
+01:07:24,928 --> 01:07:28,584
+But what you might get then is that
+5 people said yes and 5 people said no.
+
+750
+01:07:28,580 --> 01:07:32,448
+And that's not really a satisfying answer.
+
+751
+01:07:32,440 --> 01:07:33,296
+DN: Not a consensus.
+
+752
+01:07:33,296 --> 01:07:35,290
+MS: Yes.
+
+753
+01:07:35,856 --> 01:07:42,184
+MS So [inaud] look at one has a majority.
+
+754
+01:07:43,184 --> 01:07:46,336
+As in, the same answer.
+
+755
+01:07:48,120 --> 01:07:50,440
+One way of doing that is...
+
+756
+01:07:50,656 --> 01:07:58,896
+Maybe still using a fresh hole so we at
+least have a certain amount of people answering.
+
