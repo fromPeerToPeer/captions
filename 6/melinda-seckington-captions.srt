@@ -2661,3 +2661,165 @@ Let's go back here.
 00:56:18,780 --> 00:56:21,304
 DN: That's probably worth committing isn't it?
 
+637
+00:56:23,488 --> 00:56:28,976
+MS: Almost, I have another thing just here with...
+
+638
+00:56:29,992 --> 00:56:32,296
+If you haven't, or maybe not...
+
+639
+00:56:32,424 --> 00:56:38,592
+I was thinking... if you have already
+answered the question, don't show the form.
+
+640
+00:56:38,712 --> 00:56:41,744
+DN: Maybe we could do that in the next commit.
+
+641
+00:56:41,740 --> 00:56:44,536
+[Silence]
+
+642
+00:56:46,632 --> 00:56:51,352
+MS: So what have we done
+here... we're basically allowing
+
+643
+00:56:51,350 --> 00:56:54,720
+[Silence]
+
+644
+00:56:55,850 --> 00:57:00,328
+Allow user to answer questions.
+
+645
+00:57:02,968 --> 00:57:06,232
+[New Chapter]
+
+646
+00:57:07,808 --> 00:57:12,032
+DN: So we've now got the ability to answer a question.
+MS Yes.
+
+647
+00:57:12,680 --> 00:57:17,136
+How about we now tackle
+the part of the challenge where
+
+648
+00:57:17,130 --> 00:57:22,960
+if you answered a question, you can view a
+summary of all the responses to that question.
+
+649
+00:57:22,976 --> 00:57:29,344
+MS: Yes, so basically we've already answered
+this and we don't want to display it anymore.
+
+650
+00:57:30,550 --> 00:57:36,240
+So let's add a [inaud] statement here.
+
+651
+00:57:39,640 --> 00:57:42,840
+So here...
+
+652
+00:57:42,848 --> 00:57:45,696
+[Silence]
+
+653
+00:57:46,800 --> 00:57:55,640
+rather than saying .new let's do a find_or_create.
+
+654
+00:57:55,664 --> 00:57:58,776
+[Silence]
+
+655
+00:58:05,424 --> 00:58:09,112
+So where user is the current user.
+
+656
+00:58:10,816 --> 00:58:18,592
+and question...
+
+657
+00:58:18,590 --> 00:58:21,712
+[silence]
+
+658
+00:58:23,400 --> 00:58:25,640
+I think this should work.
+
+659
+00:58:26,056 --> 00:58:32,792
+DN: Right, so if the user hasn't answered
+this question then it will generate a new one.
+
+660
+00:58:32,816 --> 00:58:33,368
+MS: Yes.
+
+661
+00:58:33,360 --> 00:58:38,784
+DN: In which all fields will be empty.
+Apart from user [inaud] question.
+
+662
+00:58:39,056 --> 00:58:40,824
+I guess the response field will be empty.
+
+663
+00:58:40,820 --> 00:58:45,104
+MS: Yes, and the response field
+is the one we care about right now.
+
+664
+00:58:45,100 --> 00:58:52,840
+DN: Whereas if it can find one, the response
+field will be true or false, rather than nil.
+
+665
+00:58:52,840 --> 00:58:54,760
+MS: Yes.
+
+666
+00:58:54,760 --> 00:59:04,272
+So now if we do answer.response.present.
+
+667
+00:59:05,392 --> 00:59:08,136
+[inaud] nope.
+
+668
+00:59:10,864 --> 00:59:13,176
+DN: Ah, there's no find or create.
+
+669
+00:59:13,170 --> 00:59:19,464
+[Silence]
+
+670
+00:59:19,464 --> 00:59:21,460
+MS: Create by.
+
+671
+00:59:21,460 --> 00:59:24,496
+[Silence]
+
+672
+00:59:31,304 --> 00:59:33,016
+There we go.
+
+673
+00:59:33,712 --> 00:59:35,664
+DN: Ah excellent.
+
+674
+00:59:37,160 --> 00:59:39,568
+MS: Well no because we already answered this.
+
