@@ -2438,5 +2438,226 @@ MS: Yes.
 
 583
 00:52:12,264 --> 00:52:15,024
-So now feed it yes.
+So now feed it 'yes'.
+
+584
+00:52:16,010 --> 00:52:19,600
+DN: Excellent, so finally
+we are hitting out controller.
+
+585
+00:52:22,920 --> 00:52:30,368
+MS: Yes, and then in the controller, we don't need that,
+
+586
+00:52:31,088 --> 00:52:37,920
+because we've got question ID and user ID.
+
+587
+00:52:37,920 --> 00:52:46,776
+[Silence]
+
+588
+00:52:46,952 --> 00:52:49,344
+So where's that [inaud] create?
+
+589
+00:52:52,392 --> 00:52:54,520
+[Inaud] that.
+
+590
+00:52:54,520 --> 00:53:04,448
+[Silence]
+
+591
+00:53:04,648 --> 00:53:06,440
+I think that works.
+
+592
+00:53:08,360 --> 00:53:12,144
+Oh, they're there because we
+don't have a template [inaud]
+
+593
+00:53:13,344 --> 00:53:16,224
+If not [inaud].
+
+594
+00:53:18,456 --> 00:53:19,488
+DN: Excellent.
+
+595
+00:53:19,584 --> 00:53:23,240
+MS: Sort of, except the question ID.
+
+596
+00:53:23,800 --> 00:53:26,464
+DN: But the response is nil and the user ID is nil.
+
+597
+00:53:27,048 --> 00:53:30,504
+DN: So something is not matching up there.
+
+598
+00:53:30,500 --> 00:53:33,304
+[Silence]
+
+599
+00:53:35,240 --> 00:53:40,064
+MS: So why would it only set the question ID?
+
+600
+00:53:40,060 --> 00:53:43,736
+[Silence]
+
+601
+00:53:45,752 --> 00:53:51,000
+DN: You know how you had before [inaud].require answer?
+
+602
+00:53:51,336 --> 00:53:54,600
+And then you kept it require answer
+
+603
+00:53:54,744 --> 00:53:56,880
+I didn't quite follow why you did that.
+
+604
+00:53:59,696 --> 00:54:03,360
+MS: That was because, looking at the [inaud] rails, 
+
+605
+00:54:03,360 --> 00:54:08,864
+it didn't seem as if answer was actually being [inaud].
+
+606
+00:54:09,496 --> 00:54:14,056
+DN: But then you also changed
+the form, and got rid of... what was it...
+
+607
+00:54:14,090 --> 00:54:19,056
+it was, some of the parameters were
+inside a create object, weren't they?
+
+608
+00:54:19,440 --> 00:54:22,120
+If you got rid of 'as created' there...
+
+609
+00:54:23,456 --> 00:54:25,720
+MS: OK yes.
+
+610
+00:54:25,952 --> 00:54:27,336
+DN: Ah, that did work.
+
+611
+00:54:27,330 --> 00:54:27,752
+MS: Yes,
+
+612
+00:54:27,750 --> 00:54:30,088
+DN:  Ah, the question ID is nil.
+
+613
+00:54:31,400 --> 00:54:32,280
+MS: Yes.
+
+614
+00:54:32,280 --> 00:54:34,280
+DN: Oh that's fine.
+
+615
+00:54:37,712 --> 00:54:43,528
+So the question ID is coming from the
+URL, so it's not scoped inside of the answer.
+
+616
+00:54:44,552 --> 00:54:48,696
+MS: So the other way of doing
+it is adding another hidden field.
+
+617
+00:54:49,040 --> 00:54:51,864
+DN: Ah, well now you will have to do that.
+
+618
+00:54:54,104 --> 00:54:57,584
+MS: I'm sure there's a neater
+way of doing this, but for now...
+
+619
+00:54:57,580 --> 00:55:01,192
+[Silence]
+
+620
+00:55:05,792 --> 00:55:09,024
+So let's [inaud] the ones that we have so far.
+
+621
+00:55:09,020 --> 00:55:12,448
+[Silence]
+
+622
+00:55:14,608 --> 00:55:17,744
+So now I say yes [inaud]
+
+623
+00:55:17,740 --> 00:55:20,712
+[Silence]
+
+624
+00:55:23,040 --> 00:55:24,216
+So now it's all set.
+
+625
+00:55:24,216 --> 00:55:26,210
+DN: Ah, excellent.
+
+626
+00:55:27,640 --> 00:55:30,504
+MS: Now... we still don't show anything.
+
+627
+00:55:31,520 --> 00:55:41,152
+So... at the end of this let's redirect... back to...
+
+628
+00:55:42,184 --> 00:55:47,664
+DN: Where did we end up...
+well I guess we could just go back to the... 
+
+629
+00:55:48,064 --> 00:55:50,968
+page for the question we just answered.
+
+630
+00:55:50,960 --> 00:55:54,848
+But this time instead of showing
+a form [they both talk together].
+
+631
+00:55:55,280 --> 00:55:57,200
+all answers to that question so far.
+
+632
+00:55:57,208 --> 00:56:00,790
+MS: Yes, so that's...
+
+633
+00:56:03,224 --> 00:56:06,424
+That's question path.
+
+634
+00:56:06,420 --> 00:56:09,568
+[Silence]
+
+635
+00:56:15,552 --> 00:56:17,808
+Let's go back here.
+
+636
+00:56:18,780 --> 00:56:21,304
+DN: That's probably worth committing isn't it?
 
