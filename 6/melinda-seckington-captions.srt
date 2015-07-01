@@ -2524,7 +2524,7 @@ I didn't quite follow why you did that.
 
 604
 00:53:59,696 --> 00:54:03,360
-MS: That was because, looking at the [inaud] rails, 
+MS: That was because, looking at the [inaud] rails,
 
 605
 00:54:03,360 --> 00:54:08,864
@@ -2626,7 +2626,7 @@ So... at the end of this let's redirect... back to...
 628
 00:55:42,184 --> 00:55:47,664
 DN: Where did we end up...
-well I guess we could just go back to the... 
+well I guess we could just go back to the...
 
 629
 00:55:48,064 --> 00:55:50,968
@@ -3102,7 +3102,7 @@ after a certain amount of answers.
 741
 01:06:50,510 --> 01:06:58,224
 DN: Yes, the way I phrased that,
-it was to give you the chance 
+it was to give you the chance
 
 742
 01:06:58,224 --> 01:07:02,120
@@ -3163,7 +3163,430 @@ As in, the same answer.
 One way of doing that is...
 
 756
-01:07:50,656 --> 01:07:58,896
+01:07:50,776 --> 01:07:58,890
 Maybe still using a fresh hole so we at
 least have a certain amount of people answering.
+
+757
+01:07:59,640 --> 01:08:01,504
+Maybe 20.
+
+758
+01:08:01,712 --> 01:08:02,360
+DN: OK.
+
+759
+01:08:02,360 --> 01:08:05,952
+MS: So let's say we need to have at least 20 answers.
+
+760
+01:08:06,720 --> 01:08:10,816
+Of which 90% need to be the same.
+
+761
+01:08:10,810 --> 01:08:15,928
+DN: Yes, I,m not well versed in
+statistics but to me that sounds good.
+
+762
+01:08:15,920 --> 01:08:20,832
+MS: [laughter] good enough for this type of system yes.
+
+763
+01:08:21,288 --> 01:08:23,848
+Erm... yeah.
+
+764
+01:08:24,976 --> 01:08:27,312
+So how do we want to do this?
+
+765
+01:08:30,136 --> 01:08:37,088
+DN: So if we were to say a
+threshold, as you say, it could be 20
+
+766
+01:08:37,170 --> 01:08:41,000
+Or, since we don't have much
+data to play with, it could be 3.
+
+767
+01:08:41,040 --> 01:08:42,592
+MS: Yes.
+
+768
+01:08:42,590 --> 01:08:45,208
+DN: Where would you store the threshold?
+
+769
+01:08:46,096 --> 01:08:51,440
+So that would be, I think, in
+a constant in the question class.
+
+770
+01:08:54,640 --> 01:08:56,984
+MS: So...
+
+771
+01:08:56,980 --> 01:08:59,744
+[Silence]
+
+772
+01:09:06,176 --> 01:09:13,304
+DN: And given a question, it would be
+nice to say "how many questions do you have".
+
+773
+01:09:13,456 --> 01:09:18,312
+Or, more simply, "have you
+reached the threshold of answers?"
+
+774
+01:09:18,310 --> 01:09:21,328
+[Silence]
+
+775
+01:09:29,600 --> 01:09:31,680
+MS: So...
+
+776
+01:09:31,680 --> 01:09:34,768
+[Silence]
+
+777
+01:09:37,032 --> 01:09:38,976
+count is...
+
+778
+01:09:38,992 --> 01:09:41,928
+[Silence]
+
+779
+01:09:44,112 --> 01:09:45,776
+DN: OK.
+
+780
+01:09:45,952 --> 01:09:48,112
+MS: Yes, really simple.
+
+781
+01:09:49,400 --> 01:09:51,448
+So now we've got...
+
+782
+01:09:53,016 --> 01:09:55,536
+[inaud] we want to do resolved.
+
+783
+01:09:58,312 --> 01:10:02,992
+And in that case threshold would have to be reached.
+
+784
+01:10:04,480 --> 01:10:09,312
+And [inaud] maturity answered.
+
+785
+01:10:10,240 --> 01:10:12,832
+DN: Majority agreed... that's nice.
+
+786
+01:10:12,830 --> 01:10:15,952
+[Silence]
+
+787
+01:10:17,504 --> 01:10:19,680
+MS: I can't spell!
+
+788
+01:10:21,096 --> 01:10:23,560
+Yes what's the calculation we want to do here?
+
+789
+01:10:23,768 --> 01:10:30,216
+DN: It's a majority of either
+90% said yes, or 90% said no isn't it?
+
+790
+01:10:30,210 --> 01:10:31,200
+MS: Yes.
+
+791
+01:10:31,200 --> 01:10:34,152
+DN: Both can be true, the case. 
+
+792
+01:10:35,590 --> 01:10:38,352
+MS: Yes, so calculating both I guess.
+
+793
+01:10:38,350 --> 01:10:45,232
+So, we have total=answers.count.
+
+794
+01:10:46,360 --> 01:10:53,368
+And then we've got [inaud] yes_percentage.
+
+795
+01:10:54,296 --> 01:10:58,968
+As I said before, I'm not very good at naming things.
+
+796
+01:10:59,576 --> 01:11:01,632
+So that's...
+
+797
+01:11:04,256 --> 01:11:06,400
+Let's take a step in-between.
+
+798
+01:11:06,480 --> 01:11:09,088
+So we have yes_total.
+
+799
+01:11:09,080 --> 01:11:12,072
+[Silence]
+
+800
+01:11:18,304 --> 01:11:19,704
+DN: Right.
+
+801
+01:11:19,700 --> 01:11:22,776
+[Silence]
+
+802
+01:11:26,584 --> 01:11:32,768
+MS: Normally I would extract these
+and put them in scopes, most probably.
+
+803
+01:11:33,768 --> 01:11:35,384
+But for now...
+
+804
+01:11:36,576 --> 01:11:40,000
+So yes_percentage is yes.
+
+805
+01:11:40,920 --> 01:11:44,816
+Total divided by total.
+
+806
+01:11:47,536 --> 01:11:50,112
+And the same for no.
+
+807
+01:11:53,728 --> 01:11:57,416
+DN: And for the percentage we need
+to multiply by 100 as well don't we?
+
+808
+01:11:58,936 --> 01:12:00,664
+MS: Yes.
+
+809
+01:12:01,980 --> 01:12:09,224
+This is the point where I'm wondering how does [inaud] numbers.
+
+810
+01:12:12,680 --> 01:12:14,800
+I think I might want to do that.
+
+811
+01:12:15,320 --> 01:12:16,752
+DN: Or is it 2f.
+
+812
+01:12:16,750 --> 01:12:18,400
+MS: Yes.
+
+813
+01:12:19,752 --> 01:12:22,576
+I'm really [inaud] today. [Laughter]
+
+814
+01:12:22,570 --> 01:12:25,568
+[Silence]
+
+815
+01:12:27,800 --> 01:12:29,576
+So then if...
+
+816
+01:12:29,570 --> 01:12:32,472
+[Silence]
+
+817
+01:12:33,380 --> 01:12:37,808
+Greater than... 90.
+
+818
+01:12:37,944 --> 01:12:40,920
+[Silence]
+
+819
+01:12:45,328 --> 01:12:48,520
+DN: Another way of saying that
+is yes percentage is greater than 90
+
+820
+01:12:48,520 --> 01:12:51,048
+or yes percentage is less than 10.
+
+821
+01:12:51,976 --> 01:12:54,056
+But, let's go with it.
+
+822
+01:12:54,056 --> 01:12:56,050
+MS: Yes, true.
+
+823
+01:12:58,768 --> 01:13:03,816
+DN: Shall we play around with
+that on the consul and see what works?
+
+824
+01:13:03,810 --> 01:13:09,880
+MS: Yes, our last question
+had two answers so that should...
+
+825
+01:13:11,584 --> 01:13:15,416
+DN: Do you need to reload or does that stuff [inaud] automatically?
+
+826
+01:13:15,410 --> 01:13:18,520
+[Silence]
+
+827
+01:13:20,280 --> 01:13:22,224
+MS: I knew it... it blew up.
+
+828
+01:13:24,648 --> 01:13:27,312
+DN: Does reload throw away your instance variables?
+
+829
+01:13:29,680 --> 01:13:31,288
+MS: No.
+DN: OK.
+
+830
+01:13:31,280 --> 01:13:34,344
+[Silence]
+
+831
+01:13:42,376 --> 01:13:44,336
+MS: So the nos are not resolved.
+
+832
+01:13:44,330 --> 01:13:47,360
+[Silence]
+
+833
+01:13:53,370 --> 01:13:54,920
+DN: False.
+
+834
+01:13:55,080 --> 01:13:57,120
+Right, so we've got two answers.
+
+835
+01:13:57,120 --> 01:13:59,328
+MS: Yes.
+
+836
+01:14:00,080 --> 01:14:03,880
+DN: That's funny because I thought
+both answers were yes, weren't they?
+
+837
+01:14:03,936 --> 01:14:08,980
+MS: Yes, but we need to have at least 20 answers.
+
+838
+01:14:09,048 --> 01:14:13,408
+DN: But you did threshold reached.
+I thought you did majority agreed.
+
+839
+01:14:14,696 --> 01:14:18,568
+MS: I did resolved and then
+I looked at majority agreed.
+
+840
+01:14:19,680 --> 01:14:22,360
+Oh right, we did do majority agreed.
+
+841
+01:14:22,360 --> 01:14:25,424
+[Silence]
+
+842
+01:14:28,152 --> 01:14:30,608
+Let's just do a...
+
+843
+01:14:30,600 --> 01:14:33,544
+[Silence]
+
+844
+01:14:51,688 --> 01:14:53,808
+That's the wrong number.
+
+845
+01:14:55,128 --> 01:15:00,136
+DN: Where we working with the first question
+previously, rather than the last question?
+
+846
+01:15:00,264 --> 01:15:03,224
+I think the first question is
+the one that has responses.
+
+847
+01:15:03,552 --> 01:15:05,600
+MS: Oh, yes.
+
+848
+01:15:08,664 --> 01:15:10,408
+DN: Ah, there we go.
+
+849
+01:15:12,504 --> 01:15:15,072
+So the majority agreed is not robust at the moment.
+
+850
+01:15:15,820 --> 01:15:17,896
+If it has no answers it blows up.
+MS: Yes.
+
+851
+01:15:17,912 --> 01:15:20,600
+DN: But that's OK.
+
+852
+01:15:21,536 --> 01:15:24,688
+Well, we're running out of
+time here, so unfortunately,
+
+853
+01:15:24,680 --> 01:15:27,824
+so we are not going to have
+time to build a user interface for this.
+
+854
+01:15:27,820 --> 01:15:32,992
+But it's been interesting watching
+you just play around with the console.
+
+855
+01:15:35,784 --> 01:15:38,888
+[New Chapter}
+
+856
+01:15:39,824 --> 01:15:45,580
+DN: So if you had more time, what's the
+next thing you would do with this system?
 
