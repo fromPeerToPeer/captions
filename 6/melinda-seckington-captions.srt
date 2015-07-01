@@ -191,7 +191,7 @@ And hit the register button.
 [inaudible]
 
 44
-00:02:44,070 --> 00:02:48,664
+00:02:44,070 --> 00:02:47,096
 [Silence]
 
 45
@@ -295,7 +295,7 @@ Text, I guess, like... is this a cat picture
 So I guess let's start there.
 
 68
-00:04:15,850 --> 00:04:24,312
+00:04:15,850 --> 00:04:18,824
 [Silence]
 
 69
@@ -342,7 +342,7 @@ MS: Yes.
 So we want to...
 
 79
-00:05:04,010 --> 00:05:07,872
+00:05:04,010 --> 00:05:07,016
 [Silence]
 
 80
@@ -358,7 +358,7 @@ So I'll load that in.
 So I want to use the seeds [inaud]
 
 83
-00:05:18,992 --> 00:05:22,216
+00:05:18,990 --> 00:05:21,888
 [Silence]
 
 84
@@ -388,7 +388,7 @@ Let me just set up our questions.
 So very simply we want to do question.create.
 
 90
-00:05:48,380 --> 00:05:55,952
+00:05:48,380 --> 00:05:51,384
 [Silence]
 
 91
@@ -396,7 +396,7 @@ So very simply we want to do question.create.
 [Inaudible]
 
 92
-00:05:57,736 --> 00:06:01,816
+00:05:57,730 --> 00:06:00,744
 [Silence]
 
 93
@@ -449,7 +449,7 @@ MS: Yes, let's just throw them in the public.
 They'll maybe come up in a lesser place later
 
 104
-00:06:56,360 --> 00:07:04,408
+00:06:56,360 --> 00:06:59,368
 [Silence]
 
 105
@@ -457,7 +457,7 @@ They'll maybe come up in a lesser place later
 How do you loop through numbers again... times.
 
 106
-00:07:07,010 --> 00:07:12,920
+00:07:07,010 --> 00:07:10,016
 [Silence]
 
 107
@@ -469,7 +469,7 @@ I'll double check the [inaud]
 It would be Ruby times rather than...
 
 109
-00:07:18,270 --> 00:07:26,272
+00:07:18,270 --> 00:07:21,296
 [Silence]
 
 110
@@ -511,7 +511,7 @@ Yes I was right.
 I have to question myself sometimes.
 
 119
-00:07:57,480 --> 00:08:19,256
+00:07:57,480 --> 00:08:00,504
 [Silence]
 
 120
@@ -536,7 +536,7 @@ I guess six times is going to be 0 to 5, isn't it?
 MS: Yes.
 
 125
-00:08:42,720 --> 00:09:08,216
+00:08:42,720 --> 00:08:45,752
 [Silence]
 
 126
@@ -548,7 +548,7 @@ I'm sure we can make this smarter, in the sense that...
 Well, I guess what we can do here is...
 
 128
-00:09:18,580 --> 00:09:27,232
+00:09:18,580 --> 00:09:21,624
 [Silence]
 
 129
@@ -572,7 +572,7 @@ DN: Yes, let's Goat!
 MS: So...
 
 134
-00:09:40,730 --> 00:10:06,112
+00:09:40,730 --> 00:09:43,768
 [Silence]
 
 135
@@ -585,7 +585,7 @@ DN: You're definitely not a
 machine, you make that look easy.
 
 137
-00:10:15,050 --> 00:10:46,008
+00:10:15,050 --> 00:10:18,040
 [Silence]
 
 138
@@ -646,7 +646,7 @@ So let's see...
 I only hope that this doesn't blow up.
 
 152
-00:11:38,920 --> 00:11:47,648
+00:11:38,920 --> 00:11:41,992
 [Silence]
 
 153
@@ -666,7 +666,7 @@ No, I don't call them [inaud] image.
 We should have 6 of each of them.
 
 157
-00:12:01,960 --> 00:12:09,144
+00:12:01,960 --> 00:12:04,968
 [Silence]
 
 158
@@ -687,7 +687,7 @@ code that. It is a question.
 DN: I could do that... so let's just delete them all again.
 
 162
-00:12:27,016 --> 00:12:33,536
+00:12:27,010 --> 00:12:30,056
 [Silence]
 
 163
@@ -695,7 +695,7 @@ DN: I could do that... so let's just delete them all again.
 MS: I'll just analyze the question [inaud].
 
 164
-00:12:36,440 --> 00:12:56,344
+00:12:36,440 --> 00:12:39,472
 [Silence]
 
 165
@@ -735,7 +735,7 @@ MS: Yes, it is, I keep forgetting that.
 We've got [inaud], seeds and then a question.
 
 174
-00:13:33,400 --> 00:13:44,768
+00:13:33,400 --> 00:13:36,400
 [Silence]
 
 175
@@ -865,7 +865,7 @@ MS: No, so only the index can show for now.
 So let's make our questions controller.
 
 204
-00:16:03,520 --> 00:16:22,624
+00:16:03,520 --> 00:16:06,544
 [Silence]
 
 205
@@ -991,7 +991,7 @@ And in here we have...
 I'll have to say index.
 
 233
-00:18:14,350 --> 00:18:24,688
+00:18:14,350 --> 00:18:17,368
 [Silence]
 
 234
@@ -1008,7 +1008,7 @@ Index is going to grab all
 the questions that we have.
 
 237
-00:18:37,170 --> 00:18:43,912
+00:18:37,170 --> 00:18:40,168
 [Silence]
 
 238
@@ -1028,7 +1028,7 @@ I realise I never use the [inaud] with so much more data.
 We don't need to patch any [inaud].
 
 242
-00:18:59,624 --> 00:19:18,970
+00:18:59,620 --> 00:19:02,632
 [Silence]
 
 243
@@ -1040,7 +1040,7 @@ MS: So let's just show the description first.
 That should just show up here... No.
 
 245
-00:19:31,940 --> 00:19:38,576
+00:19:31,940 --> 00:19:34,944
 [Silence]
 
 246
@@ -1056,7 +1056,7 @@ MS: All the questions.
 So let's make a little nicer.
 
 249
-00:19:50,050 --> 00:20:11,880
+00:19:50,050 --> 00:19:53,064
 [Silence]
 
 250
@@ -1068,7 +1068,7 @@ And let's link to...
 Now what do we call that?
 
 252
-00:20:22,360 --> 00:20:28,000
+00:20:22,360 --> 00:20:25,368
 [Silence]
 
 253
@@ -1076,7 +1076,7 @@ Now what do we call that?
 [inaud]
 
 254
-00:20:31,220 --> 00:20:41,592
+00:20:31,220 --> 00:20:34,208
 [Silence]
 
 255
@@ -1104,7 +1104,7 @@ MS: Yes, we could even change it to that.
 It makes it a bit more serious... what we're going to get.
 
 261
-00:21:01,410 --> 00:21:05,152
+00:21:01,410 --> 00:21:04,440
 [Silence]
 
 262
@@ -1117,7 +1117,7 @@ don't they which will [inaud] sequential
 MS: Yes.
 
 264
-00:21:11,080 --> 00:21:23,168
+00:21:11,080 --> 00:21:14,088
 [Silence]
 
 265
@@ -1153,7 +1153,7 @@ It's for the user that we're displaying what
 question number it is, showing on the page itself.
 
 272
-00:21:57,970 --> 00:22:02,080
+00:21:57,970 --> 00:22:00,992
 [Silence]
 
 273
@@ -1212,7 +1212,7 @@ So on this page... [Melinda thinks]
 Someone [inaud] a question.
 
 286
-00:22:50,940 --> 00:23:10,920
+00:22:50,940 --> 00:22:53,952
 [Silence]
 
 287
@@ -1236,7 +1236,7 @@ Is this a hedgehog.
 I must look that up, I always forget.
 
 292
-00:23:38,552 --> 00:23:53,800
+00:23:38,550 --> 00:23:41,584
 [Silence]
 
 293
@@ -1248,7 +1248,7 @@ I must look that up, I always forget.
 And then I can...
 
 295
-00:23:59,950 --> 00:24:05,112
+00:23:59,950 --> 00:24:02,944
 [Silence]
 
 296
@@ -1256,7 +1256,7 @@ And then I can...
 I'll say that first.
 
 297
-00:24:07,128 --> 00:24:11,200
+00:24:07,120 --> 00:24:10,144
 [Silence]
 
 298
@@ -1285,7 +1285,7 @@ MS: Yes, I think it is.
 So let's move it to the assets directory.
 
 304
-00:24:35,620 --> 00:24:48,040
+00:24:35,620 --> 00:24:38,648
 [Silence]
 
 305
@@ -1297,7 +1297,7 @@ DN: OK.
 So this [inaud] work because we need to specify...
 
 307
-00:24:55,060 --> 00:25:05,072
+00:24:55,060 --> 00:24:58,096
 [Silence]
 
 308
@@ -1313,7 +1313,7 @@ MS: I'm not sure it is.
 DN: [inaud] to actually look at the HDL source.
 
 311
-00:25:17,690 --> 00:25:23,208
+00:25:17,690 --> 00:25:20,696
 [Silence]
 
 312
@@ -1373,7 +1373,7 @@ MS: Yes.
 [inaud]
 
 325
-00:26:17,470 --> 00:26:28,776
+00:26:17,470 --> 00:26:20,504
 [Silence]
 
 326
@@ -1381,7 +1381,7 @@ MS: Yes.
 [inaud] previous ones.
 
 327
-00:26:31,944 --> 00:26:45,576
+00:26:31,940 --> 00:26:34,968
 [Silence]
 
 328
@@ -1389,7 +1389,7 @@ MS: Yes.
 DN: Oh, I think you left the quote.
 
 329
-00:26:48,930 --> 00:26:55,440
+00:26:48,930 --> 00:26:51,936
 [Silence]
 
 330
@@ -1419,7 +1419,7 @@ width, but they do vary slightly in height.
 MS: Right, so let's set the width.
 
 336
-00:27:18,930 --> 00:27:23,792
+00:27:18,930 --> 00:27:21,928
 [Silence]
 
 337
@@ -1435,7 +1435,7 @@ DN: That looks good.
 MS: Let's clean this up a bit.
 
 340
-00:27:34,000 --> 00:27:43,432
+00:27:34,000 --> 00:27:37,048
 [Silence]
 
 341
@@ -1443,7 +1443,7 @@ MS: Let's clean this up a bit.
 [They both speak at once]
 
 342
-00:27:46,820 --> 00:27:50,944
+00:27:46,820 --> 00:27:49,888
 [Silence]
 
 343
@@ -1456,7 +1456,7 @@ MS: Here at the top let's add
 a link back to all the questions.
 
 345
-00:28:04,088 --> 00:28:15,872
+00:28:04,080 --> 00:28:07,088
 [Silence]
 
 346
@@ -1468,7 +1468,7 @@ DN: OK.
 MS: There we go.
 
 348
-00:28:19,770 --> 00:28:26,040
+00:28:19,770 --> 00:28:22,800
 [Silence]
 
 349
@@ -1489,7 +1489,7 @@ So we don't actually need these,
 because in the end we did just find it.
 
 353
-00:28:49,250 --> 00:28:55,192
+00:28:49,250 --> 00:28:52,296
 [Silence]
 
 354
@@ -1497,7 +1497,7 @@ because in the end we did just find it.
 So allow users to see questions.
 
 355
-00:29:03,200 --> 00:29:08,000
+00:29:03,200 --> 00:29:06,208
 [Silence]
 
 356
@@ -1530,7 +1530,7 @@ How do we do that again? [laughter] Let's have a look.
 [inaud]
 
 363
-00:29:40,490 --> 00:30:13,856
+00:29:40,490 --> 00:29:43,504
 [Silence]
 
 364
@@ -1582,7 +1582,7 @@ So rails join...
 This doesn't actually show anything.
 
 375
-00:31:08,000 --> 00:31:30,192
+00:31:08,000 --> 00:31:11,032
 [Silence]
 
 376
@@ -1600,7 +1600,7 @@ to join the users to the
 questions through the join table?
 
 379
-00:31:54,360 --> 00:32:00,696
+00:31:54,360 --> 00:31:57,384
 [Silence]
 
 380
@@ -1608,7 +1608,7 @@ questions through the join table?
 That's maybe through.
 
 381
-00:32:02,690 --> 00:32:12,728
+00:32:02,690 --> 00:32:05,712
 [Silence]
 
 382
@@ -1646,7 +1646,7 @@ DN: Can we call it response perhaps.
 MS: Yes, that's a good idea.
 
 390
-00:33:01,808 --> 00:33:09,312
+00:33:01,800 --> 00:33:04,808
 [Silence]
 
 391
@@ -1663,7 +1663,7 @@ DN: Do you want that comma?
 MS: No you don't.
 
 394
-00:33:26,490 --> 00:33:31,656
+00:33:26,490 --> 00:33:29,512
 [Silence]
 
 395
@@ -1671,7 +1671,7 @@ MS: No you don't.
 DN: I think if you do user, colon, reference...
 
 396
-00:33:34,590 --> 00:33:43,336
+00:33:34,590 --> 00:33:37,608
 [Silence]
 
 397
@@ -1679,7 +1679,7 @@ DN: I think if you do user, colon, reference...
 Or it might be references, I don't quite remember.
 
 398
-00:33:46,740 --> 00:34:09,840
+00:33:46,740 --> 00:33:49,752
 [Silence]
 
 399
@@ -1687,7 +1687,7 @@ Or it might be references, I don't quite remember.
 MS: Yes, I just realised.
 
 400
-00:34:11,840 --> 00:34:16,216
+00:34:11,840 --> 00:34:14,856
 [Silence]
 
 401
@@ -1704,7 +1704,7 @@ question, and we don't' need anything else, right?
 DN: No, that looks good.
 
 404
-00:34:24,860 --> 00:34:35,928
+00:34:24,860 --> 00:34:27,872
 [Silence]
 
 405
@@ -1721,7 +1721,7 @@ So we just want to have...
 answers...
 
 408
-00:34:51,360 --> 00:34:58,432
+00:34:51,360 --> 00:34:54,384
 [Silence]
 
 409
@@ -1737,7 +1737,7 @@ but also I need [inaud] answers.
 DN: Right.
 
 412
-00:35:07,800 --> 00:35:13,632
+00:35:07,800 --> 00:35:10,816
 [Silence]
 
 413
@@ -1745,7 +1745,7 @@ DN: Right.
 [inaud] progressions this has.
 
 414
-00:35:16,560 --> 00:35:20,416
+00:35:16,560 --> 00:35:19,584
 [Silence]
 
 415
@@ -1757,7 +1757,7 @@ And the answers this has... many.
 Users...
 
 417
-00:35:26,910 --> 00:35:39,480
+00:35:26,910 --> 00:35:29,968
 [Silence]
 
 418
@@ -1785,7 +1785,7 @@ MS: Ahh... maybe.
 Yes, I think it is, its fallen off, but...
 
 424
-00:36:03,190 --> 00:36:16,896
+00:36:03,190 --> 00:36:06,192
 [Silence]
 
 425
@@ -1834,7 +1834,7 @@ So we can...
 So... basically we want our answers to be...
 
 436
-00:37:11,400 --> 00:37:15,584
+00:37:11,400 --> 00:37:14,416
 [Silence]
 
 437
@@ -1860,7 +1860,7 @@ is, because they're logged in.
 [Inaudible]
 
 442
-00:37:40,370 --> 00:37:56,760
+00:37:40,370 --> 00:37:43,408
 [Silence]
 
 443
@@ -1888,7 +1888,7 @@ So let's create our...
 [Inaud]
 
 449
-00:38:19,140 --> 00:38:36,992
+00:38:19,140 --> 00:38:22,184
 [Silence]
 
 450
@@ -1905,7 +1905,7 @@ a form for... an answer.
 So here we need to create...
 
 453
-00:38:59,410 --> 00:39:06,024
+00:38:59,410 --> 00:39:02,488
 [Silence]
 
 454
@@ -1921,7 +1921,7 @@ So here we need to create...
 So I want to do something similar...
 
 457
-00:39:23,850 --> 00:39:42,744
+00:39:23,850 --> 00:39:26,864
 [Silence]
 
 458
@@ -1929,7 +1929,7 @@ So I want to do something similar...
 I'm not completely sure about that anymore.
 
 459
-00:39:45,630 --> 00:39:53,544
+00:39:45,630 --> 00:39:48,696
 [Silence]
 
 460
@@ -1937,7 +1937,7 @@ I'm not completely sure about that anymore.
 So question answers...
 
 461
-00:39:56,390 --> 00:40:00,896
+00:39:56,390 --> 00:39:59,408
 [Silence]
 
 462
@@ -1957,7 +1957,7 @@ radio button tag.
 I'm pretty sure...
 
 466
-00:40:21,250 --> 00:40:28,816
+00:40:21,250 --> 00:40:24,280
 [Silence]
 
 467
@@ -1969,7 +1969,7 @@ That's actually under public license... rails
 form for radio buttons app.
 
 469
-00:40:37,550 --> 00:40:53,704
+00:40:37,550 --> 00:40:40,568
 [Silence]
 
 470
@@ -1998,7 +1998,7 @@ Which... response, true.
 And then a label for it.
 
 476
-00:41:27,110 --> 00:41:46,328
+00:41:27,110 --> 00:41:30,112
 [Silence]
 
 477
@@ -2018,7 +2018,7 @@ So I think that should work... No it doesn't.
 Oh... my [inaud].
 
 481
-00:41:59,830 --> 00:42:18,920
+00:41:59,830 --> 00:42:02,832
 [Silence]
 
 482
@@ -2035,7 +2035,7 @@ But we can't do anything with it
 yet, we've got to add the submit button.
 
 485
-00:42:34,140 --> 00:42:41,144
+00:42:34,140 --> 00:42:37,160
 [Silence]
 
 486
@@ -2092,7 +2092,7 @@ anything in the controller yet.
 So we have answer.
 
 499
-00:43:26,210 --> 00:43:46,256
+00:43:26,210 --> 00:43:29,224
 [Silence]
 
 500
