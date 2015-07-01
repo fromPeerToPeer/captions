@@ -3272,7 +3272,7 @@ And in that case threshold would have to be reached.
 
 779
 01:10:04,480 --> 01:10:09,312
-And [inaud] maturity answered.
+And maybe majority answered.
 
 780
 01:10:10,240 --> 01:10:12,832
@@ -3313,7 +3313,7 @@ So, we have total=answers.count.
 
 789
 01:10:46,360 --> 01:10:53,368
-And then we've got [inaud] yes_percentage.
+And then we've got yes_percentage.
 
 790
 01:10:54,296 --> 01:10:58,968
@@ -3375,7 +3375,8 @@ MS: Yes.
 
 804
 01:12:01,980 --> 01:12:09,224
-This is the point where I'm wondering how does [inaud] numbers.
+This is the point where I'm wondering
+how do we deal with these type of numbers.
 
 805
 01:12:12,680 --> 01:12:14,800
@@ -3391,7 +3392,7 @@ MS: Yes.
 
 808
 01:12:19,752 --> 01:12:22,576
-I'm really [inaud] today. [Laughter]
+I'm really blanking today. [Laughter]
 
 809
 01:12:22,570 --> 01:12:25,568
@@ -3442,246 +3443,251 @@ had two answers so that should...
 
 820
 01:13:11,584 --> 01:13:15,416
-DN: Do you need to reload or does that stuff [inaud] automatically?
+DN: Do you need to reload or does
+that stuff get reloaded automatically?
 
 821
-01:13:15,410 --> 01:13:18,520
-[Silence]
+01:13:15,430 --> 01:13:16,632
+MS: Yes.
 
 822
-01:13:20,280 --> 01:13:22,224
-MS: I knew it... it blew up.
+01:13:16,680 --> 01:13:19,688
+[Silence]
 
 823
+01:13:20,280 --> 01:13:22,408
+MS: I knew it... it blew up.
+
+824
 01:13:24,648 --> 01:13:27,312
 DN: Does reload throw away your instance variables?
 
-824
+825
 01:13:29,680 --> 01:13:31,288
 MS: No.
 DN: OK.
 
-825
+826
 01:13:31,280 --> 01:13:34,344
 [Silence]
 
-826
+827
 01:13:42,376 --> 01:13:44,336
 MS: So the nos are not resolved.
 
-827
+828
 01:13:44,330 --> 01:13:47,360
 [Silence]
 
-828
+829
 01:13:53,370 --> 01:13:54,920
 DN: False.
 
-829
+830
 01:13:55,080 --> 01:13:57,120
 Right, so we've got two answers.
 
-830
+831
 01:13:57,120 --> 01:13:59,328
 MS: Yes.
 
-831
+832
 01:14:00,080 --> 01:14:03,880
 DN: That's funny because I thought
 both answers were yes, weren't they?
 
-832
+833
 01:14:03,936 --> 01:14:08,980
 MS: Yes, but we need to have at least 20 answers.
 
-833
+834
 01:14:09,048 --> 01:14:13,408
 DN: But you did threshold reached.
 I thought you did majority agreed.
 
-834
+835
 01:14:14,696 --> 01:14:18,568
 MS: I did resolved and then
 I looked at majority agreed.
 
-835
+836
 01:14:19,680 --> 01:14:22,360
 Oh right, we did do majority agreed.
 
-836
+837
 01:14:22,360 --> 01:14:25,424
 [Silence]
 
-837
+838
 01:14:28,152 --> 01:14:30,608
 Let's just do a...
 
-838
+839
 01:14:30,600 --> 01:14:33,544
 [Silence]
 
-839
+840
 01:14:51,688 --> 01:14:53,808
 That's the wrong number.
 
-840
+841
 01:14:55,128 --> 01:15:00,136
 DN: Where we working with the first question
 previously, rather than the last question?
 
-841
+842
 01:15:00,264 --> 01:15:03,224
 I think the first question is
 the one that has responses.
 
-842
+843
 01:15:03,552 --> 01:15:05,600
 MS: Oh, yes.
 
-843
+844
 01:15:08,664 --> 01:15:10,408
 DN: Ah, there we go.
 
-844
+845
 01:15:12,504 --> 01:15:15,072
 So the majority agreed is not robust at the moment.
 
-845
+846
 01:15:15,820 --> 01:15:17,896
 If it has no answers it blows up.
 MS: Yes.
 
-846
+847
 01:15:17,912 --> 01:15:20,600
 DN: But that's OK.
 
-847
+848
 01:15:21,536 --> 01:15:24,688
 Well, we're running out of
 time here, so unfortunately,
 
-848
+849
 01:15:24,680 --> 01:15:27,824
 so we are not going to have
 time to build a user interface for this.
 
-849
+850
 01:15:27,820 --> 01:15:32,992
 But it's been interesting watching
 you just play around with the console.
 
-850
+851
 01:15:35,784 --> 01:15:38,888
 [New Chapter}
 
-851
+852
 01:15:39,824 --> 01:15:45,580
 DN: So if you had more time, what's the
 next thing you would do with this system?
 
-852
+853
 01:15:46,432 --> 01:15:49,570
 MS: I guess the next thing would be to actually...
 
-853
+854
 01:15:49,824 --> 01:15:54,400
 use what we've just doneanhere with resolving questions.
 
-854
+855
 01:15:54,848 --> 01:15:57,184
 Putting in the interface...
 
-855
+856
 01:15:59,140 --> 01:16:01,224
 and then beyond that... 
 
-856
+857
 01:16:01,352 --> 01:16:06,520
 doing something a bit smarter about
 how we're displaying the questions to users.
 
-857
+858
 01:16:06,600 --> 01:16:10,080
 Because right now we're just
 showing all the questions in a list.
 
-858
+859
 01:16:10,128 --> 01:16:14,616
 It would be a bit nicer if, the
 user logged on to the system
 
-859
+860
 01:16:14,760 --> 01:16:17,192
 and they get shown a random image.
 
-860
+861
 01:16:17,190 --> 01:16:19,880
 DN: OK, so people don't see them in the same order,
 
-861
+862
 01:16:19,880 --> 01:16:23,576
 in which case you have question 1 having
 loads of answers and later ones having fewer.
 
-862
+863
 01:16:23,816 --> 01:16:30,832
 MS: And maybe doing something smarter like
 showing the questions that don't have many answers,
 
-863
+864
 01:16:31,750 --> 01:16:38,320
 so you can boost the ones that need more answers.
 
-864
+865
 01:16:38,560 --> 01:16:41,792
 DN: So it would be nice to have
 a way to ask the question model
 
-865
+866
 01:16:41,848 --> 01:16:47,376
 "Which of your records needs the next answer?"
 
-866
+867
 01:16:47,456 --> 01:16:54,096
 And maybe recognizing that the current
 user shouldn't answer the same question twice.
 
-867
+868
 01:16:54,090 --> 01:16:56,312
 That's something you would have to think about.
 
-868
+869
 01:16:56,328 --> 01:16:57,272
 MS: Exactly.
 
-869
+870
 01:16:57,320 --> 01:17:03,136
 CN: And once you've got that you can
 answer a question and ask for the next question.
 
-870
+871
 01:17:03,130 --> 01:17:07,256
 And it will pick one randomly
 for you, that would be nice.
 
-871
+872
 01:17:07,280 --> 01:17:08,792
 MS: Yes, that would be cool.
 
-872
+873
 01:17:08,790 --> 01:17:12,288
 DN: OK, well thanks very
 much for coming on the show Melinda,
 
-873
+874
 01:17:12,296 --> 01:17:13,592
 it's been really interesting watching you work.
 
-874
+875
 01:17:13,600 --> 01:17:14,456
 MS: Thanks for inviting me.
 
-875
+876
 01:17:14,464 --> 01:17:16,368
 DN: My pleasure.
 
