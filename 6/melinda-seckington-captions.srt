@@ -726,7 +726,7 @@ We've got [inaud], seeds and then a question.
 
 171
 00:13:45,368 --> 00:13:48,600
-[New Chapter}
+[New Chapter]
 
 172
 00:13:49,544 --> 00:13:53,424
@@ -881,7 +881,7 @@ MS: I'm not sure I do that actually.
 
 207
 00:16:45,744 --> 00:16:50,024
-Uhm... [Melinda] thinks again]
+[Melinda thinks again]
 
 208
 00:16:50,020 --> 00:16:55,296
@@ -890,11 +890,11 @@ exactly what comes back when I...
 
 209
 00:16:57,256 --> 00:17:00,800
-use generate model,
+use generate model.
 
 210
 00:17:00,800 --> 00:17:05,728
-and I always feel that with generate
+And I always feel that with generate
 controller I get more than I want.
 
 211
@@ -3059,7 +3059,7 @@ MS: Yes, certainly, it's not a big commit but...
 [Silence]
 
 730
-01:06:20,016 --> 01:06:23,544
+01:06:20,080 --> 01:06:23,344
 [New Chapter]
 
 731
