@@ -3590,3 +3590,109 @@ you just play around with the console.
 DN: So if you had more time, what's the
 next thing you would do with this system?
 
+857
+01:15:46,432 --> 01:15:49,570
+MS: I guess the next thing would be to actually...
+
+858
+01:15:49,824 --> 01:15:54,400
+use what we've just doneanhere with resolving questions.
+
+859
+01:15:54,848 --> 01:15:57,184
+Putting in the interface...
+
+860
+01:15:59,140 --> 01:16:01,224
+and then beyond that... 
+
+861
+01:16:01,352 --> 01:16:06,520
+doing something a bit smarter about
+how we're displaying the questions to users.
+
+862
+01:16:06,600 --> 01:16:10,080
+Because right now we're just
+showing all the questions in a list.
+
+863
+01:16:10,128 --> 01:16:14,616
+It would be a bit nicer if, the
+user logged on to the system
+
+864
+01:16:14,760 --> 01:16:17,192
+and they get shown a random image.
+
+865
+01:16:17,190 --> 01:16:19,880
+DN: OK, so people don't see them in the same order,
+
+866
+01:16:19,880 --> 01:16:23,576
+in which case you have question 1 having
+loads of answers and later ones having fewer.
+
+867
+01:16:23,816 --> 01:16:30,832
+MS: And maybe doing something smarter like
+showing the questions that don't have many answers,
+
+868
+01:16:31,750 --> 01:16:38,320
+so you can boost the ones that need more answers.
+
+869
+01:16:38,560 --> 01:16:41,792
+DN: So it would be nice to have
+a way to ask the question model
+
+870
+01:16:41,848 --> 01:16:47,376
+"Which of your records needs the next answer?"
+
+871
+01:16:47,456 --> 01:16:54,096
+And maybe recognizing that the current
+user shouldn't answer the same question twice.
+
+872
+01:16:54,090 --> 01:16:56,312
+That's something you would have to think about.
+
+873
+01:16:56,328 --> 01:16:57,272
+MS: Exactly.
+
+874
+01:16:57,320 --> 01:17:03,136
+CN: And once you've got that you can
+answer a question and ask for the next question.
+
+875
+01:17:03,130 --> 01:17:07,256
+And it will pick one randomly
+for you, that would be nice.
+
+876
+01:17:07,280 --> 01:17:08,792
+MS: Yes, that would be cool.
+
+877
+01:17:08,790 --> 01:17:12,288
+DN: OK, well thanks very
+much for coming on the show Melinda,
+
+878
+01:17:12,296 --> 01:17:13,592
+it's been really interesting watching you work.
+
+879
+01:17:13,600 --> 01:17:14,456
+MS: Thanks for inviting me.
+
+880
+01:17:14,464 --> 01:17:16,368
+DN: My pleasure.
+
