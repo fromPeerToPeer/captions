@@ -18,7 +18,7 @@ at FutureLearn, a social learning platform.
 
 5
 00:00:16,990 --> 00:00:19,552
-Melinda co-organizes BarCap London,
+Melinda co-organizes BarCamp London,
 
 6
 00:00:19,560 --> 00:00:24,030
@@ -422,7 +422,7 @@ MS: No they're not.
 97
 00:06:33,488 --> 00:06:38,528
 DN: When I first created these
-images, I named them dog.jpeg, cat.jpeg
+images, I named them dog.jpg, cat.jpg
 
 98
 00:06:38,520 --> 00:06:43,280
@@ -521,7 +521,7 @@ DN: A binary file.
 
 121
 00:08:30,880 --> 00:08:40,960
-DN: They could be called Animal-1.jpeg, Animal-2...
+DN: They could be called Animal-1.jpg, Animal-2...
 I guess six times is going to be 0 to 5, isn't it?
 
 122
@@ -1297,7 +1297,8 @@ MS: I'm not sure it is.
 
 306
 00:25:14,400 --> 00:25:17,696
-DN: Would it help to actually look at the HDL source?
+DN: Would it help to actually look at the
+HTML source?
 
 307
 00:25:17,690 --> 00:25:20,696
@@ -1305,7 +1306,7 @@ DN: Would it help to actually look at the HDL source?
 
 308
 00:25:23,648 --> 00:25:26,128
-DN: It's missing .jpeg.
+DN: It's missing .jpg.
 
 309
 00:25:27,776 --> 00:25:28,776
@@ -1340,7 +1341,7 @@ That's it.
 316
 00:25:54,624 --> 00:26:00,112
 MS: We're not using that at
-all but just adding .jpeg behind it.
+all but just adding .jpg behind it.
 
 317
 00:26:03,890 --> 00:26:09,176
@@ -1762,7 +1763,7 @@ Or is it not worth a commit?
 
 417
 00:35:55,650 --> 00:35:58,184
-MS: Ahh... maybe.
+MS: Ah... maybe.
 
 418
 00:35:59,416 --> 00:36:03,192
@@ -2007,7 +2008,8 @@ DN: Right.
 
 477
 00:42:23,288 --> 00:42:25,790
-That looks nice./nMS Yes.
+That looks nice.
+MS: Yes.
 
 478
 00:42:25,790 --> 00:42:34,144
@@ -2230,7 +2232,7 @@ it doesn't put it inside of a form object does it?
 
 531
 00:47:00,260 --> 00:47:04,024
-Wheras if you put f.radio button...
+Whereas if you put f.radio button...
 
 532
 00:47:04,020 --> 00:47:21,624
@@ -2985,7 +2987,7 @@ Yes, we can actually...
 
 711
 01:04:48,136 --> 01:04:49,808
-DN: Ah yes, memoise it.
+DN: Ah yes, memoize it.
 
 712
 01:04:49,800 --> 01:04:51,488
@@ -3175,7 +3177,7 @@ Of which 90% need to be the same.
 
 756
 01:08:10,810 --> 01:08:15,928
-DN: Yes, I,m not well versed in
+DN: Yes, I'm not well versed in
 statistics but to me that sounds good.
 
 757
@@ -3592,7 +3594,8 @@ MS: I guess the next thing would be to actually...
 
 854
 01:15:49,824 --> 01:15:54,400
-use what we've just doneanhere with resolving questions.
+use what we've just done here
+with resolving questions.
 
 855
 01:15:54,848 --> 01:15:57,184
@@ -3663,7 +3666,7 @@ MS: Exactly.
 
 870
 01:16:57,320 --> 01:17:03,136
-CN: And once you've got that you can
+DN: And once you've got that you can
 answer a question and ask for the next question.
 
 871
