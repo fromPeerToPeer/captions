@@ -1829,20 +1829,22 @@ the best way of modeling this.
 
 433
 00:37:20,448 --> 00:37:24,528
-DN: If it was a nested resource, then the URL for
+DN: If it was a nested resource,
+then the URL for...
 
 434
 00:37:25,720 --> 00:37:31,064
-say you post [they both talk together]
+Say you post to create an answer...
+MS: ...it would contain the question
 
 435
 00:37:31,544 --> 00:37:36,600
-MS: And we also know who the user
+And we also know who the user
 is, because they're logged in.
 
 436
 00:37:37,400 --> 00:37:40,376
-Inaudible
+So we can grab that from there.
 
 437
 00:37:40,370 --> 00:37:43,408
