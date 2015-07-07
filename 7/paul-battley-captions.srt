@@ -69,19 +69,139 @@ JW: I have provided this beautiful
 binary image for you to work with.
 
 16
-00:01:03,880 --> 00:01:06,616
+00:01:03,880 --> 00:01:07,280
 PB: Not quite the right time,
 depending on when your watching this.
 
 17
 00:01:07,312 --> 00:01:10,656
-JW: It's in a Windows 1Bit Bitmap format.
+JW: It's in a Windows 1Bit bitmap format.
 
 18
 00:01:10,650 --> 00:01:14,048
 So, it's up to you how you make use of that.
 
 19
-00:01:14,040 --> 00:01:17,312
+00:01:14,128 --> 00:01:17,310
 [New Chapter]
+
+20
+00:01:17,552 --> 00:01:22,950
+PB: So the first thing we want
+to do is pass the bitmap file.
+
+21
+00:01:22,950 --> 00:01:36,832
+If I recall correctly, that's a bunch of
+bytes, and huge bits of each byte is an image.
+
+22
+00:01:37,136 --> 00:01:42,176
+I don't know which order it goes in so
+I'm going to look it up on Wikipedia and find out.
+
+23
+00:01:42,170 --> 00:01:45,560
+Inaudible.
+
+24
+00:01:45,976 --> 00:01:51,064
+So I'll look up the BMP file format.
+
+25
+00:01:53,810 --> 00:01:58,728
+Been through that, OK what
+have I got... Pixel array inaudible.
+
+26
+00:01:58,790 --> 00:02:01,848
+I hope it's not compressed. I guess we'll find out.
+
+27
+00:02:02,630 --> 00:02:06,640
+If it is we can find some other way of processing it.
+
+28
+00:02:07,290 --> 00:02:13,112
+1 bit pixel. Each bit is
+indexed into a table of two colors.
+
+29
+00:02:14,450 --> 00:02:18,776
+That's interesting, so inaudible
+colors even though there's only two.
+
+30
+00:02:18,816 --> 00:02:21,904
+We don't really need to...
+
+31
+00:02:21,900 --> 00:02:26,432
+In our case it doesn't really
+matter, as long as we're consistent.
+
+32
+00:02:27,368 --> 00:02:33,088
+So... I suggest that we look
+at the file to see how long it is.
+
+33
+00:02:33,080 --> 00:02:36,072
+[Silence]
+
+34
+00:02:37,120 --> 00:02:42,048
+Ls - L on whatever .bmp
+
+35
+00:02:43,800 --> 00:02:45,816
+8256 bytes.
+
+36
+00:02:46,664 --> 00:02:49,888
+And... do we know the size of it?
+
+37
+00:02:49,880 --> 00:02:53,768
+We can find that out with identify.
+
+38
+00:02:56,336 --> 00:02:59,328
+Inaudible.
+
+39
+00:02:59,560 --> 00:03:09,432
+256 by 256 would be 64K except that
+we're less 8 bits of a pixel... so 8 pixels.
+
+40
+00:03:09,712 --> 00:03:16,240
+Sorry pixels per byte, so inaudible so 856 sounds just about right.
+
+41
+00:03:17,456 --> 00:03:19,128
+So it's not compressed.
+
+42
+00:03:19,752 --> 00:03:27,744
+And according to this, it's just
+the end of the file so I can probably...
+
+43
+00:03:28,180 --> 00:03:31,512
+ignore the header and just take the pixels.
+
+44
+00:03:31,720 --> 00:03:39,040
+So I'm going to write a bit of
+code that reads in this bitmap,
+
+45
+00:03:39,470 --> 00:03:45,072
+and spits out the pixels as,
+maybe hashes and spaces on screen.
+
+46
+00:03:45,070 --> 00:03:47,608
+That should give us an idea of whether its working.
 
