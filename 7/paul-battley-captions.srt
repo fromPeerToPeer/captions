@@ -1,12 +1,87 @@
-1
-00:00:01,450 --> 00:00:02,710
-Welcome to Peer to Peer
+﻿1
+00:00:01,224 --> 00:00:02,976
+NARRATOR: Welcome to Peer to Peer
 
 2
-00:00:02,820 --> 00:00:05,650
-where you can watch how
-experts solve tech problems.
+00:00:02,976 --> 00:00:06,776
+where you can hone your skills
+by watching live coding videos.
 
 3
-00:00:06,480 --> 00:00:08,640
-Our guest today is Paul Battley
+00:00:07,904 --> 00:00:10,424
+Our guest today is Paul Battley.
+
+4
+00:00:10,420 --> 00:00:12,120
+Who is a veteran Ruby developer, 
+
+5
+00:00:12,120 --> 00:00:15,824
+who has worked with agencies,
+startups and Government departments.
+
+6
+00:00:17,080 --> 00:00:21,248
+Our host is Jamie White, and the
+challenge that he has set for Paul is called
+
+7
+00:00:21,472 --> 00:00:24,128
+Encoding Images As Quad Trees.
+
+8
+00:00:25,992 --> 00:00:30,384
+Jamie White: OK, so how about
+we start by reading the challenge?
+
+9
+00:00:30,720 --> 00:00:32,224
+Paul Battley: OK, so... 
+
+10
+00:00:32,272 --> 00:00:37,992
+Write a program to convert a given binary
+image into a quad tree and serialize it to disk.
+
+11
+00:00:38,248 --> 00:00:43,352
+Write another program to take a
+serialized quad tree and turn it back into an image.
+
+12
+00:00:43,460 --> 00:00:47,608
+The quad tree for an image is generated
+by splitting the image into four quadrants
+
+13
+00:00:47,608 --> 00:00:51,152
+then successively splitting each
+of these into further quadrants.
+
+14
+00:00:51,176 --> 00:00:55,952
+When a quadrant consists of a single
+color, it may be considered a terminal node.
+
+15
+00:00:57,400 --> 00:01:03,880
+JW: I have provided this beautiful
+binary image for you to work with.
+
+16
+00:01:03,880 --> 00:01:06,616
+PB: Not quite the right time,
+depending on when your watching this.
+
+17
+00:01:07,312 --> 00:01:10,656
+JW: It's in a Windows 1Bit Bitmap format.
+
+18
+00:01:10,650 --> 00:01:14,048
+So, it's up to you how you make use of that.
+
+19
+00:01:14,040 --> 00:01:17,312
+[New Chapter]
+
