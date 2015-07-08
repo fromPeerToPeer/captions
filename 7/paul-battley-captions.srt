@@ -483,3 +483,185 @@ And let's say bits per pixels... is that what it says?
 00:09:32,976 --> 00:09:36,264
 Hard code here, I think we know what 8 is.
 
+113
+00:09:36,720 --> 00:09:42,256
+Width x height, this is all assuming
+it's multiples of 8 and in this case it is.
+
+114
+00:09:45,016 --> 00:09:49,880
+8192 that's the number I was
+looking for, that's the power of 2.
+
+115
+00:09:50,768 --> 00:09:54,904
+JW: Would you mind printing out the
+difference between bytes.length and image bytes?
+
+116
+00:09:54,900 --> 00:09:56,280
+Just to see how big the header is.
+
+117
+00:09:56,280 --> 00:09:58,368
+PB: Yes, that's a good idea.
+
+118
+00:09:58,360 --> 00:10:03,624
+So bytes.length minus image bytes.length.
+
+119
+00:10:03,620 --> 00:10:06,712
+[Silence]
+
+120
+00:10:10,456 --> 00:10:12,544
+64 bytes.
+
+121
+00:10:14,264 --> 00:10:18,008
+That's good so let's see... inaudible.
+
+122
+00:10:18,848 --> 00:10:34,416
+So in fact... I could say header - bytes.take 64
+and then I could say image bytes.drop.
+
+123
+00:10:34,456 --> 00:10:38,232
+I'm not sure if that's sensible though
+because the header might change.
+
+124
+00:10:38,904 --> 00:10:47,392
+So instead I'm going to say
+header equals bytes.take... that much.
+
+125
+00:10:49,592 --> 00:10:53,408
+So I've now got the image
+the bytes and the header.
+
+126
+00:10:53,400 --> 00:10:55,104
+Now let's try to draw the image
+
+127
+00:10:55,100 --> 00:10:57,176
+So I'm going to say...
+
+128
+00:10:59,688 --> 00:11:01,512
+(What's the best way to do this...?)
+
+129
+00:11:02,704 --> 00:11:14,424
+Say height.times do - that can be Y
+and width.times do and that can be our X.
+
+130
+00:11:14,464 --> 00:11:17,472
+[Paul thinks]
+
+131
+00:11:20,056 --> 00:11:23,096
+Then we should in fact...
+
+132
+00:11:26,112 --> 00:11:28,176
+inaudible it's not going to do it.
+
+133
+00:11:28,170 --> 00:11:31,200
+[Silence]
+
+134
+00:11:33,480 --> 00:11:40,016
+So then our byte is going to be the image bytes.
+
+135
+00:11:41,040 --> 00:11:48,880
+And the index of width over 8 x Y.
+
+136
+00:11:48,952 --> 00:11:51,832
+[Silence]
+
+137
+00:11:52,650 --> 00:11:54,896
+Plus X.
+
+138
+00:11:57,176 --> 00:12:04,696
+And then we want 8.times do,
+what shall we call this one - i.
+
+139
+00:12:05,848 --> 00:12:07,896
+Inaudible
+
+140
+00:12:07,960 --> 00:12:12,152
+So for each of these I'm going to say...
+
+141
+00:12:14,830 --> 00:12:21,216
+I want to find the inaudible bit of it,
+but I don't know which way round they are do I?
+
+142
+00:12:21,224 --> 00:12:23,176
+JW: Ah, that's true.
+
+143
+00:12:23,170 --> 00:12:25,104
+Inaudible
+
+144
+00:12:26,704 --> 00:12:29,792
+PB: Maybe it will say in Wikipedia.
+
+145
+00:12:29,790 --> 00:12:32,896
+[Silence]
+
+146
+00:12:36,808 --> 00:12:42,480
+It's probably reasonable to assume
+that the most significant ones on the left,
+
+147
+00:12:42,544 --> 00:12:45,400
+Like numbers are.
+
+148
+00:12:48,408 --> 00:12:53,704
+Yes, so if I start off with my, (a kind of ugly
+way of doing it but it will work for now).
+
+149
+00:12:53,700 --> 00:12:58,816
+If I start off with my bit mask, I want to be...
+
+150
+00:12:58,810 --> 00:13:01,808
+[Silence]
+
+151
+00:13:02,720 --> 00:13:09,336
+Yes, in fact this ought to work well,
+so bitmask wants to be Ob1OOOOOOO.
+
+152
+00:13:09,656 --> 00:13:19,024
+Then my bit is just bitmask white shifted by i.
+
+153
+00:13:19,248 --> 00:13:23,816
+So that's going to be starting
+from zero and then increasing.
+
+154
+00:13:24,144 --> 00:13:30,760
+And I can take that and inaudible that with the byte.
+
