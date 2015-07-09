@@ -13,7 +13,7 @@ Our guest today is Paul Battley.
 
 4
 00:00:10,420 --> 00:00:12,120
-Who is a veteran Ruby developer, 
+Who is a veteran Ruby developer,
 
 5
 00:00:12,120 --> 00:00:15,824
@@ -36,7 +36,7 @@ we start by reading the challenge?
 
 9
 00:00:30,720 --> 00:00:32,224
-Paul Battley: OK, so... 
+Paul Battley: OK, so...
 
 10
 00:00:32,272 --> 00:00:37,992
@@ -233,7 +233,7 @@ into the command rather than inaudible
 
 53
 00:04:27,180 --> 00:04:32,504
-PB: Well it gives you both so you can either inaudible something or it will give you the first one. 
+PB: Well it gives you both so you can either inaudible something or it will give you the first one.
 
 54
 00:04:33,000 --> 00:04:37,832
@@ -662,6 +662,126 @@ So that's going to be starting
 from zero and then increasing.
 
 154
-00:13:24,144 --> 00:13:30,760
+00:13:24,140 --> 00:13:31,040
 And I can take that and inaudible that with the byte.
+
+155
+00:13:33,176 --> 00:13:39,072
+And then take the whole thing...
+
+156
+00:13:39,070 --> 00:13:42,112
+[Paul thinks]
+
+157
+00:13:44,296 --> 00:13:51,864
+And then right shift the whole thing by 8 bytes.
+
+158
+00:13:51,860 --> 00:13:56,128
+So my first one will be a
+right shift by nothing inaudible.
+
+159
+00:13:57,568 --> 00:14:02,136
+Yes, so my first one will be right shifted
+by 8, which means it's the least significant.
+
+160
+00:14:02,672 --> 00:14:04,920
+It;s like program C isn't it? [Laughter]
+
+161
+00:14:04,920 --> 00:14:13,832
+OK, so now I am just going to say print bit to S.
+
+162
+00:14:13,830 --> 00:14:16,856
+[Paul thinks]
+
+163
+00:14:19,020 --> 00:14:29,568
+Or maybe I'll do print bit equals 1 # space.
+
+164
+00:14:29,600 --> 00:14:31,392
+That should be more readable.
+
+165
+00:14:31,390 --> 00:14:36,920
+And then at the end of each row is a put
+
+166
+00:14:39,008 --> 00:14:42,448
+Alright... we will see.
+
+167
+00:14:45,320 --> 00:14:47,592
+Let's try this again.
+
+168
+00:14:47,590 --> 00:14:49,560
+We got all zeros.
+
+169
+00:14:49,560 --> 00:14:55,664
+JW: The features in the image are down towards
+the bottom so presumably we didn't hit them yet.
+
+170
+00:14:55,680 --> 00:15:03,670
+PB: That's true, it might be
+worth shrinking the text size.
+
+171
+00:15:04,856 --> 00:15:07,496
+No that's definitely all zeros.
+
+172
+00:15:08,168 --> 00:15:11,312
+So have I got this right...
+
+173
+00:15:11,310 --> 00:15:14,320
+[Paul thinks]
+
+174
+00:15:14,320 --> 00:15:18,040
+JW: We could just try printing the bits to begin with.
+PB: Yes.
+
+175
+00:15:18,040 --> 00:15:21,040
+[Silence]
+
+176
+00:15:23,872 --> 00:15:26,672
+There's the zeros.
+
+177
+00:15:26,670 --> 00:15:31,176
+inaudible line banks which looks about right doesn't it?
+
+178
+00:15:31,170 --> 00:15:35,200
+I'm not sure how many
+characters I've got across actually but...
+
+179
+00:15:35,888 --> 00:15:38,920
+1234567890
+
+180
+00:15:41,392 --> 00:15:46,040
+Yes, it looks about right for the length
+of the line. That seems inaudible.
+
+181
+00:15:48,880 --> 00:15:51,840
+How about instead of this, I just print out the byte?
+JW: Yes.
+
+182
+00:15:53,344 --> 00:15:59,912
+So I'll skip that and just say print byte.to S
 
