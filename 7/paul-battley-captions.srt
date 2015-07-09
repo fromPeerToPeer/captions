@@ -785,3 +785,225 @@ JW: Yes.
 00:15:53,344 --> 00:15:59,912
 So I'll skip that and just say print byte.to S
 
+183
+00:16:02,648 --> 00:16:05,376
+That looks promising.
+
+184
+00:16:05,370 --> 00:16:13,376
+Hey, I can kind of see the shape. In fact if
+you squint maybe you can see the hands there.
+
+185
+00:16:13,384 --> 00:16:14,056
+JW: Yes.
+
+186
+00:16:14,050 --> 00:16:20,296
+PB: In fact if I did that to S16 inaudible and the same width.
+
+187
+00:16:20,290 --> 00:16:23,120
+that should give us an even better indication of ...
+
+188
+00:16:24,680 --> 00:16:27,336
+[laughter]
+
+189
+00:16:27,330 --> 00:16:31,016
+The zero is still there but you get the idea.
+
+190
+00:16:31,010 --> 00:16:32,744
+JW: There's an image in there somewhere.
+
+191
+00:16:33,010 --> 00:16:37,424
+PB: Yes, we can see something inaud and long, which is...
+
+192
+00:16:37,456 --> 00:16:44,368
+In fact, let's go back to that.
+
+193
+00:16:44,360 --> 00:16:49,312
+Now this makes me wonder... it's upside down isn't it?
+
+194
+00:16:49,310 --> 00:16:51,368
+JW: Oh yes...
+
+195
+00:16:51,360 --> 00:16:55,888
+PB: I think inaud is the case with
+bnp which is upside down.
+
+196
+00:16:56,408 --> 00:17:02,808
+But that doesn't matter for us, as long as it says
+our output is upside down, it should be fine.
+
+197
+00:17:04,360 --> 00:17:16,784
+OK so bytes are OK, bitmask is OK, let's just get rid of...
+
+198
+00:17:16,780 --> 00:17:19,848
+[Silence]
+
+199
+00:17:22,424 --> 00:17:26,288
+We'll get rid of that entirely
+and see what results we get.
+
+200
+00:17:26,280 --> 00:17:29,280
+[Silence]
+
+201
+00:17:30,728 --> 00:17:35,008
+OK that's a bunch of different things except...
+
+202
+00:17:35,000 --> 00:17:38,080
+[Silence]
+
+203
+00:17:39,400 --> 00:17:43,080
+Yes, I think that's right, the last row has...
+
+204
+00:17:45,672 --> 00:17:48,592
+There's a lot of white space at
+the top so we would expect...
+
+205
+00:17:49,368 --> 00:17:52,056
+This also means our inaud as well.
+
+206
+00:17:53,792 --> 00:17:56,928
+Again, as long as we're consistent that's fine.
+
+207
+00:17:59,816 --> 00:18:01,984
+OK so...
+
+208
+00:18:04,480 --> 00:18:12,672
+The easiest way of doing this then is
+to just say if it's zero, zero acts as one
+
+209
+00:18:13,120 --> 00:18:14,832
+Or rather...
+
+210
+00:18:14,830 --> 00:18:17,912
+[Silence]
+
+211
+00:18:24,920 --> 00:18:33,944
+Yes, I think that's modularly inaud shrink list. [Laughter]
+
+212
+00:18:33,968 --> 00:18:36,992
+[Silence]
+
+213
+00:18:37,208 --> 00:18:39,424
+JW: Awsome.
+
+214
+00:18:41,010 --> 00:18:48,320
+So... we know that we can get
+the bitmap in and in a format which,
+
+215
+00:18:48,328 --> 00:18:54,960
+whilst it might not look exactly how we
+want to see it - it seems to be flipped basically,
+
+216
+00:18:55,512 --> 00:19:01,088
+for the purpose of taking an image and
+processing it and exporting it again, that's fine.
+
+217
+00:19:03,064 --> 00:19:06,656
+JW: Looks like a good time to commit.
+PB Yes, I agree.
+
+218
+00:19:06,650 --> 00:19:09,696
+[Silence]
+
+219
+00:19:11,312 --> 00:19:15,376
+Don't know what I typed there... some junk... right.
+
+220
+00:19:15,370 --> 00:19:18,368
+[Silence]
+
+221
+00:19:21,310 --> 00:19:27,752
+That want's a simple BMP printer.
+
+222
+00:19:31,448 --> 00:19:41,768
+OK, now that we've got rid of
+that lot it would be nice to wrap this
+
+223
+00:19:42,136 --> 00:19:49,792
+in a method that we give a
+file and it gives us the bits.
+
+224
+00:19:49,790 --> 00:19:52,592
+[Paul thinks]
+
+225
+00:19:52,616 --> 00:19:55,680
+Yes, I think that would be good.
+
+226
+00:19:57,904 --> 00:20:02,056
+If I had a bunch of small test images,
+I would write some tests for this,
+
+227
+00:20:02,050 --> 00:20:09,744
+but given the size of the image... I don't know how easily if I can make a bnp inaud 
+
+228
+00:20:11,360 --> 00:20:16,664
+inaud def read bmp.
+
+229
+00:20:17,760 --> 00:20:22,352
+And inaud file object.
+
+230
+00:20:22,350 --> 00:20:25,696
+[Silence]
+
+231
+00:20:27,072 --> 00:20:30,568
+And... get it to take this stuff.
+
+232
+00:20:30,560 --> 00:20:33,568
+[Silence]
+
+233
+00:20:34,664 --> 00:20:39,424
+In fact I'm going to make a bnp file construct.
+
+234
+00:20:39,744 --> 00:20:44,304
+In fact, I will put something in
+class, I think that will be easier.
+
