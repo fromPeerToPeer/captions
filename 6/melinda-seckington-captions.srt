@@ -78,7 +78,7 @@ that question can be marked as resolved.
 18
 00:00:59,500 --> 00:01:04,688
 When someone has answered a question, they
-may view a summary of all answers to that question,.
+may view a summary of all answers to that question.
 
 19
 00:01:05,056 --> 00:01:06,670
@@ -154,7 +154,7 @@ MS: Yes.
 35
 00:01:59,530 --> 00:02:03,560
 DN: So that's what I thought we'd use as
-a sample data set for this challenge.
+a sample dataset for this challenge.
 
 36
 00:02:05,400 --> 00:02:10,720
@@ -172,12 +172,12 @@ because I'm familiar with those already.
 
 39
 00:02:21,210 --> 00:02:28,904
-Plus we've already got a very simple log in
-and log out system so that people can register.
+Plus we've already got a very simple login
+and logout system so that people can register.
 
 40
 00:02:30,870 --> 00:02:38,152
-So, basically if we go to the log in page.
+So, basically if we go to the login page.
 
 41
 00:02:38,248 --> 00:02:42,072
@@ -201,16 +201,16 @@ MS: Yes.
 
 46
 00:02:53,030 --> 00:02:53,872
-[They both talk at once]
+But it's not a brand new rails app.
 
 47
 00:02:53,870 --> 00:02:57,920
-DN: inaudible it already has a red
-register route and a log in route.
+DN: It already has a register route
+and a login route.
 
 48
 00:02:57,920 --> 00:02:59,920
-So if we go to log in again...
+So if we go to login again...
 
 49
 00:03:00,128 --> 00:03:04,904
@@ -224,16 +224,16 @@ you're logged in, it remembers you.
 
 51
 00:03:07,776 --> 00:03:10,248
-And, can you log out as well?
+And, can you logout as well?
 
 52
 00:03:10,240 --> 00:03:13,496
-MS: Yes, you just hit log out.
+MS: Yes, if you hit logout.
 
 53
 00:03:14,512 --> 00:03:18,736
 Which you can't really see but you
-can hit the log in page and log in again.
+can hit the login page and login again.
 
 54
 00:03:18,730 --> 00:03:22,272
@@ -298,7 +298,7 @@ Let's take the image.
 68
 00:04:28,600 --> 00:04:32,040
 DN: So the string is going to
-be a URL from where it listed it.
+be a URL for where it listed it.
 
 69
 00:04:32,040 --> 00:04:33,280
@@ -306,7 +306,7 @@ MS: Yes.
 
 70
 00:04:33,280 --> 00:04:35,592
-DN: In a public directory probably.
+DN: In the public directory probably.
 
 71
 00:04:37,220 --> 00:04:43,872
@@ -340,7 +340,7 @@ So we want to...
 
 78
 00:05:07,870 --> 00:05:12,904
-This can be used inaudible so that we can use db:seed.
+Basically use this seed file so that we can use db:seed.
 
 79
 00:05:13,200 --> 00:05:14,900
@@ -348,7 +348,7 @@ So I'll load that in.
 
 80
 00:05:16,224 --> 00:05:18,992
-So I want to use the seeds inaudible
+So I want to use the seeds file
 
 81
 00:05:18,990 --> 00:05:21,888
@@ -378,7 +378,7 @@ Let me just set up our questions.
 
 87
 00:05:43,528 --> 00:05:48,384
-So very simply we want to do question.create.
+So very simply we want to do Question.create.
 
 88
 00:05:48,380 --> 00:05:51,384
@@ -386,7 +386,7 @@ So very simply we want to do question.create.
 
 89
 00:05:55,960 --> 00:05:57,736
-Inaudible
+[Melinda thinks]
 
 90
 00:05:57,730 --> 00:06:00,744
@@ -399,7 +399,8 @@ before... image and... description.
 
 92
 00:06:09,904 --> 00:06:15,528
-That would be the very very simple way of inaudible it.
+That would be the very very simple
+way of setting it up.
 
 93
 00:06:15,520 --> 00:06:18,832
@@ -408,7 +409,7 @@ a little bit smarter I think.
 
 94
 00:06:22,136 --> 00:06:24,632
-Let's put the images is somewhere.
+Let's put the images somewhere.
 
 95
 00:06:24,630 --> 00:06:30,008
@@ -435,11 +436,11 @@ opinionated so I changed it to 'Animal 1', 'Animal 2'...
 
 100
 00:06:47,100 --> 00:06:49,704
-MS: Yes, let's just throw them in the public.
+MS: Yes, let's just throw them in public.
 
 101
 00:06:51,552 --> 00:06:56,360
-They'll maybe come up in a lesser place later
+Then maybe I'll come up with a nicer place later
 
 102
 00:06:56,360 --> 00:06:59,368
@@ -455,7 +456,7 @@ How do you loop through numbers again... times.
 
 105
 00:07:12,976 --> 00:07:14,920
-I'll double check the inaudible
+I'll double check that again
 
 106
 00:07:14,920 --> 00:07:18,272
@@ -480,12 +481,12 @@ DN: So you've got it searching rails documentation.
 
 111
 00:07:35,750 --> 00:07:40,728
-MS: Yes, it's a work flow that's called Dev Doctor.
+MS: Yes, it's a workflow that's called Dev Doctor.
 
 112
 00:07:40,720 --> 00:07:46,696
 And it's not just for rails, it's for most
-programming language that you can think of.
+programming languages that you can think of.
 
 113
 00:07:47,088 --> 00:07:48,216
@@ -497,11 +498,11 @@ MS: Yes, it's really handy.
 
 115
 00:07:52,120 --> 00:07:54,408
-Yes I was right.
+Yes, I was right.
 
 116
 00:07:54,400 --> 00:07:57,488
-I have to question myself sometimes.
+I shouldn't question myself sometimes.
 
 117
 00:07:57,480 --> 00:08:00,504
@@ -513,7 +514,7 @@ DN: Oh that's...
 
 119
 00:08:21,072 --> 00:08:25,056
-MS: Yes, sublime, like soup, try to open
+MS: Yes, sublime, likes to, try to open...
 
 120
 00:08:25,568 --> 00:08:28,752
@@ -534,7 +535,8 @@ MS: Yes.
 
 124
 00:09:08,210 --> 00:09:14,216
-I'm sure we can make this smarter, in the sense that...
+I'm not sure we can make this smarter,
+in the sense that...
 
 125
 00:09:15,968 --> 00:09:18,584
@@ -546,7 +548,7 @@ Well, I guess what we can do here is...
 
 127
 00:09:27,230 --> 00:09:29,728
-Which animal shall we actually have?
+Which animals do we actually have?
 
 128
 00:09:31,136 --> 00:09:32,752
@@ -554,11 +556,11 @@ DN: That's a good question.
 
 129
 00:09:32,750 --> 00:09:35,648
-Hedgehog, Squirrel , Goat...
+Hedgehog, Squirrel, Goat?
 
 130
 00:09:36,104 --> 00:09:38,736
-DN: Yes, let's Goat!
+DN: Yes, that's a Goat!
 
 131
 00:09:38,736 --> 00:09:40,730
@@ -632,12 +634,12 @@ So let's see...
 
 148
 00:11:30,280 --> 00:11:32,848
-We'll migrate first because
+We need to migrate first because
 we haven't done that before.
 
 149
 00:11:36,328 --> 00:11:38,928
-I only hope that this doesn't blow up.
+And I hope that this doesn't blow up.
 
 150
 00:11:38,920 --> 00:11:41,992
@@ -674,7 +676,7 @@ code that. It is a question.
 
 158
 00:12:22,240 --> 00:12:26,960
-DN: I could do that... so let's just delete them all again.
+DN: I just redo it... so let's just delete them all again.
 
 159
 00:12:27,010 --> 00:12:30,056
@@ -682,7 +684,7 @@ DN: I could do that... so let's just delete them all again.
 
 160
 00:12:33,530 --> 00:12:36,440
-MS: I'll just analyze the question inaudible.
+MS: I'll just add the question mark.
 
 161
 00:12:36,440 --> 00:12:39,472
@@ -718,7 +720,7 @@ MS: Yes, it is, I keep forgetting that.
 
 169
 00:13:29,184 --> 00:13:33,408
-We've got inaudible, seeds and then a question.
+We've got our schema, seeds and then a question.
 
 170
 00:13:33,400 --> 00:13:36,400
@@ -765,7 +767,7 @@ here's the question, and here are the buttons.
 
 180
 00:14:33,784 --> 00:14:35,808
-Here I guess we need to figure out,
+So, I guess we need to figure out,
 
 181
 00:14:37,296 --> 00:14:39,400
@@ -777,7 +779,7 @@ DN:I suppose we could have...
 
 183
 00:14:44,184 --> 00:14:48,792
-when the user logs in the route page
+when the user logs in the root page
 could be a list of questions to begin with,
 
 184
