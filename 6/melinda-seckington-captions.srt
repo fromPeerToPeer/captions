@@ -1,0 +1,3693 @@
+﻿1
+00:00:01,620 --> 00:00:03,632
+NARRATOR: Welcome to Peer to Peer,
+
+2
+00:00:03,632 --> 00:00:06,700
+where you can hone your
+skills by watching live coding videos.
+
+3
+00:00:08,128 --> 00:00:10,168
+Our guest today is Melinda Seckington.
+
+4
+00:00:11,190 --> 00:00:16,056
+She works as a Ruby developer
+at FutureLearn, a social learning platform.
+
+5
+00:00:16,990 --> 00:00:19,552
+Melinda co-organizes BarCap London,
+
+6
+00:00:19,560 --> 00:00:24,030
+and participates regularly in
+hack days, frequently winning them.
+
+7
+00:00:24,632 --> 00:00:26,968
+I'm your host, Drew Neil.
+
+8
+00:00:26,960 --> 00:00:29,600
+And the challenge that I set for Melinda is called...
+
+9
+00:00:29,624 --> 00:00:32,180
+Building a Mechanical Turk system.
+
+10
+00:00:33,992 --> 00:00:37,184
+DREW NEIL: So Melinda would you like
+to start by reading the challenge.
+
+11
+00:00:37,700 --> 00:00:39,368
+MELINDA SECKINGTON: Build a Mechanical Turk system.
+
+12
+00:00:39,368 --> 00:00:43,696
+It should poll people for answers to yes/no
+questions that are easily answered by humans
+
+13
+00:00:43,690 --> 00:00:45,288
+but not by machines.
+
+14
+00:00:45,280 --> 00:00:48,264
+If a certain number of people
+give the same answer to a question,
+
+15
+00:00:48,264 --> 00:00:51,710
+it's marked as resolved and
+polling for that question ceases.
+
+16
+00:00:51,710 --> 00:00:55,536
+If people give different answers to
+the same question, then polling will continue
+
+17
+00:00:55,530 --> 00:00:59,480
+until a consensus is reached and
+that question can be marked as resolved.
+
+18
+00:00:59,500 --> 00:01:04,688
+When someone has answered a question, they
+may view a summary of all answers to that question,.
+
+19
+00:01:05,056 --> 00:01:06,670
+DN: There's a little bit
+more to the question actually.
+
+20
+00:01:06,670 --> 00:01:10,192
+If you turn to the next page,
+I've provided a sample question.
+
+21
+00:01:11,728 --> 00:01:14,032
+MS: Is this a cat picture?
+
+22
+00:01:14,030 --> 00:01:17,456
+DN: So I think most human beings
+would have no trouble answering that.
+
+23
+00:01:17,480 --> 00:01:21,328
+Whereas it would be difficult to write
+a program to give the right answer there.
+
+24
+00:01:21,328 --> 00:01:25,648
+With more than 50% certainty.
+
+25
+00:01:26,600 --> 00:01:28,736
+And there's another question as well.
+
+26
+00:01:28,824 --> 00:01:30,824
+MS: Is this a squirrel picture?
+
+27
+00:01:30,820 --> 00:01:33,344
+I think I can say no.
+
+28
+00:01:33,760 --> 00:01:34,872
+DN: Right.
+
+29
+00:01:34,870 --> 00:01:38,504
+So that's the kind of question I
+thought we could be working with here.
+
+30
+00:01:39,440 --> 00:01:47,832
+I've provided about 6 animal pictures, so
+we can come up with a series of yes/no answers.
+
+31
+00:01:48,464 --> 00:01:51,144
+Sorry, I mean questions where it's a yes/no answer.
+
+32
+00:01:51,344 --> 00:01:53,840
+Most of them are going to be nonsense,
+
+33
+00:01:53,840 --> 00:01:57,536
+but for each picture there
+will be one correct answer.
+
+34
+00:01:57,536 --> 00:01:59,530
+MS: Yes.
+
+35
+00:01:59,530 --> 00:02:03,560
+DN: So that's what I thought we'd use as
+a sample data set for this challenge.
+
+36
+00:02:05,400 --> 00:02:10,720
+So, I haven't said which technology
+you have to use to build this system.
+
+37
+00:02:11,080 --> 00:02:13,352
+What would be your preference here?
+
+38
+00:02:14,008 --> 00:02:20,880
+For me it would be Ruby and Rails
+because I'm familiar with those already.
+
+39
+00:02:21,210 --> 00:02:28,904
+Plus we've already got a very simple log in
+and log out system so that people can register.
+
+40
+00:02:30,870 --> 00:02:38,152
+So, basically if we go to the log in page.
+
+41
+00:02:38,248 --> 00:02:42,072
+And hit the register button.
+
+42
+00:02:44,070 --> 00:02:47,096
+[Silence]
+
+43
+00:02:48,660 --> 00:02:49,696
+Now we're logged in.
+
+44
+00:02:49,690 --> 00:02:51,944
+DN: So it looks like a brand new rails app.
+
+45
+00:02:51,940 --> 00:02:53,032
+MS: Yes.
+
+46
+00:02:53,030 --> 00:02:53,872
+[They both talk at once]
+
+47
+00:02:53,870 --> 00:02:57,920
+DN: [inaud] it already has a red
+register route and a log in route.
+
+48
+00:02:57,920 --> 00:02:59,920
+So if we go to log in again...
+
+49
+00:03:00,128 --> 00:03:04,904
+You will be redirected to the main
+page because you're already logged in.
+
+50
+00:03:04,900 --> 00:03:07,576
+DN: So it can detect that
+you're logged in, it remembers you.
+
+51
+00:03:07,776 --> 00:03:10,248
+And, can you log out as well?
+
+52
+00:03:10,240 --> 00:03:13,496
+MS: Yes, you just hit log out.
+
+53
+00:03:14,512 --> 00:03:18,736
+Which you can't really see but you
+can hit the log in page and log in again.
+
+54
+00:03:18,730 --> 00:03:22,272
+So it's very very basic.
+
+55
+00:03:22,270 --> 00:03:25,464
+DN: Rudimentary... we don't even have passwords.
+
+56
+00:03:25,460 --> 00:03:28,424
+No its really basic.
+
+57
+00:03:28,420 --> 00:03:32,088
+DN: Well that's fine, that's not going to be
+an interesting part of this challenge I think.
+
+58
+00:03:32,080 --> 00:03:35,304
+[New Chapter]
+
+59
+00:03:35,576 --> 00:03:42,080
+MS: So, where to start.  It's a Mechanical
+Turk system so we've got people... users.
+
+60
+00:03:43,568 --> 00:03:49,304
+And we want to show each
+user the questions that we have.
+
+61
+00:03:50,680 --> 00:03:56,560
+So let's start with looking
+at creating these questions.
+
+62
+00:03:58,392 --> 00:04:02,080
+Each question will have an image.
+
+63
+00:04:02,620 --> 00:04:06,288
+That's showing us the cat picture.
+
+64
+00:04:08,320 --> 00:04:12,272
+Text, I guess, like... is this a cat picture
+
+65
+00:04:13,336 --> 00:04:15,856
+So I guess let's start there.
+
+66
+00:04:15,850 --> 00:04:18,824
+[Silence]
+
+67
+00:04:24,310 --> 00:04:27,056
+Let's take the image.
+
+68
+00:04:28,600 --> 00:04:32,040
+DN: So the string is going to
+be a URL from where it listed it.
+
+69
+00:04:32,040 --> 00:04:33,280
+MS: Yes.
+
+70
+00:04:33,280 --> 00:04:35,592
+DN: In a public directory probably.
+
+71
+00:04:37,220 --> 00:04:43,872
+Let's do... description.
+
+72
+00:04:45,416 --> 00:04:50,304
+And string as well, because we don't want that to be too long.
+
+73
+00:04:50,850 --> 00:04:55,912
+DN: So the challenge doesn't ask you to create
+an admin area where people can create questions,
+
+74
+00:04:55,912 --> 00:05:00,360
+We're going to pre-populate
+the system with some questions?
+
+75
+00:05:00,360 --> 00:05:02,072
+MS: Yes.
+
+76
+00:05:02,070 --> 00:05:04,016
+So we want to...
+
+77
+00:05:04,010 --> 00:05:07,016
+[Silence]
+
+78
+00:05:07,870 --> 00:05:12,904
+This can be used [inaud] so that we can use db:seed.
+
+79
+00:05:13,200 --> 00:05:14,900
+So I'll load that in.
+
+80
+00:05:16,224 --> 00:05:18,992
+So I want to use the seeds [inaud]
+
+81
+00:05:18,990 --> 00:05:21,888
+[Silence]
+
+82
+00:05:22,210 --> 00:05:29,424
+DN: So this is just a plain Ruby file. It will
+load the environments and then create models.
+
+83
+00:05:29,420 --> 00:05:30,016
+MS: Yes.
+
+84
+00:05:30,010 --> 00:05:33,496
+DN: And then you can
+execute this file with a rake task.
+
+85
+00:05:34,072 --> 00:05:35,632
+MS: Yes.
+
+86
+00:05:37,400 --> 00:05:40,104
+Let me just set up our questions.
+
+87
+00:05:43,528 --> 00:05:48,384
+So very simply we want to do question.create.
+
+88
+00:05:48,380 --> 00:05:51,384
+[Silence]
+
+89
+00:05:55,960 --> 00:05:57,736
+[Inaudible]
+
+90
+00:05:57,730 --> 00:06:00,744
+[Silence]
+
+91
+00:06:01,810 --> 00:06:09,904
+So we have, what did we say
+before... image and... description.
+
+92
+00:06:09,904 --> 00:06:15,528
+That would be the very very simple way of [inaud] it.
+
+93
+00:06:15,520 --> 00:06:18,832
+But we want to do something
+a little bit smarter I think.
+
+94
+00:06:22,136 --> 00:06:24,632
+Let's put the images is somewhere.
+
+95
+00:06:24,630 --> 00:06:30,008
+DN: Yes, I gave them to you with your challenge,
+but I don't think they're in your rails app yet.
+
+96
+00:06:30,000 --> 00:06:32,416
+MS: No they're not.
+
+97
+00:06:33,488 --> 00:06:38,528
+DN: When I first created these
+images, I named them dog.jpeg, cat.jpeg
+
+98
+00:06:38,520 --> 00:06:43,280
+And then I realised that was a little
+opinionated so I changed it to 'Animal 1', 'Animal 2'...
+
+99
+00:06:43,280 --> 00:06:47,104
+[Melinda thinks]
+
+100
+00:06:47,100 --> 00:06:49,704
+MS: Yes, let's just throw them in the public.
+
+101
+00:06:51,552 --> 00:06:56,360
+They'll maybe come up in a lesser place later
+
+102
+00:06:56,360 --> 00:06:59,368
+[Silence]
+
+103
+00:07:04,400 --> 00:07:07,016
+How do you loop through numbers again... times.
+
+104
+00:07:07,010 --> 00:07:10,016
+[Silence]
+
+105
+00:07:12,976 --> 00:07:14,920
+I'll double check the [inaud]
+
+106
+00:07:14,920 --> 00:07:18,272
+It would be Ruby times rather than...
+
+107
+00:07:18,270 --> 00:07:21,296
+[Silence]
+
+108
+00:07:26,270 --> 00:07:30,208
+DN: That's a great way of finding
+documentation, is that something to do with Alfred.
+
+109
+00:07:30,200 --> 00:07:32,160
+MS: Yes so...
+
+110
+00:07:32,160 --> 00:07:35,752
+DN: So you've got it searching rails documentation.
+
+111
+00:07:35,750 --> 00:07:40,728
+MS: Yes, it's a work flow that's called Dev Doctor.
+
+112
+00:07:40,720 --> 00:07:46,696
+And it's not just for rails, it's for most
+programming language that you can think of.
+
+113
+00:07:47,088 --> 00:07:48,216
+DN: Oh that's good.
+
+114
+00:07:48,210 --> 00:07:50,576
+MS: Yes, it's really handy.
+
+115
+00:07:52,120 --> 00:07:54,408
+Yes I was right.
+
+116
+00:07:54,400 --> 00:07:57,488
+I have to question myself sometimes.
+
+117
+00:07:57,480 --> 00:08:00,504
+[Silence]
+
+118
+00:08:19,250 --> 00:08:20,976
+DN: Oh that's...
+
+119
+00:08:21,072 --> 00:08:25,056
+MS: Yes, sublime, like soup, try to open
+
+120
+00:08:25,568 --> 00:08:28,752
+DN: A binary file.
+
+121
+00:08:30,880 --> 00:08:40,960
+DN: They could be called Animal-1.jpeg, Animal-2...
+I guess six times is going to be 0 to 5, isn't it?
+
+122
+00:08:40,960 --> 00:08:42,720
+MS: Yes.
+
+123
+00:08:42,720 --> 00:08:45,752
+[Silence]
+
+124
+00:09:08,210 --> 00:09:14,216
+I'm sure we can make this smarter, in the sense that...
+
+125
+00:09:15,968 --> 00:09:18,584
+Well, I guess what we can do here is...
+
+126
+00:09:18,580 --> 00:09:21,624
+[Silence]
+
+127
+00:09:27,230 --> 00:09:29,728
+Which animal shall we actually have?
+
+128
+00:09:31,136 --> 00:09:32,752
+DN: That's a good question.
+
+129
+00:09:32,750 --> 00:09:35,648
+Hedgehog, Squirrel , Goat...
+
+130
+00:09:36,104 --> 00:09:38,736
+DN: Yes, let's Goat!
+
+131
+00:09:38,736 --> 00:09:40,730
+MS: So...
+
+132
+00:09:40,730 --> 00:09:43,768
+[Silence]
+
+133
+00:10:06,110 --> 00:10:09,192
+Dog, Cat, Cow...
+
+134
+00:10:10,360 --> 00:10:15,056
+DN: You're definitely not a
+machine, you make that look easy.
+
+135
+00:10:15,050 --> 00:10:18,040
+[Silence]
+
+136
+00:10:46,000 --> 00:10:48,512
+So... I want to do that.
+
+137
+00:10:51,560 --> 00:10:54,496
+Two times.
+
+138
+00:10:55,232 --> 00:11:00,776
+So now what we then get is, for every single animal...
+
+139
+00:11:03,790 --> 00:11:08,576
+Basically for every image we create six questions
+
+140
+00:11:08,584 --> 00:11:12,792
+asking whether or not it's
+all the other animals as well.
+
+141
+00:11:12,790 --> 00:11:14,056
+DN: OK.
+
+142
+00:11:14,064 --> 00:11:15,480
+MS: So I think this should work.
+
+143
+00:11:15,480 --> 00:11:17,592
+DN: So we'll end up with 36.
+
+144
+00:11:17,752 --> 00:11:20,528
+MS: Yes, 36 questions.
+
+145
+00:11:21,800 --> 00:11:23,792
+DN: Where most of them are wrong answers.
+
+146
+00:11:23,808 --> 00:11:25,720
+MS: Yes.
+
+147
+00:11:26,608 --> 00:11:30,288
+So let's see...
+
+148
+00:11:30,280 --> 00:11:32,848
+We'll migrate first because
+we haven't done that before.
+
+149
+00:11:36,328 --> 00:11:38,928
+I only hope that this doesn't blow up.
+
+150
+00:11:38,920 --> 00:11:41,992
+[Silence]
+
+151
+00:11:47,640 --> 00:11:50,032
+36, how about that!
+
+152
+00:11:50,860 --> 00:11:56,400
+And then pluck all the...No, I don't call them URLs image.
+
+153
+00:11:59,200 --> 00:12:01,968
+We should have 6 of each of them.
+
+154
+00:12:01,960 --> 00:12:04,968
+[Silence]
+
+155
+00:12:09,140 --> 00:12:11,832
+DN: Is this a hedgehog, is this a squirrel, goat?
+
+156
+00:12:12,592 --> 00:12:15,088
+MS: And I forgot to put a question mark at the end.
+
+157
+00:12:16,950 --> 00:12:20,136
+DN: Well you could even hard
+code that. It is a question.
+
+158
+00:12:22,240 --> 00:12:26,960
+DN: I could do that... so let's just delete them all again.
+
+159
+00:12:27,010 --> 00:12:30,056
+[Silence]
+
+160
+00:12:33,530 --> 00:12:36,440
+MS: I'll just analyze the question [inaud].
+
+161
+00:12:36,440 --> 00:12:39,472
+[Silence]
+
+162
+00:12:56,340 --> 00:12:57,888
+There we go, that's nicer.
+
+163
+00:12:58,016 --> 00:12:59,880
+DN: That does look nice.
+
+164
+00:13:02,184 --> 00:13:05,840
+It feels like being in a car with a toddler. [laughter]
+
+165
+00:13:09,216 --> 00:13:16,568
+So next up is, we want to display these to a user.
+
+166
+00:13:16,560 --> 00:13:19,568
+[Melinda thinks]
+
+167
+00:13:20,696 --> 00:13:23,144
+DN: Is that worth a commit do you think?
+
+168
+00:13:23,140 --> 00:13:25,992
+MS: Yes, it is, I keep forgetting that.
+
+169
+00:13:29,184 --> 00:13:33,408
+We've got [inaud], seeds and then a question.
+
+170
+00:13:33,400 --> 00:13:36,400
+[Silence]
+
+171
+00:13:45,368 --> 00:13:48,600
+[New Chapter]
+
+172
+00:13:49,544 --> 00:13:53,424
+DN: OK, so we've got the question
+model, what do you want to do next?
+
+173
+00:13:55,360 --> 00:14:00,928
+MS: The next thing is
+displaying the questions to users.
+
+174
+00:14:01,456 --> 00:14:07,872
+So we want to, I guess, show the image and the question,
+
+175
+00:14:07,870 --> 00:14:10,384
+like... is this a hedgehog, is this a squirrel?
+
+176
+00:14:12,000 --> 00:14:14,920
+And then maybe not quite yet...
+
+177
+00:14:15,660 --> 00:14:21,032
+do the logic of allowing a user to answer yes or no.
+
+178
+00:14:21,390 --> 00:14:23,816
+but maybe creating fake buttons initially,
+
+179
+00:14:23,832 --> 00:14:32,080
+so we just display here's the image,
+here's the question, and here are the buttons.
+
+180
+00:14:33,784 --> 00:14:35,808
+Here I guess we need to figure out,
+
+181
+00:14:37,296 --> 00:14:39,400
+how does the user get to these?
+
+182
+00:14:42,696 --> 00:14:44,184
+DN:I suppose we could have...
+
+183
+00:14:44,184 --> 00:14:48,792
+when the user logs in the route page
+could be a list of questions to begin with,
+
+184
+00:14:49,160 --> 00:14:53,312
+and each item in the list
+would be a link to the question itself.
+
+185
+00:14:54,120 --> 00:14:57,312
+MS: Yes, that's probably the easiest way to do it.
+
+186
+00:14:58,784 --> 00:15:00,992
+OK, hmm...
+
+187
+00:15:03,624 --> 00:15:07,848
+So let's go to our route file and start with that.
+
+188
+00:15:10,344 --> 00:15:12,496
+So we...
+
+189
+00:15:12,490 --> 00:15:17,104
+basically we want the route
+of the page to be linked to the...
+
+190
+00:15:19,888 --> 00:15:21,424
+to our questions.
+
+191
+00:15:21,420 --> 00:15:24,072
+DN: So it's a questions index really.
+MS: Yes.
+
+192
+00:15:26,064 --> 00:15:31,008
+And we also want resources as questions.
+
+193
+00:15:32,580 --> 00:15:34,776
+Well, our questions to resources.
+
+194
+00:15:35,176 --> 00:15:37,584
+and then  I always like doing this...
+
+195
+00:15:38,736 --> 00:15:44,016
+To make sure that we are only
+influencing the actions that we are using,
+
+196
+00:15:44,160 --> 00:15:48,344
+rather than getting all 6 of
+them and leaving those in place.
+
+197
+00:15:49,032 --> 00:15:53,848
+DN: And in any case we don't want the
+system to allow you to create questions... not yet.
+
+198
+00:15:54,240 --> 00:15:57,504
+MS: No, so only the index can show for now.
+
+199
+00:16:00,544 --> 00:16:03,528
+So let's make our questions controller.
+
+200
+00:16:03,520 --> 00:16:06,544
+[Silence]
+
+201
+00:16:22,968 --> 00:16:25,664
+As I said before, we have index...
+
+202
+00:16:28,000 --> 00:16:29,368
+and show...
+
+203
+00:16:31,688 --> 00:16:35,104
+DN: I notice you use a rails
+generator when you're creating a model.
+
+204
+00:16:35,448 --> 00:16:38,528
+but not when creating a controller... is that normal?
+
+205
+00:16:38,992 --> 00:16:42,336
+Uhm... [Melinda thinks]
+
+206
+00:16:42,624 --> 00:16:45,440
+MS: I'm not sure I do that actually.
+
+207
+00:16:45,744 --> 00:16:50,024
+[Melinda thinks again]
+
+208
+00:16:50,020 --> 00:16:55,296
+Yes, I guess because I know
+exactly what comes back when I...
+
+209
+00:16:57,256 --> 00:17:00,800
+use generate model.
+
+210
+00:17:00,800 --> 00:17:05,728
+And I always feel that with generate
+controller I get more than I want.
+
+211
+00:17:05,752 --> 00:17:10,984
+DN: Yes, it generates the asset
+files, [inaud], JavaScripts and so on.
+
+212
+00:17:10,980 --> 00:17:13,400
+MS: Yes, normally it's like...
+
+213
+00:17:13,744 --> 00:17:17,680
+DN: More [inaud] that what you want.
+MS Yes.
+
+214
+00:17:18,136 --> 00:17:21,376
+And again I'm guessing there's an easier way
+
+215
+00:17:22,050 --> 00:17:27,232
+specify which things you exactly
+want when you generate the controller.
+
+216
+00:17:27,288 --> 00:17:31,944
+But.. I kind of like having a
+bit more control over it myself
+
+217
+00:17:31,952 --> 00:17:35,744
+and being able to see when I'm adding [inaud]
+
+218
+00:17:36,448 --> 00:17:37,272
+DN: Yes, sure.
+
+219
+00:17:37,270 --> 00:17:43,728
+MS: While with a model you
+get the rspec file, the user file and...
+
+220
+00:17:43,856 --> 00:17:47,376
+[The migration is not meant to be on there]
+
+221
+00:17:47,920 --> 00:17:50,248
+DN: So the model generator
+gives you exactly what you want,
+
+222
+00:17:50,264 --> 00:17:53,050
+and you think the controller
+generator gives you too much.
+
+223
+00:17:53,050 --> 00:17:55,600
+MS: Yes, pretty much. [Laughter]
+
+224
+00:17:55,608 --> 00:17:57,150
+DN: Yes, I can relate to that.
+
+225
+00:17:58,752 --> 00:18:02,560
+So let's create [inaudible] for that as well.
+
+226
+00:18:04,616 --> 00:18:07,120
+So questions.
+
+227
+00:18:08,016 --> 00:18:10,552
+And in here we have...
+
+228
+00:18:12,136 --> 00:18:14,352
+I'll have to say index.
+
+229
+00:18:14,350 --> 00:18:17,368
+[Silence]
+
+230
+00:18:25,760 --> 00:18:27,800
+It won't show.
+
+231
+00:18:29,608 --> 00:18:30,976
+So...
+
+232
+00:18:33,472 --> 00:18:37,176
+Index is going to grab all
+the questions that we have.
+
+233
+00:18:37,170 --> 00:18:40,168
+[Silence]
+
+234
+00:18:45,040 --> 00:18:46,664
+Here.
+
+235
+00:18:46,660 --> 00:18:48,472
+DN: That should be fine.
+
+236
+00:18:50,128 --> 00:18:55,944
+MS: I realise I never use the [inaud] because normally with so much more data...
+
+237
+00:18:56,088 --> 00:18:59,296
+DN: We don't need to patch anything.
+
+238
+00:18:59,620 --> 00:19:02,632
+[Silence]
+
+239
+00:19:19,576 --> 00:19:24,288
+MS: So let's just show the description first.
+
+240
+00:19:27,136 --> 00:19:29,944
+That should just show up here... No.
+
+241
+00:19:31,940 --> 00:19:34,944
+[Silence]
+
+242
+00:19:43,440 --> 00:19:45,280
+DN: Lovely.
+
+243
+00:19:45,376 --> 00:19:47,620
+MS: All the questions.
+
+244
+00:19:47,620 --> 00:19:50,040
+So let's make a little nicer.
+
+245
+00:19:50,050 --> 00:19:53,064
+[Silence]
+
+246
+00:20:12,392 --> 00:20:16,144
+And let's link to...
+
+247
+00:20:20,112 --> 00:20:22,360
+Now what do we call that?
+
+248
+00:20:22,360 --> 00:20:25,368
+[Silence]
+
+249
+00:20:28,328 --> 00:20:31,216
+[inaud]
+
+250
+00:20:31,220 --> 00:20:34,208
+[Silence]
+
+251
+00:20:42,760 --> 00:20:45,368
+So do we want to show the image on this page already?
+
+252
+00:20:45,368 --> 00:20:47,848
+DN: I think that would get a bit busy.
+
+253
+00:20:48,360 --> 00:20:52,744
+Maybe even you shouldn't show the text.
+
+254
+00:20:52,740 --> 00:20:55,616
+Maybe it should be like, question 1, question 2.
+
+255
+00:20:55,880 --> 00:20:58,176
+MS: Yes, we could even change it to that.
+
+256
+00:20:58,888 --> 00:21:01,416
+It makes it a bit more serious... what we're going to get.
+
+257
+00:21:01,410 --> 00:21:04,440
+[Silence]
+
+258
+00:21:05,600 --> 00:21:09,088
+DN: I guess they have IDs already
+don't they which will probably be sequential.
+
+259
+00:21:09,088 --> 00:21:11,080
+MS: Yes.
+
+260
+00:21:11,080 --> 00:21:14,088
+[Silence]
+
+261
+00:21:25,192 --> 00:21:31,816
+Yes, they are sequential but
+because we did the seed test twice,
+
+262
+00:21:32,608 --> 00:21:34,536
+they're not going to [inaud]
+
+263
+00:21:34,536 --> 00:21:36,530
+DN: That doesn't matter does it?
+MS: No.
+
+264
+00:21:36,856 --> 00:21:41,984
+But it might be nicer if
+they were, so we can do instead...
+
+265
+00:21:44,264 --> 00:21:46,600
+I'll just change this to...
+
+266
+00:21:47,496 --> 00:21:50,536
+each_with_index
+
+267
+00:21:51,456 --> 00:21:57,976
+It's for the user that we're displaying what
+question number it is, showing on the page itself.
+
+268
+00:21:57,970 --> 00:22:00,992
+[Silence]
+
+269
+00:22:02,584 --> 00:22:04,144
+Don't want to do it that way.
+
+270
+00:22:05,448 --> 00:22:08,288
+[Inaudible]
+
+271
+00:22:11,456 --> 00:22:12,648
+There we go.
+
+272
+00:22:12,640 --> 00:22:13,568
+DN: That looks good.
+
+273
+00:22:13,560 --> 00:22:16,368
+And maybe plus 1s that we don't have.
+
+274
+00:22:17,264 --> 00:22:19,024
+DN: Question zero.
+MS: Yes.
+
+275
+00:22:19,410 --> 00:22:23,408
+DN: Question zero "what is your
+name", my science teacher always did that.
+
+276
+00:22:24,568 --> 00:22:27,128
+MS: Yes mine didn't. [Laughter]
+
+277
+00:22:27,480 --> 00:22:31,488
+So, clicking on here won't do
+anything because we don't have a show yet.
+
+278
+00:22:32,670 --> 00:22:38,648
+We have a show, but I think we'll just leave it that way.
+
+279
+00:22:38,920 --> 00:22:40,640
+DN: Right.
+
+280
+00:22:42,144 --> 00:22:46,592
+MS: So on this page... [Melinda thinks]
+
+281
+00:22:48,768 --> 00:22:50,940
+Someone who grabbed a question.
+
+282
+00:22:50,940 --> 00:22:53,952
+[Silence]
+
+283
+00:23:11,384 --> 00:23:14,480
+Let's just [inaud] for now, plus the work.
+
+284
+00:23:15,616 --> 00:23:19,352
+Yes, it would if I did that [inaud]
+
+285
+00:23:22,496 --> 00:23:26,904
+[inaud] the description.
+
+286
+00:23:29,424 --> 00:23:30,768
+Is this a hedgehog.
+
+287
+00:23:34,260 --> 00:23:38,552
+I must look that up, I always forget.
+
+288
+00:23:38,550 --> 00:23:41,584
+[Silence]
+
+289
+00:23:54,440 --> 00:23:56,664
+Image_tag.
+
+290
+00:23:58,488 --> 00:23:59,952
+And then I can...
+
+291
+00:23:59,950 --> 00:24:02,944
+[Silence]
+
+292
+00:24:05,488 --> 00:24:07,120
+I'll say that first.
+
+293
+00:24:07,120 --> 00:24:10,144
+[Silence]
+
+294
+00:24:11,600 --> 00:24:13,872
+Its not called URL, it's called image.
+
+295
+00:24:15,936 --> 00:24:18,376
+DN: Ah... Close.
+
+296
+00:24:21,192 --> 00:24:23,824
+MS: So because we've put it in the public...
+
+297
+00:24:23,820 --> 00:24:27,296
+DN: Yes, is it assuming that
+it's in the assets directory?
+
+298
+00:24:27,290 --> 00:24:30,784
+MS: Yes, I think it is.
+
+299
+00:24:33,032 --> 00:24:35,624
+So let's move it to the assets directory.
+
+300
+00:24:35,620 --> 00:24:38,648
+[Silence]
+
+301
+00:24:48,576 --> 00:24:50,352
+DN: OK.
+
+302
+00:24:50,880 --> 00:24:55,064
+So this [inaud] work because we need to specify...
+
+303
+00:24:55,060 --> 00:24:58,096
+[Silence]
+
+304
+00:25:05,552 --> 00:25:07,696
+DN: I thought that assumption was built in?
+
+305
+00:25:11,360 --> 00:25:13,624
+MS: I'm not sure it is.
+
+306
+00:25:14,400 --> 00:25:17,696
+DN: Would it help to actually look at the HDL source?
+
+307
+00:25:17,690 --> 00:25:20,696
+[Silence]
+
+308
+00:25:23,648 --> 00:25:26,128
+DN: It's missing .jpeg.
+
+309
+00:25:27,776 --> 00:25:28,776
+MS: Yes, it is.
+
+310
+00:25:28,770 --> 00:25:34,072
+DN: In fact, did you move the images or
+copy them. Are they still in the public directory?
+
+311
+00:25:36,272 --> 00:25:38,424
+MS: I think I might have copied them... yes.
+
+312
+00:25:38,856 --> 00:25:42,304
+DN: Well that's good because
+that's where it's looking for them.
+
+313
+00:25:42,512 --> 00:25:44,928
+MS: So if we change this...
+
+314
+00:25:47,664 --> 00:25:49,904
+DN: Ah, there's no E.
+
+315
+00:25:50,920 --> 00:25:52,496
+That's it.
+
+316
+00:25:54,624 --> 00:26:00,112
+MS: We're not using that at
+all but just adding .jpeg behind it.
+
+317
+00:26:03,890 --> 00:26:09,176
+I guess I left that out during the seeds.
+
+318
+00:26:10,216 --> 00:26:13,520
+I didn't actually put that in.
+
+319
+00:26:13,520 --> 00:26:15,472
+DN: Regenerate them.
+MS: Yes.
+
+320
+00:26:15,920 --> 00:26:17,470
+[inaud]
+
+321
+00:26:17,470 --> 00:26:20,504
+[Silence]
+
+322
+00:26:29,392 --> 00:26:31,936
+Let's delete our previous ones.
+
+323
+00:26:31,940 --> 00:26:34,968
+[Silence]
+
+324
+00:26:46,472 --> 00:26:48,936
+DN: Oh, I think you left the quote.
+
+325
+00:26:48,930 --> 00:26:51,936
+[Silence]
+
+326
+00:26:55,440 --> 00:26:57,440
+There we go.
+
+327
+00:26:59,248 --> 00:27:01,328
+DN: Do you think the image is a bit big?
+
+328
+00:27:01,384 --> 00:27:03,016
+MS: Yes.
+
+329
+00:27:05,680 --> 00:27:10,024
+I think we could do that with
+size. Ah... just width and height.
+
+330
+00:27:11,576 --> 00:27:16,360
+I made use all the images are the same
+width, but they do vary slightly in height.
+
+331
+00:27:16,360 --> 00:27:18,936
+MS: Right, so let's set the width.
+
+332
+00:27:18,930 --> 00:27:21,928
+[Silence]
+
+333
+00:27:23,790 --> 00:27:26,256
+300... yes that looks good.
+
+334
+00:27:28,650 --> 00:27:30,744
+DN: That looks good.
+
+335
+00:27:31,088 --> 00:27:34,000
+MS: Let's clean this up a bit.
+
+336
+00:27:34,000 --> 00:27:37,048
+[Silence]
+
+337
+00:27:43,430 --> 00:27:46,824
+[They both speak at once]
+
+338
+00:27:46,820 --> 00:27:49,888
+[Silence]
+
+339
+00:27:51,104 --> 00:27:58,310
+DN: I guess the form with the yes/no answers would be [inaud].
+
+340
+00:27:58,450 --> 00:28:04,072
+MS: Here at the top let's add
+a link back to all the questions.
+
+341
+00:28:04,080 --> 00:28:07,088
+[Silence]
+
+342
+00:28:15,870 --> 00:28:17,776
+DN: OK.
+
+343
+00:28:17,776 --> 00:28:19,770
+MS: There we go.
+
+344
+00:28:19,770 --> 00:28:22,800
+[Silence]
+
+345
+00:28:29,024 --> 00:28:32,896
+DN: I'm sure some of them are [laughter].
+
+346
+00:28:34,528 --> 00:28:36,752
+Is that a good place to check in do you think?
+
+347
+00:28:36,928 --> 00:28:38,750
+MS: Yes.
+
+348
+00:28:42,712 --> 00:28:49,256
+So we don't actually need these,
+because in the end we did just find it.
+
+349
+00:28:49,250 --> 00:28:52,296
+[Silence]
+
+350
+00:28:55,190 --> 00:29:03,200
+So allow users to see questions.
+
+351
+00:29:03,200 --> 00:29:06,208
+[Silence]
+
+352
+00:29:08,320 --> 00:29:11,208
+[New Chapter]
+
+353
+00:29:12,392 --> 00:29:15,504
+DN: So I guess next we have the yes/no to do.
+
+354
+00:29:15,500 --> 00:29:22,648
+Would that be a yes button and a no button,
+or would it be a radio button with yes and no [inaud]?
+
+355
+00:29:22,640 --> 00:29:26,472
+[Melinda thinks]
+
+356
+00:29:26,470 --> 00:29:30,320
+MS: I think a radio button would be nicer.
+
+357
+00:29:32,544 --> 00:29:37,904
+How do we do that again? [laughter] Let's have a look.
+
+358
+00:29:39,216 --> 00:29:40,496
+[inaud]
+
+359
+00:29:40,490 --> 00:29:43,504
+[Silence]
+
+360
+00:30:14,880 --> 00:30:17,488
+DN: Now there's a thought, what is it a form for?
+
+361
+00:30:17,880 --> 00:30:21,400
+When we submit this form
+what actually happens in the system.
+
+362
+00:30:22,690 --> 00:30:26,616
+MS: Yes, so we haven't really looked at that yet.
+
+363
+00:30:26,970 --> 00:30:36,832
+But, I'm thinking we basically want a new
+level that lies between the questions and the users.
+
+364
+00:30:40,136 --> 00:30:44,360
+We could call it user
+questions but that seems wrong.
+
+365
+00:30:44,752 --> 00:30:46,880
+But, maybe just answers.
+
+366
+00:30:46,880 --> 00:30:51,496
+So an answers model that
+belongs to a user and to a question.
+
+367
+00:30:52,272 --> 00:30:54,120
+Let's leave that form for now.
+
+368
+00:30:54,120 --> 00:30:59,864
+[Melinda thinks]
+
+369
+00:30:59,860 --> 00:31:03,056
+So rails join...
+
+370
+00:31:05,944 --> 00:31:08,000
+This doesn't actually show anything.
+
+371
+00:31:08,000 --> 00:31:11,032
+[Silence]
+
+372
+00:31:30,992 --> 00:31:35,592
+Its weird, I know what I'm looking for
+but I don't know what words I'm looking for.
+
+373
+00:31:40,072 --> 00:31:47,200
+Is there a through keyword that you can use on, like...
+
+374
+00:31:47,744 --> 00:31:54,360
+to join the users to the
+questions through the join table?
+
+375
+00:31:54,360 --> 00:31:57,384
+[Silence]
+
+376
+00:32:00,696 --> 00:32:02,690
+That's maybe through.
+
+377
+00:32:02,690 --> 00:32:05,712
+[Silence]
+
+378
+00:32:13,030 --> 00:32:16,824
+DN: So in our case, appointments is like an answer,
+
+379
+00:32:16,888 --> 00:32:23,544
+physicians and patients are
+like users and questions, in a sense.
+
+380
+00:32:24,264 --> 00:32:26,120
+MS: Yes.
+
+381
+00:32:26,432 --> 00:32:29,240
+Yes, they are. [laughter]
+
+382
+00:32:32,180 --> 00:32:38,664
+I normally use the generate function to create this...
+
+383
+00:32:46,568 --> 00:32:53,880
+So we want announcer to have...
+
+384
+00:32:53,880 --> 00:32:57,728
+A [inaud] value for yes or no.
+
+385
+00:32:58,750 --> 00:33:01,784
+DN: Can we call it response perhaps.
+MS: Yes, that's a good idea.
+
+386
+00:33:01,800 --> 00:33:04,808
+[Silence]
+
+387
+00:33:09,310 --> 00:33:21,648
+And then we want it to belong to both
+the questions and to the (other one)...users.
+
+388
+00:33:23,792 --> 00:33:25,248
+DN: Do you want that comma?
+
+389
+00:33:25,240 --> 00:33:26,496
+MS: No you don't.
+
+390
+00:33:26,490 --> 00:33:29,512
+[Silence]
+
+391
+00:33:31,650 --> 00:33:34,592
+DN: I think if you do user, colon, reference...
+
+392
+00:33:34,590 --> 00:33:37,608
+[Silence]
+
+393
+00:33:43,330 --> 00:33:46,744
+Or it might be references, I don't quite remember.
+
+394
+00:33:46,740 --> 00:33:49,752
+[Silence]
+
+395
+00:34:09,840 --> 00:34:11,840
+MS: Yes, I just realised.
+
+396
+00:34:11,840 --> 00:34:14,856
+[Silence]
+
+397
+00:34:16,210 --> 00:34:17,808
+So we had a response, we have...
+
+398
+00:34:18,912 --> 00:34:22,776
+the relationship to the user and the
+question, and we don't' need anything else, right?
+
+399
+00:34:22,770 --> 00:34:24,864
+DN: No, that looks good.
+
+400
+00:34:24,860 --> 00:34:27,872
+[Silence]
+
+401
+00:34:35,920 --> 00:34:41,520
+Right so... your answer
+belongs to a user and a question.
+
+402
+00:34:44,072 --> 00:34:46,128
+So we just want to have...
+
+403
+00:34:49,272 --> 00:34:51,360
+answers...
+
+404
+00:34:51,360 --> 00:34:54,384
+[Silence]
+
+405
+00:34:58,430 --> 00:35:05,776
+Questions through answers,
+but also has any answers.
+
+406
+00:35:06,160 --> 00:35:07,800
+DN: Right.
+
+407
+00:35:07,800 --> 00:35:10,816
+[Silence]
+
+408
+00:35:13,630 --> 00:35:16,568
+See how many progressions this has.
+
+409
+00:35:16,560 --> 00:35:19,584
+[Silence]
+
+410
+00:35:20,410 --> 00:35:25,264
+And the answers this has... many.
+
+411
+00:35:25,744 --> 00:35:26,912
+Users...
+
+412
+00:35:26,910 --> 00:35:29,968
+[Silence]
+
+413
+00:35:39,696 --> 00:35:41,280
+DN: That looks good.
+
+414
+00:35:44,568 --> 00:35:46,944
+MS: So we now have that model.
+
+415
+00:35:50,608 --> 00:35:53,072
+DN: Is that worth a commit do you think?
+
+416
+00:35:54,200 --> 00:35:55,656
+Or is it not worth a commit?
+
+417
+00:35:55,650 --> 00:35:58,184
+MS: Ahh... maybe.
+
+418
+00:35:59,416 --> 00:36:03,192
+Yes, I think it is, its fallen off, but...
+
+419
+00:36:03,190 --> 00:36:06,192
+[Silence]
+
+420
+00:36:16,976 --> 00:36:20,328
+[New Chapter]
+
+421
+00:36:21,220 --> 00:36:27,896
+MS: Right, so I guess that next
+up is allowing users to click yes or no,
+
+422
+00:36:27,896 --> 00:36:31,568
+and then recording their response.
+
+423
+00:36:31,656 --> 00:36:38,670
+[Melinda thinks]
+
+424
+00:36:40,488 --> 00:36:44,608
+Do do this nicely we need...
+
+425
+00:36:45,056 --> 00:36:48,088
+one is an answers controller.
+
+426
+00:36:48,744 --> 00:36:50,376
+DN: Right.
+
+427
+00:36:50,470 --> 00:36:53,680
+MS: Which... all it does is create...
+
+428
+00:36:55,100 --> 00:37:00,504
+[well records], the yes or no answer.
+
+429
+00:37:03,480 --> 00:37:05,432
+So we can...
+
+430
+00:37:06,808 --> 00:37:11,400
+So... basically we want our answers to be...
+
+431
+00:37:11,400 --> 00:37:14,416
+[Silence]
+
+432
+00:37:16,088 --> 00:37:18,880
+I'm trying to think what is
+the best way of modeling this.
+
+433
+00:37:20,448 --> 00:37:24,528
+DN: If it was a nested resource, then the URL for
+
+434
+00:37:25,720 --> 00:37:31,064
+say you post [they both talk together]
+
+435
+00:37:31,544 --> 00:37:36,600
+MS: And we also know who the user
+is, because they're logged in.
+
+436
+00:37:37,400 --> 00:37:40,376
+[Inaudible]
+
+437
+00:37:40,370 --> 00:37:43,408
+[Silence]
+
+438
+00:37:56,760 --> 00:37:59,192
+So we only want new and create.
+
+439
+00:38:00,520 --> 00:38:02,800
+Maybe not even new,
+
+440
+00:38:03,640 --> 00:38:06,488
+Because we're not really displaying anything.
+
+441
+00:38:06,480 --> 00:38:11,936
+[Melinda thinks]
+
+442
+00:38:11,930 --> 00:38:19,128
+So let's create our... answers_controller.
+
+443
+00:38:19,140 --> 00:38:22,184
+[Silence]
+
+444
+00:38:37,120 --> 00:38:42,696
+What are we trying to do...
+have our show... so here we need to add...
+
+445
+00:38:42,930 --> 00:38:54,344
+a form for... an answer.
+
+446
+00:38:57,256 --> 00:38:59,416
+So here we need to create...
+
+447
+00:38:59,410 --> 00:39:02,488
+[Silence]
+
+448
+00:39:06,040 --> 00:39:08,176
+Answer from you.
+
+449
+00:39:08,320 --> 00:39:11,352
+[Melinda thinks]
+
+450
+00:39:21,080 --> 00:39:23,856
+So I want to do something similar...
+
+451
+00:39:23,850 --> 00:39:26,864
+[Silence]
+
+452
+00:39:42,952 --> 00:39:45,632
+I'm not completely sure about that anymore.
+
+453
+00:39:45,630 --> 00:39:48,696
+[Silence]
+
+454
+00:39:53,992 --> 00:39:56,392
+So question answers...
+
+455
+00:39:56,390 --> 00:39:59,408
+[Silence]
+
+456
+00:40:00,890 --> 00:40:03,392
+Alright, and then we wanted the...
+
+457
+00:40:06,120 --> 00:40:07,680
+radio button tag.
+
+458
+00:40:07,680 --> 00:40:19,088
+[Melinda looks for the radio button]
+
+459
+00:40:19,256 --> 00:40:21,256
+I'm pretty sure...
+
+460
+00:40:21,250 --> 00:40:24,280
+[Silence]
+
+461
+00:40:29,256 --> 00:40:32,520
+That's actually under public license... rails
+
+462
+00:40:34,008 --> 00:40:37,552
+form for radio buttons app.
+
+463
+00:40:37,550 --> 00:40:40,568
+[Silence]
+
+464
+00:40:54,000 --> 00:41:00,784
+DN: I suppose what we really want is add...
+I suppose one is true and one is false,
+
+465
+00:41:00,780 --> 00:41:05,096
+It's [inaud] that we say anything else, but the labels can say yes or no.
+
+466
+00:41:05,472 --> 00:41:10,288
+MS: Yes, so basically something like that.
+
+467
+00:41:11,728 --> 00:41:16,224
+So we want a radio button first.
+
+468
+00:41:17,632 --> 00:41:22,616
+Which... response, true.
+
+469
+00:41:24,552 --> 00:41:27,112
+And then a label for it.
+
+470
+00:41:27,110 --> 00:41:30,112
+[Silence]
+
+471
+00:41:46,488 --> 00:41:49,944
+False...
+
+472
+00:41:51,320 --> 00:41:52,504
+No.
+
+473
+00:41:53,880 --> 00:41:57,552
+So I think that should work... No it doesn't.
+
+474
+00:41:57,550 --> 00:41:59,832
+Oh... my [inaud].
+
+475
+00:41:59,830 --> 00:42:02,832
+[Silence]
+
+476
+00:42:19,048 --> 00:42:20,920
+DN: Right.
+
+477
+00:42:23,288 --> 00:42:25,790
+That looks nice./nMS Yes.
+
+478
+00:42:25,790 --> 00:42:34,144
+But we can't do anything with it
+yet, we've got to add the submit button.
+
+479
+00:42:34,140 --> 00:42:37,160
+[Silence]
+
+480
+00:42:41,140 --> 00:42:47,232
+DN: It's interesting that the default [inaud] by the text.
+
+481
+00:42:47,230 --> 00:42:48,728
+It sort of makes sense in this case.
+
+482
+00:42:48,720 --> 00:42:53,168
+MS: Yes, but we can change it.
+
+483
+00:42:54,192 --> 00:42:55,592
+No we cant, not like that.
+
+484
+00:42:55,590 --> 00:42:59,720
+DN: I think the comma may be needed.
+
+485
+00:43:01,392 --> 00:43:03,064
+MS: Yes.
+
+486
+00:43:03,288 --> 00:43:05,664
+Let's have a look, Oh yes it is.
+
+487
+00:43:08,176 --> 00:43:08,832
+DN: OK.
+
+488
+00:43:10,104 --> 00:43:12,616
+So is it hitting the right controller?
+
+489
+00:43:15,576 --> 00:43:17,064
+MS: Yes, it is.
+
+490
+00:43:17,064 --> 00:43:19,060
+DN: That looks good.
+
+491
+00:43:19,880 --> 00:43:24,024
+MS: We haven't actually put
+anything in the controller yet.
+
+492
+00:43:24,020 --> 00:43:26,216
+So we have answer.
+
+493
+00:43:26,210 --> 00:43:29,224
+[Silence]
+
+494
+00:43:46,504 --> 00:43:48,896
+So we require an answer.
+
+495
+00:43:50,672 --> 00:43:54,920
+And that should have a...
+
+496
+00:43:58,000 --> 00:44:00,208
+response.
+
+497
+00:44:00,200 --> 00:44:03,184
+[Silence]
+
+498
+00:44:10,850 --> 00:44:13,832
+DN: Don't you just pass in answer_params?
+
+499
+00:44:14,904 --> 00:44:17,592
+MS: Yes... Oh because we...
+
+500
+00:44:21,080 --> 00:44:23,632
+And then we [inaud]
+
+501
+00:44:23,664 --> 00:44:26,990
+[Silence]
+
+502
+00:44:27,080 --> 00:44:29,590
+I'm not sure that would be [inaud].
+
+503
+00:44:29,590 --> 00:44:29,800
+[Silence]
+I'm not sure that would be [inaud].
+
+504
+00:44:29,800 --> 00:44:34,792
+[Silence]
+
+505
+00:44:34,928 --> 00:44:41,936
+DN: So the user is known by the system,
+but it's not created in the format at the moment is it?
+
+506
+00:44:42,200 --> 00:44:43,930
+MS: No, the question will be.
+
+507
+00:44:45,424 --> 00:44:50,224
+DN: I suppose you could put the
+user ID in as a hidden field in the form.
+
+508
+00:44:51,088 --> 00:44:53,664
+And then it could be treated like the other fields.
+
+509
+00:44:53,984 --> 00:44:57,168
+MS: Yes, we can.
+
+510
+00:44:57,160 --> 00:45:06,400
+[Silence]
+
+511
+00:45:06,752 --> 00:45:08,688
+So just hidden filed tag... yes this.
+
+512
+00:45:08,680 --> 00:45:18,648
+[Silence]
+
+513
+00:45:19,440 --> 00:45:24,632
+DN: It is a thought... do we have a current user?
+
+514
+00:45:26,460 --> 00:45:28,592
+MS: I'm not sure.
+
+515
+00:45:29,560 --> 00:45:32,128
+I don't think we do.
+
+516
+00:45:32,120 --> 00:45:35,752
+DN: We have a logged in method
+but not a current user method.
+
+517
+00:45:36,312 --> 00:45:38,480
+MS: No, so let's create that.
+
+518
+00:45:38,512 --> 00:45:55,912
+[Silence]
+
+519
+00:45:56,300 --> 00:45:58,848
+[inaud] and session.
+
+520
+00:45:58,896 --> 00:46:01,824
+[Silence]
+
+521
+00:46:05,648 --> 00:46:08,072
+MS: That should work.
+
+522
+00:46:08,070 --> 00:46:29,648
+[Silence]
+
+523
+00:46:29,976 --> 00:46:31,920
+DN: Answer, that's interesting.
+
+524
+00:46:31,920 --> 00:46:35,288
+[Silence]
+
+525
+00:46:35,584 --> 00:46:38,136
+So they've all got [inaud].
+
+526
+00:46:40,432 --> 00:46:44,656
+DN: User is empty, and response is true
+which is good because you clicked yes.
+
+527
+00:46:45,168 --> 00:46:47,312
+MS: And the question ID is right.
+
+528
+00:46:49,064 --> 00:46:51,912
+But somehow...
+
+529
+00:46:51,910 --> 00:46:56,328
+DN: Maybe it's because... when you call radio button tag...
+
+530
+00:46:57,328 --> 00:47:00,264
+it doesn't put it inside of a form object does it?
+
+531
+00:47:00,260 --> 00:47:04,024
+Wheras if you put f.radio button...
+
+532
+00:47:04,020 --> 00:47:21,624
+[Silence]
+
+533
+00:47:21,620 --> 00:47:26,224
+DN: Instead of radio button tag,
+I think you can just say radio button.
+
+534
+00:47:26,220 --> 00:47:41,456
+[Silence]
+
+535
+00:47:43,304 --> 00:47:46,792
+MS: Oh actually, we were calling that anyway.
+
+536
+00:47:46,800 --> 00:47:52,824
+[Melinda thinks]
+
+537
+00:47:53,392 --> 00:47:55,144
+So current user.
+
+538
+00:47:55,140 --> 00:48:14,416
+[Silence]
+
+539
+00:48:14,496 --> 00:48:16,776
+DN: Couldn't find user with ID.
+
+540
+00:48:16,770 --> 00:48:20,672
+[Silence]
+
+541
+00:48:20,776 --> 00:48:23,040
+DN: Are we actually logged in at the moment?
+
+542
+00:48:26,264 --> 00:48:28,376
+MS: I thought we were.
+
+543
+00:48:30,368 --> 00:48:33,024
+No we're not, that explains it.
+
+544
+00:48:33,020 --> 00:48:44,136
+[Silence]
+
+545
+00:48:44,376 --> 00:48:47,256
+DN: I wonder, should the hidden field be user ID?
+
+546
+00:48:49,104 --> 00:48:50,848
+MS: Yes.
+
+547
+00:48:51,928 --> 00:48:54,048
+That's most probably better.
+
+548
+00:48:54,040 --> 00:49:13,192
+[Silence]
+
+549
+00:49:13,528 --> 00:49:15,832
+I think there's something wrong here.
+
+550
+00:49:15,830 --> 00:49:33,000
+[Silence]
+
+551
+00:49:33,360 --> 00:49:35,504
+DN: What is it calling merge anyway?
+
+552
+00:49:38,712 --> 00:49:40,960
+We're up to 73.
+
+553
+00:49:43,896 --> 00:49:46,464
+MS: Well that's because...
+
+554
+00:49:48,304 --> 00:49:50,736
+that's the only pre answer it has.
+
+555
+00:49:52,936 --> 00:49:54,904
+But, I'm going to find...
+
+556
+00:49:54,900 --> 00:50:10,128
+[Silence]
+
+557
+00:50:10,464 --> 00:50:12,896
+So our ID is 2.
+
+558
+00:50:16,496 --> 00:50:19,176
+So let's actually just try to...
+
+559
+00:50:19,170 --> 00:50:23,528
+[Silence]
+
+560
+00:50:23,896 --> 00:50:29,840
+look if we can get the current
+user ID. Does that part even work?
+
+561
+00:50:33,816 --> 00:50:37,440
+So it finds current user ID.
+
+562
+00:50:38,384 --> 00:50:40,736
+DN: So it is finding that OK?
+MS: Yes.
+
+563
+00:50:42,944 --> 00:50:49,360
+DN: I wonder, what if we were
+to hard code hidden field to user 2.
+
+564
+00:50:49,384 --> 00:50:53,528
+[Silence]
+
+565
+00:50:53,520 --> 00:50:58,552
+DN: So it's not a problem
+with current user method is it?
+
+566
+00:50:58,976 --> 00:51:02,240
+It's something about the
+way we're calling hidden field.
+
+567
+00:51:02,240 --> 00:51:05,368
+Should it be user ID rather than user?
+
+568
+00:51:05,360 --> 00:51:08,432
+MS: But we tried that... even that.
+
+569
+00:51:11,536 --> 00:51:14,240
+So there's something...
+
+570
+00:51:14,240 --> 00:51:20,400
+[Silence]
+
+571
+00:51:20,496 --> 00:51:24,928
+for and [inaud]
+
+572
+00:51:24,976 --> 00:51:32,888
+[Silence]
+
+573
+00:51:33,248 --> 00:51:35,936
+So it was a form for that we're using.
+
+574
+00:51:35,930 --> 00:51:48,856
+[Silence]
+
+575
+00:51:49,184 --> 00:51:51,880
+DN: Do we need to say value?
+
+576
+00:51:53,512 --> 00:51:55,768
+MS: Yes.
+
+577
+00:51:55,760 --> 00:52:10,416
+[Silence]
+
+578
+00:52:12,264 --> 00:52:15,024
+So now feed it 'yes'.
+
+579
+00:52:16,010 --> 00:52:19,600
+DN: Excellent, so finally
+we are hitting out controller.
+
+580
+00:52:22,920 --> 00:52:30,368
+MS: Yes, and then in the controller, we don't need that,
+
+581
+00:52:31,088 --> 00:52:37,920
+because we've got question ID and user ID.
+
+582
+00:52:37,920 --> 00:52:46,776
+[Silence]
+
+583
+00:52:46,952 --> 00:52:49,344
+So where's that [inaud] create?
+
+584
+00:52:52,392 --> 00:52:54,520
+[Inaud] that.
+
+585
+00:52:54,520 --> 00:53:04,448
+[Silence]
+
+586
+00:53:04,648 --> 00:53:06,440
+I think that works.
+
+587
+00:53:08,360 --> 00:53:12,144
+Oh, they're there because we
+don't have a template [inaud]
+
+588
+00:53:13,340 --> 00:53:16,448
+If not [inaud].
+
+589
+00:53:18,456 --> 00:53:19,488
+DN: Excellent.
+
+590
+00:53:19,584 --> 00:53:23,240
+MS: Sort of, except the question ID.
+
+591
+00:53:23,800 --> 00:53:26,464
+DN: But the response is nil and the user ID is nil.
+
+592
+00:53:27,048 --> 00:53:30,504
+DN: So something is not matching up there.
+
+593
+00:53:30,500 --> 00:53:33,304
+[Silence]
+
+594
+00:53:35,240 --> 00:53:40,064
+MS: So why would it only set the question ID?
+
+595
+00:53:40,060 --> 00:53:43,736
+[Silence]
+
+596
+00:53:45,752 --> 00:53:51,000
+DN: You know how before
+you had params.require_answer?
+
+597
+00:53:51,336 --> 00:53:54,600
+And then you kept it require answer.
+
+598
+00:53:54,744 --> 00:53:56,880
+I didn't quite follow why you did that.
+
+599
+00:53:59,696 --> 00:54:03,360
+MS: That was because, looking at the params,
+
+600
+00:54:03,360 --> 00:54:08,864
+it didn't seem as if answer was actually being [inaud].
+
+601
+00:54:09,496 --> 00:54:14,056
+DN: But then you also changed
+the form, and got rid of... what was it...
+
+602
+00:54:14,090 --> 00:54:19,056
+it was, some of the parameters were
+inside a create object, weren't they?
+
+603
+00:54:19,440 --> 00:54:22,120
+If you got rid of 'as created' there...
+
+604
+00:54:23,456 --> 00:54:25,720
+MS: OK yes.
+
+605
+00:54:25,952 --> 00:54:27,336
+DN: Ah, that did work.
+
+606
+00:54:27,330 --> 00:54:27,752
+MS: Yes,
+
+607
+00:54:27,750 --> 00:54:30,088
+DN:  Ah, the question ID is nil.
+
+608
+00:54:31,400 --> 00:54:32,280
+MS: Yes.
+
+609
+00:54:32,280 --> 00:54:34,280
+DN: Oh that's fine.
+
+610
+00:54:37,712 --> 00:54:43,528
+So the question ID is coming from the
+URL, so it's not scoped inside of the answer.
+
+611
+00:54:44,552 --> 00:54:48,696
+MS: So the other way of doing
+it is adding another hidden field.
+
+612
+00:54:49,040 --> 00:54:51,864
+DN: Ah, well now you will have to do that.
+
+613
+00:54:54,104 --> 00:54:57,584
+MS: I'm sure there's a neater
+way of doing this, but for now...
+
+614
+00:54:57,580 --> 00:55:01,192
+[Silence]
+
+615
+00:55:05,792 --> 00:55:09,024
+So let's delete the ones that we have so far.
+
+616
+00:55:09,020 --> 00:55:12,448
+[Silence]
+
+617
+00:55:14,600 --> 00:55:18,008
+So now I say yes and submit.
+
+618
+00:55:18,016 --> 00:55:21,032
+[Silence]
+
+619
+00:55:23,040 --> 00:55:24,216
+So now it's all set.
+
+620
+00:55:24,216 --> 00:55:26,210
+DN: Ah, excellent.
+
+621
+00:55:27,640 --> 00:55:30,504
+MS: Now... we still don't show anything.
+
+622
+00:55:31,520 --> 00:55:41,152
+So... at the end of this let's redirect... back to...
+
+623
+00:55:42,184 --> 00:55:47,664
+DN: Where did we end up...
+well I guess we could just go back to the...
+
+624
+00:55:48,064 --> 00:55:50,968
+page for the question we just answered.
+
+625
+00:55:50,960 --> 00:55:54,848
+But this time instead of showing
+a form [they both talk together].
+
+626
+00:55:55,280 --> 00:55:57,200
+all answers to that question so far.
+
+627
+00:55:57,208 --> 00:56:00,790
+MS: Yes, so that's...
+
+628
+00:56:03,224 --> 00:56:06,424
+That's question path.
+
+629
+00:56:06,420 --> 00:56:09,568
+[Silence]
+
+630
+00:56:15,552 --> 00:56:17,808
+Let's go back here.
+
+631
+00:56:18,780 --> 00:56:21,304
+DN: That's probably worth committing isn't it?
+
+632
+00:56:23,488 --> 00:56:28,976
+MS: Almost, I have another thing just here with...
+
+633
+00:56:29,992 --> 00:56:32,296
+If you haven't, or maybe not...
+
+634
+00:56:32,424 --> 00:56:38,592
+I was thinking... if you have already
+answered the question, don't show the form.
+
+635
+00:56:38,712 --> 00:56:41,744
+DN: Maybe we could do that in the next commit.
+
+636
+00:56:41,740 --> 00:56:44,536
+[Silence]
+
+637
+00:56:46,632 --> 00:56:51,352
+MS: So what have we done
+here... we're basically allowing
+
+638
+00:56:51,350 --> 00:56:54,720
+[Silence]
+
+639
+00:56:55,850 --> 00:57:00,328
+Allow user to answer questions.
+
+640
+00:57:02,968 --> 00:57:06,232
+[New Chapter]
+
+641
+00:57:07,808 --> 00:57:12,032
+DN: So we've now got the ability to answer a question.
+MS Yes.
+
+642
+00:57:12,680 --> 00:57:17,136
+How about we now tackle
+the part of the challenge where
+
+643
+00:57:17,130 --> 00:57:22,960
+if you answered a question, you can view a
+summary of all the responses to that question.
+
+644
+00:57:22,976 --> 00:57:29,344
+MS: Yes, so basically we've already answered
+this and we don't want to display it anymore.
+
+645
+00:57:30,550 --> 00:57:36,240
+So let's add a [inaud] statement here.
+
+646
+00:57:39,640 --> 00:57:42,840
+So here...
+
+647
+00:57:42,848 --> 00:57:45,696
+[Silence]
+
+648
+00:57:46,800 --> 00:57:55,640
+rather than saying .new let's do a find_or_create.
+
+649
+00:57:55,664 --> 00:57:58,776
+[Silence]
+
+650
+00:58:05,424 --> 00:58:09,112
+So where user is the current user.
+
+651
+00:58:10,816 --> 00:58:18,592
+and question...
+
+652
+00:58:18,590 --> 00:58:21,712
+[silence]
+
+653
+00:58:23,400 --> 00:58:25,640
+I think this should work.
+
+654
+00:58:26,056 --> 00:58:32,792
+DN: Right, so if the user hasn't answered
+this question then it will generate a new one.
+
+655
+00:58:32,816 --> 00:58:33,368
+MS: Yes.
+
+656
+00:58:33,360 --> 00:58:38,784
+DN: In which all fields will be empty...
+apart from user and question.
+
+657
+00:58:39,056 --> 00:58:40,824
+I guess the response field will be empty.
+
+658
+00:58:40,820 --> 00:58:45,104
+MS: Yes, and the response field
+is the one we care about right now.
+
+659
+00:58:45,100 --> 00:58:52,840
+DN: Whereas if it can find one, the response
+field will be true or false, rather than nil.
+
+660
+00:58:52,840 --> 00:58:54,760
+MS: Yes.
+
+661
+00:58:54,760 --> 00:59:04,272
+So now if we do answer.response.present.
+
+662
+00:59:05,392 --> 00:59:08,136
+[inaud] nope.
+
+663
+00:59:10,864 --> 00:59:13,176
+DN: Ah, there's no find or create.
+
+664
+00:59:13,170 --> 00:59:19,464
+[Silence]
+
+665
+00:59:19,464 --> 00:59:21,460
+MS: Create by.
+
+666
+00:59:21,460 --> 00:59:24,496
+[Silence]
+
+667
+00:59:31,304 --> 00:59:33,016
+There we go.
+
+668
+00:59:33,712 --> 00:59:35,664
+DN: Ah excellent.
+
+669
+00:59:37,160 --> 00:59:39,568
+MS: Well no because we already answered this.
+
+670
+00:59:39,560 --> 00:59:41,344
+DN: [inaud] branch of the 'if'.
+
+671
+00:59:41,340 --> 00:59:48,640
+So we're asking, "if present" and...
+
+672
+00:59:49,160 --> 00:59:51,664
+MS: Then we're showing a form for actually...
+
+673
+00:59:53,840 --> 00:59:56,504
+MS: So in that case... yes.
+
+674
+00:59:56,848 --> 01:00:00,072
+DN: So in there we should have some kind of a summary.
+
+675
+01:00:00,080 --> 01:00:03,432
+[Silence]
+
+676
+01:00:08,608 --> 01:00:10,424
+MS: Yeah...
+
+677
+01:00:12,160 --> 01:00:15,744
+Let's make this nicer and do here...
+
+678
+01:00:15,832 --> 01:00:18,856
+[Silence]
+
+679
+01:00:52,480 --> 01:00:54,792
+DN: Right.
+
+680
+01:00:54,790 --> 01:00:57,840
+[Silence]
+
+681
+01:01:12,000 --> 01:01:18,048
+MS: I have a feeling one or
+two or these are... that one, yes.
+
+682
+01:01:18,040 --> 01:01:20,928
+DN: Because its a method call isn't it... a macro.
+
+683
+01:01:20,920 --> 01:01:23,896
+[Silence]
+
+684
+01:01:38,096 --> 01:01:40,312
+DN: Nice.
+
+685
+01:01:42,530 --> 01:01:47,464
+MS: Yes, what do you want to
+show here, a summary of what's been...
+
+686
+01:01:47,536 --> 01:01:50,936
+DN: I was thinking it could be...
+
+687
+01:01:54,120 --> 01:01:59,408
+Let's say the system has 100 users and
+80 of them have answered this question,
+
+688
+01:01:59,400 --> 01:02:04,856
+It could be something like,
+79 people said yes and 1 person said no,
+
+689
+01:02:04,850 --> 01:02:07,944
+[Drew thinks]
+
+690
+01:02:10,040 --> 01:02:14,280
+Or it could be a percentage
+rather than actual numbers...
+
+691
+01:02:14,280 --> 01:02:18,096
+MS: Yes, well we could play
+around with that a bit I guess.
+
+692
+01:02:18,090 --> 01:02:21,192
+So let's create...
+
+693
+01:02:21,190 --> 01:02:24,192
+[Silence]
+
+694
+01:02:30,680 --> 01:02:36,232
+I am not happy with the names, but they can do for now.
+
+695
+01:02:36,230 --> 01:02:39,272
+[Silence]
+
+696
+01:03:04,784 --> 01:03:06,800
+We'll do this on the where line first.
+
+697
+01:03:07,696 --> 01:03:11,976
+So our questions...
+
+698
+01:03:13,544 --> 01:03:15,592
+Let's do our first one.
+
+699
+01:03:15,624 --> 01:03:18,440
+[Silence]
+
+700
+01:03:19,464 --> 01:03:29,016
+So I should have one answer...
+two answers, two times true.
+
+701
+01:03:29,010 --> 01:03:31,016
+[Silence]
+
+702
+01:03:39,970 --> 01:03:42,248
+DN: Ah... that's nice.
+
+703
+01:03:43,440 --> 01:03:45,880
+MS: And then false.
+
+704
+01:03:45,880 --> 01:03:48,792
+[Silence]
+
+705
+01:03:57,080 --> 01:04:01,736
+The only problem with this is we
+don't know what the question is.
+
+706
+01:04:01,730 --> 01:04:04,656
+[inaud] extracts.
+
+707
+01:04:04,650 --> 01:04:07,664
+[Silence]
+
+708
+01:04:37,488 --> 01:04:39,448
+DN: Oh I see.
+
+709
+01:04:39,440 --> 01:04:43,456
+MS: It's not the most optimal
+because it keeps on doing this.
+
+710
+01:04:45,064 --> 01:04:47,224
+Yes, we can actually...
+
+711
+01:04:48,136 --> 01:04:49,808
+DN: Ah yes, memoise it.
+
+712
+01:04:49,800 --> 01:04:51,488
+MS: Yes.
+
+713
+01:04:53,368 --> 01:04:54,808
+DN: Alright.
+
+714
+01:04:54,800 --> 01:04:57,776
+[Silence]
+
+715
+01:04:59,192 --> 01:05:01,256
+MS: [Inaudible]
+
+716
+01:05:05,080 --> 01:05:06,520
+So now we have...
+
+717
+01:05:06,520 --> 01:05:09,496
+DN: I spotted another one on line 5 there.
+
+718
+01:05:13,576 --> 01:05:15,168
+MS: Yes...
+
+719
+01:05:15,248 --> 01:05:17,536
+Responses_count.
+
+720
+01:05:17,530 --> 01:05:20,512
+[Silence]
+
+721
+01:05:24,144 --> 01:05:25,920
+So we have 2 and zero.
+
+722
+01:05:26,280 --> 01:05:28,680
+DN: Two nil. [laughter]
+
+723
+01:05:29,432 --> 01:05:31,960
+Let's just [inaud] a little bit.
+
+724
+01:05:31,960 --> 01:05:34,832
+[Silence]
+
+725
+01:05:53,552 --> 01:05:55,360
+DN: It looks good.
+
+726
+01:05:56,920 --> 01:05:58,752
+MS: Simple, but...
+
+727
+01:06:00,008 --> 01:06:02,032
+DN: Is that worth a commit do you think?
+
+728
+01:06:03,112 --> 01:06:06,784
+MS: Yes, certainly, it's not a big commit but...
+
+729
+01:06:06,780 --> 01:06:09,824
+[Silence]
+
+730
+01:06:20,080 --> 01:06:23,344
+[New Chapter]
+
+731
+01:06:24,016 --> 01:06:28,888
+DN: So how about we go back to the
+question and look at what we've still got to cover.
+
+732
+01:06:30,952 --> 01:06:36,080
+MS: So we've got the first bit,
+allowing people to answer yes or no.
+
+733
+01:06:36,080 --> 01:06:41,224
+And we've got the last bit where we see
+the summary of how people have answered.
+
+734
+01:06:41,224 --> 01:06:46,696
+We're missing the middle bit
+where questions get reserved
+
+735
+01:06:46,690 --> 01:06:50,512
+after a certain amount of answers.
+
+736
+01:06:50,510 --> 01:06:58,224
+DN: Yes, the way I phrased that,
+it was to give you the chance
+
+737
+01:06:58,224 --> 01:07:02,120
+to suggest how we might implement that.
+
+738
+01:07:02,120 --> 01:07:05,160
+So let's talk through some scenarios.
+
+739
+01:07:05,592 --> 01:07:10,120
+MS: I guess the most basic one
+is just to have a threshold of
+
+740
+01:07:10,120 --> 01:07:14,384
+the number of people that we want to have answered.
+
+741
+01:07:14,592 --> 01:07:17,424
+So it could be as simple as...
+
+742
+01:07:17,420 --> 01:07:19,488
+If 10 people answered this question,
+
+743
+01:07:19,496 --> 01:07:23,560
+it doesn't matter what they
+answered, the question is resolved.
+
+744
+01:07:24,928 --> 01:07:28,584
+But what you might get then is that
+5 people said yes and 5 people said no.
+
+745
+01:07:28,580 --> 01:07:32,448
+And that's not really a satisfying answer.
+
+746
+01:07:32,440 --> 01:07:33,296
+DN: Not a consensus.
+
+747
+01:07:33,296 --> 01:07:35,290
+MS: Yes.
+
+748
+01:07:35,850 --> 01:07:45,600
+So one step further would be to look
+at when has the majority answered the same answer.
+
+749
+01:07:45,600 --> 01:07:47,600
+DN: Yes.
+
+750
+01:07:48,120 --> 01:07:50,440
+MS: One way of doing that is...
+
+751
+01:07:50,776 --> 01:07:58,890
+Maybe still using a fresh hole so we at
+least have a certain amount of people answering.
+
+752
+01:07:59,640 --> 01:08:01,504
+Maybe 20.
+
+753
+01:08:01,712 --> 01:08:02,360
+DN: OK.
+
+754
+01:08:02,360 --> 01:08:05,952
+MS: So let's say we need to have at least 20 answers.
+
+755
+01:08:06,720 --> 01:08:10,816
+Of which 90% need to be the same.
+
+756
+01:08:10,810 --> 01:08:15,928
+DN: Yes, I,m not well versed in
+statistics but to me that sounds good.
+
+757
+01:08:15,920 --> 01:08:20,832
+MS: [laughter] good enough for this type of system yes.
+
+758
+01:08:21,288 --> 01:08:23,848
+Erm... yeah.
+
+759
+01:08:24,976 --> 01:08:27,312
+So how do we want to do this?
+
+760
+01:08:30,136 --> 01:08:37,088
+DN: So if we were to say a
+threshold, as you say, it could be 20
+
+761
+01:08:37,170 --> 01:08:41,000
+Or, since we don't have much
+data to play with, it could be 3.
+
+762
+01:08:41,040 --> 01:08:42,592
+MS: Yes.
+
+763
+01:08:42,590 --> 01:08:45,208
+DN: Where would you store the threshold?
+
+764
+01:08:46,096 --> 01:08:51,440
+So that would be, I think, in
+a constant in the question class.
+
+765
+01:08:54,640 --> 01:08:56,984
+MS: So...
+
+766
+01:08:56,980 --> 01:08:59,744
+[Silence]
+
+767
+01:09:06,176 --> 01:09:13,304
+DN: And given a question, it would be
+nice to say "how many questions do you have".
+
+768
+01:09:13,456 --> 01:09:18,312
+Or, more simply, "have you
+reached the threshold of answers?"
+
+769
+01:09:18,310 --> 01:09:21,328
+[Silence]
+
+770
+01:09:29,600 --> 01:09:31,680
+MS: So...
+
+771
+01:09:31,680 --> 01:09:34,768
+[Silence]
+
+772
+01:09:37,032 --> 01:09:38,976
+count is...
+
+773
+01:09:38,992 --> 01:09:41,928
+[Silence]
+
+774
+01:09:44,112 --> 01:09:45,776
+DN: OK.
+
+775
+01:09:45,952 --> 01:09:48,112
+MS: Yes, really simple.
+
+776
+01:09:49,400 --> 01:09:51,448
+So now we've got...
+
+777
+01:09:53,016 --> 01:09:55,536
+[inaud] we want to do resolved.
+
+778
+01:09:58,312 --> 01:10:02,992
+And in that case threshold would have to be reached.
+
+779
+01:10:04,480 --> 01:10:09,312
+And maybe majority answered.
+
+780
+01:10:10,240 --> 01:10:12,832
+DN: Majority agreed... that's nice.
+
+781
+01:10:12,830 --> 01:10:15,952
+[Silence]
+
+782
+01:10:17,504 --> 01:10:19,680
+MS: I can't spell!
+
+783
+01:10:21,096 --> 01:10:23,560
+Yes what's the calculation we want to do here?
+
+784
+01:10:23,768 --> 01:10:30,216
+DN: It's a majority of either
+90% said yes, or 90% said no isn't it?
+
+785
+01:10:30,210 --> 01:10:31,200
+MS: Yes.
+
+786
+01:10:31,200 --> 01:10:34,152
+DN: Both can be true, the case. 
+
+787
+01:10:35,590 --> 01:10:38,352
+MS: Yes, so calculating both I guess.
+
+788
+01:10:38,350 --> 01:10:45,232
+So, we have total=answers.count.
+
+789
+01:10:46,360 --> 01:10:53,368
+And then we've got yes_percentage.
+
+790
+01:10:54,296 --> 01:10:58,968
+As I said before, I'm not very good at naming things.
+
+791
+01:10:59,576 --> 01:11:01,632
+So that's...
+
+792
+01:11:04,256 --> 01:11:06,400
+Let's take a step in-between.
+
+793
+01:11:06,480 --> 01:11:09,088
+So we have yes_total.
+
+794
+01:11:09,080 --> 01:11:12,072
+[Silence]
+
+795
+01:11:18,304 --> 01:11:19,704
+DN: Right.
+
+796
+01:11:19,700 --> 01:11:22,776
+[Silence]
+
+797
+01:11:26,584 --> 01:11:32,768
+MS: Normally I would extract these
+and put them in scopes, most probably.
+
+798
+01:11:33,768 --> 01:11:35,384
+But for now...
+
+799
+01:11:36,576 --> 01:11:40,000
+So yes_percentage is yes.
+
+800
+01:11:40,920 --> 01:11:44,816
+Total divided by total.
+
+801
+01:11:47,536 --> 01:11:50,112
+And the same for no.
+
+802
+01:11:53,728 --> 01:11:57,416
+DN: And for the percentage we need
+to multiply by 100 as well don't we?
+
+803
+01:11:58,936 --> 01:12:00,664
+MS: Yes.
+
+804
+01:12:01,980 --> 01:12:09,224
+This is the point where I'm wondering
+how do we deal with these type of numbers.
+
+805
+01:12:12,680 --> 01:12:14,800
+I think I might want to do that.
+
+806
+01:12:15,320 --> 01:12:16,752
+DN: Or is it 2f.
+
+807
+01:12:16,750 --> 01:12:18,400
+MS: Yes.
+
+808
+01:12:19,752 --> 01:12:22,576
+I'm really blanking today. [Laughter]
+
+809
+01:12:22,570 --> 01:12:25,568
+[Silence]
+
+810
+01:12:27,800 --> 01:12:29,576
+So then if...
+
+811
+01:12:29,570 --> 01:12:32,472
+[Silence]
+
+812
+01:12:33,380 --> 01:12:37,808
+Greater than... 90.
+
+813
+01:12:37,944 --> 01:12:40,920
+[Silence]
+
+814
+01:12:45,328 --> 01:12:48,520
+DN: Another way of saying that
+is yes percentage is greater than 90
+
+815
+01:12:48,520 --> 01:12:51,048
+or yes percentage is less than 10.
+
+816
+01:12:51,976 --> 01:12:54,056
+But, let's go with it.
+
+817
+01:12:54,056 --> 01:12:56,050
+MS: Yes, true.
+
+818
+01:12:58,768 --> 01:13:03,816
+DN: Shall we play around with
+that on the consul and see what works?
+
+819
+01:13:03,810 --> 01:13:09,880
+MS: Yes, our last question
+had two answers so that should...
+
+820
+01:13:11,584 --> 01:13:15,416
+DN: Do you need to reload or does
+that stuff get reloaded automatically?
+
+821
+01:13:15,430 --> 01:13:16,632
+MS: Yes.
+
+822
+01:13:16,680 --> 01:13:19,688
+[Silence]
+
+823
+01:13:20,280 --> 01:13:22,408
+MS: I knew it... it blew up.
+
+824
+01:13:24,648 --> 01:13:27,312
+DN: Does reload throw away your instance variables?
+
+825
+01:13:29,680 --> 01:13:31,288
+MS: No.
+DN: OK.
+
+826
+01:13:31,280 --> 01:13:34,344
+[Silence]
+
+827
+01:13:42,376 --> 01:13:44,336
+MS: So the nos are not resolved.
+
+828
+01:13:44,330 --> 01:13:47,360
+[Silence]
+
+829
+01:13:53,370 --> 01:13:54,920
+DN: False.
+
+830
+01:13:55,080 --> 01:13:57,120
+Right, so we've got two answers.
+
+831
+01:13:57,120 --> 01:13:59,328
+MS: Yes.
+
+832
+01:14:00,080 --> 01:14:03,880
+DN: That's funny because I thought
+both answers were yes, weren't they?
+
+833
+01:14:03,936 --> 01:14:08,980
+MS: Yes, but we need to have at least 20 answers.
+
+834
+01:14:09,048 --> 01:14:13,408
+DN: But you did threshold reached.
+I thought you did majority agreed.
+
+835
+01:14:14,696 --> 01:14:18,568
+MS: I did resolved and then
+I looked at majority agreed.
+
+836
+01:14:19,680 --> 01:14:22,360
+Oh right, we did do majority agreed.
+
+837
+01:14:22,360 --> 01:14:25,424
+[Silence]
+
+838
+01:14:28,152 --> 01:14:30,608
+Let's just do a...
+
+839
+01:14:30,600 --> 01:14:33,544
+[Silence]
+
+840
+01:14:51,688 --> 01:14:53,808
+That's the wrong number.
+
+841
+01:14:55,128 --> 01:15:00,136
+DN: Where we working with the first question
+previously, rather than the last question?
+
+842
+01:15:00,264 --> 01:15:03,224
+I think the first question is
+the one that has responses.
+
+843
+01:15:03,552 --> 01:15:05,600
+MS: Oh, yes.
+
+844
+01:15:08,664 --> 01:15:10,408
+DN: Ah, there we go.
+
+845
+01:15:12,504 --> 01:15:15,072
+So the majority agreed is not robust at the moment.
+
+846
+01:15:15,820 --> 01:15:17,896
+If it has no answers it blows up.
+MS: Yes.
+
+847
+01:15:17,912 --> 01:15:20,600
+DN: But that's OK.
+
+848
+01:15:21,536 --> 01:15:24,688
+Well, we're running out of
+time here, so unfortunately,
+
+849
+01:15:24,680 --> 01:15:27,824
+so we are not going to have
+time to build a user interface for this.
+
+850
+01:15:27,820 --> 01:15:32,992
+But it's been interesting watching
+you just play around with the console.
+
+851
+01:15:35,784 --> 01:15:38,888
+[New Chapter}
+
+852
+01:15:39,824 --> 01:15:45,580
+DN: So if you had more time, what's the
+next thing you would do with this system?
+
+853
+01:15:46,432 --> 01:15:49,570
+MS: I guess the next thing would be to actually...
+
+854
+01:15:49,824 --> 01:15:54,400
+use what we've just doneanhere with resolving questions.
+
+855
+01:15:54,848 --> 01:15:57,184
+Putting in the interface...
+
+856
+01:15:59,140 --> 01:16:01,224
+and then beyond that... 
+
+857
+01:16:01,352 --> 01:16:06,520
+doing something a bit smarter about
+how we're displaying the questions to users.
+
+858
+01:16:06,600 --> 01:16:10,080
+Because right now we're just
+showing all the questions in a list.
+
+859
+01:16:10,128 --> 01:16:14,616
+It would be a bit nicer if, the
+user logged on to the system
+
+860
+01:16:14,760 --> 01:16:17,192
+and they get shown a random image.
+
+861
+01:16:17,190 --> 01:16:19,880
+DN: OK, so people don't see them in the same order,
+
+862
+01:16:19,880 --> 01:16:23,576
+in which case you have question 1 having
+loads of answers and later ones having fewer.
+
+863
+01:16:23,816 --> 01:16:30,832
+MS: And maybe doing something smarter like
+showing the questions that don't have many answers,
+
+864
+01:16:31,750 --> 01:16:38,320
+so you can boost the ones that need more answers.
+
+865
+01:16:38,560 --> 01:16:41,792
+DN: So it would be nice to have
+a way to ask the question model
+
+866
+01:16:41,848 --> 01:16:47,376
+"Which of your records needs the next answer?"
+
+867
+01:16:47,456 --> 01:16:54,096
+And maybe recognizing that the current
+user shouldn't answer the same question twice.
+
+868
+01:16:54,090 --> 01:16:56,312
+That's something you would have to think about.
+
+869
+01:16:56,328 --> 01:16:57,272
+MS: Exactly.
+
+870
+01:16:57,320 --> 01:17:03,136
+CN: And once you've got that you can
+answer a question and ask for the next question.
+
+871
+01:17:03,130 --> 01:17:07,256
+And it will pick one randomly
+for you, that would be nice.
+
+872
+01:17:07,280 --> 01:17:08,792
+MS: Yes, that would be cool.
+
+873
+01:17:08,790 --> 01:17:12,288
+DN: OK, well thanks very
+much for coming on the show Melinda,
+
+874
+01:17:12,296 --> 01:17:13,592
+it's been really interesting watching you work.
+
+875
+01:17:13,600 --> 01:17:14,456
+MS: Thanks for inviting me.
+
+876
+01:17:14,464 --> 01:17:16,368
+DN: My pleasure.
+
