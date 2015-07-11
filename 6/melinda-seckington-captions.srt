@@ -2242,8 +2242,8 @@ Whereas if you used f.radio_button...
 
 533
 00:47:21,620 --> 00:47:26,224
-DN: Instead of radio button tag,
-I think you can just say radio button.
+DN: Instead of radio_button_tag,
+I think you can just say radio_button.
 
 534
 00:47:26,220 --> 00:47:41,456
