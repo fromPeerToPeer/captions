@@ -2400,7 +2400,7 @@ So there's something...
 
 571
 00:51:20,496 --> 00:51:24,928
-for and inaudible
+form_for and hidden_field
 
 572
 00:51:24,976 --> 00:51:32,888
