@@ -2327,7 +2327,7 @@ MS: Well that's because...
 
 554
 00:49:48,304 --> 00:49:50,736
-that's the only pre answer it has.
+that's the only params that it has.
 
 555
 00:49:52,936 --> 00:49:54,904
