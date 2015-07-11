@@ -2465,12 +2465,12 @@ I think that worked.
 
 587
 00:53:08,360 --> 00:53:12,144
-Oh, they're there because we
-don't have a template inaudible
+Or well, it errored because we
+don't have a template, rather than
 
 588
 00:53:13,340 --> 00:53:16,448
-If not inaudible.
+it not creating
 
 589
 00:53:18,456 --> 00:53:19,488
