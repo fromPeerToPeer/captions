@@ -2503,11 +2503,11 @@ MS: So why would it only set the question ID?
 596
 00:53:45,752 --> 00:53:51,000
 DN: You know how before
-you had params.require_answer?
+you had params.require(:answer)?
 
 597
 00:53:51,336 --> 00:53:54,600
-And then you kept it require answer.
+And then you took our the require(:answer).
 
 598
 00:53:54,744 --> 00:53:56,880
