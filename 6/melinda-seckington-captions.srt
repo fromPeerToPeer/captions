@@ -1013,7 +1013,7 @@ because normally with so much more data...
 
 237
 00:18:56,088 --> 00:18:59,296
-DN: We don't need to patch anything.
+DN: We don't need to paginate anything.
 
 238
 00:18:59,620 --> 00:19:02,632
