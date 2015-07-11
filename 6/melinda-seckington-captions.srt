@@ -3306,7 +3306,7 @@ MS: Yes.
 
 786
 01:10:31,200 --> 01:10:34,152
-DN: Both can be true, the case. 
+DN: Both can be true, the case.
 
 787
 01:10:35,590 --> 01:10:38,352
@@ -3605,7 +3605,7 @@ Putting in the interface...
 
 856
 01:15:59,140 --> 01:16:01,224
-and then beyond that... 
+and then beyond that...
 
 857
 01:16:01,352 --> 01:16:06,520
