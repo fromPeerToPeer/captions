@@ -1684,3 +1684,402 @@ simple rows so I can work with them later.
 00:33:50,080 --> 00:33:52,896
 So I'm going to give it 4x4.
 
+397
+00:33:52,890 --> 00:33:57,008
+I'm just going to give them 1,2,3,4...
+
+398
+00:34:00,224 --> 00:34:02,784
+5,6,7,8.
+
+399
+00:34:03,936 --> 00:34:09,320
+I realise I should have put more spacing in... 9,10,11,12.
+
+400
+00:34:11,470 --> 00:34:13,456
+13,14.
+
+401
+00:34:14,696 --> 00:34:16,736
+15,16.
+
+402
+00:34:16,730 --> 00:34:19,720
+[Silence]
+
+403
+00:34:22,672 --> 00:34:23,584
+inaud
+
+404
+00:34:23,580 --> 00:34:26,608
+[Silence]
+
+405
+00:34:29,160 --> 00:34:31,208
+OK.
+
+406
+00:34:31,200 --> 00:34:34,216
+[Silence]
+
+407
+00:34:34,880 --> 00:34:41,312
+Now I should say subject.rows.
+
+408
+00:34:41,352 --> 00:34:44,384
+[Silence]
+
+409
+00:34:45,552 --> 00:34:49,088
+Expect rows to equal...
+
+410
+00:34:49,080 --> 00:34:52,088
+[Silence]
+
+411
+00:34:52,864 --> 00:34:59,392
+inaud, I could present a constant
+but it's so much easier like this.
+
+412
+00:35:01,400 --> 00:35:03,336
+inaud
+
+413
+00:35:05,440 --> 00:35:08,408
+Probably gone wrong because
+I haven't commit the initializer.
+
+414
+00:35:08,930 --> 00:35:16,640
+Def initialize rows at rows equals rows.
+
+415
+00:35:17,664 --> 00:35:23,504
+And then I'll say attr-reader rows.
+
+416
+00:35:25,232 --> 00:35:29,784
+And now from this... it works, so I just have a thing that says inaud.
+
+417
+00:35:30,208 --> 00:35:32,824
+Now, the next thing we want is to take up quadrants.
+
+418
+00:35:33,280 --> 00:35:35,952
+JW: Shall we commit to keep
+this test bootstrap in place? 
+
+419
+00:35:35,952 --> 00:35:37,950
+PB: Yes, that's a good idea.
+
+420
+00:35:39,464 --> 00:35:41,230
+OK...
+
+421
+00:35:41,230 --> 00:35:44,224
+[Silence]
+
+422
+00:35:50,432 --> 00:35:55,712
+And say implement a basic quadnode.
+
+423
+00:35:56,224 --> 00:35:58,320
+It shouldn't do anything but...
+
+424
+00:35:58,320 --> 00:36:01,360
+[Silence]
+
+425
+00:36:05,936 --> 00:36:10,864
+The next thing is to be able to
+take each quadrant out of it, so...
+
+426
+00:36:11,736 --> 00:36:16,000
+It should return the northwest quadrant.
+
+427
+00:36:16,000 --> 00:36:19,032
+[Silence]
+
+428
+00:36:19,030 --> 00:36:25,096
+JW: Actually, for reasons
+that may become clear later on,
+
+429
+00:36:26,656 --> 00:36:30,920
+let's read the quadrants in counter
+clockwise order, starting in the northeast.
+
+430
+00:36:31,120 --> 00:36:33,208
+PB: OK.
+
+431
+00:36:33,528 --> 00:36:36,488
+I was only going to expose
+it as a method called dot NW.
+
+432
+00:36:36,480 --> 00:36:37,968
+JW: OK.
+
+433
+00:36:38,032 --> 00:36:41,496
+PB: Which means we don't have to inaud.
+
+434
+00:36:43,110 --> 00:36:47,032
+Yes, we can pack them together if we
+want, so if we want to break it into quadrants,
+
+435
+00:36:47,072 --> 00:36:50,584
+which it sounds like what we will want to do.
+
+436
+00:36:51,656 --> 00:36:55,728
+OK, so this is going to be something very similar.
+
+437
+00:36:56,768 --> 00:37:01,968
+It's going to be something like
+expect subject.northwest to  equal.
+
+438
+00:37:04,984 --> 00:37:07,368
+Perhaps this should be 1,2...
+
+439
+00:37:10,010 --> 00:37:12,168
+and 5,6.
+
+440
+00:37:12,160 --> 00:37:15,184
+[Silence]
+
+441
+00:37:22,872 --> 00:37:25,272
+Yes, inaud.
+
+442
+00:37:25,270 --> 00:37:28,240
+[Silence]
+
+443
+00:37:28,288 --> 00:37:31,280
+[Paul thinks]
+
+444
+00:37:32,864 --> 00:37:35,344
+This one is very easy to implement.
+
+445
+00:37:37,670 --> 00:37:40,960
+What I  don't know yet is how
+many columns I have though.
+
+446
+00:37:42,160 --> 00:37:45,768
+So, maybe I'm going to let this one sit for a minute.
+
+447
+00:37:47,184 --> 00:37:50,080
+And say that it should return a number of columns.
+
+448
+00:37:50,080 --> 00:37:53,056
+It's going to assume that the...
+
+449
+00:37:54,208 --> 00:37:58,208
+In fact I'm going to get it to give me the number
+of rows and the number of columns, in here.
+
+450
+00:37:58,200 --> 00:38:04,288
+It should return the number of columns.
+
+451
+00:38:07,072 --> 00:38:11,256
+And say expect subjects dot...
+
+452
+00:38:11,304 --> 00:38:14,344
+[Paul thinks]
+
+453
+00:38:15,776 --> 00:38:19,424
+number of columns, column count, height, width maybe.
+
+454
+00:38:19,608 --> 00:38:21,368
+I think that would be sensible.
+
+455
+00:38:21,360 --> 00:38:27,120
+Number of columns, width so expect inaud width to equal...
+
+456
+00:38:27,120 --> 00:38:30,152
+[Silence]
+
+457
+00:38:30,816 --> 00:38:34,280
+It's probably not a brilliant
+test because they are both 4.
+
+458
+00:38:34,328 --> 00:38:37,544
+but I'm never going to know if... but...
+
+459
+00:38:40,040 --> 00:38:42,248
+Let's see.
+
+460
+00:38:43,000 --> 00:38:45,920
+Perhaps there's no width.
+
+461
+00:38:47,624 --> 00:38:52,328
+Width, and that can be just rows.first.length.
+
+462
+00:38:55,272 --> 00:39:01,304
+OK... I did the same for rows.
+
+463
+00:39:01,300 --> 00:39:04,288
+[Silence]
+
+464
+00:39:04,336 --> 00:39:08,064
+inaud here, as I say I could have
+inaud this wrong and still got the same.
+
+465
+00:39:08,940 --> 00:39:13,840
+Same result so, I'm going to accept that for now.
+
+466
+00:39:14,592 --> 00:39:17,400
+JW: We can be reasonably confident.
+PB: Yes.
+
+467
+00:39:17,400 --> 00:39:20,416
+[Silence]
+
+468
+00:39:20,416 --> 00:39:22,410
+And that's just rows.length.
+
+469
+00:39:22,410 --> 00:39:25,400
+[Silence]
+
+470
+00:39:27,296 --> 00:39:30,248
+OK, so going back to my first quadrant...
+
+471
+00:39:32,040 --> 00:39:41,000
+I want to say that quadrant
+width equals width over 2.
+
+472
+00:39:42,144 --> 00:39:46,416
+Quadrant height equals height over 2.
+
+473
+00:39:46,410 --> 00:39:50,536
+We're conveniently seeing that
+everything is a nice power of two.
+
+474
+00:39:52,136 --> 00:39:56,688
+Which is why you've helpfully
+given me the 256 pixel image.
+
+475
+00:39:56,704 --> 00:40:00,060
+JW: Yes, that assumption
+is built into this challenge.
+
+476
+00:40:01,352 --> 00:40:04,208
+PB: I suppose if not we
+could scale the image first but...
+
+477
+00:40:05,944 --> 00:40:08,920
+Yes, so I've got quadrant width which is half width,
+
+478
+00:40:09,232 --> 00:40:14,912
+and then I want to say rows.take.
+
+479
+00:40:17,664 --> 00:40:19,872
+Quadrant height.
+
+480
+00:40:19,896 --> 00:40:22,904
+[Silence]
+
+481
+00:40:23,120 --> 00:40:29,304
+I wonder if for this test it might be
+sensible to give it another couple of rows.
+
+482
+00:40:29,512 --> 00:40:34,848
+Because just for things that are only
+doing one level deep, that does work.
+
+483
+00:40:35,152 --> 00:40:36,992
+Or is that daft?
+
+484
+00:40:36,990 --> 00:40:39,952
+[Paul thinks]
+
+485
+00:40:42,832 --> 00:40:44,744
+JW: I have to say I don't see the need.
+
+486
+00:40:44,740 --> 00:40:47,920
+I think probably [they both talk at once]
+
+487
+00:40:48,064 --> 00:40:51,648
+PB: I'm just worried I might
+be confusing height and width.
+
+488
+00:40:52,240 --> 00:41:00,760
+So take height and that and I get
+a row and I can finish that row.take.
+
+489
+00:41:02,088 --> 00:41:04,256
+inaud width.
+
+490
+00:41:06,360 --> 00:41:08,384
+So I think that should do it.
+
