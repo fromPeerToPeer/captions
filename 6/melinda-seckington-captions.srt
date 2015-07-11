@@ -2519,7 +2519,8 @@ MS: That was because, looking at the params,
 
 600
 00:54:03,360 --> 00:54:08,864
-it didn't seem as if answer was actually being inaudible.
+it didn't seem as if answer was actually
+being passed along.
 
 601
 00:54:09,496 --> 00:54:14,056
