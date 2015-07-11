@@ -2375,7 +2375,7 @@ to hard code hidden_field to user 2.
 565
 00:50:53,520 --> 00:50:58,552
 DN: So it's not a problem
-with current user method is it?
+with the current_user method is it?
 
 566
 00:50:58,976 --> 00:51:02,240
