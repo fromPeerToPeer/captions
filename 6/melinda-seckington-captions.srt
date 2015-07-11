@@ -900,7 +900,7 @@ controller I get more than I want.
 211
 00:17:05,752 --> 00:17:10,984
 DN: Yes, it generates the asset
-files, inaudible, JavaScripts and so on.
+files, stylesheets, JavaScripts and so on.
 
 212
 00:17:10,980 --> 00:17:13,400
