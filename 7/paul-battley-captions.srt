@@ -1492,3 +1492,195 @@ I'm just going to run together just in case...
 00:30:00,568 --> 00:30:02,848
 Yes, tha's working.
 
+351
+00:30:03,896 --> 00:30:07,288
+So I'll say that.
+
+352
+00:30:09,840 --> 00:30:13,296
+inaud
+
+353
+00:30:15,768 --> 00:30:20,608
+BMPImage returns rows... OK.
+
+354
+00:30:23,736 --> 00:30:28,560
+I should probably have gone
+hunting for a bitmap image but never mind.
+
+355
+00:30:29,112 --> 00:30:30,328
+We can now move on.
+
+356
+00:30:30,320 --> 00:30:33,872
+[New chapter]
+
+357
+00:30:33,992 --> 00:30:39,848
+So now, what would be nice,
+is to have some kind of object.
+
+358
+00:30:40,056 --> 00:30:44,832
+which when given rows with some
+item in them takes each of the quadrants.
+
+359
+00:30:44,830 --> 00:30:49,624
+So inad writing that I think I can test quite
+easily, so I'm going to start doing things that way.
+
+360
+00:30:49,620 --> 00:30:50,944
+Perfect.
+
+361
+00:30:50,940 --> 00:30:52,968
+So I now need to...
+
+362
+00:30:52,960 --> 00:30:55,920
+I'm going to use rspec
+because I like the rspec runner.
+
+363
+00:30:55,920 --> 00:31:04,944
+So say vim Gemfile, source https.
+
+364
+00:31:05,376 --> 00:31:10,224
+I always think this should be built in but it's not.
+
+365
+00:31:10,616 --> 00:31:14,512
+And then gem rspec...
+that should give me something sensible.
+
+366
+00:31:14,952 --> 00:31:16,784
+And then I'll say bundle
+
+367
+00:31:16,780 --> 00:31:22,744
+[Silence]
+
+368
+00:31:26,600 --> 00:31:28,784
+Good.
+
+369
+00:31:30,472 --> 00:31:36,016
+Now I'm going to make a spec to actually live.
+
+370
+00:31:37,296 --> 00:31:44,304
+And I'll go back to here and say edit spec.
+
+371
+00:31:45,064 --> 00:31:51,272
+I'm going to call it, what shall I call it? Quad node.
+
+372
+00:31:51,500 --> 00:31:55,176
+That seems like a reasonable name
+and makes sense to me at the moment.
+
+373
+00:31:55,230 --> 00:32:05,224
+inaud, rspec rb and inaud 
+
+374
+00:32:05,232 --> 00:32:08,384
+Rspec.describe.
+
+375
+00:32:11,312 --> 00:32:14,376
+Quadnode do.
+
+376
+00:32:16,824 --> 00:32:19,192
+Is that right, somehow I feel...
+
+377
+00:32:19,744 --> 00:32:24,200
+It's the kind of thing I never write inaud, I just copy it off another file
+
+378
+00:32:26,512 --> 00:32:30,384
+but let's say require rspec
+
+379
+00:32:30,424 --> 00:32:33,472
+[Silence]
+
+380
+00:32:36,152 --> 00:32:40,560
+Yes, that should fail... and it does,
+
+381
+00:32:42,096 --> 00:32:44,168
+because we don't have a quadnode.
+
+382
+00:32:44,216 --> 00:32:47,208
+[Silence]
+
+383
+00:32:49,610 --> 00:32:51,984
+Lib.quadenode.
+
+384
+00:32:52,952 --> 00:32:57,952
+And say class QuadNode.
+
+385
+00:33:00,960 --> 00:33:03,832
+And that should pass.
+
+386
+00:33:03,830 --> 00:33:06,608
+Good, there will probably be something else inaud.
+
+387
+00:33:08,104 --> 00:33:10,176
+I haven't required it yet.
+
+388
+00:33:10,170 --> 00:33:13,208
+[Silence]
+
+389
+00:33:15,872 --> 00:33:17,192
+Good, OK.
+
+390
+00:33:17,960 --> 00:33:26,504
+So I'm going to say, it should return it's rows.
+
+391
+00:33:26,536 --> 00:33:29,552
+[Silence]
+
+392
+00:33:30,808 --> 00:33:35,632
+I'm just going to say subject is going to be...
+
+393
+00:33:37,048 --> 00:33:39,456
+described class.new.
+
+394
+00:33:40,752 --> 00:33:45,752
+And I'm going to give it some
+simple rows so I can work with them later.
+
+395
+00:33:45,750 --> 00:33:48,784
+[Silence]
+
+396
+00:33:50,080 --> 00:33:52,896
+So I'm going to give it 4x4.
+
