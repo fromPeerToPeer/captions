@@ -2152,7 +2152,7 @@ MS: Yes, we can.
 
 511
 00:45:06,752 --> 00:45:08,688
-So just hidden filed tag... yes this.
+So just hidden_field_tag... yes it is.
 
 512
 00:45:08,680 --> 00:45:18,648
