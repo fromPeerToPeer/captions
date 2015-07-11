@@ -2713,7 +2713,7 @@ this and we don't want to display it anymore.
 
 645
 00:57:30,550 --> 00:57:36,240
-So let's add a inaudible statement here.
+So let's add an if statement here.
 
 646
 00:57:39,640 --> 00:57:42,840
