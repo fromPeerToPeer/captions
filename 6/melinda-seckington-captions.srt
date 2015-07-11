@@ -2259,7 +2259,7 @@ MS: Oh... actually, we weren't calling that anyway.
 
 537
 00:47:53,392 --> 00:47:55,144
-So current user.
+So current_user.
 
 538
 00:47:55,140 --> 00:48:14,416
