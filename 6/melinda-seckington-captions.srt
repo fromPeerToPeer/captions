@@ -2160,7 +2160,7 @@ So just hidden_field_tag... yes it is.
 
 513
 00:45:19,440 --> 00:45:24,632
-DN: It is a thought... do we have a current user?
+DN: There's a thought... do we have a current user?
 
 514
 00:45:26,460 --> 00:45:28,592
