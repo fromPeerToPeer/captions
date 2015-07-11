@@ -1282,7 +1282,8 @@ DN: OK.
 
 302
 00:24:50,880 --> 00:24:55,064
-So this inaudible work because we need to specify...
+So this still won't work because we need
+to specify...
 
 303
 00:24:55,060 --> 00:24:58,096
