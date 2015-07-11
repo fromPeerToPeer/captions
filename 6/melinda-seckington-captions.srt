@@ -2380,7 +2380,7 @@ with the current_user method is it?
 566
 00:50:58,976 --> 00:51:02,240
 It's something about the
-way we're calling hidden field.
+way we're calling hidden_field.
 
 567
 00:51:02,240 --> 00:51:05,368
