@@ -2384,7 +2384,7 @@ way we're calling hidden_field.
 
 567
 00:51:02,240 --> 00:51:05,368
-Should it be user ID rather than user?
+Should it be user_id rather than user?
 
 568
 00:51:05,360 --> 00:51:08,432
