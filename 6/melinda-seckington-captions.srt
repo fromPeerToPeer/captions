@@ -2441,7 +2441,7 @@ MS: Yes, and then in the controller, we don't need that,
 
 581
 00:52:31,088 --> 00:52:37,920
-because we've got question ID and user ID.
+because we've got question_id and user_id.
 
 582
 00:52:37,920 --> 00:52:46,776
