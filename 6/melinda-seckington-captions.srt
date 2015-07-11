@@ -2408,7 +2408,7 @@ form_for and hidden_field
 
 573
 00:51:33,248 --> 00:51:35,936
-So it was a form for that we're using.
+So it was a form_for that we're using.
 
 574
 00:51:35,930 --> 00:51:48,856
