@@ -2433,7 +2433,7 @@ So now if we hit 'yes'.
 579
 00:52:16,010 --> 00:52:19,600
 DN: Excellent, so finally
-we are hitting out controller.
+we are hitting our controller.
 
 580
 00:52:22,920 --> 00:52:30,368
