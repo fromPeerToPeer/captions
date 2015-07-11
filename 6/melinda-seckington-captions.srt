@@ -2251,7 +2251,7 @@ I think you can just say radio_button.
 
 535
 00:47:43,304 --> 00:47:46,792
-MS: Oh actually, we were calling that anyway.
+MS: Oh... actually, we weren't calling that anyway.
 
 536
 00:47:46,800 --> 00:47:52,824
