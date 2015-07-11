@@ -941,7 +941,8 @@ get the rspec file, the user file and...
 
 220
 00:17:43,856 --> 00:17:47,376
-[The migration is not meant to be on there]
+...the migration. It’s not much to be
+wrong there.
 
 221
 00:17:47,920 --> 00:17:50,248
