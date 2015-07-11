@@ -1504,7 +1504,8 @@ DN: So I guess next we have the yes/no to do.
 354
 00:29:15,500 --> 00:29:22,648
 Would that be a yes button and a no button,
-or would it be a radio button with yes and no inaudible?
+or would it be a radio button with yes and
+no and then a submit button?
 
 355
 00:29:22,640 --> 00:29:26,472
