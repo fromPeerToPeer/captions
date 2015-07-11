@@ -2234,7 +2234,7 @@ it doesn't put it inside of a form object does it?
 
 531
 00:47:00,260 --> 00:47:04,024
-Whereas if you put f.radio button...
+Whereas if you used f.radio_button...
 
 532
 00:47:04,020 --> 00:47:21,624
