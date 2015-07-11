@@ -2172,8 +2172,8 @@ I don't think we do.
 
 516
 00:45:32,120 --> 00:45:35,752
-DN: We have a logged in method
-but not a current user method.
+DN: We have a logged_in method
+but not a current_user method.
 
 517
 00:45:36,312 --> 00:45:38,480
