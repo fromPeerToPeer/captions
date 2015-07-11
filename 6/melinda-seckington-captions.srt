@@ -2482,7 +2482,7 @@ MS: Sort of, except the question ID.
 
 591
 00:53:23,800 --> 00:53:26,464
-DN: But the response is nil and the user ID is nil.
+DN: But the response is nil and the user_id is nil.
 
 592
 00:53:27,048 --> 00:53:30,504
