@@ -817,7 +817,7 @@ MS: Yes.
 
 192
 00:15:26,064 --> 00:15:31,008
-And we also want resources as questions.
+And we also want resources :questions.
 
 193
 00:15:32,580 --> 00:15:34,776
