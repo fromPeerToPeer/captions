@@ -976,7 +976,7 @@ I would write some tests for this,
 
 227
 00:20:02,050 --> 00:20:09,744
-but given the size of the image... I don't know how easily if I can make a bnp inaud 
+but given the size of the image... I don't know how easily if I can make a bnp inaud
 
 228
 00:20:11,360 --> 00:20:16,664
@@ -1071,7 +1071,7 @@ And I can say file.read.upack.
 
 250
 00:21:49,090 --> 00:21:54,952
-So now I'm going to put this in initialize 
+So now I'm going to put this in initialize
 
 251
 00:21:55,112 --> 00:21:59,144
@@ -1127,4 +1127,165 @@ inaud
 263
 00:23:00,816 --> 00:23:02,952
 And this one...
+
+264
+00:23:04,880 --> 00:23:13,792
+Width height pixels in there, inaudible and put this in a private method.
+
+265
+00:23:13,790 --> 00:23:16,744
+[Silence]
+
+266
+00:23:16,912 --> 00:23:26,344
+inaud and say private section and say def image bytes.
+
+267
+00:23:26,340 --> 00:23:29,392
+[Silence]
+
+268
+00:23:29,390 --> 00:23:36,080
+I will cache that and say image bytes inaudible.
+
+269
+00:23:36,600 --> 00:23:39,100
+And I'm going to say def header,
+and the reason I'm doing this
+
+270
+00:23:39,100 --> 00:23:43,672
+is because I know we want to write one
+out later, so it's helpful to keep the header.
+
+271
+00:23:43,712 --> 00:23:46,664
+[Silence]
+
+272
+00:23:47,704 --> 00:23:51,136
+Again I can say header...
+
+273
+00:23:52,808 --> 00:23:55,936
+bytes.take... that's got to be at bytes.
+
+274
+00:23:58,208 --> 00:24:01,936
+at bytes.length and inaud bytes.
+
+275
+00:24:04,192 --> 00:24:09,128
+So we've inaud bytes, OK.
+
+276
+00:24:11,976 --> 00:24:19,928
+Here we have image bytes available to us inaud moved up the top somewhere.
+
+277
+00:24:22,000 --> 00:24:25,208
+Or can it. It doesn't mutate it does it inaud?
+
+278
+00:24:25,890 --> 00:24:28,856
+[Silence]
+
+279
+00:24:31,050 --> 00:24:37,928
+So at the moment pixels is still doing
+that puts stuff, so for now I'm going to do 
+
+280
+00:24:38,480 --> 00:24:41,510
+dot pixels,and see if I get the same sensible result.
+
+281
+00:24:41,510 --> 00:24:44,608
+[Silence]
+
+282
+00:24:48,144 --> 00:24:51,136
+inaud because I haven't given it the width and the height.
+
+283
+00:24:51,130 --> 00:24:54,128
+[Silence]
+
+284
+00:24:55,096 --> 00:24:59,872
+inaud
+
+285
+00:25:01,720 --> 00:25:05,264
+At a later stage, I could probably
+work out where to find those in the header,
+
+286
+00:25:05,260 --> 00:25:11,976
+and read them but that's not the
+most interesting thing we can do today.
+
+287
+00:25:13,280 --> 00:25:15,800
+OK, seems good.
+
+288
+00:25:16,056 --> 00:25:19,040
+inaud yes, that seems good.
+
+289
+00:25:20,992 --> 00:25:21,952
+OK...
+
+290
+00:25:21,992 --> 00:25:24,976
+[Silence]
+
+291
+00:25:32,016 --> 00:25:36,568
+I'll commit this before I change it slightly.
+
+292
+00:25:39,088 --> 00:25:43,848
+Make a BMPImage class, this
+is still a work in progress so...
+
+293
+00:25:44,088 --> 00:25:47,816
+I think everything will be a
+work in progress today actually.
+
+294
+00:25:48,360 --> 00:25:58,920
+So now I want to make this return, in fact
+what I think I want is an array of arrays of pixels.
+
+295
+00:25:59,400 --> 00:26:02,120
+I think that's the most sensible thing to do.
+
+296
+00:26:02,120 --> 00:26:09,104
+It might not be the most
+helpful thing later on, but for now...
+
+297
+00:26:09,160 --> 00:26:11,100
+Height I can map...
+
+298
+00:26:12,024 --> 00:26:16,680
+because each of those inaud
+
+299
+00:26:16,680 --> 00:26:23,064
+I would like to do the inaud style of functional things with the braces.
+
+300
+00:26:23,104 --> 00:26:24,570
+Width over 8.
+
+301
+00:26:24,570 --> 00:26:27,864
+Now this one... I need to do something like a flat map.
 
