@@ -2817,7 +2817,8 @@ MS: Well no because we already answered this.
 
 670
 00:59:39,560 --> 00:59:41,344
-DN: inaudible branch of the 'if'.
+DN: I think we've got the
+wrong branch of the 'if'.
 
 671
 00:59:41,340 --> 00:59:48,640
