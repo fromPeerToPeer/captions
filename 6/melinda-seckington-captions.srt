@@ -2356,7 +2356,7 @@ user ID. Does that part even work?
 
 561
 00:50:33,816 --> 00:50:37,440
-So it finds current user ID.
+So it finds the current user ID.
 
 562
 00:50:38,384 --> 00:50:40,736
