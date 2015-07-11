@@ -2366,7 +2366,7 @@ MS: Yes.
 563
 00:50:42,944 --> 00:50:49,360
 DN: I wonder, what if we were
-to hard code hidden field to user 2.
+to hard code hidden_field to user 2.
 
 564
 00:50:49,384 --> 00:50:53,528
