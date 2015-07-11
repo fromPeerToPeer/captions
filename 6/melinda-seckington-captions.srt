@@ -2685,7 +2685,7 @@ here... we're basically allowing
 
 639
 00:56:55,850 --> 00:57:00,328
-Allow user to answer questions.
+Allow users to answer questions.
 
 640
 00:57:02,968 --> 00:57:06,232
