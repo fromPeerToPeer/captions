@@ -2026,7 +2026,7 @@ yet, we've got to add the submit button.
 
 480
 00:42:41,140 --> 00:42:47,232
-DN: It's interesting that the default inaudible by the text.
+DN: It's interesting the default submit button text.
 
 481
 00:42:47,230 --> 00:42:48,728
