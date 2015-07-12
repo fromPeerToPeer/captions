@@ -1958,12 +1958,13 @@ rails form_for radio buttons example
 
 464
 00:40:54,000 --> 00:41:00,784
-DN: I suppose what we really want is add...
+DN: I suppose what we really want is two radio buttons...
 I suppose one is true and one is false,
 
 465
 00:41:00,780 --> 00:41:05,096
-It's inaudible that we say anything else, but the labels can say yes or no.
+It's a boolean we save in the answers,
+but the labels can say yes or no.
 
 466
 00:41:05,472 --> 00:41:10,288
