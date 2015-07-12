@@ -1946,11 +1946,11 @@ I'm not really sure...
 
 461
 00:40:29,256 --> 00:40:32,520
-That's actually under public license... rails
+That's actually under public license...
 
 462
 00:40:34,008 --> 00:40:37,552
-form for radio buttons app.
+rails form_for radio buttons example
 
 463
 00:40:37,550 --> 00:40:40,568
