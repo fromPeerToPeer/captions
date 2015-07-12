@@ -2042,7 +2042,7 @@ No we cant, not like that.
 
 484
 00:42:55,590 --> 00:42:59,720
-DN: I think the comma may be needed.
+DN: I think the comma isn't needed.
 
 485
 00:43:01,392 --> 00:43:03,064
