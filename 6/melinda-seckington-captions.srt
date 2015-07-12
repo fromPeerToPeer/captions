@@ -1715,7 +1715,7 @@ answers...
 405
 00:34:58,430 --> 00:35:05,776
 Questions through answers,
-but also has any answers.
+but also has_many answers.
 
 406
 00:35:06,160 --> 00:35:07,800
