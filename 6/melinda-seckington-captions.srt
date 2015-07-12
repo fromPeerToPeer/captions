@@ -1537,7 +1537,7 @@ MS: Yes, so we haven't really looked at that yet.
 363
 00:30:26,970 --> 00:30:36,832
 But, I'm thinking we basically want a new
-level that lies between the questions and the users.
+model that lies between the questions and the users.
 
 364
 00:30:40,136 --> 00:30:44,360
