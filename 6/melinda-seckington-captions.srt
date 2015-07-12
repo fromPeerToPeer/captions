@@ -1593,7 +1593,7 @@ questions through the join table?
 
 376
 00:32:00,696 --> 00:32:02,690
-That's maybe through.
+has_many :through
 
 377
 00:32:02,690 --> 00:32:05,712
