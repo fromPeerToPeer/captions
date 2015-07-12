@@ -1715,7 +1715,7 @@ answers...
 405
 00:34:58,430 --> 00:35:05,776
 Questions through answers,
-but also has_many answers.
+but also has many answers.
 
 406
 00:35:06,160 --> 00:35:07,800
@@ -1727,7 +1727,7 @@ DN: Right.
 
 408
 00:35:13,630 --> 00:35:16,568
-See how many progressions this has.
+Same again for questions.
 
 409
 00:35:16,560 --> 00:35:19,584
@@ -1735,7 +1735,8 @@ See how many progressions this has.
 
 410
 00:35:20,410 --> 00:35:25,264
-And the answers this has... many.
+This has many answers
+and this has many...
 
 411
 00:35:25,744 --> 00:35:26,912
