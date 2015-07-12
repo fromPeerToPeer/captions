@@ -1894,7 +1894,7 @@ So here we need to create...
 
 448
 00:39:06,040 --> 00:39:08,176
-Answer from you.
+Answer.new
 
 449
 00:39:08,320 --> 00:39:11,352
