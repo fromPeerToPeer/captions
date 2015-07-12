@@ -1622,11 +1622,11 @@ I normally use the generate function to create this...
 
 383
 00:32:46,568 --> 00:32:53,880
-So we want announcer to have...
+So we want an answer to have...
 
 384
 00:32:53,880 --> 00:32:57,728
-A inaudible value for yes or no.
+A boolean value for yes or no.
 
 385
 00:32:58,750 --> 00:33:01,784
