@@ -2347,3 +2347,204 @@ PB: Yes, inaud. [Laughter]
 00:47:14,072 --> 00:47:17,432
 It should fail because there is no split.
 
+554
+00:47:17,472 --> 00:47:20,464
+[Silence]
+
+555
+00:47:24,288 --> 00:47:33,256
+And then I'm going to say Northeast,
+Northwest, Southwest, Southeast.
+
+556
+00:47:33,250 --> 00:47:36,272
+[Silence]
+
+557
+00:47:39,272 --> 00:47:43,792
+OK great, that works, but it's not recursive. 
+
+558
+00:47:44,856 --> 00:47:47,856
+[Paul thinks]
+
+559
+00:47:50,848 --> 00:47:55,112
+I'm going to get additional thing which is...
+
+560
+00:47:55,760 --> 00:47:58,888
+I'm going to put all of these into...
+
+561
+00:47:58,880 --> 00:48:01,888
+[Paul thinks]
+
+562
+00:48:02,820 --> 00:48:21,904
+Actually I may as well do a special case and
+say context when it cannot be sub-divided...
+
+563
+00:48:22,016 --> 00:48:25,048
+[Silence]
+
+564
+00:48:29,688 --> 00:48:33,520
+And I'm going to say that then...
+
+565
+00:48:33,520 --> 00:48:39,688
+it should return itself split.
+
+566
+00:48:40,376 --> 00:48:45,496
+I'm not sure if that is the most
+sensible thing to do but I'll do it for now.
+
+567
+00:48:45,912 --> 00:48:52,304
+I'll just take this lot and say that (I'm
+going to have to redefine the subject in here)
+
+568
+00:48:52,544 --> 00:48:58,984
+Subject is going to be described class.new,
+
+569
+00:48:59,112 --> 00:49:04,896
+and I'm going to give it just one row to work on.
+
+570
+00:49:05,648 --> 00:49:08,760
+and then this one, don't need any of that.
+
+571
+00:49:09,192 --> 00:49:12,904
+And I should say expect split to equal subject.
+
+572
+00:49:12,900 --> 00:49:15,800
+[Silence]
+
+573
+00:49:17,320 --> 00:49:21,728
+And it's not, it's giving me empty
+things, but it's interesting what it has done.
+
+574
+00:49:23,360 --> 00:49:34,056
+Yes, so I can say if divisible that...
+
+575
+00:49:36,216 --> 00:49:41,520
+inaud for you.
+
+576
+00:49:41,520 --> 00:49:47,704
+I had an interesting bug the other
+day where I just mis-touched something
+
+577
+00:49:47,700 --> 00:49:51,200
+when I was inaud and had a really weird error, 
+
+578
+00:49:51,200 --> 00:49:55,528
+and I found out I had replaced
+something with a completely different word.
+
+579
+00:49:55,592 --> 00:49:58,608
+[Silence]
+
+580
+00:49:59,776 --> 00:50:02,176
+inaud
+
+581
+00:50:03,328 --> 00:50:07,632
+I'll put these into a private section as
+well, I don't think I need those again.
+
+582
+00:50:08,776 --> 00:50:10,928
+Def divisible... 
+
+583
+00:50:12,016 --> 00:50:16,888
+And that should be height is greater than 2,
+
+584
+00:50:17,568 --> 00:50:24,128
+and equal to 2, and width is greater than equals 2.
+
+585
+00:50:26,552 --> 00:50:31,368
+Because our things are all square,
+we don't need to check that much but...
+
+586
+00:50:33,960 --> 00:50:41,380
+So the next thing I think I want is some
+kind of recursive split, but let's just commit first.
+
+587
+00:50:41,380 --> 00:50:47,360
+[Silence]
+
+588
+00:50:58,224 --> 00:51:03,096
+I don't really like the name split
+anymore so I might change that.
+
+589
+00:51:04,304 --> 00:51:08,600
+I might change it to sub-divides.
+
+590
+00:51:08,600 --> 00:51:11,640
+[Silence]
+
+591
+00:51:14,744 --> 00:51:20,800
+Yes, in fact... oh so we've got split there, that's fine
+
+592
+00:51:21,360 --> 00:51:24,440
+So then I want to do it recursively.
+
+593
+00:51:25,456 --> 00:51:32,032
+So I'm going to add... it should split recursively.
+
+594
+00:51:32,030 --> 00:51:35,056
+[Silence]
+
+595
+00:51:37,488 --> 00:51:40,336
+So what I should end up with...
+
+596
+00:51:42,400 --> 00:51:47,776
+rather than specifying all the data for
+this, I'm goiung to just look at a bit of the data.
+
+597
+00:51:49,192 --> 00:51:53,048
+So I know it's going to have 4 things inside it.
+
+598
+00:51:53,520 --> 00:51:59,072
+And each of that is going to have 4 things inside
+it, and each of those will have one thing inside it.
+
+599
+00:52:01,248 --> 00:52:03,984
+So we'll say...
+
+600
+00:52:03,980 --> 00:52:06,976
+[Paul thinks]
+
