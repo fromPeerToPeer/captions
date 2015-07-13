@@ -1193,7 +1193,7 @@ Or can it. It doesn't mutate it does it inaud?
 279
 00:24:31,050 --> 00:24:37,928
 So at the moment pixels is still doing
-that puts stuff, so for now I'm going to do 
+that puts stuff, so for now I'm going to do
 
 280
 00:24:38,480 --> 00:24:41,510
@@ -1474,7 +1474,7 @@ Yes.
 346
 00:29:38,660 --> 00:29:42,544
 OK good, and I'm going to change
-that to rows, because having used it, 
+that to rows, because having used it,
 
 347
 00:29:42,576 --> 00:29:45,896
@@ -1589,7 +1589,7 @@ and makes sense to me at the moment.
 
 373
 00:31:55,230 --> 00:32:05,224
-inaud, rspec rb and inaud 
+inaud, rspec rb and inaud
 
 374
 00:32:05,232 --> 00:32:08,384
@@ -1773,7 +1773,7 @@ Now, the next thing we want is to take up quadrants.
 418
 00:35:33,280 --> 00:35:35,952
 JW: Shall we commit to keep
-this test bootstrap in place? 
+this test bootstrap in place?
 
 419
 00:35:35,952 --> 00:35:37,950
@@ -2082,4 +2082,268 @@ inaud width.
 490
 00:41:06,360 --> 00:41:08,384
 So I think that should do it.
+
+491
+00:41:09,400 --> 00:41:14,104
+inaud full, which are going to be quite similar.
+
+492
+00:41:14,152 --> 00:41:17,152
+[Paul thinks]
+
+493
+00:41:19,040 --> 00:41:22,488
+I'm going to write the test
+for all of them first and then... 
+
+494
+00:41:23,840 --> 00:41:26,248
+say which are Northwest and Northeast.
+
+495
+00:41:28,976 --> 00:41:31,816
+And that's 1,2,3.
+
+496
+00:41:31,810 --> 00:41:36,072
+Helpfully, because I know what these
+numbers are I don't have to go check inaud page.
+
+497
+00:41:36,408 --> 00:41:39,536
+3,4,5,6,7,8.
+
+498
+00:41:39,530 --> 00:41:42,536
+[Silence]
+
+499
+00:41:44,496 --> 00:41:46,864
+I'll write these tests as well.
+
+500
+00:41:48,232 --> 00:41:50,616
+I'll make that one Southwest.
+
+501
+00:41:52,584 --> 00:41:57,152
+That one should be 1 to 10.
+
+502
+00:41:57,150 --> 00:42:00,136
+[Silence]
+
+503
+00:42:03,216 --> 00:42:09,680
+And 11, 12 both Southwest.
+
+504
+00:42:12,720 --> 00:42:14,808
+And the last one is Southeast.
+
+505
+00:42:14,856 --> 00:42:17,856
+[Silence]
+
+506
+00:42:19,680 --> 00:42:24,488
+That's not going to be 11, 12 it's going to be 13,14.
+
+507
+00:42:27,256 --> 00:42:30,352
+That one is 11,12...
+
+508
+00:42:30,904 --> 00:42:33,432
+and 15 and 16.
+
+509
+00:42:35,710 --> 00:42:43,384
+I'll check that's right so 9,10,13,14,11,12,15,16,9,12... yes.
+
+510
+00:42:47,624 --> 00:42:51,648
+So implement Northeast... doesn't work.
+
+511
+00:42:51,640 --> 00:42:54,608
+[Silence]
+
+512
+00:42:56,288 --> 00:43:00,088
+I can pull these out into methods.
+
+513
+00:43:00,080 --> 00:43:03,072
+[Silence]
+
+514
+00:43:15,016 --> 00:43:18,064
+inaud def.
+
+515
+00:43:18,060 --> 00:43:21,104
+[Silence]
+
+516
+00:43:25,560 --> 00:43:30,168
+This one I would say rows dot... 
+
+517
+00:43:30,160 --> 00:43:34,360
+Northwest is there, Northeast
+I still want the first 2 rows.
+
+518
+00:43:35,608 --> 00:43:40,310
+Because North but with this one a drop to take.
+
+519
+00:43:40,310 --> 00:43:43,296
+[Silence]
+
+520
+00:43:43,856 --> 00:43:45,400
+JW: Yes, nice.
+
+521
+00:43:45,408 --> 00:43:47,936
+PB: I can do the same for
+these hopefully in short order,
+
+522
+00:43:47,936 --> 00:43:53,408
+So that should say Southwest and Southeast.
+
+523
+00:43:55,304 --> 00:43:59,536
+I should have copied and pasted
+these entirely because it's a case of...
+
+524
+00:43:59,530 --> 00:44:02,544
+[Silence]
+
+525
+00:44:10,760 --> 00:44:15,224
+So we have our 4 quadrants... I'm going to check those in.
+
+526
+00:44:15,220 --> 00:44:18,248
+[Silence]
+
+527
+00:44:30,020 --> 00:44:33,520
+JW: Right so we've got a quad node class which...
+
+528
+00:44:33,544 --> 00:44:38,216
+given the input pixels can give you each inaud.
+
+529
+00:44:38,210 --> 00:44:44,632
+PB: Yes, it is successively splitting
+each of these into sub-quadrants.
+
+530
+00:44:45,312 --> 00:44:53,904
+A nice thing to do next might
+be some kind of recursive split.
+
+531
+00:44:53,900 --> 00:44:56,552
+Now, you mentioned a particular order.
+
+532
+00:44:56,552 --> 00:44:58,550
+JW: Yes.
+
+533
+00:44:59,040 --> 00:45:05,576
+PB: So I'm going to write a split function
+(I should have put a space in there)...
+
+534
+00:45:05,816 --> 00:45:09,136
+I'm going to write a split function which...
+
+535
+00:45:11,896 --> 00:45:18,232
+Let's see how can I do this.. I want to be able
+to equate things when I get them out in the end.
+
+536
+00:45:20,048 --> 00:45:24,336
+So it should split...
+
+537
+00:45:24,330 --> 00:45:27,328
+[Paul thinks]
+
+538
+00:45:30,032 --> 00:45:32,272
+Let's do one level splitting first.
+
+539
+00:45:33,130 --> 00:45:46,688
+It should split into the four quadrants in order.
+
+540
+00:45:47,360 --> 00:45:52,744
+And we know that is
+anti-clockwise from the Northeast.
+
+541
+00:45:54,480 --> 00:45:57,120
+So anti-clockwise from Northeast.
+
+542
+00:45:57,120 --> 00:46:00,152
+[Silence]
+
+543
+00:46:09,904 --> 00:46:25,032
+So in that case I should be
+able to say expectsubject.split.to equal...
+
+544
+00:46:26,920 --> 00:46:33,224
+In fact I should be able to say that I get
+an array of the four things that are already there,
+
+545
+00:46:33,220 --> 00:46:35,624
+assuming those to be equal.
+
+546
+00:46:35,620 --> 00:46:40,608
+Then I'm going to say subject dot...
+
+547
+00:46:42,360 --> 00:46:45,480
+(I'll put this onto a new line because inaud)
+
+548
+00:46:46,808 --> 00:46:52,360
+Subject.Northeast, subject.Northwest
+
+549
+00:46:53,760 --> 00:46:55,696
+Subject.sw
+
+550
+00:46:58,776 --> 00:47:02,072
+And then subject.se
+
+551
+00:47:04,904 --> 00:47:07,320
+JW: I see inaud in there.
+
+552
+00:47:07,320 --> 00:47:11,432
+PB: Yes, inaud. [Laughter]
+
+553
+00:47:14,072 --> 00:47:17,432
+It should fail because there is no split.
 
