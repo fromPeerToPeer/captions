@@ -2938,7 +2938,7 @@ I am not happy with the names, but they can do for now.
 
 696
 01:03:04,784 --> 01:03:06,800
-We'll do this on the where line first.
+We'll do this on the command line first.
 
 697
 01:03:07,696 --> 01:03:11,976
@@ -2976,11 +2976,11 @@ MS: And then false.
 705
 01:03:57,080 --> 01:04:01,736
 The only problem with this is we
-don't know what the question is.
+don't actually know what the question is.
 
 706
 01:04:01,730 --> 01:04:04,656
-inaudible extracts.
+MS: So we'll extract... that.
 
 707
 01:04:04,650 --> 01:04:07,664
@@ -3017,7 +3017,7 @@ DN: Alright.
 
 715
 01:04:59,192 --> 01:05:01,256
-MS: Inaudible
+MS: Think I need to move that...
 
 716
 01:05:05,080 --> 01:05:06,520
@@ -3033,7 +3033,7 @@ MS: Yes...
 
 719
 01:05:15,248 --> 01:05:17,536
-Responses_count.
+yes_responses_count
 
 720
 01:05:17,530 --> 01:05:20,512
@@ -3049,7 +3049,7 @@ DN: Two nil. [laughter]
 
 723
 01:05:29,432 --> 01:05:31,960
-Let's just inaudible a little bit.
+Let's just make it a little bit...
 
 724
 01:05:31,960 --> 01:05:34,832
@@ -3097,7 +3097,7 @@ the summary of how people have answered.
 734
 01:06:41,224 --> 01:06:46,696
 We're missing the middle bit
-where questions get reserved
+where questions get resolved
 
 735
 01:06:46,690 --> 01:06:50,512
@@ -3170,7 +3170,7 @@ MS: One way of doing that is...
 
 751
 01:07:50,776 --> 01:07:58,890
-Maybe still using a fresh hole so we at
+Maybe still using a threshold so we at
 least have a certain amount of people answering.
 
 752
@@ -3187,7 +3187,7 @@ MS: So let's say we need to have at least 20 answers.
 
 755
 01:08:06,720 --> 01:08:10,816
-Of which 90% need to be the same.
+Of which 90% need to be the same?
 
 756
 01:08:10,810 --> 01:08:15,928
@@ -3281,7 +3281,7 @@ So now we've got...
 
 777
 01:09:53,016 --> 01:09:55,536
-inaudible we want to do resolved.
+I'm guessing, we want to do 'resolved?'.
 
 778
 01:09:58,312 --> 01:10:02,992
@@ -3289,11 +3289,11 @@ And in that case threshold would have to be reached.
 
 779
 01:10:04,480 --> 01:10:09,312
-And maybe majority answered.
+And maybe 'majority_answered?'
 
 780
 01:10:10,240 --> 01:10:12,832
-DN: Majority agreed... that's nice.
+DN: 'majority_agreed?', that's nice.
 
 781
 01:10:12,830 --> 01:10:15,952
@@ -3310,7 +3310,7 @@ Yes what's the calculation we want to do here?
 784
 01:10:23,768 --> 01:10:30,216
 DN: It's a majority of either
-90% said yes, or 90% said no isn't it?
+90% said yes, or 90% said no, isn't it?
 
 785
 01:10:30,210 --> 01:10:31,200
@@ -3326,7 +3326,7 @@ MS: Yes, so calculating both I guess.
 
 788
 01:10:38,350 --> 01:10:45,232
-So, we have total=answers.count.
+So, we have total = answers.count
 
 789
 01:10:46,360 --> 01:10:53,368
@@ -3401,7 +3401,7 @@ I think I might want to do that.
 
 806
 01:12:15,320 --> 01:12:16,752
-DN: Or is it 2f.
+DN: Or is it 'to_f'?
 
 807
 01:12:16,750 --> 01:12:18,400
@@ -3434,11 +3434,11 @@ Greater than... 90.
 814
 01:12:45,328 --> 01:12:48,520
 DN: Another way of saying that
-is yes percentage is greater than 90
+is yes_percentage is greater than 90
 
 815
 01:12:48,520 --> 01:12:51,048
-or yes percentage is less than 10.
+or yes_percentage is less than 10.
 
 816
 01:12:51,976 --> 01:12:54,056
@@ -3451,7 +3451,7 @@ MS: Yes, true.
 818
 01:12:58,768 --> 01:13:03,816
 DN: Shall we play around with
-that on the consul and see what works?
+that on the console and see what works?
 
 819
 01:13:03,810 --> 01:13:09,880
@@ -3519,17 +3519,17 @@ MS: Yes, but we need to have at least 20 answers.
 
 834
 01:14:09,048 --> 01:14:13,408
-DN: But you did threshold reached.
-I thought you did majority agreed.
+DN: But you did 'threshold_reached?'
+I thought you did 'majority_agreed?'.
 
 835
 01:14:14,696 --> 01:14:18,568
-MS: I did resolved and then
-I looked at majority agreed.
+MS: I did 'resolved' and then
+I looked at 'majority_agreed?'
 
 836
 01:14:19,680 --> 01:14:22,360
-Oh right, we did do majority agreed.
+Oh right, we did do 'majority_agreed?'.
 
 837
 01:14:22,360 --> 01:14:25,424
@@ -3549,7 +3549,7 @@ That's the wrong number.
 
 841
 01:14:55,128 --> 01:15:00,136
-DN: Where we working with the first question
+DN: Were we working with the first question
 previously, rather than the last question?
 
 842
@@ -3567,7 +3567,7 @@ DN: Ah, there we go.
 
 845
 01:15:12,504 --> 01:15:15,072
-So the majority agreed is not robust at the moment.
+So the 'majority_agreed?' is not robust at the moment.
 
 846
 01:15:15,820 --> 01:15:17,896
@@ -3632,7 +3632,7 @@ showing all the questions in a list.
 859
 01:16:10,128 --> 01:16:14,616
 It would be a bit nicer if, the
-user logged on to the system
+user logs on to the system
 
 860
 01:16:14,760 --> 01:16:17,192
