@@ -2152,7 +2152,7 @@ MS: Yes, we can.
 
 511
 00:45:06,752 --> 00:45:08,688
-So just hidden filed tag... yes this.
+So just hidden_field_tag... yes it is.
 
 512
 00:45:08,680 --> 00:45:18,648
@@ -2160,7 +2160,7 @@ So just hidden filed tag... yes this.
 
 513
 00:45:19,440 --> 00:45:24,632
-DN: It is a thought... do we have a current user?
+DN: There's a thought... do we have a current_user method?
 
 514
 00:45:26,460 --> 00:45:28,592
@@ -2172,8 +2172,8 @@ I don't think we do.
 
 516
 00:45:32,120 --> 00:45:35,752
-DN: We have a logged in method
-but not a current user method.
+DN: We have a logged_in method
+but not a current_user method.
 
 517
 00:45:36,312 --> 00:45:38,480
@@ -2185,7 +2185,7 @@ MS: No, so let's create that.
 
 519
 00:45:56,300 --> 00:45:58,848
-inaudible and session.
+and then session.
 
 520
 00:45:58,896 --> 00:46:01,824
@@ -2201,7 +2201,7 @@ MS: That should work.
 
 523
 00:46:29,976 --> 00:46:31,920
-DN: Answer, that's interesting.
+DN: answer, that's interesting.
 
 524
 00:46:31,920 --> 00:46:35,288
@@ -2209,7 +2209,7 @@ DN: Answer, that's interesting.
 
 525
 00:46:35,584 --> 00:46:38,136
-So they've all got inaudible.
+So they all got submitted.
 
 526
 00:46:40,432 --> 00:46:44,656
@@ -2226,7 +2226,7 @@ But somehow...
 
 529
 00:46:51,910 --> 00:46:56,328
-DN: Maybe it's because... when you call radio button tag...
+DN: Maybe it's because... when you call radio_button_tag...
 
 530
 00:46:57,328 --> 00:47:00,264
@@ -2234,7 +2234,7 @@ it doesn't put it inside of a form object does it?
 
 531
 00:47:00,260 --> 00:47:04,024
-Whereas if you put f.radio button...
+Whereas if you used f.radio_button...
 
 532
 00:47:04,020 --> 00:47:21,624
@@ -2242,8 +2242,8 @@ Whereas if you put f.radio button...
 
 533
 00:47:21,620 --> 00:47:26,224
-DN: Instead of radio button tag,
-I think you can just say radio button.
+DN: Instead of radio_button_tag,
+I think you can just say radio_button.
 
 534
 00:47:26,220 --> 00:47:41,456
@@ -2251,7 +2251,7 @@ I think you can just say radio button.
 
 535
 00:47:43,304 --> 00:47:46,792
-MS: Oh actually, we were calling that anyway.
+MS: Oh... actually, we weren't calling that anyway.
 
 536
 00:47:46,800 --> 00:47:52,824
@@ -2259,7 +2259,7 @@ MS: Oh actually, we were calling that anyway.
 
 537
 00:47:53,392 --> 00:47:55,144
-So current user.
+So current_user.
 
 538
 00:47:55,140 --> 00:48:14,416
@@ -2319,7 +2319,7 @@ DN: What is it calling merge anyway?
 
 552
 00:49:38,712 --> 00:49:40,960
-We're up to 73.
+Parameters is 73.
 
 553
 00:49:43,896 --> 00:49:46,464
@@ -2327,7 +2327,7 @@ MS: Well that's because...
 
 554
 00:49:48,304 --> 00:49:50,736
-that's the only pre answer it has.
+that's the only params that it has.
 
 555
 00:49:52,936 --> 00:49:54,904
@@ -2356,7 +2356,7 @@ user ID. Does that part even work?
 
 561
 00:50:33,816 --> 00:50:37,440
-So it finds current user ID.
+So it finds the current user ID.
 
 562
 00:50:38,384 --> 00:50:40,736
@@ -2366,7 +2366,7 @@ MS: Yes.
 563
 00:50:42,944 --> 00:50:49,360
 DN: I wonder, what if we were
-to hard code hidden field to user 2.
+to hard code hidden_field to user 2.
 
 564
 00:50:49,384 --> 00:50:53,528
@@ -2375,16 +2375,16 @@ to hard code hidden field to user 2.
 565
 00:50:53,520 --> 00:50:58,552
 DN: So it's not a problem
-with current user method is it?
+with the current_user method is it?
 
 566
 00:50:58,976 --> 00:51:02,240
 It's something about the
-way we're calling hidden field.
+way we're calling hidden_field.
 
 567
 00:51:02,240 --> 00:51:05,368
-Should it be user ID rather than user?
+Should it be user_id rather than user?
 
 568
 00:51:05,360 --> 00:51:08,432
@@ -2400,7 +2400,7 @@ So there's something...
 
 571
 00:51:20,496 --> 00:51:24,928
-for and inaudible
+form_for and hidden_field
 
 572
 00:51:24,976 --> 00:51:32,888
@@ -2408,7 +2408,7 @@ for and inaudible
 
 573
 00:51:33,248 --> 00:51:35,936
-So it was a form for that we're using.
+So it was a form_for that we're using.
 
 574
 00:51:35,930 --> 00:51:48,856
@@ -2428,12 +2428,12 @@ MS: Yes.
 
 578
 00:52:12,264 --> 00:52:15,024
-So now feed it 'yes'.
+So now if we hit 'yes'.
 
 579
 00:52:16,010 --> 00:52:19,600
 DN: Excellent, so finally
-we are hitting out controller.
+we are hitting our controller.
 
 580
 00:52:22,920 --> 00:52:30,368
@@ -2441,7 +2441,7 @@ MS: Yes, and then in the controller, we don't need that,
 
 581
 00:52:31,088 --> 00:52:37,920
-because we've got question ID and user ID.
+because we've got question_id and user_id.
 
 582
 00:52:37,920 --> 00:52:46,776
@@ -2449,11 +2449,11 @@ because we've got question ID and user ID.
 
 583
 00:52:46,952 --> 00:52:49,344
-So where's that inaudible create?
+So why's that within create?
 
 584
 00:52:52,392 --> 00:52:54,520
-Inaudible that.
+It's because we don't need that.
 
 585
 00:52:54,520 --> 00:53:04,448
@@ -2461,16 +2461,16 @@ Inaudible that.
 
 586
 00:53:04,648 --> 00:53:06,440
-I think that works.
+I think that worked.
 
 587
 00:53:08,360 --> 00:53:12,144
-Oh, they're there because we
-don't have a template inaudible
+Or well, it errored because we
+don't have a template, rather than
 
 588
 00:53:13,340 --> 00:53:16,448
-If not inaudible.
+it not creating
 
 589
 00:53:18,456 --> 00:53:19,488
@@ -2482,7 +2482,7 @@ MS: Sort of, except the question ID.
 
 591
 00:53:23,800 --> 00:53:26,464
-DN: But the response is nil and the user ID is nil.
+DN: But the response is nil and the user_id is nil.
 
 592
 00:53:27,048 --> 00:53:30,504
@@ -2503,11 +2503,11 @@ MS: So why would it only set the question ID?
 596
 00:53:45,752 --> 00:53:51,000
 DN: You know how before
-you had params.require_answer?
+you had params.require(:answer)?
 
 597
 00:53:51,336 --> 00:53:54,600
-And then you kept it require answer.
+And then you took our the require(:answer).
 
 598
 00:53:54,744 --> 00:53:56,880
@@ -2519,7 +2519,8 @@ MS: That was because, looking at the params,
 
 600
 00:54:03,360 --> 00:54:08,864
-it didn't seem as if answer was actually being inaudible.
+it didn't seem as if answer was actually
+being passed along.
 
 601
 00:54:09,496 --> 00:54:14,056
@@ -2557,7 +2558,7 @@ MS: Yes.
 
 609
 00:54:32,280 --> 00:54:34,280
-DN: Oh that's fine.
+DN: Oh that's funny.
 
 610
 00:54:37,712 --> 00:54:43,528
@@ -2571,7 +2572,7 @@ it is adding another hidden field.
 
 612
 00:54:49,040 --> 00:54:51,864
-DN: Ah, well now you will have to do that.
+DN: Ah, well now you know how to do that.
 
 613
 00:54:54,104 --> 00:54:57,584
@@ -2638,7 +2639,7 @@ MS: Yes, so that's...
 
 628
 00:56:03,224 --> 00:56:06,424
-That's question path.
+That's question_path.
 
 629
 00:56:06,420 --> 00:56:09,568
@@ -2646,7 +2647,7 @@ That's question path.
 
 630
 00:56:15,552 --> 00:56:17,808
-Let's go back here.
+So we're back here.
 
 631
 00:56:18,780 --> 00:56:21,304
@@ -2654,7 +2655,7 @@ DN: That's probably worth committing isn't it?
 
 632
 00:56:23,488 --> 00:56:28,976
-MS: Almost, I have another thing just here with...
+MS: Almost, I'd add another thing just here with...
 
 633
 00:56:29,992 --> 00:56:32,296
@@ -2684,7 +2685,7 @@ here... we're basically allowing
 
 639
 00:56:55,850 --> 00:57:00,328
-Allow user to answer questions.
+Allow users to answer questions.
 
 640
 00:57:02,968 --> 00:57:06,232
@@ -2712,7 +2713,7 @@ this and we don't want to display it anymore.
 
 645
 00:57:30,550 --> 00:57:36,240
-So let's add a inaudible statement here.
+So let's add an if statement here.
 
 646
 00:57:39,640 --> 00:57:42,840
@@ -2784,11 +2785,11 @@ So now if we do answer.response.present.
 
 662
 00:59:05,392 --> 00:59:08,136
-inaudible nope.
+[inaudible] nope.
 
 663
 00:59:10,864 --> 00:59:13,176
-DN: Ah, there's no find or create.
+DN: Ah, there's no find_or_create.
 
 664
 00:59:13,170 --> 00:59:19,464
@@ -2816,7 +2817,8 @@ MS: Well no because we already answered this.
 
 670
 00:59:39,560 --> 00:59:41,344
-DN: inaudible branch of the 'if'.
+DN: I think we've got the
+wrong branch of the 'if'.
 
 671
 00:59:41,340 --> 00:59:48,640
@@ -3306,7 +3308,7 @@ MS: Yes.
 
 786
 01:10:31,200 --> 01:10:34,152
-DN: Both can be true, the case. 
+DN: Both can be true, the case.
 
 787
 01:10:35,590 --> 01:10:38,352
@@ -3605,7 +3607,7 @@ Putting in the interface...
 
 856
 01:15:59,140 --> 01:16:01,224
-and then beyond that... 
+and then beyond that...
 
 857
 01:16:01,352 --> 01:16:06,520
