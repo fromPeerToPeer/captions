@@ -201,11 +201,11 @@ MS: Yes.
 
 46
 00:02:53,030 --> 00:02:53,872
-But it's not a brand new rails app.
+DN: But it's not a brand new rails app.
 
 47
 00:02:53,870 --> 00:02:57,920
-DN: It already has a register route
+It already has a register route
 and a login route.
 
 48
