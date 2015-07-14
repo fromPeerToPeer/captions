@@ -2094,7 +2094,7 @@ inaud full, which are going to be quite similar.
 493
 00:41:19,040 --> 00:41:22,488
 I'm going to write the test
-for all of them first and then... 
+for all of them first and then...
 
 494
 00:41:23,840 --> 00:41:26,248
@@ -2187,7 +2187,7 @@ inaud def.
 
 516
 00:43:25,560 --> 00:43:30,168
-This one I would say rows dot... 
+This one I would say rows dot...
 
 517
 00:43:30,160 --> 00:43:34,360
@@ -2362,7 +2362,7 @@ Northwest, Southwest, Southeast.
 
 557
 00:47:39,272 --> 00:47:43,792
-OK great, that works, but it's not recursive. 
+OK great, that works, but it's not recursive.
 
 558
 00:47:44,856 --> 00:47:47,856
@@ -2447,7 +2447,7 @@ day where I just mis-touched something
 
 577
 00:49:47,700 --> 00:49:51,200
-when I was inaud and had a really weird error, 
+when I was inaud and had a really weird error,
 
 578
 00:49:51,200 --> 00:49:55,528
@@ -2469,7 +2469,7 @@ well, I don't think I need those again.
 
 582
 00:50:08,776 --> 00:50:10,928
-Def divisible... 
+Def divisible...
 
 583
 00:50:12,016 --> 00:50:16,888
@@ -2671,4 +2671,280 @@ That is a leaf node.
 00:54:36,120 --> 00:54:39,560
 Yes, because that will work
 recursively quite nicely, won't it?
+
+630
+00:54:39,616 --> 00:54:42,688
+[Paul thinks]
+
+631
+00:54:48,848 --> 00:54:50,792
+Yes, I've been confusing myself there.
+
+632
+00:54:51,096 --> 00:54:55,280
+I'm going to leave this for now and go back to this.
+
+633
+00:54:55,344 --> 00:54:59,576
+JW: Perhaps when we come back to make use of this...
+
+634
+00:54:59,880 --> 00:55:04,904
+PB: So it's split recursively, so
+I'm going to say something like:
+
+635
+00:55:05,944 --> 00:55:09,408
+expect result.split.
+
+636
+00:55:09,456 --> 00:55:12,464
+[Paul thinks]
+
+637
+00:55:14,384 --> 00:55:17,640
+I think it should have length
+for, that's the first thing I...
+
+638
+00:55:17,640 --> 00:55:20,632
+[Silence]
+
+639
+00:55:27,008 --> 00:55:30,592
+inaud so let's implement that.
+
+640
+00:55:30,680 --> 00:55:33,696
+[Silence]
+
+641
+00:55:35,520 --> 00:55:38,224
+And I'm just going to make inaud split, for now.
+
+642
+00:55:38,280 --> 00:55:41,288
+[Silence]
+
+643
+00:55:52,448 --> 00:55:54,440
+The first one...
+
+644
+00:55:54,512 --> 00:55:57,528
+[Silence]
+
+645
+00:55:59,576 --> 00:56:01,624
+which should also be 4 long.
+
+646
+00:56:02,400 --> 00:56:08,456
+At this point I'm thinking that I should
+actually be returning some other kind of object,
+
+647
+00:56:08,450 --> 00:56:13,456
+but as long as it returns the length that will be OK.
+
+648
+00:56:16,160 --> 00:56:20,704
+So that fails because it's got
+something else. It's got a list.
+
+649
+00:56:23,944 --> 00:56:25,656
+What I've got here...
+
+650
+00:56:27,640 --> 00:56:31,160
+I suppose I get Northeast,
+Northwest, Southwest, Southeast.
+
+651
+00:56:31,856 --> 00:56:34,128
+So split recursive should be...
+
+652
+00:56:34,120 --> 00:56:40,168
+[Paul thinks]
+
+653
+00:56:51,032 --> 00:56:53,272
+Node...
+
+654
+00:56:53,312 --> 00:56:56,336
+[Silence]
+
+655
+00:56:57,512 --> 00:57:01,816
+This will get stuck in an endless loop because...
+
+656
+00:57:02,210 --> 00:57:06,704
+JW: Am I right in thinking that it won't
+be nodes as well, it will be regular arrays?
+
+657
+00:57:06,704 --> 00:57:12,192
+PB: That's right, so that's what I've
+done wrong isn't it, that actually split.
+
+658
+00:57:15,512 --> 00:57:19,488
+It should actually wrap
+these things in a new quadrant.
+
+659
+00:57:19,480 --> 00:57:22,464
+[Silence]
+
+660
+00:57:26,300 --> 00:57:34,976
+So that will give me rows, which are those,
+and it's like sub.class.new with those rows.
+
+661
+00:57:37,880 --> 00:57:49,120
+Which means of course, that this will be pending.
+
+662
+00:57:49,184 --> 00:57:52,144
+[Silence]
+
+663
+00:57:53,568 --> 00:58:02,128
+So now those are failing, because
+it's not giving me quadrants.
+
+664
+00:58:02,424 --> 00:58:05,296
+So that particular one...
+
+665
+00:58:06,096 --> 00:58:11,816
+I want to make sure that all 4 are
+packed quadrants, which I can do.
+
+666
+00:58:15,200 --> 00:58:18,528
+Describe class... in fact I can
+do that all the way down there.
+
+667
+00:58:20,600 --> 00:58:23,288
+[Paul dictates as he types]
+
+668
+00:58:23,280 --> 00:58:29,288
+[Silence]
+
+669
+00:58:33,008 --> 00:58:35,312
+inaud better.
+
+670
+00:58:36,488 --> 00:58:39,768
+OK, so something else has happened.
+
+671
+00:58:42,008 --> 00:58:43,736
+JW: It doesn't know how to compare...
+
+672
+00:58:43,730 --> 00:58:46,456
+PB: It doesn't, so let's give it that.
+
+673
+00:58:48,352 --> 00:58:50,216
+So what shall we do...
+
+674
+00:58:53,016 --> 00:58:58,896
+Other, and we'll just say set.rows equals other.rows.
+
+675
+00:58:58,890 --> 00:59:01,872
+[Silence]
+
+676
+00:59:05,112 --> 00:59:07,192
+Yes, cool.
+
+677
+00:59:09,144 --> 00:59:13,192
+So now I can go down... and this one I expect to...
+
+678
+00:59:13,240 --> 00:59:16,232
+[Silence]
+
+679
+00:59:18,416 --> 00:59:21,400
+Given that I've got 4 things, I'm going to have...
+
+680
+00:59:22,810 --> 00:59:28,784
+So I have 16 cells altogether, and the first one
+I'll get 4 which has those 4 which has which has 1H
+
+681
+00:59:28,790 --> 00:59:34,792
+So the first one should have length
+4, the second level down should have 4, 
+
+682
+00:59:34,800 --> 00:59:39,096
+the third level down I think should have length 1,
+
+683
+00:59:43,600 --> 00:59:46,752
+Which I think means that this should be that.
+
+684
+00:59:49,368 --> 00:59:51,672
+But let's leave that test for now.
+
+685
+00:59:51,670 --> 00:59:54,664
+[Silence]
+
+686
+00:59:57,504 --> 01:00:04,864
+JW: I think that in that expectation, the third one...
+
+687
+01:00:07,600 --> 01:00:09,688
+Cool.
+
+688
+01:00:14,288 --> 01:00:17,136
+PB: There we need something
+representing the leaf node.
+
+689
+01:00:24,792 --> 01:00:31,192
+Maybe that's fine, maybe simply having
+one element in it is... that leaf node.
+
+690
+01:00:31,816 --> 01:00:34,952
+So what I might say is...
+
+691
+01:00:35,208 --> 01:00:36,950
+inaud
+
+692
+01:00:37,072 --> 01:00:40,088
+[Paul thinks]
+
+693
+01:00:41,550 --> 01:00:46,096
+In this case I'm going to say it's a leaf node.
+
+694
+01:00:46,144 --> 01:00:49,144
+[Silence]
 
