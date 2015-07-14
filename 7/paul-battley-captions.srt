@@ -2919,7 +2919,7 @@ JW: I think that in that expectation, the third one...
 Cool.
 
 688
-01:00:14,288 --> 01:00:17,136
+01:00:14,280 --> 01:00:17,584
 PB: There we need something
 representing the leaf node.
 
