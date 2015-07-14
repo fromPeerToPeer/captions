@@ -1,12 +1,2674 @@
-1
-00:00:01,450 --> 00:00:02,710
-Welcome to Peer to Peer
+﻿1
+00:00:01,224 --> 00:00:02,976
+NARRATOR: Welcome to Peer to Peer
 
 2
-00:00:02,820 --> 00:00:05,650
-where you can watch how
-experts solve tech problems.
+00:00:02,976 --> 00:00:06,776
+where you can hone your skills
+by watching live coding videos.
 
 3
-00:00:06,480 --> 00:00:08,640
-Our guest today is Paul Battley
+00:00:07,904 --> 00:00:10,424
+Our guest today is Paul Battley.
+
+4
+00:00:10,420 --> 00:00:12,120
+Who is a veteran Ruby developer,
+
+5
+00:00:12,120 --> 00:00:15,824
+who has worked with agencies,
+startups and Government departments.
+
+6
+00:00:17,080 --> 00:00:21,248
+Our host is Jamie White, and the
+challenge that he has set for Paul is called
+
+7
+00:00:21,472 --> 00:00:24,128
+Encoding Images As Quad Trees.
+
+8
+00:00:25,992 --> 00:00:30,384
+Jamie White: OK, so how about
+we start by reading the challenge?
+
+9
+00:00:30,720 --> 00:00:32,224
+Paul Battley: OK, so...
+
+10
+00:00:32,272 --> 00:00:37,992
+Write a program to convert a given binary
+image into a quad tree and serialize it to disk.
+
+11
+00:00:38,248 --> 00:00:43,352
+Write another program to take a
+serialized quad tree and turn it back into an image.
+
+12
+00:00:43,460 --> 00:00:47,608
+The quad tree for an image is generated
+by splitting the image into four quadrants
+
+13
+00:00:47,608 --> 00:00:51,152
+then successively splitting each
+of these into further quadrants.
+
+14
+00:00:51,176 --> 00:00:55,952
+When a quadrant consists of a single
+color, it may be considered a terminal node.
+
+15
+00:00:57,400 --> 00:01:03,880
+JW: I have provided this beautiful
+binary image for you to work with.
+
+16
+00:01:03,880 --> 00:01:07,280
+PB: Not quite the right time,
+depending on when your watching this.
+
+17
+00:01:07,312 --> 00:01:10,656
+JW: It's in a Windows 1Bit bitmap format.
+
+18
+00:01:10,650 --> 00:01:14,048
+So, it's up to you how you make use of that.
+
+19
+00:01:14,128 --> 00:01:17,310
+[New Chapter]
+
+20
+00:01:17,552 --> 00:01:22,950
+PB: So the first thing we want
+to do is pass the bitmap file.
+
+21
+00:01:22,950 --> 00:01:36,832
+If I recall correctly, that's a bunch of
+bytes, and huge bits of each byte is an image.
+
+22
+00:01:37,136 --> 00:01:42,176
+I don't know which order it goes in so
+I'm going to look it up on Wikipedia and find out.
+
+23
+00:01:42,170 --> 00:01:45,560
+Inaudible.
+
+24
+00:01:45,976 --> 00:01:51,064
+So I'll look up the BMP file format.
+
+25
+00:01:53,810 --> 00:01:58,728
+Been through that, OK what
+have I got... Pixel array inaudible.
+
+26
+00:01:58,790 --> 00:02:01,848
+I hope it's not compressed. I guess we'll find out.
+
+27
+00:02:02,630 --> 00:02:06,640
+If it is we can find some other way of processing it.
+
+28
+00:02:07,290 --> 00:02:13,112
+1 bit pixel. Each bit is
+indexed into a table of two colors.
+
+29
+00:02:14,450 --> 00:02:18,776
+That's interesting, so inaudible
+colors even though there's only two.
+
+30
+00:02:18,816 --> 00:02:21,904
+We don't really need to...
+
+31
+00:02:21,900 --> 00:02:26,432
+In our case it doesn't really
+matter, as long as we're consistent.
+
+32
+00:02:27,368 --> 00:02:33,088
+So... I suggest that we look
+at the file to see how long it is.
+
+33
+00:02:33,080 --> 00:02:36,072
+[Silence]
+
+34
+00:02:37,120 --> 00:02:42,048
+Ls - L on whatever .bmp
+
+35
+00:02:43,800 --> 00:02:45,816
+8256 bytes.
+
+36
+00:02:46,664 --> 00:02:49,888
+And... do we know the size of it?
+
+37
+00:02:49,880 --> 00:02:53,768
+We can find that out with identify.
+
+38
+00:02:56,336 --> 00:02:59,328
+Inaudible.
+
+39
+00:02:59,560 --> 00:03:09,432
+256 by 256 would be 64K except that
+we're less 8 bits of a pixel... so 8 pixels.
+
+40
+00:03:09,712 --> 00:03:16,240
+Sorry pixels per byte, so inaudible so 856 sounds just about right.
+
+41
+00:03:17,456 --> 00:03:19,128
+So it's not compressed.
+
+42
+00:03:19,752 --> 00:03:27,744
+And according to this, it's just
+the end of the file so I can probably...
+
+43
+00:03:28,180 --> 00:03:31,512
+ignore the header and just take the pixels.
+
+44
+00:03:31,720 --> 00:03:39,040
+So I'm going to write a bit of
+code that reads in this bitmap,
+
+45
+00:03:39,470 --> 00:03:45,072
+and spits out the pixels as,
+maybe hashes and spaces on screen.
+
+46
+00:03:45,070 --> 00:03:47,608
+That should give us an idea of whether its working.
+
+47
+00:03:47,600 --> 00:03:51,000
+Inaudible and a bit wierd, but we'll work it out.
+
+48
+00:03:51,696 --> 00:03:58,768
+So I'm going to play around, and call this print-bmp.rb.
+
+49
+00:03:59,664 --> 00:04:06,192
+And now I'm going to say something like...
+
+50
+00:04:06,440 --> 00:04:10,624
+I can load it all into memory... bits = File.read.
+
+51
+00:04:10,620 --> 00:04:18,224
+I could use ARGF here but I'm going to use
+ARGV first because I want to specify the encoding.
+
+52
+00:04:18,680 --> 00:04:23,832
+JW: So ARGF gives you the final pass
+into the command rather than inaudible
+
+53
+00:04:27,180 --> 00:04:32,504
+PB: Well it gives you both so you can either inaudible something or it will give you the first one.
+
+54
+00:04:33,000 --> 00:04:37,832
+Its very handy but I'm not
+sure how that would handle inaudible.
+
+55
+00:04:38,080 --> 00:04:41,176
+I know that we need to be
+able to handle the inaudible.
+
+56
+00:04:41,180 --> 00:04:45,144
+ARGV, I think it's...
+
+57
+00:04:45,140 --> 00:04:48,032
+Inaudible encoding...
+
+58
+00:04:48,030 --> 00:04:51,144
+[Silence]
+
+59
+00:04:53,368 --> 00:04:56,728
+ASCII 8 Bit,
+
+60
+00:04:57,480 --> 00:05:00,024
+which is not ASCII actually but...
+
+61
+00:05:03,656 --> 00:05:06,008
+Let's say that's byte.
+
+62
+00:05:07,888 --> 00:05:12,216
+And then I can say "print how many bytes I have got".
+
+63
+00:05:13,984 --> 00:05:18,000
+Which should be something like 256, if that works.
+
+64
+00:05:18,560 --> 00:05:22,808
+So I'm going to split this screen.
+
+65
+00:05:22,800 --> 00:05:26,632
+Actually, no I'll make a new inaudible.
+
+66
+00:05:30,250 --> 00:05:32,400
+Quad trees...
+
+67
+00:05:32,808 --> 00:05:38,696
+Now if I say Ruby and print
+bnp and give it a style of bnp.
+
+68
+00:05:39,840 --> 00:05:42,016
+Inaudible array to string.
+
+69
+00:05:42,856 --> 00:05:46,824
+ARGV [They both talk at once]
+
+70
+00:05:51,152 --> 00:05:55,408
+OK so I'm going to read inaudible, that seems right.
+
+71
+00:05:59,270 --> 00:06:01,456
+I'm going to hard code the width and height.
+
+72
+00:06:01,470 --> 00:06:08,632
+So I'm going to say width
+equals 256 and height  equals 256
+
+73
+00:06:08,630 --> 00:06:16,832
+And then I'm going to say
+that image bytes is bytes from...
+
+74
+00:06:18,040 --> 00:06:27,432
+Actually let's just say minus
+width, width x height to the end.
+
+75
+00:06:29,752 --> 00:06:33,088
+Then if I go... make that one image bytes
+
+76
+00:06:33,080 --> 00:06:36,712
+[Silence]
+
+77
+00:06:36,712 --> 00:06:38,710
+Put some space in there.
+
+78
+00:06:42,208 --> 00:06:46,760
+I can run this at inaudible percent.
+
+79
+00:06:49,376 --> 00:06:50,968
+Inaudible.
+
+80
+00:06:52,464 --> 00:06:56,000
+And define the length nil nil class by 5.
+
+81
+00:06:56,056 --> 00:06:59,040
+[Silence]
+
+82
+00:06:59,856 --> 00:07:02,008
+That's interesting.
+
+83
+00:07:02,440 --> 00:07:04,872
+Apparently image bytes is nil.
+
+84
+00:07:06,896 --> 00:07:09,624
+Let's see if that's really true.
+
+85
+00:07:09,620 --> 00:07:12,584
+[Silence]
+
+86
+00:07:14,528 --> 00:07:17,400
+Yes, why is that nil?
+
+87
+00:07:17,832 --> 00:07:20,968
+I know that bytes works.
+
+88
+00:07:20,960 --> 00:07:23,936
+[Silence]
+
+89
+00:07:24,800 --> 00:07:26,128
+Maybe it's confused by...
+
+90
+00:07:26,120 --> 00:07:30,528
+JW: Is that all bytes are like a string?
+
+91
+00:07:30,520 --> 00:07:32,888
+PB: Your right, exactly.
+
+92
+00:07:32,880 --> 00:07:35,896
+[Silence]
+
+93
+00:07:36,880 --> 00:07:43,536
+PB: So in that case, maybe I should
+just unpack it into an array of bytes.
+
+94
+00:07:43,530 --> 00:07:46,552
+[Silence]
+
+95
+00:07:50,936 --> 00:07:53,904
+Inaudible again.
+
+96
+00:07:57,152 --> 00:07:59,720
+JW: I rarely use the unpack method.
+
+97
+00:08:00,328 --> 00:08:02,504
+That notation... what does it mean?
+
+98
+00:08:03,648 --> 00:08:12,880
+PB: If I recall correctly, that C means that
+each byte will be unpacked as its byte.
+
+99
+00:08:12,880 --> 00:08:17,920
+So you will get an array of integers
+that are the byte value of each character.
+
+100
+00:08:21,176 --> 00:08:25,464
+[Paul thinks]
+
+101
+00:08:28,128 --> 00:08:34,240
+Let's just try saying leave bytes
+and just take 10 of them or something.
+
+102
+00:08:34,270 --> 00:08:39,152
+In fact, I'm going to say take 10 and
+see if I've got something sensible there.
+
+103
+00:08:39,176 --> 00:08:42,208
+[Silence]
+
+104
+00:08:45,856 --> 00:08:49,272
+Yes, that seems useful.
+
+105
+00:08:51,920 --> 00:08:56,880
+In fact I could also say bytes dot...
+
+106
+00:08:58,296 --> 00:09:00,464
+Yes, in fact...
+
+107
+00:09:02,976 --> 00:09:05,232
+So I've got an array...
+
+108
+00:09:07,776 --> 00:09:11,088
+Where is 256?  Ah, there is my problem, right there.
+
+109
+00:09:11,128 --> 00:09:15,784
+The width is the number of bits.
+
+110
+00:09:16,000 --> 00:09:19,704
+I want it to be the number of
+characters, so it's width x height.
+
+111
+00:09:20,312 --> 00:09:29,344
+And let's say bits per pixels... is that what it says?
+
+112
+00:09:32,976 --> 00:09:36,264
+Hard code here, I think we know what 8 is.
+
+113
+00:09:36,720 --> 00:09:42,256
+Width x height, this is all assuming
+it's multiples of 8 and in this case it is.
+
+114
+00:09:45,016 --> 00:09:49,880
+8192 that's the number I was
+looking for, that's the power of 2.
+
+115
+00:09:50,768 --> 00:09:54,904
+JW: Would you mind printing out the
+difference between bytes.length and image bytes?
+
+116
+00:09:54,900 --> 00:09:56,280
+Just to see how big the header is.
+
+117
+00:09:56,280 --> 00:09:58,368
+PB: Yes, that's a good idea.
+
+118
+00:09:58,360 --> 00:10:03,624
+So bytes.length minus image bytes.length.
+
+119
+00:10:03,620 --> 00:10:06,712
+[Silence]
+
+120
+00:10:10,456 --> 00:10:12,544
+64 bytes.
+
+121
+00:10:14,264 --> 00:10:18,008
+That's good so let's see... inaudible.
+
+122
+00:10:18,848 --> 00:10:34,416
+So in fact... I could say header - bytes.take 64
+and then I could say image bytes.drop.
+
+123
+00:10:34,456 --> 00:10:38,232
+I'm not sure if that's sensible though
+because the header might change.
+
+124
+00:10:38,904 --> 00:10:47,392
+So instead I'm going to say
+header equals bytes.take... that much.
+
+125
+00:10:49,592 --> 00:10:53,408
+So I've now got the image
+the bytes and the header.
+
+126
+00:10:53,400 --> 00:10:55,104
+Now let's try to draw the image
+
+127
+00:10:55,100 --> 00:10:57,176
+So I'm going to say...
+
+128
+00:10:59,688 --> 00:11:01,512
+(What's the best way to do this...?)
+
+129
+00:11:02,704 --> 00:11:14,424
+Say height.times do - that can be Y
+and width.times do and that can be our X.
+
+130
+00:11:14,464 --> 00:11:17,472
+[Paul thinks]
+
+131
+00:11:20,056 --> 00:11:23,096
+Then we should in fact...
+
+132
+00:11:26,112 --> 00:11:28,176
+inaudible it's not going to do it.
+
+133
+00:11:28,170 --> 00:11:31,200
+[Silence]
+
+134
+00:11:33,480 --> 00:11:40,016
+So then our byte is going to be the image bytes.
+
+135
+00:11:41,040 --> 00:11:48,880
+And the index of width over 8 x Y.
+
+136
+00:11:48,952 --> 00:11:51,832
+[Silence]
+
+137
+00:11:52,650 --> 00:11:54,896
+Plus X.
+
+138
+00:11:57,176 --> 00:12:04,696
+And then we want 8.times do,
+what shall we call this one - i.
+
+139
+00:12:05,848 --> 00:12:07,896
+Inaudible
+
+140
+00:12:07,960 --> 00:12:12,152
+So for each of these I'm going to say...
+
+141
+00:12:14,830 --> 00:12:21,216
+I want to find the inaudible bit of it,
+but I don't know which way round they are do I?
+
+142
+00:12:21,224 --> 00:12:23,176
+JW: Ah, that's true.
+
+143
+00:12:23,170 --> 00:12:25,104
+Inaudible
+
+144
+00:12:26,704 --> 00:12:29,792
+PB: Maybe it will say in Wikipedia.
+
+145
+00:12:29,790 --> 00:12:32,896
+[Silence]
+
+146
+00:12:36,808 --> 00:12:42,480
+It's probably reasonable to assume
+that the most significant ones on the left,
+
+147
+00:12:42,544 --> 00:12:45,400
+Like numbers are.
+
+148
+00:12:48,408 --> 00:12:53,704
+Yes, so if I start off with my, (a kind of ugly
+way of doing it but it will work for now).
+
+149
+00:12:53,700 --> 00:12:58,816
+If I start off with my bit mask, I want to be...
+
+150
+00:12:58,810 --> 00:13:01,808
+[Silence]
+
+151
+00:13:02,720 --> 00:13:09,336
+Yes, in fact this ought to work well,
+so bitmask wants to be Ob1OOOOOOO.
+
+152
+00:13:09,656 --> 00:13:19,024
+Then my bit is just bitmask white shifted by i.
+
+153
+00:13:19,248 --> 00:13:23,816
+So that's going to be starting
+from zero and then increasing.
+
+154
+00:13:24,140 --> 00:13:31,040
+And I can take that and inaudible that with the byte.
+
+155
+00:13:33,176 --> 00:13:39,072
+And then take the whole thing...
+
+156
+00:13:39,070 --> 00:13:42,112
+[Paul thinks]
+
+157
+00:13:44,296 --> 00:13:51,864
+And then right shift the whole thing by 8 bytes.
+
+158
+00:13:51,860 --> 00:13:56,128
+So my first one will be a
+right shift by nothing inaudible.
+
+159
+00:13:57,568 --> 00:14:02,136
+Yes, so my first one will be right shifted
+by 8, which means it's the least significant.
+
+160
+00:14:02,672 --> 00:14:04,920
+It;s like program C isn't it? [Laughter]
+
+161
+00:14:04,920 --> 00:14:13,832
+OK, so now I am just going to say print bit to S.
+
+162
+00:14:13,830 --> 00:14:16,856
+[Paul thinks]
+
+163
+00:14:19,020 --> 00:14:29,568
+Or maybe I'll do print bit equals 1 # space.
+
+164
+00:14:29,600 --> 00:14:31,392
+That should be more readable.
+
+165
+00:14:31,390 --> 00:14:36,920
+And then at the end of each row is a put
+
+166
+00:14:39,008 --> 00:14:42,448
+Alright... we will see.
+
+167
+00:14:45,320 --> 00:14:47,592
+Let's try this again.
+
+168
+00:14:47,590 --> 00:14:49,560
+We got all zeros.
+
+169
+00:14:49,560 --> 00:14:55,664
+JW: The features in the image are down towards
+the bottom so presumably we didn't hit them yet.
+
+170
+00:14:55,680 --> 00:15:03,670
+PB: That's true, it might be
+worth shrinking the text size.
+
+171
+00:15:04,856 --> 00:15:07,496
+No that's definitely all zeros.
+
+172
+00:15:08,168 --> 00:15:11,312
+So have I got this right...
+
+173
+00:15:11,310 --> 00:15:14,320
+[Paul thinks]
+
+174
+00:15:14,320 --> 00:15:18,040
+JW: We could just try printing the bits to begin with.
+PB: Yes.
+
+175
+00:15:18,040 --> 00:15:21,040
+[Silence]
+
+176
+00:15:23,872 --> 00:15:26,672
+There's the zeros.
+
+177
+00:15:26,670 --> 00:15:31,176
+inaudible line banks which looks about right doesn't it?
+
+178
+00:15:31,170 --> 00:15:35,200
+I'm not sure how many
+characters I've got across actually but...
+
+179
+00:15:35,888 --> 00:15:38,920
+1234567890
+
+180
+00:15:41,392 --> 00:15:46,040
+Yes, it looks about right for the length
+of the line. That seems inaudible.
+
+181
+00:15:48,880 --> 00:15:51,840
+How about instead of this, I just print out the byte?
+JW: Yes.
+
+182
+00:15:53,344 --> 00:15:59,912
+So I'll skip that and just say print byte.to S
+
+183
+00:16:02,648 --> 00:16:05,376
+That looks promising.
+
+184
+00:16:05,370 --> 00:16:13,376
+Hey, I can kind of see the shape. In fact if
+you squint maybe you can see the hands there.
+
+185
+00:16:13,384 --> 00:16:14,056
+JW: Yes.
+
+186
+00:16:14,050 --> 00:16:20,296
+PB: In fact if I did that to S16 inaudible and the same width.
+
+187
+00:16:20,290 --> 00:16:23,120
+that should give us an even better indication of ...
+
+188
+00:16:24,680 --> 00:16:27,336
+[laughter]
+
+189
+00:16:27,330 --> 00:16:31,016
+The zero is still there but you get the idea.
+
+190
+00:16:31,010 --> 00:16:32,744
+JW: There's an image in there somewhere.
+
+191
+00:16:33,010 --> 00:16:37,424
+PB: Yes, we can see something inaud and long, which is...
+
+192
+00:16:37,456 --> 00:16:44,368
+In fact, let's go back to that.
+
+193
+00:16:44,360 --> 00:16:49,312
+Now this makes me wonder... it's upside down isn't it?
+
+194
+00:16:49,310 --> 00:16:51,368
+JW: Oh yes...
+
+195
+00:16:51,360 --> 00:16:55,888
+PB: I think inaud is the case with
+bnp which is upside down.
+
+196
+00:16:56,408 --> 00:17:02,808
+But that doesn't matter for us, as long as it says
+our output is upside down, it should be fine.
+
+197
+00:17:04,360 --> 00:17:16,784
+OK so bytes are OK, bitmask is OK, let's just get rid of...
+
+198
+00:17:16,780 --> 00:17:19,848
+[Silence]
+
+199
+00:17:22,424 --> 00:17:26,288
+We'll get rid of that entirely
+and see what results we get.
+
+200
+00:17:26,280 --> 00:17:29,280
+[Silence]
+
+201
+00:17:30,728 --> 00:17:35,008
+OK that's a bunch of different things except...
+
+202
+00:17:35,000 --> 00:17:38,080
+[Silence]
+
+203
+00:17:39,400 --> 00:17:43,080
+Yes, I think that's right, the last row has...
+
+204
+00:17:45,672 --> 00:17:48,592
+There's a lot of white space at
+the top so we would expect...
+
+205
+00:17:49,368 --> 00:17:52,056
+This also means our inaud as well.
+
+206
+00:17:53,792 --> 00:17:56,928
+Again, as long as we're consistent that's fine.
+
+207
+00:17:59,816 --> 00:18:01,984
+OK so...
+
+208
+00:18:04,480 --> 00:18:12,672
+The easiest way of doing this then is
+to just say if it's zero, zero acts as one
+
+209
+00:18:13,120 --> 00:18:14,832
+Or rather...
+
+210
+00:18:14,830 --> 00:18:17,912
+[Silence]
+
+211
+00:18:24,920 --> 00:18:33,944
+Yes, I think that's modularly inaud shrink list. [Laughter]
+
+212
+00:18:33,968 --> 00:18:36,992
+[Silence]
+
+213
+00:18:37,208 --> 00:18:39,424
+JW: Awsome.
+
+214
+00:18:41,010 --> 00:18:48,320
+So... we know that we can get
+the bitmap in and in a format which,
+
+215
+00:18:48,328 --> 00:18:54,960
+whilst it might not look exactly how we
+want to see it - it seems to be flipped basically,
+
+216
+00:18:55,512 --> 00:19:01,088
+for the purpose of taking an image and
+processing it and exporting it again, that's fine.
+
+217
+00:19:03,064 --> 00:19:06,656
+JW: Looks like a good time to commit.
+PB Yes, I agree.
+
+218
+00:19:06,650 --> 00:19:09,696
+[Silence]
+
+219
+00:19:11,312 --> 00:19:15,376
+Don't know what I typed there... some junk... right.
+
+220
+00:19:15,370 --> 00:19:18,368
+[Silence]
+
+221
+00:19:21,310 --> 00:19:27,752
+That want's a simple BMP printer.
+
+222
+00:19:31,448 --> 00:19:41,768
+OK, now that we've got rid of
+that lot it would be nice to wrap this
+
+223
+00:19:42,136 --> 00:19:49,792
+in a method that we give a
+file and it gives us the bits.
+
+224
+00:19:49,790 --> 00:19:52,592
+[Paul thinks]
+
+225
+00:19:52,616 --> 00:19:55,680
+Yes, I think that would be good.
+
+226
+00:19:57,904 --> 00:20:02,056
+If I had a bunch of small test images,
+I would write some tests for this,
+
+227
+00:20:02,050 --> 00:20:09,744
+but given the size of the image... I don't know how easily if I can make a bnp inaud
+
+228
+00:20:11,360 --> 00:20:16,664
+inaud def read bmp.
+
+229
+00:20:17,760 --> 00:20:22,352
+And inaud file object.
+
+230
+00:20:22,350 --> 00:20:25,696
+[Silence]
+
+231
+00:20:27,072 --> 00:20:30,568
+And... get it to take this stuff.
+
+232
+00:20:30,560 --> 00:20:33,568
+[Silence]
+
+233
+00:20:34,664 --> 00:20:39,424
+In fact I'm going to make a bnp file construct.
+
+234
+00:20:39,744 --> 00:20:44,304
+In fact, I will put something in
+class, I think that will be easier.
+
+235
+00:20:44,544 --> 00:20:46,008
+Because it's got a header and other things,
+
+236
+00:20:46,000 --> 00:20:50,016
+I think it's best to keep it all
+together in the same class BMP which...
+
+237
+00:20:50,010 --> 00:20:53,096
+[Silence]
+
+238
+00:20:55,104 --> 00:20:59,528
+And I can say def initialize.
+
+239
+00:20:59,520 --> 00:21:02,520
+[Silence]
+
+240
+00:21:02,520 --> 00:21:05,136
+inaud file some kind.
+
+241
+00:21:07,696 --> 00:21:14,968
+inaud, the interface below is going to be something like...
+
+242
+00:21:15,504 --> 00:21:19,424
+BMPImage.new
+
+243
+00:21:20,152 --> 00:21:23,390
+inaud first encoding.
+
+244
+00:21:25,432 --> 00:21:30,592
+Something like that will give me the
+power to inject a file that's alright for it.
+
+245
+00:21:31,480 --> 00:21:34,328
+Nothing... should be able to say...
+
+246
+00:21:34,320 --> 00:21:37,352
+[Silence]
+
+247
+00:21:37,656 --> 00:21:40,200
+In fact, if I say that it will be file.open.
+
+248
+00:21:40,200 --> 00:21:43,224
+[Silence]
+
+249
+00:21:44,820 --> 00:21:48,592
+And I can say file.read.upack.
+
+250
+00:21:49,090 --> 00:21:54,952
+So now I'm going to put this in initialize
+
+251
+00:21:55,112 --> 00:21:59,144
+I might want to move it somewhere
+else later but I think for now that will work.
+
+252
+00:21:59,140 --> 00:22:02,144
+[Silence]
+
+253
+00:22:04,040 --> 00:22:07,048
+inaud
+
+254
+00:22:07,040 --> 00:22:09,248
+Then say pixels.
+
+255
+00:22:10,984 --> 00:22:13,056
+And...
+
+256
+00:22:13,312 --> 00:22:16,824
+In fact, let's have width and height as...
+
+257
+00:22:16,820 --> 00:22:19,808
+[Silence]
+
+258
+00:22:28,056 --> 00:22:38,176
+inaud height, while we're here I'm just
+going to change width to width... yes yes yes.
+
+259
+00:22:38,928 --> 00:22:40,816
+And do the same for height.
+
+260
+00:22:42,864 --> 00:22:48,376
+Strange how my hands type a completely
+different word as the one I was intending to.
+
+261
+00:22:48,800 --> 00:22:52,584
+inaud
+
+262
+00:22:52,580 --> 00:22:55,640
+[Silence]
+
+263
+00:23:00,816 --> 00:23:02,952
+And this one...
+
+264
+00:23:04,880 --> 00:23:13,792
+Width height pixels in there, inaudible and put this in a private method.
+
+265
+00:23:13,790 --> 00:23:16,744
+[Silence]
+
+266
+00:23:16,912 --> 00:23:26,344
+inaud and say private section and say def image bytes.
+
+267
+00:23:26,340 --> 00:23:29,392
+[Silence]
+
+268
+00:23:29,390 --> 00:23:36,080
+I will cache that and say image bytes inaudible.
+
+269
+00:23:36,600 --> 00:23:39,100
+And I'm going to say def header,
+and the reason I'm doing this
+
+270
+00:23:39,100 --> 00:23:43,672
+is because I know we want to write one
+out later, so it's helpful to keep the header.
+
+271
+00:23:43,712 --> 00:23:46,664
+[Silence]
+
+272
+00:23:47,704 --> 00:23:51,136
+Again I can say header...
+
+273
+00:23:52,808 --> 00:23:55,936
+bytes.take... that's got to be at bytes.
+
+274
+00:23:58,208 --> 00:24:01,936
+at bytes.length and inaud bytes.
+
+275
+00:24:04,192 --> 00:24:09,128
+So we've inaud bytes, OK.
+
+276
+00:24:11,976 --> 00:24:19,928
+Here we have image bytes available to us inaud moved up the top somewhere.
+
+277
+00:24:22,000 --> 00:24:25,208
+Or can it. It doesn't mutate it does it inaud?
+
+278
+00:24:25,890 --> 00:24:28,856
+[Silence]
+
+279
+00:24:31,050 --> 00:24:37,928
+So at the moment pixels is still doing
+that puts stuff, so for now I'm going to do
+
+280
+00:24:38,480 --> 00:24:41,510
+dot pixels,and see if I get the same sensible result.
+
+281
+00:24:41,510 --> 00:24:44,608
+[Silence]
+
+282
+00:24:48,144 --> 00:24:51,136
+inaud because I haven't given it the width and the height.
+
+283
+00:24:51,130 --> 00:24:54,128
+[Silence]
+
+284
+00:24:55,096 --> 00:24:59,872
+inaud
+
+285
+00:25:01,720 --> 00:25:05,264
+At a later stage, I could probably
+work out where to find those in the header,
+
+286
+00:25:05,260 --> 00:25:11,976
+and read them but that's not the
+most interesting thing we can do today.
+
+287
+00:25:13,280 --> 00:25:15,800
+OK, seems good.
+
+288
+00:25:16,056 --> 00:25:19,040
+inaud yes, that seems good.
+
+289
+00:25:20,992 --> 00:25:21,952
+OK...
+
+290
+00:25:21,992 --> 00:25:24,976
+[Silence]
+
+291
+00:25:32,016 --> 00:25:36,568
+I'll commit this before I change it slightly.
+
+292
+00:25:39,088 --> 00:25:43,848
+Make a BMPImage class, this
+is still a work in progress so...
+
+293
+00:25:44,088 --> 00:25:47,816
+I think everything will be a
+work in progress today actually.
+
+294
+00:25:48,360 --> 00:25:58,920
+So now I want to make this return, in fact
+what I think I want is an array of arrays of pixels.
+
+295
+00:25:59,400 --> 00:26:02,120
+I think that's the most sensible thing to do.
+
+296
+00:26:02,120 --> 00:26:09,104
+It might not be the most
+helpful thing later on, but for now...
+
+297
+00:26:09,160 --> 00:26:11,100
+Height I can map...
+
+298
+00:26:12,024 --> 00:26:16,680
+because each of those inaud
+
+299
+00:26:16,680 --> 00:26:23,064
+I would like to do the inaud style of functional things with the braces.
+
+300
+00:26:23,104 --> 00:26:24,570
+Width over 8.
+
+301
+00:26:24,570 --> 00:26:29,816
+Now this one... I need to do
+something like a flat map I think.
+
+302
+00:26:30,320 --> 00:26:32,680
+Flat_map with x.
+
+303
+00:26:32,680 --> 00:26:35,696
+[Silence]
+
+304
+00:26:36,296 --> 00:26:41,048
+And then byte, this will be 8.times.map.
+
+305
+00:26:41,040 --> 00:26:44,080
+[Silence]
+
+306
+00:26:45,592 --> 00:26:51,896
+JW: So with flat map the arrays returned by
+the block will be concating together effectively?
+
+307
+00:26:52,080 --> 00:26:54,800
+PB: Yes, I think I can demonstrate actually.
+
+308
+00:26:54,800 --> 00:26:59,968
+It's the same as dot map and dot
+flatten... I don't know how deep it goes.
+
+309
+00:27:00,416 --> 00:27:03,912
+It inaud, but if I say...
+
+310
+00:27:03,910 --> 00:27:06,920
+[Paul thinks]
+
+311
+00:27:06,920 --> 00:27:14,704
+Yes, let's say... 1,2,3,4, something like that.
+
+312
+00:27:15,424 --> 00:27:21,360
+If I did .map a.map
+
+313
+00:27:24,240 --> 00:27:27,672
+That should give me inaud but...
+
+314
+00:27:27,670 --> 00:27:31,512
+And then if I did .flatten... I would get that.
+
+315
+00:27:31,528 --> 00:27:36,320
+And I think if I replace this one
+with flat map, its the same as map.flatten.
+
+316
+00:27:36,840 --> 00:27:41,024
+So you see map.flatten in there, which gives me the same inaud
+
+317
+00:27:43,640 --> 00:27:46,520
+I don't know if it's any easier conceptually, but...
+
+318
+00:27:48,248 --> 00:27:54,400
+I don't need that and I don't need that,
+so I'm going to say bitmask and that gives me 0 or 1.
+
+319
+00:27:57,128 --> 00:27:59,296
+And I should be able to say puts....
+
+320
+00:27:59,290 --> 00:28:02,288
+[Paul thinks]
+
+321
+00:28:03,752 --> 00:28:06,680
+Or P, actually that should be an array of...
+
+322
+00:28:09,040 --> 00:28:12,408
+Yes, that should work... we'll see.
+
+323
+00:28:12,536 --> 00:28:14,776
+I think if take...
+
+324
+00:28:14,800 --> 00:28:17,968
+[Paul thinks]
+
+325
+00:28:18,704 --> 00:28:21,376
+It might be quite wide on the screen but...
+
+326
+00:28:21,370 --> 00:28:24,384
+[Silence]
+
+327
+00:28:28,496 --> 00:28:30,896
+No, that's not quite right is it, or is it?
+
+328
+00:28:30,890 --> 00:28:34,408
+JW: It might be that we just can't see because...
+
+329
+00:28:34,400 --> 00:28:36,920
+You could put and join them with a new line.
+
+330
+00:28:36,920 --> 00:28:38,512
+PB: Yes.
+
+331
+00:28:38,510 --> 00:28:41,520
+[Silence]
+
+332
+00:28:46,208 --> 00:28:48,032
+inaud
+
+333
+00:28:48,030 --> 00:28:51,072
+[Silence]
+
+334
+00:28:53,224 --> 00:28:56,992
+I'll split this up because it's
+a bit long for this small screen.
+
+335
+00:28:57,712 --> 00:29:00,504
+Image.pixels.each.
+
+336
+00:29:00,504 --> 00:29:02,500
+Do row.
+
+337
+00:29:03,120 --> 00:29:07,000
+Row.each.do pixel.
+
+338
+00:29:08,976 --> 00:29:12,576
+I'm already thinking that inaud pixels was the wrong thing to do but
+
+339
+00:29:12,570 --> 00:29:15,368
+we'll have to inaud or something.
+
+340
+00:29:15,368 --> 00:29:17,360
+inaud
+
+341
+00:29:19,280 --> 00:29:21,072
+So I might do that.
+
+342
+00:29:21,840 --> 00:29:24,632
+Puts print.
+
+343
+00:29:25,624 --> 00:29:28,464
+Pixel and then puts.
+
+344
+00:29:31,432 --> 00:29:33,992
+Ideally this should give us the same thing.
+
+345
+00:29:35,144 --> 00:29:37,008
+Yes.
+
+346
+00:29:38,660 --> 00:29:42,544
+OK good, and I'm going to change
+that to rows, because having used it,
+
+347
+00:29:42,576 --> 00:29:45,896
+it feels like that's actually what I'm getting back.
+
+348
+00:29:45,890 --> 00:29:48,888
+[Silence]
+
+349
+00:29:57,944 --> 00:29:59,888
+I'm just going to run together just in case...
+
+350
+00:30:00,568 --> 00:30:02,848
+Yes, tha's working.
+
+351
+00:30:03,896 --> 00:30:07,288
+So I'll say that.
+
+352
+00:30:09,840 --> 00:30:13,296
+inaud
+
+353
+00:30:15,768 --> 00:30:20,608
+BMPImage returns rows... OK.
+
+354
+00:30:23,736 --> 00:30:28,560
+I should probably have gone
+hunting for a bitmap image but never mind.
+
+355
+00:30:29,112 --> 00:30:30,328
+We can now move on.
+
+356
+00:30:30,320 --> 00:30:33,872
+[New chapter]
+
+357
+00:30:33,992 --> 00:30:39,848
+So now, what would be nice,
+is to have some kind of object.
+
+358
+00:30:40,056 --> 00:30:44,832
+which when given rows with some
+item in them takes each of the quadrants.
+
+359
+00:30:44,830 --> 00:30:49,624
+So inad writing that I think I can test quite
+easily, so I'm going to start doing things that way.
+
+360
+00:30:49,620 --> 00:30:50,944
+Perfect.
+
+361
+00:30:50,940 --> 00:30:52,968
+So I now need to...
+
+362
+00:30:52,960 --> 00:30:55,920
+I'm going to use rspec
+because I like the rspec runner.
+
+363
+00:30:55,920 --> 00:31:04,944
+So say vim Gemfile, source https.
+
+364
+00:31:05,376 --> 00:31:10,224
+I always think this should be built in but it's not.
+
+365
+00:31:10,616 --> 00:31:14,512
+And then gem rspec...
+that should give me something sensible.
+
+366
+00:31:14,952 --> 00:31:16,784
+And then I'll say bundle
+
+367
+00:31:16,780 --> 00:31:22,744
+[Silence]
+
+368
+00:31:26,600 --> 00:31:28,784
+Good.
+
+369
+00:31:30,472 --> 00:31:36,016
+Now I'm going to make a spec to actually live.
+
+370
+00:31:37,296 --> 00:31:44,304
+And I'll go back to here and say edit spec.
+
+371
+00:31:45,064 --> 00:31:51,272
+I'm going to call it, what shall I call it? Quad node.
+
+372
+00:31:51,500 --> 00:31:55,176
+That seems like a reasonable name
+and makes sense to me at the moment.
+
+373
+00:31:55,230 --> 00:32:05,224
+inaud, rspec rb and inaud
+
+374
+00:32:05,232 --> 00:32:08,384
+Rspec.describe.
+
+375
+00:32:11,312 --> 00:32:14,376
+Quadnode do.
+
+376
+00:32:16,824 --> 00:32:19,192
+Is that right, somehow I feel...
+
+377
+00:32:19,744 --> 00:32:24,200
+It's the kind of thing I never write inaud, I just copy it off another file
+
+378
+00:32:26,512 --> 00:32:30,384
+but let's say require rspec
+
+379
+00:32:30,424 --> 00:32:33,472
+[Silence]
+
+380
+00:32:36,152 --> 00:32:40,560
+Yes, that should fail... and it does,
+
+381
+00:32:42,096 --> 00:32:44,168
+because we don't have a quadnode.
+
+382
+00:32:44,216 --> 00:32:47,208
+[Silence]
+
+383
+00:32:49,610 --> 00:32:51,984
+Lib.quadenode.
+
+384
+00:32:52,952 --> 00:32:57,952
+And say class QuadNode.
+
+385
+00:33:00,960 --> 00:33:03,832
+And that should pass.
+
+386
+00:33:03,830 --> 00:33:06,608
+Good, there will probably be something else inaud.
+
+387
+00:33:08,104 --> 00:33:10,176
+I haven't required it yet.
+
+388
+00:33:10,170 --> 00:33:13,208
+[Silence]
+
+389
+00:33:15,872 --> 00:33:17,192
+Good, OK.
+
+390
+00:33:17,960 --> 00:33:26,504
+So I'm going to say, it should return it's rows.
+
+391
+00:33:26,536 --> 00:33:29,552
+[Silence]
+
+392
+00:33:30,808 --> 00:33:35,632
+I'm just going to say subject is going to be...
+
+393
+00:33:37,048 --> 00:33:39,456
+described class.new.
+
+394
+00:33:40,752 --> 00:33:45,752
+And I'm going to give it some
+simple rows so I can work with them later.
+
+395
+00:33:45,750 --> 00:33:48,784
+[Silence]
+
+396
+00:33:50,080 --> 00:33:52,896
+So I'm going to give it 4x4.
+
+397
+00:33:52,890 --> 00:33:57,008
+I'm just going to give them 1,2,3,4...
+
+398
+00:34:00,224 --> 00:34:02,784
+5,6,7,8.
+
+399
+00:34:03,936 --> 00:34:09,320
+I realise I should have put more spacing in... 9,10,11,12.
+
+400
+00:34:11,470 --> 00:34:13,456
+13,14.
+
+401
+00:34:14,696 --> 00:34:16,736
+15,16.
+
+402
+00:34:16,730 --> 00:34:19,720
+[Silence]
+
+403
+00:34:22,672 --> 00:34:23,584
+inaud
+
+404
+00:34:23,580 --> 00:34:26,608
+[Silence]
+
+405
+00:34:29,160 --> 00:34:31,208
+OK.
+
+406
+00:34:31,200 --> 00:34:34,216
+[Silence]
+
+407
+00:34:34,880 --> 00:34:41,312
+Now I should say subject.rows.
+
+408
+00:34:41,352 --> 00:34:44,384
+[Silence]
+
+409
+00:34:45,552 --> 00:34:49,088
+Expect rows to equal...
+
+410
+00:34:49,080 --> 00:34:52,088
+[Silence]
+
+411
+00:34:52,864 --> 00:34:59,392
+inaud, I could present a constant
+but it's so much easier like this.
+
+412
+00:35:01,400 --> 00:35:03,336
+inaud
+
+413
+00:35:05,440 --> 00:35:08,408
+Probably gone wrong because
+I haven't commit the initializer.
+
+414
+00:35:08,930 --> 00:35:16,640
+Def initialize rows at rows equals rows.
+
+415
+00:35:17,664 --> 00:35:23,504
+And then I'll say attr-reader rows.
+
+416
+00:35:25,232 --> 00:35:29,784
+And now from this... it works, so I just have a thing that says inaud.
+
+417
+00:35:30,208 --> 00:35:32,824
+Now, the next thing we want is to take up quadrants.
+
+418
+00:35:33,280 --> 00:35:35,952
+JW: Shall we commit to keep
+this test bootstrap in place?
+
+419
+00:35:35,952 --> 00:35:37,950
+PB: Yes, that's a good idea.
+
+420
+00:35:39,464 --> 00:35:41,230
+OK...
+
+421
+00:35:41,230 --> 00:35:44,224
+[Silence]
+
+422
+00:35:50,432 --> 00:35:55,712
+And say implement a basic quadnode.
+
+423
+00:35:56,224 --> 00:35:58,320
+It shouldn't do anything but...
+
+424
+00:35:58,320 --> 00:36:01,360
+[Silence]
+
+425
+00:36:05,936 --> 00:36:10,864
+The next thing is to be able to
+take each quadrant out of it, so...
+
+426
+00:36:11,736 --> 00:36:16,000
+It should return the northwest quadrant.
+
+427
+00:36:16,000 --> 00:36:19,032
+[Silence]
+
+428
+00:36:19,030 --> 00:36:25,096
+JW: Actually, for reasons
+that may become clear later on,
+
+429
+00:36:26,656 --> 00:36:30,920
+let's read the quadrants in counter
+clockwise order, starting in the northeast.
+
+430
+00:36:31,120 --> 00:36:33,208
+PB: OK.
+
+431
+00:36:33,528 --> 00:36:36,488
+I was only going to expose
+it as a method called dot NW.
+
+432
+00:36:36,480 --> 00:36:37,968
+JW: OK.
+
+433
+00:36:38,032 --> 00:36:41,496
+PB: Which means we don't have to inaud.
+
+434
+00:36:43,110 --> 00:36:47,032
+Yes, we can pack them together if we
+want, so if we want to break it into quadrants,
+
+435
+00:36:47,072 --> 00:36:50,584
+which it sounds like what we will want to do.
+
+436
+00:36:51,656 --> 00:36:55,728
+OK, so this is going to be something very similar.
+
+437
+00:36:56,768 --> 00:37:01,968
+It's going to be something like
+expect subject.northwest to  equal.
+
+438
+00:37:04,984 --> 00:37:07,368
+Perhaps this should be 1,2...
+
+439
+00:37:10,010 --> 00:37:12,168
+and 5,6.
+
+440
+00:37:12,160 --> 00:37:15,184
+[Silence]
+
+441
+00:37:22,872 --> 00:37:25,272
+Yes, inaud.
+
+442
+00:37:25,270 --> 00:37:28,240
+[Silence]
+
+443
+00:37:28,288 --> 00:37:31,280
+[Paul thinks]
+
+444
+00:37:32,864 --> 00:37:35,344
+This one is very easy to implement.
+
+445
+00:37:37,670 --> 00:37:40,960
+What I  don't know yet is how
+many columns I have though.
+
+446
+00:37:42,160 --> 00:37:45,768
+So, maybe I'm going to let this one sit for a minute.
+
+447
+00:37:47,184 --> 00:37:50,080
+And say that it should return a number of columns.
+
+448
+00:37:50,080 --> 00:37:53,056
+It's going to assume that the...
+
+449
+00:37:54,208 --> 00:37:58,208
+In fact I'm going to get it to give me the number
+of rows and the number of columns, in here.
+
+450
+00:37:58,200 --> 00:38:04,288
+It should return the number of columns.
+
+451
+00:38:07,072 --> 00:38:11,256
+And say expect subjects dot...
+
+452
+00:38:11,304 --> 00:38:14,344
+[Paul thinks]
+
+453
+00:38:15,776 --> 00:38:19,424
+number of columns, column count, height, width maybe.
+
+454
+00:38:19,608 --> 00:38:21,368
+I think that would be sensible.
+
+455
+00:38:21,360 --> 00:38:27,120
+Number of columns, width so expect inaud width to equal...
+
+456
+00:38:27,120 --> 00:38:30,152
+[Silence]
+
+457
+00:38:30,816 --> 00:38:34,280
+It's probably not a brilliant
+test because they are both 4.
+
+458
+00:38:34,328 --> 00:38:37,544
+but I'm never going to know if... but...
+
+459
+00:38:40,040 --> 00:38:42,248
+Let's see.
+
+460
+00:38:43,000 --> 00:38:45,920
+Perhaps there's no width.
+
+461
+00:38:47,624 --> 00:38:52,328
+Width, and that can be just rows.first.length.
+
+462
+00:38:55,272 --> 00:39:01,304
+OK... I did the same for rows.
+
+463
+00:39:01,300 --> 00:39:04,288
+[Silence]
+
+464
+00:39:04,336 --> 00:39:08,064
+inaud here, as I say I could have
+inaud this wrong and still got the same.
+
+465
+00:39:08,940 --> 00:39:13,840
+Same result so, I'm going to accept that for now.
+
+466
+00:39:14,592 --> 00:39:17,400
+JW: We can be reasonably confident.
+PB: Yes.
+
+467
+00:39:17,400 --> 00:39:20,416
+[Silence]
+
+468
+00:39:20,416 --> 00:39:22,410
+And that's just rows.length.
+
+469
+00:39:22,410 --> 00:39:25,400
+[Silence]
+
+470
+00:39:27,296 --> 00:39:30,248
+OK, so going back to my first quadrant...
+
+471
+00:39:32,040 --> 00:39:41,000
+I want to say that quadrant
+width equals width over 2.
+
+472
+00:39:42,144 --> 00:39:46,416
+Quadrant height equals height over 2.
+
+473
+00:39:46,410 --> 00:39:50,536
+We're conveniently seeing that
+everything is a nice power of two.
+
+474
+00:39:52,136 --> 00:39:56,688
+Which is why you've helpfully
+given me the 256 pixel image.
+
+475
+00:39:56,704 --> 00:40:00,060
+JW: Yes, that assumption
+is built into this challenge.
+
+476
+00:40:01,352 --> 00:40:04,208
+PB: I suppose if not we
+could scale the image first but...
+
+477
+00:40:05,944 --> 00:40:08,920
+Yes, so I've got quadrant width which is half width,
+
+478
+00:40:09,232 --> 00:40:14,912
+and then I want to say rows.take.
+
+479
+00:40:17,664 --> 00:40:19,872
+Quadrant height.
+
+480
+00:40:19,896 --> 00:40:22,904
+[Silence]
+
+481
+00:40:23,120 --> 00:40:29,304
+I wonder if for this test it might be
+sensible to give it another couple of rows.
+
+482
+00:40:29,512 --> 00:40:34,848
+Because just for things that are only
+doing one level deep, that does work.
+
+483
+00:40:35,152 --> 00:40:36,992
+Or is that daft?
+
+484
+00:40:36,990 --> 00:40:39,952
+[Paul thinks]
+
+485
+00:40:42,832 --> 00:40:44,744
+JW: I have to say I don't see the need.
+
+486
+00:40:44,740 --> 00:40:47,920
+I think probably [they both talk at once]
+
+487
+00:40:48,064 --> 00:40:51,648
+PB: I'm just worried I might
+be confusing height and width.
+
+488
+00:40:52,240 --> 00:41:00,760
+So take height and that and I get
+a row and I can finish that row.take.
+
+489
+00:41:02,088 --> 00:41:04,256
+inaud width.
+
+490
+00:41:06,360 --> 00:41:08,384
+So I think that should do it.
+
+491
+00:41:09,400 --> 00:41:14,104
+inaud full, which are going to be quite similar.
+
+492
+00:41:14,152 --> 00:41:17,152
+[Paul thinks]
+
+493
+00:41:19,040 --> 00:41:22,488
+I'm going to write the test
+for all of them first and then... 
+
+494
+00:41:23,840 --> 00:41:26,248
+say which are Northwest and Northeast.
+
+495
+00:41:28,976 --> 00:41:31,816
+And that's 1,2,3.
+
+496
+00:41:31,810 --> 00:41:36,072
+Helpfully, because I know what these
+numbers are I don't have to go check inaud page.
+
+497
+00:41:36,408 --> 00:41:39,536
+3,4,5,6,7,8.
+
+498
+00:41:39,530 --> 00:41:42,536
+[Silence]
+
+499
+00:41:44,496 --> 00:41:46,864
+I'll write these tests as well.
+
+500
+00:41:48,232 --> 00:41:50,616
+I'll make that one Southwest.
+
+501
+00:41:52,584 --> 00:41:57,152
+That one should be 1 to 10.
+
+502
+00:41:57,150 --> 00:42:00,136
+[Silence]
+
+503
+00:42:03,216 --> 00:42:09,680
+And 11, 12 both Southwest.
+
+504
+00:42:12,720 --> 00:42:14,808
+And the last one is Southeast.
+
+505
+00:42:14,856 --> 00:42:17,856
+[Silence]
+
+506
+00:42:19,680 --> 00:42:24,488
+That's not going to be 11, 12 it's going to be 13,14.
+
+507
+00:42:27,256 --> 00:42:30,352
+That one is 11,12...
+
+508
+00:42:30,904 --> 00:42:33,432
+and 15 and 16.
+
+509
+00:42:35,710 --> 00:42:43,384
+I'll check that's right so 9,10,13,14,11,12,15,16,9,12... yes.
+
+510
+00:42:47,624 --> 00:42:51,648
+So implement Northeast... doesn't work.
+
+511
+00:42:51,640 --> 00:42:54,608
+[Silence]
+
+512
+00:42:56,288 --> 00:43:00,088
+I can pull these out into methods.
+
+513
+00:43:00,080 --> 00:43:03,072
+[Silence]
+
+514
+00:43:15,016 --> 00:43:18,064
+inaud def.
+
+515
+00:43:18,060 --> 00:43:21,104
+[Silence]
+
+516
+00:43:25,560 --> 00:43:30,168
+This one I would say rows dot... 
+
+517
+00:43:30,160 --> 00:43:34,360
+Northwest is there, Northeast
+I still want the first 2 rows.
+
+518
+00:43:35,608 --> 00:43:40,310
+Because North but with this one a drop to take.
+
+519
+00:43:40,310 --> 00:43:43,296
+[Silence]
+
+520
+00:43:43,856 --> 00:43:45,400
+JW: Yes, nice.
+
+521
+00:43:45,408 --> 00:43:47,936
+PB: I can do the same for
+these hopefully in short order,
+
+522
+00:43:47,936 --> 00:43:53,408
+So that should say Southwest and Southeast.
+
+523
+00:43:55,304 --> 00:43:59,536
+I should have copied and pasted
+these entirely because it's a case of...
+
+524
+00:43:59,530 --> 00:44:02,544
+[Silence]
+
+525
+00:44:10,760 --> 00:44:15,224
+So we have our 4 quadrants... I'm going to check those in.
+
+526
+00:44:15,220 --> 00:44:18,248
+[Silence]
+
+527
+00:44:30,020 --> 00:44:33,520
+JW: Right so we've got a quad node class which...
+
+528
+00:44:33,544 --> 00:44:38,216
+given the input pixels can give you each inaud.
+
+529
+00:44:38,210 --> 00:44:44,632
+PB: Yes, it is successively splitting
+each of these into sub-quadrants.
+
+530
+00:44:45,312 --> 00:44:53,904
+A nice thing to do next might
+be some kind of recursive split.
+
+531
+00:44:53,900 --> 00:44:56,552
+Now, you mentioned a particular order.
+
+532
+00:44:56,552 --> 00:44:58,550
+JW: Yes.
+
+533
+00:44:59,040 --> 00:45:05,576
+PB: So I'm going to write a split function
+(I should have put a space in there)...
+
+534
+00:45:05,816 --> 00:45:09,136
+I'm going to write a split function which...
+
+535
+00:45:11,896 --> 00:45:18,232
+Let's see how can I do this.. I want to be able
+to equate things when I get them out in the end.
+
+536
+00:45:20,048 --> 00:45:24,336
+So it should split...
+
+537
+00:45:24,330 --> 00:45:27,328
+[Paul thinks]
+
+538
+00:45:30,032 --> 00:45:32,272
+Let's do one level splitting first.
+
+539
+00:45:33,130 --> 00:45:46,688
+It should split into the four quadrants in order.
+
+540
+00:45:47,360 --> 00:45:52,744
+And we know that is
+anti-clockwise from the Northeast.
+
+541
+00:45:54,480 --> 00:45:57,120
+So anti-clockwise from Northeast.
+
+542
+00:45:57,120 --> 00:46:00,152
+[Silence]
+
+543
+00:46:09,904 --> 00:46:25,032
+So in that case I should be
+able to say expectsubject.split.to equal...
+
+544
+00:46:26,920 --> 00:46:33,224
+In fact I should be able to say that I get
+an array of the four things that are already there,
+
+545
+00:46:33,220 --> 00:46:35,624
+assuming those to be equal.
+
+546
+00:46:35,620 --> 00:46:40,608
+Then I'm going to say subject dot...
+
+547
+00:46:42,360 --> 00:46:45,480
+(I'll put this onto a new line because inaud)
+
+548
+00:46:46,808 --> 00:46:52,360
+Subject.Northeast, subject.Northwest
+
+549
+00:46:53,760 --> 00:46:55,696
+Subject.sw
+
+550
+00:46:58,776 --> 00:47:02,072
+And then subject.se
+
+551
+00:47:04,904 --> 00:47:07,320
+JW: I see inaud in there.
+
+552
+00:47:07,320 --> 00:47:11,432
+PB: Yes, inaud. [Laughter]
+
+553
+00:47:14,072 --> 00:47:17,432
+It should fail because there is no split.
+
+554
+00:47:17,472 --> 00:47:20,464
+[Silence]
+
+555
+00:47:24,288 --> 00:47:33,256
+And then I'm going to say Northeast,
+Northwest, Southwest, Southeast.
+
+556
+00:47:33,250 --> 00:47:36,272
+[Silence]
+
+557
+00:47:39,272 --> 00:47:43,792
+OK great, that works, but it's not recursive. 
+
+558
+00:47:44,856 --> 00:47:47,856
+[Paul thinks]
+
+559
+00:47:50,848 --> 00:47:55,112
+I'm going to get additional thing which is...
+
+560
+00:47:55,760 --> 00:47:58,888
+I'm going to put all of these into...
+
+561
+00:47:58,880 --> 00:48:01,888
+[Paul thinks]
+
+562
+00:48:02,820 --> 00:48:21,904
+Actually I may as well do a special case and
+say context when it cannot be sub-divided...
+
+563
+00:48:22,016 --> 00:48:25,048
+[Silence]
+
+564
+00:48:29,688 --> 00:48:33,520
+And I'm going to say that then...
+
+565
+00:48:33,520 --> 00:48:39,688
+it should return itself split.
+
+566
+00:48:40,376 --> 00:48:45,496
+I'm not sure if that is the most
+sensible thing to do but I'll do it for now.
+
+567
+00:48:45,912 --> 00:48:52,304
+I'll just take this lot and say that (I'm
+going to have to redefine the subject in here)
+
+568
+00:48:52,544 --> 00:48:58,984
+Subject is going to be described class.new,
+
+569
+00:48:59,112 --> 00:49:04,896
+and I'm going to give it just one row to work on.
+
+570
+00:49:05,648 --> 00:49:08,760
+and then this one, don't need any of that.
+
+571
+00:49:09,192 --> 00:49:12,904
+And I should say expect split to equal subject.
+
+572
+00:49:12,900 --> 00:49:15,800
+[Silence]
+
+573
+00:49:17,320 --> 00:49:21,728
+And it's not, it's giving me empty
+things, but it's interesting what it has done.
+
+574
+00:49:23,360 --> 00:49:34,056
+Yes, so I can say if divisible that...
+
+575
+00:49:36,216 --> 00:49:41,520
+inaud for you.
+
+576
+00:49:41,520 --> 00:49:47,704
+I had an interesting bug the other
+day where I just mis-touched something
+
+577
+00:49:47,700 --> 00:49:51,200
+when I was inaud and had a really weird error, 
+
+578
+00:49:51,200 --> 00:49:55,528
+and I found out I had replaced
+something with a completely different word.
+
+579
+00:49:55,592 --> 00:49:58,608
+[Silence]
+
+580
+00:49:59,776 --> 00:50:02,176
+inaud
+
+581
+00:50:03,328 --> 00:50:07,632
+I'll put these into a private section as
+well, I don't think I need those again.
+
+582
+00:50:08,776 --> 00:50:10,928
+Def divisible... 
+
+583
+00:50:12,016 --> 00:50:16,888
+And that should be height is greater than 2,
+
+584
+00:50:17,568 --> 00:50:24,128
+and equal to 2, and width is greater than equals 2.
+
+585
+00:50:26,552 --> 00:50:31,368
+Because our things are all square,
+we don't need to check that much but...
+
+586
+00:50:33,960 --> 00:50:41,380
+So the next thing I think I want is some
+kind of recursive split, but let's just commit first.
+
+587
+00:50:41,380 --> 00:50:47,360
+[Silence]
+
+588
+00:50:58,224 --> 00:51:03,096
+I don't really like the name split
+anymore so I might change that.
+
+589
+00:51:04,304 --> 00:51:08,600
+I might change it to sub-divides.
+
+590
+00:51:08,600 --> 00:51:11,640
+[Silence]
+
+591
+00:51:14,744 --> 00:51:20,800
+Yes, in fact... oh so we've got split there, that's fine
+
+592
+00:51:21,360 --> 00:51:24,440
+So then I want to do it recursively.
+
+593
+00:51:25,456 --> 00:51:32,032
+So I'm going to add... it should split recursively.
+
+594
+00:51:32,030 --> 00:51:35,056
+[Silence]
+
+595
+00:51:37,488 --> 00:51:40,336
+So what I should end up with...
+
+596
+00:51:42,400 --> 00:51:47,776
+rather than specifying all the data for
+this, I'm goiung to just look at a bit of the data.
+
+597
+00:51:49,192 --> 00:51:53,048
+So I know it's going to have 4 things inside it.
+
+598
+00:51:53,520 --> 00:51:59,072
+And each of that is going to have 4 things inside
+it, and each of those will have one thing inside it.
+
+599
+00:52:01,248 --> 00:52:03,984
+So we'll say...
+
+600
+00:52:03,980 --> 00:52:06,976
+[Paul thinks]
+
+601
+00:52:09,704 --> 00:52:16,120
+Result equals inaud
+
+602
+00:52:16,120 --> 00:52:19,120
+[Silence]
+
+603
+00:52:19,728 --> 00:52:22,016
+Split recursive.
+
+604
+00:52:22,010 --> 00:52:25,032
+[Silence]
+
+605
+00:52:25,504 --> 00:52:33,592
+I'm going to say expect (what do I get out of this)...
+
+606
+00:52:33,590 --> 00:52:36,592
+[Paul thinks]
+
+607
+00:52:44,048 --> 00:52:46,872
+I actually just get an array out of this don't I?
+
+608
+00:52:48,208 --> 00:52:52,760
+I think that's alright, but I'm wondering
+if I would rather have an object out of it.
+
+609
+00:52:54,560 --> 00:52:57,408
+I'll go with array aqnd see how that works.
+
+610
+00:52:57,400 --> 00:53:05,512
+JW: There is a slight suggestion that Northeast
+Northwest could return another quadnode.
+
+611
+00:53:06,808 --> 00:53:09,160
+PB: Yes.
+
+612
+00:53:12,424 --> 00:53:16,064
+Of course, because inaud
+
+613
+00:53:17,408 --> 00:53:22,024
+So in fact split, hmm...
+
+614
+00:53:22,020 --> 00:53:25,016
+[Paul thinks]
+
+615
+00:53:26,592 --> 00:53:28,832
+Yes, split at one level gives you those,
+
+616
+00:53:28,830 --> 00:53:33,856
+once I get down to the bottom level I'm
+going to have nodes that are just one item,
+
+617
+00:53:33,880 --> 00:53:38,640
+so maybe I should put that to
+one side for the moment and...
+
+618
+00:53:41,760 --> 00:53:44,776
+instead of returning itself
+it should return the value.
+
+619
+00:53:44,840 --> 00:53:47,432
+JW: Is the value not in an array display?
+
+620
+00:53:47,430 --> 00:53:50,416
+[Paul thinks]
+
+621
+00:53:52,656 --> 00:53:55,432
+PB: That's a good question.
+
+622
+00:53:58,360 --> 00:54:03,400
+Maybe an array, it's going to
+be easy enough to change but...
+
+623
+00:54:03,400 --> 00:54:06,432
+[Silence]
+
+624
+00:54:10,280 --> 00:54:14,816
+Yes, I would expect... let's try that inaud.
+
+625
+00:54:17,650 --> 00:54:21,632
+An array of...
+
+626
+00:54:21,688 --> 00:54:24,696
+[Paul thinks]
+
+627
+00:54:26,184 --> 00:54:31,632
+Yes, so it always returns an array until it gets
+to the bottom and there are no more arrays.
+
+628
+00:54:32,624 --> 00:54:34,992
+That is a leaf node.
+
+629
+00:54:36,120 --> 00:54:39,560
+Yes, because that will work
+recursively quite nicely, won't it?
+
