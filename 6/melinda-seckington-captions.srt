@@ -817,7 +817,7 @@ MS: Yes.
 
 192
 00:15:26,064 --> 00:15:31,008
-And we also want resources as questions.
+And we also want resources :questions.
 
 193
 00:15:32,580 --> 00:15:34,776
@@ -900,7 +900,7 @@ controller I get more than I want.
 211
 00:17:05,752 --> 00:17:10,984
 DN: Yes, it generates the asset
-files, inaudible, JavaScripts and so on.
+files, stylesheets, JavaScripts and so on.
 
 212
 00:17:10,980 --> 00:17:13,400
@@ -908,8 +908,8 @@ MS: Yes, normally it's like...
 
 213
 00:17:13,744 --> 00:17:17,680
-DN: More inaudible that what you want.
-MS Yes.
+DN: More cruft than what you want.
+MS: Yes.
 
 214
 00:17:18,136 --> 00:17:21,376
@@ -927,7 +927,8 @@ bit more control over it myself
 
 217
 00:17:31,952 --> 00:17:35,744
-and being able to see when I'm adding inaudible
+and being able to see when I'm adding
+which files.
 
 218
 00:17:36,448 --> 00:17:37,272
@@ -940,7 +941,8 @@ get the rspec file, the user file and...
 
 220
 00:17:43,856 --> 00:17:47,376
-[The migration is not meant to be on there]
+...the migration. It’s not much to be
+wrong there.
 
 221
 00:17:47,920 --> 00:17:50,248
@@ -962,7 +964,7 @@ DN: Yes, I can relate to that.
 
 225
 00:17:58,752 --> 00:18:02,560
-So let's create inaudible for that as well.
+So let's create the views for that as well.
 
 226
 00:18:04,616 --> 00:18:07,120
@@ -982,7 +984,7 @@ I'll have to say index.
 
 230
 00:18:25,760 --> 00:18:27,800
-It won't show.
+And show.
 
 231
 00:18:29,608 --> 00:18:30,976
@@ -1007,12 +1009,12 @@ DN: That should be fine.
 
 236
 00:18:50,128 --> 00:18:55,944
-MS: I realise I never use the inaudible
+MS: I realise I never use the all
 because normally with so much more data...
 
 237
 00:18:56,088 --> 00:18:59,296
-DN: We don't need to patch anything.
+DN: We don't need to paginate anything.
 
 238
 00:18:59,620 --> 00:19:02,632
@@ -1040,7 +1042,7 @@ MS: All the questions.
 
 244
 00:19:47,620 --> 00:19:50,040
-So let's make a little nicer.
+So let's make it a little nicer.
 
 245
 00:19:50,050 --> 00:19:53,064
@@ -1060,7 +1062,7 @@ Now what do we call that?
 
 249
 00:20:28,328 --> 00:20:31,216
-inaudible
+question_path
 
 250
 00:20:31,220 --> 00:20:34,208
@@ -1110,11 +1112,11 @@ MS: Yes.
 261
 00:21:25,192 --> 00:21:31,816
 Yes, they are sequential but
-because we did the seed test twice,
+because we did the seed task twice,
 
 262
 00:21:32,608 --> 00:21:34,536
-they're not going to inaudible
+they're not going to start on 1
 
 263
 00:21:34,536 --> 00:21:36,530
@@ -1149,7 +1151,7 @@ Don't want to do it that way.
 
 270
 00:22:05,448 --> 00:22:08,288
-Inaudible
+Let's just throw it into that one...
 
 271
 00:22:11,456 --> 00:22:12,648
@@ -1204,15 +1206,15 @@ Someone who grabbed a question.
 
 283
 00:23:11,384 --> 00:23:14,480
-Let's just inaudible for now, plus the work.
+Let's just do that for now, does that work?
 
 284
 00:23:15,616 --> 00:23:19,352
-Yes, it would if I did that inaudible
+Yes, it would if I did that [inaudible]
 
 285
 00:23:22,496 --> 00:23:26,904
-inaudible the description.
+So let's show the description.
 
 286
 00:23:29,424 --> 00:23:30,768
@@ -1228,11 +1230,11 @@ I must look that up, I always forget.
 
 289
 00:23:54,440 --> 00:23:56,664
-Image_tag.
+image_tag
 
 290
 00:23:58,488 --> 00:23:59,952
-And then I can...
+And then we have...
 
 291
 00:23:59,950 --> 00:24:02,944
@@ -1248,7 +1250,7 @@ I'll say that first.
 
 294
 00:24:11,600 --> 00:24:13,872
-Its not called URL, it's called image.
+It's not called URL, it's called image.
 
 295
 00:24:15,936 --> 00:24:18,376
@@ -1281,7 +1283,8 @@ DN: OK.
 
 302
 00:24:50,880 --> 00:24:55,064
-So this inaudible work because we need to specify...
+So this still won't work because we need
+to specify...
 
 303
 00:24:55,060 --> 00:24:58,096
@@ -1358,7 +1361,7 @@ MS: Yes.
 
 320
 00:26:15,920 --> 00:26:17,470
-inaudible
+[inaudible]
 
 321
 00:26:17,470 --> 00:26:20,504
@@ -1428,7 +1431,9 @@ MS: Let's clean this up a bit.
 
 337
 00:27:43,430 --> 00:27:46,824
-[They both speak at once]
+DN: That's great. Ship it.
+MS: Let's put the question underneath
+the picture
 
 338
 00:27:46,820 --> 00:27:49,888
@@ -1436,7 +1441,8 @@ MS: Let's clean this up a bit.
 
 339
 00:27:51,104 --> 00:27:58,310
-DN: I guess the form with the yes/no answers would be inaudible.
+DN: I guess the form with the yes/no
+answers would be straight after the text.
 
 340
 00:27:58,450 --> 00:28:04,072
@@ -1499,7 +1505,8 @@ DN: So I guess next we have the yes/no to do.
 354
 00:29:15,500 --> 00:29:22,648
 Would that be a yes button and a no button,
-or would it be a radio button with yes and no inaudible?
+or would it be a radio button with yes and
+no and then a submit button?
 
 355
 00:29:22,640 --> 00:29:26,472
@@ -1515,7 +1522,7 @@ How do we do that again? [laughter] Let's have a look.
 
 358
 00:29:39,216 --> 00:29:40,496
-inaudible
+radio_button
 
 359
 00:29:40,490 --> 00:29:43,504
