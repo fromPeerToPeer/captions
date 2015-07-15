@@ -1217,11 +1217,11 @@ I must look that up, I always forget.
 image_tag
 
 286
-00:23:58,488 --> 00:23:59,952
+00:23:58,480 --> 00:24:00,472
 And then we have...
 
 287
-00:23:59,950 --> 00:24:02,944
+00:24:00,520 --> 00:24:03,528
 [Silence]
 
 288
@@ -1267,8 +1267,8 @@ DN: OK.
 
 298
 00:24:50,880 --> 00:24:55,064
-So this still won't work because we need
-to specify...
+MS: So this still won't work
+because we need to specify...
 
 299
 00:24:55,060 --> 00:24:58,096
@@ -1284,8 +1284,7 @@ MS: I'm not sure it is.
 
 302
 00:25:14,400 --> 00:25:17,696
-DN: Would it help to actually look at the
-HTML source?
+DN: Would it help to actually look at the HTML source?
 
 303
 00:25:17,690 --> 00:25:20,696
@@ -1414,13 +1413,12 @@ MS: Let's clean this up a bit.
 [Silence]
 
 333
-00:27:43,430 --> 00:27:46,824
+00:27:43,430 --> 00:27:47,920
 DN: That's great, ship it!
-MS: Let's put the question underneath
-the picture
+MS: Let's put the question underneath the picture.
 
 334
-00:27:46,820 --> 00:27:49,888
+00:27:47,976 --> 00:27:50,944
 [Silence]
 
 335
@@ -1487,220 +1485,219 @@ So allow users to see questions.
 DN: So I guess next we have the yes/no to do.
 
 350
-00:29:15,500 --> 00:29:22,648
-Would that be a yes button and a no button,
-or would it be a radio button with yes and
-no and then a submit button?
+00:29:15,500 --> 00:29:18,112
+Would that be a yes button and a no button, 
 
 351
+00:29:18,120 --> 00:29:22,640
+or would it be a radio button with
+yes and no and then a submit button?
+
+352
 00:29:22,640 --> 00:29:26,472
 [Melinda thinks]
 
-352
+353
 00:29:26,470 --> 00:29:30,320
 MS: I think a radio button would be nicer.
 
-353
+354
 00:29:32,544 --> 00:29:37,904
 How do we do that again? [laughter] Let's have a look.
 
-354
-00:29:39,216 --> 00:29:40,496
+355
+00:29:39,210 --> 00:29:41,136
 radio_button
 
-355
-00:29:40,490 --> 00:29:43,504
+356
+00:29:41,160 --> 00:29:44,144
 [Silence]
 
-356
+357
 00:30:14,880 --> 00:30:17,488
 DN: Now there's a thought, what is it a form for?
 
-357
+358
 00:30:17,880 --> 00:30:21,400
 When we submit this form
 what actually happens in the system.
 
-358
+359
 00:30:22,690 --> 00:30:26,616
 MS: Yes, so we haven't really looked at that yet.
 
-359
+360
 00:30:26,970 --> 00:30:36,832
 But, I'm thinking we basically want a new
 model that lies between the questions and the users.
 
-360
+361
 00:30:40,136 --> 00:30:44,360
 We could call it user
 questions but that seems wrong.
 
-361
+362
 00:30:44,752 --> 00:30:46,880
 But, maybe just answers.
 
-362
+363
 00:30:46,880 --> 00:30:51,496
 So an answers model that
 belongs to a user and to a question.
 
-363
+364
 00:30:52,272 --> 00:30:54,120
 Let's leave that form for now.
 
-364
+365
 00:30:54,120 --> 00:30:59,864
 [Melinda thinks]
 
-365
+366
 00:30:59,860 --> 00:31:03,056
 So rails join...
 
-366
+367
 00:31:05,944 --> 00:31:08,000
 This doesn't actually show anything.
 
-367
+368
 00:31:08,000 --> 00:31:11,032
 [Silence]
 
-368
+369
 00:31:30,992 --> 00:31:35,592
 Its weird, I know what I'm looking for
 but I don't know what words I'm looking for.
 
-369
+370
 00:31:40,072 --> 00:31:47,200
 Is there a through keyword that you can use on, like...
 
-370
+371
 00:31:47,744 --> 00:31:54,360
 to join the users to the
 questions through the join table?
 
-371
+372
 00:31:54,360 --> 00:31:57,384
 [Silence]
 
-372
+373
 00:32:00,696 --> 00:32:02,690
 has_many :through
 
-373
+374
 00:32:02,690 --> 00:32:05,712
 [Silence]
 
-374
+375
 00:32:13,030 --> 00:32:16,824
 DN: So in our case, appointments is like an answer,
 
-375
+376
 00:32:16,888 --> 00:32:23,544
 physicians and patients are
 like users and questions, in a sense.
 
-376
+377
 00:32:24,264 --> 00:32:26,120
 MS: Yes.
 
-377
+378
 00:32:26,432 --> 00:32:29,240
 Yes, they are. [laughter]
 
-378
+379
 00:32:32,180 --> 00:32:38,664
 I normally use the generate function to create this...
 
-379
+380
 00:32:46,568 --> 00:32:53,880
 So we want an answer to have...
 
-380
-00:32:53,880 --> 00:32:57,728
-A boolean value for yes or no.
-
 381
+00:32:53,880 --> 00:32:57,728
+a boolean value for yes or no.
+
+382
 00:32:58,750 --> 00:33:01,784
 DN: Can we call it response perhaps.
 MS: Yes, that's a good idea.
 
-382
+383
 00:33:01,800 --> 00:33:04,808
 [Silence]
 
-383
+384
 00:33:09,310 --> 00:33:21,648
 And then we want it to belong to both
 the questions and to the (other one)...users.
 
-384
+385
 00:33:23,792 --> 00:33:25,248
 DN: Do you want that comma?
 
-385
+386
 00:33:25,240 --> 00:33:26,496
 MS: No you don't.
 
-386
+387
 00:33:26,490 --> 00:33:29,512
 [Silence]
 
-387
+388
 00:33:31,650 --> 00:33:34,592
 DN: I think if you do user, colon, reference...
 
-388
+389
 00:33:34,590 --> 00:33:37,608
 [Silence]
 
-389
+390
 00:33:43,330 --> 00:33:46,744
 Or it might be references, I don't quite remember.
 
-390
+391
 00:33:46,740 --> 00:33:49,752
 [Silence]
 
-391
-00:34:09,840 --> 00:34:11,840
-MS: Yes, It is references.
-
 392
-00:34:11,840 --> 00:34:14,856
-[Silence]
+00:34:09,840 --> 00:34:11,968
+MS: Yes, it is references.
 
 393
+00:34:11,984 --> 00:34:14,968
+[Silence]
+
+394
 00:34:16,210 --> 00:34:17,808
 So we had a response, we have...
 
-394
+395
 00:34:18,912 --> 00:34:22,776
 the relationship to the user and the
 question, and we don't need anything else, right?
 
-395
+396
 00:34:22,770 --> 00:34:24,864
 DN: No, that looks good.
 
-396
+397
 00:34:24,860 --> 00:34:27,872
 [Silence]
 
-397
+398
 00:34:35,920 --> 00:34:41,520
-Right so... your answer
+MS: Right so... your answer
 belongs to a user and a question.
 
-398
-00:34:44,072 --> 00:34:46,128
-So we just want to have...
-
 399
-00:34:49,272 --> 00:34:51,360
-answers...
+00:34:44,070 --> 00:34:50,968
+So we just want to have... answers.
 
 400
-00:34:51,360 --> 00:34:54,384
+00:34:51,048 --> 00:34:54,032
 [Silence]
 
 401
@@ -1725,237 +1722,235 @@ Same again for questions.
 [Silence]
 
 406
-00:35:20,410 --> 00:35:25,264
+00:35:20,260 --> 00:35:26,816
 This has many answers
-and this has many...
+and this has many users...
 
 407
-00:35:25,744 --> 00:35:26,912
-Users...
-
-408
 00:35:26,910 --> 00:35:29,968
 [Silence]
 
-409
+408
 00:35:39,696 --> 00:35:41,280
 DN: That looks good.
 
-410
+409
 00:35:44,568 --> 00:35:46,944
 MS: So we now have that model.
 
-411
+410
 00:35:50,608 --> 00:35:53,072
 DN: Is that worth a commit do you think?
 
-412
+411
 00:35:54,200 --> 00:35:55,656
 Or is it not worth a commit?
 
-413
+412
 00:35:55,650 --> 00:35:58,184
 MS: Ah... maybe.
 
-414
+413
 00:35:59,416 --> 00:36:03,192
 Yes, I think it is, its fallen off, but...
 
-415
+414
 00:36:03,190 --> 00:36:06,192
 [Silence]
 
-416
+415
 00:36:16,976 --> 00:36:20,328
 [New Chapter]
 
-417
+416
 00:36:21,220 --> 00:36:27,896
 MS: Right, so I guess that next
 up is allowing users to click yes or no,
 
-418
+417
 00:36:27,896 --> 00:36:31,568
 and then recording their response.
 
-419
+418
 00:36:31,656 --> 00:36:38,670
 [Melinda thinks]
 
-420
+419
 00:36:40,488 --> 00:36:44,608
 To do this nicely we need...
 
-421
+420
 00:36:45,056 --> 00:36:48,088
 one is an answers controller.
 
-422
+421
 00:36:48,744 --> 00:36:50,376
 DN: Right.
 
-423
+422
 00:36:50,470 --> 00:36:53,680
 MS: Which... all it does is create...
 
-424
+423
 00:36:55,100 --> 00:37:00,504
 [well records], the yes or no answer.
 
-425
+424
 00:37:03,480 --> 00:37:05,432
 So we can...
 
-426
+425
 00:37:06,808 --> 00:37:11,400
 So... basically we want our answers to be...
 
-427
+426
 00:37:11,400 --> 00:37:14,416
 [Silence]
 
-428
+427
 00:37:16,088 --> 00:37:18,880
 I'm trying to think what is
 the best way of modeling this.
 
-429
+428
 00:37:20,448 --> 00:37:24,528
-DN: If it was a nested resource,
-then the URL for...
+DN: If it was a nested resource, then the URL for...
 
-430
+429
 00:37:25,720 --> 00:37:31,064
 Say you post to create an answer...
-MS: ...it would contain the question
+MS: It would contain the question.
+
+430
+00:37:31,544 --> 00:37:36,600
+And we also know who the
+user is, because they're logged in.
 
 431
-00:37:31,544 --> 00:37:36,600
-And we also know who the user
-is, because they're logged in.
-
-432
 00:37:37,400 --> 00:37:40,376
 So we can grab that from there.
 
-433
+432
 00:37:40,370 --> 00:37:43,408
 [Silence]
 
-434
+433
 00:37:56,760 --> 00:37:59,192
 So we only want new and create.
 
-435
+434
 00:38:00,520 --> 00:38:02,800
 Maybe not even new,
 
-436
+435
 00:38:03,640 --> 00:38:06,488
 Because we're not really displaying anything.
 
-437
+436
 00:38:06,480 --> 00:38:11,936
 [Melinda thinks]
 
-438
+437
 00:38:11,930 --> 00:38:19,128
 So let's create our... answers_controller.
 
-439
+438
 00:38:19,140 --> 00:38:22,184
 [Silence]
 
-440
+439
 00:38:37,120 --> 00:38:42,696
 What are we trying to do...
 have our show... so here we need to add...
 
-441
+440
 00:38:42,930 --> 00:38:54,344
 a form_for... an answer.
 
-442
+441
 00:38:57,256 --> 00:38:59,416
 So here we need to create...
 
-443
+442
 00:38:59,410 --> 00:39:02,488
 [Silence]
 
-444
+443
 00:39:06,040 --> 00:39:08,176
 Answer.new
 
-445
+444
 00:39:08,320 --> 00:39:11,352
 [Melinda thinks]
 
-446
+445
 00:39:21,080 --> 00:39:23,856
 So I want to do something similar...
 
-447
+446
 00:39:23,850 --> 00:39:26,864
 [Silence]
 
-448
+447
 00:39:42,952 --> 00:39:45,632
 I'm not completely sure about that anymore.
 
-449
+448
 00:39:45,630 --> 00:39:48,696
 [Silence]
 
-450
+449
 00:39:53,992 --> 00:39:56,392
 So question_answers...
 
-451
+450
 00:39:56,390 --> 00:39:59,408
 [Silence]
 
-452
+451
 00:40:00,890 --> 00:40:03,392
 Alright, and then we wanted the...
 
-453
+452
 00:40:06,120 --> 00:40:07,680
 radio_button_tag.
 
-454
+453
 00:40:07,680 --> 00:40:19,088
 [Melinda looks for the radio button]
 
-455
-00:40:19,256 --> 00:40:21,256
+454
+00:40:19,250 --> 00:40:21,496
 I'm not really sure...
 
-456
-00:40:21,250 --> 00:40:24,280
+455
+00:40:21,520 --> 00:40:24,536
 [Silence]
 
-457
+456
 00:40:29,256 --> 00:40:32,520
 That's actually under public license...
 
-458
-00:40:34,008 --> 00:40:37,552
-rails form_for radio buttons example
+457
+00:40:33,160 --> 00:40:37,550
+rails form_for radio buttons example.
 
-459
+458
 00:40:37,550 --> 00:40:40,568
 [Silence]
 
+459
+00:40:54,000 --> 00:40:57,008
+DN: I suppose what we want is two radio buttons.
+
 460
-00:40:54,000 --> 00:41:00,784
-DN: I suppose what we really want is two radio buttons...
-I suppose one is true and one is false,
+00:40:57,048 --> 00:40:59,688
+And I suppose one is true and one is false,
 
 461
-00:41:00,780 --> 00:41:05,096
-It's a boolean we save in the answers,
-but the labels can say yes or no.
+00:40:59,688 --> 00:41:05,090
+It's a boolean we save in the
+answers, but the labels can say yes or no.
 
 462
 00:41:05,472 --> 00:41:10,288
@@ -2109,7 +2104,7 @@ And then we also want to pass...
 I'm not sure that would be submitted.
 
 499
-00:44:29,590 --> 00:44:34,792
+00:44:29,590 --> 00:44:32,544
 [Silence]
 
 500
