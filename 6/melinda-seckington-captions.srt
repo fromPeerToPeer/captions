@@ -18,7 +18,7 @@ at FutureLearn, a social learning platform.
 
 5
 00:00:16,990 --> 00:00:19,552
-Melinda co-organizes BarCap London,
+Melinda co-organizes BarCamp London,
 
 6
 00:00:19,560 --> 00:00:24,030
@@ -78,7 +78,7 @@ that question can be marked as resolved.
 18
 00:00:59,500 --> 00:01:04,688
 When someone has answered a question, they
-may view a summary of all answers to that question,.
+may view a summary of all answers to that question.
 
 19
 00:01:05,056 --> 00:01:06,670
@@ -154,7 +154,7 @@ MS: Yes.
 35
 00:01:59,530 --> 00:02:03,560
 DN: So that's what I thought we'd use as
-a sample data set for this challenge.
+a sample dataset for this challenge.
 
 36
 00:02:05,400 --> 00:02:10,720
@@ -172,12 +172,12 @@ because I'm familiar with those already.
 
 39
 00:02:21,210 --> 00:02:28,904
-Plus we've already got a very simple log in
-and log out system so that people can register.
+Plus we've already got a very simple login
+and logout system so that people can register.
 
 40
 00:02:30,870 --> 00:02:38,152
-So, basically if we go to the log in page.
+So, basically if we go to the login page.
 
 41
 00:02:38,248 --> 00:02:42,072
@@ -201,16 +201,16 @@ MS: Yes.
 
 46
 00:02:53,030 --> 00:02:53,872
-[They both talk at once]
+DN: But it's not a brand new rails app.
 
 47
 00:02:53,870 --> 00:02:57,920
-DN: [inaud] it already has a red
-register route and a log in route.
+It already has a register route
+and a login route.
 
 48
 00:02:57,920 --> 00:02:59,920
-So if we go to log in again...
+So if we go to login again...
 
 49
 00:03:00,128 --> 00:03:04,904
@@ -224,16 +224,16 @@ you're logged in, it remembers you.
 
 51
 00:03:07,776 --> 00:03:10,248
-And, can you log out as well?
+And, can you logout as well?
 
 52
 00:03:10,240 --> 00:03:13,496
-MS: Yes, you just hit log out.
+MS: Yes, if you hit logout.
 
 53
 00:03:14,512 --> 00:03:18,736
 Which you can't really see but you
-can hit the log in page and log in again.
+can hit the login page and login again.
 
 54
 00:03:18,730 --> 00:03:22,272
@@ -298,7 +298,7 @@ Let's take the image.
 68
 00:04:28,600 --> 00:04:32,040
 DN: So the string is going to
-be a URL from where it listed it.
+be a URL for where it listed it.
 
 69
 00:04:32,040 --> 00:04:33,280
@@ -306,7 +306,7 @@ MS: Yes.
 
 70
 00:04:33,280 --> 00:04:35,592
-DN: In a public directory probably.
+DN: In the public directory probably.
 
 71
 00:04:37,220 --> 00:04:43,872
@@ -340,7 +340,7 @@ So we want to...
 
 78
 00:05:07,870 --> 00:05:12,904
-This can be used [inaud] so that we can use db:seed.
+Basically use this seed file so that we can use db:seed.
 
 79
 00:05:13,200 --> 00:05:14,900
@@ -348,7 +348,7 @@ So I'll load that in.
 
 80
 00:05:16,224 --> 00:05:18,992
-So I want to use the seeds [inaud]
+So I want to use the seeds file
 
 81
 00:05:18,990 --> 00:05:21,888
@@ -378,7 +378,7 @@ Let me just set up our questions.
 
 87
 00:05:43,528 --> 00:05:48,384
-So very simply we want to do question.create.
+So very simply we want to do Question.create.
 
 88
 00:05:48,380 --> 00:05:51,384
@@ -386,7 +386,7 @@ So very simply we want to do question.create.
 
 89
 00:05:55,960 --> 00:05:57,736
-[Inaudible]
+[Melinda thinks]
 
 90
 00:05:57,730 --> 00:06:00,744
@@ -399,7 +399,8 @@ before... image and... description.
 
 92
 00:06:09,904 --> 00:06:15,528
-That would be the very very simple way of [inaud] it.
+That would be the very very simple
+way of setting it up.
 
 93
 00:06:15,520 --> 00:06:18,832
@@ -408,7 +409,7 @@ a little bit smarter I think.
 
 94
 00:06:22,136 --> 00:06:24,632
-Let's put the images is somewhere.
+Let's put the images somewhere.
 
 95
 00:06:24,630 --> 00:06:30,008
@@ -422,7 +423,7 @@ MS: No they're not.
 97
 00:06:33,488 --> 00:06:38,528
 DN: When I first created these
-images, I named them dog.jpeg, cat.jpeg
+images, I named them dog.jpg, cat.jpg
 
 98
 00:06:38,520 --> 00:06:43,280
@@ -435,11 +436,11 @@ opinionated so I changed it to 'Animal 1', 'Animal 2'...
 
 100
 00:06:47,100 --> 00:06:49,704
-MS: Yes, let's just throw them in the public.
+MS: Yes, let's just throw them in public.
 
 101
 00:06:51,552 --> 00:06:56,360
-They'll maybe come up in a lesser place later
+Then maybe I'll come up with a nicer place later
 
 102
 00:06:56,360 --> 00:06:59,368
@@ -455,7 +456,7 @@ How do you loop through numbers again... times.
 
 105
 00:07:12,976 --> 00:07:14,920
-I'll double check the [inaud]
+I'll double check that again
 
 106
 00:07:14,920 --> 00:07:18,272
@@ -480,12 +481,12 @@ DN: So you've got it searching rails documentation.
 
 111
 00:07:35,750 --> 00:07:40,728
-MS: Yes, it's a work flow that's called Dev Doctor.
+MS: Yes, it's a workflow that's called Dev Doctor.
 
 112
 00:07:40,720 --> 00:07:46,696
 And it's not just for rails, it's for most
-programming language that you can think of.
+programming languages that you can think of.
 
 113
 00:07:47,088 --> 00:07:48,216
@@ -497,11 +498,11 @@ MS: Yes, it's really handy.
 
 115
 00:07:52,120 --> 00:07:54,408
-Yes I was right.
+Yes, I was right.
 
 116
 00:07:54,400 --> 00:07:57,488
-I have to question myself sometimes.
+I shouldn't question myself sometimes.
 
 117
 00:07:57,480 --> 00:08:00,504
@@ -513,7 +514,7 @@ DN: Oh that's...
 
 119
 00:08:21,072 --> 00:08:25,056
-MS: Yes, sublime, like soup, try to open
+MS: Yes, sublime, likes to, try to open...
 
 120
 00:08:25,568 --> 00:08:28,752
@@ -521,7 +522,7 @@ DN: A binary file.
 
 121
 00:08:30,880 --> 00:08:40,960
-DN: They could be called Animal-1.jpeg, Animal-2...
+DN: They could be called Animal-1.jpg, Animal-2...
 I guess six times is going to be 0 to 5, isn't it?
 
 122
@@ -534,7 +535,8 @@ MS: Yes.
 
 124
 00:09:08,210 --> 00:09:14,216
-I'm sure we can make this smarter, in the sense that...
+I'm not sure we can make this smarter,
+in the sense that...
 
 125
 00:09:15,968 --> 00:09:18,584
@@ -546,7 +548,7 @@ Well, I guess what we can do here is...
 
 127
 00:09:27,230 --> 00:09:29,728
-Which animal shall we actually have?
+Which animals do we actually have?
 
 128
 00:09:31,136 --> 00:09:32,752
@@ -554,11 +556,11 @@ DN: That's a good question.
 
 129
 00:09:32,750 --> 00:09:35,648
-Hedgehog, Squirrel , Goat...
+Hedgehog, Squirrel, Goat?
 
 130
 00:09:36,104 --> 00:09:38,736
-DN: Yes, let's Goat!
+DN: Yes, that's a Goat!
 
 131
 00:09:38,736 --> 00:09:40,730
@@ -632,12 +634,12 @@ So let's see...
 
 148
 00:11:30,280 --> 00:11:32,848
-We'll migrate first because
+We need to migrate first because
 we haven't done that before.
 
 149
 00:11:36,328 --> 00:11:38,928
-I only hope that this doesn't blow up.
+And I hope that this doesn't blow up.
 
 150
 00:11:38,920 --> 00:11:41,992
@@ -674,7 +676,7 @@ code that. It is a question.
 
 158
 00:12:22,240 --> 00:12:26,960
-DN: I could do that... so let's just delete them all again.
+DN: I just redo it... so let's just delete them all again.
 
 159
 00:12:27,010 --> 00:12:30,056
@@ -682,7 +684,7 @@ DN: I could do that... so let's just delete them all again.
 
 160
 00:12:33,530 --> 00:12:36,440
-MS: I'll just analyze the question [inaud].
+MS: I'll just add the question mark.
 
 161
 00:12:36,440 --> 00:12:39,472
@@ -718,7 +720,7 @@ MS: Yes, it is, I keep forgetting that.
 
 169
 00:13:29,184 --> 00:13:33,408
-We've got [inaud], seeds and then a question.
+We've got our schema, seeds and then a question.
 
 170
 00:13:33,400 --> 00:13:36,400
@@ -765,7 +767,7 @@ here's the question, and here are the buttons.
 
 180
 00:14:33,784 --> 00:14:35,808
-Here I guess we need to figure out,
+So, I guess we need to figure out,
 
 181
 00:14:37,296 --> 00:14:39,400
@@ -777,7 +779,7 @@ DN:I suppose we could have...
 
 183
 00:14:44,184 --> 00:14:48,792
-when the user logs in the route page
+when the user logs in the root page
 could be a list of questions to begin with,
 
 184
@@ -817,7 +819,7 @@ MS: Yes.
 
 192
 00:15:26,064 --> 00:15:31,008
-And we also want resources as questions.
+And we also want resources :questions.
 
 193
 00:15:32,580 --> 00:15:34,776
@@ -900,7 +902,7 @@ controller I get more than I want.
 211
 00:17:05,752 --> 00:17:10,984
 DN: Yes, it generates the asset
-files, [inaud], JavaScripts and so on.
+files, stylesheets, JavaScripts and so on.
 
 212
 00:17:10,980 --> 00:17:13,400
@@ -908,8 +910,8 @@ MS: Yes, normally it's like...
 
 213
 00:17:13,744 --> 00:17:17,680
-DN: More [inaud] that what you want.
-MS Yes.
+DN: More cruft than what you want.
+MS: Yes.
 
 214
 00:17:18,136 --> 00:17:21,376
@@ -927,7 +929,8 @@ bit more control over it myself
 
 217
 00:17:31,952 --> 00:17:35,744
-and being able to see when I'm adding [inaud]
+and being able to see when I'm adding
+which files.
 
 218
 00:17:36,448 --> 00:17:37,272
@@ -940,7 +943,8 @@ get the rspec file, the user file and...
 
 220
 00:17:43,856 --> 00:17:47,376
-[The migration is not meant to be on there]
+...the migration. It’s not much to be
+wrong there.
 
 221
 00:17:47,920 --> 00:17:50,248
@@ -962,7 +966,7 @@ DN: Yes, I can relate to that.
 
 225
 00:17:58,752 --> 00:18:02,560
-So let's create [inaudible] for that as well.
+So let's create the views for that as well.
 
 226
 00:18:04,616 --> 00:18:07,120
@@ -982,7 +986,7 @@ I'll have to say index.
 
 230
 00:18:25,760 --> 00:18:27,800
-It won't show.
+And show.
 
 231
 00:18:29,608 --> 00:18:30,976
@@ -1007,11 +1011,12 @@ DN: That should be fine.
 
 236
 00:18:50,128 --> 00:18:55,944
-MS: I realise I never use the [inaud] because normally with so much more data...
+MS: I realise I never use the all
+because normally with so much more data...
 
 237
 00:18:56,088 --> 00:18:59,296
-DN: We don't need to patch anything.
+DN: We don't need to paginate anything.
 
 238
 00:18:59,620 --> 00:19:02,632
@@ -1039,7 +1044,7 @@ MS: All the questions.
 
 244
 00:19:47,620 --> 00:19:50,040
-So let's make a little nicer.
+So let's make it a little nicer.
 
 245
 00:19:50,050 --> 00:19:53,064
@@ -1059,7 +1064,7 @@ Now what do we call that?
 
 249
 00:20:28,328 --> 00:20:31,216
-[inaud]
+question_path
 
 250
 00:20:31,220 --> 00:20:34,208
@@ -1109,11 +1114,11 @@ MS: Yes.
 261
 00:21:25,192 --> 00:21:31,816
 Yes, they are sequential but
-because we did the seed test twice,
+because we did the seed task twice,
 
 262
 00:21:32,608 --> 00:21:34,536
-they're not going to [inaud]
+they're not going to start on 1
 
 263
 00:21:34,536 --> 00:21:36,530
@@ -1148,7 +1153,7 @@ Don't want to do it that way.
 
 270
 00:22:05,448 --> 00:22:08,288
-[Inaudible]
+Let's just throw it into that one...
 
 271
 00:22:11,456 --> 00:22:12,648
@@ -1203,15 +1208,15 @@ Someone who grabbed a question.
 
 283
 00:23:11,384 --> 00:23:14,480
-Let's just [inaud] for now, plus the work.
+Let's just do that for now, does that work?
 
 284
 00:23:15,616 --> 00:23:19,352
-Yes, it would if I did that [inaud]
+Yes, it would if I did that!
 
 285
 00:23:22,496 --> 00:23:26,904
-[inaud] the description.
+So let's show the description.
 
 286
 00:23:29,424 --> 00:23:30,768
@@ -1227,11 +1232,11 @@ I must look that up, I always forget.
 
 289
 00:23:54,440 --> 00:23:56,664
-Image_tag.
+image_tag
 
 290
 00:23:58,488 --> 00:23:59,952
-And then I can...
+And then we have...
 
 291
 00:23:59,950 --> 00:24:02,944
@@ -1247,7 +1252,7 @@ I'll say that first.
 
 294
 00:24:11,600 --> 00:24:13,872
-Its not called URL, it's called image.
+It's not called URL, it's called image.
 
 295
 00:24:15,936 --> 00:24:18,376
@@ -1280,7 +1285,8 @@ DN: OK.
 
 302
 00:24:50,880 --> 00:24:55,064
-So this [inaud] work because we need to specify...
+So this still won't work because we need
+to specify...
 
 303
 00:24:55,060 --> 00:24:58,096
@@ -1296,7 +1302,8 @@ MS: I'm not sure it is.
 
 306
 00:25:14,400 --> 00:25:17,696
-DN: Would it help to actually look at the HDL source?
+DN: Would it help to actually look at the
+HTML source?
 
 307
 00:25:17,690 --> 00:25:20,696
@@ -1304,7 +1311,7 @@ DN: Would it help to actually look at the HDL source?
 
 308
 00:25:23,648 --> 00:25:26,128
-DN: It's missing .jpeg.
+DN: It's missing .jpg.
 
 309
 00:25:27,776 --> 00:25:28,776
@@ -1339,7 +1346,7 @@ That's it.
 316
 00:25:54,624 --> 00:26:00,112
 MS: We're not using that at
-all but just adding .jpeg behind it.
+all but just adding .jpg behind it.
 
 317
 00:26:03,890 --> 00:26:09,176
@@ -1356,7 +1363,7 @@ MS: Yes.
 
 320
 00:26:15,920 --> 00:26:17,470
-[inaud]
+It's neater at least.
 
 321
 00:26:17,470 --> 00:26:20,504
@@ -1426,7 +1433,9 @@ MS: Let's clean this up a bit.
 
 337
 00:27:43,430 --> 00:27:46,824
-[They both speak at once]
+DN: That's great, ship it!
+MS: Let's put the question underneath
+the picture
 
 338
 00:27:46,820 --> 00:27:49,888
@@ -1434,7 +1443,8 @@ MS: Let's clean this up a bit.
 
 339
 00:27:51,104 --> 00:27:58,310
-DN: I guess the form with the yes/no answers would be [inaud].
+DN: I guess the form with the yes/no
+answers would be straight after the text.
 
 340
 00:27:58,450 --> 00:28:04,072
@@ -1497,7 +1507,8 @@ DN: So I guess next we have the yes/no to do.
 354
 00:29:15,500 --> 00:29:22,648
 Would that be a yes button and a no button,
-or would it be a radio button with yes and no [inaud]?
+or would it be a radio button with yes and
+no and then a submit button?
 
 355
 00:29:22,640 --> 00:29:26,472
@@ -1513,7 +1524,7 @@ How do we do that again? [laughter] Let's have a look.
 
 358
 00:29:39,216 --> 00:29:40,496
-[inaud]
+radio_button
 
 359
 00:29:40,490 --> 00:29:43,504
@@ -1535,7 +1546,7 @@ MS: Yes, so we haven't really looked at that yet.
 363
 00:30:26,970 --> 00:30:36,832
 But, I'm thinking we basically want a new
-level that lies between the questions and the users.
+model that lies between the questions and the users.
 
 364
 00:30:40,136 --> 00:30:44,360
@@ -1591,7 +1602,7 @@ questions through the join table?
 
 376
 00:32:00,696 --> 00:32:02,690
-That's maybe through.
+has_many :through
 
 377
 00:32:02,690 --> 00:32:05,712
@@ -1620,11 +1631,11 @@ I normally use the generate function to create this...
 
 383
 00:32:46,568 --> 00:32:53,880
-So we want announcer to have...
+So we want an answer to have...
 
 384
 00:32:53,880 --> 00:32:57,728
-A [inaud] value for yes or no.
+A boolean value for yes or no.
 
 385
 00:32:58,750 --> 00:33:01,784
@@ -1670,7 +1681,7 @@ Or it might be references, I don't quite remember.
 
 395
 00:34:09,840 --> 00:34:11,840
-MS: Yes, I just realised.
+MS: Yes, It is references.
 
 396
 00:34:11,840 --> 00:34:14,856
@@ -1683,7 +1694,7 @@ So we had a response, we have...
 398
 00:34:18,912 --> 00:34:22,776
 the relationship to the user and the
-question, and we don't' need anything else, right?
+question, and we don't need anything else, right?
 
 399
 00:34:22,770 --> 00:34:24,864
@@ -1713,7 +1724,7 @@ answers...
 405
 00:34:58,430 --> 00:35:05,776
 Questions through answers,
-but also has any answers.
+but also has many answers.
 
 406
 00:35:06,160 --> 00:35:07,800
@@ -1725,7 +1736,7 @@ DN: Right.
 
 408
 00:35:13,630 --> 00:35:16,568
-See how many progressions this has.
+Same again for questions.
 
 409
 00:35:16,560 --> 00:35:19,584
@@ -1733,7 +1744,8 @@ See how many progressions this has.
 
 410
 00:35:20,410 --> 00:35:25,264
-And the answers this has... many.
+This has many answers
+and this has many...
 
 411
 00:35:25,744 --> 00:35:26,912
@@ -1761,7 +1773,7 @@ Or is it not worth a commit?
 
 417
 00:35:55,650 --> 00:35:58,184
-MS: Ahh... maybe.
+MS: Ah... maybe.
 
 418
 00:35:59,416 --> 00:36:03,192
@@ -1790,7 +1802,7 @@ and then recording their response.
 
 424
 00:36:40,488 --> 00:36:44,608
-Do do this nicely we need...
+To do this nicely we need...
 
 425
 00:36:45,056 --> 00:36:48,088
@@ -1827,20 +1839,22 @@ the best way of modeling this.
 
 433
 00:37:20,448 --> 00:37:24,528
-DN: If it was a nested resource, then the URL for
+DN: If it was a nested resource,
+then the URL for...
 
 434
 00:37:25,720 --> 00:37:31,064
-say you post [they both talk together]
+Say you post to create an answer...
+MS: ...it would contain the question
 
 435
 00:37:31,544 --> 00:37:36,600
-MS: And we also know who the user
+And we also know who the user
 is, because they're logged in.
 
 436
 00:37:37,400 --> 00:37:40,376
-[Inaudible]
+So we can grab that from there.
 
 437
 00:37:40,370 --> 00:37:43,408
@@ -1877,7 +1891,7 @@ have our show... so here we need to add...
 
 445
 00:38:42,930 --> 00:38:54,344
-a form for... an answer.
+a form_for... an answer.
 
 446
 00:38:57,256 --> 00:38:59,416
@@ -1889,7 +1903,7 @@ So here we need to create...
 
 448
 00:39:06,040 --> 00:39:08,176
-Answer from you.
+Answer.new
 
 449
 00:39:08,320 --> 00:39:11,352
@@ -1913,7 +1927,7 @@ I'm not completely sure about that anymore.
 
 454
 00:39:53,992 --> 00:39:56,392
-So question answers...
+So question_answers...
 
 455
 00:39:56,390 --> 00:39:59,408
@@ -1925,7 +1939,7 @@ Alright, and then we wanted the...
 
 457
 00:40:06,120 --> 00:40:07,680
-radio button tag.
+radio_button_tag.
 
 458
 00:40:07,680 --> 00:40:19,088
@@ -1933,7 +1947,7 @@ radio button tag.
 
 459
 00:40:19,256 --> 00:40:21,256
-I'm pretty sure...
+I'm not really sure...
 
 460
 00:40:21,250 --> 00:40:24,280
@@ -1941,11 +1955,11 @@ I'm pretty sure...
 
 461
 00:40:29,256 --> 00:40:32,520
-That's actually under public license... rails
+That's actually under public license...
 
 462
 00:40:34,008 --> 00:40:37,552
-form for radio buttons app.
+rails form_for radio buttons example
 
 463
 00:40:37,550 --> 00:40:40,568
@@ -1953,12 +1967,13 @@ form for radio buttons app.
 
 464
 00:40:54,000 --> 00:41:00,784
-DN: I suppose what we really want is add...
+DN: I suppose what we really want is two radio buttons...
 I suppose one is true and one is false,
 
 465
 00:41:00,780 --> 00:41:05,096
-It's [inaud] that we say anything else, but the labels can say yes or no.
+It's a boolean we save in the answers,
+but the labels can say yes or no.
 
 466
 00:41:05,472 --> 00:41:10,288
@@ -1994,7 +2009,7 @@ So I think that should work... No it doesn't.
 
 474
 00:41:57,550 --> 00:41:59,832
-Oh... my [inaud].
+Oh... migrations.
 
 475
 00:41:59,830 --> 00:42:02,832
@@ -2006,7 +2021,8 @@ DN: Right.
 
 477
 00:42:23,288 --> 00:42:25,790
-That looks nice./nMS Yes.
+That looks nice.
+MS: Yes.
 
 478
 00:42:25,790 --> 00:42:34,144
@@ -2019,7 +2035,7 @@ yet, we've got to add the submit button.
 
 480
 00:42:41,140 --> 00:42:47,232
-DN: It's interesting that the default [inaud] by the text.
+DN: It's interesting the default submit button text.
 
 481
 00:42:47,230 --> 00:42:48,728
@@ -2035,7 +2051,7 @@ No we cant, not like that.
 
 484
 00:42:55,590 --> 00:42:59,720
-DN: I think the comma may be needed.
+DN: I think the comma isn't needed.
 
 485
 00:43:01,392 --> 00:43:03,064
@@ -2100,7 +2116,7 @@ MS: Yes... Oh because we...
 
 500
 00:44:21,080 --> 00:44:23,632
-And then we [inaud]
+And then we also want to pass...
 
 501
 00:44:23,664 --> 00:44:26,990
@@ -2108,12 +2124,11 @@ And then we [inaud]
 
 502
 00:44:27,080 --> 00:44:29,590
-I'm not sure that would be [inaud].
+I'm not sure that would be submitted.
 
 503
 00:44:29,590 --> 00:44:29,800
 [Silence]
-I'm not sure that would be [inaud].
 
 504
 00:44:29,800 --> 00:44:34,792
@@ -2147,7 +2162,7 @@ MS: Yes, we can.
 
 511
 00:45:06,752 --> 00:45:08,688
-So just hidden filed tag... yes this.
+So just hidden_field_tag... yes it is.
 
 512
 00:45:08,680 --> 00:45:18,648
@@ -2155,7 +2170,7 @@ So just hidden filed tag... yes this.
 
 513
 00:45:19,440 --> 00:45:24,632
-DN: It is a thought... do we have a current user?
+DN: There's a thought... do we have a current_user method?
 
 514
 00:45:26,460 --> 00:45:28,592
@@ -2167,8 +2182,8 @@ I don't think we do.
 
 516
 00:45:32,120 --> 00:45:35,752
-DN: We have a logged in method
-but not a current user method.
+DN: We have a logged_in method
+but not a current_user method.
 
 517
 00:45:36,312 --> 00:45:38,480
@@ -2180,7 +2195,7 @@ MS: No, so let's create that.
 
 519
 00:45:56,300 --> 00:45:58,848
-[inaud] and session.
+and then session.
 
 520
 00:45:58,896 --> 00:46:01,824
@@ -2196,7 +2211,7 @@ MS: That should work.
 
 523
 00:46:29,976 --> 00:46:31,920
-DN: Answer, that's interesting.
+DN: answer, that's interesting.
 
 524
 00:46:31,920 --> 00:46:35,288
@@ -2204,7 +2219,7 @@ DN: Answer, that's interesting.
 
 525
 00:46:35,584 --> 00:46:38,136
-So they've all got [inaud].
+So they all got submitted.
 
 526
 00:46:40,432 --> 00:46:44,656
@@ -2221,7 +2236,7 @@ But somehow...
 
 529
 00:46:51,910 --> 00:46:56,328
-DN: Maybe it's because... when you call radio button tag...
+DN: Maybe it's because... when you call radio_button_tag...
 
 530
 00:46:57,328 --> 00:47:00,264
@@ -2229,7 +2244,7 @@ it doesn't put it inside of a form object does it?
 
 531
 00:47:00,260 --> 00:47:04,024
-Wheras if you put f.radio button...
+Whereas if you used f.radio_button...
 
 532
 00:47:04,020 --> 00:47:21,624
@@ -2237,8 +2252,8 @@ Wheras if you put f.radio button...
 
 533
 00:47:21,620 --> 00:47:26,224
-DN: Instead of radio button tag,
-I think you can just say radio button.
+DN: Instead of radio_button_tag,
+I think you can just say radio_button.
 
 534
 00:47:26,220 --> 00:47:41,456
@@ -2246,7 +2261,7 @@ I think you can just say radio button.
 
 535
 00:47:43,304 --> 00:47:46,792
-MS: Oh actually, we were calling that anyway.
+MS: Oh... actually, we weren't calling that anyway.
 
 536
 00:47:46,800 --> 00:47:52,824
@@ -2254,7 +2269,7 @@ MS: Oh actually, we were calling that anyway.
 
 537
 00:47:53,392 --> 00:47:55,144
-So current user.
+So current_user.
 
 538
 00:47:55,140 --> 00:48:14,416
@@ -2314,7 +2329,7 @@ DN: What is it calling merge anyway?
 
 552
 00:49:38,712 --> 00:49:40,960
-We're up to 73.
+Parameters is 73.
 
 553
 00:49:43,896 --> 00:49:46,464
@@ -2322,7 +2337,7 @@ MS: Well that's because...
 
 554
 00:49:48,304 --> 00:49:50,736
-that's the only pre answer it has.
+that's the only params that it has.
 
 555
 00:49:52,936 --> 00:49:54,904
@@ -2351,7 +2366,7 @@ user ID. Does that part even work?
 
 561
 00:50:33,816 --> 00:50:37,440
-So it finds current user ID.
+So it finds the current user ID.
 
 562
 00:50:38,384 --> 00:50:40,736
@@ -2361,7 +2376,7 @@ MS: Yes.
 563
 00:50:42,944 --> 00:50:49,360
 DN: I wonder, what if we were
-to hard code hidden field to user 2.
+to hard code hidden_field to user 2.
 
 564
 00:50:49,384 --> 00:50:53,528
@@ -2370,16 +2385,16 @@ to hard code hidden field to user 2.
 565
 00:50:53,520 --> 00:50:58,552
 DN: So it's not a problem
-with current user method is it?
+with the current_user method is it?
 
 566
 00:50:58,976 --> 00:51:02,240
 It's something about the
-way we're calling hidden field.
+way we're calling hidden_field.
 
 567
 00:51:02,240 --> 00:51:05,368
-Should it be user ID rather than user?
+Should it be user_id rather than user?
 
 568
 00:51:05,360 --> 00:51:08,432
@@ -2395,7 +2410,7 @@ So there's something...
 
 571
 00:51:20,496 --> 00:51:24,928
-for and [inaud]
+form_for and hidden_field
 
 572
 00:51:24,976 --> 00:51:32,888
@@ -2403,7 +2418,7 @@ for and [inaud]
 
 573
 00:51:33,248 --> 00:51:35,936
-So it was a form for that we're using.
+So it was a form_for that we're using.
 
 574
 00:51:35,930 --> 00:51:48,856
@@ -2423,12 +2438,12 @@ MS: Yes.
 
 578
 00:52:12,264 --> 00:52:15,024
-So now feed it 'yes'.
+So now if we hit 'yes'.
 
 579
 00:52:16,010 --> 00:52:19,600
 DN: Excellent, so finally
-we are hitting out controller.
+we are hitting our controller.
 
 580
 00:52:22,920 --> 00:52:30,368
@@ -2436,7 +2451,7 @@ MS: Yes, and then in the controller, we don't need that,
 
 581
 00:52:31,088 --> 00:52:37,920
-because we've got question ID and user ID.
+because we've got question_id and user_id.
 
 582
 00:52:37,920 --> 00:52:46,776
@@ -2444,11 +2459,11 @@ because we've got question ID and user ID.
 
 583
 00:52:46,952 --> 00:52:49,344
-So where's that [inaud] create?
+So why's that within create?
 
 584
 00:52:52,392 --> 00:52:54,520
-[Inaud] that.
+It's because we don't need that.
 
 585
 00:52:54,520 --> 00:53:04,448
@@ -2456,16 +2471,16 @@ So where's that [inaud] create?
 
 586
 00:53:04,648 --> 00:53:06,440
-I think that works.
+I think that worked.
 
 587
 00:53:08,360 --> 00:53:12,144
-Oh, they're there because we
-don't have a template [inaud]
+Or well, it errored because we
+don't have a template, rather than
 
 588
 00:53:13,340 --> 00:53:16,448
-If not [inaud].
+it not creating
 
 589
 00:53:18,456 --> 00:53:19,488
@@ -2477,7 +2492,7 @@ MS: Sort of, except the question ID.
 
 591
 00:53:23,800 --> 00:53:26,464
-DN: But the response is nil and the user ID is nil.
+DN: But the response is nil and the user_id is nil.
 
 592
 00:53:27,048 --> 00:53:30,504
@@ -2498,11 +2513,11 @@ MS: So why would it only set the question ID?
 596
 00:53:45,752 --> 00:53:51,000
 DN: You know how before
-you had params.require_answer?
+you had params.require(:answer)?
 
 597
 00:53:51,336 --> 00:53:54,600
-And then you kept it require answer.
+And then you took our the require(:answer).
 
 598
 00:53:54,744 --> 00:53:56,880
@@ -2514,7 +2529,8 @@ MS: That was because, looking at the params,
 
 600
 00:54:03,360 --> 00:54:08,864
-it didn't seem as if answer was actually being [inaud].
+it didn't seem as if answer was actually
+being passed along.
 
 601
 00:54:09,496 --> 00:54:14,056
@@ -2552,7 +2568,7 @@ MS: Yes.
 
 609
 00:54:32,280 --> 00:54:34,280
-DN: Oh that's fine.
+DN: Oh that's funny.
 
 610
 00:54:37,712 --> 00:54:43,528
@@ -2566,7 +2582,7 @@ it is adding another hidden field.
 
 612
 00:54:49,040 --> 00:54:51,864
-DN: Ah, well now you will have to do that.
+DN: Ah, well now you know how to do that.
 
 613
 00:54:54,104 --> 00:54:57,584
@@ -2633,7 +2649,7 @@ MS: Yes, so that's...
 
 628
 00:56:03,224 --> 00:56:06,424
-That's question path.
+That's question_path.
 
 629
 00:56:06,420 --> 00:56:09,568
@@ -2641,7 +2657,7 @@ That's question path.
 
 630
 00:56:15,552 --> 00:56:17,808
-Let's go back here.
+So we're back here.
 
 631
 00:56:18,780 --> 00:56:21,304
@@ -2649,7 +2665,7 @@ DN: That's probably worth committing isn't it?
 
 632
 00:56:23,488 --> 00:56:28,976
-MS: Almost, I have another thing just here with...
+MS: Almost, I'd add another thing just here with...
 
 633
 00:56:29,992 --> 00:56:32,296
@@ -2679,7 +2695,7 @@ here... we're basically allowing
 
 639
 00:56:55,850 --> 00:57:00,328
-Allow user to answer questions.
+Allow users to answer questions.
 
 640
 00:57:02,968 --> 00:57:06,232
@@ -2707,7 +2723,7 @@ this and we don't want to display it anymore.
 
 645
 00:57:30,550 --> 00:57:36,240
-So let's add a [inaud] statement here.
+So let's add an if statement here.
 
 646
 00:57:39,640 --> 00:57:42,840
@@ -2779,11 +2795,11 @@ So now if we do answer.response.present.
 
 662
 00:59:05,392 --> 00:59:08,136
-[inaud] nope.
+[inaudible] nope.
 
 663
 00:59:10,864 --> 00:59:13,176
-DN: Ah, there's no find or create.
+DN: Ah, there's no find_or_create.
 
 664
 00:59:13,170 --> 00:59:19,464
@@ -2811,7 +2827,8 @@ MS: Well no because we already answered this.
 
 670
 00:59:39,560 --> 00:59:41,344
-DN: [inaud] branch of the 'if'.
+DN: I think we've got the
+wrong branch of the 'if'.
 
 671
 00:59:41,340 --> 00:59:48,640
@@ -2921,7 +2938,7 @@ I am not happy with the names, but they can do for now.
 
 696
 01:03:04,784 --> 01:03:06,800
-We'll do this on the where line first.
+We'll do this on the command line first.
 
 697
 01:03:07,696 --> 01:03:11,976
@@ -2959,11 +2976,11 @@ MS: And then false.
 705
 01:03:57,080 --> 01:04:01,736
 The only problem with this is we
-don't know what the question is.
+don't actually know what the question is.
 
 706
 01:04:01,730 --> 01:04:04,656
-[inaud] extracts.
+MS: So we'll extract... that.
 
 707
 01:04:04,650 --> 01:04:07,664
@@ -2984,7 +3001,7 @@ Yes, we can actually...
 
 711
 01:04:48,136 --> 01:04:49,808
-DN: Ah yes, memoise it.
+DN: Ah yes, memoize it.
 
 712
 01:04:49,800 --> 01:04:51,488
@@ -3000,7 +3017,7 @@ DN: Alright.
 
 715
 01:04:59,192 --> 01:05:01,256
-MS: [Inaudible]
+MS: Think I need to move that...
 
 716
 01:05:05,080 --> 01:05:06,520
@@ -3016,7 +3033,7 @@ MS: Yes...
 
 719
 01:05:15,248 --> 01:05:17,536
-Responses_count.
+yes_responses_count
 
 720
 01:05:17,530 --> 01:05:20,512
@@ -3032,7 +3049,7 @@ DN: Two nil. [laughter]
 
 723
 01:05:29,432 --> 01:05:31,960
-Let's just [inaud] a little bit.
+Let's just make it a little bit...
 
 724
 01:05:31,960 --> 01:05:34,832
@@ -3080,7 +3097,7 @@ the summary of how people have answered.
 734
 01:06:41,224 --> 01:06:46,696
 We're missing the middle bit
-where questions get reserved
+where questions get resolved
 
 735
 01:06:46,690 --> 01:06:50,512
@@ -3153,7 +3170,7 @@ MS: One way of doing that is...
 
 751
 01:07:50,776 --> 01:07:58,890
-Maybe still using a fresh hole so we at
+Maybe still using a threshold so we at
 least have a certain amount of people answering.
 
 752
@@ -3170,11 +3187,11 @@ MS: So let's say we need to have at least 20 answers.
 
 755
 01:08:06,720 --> 01:08:10,816
-Of which 90% need to be the same.
+Of which 90% need to be the same?
 
 756
 01:08:10,810 --> 01:08:15,928
-DN: Yes, I,m not well versed in
+DN: Yes, I'm not well versed in
 statistics but to me that sounds good.
 
 757
@@ -3264,7 +3281,7 @@ So now we've got...
 
 777
 01:09:53,016 --> 01:09:55,536
-[inaud] we want to do resolved.
+I'm guessing, we want to do 'resolved?'.
 
 778
 01:09:58,312 --> 01:10:02,992
@@ -3272,11 +3289,11 @@ And in that case threshold would have to be reached.
 
 779
 01:10:04,480 --> 01:10:09,312
-And maybe majority answered.
+And maybe 'majority_answered?'
 
 780
 01:10:10,240 --> 01:10:12,832
-DN: Majority agreed... that's nice.
+DN: 'majority_agreed?', that's nice.
 
 781
 01:10:12,830 --> 01:10:15,952
@@ -3293,7 +3310,7 @@ Yes what's the calculation we want to do here?
 784
 01:10:23,768 --> 01:10:30,216
 DN: It's a majority of either
-90% said yes, or 90% said no isn't it?
+90% said yes, or 90% said no, isn't it?
 
 785
 01:10:30,210 --> 01:10:31,200
@@ -3301,7 +3318,7 @@ MS: Yes.
 
 786
 01:10:31,200 --> 01:10:34,152
-DN: Both can be true, the case. 
+DN: Both can be true, the case.
 
 787
 01:10:35,590 --> 01:10:38,352
@@ -3309,7 +3326,7 @@ MS: Yes, so calculating both I guess.
 
 788
 01:10:38,350 --> 01:10:45,232
-So, we have total=answers.count.
+So, we have total = answers.count
 
 789
 01:10:46,360 --> 01:10:53,368
@@ -3384,7 +3401,7 @@ I think I might want to do that.
 
 806
 01:12:15,320 --> 01:12:16,752
-DN: Or is it 2f.
+DN: Or is it 'to_f'?
 
 807
 01:12:16,750 --> 01:12:18,400
@@ -3417,11 +3434,11 @@ Greater than... 90.
 814
 01:12:45,328 --> 01:12:48,520
 DN: Another way of saying that
-is yes percentage is greater than 90
+is yes_percentage is greater than 90
 
 815
 01:12:48,520 --> 01:12:51,048
-or yes percentage is less than 10.
+or yes_percentage is less than 10.
 
 816
 01:12:51,976 --> 01:12:54,056
@@ -3434,7 +3451,7 @@ MS: Yes, true.
 818
 01:12:58,768 --> 01:13:03,816
 DN: Shall we play around with
-that on the consul and see what works?
+that on the console and see what works?
 
 819
 01:13:03,810 --> 01:13:09,880
@@ -3502,17 +3519,17 @@ MS: Yes, but we need to have at least 20 answers.
 
 834
 01:14:09,048 --> 01:14:13,408
-DN: But you did threshold reached.
-I thought you did majority agreed.
+DN: But you did 'threshold_reached?'
+I thought you did 'majority_agreed?'.
 
 835
 01:14:14,696 --> 01:14:18,568
-MS: I did resolved and then
-I looked at majority agreed.
+MS: I did 'resolved' and then
+I looked at 'majority_agreed?'
 
 836
 01:14:19,680 --> 01:14:22,360
-Oh right, we did do majority agreed.
+Oh right, we did do 'majority_agreed?'.
 
 837
 01:14:22,360 --> 01:14:25,424
@@ -3532,7 +3549,7 @@ That's the wrong number.
 
 841
 01:14:55,128 --> 01:15:00,136
-DN: Where we working with the first question
+DN: Were we working with the first question
 previously, rather than the last question?
 
 842
@@ -3550,7 +3567,7 @@ DN: Ah, there we go.
 
 845
 01:15:12,504 --> 01:15:15,072
-So the majority agreed is not robust at the moment.
+So the 'majority_agreed?' is not robust at the moment.
 
 846
 01:15:15,820 --> 01:15:17,896
@@ -3591,7 +3608,8 @@ MS: I guess the next thing would be to actually...
 
 854
 01:15:49,824 --> 01:15:54,400
-use what we've just doneanhere with resolving questions.
+use what we've just done here
+with resolving questions.
 
 855
 01:15:54,848 --> 01:15:57,184
@@ -3599,7 +3617,7 @@ Putting in the interface...
 
 856
 01:15:59,140 --> 01:16:01,224
-and then beyond that... 
+and then beyond that...
 
 857
 01:16:01,352 --> 01:16:06,520
@@ -3614,7 +3632,7 @@ showing all the questions in a list.
 859
 01:16:10,128 --> 01:16:14,616
 It would be a bit nicer if, the
-user logged on to the system
+user logs on to the system
 
 860
 01:16:14,760 --> 01:16:17,192
@@ -3662,7 +3680,7 @@ MS: Exactly.
 
 870
 01:16:57,320 --> 01:17:03,136
-CN: And once you've got that you can
+DN: And once you've got that you can
 answer a question and ask for the next question.
 
 871
