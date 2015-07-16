@@ -2892,7 +2892,7 @@ I'll get 4 which has those 4 which has which has 1H
 681
 00:59:28,790 --> 00:59:34,792
 So the first one should have length
-4, the second level down should have 4, 
+4, the second level down should have 4,
 
 682
 00:59:34,800 --> 00:59:39,096
@@ -2947,4 +2947,218 @@ In this case I'm going to say it's a leaf node.
 694
 01:00:46,144 --> 01:00:49,144
 [Silence]
+
+695
+01:00:51,784 --> 01:00:58,720
+Then I'm going to say... it can't
+be sub-divided, it is a leaf node.
+
+696
+01:00:58,720 --> 01:01:01,680
+[Silence]
+
+697
+01:01:04,712 --> 01:01:06,848
+I could just say expect... 
+
+698
+01:01:06,840 --> 01:01:11,416
+I know there's some syntax that would let
+me do that even shorter, but I can't remember it.
+
+699
+01:01:13,640 --> 01:01:17,872
+[Paul dictates as he types]
+
+700
+01:01:33,960 --> 01:01:35,320
+JW: I think you already have a...
+
+701
+01:01:35,320 --> 01:01:38,424
+PB: Yes, we have divisible,
+which is the opposite to leaf.
+
+702
+01:01:41,232 --> 01:01:43,928
+So it's a leaf if it's not divisible.
+
+703
+01:01:43,920 --> 01:01:46,864
+[Silence]
+
+704
+01:01:52,296 --> 01:01:55,320
+So that's good... and then this one...
+
+705
+01:01:57,240 --> 01:01:59,192
+yes, that's also good.
+
+706
+01:02:00,232 --> 01:02:02,264
+Everything's fine.
+
+707
+01:02:02,260 --> 01:02:05,256
+[Silence]
+
+708
+01:02:05,976 --> 01:02:08,952
+That feels a bit happier so I'll check those in.
+
+709
+01:02:08,950 --> 01:02:11,952
+[Silence]
+
+710
+01:02:22,616 --> 01:02:25,600
+[Paul dictates what he writes]
+
+711
+01:02:26,760 --> 01:02:32,688
+inaud
+
+712
+01:02:32,760 --> 01:02:36,096
+[New Chapter]
+
+713
+01:02:36,472 --> 01:02:38,744
+PB: The next thing was that...
+
+714
+01:02:38,740 --> 01:02:43,008
+When a quadrant consists of a single color,
+it may be considered a terminal node.
+
+715
+01:02:43,768 --> 01:02:49,928
+So although we have this leaf method,
+which is the point at which we stop.
+
+716
+01:02:53,270 --> 01:02:58,936
+We want to add some additional logic to that
+which is when a quadrant consists of a single color.
+
+717
+01:02:58,944 --> 01:03:03,070
+So what I want to do now... [Paul thinks]
+
+718
+01:03:03,070 --> 01:03:08,216
+is... that's my logic, but I don't
+want to put that in the node
+
+719
+01:03:08,392 --> 01:03:10,912
+because inaud about the color.
+
+720
+01:03:10,936 --> 01:03:14,536
+So this should split recursively.
+
+721
+01:03:17,472 --> 01:03:20,472
+I'm going to need a different set of data for this.
+
+722
+01:03:22,504 --> 01:03:25,960
+So I'm going to say...
+
+723
+01:03:26,600 --> 01:03:33,328
+[Paul dictates what he types]
+
+724
+01:03:36,168 --> 01:03:43,272
+And I'm going to inaud quite easily, so I'm going to say...
+
+725
+01:03:44,272 --> 01:03:46,912
+This quadrant is all one.
+
+726
+01:03:48,160 --> 01:03:50,840
+Oh, it's not actually all 1.
+
+727
+01:03:52,300 --> 01:03:59,376
+I'm going to say that this quadrant is all 2.
+
+728
+01:03:59,500 --> 01:04:02,520
+[Silence]
+
+729
+01:04:07,152 --> 01:04:10,496
+And I'm going to leave the rest of them different.
+
+730
+01:04:10,640 --> 01:04:13,688
+[Paul thinks]
+
+731
+01:04:15,176 --> 01:04:20,448
+I'm going to say it should split recursively...
+
+732
+01:04:20,440 --> 01:04:23,480
+[Silence]
+
+733
+01:04:26,160 --> 01:04:29,352
+based upon supplied predicate.
+
+734
+01:04:29,350 --> 01:04:32,344
+[Silence]
+
+735
+01:04:33,416 --> 01:04:38,312
+So in this case, if I give... that needs to be subject.
+
+736
+01:04:40,456 --> 01:04:43,856
+I'm going to try it with a
+couple of different predicates.
+
+737
+01:04:43,850 --> 01:04:46,856
+[Silence]
+
+738
+01:04:48,608 --> 01:04:50,568
+And I'm going to say...
+
+739
+01:04:50,752 --> 01:04:53,736
+[Paul thinks]
+
+740
+01:04:55,560 --> 01:04:59,944
+Firstly, I'm going to break this down into cells.
+
+741
+01:04:59,940 --> 01:05:06,224
+[Paul talks to himself]
+
+742
+01:05:06,220 --> 01:05:09,232
+[Paul thinks]
+
+743
+01:05:09,688 --> 01:05:14,040
+Olander, which is going to be...
+
+744
+01:05:15,184 --> 01:05:20,200
+I think the simplest thing is to give
+it the four items in the same order.
+
+745
+01:05:20,688 --> 01:05:27,568
+So if I say Ive got A,B,C, and D
+going from Northeast anticlockwise.
 
