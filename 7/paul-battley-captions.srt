@@ -3307,3 +3307,62 @@ That doesn't work at all... which is OK.
 01:08:26,008 --> 01:08:30,352
 So you cant do that, which is a shame.
 
+781
+01:08:30,688 --> 01:08:33,704
+[Paul thinks]
+
+782
+01:08:38,632 --> 01:08:43,960
+In fact I could even say...
+[Paul dictates what he writes]
+
+783
+01:09:05,424 --> 01:09:08,304
+That inaud wrong I've got an array of nodes.
+
+784
+01:09:10,000 --> 01:09:12,240
+So actually I want...
+
+785
+01:09:13,104 --> 01:09:15,664
+So I split...
+
+786
+01:09:16,248 --> 01:09:23,968
+So the first thing that's wrong is
+that it's not actually to the block.
+
+787
+01:09:24,024 --> 01:09:27,064
+[Paul thinks]
+
+788
+01:09:31,104 --> 01:09:33,904
+It doesn't really matter if I do it or not so...
+
+789
+01:09:33,968 --> 01:09:36,920
+[Paul dictates what he writes on screen]
+
+790
+01:09:56,976 --> 01:10:00,152
+So this one, I want to know if I can split here.
+
+791
+01:10:00,456 --> 01:10:03,080
+So I need to check if it's divisible.
+
+792
+01:10:05,984 --> 01:10:09,840
+I need to duplicate that, and I think
+I just need to put the logic in there.
+
+793
+01:10:09,920 --> 01:10:12,912
+[Silence]
+
+794
+01:10:33,352 --> 01:10:35,872
+So that needs to be split recursive.
+
