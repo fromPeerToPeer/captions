@@ -3582,3 +3582,164 @@ PB: Yes, that's right.
 01:15:12,072 --> 01:15:15,072
 [Silence]
 
+847
+01:15:24,224 --> 01:15:25,896
+Cool, yes.
+
+848
+01:15:26,632 --> 01:15:29,240
+JW: That might be worth a commit.
+
+849
+01:15:29,384 --> 01:15:32,368
+[Silence]
+
+850
+01:15:42,664 --> 01:15:45,960
+[Paul dictates what he types]
+
+851
+01:15:46,648 --> 01:15:49,464
+[Paul dictates what he writes]
+
+852
+01:15:54,760 --> 01:15:59,312
+PB: OK, so we've got split inaud nodes, and that feels better.
+
+853
+01:16:02,256 --> 01:16:06,480
+I'm going to take your suggestion and make children...
+
+854
+01:16:06,480 --> 01:16:10,440
+... because I think children and split
+being different will make more sense.
+
+855
+01:16:10,808 --> 01:16:13,088
+So I'll change split to children.
+
+856
+01:16:13,120 --> 01:16:16,136
+[Silence]
+
+857
+01:16:19,976 --> 01:16:23,016
+inaud is that yes... No.
+
+858
+01:16:23,088 --> 01:16:26,088
+[Paul thinks]
+
+859
+01:16:36,448 --> 01:16:40,776
+Change all this to children, no, yes, yes.
+
+860
+01:16:40,864 --> 01:16:43,856
+[Silence]
+
+861
+01:16:49,130 --> 01:16:52,216
+So we now have children.
+
+862
+01:16:53,184 --> 01:16:58,800
+[Paul mumbles as he types]
+
+863
+01:17:01,600 --> 01:17:07,104
+Children inaud I'm going to change that test.
+
+864
+01:17:08,240 --> 01:17:10,488
+Should children... no.
+
+865
+01:17:10,752 --> 01:17:13,776
+[Silence]
+
+866
+01:17:23,096 --> 01:17:26,720
+[Paul dictates what he writes]
+
+867
+01:17:28,872 --> 01:17:32,584
+I shouldn't have put should
+in everything, but never mind.
+
+868
+01:17:34,840 --> 01:17:40,696
+Yes, so... change split to children.
+
+869
+01:17:41,368 --> 01:17:48,176
+It's now a lot clearer that we have a method
+that just gives us the immediate children.
+
+870
+01:17:48,696 --> 01:17:53,056
+Whether something has children or not,
+it doesn't matter what our rules are,
+
+871
+01:17:53,050 --> 01:17:56,072
+it always has children.
+
+872
+01:17:56,352 --> 01:18:01,728
+Splitting recursively is a slightly
+different process where we have some kind of
+
+873
+01:18:02,728 --> 01:18:05,984
+choice to make whether each one is split.
+
+874
+01:18:09,264 --> 01:18:15,768
+Which now, if I've got inaud
+
+875
+01:18:15,760 --> 01:18:18,752
+[Silence]
+
+876
+01:18:19,768 --> 01:18:21,648
+NARRATOR: We're going to speed through this section, 
+
+877
+01:18:21,640 --> 01:18:24,672
+because Paul and Jamie
+found themselves at a dead end.
+
+878
+01:18:25,328 --> 01:18:28,608
+They eventually backtracked on
+this idea of using a lambda.
+
+879
+01:18:28,632 --> 01:18:31,760
+So let's skip ahead to the
+section where they changed course.
+
+880
+01:18:33,536 --> 01:18:38,384
+PB: I think I'm going to take all
+the stuff I've been doing and say...
+
+881
+01:18:38,380 --> 01:18:42,792
+[Paul dictates what he writes]
+
+882
+01:18:44,008 --> 01:18:46,464
+And then I'm going to re-set...
+
+883
+01:18:46,460 --> 01:18:48,888
+[Paul dictates what he writes]
+
+884
+01:18:48,880 --> 01:18:52,040
+It's basically a posh version of stash.
+
