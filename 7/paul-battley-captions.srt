@@ -3364,5 +3364,221 @@ I just need to put the logic in there.
 
 794
 01:10:33,352 --> 01:10:35,872
-So that needs to be split recursive.
+So that needs to be split_recursive.
+
+795
+01:10:35,920 --> 01:10:38,904
+[Silence]
+
+796
+01:10:39,640 --> 01:10:43,312
+I feel like I'm slightly off track here.
+
+797
+01:10:43,310 --> 01:10:46,352
+[Paul thinks]
+
+798
+01:10:50,432 --> 01:10:53,104
+I'm sure there's a simpler thing that I've missed.
+
+799
+01:10:53,100 --> 01:10:56,104
+[Paul thinks]
+
+800
+01:10:56,464 --> 01:11:01,592
+So now do we get inaud for the quadnode.
+
+801
+01:11:05,360 --> 01:11:07,760
+I'm going to stop and read over what I've done.
+
+802
+01:11:07,832 --> 01:11:10,840
+[Silence]
+
+803
+01:11:19,128 --> 01:11:23,040
+I'm thinking that perhaps...
+
+804
+01:11:24,600 --> 01:11:29,224
+each of things should at some point be a node.
+
+805
+01:11:29,960 --> 01:11:34,312
+So each of these should be the same kind of thing.
+
+806
+01:11:36,360 --> 01:11:40,464
+So I'm going to inaud here
+and I'm going to stash my changes.
+
+807
+01:11:40,544 --> 01:11:43,568
+[Silence]
+
+808
+01:11:45,816 --> 01:11:49,576
+JW: You know you attempted to
+change the name of split earlier on,
+
+809
+01:11:49,848 --> 01:11:52,888
+I wonder if children might be a better name.
+
+810
+01:11:53,400 --> 01:11:56,712
+It would tease out the 'treesness' of it.
+
+811
+01:11:56,710 --> 01:12:01,624
+PB: Yes, let's try that... so I need to do some surgery here.
+
+812
+01:12:03,904 --> 01:12:10,024
+I feel there's a whole load of duplication
+here but there probably actually isn't.
+
+813
+01:12:12,336 --> 01:12:16,024
+I'm just going to see inaud.
+
+814
+01:12:18,960 --> 01:12:21,416
+So yes, it needs to be here.
+
+815
+01:12:21,672 --> 01:12:26,688
+I inaud a wrap function which,
+because I'm doing this quite a lot...
+
+816
+01:12:29,024 --> 01:12:35,024
+[Paul dictates what he types]... given some rows.
+
+817
+01:12:35,640 --> 01:12:38,480
+It's an easier way of doing that.
+
+818
+01:12:38,544 --> 01:12:41,592
+[Silence]
+
+819
+01:12:42,544 --> 01:12:44,984
+Just get each of these...
+
+820
+01:12:45,016 --> 01:12:48,024
+[Silence]
+
+821
+01:12:59,520 --> 01:13:02,176
+So I'm going to do that.
+
+822
+01:13:02,240 --> 01:13:05,264
+[Paul thinks]
+
+823
+01:13:05,616 --> 01:13:08,824
+JW: Actually you don't need
+the mapping on line 26 anymore.
+
+824
+01:13:10,480 --> 01:13:12,720
+Or even to map it at all.
+
+825
+01:13:16,040 --> 01:13:17,680
+PB: Yes, that's a bit nicer isn't it.
+
+826
+01:13:17,952 --> 01:13:23,144
+I'm going to put this onto one line because
+the screen is small and it's nicer to see more.
+
+827
+01:13:23,184 --> 01:13:26,192
+[Silence]
+
+828
+01:13:43,928 --> 01:13:46,520
+split recurser... erm...
+
+829
+01:13:48,496 --> 01:13:54,240
+Again, it's wrong it should be pulling
+split recurser when it should be pulling sub-nodes.
+
+830
+01:13:54,800 --> 01:13:57,304
+Let's try using this to children.
+
+831
+01:13:58,808 --> 01:14:01,168
+No let's finish and see what breaks.
+
+832
+01:14:04,288 --> 01:14:08,632
+OK, so that's expected.
+
+833
+01:14:08,630 --> 01:14:13,904
+Those will fail because it
+expected to get different things back.
+
+834
+01:14:15,648 --> 01:14:21,928
+Expect rows, yes inaud which is in Northeast quadrant and that should be...
+
+835
+01:14:22,432 --> 01:14:27,480
+JW: We could just call .rows on that and it would...
+
+836
+01:14:27,576 --> 01:14:29,480
+PB: Yes, we could.
+
+837
+01:14:32,816 --> 01:14:34,752
+Yes, I think that's fine.
+
+838
+01:14:34,848 --> 01:14:37,904
+[Silence]
+
+839
+01:14:50,280 --> 01:14:52,672
+I wonder if I should store work.
+
+840
+01:14:53,080 --> 01:14:55,080
+Don't think I did that but...
+
+841
+01:14:56,360 --> 01:14:59,496
+OK so 4 quadrants.
+
+842
+01:15:00,272 --> 01:15:02,400
+JW: It looks like they're double wrapped.
+
+843
+01:15:03,728 --> 01:15:04,848
+PB: Yes.
+
+844
+01:15:04,976 --> 01:15:07,512
+JW: Because in the test we're...
+
+845
+01:15:10,040 --> 01:15:11,992
+PB: Yes, that's right.
+
+846
+01:15:12,072 --> 01:15:15,072
+[Silence]
 
