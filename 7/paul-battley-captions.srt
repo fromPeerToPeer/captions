@@ -2959,7 +2959,7 @@ be sub-divided, it is a leaf node.
 
 697
 01:01:04,712 --> 01:01:06,848
-I could just say expect... 
+I could just say expect...
 
 698
 01:01:06,840 --> 01:01:11,416
@@ -3161,4 +3161,149 @@ it the four items in the same order.
 01:05:20,688 --> 01:05:27,568
 So if I say Ive got A,B,C, and D
 going from Northeast anticlockwise.
+
+746
+01:05:30,848 --> 01:05:33,112
+And I'm just going to return true.
+
+747
+01:05:36,376 --> 01:05:41,104
+No, I'm going to say A equals B equal C equals B.
+
+748
+01:05:41,100 --> 01:05:44,128
+[Silence]
+
+749
+01:05:49,304 --> 01:05:53,960
+And then we're going to end
+up here with a recursive split.
+
+750
+01:05:53,960 --> 01:05:56,912
+[Silence]
+
+751
+01:06:00,110 --> 01:06:05,096
+And then give it that predicate
+as a block, or olander, whatever.
+
+752
+01:06:05,096 --> 01:06:08,848
+[Paul dictates what he types]
+
+753
+01:06:08,840 --> 01:06:12,152
+It turned into a inaud.
+
+754
+01:06:13,144 --> 01:06:16,896
+Now, what do I expect...
+
+755
+01:06:18,216 --> 01:06:26,576
+I expect result naught which
+is the Northeast quadrant,
+
+756
+01:06:26,570 --> 01:06:29,640
+[Paul thinks]
+
+757
+01:06:29,720 --> 01:06:32,520
+to be a leaf.
+
+758
+01:06:33,968 --> 01:06:36,344
+JW: It's starting to read quite nicely.
+
+759
+01:06:37,776 --> 01:06:41,104
+PB: Expect 1 to be a leaf, so result...
+
+760
+01:06:42,392 --> 01:06:49,104
+[Paul dictates what he writes]
+
+761
+01:06:49,100 --> 01:06:52,144
+[Silence]
+
+762
+01:06:55,400 --> 01:06:59,144
+I'm just going to add one more
+inaud to make sure it's going down.
+
+763
+01:06:59,848 --> 01:07:04,560
+I want to say that result 3...
+
+764
+01:07:04,560 --> 01:07:07,552
+[Paul thinks]
+
+765
+01:07:14,336 --> 01:07:18,768
+JW: I think result 3 will be [they both talk at once].
+
+766
+01:07:19,230 --> 01:07:21,400
+PB: Yes.
+
+767
+01:07:21,464 --> 01:07:24,504
+[Paul thinks]
+
+768
+01:07:28,632 --> 01:07:33,424
+Maybe I should make it result inaud that might be nice.
+
+769
+01:07:33,880 --> 01:07:36,544
+[Paul dictates what he writes]
+
+770
+01:07:36,540 --> 01:07:38,928
+So in that case...
+
+771
+01:07:38,976 --> 01:07:41,992
+[Silence]
+
+772
+01:07:43,200 --> 01:07:45,400
+So in this case...
+
+773
+01:07:45,480 --> 01:07:48,488
+[Paul thinks]
+
+774
+01:07:51,496 --> 01:07:55,184
+So here I get quad tree quad tree...
+
+775
+01:07:57,072 --> 01:08:01,560
+[Paul dictates what he writes]
+
+776
+01:08:09,440 --> 01:08:14,744
+I'm not sure if that makes any sense any more,
+but it depends what the rules for splitting are.
+
+777
+01:08:14,768 --> 01:08:17,736
+[Paul thinks]
+
+778
+01:08:18,128 --> 01:08:21,264
+I'm going to forget this for now and get that bit away.
+
+779
+01:08:22,930 --> 01:08:25,952
+That doesn't work at all... which is OK.
+
+780
+01:08:26,008 --> 01:08:30,352
+So you cant do that, which is a shame.
 
