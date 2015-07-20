@@ -3596,150 +3596,284 @@ JW: That might be worth a commit.
 
 850
 01:15:42,664 --> 01:15:45,960
-[Paul dictates what he types]
-
-851
-01:15:46,648 --> 01:15:49,464
 [Paul dictates what he writes]
 
-852
+851
 01:15:54,760 --> 01:15:59,312
 PB: OK, so we've got split inaud nodes, and that feels better.
 
-853
+852
 01:16:02,256 --> 01:16:06,480
 I'm going to take your suggestion and make children...
 
-854
+853
 01:16:06,480 --> 01:16:10,440
 ... because I think children and split
 being different will make more sense.
 
-855
+854
 01:16:10,808 --> 01:16:13,088
 So I'll change split to children.
 
-856
+855
 01:16:13,120 --> 01:16:16,136
 [Silence]
 
-857
+856
 01:16:19,976 --> 01:16:23,016
 inaud is that yes... No.
 
-858
+857
 01:16:23,088 --> 01:16:26,088
 [Paul thinks]
 
-859
+858
 01:16:36,448 --> 01:16:40,776
 Change all this to children, no, yes, yes.
 
-860
+859
 01:16:40,864 --> 01:16:43,856
 [Silence]
 
-861
+860
 01:16:49,130 --> 01:16:52,216
 So we now have children.
 
-862
+861
 01:16:53,184 --> 01:16:58,800
 [Paul mumbles as he types]
 
-863
+862
 01:17:01,600 --> 01:17:07,104
 Children inaud I'm going to change that test.
 
-864
+863
 01:17:08,240 --> 01:17:10,488
 Should children... no.
 
-865
+864
 01:17:10,752 --> 01:17:13,776
 [Silence]
 
-866
+865
 01:17:23,096 --> 01:17:26,720
 [Paul dictates what he writes]
 
-867
+866
 01:17:28,872 --> 01:17:32,584
 I shouldn't have put should
 in everything, but never mind.
 
-868
+867
 01:17:34,840 --> 01:17:40,696
 Yes, so... change split to children.
 
-869
+868
 01:17:41,368 --> 01:17:48,176
 It's now a lot clearer that we have a method
 that just gives us the immediate children.
 
-870
+869
 01:17:48,696 --> 01:17:53,056
 Whether something has children or not,
 it doesn't matter what our rules are,
 
-871
+870
 01:17:53,050 --> 01:17:56,072
 it always has children.
 
-872
+871
 01:17:56,352 --> 01:18:01,728
 Splitting recursively is a slightly
 different process where we have some kind of
 
-873
+872
 01:18:02,728 --> 01:18:05,984
 choice to make whether each one is split.
 
-874
+873
 01:18:09,264 --> 01:18:15,768
 Which now, if I've got inaud
 
-875
+874
 01:18:15,760 --> 01:18:18,752
 [Silence]
 
-876
+875
 01:18:19,768 --> 01:18:21,648
-NARRATOR: We're going to speed through this section, 
+NARRATOR: We're going to speed through this section,
 
-877
+876
 01:18:21,640 --> 01:18:24,672
 because Paul and Jamie
 found themselves at a dead end.
 
-878
+877
 01:18:25,328 --> 01:18:28,608
 They eventually backtracked on
 this idea of using a lambda.
 
-879
+878
 01:18:28,632 --> 01:18:31,760
 So let's skip ahead to the
 section where they changed course.
 
-880
+879
 01:18:33,536 --> 01:18:38,384
 PB: I think I'm going to take all
 the stuff I've been doing and say...
 
-881
+880
 01:18:38,380 --> 01:18:42,792
 [Paul dictates what he writes]
 
-882
+881
 01:18:44,008 --> 01:18:46,464
 And then I'm going to re-set...
 
-883
+882
 01:18:46,460 --> 01:18:48,888
 [Paul dictates what he writes]
 
-884
+883
 01:18:48,880 --> 01:18:52,040
 It's basically a posh version of stash.
+
+884
+01:18:52,090 --> 01:18:59,352
+I still have it somewhere until it gets garbage
+collected but I'm probably not going to use it.
+
+885
+01:19:00,210 --> 01:19:04,424
+I'm going to re-load this.
+
+886
+01:19:04,420 --> 01:19:11,432
+OK so I'm going to write some
+spectre on some smaller notes.
+
+887
+01:19:11,430 --> 01:19:15,240
+So I'm going to put this
+into something saying context.
+
+888
+01:19:17,256 --> 01:19:27,616
+[Paul dictates what he writes]
+
+889
+01:19:29,672 --> 01:19:33,848
+And I put all of those inside except inaud.
+
+890
+01:19:33,840 --> 01:19:36,864
+[Silence]
+
+891
+01:19:39,600 --> 01:19:43,824
+JW: I think it's quite nice that
+we've moved away from the idea of color
+
+892
+01:19:44,312 --> 01:19:48,992
+and it's simply about... [they both talk at once].
+
+893
+01:19:49,368 --> 01:19:59,576
+So I'm going to call this one at the
+bottom: context, and call it a 1 element dataset.
+
+894
+01:20:01,800 --> 01:20:07,240
+Or it could be a 1 element
+quadtree, that might make more sense.
+
+895
+01:20:07,740 --> 01:20:15,808
+So this one, I want to say that its children is itself.
+
+896
+01:20:16,008 --> 01:20:24,144
+So our basic building block is a
+quadtree which has one element which is a leaf.
+
+897
+01:20:27,072 --> 01:20:30,208
+JW: Maybe we can ask it if it's a leaf to begin with...
+
+898
+01:20:30,200 --> 01:20:33,896
+PB: Yes, in fact that's what we've already got.
+
+899
+01:20:35,992 --> 01:20:40,176
+So we know that works, and I'm going to
+move that one up to the top because I think
+
+900
+01:20:40,170 --> 01:20:44,352
+it would be nicer to have the simple case at the top.
+
+901
+01:20:44,352 --> 01:20:46,160
+JW: Yes.
+
+902
+01:20:46,160 --> 01:20:52,296
+PB: And then I'm going to do something
+similar with 4 because 4 is still quite simple
+
+903
+01:20:52,290 --> 01:20:58,776
+but it's easy to think about and we inaud.
+
+904
+01:20:59,224 --> 01:21:05,064
+Let's get rid of that entirely, and inaud our dataset something like...
+
+905
+01:21:05,060 --> 01:21:08,056
+[Silence]
+
+906
+01:21:09,752 --> 01:21:15,040
+This is a heterogeneous data
+set as well, so that's important. 
+
+907
+01:21:17,232 --> 01:21:22,128
+And there's 1,2,3 and 4.
+
+908
+01:21:22,216 --> 01:21:25,208
+[Silence]
+
+909
+01:21:25,720 --> 01:21:28,416
+So it is NOT a leaf node.
+
+910
+01:21:28,410 --> 01:21:31,464
+[Silence]
+
+911
+01:21:33,200 --> 01:21:36,528
+Good, OK, I'm happy with that.
+
+912
+01:21:38,080 --> 01:21:46,192
+And it has 4 children.
+
+913
+01:21:46,272 --> 01:21:49,272
+[Silence]
+
+914
+01:21:51,240 --> 01:21:54,648
+I'm going to say expect subject with children.
+
+915
+01:21:54,688 --> 01:21:57,680
+[Silence]
 
