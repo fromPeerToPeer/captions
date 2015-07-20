@@ -3870,10 +3870,139 @@ And it has 4 children.
 [Silence]
 
 914
-01:21:51,240 --> 01:21:54,648
-I'm going to say expect subject with children.
+01:21:51,250 --> 01:22:05,472
+I'm going to say: [Paul dictates what he writes]
 
 915
-01:21:54,688 --> 01:21:57,680
+01:22:09,520 --> 01:22:14,552
+And let's do the same thing
+with this one, some basic stuff like...
+
+916
+01:22:17,220 --> 01:22:20,368
+(actually I'm going to get rid
+of all these 'shoulds')
+
+917
+01:22:20,416 --> 01:22:23,416
 [Silence]
+
+918
+01:22:44,144 --> 01:22:47,056
+I really typed that a lot didn't I?
+
+919
+01:22:48,480 --> 01:22:50,784
+OK, so I'm going to get rid of that.
+
+920
+01:22:50,920 --> 01:23:03,072
+All these things are...
+
+921
+01:23:03,112 --> 01:23:06,904
+Yes, so there's 16 inaud.
+
+922
+01:23:07,312 --> 01:23:12,664
+I also want to say this is not a leaf node,
+
+923
+01:23:13,888 --> 01:23:18,320
+which is kind of obvious, but
+it makes things consistent.
+
+924
+01:23:18,384 --> 01:23:21,384
+[Silence]
+
+925
+01:23:25,616 --> 01:23:27,856
+[They both talk at once]
+
+926
+01:23:27,944 --> 01:23:30,944
+[Silence]
+
+927
+01:23:34,024 --> 01:23:36,728
+OK, so that's all fine.
+
+928
+01:23:36,776 --> 01:23:39,776
+[Silence]
+
+929
+01:23:42,144 --> 01:23:50,000
+Right, I think the next thing I want
+to do... I think all that stuff is fine.
+
+930
+01:23:50,000 --> 01:23:55,072
+It returns Northwest quadrant, Northeast quadrant,
+Southwest quadrant, and Southeast quadrant.
+
+931
+01:23:58,600 --> 01:24:02,792
+We'll get rid of this split
+recursively, I don't think I care about that.
+
+932
+01:24:03,944 --> 01:24:08,472
+inaud and split in here as well.
+
+933
+01:24:11,880 --> 01:24:17,816
+I'm also tempted to get rid
+of divisible and just have leaf.
+
+934
+01:24:18,376 --> 01:24:21,296
+But... maybe that doesn't make sense.
+
+935
+01:24:21,328 --> 01:24:25,112
+JW: Divisible is a private API at the moment?
+PB: Yes.
+
+936
+01:24:31,504 --> 01:24:35,104
+JW: Shall we just commit,
+since it's quite a clean state. PB: Yes.
+
+937
+01:24:35,100 --> 01:24:38,080
+[Silence]
+
+938
+01:24:38,296 --> 01:24:44,072
+[Paul dictates what he types]
+
+939
+01:24:44,096 --> 01:24:47,104
+[Silence]
+
+940
+01:24:47,648 --> 01:24:57,856
+Now I think I want to add some kind of compression.
+
+941
+01:25:01,800 --> 01:25:06,704
+JW: You don't want to do the case
+of a homogeneous 4 element dataset?
+
+942
+01:25:07,624 --> 01:25:14,040
+PB: Ah, yes I will, that's exactly what
+I mean so I want to say that compression
+
+943
+01:25:14,040 --> 01:25:19,344
+heterogeneous 1 should give me the
+same, the children should be the same.
+
+944
+01:25:19,984 --> 01:25:26,504
+It should have 4 children but if I
+compress it I should get a leaf node and the value.
 
