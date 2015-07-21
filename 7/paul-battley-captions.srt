@@ -3839,7 +3839,7 @@ Let's get rid of that entirely, and inaud our dataset something like...
 906
 01:21:09,752 --> 01:21:15,040
 This is a heterogeneous data
-set as well, so that's important. 
+set as well, so that's important.
 
 907
 01:21:17,232 --> 01:21:22,128
@@ -4005,4 +4005,178 @@ same, the children should be the same.
 01:25:19,984 --> 01:25:26,504
 It should have 4 children but if I
 compress it I should get a leaf node and the value.
+
+945
+01:25:27,288 --> 01:25:34,184
+It's first row, first column
+should be the individual value.
+
+946
+01:25:34,180 --> 01:25:40,120
+Let's do this as our inaud.
+
+947
+01:25:41,720 --> 01:25:44,000
+homogeneous dataset.
+
+948
+01:25:44,088 --> 01:25:47,088
+[Silence]
+
+949
+01:25:48,980 --> 01:25:54,360
+So we're moving away from having
+a particular plugin way of comparing things 
+
+950
+01:25:54,360 --> 01:25:58,656
+because I think that making
+it the same is reasonable.
+
+951
+01:25:59,648 --> 01:26:02,864
+I'm going to make this all ones.
+
+952
+01:26:06,584 --> 01:26:08,736
+Yes, so that's all ones.
+
+953
+01:26:08,730 --> 01:26:12,272
+This one should be a leaf node... and so it is.
+
+954
+01:26:15,472 --> 01:26:17,992
+Let's stick with leaf node now.
+
+955
+01:26:19,496 --> 01:26:25,144
+At this point, it's perhaps nice
+that divisible and leaf node are separate.
+
+956
+01:26:25,140 --> 01:26:39,120
+So leaf node can be... [Paul dictates what he types]
+
+957
+01:26:39,120 --> 01:26:43,168
+All the values inside are the same.
+
+958
+01:26:45,360 --> 01:26:47,280
+Yes, they are all here.
+
+959
+01:26:47,280 --> 01:26:50,288
+[Silence]
+
+960
+01:26:52,000 --> 01:26:56,264
+Good, so in that case...
+
+961
+01:26:56,260 --> 01:26:59,256
+[Paul thinks]
+
+962
+01:27:00,272 --> 01:27:03,640
+Let's see F1 homogeneous dataset...
+
+963
+01:27:07,776 --> 01:27:11,808
+Maybe we could call our method
+compress or something, does that make sense?
+
+964
+01:27:11,800 --> 01:27:16,424
+Or should it just be that that's all there is...
+
+965
+01:27:17,400 --> 01:27:21,384
+[Paul thinks]
+
+966
+01:27:21,624 --> 01:27:27,688
+Yes, that would make sense, if I have
+a 4 element homogeneous dataset
+
+967
+01:27:29,504 --> 01:27:40,280
+within a 16 element dataset, then maybe I can
+say that I get a non leaf, a leaf ,a non leaf, a non leaf.
+
+968
+01:27:41,520 --> 01:27:45,072
+And that each of those has 4
+that is a leaf... does that make sense?
+
+969
+01:27:45,070 --> 01:27:48,080
+[Jamie and Paul think in silence]
+
+970
+01:27:49,848 --> 01:27:50,440
+JW: Yes.
+
+971
+01:27:50,440 --> 01:27:52,720
+PB: So for example...
+
+972
+01:27:52,768 --> 01:27:55,776
+[Silence]
+
+973
+01:27:56,680 --> 01:28:05,296
+I'm going to say somewhere here, this is a
+16 element dataset with 1 homogeneous quadrant.
+
+974
+01:28:05,384 --> 01:28:08,392
+[Silence]
+
+975
+01:28:13,056 --> 01:28:17,816
+And in case I'm going to change
+this upper left quadrant to be ones.
+
+976
+01:28:20,640 --> 01:28:21,976
+And then I'm going to say...
+
+977
+01:28:22,008 --> 01:28:25,016
+[Paul dictates what he writes on screen]
+
+978
+01:28:50,792 --> 01:28:53,064
+So now I can say...
+
+979
+01:28:53,208 --> 01:28:56,224
+[Paul dictates what he writes on screen]
+
+980
+01:28:58,208 --> 01:29:01,704
+In fact, I can just say inaud, so Northeast.
+
+981
+01:29:01,888 --> 01:29:04,872
+[Paul dictates what he writes on screen]
+
+982
+01:29:15,040 --> 01:29:18,496
+JW: Well, that obviously ends the context.
+
+983
+01:29:18,490 --> 01:29:20,896
+PB: Oh yes, OK.
+
+984
+01:29:23,744 --> 01:29:27,752
+So that fails because we got false.
+
+985
+01:29:28,384 --> 01:29:31,400
+[Paul thinks]
 
