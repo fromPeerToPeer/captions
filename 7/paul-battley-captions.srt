@@ -4180,3 +4180,110 @@ So that fails because we got false.
 01:29:28,384 --> 01:29:31,400
 [Paul thinks]
 
+986
+01:29:33,992 --> 01:29:36,624
+JW: I think it was the NW we were expecting to be a...
+
+987
+01:29:36,620 --> 01:29:42,984
+PB: Yes that would also explain why it failed.
+
+988
+01:29:45,424 --> 01:29:47,848
+Oh! it does one, yes.
+
+989
+01:29:49,464 --> 01:29:53,280
+[Paul thinks]
+
+990
+01:29:53,830 --> 01:30:00,016
+It does not compress the other quadrants.
+
+991
+01:30:00,112 --> 01:30:03,104
+[Silence]
+
+992
+01:30:04,816 --> 01:30:13,816
+And I'll say for NE for example,
+[Paul dictates what he rights]
+
+993
+01:30:13,920 --> 01:30:16,936
+[Silence]
+
+994
+01:30:17,176 --> 01:30:18,088
+Yes, so that's fine.
+
+995
+01:30:18,080 --> 01:30:20,784
+[New Chapter]
+
+996
+01:30:21,640 --> 01:30:25,400
+JW: I think at this point, to give us
+a concrete target to work towards, 
+
+997
+01:30:25,400 --> 01:30:31,896
+we could maybe step out of
+quadnode itself into some sort of serializer.
+
+998
+01:30:32,808 --> 01:30:38,048
+Give it a root quadnode and it can walk
+the tree and chop off the bits it doesn't need.
+
+999
+01:30:38,568 --> 01:30:42,416
+PB: Yes so let's write a spec for that.
+
+1000
+01:30:42,656 --> 01:30:44,784
+Spec has got a serializer.
+
+1001
+01:30:44,848 --> 01:30:47,848
+[Silence]
+
+1002
+01:30:49,600 --> 01:30:52,616
+JW: It might help inform the
+interface of quadnode as well.
+
+1003
+01:30:52,632 --> 01:30:55,648
+PB: Yes so [Paul dictates what he writes on screen]
+
+1004
+01:31:24,710 --> 01:31:31,384
+It serializes to... we could say
+to a single value, to an integer.
+
+1005
+01:31:32,144 --> 01:31:34,176
+Or should we do an array?
+
+1006
+01:31:34,170 --> 01:31:40,632
+JW: I guess the question is what do
+we want the representation to be.
+
+1007
+01:31:40,630 --> 01:31:45,208
+PB: For now let's say [Paul dictates what he writes]
+
+1008
+01:31:56,704 --> 01:32:00,440
+Actually I'm just going to write it like inaud.
+
+1009
+01:32:00,728 --> 01:32:03,928
+I think that makes more sense.
+
+1010
+01:32:05,832 --> 01:32:08,848
+Actually, I'm going to need a serializer anyway.
+
