@@ -4026,7 +4026,7 @@ homogeneous dataset.
 949
 01:25:48,980 --> 01:25:54,360
 So we're moving away from having
-a particular plugin way of comparing things 
+a particular plugin way of comparing things
 
 950
 01:25:54,360 --> 01:25:58,656
@@ -4224,7 +4224,7 @@ Yes, so that's fine.
 996
 01:30:21,640 --> 01:30:25,400
 JW: I think at this point, to give us
-a concrete target to work towards, 
+a concrete target to work towards,
 
 997
 01:30:25,400 --> 01:30:31,896
@@ -4284,6 +4284,145 @@ Actually I'm just going to write it like inaud.
 I think that makes more sense.
 
 1010
-01:32:05,832 --> 01:32:08,848
+01:32:05,830 --> 01:32:08,968
 Actually, I'm going to need a serializer anyway.
+
+1011
+01:32:10,056 --> 01:32:17,816
+[Paul dictates what he writes on screen]
+
+1012
+01:32:21,592 --> 01:32:31,968
+[Paul dictates what he writes]
+
+1013
+01:32:35,968 --> 01:32:39,856
+I could use some kind of locking
+there, but I think I'd rather not.
+
+1014
+01:32:42,040 --> 01:32:45,792
+inaud some value.
+
+1015
+01:32:46,960 --> 01:32:54,168
+Then I'm going to say [Paul dictates what he writes]
+
+1016
+01:32:56,032 --> 01:32:58,024
+With that node.
+
+1017
+01:33:00,000 --> 01:33:08,616
+And then say [Paul dictates what he writes]
+
+1018
+01:33:09,192 --> 01:33:15,936
+It's actually not strictly serialize,
+given that we've got an array of values but...
+
+1019
+01:33:17,616 --> 01:33:20,280
+maybe that's OK for now.
+
+1020
+01:33:20,280 --> 01:33:26,384
+JW: Maybe you could take the\approach of giving it to a method, or a...
+
+1021
+01:33:27,824 --> 01:33:28,608
+PB: Yes.
+
+1022
+01:33:28,600 --> 01:33:32,528
+JW: I imagine you could potentially...
+
+1023
+01:33:32,520 --> 01:33:34,368
+turn these quadnodes into a json.
+
+1024
+01:33:34,376 --> 01:33:41,736
+PB: I agree, let's give it a inaud and that will give us something nice.
+
+1025
+01:33:41,776 --> 01:33:45,520
+And now I should have... 42
+
+1026
+01:33:45,584 --> 01:33:48,568
+[Silence]
+
+1027
+01:33:50,008 --> 01:33:55,576
+Yes, it definitely doesn't work
+because I say def initialize with a node.
+
+1028
+01:33:57,360 --> 01:34:01,584
+Actually let's call that root because
+it's a bit clearer what we're doing.
+
+1029
+01:34:01,640 --> 01:34:04,640
+[Silence]
+
+1030
+01:34:07,912 --> 01:34:12,272
+And I'm going to say [Paul dictates what he writes]
+
+1031
+01:34:12,288 --> 01:34:17,200
+And then, root.rows, which I
+think will give us everything we want.
+
+1032
+01:34:18,776 --> 01:34:23,808
+Or not... [Paul laughs]... requires a serializer.
+
+1033
+01:34:23,856 --> 01:34:26,840
+[Silence]
+
+1034
+01:34:31,016 --> 01:34:33,976
+inaud
+
+1035
+01:34:34,056 --> 01:34:37,072
+[Silence]
+
+1036
+01:34:38,896 --> 01:34:43,024
+OK, so let's say context...
+
+1037
+01:34:44,990 --> 01:34:56,288
+So it's leaped straight into...
+with a 4 heterogeneous... 4-item node.
+
+1038
+01:34:56,328 --> 01:34:59,320
+[Silence]
+
+1039
+01:34:59,656 --> 01:35:05,688
+[Paul dictates what he writes]
+
+1040
+01:35:08,664 --> 01:35:14,900
+That, in fact I can copy out of
+here, where I have a heterogeneous thing.
+
+1041
+01:35:16,350 --> 01:35:18,552
+Like that.
+
+1042
+01:35:18,584 --> 01:35:21,592
+[Silence]
+
+1043
+01:35:24,280 --> 01:35:31,490
+Then I should get [1,2] ,[3,4]
 
