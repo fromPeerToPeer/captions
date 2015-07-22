@@ -4419,3 +4419,75 @@ Like that.
 01:35:24,280 --> 01:35:31,490
 Then I should get [1,2] ,[3,4]
 
+1042
+01:35:35,000 --> 01:35:37,830
+So now I need to deal with the homogeneous dataset.
+
+1043
+01:35:37,904 --> 01:35:40,960
+[Silence]
+
+1044
+01:35:49,848 --> 01:35:59,696
+That's a 2, and it serializes
+to a single row and column.
+
+1045
+01:36:02,720 --> 01:36:07,384
+JW: So this is curious because how do we...
+
+1046
+01:36:07,480 --> 01:36:12,384
+With this serialization format, we can't,
+at the moment, tell the difference between...
+
+1047
+01:36:13,270 --> 01:36:18,360
+A. What started of as a one item node and inaud
+
+1048
+01:36:18,392 --> 01:36:22,192
+PB: I was thinking about that but
+then I realised that it doesn't matter,
+
+1049
+01:36:22,190 --> 01:36:33,568
+because suppose you're reconstructing
+a picture and it only has one color,
+
+1050
+01:36:34,120 --> 01:36:38,220
+it doesn't matter how big you
+make it, you get the same input.
+
+1051
+01:36:38,320 --> 01:36:41,792
+Having thought about that,
+I'm not sure about this actually.
+
+1052
+01:36:42,120 --> 01:36:48,760
+If it is important we could sort out a inaud as a target size.
+
+1053
+01:36:51,840 --> 01:37:00,520
+In our case, it should be possible to
+reconstruct it by one walk through the trees or...
+
+1054
+01:37:00,520 --> 01:37:02,960
+so when you get to the
+bottom you will have enough data
+
+1055
+01:37:02,992 --> 01:37:06,320
+to work out what the minimal representation is.
+
+1056
+01:37:06,320 --> 01:37:08,064
+JW: OK.
+
+1057
+01:37:08,336 --> 01:37:11,460
+PB: Well yes, it might make trying interesting.
+
