@@ -4488,6 +4488,184 @@ to work out what the minimal representation is.
 JW: OK.
 
 1057
-01:37:08,336 --> 01:37:11,460
+01:37:08,304 --> 01:37:11,460
 PB: Well yes, it might make trying interesting.
+
+1058
+01:37:11,776 --> 01:37:15,688
+I don't think it's an inherent
+property of a quad tree though is it?
+
+1059
+01:37:17,520 --> 01:37:18,856
+We'll see.
+
+1060
+01:37:19,712 --> 01:37:24,280
+JW: Yes inaud we've not specified any kind of serialization format.
+
+1061
+01:37:26,512 --> 01:37:31,112
+So serializer... let's say... [Paul thinks]
+
+1062
+01:37:35,048 --> 01:37:38,696
+The simplest way to make
+the tests pass, of course is to say...
+
+1063
+01:37:39,150 --> 01:37:43,424
+if root.leaf... and then do that.
+
+1064
+01:37:45,200 --> 01:37:48,304
+Otherwise, do something else
+but I don't think that's quite...
+
+1065
+01:37:51,224 --> 01:37:56,240
+JW: I suppose we could re-curse,
+but it might not make any difference,
+
+1066
+01:37:56,240 --> 01:38:00,576
+because inaud doesn't change whether it's a leaf or not.
+
+1067
+01:38:00,570 --> 01:38:02,632
+PB: No, exactly.
+
+1068
+01:38:02,680 --> 01:38:08,824
+JW: I guess you could flattening
+and uniquing in here perhaps.
+
+1069
+01:38:09,816 --> 01:38:11,680
+It seems a bit like implication.
+
+1070
+01:38:11,680 --> 01:38:13,776
+PB: Yes, it does erm.....
+
+1071
+01:38:13,840 --> 01:38:16,824
+[Silence]
+
+1072
+01:38:21,472 --> 01:38:24,776
+How about if I said...
+
+1073
+01:38:24,856 --> 01:38:27,864
+[Silence]
+
+1074
+01:38:31,368 --> 01:38:36,064
+inaud, in fact our serializer might end up not doing anything at this point,
+
+1075
+01:38:36,120 --> 01:38:40,520
+but maybe we will want to take the
+array and turn it back into a string later on.
+
+1076
+01:38:41,520 --> 01:38:44,392
+but it's still a good way of
+driving out our API perhaps.
+
+1077
+01:38:46,936 --> 01:38:50,984
+So maybe if we said that we wanted some way of...
+
+1078
+01:38:50,980 --> 01:38:53,976
+[Paul thinks]
+
+1079
+01:38:56,664 --> 01:39:00,712
+So we could make our serializer
+a recursive effect actually.
+
+1080
+01:39:04,640 --> 01:39:09,280
+JW: If it's a leaf we want an array
+back containing that one value.
+
+1081
+01:39:11,448 --> 01:39:14,016
+This is a bit ugly but I just want to try it...
+
+1082
+01:39:14,904 --> 01:39:17,568
+[Paul dictates what he writes]
+
+1083
+01:39:31,616 --> 01:39:36,824
+This will work but I still need
+something else to make it work.
+
+1084
+01:39:38,710 --> 01:39:42,376
+So that works, but in the
+case of  having something deeper, 
+
+1085
+01:39:42,416 --> 01:39:47,320
+so I'm going to take one of
+our quadnodes back, to take this one
+
+1086
+01:39:48,930 --> 01:39:54,648
+that has one homogeneous
+quadrant... just that part of it.
+
+1087
+01:39:56,448 --> 01:40:00,110
+And then serialize the spec... let's see...
+
+1088
+01:40:00,160 --> 01:40:03,168
+[Silence]
+
+1089
+01:40:07,720 --> 01:40:10,176
+That's quite a nice name for it.
+
+1090
+01:40:10,240 --> 01:40:13,264
+[Silence]
+
+1091
+01:40:25,528 --> 01:40:30,040
+I could pull this up to the top
+because it's the same everywhere.
+
+1092
+01:40:30,424 --> 01:40:33,424
+It's just the node that varies according to context.
+
+1093
+01:40:33,488 --> 01:40:36,480
+[Silence]
+
+1094
+01:40:38,960 --> 01:40:41,472
+So now I  can say...
+
+1095
+01:40:41,544 --> 01:40:44,544
+[Silence]
+
+1096
+01:40:45,144 --> 01:40:47,456
+Let node be that.
+
+1097
+01:40:47,520 --> 01:40:50,552
+[Silence]
+
+1098
+01:40:52,584 --> 01:40:55,864
+And this one will the real test.
 
