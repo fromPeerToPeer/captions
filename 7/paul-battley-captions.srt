@@ -4832,3 +4832,128 @@ Except...
 01:44:32,672 --> 01:44:35,520
 [Paul thinks]
 
+1136
+01:44:37,376 --> 01:44:41,240
+I'm thinking that our
+serialization should form out of that.
+
+1137
+01:44:42,912 --> 01:44:45,056
+I'm just going to write it here.
+
+1138
+01:44:46,832 --> 01:44:49,136
+I'm going to ignore the inaud for now.
+
+1139
+01:44:49,592 --> 01:44:52,744
+[Paul dictates what he writes]
+
+1140
+01:44:58,536 --> 01:45:00,928
+X which is 1.
+
+1141
+01:45:03,024 --> 01:45:06,792
+Then it should be... [Paul dictates what he writes]
+
+1142
+01:45:22,224 --> 01:45:23,608
+JW: Yes.
+
+1143
+01:45:23,640 --> 01:45:26,008
+PB: Yes, that's how the serialization should be.
+
+1144
+01:45:26,008 --> 01:45:28,000
+JW: Agreed.
+
+1145
+01:45:28,552 --> 01:45:32,488
+So it's OK if we create
+something with linear data but...
+
+1146
+01:45:32,528 --> 01:45:35,528
+[Silence]
+
+1147
+01:45:38,560 --> 01:45:42,088
+JW: Yes, and in fact that
+demonstrates the compression even better.
+
+1148
+01:45:42,080 --> 01:45:44,000
+PB: Yes.
+
+1149
+01:45:44,024 --> 01:45:46,888
+So let's revisit these earlier ones.
+
+1150
+01:45:47,864 --> 01:45:51,104
+That should compress down to just 2.
+
+1151
+01:45:52,152 --> 01:45:53,128
+That.
+
+1152
+01:45:53,128 --> 01:45:55,120
+JW: Yes, indeed.
+
+1153
+01:45:57,304 --> 01:46:00,704
+Oh no, in fact, it maybe still should be in an array.
+
+1154
+01:46:03,456 --> 01:46:06,096
+PB: If we do that then, each of these should be an array
+
+1155
+01:46:06,096 --> 01:46:08,090
+and each of these should be an array.
+
+1156
+01:46:08,090 --> 01:46:10,824
+[Jamie thinks about that]
+
+1157
+01:46:14,620 --> 01:46:20,296
+It's one way of doing it, but at some point
+we have to come down to whatever our base value is
+
+1158
+01:46:20,290 --> 01:46:26,408
+and that's either an individual value
+in an array or it's a fair number.
+
+1159
+01:46:28,384 --> 01:46:35,304
+JW: Yes, inaud number is fine, maybe 2A is not the right method name anymore.
+
+1160
+01:46:36,512 --> 01:46:40,432
+PB So yes... [Paul dictates what he writes]
+
+1161
+01:46:40,504 --> 01:46:43,520
+[Silence]
+
+1162
+01:46:48,280 --> 01:46:54,050
+Is it to array...? (I'll check it later)
+
+1163
+01:46:56,368 --> 01:47:01,952
+So this one should be 2,1,3,4
+
+1164
+01:47:01,950 --> 01:47:04,952
+[Silence]
+
+1165
+01:47:05,400 --> 01:47:07,912
+This one should be just lone 2.
+
