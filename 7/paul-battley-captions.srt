@@ -4667,5 +4667,168 @@ Let node be that.
 
 1098
 01:40:52,584 --> 01:40:55,864
-And this one will the real test.
+And this one will be the real test.
+
+1099
+01:40:57,816 --> 01:41:01,712
+But I'm going to say it serializes to...
+
+1100
+01:41:02,960 --> 01:41:05,952
+[Paul thinks]
+
+1101
+01:41:07,472 --> 01:41:12,312
+[Paul dictates what he writes]
+
+1102
+01:41:20,712 --> 01:41:23,888
+That kind of makes sense to me, so now...
+
+1103
+01:41:23,880 --> 01:41:26,872
+[Silence]
+
+1104
+01:41:27,304 --> 01:41:30,208
+I mostly want this data.
+
+1105
+01:41:31,040 --> 01:41:35,480
+I want this to equal... [Paul thinks]
+
+1106
+01:41:36,928 --> 01:41:40,664
+I want one for that part.
+
+1107
+01:41:41,448 --> 01:41:46,336
+Then I want three, (sorry, it's
+the other way around isn't it?)
+
+1108
+01:41:47,330 --> 01:41:55,048
+I want to start at inaud... so I want 3,4,7 and 8.
+
+1109
+01:41:55,820 --> 01:42:00,192
+Which is the northwest
+quadrant, which is just one thing.
+
+1110
+01:42:01,584 --> 01:42:07,904
+Then I want the southwest one which is 9,10,13 and 14.
+
+1111
+01:42:10,880 --> 01:42:18,024
+And then the remaining
+quadrant which is 11,12... Hang on!
+
+1112
+01:42:20,032 --> 01:42:27,112
+I'm doing this wrong... No, it's fine, sorry,
+I was just realizing that I've got different data
+
+1113
+01:42:28,376 --> 01:42:31,064
+It's in a different order when
+it's in arrays but that's OK.
+
+1114
+01:42:31,060 --> 01:42:37,408
+JW: This is interesting because it's
+the first spec that demonstrates the
+
+1115
+01:42:37,528 --> 01:42:40,480
+compressing quality of the quadtree.
+
+1116
+01:42:40,530 --> 01:42:43,528
+[Silence]
+
+1117
+01:42:46,104 --> 01:42:51,160
+PB: I'm just going to split this up a bit so
+it's a bit clearer which one's which node.
+
+1118
+01:42:51,272 --> 01:42:54,272
+[Silence]
+
+1119
+01:43:01,952 --> 01:43:05,792
+JW: So you can see one quadrant
+is compressed down to single figures.
+
+1120
+01:43:05,790 --> 01:43:09,792
+PB: Yes, so there we got...
+something completely different!
+
+1121
+01:43:11,536 --> 01:43:17,520
+And the reason is because we've just
+called rows and columns... is that right?
+
+1122
+01:43:17,520 --> 01:43:26,344
+JW: Can I suggest an alternative...
+let's just re-wind to the other case,
+
+1123
+01:43:26,440 --> 01:43:31,728
+where I was wondering whether it
+was the correct serialization or not.
+
+1124
+01:43:31,720 --> 01:43:35,320
+So when we ended up with 2 by itself
+
+1125
+01:43:35,320 --> 01:43:38,392
+PB: It's not, because it should inaud.
+
+1126
+01:43:38,432 --> 01:43:41,448
+[Silence]
+
+1127
+01:43:43,344 --> 01:43:47,080
+That one ?
+JW: Yes. PB: yes it does doesn't it?
+
+1128
+01:43:48,992 --> 01:43:53,336
+But I also think that another thing is wrong...
+
+1129
+01:43:54,920 --> 01:44:03,872
+I think that the way we serialize
+it should be in the same order.
+
+1130
+01:44:04,040 --> 01:44:07,056
+[Paul thinks]
+
+1131
+01:44:08,008 --> 01:44:15,128
+The thing that is confusing is that we want...
+
+1132
+01:44:15,120 --> 01:44:18,152
+[Paul thinks]
+
+1133
+01:44:18,528 --> 01:44:27,552
+We know node looks like that, or we've
+decided a node is just the rows and columns.
+
+1134
+01:44:30,224 --> 01:44:32,624
+Except...
+
+1135
+01:44:32,672 --> 01:44:35,520
+[Paul thinks]
 
