@@ -4608,7 +4608,7 @@ something else to make it work.
 1084
 01:39:38,710 --> 01:39:42,376
 So that works, but in the
-case of  having something deeper, 
+case of  having something deeper,
 
 1085
 01:39:42,416 --> 01:39:47,320
@@ -4956,4 +4956,174 @@ So this one should be 2,1,3,4
 1165
 01:47:05,400 --> 01:47:07,912
 This one should be just lone 2.
+
+1166
+01:47:10,240 --> 01:47:14,880
+JW: I guess if the dimensions are
+kept externally, as you mentioned earlier,
+
+1167
+01:47:15,120 --> 01:47:21,352
+then combining this value structure with
+the dimensions, allows you to read those.
+
+1168
+01:47:22,136 --> 01:47:25,816
+PB: Yes. inaud, that's fine.
+
+1169
+01:47:27,280 --> 01:47:29,800
+If it's a leaf it should just be the bare inaud
+
+1170
+01:47:31,896 --> 01:47:36,944
+otherwise, and this will not
+completely work, but I'm going to say...
+
+1171
+01:47:36,940 --> 01:47:41,288
+[Paul dictates what he writes]
+
+1172
+01:47:43,840 --> 01:47:47,000
+Actually I think if I make it inaud
+
+1173
+01:47:47,104 --> 01:47:50,296
+[Paul dictates what he types]
+
+1174
+01:47:51,272 --> 01:47:53,840
+I don't like this already. [laughter]
+
+1175
+01:47:53,840 --> 01:47:56,840
+[Silence]
+
+1176
+01:47:58,248 --> 01:48:00,080
+Serializer is a new node.
+
+1177
+01:48:03,048 --> 01:48:06,936
+It's kind of horrible but... I think it might work.
+
+1178
+01:48:08,344 --> 01:48:12,768
+JW: Wow, cool.
+
+1179
+01:48:14,552 --> 01:48:16,864
+PB: I don't know why I feel it's horrible, erm....
+
+1180
+01:48:17,200 --> 01:48:24,608
+JW: It does feel like the serializer need
+not be separate, but it gave us a space to
+
+1181
+01:48:25,190 --> 01:48:28,000
+jump out of the internals of quadnode.
+
+1182
+01:48:28,000 --> 01:48:35,264
+PB: Yes... I'm just going to see if
+I can find a better name for 2A.
+
+1183
+01:48:35,352 --> 01:48:38,376
+[Silence]
+
+1184
+01:48:40,720 --> 01:48:42,704
+Maybe I'm just going to call it serialize.
+
+1185
+01:48:42,700 --> 01:48:45,520
+JW: Maybe if you called it values.
+
+1186
+01:48:48,648 --> 01:48:50,704
+PB: Or 'value'.
+
+1187
+01:48:50,736 --> 01:48:52,984
+JW: Yes, something like that.
+
+1188
+01:48:54,152 --> 01:48:57,008
+PB: Yes, it's as good as anything I think.
+
+1189
+01:48:57,776 --> 01:49:00,608
+Change inaud
+
+1190
+01:49:00,664 --> 01:49:03,640
+[Paul checks the changes]
+
+1191
+01:49:03,712 --> 01:49:06,720
+[Silence]
+
+1192
+01:49:07,096 --> 01:49:09,344
+OK let's commit that.
+
+1193
+01:49:09,416 --> 01:49:12,416
+[Silence]
+
+1194
+01:49:13,264 --> 01:49:16,536
+What have we changed?  As yes, we changed leaf
+
+1195
+01:49:16,600 --> 01:49:19,608
+[Silence]
+
+1196
+01:49:27,176 --> 01:49:35,672
+JW: I wonder if we've now got enough
+in place to approach it from the other side,
+
+1197
+01:49:36,256 --> 01:49:42,616
+and given that this structure that
+the serializer produces, plus the dimensions...
+
+1198
+01:49:43,080 --> 01:49:44,736
+PB: Can we reconstruct it? JW: Yes.
+
+1199
+01:49:44,750 --> 01:49:47,568
+PB: Yes, that seems like a nice thing to do.
+
+1200
+01:49:48,632 --> 01:49:57,230
+We can make it a proper serializer
+by saying 2S which is a JSON serialization.
+
+1201
+01:49:59,224 --> 01:50:03,952
+I'll say require json - that's in
+the standard library these days.
+
+1202
+01:50:05,288 --> 01:50:08,272
+And we'll just say... [Paul dictates what he writes]
+
+1203
+01:50:11,560 --> 01:50:15,080
+inaud, or inaud actually.
+
+1204
+01:50:15,976 --> 01:50:18,984
+JSON.dump? JW: Yes.
+
+1205
+01:50:21,048 --> 01:50:24,544
+PB: So that should hide a whole
+bunch of things... unless I actually test it.
 
