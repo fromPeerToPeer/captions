@@ -5123,7 +5123,241 @@ inaud, or inaud actually.
 JSON.dump? JW: Yes.
 
 1205
-01:50:21,048 --> 01:50:24,544
+01:50:21,040 --> 01:50:25,240
 PB: So that should hide a whole
 bunch of things... unless I actually test it.
+
+1206
+01:50:25,640 --> 01:50:29,640
+JW: If you change all these current tests
+to use 2S instead, then we don't have to...
+
+1207
+01:50:30,080 --> 01:50:31,760
+deal with the inaud value anymore.
+
+1208
+01:50:31,792 --> 01:50:33,864
+PB: Yes, let's make that private.
+
+1209
+01:50:36,512 --> 01:50:39,760
+Hide our shame somewhere [laughter].
+
+1210
+01:50:40,912 --> 01:50:44,472
+[Paul dictates what he writes]
+
+1211
+01:50:47,432 --> 01:50:50,896
+[Paul checks the changed values]
+
+1212
+01:50:50,890 --> 01:50:53,888
+And then... [Paul thinks]
+
+1213
+01:50:55,800 --> 01:50:59,704
+I hope the spacing is the same...
+we might find it's not in the end.
+
+1214
+01:50:59,952 --> 01:51:02,448
+Let's try one of them first and see...
+
+1215
+01:51:03,200 --> 01:51:06,056
+... program value called...
+
+1216
+01:51:07,856 --> 01:51:11,224
+Ah! Yes, that doesn't work because...
+
+1217
+01:51:12,136 --> 01:51:15,520
+we cant get the inaud, not yet anyway, but we will.
+
+1218
+01:51:15,520 --> 01:51:18,648
+Could we have 'protected'? I'm
+never quite sure how that works.
+
+1219
+01:51:19,880 --> 01:51:22,328
+Do they work like friend methods?
+
+1220
+01:51:22,520 --> 01:51:25,592
+JW: That's the first time I've ever
+seen a reason to use protected.
+
+1221
+01:51:25,610 --> 01:51:33,568
+PB: Yes, and it's a bad reason I think, bu
+ apart for all the extra spaces, which we can say...
+
+1222
+01:51:33,624 --> 01:51:36,616
+[Silence]
+
+1223
+01:51:47,440 --> 01:51:52,192
+inaud I'll do the same for the
+other ones, which are much shorter so...
+
+1224
+01:51:52,248 --> 01:51:55,248
+[Silence]
+
+1225
+01:51:56,328 --> 01:51:58,336
+That's easier... 
+
+1226
+01:51:59,128 --> 01:52:01,072
+This one is...
+
+1227
+01:52:01,160 --> 01:52:04,152
+[Silence]
+
+1228
+01:52:10,824 --> 01:52:15,112
+Well actually, my test name was completely wrong.
+
+1229
+01:52:15,200 --> 01:52:18,216
+[Paul thinks]
+
+1230
+01:52:18,520 --> 01:52:23,456
+Check the serializer has rows and columns in inaud....
+
+1231
+01:52:25,464 --> 01:52:27,488
+[Paul dictates what he writes]
+
+1232
+01:52:27,560 --> 01:52:30,544
+[Silence]
+
+1233
+01:52:32,992 --> 01:52:34,848
+So it's a single value.
+
+1234
+01:52:36,820 --> 01:52:40,120
+I don't know if any of this is really important but...
+
+1235
+01:52:40,688 --> 01:52:43,872
+Yes, I think that's cool, let's see if it works.
+
+1236
+01:52:45,072 --> 01:52:47,208
+OK, let's add that.
+
+1237
+01:52:49,672 --> 01:52:51,640
+Yes.
+
+1238
+01:52:51,712 --> 01:52:54,712
+[Silence]
+
+1239
+01:52:56,472 --> 01:53:00,048
+JW: It actually serialized. [Laughter]
+
+1240
+01:53:00,104 --> 01:53:03,120
+[Silence]
+
+1241
+01:53:04,056 --> 01:53:07,104
+[New Chapter]
+
+1242
+01:53:07,800 --> 01:53:14,260
+PB: So let's look at our print bmp. I'm gong to
+pull this out into a class so we can use it on it's own.
+
+1243
+01:53:14,664 --> 01:53:19,800
+We don't really test for this,
+we test ad-hoc but that's alright.
+
+1244
+01:53:20,160 --> 01:53:22,664
+[Paul dictates what he writes]
+
+1245
+01:53:23,880 --> 01:53:25,904
+inaud
+
+1246
+01:53:26,328 --> 01:53:31,832
+So now I want to see just how much we do compress.
+
+1247
+01:53:31,896 --> 01:53:34,872
+[Paul thinks]
+
+1248
+01:53:38,656 --> 01:53:42,488
+I'm going to close this path because
+it doesn't seem useful any more.
+
+1249
+01:53:42,640 --> 01:53:47,728
+I need a new file called something like dump, err...
+
+1250
+01:53:47,784 --> 01:53:50,784
+[Paul thinks]
+
+1251
+01:53:53,080 --> 01:53:55,624
+... dot image or something.
+
+1252
+01:53:56,520 --> 01:53:59,128
+And I'm going to say require...
+
+1253
+01:53:59,208 --> 01:54:02,864
+[Silence]
+
+1254
+01:54:03,688 --> 01:54:06,744
+bnp image, so that I can load it.
+
+1255
+01:54:06,740 --> 01:54:12,008
+I'm going to require
+serializer, so that I can serialize it.
+
+1256
+01:54:13,500 --> 01:54:19,552
+And I'm going to require quadnode.
+
+1257
+01:54:19,616 --> 01:54:22,208
+I've already forgotten my inaud.
+
+1258
+01:54:22,232 --> 01:54:25,240
+[Paul thinks]
+
+1259
+01:54:26,160 --> 01:54:29,664
+So now we can say, for example...
+
+1260
+01:54:31,824 --> 01:54:36,864
+We've got JSON, so first of all let's say...
+
+1261
+01:54:36,944 --> 01:54:39,952
+[Paul thinks]
 
