@@ -5361,3 +5361,167 @@ We've got JSON, so first of all let's say...
 01:54:36,944 --> 01:54:39,952
 [Paul thinks]
 
+1262
+01:54:41,808 --> 01:54:45,512
+[Paul dictates what he writes]
+
+1263
+01:54:45,784 --> 01:54:49,296
+Perhaps I shouldn't close that file.
+
+1264
+01:54:49,376 --> 01:54:52,376
+[Silence]
+
+1265
+01:54:58,576 --> 01:55:05,544
+Oh that's... what do they call that file?
+
+1266
+01:55:06,352 --> 01:55:09,272
+JW: I think it's called print. PB: Yes.
+
+1267
+01:55:09,352 --> 01:55:12,352
+[Silence]
+
+1268
+01:55:13,832 --> 01:55:18,280
+Yes, inaud cool.
+
+1269
+01:55:18,336 --> 01:55:21,352
+[Paul thinks]
+
+1270
+01:55:25,950 --> 01:55:29,200
+And then I'm saying...
+
+1271
+01:55:29,210 --> 01:55:33,784
+Let's just first of all see what we get
+when we print out our serialized version.
+
+1272
+01:55:35,552 --> 01:55:39,392
+[Paul dictates what he writes]
+
+1273
+01:55:45,360 --> 01:55:47,856
+I think that's right.
+JW: Yes, I think so.
+
+1274
+01:55:49,720 --> 01:55:51,584
+Initialize with rows.
+
+1275
+01:55:51,608 --> 01:55:55,560
+Serializer initialise with the root node.
+
+1276
+01:55:57,888 --> 01:56:01,784
+And then let's puts that.to_s
+
+1277
+01:56:03,650 --> 01:56:09,088
+And this one... [Paul dictates what he types]
+
+1278
+01:56:09,128 --> 01:56:12,760
+with inaud maybe.
+
+1279
+01:56:13,720 --> 01:56:14,744
+JW: Right. [laughter]
+
+1280
+01:56:14,768 --> 01:56:18,264
+PB: So we get a bunch of ones
+and zeros which is quite short.
+
+1281
+01:56:18,320 --> 01:56:23,864
+So assuming this comes
+apart properly, that's quite good.
+
+1282
+01:56:24,152 --> 01:56:27,760
+Let's see how much our actual...
+
+1283
+01:56:30,152 --> 01:56:33,152
+[Paul dictates what he writes]
+
+1284
+01:56:51,200 --> 01:56:55,968
+And then let's put print...
+
+1285
+01:56:56,184 --> 01:56:59,144
+[Paul dictates what he writes]
+
+1286
+01:57:01,816 --> 01:57:04,440
+And see just how much compression we've got.
+
+1287
+01:57:04,512 --> 01:57:07,520
+[Silence]
+
+1288
+01:57:08,456 --> 01:57:09,728
+JW: Not bad.
+
+1289
+01:57:09,720 --> 01:57:14,952
+PB: Yes, inaud which is very nice.
+
+1290
+01:57:16,100 --> 01:57:19,184
+Now we know that is giving us a nice impression,
+
+1291
+01:57:19,208 --> 01:57:26,920
+and in fact, if we didn't have all the JSON
+effect it would probably be a little bit smaller.
+
+1292
+01:57:28,040 --> 01:57:32,424
+We've got all that, we should see
+if we can reconstruct the image.
+
+1293
+01:57:32,504 --> 01:57:35,656
+[New Chapter]
+
+1294
+01:57:35,912 --> 01:57:40,256
+PB: So let's see if we can write a
+deserializer that takes the serialized one
+
+1295
+01:57:40,280 --> 01:57:44,648
+and turns it back into a
+quadtree... does that make sense?
+
+1296
+01:57:45,024 --> 01:57:47,368
+JW: I think so yes.
+
+1297
+01:57:48,552 --> 01:57:52,592
+If we can inaud then it's already done
+
+1298
+01:57:54,648 --> 01:57:56,472
+PB: That's true actually.
+
+1299
+01:57:57,368 --> 01:57:59,960
+We need to know the width and height to start with.
+
+1300
+01:58:01,312 --> 01:58:04,960
+Actually we could work it out by inaud the width of the tree perhaps...
+
