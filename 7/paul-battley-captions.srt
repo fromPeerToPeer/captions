@@ -5668,3 +5668,455 @@ And let's say... [Paul thinks]
 02:02:08,736 --> 02:02:11,728
 [Paul dictates what he writes]
 
+1335
+02:02:23,792 --> 02:02:27,144
+inaud I can't think of a better name is...
+
+1336
+02:02:27,990 --> 02:02:30,984
+[Paul dictates what he writes]
+
+1337
+02:02:40,320 --> 02:02:47,152
+And that should be...
+the simplest implementation is...
+
+1338
+02:02:47,240 --> 02:02:50,232
+[Silence]
+
+1339
+02:02:51,944 --> 02:02:54,048
+That should work with one value.
+
+1340
+02:02:54,104 --> 02:02:57,096
+[Silence]
+
+1341
+02:03:00,832 --> 02:03:02,536
+Oh! that's an interesting problem.
+
+1342
+02:03:07,152 --> 02:03:10,080
+So I think we need to
+change our serializer slightly...
+
+1343
+02:03:10,152 --> 02:03:13,160
+[Silence]
+
+1344
+02:03:16,408 --> 02:03:22,888
+.. and wrap everything in one array
+and then we'll pull out the first item
+
+1345
+02:03:27,008 --> 02:03:30,112
+that's the way we have to leave it because
+you cant have a bare value and a JSON
+
+1346
+02:03:30,110 --> 02:03:32,616
+even though it will serialize and deserialize.
+
+1347
+02:03:32,610 --> 02:03:37,952
+Or, even better let's leave
+this as it is and just say...
+
+1348
+02:03:38,448 --> 02:03:40,680
+JW: Wrap in there, yes.
+
+1349
+02:03:40,744 --> 02:03:43,752
+[Silence]
+
+1350
+02:03:49,832 --> 02:03:52,104
+PB: Ridiculous isn't it? OK.
+
+1351
+02:03:53,896 --> 02:03:56,968
+Yes, that works, cool.
+
+1352
+02:03:56,960 --> 02:04:01,296
+Now, we didn't specify the size of our image.
+
+1353
+02:04:02,110 --> 02:04:04,456
+JW: True.
+
+1354
+02:04:04,608 --> 02:04:07,584
+[Silence]
+
+1355
+02:04:10,704 --> 02:04:15,032
+JW: Given the need to produce
+a compliant JSON document,
+
+1356
+02:04:16,464 --> 02:04:20,992
+you could potentially wrap the whole
+thing in an object which contains the dimensions
+
+1357
+02:04:21,072 --> 02:04:23,120
+and value over a key.
+
+1358
+02:04:23,120 --> 02:04:25,120
+PB: In fact we could.
+
+1359
+02:04:26,640 --> 02:04:32,512
+But I think with inaud we don't know that because our serializer is only given the quadtree.
+
+1360
+02:04:33,232 --> 02:04:38,176
+JW: Your right it could inaud
+
+1361
+02:04:38,864 --> 02:04:40,440
+PB: That might make sense
+
+1362
+02:04:40,488 --> 02:04:43,504
+But let's press on, and leave that for now.
+
+1363
+02:04:43,584 --> 02:04:46,584
+[Silence]
+
+1364
+02:04:50,312 --> 02:04:52,672
+[Paul thinks]
+
+1365
+02:04:54,584 --> 02:04:57,688
+Let's put those up there... width and height.
+
+1366
+02:05:00,952 --> 02:05:04,456
+I'm not really sure where they should go. 
+
+1367
+02:05:04,568 --> 02:05:07,560
+[Silence]
+
+1368
+02:05:10,616 --> 02:05:15,160
+So in the future if we do want
+to do it it's all in the same place.
+
+1369
+02:05:16,648 --> 02:05:20,056
+And that will fail because
+our serializer doesn't like it.
+
+1370
+02:05:22,776 --> 02:05:25,328
+And height... inaud for that.
+
+1371
+02:05:26,464 --> 02:05:29,008
+And that works.
+
+1372
+02:05:29,000 --> 02:05:32,272
+Right, so now... context.
+
+1373
+02:05:32,384 --> 02:05:35,384
+[Paul thinks]
+
+1374
+02:05:37,024 --> 02:05:39,920
+Shall we do a heterogeneous 2 x 2 image?
+
+1375
+02:05:39,920 --> 02:05:41,408
+JW: Yes.
+
+1376
+02:05:43,784 --> 02:05:47,680
+Because I think we can work our
+way around this one quite nicely,
+
+1377
+02:05:48,520 --> 02:05:51,270
+and that will be very similar to what we've got but...
+
+1378
+02:05:53,320 --> 02:05:59,536
+So let our serializer be 1,2,3,4.
+
+1379
+02:06:02,320 --> 02:06:05,184
+Let the width and height be 2.
+
+1380
+02:06:05,680 --> 02:06:12,272
+And it should expand to... 4 pixels.
+
+1381
+02:06:13,592 --> 02:06:16,230
+Yes, because it's an image 4 pixels.
+
+1382
+02:06:19,216 --> 02:06:25,088
+That's going to be 1 and 2 and the second row is 3 and 4.
+
+1383
+02:06:27,576 --> 02:06:30,992
+PB: It's not it's serializer inaud.
+
+1384
+02:06:31,664 --> 02:06:33,192
+It should be 2,1,3,4
+
+1385
+02:06:33,190 --> 02:06:35,488
+JW: Something like that yes.
+
+1386
+02:06:37,368 --> 02:06:39,400
+PB: OK.
+
+1387
+02:06:39,520 --> 02:06:42,552
+[Silence]
+
+1388
+02:06:42,840 --> 02:06:44,550
+Fine.
+
+1389
+02:06:46,992 --> 02:06:50,152
+So I'm going to say...
+
+1390
+02:06:52,312 --> 02:06:56,560
+This may not be the exactly right way
+to do it, but I'm going to start building up
+
+1391
+02:06:58,440 --> 02:07:02,896
+a place holder - rows and
+columns that I can put things into.
+
+1392
+02:07:03,456 --> 02:07:05,530
+I'm sure there's a more elegant way of doing this
+
+1393
+02:07:05,530 --> 02:07:09,064
+ but I think this will be clearer
+and probably easier to get right.
+
+1394
+02:07:09,600 --> 02:07:12,000
+So I'm going to say...
+
+1395
+02:07:12,352 --> 02:07:15,344
+[Paul dictates what he writes]
+
+1396
+02:07:25,968 --> 02:07:29,128
+JW: I think you want the
+times before the first left as well.
+
+1397
+02:07:30,440 --> 02:07:32,656
+PB: Yes, I do.
+
+1398
+02:07:33,168 --> 02:07:36,024
+So that should give me a whole load of inaud.
+
+1399
+02:07:37,608 --> 02:07:43,160
+And then we need to go from...
+
+1400
+02:07:45,088 --> 02:07:48,872
+In fact, should we just assume that our
+image is going to be square, would that be sensible?
+
+1401
+02:07:48,888 --> 02:07:49,568
+JW: Yes.
+
+1402
+02:07:49,560 --> 02:07:51,968
+PB: Let's just say size.
+
+1403
+02:07:52,040 --> 02:07:55,032
+[Silence]
+
+1404
+02:07:55,536 --> 02:08:00,288
+Otherwise, I don't know how
+we're going to make a quadtree.
+
+1405
+02:08:00,368 --> 02:08:03,368
+[Silence]
+
+1406
+02:08:06,560 --> 02:08:13,608
+Now we should worm our way around at each level.
+
+1407
+02:08:15,288 --> 02:08:19,176
+I'm going to say fill in...
+
+1408
+02:08:22,208 --> 02:08:28,008
+which is going to be given
+some kind of point in the tree.
+
+1409
+02:08:28,000 --> 02:08:35,944
+So it could be within something, and it's
+got to be given a map into which to put it.
+
+1410
+02:08:36,200 --> 02:08:38,760
+And an x offset and Y offset.
+
+1411
+02:08:38,760 --> 02:08:41,760
+[Paul dictates what he writes]
+
+1412
+02:08:48,768 --> 02:08:54,240
+inaud terrible for anything but that's what it's going to be building from.
+
+1413
+02:08:55,488 --> 02:09:00,216
+inaud
+
+1414
+02:09:02,384 --> 02:09:06,360
+I could call that rows, maybe
+that would make more sense.
+
+1415
+02:09:06,848 --> 02:09:11,720
+We're going to start off with a blank inaud going to put things.
+
+1416
+02:09:12,568 --> 02:09:19,960
+and there are two cases: one is if there is
+only one value then there is no mapping to do at all,
+
+1417
+02:09:20,016 --> 02:09:23,032
+[Paul thinks]
+
+1418
+02:09:25,144 --> 02:09:28,616
+... but we'll inaud ... so fill in.
+
+1419
+02:09:31,792 --> 02:09:34,048
+Offset 0.
+
+1420
+02:09:35,872 --> 02:09:38,432
+Whatever our intermediate data is, it's still there inaud
+
+1421
+02:09:38,496 --> 02:09:41,496
+[Silence]
+
+1422
+02:09:42,240 --> 02:09:47,016
+That doesn't return anything...
+and we'll return rows at the end.
+
+1423
+02:09:48,688 --> 02:09:54,344
+So fill in for each quadrant... so I'm going to say...
+
+1424
+02:09:54,340 --> 02:09:57,344
+[Paul dictates what he types]
+
+1425
+02:10:07,080 --> 02:10:09,232
+It's going to get confusing I think, but...
+
+1426
+02:10:09,520 --> 02:10:14,520
+I'm going to say that my quadrant
+offsets because this will make it clearer later on.
+
+1427
+02:10:14,552 --> 02:10:21,808
+The top right is going to be X1 Y0
+
+1428
+02:10:23,744 --> 02:10:27,328
+Then it's going to be 00.
+
+1429
+02:10:29,864 --> 02:10:32,696
+Then it's going to be 01.
+
+1430
+02:10:33,416 --> 02:10:36,576
+Then 11.
+
+1431
+02:10:38,776 --> 02:10:44,008
+We also need some kind of scaling
+factor, so we know that when we start...
+
+1432
+02:10:44,040 --> 02:10:47,072
+[Paul thinks]
+
+1433
+02:10:49,936 --> 02:10:53,528
+Even better than this is
+the scale, let's just say scale.
+
+1434
+02:10:55,992 --> 02:11:00,464
+And our X offset, and our Y offset.
+
+1435
+02:11:00,520 --> 02:11:03,520
+[Silence]
+
+1436
+02:11:04,864 --> 02:11:07,208
+And then...
+
+1437
+02:11:08,200 --> 02:11:10,112
+...we fill in...
+
+1438
+02:11:11,608 --> 02:11:13,952
+One of two things happens here.
+
+1439
+02:11:14,008 --> 02:11:17,000
+[Silence]
+
+1440
+02:11:17,210 --> 02:11:20,224
+[Paul dictates what he writes]
+
+1441
+02:11:21,848 --> 02:11:24,016
+If data is a number...
+
