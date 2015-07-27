@@ -5194,7 +5194,7 @@ seen a reason to use protected.
 1221
 01:51:25,610 --> 01:51:33,568
 PB: Yes, and it's a bad reason I think, bu
- apart for all the extra spaces, which we can say...
+apart for all the extra spaces, which we can say...
 
 1222
 01:51:33,624 --> 01:51:36,616
@@ -5211,7 +5211,7 @@ other ones, which are much shorter so...
 
 1225
 01:51:56,328 --> 01:51:58,336
-That's easier... 
+That's easier...
 
 1226
 01:51:59,128 --> 01:52:01,072
@@ -5522,6 +5522,149 @@ PB: That's true actually.
 We need to know the width and height to start with.
 
 1300
-01:58:01,312 --> 01:58:04,960
+01:58:01,310 --> 01:58:05,064
 Actually we could work it out by inaud the width of the tree perhaps...
+
+1301
+01:58:05,060 --> 01:58:08,672
+But let's give ourselves inaud
+
+1302
+01:58:10,184 --> 01:58:16,224
+JW: There's a temptation to do it inaud way
+
+1303
+01:58:16,352 --> 01:58:22,976
+But I feel like a deserializer spec where we have a very simple
+
+1304
+01:58:23,504 --> 01:58:27,640
+serialized quadroot to work from and
+produce the rows and columns we expect.
+
+1305
+01:58:27,912 --> 01:58:30,160
+might be the best way to try this out.
+
+1306
+01:58:30,160 --> 01:58:33,000
+PB: Yes let's do that...
+
+1307
+01:58:33,510 --> 01:58:36,520
+[Silence]
+
+1308
+01:58:37,872 --> 01:58:40,392
+[Paul dictates what he writes]
+
+1309
+01:58:56,256 --> 01:58:58,384
+Obviously I failed so...
+
+1310
+01:58:58,416 --> 01:59:01,424
+[Paul dictates what he writes]
+
+1311
+01:59:19,920 --> 01:59:23,056
+The simplest case is 1 and 1.
+
+1312
+01:59:23,570 --> 01:59:29,936
+And then we can go to... a single value and a 1 x 1.
+
+1313
+01:59:30,168 --> 01:59:34,880
+Then we can do a single value
+and 4 x 4, that might be nice.
+
+1314
+01:59:36,200 --> 01:59:39,232
+[Paul dictates what he writes]
+
+1315
+01:59:51,240 --> 01:59:54,104
+And we can say... [Paul dictates what he writes]
+
+1316
+02:00:01,264 --> 02:00:05,680
+JW: We could hide quadnode inside the serializer.
+
+1317
+02:00:06,304 --> 02:00:08,536
+We might want to come back round to that.
+
+1318
+02:00:10,064 --> 02:00:13,072
+[Paul dictates what he writes]
+
+1319
+02:00:21,096 --> 02:00:22,824
+JW: It's a 1 x 1 matrix, isn't it?
+
+1320
+02:00:22,820 --> 02:00:25,208
+PB: Yes.
+
+1321
+02:00:27,032 --> 02:00:33,144
+Matrix might be a bit
+misleading though so... to a single cell.
+
+1322
+02:00:33,392 --> 02:00:36,392
+[Paul dictates what he writes]
+
+1323
+02:00:45,432 --> 02:00:51,352
+So then, whatever we do let's say...
+
+1324
+02:00:51,400 --> 02:00:54,456
+[Silence]
+
+1325
+02:00:59,280 --> 02:01:04,416
+Subject is going to be deserializer.new.
+
+1326
+02:01:04,576 --> 02:01:09,160
+I'm not sure if this is the right
+interface... but with something serialized.
+
+1327
+02:01:11,648 --> 02:01:14,640
+[Paul dictates what he writes]
+
+1328
+02:01:19,144 --> 02:01:23,752
+I feel that our deserializer and serializer
+should probably have the same interface,
+
+1329
+02:01:23,750 --> 02:01:29,944
+so serializer should be given
+rows and columns and the quadtree.
+
+1330
+02:01:30,000 --> 02:01:36,408
+Or there should be something else that's
+performing these things, but that's OK
+
+1331
+02:01:36,576 --> 02:01:41,024
+So expect subject.deserialize, yes.
+
+1332
+02:01:43,600 --> 02:01:46,608
+[Paul dictates what he writes]
+
+1333
+02:02:04,880 --> 02:02:08,568
+And let's say... [Paul thinks]
+
+1334
+02:02:08,736 --> 02:02:11,728
+[Paul dictates what he writes]
 
