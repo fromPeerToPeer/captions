@@ -6294,3 +6294,249 @@ like fill in with the same rows.
 02:14:50,808 --> 02:14:54,832
 [Paul thinks]
 
+1482
+02:15:03,920 --> 02:15:11,440
+JW: At this point as the scale is not 1,
+we can pick the appropriate pieces of data,
+
+1483
+02:15:11,690 --> 02:15:19,208
+to send to our recursive calls to fill in,
+or if it is one we can use whatever item we have.
+
+1484
+02:15:19,200 --> 02:15:20,808
+PB: Yes, that's exactly it.
+
+1485
+02:15:22,440 --> 02:15:24,984
+So we say... [Paul dictates what he says on screen]
+
+1486
+02:15:24,984 --> 02:15:26,980
+JW: Yes, do the special case first.
+PB: Yes.
+
+1487
+02:15:26,980 --> 02:15:29,992
+Then we say... [Paul dictates what he writes]
+
+1488
+02:15:38,904 --> 02:15:43,680
+Yes, that's right, and we just return.
+
+1489
+02:15:49,080 --> 02:15:53,304
+We'll assume that our data is good but otherwise,
+
+1490
+02:15:53,560 --> 02:15:59,224
+for each of our additional offsets
+into this, we have to say that at the start,
+
+1491
+02:15:59,790 --> 02:16:05,080
+for example here, our scale is the width.
+
+1492
+02:16:07,144 --> 02:16:10,512
+JW: Don't we just need to
+break data into 4 pieces, and then...
+
+1493
+02:16:11,368 --> 02:16:15,864
+PB: Yes, but the only point is that
+the segment we're working on
+
+1494
+02:16:15,860 --> 02:16:18,776
+(They both talk at once)
+
+1495
+02:16:18,824 --> 02:16:28,096
+So if we start at eight, then we
+multiply, we add 0 x the scale of two.
+
+1496
+02:16:28,136 --> 02:16:31,144
+[Silence]
+
+1497
+02:16:38,104 --> 02:16:47,330
+So this is the existing Exocet plus the internal offset which I called 2 inaud
+
+1498
+02:16:48,720 --> 02:16:51,712
+[Paul dictates what he writes]
+
+1499
+02:16:55,608 --> 02:16:58,632
+[Silence]
+
+1500
+02:16:59,430 --> 02:17:05,064
+And we need to zip it with data, if, or...
+
+1501
+02:17:05,672 --> 02:17:08,672
+[Paul thinks]
+
+1502
+02:17:10,464 --> 02:17:13,392
+So I'm going to say... [Paul dictates what he writes]
+
+1503
+02:17:18,000 --> 02:17:19,704
+If we can do that on our data...
+
+1504
+02:17:20,256 --> 02:17:23,016
+or each actually.
+
+1505
+02:17:23,656 --> 02:17:26,608
+If we can call each on the data... if we cant inaud...
+
+1506
+02:17:27,160 --> 02:17:29,208
+I hope.
+
+1507
+02:17:29,900 --> 02:17:34,984
+Yes, this is to each and... [Paul thinks]
+
+1508
+02:17:35,280 --> 02:17:37,064
+That's fine.
+
+1509
+02:17:37,232 --> 02:17:40,248
+[Paul dictates what he writes]
+
+1510
+02:17:45,064 --> 02:17:52,344
+I'm going to replace the
+data with data data data data.
+
+1511
+02:17:52,736 --> 02:17:55,016
+I think that's horrible but it might work.
+
+1512
+02:17:55,016 --> 02:17:57,010
+JW: Yes.
+
+1513
+02:17:57,920 --> 02:18:00,664
+I could have done data x 4 but...
+
+1514
+02:18:00,744 --> 02:18:03,744
+[Silence]
+
+1515
+02:18:09,224 --> 02:18:15,464
+JW: So we've got the rows to pass
+in, the two offsets into that space.
+
+1516
+02:18:16,048 --> 02:18:18,728
+And now we need the scale.
+
+1517
+02:18:19,960 --> 02:18:22,320
+PB: Yes, which in that case I need to...
+
+1518
+02:18:25,304 --> 02:18:27,160
+That one.
+
+1519
+02:18:27,200 --> 02:18:30,192
+[Silence]
+
+1520
+02:18:30,190 --> 02:18:33,184
+JW: Which will be half of the scale that is given to us.
+
+1521
+02:18:33,352 --> 02:18:35,180
+PB: Yes.
+
+1522
+02:18:35,616 --> 02:18:39,792
+So maybe scale inaud all over the place so we'll say...
+
+1523
+02:18:40,528 --> 02:18:43,536
+[Paul dictates what he writes]
+
+1524
+02:18:45,456 --> 02:18:48,432
+[Silence]
+
+1525
+02:18:49,640 --> 02:18:55,448
+In fact that might give a better name for the inaud
+
+1526
+02:18:55,608 --> 02:19:00,560
+Let's call that subxoff, subyoff.
+
+1527
+02:19:00,608 --> 02:19:03,600
+[Silence]
+
+1528
+02:19:04,536 --> 02:19:08,192
+JW: I think you can get away
+with simply calling those X and Y.
+
+1529
+02:19:09,384 --> 02:19:11,808
+PB: Yes, possible.
+
+1530
+02:19:14,552 --> 02:19:19,120
+And the data is whatever we have.
+
+1531
+02:19:20,680 --> 02:19:23,832
+Either that or depending on whether we...
+
+1532
+02:19:23,920 --> 02:19:27,928
+JW: Don't we need to reach into that data and pull out the appropriate one for this inaud.
+
+1533
+02:19:27,920 --> 02:19:30,240
+PB: Yes, sorry that's right.
+
+1534
+02:19:33,160 --> 02:19:35,528
+We've got subdata as well. 
+
+1535
+02:19:35,520 --> 02:19:38,664
+And I'm going to zip this.
+
+1536
+02:19:38,660 --> 02:19:41,656
+[Silence]
+
+1537
+02:19:46,200 --> 02:19:48,520
+Zip that with data.
+
+1538
+02:19:48,520 --> 02:19:51,848
+[Silence]
+
+1539
+02:19:51,848 --> 02:19:53,840
+Those are prep sized.
+
+1540
+02:19:55,744 --> 02:19:58,104
+JW: That's an interesting bridge.
+
