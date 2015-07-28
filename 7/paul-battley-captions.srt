@@ -5801,7 +5801,7 @@ Let's put those up there... width and height.
 
 1366
 02:05:00,952 --> 02:05:04,456
-I'm not really sure where they should go. 
+I'm not really sure where they should go.
 
 1367
 02:05:04,568 --> 02:05:07,560
@@ -5914,7 +5914,7 @@ I'm sure there's a more elegant way of doing this
 
 1393
 02:07:05,530 --> 02:07:09,064
- but I think this will be clearer
+but I think this will be clearer
 and probably easier to get right.
 
 1394
@@ -6123,4 +6123,174 @@ If data is a number...
 1442
 02:11:26,752 --> 02:11:28,968
 So how do I do that?
+
+1443
+02:11:33,392 --> 02:11:42,168
+I need to walk through these 4 sections.  I've got some kind of inaud array, an array inaud.
+
+1444
+02:11:42,752 --> 02:11:53,032
+In each part, I should have 4
+values for each of those 4 parts.
+
+1445
+02:11:55,440 --> 02:12:01,800
+A quadrant, where I am, with that value, otherwise I should take the inaud of that quadrant..
+
+1446
+02:12:02,930 --> 02:12:06,376
+But I guess I'm doing that
+in offsets, so I've got 2 sets of offsets.
+
+1447
+02:12:06,744 --> 02:12:09,016
+JW: I suppose that an alternative would be to...
+
+1448
+02:12:12,096 --> 02:12:16,224
+inaud this code here but walking
+all the way down to the 1 pixel size,
+
+1449
+02:12:16,220 --> 02:12:21,928
+carrying down the right level of the quadtree
+data to meet your representation with you.
+
+1450
+02:12:24,016 --> 02:12:27,168
+And then if you cant step down a level into the data,
+
+1451
+02:12:27,160 --> 02:12:29,688
+you can pass that same single value all the way down
+
+1452
+02:12:29,680 --> 02:12:32,576
+PB: Yes, that makes sense. 
+
+1453
+02:12:32,696 --> 02:12:39,048
+So I just need the ability to know
+where I am so I can have 2 sets of offsets here, 
+
+1454
+02:12:39,504 --> 02:12:44,320
+because when we fill in we
+will be given that offset and term.
+
+1455
+02:12:44,320 --> 02:12:46,128
+And... [Paul ponders]
+
+1456
+02:12:46,672 --> 02:12:50,976
+So if I were to inaud sketch here...
+
+1457
+02:12:52,368 --> 02:12:58,368
+If I've got a field that has 8 for example,
+
+1458
+02:13:03,576 --> 02:13:07,820
+Firstly I want to take... this lot here.
+
+1459
+02:13:07,920 --> 02:13:10,904
+[Silence]
+
+1460
+02:13:11,048 --> 02:13:13,808
+(inaud X and Ys inaud.)
+
+1461
+02:13:13,800 --> 02:13:16,952
+So I take this quadrant here.
+
+1462
+02:13:19,000 --> 02:13:27,976
+We'll either have 4 values, or 1 value. Well, it will
+have 4 elements, or 1, and just be an initial object.
+
+1463
+02:13:28,456 --> 02:13:32,904
+If it's an initial object, then I pass
+it down, but since there are 4,
+
+1464
+02:13:33,200 --> 02:13:38,920
+I take the first and then fill in
+again with the offset here being 4,
+
+1465
+02:13:39,400 --> 02:13:41,408
+and the offset being 0.
+
+1466
+02:13:42,568 --> 02:13:50,368
+And that needs to know that it
+started off, well I start off filling with maybe...
+
+1467
+02:13:50,360 --> 02:13:52,728
+[Paul thinks]
+
+1468
+02:13:52,968 --> 02:13:55,624
+...my scale.
+
+1469
+02:13:56,896 --> 02:14:00,800
+Being in this case, half of the width.
+
+1470
+02:14:02,256 --> 02:14:05,256
+JW: The scale halves each time
+so eventually you will get to scale one
+
+1471
+02:14:05,250 --> 02:14:07,272
+and you can actually do some painting.
+
+1472
+02:14:07,272 --> 02:14:09,270
+PB: Yes, so let's start off with size.
+
+1473
+02:14:09,270 --> 02:14:12,464
+Rows, and size and some data.
+
+1474
+02:14:12,968 --> 02:14:15,008
+But, I also need to know what my offset is.
+
+1475
+02:14:15,000 --> 02:14:16,008
+JW: Yes, I think so.
+
+1476
+02:14:17,000 --> 02:14:20,456
+PB: So I need X over 00 and size.
+
+1477
+02:14:21,400 --> 02:14:25,800
+[Paul dictates what he types]
+
+1478
+02:14:25,800 --> 02:14:35,672
+But then I also have additional things
+I've mapped down for each of those parts in turn.
+
+1479
+02:14:35,704 --> 02:14:41,856
+So I've got another X half set
+which is going to be scaled by...
+
+1480
+02:14:43,370 --> 02:14:50,328
+What should I say there, something
+like fill in with the same rows.
+
+1481
+02:14:50,808 --> 02:14:54,832
+[Paul thinks]
 
