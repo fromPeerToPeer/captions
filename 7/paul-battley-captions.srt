@@ -6540,3 +6540,183 @@ Those are prep sized.
 02:19:55,744 --> 02:19:58,104
 JW: That's an interesting bridge.
 
+1541
+02:19:58,432 --> 02:20:03,632
+Is it to pack the pieces you want together and then inaud over them rather than...
+
+1542
+02:20:04,192 --> 02:20:08,328
+PB: Yes I think it's a bit
+nicer than using say, with index.
+
+1543
+02:20:08,600 --> 02:20:09,616
+Let's see what happens.
+
+1544
+02:20:09,610 --> 02:20:14,000
+JW: I think we'll see a couple of commas before we inaud
+
+1545
+02:20:14,936 --> 02:20:17,120
+Err... 29.
+
+1546
+02:20:18,536 --> 02:20:20,840
+JW: Get rid of those PB: Yes.
+
+1547
+02:20:21,048 --> 02:20:24,096
+[Silence]
+
+1548
+02:20:26,320 --> 02:20:29,224
+JW: We've not actually defined subdata or is this...
+
+1549
+02:20:30,280 --> 02:20:34,080
+PB: Yes, you're right that should be sub data,
+other wise it's not going to do anything at all.
+
+1550
+02:20:34,128 --> 02:20:37,120
+[Silence]
+
+1551
+02:20:41,630 --> 02:20:43,968
+JW: inaud scale, yes of course.
+
+1552
+02:20:44,008 --> 02:20:50,584
+PB: That's right... so we've got RSpec...
+and we can just replace width with size.
+
+1553
+02:20:50,648 --> 02:20:53,656
+[Silence]
+
+1554
+02:21:04,936 --> 02:21:07,064
+OK? JW: Yes.
+
+1555
+02:21:07,744 --> 02:21:11,304
+Oh, we haven't made size available.
+
+1556
+02:21:11,360 --> 02:21:14,352
+[Silence]
+
+1557
+02:21:27,064 --> 02:21:32,032
+Ah right, in that case, so for our
+next trick let's try doing the whole thing. 
+
+1558
+02:21:33,960 --> 02:21:36,944
+[Paul dictates what he writes]
+
+1559
+02:21:40,240 --> 02:21:42,496
+Let's serialize the spec.
+
+1560
+02:21:45,032 --> 02:21:47,632
+Given that... we should get that.
+
+1561
+02:21:47,632 --> 02:21:49,630
+JW: Yes, great.
+
+1562
+02:21:52,192 --> 02:21:54,408
+And what would you call it, a ...
+
+1563
+02:21:55,272 --> 02:21:57,128
+JW: Partially homogenized?
+
+1564
+02:21:57,120 --> 02:22:00,384
+PB: Yes partially homogeneous, that seems fine.
+
+1565
+02:22:03,216 --> 02:22:06,216
+[Paul thinks]
+
+1566
+02:22:07,416 --> 02:22:10,424
+[Silence]
+
+1567
+02:22:12,184 --> 02:22:14,056
+I'll just wall it up.
+
+1568
+02:22:16,112 --> 02:22:19,112
+[Paul dictates what he types]
+
+1569
+02:22:33,376 --> 02:22:35,992
+And the size for that one is 4.
+
+1570
+02:22:36,112 --> 02:22:39,144
+[Silence]
+
+1571
+02:22:47,368 --> 02:22:50,360
+I was going to say it expands the original.
+
+1572
+02:22:50,424 --> 02:22:53,440
+[Silence]
+
+1573
+02:22:54,808 --> 02:22:56,912
+inaud as well.
+
+1574
+02:22:57,024 --> 02:23:00,032
+[Silence]
+
+1575
+02:23:14,400 --> 02:23:16,512
+I'll just copy that.
+
+1576
+02:23:16,608 --> 02:23:19,264
+And say expect serialized to equal...
+
+1577
+02:23:20,776 --> 02:23:23,256
+that and inaud
+
+1578
+02:23:25,872 --> 02:23:26,840
+JW: inaud
+
+1579
+02:23:28,032 --> 02:23:30,264
+PB: Yes.
+
+1580
+02:23:31,424 --> 02:23:33,928
+Yes... that's why.
+
+1581
+02:23:33,920 --> 02:23:36,600
+JW:  and there's another one, inaud cool.
+
+1582
+02:23:39,120 --> 02:23:43,336
+PB: Nice, cool, let's check this in.
+
+1583
+02:23:44,880 --> 02:23:47,896
+[Paul dictates what he writes]
+
+1584
+02:23:58,896 --> 02:24:02,240
+[New Chapter]
+
