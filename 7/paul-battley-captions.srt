@@ -6166,12 +6166,12 @@ you can pass that same single value all the way down
 
 1452
 02:12:29,680 --> 02:12:32,576
-PB: Yes, that makes sense. 
+PB: Yes, that makes sense.
 
 1453
 02:12:32,696 --> 02:12:39,048
 So I just need the ability to know
-where I am so I can have 2 sets of offsets here, 
+where I am so I can have 2 sets of offsets here,
 
 1454
 02:12:39,504 --> 02:12:44,320
@@ -6514,7 +6514,7 @@ PB: Yes, sorry that's right.
 
 1534
 02:19:33,160 --> 02:19:35,528
-We've got subdata as well. 
+We've got subdata as well.
 
 1535
 02:19:35,520 --> 02:19:38,664
@@ -6610,7 +6610,7 @@ Oh, we haven't made size available.
 1557
 02:21:27,064 --> 02:21:32,032
 Ah right, in that case, so for our
-next trick let's try doing the whole thing. 
+next trick let's try doing the whole thing.
 
 1558
 02:21:33,960 --> 02:21:36,944
@@ -6719,4 +6719,141 @@ PB: Nice, cool, let's check this in.
 1584
 02:23:58,896 --> 02:24:02,240
 [New Chapter]
+
+1585
+02:24:02,888 --> 02:24:07,610
+JW: So now we've got a serializer
+component and a deserializer component,
+
+1586
+02:24:07,610 --> 02:24:14,544
+and we can take in a bitmap image, and write it
+to our own custom quadtree serialization format,
+
+1587
+02:24:14,540 --> 02:24:19,912
+which is JSON compliant but doesn't
+mean anything without the deserializer part.
+
+1588
+02:24:20,016 --> 02:24:21,344
+PB: Yes.
+
+1589
+02:24:21,408 --> 02:24:23,960
+JW: And, it does seem to compress the representation.
+
+1590
+02:24:23,960 --> 02:24:27,432
+PB: Yes, certainly it's 10 x smaller.
+
+1591
+02:24:28,360 --> 02:24:33,112
+JW: So that's one aspect of
+quadtrees as I understand it.
+
+1592
+02:24:34,224 --> 02:24:37,520
+There are other operations
+you can perform with them.
+
+1593
+02:24:37,712 --> 02:24:45,144
+So I believe if you want to cut an
+image in half, as in shrink it by a factor of 2,
+
+1594
+02:24:45,320 --> 02:24:51,432
+All you need to do is chop off the lowest level.
+
+1595
+02:24:51,768 --> 02:24:53,232
+PB: Yes, that makes sense.
+
+1596
+02:24:53,230 --> 02:24:58,712
+JW: And I think our deserializer could
+do that simply by us giving it half size
+
+1597
+02:24:58,730 --> 02:25:01,896
+and it would ignore the final file.
+
+1598
+02:25:02,192 --> 02:25:04,928
+PB: That's right yes, it wouldn't walk all the way down.
+
+1599
+02:25:05,392 --> 02:25:13,440
+Yes, and you could rotate it by recursively
+swapping around the elements at each level.
+
+1600
+02:25:13,536 --> 02:25:18,728
+JW: Yes, in fact it's rather like what you
+were talking about earlier, a wrapping bitshift
+
+1601
+02:25:18,780 --> 02:25:22,568
+push numbers then take the one that's
+fallen off and put it back on at the beginning.
+
+1602
+02:25:22,560 --> 02:25:24,480
+PB: Yes, rotation of the four elements.
+
+1603
+02:25:24,480 --> 02:25:27,672
+JW: Which isn't all that intuitive to picture,
+
+1604
+02:25:27,976 --> 02:25:31,240
+but I believe when you put it
+all back together again it does work.
+
+1605
+02:25:31,240 --> 02:25:32,432
+PB: Yes.
+
+1606
+02:25:33,296 --> 02:25:38,200
+JW: So let's have one more look at our
+serialized version of my London skyline bitmap.
+
+1607
+02:25:38,304 --> 02:25:45,248
+PB: OK, in that case we want...
+something we made, which is serializer...
+
+1608
+02:25:45,264 --> 02:25:47,728
+So, if we run this...
+
+1609
+02:25:47,928 --> 02:25:50,936
+[Paul dictates as he writes] 
+
+1610
+02:25:59,352 --> 02:26:01,512
+JW: There it is... glorious.
+
+1611
+02:26:02,128 --> 02:26:04,616
+PB: And if I shrink the full size down a bit...
+
+1612
+02:26:05,100 --> 02:26:07,264
+It's still not too bad, there we go.
+
+1613
+02:26:07,290 --> 02:26:08,464
+JW: Yes, that's good.
+
+1614
+02:26:10,792 --> 02:26:12,464
+Right cool.
+
+1615
+02:26:12,460 --> 02:26:14,072
+PB: Well thank you very much.
 
