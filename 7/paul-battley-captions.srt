@@ -522,7 +522,7 @@ So bytes.length minus image bytes.length.
 
 121
 00:10:14,260 --> 00:10:18,784
-That's good so let's see... 
+That's good so let's see...
 
 122
 00:10:18,840 --> 00:10:22,168
@@ -4335,7 +4335,7 @@ JW: I imagine you could potentially...
 
 1019
 01:33:32,520 --> 01:33:34,368
-turn these quadnodes into a json.
+turn these quadnodes into a JSON.
 
 1020
 01:33:34,376 --> 01:33:41,736
@@ -4512,7 +4512,7 @@ specified any kind of serialization format.
 
 1059
 01:37:26,510 --> 01:37:29,936
-PB: So serializer... let's say... 
+PB: So serializer... let's say...
 
 1060
 01:37:29,930 --> 01:37:32,952
@@ -5111,7 +5111,7 @@ by saying 2S which is a JSON serialization.
 
 1198
 01:49:59,224 --> 01:50:03,952
-I'll say require json - that's in
+I'll say require JSON - that's in
 the standard library these days.
 
 1199
@@ -5430,7 +5430,7 @@ And then let's puts that.to_s
 
 1274
 01:56:03,650 --> 01:56:05,192
-And this one... 
+And this one...
 
 1275
 01:56:05,304 --> 01:56:08,296
@@ -5781,1087 +5781,1096 @@ PB: In fact we could.
 
 1356
 02:04:26,640 --> 02:04:32,512
-But I think with inaud we don't know that because our serializer is only given the quadtree.
+But I think with inaud we don't know that because our serializer is only given the quad tree.
 
 1357
-02:04:33,232 --> 02:04:38,176
-JW: Your right it could inaud
+02:04:33,230 --> 02:04:35,176
+But yes, your right it could.
 
 1358
-02:04:38,864 --> 02:04:40,440
-PB: That might make sense
+02:04:35,170 --> 02:04:37,704
+JW: inaud
 
 1359
+02:04:37,784 --> 02:04:40,440
+PB: Yes, that might make sense.
+
+1360
 02:04:40,488 --> 02:04:43,504
 But let's press on, and leave that for now.
 
-1360
+1361
 02:04:43,584 --> 02:04:46,584
 [Silence]
 
-1361
+1362
 02:04:50,312 --> 02:04:52,672
 [Paul thinks]
 
-1362
+1363
 02:04:54,584 --> 02:04:57,688
 Let's put those up there... width and height.
 
-1363
+1364
 02:05:00,952 --> 02:05:04,456
 I'm not really sure where they should go.
 
-1364
+1365
 02:05:04,568 --> 02:05:07,560
 [Silence]
 
-1365
+1366
 02:05:10,616 --> 02:05:15,160
 So in the future if we do want
 to do it it's all in the same place.
 
-1366
+1367
 02:05:16,648 --> 02:05:20,056
 And that will fail because
 our serializer doesn't like it.
 
-1367
+1368
 02:05:22,776 --> 02:05:25,328
 And height... inaud for that.
 
-1368
+1369
 02:05:26,464 --> 02:05:29,008
 And that works.
 
-1369
+1370
 02:05:29,000 --> 02:05:32,272
 Right, so now... context.
 
-1370
+1371
 02:05:32,384 --> 02:05:35,384
 [Paul thinks]
 
-1371
+1372
 02:05:37,024 --> 02:05:39,920
 Shall we do a heterogeneous 2 x 2 image?
 
-1372
+1373
 02:05:39,920 --> 02:05:41,408
 JW: Yes.
 
-1373
+1374
 02:05:43,784 --> 02:05:47,680
 Because I think we can work our
 way around this one quite nicely,
 
-1374
+1375
 02:05:48,520 --> 02:05:51,270
 and that will be very similar to what we've got but...
 
-1375
+1376
 02:05:53,320 --> 02:05:59,536
 So let our serializer be 1,2,3,4.
 
-1376
+1377
 02:06:02,320 --> 02:06:05,184
 Let the width and height be 2.
 
-1377
+1378
 02:06:05,680 --> 02:06:12,272
 And it should expand to... 4 pixels.
 
-1378
+1379
 02:06:13,592 --> 02:06:16,230
 Yes, because it's an image 4 pixels.
 
-1379
+1380
 02:06:19,216 --> 02:06:25,088
 That's going to be 1 and 2 and the second row is 3 and 4.
 
-1380
-02:06:27,576 --> 02:06:30,992
-PB: It's not it's serializer inaud.
-
 1381
-02:06:31,664 --> 02:06:33,192
-It should be 2,1,3,4
+02:06:27,570 --> 02:06:31,136
+PB: It's not, it's serializer. [Laughter]
 
 1382
+02:06:31,240 --> 02:06:33,190
+Er... yes it should be 2,1,3,4
+
+1383
 02:06:33,190 --> 02:06:35,488
 JW: Something like that yes.
 
-1383
+1384
 02:06:37,368 --> 02:06:39,400
 PB: OK.
 
-1384
+1385
 02:06:39,520 --> 02:06:42,552
 [Silence]
 
-1385
+1386
 02:06:42,840 --> 02:06:44,550
 Fine.
 
-1386
+1387
 02:06:46,992 --> 02:06:50,152
 So I'm going to say...
 
-1387
+1388
 02:06:52,312 --> 02:06:56,560
 This may not be the exactly right way
 to do it, but I'm going to start building up
 
-1388
+1389
 02:06:58,440 --> 02:07:02,896
 a place holder - rows and
 columns that I can put things into.
 
-1389
+1390
 02:07:03,456 --> 02:07:05,530
 I'm sure there's a more elegant way of doing this
 
-1390
+1391
 02:07:05,530 --> 02:07:09,064
 but I think this will be clearer
 and probably easier to get right.
 
-1391
+1392
 02:07:09,600 --> 02:07:12,000
 So I'm going to say...
 
-1392
+1393
 02:07:12,352 --> 02:07:15,344
 [Paul dictates what he writes]
 
-1393
+1394
 02:07:25,968 --> 02:07:29,128
 JW: I think you want the
 times before the first left as well.
 
-1394
+1395
 02:07:30,440 --> 02:07:32,656
 PB: Yes, I do.
 
-1395
+1396
 02:07:33,168 --> 02:07:36,024
 So that should give me a whole load of inaud.
 
-1396
+1397
 02:07:37,608 --> 02:07:43,160
 And then we need to go from...
 
-1397
+1398
 02:07:45,088 --> 02:07:48,872
 In fact, should we just assume that our
 image is going to be square, would that be sensible?
 
-1398
+1399
 02:07:48,888 --> 02:07:49,568
 JW: Yes.
 
-1399
+1400
 02:07:49,560 --> 02:07:51,968
 PB: Let's just say size.
 
-1400
+1401
 02:07:52,040 --> 02:07:55,032
 [Silence]
 
-1401
+1402
 02:07:55,536 --> 02:08:00,288
 Otherwise, I don't know how
 we're going to make a quadtree.
 
-1402
+1403
 02:08:00,368 --> 02:08:03,368
 [Silence]
 
-1403
+1404
 02:08:06,560 --> 02:08:13,608
 Now we should worm our way around at each level.
 
-1404
+1405
 02:08:15,288 --> 02:08:19,176
 I'm going to say fill in...
 
-1405
+1406
 02:08:22,208 --> 02:08:28,008
 which is going to be given
 some kind of point in the tree.
 
-1406
+1407
 02:08:28,000 --> 02:08:35,944
 So it could be within something, and it's
 got to be given a map into which to put it.
 
-1407
+1408
 02:08:36,200 --> 02:08:38,760
 And an x offset and Y offset.
 
-1408
+1409
 02:08:38,760 --> 02:08:41,760
 [Paul dictates what he writes]
 
-1409
-02:08:48,768 --> 02:08:54,240
-inaud terrible for anything but that's what it's going to be building from.
-
 1410
+02:08:48,760 --> 02:08:52,144
+And, I'm going to call it data,
+which is a terrible name for anything,
+
+1411
+02:08:52,140 --> 02:08:55,008
+but that's what it's going to be building from.
+
+1412
 02:08:55,488 --> 02:09:00,216
 inaud
 
-1411
+1413
 02:09:02,384 --> 02:09:06,360
 I could call that rows, maybe
 that would make more sense.
 
-1412
+1414
 02:09:06,848 --> 02:09:11,720
-We're going to start off with a blank inaud going to put things.
+We're going to start off with a blank inaud in which I'm going to put things.
 
-1413
+1415
 02:09:12,568 --> 02:09:19,960
-and there are two cases: one is if there is
+And there are two cases: one is if there is
 only one value then there is no mapping to do at all,
 
-1414
+1416
 02:09:20,016 --> 02:09:23,032
 [Paul thinks]
 
-1415
+1417
 02:09:25,144 --> 02:09:28,616
 ... but we'll inaud ... so fill in.
 
-1416
+1418
 02:09:31,792 --> 02:09:34,048
 Offset 0.
 
-1417
+1419
 02:09:35,872 --> 02:09:38,432
 Whatever our intermediate data is, it's still there inaud
 
-1418
+1420
 02:09:38,496 --> 02:09:41,496
 [Silence]
 
-1419
+1421
 02:09:42,240 --> 02:09:47,016
 That doesn't return anything...
 and we'll return rows at the end.
 
-1420
+1422
 02:09:48,688 --> 02:09:54,344
 So fill in for each quadrant... so I'm going to say...
 
-1421
+1423
 02:09:54,340 --> 02:09:57,344
 [Paul dictates what he types]
 
-1422
+1424
 02:10:07,080 --> 02:10:09,232
 It's going to get confusing I think, but...
 
-1423
+1425
 02:10:09,520 --> 02:10:14,520
 I'm going to say that my quadrant
 offsets because this will make it clearer later on.
 
-1424
+1426
 02:10:14,552 --> 02:10:21,808
 The top right is going to be X1 Y0
 
-1425
+1427
 02:10:23,744 --> 02:10:27,328
 Then it's going to be 00.
 
-1426
+1428
 02:10:29,864 --> 02:10:32,696
 Then it's going to be 01.
 
-1427
+1429
 02:10:33,416 --> 02:10:36,576
 Then 11.
 
-1428
+1430
 02:10:38,776 --> 02:10:44,008
 We also need some kind of scaling
 factor, so we know that when we start...
 
-1429
+1431
 02:10:44,040 --> 02:10:47,072
 [Paul thinks]
 
-1430
+1432
 02:10:49,936 --> 02:10:53,528
 Even better than this is
 the scale, let's just say scale.
 
-1431
+1433
 02:10:55,992 --> 02:11:00,464
 And our X offset, and our Y offset.
 
-1432
+1434
 02:11:00,520 --> 02:11:03,520
 [Silence]
 
-1433
+1435
 02:11:04,864 --> 02:11:07,208
 And then...
 
-1434
+1436
 02:11:08,200 --> 02:11:10,112
 ...we fill in...
 
-1435
+1437
 02:11:11,608 --> 02:11:13,952
 One of two things happens here.
 
-1436
+1438
 02:11:14,008 --> 02:11:17,000
 [Silence]
 
-1437
+1439
 02:11:17,210 --> 02:11:20,224
 [Paul dictates what he writes]
 
-1438
+1440
 02:11:21,848 --> 02:11:24,016
 If data is a number...
 
-1439
+1441
 02:11:26,752 --> 02:11:28,968
 So how do I do that?
 
-1440
+1442
 02:11:33,392 --> 02:11:42,168
-I need to walk through these 4 sections.  I've got some kind of inaud array, an array inaud.
+I need to walk through these 4 sections
+and I've got some kind of array of arrays.
 
-1441
+1443
 02:11:42,752 --> 02:11:53,032
 In each part, I should have 4
 values for each of those 4 parts.
 
-1442
-02:11:55,440 --> 02:12:01,800
-A quadrant, where I am, with that value, otherwise I should take the inaud of that quadrant..
+1444
+02:11:53,150 --> 02:11:58,704
+If it's a single value, I should fill that
+whole quadrant where I am with that value.
 
-1443
+1445
+02:11:59,150 --> 02:12:02,848
+Otherwise I should take
+the opposite of that quadrant...
+
+1446
 02:12:02,930 --> 02:12:06,376
 But I guess I'm doing that
 in offsets, so I've got 2 sets of offsets.
 
-1444
+1447
 02:12:06,744 --> 02:12:09,016
 JW: I suppose that an alternative would be to...
 
-1445
-02:12:12,096 --> 02:12:16,224
+1448
+02:12:12,032 --> 02:12:16,220
 inaud this code here but walking
 all the way down to the 1 pixel size,
 
-1446
+1449
 02:12:16,220 --> 02:12:21,928
 carrying down the right level of the quadtree
 data to meet your representation with you.
 
-1447
+1450
 02:12:24,016 --> 02:12:27,168
 And then if you cant step down a level into the data,
 
-1448
+1451
 02:12:27,160 --> 02:12:29,688
 you can pass that same single value all the way down
 
-1449
+1452
 02:12:29,680 --> 02:12:32,576
 PB: Yes, that makes sense.
 
-1450
+1453
 02:12:32,696 --> 02:12:39,048
 So I just need the ability to know
 where I am so I can have 2 sets of offsets here,
 
-1451
+1454
 02:12:39,504 --> 02:12:44,320
 because when we fill in we
 will be given that offset and term.
 
-1452
+1455
 02:12:44,320 --> 02:12:46,128
 And... [Paul ponders]
 
-1453
+1456
 02:12:46,672 --> 02:12:50,976
 So if I were to inaud sketch here...
 
-1454
+1457
 02:12:52,368 --> 02:12:58,368
 If I've got a field that has 8 for example,
 
-1455
+1458
 02:13:03,576 --> 02:13:07,820
 Firstly I want to take... this lot here.
 
-1456
+1459
 02:13:07,920 --> 02:13:10,904
 [Silence]
 
-1457
+1460
 02:13:11,048 --> 02:13:13,808
-(inaud X and Ys inaud.)
+(Maybe not call them X and Ys inaud.)
 
-1458
+1461
 02:13:13,800 --> 02:13:16,952
 So I take this quadrant here.
 
-1459
+1462
 02:13:19,000 --> 02:13:27,976
 We'll either have 4 values, or 1 value. Well, it will
 have 4 elements, or 1, and just be an initial object.
 
-1460
+1463
 02:13:28,456 --> 02:13:32,904
 If it's an initial object, then I pass
 it down, but since there are 4,
 
-1461
+1464
 02:13:33,200 --> 02:13:38,920
 I take the first and then fill in
 again with the offset here being 4,
 
-1462
+1465
 02:13:39,400 --> 02:13:41,408
 and the offset being 0.
 
-1463
+1466
 02:13:42,568 --> 02:13:50,368
 And that needs to know that it
 started off, well I start off filling with maybe...
 
-1464
+1467
 02:13:50,360 --> 02:13:52,728
 [Paul thinks]
 
-1465
+1468
 02:13:52,968 --> 02:13:55,624
 ...my scale.
 
-1466
+1469
 02:13:56,896 --> 02:14:00,800
 Being in this case, half of the width.
 
-1467
+1470
 02:14:02,256 --> 02:14:05,256
 JW: The scale halves each time
 so eventually you will get to scale one
 
-1468
+1471
 02:14:05,250 --> 02:14:07,272
 and you can actually do some painting.
 
-1469
+1472
 02:14:07,272 --> 02:14:09,270
 PB: Yes, so let's start off with size.
 
-1470
+1473
 02:14:09,270 --> 02:14:12,464
 Rows, and size and some data.
 
-1471
+1474
 02:14:12,968 --> 02:14:15,008
 But, I also need to know what my offset is.
 
-1472
+1475
 02:14:15,000 --> 02:14:16,008
 JW: Yes, I think so.
 
-1473
+1476
 02:14:17,000 --> 02:14:20,456
 PB: So I need X over 00 and size.
 
-1474
+1477
 02:14:21,400 --> 02:14:25,800
 [Paul dictates what he types]
 
-1475
+1478
 02:14:25,800 --> 02:14:35,672
 But then I also have additional things
 I've mapped down for each of those parts in turn.
 
-1476
+1479
 02:14:35,704 --> 02:14:41,856
 So I've got another X half set
 which is going to be scaled by...
 
-1477
+1480
 02:14:43,370 --> 02:14:50,328
 What should I say there, something
 like fill in with the same rows.
 
-1478
+1481
 02:14:50,808 --> 02:14:54,832
 [Paul thinks]
 
-1479
+1482
 02:15:03,920 --> 02:15:11,440
 JW: At this point as the scale is not 1,
 we can pick the appropriate pieces of data,
 
-1480
+1483
 02:15:11,690 --> 02:15:19,208
 to send to our recursive calls to fill in,
 or if it is one we can use whatever item we have.
 
-1481
+1484
 02:15:19,200 --> 02:15:20,808
 PB: Yes, that's exactly it.
 
-1482
+1485
 02:15:22,440 --> 02:15:24,984
 So we say... [Paul dictates what he says on screen]
 
-1483
+1486
 02:15:24,984 --> 02:15:26,980
 JW: Yes, do the special case first.
 PB: Yes.
 
-1484
+1487
 02:15:26,980 --> 02:15:29,992
 Then we say... [Paul dictates what he writes]
 
-1485
+1488
 02:15:38,904 --> 02:15:43,680
 Yes, that's right, and we just return.
 
-1486
+1489
 02:15:49,080 --> 02:15:53,304
 We'll assume that our data is good but otherwise,
 
-1487
+1490
 02:15:53,560 --> 02:15:59,224
 for each of our additional offsets
 into this, we have to say that at the start,
 
-1488
+1491
 02:15:59,790 --> 02:16:05,080
 for example here, our scale is the width.
 
-1489
+1492
 02:16:07,144 --> 02:16:10,512
 JW: Don't we just need to
 break data into 4 pieces, and then...
 
-1490
+1493
 02:16:11,368 --> 02:16:15,864
 PB: Yes, but the only point is that
 the segment we're working on
 
-1491
+1494
 02:16:15,860 --> 02:16:18,776
 (They both talk at once)
 
-1492
+1495
 02:16:18,824 --> 02:16:28,096
 So if we start at eight, then we
 multiply, we add 0 x the scale of two.
 
-1493
+1496
 02:16:28,136 --> 02:16:31,144
 [Silence]
 
-1494
+1497
 02:16:38,104 --> 02:16:47,330
 So this is the existing Exocet plus the internal offset which I called 2 inaud
 
-1495
+1498
 02:16:48,720 --> 02:16:51,712
 [Paul dictates what he writes]
 
-1496
+1499
 02:16:55,608 --> 02:16:58,632
 [Silence]
 
-1497
+1500
 02:16:59,430 --> 02:17:05,064
 And we need to zip it with data, if, or...
 
-1498
+1501
 02:17:05,672 --> 02:17:08,672
 [Paul thinks]
 
-1499
+1502
 02:17:10,464 --> 02:17:13,392
 So I'm going to say... [Paul dictates what he writes]
 
-1500
+1503
 02:17:18,000 --> 02:17:19,704
 If we can do that on our data...
 
-1501
+1504
 02:17:20,256 --> 02:17:23,016
 or each actually.
 
-1502
+1505
 02:17:23,656 --> 02:17:26,608
-If we can call each on the data... if we cant inaud...
+If we can call each on the data... which we cant inaud...
 
-1503
+1506
 02:17:27,160 --> 02:17:29,208
 I hope.
 
-1504
+1507
 02:17:29,900 --> 02:17:34,984
 Yes, this is to each and... [Paul thinks]
 
-1505
+1508
 02:17:35,280 --> 02:17:37,064
 That's fine.
 
-1506
+1509
 02:17:37,232 --> 02:17:40,248
 [Paul dictates what he writes]
 
-1507
+1510
 02:17:45,064 --> 02:17:52,344
 I'm going to replace the
 data with data data data data.
 
-1508
+1511
 02:17:52,736 --> 02:17:55,016
 I think that's horrible but it might work.
 
-1509
+1512
 02:17:55,016 --> 02:17:57,010
 JW: Yes.
 
-1510
+1513
 02:17:57,920 --> 02:18:00,664
 I could have done data x 4 but...
 
-1511
+1514
 02:18:00,744 --> 02:18:03,744
 [Silence]
 
-1512
+1515
 02:18:09,224 --> 02:18:15,464
 JW: So we've got the rows to pass
 in, the two offsets into that space.
 
-1513
+1516
 02:18:16,048 --> 02:18:18,728
 And now we need the scale.
 
-1514
+1517
 02:18:19,960 --> 02:18:22,320
 PB: Yes, which in that case I need to...
 
-1515
+1518
 02:18:25,304 --> 02:18:27,160
 That one.
 
-1516
+1519
 02:18:27,200 --> 02:18:30,192
 [Silence]
 
-1517
+1520
 02:18:30,190 --> 02:18:33,184
 JW: Which will be half of the scale that is given to us.
 
-1518
+1521
 02:18:33,352 --> 02:18:35,180
 PB: Yes.
 
-1519
+1522
 02:18:35,616 --> 02:18:39,792
 So maybe scale inaud all over the place so we'll say...
 
-1520
+1523
 02:18:40,528 --> 02:18:43,536
 [Paul dictates what he writes]
 
-1521
+1524
 02:18:45,456 --> 02:18:48,432
 [Silence]
 
-1522
+1525
 02:18:49,640 --> 02:18:55,448
-In fact that might give a better name for the inaud
+In fact that might give a better name for the xoff2.
 
-1523
+1526
 02:18:55,608 --> 02:19:00,560
 Let's call that subxoff, subyoff.
 
-1524
+1527
 02:19:00,608 --> 02:19:03,600
 [Silence]
 
-1525
+1528
 02:19:04,536 --> 02:19:08,192
 JW: I think you can get away
 with simply calling those X and Y.
 
-1526
+1529
 02:19:09,384 --> 02:19:11,808
 PB: Yes, possible.
 
-1527
+1530
 02:19:14,552 --> 02:19:19,120
 And the data is whatever we have.
 
-1528
+1531
 02:19:20,680 --> 02:19:23,832
 Either that or depending on whether we...
 
-1529
+1532
 02:19:23,920 --> 02:19:27,928
 JW: Don't we need to reach into that data and pull out the appropriate one for this inaud.
 
-1530
+1533
 02:19:27,920 --> 02:19:30,240
 PB: Yes, sorry that's right.
 
-1531
+1534
 02:19:33,160 --> 02:19:35,528
 We've got subdata as well.
 
-1532
+1535
 02:19:35,520 --> 02:19:38,664
 And I'm going to zip this.
 
-1533
+1536
 02:19:38,660 --> 02:19:41,656
 [Silence]
 
-1534
+1537
 02:19:46,200 --> 02:19:48,520
 Zip that with data.
 
-1535
+1538
 02:19:48,520 --> 02:19:51,848
 [Silence]
 
-1536
+1539
 02:19:51,848 --> 02:19:53,840
 Those are prep sized.
 
-1537
+1540
 02:19:55,744 --> 02:19:58,104
 JW: That's an interesting bridge.
 
-1538
-02:19:58,432 --> 02:20:03,632
-Is it to pack the pieces you want together and then inaud over them rather than...
+1541
+02:19:58,392 --> 02:20:03,630
+Is it to pack the pieces you want
+together and then iterate over them rather than...
 
-1539
+1542
 02:20:04,192 --> 02:20:08,328
 PB: Yes I think it's a bit
 nicer than using say, with index.
 
-1540
+1543
 02:20:08,600 --> 02:20:09,616
 Let's see what happens.
 
-1541
+1544
 02:20:09,610 --> 02:20:14,000
 JW: I think we'll see a couple of commas before we inaud
 
-1542
+1545
 02:20:14,936 --> 02:20:17,120
 Err... 29.
 
-1543
+1546
 02:20:18,536 --> 02:20:20,840
 JW: Get rid of those PB: Yes.
 
-1544
+1547
 02:20:21,048 --> 02:20:24,096
 [Silence]
 
-1545
+1548
 02:20:26,320 --> 02:20:29,224
 JW: We've not actually defined subdata or is this...
 
-1546
+1549
 02:20:30,280 --> 02:20:34,080
 PB: Yes, you're right that should be sub data,
 other wise it's not going to do anything at all.
 
-1547
+1550
 02:20:34,128 --> 02:20:37,120
 [Silence]
 
-1548
+1551
 02:20:41,630 --> 02:20:43,968
-JW: inaud scale, yes of course.
+JW: The whole scale, yes of course.
 
-1549
+1552
 02:20:44,008 --> 02:20:50,584
 PB: That's right... so we've got RSpec...
 and we can just replace width with size.
 
-1550
+1553
 02:20:50,648 --> 02:20:53,656
 [Silence]
 
-1551
+1554
 02:21:04,936 --> 02:21:07,064
 OK? JW: Yes.
 
-1552
+1555
 02:21:07,744 --> 02:21:11,304
 Oh, we haven't made size available.
 
-1553
+1556
 02:21:11,360 --> 02:21:14,352
 [Silence]
 
-1554
+1557
 02:21:27,064 --> 02:21:32,032
 Ah right, in that case, so for our
 next trick let's try doing the whole thing.
 
-1555
+1558
 02:21:33,960 --> 02:21:36,944
 [Paul dictates what he writes]
 
-1556
+1559
 02:21:40,240 --> 02:21:42,496
 Let's serialize the spec.
 
-1557
+1560
 02:21:45,032 --> 02:21:47,632
 Given that... we should get that.
 
-1558
+1561
 02:21:47,632 --> 02:21:49,630
 JW: Yes, great.
 
-1559
+1562
 02:21:52,192 --> 02:21:54,408
 And what would you call it, a ...
 
-1560
+1563
 02:21:55,272 --> 02:21:57,128
 JW: Partially homogenized?
 
-1561
+1564
 02:21:57,120 --> 02:22:00,384
 PB: Yes partially homogeneous, that seems fine.
 
-1562
+1565
 02:22:03,216 --> 02:22:06,216
 [Paul thinks]
 
-1563
+1566
 02:22:07,416 --> 02:22:10,424
 [Silence]
 
-1564
+1567
 02:22:12,184 --> 02:22:14,056
 I'll just wall it up.
 
-1565
+1568
 02:22:16,112 --> 02:22:19,112
 [Paul dictates what he types]
 
-1566
+1569
 02:22:33,376 --> 02:22:35,992
 And the size for that one is 4.
 
-1567
+1570
 02:22:36,112 --> 02:22:39,144
 [Silence]
 
-1568
+1571
 02:22:47,368 --> 02:22:50,360
 I was going to say it expands the original.
 
-1569
+1572
 02:22:50,424 --> 02:22:53,440
 [Silence]
 
-1570
-02:22:54,808 --> 02:22:56,912
-inaud as well.
-
-1571
-02:22:57,024 --> 02:23:00,032
-[Silence]
-
-1572
+1573
 02:23:14,400 --> 02:23:16,512
 I'll just copy that.
 
-1573
+1574
 02:23:16,608 --> 02:23:19,264
 And say expect serialized to equal...
 
-1574
-02:23:20,776 --> 02:23:23,256
+1575
+02:23:20,770 --> 02:23:23,648
 that and inaud
 
-1575
-02:23:25,872 --> 02:23:26,840
+1576
+02:23:25,870 --> 02:23:27,984
 JW: inaud
 
-1576
-02:23:28,032 --> 02:23:30,264
-PB: Yes.
-
 1577
+02:23:28,032 --> 02:23:30,264
+PB: Yes erm...
+
+1578
 02:23:31,424 --> 02:23:33,928
 Yes... that's why.
 
-1578
-02:23:33,920 --> 02:23:36,600
-JW:  and there's another one, inaud cool.
-
 1579
+02:23:33,920 --> 02:23:36,600
+JW: And there's another one, inaud cool.
+
+1580
 02:23:39,120 --> 02:23:43,336
 PB: Nice, cool, let's check this in.
 
-1580
+1581
 02:23:44,880 --> 02:23:47,896
 [Paul dictates what he writes]
 
-1581
+1582
 02:23:58,896 --> 02:24:02,240
 [New Chapter]
 
-1582
+1583
 02:24:02,888 --> 02:24:07,610
 JW: So now we've got a serializer
 component and a deserializer component,
 
-1583
+1584
 02:24:07,610 --> 02:24:14,544
 and we can take in a bitmap image, and write it
 to our own custom quadtree serialization format,
 
-1584
+1585
 02:24:14,540 --> 02:24:19,912
 which is JSON compliant but doesn't
 mean anything without the deserializer part.
 
-1585
+1586
 02:24:20,016 --> 02:24:21,344
 PB: Yes.
 
-1586
+1587
 02:24:21,408 --> 02:24:23,960
 JW: And, it does seem to compress the representation.
 
-1587
+1588
 02:24:23,960 --> 02:24:27,432
 PB: Yes, certainly it's 10 x smaller.
 
-1588
+1589
 02:24:28,360 --> 02:24:33,112
 JW: So that's one aspect of
 quadtrees as I understand it.
 
-1589
+1590
 02:24:34,224 --> 02:24:37,520
 There are other operations
 you can perform with them.
 
-1590
+1591
 02:24:37,712 --> 02:24:45,144
 So I believe if you want to cut an
 image in half, as in shrink it by a factor of 2,
 
-1591
+1592
 02:24:45,320 --> 02:24:51,432
 All you need to do is chop off the lowest level.
 
-1592
+1593
 02:24:51,768 --> 02:24:53,232
 PB: Yes, that makes sense.
 
-1593
+1594
 02:24:53,230 --> 02:24:58,712
 JW: And I think our deserializer could
 do that simply by us giving it half size
 
-1594
+1595
 02:24:58,730 --> 02:25:01,896
 and it would ignore the final file.
 
-1595
+1596
 02:25:02,192 --> 02:25:04,928
 PB: That's right yes, it wouldn't walk all the way down.
 
-1596
+1597
 02:25:05,392 --> 02:25:13,440
 Yes, and you could rotate it by recursively
 swapping around the elements at each level.
 
-1597
+1598
 02:25:13,536 --> 02:25:18,728
 JW: Yes, in fact it's rather like what you
 were talking about earlier, a wrapping bitshift
 
-1598
+1599
 02:25:18,780 --> 02:25:22,568
 push numbers then take the one that's
 fallen off and put it back on at the beginning.
 
-1599
+1600
 02:25:22,560 --> 02:25:24,480
 PB: Yes, rotation of the four elements.
 
-1600
+1601
 02:25:24,480 --> 02:25:27,672
 JW: Which isn't all that intuitive to picture,
 
-1601
+1602
 02:25:27,976 --> 02:25:31,240
 but I believe when you put it
 all back together again it does work.
 
-1602
+1603
 02:25:31,240 --> 02:25:32,432
 PB: Yes.
 
-1603
+1604
 02:25:33,296 --> 02:25:38,200
 JW: So let's have one more look at our
 serialized version of my London skyline bitmap.
 
-1604
+1605
 02:25:38,304 --> 02:25:45,248
 PB: OK, in that case we want...
 something we made, which is serializer...
 
-1605
+1606
 02:25:45,264 --> 02:25:47,728
 So, if we run this...
 
-1606
-02:25:47,928 --> 02:25:50,936
-[Paul dictates as he writes] 
-
 1607
+02:25:47,928 --> 02:25:50,936
+[Paul dictates as he writes]
+
+1608
 02:25:59,352 --> 02:26:01,512
 JW: There it is... glorious.
 
-1608
+1609
 02:26:02,128 --> 02:26:04,616
 PB: And if I shrink the full size down a bit...
 
-1609
+1610
 02:26:05,100 --> 02:26:07,264
 It's still not too bad, there we go.
 
-1610
+1611
 02:26:07,290 --> 02:26:08,464
 JW: Yes, that's good.
 
-1611
+1612
 02:26:10,792 --> 02:26:12,464
 Right cool.
 
-1612
+1613
 02:26:12,460 --> 02:26:14,072
 PB: Well thank you very much.
 
