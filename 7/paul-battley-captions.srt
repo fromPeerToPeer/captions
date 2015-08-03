@@ -2688,7 +2688,7 @@ I'm going to say something like:
 
 631
 00:55:05,944 --> 00:55:09,408
-expect result.split.
+expect(result.split)
 
 632
 00:55:09,456 --> 00:55:12,464
