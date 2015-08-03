@@ -2856,7 +2856,7 @@ So what shall we do...
 
 670
 00:58:53,016 --> 00:58:58,896
-Other, and we'll just say set.rows equals other.rows.
+other, and we'll just say self.rows == other.rows.
 
 671
 00:58:58,890 --> 00:59:01,872
