@@ -2397,7 +2397,7 @@ going to have to redefine the subject in here)
 
 564
 00:48:52,544 --> 00:48:58,984
-Subject is going to be described class.new,
+Subject is going to be described_class.new,
 
 565
 00:48:59,112 --> 00:49:04,896
