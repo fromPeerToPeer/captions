@@ -2409,7 +2409,8 @@ and then this one, don't need any of that.
 
 567
 00:49:09,192 --> 00:49:12,904
-And I should say expect split to equal subject.
+And I should say expect(subject.split).to
+eq(subject).
 
 568
 00:49:12,900 --> 00:49:15,800
