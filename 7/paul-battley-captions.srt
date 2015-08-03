@@ -2459,7 +2459,7 @@ well, I don't think I need those again.
 
 578
 00:50:08,776 --> 00:50:10,928
-Def divisible...
+def divisible...
 
 579
 00:50:12,016 --> 00:50:16,888
