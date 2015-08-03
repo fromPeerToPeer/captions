@@ -2788,7 +2788,7 @@ done wrong isn't it, that actually split.
 654
 00:57:15,512 --> 00:57:19,488
 It should actually wrap
-these things in a new quadrant.
+these things in a new QuadNode.
 
 655
 00:57:19,480 --> 00:57:22,464
