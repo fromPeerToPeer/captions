@@ -2797,7 +2797,7 @@ these things in a new QuadNode.
 656
 00:57:26,300 --> 00:57:34,976
 So that will give me rows, which are those,
-and it's like sub.class.new with those rows.
+and it's like self.class.new with those rows.
 
 657
 00:57:37,880 --> 00:57:49,120
