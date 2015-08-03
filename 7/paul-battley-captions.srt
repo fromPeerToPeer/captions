@@ -2819,7 +2819,7 @@ So that particular one...
 661
 00:58:06,096 --> 00:58:11,816
 I want to make sure that all 4 are
-packed quadrants, which I can do.
+packed QuadNodes, which I can do.
 
 662
 00:58:15,200 --> 00:58:18,528
