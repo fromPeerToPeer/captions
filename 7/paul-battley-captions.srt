@@ -2619,7 +2619,8 @@ it should return the value.
 
 615
 00:53:44,840 --> 00:53:47,432
-JW: Is the value not in an array display?
+JW: Just the value, not in an array, just
+the value?
 
 616
 00:53:47,430 --> 00:53:50,416
