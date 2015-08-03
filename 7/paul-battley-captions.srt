@@ -2383,7 +2383,7 @@ And I'm going to say that then...
 
 561
 00:48:33,520 --> 00:48:39,688
-it should return itself split.
+it should return itself for split.
 
 562
 00:48:40,376 --> 00:48:45,496
