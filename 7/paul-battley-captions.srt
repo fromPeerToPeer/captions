@@ -2467,7 +2467,8 @@ And that should be height is greater than 2,
 
 580
 00:50:17,568 --> 00:50:24,128
-and equal to 2, and width is greater than equals 2.
+or equal to 2, and width is greater than
+or equal to 2.
 
 581
 00:50:26,552 --> 00:50:31,368
