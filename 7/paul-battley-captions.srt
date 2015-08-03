@@ -2697,7 +2697,7 @@ expect(result.split)
 633
 00:55:14,384 --> 00:55:17,640
 I think it should have length
-for, that's the first thing I...
+4, that's the first thing I...
 
 634
 00:55:17,640 --> 00:55:20,632
