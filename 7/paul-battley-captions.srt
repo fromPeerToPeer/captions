@@ -2810,7 +2810,7 @@ Which means of course, that this will be pending.
 659
 00:57:53,568 --> 00:58:02,128
 So now those are failing, because
-it's not giving me quadrants.
+it's not giving me QuadNodes.
 
 660
 00:58:02,424 --> 00:58:05,296
