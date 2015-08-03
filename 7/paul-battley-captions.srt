@@ -2299,7 +2299,7 @@ So anti-clockwise from northeast.
 541
 00:46:09,904 --> 00:46:25,032
 So in that case I should be
-able to say expect subject.split.to equal...
+able to say expect(subject.split).to eq...
 
 542
 00:46:26,920 --> 00:46:33,224
