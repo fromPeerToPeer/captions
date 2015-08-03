@@ -2880,8 +2880,9 @@ Given that I've got 4 things, I'm going to have...
 
 676
 00:59:22,810 --> 00:59:28,784
-So I have 16 cells altogether, and the first one
-I'll get 4 which has those 4 which has which has 1H
+So I have 16 cells altogether, so the
+first level I'll get 4 which has those 4
+which has one in each of them
 
 677
 00:59:28,790 --> 00:59:34,792
