@@ -2705,7 +2705,8 @@ I think it should have length
 
 635
 00:55:27,008 --> 00:55:30,592
-inaudible so let's implement that.
+That's because I haven't implemented it so
+let's implement that.
 
 636
 00:55:30,680 --> 00:55:33,696
