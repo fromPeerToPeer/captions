@@ -2823,7 +2823,7 @@ packed QuadNodes, which I can do.
 
 662
 00:58:15,200 --> 00:58:18,528
-Describe class... in fact I can
+described_class... in fact I can
 do that all the way down there.
 
 663
