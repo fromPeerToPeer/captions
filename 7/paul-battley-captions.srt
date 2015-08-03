@@ -2436,7 +2436,7 @@ day where I just mis-touched something
 
 573
 00:49:47,700 --> 00:49:51,200
-when I was viewing a file of
+when I was viewing a file in
 Vim and had a really weird error,
 
 574
