@@ -92,8 +92,8 @@ to do is pass the bitmap file.
 
 21
 00:01:22,950 --> 00:01:36,832
-If I recall correctly, that's a bunch of
-bytes, and huge bits of each byte is an image.
+If I recall correctly, that's a bunch of bytes, and
+it's a 1 bit bitmap so each bit of each byte is an image.
 
 22
 00:01:37,136 --> 00:01:42,176
@@ -102,7 +102,8 @@ I'm going to look it up on Wikipedia and find out.
 
 23
 00:01:42,170 --> 00:01:45,560
-Inaudible.
+Which I happen to have open from
+when we were testing out the scaling.
 
 24
 00:01:45,976 --> 00:01:51,064
@@ -111,7 +112,7 @@ So I'll look up the BMP file format.
 25
 00:01:53,810 --> 00:01:58,728
 Been through that, OK what
-have I got... Pixel array inaudible.
+have I got... Pixel array bitmap data.
 
 26
 00:01:58,790 --> 00:02:01,848
@@ -167,7 +168,7 @@ We can find that out with identify.
 
 38
 00:02:56,336 --> 00:02:59,328
-Inaudible.
+It's 256 x 256.
 
 39
 00:02:59,560 --> 00:03:09,432
@@ -176,7 +177,8 @@ we're less 8 bits of a pixel... so 8 pixels.
 
 40
 00:03:09,712 --> 00:03:16,240
-Sorry pixels per byte, so inaudible so 856 sounds just about right.
+Sorry pixels per byte, so divided
+by 8, so 8256 sounds just about right.
 
 41
 00:03:17,456 --> 00:03:19,128
@@ -203,11 +205,11 @@ maybe hashes and spaces on screen.
 
 46
 00:03:45,070 --> 00:03:47,608
-That should give us an idea of whether its working.
+That should give us an idea of whether it's working.
 
 47
 00:03:47,600 --> 00:03:51,000
-Inaudible and a bit wierd, but we'll work it out.
+It may wrap and be a bit weird, but we'll work it out.
 
 48
 00:03:51,696 --> 00:03:58,768
@@ -228,22 +230,22 @@ ARGV first because I want to specify the encoding.
 
 52
 00:04:18,680 --> 00:04:23,832
-JW: So ARGF gives you the final pass
+JW: So ARGF gives you the final past
 into the command rather than inaudible
 
 53
 00:04:27,180 --> 00:04:32,504
-PB: Well it gives you both so you can either inaudible something or it will give you the first one.
+PB: Well it gives you both, so you can either
+write something or it will give you the first one.
 
 54
 00:04:33,000 --> 00:04:37,832
-Its very handy but I'm not
-sure how that would handle inaudible.
+It's very handy, but I'm not sure
+how that would handle character encoding.
 
 55
 00:04:38,080 --> 00:04:41,176
-I know that we need to be
-able to handle the inaudible.
+I know that we need to be able to handle the raw bytes.
 
 56
 00:04:41,180 --> 00:04:45,144
@@ -251,7 +253,7 @@ ARGV, I think it's...
 
 57
 00:04:45,140 --> 00:04:48,032
-Inaudible encoding...
+I think I can specify it like this.
 
 58
 00:04:48,030 --> 00:04:51,144
@@ -275,7 +277,7 @@ And then I can say "print how many bytes I have got".
 
 63
 00:05:13,984 --> 00:05:18,000
-Which should be something like 256, if that works.
+Which should be something like 8256, if that works.
 
 64
 00:05:18,560 --> 00:05:22,808
@@ -292,19 +294,19 @@ Quad trees...
 67
 00:05:32,808 --> 00:05:38,696
 Now if I say Ruby and print
-bnp and give it a style of bnp.
+bmp and give it a style of bmp.
 
 68
-00:05:39,840 --> 00:05:42,016
-Inaudible array to string.
+00:05:39,840 --> 00:05:42,264
+No implicit conversion from array to string.
 
 69
 00:05:42,856 --> 00:05:46,824
-ARGV [They both talk at once]
+And read ARGV first.
 
 70
 00:05:51,152 --> 00:05:55,408
-OK so I'm going to read inaudible, that seems right.
+OK so I'm going to read 8256, that seems right.
 
 71
 00:05:59,270 --> 00:06:01,456
@@ -313,7 +315,7 @@ I'm going to hard code the width and height.
 72
 00:06:01,470 --> 00:06:08,632
 So I'm going to say width
-equals 256 and height  equals 256
+equals 256 and height equals 256
 
 73
 00:06:08,630 --> 00:06:16,832
@@ -408,7 +410,7 @@ just unpack it into an array of bytes.
 
 95
 00:07:50,936 --> 00:07:53,904
-Inaudible again.
+I'll make that length again.
 
 96
 00:07:57,152 --> 00:07:59,720
@@ -519,13 +521,12 @@ So bytes.length minus image bytes.length.
 64 bytes.
 
 121
-00:10:14,264 --> 00:10:18,008
-That's good so let's see... inaudible.
+00:10:14,260 --> 00:10:18,784
+That's good so let's see...
 
 122
-00:10:18,848 --> 00:10:34,416
-So in fact... I could say header - bytes.take 64
-and then I could say image bytes.drop.
+00:10:18,840 --> 00:10:22,168
+So in fact, I could say... [Paul dictates what he writes]
 
 123
 00:10:34,456 --> 00:10:38,232
@@ -572,7 +573,7 @@ Then we should in fact...
 inaudible it's not going to do it.
 
 133
-00:11:28,170 --> 00:11:31,200
+00:11:28,304 --> 00:11:31,312
 [Silence]
 
 134
@@ -606,8 +607,8 @@ So for each of these I'm going to say...
 
 141
 00:12:14,830 --> 00:12:21,216
-I want to find the inaudible bit of it,
-but I don't know which way round they are do I?
+I want to find the 'i' bit of it, but I don't
+know which way round they are do I?
 
 142
 00:12:21,224 --> 00:12:23,176
@@ -654,7 +655,7 @@ so bitmask wants to be Ob1OOOOOOO.
 
 152
 00:13:09,656 --> 00:13:19,024
-Then my bit is just bitmask white shifted by i.
+Then my bit is just bitmask right shifted by i.
 
 153
 00:13:19,248 --> 00:13:23,816
@@ -680,7 +681,7 @@ And then right shift the whole thing by 8 bytes.
 158
 00:13:51,860 --> 00:13:56,128
 So my first one will be a
-right shift by nothing inaudible.
+right shift by nothing (no other way round.)
 
 159
 00:13:57,568 --> 00:14:02,136
@@ -689,7 +690,7 @@ by 8, which means it's the least significant.
 
 160
 00:14:02,672 --> 00:14:04,920
-It;s like program C isn't it? [Laughter]
+It's like program C isn't it? [Laughter]
 
 161
 00:14:04,920 --> 00:14:13,832
@@ -747,8 +748,8 @@ So have I got this right...
 
 174
 00:15:14,320 --> 00:15:18,040
-JW: We could just try printing the bits to begin with.
-PB: Yes.
+JW: We could just try printing
+the bits to begin with. PB: Yes.
 
 175
 00:15:18,040 --> 00:15:21,040
@@ -760,7 +761,8 @@ There's the zeros.
 
 177
 00:15:26,670 --> 00:15:31,176
-inaudible line banks which looks about right doesn't it?
+But I am getting line banks
+which looks about right doesn't it?
 
 178
 00:15:31,170 --> 00:15:35,200
@@ -773,17 +775,17 @@ characters I've got across actually but...
 
 180
 00:15:41,392 --> 00:15:46,040
-Yes, it looks about right for the length
-of the line. That seems inaudible.
+Yes, it looks about right for the
+length of the line. That seems OK.
 
 181
 00:15:48,880 --> 00:15:51,840
-How about instead of this, I just print out the byte?
-JW: Yes.
+How about instead of this,
+I just print out the byte? JW: Yes.
 
 182
 00:15:53,344 --> 00:15:59,912
-So I'll skip that and just say print byte.to S
+PB: So I'll skip that and just say print byte.to S
 
 183
 00:16:02,648 --> 00:16:05,376
@@ -819,8 +821,8 @@ The zero is still there but you get the idea.
 JW: There's an image in there somewhere.
 
 191
-00:16:33,010 --> 00:16:37,424
-PB: Yes, we can see something inaud and long, which is...
+00:16:32,776 --> 00:16:37,420
+PB: Yes, we can see there's something circular and something long.
 
 192
 00:16:37,456 --> 00:16:44,368
@@ -836,8 +838,8 @@ JW: Oh yes...
 
 195
 00:16:51,360 --> 00:16:55,888
-PB: I think inaud is the case with
-bnp which is upside down.
+PB: I think that is the case with bmp,
+that the image is upside down.
 
 196
 00:16:56,408 --> 00:17:02,808
@@ -880,7 +882,7 @@ the top so we would expect...
 
 205
 00:17:49,368 --> 00:17:52,056
-This also means our inaud as well.
+This also means our bits are inverted as well.
 
 206
 00:17:53,792 --> 00:17:56,928
@@ -962,29 +964,30 @@ in a method that we give a
 file and it gives us the bits.
 
 224
-00:19:49,790 --> 00:19:52,592
-[Paul thinks]
-
-225
 00:19:52,616 --> 00:19:55,680
 Yes, I think that would be good.
 
-226
+225
 00:19:57,904 --> 00:20:02,056
 If I had a bunch of small test images,
 I would write some tests for this,
 
+226
+00:20:02,050 --> 00:20:04,544
+but given the size of the image...
+
 227
-00:20:02,050 --> 00:20:09,744
-but given the size of the image... I don't know how easily if I can make a bnp inaud 
+00:20:04,720 --> 00:20:11,360
+And I don't know how easily if I can
+make a bmp of it, so I'm going to explore it.
 
 228
 00:20:11,360 --> 00:20:16,664
-inaud def read bmp.
+So now I'll say def read bmp.
 
 229
 00:20:17,760 --> 00:20:22,352
-And inaud file object.
+And I've got to give it a file object.
 
 230
 00:20:22,350 --> 00:20:25,696
@@ -1014,7 +1017,7 @@ Because it's got a header and other things,
 236
 00:20:46,000 --> 00:20:50,016
 I think it's best to keep it all
-together in the same class BMP which...
+together in the same class - BMP Image.
 
 237
 00:20:50,010 --> 00:20:53,096
@@ -1030,11 +1033,11 @@ And I can say def initialize.
 
 240
 00:21:02,520 --> 00:21:05,136
-inaud file some kind.
+With a file of some kind.
 
 241
 00:21:07,696 --> 00:21:14,968
-inaud, the interface below is going to be something like...
+The interface below is going to be something like...
 
 242
 00:21:15,504 --> 00:21:19,424
@@ -1071,7 +1074,7 @@ And I can say file.read.upack.
 
 250
 00:21:49,090 --> 00:21:54,952
-So now I'm going to put this in initialize 
+So now I'm going to put this in initialize.
 
 251
 00:21:55,112 --> 00:21:59,144
@@ -1104,8 +1107,7 @@ In fact, let's have width and height as...
 
 258
 00:22:28,056 --> 00:22:38,176
-inaud height, while we're here I'm just
-going to change width to width... yes yes yes.
+It's got width and height, and while we're here I'm just going to change width to width... yes, yes, yes.
 
 259
 00:22:38,928 --> 00:22:40,816
@@ -1118,7 +1120,7 @@ different word as the one I was intending to.
 
 261
 00:22:48,800 --> 00:22:52,584
-inaud
+I don't know how that works... Oh yes...
 
 262
 00:22:52,580 --> 00:22:55,640
@@ -1127,4 +1129,5748 @@ inaud
 263
 00:23:00,816 --> 00:23:02,952
 And this one...
+
+264
+00:23:04,880 --> 00:23:13,792
+Width height pixels in there, inaudible we can put this into a private method.
+
+265
+00:23:13,790 --> 00:23:16,744
+[Silence]
+
+266
+00:23:16,912 --> 00:23:26,344
+inaud and say private section and say def image bytes.
+
+267
+00:23:26,340 --> 00:23:29,392
+[Silence]
+
+268
+00:23:29,390 --> 00:23:36,080
+I will cache that and say image bytes inaudible.
+
+269
+00:23:36,600 --> 00:23:39,100
+And I'm going to say def header,
+and the reason I'm doing this
+
+270
+00:23:39,100 --> 00:23:43,672
+is because I know we want to write one
+out later, so it's helpful to keep the header.
+
+271
+00:23:43,712 --> 00:23:46,664
+[Silence]
+
+272
+00:23:47,704 --> 00:23:51,136
+Again I can say header...
+
+273
+00:23:52,808 --> 00:23:55,936
+bytes.take... that's got to be at bytes.
+
+274
+00:23:58,208 --> 00:24:01,936
+at bytes.length and image bytes.
+
+275
+00:24:04,192 --> 00:24:09,128
+So we've inaud bytes, OK.
+
+276
+00:24:11,970 --> 00:24:16,640
+Here we have image bytes available to us.
+
+277
+00:24:17,776 --> 00:24:20,376
+Bitmask can be moved up the top somewhere.
+
+278
+00:24:22,000 --> 00:24:25,736
+Or can it. It doesn't mutate it
+does it, doing a right shift? JW: No.
+
+279
+00:24:25,890 --> 00:24:28,856
+[Silence]
+
+280
+00:24:31,050 --> 00:24:37,928
+PB: So at the moment pixels is still doing
+that puts stuff, so for now I'm going to do
+
+281
+00:24:38,480 --> 00:24:41,510
+dot pixels, and see if I get the same sensible result.
+
+282
+00:24:41,510 --> 00:24:44,608
+[Silence]
+
+283
+00:24:48,144 --> 00:24:51,136
+inaud because I haven't given it the width and the height.
+
+284
+00:24:51,130 --> 00:24:54,128
+[Silence]
+
+285
+00:24:55,096 --> 00:24:59,872
+inaud
+
+286
+00:25:01,720 --> 00:25:05,264
+At a later stage, I could probably
+work out where to find those in the header,
+
+287
+00:25:05,260 --> 00:25:11,976
+and read them but that's not the
+most interesting thing we can do today.
+
+288
+00:25:13,280 --> 00:25:15,800
+OK, seems good.
+
+289
+00:25:16,056 --> 00:25:19,040
+inaud yes, that seems good.
+
+290
+00:25:20,992 --> 00:25:21,952
+OK...
+
+291
+00:25:21,992 --> 00:25:24,976
+[Silence]
+
+292
+00:25:32,016 --> 00:25:36,568
+I'll commit this before I change it slightly.
+
+293
+00:25:39,088 --> 00:25:43,848
+Make a BMPImage class, this
+is still a work in progress so...
+
+294
+00:25:44,088 --> 00:25:47,816
+I think everything will be a
+work in progress today actually.
+
+295
+00:25:48,360 --> 00:25:58,920
+So now I want to make this return, in fact
+what I think I want is an array of arrays of pixels.
+
+296
+00:25:59,400 --> 00:26:02,120
+I think that's the most sensible thing to do.
+
+297
+00:26:02,120 --> 00:26:09,104
+It might not be the most
+helpful thing later on, but for now...
+
+298
+00:26:09,160 --> 00:26:11,100
+Height I can map...
+
+299
+00:26:12,024 --> 00:26:16,680
+... because for each of those I'm going to say that.
+
+300
+00:26:16,680 --> 00:26:23,064
+I would like to do the inaud style of functional things with the braces.
+
+301
+00:26:23,104 --> 00:26:24,570
+Width over 8.
+
+302
+00:26:24,570 --> 00:26:29,816
+Now this one... I need to do
+something like a flat map I think.
+
+303
+00:26:30,320 --> 00:26:32,680
+Flat_map with x.
+
+304
+00:26:32,680 --> 00:26:35,696
+[Silence]
+
+305
+00:26:36,296 --> 00:26:41,048
+And then byte, this will be 8.times.map.
+
+306
+00:26:41,040 --> 00:26:44,080
+[Silence]
+
+307
+00:26:45,592 --> 00:26:51,896
+JW: So with flat map the arrays returned by
+the block will be concating together effectively?
+
+308
+00:26:52,080 --> 00:26:54,800
+PB: Yes, I think I can demonstrate actually.
+
+309
+00:26:54,800 --> 00:26:59,968
+It's the same as dot map and dot
+flatten... I don't know how deep it goes.
+
+310
+00:27:00,416 --> 00:27:03,912
+It inaud, but if I have say...
+
+311
+00:27:03,910 --> 00:27:06,920
+[Paul thinks]
+
+312
+00:27:06,920 --> 00:27:14,704
+Yes, let's say... 1,2,3,4, something like that.
+
+313
+00:27:15,424 --> 00:27:21,360
+If I did .map a.map
+
+314
+00:27:24,240 --> 00:27:27,672
+That should give me the same output so...
+
+315
+00:27:27,670 --> 00:27:31,512
+And then if I did .flatten... I would get that.
+
+316
+00:27:31,528 --> 00:27:36,320
+And I think if I replace this one
+with flat map, its the same as map.flatten.
+
+317
+00:27:36,840 --> 00:27:41,024
+So you see map.flatten in there, which gives me the same inaud
+
+318
+00:27:43,640 --> 00:27:46,520
+I don't know if it's any easier conceptually, but...
+
+319
+00:27:48,248 --> 00:27:54,400
+I don't need that and I don't need that,
+so I'm going to say bitmask and that gives me 0 or 1.
+
+320
+00:27:57,128 --> 00:27:59,296
+And I should be able to say puts....
+
+321
+00:27:59,290 --> 00:28:02,288
+[Paul thinks]
+
+322
+00:28:03,752 --> 00:28:06,680
+Or P, actually that should be an array of...
+
+323
+00:28:09,040 --> 00:28:12,408
+Yes, that should work... we'll see.
+
+324
+00:28:12,536 --> 00:28:14,776
+I think if take...
+
+325
+00:28:14,800 --> 00:28:17,968
+[Paul thinks]
+
+326
+00:28:18,704 --> 00:28:21,376
+It might be quite wide on the screen but...
+
+327
+00:28:21,370 --> 00:28:24,384
+[Silence]
+
+328
+00:28:28,496 --> 00:28:30,896
+No, that's not quite right is it, or is it?
+
+329
+00:28:30,890 --> 00:28:34,408
+JW: It might be that we just can't see because...
+
+330
+00:28:34,400 --> 00:28:36,920
+You could put and join them with a new line.
+
+331
+00:28:36,920 --> 00:28:38,512
+PB: Yes.
+
+332
+00:28:38,510 --> 00:28:41,520
+[Silence]
+
+333
+00:28:45,720 --> 00:28:48,030
+inaud
+
+334
+00:28:48,030 --> 00:28:51,072
+[Silence]
+
+335
+00:28:53,224 --> 00:28:56,992
+I'll split this up because it's
+a bit long for this small screen.
+
+336
+00:28:57,712 --> 00:29:00,504
+Image.pixels.each.
+
+337
+00:29:00,504 --> 00:29:02,500
+Do row.
+
+338
+00:29:03,120 --> 00:29:07,000
+Row.each.do pixel.
+
+339
+00:29:08,970 --> 00:29:12,128
+I'm already thinking that calling
+pixels was the wrong thing to do
+
+340
+00:29:12,136 --> 00:29:15,360
+but we'll have to inaud or something.
+
+341
+00:29:15,368 --> 00:29:17,360
+inaud
+
+342
+00:29:19,280 --> 00:29:21,072
+So I might do that.
+
+343
+00:29:21,840 --> 00:29:24,632
+Puts print.
+
+344
+00:29:25,624 --> 00:29:28,464
+Pixel and then puts.
+
+345
+00:29:31,432 --> 00:29:33,992
+Ideally this should give us the same thing.
+
+346
+00:29:35,144 --> 00:29:37,008
+Yes.
+
+347
+00:29:38,660 --> 00:29:42,544
+OK good, and I'm going to change
+that to rows, because having used it,
+
+348
+00:29:42,576 --> 00:29:45,896
+it feels like that's actually what I'm getting back.
+
+349
+00:29:45,890 --> 00:29:48,888
+[Silence]
+
+350
+00:29:57,944 --> 00:29:59,888
+I'm just going to run together just in case...
+
+351
+00:30:00,568 --> 00:30:02,848
+Yes, tha's working.
+
+352
+00:30:03,896 --> 00:30:07,288
+So I'll say that.
+
+353
+00:30:09,832 --> 00:30:12,816
+[Paul mumbles as he types]
+
+354
+00:30:15,768 --> 00:30:20,608
+BMPImage returns rows... OK.
+
+355
+00:30:23,736 --> 00:30:28,560
+I should probably have gone
+hunting for a bitmap image but never mind.
+
+356
+00:30:29,112 --> 00:30:30,328
+We can now move on.
+
+357
+00:30:30,320 --> 00:30:33,872
+[New chapter]
+
+358
+00:30:33,992 --> 00:30:39,848
+So now, what would be nice,
+is to have some kind of object.
+
+359
+00:30:40,056 --> 00:30:44,832
+which when given rows with some
+item in them takes each of the quadrants.
+
+360
+00:30:44,830 --> 00:30:49,624
+So inad writing that I think I can test quite
+easily, so I'm going to start doing things that way.
+
+361
+00:30:49,620 --> 00:30:50,944
+Perfect.
+
+362
+00:30:50,940 --> 00:30:52,968
+So I now need to...
+
+363
+00:30:52,960 --> 00:30:55,920
+I'm going to use rspec
+because I like the rspec runner.
+
+364
+00:30:55,920 --> 00:31:04,944
+So say vim Gemfile, source https.
+
+365
+00:31:05,376 --> 00:31:10,224
+I always think this should be built in but it's not.
+
+366
+00:31:10,616 --> 00:31:14,512
+And then gem rspec...
+that should give me something sensible.
+
+367
+00:31:14,952 --> 00:31:16,784
+And then I'll say bundle
+
+368
+00:31:16,780 --> 00:31:22,744
+[Silence]
+
+369
+00:31:26,600 --> 00:31:28,784
+Good.
+
+370
+00:31:30,472 --> 00:31:36,016
+Now I'm going to make a spec to actually live.
+
+371
+00:31:37,296 --> 00:31:44,304
+And I'll go back to here and say edit spec.
+
+372
+00:31:45,064 --> 00:31:51,272
+I'm going to call it, what shall I call it? Quad node.
+
+373
+00:31:51,500 --> 00:31:55,176
+That seems like a reasonable name
+and makes sense to me at the moment.
+
+374
+00:31:55,230 --> 00:31:58,232
+[Paul dictates what he types]
+
+375
+00:32:16,824 --> 00:32:19,192
+Is that right, somehow I feel...
+
+376
+00:32:19,744 --> 00:32:24,200
+It's the kind of thing I never write inaud, I just copy it off another file inaud
+
+377
+00:32:26,512 --> 00:32:30,384
+but let's say require rspec
+
+378
+00:32:30,424 --> 00:32:33,472
+[Silence]
+
+379
+00:32:36,152 --> 00:32:40,560
+Yes, that should fail... and it does,
+
+380
+00:32:42,096 --> 00:32:44,168
+because we don't have a quadnode.
+
+381
+00:32:44,216 --> 00:32:47,208
+[Silence]
+
+382
+00:32:49,610 --> 00:32:51,984
+Lib.quadenode.
+
+383
+00:32:52,952 --> 00:32:57,952
+And say class QuadNode.
+
+384
+00:33:00,960 --> 00:33:03,832
+And that should pass.
+
+385
+00:33:03,830 --> 00:33:06,608
+Good, there will probably be something else inaud.
+
+386
+00:33:08,104 --> 00:33:10,176
+I haven't required it yet.
+
+387
+00:33:10,170 --> 00:33:13,208
+[Silence]
+
+388
+00:33:15,872 --> 00:33:17,192
+Good, OK.
+
+389
+00:33:17,960 --> 00:33:26,504
+So I'm going to say, it should return it's rows.
+
+390
+00:33:26,536 --> 00:33:29,552
+[Silence]
+
+391
+00:33:30,808 --> 00:33:35,632
+I'm just going to say subject is going to be...
+
+392
+00:33:37,048 --> 00:33:39,456
+described class.new.
+
+393
+00:33:40,752 --> 00:33:45,752
+And I'm going to give it some
+simple rows so I can work with them later.
+
+394
+00:33:45,750 --> 00:33:48,784
+[Silence]
+
+395
+00:33:50,080 --> 00:33:52,896
+So I'm going to give it 4x4.
+
+396
+00:33:52,890 --> 00:33:57,008
+I'm just going to give them 1,2,3,4...
+
+397
+00:34:00,224 --> 00:34:02,784
+5,6,7,8.
+
+398
+00:34:03,936 --> 00:34:09,320
+I realise I should have put more spacing in... 9,10,11,12.
+
+399
+00:34:11,470 --> 00:34:13,456
+13,14.
+
+400
+00:34:14,696 --> 00:34:16,736
+15,16.
+
+401
+00:34:16,730 --> 00:34:19,720
+[Silence]
+
+402
+00:34:22,670 --> 00:34:23,504
+inaud
+
+403
+00:34:23,580 --> 00:34:26,608
+[Silence]
+
+404
+00:34:29,160 --> 00:34:31,208
+OK.
+
+405
+00:34:31,200 --> 00:34:34,216
+[Silence]
+
+406
+00:34:34,880 --> 00:34:41,312
+Now I should say subject.rows.
+
+407
+00:34:41,352 --> 00:34:44,384
+[Silence]
+
+408
+00:34:45,552 --> 00:34:49,088
+Expect rows to equal...
+
+409
+00:34:49,080 --> 00:34:52,088
+[Silence]
+
+410
+00:34:52,860 --> 00:34:55,328
+I'm going to copy and paste this.
+
+411
+00:34:55,320 --> 00:34:58,552
+I could present a constant
+but it's so much easier like this.
+
+412
+00:35:01,400 --> 00:35:03,336
+inaud
+
+413
+00:35:05,440 --> 00:35:08,408
+It's probably gone wrong
+because I haven't given it an initializer.
+
+414
+00:35:08,930 --> 00:35:11,928
+[Paul dictates what he writes]
+
+415
+00:35:17,664 --> 00:35:23,504
+And then I'll say... [Paul dictates what he writes]
+
+416
+00:35:25,230 --> 00:35:30,152
+And now from this... it works, so I just have a thing that inaud.
+
+417
+00:35:30,208 --> 00:35:32,824
+Now, the next thing we want is to take up quadrants.
+
+418
+00:35:33,280 --> 00:35:35,952
+JW: Shall we commit to keep
+this test bootstrap in place?
+
+419
+00:35:35,952 --> 00:35:37,950
+PB: Yes, that's a good idea.
+
+420
+00:35:39,464 --> 00:35:41,230
+OK...
+
+421
+00:35:41,230 --> 00:35:44,224
+[Silence]
+
+422
+00:35:50,432 --> 00:35:55,712
+And say implement a basic quadnode.
+
+423
+00:35:56,224 --> 00:35:58,320
+It shouldn't do anything but...
+
+424
+00:35:58,320 --> 00:36:01,360
+[Silence]
+
+425
+00:36:05,936 --> 00:36:10,864
+The next thing is to be able to
+take each quadrant out of it, so...
+
+426
+00:36:11,736 --> 00:36:16,000
+It should return the northwest quadrant.
+
+427
+00:36:16,000 --> 00:36:19,032
+[Silence]
+
+428
+00:36:19,030 --> 00:36:25,096
+JW: Actually, for reasons
+that may become clear later on,
+
+429
+00:36:26,656 --> 00:36:30,920
+let's read the quadrants in counter
+clockwise order, starting in the northeast.
+
+430
+00:36:31,120 --> 00:36:33,208
+PB: OK.
+
+431
+00:36:33,528 --> 00:36:36,488
+I was only going to expose
+it as a method called dot NW.
+
+432
+00:36:36,480 --> 00:36:37,968
+JW: OK.
+
+433
+00:36:38,032 --> 00:36:41,496
+PB: Which means we don't have to inaud.
+
+434
+00:36:43,110 --> 00:36:47,032
+Yes, we can pack them together if we
+want, so if we want to break it into quadrants,
+
+435
+00:36:47,072 --> 00:36:50,584
+which it sounds like what we will want to do.
+
+436
+00:36:51,656 --> 00:36:55,728
+OK, so this is going to be something very similar.
+
+437
+00:36:56,768 --> 00:37:01,968
+It's going to be something like
+expect subject.northwest to  equal.
+
+438
+00:37:04,984 --> 00:37:07,368
+Perhaps this should be 1,2...
+
+439
+00:37:10,010 --> 00:37:12,168
+and 5,6.
+
+440
+00:37:12,160 --> 00:37:15,184
+[Silence]
+
+441
+00:37:22,872 --> 00:37:25,272
+Yes, inaud.
+
+442
+00:37:25,270 --> 00:37:28,240
+[Silence]
+
+443
+00:37:28,288 --> 00:37:31,280
+[Paul thinks]
+
+444
+00:37:32,864 --> 00:37:35,344
+This one is very easy to implement.
+
+445
+00:37:37,670 --> 00:37:40,960
+What I  don't know yet is how
+many columns I have though.
+
+446
+00:37:42,160 --> 00:37:45,768
+So, maybe I'm going to let this one sit for a minute.
+
+447
+00:37:47,184 --> 00:37:50,080
+And say that it should return a number of columns.
+
+448
+00:37:50,080 --> 00:37:53,056
+It's going to assume that the...
+
+449
+00:37:54,208 --> 00:37:58,208
+In fact I'm going to get it to give me the number
+of rows and the number of columns, in here.
+
+450
+00:37:58,200 --> 00:38:04,288
+It should return the number of columns.
+
+451
+00:38:07,072 --> 00:38:11,256
+And say expect subjects dot...
+
+452
+00:38:11,304 --> 00:38:14,344
+[Paul thinks]
+
+453
+00:38:15,776 --> 00:38:19,424
+number of columns, column count, height, width maybe.
+
+454
+00:38:19,608 --> 00:38:21,368
+I think that would be sensible.
+
+455
+00:38:21,360 --> 00:38:24,360
+[Paul dictates what he writes]
+
+456
+00:38:27,120 --> 00:38:30,152
+[Silence]
+
+457
+00:38:30,816 --> 00:38:34,280
+It's probably not a brilliant
+test because they are both 4.
+
+458
+00:38:34,328 --> 00:38:37,544
+but I'm never going to know if... but...
+
+459
+00:38:40,040 --> 00:38:42,248
+Let's see.
+
+460
+00:38:43,000 --> 00:38:45,920
+Perhaps there's no width.
+
+461
+00:38:47,624 --> 00:38:52,328
+Width, and that can be just rows.first.length.
+
+462
+00:38:55,272 --> 00:39:01,304
+OK... I did the same for rows.
+
+463
+00:39:01,300 --> 00:39:04,288
+[Silence]
+
+464
+00:39:05,304 --> 00:39:08,060
+As I say I could have got this
+wrong and still got the same.
+
+465
+00:39:08,940 --> 00:39:13,840
+Same result so, I'm going to accept that for now.
+
+466
+00:39:14,592 --> 00:39:17,400
+JW: We can be reasonably confident.
+PB: Yes.
+
+467
+00:39:17,400 --> 00:39:20,416
+[Silence]
+
+468
+00:39:20,416 --> 00:39:22,410
+And that's just rows.length.
+
+469
+00:39:22,410 --> 00:39:25,400
+[Silence]
+
+470
+00:39:27,296 --> 00:39:30,248
+OK, so going back to my first quadrant...
+
+471
+00:39:32,040 --> 00:39:41,000
+I want to say that quadrant
+width equals width over 2.
+
+472
+00:39:42,144 --> 00:39:46,416
+Quadrant height equals height over 2.
+
+473
+00:39:46,410 --> 00:39:50,536
+We're conveniently seeing that
+everything is a nice power of two.
+
+474
+00:39:52,136 --> 00:39:56,688
+Which is why you've helpfully
+given me the 256 pixel image.
+
+475
+00:39:56,704 --> 00:40:00,060
+JW: Yes, that assumption
+is built into this challenge.
+
+476
+00:40:01,352 --> 00:40:04,208
+PB: I suppose if not we
+could scale the image first but...
+
+477
+00:40:05,944 --> 00:40:08,920
+Yes, so I've got quadrant width which is half width,
+
+478
+00:40:09,232 --> 00:40:14,912
+and then I want to say rows.take.
+
+479
+00:40:17,664 --> 00:40:19,872
+Quadrant height.
+
+480
+00:40:19,896 --> 00:40:22,904
+[Silence]
+
+481
+00:40:23,120 --> 00:40:29,304
+I wonder if for this test it might be
+sensible to give it another couple of rows.
+
+482
+00:40:29,512 --> 00:40:34,848
+Because just for things that are only
+doing one level deep, that does work.
+
+483
+00:40:35,152 --> 00:40:36,992
+Or is that daft?
+
+484
+00:40:36,990 --> 00:40:39,952
+[Paul thinks]
+
+485
+00:40:42,832 --> 00:40:44,744
+JW: I have to say I don't see the need.
+
+486
+00:40:44,740 --> 00:40:47,920
+I think probably [they both talk at once]
+
+487
+00:40:48,064 --> 00:40:51,648
+PB: I'm just worried I might
+be confusing height and width.
+
+488
+00:40:52,240 --> 00:40:58,968
+So take height and map and I get a row and firstly I can say...
+
+489
+00:40:58,960 --> 00:41:01,912
+[Paul dictates what he types]
+
+490
+00:41:06,360 --> 00:41:08,384
+So I think that should do it.
+
+491
+00:41:09,400 --> 00:41:14,104
+inaud full, which are going to be quite similar.
+
+492
+00:41:14,152 --> 00:41:17,152
+[Paul thinks]
+
+493
+00:41:19,040 --> 00:41:22,488
+I'm going to write the test
+for all of them first and then...
+
+494
+00:41:23,840 --> 00:41:26,248
+say which are northwest and northeast.
+
+495
+00:41:28,976 --> 00:41:31,816
+And that's 1,2,3.
+
+496
+00:41:31,810 --> 00:41:36,416
+Helpfully, because I know what these numbers are,
+I don't have to go check right at the top of the page.
+
+497
+00:41:36,424 --> 00:41:39,530
+3,4,5,6,7,8.
+
+498
+00:41:39,530 --> 00:41:42,536
+[Silence]
+
+499
+00:41:44,496 --> 00:41:46,864
+I'll write these tests as well.
+
+500
+00:41:48,232 --> 00:41:50,616
+I'll make that one southwest.
+
+501
+00:41:52,584 --> 00:41:57,152
+That one should be 1 to 10.
+
+502
+00:41:57,150 --> 00:42:00,136
+[Silence]
+
+503
+00:42:03,216 --> 00:42:09,680
+And 11, 12 both southwest.
+
+504
+00:42:12,720 --> 00:42:14,808
+And the last one is southeast.
+
+505
+00:42:14,856 --> 00:42:17,856
+[Silence]
+
+506
+00:42:19,680 --> 00:42:24,488
+That's not going to be 11, 12 it's going to be 13,14.
+
+507
+00:42:27,256 --> 00:42:30,352
+That one is 11,12...
+
+508
+00:42:30,904 --> 00:42:33,432
+and 15 and 16.
+
+509
+00:42:35,710 --> 00:42:43,384
+I'll check that's right so 9,10,13,14,11,12,15,16,9,12... yes.
+
+510
+00:42:47,624 --> 00:42:51,648
+So implement northeast... doesn't work.
+
+511
+00:42:51,640 --> 00:42:54,608
+[Silence]
+
+512
+00:42:56,288 --> 00:43:00,088
+I can pull these out into methods.
+
+513
+00:43:00,080 --> 00:43:03,072
+[Silence]
+
+514
+00:43:25,560 --> 00:43:30,168
+This one I would say rows dot...
+
+515
+00:43:30,160 --> 00:43:34,360
+Northwest is there, northeast
+I still want the first 2 rows,
+
+516
+00:43:35,608 --> 00:43:40,310
+because north... but with this one a inaud
+
+517
+00:43:40,310 --> 00:43:43,296
+[Silence]
+
+518
+00:43:43,856 --> 00:43:45,400
+JW: Yes, nice.
+
+519
+00:43:45,408 --> 00:43:47,936
+PB: I can do the same for
+these hopefully in short order,
+
+520
+00:43:47,936 --> 00:43:53,408
+So that should say southwest and southeast.
+
+521
+00:43:55,304 --> 00:43:59,536
+I should have copied and pasted
+these entirely because it's a case of...
+
+522
+00:43:59,530 --> 00:44:02,544
+[Silence]
+
+523
+00:44:10,760 --> 00:44:15,224
+So we have our 4 quadrants... I'm going to check those in.
+
+524
+00:44:15,220 --> 00:44:18,248
+[Silence]
+
+525
+00:44:30,020 --> 00:44:33,520
+JW: Right so we've got a quad node class which...
+
+526
+00:44:33,540 --> 00:44:38,152
+given the input pixels can give you each inaud.
+
+527
+00:44:38,210 --> 00:44:44,632
+PB: Yes, it is successively splitting
+each of these into sub-quadrants.
+
+528
+00:44:45,312 --> 00:44:53,904
+A nice thing to do next might
+be some kind of recursive split.
+
+529
+00:44:53,900 --> 00:44:56,552
+Now, you mentioned a particular order.
+
+530
+00:44:56,552 --> 00:44:58,550
+JW: Yes.
+
+531
+00:44:59,040 --> 00:45:05,576
+PB: So I'm going to write a split function
+(I should have put a space in there)...
+
+532
+00:45:05,816 --> 00:45:09,136
+I'm going to write a split function which...
+
+533
+00:45:11,896 --> 00:45:18,232
+Let's see how can I do this.. I want to be able
+to equate things when I get them out in the end.
+
+534
+00:45:20,048 --> 00:45:24,336
+So it should split...
+
+535
+00:45:24,330 --> 00:45:27,328
+[Paul thinks]
+
+536
+00:45:30,032 --> 00:45:32,272
+Let's do one level splitting first.
+
+537
+00:45:33,130 --> 00:45:46,688
+It should split into the four quadrants in order.
+
+538
+00:45:47,360 --> 00:45:52,744
+And we know that is
+anti-clockwise from the northeast.
+
+539
+00:45:54,480 --> 00:45:57,120
+So anti-clockwise from northeast.
+
+540
+00:45:57,120 --> 00:46:00,152
+[Silence]
+
+541
+00:46:09,904 --> 00:46:25,032
+So in that case I should be
+able to say expectsubject.split.to equal...
+
+542
+00:46:26,920 --> 00:46:33,224
+In fact I should be able to say that I get
+an array of the four things that are already there,
+
+543
+00:46:33,220 --> 00:46:35,624
+assuming those to be equal.
+
+544
+00:46:35,620 --> 00:46:40,608
+Then I'm going to say subject dot...
+
+545
+00:46:42,360 --> 00:46:45,480
+(I'll put this onto a new line because inaud)
+
+546
+00:46:46,800 --> 00:47:00,792
+[Paul dictates what he writes]
+
+547
+00:47:04,904 --> 00:47:07,320
+JW: I see a strait ?Q in there, where you want a W.
+
+548
+00:47:07,320 --> 00:47:11,432
+PB: Yes, [Laughter]
+
+549
+00:47:14,072 --> 00:47:17,432
+It should fail because there is no split.
+
+550
+00:47:17,472 --> 00:47:20,464
+[Silence]
+
+551
+00:47:24,288 --> 00:47:33,256
+And then I'm going to say northeast,
+northwest, southwest, southeast.
+
+552
+00:47:33,250 --> 00:47:36,272
+[Silence]
+
+553
+00:47:39,272 --> 00:47:43,792
+OK great, that works, but it's not recursive.
+
+554
+00:47:44,856 --> 00:47:47,856
+[Paul thinks]
+
+555
+00:47:50,848 --> 00:47:55,112
+I'm going to get additional thing which is...
+
+556
+00:47:55,760 --> 00:47:58,888
+I'm going to put all of these into...
+
+557
+00:47:58,880 --> 00:48:01,888
+[Paul thinks]
+
+558
+00:48:02,820 --> 00:48:21,904
+Actually I may as well do a special case and
+say context when it cannot be sub-divided...
+
+559
+00:48:22,016 --> 00:48:25,048
+[Silence]
+
+560
+00:48:29,688 --> 00:48:33,520
+And I'm going to say that then...
+
+561
+00:48:33,520 --> 00:48:39,688
+it should return itself split.
+
+562
+00:48:40,376 --> 00:48:45,496
+I'm not sure if that is the most
+sensible thing to do but I'll do it for now.
+
+563
+00:48:45,912 --> 00:48:52,304
+I'll just take this lot and say that (I'm
+going to have to redefine the subject in here)
+
+564
+00:48:52,544 --> 00:48:58,984
+Subject is going to be described class.new,
+
+565
+00:48:59,112 --> 00:49:04,896
+and I'm going to give it just one row to work on.
+
+566
+00:49:05,648 --> 00:49:08,760
+and then this one, don't need any of that.
+
+567
+00:49:09,192 --> 00:49:12,904
+And I should say expect split to equal subject.
+
+568
+00:49:12,900 --> 00:49:15,800
+[Silence]
+
+569
+00:49:17,320 --> 00:49:21,728
+And it's not, it's giving me empty
+things, but it's interesting what it has done.
+
+570
+00:49:23,360 --> 00:49:34,056
+Yes, so I can say if divisible that...
+
+571
+00:49:36,216 --> 00:49:41,520
+inaud for you.
+
+572
+00:49:41,520 --> 00:49:47,704
+I had an interesting bug the other
+day where I just mis-touched something
+
+573
+00:49:47,700 --> 00:49:51,200
+when I was viewing a file of
+Vim and had a really weird error,
+
+574
+00:49:51,200 --> 00:49:55,528
+and I found out I had replaced
+something with a completely different word.
+
+575
+00:49:55,592 --> 00:49:58,608
+[Silence]
+
+576
+00:49:59,776 --> 00:50:02,176
+inaud
+
+577
+00:50:03,328 --> 00:50:07,632
+I'll put these into a private section as
+well, I don't think I need those again.
+
+578
+00:50:08,776 --> 00:50:10,928
+Def divisible...
+
+579
+00:50:12,016 --> 00:50:16,888
+And that should be height is greater than 2,
+
+580
+00:50:17,568 --> 00:50:24,128
+and equal to 2, and width is greater than equals 2.
+
+581
+00:50:26,552 --> 00:50:31,368
+Because our things are all square,
+we don't need to check that much but...
+
+582
+00:50:33,960 --> 00:50:41,380
+So the next thing I think I want is some
+kind of recursive split, but let's just commit first.
+
+583
+00:50:41,380 --> 00:50:47,360
+[Silence]
+
+584
+00:50:58,224 --> 00:51:03,096
+I don't really like the name split
+anymore so I might change that.
+
+585
+00:51:04,304 --> 00:51:08,600
+I might change it to sub-divides.
+
+586
+00:51:08,600 --> 00:51:11,640
+[Silence]
+
+587
+00:51:14,744 --> 00:51:20,800
+Yes, in fact... oh so we've got split there, that's fine
+
+588
+00:51:21,360 --> 00:51:24,440
+So then I want to do it recursively.
+
+589
+00:51:25,456 --> 00:51:32,032
+So I'm going to add... it should split recursively.
+
+590
+00:51:32,030 --> 00:51:35,056
+[Silence]
+
+591
+00:51:37,488 --> 00:51:40,336
+So what I should end up with...
+
+592
+00:51:42,400 --> 00:51:47,776
+rather than specifying all the data for
+this, I'm goiung to just look at a bit of the data.
+
+593
+00:51:49,192 --> 00:51:53,048
+So I know it's going to have 4 things inside it.
+
+594
+00:51:53,520 --> 00:51:59,072
+And each of that is going to have 4 things inside
+it, and each of those will have one thing inside it.
+
+595
+00:52:01,248 --> 00:52:03,984
+So we'll say...
+
+596
+00:52:03,980 --> 00:52:06,976
+[Paul thinks]
+
+597
+00:52:09,704 --> 00:52:16,120
+Result equals inaud
+
+598
+00:52:16,120 --> 00:52:19,120
+[Silence]
+
+599
+00:52:19,728 --> 00:52:22,016
+Split recursive.
+
+600
+00:52:22,010 --> 00:52:25,032
+[Silence]
+
+601
+00:52:25,504 --> 00:52:33,592
+I'm going to say expect (what do I get out of this)...
+
+602
+00:52:33,590 --> 00:52:36,592
+[Paul thinks]
+
+603
+00:52:44,048 --> 00:52:46,872
+I actually just get an array out of this don't I?
+
+604
+00:52:48,208 --> 00:52:52,760
+I think that's alright, but I'm wondering
+if I would rather have an object out of it.
+
+605
+00:52:54,560 --> 00:52:57,408
+I'll go with array aqnd see how that works.
+
+606
+00:52:57,400 --> 00:53:05,512
+JW: There is a slight suggestion that northeast
+
+orthwest could return another quadnode.
+
+607
+00:53:06,808 --> 00:53:09,160
+PB: Yes.
+
+608
+00:53:12,424 --> 00:53:16,064
+Of course, because inaud
+
+609
+00:53:17,408 --> 00:53:22,024
+So in fact split... hmm.
+
+610
+00:53:22,020 --> 00:53:25,016
+[Paul thinks]
+
+611
+00:53:26,592 --> 00:53:28,832
+Yes, split at one level gives you those,
+
+612
+00:53:28,830 --> 00:53:33,856
+once I get down to the bottom level I'm
+going to have nodes that are just one item,
+
+613
+00:53:33,880 --> 00:53:38,640
+so maybe I should put that to
+one side for the moment and...
+
+614
+00:53:41,760 --> 00:53:44,776
+instead of returning itself
+it should return the value.
+
+615
+00:53:44,840 --> 00:53:47,432
+JW: Is the value not in an array display?
+
+616
+00:53:47,430 --> 00:53:50,416
+[Paul thinks]
+
+617
+00:53:52,656 --> 00:53:55,432
+PB: That's a good question.
+
+618
+00:53:58,360 --> 00:54:03,400
+Maybe an array, it's going to
+be easy enough to change but...
+
+619
+00:54:03,400 --> 00:54:06,432
+[Paul thinks]
+
+620
+00:54:10,280 --> 00:54:14,816
+Yes, I would expect... let's try that.
+
+621
+00:54:17,650 --> 00:54:21,632
+An array of...
+
+622
+00:54:21,688 --> 00:54:24,696
+[Paul thinks]
+
+623
+00:54:26,184 --> 00:54:31,632
+Yes, so it always returns an array until it gets
+to the bottom and there are no more arrays.
+
+624
+00:54:32,624 --> 00:54:34,992
+That is a leaf node.
+
+625
+00:54:36,120 --> 00:54:39,560
+Yes, because that will work
+recursively quite nicely, won't it?
+
+626
+00:54:39,616 --> 00:54:42,688
+[Paul thinks]
+
+627
+00:54:48,848 --> 00:54:50,792
+Yes, I've been confusing myself there.
+
+628
+00:54:51,096 --> 00:54:55,280
+I'm going to leave this for now and go back to this.
+
+629
+00:54:55,344 --> 00:54:59,576
+JW: Perhaps when we come back to make use of this...
+
+630
+00:54:59,880 --> 00:55:04,904
+PB: So it's split recursively, so
+I'm going to say something like:
+
+631
+00:55:05,944 --> 00:55:09,408
+expect result.split.
+
+632
+00:55:09,456 --> 00:55:12,464
+[Paul thinks]
+
+633
+00:55:14,384 --> 00:55:17,640
+I think it should have length
+for, that's the first thing I...
+
+634
+00:55:17,640 --> 00:55:20,632
+[Silence]
+
+635
+00:55:27,008 --> 00:55:30,592
+inaud so let's implement that.
+
+636
+00:55:30,680 --> 00:55:33,696
+[Silence]
+
+637
+00:55:35,520 --> 00:55:38,224
+And I'm just going to make that be split, for now.
+
+638
+00:55:38,280 --> 00:55:41,288
+[Silence]
+
+639
+00:55:52,448 --> 00:55:54,440
+The first one...
+
+640
+00:55:54,512 --> 00:55:57,528
+[Silence]
+
+641
+00:55:59,576 --> 00:56:01,624
+which should also be 4 long.
+
+642
+00:56:02,400 --> 00:56:08,456
+At this point I'm thinking that I should
+actually be returning some other kind of object,
+
+643
+00:56:08,450 --> 00:56:13,456
+but as long as it returns the length that will be OK.
+
+644
+00:56:16,160 --> 00:56:20,704
+So that fails because it's got
+something else. It's got a list.
+
+645
+00:56:23,944 --> 00:56:25,656
+What I've got here...
+
+646
+00:56:27,640 --> 00:56:31,160
+I suppose I get northeast,
+northwest, southwest, southeast.
+
+647
+00:56:31,856 --> 00:56:34,128
+So split recursive should be...
+
+648
+00:56:34,120 --> 00:56:40,168
+[Paul thinks]
+
+649
+00:56:51,032 --> 00:56:53,272
+Node...
+
+650
+00:56:53,312 --> 00:56:56,336
+[Silence]
+
+651
+00:56:57,512 --> 00:57:01,816
+This will get stuck in an endless loop because...
+
+652
+00:57:02,210 --> 00:57:06,704
+JW: Am I right in thinking that it won't
+be nodes as well, it will be regular arrays?
+
+653
+00:57:06,704 --> 00:57:12,192
+PB: That's right, so that's what I've
+done wrong isn't it, that actually split.
+
+654
+00:57:15,512 --> 00:57:19,488
+It should actually wrap
+these things in a new quadrant.
+
+655
+00:57:19,480 --> 00:57:22,464
+[Silence]
+
+656
+00:57:26,300 --> 00:57:34,976
+So that will give me rows, which are those,
+and it's like sub.class.new with those rows.
+
+657
+00:57:37,880 --> 00:57:49,120
+Which means of course, that this will be pending.
+
+658
+00:57:49,184 --> 00:57:52,144
+[Silence]
+
+659
+00:57:53,568 --> 00:58:02,128
+So now those are failing, because
+it's not giving me quadrants.
+
+660
+00:58:02,424 --> 00:58:05,296
+So that particular one...
+
+661
+00:58:06,096 --> 00:58:11,816
+I want to make sure that all 4 are
+packed quadrants, which I can do.
+
+662
+00:58:15,200 --> 00:58:18,528
+Describe class... in fact I can
+do that all the way down there.
+
+663
+00:58:20,600 --> 00:58:23,288
+[Paul dictates as he types]
+
+664
+00:58:23,280 --> 00:58:29,288
+[Silence]
+
+665
+00:58:32,920 --> 00:58:35,310
+inaud better.
+
+666
+00:58:36,488 --> 00:58:39,768
+OK, so something else has happened.
+
+667
+00:58:42,008 --> 00:58:43,736
+JW: It doesn't know how to compare...
+
+668
+00:58:43,730 --> 00:58:46,456
+PB: It doesn't, so let's give it that.
+
+669
+00:58:48,352 --> 00:58:50,216
+So what shall we do...
+
+670
+00:58:53,016 --> 00:58:58,896
+Other, and we'll just say set.rows equals other.rows.
+
+671
+00:58:58,890 --> 00:59:01,872
+[Silence]
+
+672
+00:59:05,112 --> 00:59:07,192
+Yes, cool.
+
+673
+00:59:09,144 --> 00:59:13,192
+So now I can go down... and this one I expect to...
+
+674
+00:59:13,240 --> 00:59:16,232
+[Silence]
+
+675
+00:59:18,416 --> 00:59:21,400
+Given that I've got 4 things, I'm going to have...
+
+676
+00:59:22,810 --> 00:59:28,784
+So I have 16 cells altogether, and the first one
+I'll get 4 which has those 4 which has which has 1H
+
+677
+00:59:28,790 --> 00:59:34,792
+So the first one should have length
+4, the second level down should have 4,
+
+678
+00:59:34,800 --> 00:59:39,096
+the third level down I think should have length 1,
+
+679
+00:59:43,600 --> 00:59:46,752
+Which I think means that this should be that.
+
+680
+00:59:49,368 --> 00:59:51,672
+But let's leave that test for now.
+
+681
+00:59:51,670 --> 00:59:54,664
+[Silence]
+
+682
+00:59:57,504 --> 01:00:04,864
+JW: I think that in that expectation, the third one...
+
+683
+01:00:07,600 --> 01:00:09,688
+Cool.
+
+684
+01:00:14,280 --> 01:00:17,584
+PB: There we need something
+representing the leaf node.
+
+685
+01:00:24,792 --> 01:00:31,192
+Maybe that's fine, maybe simply having
+one element in it is... that leaf node.
+
+686
+01:00:31,816 --> 01:00:34,952
+So what I might say is...
+
+687
+01:00:35,200 --> 01:00:37,168
+inaud
+
+688
+01:00:37,224 --> 01:00:40,232
+[Paul thinks]
+
+689
+01:00:41,550 --> 01:00:46,096
+In this case I'm going to say it's a leaf node.
+
+690
+01:00:46,144 --> 01:00:49,144
+[Silence]
+
+691
+01:00:51,784 --> 01:00:58,720
+Then I'm going to say... it can't
+be sub-divided, it is a leaf node.
+
+692
+01:00:58,720 --> 01:01:01,680
+[Silence]
+
+693
+01:01:04,712 --> 01:01:06,848
+I could just say expect...
+
+694
+01:01:06,840 --> 01:01:11,416
+I know there's some syntax that would let
+me do that even shorter, but I can't remember it.
+
+695
+01:01:13,640 --> 01:01:17,872
+[Paul dictates as he types]
+
+696
+01:01:33,960 --> 01:01:35,320
+JW: I think you already have a...
+
+697
+01:01:35,320 --> 01:01:38,424
+PB: Yes, we have divisible,
+which is the opposite to leaf.
+
+698
+01:01:41,232 --> 01:01:43,928
+So it's a leaf if it's not divisible.
+
+699
+01:01:43,920 --> 01:01:46,864
+[Silence]
+
+700
+01:01:52,296 --> 01:01:55,320
+So that's good... and then this one...
+
+701
+01:01:57,240 --> 01:01:59,192
+yes, that's also good.
+
+702
+01:02:00,232 --> 01:02:02,264
+Everything's fine.
+
+703
+01:02:02,260 --> 01:02:05,256
+[Silence]
+
+704
+01:02:05,976 --> 01:02:08,952
+That feels a bit happier so I'll check those in.
+
+705
+01:02:08,950 --> 01:02:11,952
+[Silence]
+
+706
+01:02:22,616 --> 01:02:25,600
+[Paul dictates what he writes]
+
+707
+01:02:26,760 --> 01:02:32,688
+inaud
+
+708
+01:02:32,760 --> 01:02:36,096
+[New Chapter]
+
+709
+01:02:36,472 --> 01:02:38,744
+PB: The next thing was that...
+
+710
+01:02:38,740 --> 01:02:43,008
+When a quadrant consists of a single color,
+it may be considered a terminal node.
+
+711
+01:02:43,768 --> 01:02:49,928
+So although we have this leaf method,
+which is the point at which we stop.
+
+712
+01:02:53,270 --> 01:02:58,936
+We want to add some additional logic to that
+which is when a quadrant consists of a single color.
+
+713
+01:02:58,944 --> 01:03:03,070
+So what I want to do now... [Paul thinks]
+
+714
+01:03:03,070 --> 01:03:08,216
+is... that's my logic, but I don't
+want to put that in the node
+
+715
+01:03:08,392 --> 01:03:10,912
+because inaud about the color.
+
+716
+01:03:10,936 --> 01:03:14,536
+So this should split recursively.
+
+717
+01:03:17,472 --> 01:03:20,472
+I'm going to need a different set of data for this.
+
+718
+01:03:22,504 --> 01:03:25,960
+So I'm going to say...
+
+719
+01:03:26,600 --> 01:03:33,328
+[Paul dictates what he types]
+
+720
+01:03:36,168 --> 01:03:43,272
+And I'm going to make something that
+I can easily understand, so I'm going to say...
+
+721
+01:03:44,270 --> 01:03:47,168
+...this quadrant is all one.
+
+722
+01:03:48,160 --> 01:03:50,840
+Oh, it's not actually all 1.
+
+723
+01:03:52,300 --> 01:03:59,376
+I'm going to say that this quadrant is all 2.
+
+724
+01:03:59,500 --> 01:04:02,520
+[Silence]
+
+725
+01:04:07,152 --> 01:04:10,496
+And I'm going to leave the rest of them different.
+
+726
+01:04:10,640 --> 01:04:13,688
+[Paul thinks]
+
+727
+01:04:15,176 --> 01:04:20,448
+I'm going to say it should split recursively...
+
+728
+01:04:20,440 --> 01:04:23,480
+[Silence]
+
+729
+01:04:26,160 --> 01:04:29,352
+based upon supplied predicate.
+
+730
+01:04:29,350 --> 01:04:32,344
+[Silence]
+
+731
+01:04:33,416 --> 01:04:38,312
+So in this case, if I give... that needs to be subject.
+
+732
+01:04:40,456 --> 01:04:43,856
+I'm going to try it with a
+couple of different predicates.
+
+733
+01:04:43,850 --> 01:04:46,856
+[Silence]
+
+734
+01:04:48,608 --> 01:04:50,568
+And I'm going to say...
+
+735
+01:04:50,752 --> 01:04:53,736
+[Paul thinks]
+
+736
+01:04:55,560 --> 01:04:59,944
+Firstly, I'm going to break this down into cells.
+
+737
+01:04:59,940 --> 01:05:06,224
+[Paul talks to himself]
+
+738
+01:05:06,220 --> 01:05:09,232
+[Paul thinks]
+
+739
+01:05:09,688 --> 01:05:14,040
+Olander, which is going to be...
+
+740
+01:05:15,184 --> 01:05:20,200
+I think the simplest thing is to give
+it the four items in the same order.
+
+741
+01:05:20,688 --> 01:05:27,568
+So if I say Ive got A,B,C, and D
+going from northeast anticlockwise.
+
+742
+01:05:30,848 --> 01:05:33,112
+And I'm just going to return true.
+
+743
+01:05:36,376 --> 01:05:41,104
+No, I'm going to say A equals B equal C equals B.
+
+744
+01:05:41,100 --> 01:05:44,128
+[Silence]
+
+745
+01:05:49,304 --> 01:05:53,960
+And then we're going to end
+up here with a recursive split.
+
+746
+01:05:53,960 --> 01:05:56,912
+[Silence]
+
+747
+01:06:00,110 --> 01:06:05,096
+And then give it that predicate
+as a block, or olander, whatever.
+
+748
+01:06:05,096 --> 01:06:08,848
+[Paul dictates what he types]
+
+749
+01:06:08,840 --> 01:06:12,240
+It turned into a inaud.
+
+750
+01:06:13,144 --> 01:06:16,896
+Now, what do I expect...
+
+751
+01:06:18,216 --> 01:06:26,576
+I expect result naught which
+is the northeast quadrant,
+
+752
+01:06:26,570 --> 01:06:29,640
+[Paul thinks]
+
+753
+01:06:29,720 --> 01:06:32,520
+to be a leaf.
+
+754
+01:06:33,968 --> 01:06:36,344
+JW: It's starting to read quite nicely.
+
+755
+01:06:37,776 --> 01:06:41,104
+PB: Expect 1 to be a leaf, so result...
+
+756
+01:06:42,392 --> 01:06:49,104
+[Paul dictates what he writes]
+
+757
+01:06:49,100 --> 01:06:52,144
+[Silence]
+
+758
+01:06:55,400 --> 01:06:59,144
+I'm just going to add one more
+inaud to make sure it's going down.
+
+759
+01:06:59,848 --> 01:07:04,560
+I want to say that result 3...
+
+760
+01:07:04,560 --> 01:07:07,552
+[Paul thinks]
+
+761
+01:07:14,336 --> 01:07:18,768
+JW: I think result 3 will be [they both talk at once].
+
+762
+01:07:19,230 --> 01:07:21,400
+PB: Yes.
+
+763
+01:07:21,464 --> 01:07:24,504
+[Paul thinks]
+
+764
+01:07:28,632 --> 01:07:33,424
+Maybe I should make it result
+subscript, that might be nice.
+
+765
+01:07:33,880 --> 01:07:36,544
+[Paul dictates what he writes]
+
+766
+01:07:36,540 --> 01:07:38,928
+So in that case...
+
+767
+01:07:38,976 --> 01:07:41,992
+[Silence]
+
+768
+01:07:43,200 --> 01:07:45,400
+So in this case...
+
+769
+01:07:45,480 --> 01:07:48,488
+[Paul thinks]
+
+770
+01:07:51,496 --> 01:07:55,184
+So here I get quad tree quad tree...
+
+771
+01:07:57,072 --> 01:08:01,560
+[Paul dictates what he writes]
+
+772
+01:08:09,440 --> 01:08:14,744
+I'm not sure if that makes any sense any more,
+but it depends what the rules for splitting are.
+
+773
+01:08:14,768 --> 01:08:17,736
+[Paul thinks]
+
+774
+01:08:18,128 --> 01:08:21,264
+I'm going to forget this for now and get that bit away.
+
+775
+01:08:22,930 --> 01:08:25,952
+That doesn't work at all... which is OK.
+
+776
+01:08:26,008 --> 01:08:30,352
+So you cant do that, which is a shame.
+
+777
+01:08:30,688 --> 01:08:33,704
+[Paul thinks]
+
+778
+01:08:38,632 --> 01:08:43,960
+In fact I could even say...
+[Paul dictates what he writes]
+
+779
+01:09:05,424 --> 01:09:08,304
+That inaud wrong, I've got an array of nodes.
+
+780
+01:09:10,000 --> 01:09:12,240
+So actually I want...
+
+781
+01:09:13,104 --> 01:09:15,664
+So I split...
+
+782
+01:09:16,248 --> 01:09:23,968
+So the first thing that's wrong is
+that it's not actually to the block.
+
+783
+01:09:24,024 --> 01:09:27,064
+[Paul thinks]
+
+784
+01:09:31,104 --> 01:09:33,904
+It doesn't really matter if I do it or not so...
+
+785
+01:09:33,968 --> 01:09:36,920
+[Paul dictates what he writes on screen]
+
+786
+01:09:56,976 --> 01:10:00,152
+So this one, I want to know if I can split here.
+
+787
+01:10:00,456 --> 01:10:03,080
+So I need to check if it's divisible.
+
+788
+01:10:05,984 --> 01:10:09,840
+I need to duplicate that, and I think
+I just need to put the logic in there.
+
+789
+01:10:09,920 --> 01:10:12,912
+[Silence]
+
+790
+01:10:33,352 --> 01:10:35,872
+So that needs to be split_recursive.
+
+791
+01:10:35,920 --> 01:10:38,904
+[Silence]
+
+792
+01:10:39,640 --> 01:10:43,312
+I feel like I'm slightly off track here.
+
+793
+01:10:43,310 --> 01:10:46,352
+[Paul thinks]
+
+794
+01:10:50,432 --> 01:10:53,104
+I'm sure there's a simpler thing that I've missed.
+
+795
+01:10:53,100 --> 01:10:56,104
+[Paul thinks]
+
+796
+01:10:56,464 --> 01:11:01,592
+So now do we get inaud map for the QuadNode.
+
+797
+01:11:05,360 --> 01:11:07,760
+I'm going to stop and read over what I've done.
+
+798
+01:11:07,832 --> 01:11:10,840
+[Silence]
+
+799
+01:11:19,128 --> 01:11:23,040
+I'm thinking that perhaps...
+
+800
+01:11:24,600 --> 01:11:29,224
+each of things should at some point be a node.
+
+801
+01:11:29,960 --> 01:11:34,312
+So each of these should be the same kind of thing.
+
+802
+01:11:36,360 --> 01:11:40,464
+So I'm going to do this in here
+and I'm going to stash my changes.
+
+803
+01:11:40,544 --> 01:11:43,568
+[Silence]
+
+804
+01:11:45,816 --> 01:11:49,576
+JW: You know you attempted to
+change the name of split earlier on,
+
+805
+01:11:49,848 --> 01:11:52,888
+I wonder if children might be a better name.
+
+806
+01:11:53,400 --> 01:11:56,712
+It would tease out the 'treesness' of it.
+
+807
+01:11:56,710 --> 01:12:01,624
+PB: Yes, let's try that... so I need to do some surgery here.
+
+808
+01:12:03,904 --> 01:12:10,024
+I feel there's a whole load of duplication
+here but there probably actually isn't.
+
+809
+01:12:12,336 --> 01:12:16,024
+I'm just going to see... yes very.take erm...
+
+810
+01:12:18,960 --> 01:12:21,416
+... so yes, it needs to be here.
+
+811
+01:12:21,670 --> 01:12:26,816
+I inaud a wrap function which,
+because I'm doing this quite a lot erm ...
+
+812
+01:12:29,020 --> 01:12:32,032
+[Paul dictates what he types]
+
+813
+01:12:33,600 --> 01:12:38,480
+Given some rows, it's an easier way of doing that.
+
+814
+01:12:38,544 --> 01:12:41,592
+[Silence]
+
+815
+01:12:42,544 --> 01:12:44,984
+Just get each of these...
+
+816
+01:12:45,016 --> 01:12:48,024
+[Silence]
+
+817
+01:12:59,520 --> 01:13:02,176
+So I'm going to do that.
+
+818
+01:13:02,240 --> 01:13:05,264
+[Paul thinks]
+
+819
+01:13:05,616 --> 01:13:08,824
+JW: Actually you don't need
+the mapping on line 26 anymore.
+
+820
+01:13:10,480 --> 01:13:12,720
+Or even to map it at all.
+
+821
+01:13:16,040 --> 01:13:17,680
+PB: Yes, that's a bit nicer isn't it.
+
+822
+01:13:17,952 --> 01:13:23,144
+I'm going to put this onto one line because
+the screen is small and it's nicer to see more.
+
+823
+01:13:23,184 --> 01:13:26,192
+[Silence]
+
+824
+01:13:43,928 --> 01:13:46,520
+split recurser... erm...
+
+825
+01:13:48,496 --> 01:13:54,240
+Again, it's wrong it should be pulling
+split recurser when it should be pulling sub-nodes.
+
+826
+01:13:54,800 --> 01:13:57,304
+Let's try using this to children.
+
+827
+01:13:58,808 --> 01:14:01,168
+No let's finish and see what breaks.
+
+828
+01:14:04,288 --> 01:14:08,632
+OK, so that's expected.
+
+829
+01:14:08,630 --> 01:14:13,904
+Those will fail because it
+expected to get different things back.
+
+830
+01:14:15,648 --> 01:14:21,928
+Expect rows, yes inaud which is in northeast quadrant and that should be erm...
+
+831
+01:14:22,432 --> 01:14:27,480
+JW: We could just call .rows on that and it would...
+
+832
+01:14:27,576 --> 01:14:29,480
+PB: Yes, we could.
+
+833
+01:14:32,816 --> 01:14:34,752
+Yes, I think that's fine.
+
+834
+01:14:34,848 --> 01:14:37,904
+[Silence]
+
+835
+01:14:50,280 --> 01:14:52,672
+I wonder if I should store work.
+
+836
+01:14:53,080 --> 01:14:55,080
+Don't think I did that but...
+
+837
+01:14:56,360 --> 01:14:59,496
+OK so 4 quadrants.
+
+838
+01:15:00,272 --> 01:15:02,400
+JW: It looks like they're double wrapped.
+
+839
+01:15:03,728 --> 01:15:04,848
+PB: Yes.
+
+840
+01:15:04,976 --> 01:15:07,512
+JW: Because in the test we're...
+
+841
+01:15:10,040 --> 01:15:11,992
+PB: Yes, that's right.
+
+842
+01:15:12,072 --> 01:15:15,072
+[Silence]
+
+843
+01:15:24,224 --> 01:15:25,896
+Cool, yes.
+
+844
+01:15:26,632 --> 01:15:29,240
+JW: That might be worth a commit.
+
+845
+01:15:29,384 --> 01:15:32,368
+[Silence]
+
+846
+01:15:42,664 --> 01:15:45,960
+[Paul dictates what he writes]
+
+847
+01:15:54,816 --> 01:15:59,520
+PB: OK, so we're splitting quadrants
+between nodes, and that feels better.
+
+848
+01:16:02,256 --> 01:16:06,480
+I'm going to take your suggestion and make children...
+
+849
+01:16:06,480 --> 01:16:10,440
+... because I think children and split
+being different will make more sense.
+
+850
+01:16:10,808 --> 01:16:13,088
+So I'll change split to children.
+
+851
+01:16:13,120 --> 01:16:16,136
+[Silence]
+
+852
+01:16:19,976 --> 01:16:23,016
+inaud is that yes... No.
+
+853
+01:16:23,088 --> 01:16:26,088
+[Paul thinks]
+
+854
+01:16:36,448 --> 01:16:40,776
+Change all this to children, no, yes, yes.
+
+855
+01:16:40,864 --> 01:16:43,856
+[Silence]
+
+856
+01:16:49,130 --> 01:16:52,216
+So we now have children.
+
+857
+01:16:53,184 --> 01:16:58,800
+[Paul mumbles as he types]
+
+858
+01:17:01,600 --> 01:17:07,104
+Children inaud I'm going to change that test.
+
+859
+01:17:08,240 --> 01:17:10,488
+Should children... no.
+
+860
+01:17:10,752 --> 01:17:13,776
+[Silence]
+
+861
+01:17:23,096 --> 01:17:26,720
+[Paul dictates what he writes]
+
+862
+01:17:28,872 --> 01:17:32,584
+I shouldn't have put should
+in everything, but never mind.
+
+863
+01:17:34,840 --> 01:17:40,696
+Yes, so... change split to children.
+
+864
+01:17:41,368 --> 01:17:48,176
+It's now a lot clearer that we have a method
+that just gives us the immediate children.
+
+865
+01:17:48,696 --> 01:17:53,056
+Whether something has children or not,
+it doesn't matter what our rules are,
+
+866
+01:17:53,050 --> 01:17:56,072
+it always has children.
+
+867
+01:17:56,352 --> 01:18:01,728
+Splitting recursively is a slightly
+different process where we have some kind of
+
+868
+01:18:02,728 --> 01:18:05,984
+choice to make whether each one is split.
+
+869
+01:18:09,264 --> 01:18:15,768
+Which now, if I've got...
+I'll just apply the stuff I did earlier.
+
+870
+01:18:15,760 --> 01:18:18,752
+[Silence]
+
+871
+01:18:19,768 --> 01:18:21,648
+NARRATOR: We're going to speed through this section,
+
+872
+01:18:21,640 --> 01:18:24,672
+because Paul and Jamie
+found themselves at a dead end.
+
+873
+01:18:25,328 --> 01:18:28,608
+They eventually backtracked on
+this idea of using a lambda.
+
+874
+01:18:28,632 --> 01:18:31,760
+So let's skip ahead to the
+section where they changed course.
+
+875
+01:18:33,536 --> 01:18:38,384
+PB: I think I'm going to take all
+the stuff I've been doing and say...
+
+876
+01:18:38,380 --> 01:18:42,792
+[Paul dictates what he writes]
+
+877
+01:18:44,008 --> 01:18:46,464
+And then I'm going to re-set...
+
+878
+01:18:46,460 --> 01:18:48,888
+[Paul dictates what he writes]
+
+879
+01:18:48,880 --> 01:18:52,040
+It's basically a posh version of stash.
+
+880
+01:18:52,090 --> 01:18:59,352
+I still have it somewhere until it gets garbage
+collected but I'm probably not going to use it.
+
+881
+01:19:00,210 --> 01:19:04,424
+I'm going to re-load this.
+
+882
+01:19:04,420 --> 01:19:11,432
+OK so I'm going to write some
+spectre on some smaller notes.
+
+883
+01:19:11,430 --> 01:19:15,240
+So I'm going to put this
+into something saying context.
+
+884
+01:19:17,256 --> 01:19:27,616
+[Paul dictates what he writes]
+
+885
+01:19:29,672 --> 01:19:33,848
+And I put all of those inside except inaud.
+
+886
+01:19:33,840 --> 01:19:36,864
+[Silence]
+
+887
+01:19:39,600 --> 01:19:43,824
+JW: I think it's quite nice that
+we've moved away from the idea of color
+
+888
+01:19:44,312 --> 01:19:48,992
+and it's simply about... [they both talk at once].
+
+889
+01:19:49,368 --> 01:19:59,576
+So I'm going to call this one at the
+bottom: context, and call it a 1 element dataset.
+
+890
+01:20:01,800 --> 01:20:07,240
+Or it could be a 1 element
+quadtree, that might make more sense.
+
+891
+01:20:07,740 --> 01:20:15,808
+So this one, I want to say that its children is itself.
+
+892
+01:20:16,008 --> 01:20:24,144
+So our basic building block is a
+quadtree which has one element which is a leaf.
+
+893
+01:20:27,072 --> 01:20:30,208
+JW: Maybe we can ask it if it's a leaf to begin with...
+
+894
+01:20:30,200 --> 01:20:33,896
+PB: Yes, in fact that's what we've already got.
+
+895
+01:20:35,992 --> 01:20:40,176
+So we know that works, and I'm going to
+move that one up to the top because I think
+
+896
+01:20:40,170 --> 01:20:44,352
+it would be nicer to have the simple case at the top.
+
+897
+01:20:44,352 --> 01:20:46,160
+JW: Yes.
+
+898
+01:20:46,160 --> 01:20:52,296
+PB: And then I'm going to do something
+similar with 4 because 4 is still quite simple
+
+899
+01:20:52,290 --> 01:20:58,776
+but it's easy to think about and we inaud.
+
+900
+01:20:59,224 --> 01:21:05,064
+Let's get rid of that entirely, and inaud our dataset something like...
+
+901
+01:21:05,060 --> 01:21:08,056
+[Silence]
+
+902
+01:21:09,752 --> 01:21:15,040
+This is a heterogeneous data
+set as well, so that's important.
+
+903
+01:21:17,232 --> 01:21:22,128
+And there's 1,2,3 and 4.
+
+904
+01:21:22,216 --> 01:21:25,208
+[Silence]
+
+905
+01:21:25,720 --> 01:21:28,416
+So it is NOT a leaf node.
+
+906
+01:21:28,410 --> 01:21:31,464
+[Silence]
+
+907
+01:21:33,200 --> 01:21:36,528
+Good, OK, I'm happy with that.
+
+908
+01:21:38,080 --> 01:21:46,192
+And it has 4 children.
+
+909
+01:21:46,272 --> 01:21:49,272
+[Silence]
+
+910
+01:21:51,250 --> 01:22:05,472
+I'm going to say: [Paul dictates what he writes]
+
+911
+01:22:09,520 --> 01:22:14,552
+And let's do the same thing
+with this one, some basic stuff like...
+
+912
+01:22:17,220 --> 01:22:20,368
+(actually I'm going to get rid
+of all these 'shoulds')
+
+913
+01:22:20,416 --> 01:22:23,416
+[Silence]
+
+914
+01:22:44,144 --> 01:22:47,056
+I really typed that a lot didn't I?
+
+915
+01:22:48,480 --> 01:22:50,784
+OK, so I'm going to get rid of that.
+
+916
+01:22:50,920 --> 01:23:03,072
+All these things are...
+
+917
+01:23:03,112 --> 01:23:06,904
+Yes, so there's 16 inaud.
+
+918
+01:23:07,312 --> 01:23:12,664
+I also want to say this is not a leaf node,
+
+919
+01:23:13,888 --> 01:23:18,320
+which is kind of obvious, but
+it makes things consistent.
+
+920
+01:23:18,384 --> 01:23:21,384
+[Silence]
+
+921
+01:23:25,616 --> 01:23:27,856
+[They both talk at once]
+
+922
+01:23:27,944 --> 01:23:30,944
+[Silence]
+
+923
+01:23:34,024 --> 01:23:36,728
+OK, so that's all fine.
+
+924
+01:23:36,776 --> 01:23:39,776
+[Silence]
+
+925
+01:23:42,144 --> 01:23:50,000
+Right, I think the next thing I want
+to do... I think all that stuff is fine.
+
+926
+01:23:50,000 --> 01:23:55,072
+It returns northwest quadrant, northeast quadrant,
+southwest quadrant, and southeast quadrant.
+
+927
+01:23:58,600 --> 01:24:02,792
+We'll get rid of this split
+recursively, I don't think I care about that.
+
+928
+01:24:03,944 --> 01:24:08,472
+Anything else split? No, and represent
+anything that's split in here as well.
+
+929
+01:24:11,880 --> 01:24:17,816
+I'm also tempted to get rid
+of divisible and just have leaf.
+
+930
+01:24:18,376 --> 01:24:21,296
+But... maybe that doesn't make sense.
+
+931
+01:24:21,328 --> 01:24:25,112
+JW: Divisible is a private API at the moment?
+PB: Yes.
+
+932
+01:24:31,504 --> 01:24:35,104
+JW: Shall we just commit,
+since it's quite a clean state. PB: Yes.
+
+933
+01:24:35,100 --> 01:24:38,080
+[Silence]
+
+934
+01:24:38,296 --> 01:24:44,072
+[Paul dictates what he types]
+
+935
+01:24:44,096 --> 01:24:47,104
+[Silence]
+
+936
+01:24:47,648 --> 01:24:57,856
+Now I think I want to add some kind of compression.
+
+937
+01:25:01,800 --> 01:25:06,704
+JW: You don't want to do the case
+of a homogeneous 4 element dataset?
+
+938
+01:25:07,624 --> 01:25:14,040
+PB: Ah, yes I will, that's exactly what
+I mean so I want to say that compression
+
+939
+01:25:14,040 --> 01:25:19,344
+heterogeneous 1 should give me the
+same, the children should be the same.
+
+940
+01:25:19,984 --> 01:25:26,504
+It should have 4 children but if I
+compress it I should get a leaf node and the value.
+
+941
+01:25:27,288 --> 01:25:34,184
+It's first row, first column
+should be the individual value.
+
+942
+01:25:34,180 --> 01:25:40,120
+Let's do this as our heterogeneous.
+
+943
+01:25:41,720 --> 01:25:44,000
+And we're going to form a homogeneous dataset.
+
+944
+01:25:44,088 --> 01:25:47,088
+[Silence]
+
+945
+01:25:48,980 --> 01:25:54,360
+So we're moving away from having
+a particular plugin way of comparing things
+
+946
+01:25:54,360 --> 01:25:58,656
+because I think that making
+it the same is reasonable.
+
+947
+01:25:59,648 --> 01:26:02,864
+I'm going to make this all ones.
+
+948
+01:26:06,584 --> 01:26:08,736
+Yes, so that's all ones.
+
+949
+01:26:08,730 --> 01:26:12,272
+This one should be a leaf node... and so it is.
+
+950
+01:26:15,472 --> 01:26:17,992
+Let's stick with leaf node now.
+
+951
+01:26:19,496 --> 01:26:25,144
+At this point, it's perhaps nice
+that divisible and leaf node are separate.
+
+952
+01:26:25,140 --> 01:26:39,120
+So leaf node can be... [Paul dictates what he types]
+
+953
+01:26:39,120 --> 01:26:43,168
+All the values inside are the same.
+
+954
+01:26:45,360 --> 01:26:47,280
+Yes, they are all here.
+
+955
+01:26:47,280 --> 01:26:50,288
+[Silence]
+
+956
+01:26:52,000 --> 01:26:56,264
+Good, so in that case...
+
+957
+01:26:56,260 --> 01:26:59,256
+[Paul thinks]
+
+958
+01:27:00,272 --> 01:27:03,640
+Let's see F1 homogeneous dataset...
+
+959
+01:27:07,776 --> 01:27:11,808
+Maybe we could call our method
+compress or something, does that make sense?
+
+960
+01:27:11,800 --> 01:27:16,424
+Or should it just be that that's all there is...
+
+961
+01:27:17,400 --> 01:27:21,384
+[Paul thinks]
+
+962
+01:27:21,624 --> 01:27:27,688
+Yes, that would make sense, if I have
+a 4 element homogeneous dataset
+
+963
+01:27:29,504 --> 01:27:40,280
+within a 16 element dataset, then maybe I can
+say that I get a non leaf, a leaf ,a non leaf, a non leaf.
+
+964
+01:27:41,520 --> 01:27:45,072
+And that each of those has 4
+that is a leaf... does that make sense?
+
+965
+01:27:45,070 --> 01:27:48,080
+[Jamie and Paul think in silence]
+
+966
+01:27:49,848 --> 01:27:50,440
+JW: Yes.
+
+967
+01:27:50,440 --> 01:27:52,720
+PB: So for example...
+
+968
+01:27:52,768 --> 01:27:55,776
+[Silence]
+
+969
+01:27:56,680 --> 01:28:05,296
+I'm going to say somewhere here, this is a
+16 element dataset with 1 homogeneous quadrant.
+
+970
+01:28:05,384 --> 01:28:08,392
+[Silence]
+
+971
+01:28:13,056 --> 01:28:17,816
+And in case I'm going to change
+this upper left quadrant to be ones.
+
+972
+01:28:20,640 --> 01:28:21,976
+And then I'm going to say...
+
+973
+01:28:22,008 --> 01:28:25,016
+[Paul dictates what he writes on screen]
+
+974
+01:28:50,792 --> 01:28:53,064
+So now I can say...
+
+975
+01:28:53,208 --> 01:28:56,224
+[Paul dictates what he writes on screen]
+
+976
+01:28:58,208 --> 01:29:01,704
+In fact, I can just say inaud, so northeast.
+
+977
+01:29:01,888 --> 01:29:04,872
+[Paul dictates what he writes on screen]
+
+978
+01:29:15,040 --> 01:29:18,496
+JW: Well, that obviously ends the context.
+
+979
+01:29:18,490 --> 01:29:20,896
+PB: Oh yes, OK.
+
+980
+01:29:23,744 --> 01:29:27,752
+So that fails because we got false.
+
+981
+01:29:28,384 --> 01:29:31,400
+[Paul thinks]
+
+982
+01:29:33,992 --> 01:29:36,624
+JW: I think it was the NW we were expecting to be a...
+
+983
+01:29:36,620 --> 01:29:42,984
+PB: Yes that would also explain why it failed.
+
+984
+01:29:45,424 --> 01:29:47,848
+Oh! it does one, yes.
+
+985
+01:29:49,464 --> 01:29:53,280
+[Paul thinks]
+
+986
+01:29:53,830 --> 01:30:00,016
+It does not compress the other quadrants.
+
+987
+01:30:00,112 --> 01:30:03,104
+[Silence]
+
+988
+01:30:04,816 --> 01:30:13,816
+And I'll say for NE for example,
+[Paul dictates what he rights]
+
+989
+01:30:13,920 --> 01:30:16,936
+[Silence]
+
+990
+01:30:17,176 --> 01:30:18,088
+Yes, so that's fine.
+
+991
+01:30:18,080 --> 01:30:20,784
+[New Chapter]
+
+992
+01:30:21,640 --> 01:30:25,400
+JW: I think at this point, to give us
+a concrete target to work towards,
+
+993
+01:30:25,400 --> 01:30:31,896
+we could maybe step out of
+quadnode itself into some sort of serializer.
+
+994
+01:30:32,808 --> 01:30:38,048
+Give it a root quadnode and it can walk
+the tree and chop off the bits it doesn't need.
+
+995
+01:30:38,568 --> 01:30:42,416
+PB: Yes so let's write a spec for that.
+
+996
+01:30:42,656 --> 01:30:44,784
+Spec has got a serializer.
+
+997
+01:30:44,848 --> 01:30:47,848
+[Silence]
+
+998
+01:30:49,600 --> 01:30:52,616
+JW: It might help inform the
+interface of quadnode as well.
+
+999
+01:30:52,632 --> 01:30:55,648
+PB: Yes so [Paul dictates what he writes on screen]
+
+1000
+01:31:24,710 --> 01:31:31,384
+It serializes to... we could say
+to a single value, to an integer.
+
+1001
+01:31:32,144 --> 01:31:34,176
+Or should we do an array?
+
+1002
+01:31:34,170 --> 01:31:40,632
+JW: I guess the question is what do
+we want the representation to be.
+
+1003
+01:31:40,630 --> 01:31:45,208
+PB: For now let's say [Paul dictates what he writes]
+
+1004
+01:31:56,704 --> 01:32:00,440
+Actually I'm just going to write
+it like a Ruby and just say value.
+
+1005
+01:32:00,728 --> 01:32:03,928
+I think that makes more sense
+than trying to explain an image.
+
+1006
+01:32:05,830 --> 01:32:08,968
+Actually, I'm going to need a serializer anyway.
+
+1007
+01:32:10,056 --> 01:32:17,816
+[Paul dictates what he writes on screen]
+
+1008
+01:32:21,592 --> 01:32:31,968
+[Paul dictates what he writes]
+
+1009
+01:32:35,968 --> 01:32:39,856
+I could use some kind of locking
+there, but I think I'd rather not.
+
+1010
+01:32:42,040 --> 01:32:45,208
+So we've got some value.
+
+1011
+01:32:46,960 --> 01:32:54,168
+Then I'm going to say... [Paul dictates what he writes]
+
+1012
+01:32:56,032 --> 01:32:58,024
+With that node.
+
+1013
+01:33:00,000 --> 01:33:08,616
+And then say [Paul dictates what he writes]
+
+1014
+01:33:09,192 --> 01:33:15,936
+It's actually not strictly serialize,
+given that we've got an array of values but...
+
+1015
+01:33:17,616 --> 01:33:20,280
+maybe that's OK for now.
+
+1016
+01:33:20,280 --> 01:33:26,384
+JW: Maybe you could take the\approach of giving it to a method, or a...
+
+1017
+01:33:27,824 --> 01:33:28,608
+PB: Yes.
+
+1018
+01:33:28,600 --> 01:33:32,528
+JW: I imagine you could potentially...
+
+1019
+01:33:32,520 --> 01:33:34,368
+turn these quadnodes into a JSON.
+
+1020
+01:33:34,376 --> 01:33:41,736
+PB: I agree, let's give it a 2a method
+and that will give us something nice.
+
+1021
+01:33:41,776 --> 01:33:45,520
+And now I should have... 42
+
+1022
+01:33:45,584 --> 01:33:48,568
+[Silence]
+
+1023
+01:33:50,008 --> 01:33:55,576
+Yes, it definitely doesn't work
+because I say def initialize with a node.
+
+1024
+01:33:57,360 --> 01:34:01,584
+Actually let's call that root because
+it's a bit clearer what we're doing.
+
+1025
+01:34:01,640 --> 01:34:04,640
+[Silence]
+
+1026
+01:34:07,912 --> 01:34:12,272
+And I'm going to say [Paul dictates what he writes]
+
+1027
+01:34:12,288 --> 01:34:17,200
+And then, root.rows, which I
+think will give us everything we want.
+
+1028
+01:34:18,776 --> 01:34:23,808
+Or not... [Paul laughs]... requires a serializer.
+
+1029
+01:34:23,856 --> 01:34:26,840
+[Silence]
+
+1030
+01:34:31,016 --> 01:34:33,976
+inaud
+
+1031
+01:34:34,056 --> 01:34:37,072
+[Silence]
+
+1032
+01:34:38,896 --> 01:34:43,024
+OK, so let's say context...
+
+1033
+01:34:44,990 --> 01:34:56,288
+So it's leaped straight into...
+with a 4 heterogeneous... 4-item node.
+
+1034
+01:34:56,328 --> 01:34:59,320
+[Silence]
+
+1035
+01:34:59,656 --> 01:35:05,688
+[Paul dictates what he writes]
+
+1036
+01:35:08,664 --> 01:35:14,900
+That, in fact I can copy out of
+here, where I have a heterogeneous thing.
+
+1037
+01:35:16,350 --> 01:35:18,552
+Like that.
+
+1038
+01:35:18,584 --> 01:35:21,592
+[Silence]
+
+1039
+01:35:24,280 --> 01:35:31,490
+Then I should get [1,2] ,[3,4]
+
+1040
+01:35:35,000 --> 01:35:37,830
+So now I need to deal with the homogeneous dataset.
+
+1041
+01:35:37,904 --> 01:35:40,960
+[Silence]
+
+1042
+01:35:49,848 --> 01:35:59,696
+That's a 2, and it serializes
+to a single row and column.
+
+1043
+01:36:02,720 --> 01:36:07,384
+JW: So this is curious because how do we...
+
+1044
+01:36:07,480 --> 01:36:12,384
+With this serialization format, we can't,
+at the moment, tell the difference between
+
+1045
+01:36:13,270 --> 01:36:18,360
+what started of as a 1 item node and a 4 item node.
+
+1046
+01:36:18,392 --> 01:36:22,192
+PB: I was thinking about that but
+then I realised that it doesn't matter,
+
+1047
+01:36:22,190 --> 01:36:33,568
+because suppose you're reconstructing
+a picture and it only has one color,
+
+1048
+01:36:34,120 --> 01:36:38,220
+it doesn't matter how big you
+make it, you get the same input.
+
+1049
+01:36:38,320 --> 01:36:41,792
+Having thought about that,
+I'm not sure about this actually.
+
+1050
+01:36:42,120 --> 01:36:48,760
+If it is important we could
+sort out a band as a target size.
+
+1051
+01:36:51,840 --> 01:37:00,520
+In our case, it should be possible to
+reconstruct it by one walk through the trees or...
+
+1052
+01:37:00,520 --> 01:37:02,960
+so when you get to the
+bottom you will have enough data
+
+1053
+01:37:02,992 --> 01:37:06,320
+to work out what the minimal representation is.
+
+1054
+01:37:06,320 --> 01:37:08,064
+JW: OK.
+
+1055
+01:37:08,304 --> 01:37:11,460
+PB: Well yes, it might make trying interesting.
+
+1056
+01:37:11,776 --> 01:37:15,688
+I don't think it's an inherent
+property of a quad tree though is it?
+
+1057
+01:37:17,520 --> 01:37:18,856
+We'll see.
+
+1058
+01:37:19,710 --> 01:37:24,352
+JW: Yes do that, we've not
+specified any kind of serialization format.
+
+1059
+01:37:26,510 --> 01:37:29,936
+PB: So serializer... let's say...
+
+1060
+01:37:29,930 --> 01:37:32,952
+[Paul thinks]
+
+1061
+01:37:35,048 --> 01:37:38,696
+The simplest way to make
+the tests pass, of course is to say...
+
+1062
+01:37:39,150 --> 01:37:43,424
+if root.leaf... and then do that.
+
+1063
+01:37:45,200 --> 01:37:48,304
+Otherwise, do something else
+but I don't think that's quite...
+
+1064
+01:37:51,224 --> 01:37:56,240
+JW: I suppose we could re-curse,
+but it might not make any difference,
+
+1065
+01:37:56,240 --> 01:38:00,576
+because rows doesn't change depending
+on whether it's a leaf or not.
+
+1066
+01:38:00,570 --> 01:38:02,632
+PB: No, exactly.
+
+1067
+01:38:02,680 --> 01:38:08,824
+JW: I guess you could flattening
+and uniquing in here perhaps.
+
+1068
+01:38:09,816 --> 01:38:11,680
+It seems a bit like implication.
+
+1069
+01:38:11,680 --> 01:38:13,776
+PB: Yes, it does erm.....
+
+1070
+01:38:13,840 --> 01:38:16,824
+[Silence]
+
+1071
+01:38:21,472 --> 01:38:24,776
+How about if I said...
+
+1072
+01:38:24,856 --> 01:38:27,864
+[Silence]
+
+1073
+01:38:32,472 --> 01:38:36,060
+In fact, our serializer might
+end up not doing anything at this point,
+
+1074
+01:38:36,120 --> 01:38:40,520
+but maybe we will want to take the
+array and turn it back into a string later on.
+
+1075
+01:38:41,520 --> 01:38:44,392
+but it's still a good way of
+driving out our API perhaps.
+
+1076
+01:38:46,936 --> 01:38:50,984
+So maybe if we said that we wanted some way of...
+
+1077
+01:38:50,980 --> 01:38:53,976
+[Paul thinks]
+
+1078
+01:38:56,664 --> 01:39:00,712
+So we could make our serializer
+a recursive effect actually.
+
+1079
+01:39:04,640 --> 01:39:09,280
+JW: If it's a leaf we want an array
+back containing that one value.
+
+1080
+01:39:11,448 --> 01:39:14,016
+This is a bit ugly but I just want to try it...
+
+1081
+01:39:14,904 --> 01:39:17,568
+[Paul dictates what he writes]
+
+1082
+01:39:31,616 --> 01:39:36,824
+This will work but I still need
+something else to make it work.
+
+1083
+01:39:38,710 --> 01:39:42,376
+So that works, but in the
+case of  having something deeper,
+
+1084
+01:39:42,416 --> 01:39:47,320
+so I'm going to take one of
+our quadnodes back, to take this one
+
+1085
+01:39:48,930 --> 01:39:54,648
+that has one homogeneous
+quadrant... just that part of it.
+
+1086
+01:39:56,448 --> 01:40:00,110
+And then serialize the spec... let's see...
+
+1087
+01:40:00,160 --> 01:40:03,168
+[Silence]
+
+1088
+01:40:07,720 --> 01:40:10,176
+That's quite a nice name for it.
+
+1089
+01:40:10,240 --> 01:40:13,264
+[Silence]
+
+1090
+01:40:25,528 --> 01:40:30,040
+I could pull this up to the top
+because it's the same everywhere.
+
+1091
+01:40:30,424 --> 01:40:33,424
+It's just the node that varies according to context.
+
+1092
+01:40:33,488 --> 01:40:36,480
+[Silence]
+
+1093
+01:40:38,960 --> 01:40:41,472
+So now I  can say...
+
+1094
+01:40:41,544 --> 01:40:44,544
+[Silence]
+
+1095
+01:40:45,144 --> 01:40:47,456
+Let node be that.
+
+1096
+01:40:47,520 --> 01:40:50,552
+[Silence]
+
+1097
+01:40:52,584 --> 01:40:55,864
+And this one will be the real test.
+
+1098
+01:40:57,816 --> 01:41:01,712
+But I'm going to say it serializes to...
+
+1099
+01:41:02,960 --> 01:41:05,952
+[Paul thinks]
+
+1100
+01:41:07,472 --> 01:41:12,312
+[Paul dictates what he writes]
+
+1101
+01:41:20,712 --> 01:41:23,888
+That kind of makes sense to me, so now...
+
+1102
+01:41:23,880 --> 01:41:26,872
+[Silence]
+
+1103
+01:41:27,304 --> 01:41:30,208
+I mostly want this data.
+
+1104
+01:41:31,040 --> 01:41:35,480
+I want this to equal... [Paul thinks]
+
+1105
+01:41:36,928 --> 01:41:40,664
+I want one for that part.
+
+1106
+01:41:41,448 --> 01:41:46,336
+Then I want three, (sorry, it's
+the other way around isn't it?)
+
+1107
+01:41:47,330 --> 01:41:55,048
+I want to start at 3,4... so I want 3,4,7 and 8.
+
+1108
+01:41:55,820 --> 01:42:00,192
+Which is the northwest
+quadrant, which is just one thing.
+
+1109
+01:42:01,584 --> 01:42:07,904
+Then I want the southwest one which is 9,10,13 and 14.
+
+1110
+01:42:10,880 --> 01:42:18,024
+And then the remaining
+quadrant which is 11,12... Hang on!
+
+1111
+01:42:20,032 --> 01:42:27,112
+I'm doing this wrong... No, it's fine, sorry,
+I was just realizing that I've got different data
+
+1112
+01:42:28,376 --> 01:42:31,064
+It's in a different order when
+it's in arrays but that's OK.
+
+1113
+01:42:31,060 --> 01:42:37,408
+JW: This is interesting because it's
+the first spec that demonstrates the
+
+1114
+01:42:37,528 --> 01:42:40,480
+compressing quality of the quadtree.
+
+1115
+01:42:40,530 --> 01:42:43,528
+[Silence]
+
+1116
+01:42:46,104 --> 01:42:51,160
+PB: I'm just going to split this up a bit so
+it's a bit clearer which one's which node.
+
+1117
+01:42:51,272 --> 01:42:54,272
+[Silence]
+
+1118
+01:43:01,952 --> 01:43:05,792
+JW: So you can see one quadrant
+is compressed down to single figures.
+
+1119
+01:43:05,790 --> 01:43:09,792
+PB: Yes, so there we got...
+something completely different!
+
+1120
+01:43:11,536 --> 01:43:17,520
+And the reason is because we've just
+called rows and columns... is that right?
+
+1121
+01:43:17,520 --> 01:43:26,344
+JW: Can I suggest an alternative...
+let's just re-wind to the other case,
+
+1122
+01:43:26,440 --> 01:43:31,728
+where I was wondering whether it
+was the correct serialization or not.
+
+1123
+01:43:31,720 --> 01:43:35,320
+So when we ended up with 2 by itself
+
+1124
+01:43:35,320 --> 01:43:38,392
+PB: It's not, because it should inaud.
+
+1125
+01:43:38,432 --> 01:43:41,448
+[Silence]
+
+1126
+01:43:43,344 --> 01:43:47,080
+That one ?
+JW: Yes. PB: yes it does doesn't it?
+
+1127
+01:43:48,992 --> 01:43:53,336
+But I also think that another thing is wrong...
+
+1128
+01:43:54,920 --> 01:44:03,872
+I think that the way we serialize
+it should be in the same order.
+
+1129
+01:44:04,040 --> 01:44:07,056
+[Paul thinks]
+
+1130
+01:44:08,008 --> 01:44:15,128
+The thing that is confusing is that we want...
+
+1131
+01:44:15,120 --> 01:44:18,152
+[Paul thinks]
+
+1132
+01:44:18,528 --> 01:44:27,552
+We know node looks like that, or we've
+decided a node is just the rows and columns.
+
+1133
+01:44:30,224 --> 01:44:32,624
+Except...
+
+1134
+01:44:32,672 --> 01:44:35,520
+[Paul thinks]
+
+1135
+01:44:37,376 --> 01:44:41,240
+I'm thinking that our
+serialization should form out of that.
+
+1136
+01:44:42,912 --> 01:44:45,056
+I'm just going to write it here.
+
+1137
+01:44:46,832 --> 01:44:49,136
+I'm going to ignore the inaud for now.
+
+1138
+01:44:49,592 --> 01:44:52,744
+[Paul dictates what he writes]
+
+1139
+01:44:58,536 --> 01:45:00,928
+X which is 1.
+
+1140
+01:45:03,024 --> 01:45:06,792
+Then it should be... [Paul dictates what he writes]
+
+1141
+01:45:22,224 --> 01:45:23,608
+JW: Yes.
+
+1142
+01:45:23,640 --> 01:45:26,008
+PB: Yes, that's how the serialization should be.
+
+1143
+01:45:26,008 --> 01:45:28,000
+JW: Agreed.
+
+1144
+01:45:28,552 --> 01:45:32,488
+So it's OK if we create
+something with linear data but...
+
+1145
+01:45:32,528 --> 01:45:35,528
+[Silence]
+
+1146
+01:45:38,560 --> 01:45:42,088
+JW: Yes, and in fact that
+demonstrates the compression even better.
+
+1147
+01:45:42,080 --> 01:45:44,000
+PB: Yes.
+
+1148
+01:45:44,024 --> 01:45:46,888
+So let's revisit these earlier ones.
+
+1149
+01:45:47,864 --> 01:45:51,104
+That should compress down to just 2.
+
+1150
+01:45:52,152 --> 01:45:53,128
+That.
+
+1151
+01:45:53,128 --> 01:45:55,120
+JW: Yes, indeed.
+
+1152
+01:45:57,304 --> 01:46:00,704
+Oh no, in fact, it maybe still should be in an array.
+
+1153
+01:46:03,456 --> 01:46:06,096
+PB: If we do that then, each of these should be an array
+
+1154
+01:46:06,096 --> 01:46:08,090
+and each of these should be an array.
+
+1155
+01:46:08,090 --> 01:46:10,824
+[Jamie thinks about that]
+
+1156
+01:46:14,620 --> 01:46:20,296
+It's one way of doing it, but at some point
+we have to come down to whatever our base value is
+
+1157
+01:46:20,290 --> 01:46:26,408
+and that's either an individual value
+in an array or it's a fair number.
+
+1158
+01:46:28,384 --> 01:46:35,304
+JW: Yes, Ruby inaud number is fine, maybe 2A is not the right method name anymore.
+
+1159
+01:46:36,512 --> 01:46:40,432
+PB So yes... [Paul dictates what he writes]
+
+1160
+01:46:40,504 --> 01:46:43,520
+[Silence]
+
+1161
+01:46:48,280 --> 01:46:54,050
+Is it to array...? (I'll check it later)
+
+1162
+01:46:56,368 --> 01:47:01,952
+So this one should be 2,1,3,4
+
+1163
+01:47:01,950 --> 01:47:04,952
+[Silence]
+
+1164
+01:47:05,400 --> 01:47:07,912
+This one should be just lone 2.
+
+1165
+01:47:10,240 --> 01:47:14,880
+JW: I guess if the dimensions are
+kept externally, as you mentioned earlier,
+
+1166
+01:47:15,120 --> 01:47:21,352
+then combining this value structure with
+the dimensions, allows you to read those.
+
+1167
+01:47:22,136 --> 01:47:25,816
+PB: Yes. inaud, that's fine.
+
+1168
+01:47:27,280 --> 01:47:29,800
+If it's a leaf it should just be the bare value.
+
+1169
+01:47:31,896 --> 01:47:36,944
+Otherwise, and this will not
+completely work, but I'm going to say...
+
+1170
+01:47:36,940 --> 01:47:41,288
+[Paul dictates what he writes]
+
+1171
+01:47:43,840 --> 01:47:47,000
+Actually I think if I make it recursive now...
+
+1172
+01:47:47,104 --> 01:47:50,296
+[Paul dictates what he types]
+
+1173
+01:47:51,272 --> 01:47:53,840
+I don't like this already. [laughter]
+
+1174
+01:47:53,840 --> 01:47:56,840
+[Silence]
+
+1175
+01:47:58,248 --> 01:48:00,080
+Serializer is a new node.
+
+1176
+01:48:03,048 --> 01:48:06,936
+It's kind of horrible but... I think it might work.
+
+1177
+01:48:08,344 --> 01:48:12,768
+JW: Wow, cool.
+
+1178
+01:48:14,552 --> 01:48:16,864
+PB: I don't know why I feel it's horrible, erm....
+
+1179
+01:48:17,200 --> 01:48:24,608
+JW: It does feel like the serializer need
+not be separate, but it gave us a space to
+
+1180
+01:48:25,190 --> 01:48:28,000
+jump out of the internals of quadnode.
+
+1181
+01:48:28,000 --> 01:48:35,264
+PB: Yes... I'm just going to see if
+I can find a better name for 2A.
+
+1182
+01:48:35,352 --> 01:48:38,376
+[Silence]
+
+1183
+01:48:40,720 --> 01:48:42,704
+Maybe I'm just going to call it serialize.
+
+1184
+01:48:42,700 --> 01:48:45,520
+JW: Maybe if you called it values.
+
+1185
+01:48:48,648 --> 01:48:50,704
+PB: Or 'value'.
+
+1186
+01:48:50,736 --> 01:48:52,984
+JW: Yes, something like that.
+
+1187
+01:48:54,152 --> 01:48:57,008
+PB: Yes, it's as good as anything I think.
+
+1188
+01:49:00,664 --> 01:49:03,640
+[Paul checks the changes]
+
+1189
+01:49:07,096 --> 01:49:09,344
+OK let's commit that.
+
+1190
+01:49:09,416 --> 01:49:12,416
+[Silence]
+
+1191
+01:49:13,264 --> 01:49:16,536
+What have we changed?  As yes, we changed leaf
+
+1192
+01:49:16,600 --> 01:49:19,608
+[Silence]
+
+1193
+01:49:27,176 --> 01:49:35,672
+JW: I wonder if we've now got enough
+in place to approach it from the other side,
+
+1194
+01:49:36,256 --> 01:49:42,616
+and given that this structure that
+the serializer produces, plus the dimensions...
+
+1195
+01:49:43,080 --> 01:49:44,736
+PB: Can we reconstruct it? JW: Yes.
+
+1196
+01:49:44,750 --> 01:49:47,568
+PB: Yes, that seems like a nice thing to do.
+
+1197
+01:49:48,632 --> 01:49:57,230
+We can make it a proper serializer
+by saying 2S which is a JSON serialization.
+
+1198
+01:49:59,224 --> 01:50:03,952
+I'll say require JSON - that's in
+the standard library these days.
+
+1199
+01:50:05,288 --> 01:50:08,272
+And we'll just say... [Paul dictates what he writes]
+
+1200
+01:50:11,560 --> 01:50:15,080
+inaud, or inaud actually.
+
+1201
+01:50:15,976 --> 01:50:18,984
+JSON.dump? JW: Yes.
+
+1202
+01:50:21,040 --> 01:50:25,240
+PB: So that should hide a whole
+bunch of things... unless I actually test it.
+
+1203
+01:50:25,640 --> 01:50:29,640
+JW: If you change all these current tests
+to use 2S instead, then we don't have to...
+
+1204
+01:50:30,080 --> 01:50:31,760
+deal with the inaud value anymore.
+
+1205
+01:50:31,792 --> 01:50:33,864
+PB: Yes, let's make that private.
+
+1206
+01:50:36,512 --> 01:50:39,760
+Hide our shame somewhere [laughter].
+
+1207
+01:50:40,912 --> 01:50:44,472
+[Paul dictates what he writes]
+
+1208
+01:50:47,432 --> 01:50:50,896
+[Paul checks the changed values]
+
+1209
+01:50:50,890 --> 01:50:53,888
+And then... [Paul thinks]
+
+1210
+01:50:55,800 --> 01:50:59,704
+I hope the spacing is the same...
+we might find it's not in the end.
+
+1211
+01:50:59,952 --> 01:51:02,448
+Let's try one of them first and see...
+
+1212
+01:51:03,200 --> 01:51:06,056
+... program value called...
+
+1213
+01:51:07,856 --> 01:51:11,224
+Ah! Yes, that doesn't work because...
+
+1214
+01:51:12,136 --> 01:51:15,520
+we can't make the inaud, not yet anyway, but we will.
+
+1215
+01:51:15,520 --> 01:51:18,648
+Could we have 'protected'? I'm
+never quite sure how that works.
+
+1216
+01:51:19,880 --> 01:51:22,328
+Do they work like friend methods?
+
+1217
+01:51:22,520 --> 01:51:25,592
+JW: That's the first time I've ever
+seen a reason to use protected.
+
+1218
+01:51:25,610 --> 01:51:33,568
+PB: Yes, and it's a bad reason I think, bu
+apart for all the extra spaces, which we can say...
+
+1219
+01:51:33,624 --> 01:51:36,616
+[Silence]
+
+1220
+01:51:47,440 --> 01:51:52,192
+inaud I'll do the same for the
+other ones, which are much shorter so...
+
+1221
+01:51:52,248 --> 01:51:55,248
+[Silence]
+
+1222
+01:51:56,328 --> 01:51:58,336
+That's easier...
+
+1223
+01:51:59,128 --> 01:52:01,072
+This one is...
+
+1224
+01:52:01,160 --> 01:52:04,152
+[Silence]
+
+1225
+01:52:10,824 --> 01:52:15,112
+Well actually, my test name was completely wrong.
+
+1226
+01:52:15,200 --> 01:52:18,216
+[Paul thinks]
+
+1227
+01:52:18,344 --> 01:52:23,536
+I'll just check the serializer has rows
+and columns in (I should use better names) erm....
+
+1228
+01:52:23,648 --> 01:52:26,656
+[Paul dictates what he writes]
+
+1229
+01:52:27,560 --> 01:52:30,544
+[Silence]
+
+1230
+01:52:32,992 --> 01:52:34,848
+So it's a single value.
+
+1231
+01:52:36,820 --> 01:52:40,120
+I don't know if any of this is really important but...
+
+1232
+01:52:40,688 --> 01:52:43,872
+Yes, I think that's cool, let's see if it works.
+
+1233
+01:52:45,072 --> 01:52:47,208
+OK, let's add that.
+
+1234
+01:52:49,672 --> 01:52:51,640
+Yes.
+
+1235
+01:52:51,712 --> 01:52:54,712
+[Silence]
+
+1236
+01:52:56,472 --> 01:53:00,048
+JW: It actually serialized. [Laughter]
+
+1237
+01:53:00,104 --> 01:53:03,120
+[Silence]
+
+1238
+01:53:04,056 --> 01:53:07,104
+[New Chapter]
+
+1239
+01:53:07,800 --> 01:53:14,260
+PB: So let's look at our print bmp. I'm gong to
+pull this out into a class so we can use it on it's own.
+
+1240
+01:53:14,664 --> 01:53:19,800
+We don't really test for this,
+we test ad-hoc but that's alright.
+
+1241
+01:53:20,160 --> 01:53:22,664
+[Paul dictates what he writes]
+
+1242
+01:53:23,880 --> 01:53:25,904
+inaud
+
+1243
+01:53:26,328 --> 01:53:31,832
+So now I want to see just how much we do compress.
+
+1244
+01:53:31,896 --> 01:53:34,872
+[Paul thinks]
+
+1245
+01:53:38,656 --> 01:53:42,488
+I'm going to close this path because
+it doesn't seem useful any more.
+
+1246
+01:53:42,640 --> 01:53:47,728
+I need a new file called something like dump, err...
+
+1247
+01:53:47,784 --> 01:53:50,784
+[Paul thinks]
+
+1248
+01:53:53,080 --> 01:53:55,624
+... dot image or something.
+
+1249
+01:53:56,520 --> 01:53:59,128
+And I'm going to say require...
+
+1250
+01:53:59,208 --> 01:54:02,864
+[Silence]
+
+1251
+01:54:03,688 --> 01:54:06,744
+bnp image, so that I can load it.
+
+1252
+01:54:06,740 --> 01:54:12,008
+I'm going to require
+serializer, so that I can serialize it.
+
+1253
+01:54:13,500 --> 01:54:19,552
+And I'm going to require quadnode.
+
+1254
+01:54:19,616 --> 01:54:22,208
+I've already forgotten my inaud.
+
+1255
+01:54:22,232 --> 01:54:25,240
+[Paul thinks]
+
+1256
+01:54:26,160 --> 01:54:29,664
+So now we can say, for example...
+
+1257
+01:54:31,824 --> 01:54:36,864
+We've got JSON, so first of all let's say...
+
+1258
+01:54:36,944 --> 01:54:39,952
+[Paul thinks]
+
+1259
+01:54:41,808 --> 01:54:45,512
+[Paul dictates what he writes]
+
+1260
+01:54:45,784 --> 01:54:49,296
+Perhaps I shouldn't close that file.
+
+1261
+01:54:49,376 --> 01:54:52,376
+[Silence]
+
+1262
+01:54:58,576 --> 01:55:05,544
+Oh that's... what do they call that file?
+
+1263
+01:55:06,352 --> 01:55:09,272
+JW: I think it's called print. PB: Yes.
+
+1264
+01:55:09,352 --> 01:55:12,352
+[Silence]
+
+1265
+01:55:13,832 --> 01:55:18,280
+Yes, inaud cool.
+
+1266
+01:55:18,336 --> 01:55:21,352
+[Paul thinks]
+
+1267
+01:55:25,950 --> 01:55:29,200
+And then I'm saying...
+
+1268
+01:55:29,210 --> 01:55:33,784
+Let's just first of all see what we get
+when we print out our serialized version.
+
+1269
+01:55:35,552 --> 01:55:39,392
+[Paul dictates what he writes]
+
+1270
+01:55:45,360 --> 01:55:47,856
+I think that's right.
+JW: Yes, I think so.
+
+1271
+01:55:49,720 --> 01:55:51,584
+Initialize with rows.
+
+1272
+01:55:51,608 --> 01:55:55,560
+Serializer initialise with the root node.
+
+1273
+01:55:57,888 --> 01:56:01,784
+And then let's puts that.to_s
+
+1274
+01:56:03,650 --> 01:56:05,192
+And this one...
+
+1275
+01:56:05,304 --> 01:56:08,296
+[Paul dictates what he types]
+
+1276
+01:56:13,720 --> 01:56:14,744
+JW: Right. [laughter]
+
+1277
+01:56:14,768 --> 01:56:18,264
+PB: So we get a bunch of ones
+and zeros which is quite short.
+
+1278
+01:56:18,320 --> 01:56:23,864
+So assuming this comes
+apart properly, that's quite good.
+
+1279
+01:56:24,152 --> 01:56:27,760
+Let's see how much our actual...
+
+1280
+01:56:30,152 --> 01:56:33,152
+[Paul dictates what he writes]
+
+1281
+01:56:51,200 --> 01:56:55,968
+And then let's put print...
+
+1282
+01:56:56,184 --> 01:56:59,144
+[Paul dictates what he writes]
+
+1283
+01:57:01,816 --> 01:57:04,440
+And see just how much compression we've got.
+
+1284
+01:57:04,512 --> 01:57:07,520
+[Silence]
+
+1285
+01:57:08,456 --> 01:57:09,728
+JW: Not bad.
+
+1286
+01:57:09,720 --> 01:57:14,952
+PB: Yes, inaud which is very nice.
+
+1287
+01:57:16,100 --> 01:57:19,184
+Now we know that is giving us a nice impression,
+
+1288
+01:57:19,208 --> 01:57:26,920
+and in fact, if we didn't have all the JSON
+effect it would probably be a little bit smaller.
+
+1289
+01:57:28,040 --> 01:57:32,424
+We've got all that, we should see
+if we can reconstruct the image.
+
+1290
+01:57:32,504 --> 01:57:35,656
+[New Chapter]
+
+1291
+01:57:35,912 --> 01:57:40,256
+PB: So let's see if we can write a
+deserializer that takes the serialized one
+
+1292
+01:57:40,280 --> 01:57:44,648
+and turns it back into a
+quadtree... does that make sense?
+
+1293
+01:57:45,024 --> 01:57:47,368
+JW: I think so yes.
+
+1294
+01:57:48,550 --> 01:57:54,552
+If we even need to involve the nodes already done.
+
+1295
+01:57:54,648 --> 01:57:56,472
+PB: That's true actually.
+
+1296
+01:57:57,368 --> 01:57:59,960
+We need to know the width and height to start with.
+
+1297
+01:58:01,310 --> 01:58:05,064
+Actually we could work it out by walking
+all the way through the tree perhaps.
+
+1298
+01:58:05,060 --> 01:58:08,672
+But let's give ourselves inaud
+
+1299
+01:58:10,184 --> 01:58:16,224
+JW: There's a temptation to do
+it in the scripty quick and dirty way.
+
+1300
+01:58:16,352 --> 01:58:22,976
+But I feel like a deserializer
+spec where we have a very simple
+
+1301
+01:58:23,504 --> 01:58:27,640
+serialized quadroot to work from and
+produce the rows and columns we expect,
+
+1302
+01:58:27,912 --> 01:58:30,160
+might be the best way to try this out.
+
+1303
+01:58:30,160 --> 01:58:33,000
+PB: Yes let's do that...
+
+1304
+01:58:33,510 --> 01:58:36,520
+[Silence]
+
+1305
+01:58:37,872 --> 01:58:40,392
+[Paul dictates what he writes]
+
+1306
+01:58:56,256 --> 01:58:58,384
+Obviously I failed so...
+
+1307
+01:58:58,416 --> 01:59:01,424
+[Paul dictates what he writes]
+
+1308
+01:59:19,920 --> 01:59:23,056
+The simplest case is 1 and 1.
+
+1309
+01:59:23,570 --> 01:59:29,936
+And then we can go to... a single value and a 1 x 1.
+
+1310
+01:59:30,168 --> 01:59:34,880
+Then we can do a single value
+and 4 x 4, that might be nice.
+
+1311
+01:59:36,200 --> 01:59:39,232
+[Paul dictates what he writes]
+
+1312
+01:59:51,240 --> 01:59:54,104
+And we can say... [Paul dictates what he writes]
+
+1313
+02:00:01,264 --> 02:00:05,680
+JW: We could hide quadnode inside the serializer.
+
+1314
+02:00:06,304 --> 02:00:08,536
+We might want to come back round to that.
+
+1315
+02:00:10,064 --> 02:00:13,072
+[Paul dictates what he writes]
+
+1316
+02:00:21,096 --> 02:00:22,824
+JW: It's a 1 x 1 matrix, isn't it?
+
+1317
+02:00:22,820 --> 02:00:25,208
+PB: Yes.
+
+1318
+02:00:27,032 --> 02:00:33,144
+Matrix might be a bit
+misleading though so... to a single cell.
+
+1319
+02:00:33,392 --> 02:00:36,392
+[Paul dictates what he writes]
+
+1320
+02:00:45,432 --> 02:00:51,352
+So then, whatever we do let's say...
+
+1321
+02:00:51,400 --> 02:00:54,456
+[Silence]
+
+1322
+02:00:59,280 --> 02:01:04,416
+Subject is going to be deserializer.new.
+
+1323
+02:01:04,576 --> 02:01:09,160
+I'm not sure if this is the right
+interface... but with something serialized.
+
+1324
+02:01:11,648 --> 02:01:14,640
+[Paul dictates what he writes]
+
+1325
+02:01:19,144 --> 02:01:23,752
+I feel that our deserializer and serializer
+should probably have the same interface,
+
+1326
+02:01:23,750 --> 02:01:29,944
+so serializer should be given
+rows and columns and the quadtree.
+
+1327
+02:01:30,000 --> 02:01:36,408
+Or there should be something else that's
+performing these things, but that's OK
+
+1328
+02:01:36,576 --> 02:01:41,024
+So expect subject.deserialize, yes.
+
+1329
+02:01:43,600 --> 02:01:46,608
+[Paul dictates what he writes]
+
+1330
+02:02:04,880 --> 02:02:08,568
+And let's say... [Paul thinks]
+
+1331
+02:02:08,736 --> 02:02:11,728
+[Paul dictates what he writes]
+
+1332
+02:02:23,792 --> 02:02:27,144
+inaud I can't think of a better name is...
+
+1333
+02:02:27,990 --> 02:02:30,984
+[Paul dictates what he writes]
+
+1334
+02:02:40,320 --> 02:02:47,152
+And that should be...
+the simplest implementation is...
+
+1335
+02:02:47,240 --> 02:02:50,232
+[Silence]
+
+1336
+02:02:51,944 --> 02:02:54,048
+That should work with one value.
+
+1337
+02:02:54,104 --> 02:02:57,096
+[Silence]
+
+1338
+02:03:00,832 --> 02:03:02,536
+Oh! that's an interesting problem.
+
+1339
+02:03:07,152 --> 02:03:10,080
+So I think we need to
+change our serializer slightly...
+
+1340
+02:03:10,152 --> 02:03:13,160
+[Silence]
+
+1341
+02:03:16,408 --> 02:03:22,888
+.. and wrap everything in one array
+and then we'll pull out the first item
+
+1342
+02:03:27,008 --> 02:03:30,112
+that's the way we have to leave it because
+you cant have a bare value and a JSON
+
+1343
+02:03:30,110 --> 02:03:32,616
+even though it will serialize and deserialize.
+
+1344
+02:03:32,610 --> 02:03:37,952
+Or, even better let's leave
+this as it is and just say...
+
+1345
+02:03:38,448 --> 02:03:40,680
+JW: Wrap in there, yes.
+
+1346
+02:03:40,744 --> 02:03:43,752
+[Silence]
+
+1347
+02:03:49,832 --> 02:03:52,104
+PB: Ridiculous isn't it? OK.
+
+1348
+02:03:53,896 --> 02:03:56,968
+Yes, that works, cool.
+
+1349
+02:03:56,960 --> 02:04:01,296
+Now, we didn't specify the size of our image.
+
+1350
+02:04:02,110 --> 02:04:04,456
+JW: True.
+
+1351
+02:04:04,608 --> 02:04:07,584
+[Silence]
+
+1352
+02:04:10,704 --> 02:04:15,032
+JW: Given the need to produce
+a compliant JSON document,
+
+1353
+02:04:16,464 --> 02:04:20,992
+you could potentially wrap the whole
+thing in an object which contains the dimensions
+
+1354
+02:04:21,072 --> 02:04:23,120
+and value over a key.
+
+1355
+02:04:23,120 --> 02:04:25,120
+PB: In fact we could.
+
+1356
+02:04:26,640 --> 02:04:32,512
+But I think with inaud we don't know that because our serializer is only given the quad tree.
+
+1357
+02:04:33,230 --> 02:04:35,176
+But yes, your right it could.
+
+1358
+02:04:35,170 --> 02:04:37,704
+JW: inaud
+
+1359
+02:04:37,784 --> 02:04:40,440
+PB: Yes, that might make sense.
+
+1360
+02:04:40,488 --> 02:04:43,504
+But let's press on, and leave that for now.
+
+1361
+02:04:43,584 --> 02:04:46,584
+[Silence]
+
+1362
+02:04:50,312 --> 02:04:52,672
+[Paul thinks]
+
+1363
+02:04:54,584 --> 02:04:57,688
+Let's put those up there... width and height.
+
+1364
+02:05:00,952 --> 02:05:04,456
+I'm not really sure where they should go.
+
+1365
+02:05:04,568 --> 02:05:07,560
+[Silence]
+
+1366
+02:05:10,616 --> 02:05:15,160
+So in the future if we do want
+to do it it's all in the same place.
+
+1367
+02:05:16,648 --> 02:05:20,056
+And that will fail because
+our serializer doesn't like it.
+
+1368
+02:05:22,776 --> 02:05:25,328
+And height... inaud for that.
+
+1369
+02:05:26,464 --> 02:05:29,008
+And that works.
+
+1370
+02:05:29,000 --> 02:05:32,272
+Right, so now... context.
+
+1371
+02:05:32,384 --> 02:05:35,384
+[Paul thinks]
+
+1372
+02:05:37,024 --> 02:05:39,920
+Shall we do a heterogeneous 2 x 2 image?
+
+1373
+02:05:39,920 --> 02:05:41,408
+JW: Yes.
+
+1374
+02:05:43,784 --> 02:05:47,680
+Because I think we can work our
+way around this one quite nicely,
+
+1375
+02:05:48,520 --> 02:05:51,270
+and that will be very similar to what we've got but...
+
+1376
+02:05:53,320 --> 02:05:59,536
+So let our serializer be 1,2,3,4.
+
+1377
+02:06:02,320 --> 02:06:05,184
+Let the width and height be 2.
+
+1378
+02:06:05,680 --> 02:06:12,272
+And it should expand to... 4 pixels.
+
+1379
+02:06:13,592 --> 02:06:16,230
+Yes, because it's an image 4 pixels.
+
+1380
+02:06:19,216 --> 02:06:25,088
+That's going to be 1 and 2 and the second row is 3 and 4.
+
+1381
+02:06:27,570 --> 02:06:31,136
+PB: It's not, it's serializer. [Laughter]
+
+1382
+02:06:31,240 --> 02:06:33,190
+Er... yes it should be 2,1,3,4
+
+1383
+02:06:33,190 --> 02:06:35,488
+JW: Something like that yes.
+
+1384
+02:06:37,368 --> 02:06:39,400
+PB: OK.
+
+1385
+02:06:39,520 --> 02:06:42,552
+[Silence]
+
+1386
+02:06:42,840 --> 02:06:44,550
+Fine.
+
+1387
+02:06:46,992 --> 02:06:50,152
+So I'm going to say...
+
+1388
+02:06:52,312 --> 02:06:56,560
+This may not be the exactly right way
+to do it, but I'm going to start building up
+
+1389
+02:06:58,440 --> 02:07:02,896
+a place holder - rows and
+columns that I can put things into.
+
+1390
+02:07:03,456 --> 02:07:05,530
+I'm sure there's a more elegant way of doing this
+
+1391
+02:07:05,530 --> 02:07:09,064
+but I think this will be clearer
+and probably easier to get right.
+
+1392
+02:07:09,600 --> 02:07:12,000
+So I'm going to say...
+
+1393
+02:07:12,352 --> 02:07:15,344
+[Paul dictates what he writes]
+
+1394
+02:07:25,968 --> 02:07:29,128
+JW: I think you want the
+times before the first left as well.
+
+1395
+02:07:30,440 --> 02:07:32,656
+PB: Yes, I do.
+
+1396
+02:07:33,168 --> 02:07:36,024
+So that should give me a whole load of inaud.
+
+1397
+02:07:37,608 --> 02:07:43,160
+And then we need to go from...
+
+1398
+02:07:45,088 --> 02:07:48,872
+In fact, should we just assume that our
+image is going to be square, would that be sensible?
+
+1399
+02:07:48,888 --> 02:07:49,568
+JW: Yes.
+
+1400
+02:07:49,560 --> 02:07:51,968
+PB: Let's just say size.
+
+1401
+02:07:52,040 --> 02:07:55,032
+[Silence]
+
+1402
+02:07:55,536 --> 02:08:00,288
+Otherwise, I don't know how
+we're going to make a quadtree.
+
+1403
+02:08:00,368 --> 02:08:03,368
+[Silence]
+
+1404
+02:08:06,560 --> 02:08:13,608
+Now we should worm our way around at each level.
+
+1405
+02:08:15,288 --> 02:08:19,176
+I'm going to say fill in...
+
+1406
+02:08:22,208 --> 02:08:28,008
+which is going to be given
+some kind of point in the tree.
+
+1407
+02:08:28,000 --> 02:08:35,944
+So it could be within something, and it's
+got to be given a map into which to put it.
+
+1408
+02:08:36,200 --> 02:08:38,760
+And an x offset and Y offset.
+
+1409
+02:08:38,760 --> 02:08:41,760
+[Paul dictates what he writes]
+
+1410
+02:08:48,760 --> 02:08:52,144
+And, I'm going to call it data,
+which is a terrible name for anything,
+
+1411
+02:08:52,140 --> 02:08:55,008
+but that's what it's going to be building from.
+
+1412
+02:08:55,488 --> 02:09:00,216
+inaud
+
+1413
+02:09:02,384 --> 02:09:06,360
+I could call that rows, maybe
+that would make more sense.
+
+1414
+02:09:06,848 --> 02:09:11,720
+We're going to start off with a blank inaud in which I'm going to put things.
+
+1415
+02:09:12,568 --> 02:09:19,960
+And there are two cases: one is if there is
+only one value then there is no mapping to do at all,
+
+1416
+02:09:20,016 --> 02:09:23,032
+[Paul thinks]
+
+1417
+02:09:25,144 --> 02:09:28,616
+... but we'll inaud ... so fill in.
+
+1418
+02:09:31,792 --> 02:09:34,048
+Offset 0.
+
+1419
+02:09:35,872 --> 02:09:38,432
+Whatever our intermediate data is, it's still there inaud
+
+1420
+02:09:38,496 --> 02:09:41,496
+[Silence]
+
+1421
+02:09:42,240 --> 02:09:47,016
+That doesn't return anything...
+and we'll return rows at the end.
+
+1422
+02:09:48,688 --> 02:09:54,344
+So fill in for each quadrant... so I'm going to say...
+
+1423
+02:09:54,340 --> 02:09:57,344
+[Paul dictates what he types]
+
+1424
+02:10:07,080 --> 02:10:09,232
+It's going to get confusing I think, but...
+
+1425
+02:10:09,520 --> 02:10:14,520
+I'm going to say that my quadrant
+offsets because this will make it clearer later on.
+
+1426
+02:10:14,552 --> 02:10:21,808
+The top right is going to be X1 Y0
+
+1427
+02:10:23,744 --> 02:10:27,328
+Then it's going to be 00.
+
+1428
+02:10:29,864 --> 02:10:32,696
+Then it's going to be 01.
+
+1429
+02:10:33,416 --> 02:10:36,576
+Then 11.
+
+1430
+02:10:38,776 --> 02:10:44,008
+We also need some kind of scaling
+factor, so we know that when we start...
+
+1431
+02:10:44,040 --> 02:10:47,072
+[Paul thinks]
+
+1432
+02:10:49,936 --> 02:10:53,528
+Even better than this is
+the scale, let's just say scale.
+
+1433
+02:10:55,992 --> 02:11:00,464
+And our X offset, and our Y offset.
+
+1434
+02:11:00,520 --> 02:11:03,520
+[Silence]
+
+1435
+02:11:04,864 --> 02:11:07,208
+And then...
+
+1436
+02:11:08,200 --> 02:11:10,112
+...we fill in...
+
+1437
+02:11:11,608 --> 02:11:13,952
+One of two things happens here.
+
+1438
+02:11:14,008 --> 02:11:17,000
+[Silence]
+
+1439
+02:11:17,210 --> 02:11:20,224
+[Paul dictates what he writes]
+
+1440
+02:11:21,848 --> 02:11:24,016
+If data is a number...
+
+1441
+02:11:26,752 --> 02:11:28,968
+So how do I do that?
+
+1442
+02:11:33,392 --> 02:11:42,168
+I need to walk through these 4 sections
+and I've got some kind of array of arrays.
+
+1443
+02:11:42,752 --> 02:11:53,032
+In each part, I should have 4
+values for each of those 4 parts.
+
+1444
+02:11:53,150 --> 02:11:58,704
+If it's a single value, I should fill that
+whole quadrant where I am with that value.
+
+1445
+02:11:59,150 --> 02:12:02,848
+Otherwise I should take
+the opposite of that quadrant...
+
+1446
+02:12:02,930 --> 02:12:06,376
+But I guess I'm doing that
+in offsets, so I've got 2 sets of offsets.
+
+1447
+02:12:06,744 --> 02:12:09,016
+JW: I suppose that an alternative would be to...
+
+1448
+02:12:12,032 --> 02:12:16,220
+inaud this code here but walking
+all the way down to the 1 pixel size,
+
+1449
+02:12:16,220 --> 02:12:21,928
+carrying down the right level of the quadtree
+data to meet your representation with you.
+
+1450
+02:12:24,016 --> 02:12:27,168
+And then if you cant step down a level into the data,
+
+1451
+02:12:27,160 --> 02:12:29,688
+you can pass that same single value all the way down
+
+1452
+02:12:29,680 --> 02:12:32,576
+PB: Yes, that makes sense.
+
+1453
+02:12:32,696 --> 02:12:39,048
+So I just need the ability to know
+where I am so I can have 2 sets of offsets here,
+
+1454
+02:12:39,504 --> 02:12:44,320
+because when we fill in we
+will be given that offset and term.
+
+1455
+02:12:44,320 --> 02:12:46,128
+And... [Paul ponders]
+
+1456
+02:12:46,672 --> 02:12:50,976
+So if I were to inaud sketch here...
+
+1457
+02:12:52,368 --> 02:12:58,368
+If I've got a field that has 8 for example,
+
+1458
+02:13:03,576 --> 02:13:07,820
+Firstly I want to take... this lot here.
+
+1459
+02:13:07,920 --> 02:13:10,904
+[Silence]
+
+1460
+02:13:11,048 --> 02:13:13,808
+(Maybe not call them X and Ys inaud.)
+
+1461
+02:13:13,800 --> 02:13:16,952
+So I take this quadrant here.
+
+1462
+02:13:19,000 --> 02:13:27,976
+We'll either have 4 values, or 1 value. Well, it will
+have 4 elements, or 1, and just be an initial object.
+
+1463
+02:13:28,456 --> 02:13:32,904
+If it's an initial object, then I pass
+it down, but since there are 4,
+
+1464
+02:13:33,200 --> 02:13:38,920
+I take the first and then fill in
+again with the offset here being 4,
+
+1465
+02:13:39,400 --> 02:13:41,408
+and the offset being 0.
+
+1466
+02:13:42,568 --> 02:13:50,368
+And that needs to know that it
+started off, well I start off filling with maybe...
+
+1467
+02:13:50,360 --> 02:13:52,728
+[Paul thinks]
+
+1468
+02:13:52,968 --> 02:13:55,624
+...my scale.
+
+1469
+02:13:56,896 --> 02:14:00,800
+Being in this case, half of the width.
+
+1470
+02:14:02,256 --> 02:14:05,256
+JW: The scale halves each time
+so eventually you will get to scale one
+
+1471
+02:14:05,250 --> 02:14:07,272
+and you can actually do some painting.
+
+1472
+02:14:07,272 --> 02:14:09,270
+PB: Yes, so let's start off with size.
+
+1473
+02:14:09,270 --> 02:14:12,464
+Rows, and size and some data.
+
+1474
+02:14:12,968 --> 02:14:15,008
+But, I also need to know what my offset is.
+
+1475
+02:14:15,000 --> 02:14:16,008
+JW: Yes, I think so.
+
+1476
+02:14:17,000 --> 02:14:20,456
+PB: So I need X over 00 and size.
+
+1477
+02:14:21,400 --> 02:14:25,800
+[Paul dictates what he types]
+
+1478
+02:14:25,800 --> 02:14:35,672
+But then I also have additional things
+I've mapped down for each of those parts in turn.
+
+1479
+02:14:35,704 --> 02:14:41,856
+So I've got another X half set
+which is going to be scaled by...
+
+1480
+02:14:43,370 --> 02:14:50,328
+What should I say there, something
+like fill in with the same rows.
+
+1481
+02:14:50,808 --> 02:14:54,832
+[Paul thinks]
+
+1482
+02:15:03,920 --> 02:15:11,440
+JW: At this point as the scale is not 1,
+we can pick the appropriate pieces of data,
+
+1483
+02:15:11,690 --> 02:15:19,208
+to send to our recursive calls to fill in,
+or if it is one we can use whatever item we have.
+
+1484
+02:15:19,200 --> 02:15:20,808
+PB: Yes, that's exactly it.
+
+1485
+02:15:22,440 --> 02:15:24,984
+So we say... [Paul dictates what he says on screen]
+
+1486
+02:15:24,984 --> 02:15:26,980
+JW: Yes, do the special case first.
+PB: Yes.
+
+1487
+02:15:26,980 --> 02:15:29,992
+Then we say... [Paul dictates what he writes]
+
+1488
+02:15:38,904 --> 02:15:43,680
+Yes, that's right, and we just return.
+
+1489
+02:15:49,080 --> 02:15:53,304
+We'll assume that our data is good but otherwise,
+
+1490
+02:15:53,560 --> 02:15:59,224
+for each of our additional offsets
+into this, we have to say that at the start,
+
+1491
+02:15:59,790 --> 02:16:05,080
+for example here, our scale is the width.
+
+1492
+02:16:07,144 --> 02:16:10,512
+JW: Don't we just need to
+break data into 4 pieces, and then...
+
+1493
+02:16:11,368 --> 02:16:15,864
+PB: Yes, but the only point is that
+the segment we're working on
+
+1494
+02:16:15,860 --> 02:16:18,776
+(They both talk at once)
+
+1495
+02:16:18,824 --> 02:16:28,096
+So if we start at eight, then we
+multiply, we add 0 x the scale of two.
+
+1496
+02:16:28,136 --> 02:16:31,144
+[Silence]
+
+1497
+02:16:38,104 --> 02:16:47,330
+So this is the existing Exocet plus the internal offset which I called 2 inaud
+
+1498
+02:16:48,720 --> 02:16:51,712
+[Paul dictates what he writes]
+
+1499
+02:16:55,608 --> 02:16:58,632
+[Silence]
+
+1500
+02:16:59,430 --> 02:17:05,064
+And we need to zip it with data, if, or...
+
+1501
+02:17:05,672 --> 02:17:08,672
+[Paul thinks]
+
+1502
+02:17:10,464 --> 02:17:13,392
+So I'm going to say... [Paul dictates what he writes]
+
+1503
+02:17:18,000 --> 02:17:19,704
+If we can do that on our data...
+
+1504
+02:17:20,256 --> 02:17:23,016
+or each actually.
+
+1505
+02:17:23,656 --> 02:17:26,608
+If we can call each on the data... which we cant inaud...
+
+1506
+02:17:27,160 --> 02:17:29,208
+I hope.
+
+1507
+02:17:29,900 --> 02:17:34,984
+Yes, this is to each and... [Paul thinks]
+
+1508
+02:17:35,280 --> 02:17:37,064
+That's fine.
+
+1509
+02:17:37,232 --> 02:17:40,248
+[Paul dictates what he writes]
+
+1510
+02:17:45,064 --> 02:17:52,344
+I'm going to replace the
+data with data data data data.
+
+1511
+02:17:52,736 --> 02:17:55,016
+I think that's horrible but it might work.
+
+1512
+02:17:55,016 --> 02:17:57,010
+JW: Yes.
+
+1513
+02:17:57,920 --> 02:18:00,664
+I could have done data x 4 but...
+
+1514
+02:18:00,744 --> 02:18:03,744
+[Silence]
+
+1515
+02:18:09,224 --> 02:18:15,464
+JW: So we've got the rows to pass
+in, the two offsets into that space.
+
+1516
+02:18:16,048 --> 02:18:18,728
+And now we need the scale.
+
+1517
+02:18:19,960 --> 02:18:22,320
+PB: Yes, which in that case I need to...
+
+1518
+02:18:25,304 --> 02:18:27,160
+That one.
+
+1519
+02:18:27,200 --> 02:18:30,192
+[Silence]
+
+1520
+02:18:30,190 --> 02:18:33,184
+JW: Which will be half of the scale that is given to us.
+
+1521
+02:18:33,352 --> 02:18:35,180
+PB: Yes.
+
+1522
+02:18:35,616 --> 02:18:39,792
+So maybe scale inaud all over the place so we'll say...
+
+1523
+02:18:40,528 --> 02:18:43,536
+[Paul dictates what he writes]
+
+1524
+02:18:45,456 --> 02:18:48,432
+[Silence]
+
+1525
+02:18:49,640 --> 02:18:55,448
+In fact that might give a better name for the xoff2.
+
+1526
+02:18:55,608 --> 02:19:00,560
+Let's call that subxoff, subyoff.
+
+1527
+02:19:00,608 --> 02:19:03,600
+[Silence]
+
+1528
+02:19:04,536 --> 02:19:08,192
+JW: I think you can get away
+with simply calling those X and Y.
+
+1529
+02:19:09,384 --> 02:19:11,808
+PB: Yes, possible.
+
+1530
+02:19:14,552 --> 02:19:19,120
+And the data is whatever we have.
+
+1531
+02:19:20,680 --> 02:19:23,832
+Either that or depending on whether we...
+
+1532
+02:19:23,920 --> 02:19:27,928
+JW: Don't we need to reach into that data and pull out the appropriate one for this inaud.
+
+1533
+02:19:27,920 --> 02:19:30,240
+PB: Yes, sorry that's right.
+
+1534
+02:19:33,160 --> 02:19:35,528
+We've got subdata as well.
+
+1535
+02:19:35,520 --> 02:19:38,664
+And I'm going to zip this.
+
+1536
+02:19:38,660 --> 02:19:41,656
+[Silence]
+
+1537
+02:19:46,200 --> 02:19:48,520
+Zip that with data.
+
+1538
+02:19:48,520 --> 02:19:51,848
+[Silence]
+
+1539
+02:19:51,848 --> 02:19:53,840
+Those are prep sized.
+
+1540
+02:19:55,744 --> 02:19:58,104
+JW: That's an interesting bridge.
+
+1541
+02:19:58,392 --> 02:20:03,630
+Is it to pack the pieces you want
+together and then iterate over them rather than...
+
+1542
+02:20:04,192 --> 02:20:08,328
+PB: Yes I think it's a bit
+nicer than using say, with index.
+
+1543
+02:20:08,600 --> 02:20:09,616
+Let's see what happens.
+
+1544
+02:20:09,610 --> 02:20:14,000
+JW: I think we'll see a couple of commas before we inaud
+
+1545
+02:20:14,936 --> 02:20:17,120
+Err... 29.
+
+1546
+02:20:18,536 --> 02:20:20,840
+JW: Get rid of those PB: Yes.
+
+1547
+02:20:21,048 --> 02:20:24,096
+[Silence]
+
+1548
+02:20:26,320 --> 02:20:29,224
+JW: We've not actually defined subdata or is this...
+
+1549
+02:20:30,280 --> 02:20:34,080
+PB: Yes, you're right that should be sub data,
+other wise it's not going to do anything at all.
+
+1550
+02:20:34,128 --> 02:20:37,120
+[Silence]
+
+1551
+02:20:41,630 --> 02:20:43,968
+JW: The whole scale, yes of course.
+
+1552
+02:20:44,008 --> 02:20:50,584
+PB: That's right... so we've got RSpec...
+and we can just replace width with size.
+
+1553
+02:20:50,648 --> 02:20:53,656
+[Silence]
+
+1554
+02:21:04,936 --> 02:21:07,064
+OK? JW: Yes.
+
+1555
+02:21:07,744 --> 02:21:11,304
+Oh, we haven't made size available.
+
+1556
+02:21:11,360 --> 02:21:14,352
+[Silence]
+
+1557
+02:21:27,064 --> 02:21:32,032
+Ah right, in that case, so for our
+next trick let's try doing the whole thing.
+
+1558
+02:21:33,960 --> 02:21:36,944
+[Paul dictates what he writes]
+
+1559
+02:21:40,240 --> 02:21:42,496
+Let's serialize the spec.
+
+1560
+02:21:45,032 --> 02:21:47,632
+Given that... we should get that.
+
+1561
+02:21:47,632 --> 02:21:49,630
+JW: Yes, great.
+
+1562
+02:21:52,192 --> 02:21:54,408
+And what would you call it, a ...
+
+1563
+02:21:55,272 --> 02:21:57,128
+JW: Partially homogenized?
+
+1564
+02:21:57,120 --> 02:22:00,384
+PB: Yes partially homogeneous, that seems fine.
+
+1565
+02:22:03,216 --> 02:22:06,216
+[Paul thinks]
+
+1566
+02:22:07,416 --> 02:22:10,424
+[Silence]
+
+1567
+02:22:12,184 --> 02:22:14,056
+I'll just wall it up.
+
+1568
+02:22:16,112 --> 02:22:19,112
+[Paul dictates what he types]
+
+1569
+02:22:33,376 --> 02:22:35,992
+And the size for that one is 4.
+
+1570
+02:22:36,112 --> 02:22:39,144
+[Silence]
+
+1571
+02:22:47,368 --> 02:22:50,360
+I was going to say it expands the original.
+
+1572
+02:22:50,424 --> 02:22:53,440
+[Silence]
+
+1573
+02:23:14,400 --> 02:23:16,512
+I'll just copy that.
+
+1574
+02:23:16,608 --> 02:23:19,264
+And say expect serialized to equal...
+
+1575
+02:23:20,770 --> 02:23:23,648
+that and inaud
+
+1576
+02:23:25,870 --> 02:23:27,984
+JW: inaud
+
+1577
+02:23:28,032 --> 02:23:30,264
+PB: Yes erm...
+
+1578
+02:23:31,424 --> 02:23:33,928
+Yes... that's why.
+
+1579
+02:23:33,920 --> 02:23:36,600
+JW: And there's another one, inaud cool.
+
+1580
+02:23:39,120 --> 02:23:43,336
+PB: Nice, cool, let's check this in.
+
+1581
+02:23:44,880 --> 02:23:47,896
+[Paul dictates what he writes]
+
+1582
+02:23:58,896 --> 02:24:02,240
+[New Chapter]
+
+1583
+02:24:02,888 --> 02:24:07,610
+JW: So now we've got a serializer
+component and a deserializer component,
+
+1584
+02:24:07,610 --> 02:24:14,544
+and we can take in a bitmap image, and write it
+to our own custom quadtree serialization format,
+
+1585
+02:24:14,540 --> 02:24:19,912
+which is JSON compliant but doesn't
+mean anything without the deserializer part.
+
+1586
+02:24:20,016 --> 02:24:21,344
+PB: Yes.
+
+1587
+02:24:21,408 --> 02:24:23,960
+JW: And, it does seem to compress the representation.
+
+1588
+02:24:23,960 --> 02:24:27,432
+PB: Yes, certainly it's 10 x smaller.
+
+1589
+02:24:28,360 --> 02:24:33,112
+JW: So that's one aspect of
+quadtrees as I understand it.
+
+1590
+02:24:34,224 --> 02:24:37,520
+There are other operations
+you can perform with them.
+
+1591
+02:24:37,712 --> 02:24:45,144
+So I believe if you want to cut an
+image in half, as in shrink it by a factor of 2,
+
+1592
+02:24:45,320 --> 02:24:51,432
+All you need to do is chop off the lowest level.
+
+1593
+02:24:51,768 --> 02:24:53,232
+PB: Yes, that makes sense.
+
+1594
+02:24:53,230 --> 02:24:58,712
+JW: And I think our deserializer could
+do that simply by us giving it half size
+
+1595
+02:24:58,730 --> 02:25:01,896
+and it would ignore the final file.
+
+1596
+02:25:02,192 --> 02:25:04,928
+PB: That's right yes, it wouldn't walk all the way down.
+
+1597
+02:25:05,392 --> 02:25:13,440
+Yes, and you could rotate it by recursively
+swapping around the elements at each level.
+
+1598
+02:25:13,536 --> 02:25:18,728
+JW: Yes, in fact it's rather like what you
+were talking about earlier, a wrapping bitshift
+
+1599
+02:25:18,780 --> 02:25:22,568
+push numbers then take the one that's
+fallen off and put it back on at the beginning.
+
+1600
+02:25:22,560 --> 02:25:24,480
+PB: Yes, rotation of the four elements.
+
+1601
+02:25:24,480 --> 02:25:27,672
+JW: Which isn't all that intuitive to picture,
+
+1602
+02:25:27,976 --> 02:25:31,240
+but I believe when you put it
+all back together again it does work.
+
+1603
+02:25:31,240 --> 02:25:32,432
+PB: Yes.
+
+1604
+02:25:33,296 --> 02:25:38,200
+JW: So let's have one more look at our
+serialized version of my London skyline bitmap.
+
+1605
+02:25:38,304 --> 02:25:45,248
+PB: OK, in that case we want...
+something we made, which is serializer...
+
+1606
+02:25:45,264 --> 02:25:47,728
+So, if we run this...
+
+1607
+02:25:47,928 --> 02:25:50,936
+[Paul dictates as he writes]
+
+1608
+02:25:59,352 --> 02:26:01,512
+JW: There it is... glorious.
+
+1609
+02:26:02,128 --> 02:26:04,616
+PB: And if I shrink the full size down a bit...
+
+1610
+02:26:05,100 --> 02:26:07,264
+It's still not too bad, there we go.
+
+1611
+02:26:07,290 --> 02:26:08,464
+JW: Yes, that's good.
+
+1612
+02:26:10,792 --> 02:26:12,464
+Right cool.
+
+1613
+02:26:12,460 --> 02:26:14,072
+PB: Well thank you very much.
 
