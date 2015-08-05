@@ -61,7 +61,7 @@ of these into further quadrants.
 14
 00:00:51,176 --> 00:00:55,952
 When a quadrant consists of a single
-colour, it may be considered a terminal node.
+color, it may be considered a terminal node.
 
 15
 00:00:57,400 --> 00:01:03,880
