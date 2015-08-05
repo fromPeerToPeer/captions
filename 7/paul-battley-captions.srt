@@ -61,7 +61,7 @@ of these into further quadrants.
 14
 00:00:51,176 --> 00:00:55,952
 When a quadrant consists of a single
-color, it may be considered a terminal node.
+colour, it may be considered a terminal node.
 
 15
 00:00:57,400 --> 00:01:03,880
@@ -75,7 +75,7 @@ depending on when your watching this.
 
 17
 00:01:07,312 --> 00:01:10,656
-JW: It's in a Windows 1Bit bitmap format.
+JW: It's in a Windows 1 bit bitmap format.
 
 18
 00:01:10,650 --> 00:01:14,048
@@ -88,7 +88,7 @@ So, it's up to you how you make use of that.
 20
 00:01:17,552 --> 00:01:22,950
 PB: So the first thing we want
-to do is pass the bitmap file.
+to do is parse the bitmap file.
 
 21
 00:01:22,950 --> 00:01:36,832
@@ -125,12 +125,12 @@ If it is we can find some other way of processing it.
 28
 00:02:07,290 --> 00:02:13,112
 1 bit pixel. Each bit is
-indexed into a table of two colors.
+an index into a table of two colours.
 
 29
 00:02:14,450 --> 00:02:18,776
-That's interesting, so inaudible
-colors even though there's only two.
+That's interesting, so it still has a 
+colours table even though there's only two.
 
 30
 00:02:18,816 --> 00:02:21,904
@@ -152,7 +152,7 @@ at the file to see how long it is.
 
 34
 00:02:37,120 --> 00:02:42,048
-Ls - L on whatever .bmp
+ls -l on whatever dot bitmap
 
 35
 00:02:43,800 --> 00:02:45,816
@@ -173,7 +173,7 @@ It's 256 x 256.
 39
 00:02:59,560 --> 00:03:09,432
 256 by 256 would be 64K except that
-we're less 8 bits of a pixel... so 8 pixels.
+we know it's 8 bits per pixel... so 8 pixels.
 
 40
 00:03:09,712 --> 00:03:16,240
@@ -230,13 +230,13 @@ ARGV first because I want to specify the encoding.
 
 52
 00:04:18,680 --> 00:04:23,832
-JW: So ARGF gives you the final past
-into the command rather than inaudible
+JW: So ARGF gives you the file passed
+into the command rather than standard in?
 
 53
 00:04:27,180 --> 00:04:32,504
 PB: Well it gives you both, so you can either
-write something or it will give you the first one.
+pipe something in or it will give you the first one.
 
 54
 00:04:33,000 --> 00:04:37,832
@@ -269,7 +269,7 @@ which is not ASCII actually but...
 
 61
 00:05:03,656 --> 00:05:06,008
-Let's say that's byte.
+Let's say that's bytes.
 
 62
 00:05:07,888 --> 00:05:12,216
@@ -285,7 +285,7 @@ So I'm going to split this screen.
 
 65
 00:05:22,800 --> 00:05:26,632
-Actually, no I'll make a new inaudible.
+Actually, no I'll make a new term in tmux
 
 66
 00:05:30,250 --> 00:05:32,400
@@ -302,7 +302,7 @@ No implicit conversion from array to string.
 
 69
 00:05:42,856 --> 00:05:46,824
-And read ARGV first.
+That's right, I need ARGV.first
 
 70
 00:05:51,152 --> 00:05:55,408
@@ -325,7 +325,7 @@ that image bytes is bytes from...
 74
 00:06:18,040 --> 00:06:27,432
 Actually let's just say minus
-width, width x height to the end.
+width, width times height to the end.
 
 75
 00:06:29,752 --> 00:06:33,088
@@ -341,15 +341,16 @@ Put some space in there.
 
 78
 00:06:42,208 --> 00:06:46,760
-I can run this at inaudible percent.
+I can run this with !ruby %
 
 79
 00:06:49,376 --> 00:06:50,968
-Inaudible.
+[inaudible]
 
 80
 00:06:52,464 --> 00:06:56,000
-And define the length nil nil class by 5.
+Undefined method length for 
+nil nil class line 5
 
 81
 00:06:56,056 --> 00:06:59,040
@@ -361,7 +362,7 @@ That's interesting.
 
 83
 00:07:02,440 --> 00:07:04,872
-Apparently image bytes is nil.
+Apparently image_bytes is nil.
 
 84
 00:07:06,896 --> 00:07:09,624
@@ -393,7 +394,7 @@ JW: Is that all bytes are like a string?
 
 91
 00:07:30,520 --> 00:07:32,888
-PB: Your right, exactly.
+PB: You're right, exactly.
 
 92
 00:07:32,880 --> 00:07:35,896
@@ -436,7 +437,7 @@ that are the byte value of each character.
 
 101
 00:08:28,128 --> 00:08:34,240
-Let's just try saying leave bytes
+Let's just try saying p bytes
 and just take 10 of them or something.
 
 102
@@ -450,7 +451,7 @@ see if I've got something sensible there.
 
 104
 00:08:45,856 --> 00:08:49,272
-Yes, that seems useful.
+Yes, that seems sensible.
 
 105
 00:08:51,920 --> 00:08:56,880
@@ -479,11 +480,11 @@ characters, so it's width x height.
 
 111
 00:09:20,312 --> 00:09:29,344
-And let's say bits per pixels... is that what it says?
+And let's say bits per pixel... is that what it says?
 
 112
 00:09:32,976 --> 00:09:36,264
-Hard code here, I think we know what 8 is.
+Let's hard code it here, I think we know what 8 is.
 
 113
 00:09:36,720 --> 00:09:42,256
@@ -493,12 +494,12 @@ it's multiples of 8 and in this case it is.
 114
 00:09:45,016 --> 00:09:49,880
 8192 that's the number I was
-looking for, that's the power of 2.
+looking for, that's a power of 2.
 
 115
 00:09:50,768 --> 00:09:54,904
 JW: Would you mind printing out the
-difference between bytes.length and image bytes?
+difference between bytes.length and image_bytes?
 
 116
 00:09:54,900 --> 00:09:56,280
@@ -510,7 +511,7 @@ PB: Yes, that's a good idea.
 
 118
 00:09:58,360 --> 00:10:03,624
-So bytes.length minus image bytes.length.
+So bytes.length minus image_bytes.length.
 
 119
 00:10:03,620 --> 00:10:06,712
@@ -540,8 +541,8 @@ header equals bytes.take... that much.
 
 125
 00:10:49,592 --> 00:10:53,408
-So I've now got the image
-the bytes and the header.
+So I've now got the the bytes of
+the image and the header.
 
 126
 00:10:53,400 --> 00:10:55,104
@@ -570,7 +571,7 @@ Then we should in fact...
 
 132
 00:11:26,112 --> 00:11:28,176
-inaudible it's not going to do it.
+I'm going to make this width / 8
 
 133
 00:11:28,304 --> 00:11:31,312
@@ -578,11 +579,12 @@ inaudible it's not going to do it.
 
 134
 00:11:33,480 --> 00:11:40,016
-So then our byte is going to be the image bytes.
+So then our byte is going to be
+the image_bytes
 
 135
 00:11:41,040 --> 00:11:48,880
-And the index of width over 8 x Y.
+at the index of width over 8 times Y.
 
 136
 00:11:48,952 --> 00:11:51,832
@@ -595,11 +597,11 @@ Plus X.
 138
 00:11:57,176 --> 00:12:04,696
 And then we want 8.times do,
-what shall we call this one - i.
+what shall we call this one - i?
 
 139
 00:12:05,848 --> 00:12:07,896
-Inaudible
+[inaudible]
 
 140
 00:12:07,960 --> 00:12:12,152
@@ -607,7 +609,7 @@ So for each of these I'm going to say...
 
 141
 00:12:14,830 --> 00:12:21,216
-I want to find the 'i' bit of it, but I don't
+I want to find the Ith bit of it, but I don't
 know which way round they are do I?
 
 142
@@ -616,7 +618,7 @@ JW: Ah, that's true.
 
 143
 00:12:23,170 --> 00:12:25,104
-Inaudible
+We don't know which endian are these bytes
 
 144
 00:12:26,704 --> 00:12:29,792
@@ -629,7 +631,7 @@ PB: Maybe it will say in Wikipedia.
 146
 00:12:36,808 --> 00:12:42,480
 It's probably reasonable to assume
-that the most significant ones on the left,
+that the most significant one's on the left,
 
 147
 00:12:42,544 --> 00:12:45,400
@@ -637,8 +639,8 @@ Like numbers are.
 
 148
 00:12:48,408 --> 00:12:53,704
-Yes, so if I start off with my, (a kind of ugly
-way of doing it but it will work for now).
+Yes, so if I start off with my... kind of ugly
+way of doing it but it will work for now
 
 149
 00:12:53,700 --> 00:12:58,816
@@ -664,7 +666,8 @@ from zero and then increasing.
 
 154
 00:13:24,140 --> 00:13:31,040
-And I can take that and inaudible that with the byte.
+And I can take that and logical AND
+that with the byte.
 
 155
 00:13:33,176 --> 00:13:39,072
@@ -676,7 +679,7 @@ And then take the whole thing...
 
 157
 00:13:44,296 --> 00:13:51,864
-And then right shift the whole thing by 8 bytes.
+And then right shift the whole thing by 8 minus i
 
 158
 00:13:51,860 --> 00:13:56,128
@@ -690,7 +693,7 @@ by 8, which means it's the least significant.
 
 160
 00:14:02,672 --> 00:14:04,920
-It's like program C isn't it? [Laughter]
+It's like programming in C isn't it? [Laughter]
 
 161
 00:14:04,920 --> 00:14:13,832
@@ -710,7 +713,7 @@ That should be more readable.
 
 165
 00:14:31,390 --> 00:14:36,920
-And then at the end of each row is a put
+And then at the end of each row is a puts
 
 166
 00:14:39,008 --> 00:14:42,448
@@ -3018,7 +3021,7 @@ PB: The next thing was that...
 
 710
 01:02:38,740 --> 01:02:43,008
-When a quadrant consists of a single color,
+When a quadrant consists of a single colour,
 it may be considered a terminal node.
 
 711
