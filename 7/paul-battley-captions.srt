@@ -2102,7 +2102,7 @@ which are going to be quite similar.
 
 493
 00:41:19,040 --> 00:41:22,488
-I'm going to write the test
+I'm going to write the tests
 for all of them first and then...
 
 494
