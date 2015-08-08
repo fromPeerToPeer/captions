@@ -1631,7 +1631,7 @@ because we don't have a QuadNode.
 
 382
 00:32:49,610 --> 00:32:51,984
-Lib.quadnode.
+Tab edit lib/quadnode.
 
 383
 00:32:52,952 --> 00:32:57,952
