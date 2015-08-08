@@ -1581,7 +1581,7 @@ Good.
 
 370
 00:31:30,472 --> 00:31:36,016
-Now I'm going to make a spec to actually live.
+Now I'm going to make a spec and a lib.
 
 371
 00:31:37,296 --> 00:31:44,304
