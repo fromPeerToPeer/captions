@@ -1967,7 +1967,7 @@ Width, and that can be just rows.first.length.
 
 462
 00:38:55,272 --> 00:39:01,304
-OK... I did the same for rows.
+OK... I'm going to do the same for rows.
 
 463
 00:39:01,300 --> 00:39:04,288
