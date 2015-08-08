@@ -2240,7 +2240,7 @@ JW: Right so we've got a quad node class which...
 
 526
 00:44:33,540 --> 00:44:38,152
-given the input pixels can give you each inaudible.
+given the input pixels can give you each sub-quadrant.
 
 527
 00:44:38,210 --> 00:44:44,632
