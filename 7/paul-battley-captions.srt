@@ -1659,7 +1659,7 @@ Good, OK.
 
 389
 00:33:17,960 --> 00:33:26,504
-So I'm going to say, it should return it's rows.
+So I'm going to say, it should return its rows.
 
 390
 00:33:26,536 --> 00:33:29,552
