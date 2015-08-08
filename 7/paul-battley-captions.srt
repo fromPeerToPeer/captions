@@ -1922,7 +1922,7 @@ It should return the number of columns.
 
 451
 00:38:07,072 --> 00:38:11,256
-And say expect subjects dot...
+And say expect subject dot...
 
 452
 00:38:11,304 --> 00:38:14,344
