@@ -5197,7 +5197,7 @@ seen a reason to use protected.
 
 1218
 01:51:25,610 --> 01:51:33,568
-PB: Yes, and it's a bad reason I think, bu
+PB: Yes, and it's a bad reason I think, but
 apart for all the extra spaces, which we can say...
 
 1219
@@ -5285,8 +5285,8 @@ JW: It actually serialized. [Laughter]
 1239
 01:53:07,800 --> 01:53:14,260
 PB: So let's look at our print bmp.
-I'm gong to pull this out into a class
-so we can use it on it's own.
+I'm going to pull this out into a class
+so we can use it on its own.
 
 1240
 01:53:14,664 --> 01:53:19,800
