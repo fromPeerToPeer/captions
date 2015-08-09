@@ -5634,7 +5634,7 @@ So then, whatever we do let's say...
 
 1322
 02:00:59,280 --> 02:01:04,416
-Subject is going to be deserializer.new.
+Subject is going to be Deserializer.new.
 
 1323
 02:01:04,576 --> 02:01:09,160
@@ -5678,7 +5678,8 @@ And let's say... [Paul thinks]
 
 1332
 02:02:23,792 --> 02:02:27,144
-inaud I can't think of a better name is...
+...then we can say, some kind of @intermediate
+I can't think of a better name is...
 
 1333
 02:02:27,990 --> 02:02:30,984
@@ -5722,7 +5723,7 @@ and then we'll pull out the first item
 1342
 02:03:27,008 --> 02:03:30,112
 that's the way we have to leave it because
-you cant have a bare value and a JSON
+you cant have a bare value in JSON
 
 1343
 02:03:30,110 --> 02:03:32,616
@@ -5781,15 +5782,16 @@ PB: In fact we could.
 
 1356
 02:04:26,640 --> 02:04:32,512
-But I think with inaud we don't know that because our serializer is only given the quad tree.
+But with the current API we don't know that
+because our serializer is only given the quad tree.
 
 1357
 02:04:33,230 --> 02:04:35,176
-But yes, your right it could.
+But yes, you are right it could.
 
 1358
 02:04:35,170 --> 02:04:37,704
-JW: inaud
+JW: width and height, the root does.
 
 1359
 02:04:37,784 --> 02:04:40,440
@@ -5831,7 +5833,8 @@ our serializer doesn't like it.
 
 1368
 02:05:22,776 --> 02:05:25,328
-And height... inaud for that.
+Width And height...
+we can single it out for now.
 
 1369
 02:05:26,464 --> 02:05:29,008
@@ -5860,11 +5863,12 @@ way around this one quite nicely,
 
 1375
 02:05:48,520 --> 02:05:51,270
-and that will be very similar to what we've got but...
+and that will be very similar to what
+we've got but...
 
 1376
 02:05:53,320 --> 02:05:59,536
-So let our serializer be 1,2,3,4.
+So let our serializer be [1,2,3,4].
 
 1377
 02:06:02,320 --> 02:06:05,184
@@ -5880,7 +5884,8 @@ Yes, because it's an image 4 pixels.
 
 1380
 02:06:19,216 --> 02:06:25,088
-That's going to be 1 and 2 and the second row is 3 and 4.
+That's going to be 1 and 2
+and the second row is 3 and 4.
 
 1381
 02:06:27,570 --> 02:06:31,136
@@ -5888,7 +5893,7 @@ PB: It's not, it's serializer. [Laughter]
 
 1382
 02:06:31,240 --> 02:06:33,190
-Er... yes it should be 2,1,3,4
+Er... yes it should be [2,1,3,4]
 
 1383
 02:06:33,190 --> 02:06:35,488
