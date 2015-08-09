@@ -4942,7 +4942,7 @@ in an array or it's a bare number.
 
 1158
 01:46:28,384 --> 01:46:35,304
-JW: Yes, Ruby inaudible number is fine,
+JW: Yes, maybe a bare number is fine,
 maybe 2A is not the right method name anymore.
 
 1159
@@ -4981,7 +4981,7 @@ the dimensions, allows you to rebuild
 
 1167
 01:47:22,136 --> 01:47:25,816
-PB: Yes. inaudible, that's fine.
+PB: Yes. nothing works now, that's fine.
 
 1168
 01:47:27,280 --> 01:47:29,800
@@ -5120,7 +5120,7 @@ And we'll just say... [Paul dictates what he writes]
 
 1200
 01:50:11,560 --> 01:50:15,080
-inaudible, or inaudible actually.
+to_json, or actually rather
 
 1201
 01:50:15,976 --> 01:50:18,984
@@ -5138,7 +5138,7 @@ to use 2S instead, then we don't have to...
 
 1204
 01:50:30,080 --> 01:50:31,760
-deal with the inaudible value anymore.
+deal with the awkwardly named `value` anymore.
 
 1205
 01:50:31,792 --> 01:50:33,864
@@ -5179,7 +5179,7 @@ Ah! Yes, that doesn't work because...
 
 1214
 01:51:12,136 --> 01:51:15,520
-we can't make the inaudible, not yet anyway, but we will.
+we can't make it private, not yet anyway
 
 1215
 01:51:15,520 --> 01:51:18,648
@@ -5206,7 +5206,7 @@ apart for all the extra spaces, which we can say...
 
 1220
 01:51:47,440 --> 01:51:52,192
-inaudible I'll do the same for the
+Good. I'll do the same for the
 other ones, which are much shorter so...
 
 1221
@@ -5299,7 +5299,7 @@ we test ad-hoc but that's alright.
 
 1242
 01:53:23,880 --> 01:53:25,904
-inaudible
+BMPImage
 
 1243
 01:53:26,328 --> 01:53:31,832
@@ -5349,7 +5349,7 @@ And I'm going to require QuadNode.
 
 1254
 01:54:19,616 --> 01:54:22,208
-I've already forgotten my inaudible.
+I've already forgotten what I called it
 
 1255
 01:54:22,232 --> 01:54:25,240
@@ -5393,7 +5393,7 @@ JW: I think it's called print. PB: Yes.
 
 1265
 01:55:13,832 --> 01:55:18,280
-Yes, inaudible cool.
+Yes, let's copy it from down there
 
 1266
 01:55:18,336 --> 01:55:21,352
@@ -5481,7 +5481,7 @@ JW: Not bad.
 
 1286
 01:57:09,720 --> 01:57:14,952
-PB: Yes, inaudible
+PB: Yes, an order of magnitude,
 which is very nice.
 
 1287
@@ -5535,7 +5535,7 @@ all the way through the tree perhaps.
 
 1298
 01:58:05,060 --> 01:58:08,672
-But let's give ourselves inaudible
+But let's give ourselves the width and height
 
 1299
 01:58:10,184 --> 01:58:16,224
