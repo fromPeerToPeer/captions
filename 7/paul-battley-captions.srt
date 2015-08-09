@@ -6005,7 +6005,7 @@ got to be given a map into which to put it.
 
 1408
 02:08:36,200 --> 02:08:38,760
-And an x offset and Y offset.
+And an X offset and Y offset.
 
 1409
 02:08:38,760 --> 02:08:41,760
@@ -6177,7 +6177,7 @@ JW: I suppose that an alternative would be to...
 
 1448
 02:12:12,032 --> 02:12:16,220
-inaud this code here but walking
+same basical idea, but walking
 all the way down to the 1 pixel size,
 
 1449
@@ -6213,7 +6213,8 @@ And... [Paul ponders]
 
 1456
 02:12:46,672 --> 02:12:50,976
-So if I were to inaud sketch here...
+So if I were to write it, 
+I can sketch it here...
 
 1457
 02:12:52,368 --> 02:12:58,368
@@ -6221,7 +6222,7 @@ If I've got a field that has 8 for example,
 
 1458
 02:13:03,576 --> 02:13:07,820
-Firstly I want to take... this lot here.
+Firstly, I want to take... this lot here.
 
 1459
 02:13:07,920 --> 02:13:10,904
@@ -6229,7 +6230,8 @@ Firstly I want to take... this lot here.
 
 1460
 02:13:11,048 --> 02:13:13,808
-(Maybe not call them X and Ys inaud.)
+(Maybe not call them X and Ys
+is going to be confusing as well.)
 
 1461
 02:13:13,800 --> 02:13:16,952
@@ -6243,7 +6245,7 @@ have 4 elements, or 1, and just be an initial object.
 1463
 02:13:28,456 --> 02:13:32,904
 If it's an initial object, then I pass
-it down, but since there are 4,
+it down, but assuming there are 4,
 
 1464
 02:13:33,200 --> 02:13:38,920
@@ -6298,7 +6300,7 @@ JW: Yes, I think so.
 
 1476
 02:14:17,000 --> 02:14:20,456
-PB: So I need X over 00 and size.
+PB: So I need X over 0, 0 and size.
 
 1477
 02:14:21,400 --> 02:14:25,800
