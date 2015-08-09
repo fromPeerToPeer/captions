@@ -5863,8 +5863,7 @@ way around this one quite nicely,
 
 1375
 02:05:48,520 --> 02:05:51,270
-and that will be very similar to what
-we've got but...
+and that will be very similar to what we've got but...
 
 1376
 02:05:53,320 --> 02:05:59,536
@@ -5884,8 +5883,7 @@ Yes, because it's an image 4 pixels.
 
 1380
 02:06:19,216 --> 02:06:25,088
-That's going to be 1 and 2
-and the second row is 3 and 4.
+That's going to be 1 and 2 and the second row is 3 and 4.
 
 1381
 02:06:27,570 --> 02:06:31,136
@@ -5927,7 +5925,7 @@ columns that I can put things into.
 
 1390
 02:07:03,456 --> 02:07:05,530
-I'm sure there's a more elegant way of doing this
+I'm sure there's a more elegant functional way of doing this
 
 1391
 02:07:05,530 --> 02:07:09,064
@@ -5953,7 +5951,7 @@ PB: Yes, I do.
 
 1396
 02:07:33,168 --> 02:07:36,024
-So that should give me a whole load of inaud.
+So that should give me a whole load of ref-nils.
 
 1397
 02:07:37,608 --> 02:07:43,160
@@ -6022,7 +6020,7 @@ but that's what it's going to be building from.
 
 1412
 02:08:55,488 --> 02:09:00,216
-inaud
+If that's going to be filled to
 
 1413
 02:09:02,384 --> 02:09:06,360
@@ -6031,7 +6029,7 @@ that would make more sense.
 
 1414
 02:09:06,848 --> 02:09:11,720
-We're going to start off with a blank inaud in which I'm going to put things.
+We're going to start off with a blank [inaud] in which I'm going to put things.
 
 1415
 02:09:12,568 --> 02:09:19,960
@@ -6044,7 +6042,7 @@ only one value then there is no mapping to do at all,
 
 1417
 02:09:25,144 --> 02:09:28,616
-... but we'll inaud ... so fill in.
+... but we'll [inaud] to fill in ... so fill in.
 
 1418
 02:09:31,792 --> 02:09:34,048
@@ -6052,7 +6050,7 @@ Offset 0.
 
 1419
 02:09:35,872 --> 02:09:38,432
-Whatever our intermediate data is, it's still there inaud
+Whatever our intermediate data is, it's still there [inaud]
 
 1420
 02:09:38,496 --> 02:09:41,496
@@ -6086,15 +6084,15 @@ The top right is going to be X1 Y0
 
 1427
 02:10:23,744 --> 02:10:27,328
-Then it's going to be 00.
+Then it's going to be [0, 0].
 
 1428
 02:10:29,864 --> 02:10:32,696
-Then it's going to be 01.
+Then it's going to be [0, 1].
 
 1429
 02:10:33,416 --> 02:10:36,576
-Then 11.
+Then [1, 1].
 
 1430
 02:10:38,776 --> 02:10:44,008
@@ -6187,7 +6185,7 @@ data to meet your representation with you.
 
 1450
 02:12:24,016 --> 02:12:27,168
-And then if you cant step down a level into the data,
+And then if you can't step down a level into the data,
 
 1451
 02:12:27,160 --> 02:12:29,688
@@ -6213,7 +6211,7 @@ And... [Paul ponders]
 
 1456
 02:12:46,672 --> 02:12:50,976
-So if I were to write it, 
+So if I were to, maybe I write it,
 I can sketch it here...
 
 1457
