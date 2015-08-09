@@ -4904,7 +4904,7 @@ So let's revisit these earlier ones.
 
 1149
 01:45:47,864 --> 01:45:51,104
-That should compress down to just 2.
+That should compress down to just 42.
 
 1150
 01:45:52,152 --> 01:45:53,128
