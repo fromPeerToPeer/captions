@@ -5510,7 +5510,7 @@ deserializer that takes the serialized one
 1292
 01:57:40,280 --> 01:57:44,648
 and turns it back into a
-QuadTree... does that make sense?
+QuadNode... does that make sense?
 
 1293
 01:57:45,024 --> 01:57:47,368
@@ -5550,7 +5550,7 @@ spec where we have a very simple
 
 1301
 01:58:23,504 --> 01:58:27,640
-serialized QuadRoot to work from and
+serialized QuadNode to work from and
 produce the rows and columns we expect,
 
 1302
