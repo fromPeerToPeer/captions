@@ -4959,7 +4959,7 @@ Is it to array...? (I'll change it later)
 
 1162
 01:46:56,368 --> 01:47:01,952
-So this one should be 2,1,3,4
+So this one should be [2, 1, 3, 4]
 
 1163
 01:47:01,950 --> 01:47:04,952
@@ -5014,7 +5014,7 @@ I don't like this already. [laughter]
 
 1175
 01:47:58,248 --> 01:48:00,080
-Serializer is a new node.
+Serializer.new(node)
 
 1176
 01:48:03,048 --> 01:48:06,936
@@ -5111,7 +5111,7 @@ by saying to_s which is a JSON serialization.
 
 1198
 01:49:59,224 --> 01:50:03,952
-I'll say require JSON - that's in
+I'll say `require 'json'` - that's in
 the standard library these days.
 
 1199
@@ -5235,8 +5235,8 @@ Well actually, my test name was completely wrong.
 
 1227
 01:52:18,344 --> 01:52:23,536
-I'll just check the serializer has rows
-and columns in (I should use better names) erm....
+I'll just check 'it serializes the rows
+and columns in' (I should use better names) erm....
 
 1228
 01:52:23,648 --> 01:52:26,656
@@ -5336,7 +5336,7 @@ And I'm going to say require...
 
 1251
 01:54:03,688 --> 01:54:06,744
-bmp image, so that I can load it.
+bmp_image, so that I can load it.
 
 1252
 01:54:06,740 --> 01:54:12,008
@@ -5427,7 +5427,7 @@ Serializer initialise with the root node.
 
 1273
 01:55:57,888 --> 01:56:01,784
-And then let's puts that.to_s
+And then let's `puts` that dot `to_s`
 
 1274
 01:56:03,650 --> 01:56:05,192
