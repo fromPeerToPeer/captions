@@ -4943,7 +4943,7 @@ in an array or it's a bare number.
 1158
 01:46:28,384 --> 01:46:35,304
 JW: Yes, maybe a bare number is fine,
-maybe 2A is not the right method name anymore.
+maybe to_a is not the right method name anymore.
 
 1159
 01:46:36,512 --> 01:46:40,432
@@ -5040,7 +5040,7 @@ jump out of the internals of QuadNode.
 1181
 01:48:28,000 --> 01:48:35,264
 PB: Yes... I'm just going to see if
-I can find a better name for 2A.
+I can find a better name for to_a.
 
 1182
 01:48:35,352 --> 01:48:38,376
@@ -5107,7 +5107,7 @@ PB: Yes, that seems like a nice thing to do.
 1197
 01:49:48,632 --> 01:49:57,230
 We can make it a proper serializer
-by saying 2S which is a JSON serialization.
+by saying to_s which is a JSON serialization.
 
 1198
 01:49:59,224 --> 01:50:03,952
@@ -5134,7 +5134,7 @@ bunch of things... unless I actually test it.
 1203
 01:50:25,640 --> 01:50:29,640
 JW: If you change all these current tests
-to use 2S instead, then we don't have to...
+to use to_s instead, then we don't have to...
 
 1204
 01:50:30,080 --> 01:50:31,760
