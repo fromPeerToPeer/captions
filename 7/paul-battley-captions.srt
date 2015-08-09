@@ -2908,13 +2908,13 @@ Cool.
 
 684
 01:00:14,280 --> 01:00:17,584
-PB: There we need something
+PB: There we need some way of
 representing the leaf node.
 
 685
 01:00:24,792 --> 01:00:31,192
 Maybe that's fine, maybe simply having
-one element in it is... that leaf node.
+one element in it is... a leaf node.
 
 686
 01:00:31,816 --> 01:00:34,952
@@ -2922,7 +2922,7 @@ So what I might say is...
 
 687
 01:00:35,200 --> 01:00:37,168
-inaudible
+First of all that's.. that's..
 
 688
 01:00:37,224 --> 01:00:40,232
@@ -2993,7 +2993,7 @@ Everything's fine.
 
 704
 01:02:05,976 --> 01:02:08,952
-That feels a bit happier so I'll check those in.
+That feels a bit happier so I'm gonna check those in.
 
 705
 01:02:08,950 --> 01:02:11,952
@@ -3005,7 +3005,7 @@ That feels a bit happier so I'll check those in.
 
 707
 01:02:26,760 --> 01:02:32,688
-inaudible
+There's a bunch of other stuff that I would [inaudible]
 
 708
 01:02:32,760 --> 01:02:36,096
@@ -3041,7 +3041,7 @@ want to put that in the node
 
 715
 01:03:08,392 --> 01:03:10,912
-because inaudible about the color.
+because I don't think it really belongs [inaudible] about the color.
 
 716
 01:03:10,936 --> 01:03:14,536
@@ -3066,7 +3066,7 @@ I can easily understand, so I'm going to say...
 
 721
 01:03:44,270 --> 01:03:47,168
-...this quadrant is all one.
+...this quadrant is all 1.
 
 722
 01:03:48,160 --> 01:03:50,840
@@ -3127,7 +3127,7 @@ And I'm going to say...
 
 736
 01:04:55,560 --> 01:04:59,944
-Firstly, I'm going to break this down into cells.
+First of all, I'm going to break this down into cells.
 
 737
 01:04:59,940 --> 01:05:06,224
@@ -3139,7 +3139,7 @@ Firstly, I'm going to break this down into cells.
 
 739
 01:05:09,688 --> 01:05:14,040
-Olander, which is going to be...
+lambda, which is going to be...
 
 740
 01:05:15,184 --> 01:05:20,200
@@ -3148,7 +3148,7 @@ it the four items in the same order.
 
 741
 01:05:20,688 --> 01:05:27,568
-So if I say Ive got A,B,C, and D
+So if I say I've got A, B, C, and D
 going from northeast anticlockwise.
 
 742
@@ -3157,7 +3157,7 @@ And I'm just going to return true.
 
 743
 01:05:36,376 --> 01:05:41,104
-No, I'm going to say A equals B equal C equals B.
+No, I'm going to say A == B == C == D.
 
 744
 01:05:41,100 --> 01:05:44,128
@@ -3175,7 +3175,7 @@ up here with a recursive split.
 747
 01:06:00,110 --> 01:06:05,096
 And then give it that predicate
-as a block, or olander, whatever.
+as a block, or lambda, whatever.
 
 748
 01:06:05,096 --> 01:06:08,848
@@ -3183,7 +3183,7 @@ as a block, or olander, whatever.
 
 749
 01:06:08,840 --> 01:06:12,240
-It turned into a inaudible.
+It turned into a Proc.
 
 750
 01:06:13,144 --> 01:06:16,896
@@ -3221,7 +3221,7 @@ PB: Expect 1 to be a leaf, so result...
 758
 01:06:55,400 --> 01:06:59,144
 I'm just going to add one more
-inaudible to make sure it's going down.
+[inaudible] to make sure it's going down.
 
 759
 01:06:59,848 --> 01:07:04,560
@@ -3279,7 +3279,7 @@ So here I get quad tree quad tree...
 772
 01:08:09,440 --> 01:08:14,744
 I'm not sure if that makes any sense any more,
-but it depends what the rules for splitting are.
+because it depends on what the rules for splitting are.
 
 773
 01:08:14,768 --> 01:08:17,736
@@ -3308,7 +3308,7 @@ In fact I could even say...
 
 779
 01:09:05,424 --> 01:09:08,304
-That inaudible wrong, I've got an array of nodes.
+That [inaudible] wrong, I've got an array of nodes.
 
 780
 01:09:10,000 --> 01:09:12,240
@@ -3337,7 +3337,7 @@ It doesn't really matter if I do it or not so...
 
 786
 01:09:56,976 --> 01:10:00,152
-So this one, I want to know if I can split here.
+So first of all, I want to know if I can split here.
 
 787
 01:10:00,456 --> 01:10:03,080
@@ -3378,7 +3378,7 @@ I'm sure there's a simpler thing that I've missed.
 
 796
 01:10:56,464 --> 01:11:01,592
-So now do we get inaudible map for the QuadNode.
+So now do we get undefined method map for the QuadNode.
 
 797
 01:11:05,360 --> 01:11:07,760
@@ -3394,7 +3394,7 @@ I'm thinking that perhaps...
 
 800
 01:11:24,600 --> 01:11:29,224
-each of things should at some point be a node.
+each of these things should at some point be a node.
 
 801
 01:11:29,960 --> 01:11:34,312
@@ -3433,7 +3433,7 @@ here but there probably actually isn't.
 
 809
 01:12:12,336 --> 01:12:16,024
-I'm just going to see... yes very.take erm...
+I'm just going to see... yes row.take erm...
 
 810
 01:12:18,960 --> 01:12:21,416
@@ -3441,7 +3441,7 @@ I'm just going to see... yes very.take erm...
 
 811
 01:12:21,670 --> 01:12:26,816
-I inaudible a wrap function which,
+I'm gonna make a wrap function which,
 because I'm doing this quite a lot erm ...
 
 812
@@ -3500,7 +3500,7 @@ split recurser... erm...
 
 825
 01:13:48,496 --> 01:13:54,240
-Again, it's wrong it should be pulling
+Again, it's wrong it should be calling
 split recurser when it should be pulling sub-nodes.
 
 826
@@ -3509,7 +3509,7 @@ Let's try using this to children.
 
 827
 01:13:58,808 --> 01:14:01,168
-No let's finish and see what breaks.
+No let's first see what breaks.
 
 828
 01:14:04,288 --> 01:14:08,632
@@ -3522,7 +3522,7 @@ expected to get different things back.
 
 830
 01:14:15,648 --> 01:14:21,928
-Expect rows, yes inaudible which is in northeast quadrant and that should be erm...
+Expect rows, yes [inaudible] which is in northeast quadrant and that should be erm...
 
 831
 01:14:22,432 --> 01:14:27,480
