@@ -5423,7 +5423,7 @@ Initialize with rows.
 
 1272
 01:55:51,608 --> 01:55:55,560
-Serializer initialise with the root node.
+Serializer initialize with the root node.
 
 1273
 01:55:57,888 --> 01:56:01,784
