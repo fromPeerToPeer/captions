@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:01,224 --> 00:00:02,976
 NARRATOR: Welcome to Peer to Peer
 
@@ -907,7 +907,7 @@ Or rather...
 
 211
 00:18:24,920 --> 00:18:33,944
-Yes, I think that's modularly inaud shrink list. [Laughter]
+Yes, I think that's modularly inaudible shrink list. [Laughter]
 
 212
 00:18:33,968 --> 00:18:36,992
@@ -951,7 +951,7 @@ Don't know what I typed there... some junk... right.
 
 221
 00:19:21,310 --> 00:19:27,752
-That want's a simple BMP printer.
+That wants a simple BMP printer.
 
 222
 00:19:31,448 --> 00:19:41,768
@@ -1003,7 +1003,7 @@ And... get it to take this stuff.
 
 233
 00:20:34,664 --> 00:20:39,424
-In fact I'm going to make a bnp file construct.
+In fact I'm going to make a bmp file construct.
 
 234
 00:20:39,744 --> 00:20:44,304
@@ -1045,7 +1045,7 @@ BMPImage.new
 
 243
 00:21:20,152 --> 00:21:23,390
-inaud first encoding.
+inaudible first encoding.
 
 244
 00:21:25,432 --> 00:21:30,592
@@ -1070,7 +1070,7 @@ In fact, if I say that it will be file.open.
 
 249
 00:21:44,820 --> 00:21:48,592
-And I can say file.read.upack.
+And I can say file.read.unpack.
 
 250
 00:21:49,090 --> 00:21:54,952
@@ -1087,7 +1087,7 @@ else later but I think for now that will work.
 
 253
 00:22:04,040 --> 00:22:07,048
-inaud
+inaudible
 
 254
 00:22:07,040 --> 00:22:09,248
@@ -1140,7 +1140,7 @@ Width height pixels in there, inaudible we can put this into a private method.
 
 266
 00:23:16,912 --> 00:23:26,344
-inaud and say private section and say def image bytes.
+inaudible and say private section and say def image bytes.
 
 267
 00:23:26,340 --> 00:23:29,392
@@ -1178,7 +1178,7 @@ at bytes.length and image bytes.
 
 275
 00:24:04,192 --> 00:24:09,128
-So we've inaud bytes, OK.
+So we've inaudible bytes, OK.
 
 276
 00:24:11,970 --> 00:24:16,640
@@ -1212,7 +1212,7 @@ dot pixels, and see if I get the same sensible result.
 
 283
 00:24:48,144 --> 00:24:51,136
-inaud because I haven't given it the width and the height.
+inaudible because I haven't given it the width and the height.
 
 284
 00:24:51,130 --> 00:24:54,128
@@ -1220,7 +1220,7 @@ inaud because I haven't given it the width and the height.
 
 285
 00:24:55,096 --> 00:24:59,872
-inaud
+inaudible
 
 286
 00:25:01,720 --> 00:25:05,264
@@ -1238,7 +1238,7 @@ OK, seems good.
 
 289
 00:25:16,056 --> 00:25:19,040
-inaud yes, that seems good.
+inaudible yes, that seems good.
 
 290
 00:25:20,992 --> 00:25:21,952
@@ -1286,7 +1286,7 @@ Height I can map...
 
 300
 00:26:16,680 --> 00:26:23,064
-I would like to do the inaud style of functional things with the braces.
+I would like to do the inaudible style of functional things with the braces.
 
 301
 00:26:23,104 --> 00:26:24,570
@@ -1329,7 +1329,7 @@ flatten... I don't know how deep it goes.
 
 310
 00:27:00,416 --> 00:27:03,912
-It inaud, but if I have say...
+It inaudible, but if I have say...
 
 311
 00:27:03,910 --> 00:27:06,920
@@ -1358,7 +1358,7 @@ with flat map, its the same as map.flatten.
 
 317
 00:27:36,840 --> 00:27:41,024
-So you see map.flatten in there, which gives me the same inaud
+So you see map.flatten in there, which gives me the same inaudible
 
 318
 00:27:43,640 --> 00:27:46,520
@@ -1423,7 +1423,7 @@ PB: Yes.
 
 333
 00:28:45,720 --> 00:28:48,030
-inaud
+inaudible
 
 334
 00:28:48,030 --> 00:28:51,072
@@ -1453,11 +1453,11 @@ pixels was the wrong thing to do
 
 340
 00:29:12,136 --> 00:29:15,360
-but we'll have to inaud or something.
+but we'll have to inaudible or something.
 
 341
 00:29:15,368 --> 00:29:17,360
-inaud
+inaudible
 
 342
 00:29:19,280 --> 00:29:21,072
@@ -1498,7 +1498,7 @@ I'm just going to run together just in case...
 
 351
 00:30:00,568 --> 00:30:02,848
-Yes, tha's working.
+Yes, that's working.
 
 352
 00:30:03,896 --> 00:30:07,288
@@ -1537,7 +1537,7 @@ item in them takes each of the quadrants.
 
 360
 00:30:44,830 --> 00:30:49,624
-So inad writing that I think I can test quite
+So inaudible writing that I think I can test quite
 easily, so I'm going to start doing things that way.
 
 361
@@ -1605,7 +1605,7 @@ Is that right, somehow I feel...
 
 376
 00:32:19,744 --> 00:32:24,200
-It's the kind of thing I never write inaud, I just copy it off another file inaud
+It's the kind of thing I never write inaudible, I just copy it off another file inaudible
 
 377
 00:32:26,512 --> 00:32:30,384
@@ -1621,7 +1621,7 @@ Yes, that should fail... and it does,
 
 380
 00:32:42,096 --> 00:32:44,168
-because we don't have a quadnode.
+because we don't have a QuadNode.
 
 381
 00:32:44,216 --> 00:32:47,208
@@ -1629,7 +1629,7 @@ because we don't have a quadnode.
 
 382
 00:32:49,610 --> 00:32:51,984
-Lib.quadenode.
+Lib.quadnode.
 
 383
 00:32:52,952 --> 00:32:57,952
@@ -1641,7 +1641,7 @@ And that should pass.
 
 385
 00:33:03,830 --> 00:33:06,608
-Good, there will probably be something else inaud.
+Good, there will probably be something else inaudible.
 
 386
 00:33:08,104 --> 00:33:10,176
@@ -1710,7 +1710,7 @@ I realise I should have put more spacing in... 9,10,11,12.
 
 402
 00:34:22,670 --> 00:34:23,504
-inaud
+inaudible
 
 403
 00:34:23,580 --> 00:34:26,608
@@ -1751,7 +1751,7 @@ but it's so much easier like this.
 
 412
 00:35:01,400 --> 00:35:03,336
-inaud
+inaudible
 
 413
 00:35:05,440 --> 00:35:08,408
@@ -1768,7 +1768,7 @@ And then I'll say... [Paul dictates what he writes]
 
 416
 00:35:25,230 --> 00:35:30,152
-And now from this... it works, so I just have a thing that inaud.
+And now from this... it works, so I just have a thing that inaudible.
 
 417
 00:35:30,208 --> 00:35:32,824
@@ -1793,7 +1793,7 @@ OK...
 
 422
 00:35:50,432 --> 00:35:55,712
-And say implement a basic quadnode.
+And say implement a basic QuadNode.
 
 423
 00:35:56,224 --> 00:35:58,320
@@ -1841,7 +1841,7 @@ JW: OK.
 
 433
 00:36:38,032 --> 00:36:41,496
-PB: Which means we don't have to inaud.
+PB: Which means we don't have to inaudible.
 
 434
 00:36:43,110 --> 00:36:47,032
@@ -1875,7 +1875,7 @@ and 5,6.
 
 441
 00:37:22,872 --> 00:37:25,272
-Yes, inaud.
+Yes, inaudible.
 
 442
 00:37:25,270 --> 00:37:28,240
@@ -2088,7 +2088,7 @@ So I think that should do it.
 
 491
 00:41:09,400 --> 00:41:14,104
-inaud full, which are going to be quite similar.
+inaudible full, which are going to be quite similar.
 
 492
 00:41:14,152 --> 00:41:17,152
@@ -2191,7 +2191,7 @@ I still want the first 2 rows,
 
 516
 00:43:35,608 --> 00:43:40,310
-because north... but with this one a inaud
+because north... but with this one a inaudible
 
 517
 00:43:40,310 --> 00:43:43,296
@@ -2233,7 +2233,7 @@ JW: Right so we've got a quad node class which...
 
 526
 00:44:33,540 --> 00:44:38,152
-given the input pixels can give you each inaud.
+given the input pixels can give you each inaudible.
 
 527
 00:44:38,210 --> 00:44:44,632
@@ -2299,7 +2299,7 @@ So anti-clockwise from northeast.
 541
 00:46:09,904 --> 00:46:25,032
 So in that case I should be
-able to say expectsubject.split.to equal...
+able to say expect subject.split.to equal...
 
 542
 00:46:26,920 --> 00:46:33,224
@@ -2316,7 +2316,7 @@ Then I'm going to say subject dot...
 
 545
 00:46:42,360 --> 00:46:45,480
-(I'll put this onto a new line because inaud)
+(I'll put this onto a new line because inaudible)
 
 546
 00:46:46,800 --> 00:47:00,792
@@ -2425,7 +2425,7 @@ Yes, so I can say if divisible that...
 
 571
 00:49:36,216 --> 00:49:41,520
-inaud for you.
+inaudible for you.
 
 572
 00:49:41,520 --> 00:49:47,704
@@ -2448,7 +2448,7 @@ something with a completely different word.
 
 576
 00:49:59,776 --> 00:50:02,176
-inaud
+inaudible
 
 577
 00:50:03,328 --> 00:50:07,632
@@ -2517,7 +2517,7 @@ So what I should end up with...
 592
 00:51:42,400 --> 00:51:47,776
 rather than specifying all the data for
-this, I'm goiung to just look at a bit of the data.
+this, I'm going to just look at a bit of the data.
 
 593
 00:51:49,192 --> 00:51:53,048
@@ -2538,7 +2538,7 @@ So we'll say...
 
 597
 00:52:09,704 --> 00:52:16,120
-Result equals inaud
+Result equals inaudible
 
 598
 00:52:16,120 --> 00:52:19,120
@@ -2571,13 +2571,12 @@ if I would rather have an object out of it.
 
 605
 00:52:54,560 --> 00:52:57,408
-I'll go with array aqnd see how that works.
+I'll go with array and see how that works.
 
 606
 00:52:57,400 --> 00:53:05,512
 JW: There is a slight suggestion that northeast
-
-orthwest could return another quadnode.
+northwest could return another QuadNode.
 
 607
 00:53:06,808 --> 00:53:09,160
@@ -2585,7 +2584,7 @@ PB: Yes.
 
 608
 00:53:12,424 --> 00:53:16,064
-Of course, because inaud
+Of course, because inaudible
 
 609
 00:53:17,408 --> 00:53:22,024
@@ -2701,7 +2700,7 @@ for, that's the first thing I...
 
 635
 00:55:27,008 --> 00:55:30,592
-inaud so let's implement that.
+inaudible so let's implement that.
 
 636
 00:55:30,680 --> 00:55:33,696
@@ -2831,7 +2830,7 @@ do that all the way down there.
 
 665
 00:58:32,920 --> 00:58:35,310
-inaud better.
+inaudible better.
 
 666
 00:58:36,488 --> 00:58:39,768
@@ -2923,7 +2922,7 @@ So what I might say is...
 
 687
 01:00:35,200 --> 01:00:37,168
-inaud
+inaudible
 
 688
 01:00:37,224 --> 01:00:40,232
@@ -3006,7 +3005,7 @@ That feels a bit happier so I'll check those in.
 
 707
 01:02:26,760 --> 01:02:32,688
-inaud
+inaudible
 
 708
 01:02:32,760 --> 01:02:36,096
@@ -3042,7 +3041,7 @@ want to put that in the node
 
 715
 01:03:08,392 --> 01:03:10,912
-because inaud about the color.
+because inaudible about the color.
 
 716
 01:03:10,936 --> 01:03:14,536
@@ -3184,7 +3183,7 @@ as a block, or olander, whatever.
 
 749
 01:06:08,840 --> 01:06:12,240
-It turned into a inaud.
+It turned into a inaudible.
 
 750
 01:06:13,144 --> 01:06:16,896
@@ -3222,7 +3221,7 @@ PB: Expect 1 to be a leaf, so result...
 758
 01:06:55,400 --> 01:06:59,144
 I'm just going to add one more
-inaud to make sure it's going down.
+inaudible to make sure it's going down.
 
 759
 01:06:59,848 --> 01:07:04,560
@@ -3309,7 +3308,7 @@ In fact I could even say...
 
 779
 01:09:05,424 --> 01:09:08,304
-That inaud wrong, I've got an array of nodes.
+That inaudible wrong, I've got an array of nodes.
 
 780
 01:09:10,000 --> 01:09:12,240
@@ -3379,7 +3378,7 @@ I'm sure there's a simpler thing that I've missed.
 
 796
 01:10:56,464 --> 01:11:01,592
-So now do we get inaud map for the QuadNode.
+So now do we get inaudible map for the QuadNode.
 
 797
 01:11:05,360 --> 01:11:07,760
@@ -3442,7 +3441,7 @@ I'm just going to see... yes very.take erm...
 
 811
 01:12:21,670 --> 01:12:26,816
-I inaud a wrap function which,
+I inaudible a wrap function which,
 because I'm doing this quite a lot erm ...
 
 812
@@ -3523,7 +3522,7 @@ expected to get different things back.
 
 830
 01:14:15,648 --> 01:14:21,928
-Expect rows, yes inaud which is in northeast quadrant and that should be erm...
+Expect rows, yes inaudible which is in northeast quadrant and that should be erm...
 
 831
 01:14:22,432 --> 01:14:27,480
@@ -3613,7 +3612,7 @@ So I'll change split to children.
 
 852
 01:16:19,976 --> 01:16:23,016
-inaud is that yes... No.
+inaudible is that yes... No.
 
 853
 01:16:23,088 --> 01:16:26,088
@@ -3637,7 +3636,7 @@ So we now have children.
 
 858
 01:17:01,600 --> 01:17:07,104
-Children inaud I'm going to change that test.
+Children inaudible I'm going to change that test.
 
 859
 01:17:08,240 --> 01:17:10,488
@@ -3757,7 +3756,7 @@ into something saying context.
 
 885
 01:19:29,672 --> 01:19:33,848
-And I put all of those inside except inaud.
+And I put all of those inside except inaudible.
 
 886
 01:19:33,840 --> 01:19:36,864
@@ -3780,7 +3779,7 @@ bottom: context, and call it a 1 element dataset.
 890
 01:20:01,800 --> 01:20:07,240
 Or it could be a 1 element
-quadtree, that might make more sense.
+QuadTree, that might make more sense.
 
 891
 01:20:07,740 --> 01:20:15,808
@@ -3789,7 +3788,7 @@ So this one, I want to say that its children is itself.
 892
 01:20:16,008 --> 01:20:24,144
 So our basic building block is a
-quadtree which has one element which is a leaf.
+QuadTree which has one element which is a leaf.
 
 893
 01:20:27,072 --> 01:20:30,208
@@ -3819,11 +3818,11 @@ similar with 4 because 4 is still quite simple
 
 899
 01:20:52,290 --> 01:20:58,776
-but it's easy to think about and we inaud.
+but it's easy to think about and we inaudible.
 
 900
 01:20:59,224 --> 01:21:05,064
-Let's get rid of that entirely, and inaud our dataset something like...
+Let's get rid of that entirely, and inaudible our dataset something like...
 
 901
 01:21:05,060 --> 01:21:08,056
@@ -3894,7 +3893,7 @@ All these things are...
 
 917
 01:23:03,112 --> 01:23:06,904
-Yes, so there's 16 inaud.
+Yes, so there's 16 inaudible.
 
 918
 01:23:07,312 --> 01:23:12,664
@@ -4152,7 +4151,7 @@ So now I can say...
 
 976
 01:28:58,208 --> 01:29:01,704
-In fact, I can just say inaud, so northeast.
+In fact, I can just say inaudible, so northeast.
 
 977
 01:29:01,888 --> 01:29:04,872
@@ -4223,11 +4222,11 @@ a concrete target to work towards,
 993
 01:30:25,400 --> 01:30:31,896
 we could maybe step out of
-quadnode itself into some sort of serializer.
+QuadNode itself into some sort of serializer.
 
 994
 01:30:32,808 --> 01:30:38,048
-Give it a root quadnode and it can walk
+Give it a root QuadNode and it can walk
 the tree and chop off the bits it doesn't need.
 
 995
@@ -4245,7 +4244,7 @@ Spec has got a serializer.
 998
 01:30:49,600 --> 01:30:52,616
 JW: It might help inform the
-interface of quadnode as well.
+interface of QuadNode as well.
 
 999
 01:30:52,632 --> 01:30:55,648
@@ -4383,7 +4382,7 @@ Or not... [Paul laughs]... requires a serializer.
 
 1030
 01:34:31,016 --> 01:34:33,976
-inaud
+inaudible
 
 1031
 01:34:34,056 --> 01:34:37,072
@@ -4753,7 +4752,7 @@ the first spec that demonstrates the
 
 1114
 01:42:37,528 --> 01:42:40,480
-compressing quality of the quadtree.
+compressing quality of the QuadTree.
 
 1115
 01:42:40,530 --> 01:42:43,528
@@ -4799,7 +4798,7 @@ So when we ended up with 2 by itself
 
 1124
 01:43:35,320 --> 01:43:38,392
-PB: It's not, because it should inaud.
+PB: It's not, because it should inaudible.
 
 1125
 01:43:38,432 --> 01:43:41,448
@@ -4855,7 +4854,7 @@ I'm just going to write it here.
 
 1137
 01:44:46,832 --> 01:44:49,136
-I'm going to ignore the inaud for now.
+I'm going to ignore the inaudible for now.
 
 1138
 01:44:49,592 --> 01:44:52,744
@@ -4943,7 +4942,7 @@ in an array or it's a fair number.
 
 1158
 01:46:28,384 --> 01:46:35,304
-JW: Yes, Ruby inaud number is fine, maybe 2A is not the right method name anymore.
+JW: Yes, Ruby inaudible number is fine, maybe 2A is not the right method name anymore.
 
 1159
 01:46:36,512 --> 01:46:40,432
@@ -4981,7 +4980,7 @@ the dimensions, allows you to read those.
 
 1167
 01:47:22,136 --> 01:47:25,816
-PB: Yes. inaud, that's fine.
+PB: Yes. inaudible, that's fine.
 
 1168
 01:47:27,280 --> 01:47:29,800
@@ -5035,7 +5034,7 @@ not be separate, but it gave us a space to
 
 1180
 01:48:25,190 --> 01:48:28,000
-jump out of the internals of quadnode.
+jump out of the internals of QuadNode.
 
 1181
 01:48:28,000 --> 01:48:35,264
@@ -5120,7 +5119,7 @@ And we'll just say... [Paul dictates what he writes]
 
 1200
 01:50:11,560 --> 01:50:15,080
-inaud, or inaud actually.
+inaudible, or inaudible actually.
 
 1201
 01:50:15,976 --> 01:50:18,984
@@ -5138,7 +5137,7 @@ to use 2S instead, then we don't have to...
 
 1204
 01:50:30,080 --> 01:50:31,760
-deal with the inaud value anymore.
+deal with the inaudible value anymore.
 
 1205
 01:50:31,792 --> 01:50:33,864
@@ -5179,7 +5178,7 @@ Ah! Yes, that doesn't work because...
 
 1214
 01:51:12,136 --> 01:51:15,520
-we can't make the inaud, not yet anyway, but we will.
+we can't make the inaudible, not yet anyway, but we will.
 
 1215
 01:51:15,520 --> 01:51:18,648
@@ -5206,7 +5205,7 @@ apart for all the extra spaces, which we can say...
 
 1220
 01:51:47,440 --> 01:51:52,192
-inaud I'll do the same for the
+inaudible I'll do the same for the
 other ones, which are much shorter so...
 
 1221
@@ -5298,7 +5297,7 @@ we test ad-hoc but that's alright.
 
 1242
 01:53:23,880 --> 01:53:25,904
-inaud
+inaudible
 
 1243
 01:53:26,328 --> 01:53:31,832
@@ -5335,7 +5334,7 @@ And I'm going to say require...
 
 1251
 01:54:03,688 --> 01:54:06,744
-bnp image, so that I can load it.
+bmp image, so that I can load it.
 
 1252
 01:54:06,740 --> 01:54:12,008
@@ -5344,11 +5343,11 @@ serializer, so that I can serialize it.
 
 1253
 01:54:13,500 --> 01:54:19,552
-And I'm going to require quadnode.
+And I'm going to require QuadNode.
 
 1254
 01:54:19,616 --> 01:54:22,208
-I've already forgotten my inaud.
+I've already forgotten my inaudible.
 
 1255
 01:54:22,232 --> 01:54:25,240
@@ -5392,7 +5391,7 @@ JW: I think it's called print. PB: Yes.
 
 1265
 01:55:13,832 --> 01:55:18,280
-Yes, inaud cool.
+Yes, inaudible cool.
 
 1266
 01:55:18,336 --> 01:55:21,352
@@ -5480,7 +5479,7 @@ JW: Not bad.
 
 1286
 01:57:09,720 --> 01:57:14,952
-PB: Yes, inaud which is very nice.
+PB: Yes, inaudible which is very nice.
 
 1287
 01:57:16,100 --> 01:57:19,184
@@ -5508,7 +5507,7 @@ deserializer that takes the serialized one
 1292
 01:57:40,280 --> 01:57:44,648
 and turns it back into a
-quadtree... does that make sense?
+QuadTree... does that make sense?
 
 1293
 01:57:45,024 --> 01:57:47,368
@@ -5533,7 +5532,7 @@ all the way through the tree perhaps.
 
 1298
 01:58:05,060 --> 01:58:08,672
-But let's give ourselves inaud
+But let's give ourselves inaudible
 
 1299
 01:58:10,184 --> 01:58:16,224
@@ -5547,7 +5546,7 @@ spec where we have a very simple
 
 1301
 01:58:23,504 --> 01:58:27,640
-serialized quadroot to work from and
+serialized QuadRoot to work from and
 produce the rows and columns we expect,
 
 1302
@@ -5597,7 +5596,7 @@ And we can say... [Paul dictates what he writes]
 
 1313
 02:00:01,264 --> 02:00:05,680
-JW: We could hide quadnode inside the serializer.
+JW: We could hide QuadNode inside the serializer.
 
 1314
 02:00:06,304 --> 02:00:08,536
@@ -5653,7 +5652,7 @@ should probably have the same interface,
 1326
 02:01:23,750 --> 02:01:29,944
 so serializer should be given
-rows and columns and the quadtree.
+rows and columns and the QuadTree.
 
 1327
 02:01:30,000 --> 02:01:36,408
@@ -5678,8 +5677,7 @@ And let's say... [Paul thinks]
 
 1332
 02:02:23,792 --> 02:02:27,144
-...then we can say, some kind of @intermediate
-I can't think of a better name is...
+inaudible I can't think of a better name is...
 
 1333
 02:02:27,990 --> 02:02:30,984
@@ -5782,8 +5780,7 @@ PB: In fact we could.
 
 1356
 02:04:26,640 --> 02:04:32,512
-But with the current API we don't know that
-because our serializer is only given the quad tree.
+But I think with inaudible we don't know that because our serializer is only given the quad tree.
 
 1357
 02:04:33,230 --> 02:04:35,176
@@ -5791,7 +5788,7 @@ But yes, you are right it could.
 
 1358
 02:04:35,170 --> 02:04:37,704
-JW: width and height, the root does.
+JW: inaudible
 
 1359
 02:04:37,784 --> 02:04:40,440
@@ -5833,8 +5830,7 @@ our serializer doesn't like it.
 
 1368
 02:05:22,776 --> 02:05:25,328
-Width And height...
-we can single it out for now.
+And height... inaudible for that.
 
 1369
 02:05:26,464 --> 02:05:29,008
@@ -5953,7 +5949,7 @@ PB: Yes, I do.
 
 1396
 02:07:33,168 --> 02:07:36,024
-So that should give me a whole load of ref-nils.
+So that should give me a whole load of inaudible.
 
 1397
 02:07:37,608 --> 02:07:43,160
@@ -5979,7 +5975,7 @@ PB: Let's just say size.
 1402
 02:07:55,536 --> 02:08:00,288
 Otherwise, I don't know how
-we're going to make a quadtree.
+we're going to make a QuadTree.
 
 1403
 02:08:00,368 --> 02:08:03,368
@@ -6022,7 +6018,7 @@ but that's what it's going to be building from.
 
 1412
 02:08:55,488 --> 02:09:00,216
-If that's going to be filled to
+inaudible
 
 1413
 02:09:02,384 --> 02:09:06,360
@@ -6031,8 +6027,7 @@ that would make more sense.
 
 1414
 02:09:06,848 --> 02:09:11,720
-We're going to start off with a blank [inaud] 
-in which I'm going to put things.
+We're going to start off with a blank inaudible in which I'm going to put things.
 
 1415
 02:09:12,568 --> 02:09:19,960
@@ -6045,7 +6040,7 @@ only one value then there is no mapping to do at all,
 
 1417
 02:09:25,144 --> 02:09:28,616
-... but we'll [inaud] to fill in ... so fill in.
+... but we'll inaudible ... so fill in.
 
 1418
 02:09:31,792 --> 02:09:34,048
@@ -6053,8 +6048,7 @@ Offset 0.
 
 1419
 02:09:35,872 --> 02:09:38,432
-Whatever our intermediate data is, 
-it's still there [inaud]
+Whatever our intermediate data is, it's still there inaudible
 
 1420
 02:09:38,496 --> 02:09:41,496
@@ -6180,12 +6174,12 @@ JW: I suppose that an alternative would be to...
 
 1448
 02:12:12,032 --> 02:12:16,220
-same basical idea, but walking
+inaudible this code here but walking
 all the way down to the 1 pixel size,
 
 1449
 02:12:16,220 --> 02:12:21,928
-carrying down the right level of the quadtree
+carrying down the right level of the QuadTree
 data to meet your representation with you.
 
 1450
@@ -6216,8 +6210,7 @@ And... [Paul ponders]
 
 1456
 02:12:46,672 --> 02:12:50,976
-So if I were to, maybe I write it,
-I can sketch it here...
+So if I were to inaudible sketch here...
 
 1457
 02:12:52,368 --> 02:12:58,368
@@ -6233,8 +6226,7 @@ Firstly, I want to take... this lot here.
 
 1460
 02:13:11,048 --> 02:13:13,808
-(Maybe not call them X and Ys
-is going to be confusing as well.)
+(Maybe not call them X and Ys inaudible.)
 
 1461
 02:13:13,800 --> 02:13:16,952
@@ -6397,7 +6389,7 @@ multiply, we add 0 x the scale of two.
 
 1497
 02:16:38,104 --> 02:16:47,330
-So this is the existing Exocet plus the internal offset which I called 2 inaud
+So this is the existing Exocet plus the internal offset which I called 2 inaudible
 
 1498
 02:16:48,720 --> 02:16:51,712
@@ -6429,7 +6421,7 @@ or each actually.
 
 1505
 02:17:23,656 --> 02:17:26,608
-If we can call each on the data... which we cant inaud...
+If we can call each on the data... which we cant inaudible...
 
 1506
 02:17:27,160 --> 02:17:29,208
@@ -6499,7 +6491,7 @@ PB: Yes.
 
 1522
 02:18:35,616 --> 02:18:39,792
-So maybe scale inaud all over the place so we'll say...
+So maybe scale inaudible all over the place so we'll say...
 
 1523
 02:18:40,528 --> 02:18:43,536
@@ -6540,7 +6532,7 @@ Either that or depending on whether we...
 
 1532
 02:19:23,920 --> 02:19:27,928
-JW: Don't we need to reach into that data and pull out the appropriate one for this inaud.
+JW: Don't we need to reach into that data and pull out the appropriate one for this inaudible.
 
 1533
 02:19:27,920 --> 02:19:30,240
@@ -6590,7 +6582,7 @@ Let's see what happens.
 
 1544
 02:20:09,610 --> 02:20:14,000
-JW: I think we'll see a couple of commas before we inaud
+JW: I think we'll see a couple of commas before we inaudible
 
 1545
 02:20:14,936 --> 02:20:17,120
@@ -6717,11 +6709,11 @@ And say expect serialized to equal...
 
 1575
 02:23:20,770 --> 02:23:23,648
-that and inaud
+that and inaudible
 
 1576
 02:23:25,870 --> 02:23:27,984
-JW: inaud
+JW: inaudible
 
 1577
 02:23:28,032 --> 02:23:30,264
@@ -6733,7 +6725,7 @@ Yes... that's why.
 
 1579
 02:23:33,920 --> 02:23:36,600
-JW: And there's another one, inaud cool.
+JW: And there's another one, inaudible cool.
 
 1580
 02:23:39,120 --> 02:23:43,336
@@ -6755,7 +6747,7 @@ component and a deserializer component,
 1584
 02:24:07,610 --> 02:24:14,544
 and we can take in a bitmap image, and write it
-to our own custom quadtree serialization format,
+to our own custom QuadTree serialization format,
 
 1585
 02:24:14,540 --> 02:24:19,912
@@ -6883,4 +6875,3 @@ Right cool.
 1613
 02:26:12,460 --> 02:26:14,072
 PB: Well thank you very much.
-
