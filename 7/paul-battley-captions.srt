@@ -4938,7 +4938,7 @@ we have to come down to whatever our base value is
 1157
 01:46:20,290 --> 01:46:26,408
 and that's either an individual value
-in an array or it's a fair number.
+in an array or it's a bare number.
 
 1158
 01:46:28,384 --> 01:46:35,304
@@ -4954,7 +4954,7 @@ PB So yes... [Paul dictates what he writes]
 
 1161
 01:46:48,280 --> 01:46:54,050
-Is it to array...? (I'll check it later)
+Is it to array...? (I'll change it later)
 
 1162
 01:46:56,368 --> 01:47:01,952
@@ -4966,7 +4966,7 @@ So this one should be 2,1,3,4
 
 1164
 01:47:05,400 --> 01:47:07,912
-This one should be just lone 2.
+This one should be just the value 2.
 
 1165
 01:47:10,240 --> 01:47:14,880
@@ -4976,7 +4976,7 @@ kept externally, as you mentioned earlier,
 1166
 01:47:15,120 --> 01:47:21,352
 then combining this value structure with
-the dimensions, allows you to read those.
+the dimensions, allows you to rebuild
 
 1167
 01:47:22,136 --> 01:47:25,816
@@ -5170,7 +5170,7 @@ Let's try one of them first and see...
 
 1212
 01:51:03,200 --> 01:51:06,056
-... program value called...
+... private method value called...
 
 1213
 01:51:07,856 --> 01:51:11,224
@@ -5182,7 +5182,7 @@ we can't make the inaudible, not yet anyway, but we will.
 
 1215
 01:51:15,520 --> 01:51:18,648
-Could we have 'protected'? I'm
+Could we make it 'protected'? I'm
 never quite sure how that works.
 
 1216
@@ -5247,7 +5247,7 @@ and columns in (I should use better names) erm....
 
 1230
 01:52:32,992 --> 01:52:34,848
-So it's a single value.
+To a single value.
 
 1231
 01:52:36,820 --> 01:52:40,120
@@ -5309,7 +5309,7 @@ So now I want to see just how much we do compress.
 
 1245
 01:53:38,656 --> 01:53:42,488
-I'm going to close this path because
+I'm going to close this file because
 it doesn't seem useful any more.
 
 1246
@@ -5322,7 +5322,7 @@ I need a new file called something like dump, err...
 
 1248
 01:53:53,080 --> 01:53:55,624
-... dot image or something.
+... dump image or something.
 
 1249
 01:53:56,520 --> 01:53:59,128
@@ -5379,7 +5379,7 @@ Perhaps I shouldn't close that file.
 
 1262
 01:54:58,576 --> 01:55:05,544
-Oh that's... what do they call that file?
+Oh that's... what did I call that file?
 
 1263
 01:55:06,352 --> 01:55:09,272
@@ -5459,7 +5459,7 @@ Let's see how much our actual...
 
 1281
 01:56:51,200 --> 01:56:55,968
-And then let's put print...
+And then let's just print...
 
 1282
 01:56:56,184 --> 01:56:59,144
@@ -5483,12 +5483,12 @@ PB: Yes, inaudible which is very nice.
 
 1287
 01:57:16,100 --> 01:57:19,184
-Now we know that is giving us a nice impression,
+Now we know that is giving us a nice compression,
 
 1288
 01:57:19,208 --> 01:57:26,920
 and in fact, if we didn't have all the JSON
-effect it would probably be a little bit smaller.
+overhead they would probably both be smaller.
 
 1289
 01:57:28,040 --> 01:57:32,424
@@ -5551,7 +5551,7 @@ produce the rows and columns we expect,
 
 1302
 01:58:27,912 --> 01:58:30,160
-might be the best way to try this out.
+might be the best way to drive this out.
 
 1303
 01:58:30,160 --> 01:58:33,000
