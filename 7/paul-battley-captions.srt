@@ -4942,7 +4942,8 @@ in an array or it's a bare number.
 
 1158
 01:46:28,384 --> 01:46:35,304
-JW: Yes, Ruby inaudible number is fine, maybe 2A is not the right method name anymore.
+JW: Yes, Ruby inaudible number is fine,
+maybe 2A is not the right method name anymore.
 
 1159
 01:46:36,512 --> 01:46:40,432
@@ -5283,8 +5284,9 @@ JW: It actually serialized. [Laughter]
 
 1239
 01:53:07,800 --> 01:53:14,260
-PB: So let's look at our print bmp. I'm gong to
-pull this out into a class so we can use it on it's own.
+PB: So let's look at our print bmp.
+I'm gong to pull this out into a class
+so we can use it on it's own.
 
 1240
 01:53:14,664 --> 01:53:19,800
@@ -5479,7 +5481,8 @@ JW: Not bad.
 
 1286
 01:57:09,720 --> 01:57:14,952
-PB: Yes, inaudible which is very nice.
+PB: Yes, inaudible
+which is very nice.
 
 1287
 01:57:16,100 --> 01:57:19,184
