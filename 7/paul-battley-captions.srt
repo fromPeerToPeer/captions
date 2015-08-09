@@ -5284,7 +5284,7 @@ JW: Actually serialize. [Laughter]
 
 1239
 01:53:07,800 --> 01:53:14,260
-PB: So let's look at our print bmp.
+PB: So let's look at our print bmp image.
 I'm going to pull this out into a class
 so we can use it on its own.
 
@@ -5518,7 +5518,8 @@ JW: I think so yes.
 
 1294
 01:57:48,550 --> 01:57:54,552
-If we even need to involve the nodes already done.
+If we even need to involve the nodes,
+we maybe don't
 
 1295
 01:57:54,648 --> 01:57:56,472
@@ -5570,7 +5571,8 @@ PB: Yes let's do that...
 
 1306
 01:58:56,256 --> 01:58:58,384
-Obviously I failed so...
+Obviously going to fail because we don't
+have one so...
 
 1307
 01:58:58,416 --> 01:59:01,424
