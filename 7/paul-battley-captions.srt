@@ -5883,7 +5883,8 @@ Yes, because it's an image 4 pixels.
 
 1380
 02:06:19,216 --> 02:06:25,088
-That's going to be 1 and 2 and the second row is 3 and 4.
+That's going to be 1 and 2 
+and the second row is 3 and 4.
 
 1381
 02:06:27,570 --> 02:06:31,136
@@ -5925,7 +5926,8 @@ columns that I can put things into.
 
 1390
 02:07:03,456 --> 02:07:05,530
-I'm sure there's a more elegant functional way of doing this
+I'm sure there's a more elegant functional
+way of doing this
 
 1391
 02:07:05,530 --> 02:07:09,064
@@ -6029,7 +6031,8 @@ that would make more sense.
 
 1414
 02:09:06,848 --> 02:09:11,720
-We're going to start off with a blank [inaud] in which I'm going to put things.
+We're going to start off with a blank [inaud] 
+in which I'm going to put things.
 
 1415
 02:09:12,568 --> 02:09:19,960
@@ -6050,7 +6053,8 @@ Offset 0.
 
 1419
 02:09:35,872 --> 02:09:38,432
-Whatever our intermediate data is, it's still there [inaud]
+Whatever our intermediate data is, 
+it's still there [inaud]
 
 1420
 02:09:38,496 --> 02:09:41,496
@@ -6063,7 +6067,8 @@ and we'll return rows at the end.
 
 1422
 02:09:48,688 --> 02:09:54,344
-So fill in for each quadrant... so I'm going to say...
+So fill in for each quadrant... 
+so I'm going to say...
 
 1423
 02:09:54,340 --> 02:09:57,344
