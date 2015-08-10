@@ -6378,7 +6378,8 @@ the segment we're working on
 1495
 02:16:18,824 --> 02:16:28,096
 So if we start at eight, then we
-multiply, we add 0 x the scale of two.
+multiply, we add multiple times the
+scale of two.
 
 1496
 02:16:28,136 --> 02:16:31,144
@@ -6386,7 +6387,9 @@ multiply, we add 0 x the scale of two.
 
 1497
 02:16:38,104 --> 02:16:47,330
-So this is the existing Exocet plus the internal offset which I called 2 inaudible
+So this is the existing x offset plus the 
+internal offset which I called 2
+[inaudible]
 
 1498
 02:16:48,720 --> 02:16:51,712
@@ -6418,7 +6421,8 @@ or each actually.
 
 1505
 02:17:23,656 --> 02:17:26,608
-If we can call each on the data... which we cant inaudible...
+If we can call each on the data...
+which we can't call on string, can we?
 
 1506
 02:17:27,160 --> 02:17:29,208
@@ -6488,10 +6492,12 @@ PB: Yes.
 
 1522
 02:18:35,616 --> 02:18:39,792
-So maybe scale inaudible all over the place so we'll say...
+So maybe replace scale all over the place
+to say
 
 1523
 02:18:40,528 --> 02:18:43,536
+subscale
 [Paul dictates what he writes]
 
 1524
@@ -6529,7 +6535,7 @@ Either that or depending on whether we...
 
 1532
 02:19:23,920 --> 02:19:27,928
-JW: Don't we need to reach into that data and pull out the appropriate one for this inaudible.
+JW: Don't we need to reach into that data and pull out the appropriate one for this [inaudible].
 
 1533
 02:19:27,920 --> 02:19:30,240
@@ -6579,7 +6585,8 @@ Let's see what happens.
 
 1544
 02:20:09,610 --> 02:20:14,000
-JW: I think we'll see a couple of commas before we inaudible
+JW: I think we're missing a couple of
+commas before we [inaudible]
 
 1545
 02:20:14,936 --> 02:20:17,120
@@ -6599,8 +6606,8 @@ JW: We've not actually defined subdata or is this...
 
 1549
 02:20:30,280 --> 02:20:34,080
-PB: Yes, you're right that should be sub data,
-other wise it's not going to do anything at all.
+PB: Yes, you're right that should be subdata,
+otherwise it's not going to do anything at all.
 
 1550
 02:20:34,128 --> 02:20:37,120
@@ -6690,7 +6697,7 @@ And the size for that one is 4.
 
 1571
 02:22:47,368 --> 02:22:50,360
-I was going to say it expands the original.
+I was going to say it expands the image.
 
 1572
 02:22:50,424 --> 02:22:53,440
@@ -6706,11 +6713,11 @@ And say expect serialized to equal...
 
 1575
 02:23:20,770 --> 02:23:23,648
-that and inaudible
+that and [inaudible]
 
 1576
 02:23:25,870 --> 02:23:27,984
-JW: inaudible
+JW: [inaudible]
 
 1577
 02:23:28,032 --> 02:23:30,264
@@ -6722,7 +6729,7 @@ Yes... that's why.
 
 1579
 02:23:33,920 --> 02:23:36,600
-JW: And there's another one, inaudible cool.
+JW: And there's another one, [inaudible] cool.
 
 1580
 02:23:39,120 --> 02:23:43,336
