@@ -761,7 +761,7 @@ There's the zeros.
 
 177
 00:15:26,670 --> 00:15:31,176
-But I am getting line banks
+But I am getting line breaks
 which looks about right doesn't it?
 
 178
@@ -785,7 +785,7 @@ I just print out the byte? JW: Yes.
 
 182
 00:15:53,344 --> 00:15:59,912
-PB: So I'll skip that and just say print byte.to S
+PB: So I'll skip that and just say print byte.to_s
 
 183
 00:16:02,648 --> 00:16:05,376
@@ -802,7 +802,7 @@ JW: Yes.
 
 186
 00:16:14,050 --> 00:16:20,296
-PB: In fact if I did that to S16 inaudible and the same width.
+PB: In fact if I did that to_s(16) so it comes out as hex and they're all the same width.
 
 187
 00:16:20,290 --> 00:16:23,120
@@ -814,7 +814,7 @@ that should give us an even better indication of ...
 
 189
 00:16:27,330 --> 00:16:31,016
-The zero is still there but you get the idea.
+There's zeros still there but you get the idea.
 
 190
 00:16:31,010 --> 00:16:32,744
@@ -838,7 +838,7 @@ JW: Oh yes...
 
 195
 00:16:51,360 --> 00:16:55,888
-PB: I think that is the case with bmp,
+PB: I think that is the case with BMP,
 that the image is upside down.
 
 196
@@ -848,7 +848,7 @@ our output is upside down, it should be fine.
 
 197
 00:17:04,360 --> 00:17:16,784
-OK so bytes are OK, bitmask is OK, let's just get rid of...
+OK so bytes are OK, our bitmask is OK, let's just get rid of...
 
 198
 00:17:16,780 --> 00:17:19,848
@@ -877,7 +877,7 @@ Yes, I think that's right, the last row has...
 
 204
 00:17:45,672 --> 00:17:48,592
-There's a lot of white space at
+There's a lot of whitespace at
 the top so we would expect...
 
 205
@@ -895,7 +895,7 @@ OK so...
 208
 00:18:04,480 --> 00:18:12,672
 The easiest way of doing this then is
-to just say if it's zero, zero acts as one
+to just say if it's zero, zero, else it's one
 
 209
 00:18:13,120 --> 00:18:14,832
@@ -907,7 +907,7 @@ Or rather...
 
 211
 00:18:24,920 --> 00:18:33,944
-Yes, I think that's modularly inaudible shrink list. [Laughter]
+Yes, I think that's modularly [inaudible]. If I just shrink this. [Laughter]
 
 212
 00:18:33,968 --> 00:18:36,992
@@ -925,7 +925,7 @@ the bitmap in and in a format which,
 215
 00:18:48,328 --> 00:18:54,960
 whilst it might not look exactly how we
-want to see it - it seems to be flipped basically,
+want to see it - it seems to be flipped vertically,
 
 216
 00:18:55,512 --> 00:19:01,088
@@ -979,11 +979,11 @@ but given the size of the image...
 227
 00:20:04,720 --> 00:20:11,360
 And I don't know how easily if I can
-make a bmp of it, so I'm going to explore it.
+make a BMP of it, so I'm going to explore it.
 
 228
 00:20:11,360 --> 00:20:16,664
-So now I'll say def read bmp.
+So now I'll say def read_bmp.
 
 229
 00:20:17,760 --> 00:20:22,352
@@ -1003,7 +1003,7 @@ And... get it to take this stuff.
 
 233
 00:20:34,664 --> 00:20:39,424
-In fact I'm going to make a bmp file construct.
+In fact I'm going to make a BMPFile struct.
 
 234
 00:20:39,744 --> 00:20:44,304
@@ -1050,11 +1050,11 @@ inaudible first encoding.
 244
 00:21:25,432 --> 00:21:30,592
 Something like that will give me the
-power to inject a file that's alright for it.
+power to inject a file that's in the right format.
 
 245
 00:21:31,480 --> 00:21:34,328
-Nothing... should be able to say...
+Now... should be able to say...
 
 246
 00:21:34,320 --> 00:21:37,352
@@ -1062,7 +1062,7 @@ Nothing... should be able to say...
 
 247
 00:21:37,656 --> 00:21:40,200
-In fact, if I say that it will be file.open.
+In fact, if I say that it will be File.open.
 
 248
 00:21:40,200 --> 00:21:43,224
@@ -1132,7 +1132,7 @@ And this one...
 
 264
 00:23:04,880 --> 00:23:13,792
-Width height pixels in there, inaudible we can put this into a private method.
+Width height pixels in there, [inaudible] we can put this into a private method.
 
 265
 00:23:13,790 --> 00:23:16,744
@@ -1140,7 +1140,7 @@ Width height pixels in there, inaudible we can put this into a private method.
 
 266
 00:23:16,912 --> 00:23:26,344
-inaudible and say private section and say def image bytes.
+Go to the bottom, and say private section and say def image_bytes.
 
 267
 00:23:26,340 --> 00:23:29,392
@@ -1148,7 +1148,7 @@ inaudible and say private section and say def image bytes.
 
 268
 00:23:29,390 --> 00:23:36,080
-I will cache that and say image bytes inaudible.
+I will cache that and say image_bytes [inaudible].
 
 269
 00:23:36,600 --> 00:23:39,100
@@ -1170,19 +1170,19 @@ Again I can say header...
 
 273
 00:23:52,808 --> 00:23:55,936
-bytes.take... that's got to be at bytes.
+bytes.take... that's got to be @bytes.
 
 274
 00:23:58,208 --> 00:24:01,936
-at bytes.length and image bytes.
+@bytes.length and image_bytes.
 
 275
 00:24:04,192 --> 00:24:09,128
-So we've inaudible bytes, OK.
+So we've always got bytes, OK.
 
 276
 00:24:11,970 --> 00:24:16,640
-Here we have image bytes available to us.
+Here we have image_bytes available to us.
 
 277
 00:24:17,776 --> 00:24:20,376
@@ -1204,7 +1204,7 @@ that puts stuff, so for now I'm going to do
 
 281
 00:24:38,480 --> 00:24:41,510
-dot pixels, and see if I get the same sensible result.
+.pixels, and see if I get the same sensible result.
 
 282
 00:24:41,510 --> 00:24:44,608
@@ -1295,11 +1295,11 @@ Width over 8.
 302
 00:26:24,570 --> 00:26:29,816
 Now this one... I need to do
-something like a flat map I think.
+something like a flat_map I think.
 
 303
 00:26:30,320 --> 00:26:32,680
-Flat_map with x.
+flat_map with x.
 
 304
 00:26:32,680 --> 00:26:35,696
@@ -1315,7 +1315,7 @@ And then byte, this will be 8.times.map.
 
 307
 00:26:45,592 --> 00:26:51,896
-JW: So with flat map the arrays returned by
+JW: So with flat_map the arrays returned by
 the block will be concating together effectively?
 
 308
@@ -1324,12 +1324,12 @@ PB: Yes, I think I can demonstrate actually.
 
 309
 00:26:54,800 --> 00:26:59,968
-It's the same as dot map and dot
-flatten... I don't know how deep it goes.
+It's the same as .map and .flatten...
+I don't know how deep it goes.
 
 310
 00:27:00,416 --> 00:27:03,912
-It inaudible, but if I have say...
+It may go several layers deep, but if I have say...
 
 311
 00:27:03,910 --> 00:27:06,920
@@ -1341,7 +1341,7 @@ Yes, let's say... 1,2,3,4, something like that.
 
 313
 00:27:15,424 --> 00:27:21,360
-If I did .map a.map
+If I did .map { |a| a.map { |b| b } }
 
 314
 00:27:24,240 --> 00:27:27,672
@@ -1354,11 +1354,11 @@ And then if I did .flatten... I would get that.
 316
 00:27:31,528 --> 00:27:36,320
 And I think if I replace this one
-with flat map, its the same as map.flatten.
+with flat_map, it's the same as map.flatten.
 
 317
 00:27:36,840 --> 00:27:41,024
-So you see map.flatten in there, which gives me the same inaudible
+So you see map.flatten in there, which gives me the same.
 
 318
 00:27:43,640 --> 00:27:46,520
@@ -1379,7 +1379,7 @@ And I should be able to say puts....
 
 322
 00:28:03,752 --> 00:28:06,680
-Or P, actually that should be an array of...
+Or p, actually that should be an array of...
 
 323
 00:28:09,040 --> 00:28:12,408
@@ -1436,24 +1436,24 @@ a bit long for this small screen.
 
 336
 00:28:57,712 --> 00:29:00,504
-Image.pixels.each.
+img.pixels.each.
 
 337
 00:29:00,504 --> 00:29:02,500
-Do row.
+do |row|
 
 338
 00:29:03,120 --> 00:29:07,000
-Row.each.do pixel.
+row.each do |pixel|
 
 339
 00:29:08,970 --> 00:29:12,128
-I'm already thinking that calling
+I'm already thinking that calling it
 pixels was the wrong thing to do
 
 340
 00:29:12,136 --> 00:29:15,360
-but we'll have to inaudible or something.
+It might have been better named as rows or something.
 
 341
 00:29:15,368 --> 00:29:17,360
@@ -1465,7 +1465,7 @@ So I might do that.
 
 343
 00:29:21,840 --> 00:29:24,632
-Puts print.
+Puts... no print.
 
 344
 00:29:25,624 --> 00:29:28,464
