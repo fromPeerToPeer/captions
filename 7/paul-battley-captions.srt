@@ -6614,7 +6614,7 @@ together and then iterate over them rather than...
 1542
 02:20:04,192 --> 02:20:08,328
 PB: Yes I think it's a bit
-nicer than using say, with index.
+nicer than using say, with_index.
 
 1543
 02:20:08,600 --> 02:20:09,616
@@ -6622,16 +6622,18 @@ Let's see what happens.
 
 1544
 02:20:09,610 --> 02:20:14,000
-JW: I think we're missing a couple of
-commas before we [inaudible]
+JW: I think we're missing
+a couple of commas...
 
 1545
 02:20:14,936 --> 02:20:17,120
+PB: [Laughing] It certainly seems unhappy!
 Err... 29.
 
 1546
 02:20:18,536 --> 02:20:20,840
-JW: Get rid of those PB: Yes.
+JW: Get rid of those
+PB: Yes.
 
 1547
 02:20:21,048 --> 02:20:24,096
