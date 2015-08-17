@@ -2309,7 +2309,7 @@ So anti-clockwise from northeast.
 541
 00:46:09,904 --> 00:46:25,032
 So in that case I should be
-able to say expect subject.split.to equal...
+able to say expect(subject.split).to eq...
 
 542
 00:46:26,920 --> 00:46:33,224
@@ -2322,11 +2322,12 @@ assuming those to be equal.
 
 544
 00:46:35,620 --> 00:46:40,608
-Then I'm going to say subject dot...
+Then I'm going to say subject...
 
 545
 00:46:42,360 --> 00:46:45,480
-(I'll put this onto a new line because inaudible)
+(I'll put this onto a new line so it's a
+bit clearer)
 
 546
 00:46:46,800 --> 00:47:00,792
@@ -2334,7 +2335,7 @@ Then I'm going to say subject dot...
 
 547
 00:47:04,904 --> 00:47:07,320
-JW: I see a strait ?Q in there, where you want a W.
+JW: I see a stray Q in there, where you want a W.
 
 548
 00:47:07,320 --> 00:47:11,432
@@ -2392,7 +2393,7 @@ And I'm going to say that then...
 
 561
 00:48:33,520 --> 00:48:39,688
-it should return itself split.
+it should return itself for split.
 
 562
 00:48:40,376 --> 00:48:45,496
@@ -2406,7 +2407,7 @@ going to have to redefine the subject in here)
 
 564
 00:48:52,544 --> 00:48:58,984
-Subject is going to be described class.new,
+Subject is going to be described_class.new,
 
 565
 00:48:59,112 --> 00:49:04,896
@@ -2418,7 +2419,8 @@ and then this one, don't need any of that.
 
 567
 00:49:09,192 --> 00:49:12,904
-And I should say expect split to equal subject.
+And I should say expect(subject.split).to
+eq(subject).
 
 568
 00:49:12,900 --> 00:49:15,800
@@ -2431,11 +2433,11 @@ things, but it's interesting what it has done.
 
 570
 00:49:23,360 --> 00:49:34,056
-Yes, so I can say if divisible that...
+Yes, so I can say if divisible? that...
 
 571
 00:49:36,216 --> 00:49:41,520
-inaudible for you.
+That's Vim for you.
 
 572
 00:49:41,520 --> 00:49:47,704
@@ -2444,7 +2446,7 @@ day where I just mis-touched something
 
 573
 00:49:47,700 --> 00:49:51,200
-when I was viewing a file of
+when I was viewing a file in
 Vim and had a really weird error,
 
 574
@@ -2458,7 +2460,7 @@ something with a completely different word.
 
 576
 00:49:59,776 --> 00:50:02,176
-inaudible
+undefined divisible?
 
 577
 00:50:03,328 --> 00:50:07,632
@@ -2467,7 +2469,7 @@ well, I don't think I need those again.
 
 578
 00:50:08,776 --> 00:50:10,928
-Def divisible...
+def divisible...
 
 579
 00:50:12,016 --> 00:50:16,888
@@ -2475,7 +2477,8 @@ And that should be height is greater than 2,
 
 580
 00:50:17,568 --> 00:50:24,128
-and equal to 2, and width is greater than equals 2.
+or equal to 2, and width is greater than
+or equal to 2.
 
 581
 00:50:26,552 --> 00:50:31,368
@@ -2548,7 +2551,8 @@ So we'll say...
 
 597
 00:52:09,704 --> 00:52:16,120
-Result equals inaudible
+Result equals... I'm going to give it a
+method called...
 
 598
 00:52:16,120 --> 00:52:19,120
@@ -2556,7 +2560,7 @@ Result equals inaudible
 
 599
 00:52:19,728 --> 00:52:22,016
-Split recursive.
+split_recursive
 
 600
 00:52:22,010 --> 00:52:25,032
@@ -2572,7 +2576,7 @@ I'm going to say expect (what do I get out of this)...
 
 603
 00:52:44,048 --> 00:52:46,872
-I actually just get an array out of this don't I?
+I actually just get arrays out of this don't I?
 
 604
 00:52:48,208 --> 00:52:52,760
@@ -2581,7 +2585,7 @@ if I would rather have an object out of it.
 
 605
 00:52:54,560 --> 00:52:57,408
-I'll go with array and see how that works.
+I'll go with arrays and see how that works.
 
 606
 00:52:57,400 --> 00:53:05,512
@@ -2594,7 +2598,7 @@ PB: Yes.
 
 608
 00:53:12,424 --> 00:53:16,064
-Of course, because inaudible
+Of course, because down at the bottom...
 
 609
 00:53:17,408 --> 00:53:22,024
@@ -2625,7 +2629,8 @@ it should return the value.
 
 615
 00:53:44,840 --> 00:53:47,432
-JW: Is the value not in an array display?
+JW: Just the value, not in an array, just
+the value?
 
 616
 00:53:47,430 --> 00:53:50,416
@@ -2693,7 +2698,7 @@ I'm going to say something like:
 
 631
 00:55:05,944 --> 00:55:09,408
-expect result.split.
+expect(result.split)
 
 632
 00:55:09,456 --> 00:55:12,464
@@ -2702,7 +2707,7 @@ expect result.split.
 633
 00:55:14,384 --> 00:55:17,640
 I think it should have length
-for, that's the first thing I...
+4, that's the first thing I...
 
 634
 00:55:17,640 --> 00:55:20,632
@@ -2710,7 +2715,8 @@ for, that's the first thing I...
 
 635
 00:55:27,008 --> 00:55:30,592
-inaudible so let's implement that.
+That's because I haven't implemented it so
+let's implement that.
 
 636
 00:55:30,680 --> 00:55:33,696
@@ -2761,7 +2767,7 @@ northwest, southwest, southeast.
 
 647
 00:56:31,856 --> 00:56:34,128
-So split recursive should be...
+So split_recursive should be...
 
 648
 00:56:34,120 --> 00:56:40,168
@@ -2769,7 +2775,7 @@ So split recursive should be...
 
 649
 00:56:51,032 --> 00:56:53,272
-Node...
+node...
 
 650
 00:56:53,312 --> 00:56:56,336
@@ -2792,7 +2798,7 @@ done wrong isn't it, that actually split.
 654
 00:57:15,512 --> 00:57:19,488
 It should actually wrap
-these things in a new quadrant.
+these things in a new QuadNode.
 
 655
 00:57:19,480 --> 00:57:22,464
@@ -2801,7 +2807,7 @@ these things in a new quadrant.
 656
 00:57:26,300 --> 00:57:34,976
 So that will give me rows, which are those,
-and it's like sub.class.new with those rows.
+and it's like self.class.new with those rows.
 
 657
 00:57:37,880 --> 00:57:49,120
@@ -2814,7 +2820,7 @@ Which means of course, that this will be pending.
 659
 00:57:53,568 --> 00:58:02,128
 So now those are failing, because
-it's not giving me quadrants.
+it's not giving me QuadNodes.
 
 660
 00:58:02,424 --> 00:58:05,296
@@ -2823,11 +2829,11 @@ So that particular one...
 661
 00:58:06,096 --> 00:58:11,816
 I want to make sure that all 4 are
-packed quadrants, which I can do.
+packed QuadNodes, which I can do.
 
 662
 00:58:15,200 --> 00:58:18,528
-Describe class... in fact I can
+described_class... in fact I can
 do that all the way down there.
 
 663
@@ -2840,7 +2846,7 @@ do that all the way down there.
 
 665
 00:58:32,920 --> 00:58:35,310
-inaudible better.
+See if that's better.
 
 666
 00:58:36,488 --> 00:58:39,768
@@ -2860,7 +2866,7 @@ So what shall we do...
 
 670
 00:58:53,016 --> 00:58:58,896
-Other, and we'll just say set.rows equals other.rows.
+other, and we'll just say self.rows == other.rows.
 
 671
 00:58:58,890 --> 00:59:01,872
@@ -2884,8 +2890,9 @@ Given that I've got 4 things, I'm going to have...
 
 676
 00:59:22,810 --> 00:59:28,784
-So I have 16 cells altogether, and the first one
-I'll get 4 which has those 4 which has which has 1H
+So I have 16 cells altogether, so the
+first level I'll get 4 which has those 4
+which has one in each of them
 
 677
 00:59:28,790 --> 00:59:34,792
