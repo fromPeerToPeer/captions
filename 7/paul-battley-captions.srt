@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:01,224 --> 00:00:02,976
 NARRATOR: Welcome to Peer to Peer
 
@@ -75,7 +75,7 @@ depending on when your watching this.
 
 17
 00:01:07,312 --> 00:01:10,656
-JW: It's in a Windows 1Bit bitmap format.
+JW: It's in a Windows 1 bit bitmap format.
 
 18
 00:01:10,650 --> 00:01:14,048
@@ -88,7 +88,7 @@ So, it's up to you how you make use of that.
 20
 00:01:17,552 --> 00:01:22,950
 PB: So the first thing we want
-to do is pass the bitmap file.
+to do is parse the bitmap file.
 
 21
 00:01:22,950 --> 00:01:36,832
@@ -125,12 +125,12 @@ If it is we can find some other way of processing it.
 28
 00:02:07,290 --> 00:02:13,112
 1 bit pixel. Each bit is
-indexed into a table of two colors.
+an index into a table of two colours.
 
 29
 00:02:14,450 --> 00:02:18,776
-That's interesting, so inaudible
-colors even though there's only two.
+That's interesting, so it still has a 
+colours table even though there's only two.
 
 30
 00:02:18,816 --> 00:02:21,904
@@ -152,7 +152,7 @@ at the file to see how long it is.
 
 34
 00:02:37,120 --> 00:02:42,048
-Ls - L on whatever .bmp
+ls -l on whatever dot bitmap
 
 35
 00:02:43,800 --> 00:02:45,816
@@ -173,7 +173,7 @@ It's 256 x 256.
 39
 00:02:59,560 --> 00:03:09,432
 256 by 256 would be 64K except that
-we're less 8 bits of a pixel... so 8 pixels.
+we know it's 8 bits per pixel... so 8 pixels.
 
 40
 00:03:09,712 --> 00:03:16,240
@@ -230,13 +230,13 @@ ARGV first because I want to specify the encoding.
 
 52
 00:04:18,680 --> 00:04:23,832
-JW: So ARGF gives you the final past
-into the command rather than inaudible
+JW: So ARGF gives you the file passed
+into the command rather than standard in?
 
 53
 00:04:27,180 --> 00:04:32,504
 PB: Well it gives you both, so you can either
-write something or it will give you the first one.
+pipe something in or it will give you the first one.
 
 54
 00:04:33,000 --> 00:04:37,832
@@ -269,7 +269,7 @@ which is not ASCII actually but...
 
 61
 00:05:03,656 --> 00:05:06,008
-Let's say that's byte.
+Let's say that's bytes.
 
 62
 00:05:07,888 --> 00:05:12,216
@@ -285,7 +285,7 @@ So I'm going to split this screen.
 
 65
 00:05:22,800 --> 00:05:26,632
-Actually, no I'll make a new inaudible.
+Actually, no I'll make a new term in tmux
 
 66
 00:05:30,250 --> 00:05:32,400
@@ -302,7 +302,7 @@ No implicit conversion from array to string.
 
 69
 00:05:42,856 --> 00:05:46,824
-And read ARGV first.
+That's right, I need ARGV.first
 
 70
 00:05:51,152 --> 00:05:55,408
@@ -325,7 +325,7 @@ that image bytes is bytes from...
 74
 00:06:18,040 --> 00:06:27,432
 Actually let's just say minus
-width, width x height to the end.
+width, width times height to the end.
 
 75
 00:06:29,752 --> 00:06:33,088
@@ -341,15 +341,16 @@ Put some space in there.
 
 78
 00:06:42,208 --> 00:06:46,760
-I can run this at inaudible percent.
+I can run this with !ruby %
 
 79
 00:06:49,376 --> 00:06:50,968
-Inaudible.
+[inaudible]
 
 80
 00:06:52,464 --> 00:06:56,000
-And define the length nil nil class by 5.
+Undefined method length for 
+nil nil class line 5
 
 81
 00:06:56,056 --> 00:06:59,040
@@ -361,7 +362,7 @@ That's interesting.
 
 83
 00:07:02,440 --> 00:07:04,872
-Apparently image bytes is nil.
+Apparently image_bytes is nil.
 
 84
 00:07:06,896 --> 00:07:09,624
@@ -393,7 +394,7 @@ JW: Is that all bytes are like a string?
 
 91
 00:07:30,520 --> 00:07:32,888
-PB: Your right, exactly.
+PB: You're right, exactly.
 
 92
 00:07:32,880 --> 00:07:35,896
@@ -436,7 +437,7 @@ that are the byte value of each character.
 
 101
 00:08:28,128 --> 00:08:34,240
-Let's just try saying leave bytes
+Let's just try saying p bytes
 and just take 10 of them or something.
 
 102
@@ -450,7 +451,7 @@ see if I've got something sensible there.
 
 104
 00:08:45,856 --> 00:08:49,272
-Yes, that seems useful.
+Yes, that seems sensible.
 
 105
 00:08:51,920 --> 00:08:56,880
@@ -479,11 +480,11 @@ characters, so it's width x height.
 
 111
 00:09:20,312 --> 00:09:29,344
-And let's say bits per pixels... is that what it says?
+And let's say bits per pixel... is that what it says?
 
 112
 00:09:32,976 --> 00:09:36,264
-Hard code here, I think we know what 8 is.
+Let's hard code it here, I think we know what 8 is.
 
 113
 00:09:36,720 --> 00:09:42,256
@@ -493,12 +494,12 @@ it's multiples of 8 and in this case it is.
 114
 00:09:45,016 --> 00:09:49,880
 8192 that's the number I was
-looking for, that's the power of 2.
+looking for, that's a power of 2.
 
 115
 00:09:50,768 --> 00:09:54,904
 JW: Would you mind printing out the
-difference between bytes.length and image bytes?
+difference between bytes.length and image_bytes?
 
 116
 00:09:54,900 --> 00:09:56,280
@@ -510,7 +511,7 @@ PB: Yes, that's a good idea.
 
 118
 00:09:58,360 --> 00:10:03,624
-So bytes.length minus image bytes.length.
+So bytes.length minus image_bytes.length.
 
 119
 00:10:03,620 --> 00:10:06,712
@@ -540,8 +541,8 @@ header equals bytes.take... that much.
 
 125
 00:10:49,592 --> 00:10:53,408
-So I've now got the image
-the bytes and the header.
+So I've now got the the bytes of
+the image and the header.
 
 126
 00:10:53,400 --> 00:10:55,104
@@ -570,7 +571,7 @@ Then we should in fact...
 
 132
 00:11:26,112 --> 00:11:28,176
-inaudible it's not going to do it.
+I'm going to make this width / 8
 
 133
 00:11:28,304 --> 00:11:31,312
@@ -578,11 +579,12 @@ inaudible it's not going to do it.
 
 134
 00:11:33,480 --> 00:11:40,016
-So then our byte is going to be the image bytes.
+So then our byte is going to be
+the image_bytes
 
 135
 00:11:41,040 --> 00:11:48,880
-And the index of width over 8 x Y.
+at the index of width over 8 times Y.
 
 136
 00:11:48,952 --> 00:11:51,832
@@ -595,11 +597,11 @@ Plus X.
 138
 00:11:57,176 --> 00:12:04,696
 And then we want 8.times do,
-what shall we call this one - i.
+what shall we call this one - i?
 
 139
 00:12:05,848 --> 00:12:07,896
-Inaudible
+[inaudible]
 
 140
 00:12:07,960 --> 00:12:12,152
@@ -607,7 +609,7 @@ So for each of these I'm going to say...
 
 141
 00:12:14,830 --> 00:12:21,216
-I want to find the 'i' bit of it, but I don't
+I want to find the Ith bit of it, but I don't
 know which way round they are do I?
 
 142
@@ -616,7 +618,7 @@ JW: Ah, that's true.
 
 143
 00:12:23,170 --> 00:12:25,104
-Inaudible
+We don't know which endian are these bytes
 
 144
 00:12:26,704 --> 00:12:29,792
@@ -629,7 +631,7 @@ PB: Maybe it will say in Wikipedia.
 146
 00:12:36,808 --> 00:12:42,480
 It's probably reasonable to assume
-that the most significant ones on the left,
+that the most significant one's on the left,
 
 147
 00:12:42,544 --> 00:12:45,400
@@ -637,8 +639,8 @@ Like numbers are.
 
 148
 00:12:48,408 --> 00:12:53,704
-Yes, so if I start off with my, (a kind of ugly
-way of doing it but it will work for now).
+Yes, so if I start off with my... kind of ugly
+way of doing it but it will work for now
 
 149
 00:12:53,700 --> 00:12:58,816
@@ -664,7 +666,8 @@ from zero and then increasing.
 
 154
 00:13:24,140 --> 00:13:31,040
-And I can take that and inaudible that with the byte.
+And I can take that and logical AND
+that with the byte.
 
 155
 00:13:33,176 --> 00:13:39,072
@@ -676,7 +679,7 @@ And then take the whole thing...
 
 157
 00:13:44,296 --> 00:13:51,864
-And then right shift the whole thing by 8 bytes.
+And then right shift the whole thing by 8 minus i
 
 158
 00:13:51,860 --> 00:13:56,128
@@ -690,7 +693,7 @@ by 8, which means it's the least significant.
 
 160
 00:14:02,672 --> 00:14:04,920
-It's like program C isn't it? [Laughter]
+It's like programming in C isn't it? [Laughter]
 
 161
 00:14:04,920 --> 00:14:13,832
@@ -710,7 +713,7 @@ That should be more readable.
 
 165
 00:14:31,390 --> 00:14:36,920
-And then at the end of each row is a put
+And then at the end of each row is a puts
 
 166
 00:14:39,008 --> 00:14:42,448
@@ -761,7 +764,7 @@ There's the zeros.
 
 177
 00:15:26,670 --> 00:15:31,176
-But I am getting line banks
+But I am getting line breaks
 which looks about right doesn't it?
 
 178
@@ -785,7 +788,7 @@ I just print out the byte? JW: Yes.
 
 182
 00:15:53,344 --> 00:15:59,912
-PB: So I'll skip that and just say print byte.to S
+PB: So I'll skip that and just say print byte.to_s
 
 183
 00:16:02,648 --> 00:16:05,376
@@ -802,7 +805,7 @@ JW: Yes.
 
 186
 00:16:14,050 --> 00:16:20,296
-PB: In fact if I did that to S16 inaudible and the same width.
+PB: In fact if I did that to_s(16) so it comes out as hex and they're all the same width.
 
 187
 00:16:20,290 --> 00:16:23,120
@@ -814,7 +817,7 @@ that should give us an even better indication of ...
 
 189
 00:16:27,330 --> 00:16:31,016
-The zero is still there but you get the idea.
+There's zeros still there but you get the idea.
 
 190
 00:16:31,010 --> 00:16:32,744
@@ -838,7 +841,7 @@ JW: Oh yes...
 
 195
 00:16:51,360 --> 00:16:55,888
-PB: I think that is the case with bmp,
+PB: I think that is the case with BMP,
 that the image is upside down.
 
 196
@@ -848,7 +851,7 @@ our output is upside down, it should be fine.
 
 197
 00:17:04,360 --> 00:17:16,784
-OK so bytes are OK, bitmask is OK, let's just get rid of...
+OK so bytes are OK, our bitmask is OK, let's just get rid of...
 
 198
 00:17:16,780 --> 00:17:19,848
@@ -877,7 +880,7 @@ Yes, I think that's right, the last row has...
 
 204
 00:17:45,672 --> 00:17:48,592
-There's a lot of white space at
+There's a lot of whitespace at
 the top so we would expect...
 
 205
@@ -895,7 +898,7 @@ OK so...
 208
 00:18:04,480 --> 00:18:12,672
 The easiest way of doing this then is
-to just say if it's zero, zero acts as one
+to just say if it's zero, zero, else it's one
 
 209
 00:18:13,120 --> 00:18:14,832
@@ -907,7 +910,7 @@ Or rather...
 
 211
 00:18:24,920 --> 00:18:33,944
-Yes, I think that's modularly inaudible shrink list. [Laughter]
+Yes, I think that's modularly [inaudible]. If I just shrink this. [Laughter]
 
 212
 00:18:33,968 --> 00:18:36,992
@@ -925,7 +928,7 @@ the bitmap in and in a format which,
 215
 00:18:48,328 --> 00:18:54,960
 whilst it might not look exactly how we
-want to see it - it seems to be flipped basically,
+want to see it - it seems to be flipped vertically,
 
 216
 00:18:55,512 --> 00:19:01,088
@@ -979,11 +982,11 @@ but given the size of the image...
 227
 00:20:04,720 --> 00:20:11,360
 And I don't know how easily if I can
-make a bmp of it, so I'm going to explore it.
+make a BMP of it, so I'm going to explore it.
 
 228
 00:20:11,360 --> 00:20:16,664
-So now I'll say def read bmp.
+So now I'll say def read_bmp.
 
 229
 00:20:17,760 --> 00:20:22,352
@@ -1003,7 +1006,7 @@ And... get it to take this stuff.
 
 233
 00:20:34,664 --> 00:20:39,424
-In fact I'm going to make a bmp file construct.
+In fact I'm going to make a BMPFile struct.
 
 234
 00:20:39,744 --> 00:20:44,304
@@ -1050,11 +1053,11 @@ inaudible first encoding.
 244
 00:21:25,432 --> 00:21:30,592
 Something like that will give me the
-power to inject a file that's alright for it.
+power to inject a file that's in the right format.
 
 245
 00:21:31,480 --> 00:21:34,328
-Nothing... should be able to say...
+Now... should be able to say...
 
 246
 00:21:34,320 --> 00:21:37,352
@@ -1062,7 +1065,7 @@ Nothing... should be able to say...
 
 247
 00:21:37,656 --> 00:21:40,200
-In fact, if I say that it will be file.open.
+In fact, if I say that it will be File.open.
 
 248
 00:21:40,200 --> 00:21:43,224
@@ -1132,7 +1135,7 @@ And this one...
 
 264
 00:23:04,880 --> 00:23:13,792
-Width height pixels in there, inaudible we can put this into a private method.
+Width height pixels in there, [inaudible] we can put this into a private method.
 
 265
 00:23:13,790 --> 00:23:16,744
@@ -1140,7 +1143,7 @@ Width height pixels in there, inaudible we can put this into a private method.
 
 266
 00:23:16,912 --> 00:23:26,344
-inaudible and say private section and say def image bytes.
+Go to the bottom, and say private section and say def image_bytes.
 
 267
 00:23:26,340 --> 00:23:29,392
@@ -1148,7 +1151,7 @@ inaudible and say private section and say def image bytes.
 
 268
 00:23:29,390 --> 00:23:36,080
-I will cache that and say image bytes inaudible.
+I will cache that and say image_bytes [inaudible].
 
 269
 00:23:36,600 --> 00:23:39,100
@@ -1170,19 +1173,19 @@ Again I can say header...
 
 273
 00:23:52,808 --> 00:23:55,936
-bytes.take... that's got to be at bytes.
+bytes.take... that's got to be @bytes.
 
 274
 00:23:58,208 --> 00:24:01,936
-at bytes.length and image bytes.
+@bytes.length and image_bytes.
 
 275
 00:24:04,192 --> 00:24:09,128
-So we've inaudible bytes, OK.
+So we've always got bytes, OK.
 
 276
 00:24:11,970 --> 00:24:16,640
-Here we have image bytes available to us.
+Here we have image_bytes available to us.
 
 277
 00:24:17,776 --> 00:24:20,376
@@ -1204,7 +1207,7 @@ that puts stuff, so for now I'm going to do
 
 281
 00:24:38,480 --> 00:24:41,510
-dot pixels, and see if I get the same sensible result.
+.pixels, and see if I get the same sensible result.
 
 282
 00:24:41,510 --> 00:24:44,608
@@ -1295,11 +1298,11 @@ Width over 8.
 302
 00:26:24,570 --> 00:26:29,816
 Now this one... I need to do
-something like a flat map I think.
+something like a flat_map I think.
 
 303
 00:26:30,320 --> 00:26:32,680
-Flat_map with x.
+flat_map with x.
 
 304
 00:26:32,680 --> 00:26:35,696
@@ -1315,7 +1318,7 @@ And then byte, this will be 8.times.map.
 
 307
 00:26:45,592 --> 00:26:51,896
-JW: So with flat map the arrays returned by
+JW: So with flat_map the arrays returned by
 the block will be concating together effectively?
 
 308
@@ -1324,12 +1327,12 @@ PB: Yes, I think I can demonstrate actually.
 
 309
 00:26:54,800 --> 00:26:59,968
-It's the same as dot map and dot
-flatten... I don't know how deep it goes.
+It's the same as .map and .flatten...
+I don't know how deep it goes.
 
 310
 00:27:00,416 --> 00:27:03,912
-It inaudible, but if I have say...
+It may go several layers deep, but if I have say...
 
 311
 00:27:03,910 --> 00:27:06,920
@@ -1341,7 +1344,7 @@ Yes, let's say... 1,2,3,4, something like that.
 
 313
 00:27:15,424 --> 00:27:21,360
-If I did .map a.map
+If I did .map { |a| a.map { |b| b } }
 
 314
 00:27:24,240 --> 00:27:27,672
@@ -1354,11 +1357,11 @@ And then if I did .flatten... I would get that.
 316
 00:27:31,528 --> 00:27:36,320
 And I think if I replace this one
-with flat map, its the same as map.flatten.
+with flat_map, it's the same as map.flatten.
 
 317
 00:27:36,840 --> 00:27:41,024
-So you see map.flatten in there, which gives me the same inaudible
+So you see map.flatten in there, which gives me the same.
 
 318
 00:27:43,640 --> 00:27:46,520
@@ -1379,7 +1382,7 @@ And I should be able to say puts....
 
 322
 00:28:03,752 --> 00:28:06,680
-Or P, actually that should be an array of...
+Or p, actually that should be an array of...
 
 323
 00:28:09,040 --> 00:28:12,408
@@ -1436,24 +1439,24 @@ a bit long for this small screen.
 
 336
 00:28:57,712 --> 00:29:00,504
-Image.pixels.each.
+img.pixels.each.
 
 337
 00:29:00,504 --> 00:29:02,500
-Do row.
+do |row|
 
 338
 00:29:03,120 --> 00:29:07,000
-Row.each.do pixel.
+row.each do |pixel|
 
 339
 00:29:08,970 --> 00:29:12,128
-I'm already thinking that calling
+I'm already thinking that calling it
 pixels was the wrong thing to do
 
 340
 00:29:12,136 --> 00:29:15,360
-but we'll have to inaudible or something.
+It might have been better named as rows or something.
 
 341
 00:29:15,368 --> 00:29:17,360
@@ -1465,7 +1468,7 @@ So I might do that.
 
 343
 00:29:21,840 --> 00:29:24,632
-Puts print.
+Puts... no print.
 
 344
 00:29:25,624 --> 00:29:28,464
@@ -1537,7 +1540,8 @@ item in them takes each of the quadrants.
 
 360
 00:30:44,830 --> 00:30:49,624
-So inaudible writing that I think I can test quite
+So that's what I need to write, and
+that I think I can test quite
 easily, so I'm going to start doing things that way.
 
 361
@@ -1580,7 +1584,7 @@ Good.
 
 370
 00:31:30,472 --> 00:31:36,016
-Now I'm going to make a spec to actually live.
+Now I'm going to make a spec and a lib.
 
 371
 00:31:37,296 --> 00:31:44,304
@@ -1605,7 +1609,8 @@ Is that right, somehow I feel...
 
 376
 00:32:19,744 --> 00:32:24,200
-It's the kind of thing I never write inaudible, I just copy it off another file inaudible
+It's the kind of thing I never write, I just copy it off another file
+I've written using it...
 
 377
 00:32:26,512 --> 00:32:30,384
@@ -1629,7 +1634,7 @@ because we don't have a QuadNode.
 
 382
 00:32:49,610 --> 00:32:51,984
-Lib.quadnode.
+Tab edit lib/quadnode.
 
 383
 00:32:52,952 --> 00:32:57,952
@@ -1641,7 +1646,7 @@ And that should pass.
 
 385
 00:33:03,830 --> 00:33:06,608
-Good, there will probably be something else inaudible.
+Nope, I probably missed something else there.
 
 386
 00:33:08,104 --> 00:33:10,176
@@ -1657,7 +1662,7 @@ Good, OK.
 
 389
 00:33:17,960 --> 00:33:26,504
-So I'm going to say, it should return it's rows.
+So I'm going to say, it should return its rows.
 
 390
 00:33:26,536 --> 00:33:29,552
@@ -1710,7 +1715,7 @@ I realise I should have put more spacing in... 9,10,11,12.
 
 402
 00:34:22,670 --> 00:34:23,504
-inaudible
+[inaudible]
 
 403
 00:34:23,580 --> 00:34:26,608
@@ -1747,11 +1752,12 @@ I'm going to copy and paste this.
 411
 00:34:55,320 --> 00:34:58,552
 I could present a constant
-but it's so much easier like this.
+but this is the only time I'm going
+to use it like this.
 
 412
 00:35:01,400 --> 00:35:03,336
-inaudible
+How's that?
 
 413
 00:35:05,440 --> 00:35:08,408
@@ -1768,7 +1774,8 @@ And then I'll say... [Paul dictates what he writes]
 
 416
 00:35:25,230 --> 00:35:30,152
-And now from this... it works, so I just have a thing that inaudible.
+And now from this... it works, so I just have a thing
+that has its rows now.
 
 417
 00:35:30,208 --> 00:35:32,824
@@ -1841,7 +1848,8 @@ JW: OK.
 
 433
 00:36:38,032 --> 00:36:41,496
-PB: Which means we don't have to inaudible.
+PB: Which means we don't have to worry about
+what order they are in.
 
 434
 00:36:43,110 --> 00:36:47,032
@@ -1875,7 +1883,7 @@ and 5,6.
 
 441
 00:37:22,872 --> 00:37:25,272
-Yes, inaudible.
+Yes, that's obviously going to fail.
 
 442
 00:37:25,270 --> 00:37:28,240
@@ -1917,7 +1925,7 @@ It should return the number of columns.
 
 451
 00:38:07,072 --> 00:38:11,256
-And say expect subjects dot...
+And say expect subject dot...
 
 452
 00:38:11,304 --> 00:38:14,344
@@ -1946,7 +1954,7 @@ test because they are both 4.
 
 458
 00:38:34,328 --> 00:38:37,544
-but I'm never going to know if... but...
+so I'm never going to know if... but...
 
 459
 00:38:40,040 --> 00:38:42,248
@@ -1954,7 +1962,7 @@ Let's see.
 
 460
 00:38:43,000 --> 00:38:45,920
-Perhaps there's no width.
+But there's no width.
 
 461
 00:38:47,624 --> 00:38:52,328
@@ -1962,7 +1970,7 @@ Width, and that can be just rows.first.length.
 
 462
 00:38:55,272 --> 00:39:01,304
-OK... I did the same for rows.
+OK... I'm going to do the same for rows.
 
 463
 00:39:01,300 --> 00:39:04,288
@@ -2088,7 +2096,8 @@ So I think that should do it.
 
 491
 00:41:09,400 --> 00:41:14,104
-inaudible full, which are going to be quite similar.
+Successfull, so now I can do the other four,
+which are going to be quite similar.
 
 492
 00:41:14,152 --> 00:41:17,152
@@ -2096,12 +2105,12 @@ inaudible full, which are going to be quite similar.
 
 493
 00:41:19,040 --> 00:41:22,488
-I'm going to write the test
+I'm going to write the tests
 for all of them first and then...
 
 494
 00:41:23,840 --> 00:41:26,248
-say which are northwest and northeast.
+so after northwest we'll do northeast.
 
 495
 00:41:28,976 --> 00:41:31,816
@@ -2191,7 +2200,8 @@ I still want the first 2 rows,
 
 516
 00:43:35,608 --> 00:43:40,310
-because north... but with this one a inaudible
+because north... but with this one a drop
+instead of take
 
 517
 00:43:40,310 --> 00:43:43,296
@@ -2233,7 +2243,7 @@ JW: Right so we've got a quad node class which...
 
 526
 00:44:33,540 --> 00:44:38,152
-given the input pixels can give you each inaudible.
+given the input pixels can give you each sub-quadrant.
 
 527
 00:44:38,210 --> 00:44:44,632
@@ -2299,7 +2309,7 @@ So anti-clockwise from northeast.
 541
 00:46:09,904 --> 00:46:25,032
 So in that case I should be
-able to say expect subject.split.to equal...
+able to say expect(subject.split).to eq...
 
 542
 00:46:26,920 --> 00:46:33,224
@@ -2312,11 +2322,12 @@ assuming those to be equal.
 
 544
 00:46:35,620 --> 00:46:40,608
-Then I'm going to say subject dot...
+Then I'm going to say subject...
 
 545
 00:46:42,360 --> 00:46:45,480
-(I'll put this onto a new line because inaudible)
+(I'll put this onto a new line so it's a
+bit clearer)
 
 546
 00:46:46,800 --> 00:47:00,792
@@ -2324,7 +2335,7 @@ Then I'm going to say subject dot...
 
 547
 00:47:04,904 --> 00:47:07,320
-JW: I see a strait ?Q in there, where you want a W.
+JW: I see a stray Q in there, where you want a W.
 
 548
 00:47:07,320 --> 00:47:11,432
@@ -2382,7 +2393,7 @@ And I'm going to say that then...
 
 561
 00:48:33,520 --> 00:48:39,688
-it should return itself split.
+it should return itself for split.
 
 562
 00:48:40,376 --> 00:48:45,496
@@ -2396,7 +2407,7 @@ going to have to redefine the subject in here)
 
 564
 00:48:52,544 --> 00:48:58,984
-Subject is going to be described class.new,
+Subject is going to be described_class.new,
 
 565
 00:48:59,112 --> 00:49:04,896
@@ -2408,7 +2419,8 @@ and then this one, don't need any of that.
 
 567
 00:49:09,192 --> 00:49:12,904
-And I should say expect split to equal subject.
+And I should say expect(subject.split).to
+eq(subject).
 
 568
 00:49:12,900 --> 00:49:15,800
@@ -2421,11 +2433,11 @@ things, but it's interesting what it has done.
 
 570
 00:49:23,360 --> 00:49:34,056
-Yes, so I can say if divisible that...
+Yes, so I can say if divisible? that...
 
 571
 00:49:36,216 --> 00:49:41,520
-inaudible for you.
+That's Vim for you.
 
 572
 00:49:41,520 --> 00:49:47,704
@@ -2434,7 +2446,7 @@ day where I just mis-touched something
 
 573
 00:49:47,700 --> 00:49:51,200
-when I was viewing a file of
+when I was viewing a file in
 Vim and had a really weird error,
 
 574
@@ -2448,7 +2460,7 @@ something with a completely different word.
 
 576
 00:49:59,776 --> 00:50:02,176
-inaudible
+undefined divisible?
 
 577
 00:50:03,328 --> 00:50:07,632
@@ -2457,7 +2469,7 @@ well, I don't think I need those again.
 
 578
 00:50:08,776 --> 00:50:10,928
-Def divisible...
+def divisible...
 
 579
 00:50:12,016 --> 00:50:16,888
@@ -2465,7 +2477,8 @@ And that should be height is greater than 2,
 
 580
 00:50:17,568 --> 00:50:24,128
-and equal to 2, and width is greater than equals 2.
+or equal to 2, and width is greater than
+or equal to 2.
 
 581
 00:50:26,552 --> 00:50:31,368
@@ -2538,7 +2551,8 @@ So we'll say...
 
 597
 00:52:09,704 --> 00:52:16,120
-Result equals inaudible
+Result equals... I'm going to give it a
+method called...
 
 598
 00:52:16,120 --> 00:52:19,120
@@ -2546,7 +2560,7 @@ Result equals inaudible
 
 599
 00:52:19,728 --> 00:52:22,016
-Split recursive.
+split_recursive
 
 600
 00:52:22,010 --> 00:52:25,032
@@ -2562,7 +2576,7 @@ I'm going to say expect (what do I get out of this)...
 
 603
 00:52:44,048 --> 00:52:46,872
-I actually just get an array out of this don't I?
+I actually just get arrays out of this don't I?
 
 604
 00:52:48,208 --> 00:52:52,760
@@ -2571,7 +2585,7 @@ if I would rather have an object out of it.
 
 605
 00:52:54,560 --> 00:52:57,408
-I'll go with array and see how that works.
+I'll go with arrays and see how that works.
 
 606
 00:52:57,400 --> 00:53:05,512
@@ -2584,7 +2598,7 @@ PB: Yes.
 
 608
 00:53:12,424 --> 00:53:16,064
-Of course, because inaudible
+Of course, because down at the bottom...
 
 609
 00:53:17,408 --> 00:53:22,024
@@ -2615,7 +2629,8 @@ it should return the value.
 
 615
 00:53:44,840 --> 00:53:47,432
-JW: Is the value not in an array display?
+JW: Just the value, not in an array, just
+the value?
 
 616
 00:53:47,430 --> 00:53:50,416
@@ -2683,7 +2698,7 @@ I'm going to say something like:
 
 631
 00:55:05,944 --> 00:55:09,408
-expect result.split.
+expect(result.split)
 
 632
 00:55:09,456 --> 00:55:12,464
@@ -2692,7 +2707,7 @@ expect result.split.
 633
 00:55:14,384 --> 00:55:17,640
 I think it should have length
-for, that's the first thing I...
+4, that's the first thing I...
 
 634
 00:55:17,640 --> 00:55:20,632
@@ -2700,7 +2715,8 @@ for, that's the first thing I...
 
 635
 00:55:27,008 --> 00:55:30,592
-inaudible so let's implement that.
+That's because I haven't implemented it so
+let's implement that.
 
 636
 00:55:30,680 --> 00:55:33,696
@@ -2751,7 +2767,7 @@ northwest, southwest, southeast.
 
 647
 00:56:31,856 --> 00:56:34,128
-So split recursive should be...
+So split_recursive should be...
 
 648
 00:56:34,120 --> 00:56:40,168
@@ -2759,7 +2775,7 @@ So split recursive should be...
 
 649
 00:56:51,032 --> 00:56:53,272
-Node...
+node...
 
 650
 00:56:53,312 --> 00:56:56,336
@@ -2782,7 +2798,7 @@ done wrong isn't it, that actually split.
 654
 00:57:15,512 --> 00:57:19,488
 It should actually wrap
-these things in a new quadrant.
+these things in a new QuadNode.
 
 655
 00:57:19,480 --> 00:57:22,464
@@ -2791,7 +2807,7 @@ these things in a new quadrant.
 656
 00:57:26,300 --> 00:57:34,976
 So that will give me rows, which are those,
-and it's like sub.class.new with those rows.
+and it's like self.class.new with those rows.
 
 657
 00:57:37,880 --> 00:57:49,120
@@ -2804,7 +2820,7 @@ Which means of course, that this will be pending.
 659
 00:57:53,568 --> 00:58:02,128
 So now those are failing, because
-it's not giving me quadrants.
+it's not giving me QuadNodes.
 
 660
 00:58:02,424 --> 00:58:05,296
@@ -2813,11 +2829,11 @@ So that particular one...
 661
 00:58:06,096 --> 00:58:11,816
 I want to make sure that all 4 are
-packed quadrants, which I can do.
+packed QuadNodes, which I can do.
 
 662
 00:58:15,200 --> 00:58:18,528
-Describe class... in fact I can
+described_class... in fact I can
 do that all the way down there.
 
 663
@@ -2830,7 +2846,7 @@ do that all the way down there.
 
 665
 00:58:32,920 --> 00:58:35,310
-inaudible better.
+See if that's better.
 
 666
 00:58:36,488 --> 00:58:39,768
@@ -2850,7 +2866,7 @@ So what shall we do...
 
 670
 00:58:53,016 --> 00:58:58,896
-Other, and we'll just say set.rows equals other.rows.
+other, and we'll just say self.rows == other.rows.
 
 671
 00:58:58,890 --> 00:59:01,872
@@ -2874,8 +2890,9 @@ Given that I've got 4 things, I'm going to have...
 
 676
 00:59:22,810 --> 00:59:28,784
-So I have 16 cells altogether, and the first one
-I'll get 4 which has those 4 which has which has 1H
+So I have 16 cells altogether, so the
+first level I'll get 4 which has those 4
+which has one in each of them
 
 677
 00:59:28,790 --> 00:59:34,792
@@ -2908,13 +2925,13 @@ Cool.
 
 684
 01:00:14,280 --> 01:00:17,584
-PB: There we need something
+PB: There we need some way of
 representing the leaf node.
 
 685
 01:00:24,792 --> 01:00:31,192
 Maybe that's fine, maybe simply having
-one element in it is... that leaf node.
+one element in it is... a leaf node.
 
 686
 01:00:31,816 --> 01:00:34,952
@@ -2922,7 +2939,7 @@ So what I might say is...
 
 687
 01:00:35,200 --> 01:00:37,168
-inaudible
+First of all that's.. that's..
 
 688
 01:00:37,224 --> 01:00:40,232
@@ -2993,7 +3010,7 @@ Everything's fine.
 
 704
 01:02:05,976 --> 01:02:08,952
-That feels a bit happier so I'll check those in.
+That feels a bit happier so I'm gonna check those in.
 
 705
 01:02:08,950 --> 01:02:11,952
@@ -3005,7 +3022,7 @@ That feels a bit happier so I'll check those in.
 
 707
 01:02:26,760 --> 01:02:32,688
-inaudible
+There's a bunch of other stuff that I would [inaudible]
 
 708
 01:02:32,760 --> 01:02:36,096
@@ -3017,7 +3034,7 @@ PB: The next thing was that...
 
 710
 01:02:38,740 --> 01:02:43,008
-When a quadrant consists of a single color,
+When a quadrant consists of a single colour,
 it may be considered a terminal node.
 
 711
@@ -3041,7 +3058,7 @@ want to put that in the node
 
 715
 01:03:08,392 --> 01:03:10,912
-because inaudible about the color.
+because I don't think it really belongs [inaudible] about the color.
 
 716
 01:03:10,936 --> 01:03:14,536
@@ -3066,7 +3083,7 @@ I can easily understand, so I'm going to say...
 
 721
 01:03:44,270 --> 01:03:47,168
-...this quadrant is all one.
+...this quadrant is all 1.
 
 722
 01:03:48,160 --> 01:03:50,840
@@ -3127,7 +3144,7 @@ And I'm going to say...
 
 736
 01:04:55,560 --> 01:04:59,944
-Firstly, I'm going to break this down into cells.
+First of all, I'm going to break this down into cells.
 
 737
 01:04:59,940 --> 01:05:06,224
@@ -3139,7 +3156,7 @@ Firstly, I'm going to break this down into cells.
 
 739
 01:05:09,688 --> 01:05:14,040
-Olander, which is going to be...
+lambda, which is going to be...
 
 740
 01:05:15,184 --> 01:05:20,200
@@ -3148,7 +3165,7 @@ it the four items in the same order.
 
 741
 01:05:20,688 --> 01:05:27,568
-So if I say Ive got A,B,C, and D
+So if I say I've got A, B, C, and D
 going from northeast anticlockwise.
 
 742
@@ -3157,7 +3174,7 @@ And I'm just going to return true.
 
 743
 01:05:36,376 --> 01:05:41,104
-No, I'm going to say A equals B equal C equals B.
+No, I'm going to say A == B == C == D.
 
 744
 01:05:41,100 --> 01:05:44,128
@@ -3175,7 +3192,7 @@ up here with a recursive split.
 747
 01:06:00,110 --> 01:06:05,096
 And then give it that predicate
-as a block, or olander, whatever.
+as a block, or lambda, whatever.
 
 748
 01:06:05,096 --> 01:06:08,848
@@ -3183,7 +3200,7 @@ as a block, or olander, whatever.
 
 749
 01:06:08,840 --> 01:06:12,240
-It turned into a inaudible.
+It turned into a Proc.
 
 750
 01:06:13,144 --> 01:06:16,896
@@ -3221,7 +3238,7 @@ PB: Expect 1 to be a leaf, so result...
 758
 01:06:55,400 --> 01:06:59,144
 I'm just going to add one more
-inaudible to make sure it's going down.
+[inaudible] to make sure it's going down.
 
 759
 01:06:59,848 --> 01:07:04,560
@@ -3279,7 +3296,7 @@ So here I get quad tree quad tree...
 772
 01:08:09,440 --> 01:08:14,744
 I'm not sure if that makes any sense any more,
-but it depends what the rules for splitting are.
+because it depends on what the rules for splitting are.
 
 773
 01:08:14,768 --> 01:08:17,736
@@ -3308,7 +3325,7 @@ In fact I could even say...
 
 779
 01:09:05,424 --> 01:09:08,304
-That inaudible wrong, I've got an array of nodes.
+That [inaudible] wrong, I've got an array of nodes.
 
 780
 01:09:10,000 --> 01:09:12,240
@@ -3337,7 +3354,7 @@ It doesn't really matter if I do it or not so...
 
 786
 01:09:56,976 --> 01:10:00,152
-So this one, I want to know if I can split here.
+So first of all, I want to know if I can split here.
 
 787
 01:10:00,456 --> 01:10:03,080
@@ -3378,7 +3395,7 @@ I'm sure there's a simpler thing that I've missed.
 
 796
 01:10:56,464 --> 01:11:01,592
-So now do we get inaudible map for the QuadNode.
+So now do we get undefined method map for the QuadNode.
 
 797
 01:11:05,360 --> 01:11:07,760
@@ -3394,7 +3411,7 @@ I'm thinking that perhaps...
 
 800
 01:11:24,600 --> 01:11:29,224
-each of things should at some point be a node.
+each of these things should at some point be a node.
 
 801
 01:11:29,960 --> 01:11:34,312
@@ -3433,7 +3450,7 @@ here but there probably actually isn't.
 
 809
 01:12:12,336 --> 01:12:16,024
-I'm just going to see... yes very.take erm...
+I'm just going to see... yes row.take erm...
 
 810
 01:12:18,960 --> 01:12:21,416
@@ -3441,7 +3458,7 @@ I'm just going to see... yes very.take erm...
 
 811
 01:12:21,670 --> 01:12:26,816
-I inaudible a wrap function which,
+I'm gonna make a wrap function which,
 because I'm doing this quite a lot erm ...
 
 812
@@ -3500,7 +3517,7 @@ split recurser... erm...
 
 825
 01:13:48,496 --> 01:13:54,240
-Again, it's wrong it should be pulling
+Again, it's wrong it should be calling
 split recurser when it should be pulling sub-nodes.
 
 826
@@ -3509,7 +3526,7 @@ Let's try using this to children.
 
 827
 01:13:58,808 --> 01:14:01,168
-No let's finish and see what breaks.
+No let's first see what breaks.
 
 828
 01:14:04,288 --> 01:14:08,632
@@ -3522,7 +3539,7 @@ expected to get different things back.
 
 830
 01:14:15,648 --> 01:14:21,928
-Expect rows, yes inaudible which is in northeast quadrant and that should be erm...
+Expect rows, yes [inaudible] which is in northeast quadrant and that should be erm...
 
 831
 01:14:22,432 --> 01:14:27,480
@@ -3612,7 +3629,7 @@ So I'll change split to children.
 
 852
 01:16:19,976 --> 01:16:23,016
-inaudible is that yes... No.
+Yes, do I want to change that? yes... No.
 
 853
 01:16:23,088 --> 01:16:26,088
@@ -3620,7 +3637,7 @@ inaudible is that yes... No.
 
 854
 01:16:36,448 --> 01:16:40,776
-Change all this to children, no, yes, yes.
+Change all this to children, yes, no, yes, yes.
 
 855
 01:16:40,864 --> 01:16:43,856
@@ -3657,7 +3674,7 @@ in everything, but never mind.
 
 863
 01:17:34,840 --> 01:17:40,696
-Yes, so... change split to children.
+Yes, so... rename split to children.
 
 864
 01:17:41,368 --> 01:17:48,176
@@ -3743,12 +3760,12 @@ I'm going to re-load this.
 882
 01:19:04,420 --> 01:19:11,432
 OK so I'm going to write some
-spectre on some smaller notes.
+specs around some smaller nodes.
 
 883
 01:19:11,430 --> 01:19:15,240
-So I'm going to put this
-into something saying context.
+So I'm going to put this lot
+into context saying context.
 
 884
 01:19:17,256 --> 01:19:27,616
@@ -3756,7 +3773,7 @@ into something saying context.
 
 885
 01:19:29,672 --> 01:19:33,848
-And I put all of those inside except inaudible.
+And I put all of those inside except that thing.
 
 886
 01:19:33,840 --> 01:19:36,864
@@ -3773,12 +3790,12 @@ and it's simply about... [they both talk at once].
 
 889
 01:19:49,368 --> 01:19:59,576
-So I'm going to call this one at the
-bottom: context, and call it a 1 element dataset.
+So I'm going to call this one down at the
+bottom context, and call this one a 1-element data set.
 
 890
 01:20:01,800 --> 01:20:07,240
-Or it could be a 1 element
+Or it could be a 1-element
 QuadTree, that might make more sense.
 
 891
@@ -3788,7 +3805,7 @@ So this one, I want to say that its children is itself.
 892
 01:20:16,008 --> 01:20:24,144
 So our basic building block is a
-QuadTree which has one element which is a leaf.
+QuadTree which has one element and which is a leaf.
 
 893
 01:20:27,072 --> 01:20:30,208
@@ -3818,11 +3835,11 @@ similar with 4 because 4 is still quite simple
 
 899
 01:20:52,290 --> 01:20:58,776
-but it's easy to think about and we inaudible.
+but it's easy to think about and we know its behavior is.
 
 900
 01:20:59,224 --> 01:21:05,064
-Let's get rid of that entirely, and inaudible our dataset something like...
+Let's get rid of that entirely, and since our dataset something like...
 
 901
 01:21:05,060 --> 01:21:08,056
@@ -3867,8 +3884,8 @@ I'm going to say: [Paul dictates what he writes]
 
 911
 01:22:09,520 --> 01:22:14,552
-And let's do the same thing
-with this one, some basic stuff like...
+And this one, let's do the same thing
+some very basic stuff like...
 
 912
 01:22:17,220 --> 01:22:20,368
@@ -3893,7 +3910,7 @@ All these things are...
 
 917
 01:23:03,112 --> 01:23:06,904
-Yes, so there's 16 inaudible.
+Yes, so there's the 16-element one.
 
 918
 01:23:07,312 --> 01:23:12,664
@@ -3941,7 +3958,7 @@ recursively, I don't think I care about that.
 
 928
 01:24:03,944 --> 01:24:08,472
-Anything else split? No, and represent
+Anything else is split? No, and get rid of
 anything that's split in here as well.
 
 929
@@ -3977,31 +3994,32 @@ since it's quite a clean state. PB: Yes.
 
 936
 01:24:47,648 --> 01:24:57,856
-Now I think I want to add some kind of compression.
+What I think I want to do now,
+I want to add some kind of compression.
 
 937
 01:25:01,800 --> 01:25:06,704
 JW: You don't want to do the case
-of a homogeneous 4 element dataset?
+of a homogeneous 4-element dataset?
 
 938
 01:25:07,624 --> 01:25:14,040
 PB: Ah, yes I will, that's exactly what
-I mean so I want to say that compression
+I mean so I want to say that compressing
 
 939
 01:25:14,040 --> 01:25:19,344
-heterogeneous 1 should give me the
+this heterogeneous one should give me the
 same, the children should be the same.
 
 940
 01:25:19,984 --> 01:25:26,504
 It should have 4 children but if I
-compress it I should get a leaf node and the value.
+compress it, I should get a leaf node and the value.
 
 941
 01:25:27,288 --> 01:25:34,184
-It's first row, first column
+Its first row, first column
 should be the individual value.
 
 942
@@ -4023,8 +4041,8 @@ a particular plugin way of comparing things
 
 946
 01:25:54,360 --> 01:25:58,656
-because I think that making
-it the same is reasonable.
+because I think that making it the same is
+a reasonable property that we can bake into this.
 
 947
 01:25:59,648 --> 01:26:02,864
@@ -4040,12 +4058,12 @@ This one should be a leaf node... and so it is.
 
 950
 01:26:15,472 --> 01:26:17,992
-Let's stick with leaf node now.
+Let's stick with leaf node for now.
 
 951
 01:26:19,496 --> 01:26:25,144
 At this point, it's perhaps nice
-that divisible and leaf node are separate.
+that leaf and divisible are separate.
 
 952
 01:26:25,140 --> 01:26:39,120
@@ -4073,7 +4091,7 @@ Good, so in that case...
 
 958
 01:27:00,272 --> 01:27:03,640
-Let's see F1 homogeneous dataset...
+Let's see 4-element homogeneous dataset...
 
 959
 01:27:07,776 --> 01:27:11,808
@@ -4091,12 +4109,12 @@ Or should it just be that that's all there is...
 962
 01:27:21,624 --> 01:27:27,688
 Yes, that would make sense, if I have
-a 4 element homogeneous dataset
+a 4-element homogeneous dataset
 
 963
 01:27:29,504 --> 01:27:40,280
-within a 16 element dataset, then maybe I can
-say that I get a non leaf, a leaf ,a non leaf, a non leaf.
+within a 16-element dataset, then maybe I can
+say that I get a non-leaf, a leaf, a non-leaf, a non-leaf.
 
 964
 01:27:41,520 --> 01:27:45,072
@@ -4122,7 +4140,7 @@ PB: So for example...
 969
 01:27:56,680 --> 01:28:05,296
 I'm going to say somewhere here, this is a
-16 element dataset with 1 homogeneous quadrant.
+16-element dataset with 1 homogeneous quadrant.
 
 970
 01:28:05,384 --> 01:28:08,392
@@ -4131,7 +4149,7 @@ I'm going to say somewhere here, this is a
 971
 01:28:13,056 --> 01:28:17,816
 And in case I'm going to change
-this upper left quadrant to be ones.
+this upper left quadrant to be 1s.
 
 972
 01:28:20,640 --> 01:28:21,976
@@ -4151,7 +4169,7 @@ So now I can say...
 
 976
 01:28:58,208 --> 01:29:01,704
-In fact, I can just say inaudible, so northeast.
+In fact, I can just say subject.ne.
 
 977
 01:29:01,888 --> 01:29:04,872
@@ -4159,7 +4177,7 @@ In fact, I can just say inaudible, so northeast.
 
 978
 01:29:15,040 --> 01:29:18,496
-JW: Well, that obviously ends the context.
+JW: Well, we need an end to the context.
 
 979
 01:29:18,490 --> 01:29:20,896
@@ -4179,11 +4197,11 @@ JW: I think it was the NW we were expecting to be a...
 
 983
 01:29:36,620 --> 01:29:42,984
-PB: Yes that would also explain why it failed.
+PB: Yes so that would also explain why it failed.
 
 984
 01:29:45,424 --> 01:29:47,848
-Oh! it does one, yes.
+Oh! it does run, yes.
 
 985
 01:29:49,464 --> 01:29:53,280
@@ -4908,7 +4926,7 @@ So let's revisit these earlier ones.
 
 1149
 01:45:47,864 --> 01:45:51,104
-That should compress down to just 2.
+That should compress down to just 42.
 
 1150
 01:45:52,152 --> 01:45:53,128
@@ -4942,11 +4960,12 @@ we have to come down to whatever our base value is
 1157
 01:46:20,290 --> 01:46:26,408
 and that's either an individual value
-in an array or it's a fair number.
+in an array or it's a bare number.
 
 1158
 01:46:28,384 --> 01:46:35,304
-JW: Yes, Ruby inaudible number is fine, maybe 2A is not the right method name anymore.
+JW: Yes, maybe a bare number is fine,
+maybe to_a is not the right method name anymore.
 
 1159
 01:46:36,512 --> 01:46:40,432
@@ -4958,11 +4977,11 @@ PB So yes... [Paul dictates what he writes]
 
 1161
 01:46:48,280 --> 01:46:54,050
-Is it to array...? (I'll check it later)
+Is it to array...? (I'll change it later)
 
 1162
 01:46:56,368 --> 01:47:01,952
-So this one should be 2,1,3,4
+So this one should be [2, 1, 3, 4]
 
 1163
 01:47:01,950 --> 01:47:04,952
@@ -4970,7 +4989,7 @@ So this one should be 2,1,3,4
 
 1164
 01:47:05,400 --> 01:47:07,912
-This one should be just lone 2.
+This one should be just the value 2.
 
 1165
 01:47:10,240 --> 01:47:14,880
@@ -4980,11 +4999,11 @@ kept externally, as you mentioned earlier,
 1166
 01:47:15,120 --> 01:47:21,352
 then combining this value structure with
-the dimensions, allows you to read those.
+the dimensions, allows you to rebuild
 
 1167
 01:47:22,136 --> 01:47:25,816
-PB: Yes. inaudible, that's fine.
+PB: Yes. nothing works now, that's fine.
 
 1168
 01:47:27,280 --> 01:47:29,800
@@ -5017,7 +5036,7 @@ I don't like this already. [laughter]
 
 1175
 01:47:58,248 --> 01:48:00,080
-Serializer is a new node.
+Serializer.new(node)
 
 1176
 01:48:03,048 --> 01:48:06,936
@@ -5043,7 +5062,7 @@ jump out of the internals of QuadNode.
 1181
 01:48:28,000 --> 01:48:35,264
 PB: Yes... I'm just going to see if
-I can find a better name for 2A.
+I can find a better name for to_a.
 
 1182
 01:48:35,352 --> 01:48:38,376
@@ -5110,11 +5129,11 @@ PB: Yes, that seems like a nice thing to do.
 1197
 01:49:48,632 --> 01:49:57,230
 We can make it a proper serializer
-by saying 2S which is a JSON serialization.
+by saying to_s which is a JSON serialization.
 
 1198
 01:49:59,224 --> 01:50:03,952
-I'll say require JSON - that's in
+I'll say `require 'json'` - that's in
 the standard library these days.
 
 1199
@@ -5123,7 +5142,7 @@ And we'll just say... [Paul dictates what he writes]
 
 1200
 01:50:11,560 --> 01:50:15,080
-inaudible, or inaudible actually.
+to_json, or actually rather
 
 1201
 01:50:15,976 --> 01:50:18,984
@@ -5137,11 +5156,11 @@ bunch of things... unless I actually test it.
 1203
 01:50:25,640 --> 01:50:29,640
 JW: If you change all these current tests
-to use 2S instead, then we don't have to...
+to use to_s instead, then we don't have to...
 
 1204
 01:50:30,080 --> 01:50:31,760
-deal with the inaudible value anymore.
+deal with the awkwardly named `value` anymore.
 
 1205
 01:50:31,792 --> 01:50:33,864
@@ -5174,7 +5193,7 @@ Let's try one of them first and see...
 
 1212
 01:51:03,200 --> 01:51:06,056
-... program value called...
+... private method value called...
 
 1213
 01:51:07,856 --> 01:51:11,224
@@ -5182,11 +5201,11 @@ Ah! Yes, that doesn't work because...
 
 1214
 01:51:12,136 --> 01:51:15,520
-we can't make the inaudible, not yet anyway, but we will.
+we can't make it private, not yet anyway
 
 1215
 01:51:15,520 --> 01:51:18,648
-Could we have 'protected'? I'm
+Could we make it 'protected'? I'm
 never quite sure how that works.
 
 1216
@@ -5200,7 +5219,7 @@ seen a reason to use protected.
 
 1218
 01:51:25,610 --> 01:51:33,568
-PB: Yes, and it's a bad reason I think, bu
+PB: Yes, and it's a bad reason I think, but
 apart for all the extra spaces, which we can say...
 
 1219
@@ -5209,7 +5228,7 @@ apart for all the extra spaces, which we can say...
 
 1220
 01:51:47,440 --> 01:51:52,192
-inaudible I'll do the same for the
+Good. I'll do the same for the
 other ones, which are much shorter so...
 
 1221
@@ -5238,8 +5257,8 @@ Well actually, my test name was completely wrong.
 
 1227
 01:52:18,344 --> 01:52:23,536
-I'll just check the serializer has rows
-and columns in (I should use better names) erm....
+I'll just check 'it serializes the rows
+and columns in' (I should use better names) erm....
 
 1228
 01:52:23,648 --> 01:52:26,656
@@ -5251,7 +5270,7 @@ and columns in (I should use better names) erm....
 
 1230
 01:52:32,992 --> 01:52:34,848
-So it's a single value.
+To a single value.
 
 1231
 01:52:36,820 --> 01:52:40,120
@@ -5275,7 +5294,7 @@ Yes.
 
 1236
 01:52:56,472 --> 01:53:00,048
-JW: It actually serialized. [Laughter]
+JW: Actually serialize. [Laughter]
 
 1237
 01:53:00,104 --> 01:53:03,120
@@ -5287,8 +5306,9 @@ JW: It actually serialized. [Laughter]
 
 1239
 01:53:07,800 --> 01:53:14,260
-PB: So let's look at our print bmp. I'm gong to
-pull this out into a class so we can use it on it's own.
+PB: So let's look at our print bmp image.
+I'm going to pull this out into a class
+so we can use it on its own.
 
 1240
 01:53:14,664 --> 01:53:19,800
@@ -5301,7 +5321,7 @@ we test ad-hoc but that's alright.
 
 1242
 01:53:23,880 --> 01:53:25,904
-inaudible
+BMPImage
 
 1243
 01:53:26,328 --> 01:53:31,832
@@ -5313,7 +5333,7 @@ So now I want to see just how much we do compress.
 
 1245
 01:53:38,656 --> 01:53:42,488
-I'm going to close this path because
+I'm going to close this file because
 it doesn't seem useful any more.
 
 1246
@@ -5326,7 +5346,7 @@ I need a new file called something like dump, err...
 
 1248
 01:53:53,080 --> 01:53:55,624
-... dot image or something.
+... dump image or something.
 
 1249
 01:53:56,520 --> 01:53:59,128
@@ -5338,7 +5358,7 @@ And I'm going to say require...
 
 1251
 01:54:03,688 --> 01:54:06,744
-bmp image, so that I can load it.
+bmp_image, so that I can load it.
 
 1252
 01:54:06,740 --> 01:54:12,008
@@ -5351,7 +5371,7 @@ And I'm going to require QuadNode.
 
 1254
 01:54:19,616 --> 01:54:22,208
-I've already forgotten my inaudible.
+I've already forgotten what I called it
 
 1255
 01:54:22,232 --> 01:54:25,240
@@ -5383,7 +5403,7 @@ Perhaps I shouldn't close that file.
 
 1262
 01:54:58,576 --> 01:55:05,544
-Oh that's... what do they call that file?
+Oh that's... what did I call that file?
 
 1263
 01:55:06,352 --> 01:55:09,272
@@ -5395,7 +5415,7 @@ JW: I think it's called print. PB: Yes.
 
 1265
 01:55:13,832 --> 01:55:18,280
-Yes, inaudible cool.
+Yes, let's copy it from down there
 
 1266
 01:55:18,336 --> 01:55:21,352
@@ -5425,11 +5445,11 @@ Initialize with rows.
 
 1272
 01:55:51,608 --> 01:55:55,560
-Serializer initialise with the root node.
+Serializer initialize with the root node.
 
 1273
 01:55:57,888 --> 01:56:01,784
-And then let's puts that.to_s
+And then let's `puts` that dot `to_s`
 
 1274
 01:56:03,650 --> 01:56:05,192
@@ -5463,7 +5483,7 @@ Let's see how much our actual...
 
 1281
 01:56:51,200 --> 01:56:55,968
-And then let's put print...
+And then let's just print...
 
 1282
 01:56:56,184 --> 01:56:59,144
@@ -5483,16 +5503,17 @@ JW: Not bad.
 
 1286
 01:57:09,720 --> 01:57:14,952
-PB: Yes, inaudible which is very nice.
+PB: Yes, an order of magnitude,
+which is very nice.
 
 1287
 01:57:16,100 --> 01:57:19,184
-Now we know that is giving us a nice impression,
+Now we know that is giving us a nice compression,
 
 1288
 01:57:19,208 --> 01:57:26,920
 and in fact, if we didn't have all the JSON
-effect it would probably be a little bit smaller.
+overhead they would probably both be smaller.
 
 1289
 01:57:28,040 --> 01:57:32,424
@@ -5511,7 +5532,7 @@ deserializer that takes the serialized one
 1292
 01:57:40,280 --> 01:57:44,648
 and turns it back into a
-QuadTree... does that make sense?
+QuadNode... does that make sense?
 
 1293
 01:57:45,024 --> 01:57:47,368
@@ -5519,7 +5540,8 @@ JW: I think so yes.
 
 1294
 01:57:48,550 --> 01:57:54,552
-If we even need to involve the nodes already done.
+If we even need to involve the nodes,
+we maybe don't
 
 1295
 01:57:54,648 --> 01:57:56,472
@@ -5536,7 +5558,7 @@ all the way through the tree perhaps.
 
 1298
 01:58:05,060 --> 01:58:08,672
-But let's give ourselves inaudible
+But let's give ourselves the width and height
 
 1299
 01:58:10,184 --> 01:58:16,224
@@ -5550,12 +5572,12 @@ spec where we have a very simple
 
 1301
 01:58:23,504 --> 01:58:27,640
-serialized QuadRoot to work from and
+serialized QuadNode to work from and
 produce the rows and columns we expect,
 
 1302
 01:58:27,912 --> 01:58:30,160
-might be the best way to try this out.
+might be the best way to drive this out.
 
 1303
 01:58:30,160 --> 01:58:33,000
@@ -5571,7 +5593,8 @@ PB: Yes let's do that...
 
 1306
 01:58:56,256 --> 01:58:58,384
-Obviously I failed so...
+Obviously going to fail because we don't
+have one so...
 
 1307
 01:58:58,416 --> 01:59:01,424
@@ -5637,7 +5660,7 @@ So then, whatever we do let's say...
 
 1322
 02:00:59,280 --> 02:01:04,416
-Subject is going to be deserializer.new.
+Subject is going to be Deserializer.new.
 
 1323
 02:01:04,576 --> 02:01:09,160
@@ -5725,7 +5748,7 @@ and then we'll pull out the first item
 1342
 02:03:27,008 --> 02:03:30,112
 that's the way we have to leave it because
-you cant have a bare value and a JSON
+you cant have a bare value in JSON
 
 1343
 02:03:30,110 --> 02:03:32,616
@@ -5788,7 +5811,7 @@ But I think with inaudible we don't know that because our serializer is only giv
 
 1357
 02:04:33,230 --> 02:04:35,176
-But yes, your right it could.
+But yes, you are right it could.
 
 1358
 02:04:35,170 --> 02:04:37,704
@@ -5867,7 +5890,7 @@ and that will be very similar to what we've got but...
 
 1376
 02:05:53,320 --> 02:05:59,536
-So let our serializer be 1,2,3,4.
+So let our serializer be [1,2,3,4].
 
 1377
 02:06:02,320 --> 02:06:05,184
@@ -5883,7 +5906,8 @@ Yes, because it's an image 4 pixels.
 
 1380
 02:06:19,216 --> 02:06:25,088
-That's going to be 1 and 2 and the second row is 3 and 4.
+That's going to be 1 and 2 
+and the second row is 3 and 4.
 
 1381
 02:06:27,570 --> 02:06:31,136
@@ -5891,7 +5915,7 @@ PB: It's not, it's serializer. [Laughter]
 
 1382
 02:06:31,240 --> 02:06:33,190
-Er... yes it should be 2,1,3,4
+Er... yes it should be [2,1,3,4]
 
 1383
 02:06:33,190 --> 02:06:35,488
@@ -5925,7 +5949,8 @@ columns that I can put things into.
 
 1390
 02:07:03,456 --> 02:07:05,530
-I'm sure there's a more elegant way of doing this
+I'm sure there's a more elegant functional
+way of doing this
 
 1391
 02:07:05,530 --> 02:07:09,064
@@ -6003,7 +6028,7 @@ got to be given a map into which to put it.
 
 1408
 02:08:36,200 --> 02:08:38,760
-And an x offset and Y offset.
+And an X offset and Y offset.
 
 1409
 02:08:38,760 --> 02:08:41,760
@@ -6063,7 +6088,8 @@ and we'll return rows at the end.
 
 1422
 02:09:48,688 --> 02:09:54,344
-So fill in for each quadrant... so I'm going to say...
+So fill in for each quadrant... 
+so I'm going to say...
 
 1423
 02:09:54,340 --> 02:09:57,344
@@ -6084,15 +6110,15 @@ The top right is going to be X1 Y0
 
 1427
 02:10:23,744 --> 02:10:27,328
-Then it's going to be 00.
+Then it's going to be [0, 0].
 
 1428
 02:10:29,864 --> 02:10:32,696
-Then it's going to be 01.
+Then it's going to be [0, 1].
 
 1429
 02:10:33,416 --> 02:10:36,576
-Then 11.
+Then [1, 1].
 
 1430
 02:10:38,776 --> 02:10:44,008
@@ -6185,7 +6211,7 @@ data to meet your representation with you.
 
 1450
 02:12:24,016 --> 02:12:27,168
-And then if you cant step down a level into the data,
+And then if you can't step down a level into the data,
 
 1451
 02:12:27,160 --> 02:12:29,688
@@ -6219,7 +6245,7 @@ If I've got a field that has 8 for example,
 
 1458
 02:13:03,576 --> 02:13:07,820
-Firstly I want to take... this lot here.
+Firstly, I want to take... this lot here.
 
 1459
 02:13:07,920 --> 02:13:10,904
@@ -6241,7 +6267,7 @@ have 4 elements, or 1, and just be an initial object.
 1463
 02:13:28,456 --> 02:13:32,904
 If it's an initial object, then I pass
-it down, but since there are 4,
+it down, but assuming there are 4,
 
 1464
 02:13:33,200 --> 02:13:38,920
@@ -6296,7 +6322,7 @@ JW: Yes, I think so.
 
 1476
 02:14:17,000 --> 02:14:20,456
-PB: So I need X over 00 and size.
+PB: So I need X over 0, 0 and size.
 
 1477
 02:14:21,400 --> 02:14:25,800
@@ -6382,7 +6408,8 @@ the segment we're working on
 1495
 02:16:18,824 --> 02:16:28,096
 So if we start at eight, then we
-multiply, we add 0 x the scale of two.
+multiply, we add multiple times the
+scale of two.
 
 1496
 02:16:28,136 --> 02:16:31,144
@@ -6390,7 +6417,9 @@ multiply, we add 0 x the scale of two.
 
 1497
 02:16:38,104 --> 02:16:47,330
-So this is the existing Exocet plus the internal offset which I called 2 inaudible
+So this is the existing x offset plus the 
+internal offset which I called 2
+[inaudible]
 
 1498
 02:16:48,720 --> 02:16:51,712
@@ -6422,7 +6451,8 @@ or each actually.
 
 1505
 02:17:23,656 --> 02:17:26,608
-If we can call each on the data... which we cant inaudible...
+If we can call each on the data...
+which we can't call on string, can we?
 
 1506
 02:17:27,160 --> 02:17:29,208
@@ -6492,10 +6522,12 @@ PB: Yes.
 
 1522
 02:18:35,616 --> 02:18:39,792
-So maybe scale inaudible all over the place so we'll say...
+So maybe replace scale all over the place
+to say
 
 1523
 02:18:40,528 --> 02:18:43,536
+subscale
 [Paul dictates what he writes]
 
 1524
@@ -6533,7 +6565,7 @@ Either that or depending on whether we...
 
 1532
 02:19:23,920 --> 02:19:27,928
-JW: Don't we need to reach into that data and pull out the appropriate one for this inaudible.
+JW: Don't we need to reach into that data and pull out the appropriate one for this [inaudible].
 
 1533
 02:19:27,920 --> 02:19:30,240
@@ -6583,7 +6615,8 @@ Let's see what happens.
 
 1544
 02:20:09,610 --> 02:20:14,000
-JW: I think we'll see a couple of commas before we inaudible
+JW: I think we're missing a couple of
+commas before we [inaudible]
 
 1545
 02:20:14,936 --> 02:20:17,120
@@ -6603,8 +6636,8 @@ JW: We've not actually defined subdata or is this...
 
 1549
 02:20:30,280 --> 02:20:34,080
-PB: Yes, you're right that should be sub data,
-other wise it's not going to do anything at all.
+PB: Yes, you're right that should be subdata,
+otherwise it's not going to do anything at all.
 
 1550
 02:20:34,128 --> 02:20:37,120
@@ -6694,7 +6727,7 @@ And the size for that one is 4.
 
 1571
 02:22:47,368 --> 02:22:50,360
-I was going to say it expands the original.
+I was going to say it expands the image.
 
 1572
 02:22:50,424 --> 02:22:53,440
@@ -6710,11 +6743,11 @@ And say expect serialized to equal...
 
 1575
 02:23:20,770 --> 02:23:23,648
-that and inaudible
+that and [inaudible]
 
 1576
 02:23:25,870 --> 02:23:27,984
-JW: inaudible
+JW: [inaudible]
 
 1577
 02:23:28,032 --> 02:23:30,264
@@ -6726,7 +6759,7 @@ Yes... that's why.
 
 1579
 02:23:33,920 --> 02:23:36,600
-JW: And there's another one, inaudible cool.
+JW: And there's another one, [inaudible] cool.
 
 1580
 02:23:39,120 --> 02:23:43,336
