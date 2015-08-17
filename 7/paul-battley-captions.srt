@@ -3022,7 +3022,10 @@ That feels a bit happier so I'm gonna check those in.
 
 707
 01:02:26,760 --> 01:02:32,688
-There's a bunch of other stuff that I would [inaudible]
+There's a bunch of other stuff that I
+would add in my commit message if I were
+doing it properly, but I'll leave that for
+now.
 
 708
 01:02:32,760 --> 01:02:36,096
