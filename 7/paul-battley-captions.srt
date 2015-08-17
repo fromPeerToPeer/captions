@@ -910,7 +910,8 @@ Or rather...
 
 211
 00:18:24,920 --> 00:18:33,944
-Yes, I think that's modularly [inaudible]. If I just shrink this. [Laughter]
+Yes, I think that's modularly [inaudible].
+If I just shrink this. [Laughter]
 
 212
 00:18:33,968 --> 00:18:36,992
@@ -1048,7 +1049,7 @@ BMPImage.new
 
 243
 00:21:20,152 --> 00:21:23,390
-inaudible first encoding.
+File.read(ARGV.first, encoding...)
 
 244
 00:21:25,432 --> 00:21:30,592
@@ -1090,7 +1091,7 @@ else later but I think for now that will work.
 
 253
 00:22:04,040 --> 00:22:07,048
-inaudible
+bytes is file.read.unpack('C*')
 
 254
 00:22:07,040 --> 00:22:09,248
@@ -1135,7 +1136,8 @@ And this one...
 
 264
 00:23:04,880 --> 00:23:13,792
-Width height pixels in there, [inaudible] we can put this into a private method.
+Width height pixels in there, [inaudible]
+we can put this into a private method.
 
 265
 00:23:13,790 --> 00:23:16,744
@@ -1215,7 +1217,8 @@ that puts stuff, so for now I'm going to do
 
 283
 00:24:48,144 --> 00:24:51,136
-inaudible because I haven't given it the width and the height.
+Ah because I haven't given it the width
+and the height.
 
 284
 00:24:51,130 --> 00:24:54,128
@@ -1223,7 +1226,8 @@ inaudible because I haven't given it the width and the height.
 
 285
 00:24:55,096 --> 00:24:59,872
-inaudible
+I can't remember if I kept those or not,
+but I'll just put 256 by 256.
 
 286
 00:25:01,720 --> 00:25:05,264
@@ -1241,7 +1245,7 @@ OK, seems good.
 
 289
 00:25:16,056 --> 00:25:19,040
-inaudible yes, that seems good.
+Yes, that seems good.
 
 290
 00:25:20,992 --> 00:25:21,952
@@ -1289,7 +1293,8 @@ Height I can map...
 
 300
 00:26:16,680 --> 00:26:23,064
-I would like to do the inaudible style of functional things with the braces.
+I would like to do the Jim Weirich style
+of functional things with the braces.
 
 301
 00:26:23,104 --> 00:26:24,570
@@ -1426,7 +1431,7 @@ PB: Yes.
 
 333
 00:28:45,720 --> 00:28:48,030
-inaudible
+[inaudible]
 
 334
 00:28:48,030 --> 00:28:51,072
@@ -1460,7 +1465,7 @@ It might have been better named as rows or something.
 
 341
 00:29:15,368 --> 00:29:17,360
-inaudible
+[inaudible]
 
 342
 00:29:19,280 --> 00:29:21,072
@@ -3658,7 +3663,8 @@ So we now have children.
 
 858
 01:17:01,600 --> 01:17:07,104
-Children inaudible I'm going to change that test.
+'Should children into'...
+I'm going to change that test.
 
 859
 01:17:08,240 --> 01:17:10,488
@@ -5709,7 +5715,9 @@ And let's say... [Paul thinks]
 
 1332
 02:02:23,792 --> 02:02:27,144
-inaudible I can't think of a better name is...
+Some kind of intermediate.
+I'm going to call it that because I can't
+think of a better name is...
 
 1333
 02:02:27,990 --> 02:02:30,984
@@ -5812,7 +5820,9 @@ PB: In fact we could.
 
 1356
 02:04:26,640 --> 02:04:32,512
-But I think with inaudible we don't know that because our serializer is only given the quad tree.
+But I think with the current API we don't
+know that because our serializer is only
+given the quad tree.
 
 1357
 02:04:33,230 --> 02:04:35,176
@@ -5820,7 +5830,7 @@ But yes, you are right it could.
 
 1358
 02:04:35,170 --> 02:04:37,704
-JW: inaudible
+JW: The root knows it's width and height.
 
 1359
 02:04:37,784 --> 02:04:40,440
@@ -5828,7 +5838,8 @@ PB: Yes, that might make sense.
 
 1360
 02:04:40,488 --> 02:04:43,504
-But let's press on, and leave that for now.
+JW: But let's press on
+PB: Yeah, we'll leave that for now.
 
 1361
 02:04:43,584 --> 02:04:46,584
@@ -5862,7 +5873,8 @@ our serializer doesn't like it.
 
 1368
 02:05:22,776 --> 02:05:25,328
-And height... inaudible for that.
+Width and height, but we can just ignore
+them for now.
 
 1369
 02:05:26,464 --> 02:05:29,008
@@ -5981,7 +5993,8 @@ PB: Yes, I do.
 
 1396
 02:07:33,168 --> 02:07:36,024
-So that should give me a whole load of inaudible.
+So that should give me a
+whole load of nils.
 
 1397
 02:07:37,608 --> 02:07:43,160
@@ -6050,7 +6063,7 @@ but that's what it's going to be building from.
 
 1412
 02:08:55,488 --> 02:09:00,216
-inaudible
+[inaudible]
 
 1413
 02:09:02,384 --> 02:09:06,360
@@ -6059,7 +6072,8 @@ that would make more sense.
 
 1414
 02:09:06,848 --> 02:09:11,720
-We're going to start off with a blank inaudible in which I'm going to put things.
+We're going to start off with a blank
+container in which we'll put things.
 
 1415
 02:09:12,568 --> 02:09:19,960
@@ -6072,7 +6086,7 @@ only one value then there is no mapping to do at all,
 
 1417
 02:09:25,144 --> 02:09:28,616
-... but we'll inaudible ... so fill in.
+...but we'll delegate that out to fill_in.
 
 1418
 02:09:31,792 --> 02:09:34,048
@@ -6080,7 +6094,8 @@ Offset 0.
 
 1419
 02:09:35,872 --> 02:09:38,432
-Whatever our intermediate data is, it's still there inaudible
+Whatever our intermediate data is.
+It's still there, we've got a name for it.
 
 1420
 02:09:38,496 --> 02:09:41,496
@@ -6206,8 +6221,8 @@ JW: I suppose that an alternative would be to...
 
 1448
 02:12:12,032 --> 02:12:16,220
-inaudible this code here but walking
-all the way down to the 1 pixel size,
+same basic idea but walking all the way
+down to the 1 pixel size,
 
 1449
 02:12:16,220 --> 02:12:21,928
@@ -6242,7 +6257,8 @@ And... [Paul ponders]
 
 1456
 02:12:46,672 --> 02:12:50,976
-So if I were to inaudible sketch here...
+So if I were to...
+Maybe if I sketch something out here...
 
 1457
 02:12:52,368 --> 02:12:58,368
@@ -6258,7 +6274,8 @@ Firstly, I want to take... this lot here.
 
 1460
 02:13:11,048 --> 02:13:13,808
-(Maybe not call them X and Ys inaudible.)
+(Maybe not call them X and Y,
+that's going to be confusing as well!)
 
 1461
 02:13:13,800 --> 02:13:16,952
