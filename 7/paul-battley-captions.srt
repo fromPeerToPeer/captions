@@ -4200,7 +4200,7 @@ It does not compress the other quadrants.
 988
 01:30:04,816 --> 01:30:13,816
 And I'll say for NE for example,
-[Paul dictates what he rights]
+[Paul dictates what he writes]
 
 989
 01:30:13,920 --> 01:30:16,936
@@ -4271,12 +4271,12 @@ PB: For now let's say [Paul dictates what he writes]
 1004
 01:31:56,704 --> 01:32:00,440
 Actually I'm just going to write
-it like a Ruby and just say value.
+it like Ruby and just say value.
 
 1005
 01:32:00,728 --> 01:32:03,928
 I think that makes more sense
-than trying to explain an image.
+than trying to explain it in English.
 
 1006
 01:32:05,830 --> 01:32:08,968
@@ -4292,12 +4292,12 @@ Actually, I'm going to need a serializer anyway.
 
 1009
 01:32:35,968 --> 01:32:39,856
-I could use some kind of locking
+I could use some kind of mock in
 there, but I think I'd rather not.
 
 1010
 01:32:42,040 --> 01:32:45,208
-So we've got some value.
+So if we've got some value.
 
 1011
 01:32:46,960 --> 01:32:54,168
@@ -4322,7 +4322,8 @@ maybe that's OK for now.
 
 1016
 01:33:20,280 --> 01:33:26,384
-JW: Maybe you could take the\approach of giving it to a method, or a...
+JW: Maybe you could take the
+approach of giving it to a method…
 
 1017
 01:33:27,824 --> 01:33:28,608
@@ -4334,16 +4335,16 @@ JW: I imagine you could potentially...
 
 1019
 01:33:32,520 --> 01:33:34,368
-turn these quadnodes into a JSON.
+turn these quadnodes into a JSON structure.
 
 1020
 01:33:34,376 --> 01:33:41,736
-PB: I agree, let's give it a 2a method
+PB: I agree, let's give it a to_a method
 and that will give us something nice.
 
 1021
 01:33:41,776 --> 01:33:45,520
-And now I should have... 42
+So now I should have... 42
 
 1022
 01:33:45,584 --> 01:33:48,568
@@ -4352,7 +4353,7 @@ And now I should have... 42
 1023
 01:33:50,008 --> 01:33:55,576
 Yes, it definitely doesn't work
-because I say def initialize with a node.
+because I… say def initialize with a node.
 
 1024
 01:33:57,360 --> 01:34:01,584
@@ -4374,7 +4375,7 @@ think will give us everything we want.
 
 1028
 01:34:18,776 --> 01:34:23,808
-Or not... [Paul laughs]... requires a serializer.
+Or not... [Paul laughs]... require 'serializer'.
 
 1029
 01:34:23,856 --> 01:34:26,840
@@ -4382,7 +4383,7 @@ Or not... [Paul laughs]... requires a serializer.
 
 1030
 01:34:31,016 --> 01:34:33,976
-inaudible
+And 'quadnode' as well.
 
 1031
 01:34:34,056 --> 01:34:37,072
@@ -4394,8 +4395,8 @@ OK, so let's say context...
 
 1033
 01:34:44,990 --> 01:34:56,288
-So it's leaped straight into...
-with a 4 heterogeneous... 4-item node.
+So let's leap straight into,
+with a heterogeneous 4-item node.
 
 1034
 01:34:56,328 --> 01:34:59,320
@@ -4420,7 +4421,8 @@ Like that.
 
 1039
 01:35:24,280 --> 01:35:31,490
-Then I should get [1,2] ,[3,4]
+Then I should get [1,2] ,[3,4].
+And I do. Good.
 
 1040
 01:35:35,000 --> 01:35:37,830
@@ -4432,7 +4434,7 @@ So now I need to deal with the homogeneous dataset.
 
 1042
 01:35:49,848 --> 01:35:59,696
-That's a 2, and it serializes
+Make them all 2, and it serializes
 to a single row and column.
 
 1043
@@ -4446,7 +4448,7 @@ at the moment, tell the difference between
 
 1045
 01:36:13,270 --> 01:36:18,360
-what started of as a 1 item node and a 4 item node.
+what started off as a 1 item node and a 4 item node.
 
 1046
 01:36:18,392 --> 01:36:22,192
@@ -4465,18 +4467,19 @@ make it, you get the same input.
 
 1049
 01:36:38,320 --> 01:36:41,792
-Having thought about that,
-I'm not sure about this actually.
+Having thought about it,
+I'm not sure that's actually important.
 
 1050
 01:36:42,120 --> 01:36:48,760
 If it is important we could
-sort out a band as a target size.
+sort it out of band as a target size.
 
 1051
 01:36:51,840 --> 01:37:00,520
 In our case, it should be possible to
-reconstruct it by one walk through the trees or...
+reconstruct it by walking all the way
+through the tree as well
 
 1052
 01:37:00,520 --> 01:37:02,960
@@ -4520,11 +4523,11 @@ PB: So serializer... let's say...
 1061
 01:37:35,048 --> 01:37:38,696
 The simplest way to make
-the tests pass, of course is to say...
+this test pass, of course is to say...
 
 1062
 01:37:39,150 --> 01:37:43,424
-if root.leaf... and then do that.
+if root.leaf?... and then do that.
 
 1063
 01:37:45,200 --> 01:37:48,304
@@ -4547,12 +4550,12 @@ PB: No, exactly.
 
 1067
 01:38:02,680 --> 01:38:08,824
-JW: I guess you could flattening
+JW: I guess you could do flattening
 and uniquing in here perhaps.
 
 1068
 01:38:09,816 --> 01:38:11,680
-It seems a bit like implication.
+It seems a bit like duplication.
 
 1069
 01:38:11,680 --> 01:38:13,776
@@ -4578,7 +4581,7 @@ end up not doing anything at this point,
 1074
 01:38:36,120 --> 01:38:40,520
 but maybe we will want to take the
-array and turn it back into a string later on.
+to_a and turn that into a string later on.
 
 1075
 01:38:41,520 --> 01:38:44,392
@@ -4596,7 +4599,7 @@ So maybe if we said that we wanted some way of...
 1078
 01:38:56,664 --> 01:39:00,712
 So we could make our serializer
-a recursive effect actually.
+a recursive thing actually.
 
 1079
 01:39:04,640 --> 01:39:09,280
@@ -4613,18 +4616,18 @@ This is a bit ugly but I just want to try it...
 
 1082
 01:39:31,616 --> 01:39:36,824
-This will work but I still need
+This will work but I still need to do
 something else to make it work.
 
 1083
 01:39:38,710 --> 01:39:42,376
 So that works, but in the
-case of  having something deeper,
+case of having something deeper,
 
 1084
 01:39:42,416 --> 01:39:47,320
-so I'm going to take one of
-our quadnodes back, to take this one
+so I'm going to take, from
+our quadnodes spec, the one
 
 1085
 01:39:48,930 --> 01:39:54,648
@@ -4662,7 +4665,7 @@ It's just the node that varies according to context.
 
 1093
 01:40:38,960 --> 01:40:41,472
-So now I  can say...
+So now I can say...
 
 1094
 01:40:41,544 --> 01:40:44,544
@@ -4710,25 +4713,25 @@ I want this to equal... [Paul thinks]
 
 1105
 01:41:36,928 --> 01:41:40,664
-I want one for that part.
+I want 1 for that part.
 
 1106
 01:41:41,448 --> 01:41:46,336
-Then I want three, (sorry, it's
+Then I want 3, (sorry, it's
 the other way around isn't it?)
 
 1107
 01:41:47,330 --> 01:41:55,048
-I want to start at 3,4... so I want 3,4,7 and 8.
+I want to start at 3,4... so I want 3,4,7,8.
 
 1108
 01:41:55,820 --> 01:42:00,192
-Which is the northwest
-quadrant, which is just one thing.
+Which is the northeast quadrant,
+the northwest quadrant is just one thing.
 
 1109
 01:42:01,584 --> 01:42:07,904
-Then I want the southwest one which is 9,10,13 and 14.
+Then I want the southwest one which is 9,10,13,14.
 
 1110
 01:42:10,880 --> 01:42:18,024
@@ -4770,7 +4773,7 @@ it's a bit clearer which one's which node.
 1118
 01:43:01,952 --> 01:43:05,792
 JW: So you can see one quadrant
-is compressed down to single figures.
+is compressed down to a single value.
 
 1119
 01:43:05,790 --> 01:43:09,792
@@ -4798,7 +4801,8 @@ So when we ended up with 2 by itself
 
 1124
 01:43:35,320 --> 01:43:38,392
-PB: It's not, because it should inaudible.
+PB: It's not, because it should...
+JW: I think we want some more square brackets.
 
 1125
 01:43:38,432 --> 01:43:41,448
@@ -4806,7 +4810,7 @@ PB: It's not, because it should inaudible.
 
 1126
 01:43:43,344 --> 01:43:47,080
-That one ?
+PB: That one?
 JW: Yes. PB: yes it does doesn't it?
 
 1127
@@ -4833,7 +4837,7 @@ The thing that is confusing is that we want...
 1132
 01:44:18,528 --> 01:44:27,552
 We know node looks like that, or we've
-decided a node is just the rows and columns.
+decided a node is just rows and columns.
 
 1133
 01:44:30,224 --> 01:44:32,624
@@ -4846,7 +4850,7 @@ Except...
 1135
 01:44:37,376 --> 01:44:41,240
 I'm thinking that our
-serialization should form out of that.
+serialization format of that should be,
 
 1136
 01:44:42,912 --> 01:44:45,056
@@ -4854,7 +4858,7 @@ I'm just going to write it here.
 
 1137
 01:44:46,832 --> 01:44:49,136
-I'm going to ignore the inaudible for now.
+I'm going to ignore the outer brackets for now.
 
 1138
 01:44:49,592 --> 01:44:52,744
@@ -4862,7 +4866,7 @@ I'm going to ignore the inaudible for now.
 
 1139
 01:44:58,536 --> 01:45:00,928
-X which is 1.
+the next section which is 1.
 
 1140
 01:45:03,024 --> 01:45:06,792
