@@ -3061,7 +3061,8 @@ want to put that in the node
 
 715
 01:03:08,392 --> 01:03:10,912
-because I don't think it really belongs [inaudible] about the color.
+because I don't think it really needs to
+know about the color.
 
 716
 01:03:10,936 --> 01:03:14,536
