@@ -3629,7 +3629,7 @@ So I'll change split to children.
 
 852
 01:16:19,976 --> 01:16:23,016
-inaudible is that yes... No.
+Yes, do I want to change that? yes... No.
 
 853
 01:16:23,088 --> 01:16:26,088
@@ -3637,7 +3637,7 @@ inaudible is that yes... No.
 
 854
 01:16:36,448 --> 01:16:40,776
-Change all this to children, no, yes, yes.
+Change all this to children, yes, no, yes, yes.
 
 855
 01:16:40,864 --> 01:16:43,856
@@ -3674,7 +3674,7 @@ in everything, but never mind.
 
 863
 01:17:34,840 --> 01:17:40,696
-Yes, so... change split to children.
+Yes, so... rename split to children.
 
 864
 01:17:41,368 --> 01:17:48,176
@@ -3760,12 +3760,12 @@ I'm going to re-load this.
 882
 01:19:04,420 --> 01:19:11,432
 OK so I'm going to write some
-spectre on some smaller notes.
+specs around some smaller nodes.
 
 883
 01:19:11,430 --> 01:19:15,240
-So I'm going to put this
-into something saying context.
+So I'm going to put this lot
+into context saying context.
 
 884
 01:19:17,256 --> 01:19:27,616
@@ -3773,7 +3773,7 @@ into something saying context.
 
 885
 01:19:29,672 --> 01:19:33,848
-And I put all of those inside except inaudible.
+And I put all of those inside except that thing.
 
 886
 01:19:33,840 --> 01:19:36,864
@@ -3790,12 +3790,12 @@ and it's simply about... [they both talk at once].
 
 889
 01:19:49,368 --> 01:19:59,576
-So I'm going to call this one at the
-bottom: context, and call it a 1 element dataset.
+So I'm going to call this one down at the
+bottom context, and call this one a 1-element data set.
 
 890
 01:20:01,800 --> 01:20:07,240
-Or it could be a 1 element
+Or it could be a 1-element
 QuadTree, that might make more sense.
 
 891
@@ -3805,7 +3805,7 @@ So this one, I want to say that its children is itself.
 892
 01:20:16,008 --> 01:20:24,144
 So our basic building block is a
-QuadTree which has one element which is a leaf.
+QuadTree which has one element and which is a leaf.
 
 893
 01:20:27,072 --> 01:20:30,208
@@ -3835,11 +3835,11 @@ similar with 4 because 4 is still quite simple
 
 899
 01:20:52,290 --> 01:20:58,776
-but it's easy to think about and we inaudible.
+but it's easy to think about and we know its behavior is.
 
 900
 01:20:59,224 --> 01:21:05,064
-Let's get rid of that entirely, and inaudible our dataset something like...
+Let's get rid of that entirely, and since our dataset something like...
 
 901
 01:21:05,060 --> 01:21:08,056
@@ -3884,8 +3884,8 @@ I'm going to say: [Paul dictates what he writes]
 
 911
 01:22:09,520 --> 01:22:14,552
-And let's do the same thing
-with this one, some basic stuff like...
+And this one, let's do the same thing
+some very basic stuff like...
 
 912
 01:22:17,220 --> 01:22:20,368
@@ -3910,7 +3910,7 @@ All these things are...
 
 917
 01:23:03,112 --> 01:23:06,904
-Yes, so there's 16 inaudible.
+Yes, so there's the 16-element one.
 
 918
 01:23:07,312 --> 01:23:12,664
@@ -3958,7 +3958,7 @@ recursively, I don't think I care about that.
 
 928
 01:24:03,944 --> 01:24:08,472
-Anything else split? No, and represent
+Anything else is split? No, and get rid of
 anything that's split in here as well.
 
 929
@@ -3994,31 +3994,32 @@ since it's quite a clean state. PB: Yes.
 
 936
 01:24:47,648 --> 01:24:57,856
-Now I think I want to add some kind of compression.
+What I think I want to do now,
+I want to add some kind of compression.
 
 937
 01:25:01,800 --> 01:25:06,704
 JW: You don't want to do the case
-of a homogeneous 4 element dataset?
+of a homogeneous 4-element dataset?
 
 938
 01:25:07,624 --> 01:25:14,040
 PB: Ah, yes I will, that's exactly what
-I mean so I want to say that compression
+I mean so I want to say that compressing
 
 939
 01:25:14,040 --> 01:25:19,344
-heterogeneous 1 should give me the
+this heterogeneous one should give me the
 same, the children should be the same.
 
 940
 01:25:19,984 --> 01:25:26,504
 It should have 4 children but if I
-compress it I should get a leaf node and the value.
+compress it, I should get a leaf node and the value.
 
 941
 01:25:27,288 --> 01:25:34,184
-It's first row, first column
+Its first row, first column
 should be the individual value.
 
 942
@@ -4040,8 +4041,8 @@ a particular plugin way of comparing things
 
 946
 01:25:54,360 --> 01:25:58,656
-because I think that making
-it the same is reasonable.
+because I think that making it the same is
+a reasonable property that we can bake into this.
 
 947
 01:25:59,648 --> 01:26:02,864
@@ -4057,12 +4058,12 @@ This one should be a leaf node... and so it is.
 
 950
 01:26:15,472 --> 01:26:17,992
-Let's stick with leaf node now.
+Let's stick with leaf node for now.
 
 951
 01:26:19,496 --> 01:26:25,144
 At this point, it's perhaps nice
-that divisible and leaf node are separate.
+that leaf and divisible are separate.
 
 952
 01:26:25,140 --> 01:26:39,120
@@ -4090,7 +4091,7 @@ Good, so in that case...
 
 958
 01:27:00,272 --> 01:27:03,640
-Let's see F1 homogeneous dataset...
+Let's see 4-element homogeneous dataset...
 
 959
 01:27:07,776 --> 01:27:11,808
@@ -4108,12 +4109,12 @@ Or should it just be that that's all there is...
 962
 01:27:21,624 --> 01:27:27,688
 Yes, that would make sense, if I have
-a 4 element homogeneous dataset
+a 4-element homogeneous dataset
 
 963
 01:27:29,504 --> 01:27:40,280
-within a 16 element dataset, then maybe I can
-say that I get a non leaf, a leaf ,a non leaf, a non leaf.
+within a 16-element dataset, then maybe I can
+say that I get a non-leaf, a leaf, a non-leaf, a non-leaf.
 
 964
 01:27:41,520 --> 01:27:45,072
@@ -4139,7 +4140,7 @@ PB: So for example...
 969
 01:27:56,680 --> 01:28:05,296
 I'm going to say somewhere here, this is a
-16 element dataset with 1 homogeneous quadrant.
+16-element dataset with 1 homogeneous quadrant.
 
 970
 01:28:05,384 --> 01:28:08,392
@@ -4148,7 +4149,7 @@ I'm going to say somewhere here, this is a
 971
 01:28:13,056 --> 01:28:17,816
 And in case I'm going to change
-this upper left quadrant to be ones.
+this upper left quadrant to be 1s.
 
 972
 01:28:20,640 --> 01:28:21,976
@@ -4168,7 +4169,7 @@ So now I can say...
 
 976
 01:28:58,208 --> 01:29:01,704
-In fact, I can just say inaudible, so northeast.
+In fact, I can just say subject.ne.
 
 977
 01:29:01,888 --> 01:29:04,872
@@ -4176,7 +4177,7 @@ In fact, I can just say inaudible, so northeast.
 
 978
 01:29:15,040 --> 01:29:18,496
-JW: Well, that obviously ends the context.
+JW: Well, we need an end to the context.
 
 979
 01:29:18,490 --> 01:29:20,896
@@ -4196,11 +4197,11 @@ JW: I think it was the NW we were expecting to be a...
 
 983
 01:29:36,620 --> 01:29:42,984
-PB: Yes that would also explain why it failed.
+PB: Yes so that would also explain why it failed.
 
 984
 01:29:45,424 --> 01:29:47,848
-Oh! it does one, yes.
+Oh! it does run, yes.
 
 985
 01:29:49,464 --> 01:29:53,280
