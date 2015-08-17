@@ -1540,7 +1540,8 @@ item in them takes each of the quadrants.
 
 360
 00:30:44,830 --> 00:30:49,624
-So inaudible writing that I think I can test quite
+So that's what I need to write, and
+that I think I can test quite
 easily, so I'm going to start doing things that way.
 
 361
@@ -1583,7 +1584,7 @@ Good.
 
 370
 00:31:30,472 --> 00:31:36,016
-Now I'm going to make a spec to actually live.
+Now I'm going to make a spec and a lib.
 
 371
 00:31:37,296 --> 00:31:44,304
@@ -1608,7 +1609,8 @@ Is that right, somehow I feel...
 
 376
 00:32:19,744 --> 00:32:24,200
-It's the kind of thing I never write inaudible, I just copy it off another file inaudible
+It's the kind of thing I never write, I just copy it off another file
+I've written using it...
 
 377
 00:32:26,512 --> 00:32:30,384
@@ -1632,7 +1634,7 @@ because we don't have a QuadNode.
 
 382
 00:32:49,610 --> 00:32:51,984
-Lib.quadnode.
+Tab edit lib/quadnode.
 
 383
 00:32:52,952 --> 00:32:57,952
@@ -1644,7 +1646,7 @@ And that should pass.
 
 385
 00:33:03,830 --> 00:33:06,608
-Good, there will probably be something else inaudible.
+Nope, I probably missed something else there.
 
 386
 00:33:08,104 --> 00:33:10,176
@@ -1660,7 +1662,7 @@ Good, OK.
 
 389
 00:33:17,960 --> 00:33:26,504
-So I'm going to say, it should return it's rows.
+So I'm going to say, it should return its rows.
 
 390
 00:33:26,536 --> 00:33:29,552
@@ -1713,7 +1715,7 @@ I realise I should have put more spacing in... 9,10,11,12.
 
 402
 00:34:22,670 --> 00:34:23,504
-inaudible
+[inaudible]
 
 403
 00:34:23,580 --> 00:34:26,608
@@ -1750,11 +1752,12 @@ I'm going to copy and paste this.
 411
 00:34:55,320 --> 00:34:58,552
 I could present a constant
-but it's so much easier like this.
+but this is the only time I'm going
+to use it like this.
 
 412
 00:35:01,400 --> 00:35:03,336
-inaudible
+How's that?
 
 413
 00:35:05,440 --> 00:35:08,408
@@ -1771,7 +1774,8 @@ And then I'll say... [Paul dictates what he writes]
 
 416
 00:35:25,230 --> 00:35:30,152
-And now from this... it works, so I just have a thing that inaudible.
+And now from this... it works, so I just have a thing
+that has its rows now.
 
 417
 00:35:30,208 --> 00:35:32,824
@@ -1844,7 +1848,8 @@ JW: OK.
 
 433
 00:36:38,032 --> 00:36:41,496
-PB: Which means we don't have to inaudible.
+PB: Which means we don't have to worry about
+what order they are in.
 
 434
 00:36:43,110 --> 00:36:47,032
@@ -1878,7 +1883,7 @@ and 5,6.
 
 441
 00:37:22,872 --> 00:37:25,272
-Yes, inaudible.
+Yes, that's obviously going to fail.
 
 442
 00:37:25,270 --> 00:37:28,240
@@ -1920,7 +1925,7 @@ It should return the number of columns.
 
 451
 00:38:07,072 --> 00:38:11,256
-And say expect subjects dot...
+And say expect subject dot...
 
 452
 00:38:11,304 --> 00:38:14,344
@@ -1949,7 +1954,7 @@ test because they are both 4.
 
 458
 00:38:34,328 --> 00:38:37,544
-but I'm never going to know if... but...
+so I'm never going to know if... but...
 
 459
 00:38:40,040 --> 00:38:42,248
@@ -1957,7 +1962,7 @@ Let's see.
 
 460
 00:38:43,000 --> 00:38:45,920
-Perhaps there's no width.
+But there's no width.
 
 461
 00:38:47,624 --> 00:38:52,328
@@ -1965,7 +1970,7 @@ Width, and that can be just rows.first.length.
 
 462
 00:38:55,272 --> 00:39:01,304
-OK... I did the same for rows.
+OK... I'm going to do the same for rows.
 
 463
 00:39:01,300 --> 00:39:04,288
@@ -2091,7 +2096,8 @@ So I think that should do it.
 
 491
 00:41:09,400 --> 00:41:14,104
-inaudible full, which are going to be quite similar.
+Successfull, so now I can do the other four,
+which are going to be quite similar.
 
 492
 00:41:14,152 --> 00:41:17,152
@@ -2099,12 +2105,12 @@ inaudible full, which are going to be quite similar.
 
 493
 00:41:19,040 --> 00:41:22,488
-I'm going to write the test
+I'm going to write the tests
 for all of them first and then...
 
 494
 00:41:23,840 --> 00:41:26,248
-say which are northwest and northeast.
+so after northwest we'll do northeast.
 
 495
 00:41:28,976 --> 00:41:31,816
@@ -2194,7 +2200,8 @@ I still want the first 2 rows,
 
 516
 00:43:35,608 --> 00:43:40,310
-because north... but with this one a inaudible
+because north... but with this one a drop
+instead of take
 
 517
 00:43:40,310 --> 00:43:43,296
@@ -2236,7 +2243,7 @@ JW: Right so we've got a quad node class which...
 
 526
 00:44:33,540 --> 00:44:38,152
-given the input pixels can give you each inaudible.
+given the input pixels can give you each sub-quadrant.
 
 527
 00:44:38,210 --> 00:44:44,632
