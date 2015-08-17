@@ -4922,7 +4922,7 @@ So let's revisit these earlier ones.
 
 1149
 01:45:47,864 --> 01:45:51,104
-That should compress down to just 2.
+That should compress down to just 42.
 
 1150
 01:45:52,152 --> 01:45:53,128
@@ -4956,11 +4956,12 @@ we have to come down to whatever our base value is
 1157
 01:46:20,290 --> 01:46:26,408
 and that's either an individual value
-in an array or it's a fair number.
+in an array or it's a bare number.
 
 1158
 01:46:28,384 --> 01:46:35,304
-JW: Yes, Ruby inaudible number is fine, maybe 2A is not the right method name anymore.
+JW: Yes, maybe a bare number is fine,
+maybe to_a is not the right method name anymore.
 
 1159
 01:46:36,512 --> 01:46:40,432
@@ -4972,11 +4973,11 @@ PB So yes... [Paul dictates what he writes]
 
 1161
 01:46:48,280 --> 01:46:54,050
-Is it to array...? (I'll check it later)
+Is it to array...? (I'll change it later)
 
 1162
 01:46:56,368 --> 01:47:01,952
-So this one should be 2,1,3,4
+So this one should be [2, 1, 3, 4]
 
 1163
 01:47:01,950 --> 01:47:04,952
@@ -4984,7 +4985,7 @@ So this one should be 2,1,3,4
 
 1164
 01:47:05,400 --> 01:47:07,912
-This one should be just lone 2.
+This one should be just the value 2.
 
 1165
 01:47:10,240 --> 01:47:14,880
@@ -4994,11 +4995,11 @@ kept externally, as you mentioned earlier,
 1166
 01:47:15,120 --> 01:47:21,352
 then combining this value structure with
-the dimensions, allows you to read those.
+the dimensions, allows you to rebuild
 
 1167
 01:47:22,136 --> 01:47:25,816
-PB: Yes. inaudible, that's fine.
+PB: Yes. nothing works now, that's fine.
 
 1168
 01:47:27,280 --> 01:47:29,800
@@ -5031,7 +5032,7 @@ I don't like this already. [laughter]
 
 1175
 01:47:58,248 --> 01:48:00,080
-Serializer is a new node.
+Serializer.new(node)
 
 1176
 01:48:03,048 --> 01:48:06,936
@@ -5057,7 +5058,7 @@ jump out of the internals of QuadNode.
 1181
 01:48:28,000 --> 01:48:35,264
 PB: Yes... I'm just going to see if
-I can find a better name for 2A.
+I can find a better name for to_a.
 
 1182
 01:48:35,352 --> 01:48:38,376
@@ -5124,11 +5125,11 @@ PB: Yes, that seems like a nice thing to do.
 1197
 01:49:48,632 --> 01:49:57,230
 We can make it a proper serializer
-by saying 2S which is a JSON serialization.
+by saying to_s which is a JSON serialization.
 
 1198
 01:49:59,224 --> 01:50:03,952
-I'll say require JSON - that's in
+I'll say `require 'json'` - that's in
 the standard library these days.
 
 1199
@@ -5137,7 +5138,7 @@ And we'll just say... [Paul dictates what he writes]
 
 1200
 01:50:11,560 --> 01:50:15,080
-inaudible, or inaudible actually.
+to_json, or actually rather
 
 1201
 01:50:15,976 --> 01:50:18,984
@@ -5151,11 +5152,11 @@ bunch of things... unless I actually test it.
 1203
 01:50:25,640 --> 01:50:29,640
 JW: If you change all these current tests
-to use 2S instead, then we don't have to...
+to use to_s instead, then we don't have to...
 
 1204
 01:50:30,080 --> 01:50:31,760
-deal with the inaudible value anymore.
+deal with the awkwardly named `value` anymore.
 
 1205
 01:50:31,792 --> 01:50:33,864
@@ -5188,7 +5189,7 @@ Let's try one of them first and see...
 
 1212
 01:51:03,200 --> 01:51:06,056
-... program value called...
+... private method value called...
 
 1213
 01:51:07,856 --> 01:51:11,224
@@ -5196,11 +5197,11 @@ Ah! Yes, that doesn't work because...
 
 1214
 01:51:12,136 --> 01:51:15,520
-we can't make the inaudible, not yet anyway, but we will.
+we can't make it private, not yet anyway
 
 1215
 01:51:15,520 --> 01:51:18,648
-Could we have 'protected'? I'm
+Could we make it 'protected'? I'm
 never quite sure how that works.
 
 1216
@@ -5214,7 +5215,7 @@ seen a reason to use protected.
 
 1218
 01:51:25,610 --> 01:51:33,568
-PB: Yes, and it's a bad reason I think, bu
+PB: Yes, and it's a bad reason I think, but
 apart for all the extra spaces, which we can say...
 
 1219
@@ -5223,7 +5224,7 @@ apart for all the extra spaces, which we can say...
 
 1220
 01:51:47,440 --> 01:51:52,192
-inaudible I'll do the same for the
+Good. I'll do the same for the
 other ones, which are much shorter so...
 
 1221
@@ -5252,8 +5253,8 @@ Well actually, my test name was completely wrong.
 
 1227
 01:52:18,344 --> 01:52:23,536
-I'll just check the serializer has rows
-and columns in (I should use better names) erm....
+I'll just check 'it serializes the rows
+and columns in' (I should use better names) erm....
 
 1228
 01:52:23,648 --> 01:52:26,656
@@ -5265,7 +5266,7 @@ and columns in (I should use better names) erm....
 
 1230
 01:52:32,992 --> 01:52:34,848
-So it's a single value.
+To a single value.
 
 1231
 01:52:36,820 --> 01:52:40,120
@@ -5289,7 +5290,7 @@ Yes.
 
 1236
 01:52:56,472 --> 01:53:00,048
-JW: It actually serialized. [Laughter]
+JW: Actually serialize. [Laughter]
 
 1237
 01:53:00,104 --> 01:53:03,120
@@ -5301,8 +5302,9 @@ JW: It actually serialized. [Laughter]
 
 1239
 01:53:07,800 --> 01:53:14,260
-PB: So let's look at our print bmp. I'm gong to
-pull this out into a class so we can use it on it's own.
+PB: So let's look at our print bmp image.
+I'm going to pull this out into a class
+so we can use it on its own.
 
 1240
 01:53:14,664 --> 01:53:19,800
@@ -5315,7 +5317,7 @@ we test ad-hoc but that's alright.
 
 1242
 01:53:23,880 --> 01:53:25,904
-inaudible
+BMPImage
 
 1243
 01:53:26,328 --> 01:53:31,832
@@ -5327,7 +5329,7 @@ So now I want to see just how much we do compress.
 
 1245
 01:53:38,656 --> 01:53:42,488
-I'm going to close this path because
+I'm going to close this file because
 it doesn't seem useful any more.
 
 1246
@@ -5340,7 +5342,7 @@ I need a new file called something like dump, err...
 
 1248
 01:53:53,080 --> 01:53:55,624
-... dot image or something.
+... dump image or something.
 
 1249
 01:53:56,520 --> 01:53:59,128
@@ -5352,7 +5354,7 @@ And I'm going to say require...
 
 1251
 01:54:03,688 --> 01:54:06,744
-bmp image, so that I can load it.
+bmp_image, so that I can load it.
 
 1252
 01:54:06,740 --> 01:54:12,008
@@ -5365,7 +5367,7 @@ And I'm going to require QuadNode.
 
 1254
 01:54:19,616 --> 01:54:22,208
-I've already forgotten my inaudible.
+I've already forgotten what I called it
 
 1255
 01:54:22,232 --> 01:54:25,240
@@ -5397,7 +5399,7 @@ Perhaps I shouldn't close that file.
 
 1262
 01:54:58,576 --> 01:55:05,544
-Oh that's... what do they call that file?
+Oh that's... what did I call that file?
 
 1263
 01:55:06,352 --> 01:55:09,272
@@ -5409,7 +5411,7 @@ JW: I think it's called print. PB: Yes.
 
 1265
 01:55:13,832 --> 01:55:18,280
-Yes, inaudible cool.
+Yes, let's copy it from down there
 
 1266
 01:55:18,336 --> 01:55:21,352
@@ -5439,11 +5441,11 @@ Initialize with rows.
 
 1272
 01:55:51,608 --> 01:55:55,560
-Serializer initialise with the root node.
+Serializer initialize with the root node.
 
 1273
 01:55:57,888 --> 01:56:01,784
-And then let's puts that.to_s
+And then let's `puts` that dot `to_s`
 
 1274
 01:56:03,650 --> 01:56:05,192
@@ -5477,7 +5479,7 @@ Let's see how much our actual...
 
 1281
 01:56:51,200 --> 01:56:55,968
-And then let's put print...
+And then let's just print...
 
 1282
 01:56:56,184 --> 01:56:59,144
@@ -5497,16 +5499,17 @@ JW: Not bad.
 
 1286
 01:57:09,720 --> 01:57:14,952
-PB: Yes, inaudible which is very nice.
+PB: Yes, an order of magnitude,
+which is very nice.
 
 1287
 01:57:16,100 --> 01:57:19,184
-Now we know that is giving us a nice impression,
+Now we know that is giving us a nice compression,
 
 1288
 01:57:19,208 --> 01:57:26,920
 and in fact, if we didn't have all the JSON
-effect it would probably be a little bit smaller.
+overhead they would probably both be smaller.
 
 1289
 01:57:28,040 --> 01:57:32,424
@@ -5525,7 +5528,7 @@ deserializer that takes the serialized one
 1292
 01:57:40,280 --> 01:57:44,648
 and turns it back into a
-QuadTree... does that make sense?
+QuadNode... does that make sense?
 
 1293
 01:57:45,024 --> 01:57:47,368
@@ -5533,7 +5536,8 @@ JW: I think so yes.
 
 1294
 01:57:48,550 --> 01:57:54,552
-If we even need to involve the nodes already done.
+If we even need to involve the nodes,
+we maybe don't
 
 1295
 01:57:54,648 --> 01:57:56,472
@@ -5550,7 +5554,7 @@ all the way through the tree perhaps.
 
 1298
 01:58:05,060 --> 01:58:08,672
-But let's give ourselves inaudible
+But let's give ourselves the width and height
 
 1299
 01:58:10,184 --> 01:58:16,224
@@ -5564,12 +5568,12 @@ spec where we have a very simple
 
 1301
 01:58:23,504 --> 01:58:27,640
-serialized QuadRoot to work from and
+serialized QuadNode to work from and
 produce the rows and columns we expect,
 
 1302
 01:58:27,912 --> 01:58:30,160
-might be the best way to try this out.
+might be the best way to drive this out.
 
 1303
 01:58:30,160 --> 01:58:33,000
@@ -5585,7 +5589,8 @@ PB: Yes let's do that...
 
 1306
 01:58:56,256 --> 01:58:58,384
-Obviously I failed so...
+Obviously going to fail because we don't
+have one so...
 
 1307
 01:58:58,416 --> 01:59:01,424
