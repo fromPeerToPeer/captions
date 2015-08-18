@@ -1,4 +1,4 @@
-1
+﻿1
 00:00:01,224 --> 00:00:02,976
 NARRATOR: Welcome to Peer to Peer
 
@@ -129,7 +129,7 @@ an index into a table of two colours.
 
 29
 00:02:14,450 --> 00:02:18,776
-That's interesting, so it still has a 
+That's interesting, so it still has a
 colours table even though there's only two.
 
 30
@@ -324,8 +324,8 @@ that image bytes is bytes from...
 
 74
 00:06:18,040 --> 00:06:27,432
-Actually let's just say minus
-width, width times height to the end.
+Actually let's just say minus width,
+width times height to the end.
 
 75
 00:06:29,752 --> 00:06:33,088
@@ -349,8 +349,7 @@ I can run this with !ruby %
 
 80
 00:06:52,464 --> 00:06:56,000
-Undefined method length for 
-nil nil class line 5
+Undefined method length for nil nil class line 5
 
 81
 00:06:56,056 --> 00:06:59,040
@@ -437,8 +436,8 @@ that are the byte value of each character.
 
 101
 00:08:28,128 --> 00:08:34,240
-Let's just try saying p bytes
-and just take 10 of them or something.
+Let's just try saying p bytes and
+just take 10 of them or something.
 
 102
 00:08:34,270 --> 00:08:39,152
@@ -579,8 +578,8 @@ I'm going to make this width / 8
 
 134
 00:11:33,480 --> 00:11:40,016
-So then our byte is going to be
-the image_bytes
+So then our byte is going
+to be the image_bytes
 
 135
 00:11:41,040 --> 00:11:48,880
@@ -666,8 +665,8 @@ from zero and then increasing.
 
 154
 00:13:24,140 --> 00:13:31,040
-And I can take that and logical AND
-that with the byte.
+And I can take that and logical
+AND that with the byte.
 
 155
 00:13:33,176 --> 00:13:39,072
@@ -805,7 +804,8 @@ JW: Yes.
 
 186
 00:16:14,050 --> 00:16:20,296
-PB: In fact if I did that to_s(16) so it comes out as hex and they're all the same width.
+PB: In fact if I did that to_s(16) so it comes
+out as hex and they're all the same width.
 
 187
 00:16:20,290 --> 00:16:23,120
@@ -851,7 +851,8 @@ our output is upside down, it should be fine.
 
 197
 00:17:04,360 --> 00:17:16,784
-OK so bytes are OK, our bitmask is OK, let's just get rid of...
+OK so bytes are OK, our bitmask
+is OK, let's just get rid of...
 
 198
 00:17:16,780 --> 00:17:19,848
@@ -1145,7 +1146,8 @@ we can put this into a private method.
 
 266
 00:23:16,912 --> 00:23:26,344
-Go to the bottom, and say private section and say def image_bytes.
+Go to the bottom, and say private
+section and say def image_bytes.
 
 267
 00:23:26,340 --> 00:23:29,392
@@ -1217,8 +1219,8 @@ that puts stuff, so for now I'm going to do
 
 283
 00:24:48,144 --> 00:24:51,136
-Ah because I haven't given it the width
-and the height.
+Ah because I haven't given it
+the width and the height.
 
 284
 00:24:51,130 --> 00:24:54,128
@@ -1226,8 +1228,8 @@ and the height.
 
 285
 00:24:55,096 --> 00:24:59,872
-I can't remember if I kept those or not,
-but I'll just put 256 by 256.
+I can't remember if I kept those or
+not, but I'll just put 256 by 256.
 
 286
 00:25:01,720 --> 00:25:05,264
@@ -1349,7 +1351,7 @@ Yes, let's say... 1,2,3,4, something like that.
 
 313
 00:27:15,424 --> 00:27:21,360
-If I did .map { |a| a.map { |b| b } }
+If I did .map  }
 
 314
 00:27:24,240 --> 00:27:27,672
@@ -1366,7 +1368,8 @@ with flat_map, it's the same as map.flatten.
 
 317
 00:27:36,840 --> 00:27:41,024
-So you see map.flatten in there, which gives me the same.
+So you see map.flatten in there,
+which gives me the same.
 
 318
 00:27:43,640 --> 00:27:46,520
@@ -1457,7 +1460,7 @@ row.each do |pixel|
 339
 00:29:08,970 --> 00:29:12,128
 I'm already thinking that calling it
-pixels was the wrong thing to do
+pixels was the wrong thing to do.
 
 340
 00:29:12,136 --> 00:29:15,360
@@ -5923,7 +5926,7 @@ Yes, because it's an image 4 pixels.
 
 1380
 02:06:19,216 --> 02:06:25,088
-That's going to be 1 and 2 
+That's going to be 1 and 2
 and the second row is 3 and 4.
 
 1381
@@ -6108,7 +6111,7 @@ and we'll return rows at the end.
 
 1422
 02:09:48,688 --> 02:09:54,344
-So fill in for each quadrant... 
+So fill in for each quadrant...
 so I'm going to say...
 
 1423
@@ -6439,7 +6442,7 @@ scale of two.
 
 1497
 02:16:38,104 --> 02:16:47,330
-So this is the existing x offset plus the 
+So this is the existing x offset plus the
 internal offset which I called 2,
 which is an awful name!
 
@@ -6939,3 +6942,4 @@ PB: Well thank you very much.
 1614
 02:26:14,100 --> 02:26:20,100
 Captions produced by Bonnie Roworth
+
