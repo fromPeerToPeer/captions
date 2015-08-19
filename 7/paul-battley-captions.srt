@@ -3312,8 +3312,8 @@ So here I get quad tree quad tree...
 
 774
 01:08:09,440 --> 01:08:14,744
-I'm not sure if that makes any sense any more,
-because it depends on what the rules for splitting are.
+I'm not sure if that makes any sense any more, because
+it depends on what the rules for splitting are.
 
 775
 01:08:14,768 --> 01:08:17,736
@@ -4650,8 +4650,8 @@ This is a bit ugly but I just want to try it...
 
 1083
 01:39:31,616 --> 01:39:36,824
-This will work but I still need to do
-something else to make it work.
+This will work but I still need to
+do something else to make it work.
 
 1084
 01:39:38,710 --> 01:39:42,376
@@ -4775,7 +4775,7 @@ quadrant which is 11,12... Hang on!
 1112
 01:42:20,032 --> 01:42:27,112
 I'm doing this wrong... No, it's fine, sorry,
-I was just realizing that I've got different data
+I was just realizing that I've got different data.
 
 1113
 01:42:28,376 --> 01:42:31,064
@@ -4797,8 +4797,8 @@ compressing quality of the QuadTree.
 
 1117
 01:42:46,104 --> 01:42:51,160
-PB: I'm just going to split this up a bit so
-it's a bit clearer which one's which node.
+PB: I'm just going to split this up a bit
+so it's a bit clearer which one's which node.
 
 1118
 01:42:51,272 --> 01:42:54,272
@@ -4891,7 +4891,7 @@ serialization format of that should be,
 I'm just going to write it here.
 
 1138
-01:44:46,832 --> 01:44:49,136
+01:44:46,830 --> 01:44:49,584
 I'm going to ignore the outer brackets for now.
 
 1139
@@ -4900,7 +4900,7 @@ I'm going to ignore the outer brackets for now.
 
 1140
 01:44:58,536 --> 01:45:00,928
-the next section which is 1.
+The next section which is 1.
 
 1141
 01:45:03,024 --> 01:45:06,792
@@ -5015,7 +5015,7 @@ kept externally, as you mentioned earlier,
 1167
 01:47:15,120 --> 01:47:21,352
 then combining this value structure with
-the dimensions, allows you to rebuild
+the dimensions, allows you to rebuild.
 
 1168
 01:47:22,136 --> 01:47:25,816
@@ -5217,7 +5217,7 @@ Ah! Yes, that doesn't work because...
 
 1215
 01:51:12,136 --> 01:51:15,520
-we can't make it private, not yet anyway
+we can't make it private, not yet anyway.
 
 1216
 01:51:15,520 --> 01:51:18,648
@@ -5322,9 +5322,8 @@ JW: Actually serialize. [Laughter]
 
 1240
 01:53:07,800 --> 01:53:14,260
-PB: So let's look at our print bmp image.
-I'm going to pull this out into a class
-so we can use it on its own.
+PB: So let's look at our print bmp image. I'm going to
+pull this out into a class so we can use it on its own.
 
 1241
 01:53:14,664 --> 01:53:19,800
@@ -5387,7 +5386,7 @@ And I'm going to require QuadNode.
 
 1255
 01:54:19,616 --> 01:54:22,208
-I've already forgotten what I called it
+I've already forgotten what I called it.
 
 1256
 01:54:22,232 --> 01:54:25,240
@@ -5519,8 +5518,8 @@ JW: Not bad.
 
 1287
 01:57:09,720 --> 01:57:14,952
-PB: Yes, an order of magnitude,
-which is very nice.
+PB: Yes, an order of
+magnitude, which is very nice.
 
 1288
 01:57:16,100 --> 01:57:19,184
@@ -5556,8 +5555,7 @@ JW: I think so yes.
 
 1295
 01:57:48,550 --> 01:57:54,552
-If we even need to involve the nodes,
-we maybe don't
+If we even need to involve the nodes, we maybe don't.
 
 1296
 01:57:54,648 --> 01:57:56,472
@@ -5608,12 +5606,11 @@ PB: Yes let's do that...
 [Paul dictates what he writes]
 
 1307
-01:58:56,256 --> 01:58:58,384
-Obviously going to fail because we don't
-have one so...
+01:58:56,250 --> 01:58:58,944
+Obviously going to fail because we don't have one so...
 
 1308
-01:58:58,416 --> 01:59:01,424
+01:58:58,960 --> 01:59:01,968
 [Paul dictates what he writes]
 
 1309
@@ -5719,10 +5716,9 @@ And let's say... [Paul thinks]
 [Paul dictates what he writes]
 
 1333
-02:02:23,792 --> 02:02:27,144
-Some kind of intermediate.
-I'm going to call it that because I can't
-think of a better name is...
+02:02:21,952 --> 02:02:27,140
+Some kind of intermediate. I'm going to call
+it that because I can't think of a better name is...
 
 1334
 02:02:27,990 --> 02:02:30,984
@@ -5765,8 +5761,8 @@ and then we'll pull out the first item
 
 1343
 02:03:27,008 --> 02:03:30,112
-that's the way we have to leave it because
-you cant have a bare value in JSON
+That's the way we have to leave it because
+you can't have a bare value in JSON
 
 1344
 02:03:30,110 --> 02:03:32,616
@@ -5824,10 +5820,9 @@ and value over a key.
 PB: In fact we could.
 
 1357
-02:04:26,640 --> 02:04:32,512
-But I think with the current API we don't
-know that because our serializer is only
-given the quad tree.
+02:04:26,640 --> 02:04:32,848
+But I think with the current API we don't know that
+because our serializer is only given the quad tree.
 
 1358
 02:04:33,230 --> 02:04:35,176
@@ -5842,12 +5837,12 @@ JW: The root knows it's width and height.
 PB: Yes, that might make sense.
 
 1361
-02:04:40,488 --> 02:04:43,504
-JW: But let's press on
+02:04:40,480 --> 02:04:43,696
+JW: But let's press on.
 PB: Yeah, we'll leave that for now.
 
 1362
-02:04:43,584 --> 02:04:46,584
+02:04:43,744 --> 02:04:46,800
 [Silence]
 
 1363
@@ -5877,9 +5872,8 @@ And that will fail because
 our serializer doesn't like it.
 
 1369
-02:05:22,776 --> 02:05:25,328
-Width and height, but we can just ignore
-them for now.
+02:05:22,770 --> 02:05:25,840
+Width and height, but we can just ignore them for now.
 
 1370
 02:05:26,464 --> 02:05:29,008
@@ -5928,8 +5922,7 @@ Yes, because it's an image 4 pixels.
 
 1381
 02:06:19,216 --> 02:06:25,088
-That's going to be 1 and 2
-and the second row is 3 and 4.
+That's going to be 1 and 2 and the second row is 3 and 4.
 
 1382
 02:06:27,570 --> 02:06:31,136
@@ -5971,8 +5964,8 @@ columns that I can put things into.
 
 1391
 02:07:03,456 --> 02:07:05,530
-I'm sure there's a more elegant functional
-way of doing this
+I'm sure there's a more elegant
+functional way of doing this,
 
 1392
 02:07:05,530 --> 02:07:09,064
@@ -5998,8 +5991,7 @@ PB: Yes, I do.
 
 1397
 02:07:33,168 --> 02:07:36,024
-So that should give me a
-whole load of nils.
+So that should give me a whole load of nils.
 
 1398
 02:07:37,608 --> 02:07:43,160
@@ -6077,13 +6069,13 @@ that would make more sense.
 
 1415
 02:09:06,848 --> 02:09:11,720
-We're going to start off with a blank
-container in which we'll put things.
+We're going to start off with a
+blank container in which we'll put things.
 
 1416
 02:09:12,568 --> 02:09:19,960
-And there are two cases: one is if there is
-only one value then there is no mapping to do at all,
+And there are two cases: one is if there is only
+one value then there is no mapping to do at all.
 
 1417
 02:09:20,016 --> 02:09:23,032
@@ -6098,850 +6090,844 @@ only one value then there is no mapping to do at all,
 Offset 0.
 
 1420
-02:09:35,872 --> 02:09:38,432
+02:09:35,870 --> 02:09:39,680
 Whatever our intermediate data is.
 It's still there, we've got a name for it.
 
 1421
-02:09:38,496 --> 02:09:41,496
-[Silence]
-
-1422
-02:09:42,240 --> 02:09:47,016
+02:09:42,240 --> 02:09:47,456
 That doesn't return anything...
 and we'll return rows at the end.
 
-1423
+1422
 02:09:48,688 --> 02:09:54,344
-So fill in for each quadrant...
-so I'm going to say...
+So fill in for each quadrant... so I'm going to say...
 
-1424
+1423
 02:09:54,340 --> 02:09:57,344
 [Paul dictates what he types]
 
-1425
+1424
 02:10:07,080 --> 02:10:09,232
 It's going to get confusing I think, but...
 
-1426
+1425
 02:10:09,520 --> 02:10:14,520
 I'm going to say that my quadrant
 offsets because this will make it clearer later on.
 
-1427
+1426
 02:10:14,552 --> 02:10:21,808
 The top right is going to be X1 Y0
 
-1428
+1427
 02:10:23,744 --> 02:10:27,328
 Then it's going to be [0, 0].
 
-1429
+1428
 02:10:29,864 --> 02:10:32,696
 Then it's going to be [0, 1].
 
-1430
+1429
 02:10:33,416 --> 02:10:36,576
 Then [1, 1].
 
-1431
+1430
 02:10:38,776 --> 02:10:44,008
 We also need some kind of scaling
 factor, so we know that when we start...
 
-1432
+1431
 02:10:44,040 --> 02:10:47,072
 [Paul thinks]
 
-1433
+1432
 02:10:49,936 --> 02:10:53,528
 Even better than this is
 the scale, let's just say scale.
 
-1434
+1433
 02:10:55,992 --> 02:11:00,464
 And our X offset, and our Y offset.
 
-1435
+1434
 02:11:00,520 --> 02:11:03,520
 [Silence]
 
-1436
+1435
 02:11:04,864 --> 02:11:07,208
 And then...
 
-1437
+1436
 02:11:08,200 --> 02:11:10,112
 ...we fill in...
 
-1438
+1437
 02:11:11,608 --> 02:11:13,952
 One of two things happens here.
 
-1439
+1438
 02:11:14,008 --> 02:11:17,000
 [Silence]
 
-1440
+1439
 02:11:17,210 --> 02:11:20,224
 [Paul dictates what he writes]
 
-1441
+1440
 02:11:21,848 --> 02:11:24,016
 If data is a number...
 
-1442
+1441
 02:11:26,752 --> 02:11:28,968
 So how do I do that?
 
-1443
+1442
 02:11:33,392 --> 02:11:42,168
 I need to walk through these 4 sections
 and I've got some kind of array of arrays.
 
-1444
+1443
 02:11:42,752 --> 02:11:53,032
 In each part, I should have 4
 values for each of those 4 parts.
 
-1445
+1444
 02:11:53,150 --> 02:11:58,704
 If it's a single value, I should fill that
 whole quadrant where I am with that value.
 
-1446
+1445
 02:11:59,150 --> 02:12:02,848
 Otherwise I should take
 the opposite of that quadrant...
 
-1447
+1446
 02:12:02,930 --> 02:12:06,376
 But I guess I'm doing that
 in offsets, so I've got 2 sets of offsets.
 
-1448
+1447
 02:12:06,744 --> 02:12:09,016
 JW: I suppose that an alternative would be to...
 
-1449
+1448
 02:12:12,032 --> 02:12:16,220
-same basic idea but walking all the way
-down to the 1 pixel size,
+same basic idea but walking all
+the way down to the 1 pixel size,
 
-1450
+1449
 02:12:16,220 --> 02:12:21,928
 carrying down the right level of the QuadTree
 data to meet your representation with you.
 
-1451
+1450
 02:12:24,016 --> 02:12:27,168
 And then if you can't step down a level into the data,
 
-1452
+1451
 02:12:27,160 --> 02:12:29,688
 you can pass that same single value all the way down
 
-1453
+1452
 02:12:29,680 --> 02:12:32,576
 PB: Yes, that makes sense.
 
-1454
+1453
 02:12:32,696 --> 02:12:39,048
 So I just need the ability to know
 where I am so I can have 2 sets of offsets here,
 
-1455
+1454
 02:12:39,504 --> 02:12:44,320
 because when we fill in we
 will be given that offset and term.
 
-1456
+1455
 02:12:44,320 --> 02:12:46,128
 And... [Paul ponders]
 
-1457
+1456
 02:12:46,672 --> 02:12:50,976
 So if I were to...
 Maybe if I sketch something out here...
 
-1458
+1457
 02:12:52,368 --> 02:12:58,368
 If I've got a field that has 8 for example,
 
-1459
+1458
 02:13:03,576 --> 02:13:07,820
 Firstly, I want to take... this lot here.
 
-1460
+1459
 02:13:07,920 --> 02:13:10,904
 [Silence]
 
-1461
-02:13:11,048 --> 02:13:13,808
+1460
+02:13:11,040 --> 02:13:13,897
 (Maybe not call them X and Y,
 that's going to be confusing as well!)
 
-1462
-02:13:13,800 --> 02:13:16,952
+1461
+02:13:13,920 --> 02:13:16,950
 So I take this quadrant here.
 
-1463
+1462
 02:13:19,000 --> 02:13:27,976
 We'll either have 4 values, or 1 value. Well, it will
 have 4 elements, or 1, and just be an initial object.
 
-1464
+1463
 02:13:28,456 --> 02:13:32,904
 If it's an initial object, then I pass
 it down, but assuming there are 4,
 
-1465
+1464
 02:13:33,200 --> 02:13:38,920
 I take the first and then fill in
 again with the offset here being 4,
 
-1466
+1465
 02:13:39,400 --> 02:13:41,408
 and the offset being 0.
 
-1467
+1466
 02:13:42,568 --> 02:13:50,368
 And that needs to know that it
 started off, well I start off filling with maybe...
 
-1468
+1467
 02:13:50,360 --> 02:13:52,728
 [Paul thinks]
 
-1469
+1468
 02:13:52,968 --> 02:13:55,624
 ...my scale.
 
-1470
+1469
 02:13:56,896 --> 02:14:00,800
 Being in this case, half of the width.
 
-1471
+1470
 02:14:02,256 --> 02:14:05,256
 JW: The scale halves each time
 so eventually you will get to scale one
 
-1472
+1471
 02:14:05,250 --> 02:14:07,272
 and you can actually do some painting.
 
-1473
+1472
 02:14:07,272 --> 02:14:09,270
 PB: Yes, so let's start off with size.
 
-1474
+1473
 02:14:09,270 --> 02:14:12,464
 Rows, and size and some data.
 
-1475
+1474
 02:14:12,968 --> 02:14:15,008
 But, I also need to know what my offset is.
 
-1476
+1475
 02:14:15,000 --> 02:14:16,008
 JW: Yes, I think so.
 
-1477
+1476
 02:14:17,000 --> 02:14:20,456
 PB: So I need X over 0, 0 and size.
 
-1478
+1477
 02:14:21,400 --> 02:14:25,800
 [Paul dictates what he types]
 
-1479
+1478
 02:14:25,800 --> 02:14:35,672
 But then I also have additional things
 I've mapped down for each of those parts in turn.
 
-1480
+1479
 02:14:35,704 --> 02:14:41,856
 So I've got another X half set
 which is going to be scaled by...
 
-1481
+1480
 02:14:43,370 --> 02:14:50,328
 What should I say there, something
 like fill in with the same rows.
 
-1482
+1481
 02:14:50,808 --> 02:14:54,832
 [Paul thinks]
 
-1483
+1482
 02:15:03,920 --> 02:15:11,440
 JW: At this point as the scale is not 1,
 we can pick the appropriate pieces of data,
 
-1484
+1483
 02:15:11,690 --> 02:15:19,208
 to send to our recursive calls to fill in,
 or if it is one we can use whatever item we have.
 
-1485
+1484
 02:15:19,200 --> 02:15:20,808
 PB: Yes, that's exactly it.
 
-1486
+1485
 02:15:22,440 --> 02:15:24,984
 So we say... [Paul dictates what he says on screen]
 
-1487
+1486
 02:15:24,984 --> 02:15:26,980
 JW: Yes, do the special case first.
 PB: Yes.
 
-1488
+1487
 02:15:26,980 --> 02:15:29,992
 Then we say... [Paul dictates what he writes]
 
-1489
+1488
 02:15:38,904 --> 02:15:43,680
 Yes, that's right, and we just return.
 
-1490
+1489
 02:15:49,080 --> 02:15:53,304
 We'll assume that our data is good but otherwise,
 
-1491
+1490
 02:15:53,560 --> 02:15:59,224
 for each of our additional offsets
 into this, we have to say that at the start,
 
-1492
+1491
 02:15:59,790 --> 02:16:05,080
 for example here, our scale is the width.
 
-1493
+1492
 02:16:07,144 --> 02:16:10,512
 JW: Don't we just need to
 break data into 4 pieces, and then...
 
-1494
+1493
 02:16:11,368 --> 02:16:15,864
 PB: Yes, but the only point is that
 the segment we're working on
 
-1495
+1494
 02:16:15,860 --> 02:16:18,776
 (They both talk at once)
 
-1496
+1495
 02:16:18,824 --> 02:16:28,096
-So if we start at eight, then we
-multiply, we add multiple times the
-scale of two.
+So if we start at eight, then we multiply,
+we add multiple times the scale of two.
 
-1497
+1496
 02:16:28,136 --> 02:16:31,144
 [Silence]
 
-1498
+1497
 02:16:38,104 --> 02:16:47,330
 So this is the existing x offset plus the
 internal offset which I called 2,
 which is an awful name!
 
-1499
+1498
 02:16:48,720 --> 02:16:51,712
 [Paul dictates what he writes]
 
-1500
+1499
 02:16:55,608 --> 02:16:58,632
 [Silence]
 
-1501
+1500
 02:16:59,430 --> 02:17:05,064
 And we need to zip it with data, if, or...
 
-1502
+1501
 02:17:05,672 --> 02:17:08,672
 [Paul thinks]
 
-1503
+1502
 02:17:10,464 --> 02:17:13,392
 So I'm going to say... [Paul dictates what he writes]
 
-1504
+1503
 02:17:18,000 --> 02:17:19,704
 If we can do that on our data...
 
-1505
+1504
 02:17:20,256 --> 02:17:23,016
 or each actually.
 
-1506
+1505
 02:17:23,656 --> 02:17:26,608
 If we can call each on the data...
 which we can't call on string, can we?
 
-1507
+1506
 02:17:27,160 --> 02:17:29,208
 I hope.
 
-1508
+1507
 02:17:29,900 --> 02:17:34,984
 Yes, this is to each and... [Paul thinks]
 
-1509
+1508
 02:17:35,280 --> 02:17:37,064
 That's fine.
 
-1510
+1509
 02:17:37,232 --> 02:17:40,248
 [Paul dictates what he writes]
 
-1511
+1510
 02:17:45,064 --> 02:17:52,344
 I'm going to replace the
 data with data data data data.
 
-1512
+1511
 02:17:52,736 --> 02:17:55,016
 I think that's horrible but it might work.
 
-1513
+1512
 02:17:55,016 --> 02:17:57,010
 JW: Yes.
 
-1514
+1513
 02:17:57,920 --> 02:18:00,664
 I could have done data x 4 but...
 
-1515
+1514
 02:18:00,744 --> 02:18:03,744
 [Silence]
 
-1516
+1515
 02:18:09,224 --> 02:18:15,464
 JW: So we've got the rows to pass
 in, the two offsets into that space.
 
-1517
+1516
 02:18:16,048 --> 02:18:18,728
 And now we need the scale.
 
-1518
+1517
 02:18:19,960 --> 02:18:22,320
 PB: Yes, which in that case I need to...
 
-1519
+1518
 02:18:25,304 --> 02:18:27,160
 That one.
 
-1520
+1519
 02:18:27,200 --> 02:18:30,192
 [Silence]
 
-1521
+1520
 02:18:30,190 --> 02:18:33,184
 JW: Which will be half of the scale that is given to us.
 
-1522
+1521
 02:18:33,352 --> 02:18:35,180
 PB: Yes.
 
-1523
+1522
 02:18:35,616 --> 02:18:39,792
 So maybe replace scale all over the place
 to say
 
-1524
+1523
 02:18:40,528 --> 02:18:43,536
 subscale
 [Paul dictates what he writes]
 
-1525
+1524
 02:18:45,456 --> 02:18:48,432
 [Silence]
 
-1526
+1525
 02:18:49,640 --> 02:18:55,448
 In fact that might give a better name for the xoff2.
 
-1527
+1526
 02:18:55,608 --> 02:19:00,560
 Let's call that subxoff, subyoff.
 
-1528
+1527
 02:19:00,608 --> 02:19:03,600
 [Silence]
 
-1529
+1528
 02:19:04,536 --> 02:19:08,192
 JW: I think you can get away
 with simply calling those X and Y.
 
-1530
+1529
 02:19:09,384 --> 02:19:11,808
 PB: Yes, possible.
 
-1531
+1530
 02:19:14,552 --> 02:19:19,120
 And the data is whatever we have.
 
-1532
+1531
 02:19:20,680 --> 02:19:23,832
 Either that or depending on whether we...
 
-1533
+1532
 02:19:23,920 --> 02:19:27,928
 JW: Don't we need to reach into that data
 and pull out the appropriate one for this
 part of the quadrant.
 
-1534
+1533
 02:19:27,920 --> 02:19:30,240
 PB: Yes, sorry that's right.
 
-1535
+1534
 02:19:33,160 --> 02:19:35,528
 We've got subdata as well.
 
-1536
+1535
 02:19:35,520 --> 02:19:38,664
 And I'm going to zip this.
 
-1537
+1536
 02:19:38,660 --> 02:19:41,656
 [Silence]
 
-1538
+1537
 02:19:46,200 --> 02:19:48,520
 Zip that with data.
 
-1539
+1538
 02:19:48,520 --> 02:19:51,848
 [Silence]
 
-1540
+1539
 02:19:51,848 --> 02:19:53,840
 Those are prep sized.
 
-1541
+1540
 02:19:55,744 --> 02:19:58,104
 JW: That's an interesting bridge.
 
-1542
+1541
 02:19:58,392 --> 02:20:03,630
 Is it to pack the pieces you want
 together and then iterate over them rather than...
 
-1543
+1542
 02:20:04,192 --> 02:20:08,328
 PB: Yes I think it's a bit
 nicer than using say, with_index.
 
-1544
+1543
 02:20:08,600 --> 02:20:09,616
 Let's see what happens.
 
-1545
+1544
 02:20:09,610 --> 02:20:14,000
 JW: I think we're missing
 a couple of commas...
 
-1546
+1545
 02:20:14,936 --> 02:20:17,120
 PB: [Laughing] It certainly seems unhappy!
 Err... 29.
 
-1547
+1546
 02:20:18,536 --> 02:20:20,840
 JW: Get rid of those
 PB: Yes.
 
-1548
+1547
 02:20:21,048 --> 02:20:24,096
 [Silence]
 
-1549
+1548
 02:20:26,320 --> 02:20:29,224
 JW: We've not actually defined subdata or is this...
 
-1550
+1549
 02:20:30,280 --> 02:20:34,080
 PB: Yes, you're right that should be subdata,
 otherwise it's not going to do anything at all.
 
-1551
+1550
 02:20:34,128 --> 02:20:37,120
 [Silence]
 
-1552
+1551
 02:20:41,630 --> 02:20:43,968
 JW: The whole scale, yes of course.
 
-1553
+1552
 02:20:44,008 --> 02:20:50,584
 PB: That's right... so we've got RSpec...
 and we can just replace width with size.
 
-1554
+1553
 02:20:50,648 --> 02:20:53,656
 [Silence]
 
-1555
+1554
 02:21:04,936 --> 02:21:07,064
 OK? JW: Yes.
 
-1556
+1555
 02:21:07,744 --> 02:21:11,304
 Oh, we haven't made size available.
 
-1557
+1556
 02:21:11,360 --> 02:21:14,352
 [Silence]
 
-1558
+1557
 02:21:27,064 --> 02:21:32,032
 Ah right, in that case, so for our
 next trick let's try doing the whole thing.
 
-1559
+1558
 02:21:33,960 --> 02:21:36,944
 [Paul dictates what he writes]
 
-1560
+1559
 02:21:40,240 --> 02:21:42,496
 Let's serialize the spec.
 
-1561
+1560
 02:21:45,032 --> 02:21:47,632
 Given that... we should get that.
 
-1562
+1561
 02:21:47,632 --> 02:21:49,630
 JW: Yes, great.
 
-1563
+1562
 02:21:52,192 --> 02:21:54,408
 And what would you call it, a ...
 
-1564
+1563
 02:21:55,272 --> 02:21:57,128
 JW: Partially homogenized?
 
-1565
+1564
 02:21:57,120 --> 02:22:00,384
 PB: Yes partially homogeneous, that seems fine.
 
-1566
+1565
 02:22:03,216 --> 02:22:06,216
 [Paul thinks]
 
-1567
+1566
 02:22:07,416 --> 02:22:10,424
 [Silence]
 
-1568
+1567
 02:22:12,184 --> 02:22:14,056
 I'll just wall it up.
 
-1569
+1568
 02:22:16,112 --> 02:22:19,112
 [Paul dictates what he types]
 
-1570
+1569
 02:22:33,376 --> 02:22:35,992
 And the size for that one is 4.
 
-1571
+1570
 02:22:36,112 --> 02:22:39,144
 [Silence]
 
-1572
+1571
 02:22:47,368 --> 02:22:50,360
 I was going to say it expands the image.
 
-1573
+1572
 02:22:50,424 --> 02:22:53,440
 [Silence]
 
-1574
+1573
 02:23:14,400 --> 02:23:16,512
 I'll just copy that.
 
-1575
+1574
 02:23:16,608 --> 02:23:19,264
 And say expect serialized to equal...
 
-1576
+1575
 02:23:20,770 --> 02:23:23,648
 that and [inaudible]
 
-1577
+1576
 02:23:25,870 --> 02:23:27,984
 JW: [inaudible]
 
-1578
+1577
 02:23:28,032 --> 02:23:30,264
 PB: Yes erm...
 
-1579
+1578
 02:23:31,424 --> 02:23:33,928
 Yes... that's why.
 
-1580
+1579
 02:23:33,920 --> 02:23:36,600
 JW: And there's another one, [inaudible] cool.
 
-1581
+1580
 02:23:39,120 --> 02:23:43,336
 PB: Nice, cool, let's check this in.
 
-1582
+1581
 02:23:44,880 --> 02:23:47,896
 [Paul dictates what he writes]
 
-1583
+1582
 02:23:58,896 --> 02:24:02,240
 [New Chapter]
 
-1584
+1583
 02:24:02,888 --> 02:24:07,610
 JW: So now we've got a serializer
 component and a deserializer component,
 
-1585
+1584
 02:24:07,610 --> 02:24:14,544
 and we can take in a bitmap image, and write it
 to our own custom QuadTree serialization format,
 
-1586
+1585
 02:24:14,540 --> 02:24:19,912
 which is JSON compliant but doesn't
 mean anything without the deserializer part.
 
-1587
+1586
 02:24:20,016 --> 02:24:21,344
 PB: Yes.
 
-1588
+1587
 02:24:21,408 --> 02:24:23,960
 JW: And, it does seem to compress the representation.
 
-1589
+1588
 02:24:23,960 --> 02:24:27,432
 PB: Yes, certainly it's 10 x smaller.
 
-1590
+1589
 02:24:28,360 --> 02:24:33,112
 JW: So that's one aspect of
 quadtrees as I understand it.
 
-1591
+1590
 02:24:34,224 --> 02:24:37,520
 There are other operations
 you can perform with them.
 
-1592
+1591
 02:24:37,712 --> 02:24:45,144
 So I believe if you want to cut an
 image in half, as in shrink it by a factor of 2,
 
-1593
+1592
 02:24:45,320 --> 02:24:51,432
 All you need to do is chop off the lowest level.
 
-1594
+1593
 02:24:51,768 --> 02:24:53,232
 PB: Yes, that makes sense.
 
-1595
+1594
 02:24:53,230 --> 02:24:58,712
 JW: And I think our deserializer could
 do that simply by us giving it half size
 
-1596
+1595
 02:24:58,730 --> 02:25:01,896
 and it would ignore the final file.
 
-1597
+1596
 02:25:02,192 --> 02:25:04,928
 PB: That's right yes, it wouldn't walk all the way down.
 
-1598
+1597
 02:25:05,392 --> 02:25:13,440
 Yes, and you could rotate it by recursively
 swapping around the elements at each level.
 
-1599
+1598
 02:25:13,536 --> 02:25:18,728
 JW: Yes, in fact it's rather like what you
 were talking about earlier, a wrapping bitshift
 
-1600
+1599
 02:25:18,780 --> 02:25:22,568
 push numbers then take the one that's
 fallen off and put it back on at the beginning.
 
-1601
+1600
 02:25:22,560 --> 02:25:24,480
 PB: Yes, rotation of the four elements.
 
-1602
+1601
 02:25:24,480 --> 02:25:27,672
 JW: Which isn't all that intuitive to picture,
 
-1603
+1602
 02:25:27,976 --> 02:25:31,240
 but I believe when you put it
 all back together again it does work.
 
-1604
+1603
 02:25:31,240 --> 02:25:32,432
 PB: Yes.
 
-1605
+1604
 02:25:33,296 --> 02:25:38,200
 JW: So let's have one more look at our
 serialized version of my London skyline bitmap.
 
-1606
+1605
 02:25:38,304 --> 02:25:45,248
 PB: OK, in that case we want...
 something we made, which is serializer...
 
-1607
+1606
 02:25:45,264 --> 02:25:47,728
 So, if we run this...
 
-1608
+1607
 02:25:47,928 --> 02:25:50,936
 [Paul dictates as he writes]
 
-1609
+1608
 02:25:59,352 --> 02:26:01,512
 JW: There it is... glorious.
 
-1610
+1609
 02:26:02,128 --> 02:26:04,616
 PB: And if I shrink the full size down a bit...
 
-1611
+1610
 02:26:05,100 --> 02:26:07,264
 It's still not too bad, there we go.
 
-1612
+1611
 02:26:07,290 --> 02:26:08,464
 JW: Yes, that's good.
 
-1613
+1612
 02:26:10,792 --> 02:26:12,464
 Right cool.
 
-1614
+1613
 02:26:12,460 --> 02:26:14,072
 PB: Well thank you very much.
 
-1615
+1614
 02:26:14,100 --> 02:26:20,100
 Captions produced by Bonnie Roworth
 
