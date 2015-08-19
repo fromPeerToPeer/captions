@@ -2182,7 +2182,8 @@ and 15 and 16.
 
 510
 00:42:35,710 --> 00:42:43,384
-I'll check that's right so 9,10,13,14,11,12,15,16,9,12... yes.
+I'll check that's right so
+9,10,13,14,11,12,15,16,9,12... yes.
 
 511
 00:42:47,624 --> 00:42:51,648
@@ -2211,8 +2212,8 @@ I still want the first 2 rows,
 
 517
 00:43:35,608 --> 00:43:40,310
-because north... but with this one a drop
-instead of take
+because north... but with this
+one a drop instead of take.
 
 518
 00:43:40,310 --> 00:43:43,296
@@ -2337,8 +2338,7 @@ Then I'm going to say subject...
 
 546
 00:46:42,360 --> 00:46:45,480
-(I'll put this onto a new line so it's a
-bit clearer)
+(I'll put this onto a new line so it's a bit clearer)
 
 547
 00:46:46,800 --> 00:47:00,792
@@ -2488,8 +2488,8 @@ And that should be height is greater than 2,
 
 581
 00:50:17,568 --> 00:50:24,128
-or equal to 2, and width is greater than
-or equal to 2.
+or equal to 2, and width is
+greater than or equal to 2.
 
 582
 00:50:26,552 --> 00:50:31,368
@@ -2562,8 +2562,8 @@ So we'll say...
 
 598
 00:52:09,704 --> 00:52:16,120
-Result equals... I'm going to give it a
-method called...
+Result equals... I'm going to
+give it a method called...
 
 599
 00:52:16,120 --> 00:52:19,120
@@ -2640,8 +2640,8 @@ it should return the value.
 
 616
 00:53:44,840 --> 00:53:47,432
-JW: Just the value, not in an array, just
-the value?
+JW: Just the value, not in
+an array, just the value?
 
 617
 00:53:47,430 --> 00:53:50,416
@@ -2674,8 +2674,8 @@ An array of...
 
 624
 00:54:26,184 --> 00:54:31,632
-Yes, so it always returns an array until it gets
-to the bottom and there are no more arrays.
+Yes, so it always returns an array until it
+gets to the bottom and there are no more arrays.
 
 625
 00:54:32,624 --> 00:54:34,992
@@ -2830,8 +2830,8 @@ Which means of course, that this will be pending.
 
 660
 00:57:53,568 --> 00:58:02,128
-So now those are failing, because
-it's not giving me QuadNodes.
+So now those are failing,
+because it's not giving me QuadNodes.
 
 661
 00:58:02,424 --> 00:58:05,296
@@ -2839,8 +2839,8 @@ So that particular one...
 
 662
 00:58:06,096 --> 00:58:11,816
-I want to make sure that all 4 are
-packed QuadNodes, which I can do.
+I want to make sure that all 4
+are packed QuadNodes, which I can do.
 
 663
 00:58:15,200 --> 00:58:18,528
@@ -2907,8 +2907,8 @@ which has one in each of them
 
 678
 00:59:28,790 --> 00:59:34,792
-So the first one should have length
-4, the second level down should have 4,
+So the first one should have length 4,
+the second level down should have 4,
 
 679
 00:59:34,800 --> 00:59:39,096
@@ -3032,1037 +3032,1037 @@ That feels a bit happier so I'm gonna check those in.
 [Paul dictates what he writes]
 
 708
-01:02:26,760 --> 01:02:32,688
-There's a bunch of other stuff that I
-would add in my commit message if I were
-doing it properly, but I'll leave that for
-now.
+01:02:26,760 --> 01:02:31,688
+There's a bunch of other stuff that I would
+add in my commit message if I were doing it properly... 
 
 709
+01:02:31,706 --> 01:02:32,760
+but I'll leave that for now.
+
+710
 01:02:32,760 --> 01:02:36,096
 [New Chapter]
 
-710
+711
 01:02:36,472 --> 01:02:38,744
 PB: The next thing was that...
 
-711
-01:02:38,740 --> 01:02:43,008
-When a quadrant consists of a single colour,
-it may be considered a terminal node.
-
 712
+01:02:38,740 --> 01:02:43,008
+When a quadrant consists of a single
+colour, it may be considered a terminal node.
+
+713
 01:02:43,768 --> 01:02:49,928
 So although we have this leaf method,
 which is the point at which we stop.
 
-713
+714
 01:02:53,270 --> 01:02:58,936
 We want to add some additional logic to that
 which is when a quadrant consists of a single color.
 
-714
+715
 01:02:58,944 --> 01:03:03,070
 So what I want to do now... [Paul thinks]
 
-715
+716
 01:03:03,070 --> 01:03:08,216
 is... that's my logic, but I don't
 want to put that in the node
 
-716
+717
 01:03:08,392 --> 01:03:10,912
 because I don't think it really needs to
 know about the color.
 
-717
+718
 01:03:10,936 --> 01:03:14,536
 So this should split recursively.
 
-718
+719
 01:03:17,472 --> 01:03:20,472
 I'm going to need a different set of data for this.
 
-719
+720
 01:03:22,504 --> 01:03:25,960
 So I'm going to say...
 
-720
+721
 01:03:26,600 --> 01:03:33,328
 [Paul dictates what he types]
 
-721
+722
 01:03:36,168 --> 01:03:43,272
 And I'm going to make something that
 I can easily understand, so I'm going to say...
 
-722
+723
 01:03:44,270 --> 01:03:47,168
 ...this quadrant is all 1.
 
-723
+724
 01:03:48,160 --> 01:03:50,840
 Oh, it's not actually all 1.
 
-724
+725
 01:03:52,300 --> 01:03:59,376
 I'm going to say that this quadrant is all 2.
 
-725
+726
 01:03:59,500 --> 01:04:02,520
 [Silence]
 
-726
+727
 01:04:07,152 --> 01:04:10,496
 And I'm going to leave the rest of them different.
 
-727
+728
 01:04:10,640 --> 01:04:13,688
 [Paul thinks]
 
-728
+729
 01:04:15,176 --> 01:04:20,448
 I'm going to say it should split recursively...
 
-729
+730
 01:04:20,440 --> 01:04:23,480
 [Silence]
 
-730
+731
 01:04:26,160 --> 01:04:29,352
 based upon supplied predicate.
 
-731
+732
 01:04:29,350 --> 01:04:32,344
 [Silence]
 
-732
+733
 01:04:33,416 --> 01:04:38,312
 So in this case, if I give... that needs to be subject.
 
-733
+734
 01:04:40,456 --> 01:04:43,856
 I'm going to try it with a
 couple of different predicates.
 
-734
+735
 01:04:43,850 --> 01:04:46,856
 [Silence]
 
-735
+736
 01:04:48,608 --> 01:04:50,568
 And I'm going to say...
 
-736
+737
 01:04:50,752 --> 01:04:53,736
 [Paul thinks]
 
-737
+738
 01:04:55,560 --> 01:04:59,944
 First of all, I'm going to break this down into cells.
 
-738
+739
 01:04:59,940 --> 01:05:06,224
 [Paul talks to himself]
 
-739
+740
 01:05:06,220 --> 01:05:09,232
 [Paul thinks]
 
-740
+741
 01:05:09,688 --> 01:05:14,040
 lambda, which is going to be...
 
-741
+742
 01:05:15,184 --> 01:05:20,200
 I think the simplest thing is to give
 it the four items in the same order.
 
-742
+743
 01:05:20,688 --> 01:05:27,568
 So if I say I've got A, B, C, and D
 going from northeast anticlockwise.
 
-743
+744
 01:05:30,848 --> 01:05:33,112
 And I'm just going to return true.
 
-744
+745
 01:05:36,376 --> 01:05:41,104
 No, I'm going to say A == B == C == D.
 
-745
+746
 01:05:41,100 --> 01:05:44,128
 [Silence]
 
-746
+747
 01:05:49,304 --> 01:05:53,960
 And then we're going to end
 up here with a recursive split.
 
-747
+748
 01:05:53,960 --> 01:05:56,912
 [Silence]
 
-748
+749
 01:06:00,110 --> 01:06:05,096
 And then give it that predicate
 as a block, or lambda, whatever.
 
-749
+750
 01:06:05,096 --> 01:06:08,848
 [Paul dictates what he types]
 
-750
+751
 01:06:08,840 --> 01:06:12,240
 It turned into a Proc.
 
-751
+752
 01:06:13,144 --> 01:06:16,896
 Now, what do I expect...
 
-752
+753
 01:06:18,216 --> 01:06:26,576
 I expect result naught which
 is the northeast quadrant,
 
-753
+754
 01:06:26,570 --> 01:06:29,640
 [Paul thinks]
 
-754
+755
 01:06:29,720 --> 01:06:32,520
 to be a leaf.
 
-755
+756
 01:06:33,968 --> 01:06:36,344
 JW: It's starting to read quite nicely.
 
-756
+757
 01:06:37,776 --> 01:06:41,104
 PB: Expect 1 to be a leaf, so result...
 
-757
+758
 01:06:42,392 --> 01:06:49,104
 [Paul dictates what he writes]
 
-758
+759
 01:06:49,100 --> 01:06:52,144
 [Silence]
 
-759
+760
 01:06:55,400 --> 01:06:59,144
 I'm just going to add one more
 to make sure it's going down.
 
-760
+761
 01:06:59,848 --> 01:07:04,560
 I want to say that result 3...
 
-761
+762
 01:07:04,560 --> 01:07:07,552
 [Paul thinks]
 
-762
+763
 01:07:14,336 --> 01:07:18,768
 JW: I think result 3 will be [they both talk at once].
 
-763
+764
 01:07:19,230 --> 01:07:21,400
 PB: Yes.
 
-764
+765
 01:07:21,464 --> 01:07:24,504
 [Paul thinks]
 
-765
+766
 01:07:28,632 --> 01:07:33,424
 Maybe I should make it result
 subscript, that might be nice.
 
-766
+767
 01:07:33,880 --> 01:07:36,544
 [Paul dictates what he writes]
 
-767
+768
 01:07:36,540 --> 01:07:38,928
 So in that case...
 
-768
+769
 01:07:38,976 --> 01:07:41,992
 [Silence]
 
-769
+770
 01:07:43,200 --> 01:07:45,400
 So in this case...
 
-770
+771
 01:07:45,480 --> 01:07:48,488
 [Paul thinks]
 
-771
+772
 01:07:51,496 --> 01:07:55,184
 So here I get quad tree quad tree...
 
-772
+773
 01:07:57,072 --> 01:08:01,560
 [Paul dictates what he writes]
 
-773
+774
 01:08:09,440 --> 01:08:14,744
 I'm not sure if that makes any sense any more,
 because it depends on what the rules for splitting are.
 
-774
+775
 01:08:14,768 --> 01:08:17,736
 [Paul thinks]
 
-775
+776
 01:08:18,128 --> 01:08:21,264
 I'm going to forget this for now and get that bit away.
 
-776
+777
 01:08:22,930 --> 01:08:25,952
 That doesn't work at all... which is OK.
 
-777
+778
 01:08:26,008 --> 01:08:30,352
 So you cant do that, which is a shame.
 
-778
+779
 01:08:30,688 --> 01:08:33,704
 [Paul thinks]
 
-779
+780
 01:08:38,632 --> 01:08:43,960
 In fact I could even say...
 [Paul dictates what he writes]
 
-780
+781
 01:09:05,424 --> 01:09:08,304
 That what I've done wrong,
 I've got an array of nodes.
 
-781
+782
 01:09:10,000 --> 01:09:12,240
 So actually I want...
 
-782
+783
 01:09:13,104 --> 01:09:15,664
 So I split...
 
-783
+784
 01:09:16,248 --> 01:09:23,968
 So the first thing that's wrong is
 that it's not actually to the block.
 
-784
+785
 01:09:24,024 --> 01:09:27,064
 [Paul thinks]
 
-785
+786
 01:09:31,104 --> 01:09:33,904
 It doesn't really matter if I do it or not so...
 
-786
+787
 01:09:33,968 --> 01:09:36,920
 [Paul dictates what he writes on screen]
 
-787
+788
 01:09:56,976 --> 01:10:00,152
 So first of all, I want to know if I can split here.
 
-788
+789
 01:10:00,456 --> 01:10:03,080
 So I need to check if it's divisible.
 
-789
+790
 01:10:05,984 --> 01:10:09,840
 I need to duplicate that, and I think
 I just need to put the logic in there.
 
-790
+791
 01:10:09,920 --> 01:10:12,912
 [Silence]
 
-791
+792
 01:10:33,352 --> 01:10:35,872
 So that needs to be split_recursive.
 
-792
+793
 01:10:35,920 --> 01:10:38,904
 [Silence]
 
-793
+794
 01:10:39,640 --> 01:10:43,312
 I feel like I'm slightly off track here.
 
-794
+795
 01:10:43,310 --> 01:10:46,352
 [Paul thinks]
 
-795
+796
 01:10:50,432 --> 01:10:53,104
 I'm sure there's a simpler thing that I've missed.
 
-796
+797
 01:10:53,100 --> 01:10:56,104
 [Paul thinks]
 
-797
+798
 01:10:56,464 --> 01:11:01,592
 So now do we get undefined method map for the QuadNode.
 
-798
+799
 01:11:05,360 --> 01:11:07,760
 I'm going to stop and read over what I've done.
 
-799
+800
 01:11:07,832 --> 01:11:10,840
 [Silence]
 
-800
+801
 01:11:19,128 --> 01:11:23,040
 I'm thinking that perhaps...
 
-801
+802
 01:11:24,600 --> 01:11:29,224
 each of these things should at some point be a node.
 
-802
+803
 01:11:29,960 --> 01:11:34,312
 So each of these should be the same kind of thing.
 
-803
+804
 01:11:36,360 --> 01:11:40,464
 So I'm going to do this in here
 and I'm going to stash my changes.
 
-804
+805
 01:11:40,544 --> 01:11:43,568
 [Silence]
 
-805
+806
 01:11:45,816 --> 01:11:49,576
 JW: You know you attempted to
 change the name of split earlier on,
 
-806
+807
 01:11:49,848 --> 01:11:52,888
 I wonder if children might be a better name.
 
-807
+808
 01:11:53,400 --> 01:11:56,712
 It would tease out the 'treesness' of it.
 
-808
+809
 01:11:56,710 --> 01:12:01,624
 PB: Yes, let's try that... so I need to do some surgery here.
 
-809
+810
 01:12:03,904 --> 01:12:10,024
 I feel there's a whole load of duplication
 here but there probably actually isn't.
 
-810
+811
 01:12:12,336 --> 01:12:16,024
 I'm just going to see... yes row.take erm...
 
-811
+812
 01:12:18,960 --> 01:12:21,416
 ... so yes, it needs to be here.
 
-812
+813
 01:12:21,670 --> 01:12:26,816
 I'm gonna make a wrap function which,
 because I'm doing this quite a lot erm ...
 
-813
+814
 01:12:29,020 --> 01:12:32,032
 [Paul dictates what he types]
 
-814
+815
 01:12:33,600 --> 01:12:38,480
 Given some rows, it's an easier way of doing that.
 
-815
+816
 01:12:38,544 --> 01:12:41,592
 [Silence]
 
-816
+817
 01:12:42,544 --> 01:12:44,984
 Just get each of these...
 
-817
+818
 01:12:45,016 --> 01:12:48,024
 [Silence]
 
-818
+819
 01:12:59,520 --> 01:13:02,176
 So I'm going to do that.
 
-819
+820
 01:13:02,240 --> 01:13:05,264
 [Paul thinks]
 
-820
+821
 01:13:05,616 --> 01:13:08,824
 JW: Actually you don't need
 the mapping on line 26 anymore.
 
-821
+822
 01:13:10,480 --> 01:13:12,720
 Or even to map it at all.
 
-822
+823
 01:13:16,040 --> 01:13:17,680
 PB: Yes, that's a bit nicer isn't it.
 
-823
+824
 01:13:17,952 --> 01:13:23,144
 I'm going to put this onto one line because
 the screen is small and it's nicer to see more.
 
-824
+825
 01:13:23,184 --> 01:13:26,192
 [Silence]
 
-825
+826
 01:13:43,928 --> 01:13:46,520
 split recurser... erm...
 
-826
+827
 01:13:48,496 --> 01:13:54,240
-Again, it's wrong it should be calling
+Again it's wrong, it should be calling
 split recurser when it should be pulling sub-nodes.
 
-827
+828
 01:13:54,800 --> 01:13:57,304
 Let's try using this to children.
 
-828
+829
 01:13:58,808 --> 01:14:01,168
 No let's first see what breaks.
 
-829
+830
 01:14:04,288 --> 01:14:08,632
 OK, so that's expected.
 
-830
+831
 01:14:08,630 --> 01:14:13,904
 Those will fail because it
 expected to get different things back.
 
-831
-01:14:15,648 --> 01:14:21,928
-Expect rows, yes [inaudible] which is in northeast quadrant and that should be erm...
-
 832
+01:14:15,648 --> 01:14:21,928
+Expect rows, yes [inaudible] which is in
+northeast quadrant and that should be erm...
+
+833
 01:14:22,432 --> 01:14:27,480
 JW: We could just call .rows on that and it would...
 
-833
+834
 01:14:27,576 --> 01:14:29,480
 PB: Yes, we could.
 
-834
+835
 01:14:32,816 --> 01:14:34,752
 Yes, I think that's fine.
 
-835
+836
 01:14:34,848 --> 01:14:37,904
 [Silence]
 
-836
+837
 01:14:50,280 --> 01:14:52,672
 I wonder if I should store work.
 
-837
+838
 01:14:53,080 --> 01:14:55,080
 Don't think I did that but...
 
-838
+839
 01:14:56,360 --> 01:14:59,496
 OK so 4 quadrants.
 
-839
+840
 01:15:00,272 --> 01:15:02,400
 JW: It looks like they're double wrapped.
 
-840
+841
 01:15:03,728 --> 01:15:04,848
 PB: Yes.
 
-841
+842
 01:15:04,976 --> 01:15:07,512
 JW: Because in the test we're...
 
-842
+843
 01:15:10,040 --> 01:15:11,992
 PB: Yes, that's right.
 
-843
+844
 01:15:12,072 --> 01:15:15,072
 [Silence]
 
-844
+845
 01:15:24,224 --> 01:15:25,896
 Cool, yes.
 
-845
+846
 01:15:26,632 --> 01:15:29,240
 JW: That might be worth a commit.
 
-846
+847
 01:15:29,384 --> 01:15:32,368
 [Silence]
 
-847
+848
 01:15:42,664 --> 01:15:45,960
 [Paul dictates what he writes]
 
-848
+849
 01:15:54,816 --> 01:15:59,520
 PB: OK, so we're splitting quadrants
 between nodes, and that feels better.
 
-849
+850
 01:16:02,256 --> 01:16:06,480
 I'm going to take your suggestion and make children...
 
-850
+851
 01:16:06,480 --> 01:16:10,440
 ... because I think children and split
 being different will make more sense.
 
-851
+852
 01:16:10,808 --> 01:16:13,088
 So I'll change split to children.
 
-852
+853
 01:16:13,120 --> 01:16:16,136
 [Silence]
 
-853
+854
 01:16:19,976 --> 01:16:23,016
 Yes, do I want to change that? yes... No.
 
-854
+855
 01:16:23,088 --> 01:16:26,088
 [Paul thinks]
 
-855
+856
 01:16:36,448 --> 01:16:40,776
 Change all this to children, yes, no, yes, yes.
 
-856
+857
 01:16:40,864 --> 01:16:43,856
 [Silence]
 
-857
+858
 01:16:49,130 --> 01:16:52,216
 So we now have children.
 
-858
+859
 01:16:53,184 --> 01:16:58,800
 [Paul mumbles as he types]
 
-859
+860
 01:17:01,600 --> 01:17:07,104
 'Should children into'...
 I'm going to change that test.
 
-860
+861
 01:17:08,240 --> 01:17:10,488
 Should children... no.
 
-861
+862
 01:17:10,752 --> 01:17:13,776
 [Silence]
 
-862
+863
 01:17:23,096 --> 01:17:26,720
 [Paul dictates what he writes]
 
-863
+864
 01:17:28,872 --> 01:17:32,584
 I shouldn't have put should
 in everything, but never mind.
 
-864
+865
 01:17:34,840 --> 01:17:40,696
 Yes, so... rename split to children.
 
-865
-01:17:41,368 --> 01:17:48,176
-It's now a lot clearer that we have a method
-that just gives us the immediate children.
-
 866
+01:17:41,368 --> 01:17:48,176
+It's now a lot clearer that we have a
+method that just gives us the immediate children.
+
+867
 01:17:48,696 --> 01:17:53,056
 Whether something has children or not,
 it doesn't matter what our rules are,
 
-867
+868
 01:17:53,050 --> 01:17:56,072
 it always has children.
 
-868
+869
 01:17:56,352 --> 01:18:01,728
 Splitting recursively is a slightly
 different process where we have some kind of
 
-869
+870
 01:18:02,728 --> 01:18:05,984
 choice to make whether each one is split.
 
-870
+871
 01:18:09,264 --> 01:18:15,768
 Which now, if I've got...
 I'll just apply the stuff I did earlier.
 
-871
+872
 01:18:15,760 --> 01:18:18,752
 [Silence]
 
-872
+873
 01:18:19,768 --> 01:18:21,648
 NARRATOR: We're going to speed through this section,
 
-873
+874
 01:18:21,640 --> 01:18:24,672
 because Paul and Jamie
 found themselves at a dead end.
 
-874
+875
 01:18:25,328 --> 01:18:28,608
 They eventually backtracked on
 this idea of using a lambda.
 
-875
+876
 01:18:28,632 --> 01:18:31,760
 So let's skip ahead to the
 section where they changed course.
 
-876
+877
 01:18:33,536 --> 01:18:38,384
 PB: I think I'm going to take all
 the stuff I've been doing and say...
 
-877
+878
 01:18:38,380 --> 01:18:42,792
 [Paul dictates what he writes]
 
-878
+879
 01:18:44,008 --> 01:18:46,464
 And then I'm going to re-set...
 
-879
+880
 01:18:46,460 --> 01:18:48,888
 [Paul dictates what he writes]
 
-880
+881
 01:18:48,880 --> 01:18:52,040
 It's basically a posh version of stash.
 
-881
+882
 01:18:52,090 --> 01:18:59,352
 I still have it somewhere until it gets garbage
 collected but I'm probably not going to use it.
 
-882
+883
 01:19:00,210 --> 01:19:04,424
 I'm going to re-load this.
 
-883
+884
 01:19:04,420 --> 01:19:11,432
 OK so I'm going to write some
 specs around some smaller nodes.
 
-884
+885
 01:19:11,430 --> 01:19:15,240
 So I'm going to put this lot
 into context saying context.
 
-885
+886
 01:19:17,256 --> 01:19:27,616
 [Paul dictates what he writes]
 
-886
+887
 01:19:29,672 --> 01:19:33,848
 And I put all of those inside except that thing.
 
-887
+888
 01:19:33,840 --> 01:19:36,864
 [Silence]
 
-888
+889
 01:19:39,600 --> 01:19:43,824
 JW: I think it's quite nice that
 we've moved away from the idea of color
 
-889
+890
 01:19:44,312 --> 01:19:48,992
 and it's simply about... [they both talk at once].
 
-890
+891
 01:19:49,368 --> 01:19:59,576
 So I'm going to call this one down at the
 bottom context, and call this one a 1-element data set.
 
-891
+892
 01:20:01,800 --> 01:20:07,240
 Or it could be a 1-element
 QuadTree, that might make more sense.
 
-892
+893
 01:20:07,740 --> 01:20:15,808
 So this one, I want to say that its children is itself.
 
-893
-01:20:16,008 --> 01:20:24,144
-So our basic building block is a
-QuadTree which has one element and which is a leaf.
-
 894
+01:20:16,008 --> 01:20:24,144
+So our basic building block is a QuadTree
+which has one element and which is a leaf.
+
+895
 01:20:27,072 --> 01:20:30,208
 JW: Maybe we can ask it if it's a leaf to begin with...
 
-895
+896
 01:20:30,200 --> 01:20:33,896
 PB: Yes, in fact that's what we've already got.
 
-896
+897
 01:20:35,992 --> 01:20:40,176
 So we know that works, and I'm going to
 move that one up to the top because I think
 
-897
+898
 01:20:40,170 --> 01:20:44,352
 it would be nicer to have the simple case at the top.
 
-898
+899
 01:20:44,352 --> 01:20:46,160
 JW: Yes.
 
-899
+900
 01:20:46,160 --> 01:20:52,296
 PB: And then I'm going to do something
 similar with 4 because 4 is still quite simple
 
-900
+901
 01:20:52,290 --> 01:20:58,776
 but it's easy to think about and we know its behavior is.
 
-901
-01:20:59,224 --> 01:21:05,064
-Let's get rid of that entirely, and since our dataset something like...
-
 902
+01:20:59,224 --> 01:21:05,064
+Let's get rid of that entirely,
+and since our dataset something like...
+
+903
 01:21:05,060 --> 01:21:08,056
 [Silence]
 
-903
+904
 01:21:09,752 --> 01:21:15,040
 This is a heterogeneous data
 set as well, so that's important.
 
-904
+905
 01:21:17,232 --> 01:21:22,128
 And there's 1,2,3 and 4.
 
-905
+906
 01:21:22,216 --> 01:21:25,208
 [Silence]
 
-906
+907
 01:21:25,720 --> 01:21:28,416
 So it is NOT a leaf node.
 
-907
+908
 01:21:28,410 --> 01:21:31,464
 [Silence]
 
-908
+909
 01:21:33,200 --> 01:21:36,528
 Good, OK, I'm happy with that.
 
-909
+910
 01:21:38,080 --> 01:21:46,192
 And it has 4 children.
 
-910
+911
 01:21:46,272 --> 01:21:49,272
 [Silence]
 
-911
+912
 01:21:51,250 --> 01:22:05,472
 I'm going to say: [Paul dictates what he writes]
 
-912
+913
 01:22:09,520 --> 01:22:14,552
 And this one, let's do the same thing
 some very basic stuff like...
 
-913
-01:22:17,220 --> 01:22:20,368
-(actually I'm going to get rid
-of all these 'shoulds')
-
 914
+01:22:17,220 --> 01:22:20,368
+(actually I'm going to get
+rid of all these 'shoulds').
+
+915
 01:22:20,416 --> 01:22:23,416
 [Silence]
 
-915
+916
 01:22:44,144 --> 01:22:47,056
 I really typed that a lot didn't I?
 
-916
+917
 01:22:48,480 --> 01:22:50,784
 OK, so I'm going to get rid of that.
 
-917
+918
 01:22:50,920 --> 01:23:03,072
 All these things are...
 
-918
+919
 01:23:03,112 --> 01:23:06,904
 Yes, so there's the 16-element one.
 
-919
+920
 01:23:07,312 --> 01:23:12,664
 I also want to say this is not a leaf node,
 
-920
+921
 01:23:13,888 --> 01:23:18,320
 which is kind of obvious, but
 it makes things consistent.
 
-921
+922
 01:23:18,384 --> 01:23:21,384
 [Silence]
 
-922
+923
 01:23:25,616 --> 01:23:27,856
 [They both talk at once]
 
-923
+924
 01:23:27,944 --> 01:23:30,944
 [Silence]
 
-924
+925
 01:23:34,024 --> 01:23:36,728
 OK, so that's all fine.
 
-925
+926
 01:23:36,776 --> 01:23:39,776
 [Silence]
 
-926
-01:23:42,144 --> 01:23:50,000
+927
+01:23:42,140 --> 01:23:47,751
 Right, I think the next thing I want
 to do... I think all that stuff is fine.
 
-927
-01:23:50,000 --> 01:23:55,072
+928
+01:23:47,760 --> 01:23:58,430
 It returns northwest quadrant, northeast quadrant,
 southwest quadrant, and southeast quadrant.
 
-928
-01:23:58,600 --> 01:24:02,792
+929
+01:23:58,462 --> 01:24:02,790
 We'll get rid of this split
 recursively, I don't think I care about that.
 
-929
+930
 01:24:03,944 --> 01:24:08,472
 Anything else is split? No, and get rid of
 anything that's split in here as well.
 
-930
+931
 01:24:11,880 --> 01:24:17,816
 I'm also tempted to get rid
 of divisible and just have leaf.
 
-931
+932
 01:24:18,376 --> 01:24:21,296
 But... maybe that doesn't make sense.
 
-932
+933
 01:24:21,328 --> 01:24:25,112
 JW: Divisible is a private API at the moment?
 PB: Yes.
 
-933
+934
 01:24:31,504 --> 01:24:35,104
 JW: Shall we just commit,
 since it's quite a clean state. PB: Yes.
 
-934
+935
 01:24:35,100 --> 01:24:38,080
 [Silence]
 
-935
+936
 01:24:38,296 --> 01:24:44,072
 [Paul dictates what he types]
 
-936
+937
 01:24:44,096 --> 01:24:47,104
 [Silence]
 
-937
+938
 01:24:47,648 --> 01:24:57,856
 What I think I want to do now,
 I want to add some kind of compression.
 
-938
+939
 01:25:01,800 --> 01:25:06,704
 JW: You don't want to do the case
 of a homogeneous 4-element dataset?
 
-939
+940
 01:25:07,624 --> 01:25:14,040
 PB: Ah, yes I will, that's exactly what
 I mean so I want to say that compressing
 
-940
-01:25:14,040 --> 01:25:19,344
-this heterogeneous one should give me the
-same, the children should be the same.
-
 941
-01:25:19,984 --> 01:25:26,504
-It should have 4 children but if I
-compress it, I should get a leaf node and the value.
+01:25:14,040 --> 01:25:19,344
+this heterogeneous one should give me
+the same, the children should be the same.
 
 942
+01:25:19,984 --> 01:25:26,504
+It should have 4 children but if I compress
+it, I should get a leaf node and the value.
+
+943
 01:25:27,288 --> 01:25:34,184
 Its first row, first column
 should be the individual value.
 
-943
+944
 01:25:34,180 --> 01:25:40,120
 Let's do this as our heterogeneous.
 
-944
-01:25:41,720 --> 01:25:44,000
-And we're going to form a homogeneous dataset.
-
 945
-01:25:44,088 --> 01:25:47,088
-[Silence]
+01:25:41,168 --> 01:25:45,120
+And we're going to form a homogeneous dataset.
 
 946
 01:25:48,980 --> 01:25:54,360
-So we're moving away from having
-a particular plugin way of comparing things
+So we're moving away from having a
+particular plugin way of comparing things
 
 947
-01:25:54,360 --> 01:25:58,656
+01:25:54,360 --> 01:25:59,472
 because I think that making it the same is
 a reasonable property that we can bake into this.
 
 948
-01:25:59,648 --> 01:26:02,864
+01:25:59,504 --> 01:26:02,860
 I'm going to make this all ones.
 
 949
@@ -4125,8 +4125,8 @@ Or should it just be that that's all there is...
 
 963
 01:27:21,624 --> 01:27:27,688
-Yes, that would make sense, if I have
-a 4-element homogeneous dataset
+Yes, that would make sense, if I
+have a 4-element homogeneous dataset
 
 964
 01:27:29,504 --> 01:27:40,280
@@ -4512,13 +4512,12 @@ sort it out of band as a target size.
 
 1052
 01:36:51,840 --> 01:37:00,520
-In our case, it should be possible to
-reconstruct it by walking all the way
-through the tree as well
+In our case, it should be possible to reconstruct it
+by walking all the way through the tree as well.
 
 1053
 01:37:00,520 --> 01:37:02,960
-so when you get to the
+So when you get to the
 bottom you will have enough data
 
 1054
@@ -4557,8 +4556,8 @@ PB: So serializer... let's say...
 
 1062
 01:37:35,048 --> 01:37:38,696
-The simplest way to make
-this test pass, of course is to say...
+The simplest way to make this
+test pass, of course is to say...
 
 1063
 01:37:39,150 --> 01:37:43,424
@@ -4610,8 +4609,8 @@ How about if I said...
 
 1074
 01:38:32,472 --> 01:38:36,060
-In fact, our serializer might
-end up not doing anything at this point,
+In fact, our serializer might end
+up not doing anything at this point,
 
 1075
 01:38:36,120 --> 01:38:40,520
