@@ -2337,7 +2337,7 @@ assuming those to be equal.
 Then I'm going to say subject...
 
 546
-00:46:42,360 --> 00:46:45,480
+00:46:42,360 --> 00:46:45,600
 (I'll put this onto a new line so it's a bit clearer)
 
 547
@@ -2488,8 +2488,8 @@ And that should be height is greater than 2,
 
 581
 00:50:17,568 --> 00:50:24,128
-or equal to 2, and width is
-greater than or equal to 2.
+or equal to 2, and width
+is greater than or equal to 2.
 
 582
 00:50:26,552 --> 00:50:31,368
@@ -4834,18 +4834,18 @@ was the correct serialization or not.
 So when we ended up with 2 by itself
 
 1125
-01:43:35,320 --> 01:43:38,392
+01:43:35,320 --> 01:43:39,584
 PB: It's not, because it should...
 JW: I think we want some more square brackets.
 
 1126
-01:43:38,432 --> 01:43:41,448
+01:43:39,632 --> 01:43:42,656
 [Silence]
 
 1127
 01:43:43,344 --> 01:43:47,080
-PB: That one?
-JW: Yes. PB: yes it does doesn't it?
+PB: That one? JW: Yes.
+PB: yes it does doesn't it?
 
 1128
 01:43:48,992 --> 01:43:53,336
