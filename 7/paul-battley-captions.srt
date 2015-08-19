@@ -6430,9 +6430,8 @@ we add multiple times the scale of two.
 
 1497
 02:16:38,104 --> 02:16:47,330
-So this is the existing x offset plus the
-internal offset which I called 2,
-which is an awful name!
+So this is the existing x offset plus the internal
+offset which I called 2, which is an awful name!
 
 1498
 02:16:48,720 --> 02:16:51,712
