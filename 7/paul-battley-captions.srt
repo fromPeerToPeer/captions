@@ -204,11 +204,11 @@ and spits out the pixels as,
 maybe hashes and spaces on screen.
 
 46
-00:03:45,070 --> 00:03:47,608
+00:03:45,070 --> 00:03:47,668
 That should give us an idea of whether it's working.
 
 47
-00:03:47,600 --> 00:03:51,000
+00:03:47,691 --> 00:03:51,000
 It may wrap and be a bit weird, but we'll work it out.
 
 48
@@ -578,8 +578,7 @@ I'm going to make this width / 8
 
 134
 00:11:33,480 --> 00:11:40,016
-So then our byte is going
-to be the image_bytes
+So then our byte is going to be the image_bytes
 
 135
 00:11:41,040 --> 00:11:48,880
@@ -616,8 +615,8 @@ know which way round they are do I?
 JW: Ah, that's true.
 
 143
-00:12:23,170 --> 00:12:25,104
-We don't know which endian are these bytes
+00:12:23,170 --> 00:12:26,285
+We don't know which endian are these bytes.
 
 144
 00:12:26,704 --> 00:12:29,792
@@ -665,8 +664,8 @@ from zero and then increasing.
 
 154
 00:13:24,140 --> 00:13:31,040
-And I can take that and logical
-AND that with the byte.
+And I can take that and
+logical AND that with the byte.
 
 155
 00:13:33,176 --> 00:13:39,072
@@ -1219,8 +1218,8 @@ that puts stuff, so for now I'm going to do
 
 283
 00:24:48,144 --> 00:24:51,136
-Ah because I haven't given it
-the width and the height.
+Ah because I haven't given
+it the width and the height.
 
 284
 00:24:51,130 --> 00:24:54,128
@@ -1988,7 +1987,7 @@ OK... I'm going to do the same for rows.
 [Silence]
 
 465
-00:39:05,304 --> 00:39:08,060
+00:39:05,300 --> 00:39:08,662
 As I say I could have got this
 wrong and still got the same.
 
@@ -2224,12 +2223,12 @@ one a drop instead of take.
 JW: Yes, nice.
 
 520
-00:43:45,408 --> 00:43:47,936
+00:43:45,400 --> 00:43:48,137
 PB: I can do the same for
-these hopefully in short order,
+these hopefully in short order.
 
 521
-00:43:47,936 --> 00:43:53,408
+00:43:48,148 --> 00:43:53,400
 So that should say southwest and southeast.
 
 522
@@ -2987,20 +2986,20 @@ me do that even shorter, but I can't remember it.
 [Paul dictates as he types]
 
 697
-01:01:33,960 --> 01:01:35,320
+01:01:33,960 --> 01:01:35,531
 JW: I think you already have a...
 
 698
-01:01:35,320 --> 01:01:38,424
+01:01:35,550 --> 01:01:38,982
 PB: Yes, we have divisible,
 which is the opposite to leaf.
 
 699
-01:01:41,232 --> 01:01:43,928
+01:01:41,230 --> 01:01:44,228
 So it's a leaf if it's not divisible.
 
 700
-01:01:43,920 --> 01:01:46,864
+01:01:44,285 --> 01:01:47,280
 [Silence]
 
 701
@@ -3045,11 +3044,11 @@ but I'll leave that for now.
 [New Chapter]
 
 711
-01:02:36,472 --> 01:02:38,744
+01:02:36,617 --> 01:02:38,740
 PB: The next thing was that...
 
 712
-01:02:38,740 --> 01:02:43,008
+01:02:38,740 --> 01:02:43,462
 When a quadrant consists of a single
 colour, it may be considered a terminal node.
 
@@ -3073,12 +3072,12 @@ is... that's my logic, but I don't
 want to put that in the node
 
 717
-01:03:08,392 --> 01:03:10,912
-because I don't think it really needs to
-know about the color.
+01:03:08,390 --> 01:03:11,965
+because I don't think it really
+needs to know about the color.
 
 718
-01:03:10,936 --> 01:03:14,536
+01:03:12,011 --> 01:03:15,245
 So this should split recursively.
 
 719
@@ -3739,8 +3738,8 @@ found themselves at a dead end.
 
 875
 01:18:25,328 --> 01:18:28,608
-They eventually backtracked on
-this idea of using a lambda.
+They eventually backtracked
+on this idea of using a lambda.
 
 876
 01:18:28,632 --> 01:18:31,760
@@ -4309,12 +4308,12 @@ Actually I'm just going to write
 it like Ruby and just say value.
 
 1006
-01:32:00,728 --> 01:32:03,928
+01:32:00,720 --> 01:32:04,742
 I think that makes more sense
 than trying to explain it in English.
 
 1007
-01:32:05,830 --> 01:32:08,968
+01:32:05,830 --> 01:32:09,200
 Actually, I'm going to need a serializer anyway.
 
 1008
@@ -4365,15 +4364,15 @@ approach of giving it to a method…
 PB: Yes.
 
 1019
-01:33:28,600 --> 01:33:32,528
+01:33:28,600 --> 01:33:32,468
 JW: I imagine you could potentially...
 
 1020
-01:33:32,520 --> 01:33:34,368
+01:33:32,480 --> 01:33:34,530
 turn these quadnodes into a JSON structure.
 
 1021
-01:33:34,376 --> 01:33:41,736
+01:33:34,537 --> 01:33:41,730
 PB: I agree, let's give it a to_a method
 and that will give us something nice.
 
@@ -4511,12 +4510,12 @@ If it is important we could
 sort it out of band as a target size.
 
 1052
-01:36:51,840 --> 01:37:00,520
+01:36:51,840 --> 01:37:00,445
 In our case, it should be possible to reconstruct it
 by walking all the way through the tree as well.
 
 1053
-01:37:00,520 --> 01:37:02,960
+01:37:00,468 --> 01:37:02,994
 So when you get to the
 bottom you will have enough data
 
@@ -5170,12 +5169,12 @@ PB: So that should hide a whole
 bunch of things... unless I actually test it.
 
 1204
-01:50:25,640 --> 01:50:29,640
+01:50:25,640 --> 01:50:30,091
 JW: If you change all these current tests
 to use to_s instead, then we don't have to...
 
 1205
-01:50:30,080 --> 01:50:31,760
+01:50:30,102 --> 01:50:31,760
 deal with the awkwardly named `value` anymore.
 
 1206
@@ -5220,7 +5219,7 @@ Ah! Yes, that doesn't work because...
 we can't make it private, not yet anyway.
 
 1216
-01:51:15,520 --> 01:51:18,648
+01:51:15,520 --> 01:51:19,257
 Could we make it 'protected'? I'm
 never quite sure how that works.
 
@@ -5229,9 +5228,9 @@ never quite sure how that works.
 Do they work like friend methods?
 
 1218
-01:51:22,520 --> 01:51:25,592
-JW: That's the first time I've ever
-seen a reason to use protected.
+01:51:22,480 --> 01:51:25,590
+JW: That's the first time I've
+ever seen a reason to use protected.
 
 1219
 01:51:25,610 --> 01:51:33,568
@@ -5566,13 +5565,13 @@ PB: That's true actually.
 We need to know the width and height to start with.
 
 1298
-01:58:01,310 --> 01:58:05,064
+01:58:01,310 --> 01:58:05,108
 Actually we could work it out by walking
 all the way through the tree perhaps.
 
 1299
-01:58:05,060 --> 01:58:08,672
-But let's give ourselves the width and height
+01:58:05,108 --> 01:58:08,670
+But let's give ourselves the width and height.
 
 1300
 01:58:10,184 --> 01:58:16,224
@@ -5761,8 +5760,8 @@ and then we'll pull out the first item
 
 1343
 02:03:27,008 --> 02:03:30,112
-That's the way we have to leave it because
-you can't have a bare value in JSON
+That's the way we have to leave it
+because you can't have a bare value in JSON
 
 1344
 02:03:30,110 --> 02:03:32,616
@@ -5998,12 +5997,12 @@ So that should give me a whole load of nils.
 And then we need to go from...
 
 1399
-02:07:45,088 --> 02:07:48,872
+02:07:45,080 --> 02:07:48,925
 In fact, should we just assume that our
 image is going to be square, would that be sensible?
 
 1400
-02:07:48,888 --> 02:07:49,568
+02:07:48,925 --> 02:07:49,560
 JW: Yes.
 
 1401
@@ -6074,8 +6073,8 @@ blank container in which we'll put things.
 
 1416
 02:09:12,568 --> 02:09:19,960
-And there are two cases: one is if there is only
-one value then there is no mapping to do at all.
+And there are two cases: one is if there is
+only one value then there is no mapping to do at all.
 
 1417
 02:09:20,016 --> 02:09:23,032
@@ -6462,7 +6461,7 @@ If we can do that on our data...
 or each actually.
 
 1505
-02:17:23,656 --> 02:17:26,608
+02:17:23,650 --> 02:17:27,165
 If we can call each on the data...
 which we can't call on string, can we?
 
@@ -6533,13 +6532,12 @@ JW: Which will be half of the scale that is given to us.
 PB: Yes.
 
 1522
-02:18:35,616 --> 02:18:39,792
-So maybe replace scale all over the place
-to say
+02:18:35,610 --> 02:18:41,382
+So maybe replace scale all
+over the place to say subscale...
 
 1523
-02:18:40,528 --> 02:18:43,536
-subscale
+02:18:41,428 --> 02:18:44,457
 [Paul dictates what he writes]
 
 1524
@@ -6577,9 +6575,8 @@ Either that or depending on whether we...
 
 1532
 02:19:23,920 --> 02:19:27,928
-JW: Don't we need to reach into that data
-and pull out the appropriate one for this
-part of the quadrant.
+JW: Don't we need to reach into that data and pull out
+the appropriate one for this part of the quadrant?
 
 1533
 02:19:27,920 --> 02:19:30,240
@@ -6628,14 +6625,12 @@ nicer than using say, with_index.
 Let's see what happens.
 
 1544
-02:20:09,610 --> 02:20:14,000
-JW: I think we're missing
-a couple of commas...
+02:20:09,610 --> 02:20:11,954
+JW: I think we're missing a couple of commas...
 
 1545
-02:20:14,936 --> 02:20:17,120
-PB: [Laughing] It certainly seems unhappy!
-Err... 29.
+02:20:11,965 --> 02:20:17,530
+PB: [Laughing] It certainly seems unhappy! Err... 29.
 
 1546
 02:20:18,536 --> 02:20:20,840
@@ -6651,12 +6646,12 @@ PB: Yes.
 JW: We've not actually defined subdata or is this...
 
 1549
-02:20:30,280 --> 02:20:34,080
+02:20:30,280 --> 02:20:35,085
 PB: Yes, you're right that should be subdata,
 otherwise it's not going to do anything at all.
 
 1550
-02:20:34,128 --> 02:20:37,120
+02:20:35,131 --> 02:20:38,125
 [Silence]
 
 1551
@@ -6833,7 +6828,7 @@ image in half, as in shrink it by a factor of 2,
 
 1592
 02:24:45,320 --> 02:24:51,432
-All you need to do is chop off the lowest level.
+all you need to do is chop off the lowest level.
 
 1593
 02:24:51,768 --> 02:24:53,232
