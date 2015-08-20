@@ -824,7 +824,8 @@ JW: There's an image in there somewhere.
 
 191
 00:16:32,776 --> 00:16:37,420
-PB: Yes, we can see there's something circular and something long.
+PB: Yes, we can see there's
+something circular and something long.
 
 192
 00:16:37,456 --> 00:16:44,368
@@ -1549,7 +1550,7 @@ item in them takes each of the quadrants.
 360
 00:30:44,830 --> 00:30:47,688
 So that's what I need to write,
-and that I think I can test quite easily, 
+and that I think I can test quite easily,
 
 361
 00:30:47,688 --> 00:30:49,620
@@ -2094,7 +2095,8 @@ be confusing height and width.
 
 489
 00:40:52,240 --> 00:40:58,968
-So take height and map and I get a row and firstly I can say...
+So take height and map and
+I get a row and firstly I can say...
 
 490
 00:40:58,960 --> 00:41:01,912
@@ -2254,7 +2256,8 @@ JW: Right so we've got a quad node class which...
 
 527
 00:44:33,540 --> 00:44:38,152
-given the input pixels can give you each sub-quadrant.
+given the input pixels can
+give you each sub-quadrant.
 
 528
 00:44:38,210 --> 00:44:44,632
@@ -2429,8 +2432,7 @@ and then this one, don't need any of that.
 
 568
 00:49:09,192 --> 00:49:12,904
-And I should say expect(subject.split).to
-eq(subject).
+And I should say expect(subject.split).to eq(subject).
 
 569
 00:49:12,900 --> 00:49:15,800
@@ -2561,8 +2563,8 @@ So we'll say...
 
 598
 00:52:09,704 --> 00:52:16,120
-Result equals... I'm going to
-give it a method called...
+Result equals... I'm going
+to give it a method called...
 
 599
 00:52:16,120 --> 00:52:19,120
@@ -2725,8 +2727,8 @@ I think it should have length
 
 636
 00:55:27,008 --> 00:55:30,592
-That's because I haven't implemented it so
-let's implement that.
+That's because I haven't
+implemented it so let's implement that.
 
 637
 00:55:30,680 --> 00:55:33,696
@@ -2935,13 +2937,13 @@ Cool.
 
 685
 01:00:14,280 --> 01:00:17,584
-PB: There we need some way of
-representing the leaf node.
+PB: There we need some way
+of representing the leaf node.
 
 686
 01:00:24,792 --> 01:00:31,192
-Maybe that's fine, maybe simply having
-one element in it is... a leaf node.
+Maybe that's fine, maybe simply
+having one element in it is... a leaf node.
 
 687
 01:00:31,816 --> 01:00:34,952
@@ -3033,7 +3035,7 @@ That feels a bit happier so I'm gonna check those in.
 708
 01:02:26,760 --> 01:02:31,688
 There's a bunch of other stuff that I would
-add in my commit message if I were doing it properly... 
+add in my commit message if I were doing it properly...
 
 709
 01:02:31,706 --> 01:02:32,760
@@ -3412,7 +3414,8 @@ I'm sure there's a simpler thing that I've missed.
 
 798
 01:10:56,464 --> 01:11:01,592
-So now do we get undefined method map for the QuadNode.
+So now do we get undefined
+method map for the QuadNode.
 
 799
 01:11:05,360 --> 01:11:07,760
@@ -3854,7 +3857,8 @@ similar with 4 because 4 is still quite simple
 
 901
 01:20:52,290 --> 01:20:58,776
-but it's easy to think about and we know its behavior is.
+but it's easy to think about
+and we know its behavior is.
 
 902
 01:20:59,224 --> 01:21:05,064
@@ -4772,7 +4776,7 @@ And then the remaining
 quadrant which is 11,12... Hang on!
 
 1112
-01:42:20,032 --> 01:42:27,112
+01:42:20,030 --> 01:42:27,320
 I'm doing this wrong... No, it's fine, sorry,
 I was just realizing that I've got different data.
 
@@ -5013,8 +5017,8 @@ kept externally, as you mentioned earlier,
 
 1167
 01:47:15,120 --> 01:47:21,352
-then combining this value structure with
-the dimensions, allows you to rebuild.
+then combining this value structure
+with the dimensions, allows you to rebuild.
 
 1168
 01:47:22,136 --> 01:47:25,816
@@ -5117,7 +5121,7 @@ OK let's commit that.
 
 1192
 01:49:13,264 --> 01:49:16,536
-What have we changed?  As yes, we changed leaf
+What have we changed?  As yes, we changed leaf.
 
 1193
 01:49:16,600 --> 01:49:19,608
@@ -5455,7 +5459,7 @@ JW: Yes, I think so.
 
 1272
 01:55:49,720 --> 01:55:51,584
-Initialize with rows.
+PB: Initialize with rows.
 
 1273
 01:55:51,608 --> 01:55:55,560
@@ -5566,8 +5570,8 @@ We need to know the width and height to start with.
 
 1298
 01:58:01,310 --> 01:58:05,108
-Actually we could work it out by walking
-all the way through the tree perhaps.
+Actually we could work it out by
+walking all the way through the tree perhaps.
 
 1299
 01:58:05,108 --> 01:58:08,670
@@ -6353,8 +6357,8 @@ which is going to be scaled by...
 
 1480
 02:14:43,370 --> 02:14:50,328
-What should I say there, something
-like fill in with the same rows.
+What should I say there, maybe
+something like fill in with the same rows.
 
 1481
 02:14:50,808 --> 02:14:54,832
@@ -6411,8 +6415,8 @@ break data into 4 pieces, and then...
 
 1493
 02:16:11,368 --> 02:16:15,864
-PB: Yes, but the only point is that
-the segment we're working on
+PB: Yes, but the only point is
+that the segment we're working on
 
 1494
 02:16:15,860 --> 02:16:18,776
