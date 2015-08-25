@@ -1,12 +1,96 @@
-1
-00:00:01,224 --> 00:00:02,976
+﻿1
+00:00:00,960 --> 00:00:02,777
 NARRATOR: Welcome to Peer to Peer
 
 2
-00:00:02,976 --> 00:00:06,776
+00:00:02,777 --> 00:00:06,770
 where you can hone your skills
 by watching live coding videos.
 
 3
-00:00:07,904 --> 00:00:10,424
+00:00:06,891 --> 00:00:09,245
 Our guest today is Sam Phippen
+
+4
+00:00:09,240 --> 00:00:12,228
+Who's a swashbuckling hacker from London, UK.
+
+5
+00:00:12,880 --> 00:00:16,754
+He fixes every size of data problem and inaud plausible solutions.
+
+6
+00:00:17,771 --> 00:00:22,240
+He helps fight the forces of justice
+as a member of RSpec core team.
+
+7
+00:00:22,514 --> 00:00:25,280
+And he's sad that he can't hug every cat.
+
+8
+00:00:26,114 --> 00:00:28,400
+Our host is Camille Baldock.
+
+9
+00:00:28,400 --> 00:00:31,017
+And the challenge that she's set for Sam is called
+
+10
+00:00:31,010 --> 00:00:34,228
+Building a Spy library.
+
+11
+00:00:34,440 --> 00:00:36,880
+CAMILLE BALLDOCK; So Sam, do you
+want to start by reading the challenge?
+
+12
+00:00:36,880 --> 00:00:37,851
+SAM PHIPPEN: Sure.
+
+13
+00:00:38,811 --> 00:00:42,640
+Write a simple library to enable testing with spies.
+
+14
+00:00:42,811 --> 00:00:46,628
+Here's a simple Ruby app
+which interacts with a RESTful API.
+
+15
+00:00:46,750 --> 00:00:52,308
+The app has a passing test suite, but the tests
+are an incomplete specification of its behaviour.
+
+16
+00:00:52,340 --> 00:00:56,525
+Add a set of isolated tests that
+spy on collaborations between objects
+
+17
+00:00:56,520 --> 00:00:58,205
+to complete the test suite.
+
+18
+00:00:58,380 --> 00:01:00,548
+Chapter 01
+
+19
+00:01:02,662 --> 00:01:07,588
+CB: Right! So do you want to have a
+quick look at what this Ruby app is and does.
+
+20
+00:01:07,640 --> 00:01:10,388
+And we can have a play with that
+before we actually dive into the challenge.
+
+21
+00:01:10,422 --> 00:01:13,020
+SP: Sure... so...
+
+22
+00:01:13,020 --> 00:01:16,594
+It looks like we've got a gem file and a jem file.block
+
