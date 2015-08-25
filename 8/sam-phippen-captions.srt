@@ -91,6 +91,93 @@ before we actually dive into the challenge.
 SP: Sure... so...
 
 22
-00:01:13,020 --> 00:01:16,594
-It looks like we've got a gem file and a jem file.block
+00:01:13,020 --> 00:01:19,017
+It looks like we've got a gem file and
+a jem file.block lib and test directory.
+
+23
+00:01:19,280 --> 00:01:26,377
+So I guess the first thing we should do
+is check that all the tests are passing.
+
+24
+00:01:26,982 --> 00:01:31,554
+The project has a test helper,
+so we'll run that... it should run
+
+25
+00:01:33,291 --> 00:01:35,645
+We have tests and they're passing so...
+
+26
+00:01:35,640 --> 00:01:39,771
+I'm going to start by looking at what the tests do.
+
+27
+00:01:40,457 --> 00:01:42,765
+Seems like a reasonable place to begin.
+
+28
+00:01:42,880 --> 00:01:49,908
+So we've got a sort of standard mini test inaud and we're requiring a file called Counter Client,
+
+29
+00:01:49,900 --> 00:01:55,222
+which is presumably the RESTful
+client the challenge mentions.
+
+30
+00:01:55,220 --> 00:01:59,885
+And we can see here that
+we've got our counter client test class,
+
+31
+00:01:59,908 --> 00:02:05,920
+Which inherits from Vtest test
+and it has a set up phase, but
+
+32
+00:02:05,920 --> 00:02:09,394
+it doesn't look like it has any actual tests in it.
+
+33
+00:02:09,390 --> 00:02:16,880
+Instead it's just used to do the set up, and then
+this child class integrated counter client test 
+
+34
+00:02:16,880 --> 00:02:20,274
+is the one that's actually running the tests.
+
+35
+00:02:20,270 --> 00:02:29,268
+And that does it's own minor piece of set up
+providing I guess, the integrated collaborator.
+
+36
+00:02:31,405 --> 00:02:35,782
+CB: Inaud using HDP for the client right?
+
+37
+00:02:35,780 --> 00:02:42,297
+SP: Yes so whatever this LHTTP thing is
+erm... that's presumably making the real
+
+38
+00:02:42,290 --> 00:02:46,365
+HTTP requests giving our integrated test.
+
+39
+00:02:46,380 --> 00:02:51,668
+And then we have our test
+for the degenerate case erm...
+
+40
+00:02:51,660 --> 00:02:58,274
+... so that uninitialized key has a count
+of zero and then 1 and a random number.
+
+41
+00:02:59,497 --> 00:03:01,657
+These test seem like they are pretty good.
 
