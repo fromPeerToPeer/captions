@@ -541,3 +541,84 @@ happen with a collaborator in the middle?
 00:09:43,650 --> 00:09:46,994
 [New Chapter]
 
+120
+00:09:47,737 --> 00:09:51,060
+SP: So we need to write this library now.
+
+121
+00:09:51,060 --> 00:10:01,440
+And I think we'll do that as a new gem
+and so we'll move out of our project,
+
+122
+00:10:01,440 --> 00:10:06,194
+and do bundle gem bond.
+
+123
+00:10:06,190 --> 00:10:13,520
+This will have bundler initialise and create the
+new gem for us with all of the necessary set up.
+
+124
+00:10:15,908 --> 00:10:18,354
+It's done that.
+
+125
+00:10:18,445 --> 00:10:22,034
+CB: There's got to be a gem
+called bond out there in the world.
+
+126
+00:10:22,030 --> 00:10:26,617
+SP: I'm sure we're stomping on someone else gem in inaud space but...
+
+127
+00:10:26,610 --> 00:10:28,308
+CB: It's experimental.
+
+128
+00:10:28,300 --> 00:10:31,634
+SP: This will be fine for what we're doing.
+
+129
+00:10:31,630 --> 00:10:36,685
+So this is what our project looks like
+after bundler has generated for us.
+
+130
+00:10:36,680 --> 00:10:39,977
+There's a bit more in here.
+
+131
+00:10:40,045 --> 00:10:44,468
+One thing that's worth noting is we
+now have a spec directory not a test directory
+
+132
+00:10:44,460 --> 00:10:49,725
+and that's got bundler set up to
+automatically include RSpec into projects for me.
+
+133
+00:10:51,165 --> 00:10:55,257
+CB: So are we going to write our tests for inaud
+
+134
+00:10:55,250 --> 00:10:58,080
+RSpec and then revert back
+to mini-test for our client.
+
+135
+00:10:58,080 --> 00:11:05,794
+SP: Yes, so the idea would be that,
+our spy library, we can test it in whatever,
+
+136
+00:11:05,790 --> 00:11:07,200
+it doesn't really matter.
+
+137
+00:11:07,200 --> 00:11:13,291
+And then it's actually just going to be a
+module that we can include into any set of tests,
+
