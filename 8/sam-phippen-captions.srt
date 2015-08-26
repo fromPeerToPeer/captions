@@ -143,7 +143,7 @@ it doesn't look like it has any actual tests in it.
 33
 00:02:09,390 --> 00:02:16,880
 Instead it's just used to do the set up, and then
-this child class integrated counter client test 
+this child class integrated counter client test
 
 34
 00:02:16,880 --> 00:02:20,274
@@ -178,6 +178,174 @@ for the degenerate case erm...
 of zero and then 1 and a random number.
 
 41
-00:02:59,497 --> 00:03:01,657
-These test seem like they are pretty good.
+00:02:59,714 --> 00:03:01,988
+These test seem like they are pretty good,
+
+42
+00:03:02,045 --> 00:03:05,177
+covering for the behaviour of the actual object.
+
+43
+00:03:07,805 --> 00:03:11,805
+CB: Yes, let's have a look at what the
+object does, we can only see a couple of methods
+
+44
+00:03:12,011 --> 00:03:15,302
+SP: Sure so...
+
+45
+00:03:15,474 --> 00:03:21,154
+... counter client object can
+be initialized with an HTTP,
+
+46
+00:03:21,150 --> 00:03:29,874
+it has a get method which delegates onto the HTTP
+and an increment method which does the same.
+
+47
+00:03:29,870 --> 00:03:33,885
+So that gives us the API that we're dealing with here.
+
+48
+00:03:33,880 --> 00:03:39,474
+And it's worth noting that there's a small
+fix we can make here before we move on.
+
+49
+00:03:40,068 --> 00:03:45,160
+At the top of the file here we're
+acquiring LHTTP but it looks like it's actually...
+
+50
+00:03:45,160 --> 00:03:46,434
+CB: We're not actually using it anywhere here.
+
+51
+00:03:46,430 --> 00:03:52,960
+SP: Sure, but it's being dependency injected so
+I guess sometime in the past this file needed that.
+
+52
+00:03:53,040 --> 00:03:55,782
+CB: Alright and it's going to inaud to get that out.
+
+53
+00:03:55,780 --> 00:03:59,954
+SP: We should be able to play
+that away and still pass all the tests.
+
+54
+00:03:59,950 --> 00:04:02,937
+[Sam thinks]
+
+55
+00:04:06,920 --> 00:04:12,960
+And the reason we're failing is that
+it's not being required in the test,
+
+56
+00:04:12,994 --> 00:04:18,770
+which is where it should be
+being required, so let's also fix that.
+
+57
+00:04:21,805 --> 00:04:26,765
+And I've put the require at the
+top there but it can go either way.
+
+58
+00:04:26,760 --> 00:04:29,634
+Great, so we've past all of our tests.
+
+59
+00:04:30,120 --> 00:04:32,811
+Back to green... that's nice. 
+
+60
+00:04:32,857 --> 00:04:39,782
+So we've made a more change without having
+to think too hard about anything in particular.
+
+61
+00:04:39,780 --> 00:04:48,377
+So, the challenge adequately
+describes the problem with these tests.
+
+62
+00:04:49,360 --> 00:04:58,520
+There's no actual evidence here of any real collaborations between the inaud HTTP and the counter client.
+
+63
+00:04:58,960 --> 00:05:06,445
+If you look in these tests, no actual
+interactions occur with LHTTP and the test itself.
+
+64
+00:05:06,600 --> 00:05:10,960
+It's assumed therefore that the client is
+delegating that, and we know that's the case,
+
+65
+00:05:10,971 --> 00:05:15,794
+but it would be nice to have
+evidence in test as well as evidence in code.
+
+66
+00:05:15,790 --> 00:05:20,834
+CB: Right so when we look at that test, we have
+no confidence that there is a HTTP thing going on,
+
+67
+00:05:20,830 --> 00:05:24,011
+and someone might have just put a hash and memory....
+
+68
+00:05:24,010 --> 00:05:29,622
+SP: Right, exactly, so I think it would
+be a good idea to add some isolated tests
+
+69
+00:05:29,620 --> 00:05:35,062
+which use the the fact that the
+counter client is already dependency injection
+
+70
+00:05:35,060 --> 00:05:42,400
+to specify the contract effectively between
+the object, which will be an isolated test.
+
+71
+00:05:42,400 --> 00:05:48,125
+CB: So here we don't care about that it's
+using HTTP, all we care about is that our HTTP thing
+
+72
+00:05:48,120 --> 00:05:50,228
+that we've dependency
+injected in our counter client,
+
+73
+00:05:50,262 --> 00:05:53,634
+is going to be called in lots
+of different ways and do the work.
+
+74
+00:05:53,630 --> 00:05:55,817
+Not just something else, right?
+
+75
+00:05:55,810 --> 00:06:05,588
+SP: Yes, effectively the counter client and
+doing HTTP are at different levels of construction.
+
+76
+00:06:06,788 --> 00:06:09,600
+The specific languages here are different.
+
+77
+00:06:09,600 --> 00:06:13,645
+The counter client has methods that
+are talking in terms of our domain rate,
 
