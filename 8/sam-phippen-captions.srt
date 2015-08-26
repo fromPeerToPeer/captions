@@ -345,7 +345,199 @@ doing HTTP are at different levels of construction.
 The specific languages here are different.
 
 77
-00:06:09,600 --> 00:06:13,645
+00:06:09,600 --> 00:06:15,542
 The counter client has methods that
-are talking in terms of our domain rate,
+are talking in terms of our domain rate, inaud
+
+78
+00:06:15,540 --> 00:06:21,657
+And the HTTP client has inaud that is talking in terms of HTTP inaud get post URLs
+
+79
+00:06:21,690 --> 00:06:29,760
+and then here we also we have conversion
+from the string to the integer response body
+
+80
+00:06:29,840 --> 00:06:37,188
+because we have integer counts but
+we obviously can't specify the HTTP body.
+
+81
+00:06:37,337 --> 00:06:42,948
+So I think it would be a good
+idea to add a set of isolated tests,
+
+82
+00:06:43,050 --> 00:06:45,051
+which will take us into our spying library.
+
+83
+00:06:45,050 --> 00:06:50,651
+CB: OK, so let's go back to our tests and can
+you show me where you would like to get started
+
+84
+00:06:50,650 --> 00:06:54,925
+in terms of what is it we would
+like to look at on this HTTP object.
+
+85
+00:06:54,920 --> 00:06:59,771
+SP: Sure, so we'll start by adding a test to get that.
+
+86
+00:06:59,770 --> 00:07:05,074
+So we're going to have a new test case
+which will be isolated counter client test.
+
+87
+00:07:05,165 --> 00:07:08,880
+Which is itself going to inherit
+from the counter client test base.
+
+88
+00:07:09,325 --> 00:07:11,611
+The same way our previous one did.
+
+89
+00:07:11,862 --> 00:07:16,948
+It's going to have a set up block, and
+here it's going to be mostly the same.
+
+90
+00:07:17,460 --> 00:07:24,068
+except we are going to need to provide
+an isolated dependency, not the HTTP client,
+
+91
+00:07:24,080 --> 00:07:26,548
+so that we can observe interactions.
+
+92
+00:07:27,062 --> 00:07:30,788
+So this is going to be our spy object.
+
+93
+00:07:31,588 --> 00:07:34,765
+CB: OK, so I'm going to let you go on for a few seconds
+
+94
+00:07:34,760 --> 00:07:38,022
+then I'm going to ask you lots of
+obnoxious questions about spies.
+
+95
+00:07:38,194 --> 00:07:43,840
+SP: So we need a name for our spying library.
+
+96
+00:07:45,085 --> 00:07:52,650
+I was thinking Bond... so we'll
+say that each HTTP is a new bond.
+
+97
+00:07:55,108 --> 00:07:59,382
+CB: We're getting very British Government with
+this and I can only whole heartedly approve.
+
+98
+00:07:59,460 --> 00:08:04,960
+SP: So we'll pretend for the moment
+there exists a module called Bond,
+
+99
+00:08:05,051 --> 00:08:10,788
+which provides us this
+method and then we'll run the test.
+
+100
+00:08:10,780 --> 00:08:16,514
+CB: So what do you imagine this method
+doing, what is our Bond history going to do?
+
+101
+00:08:19,234 --> 00:08:26,050
+The Bond object is going to be
+a minimum viable implementation.
+
+102
+00:08:26,148 --> 00:08:30,388
+Or something that looks like
+how spies are implemented in RSpec.
+
+103
+00:08:31,302 --> 00:08:35,828
+CB: So why don't we talk about how that
+works, as in the minimum viable stuff in there.
+
+104
+00:08:36,594 --> 00:08:42,765
+SP: In RSpec, spy objects respond to all method calls,
+
+105
+00:08:42,760 --> 00:08:50,651
+that is, whenever you invoke any method on
+a spy it will actually succeed and then return self.
+
+106
+00:08:50,880 --> 00:08:54,100
+which means you can do inaud, because when you get the object back
+
+107
+00:08:54,100 --> 00:08:56,822
+it's the same object which can respond to any method
+
+108
+00:08:56,820 --> 00:09:04,034
+so you can do eg. spy. inaud and that would work because it's just returning spy on each inaud
+
+109
+00:09:04,830 --> 00:09:08,160
+The job of spies, and why they are useful in testing, 
+
+110
+00:09:08,182 --> 00:09:12,262
+is they record all the method
+calls that are made upon them,
+
+111
+00:09:12,260 --> 00:09:18,091
+which means that at the end of our test
+we can assert on the calls that have been made
+
+112
+00:09:18,148 --> 00:09:20,354
+to allow us to observe the interactions.
+
+113
+00:09:20,350 --> 00:09:24,297
+And so here, what we will do when we write our tests,
+
+114
+00:09:24,308 --> 00:09:30,971
+is the counter client will send the
+various methods to our spy object.
+
+115
+00:09:30,970 --> 00:09:34,731
+We'll record them and then we'll assert on them after the inaud
+
+116
+00:09:34,840 --> 00:09:37,942
+CB: So we're doing the exact same tests we're doing on inaud
+
+117
+00:09:37,965 --> 00:09:40,605
+but on top of that we're going to
+have a spy listening in the middle.
+
+118
+00:09:40,600 --> 00:09:43,657
+And making sure the right things
+happen with a collaborator in the middle?
+
+119
+00:09:43,650 --> 00:09:46,994
+[New Chapter]
 
