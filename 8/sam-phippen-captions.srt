@@ -622,3 +622,138 @@ it doesn't really matter.
 And then it's actually just going to be a
 module that we can include into any set of tests,
 
+138
+00:11:13,290 --> 00:11:14,948
+And it should work.
+
+139
+00:11:16,685 --> 00:11:23,428
+The nice thing about using inaud Ruby is they all communicate failures the same way.
+
+140
+00:11:23,420 --> 00:11:29,108
+Which is they raise
+exceptions when expectations fail.
+
+141
+00:11:29,100 --> 00:11:34,240
+So all we need to do to make Bond
+compatible with both RSpec and mini-test,
+
+142
+00:11:34,240 --> 00:11:38,548
+is have it raise the appropriate
+exceptions at the appropriate times.
+
+143
+00:11:38,540 --> 00:11:41,702
+and inaud our tests fail.
+
+144
+00:11:41,700 --> 00:11:49,245
+CB: OK, a question before we go on... inaud Bond so our license inaud or what?
+
+145
+00:11:50,380 --> 00:11:55,017
+SP: Yes, we have an MIT license, we have
+a gem file which has a gem speck in it,
+
+146
+00:11:55,085 --> 00:12:02,845
+and then the Bond gem speck declares development dependencies on bundler and inaud.
+
+147
+00:12:02,840 --> 00:12:08,308
+It has 2 Ds here, we'll just fix those.
+
+148
+00:12:08,445 --> 00:12:11,474
+[Sam thinks]
+
+149
+00:12:12,980 --> 00:12:18,765
+We'll just fix all of this we
+cant have any 'to dos' left or...
+
+150
+00:12:18,788 --> 00:12:22,091
+CB: Why what would happen?
+
+151
+00:12:22,090 --> 00:12:28,217
+SP: My understanding is that bundler
+won't let you compile into a complete gem
+
+152
+00:12:28,210 --> 00:12:32,914
+if you have 'to dos' left in your summary or description or inaud page.
+
+153
+00:12:33,085 --> 00:12:38,262
+So it's to force you to put
+something meaningful in there.
+
+154
+00:12:38,365 --> 00:12:44,342
+This one is fine because there's this response to
+thing in here so we can actually just blow this away.
+
+155
+00:12:44,434 --> 00:12:46,537
+That's from private gems.
+
+156
+00:12:47,291 --> 00:12:51,154
+CB: Alright so if you have your own internal Ruby inaud, OK.
+
+157
+00:12:51,860 --> 00:12:58,937
+SP: One thing that's worth noting is...
+we haven't got a dependency on RSpec declared here.
+
+158
+00:12:59,017 --> 00:13:01,200
+CB: Do you want to add a test
+development dependency on there?
+
+159
+00:13:01,200 --> 00:13:09,485
+SP: I'm actually going to put it in the gem file,
+because we're going to pull RSpec from GitHub Master.
+
+160
+00:13:10,170 --> 00:13:13,874
+This is a thing I tend to do in
+my projects because I work on RSpec
+
+161
+00:13:13,897 --> 00:13:17,360
+and I want to be able to find
+bugs when I'm actually using it.
+
+162
+00:13:17,360 --> 00:13:19,862
+CB: So you just work breeding RSpec or something?
+
+163
+00:13:19,860 --> 00:13:25,017
+SP: Yes, but I am uniquely qualified. [Laughter]
+
+164
+00:13:25,010 --> 00:13:28,697
+No, if that goes wrong we'll find bugs in it.
+
+165
+00:13:28,777 --> 00:13:30,490
+CB: Yes, no question about that.
+
+166
+00:13:30,571 --> 00:13:36,205
+SP: One of the nice things about doing
+this is not only do we have all of our own testing,
+
+167
+00:13:36,200 --> 00:13:43,005
+which on RSpec is pretty strong, but it
+means it's getting some real world usage on master.
+
