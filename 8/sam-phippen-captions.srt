@@ -757,3 +757,246 @@ this is not only do we have all of our own testing,
 which on RSpec is pretty strong, but it
 means it's getting some real world usage on master.
 
+168
+00:13:43,000 --> 00:13:48,811
+We have a pretty strict no red merges policy.
+
+169
+00:13:48,810 --> 00:13:55,714
+So it's very rare that
+master RSpec is non functional.
+
+170
+00:13:57,097 --> 00:14:00,834
+CB: But you have a bunch of tests
+that you run on a bunch of Rubys?
+
+171
+00:14:00,830 --> 00:14:05,097
+SP: Yes, but we'll see. [Laughter]
+
+172
+00:14:05,090 --> 00:14:10,445
+CB: Who knows what today has in store for us.
+
+173
+00:14:10,960 --> 00:14:19,142
+SP: The other thing we will do quickly is GitHub the
+project and add the gem file and the gem spec.
+
+174
+00:14:19,874 --> 00:14:25,600
+And we've got RSpec and spec
+helper, and we'll see what those do.
+
+175
+00:14:25,600 --> 00:14:32,000
+That is the default test that bundler has
+generated which I am going to delete.
+
+176
+00:14:33,200 --> 00:14:40,342
+And with green with some
+examples... so that's a good initial...
+
+177
+00:14:40,468 --> 00:14:45,211
+CB: I love this failing test initially bundler,
+it,s a great way to test your set up.
+
+178
+00:14:45,210 --> 00:14:53,817
+SP: Yes, I typically blow it away as soon as I
+see it hasn't run, but it's useful to have a test there.
+
+179
+00:14:53,810 --> 00:14:56,788
+[Silence]
+
+180
+00:14:58,890 --> 00:15:05,908
+So we sort of specified the API a
+little bit, back in our mini-test.
+
+181
+00:15:05,920 --> 00:15:10,285
+So we have the Bond module
+which we can include into test classes,
+
+182
+00:15:10,280 --> 00:15:15,874
+And that provides us with our DSL,
+which is basically just a method 
+
+183
+00:15:15,885 --> 00:15:18,834
+which will return us an object and it takes a name.
+
+184
+00:15:18,830 --> 00:15:24,891
+The reason we tried that name is so
+we can put it in the inspect strings.
+
+185
+00:15:24,890 --> 00:15:28,457
+Obviously if you have multiple
+spies flying through your system
+
+186
+00:15:28,468 --> 00:15:32,685
+you don't necessary know which one
+is which so it can be useful to tag them.
+
+187
+00:15:32,680 --> 00:15:35,931
+CB: OK so you use a name to
+uniquely identify your things.
+
+188
+00:15:35,930 --> 00:15:41,805
+SP: Yes, this is a thing that I do with
+all my RSpec doubles and all of my RSpec spies.
+
+189
+00:15:41,800 --> 00:15:46,285
+I give them a name which is
+the first parameter they all take.
+
+190
+00:15:46,331 --> 00:15:50,994
+So that we don't have to think
+hard about where it came from later.
+
+191
+00:15:50,990 --> 00:15:54,560
+CB: So this is when you do your let in RSpec and specify inaud double.
+
+192
+00:15:54,560 --> 00:16:02,651
+SP: Exactly.  So given that we've
+specified a public API that seems OK,
+
+193
+00:16:03,005 --> 00:16:09,000
+I'm going to start by writing a high
+level failing test which shows that off.
+
+194
+00:16:09,394 --> 00:16:14,765
+I'm not opposed to that API changing at some point
+if the tests are indicating that's a good thing to do.
+
+195
+00:16:14,857 --> 00:16:17,645
+But it seems like a sensible place to start.
+
+196
+00:16:19,440 --> 00:16:27,394
+So let's open the Bond spec backup
+and the first thing we're going to describe
+
+197
+00:16:27,390 --> 00:16:32,868
+is the .bond class method.
+
+198
+00:16:33,645 --> 00:16:36,937
+And the reason it's a dot and not a hash
+
+199
+00:16:36,930 --> 00:16:40,868
+is that the Bond method will be
+available on the Bond module itself.
+
+200
+00:16:41,782 --> 00:16:48,925
+Not an instance method... no that's wrong,
+it should be a hash, I'm talking no sense.
+
+201
+00:16:48,920 --> 00:16:51,234
+CB: Ok so we're going for an instance method Bond.
+
+202
+00:16:51,230 --> 00:16:58,571
+SP: Because when you do like this: that
+makes all the methods from that module available
+
+203
+00:16:58,570 --> 00:17:04,680
+Right, so when we have a test method like
+test these, right, that is an instance method call.
+
+204
+00:17:04,680 --> 00:17:11,097
+Not a pass method call, I was wrong,
+but I had to work it out by saying it,
+
+205
+00:17:11,131 --> 00:17:12,914
+so that's fine.
+
+206
+00:17:12,910 --> 00:17:17,577
+The other thing I want to check
+before we get too deep into this
+
+207
+00:17:17,570 --> 00:17:25,097
+is the contents of the spec helper, of the project.
+
+208
+00:17:25,630 --> 00:17:32,365
+I'm checking that because it's useful to know
+how your test configurations actually happen.
+
+209
+00:17:32,360 --> 00:17:37,200
+I can immediately see something
+here that I would like to change,
+
+210
+00:17:37,200 --> 00:17:45,257
+which is to do with how the requires, and also
+there's no RSpec configuration block here at all.
+
+211
+00:17:46,137 --> 00:17:51,040
+This is a thing bundler has clearly generated
+for us, but it's not exactly what we want.
+
+212
+00:17:51,040 --> 00:17:57,988
+So I'm going to have RSpec overwrite the
+bundler configuration with its own defaults,
+
+213
+00:17:59,520 --> 00:18:02,548
+CB: So this is your inaud RSpec yes?
+
+214
+00:18:02,540 --> 00:18:08,674
+SP: Yes, so BER is just an alias
+that expands to bundle exec RSpec.
+
+215
+00:18:09,600 --> 00:18:18,342
+[Big sigh] it's inaud a lot, so now if I just close the spec helper and re-open it.
+
+216
+00:18:18,445 --> 00:18:21,680
+That should have changed but it hasn't.
+
+217
+00:18:21,874 --> 00:18:24,685
+Am I doing something wrong?
+
+218
+00:18:27,417 --> 00:18:30,857
+CB: Can you do something to force it or remove it?
+
+219
+00:18:30,914 --> 00:18:37,234
+Maybe.  That's interesting,
+I usually don't have this problem.
+
