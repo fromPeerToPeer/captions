@@ -1000,3 +1000,199 @@ CB: Can you do something to force it or remove it?
 Maybe.  That's interesting,
 I usually don't have this problem.
 
+220
+00:18:38,365 --> 00:18:44,960
+Let's just delete the whole spec directory, that
+will make sure we just have exactly what we want.
+
+221
+00:18:45,040 --> 00:18:51,611
+Great, and now we have the default
+generated RSpec configuration.
+
+222
+00:18:51,908 --> 00:18:57,630
+This is a file filled with comments, I'm going to
+blow most of them away, that's what I usually do.
+
+223
+00:19:00,880 --> 00:19:04,388
+There's a lot of stuff that's usuful in here.
+
+224
+00:19:04,380 --> 00:19:09,897
+CB: I actually like it, it gives you the options
+available without having to configure it.
+
+225
+00:19:10,148 --> 00:19:13,142
+[Sam dictates what he writes]
+
+226
+00:19:14,765 --> 00:19:20,068
+SP: This is a setting I turn on inaud my spec helpers.
+
+227
+00:19:20,060 --> 00:19:24,251
+It basically stops RSpec from going away,
+
+228
+00:19:24,250 --> 00:19:29,737
+and patching methods onto
+all objects and classes, whatever. 
+
+229
+00:19:29,730 --> 00:19:35,508
+So it disables the inaud syntax, but it also disables bare describe.
+
+230
+00:19:35,657 --> 00:19:48,034
+This is a lesser known thing it does, but if we reopen our one spec inaud file, which I deleted,
+
+231
+00:19:49,188 --> 00:19:56,342
+Require spec helper, and then type inaud describe, like we had before with bundler.
+
+232
+00:19:56,834 --> 00:20:05,480
+This won't work because we're in main,
+we're not in the main object, right. 
+
+233
+00:20:05,668 --> 00:20:06,857
+CB: OK.
+
+234
+00:20:06,850 --> 00:20:14,217
+SP: So disable monkey patching has
+removed describe from module and object.
+
+235
+00:20:14,210 --> 00:20:16,205
+We're at inaud spider fault.
+
+236
+00:20:16,200 --> 00:20:19,497
+CB: So why would you recommend inaud these tests.
+
+237
+00:20:19,660 --> 00:20:25,314
+SP: It's mostly so if you end up writing
+an object which has a method called describe,
+
+238
+00:20:25,805 --> 00:20:29,108
+RSpec doesn't stomp on you, which people actually do.
+
+239
+00:20:29,100 --> 00:20:32,742
+It' not like describe is such an uncommon word.
+
+240
+00:20:32,880 --> 00:20:35,577
+And nor should it specifically belong to RSpec.
+
+241
+00:20:35,570 --> 00:20:39,840
+CB: So is it specifically describe,
+or are there other things going on here?
+
+242
+00:20:39,840 --> 00:20:47,302
+It's a bunch of RSpec DSL methods so
+it also removes the example and specify. 
+
+243
+00:20:48,114 --> 00:20:54,342
+And basically those are all aliases of each
+other that delegate on to doing the same thing.
+
+244
+00:20:54,340 --> 00:20:55,760
+CB: They all describe inaud
+
+245
+00:20:55,760 --> 00:21:02,868
+SP: Yes, but the point is that's it's
+better not to have to think about that.
+
+246
+00:21:02,860 --> 00:21:07,725
+The only trade off is it means you have
+to write RSpec.describe at the top of your file.
+
+247
+00:21:07,720 --> 00:21:12,457
+But once your in here you can write
+describe as normal, and the reason for that
+
+248
+00:21:12,450 --> 00:21:16,731
+is that we're inside inaud we have trust.
+
+249
+00:21:17,740 --> 00:21:24,457
+We've got out MT test set up and
+we need to write first test which will sort of
+
+250
+00:21:25,020 --> 00:21:31,977
+help us begin to push the feature, which means
+we need the method to have it do something.
+
+251
+00:21:32,251 --> 00:21:37,000
+I think we will start by having
+it return a Bond spy object.
+
+252
+00:21:38,125 --> 00:21:41,485
+We're basically just going to make the class
+
+253
+00:21:41,480 --> 00:21:45,805
+then assert on getting an
+object of the correct type back.
+
+254
+00:21:45,897 --> 00:21:51,920
+This isn't the best test for where we want
+to end up, but it's good enough to begin
+
+255
+00:21:51,920 --> 00:21:56,148
+bootstrapping it and it will
+probably go away at some point as well.
+
+256
+00:21:56,308 --> 00:22:03,142
+I generally try not to have object type checks
+by the time I've done rating my tests but...
+
+257
+00:22:03,211 --> 00:22:06,685
+CB: But how do you test for inaud if it responds to all of the methods?
+
+258
+00:22:07,314 --> 00:22:09,005
+Quaks, like, all the Ducks.
+
+259
+00:22:09,370 --> 00:22:14,377
+SP: Fortunately, there is a protocol in Ruby we can use, 
+
+260
+00:22:15,062 --> 00:22:20,600
+regardless of how pathological
+the interface to our object is.
+
+261
+00:22:20,994 --> 00:22:27,142
+We might end up using that internally as
+we're writing... it's the triple equals protocol.
+
+262
+00:22:31,070 --> 00:22:36,971
+What RSpec does internally is it will
+triple equals. the class against the object.
+
