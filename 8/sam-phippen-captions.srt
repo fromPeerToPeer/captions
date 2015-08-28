@@ -1196,3 +1196,73 @@ we're writing... it's the triple equals protocol.
 What RSpec does internally is it will
 triple equals. the class against the object.
 
+263
+00:22:37,005 --> 00:22:43,360
+If we say, expect this to be a kind of
+that, it will use triple equals to do that.
+
+264
+00:22:44,194 --> 00:22:49,405
+We don't need to worry about designing
+an object that doesn't work against RSpec,
+
+265
+00:22:49,400 --> 00:22:56,354
+because RSpec really is designed
+for all kinds of screwy objects like this
+
+266
+00:22:57,702 --> 00:23:04,000
+What we are going to end up doing
+will end up being similar but more powerful
+
+267
+00:23:04,000 --> 00:23:08,468
+than, for example to how active
+record defines attributes methods.
+
+268
+00:23:08,460 --> 00:23:13,108
+where, like, they're missing and then
+they get defined when you ask for them,
+
+269
+00:23:13,100 --> 00:23:16,011
+And it's kind of magical, but this should be fine.
+
+270
+00:23:16,010 --> 00:23:21,394
+So I'm going to say it returns a Bond spy.
+
+271
+00:23:21,680 --> 00:23:24,640
+Which I need to type correctly!
+
+272
+00:23:24,640 --> 00:23:32,445
+Bond spy and then we'll
+say expect Bond - this is arbitrary,
+
+273
+00:23:32,440 --> 00:23:35,280
+[Sam thinks]
+
+274
+00:23:35,280 --> 00:23:40,262
+... to be a kind of Bond spy.
+
+275
+00:23:40,365 --> 00:23:49,428
+The other thing we need to make
+this work is to include Bond into our tests.
+
+276
+00:23:49,782 --> 00:24:00,845
+And so, we've actually taken a reasonably large
+step here, but given that we defined the API earlier,
+
+277
+00:24:00,840 --> 00:24:04,868
+I sort of want to get that down
+into paper before I run the test.
+
