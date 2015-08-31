@@ -1432,3 +1432,261 @@ CB: I don't know how you are including all your files...
 SP: Let's just see if that magically
 makes it work... it totally does.
 
+316
+00:27:13,620 --> 00:27:19,097
+My guess would be, Bond version, the versoion inaud was being loaded,
+
+317
+00:27:19,090 --> 00:27:24,868
+but not the whole module,
+because this file defines the module.
+
+318
+00:27:24,860 --> 00:27:29,348
+CB: inaud no methods and try to inaud methods over it and not including them.
+
+319
+00:27:30,457 --> 00:27:32,660
+Ah Ruby....
+
+320
+00:27:32,754 --> 00:27:37,657
+SP: Yes, even RSpec inaud sometimes.
+
+321
+00:27:38,180 --> 00:27:42,640
+CB: I do like that it's really explicit though
+and you don't have magical things happening,
+
+322
+00:27:42,685 --> 00:27:44,994
+It's a good thing that it fails.
+
+323
+00:27:44,990 --> 00:27:47,645
+SP: So if we do this now, does it work?
+
+324
+00:27:48,057 --> 00:27:52,948
+Yes totally, great, awesome.
+
+325
+00:27:52,940 --> 00:27:57,805
+It's nice to know Ruby works
+how I think it works. [Laughter]
+
+326
+00:27:57,800 --> 00:28:01,874
+CB: Is there a mysterious thing to tack on the end inaud.
+
+327
+00:28:01,920 --> 00:28:07,040
+So our test failure was, got 
+one argument, expected zero,
+
+328
+00:28:07,040 --> 00:28:10,491
+So we can fix that with inaud name in here.
+
+329
+00:28:10,490 --> 00:28:15,520
+And we run all the tests and now
+we have uninitialized constant, Bond spy.
+
+330
+00:28:15,520 --> 00:28:18,102
+And now we're cooking.
+
+331
+00:28:18,100 --> 00:28:23,451
+And so because Bond is the top level of our library,
+
+332
+00:28:23,450 --> 00:28:28,388
+I'm going to have it pull in
+most of the constants we define here.
+
+333
+00:28:28,380 --> 00:28:32,502
+So we'll require a Bond spy here in just a second.
+
+334
+00:28:32,560 --> 00:28:38,594
+The reason I'm not going to require
+that in the test is... I like to think of...
+
+335
+00:28:38,590 --> 00:28:42,640
+... at least these really high level
+tests of library, as if they're a direct client,
+
+336
+00:28:42,640 --> 00:28:49,897
+and you're never going to see Bond
+spy in your own usage of the library,
+
+337
+00:28:49,890 --> 00:28:54,320
+It's going to be a detail which is hidden from you.
+
+338
+00:28:54,320 --> 00:28:59,280
+Your just going to rely on the testing API
+that we provide, so you don't need to know about it.
+
+339
+00:28:59,310 --> 00:29:03,931
+So we'll require it here at
+the top level of the library.
+
+340
+00:29:03,960 --> 00:29:07,577
+If I was planning on
+maintaining this library forever,
+
+341
+00:29:07,570 --> 00:29:13,222
+I would also mark the
+Bond spy constant as API private,
+
+342
+00:29:13,220 --> 00:29:17,680
+so that people knew not
+to interface with it directly.
+
+343
+00:29:17,760 --> 00:29:29,451
+Given this is a toy, we'll add that
+require there and we'll make lib bond spy.rp
+
+344
+00:29:29,542 --> 00:29:36,840
+which will be module bond class spy, that
+should be enough to get us to the next test failure.
+
+345
+00:29:36,914 --> 00:29:42,411
+And right, we've got expected
+nil to be a kind of Bond spy.
+
+346
+00:29:43,760 --> 00:29:51,508
+To satisfy this we can just do bond spy.new and I'm going to thread the inaud through here, 
+
+347
+00:29:51,520 --> 00:29:56,971
+and cheat slightly, and pass that in as well.
+
+348
+00:29:56,970 --> 00:30:01,908
+So now when we run this
+my test should pass... and it does.
+
+349
+00:30:01,900 --> 00:30:11,474
+So now we've written this new bond spy
+class it's probably useful to start writing tests
+
+350
+00:30:11,470 --> 00:30:14,822
+that describe the
+behaviour of this class in detail
+
+351
+00:30:14,820 --> 00:30:23,942
+before we  pop back up and begin talking about
+the library, because I cheated very slightly here.
+
+352
+00:30:24,090 --> 00:30:34,560
+We could also think about writing
+a top level test on the bond library itself.
+
+353
+00:30:34,700 --> 00:30:36,775
+CB: Alright, what did you have in mind?
+
+354
+00:30:36,770 --> 00:30:43,191
+SP: So the next test would be 'it responds to all method calls'.
+
+355
+00:30:43,786 --> 00:30:50,550
+But because this is just like a DSL
+that wraps the object construction,
+
+356
+00:30:50,610 --> 00:30:54,302
+I'm tempted to make these
+tests appear on the spy class itself.
+
+357
+00:30:55,090 --> 00:31:01,632
+They could go in either place and I want
+to make sure there's no test duplication as well.
+
+358
+00:31:01,790 --> 00:31:04,816
+Although the nice thing about
+having them on the top level is that it
+
+359
+00:31:04,810 --> 00:31:10,544
+provides very explicit usage documentation because we're interfacing with the inaud API.
+
+360
+00:31:10,672 --> 00:31:13,376
+So maybe let's start there.
+
+361
+00:31:13,370 --> 00:31:19,424
+CB: We can always move them around later on.
+SP: That's true.
+
+362
+00:31:20,240 --> 00:31:30,400
+The next test we're going to write will cover
+the entire behaviour work flow of the library.
+
+363
+00:31:30,448 --> 00:31:35,160
+of the library, now that I think we've got it all connected together, 
+
+364
+00:31:35,160 --> 00:31:39,712
+It's useful to think about how
+the library is actually going to work.
+
+365
+00:31:39,710 --> 00:31:49,264
+So I think an adequate description here
+is 'responds to all method calls and records them'.
+
+366
+00:31:49,260 --> 00:31:54,256
+And we'll write the simplest
+possible way to verify that.
+
+367
+00:31:54,250 --> 00:32:06,624
+So my spy is a bond... these names are arbitrary... inaud method name.
+
+368
+00:32:06,700 --> 00:32:12,656
+and we need another method for
+our library which is creating expectations
+
+369
+00:32:12,670 --> 00:32:15,792
+for the methods that were actually received.
+
+370
+00:32:15,870 --> 00:32:21,456
+And that method can't live on the spy
+object itself, it needs to live on the library.
+
+371
+00:32:21,456 --> 00:32:28,032
+And the reason is because the spy object
+responds to all method calls and records them.
+
