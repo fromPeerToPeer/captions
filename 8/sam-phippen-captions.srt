@@ -261,7 +261,7 @@ Great, so we've past all of our tests.
 
 59
 00:04:30,120 --> 00:04:32,811
-Back to green... that's nice. 
+Back to green... that's nice.
 
 60
 00:04:32,857 --> 00:04:39,782
@@ -494,7 +494,7 @@ so you can do eg. spy. inaud and that would work because it's just returning spy
 
 109
 00:09:04,830 --> 00:09:08,160
-The job of spies, and why they are useful in testing, 
+The job of spies, and why they are useful in testing,
 
 110
 00:09:08,182 --> 00:09:12,262
@@ -826,7 +826,7 @@ which we can include into test classes,
 182
 00:15:10,280 --> 00:15:15,874
 And that provides us with our DSL,
-which is basically just a method 
+which is basically just a method
 
 183
 00:15:15,885 --> 00:15:18,834
@@ -1039,7 +1039,7 @@ It basically stops RSpec from going away,
 228
 00:19:24,250 --> 00:19:29,737
 and patching methods onto
-all objects and classes, whatever. 
+all objects and classes, whatever.
 
 229
 00:19:29,730 --> 00:19:35,508
@@ -1056,7 +1056,7 @@ Require spec helper, and then type inaud describe, like we had before with bundl
 232
 00:19:56,834 --> 00:20:05,480
 This won't work because we're in main,
-we're not in the main object, right. 
+we're not in the main object, right.
 
 233
 00:20:05,668 --> 00:20:06,857
@@ -1100,7 +1100,7 @@ or are there other things going on here?
 242
 00:20:39,840 --> 00:20:47,302
 It's a bunch of RSpec DSL methods so
-it also removes the example and specify. 
+it also removes the example and specify.
 
 243
 00:20:48,114 --> 00:20:54,342
@@ -1179,7 +1179,7 @@ Quaks, like, all the Ducks.
 
 259
 00:22:09,370 --> 00:22:14,377
-SP: Fortunately, there is a protocol in Ruby we can use, 
+SP: Fortunately, there is a protocol in Ruby we can use,
 
 260
 00:22:15,062 --> 00:22:20,600
@@ -1265,4 +1265,170 @@ step here, but given that we defined the API earlier,
 00:24:00,840 --> 00:24:04,868
 I sort of want to get that down
 into paper before I run the test.
+
+278
+00:24:04,860 --> 00:24:09,965
+We could have done inaud Bond, watch it fail, call the method, watch it fail,
+
+279
+00:24:11,080 --> 00:24:14,080
+Watch the class beyond
+defined and then define that,
+
+280
+00:24:14,114 --> 00:24:18,937
+but I think it's useful at this
+point to have all that written down.
+
+281
+00:24:19,234 --> 00:24:23,337
+In the strictest sense, we've skipped
+some steps but again I think that's fine.
+
+282
+00:24:23,330 --> 00:24:25,668
+CB: In the strictest sense, but your also
+trying to show me where you're going,
+
+283
+00:24:25,660 --> 00:24:29,085
+so it's useful to have the API right there.
+
+284
+00:24:29,080 --> 00:24:32,628
+SP: Sure, alright let's run it and see what happens.
+
+285
+00:24:33,130 --> 00:24:41,560
+So we failed with undefined method Bond for RSpec inaud Bond, which is great.
+
+286
+00:24:41,720 --> 00:24:50,891
+So to fix that we can just go to
+the bond module, define the method,
+
+287
+00:24:50,920 --> 00:24:54,697
+and that should get us to the next failure.
+
+288
+00:24:55,900 --> 00:24:59,005
+Doing that, we still have undefined method Bond,
+
+289
+00:24:59,000 --> 00:25:02,788
+so let's work out what's
+going on to the documentation.
+
+290
+00:25:02,780 --> 00:25:03,942
+CB: OK
+
+291
+00:25:05,302 --> 00:25:08,251
+SP: This is pretty standard.
+
+292
+00:25:12,800 --> 00:25:18,102
+It's probably worth me pointing out here
+that I'm totally fine with Googling stuff like this
+
+293
+00:25:18,137 --> 00:25:21,165
+all the time, even though I should know it.
+
+294
+00:25:21,160 --> 00:25:27,200
+I think having the stuff offloaded into the
+collective brain of the Internet is a good thing.
+
+295
+00:25:27,200 --> 00:25:31,508
+None of this is what we want, although we could...
+
+296
+00:25:31,500 --> 00:25:33,817
+CB: Module spy!
+
+297
+00:25:33,810 --> 00:25:36,354
+SP: No say, [Laughter]
+
+298
+00:25:36,350 --> 00:25:38,731
+CB: Distance.
+
+299
+00:25:38,730 --> 00:25:45,360
+SP: I think what we should do here, instead
+of screwing around with RSpec too much,
+
+300
+00:25:45,360 --> 00:25:50,891
+we can have a subject object
+which can be included into it.
+
+301
+00:25:50,890 --> 00:25:53,874
+[Silence]
+
+302
+00:25:54,331 --> 00:26:00,914
+So here I'm going to do object.new.tap.
+
+303
+00:26:01,988 --> 00:26:07,817
+And then we're going to extend Bond.
+
+304
+00:26:07,810 --> 00:26:10,845
+[Silence]
+
+305
+00:26:12,434 --> 00:26:16,674
+Let's just format this so it makes sense.
+
+306
+00:26:16,670 --> 00:26:22,662
+Basically, we are going to make a new object,
+
+307
+00:26:22,660 --> 00:26:31,760
+and then the tap gives us the ability
+to mutate that object and then return it.
+
+308
+00:26:33,440 --> 00:26:38,948
+Sending extend there should work...
+I can't remember if extend is private...
+
+309
+00:26:42,034 --> 00:26:47,394
+So if we do Bond holder.bond arbitrary.
+
+310
+00:26:49,211 --> 00:26:52,514
+Undefined method bond inaud object... [Sam thinks]
+
+311
+00:26:52,510 --> 00:26:56,697
+CB: OK, we are extending the
+module, are we extending the right thing
+
+312
+00:26:56,690 --> 00:27:00,491
+and are we requiring the right things?
+
+313
+00:27:00,537 --> 00:27:05,622
+SP: That's a good question... what's going on here...
+
+314
+00:27:05,977 --> 00:27:09,245
+CB: I don't know how you are including all your files...
+
+315
+00:27:09,240 --> 00:27:13,622
+SP: Let's just see if that magically
+makes it work... it totally does.
 
