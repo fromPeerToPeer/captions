@@ -1690,3 +1690,211 @@ object itself, it needs to live on the library.
 And the reason is because the spy object
 responds to all method calls and records them.
 
+372
+00:32:28,030 --> 00:32:38,288
+So bond did you receive? Something like this...
+
+373
+00:32:38,528 --> 00:32:40,832
+And this could be a symbol, or a string ...
+
+374
+00:32:40,830 --> 00:32:45,904
+CB: So is this another test because we have the inaud something,
+
+375
+00:32:45,936 --> 00:32:52,432
+and then we have the action knows how to
+tell me whether the things I want have happened.
+
+376
+00:32:52,430 --> 00:33:03,504
+SP: Yes, the other test we could write is...
+it fails the test when it didn't receive a method call.
+
+377
+00:33:04,176 --> 00:33:09,088
+CB: And this is the usual inaud reception thing which is the default test.
+
+378
+00:33:09,080 --> 00:33:15,024
+SP: We expect this to raise error, we don't really care about the inaud pass right now.
+
+379
+00:33:16,640 --> 00:33:19,472
+So this is all the behaviour we probably need.
+
+380
+00:33:19,504 --> 00:33:24,112
+It's just a case of which one
+we want to go after first.
+
+381
+00:33:24,256 --> 00:33:30,624
+I think it's going to be easier to write small
+amounts of code to get the raise error to pass.
+
+382
+00:33:30,896 --> 00:33:36,270
+Before having to implement
+the 'it records everything'.
+
+383
+00:33:36,270 --> 00:33:45,120
+So for the moment, I'm going to make
+this an exit so it doesn't run all our tests.
+
+384
+00:33:45,312 --> 00:33:51,536
+And so if we run everything now,
+we have our return to bond spy.
+
+385
+00:33:51,530 --> 00:33:54,016
+CB: We've got one that's skipped.
+
+386
+00:33:54,010 --> 00:34:01,488
+[Sam reads the message on screen].
+
+387
+00:34:01,480 --> 00:34:06,144
+CB: We're trying to be generic and RSpec is helping us not be inaud.
+
+388
+00:34:06,190 --> 00:34:15,040
+SP: So, that warning is useful and it's telling
+us we need to specify an error class or a message.
+
+389
+00:34:15,040 --> 00:34:22,576
+And I think what I'll do for the moment,
+so we don't get a constant missing failure,
+
+390
+00:34:22,608 --> 00:34:36,176
+is have an expected to receive,
+and then it's this method name.
+
+391
+00:34:36,928 --> 00:34:40,464
+This is useful because we can just close this other pane for a moment,
+
+392
+00:34:40,608 --> 00:34:49,290
+we can see that we've now got a tiny bit of
+duplication in our test, that I'd like to get rid of.
+
+393
+00:34:49,290 --> 00:34:53,872
+So we'll lift that into a let.
+
+394
+00:34:53,870 --> 00:34:56,896
+[Silence]
+
+395
+00:34:59,408 --> 00:35:02,432
+That can be this erm.....
+
+396
+00:35:02,430 --> 00:35:05,440
+[Silence]
+
+397
+00:35:06,256 --> 00:35:08,752
+And then...
+
+398
+00:35:10,560 --> 00:35:17,248
+Now that expectation and the bond that you receive
+have the same string being assigned to them.
+
+399
+00:35:17,392 --> 00:35:20,560
+It's like 'called out' is
+the thing were comparing on.
+
+400
+00:35:20,750 --> 00:35:24,800
+One thing I like to do,
+when writing these kinds of tests,
+
+401
+00:35:25,280 --> 00:35:31,008
+is call out anything that is going
+to be a comparison, into a let,
+
+402
+00:35:31,120 --> 00:35:38,896
+because where you pass it in your being
+extremely explicit that it's the exact same thing.
+
+403
+00:35:40,016 --> 00:35:45,664
+For example, imagine that we were testing
+something that used numbers, and said, that is a 5
+
+404
+00:35:45,660 --> 00:35:50,384
+Well, there it's much more obvious
+that the method names are the same.
+
+405
+00:35:50,380 --> 00:35:59,840
+But if I have a 5 here and another 5 here,
+it's not so explicit that that's what's going on.
+
+406
+00:36:01,184 --> 00:36:07,584
+So yes, that will be the first test that we
+get working, and then we'll look at the other ones.
+
+407
+00:36:07,580 --> 00:36:11,936
+So if I run this now it's going to fail.
+
+408
+00:36:12,016 --> 00:36:17,408
+[Sam reads the message on screen]
+
+409
+00:36:17,600 --> 00:36:20,944
+Which is super useful.
+
+410
+00:36:20,940 --> 00:36:25,904
+So, that needs to go on bond itself.
+
+411
+00:36:27,312 --> 00:36:35,872
+It takes a spy or a bond, I think spy is the
+wrong name, so this is a spy and this is a method name.
+
+412
+00:36:36,640 --> 00:36:41,696
+And all we need to do to make this test pass,
+
+413
+00:36:41,690 --> 00:36:52,544
+is raise expected to receive...
+
+414
+00:36:53,600 --> 00:37:00,592
+So that is incredibly obvious but
+it has caused the test to pass.
+
+415
+00:37:00,620 --> 00:37:10,304
+So, in the true sense of the word
+we've done, like a little bit of tdd inaud,
+
+416
+00:37:11,216 --> 00:37:16,890
+we've written our test and then we've
+done a really stupid thing to make it pass.
+
+417
+00:37:17,136 --> 00:37:21,408
+CB: OK, how about we inaud some actual logic now. [Laughter]
+
