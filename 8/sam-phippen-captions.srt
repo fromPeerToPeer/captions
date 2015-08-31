@@ -1898,3 +1898,139 @@ done a really stupid thing to make it pass.
 00:37:17,136 --> 00:37:21,408
 CB: OK, how about we inaud some actual logic now. [Laughter]
 
+418
+00:37:23,760 --> 00:37:33,488
+SP: OK so we've got our easy test passing
+with something really simple, the degenerate case.
+
+419
+00:37:34,304 --> 00:37:42,368
+Now let's re-enable the test
+that is expecting a method call to go through
+
+420
+00:37:42,360 --> 00:37:47,664
+implementing that, so I'll just
+delete and then run the tests.
+
+421
+00:37:47,776 --> 00:37:54,560
+And we get our failure that we were expecting,
+undefined this method name for bond spy.
+
+422
+00:37:54,560 --> 00:37:58,640
+CB: Something interesting happens when your inaud, can you scroll out to er...
+
+423
+00:37:59,424 --> 00:38:09,088
+SP: Sure, so the test run started here and
+what I have set up is, every time I run my tests,
+
+424
+00:38:10,480 --> 00:38:17,136
+it runs a bunch of git commands to work
+out if anything has changed, what's changed,
+
+425
+00:38:17,136 --> 00:38:25,920
+and then it will run the tests and
+depending on whether they pass or fail,
+
+426
+00:38:26,576 --> 00:38:32,112
+it will move us onto a branch and then
+check everything in with status red or green.
+
+427
+00:38:32,110 --> 00:38:36,384
+CB: Great, so if we check on GitHub now
+it's going to be red, red green, red, or...
+
+428
+00:38:36,380 --> 00:38:42,912
+SP: Yes, like our last test was red
+because it failed, and then green red green.
+
+429
+00:38:42,910 --> 00:38:45,968
+CB: inaud
+
+430
+00:38:45,960 --> 00:38:54,832
+SP: Sure, we had two greens in a row,
+we were stuck in red for a while, that happens.
+
+431
+00:38:55,680 --> 00:39:00,940
+One thing I tend to observe is,
+when I've had an integration test,
+
+432
+00:39:00,940 --> 00:39:05,696
+you get many more red commits
+as your pulling all the pieces together 
+
+433
+00:39:06,192 --> 00:39:12,110
+but then once your beginning to
+flow you get a red/green switching.
+
+434
+00:39:12,110 --> 00:39:17,728
+It's worth noting now that we have this
+failing test as we begin to implement this class,  
+
+435
+00:39:17,744 --> 00:39:23,760
+it will be red for quite a while, because
+we will be making individual unit tests.
+
+436
+00:39:23,904 --> 00:39:26,112
+CB: So your just going from
+failure to failure to failure.
+
+437
+00:39:26,110 --> 00:39:31,536
+SP: Yes, but the important thing to
+note there is that it's incrementally moving
+
+438
+00:39:31,550 --> 00:39:39,664
+towards getting things working and we'll have more
+green tests at the end of each run, hopefully.
+
+439
+00:39:41,360 --> 00:39:46,528
+I'm actually going to change this
+test very slightly before we carry on.
+
+440
+00:39:46,576 --> 00:39:52,880
+And it's the same change that we
+made before to our failure case test.
+
+441
+00:39:52,880 --> 00:39:58,128
+Where we called method name into a let.
+
+442
+00:39:58,120 --> 00:40:03,488
+This test has that same sort of duplication but
+it's harder to spot because this is a method call
+
+443
+00:40:03,480 --> 00:40:10,176
+and this is a piece of data,
+but they are indicating the same thing, 
+
+444
+00:40:10,170 --> 00:40:15,840
+so I'm going to change this
+to public send on the method name.
+
+445
+00:40:15,888 --> 00:40:21,760
+And this one to method name as well.
+
