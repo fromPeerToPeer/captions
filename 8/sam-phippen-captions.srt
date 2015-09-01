@@ -2716,3 +2716,121 @@ we implemented one did you receive
 to automatically raise
 whenever the method is sent.
 
+595
+00:53:58,960 --> 00:54:07,536
+Now we need to go back into that method
+and begin to change it to make that work.
+
+596
+00:54:07,712 --> 00:54:13,296
+And in order to do that we're going to
+have to do a couple of things to the spy class, 
+
+597
+00:54:13,290 --> 00:54:16,864
+But let's not get ahead of ourselves.
+
+598
+00:54:17,136 --> 00:54:24,384
+So here, we really need to ask
+the question, "if the spy receives the method"
+
+599
+00:54:24,496 --> 00:54:29,840
+then do nothing, otherwise raise, that can be inaud less.
+
+600
+00:54:32,016 --> 00:54:37,296
+And then we need to think
+about how (they both talk at once).
+
+601
+00:54:39,200 --> 00:54:42,208
+CB: How do you feel about that interface?
+
+602
+00:54:42,200 --> 00:54:45,648
+SP: Well, we're going to
+change the interface a little bit.
+
+603
+00:54:45,640 --> 00:54:49,072
+CB: So how do you see the method on the spy, how do you...
+
+604
+00:54:49,216 --> 00:54:54,832
+SP: Let's just start poking towards it, right.
+
+605
+00:54:55,184 --> 00:54:58,224
+We're going to make this method
+private, that is an implementation detail,
+
+606
+00:54:58,220 --> 00:55:01,152
+nothing else really cares about it.
+
+607
+00:55:02,832 --> 00:55:05,664
+[Sam dictates what he writes on screen]
+
+608
+00:55:06,110 --> 00:55:12,608
+Now we have a problem and that is, 
+
+609
+00:55:12,730 --> 00:55:21,504
+we've defined the public interface of the
+spy to respond to everything all the time, forever,
+
+610
+00:55:21,968 --> 00:55:30,368
+so we can't add method to our spy to allow us to
+interface with the calls that are being made to it.
+
+611
+00:55:30,360 --> 00:55:32,608
+We need something else.
+
+612
+00:55:32,600 --> 00:55:40,768
+So I'm going to change the construction
+of spies to include another object.
+
+613
+00:55:41,488 --> 00:55:43,232
+Which we are going to call proxy.
+
+614
+00:55:43,310 --> 00:55:49,616
+And we'll then ask the proxy object
+for each spy what's happened to it
+
+615
+00:55:49,616 --> 00:55:51,040
+during the execution of the test.
+
+616
+00:55:51,040 --> 00:55:53,312
+CB: So you still have your spy
+that responds to all the things,
+
+617
+00:55:53,310 --> 00:55:56,976
+and there's also the proxy thing that
+will have methods along the the lines of
+
+618
+00:55:57,040 --> 00:56:01,712
+have you received the method, and that
+thing is going to be keeping terms on the spy
+
+619
+00:56:01,760 --> 00:56:05,648
+to check that the right things have happened
+without messing around with the methods on the spy.
+
+620
+00:56:05,696 --> 00:56:08,016
+SP: Exactly.
+
