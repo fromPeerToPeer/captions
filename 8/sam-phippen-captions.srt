@@ -2523,3 +2523,196 @@ define imogee as your method names.
 So I'm going to treat this
 like the tests are external.
 
+553
+00:50:26,960 --> 00:50:29,584
+Entirely external to the object.
+
+554
+00:50:30,224 --> 00:50:36,400
+So we can use secure random.hex to pass the method in.
+
+555
+00:50:36,680 --> 00:50:42,288
+Because the object has no way of knowing
+in advance what that method name is going to be.
+
+556
+00:50:42,304 --> 00:50:44,368
+So you can't fake it out.
+
+557
+00:50:44,360 --> 00:50:46,848
+CB: So you're randomizing a method name. 
+
+558
+00:50:47,136 --> 00:50:49,872
+Silly question but can you have a method as such inaud that?
+
+559
+00:50:49,870 --> 00:50:55,456
+SP: I believe so, as long as you use
+define method I think any string is valid.
+
+560
+00:50:55,520 --> 00:50:59,920
+If we get errors we can just
+stick a letter on the front of it.
+
+561
+00:51:00,000 --> 00:51:04,464
+But this seems like a reasonable place
+to start, so we'll just stick that in there.
+
+562
+00:51:05,184 --> 00:51:08,992
+And we'll require the secure random.
+
+563
+00:51:09,424 --> 00:51:13,968
+At this point I expect both of these tests to fail.
+
+564
+00:51:13,960 --> 00:51:21,008
+And they do, with false and
+undefined method 916 etc 4 bond spy.
+
+565
+00:51:21,056 --> 00:51:29,376
+So now both of our tests are putting pressure
+on us to come up with a better representation.
+
+566
+00:51:29,370 --> 00:51:33,632
+It seems to me the best thing to
+do here is to use method messing,
+
+567
+00:51:33,936 --> 00:51:39,488
+in order to define the behaviour
+which will work for any method.
+
+568
+00:51:39,480 --> 00:51:45,200
+inaud
+
+569
+00:51:45,232 --> 00:51:48,960
+We have a method missing but here we are.
+
+570
+00:51:48,960 --> 00:51:53,200
+CB: I can't believe I'm going to let someone do inaud
+
+571
+00:51:53,200 --> 00:51:57,216
+SP: So the inaud method missing is it takes the method name 
+
+572
+00:51:57,210 --> 00:52:02,304
+and then the ARGS that were
+passed to the method in a block.
+
+573
+00:52:02,944 --> 00:52:06,768
+And we specified that we were going to
+return self, so we'll stick self in there for a moment.
+
+574
+00:52:06,760 --> 00:52:10,704
+And then the other thing we need to do is make the inaud check work.
+
+575
+00:52:10,720 --> 00:52:15,210
+To do that we could override
+respond to and return true.
+
+576
+00:52:15,790 --> 00:52:19,296
+But that's not strictly correct. 
+
+577
+00:52:19,312 --> 00:52:26,528
+Ruby provides us with a hook to tell it about
+method missing implementations that we support.
+
+578
+00:52:26,520 --> 00:52:32,096
+That's the method respond to missing,
+which is invoked as part of respond to checks,
+
+579
+00:52:32,090 --> 00:52:36,688
+and as part of method missing dispatch to
+know whether or not we actually respond to that.
+
+580
+00:52:36,680 --> 00:52:44,368
+So I think the signature is method name
+and visibility but we should check that.
+
+581
+00:52:44,360 --> 00:52:50,736
+In fact we happen to be right there,
+thanks Google, include all true or false.
+
+582
+00:52:50,864 --> 00:52:59,152
+We're actually not going to use that
+property and the property is not optional
+
+583
+00:52:59,150 --> 00:53:05,568
+so we don't need to pass a default.
+
+584
+00:53:05,808 --> 00:53:12,976
+Great, so if we run our tests now, hopefully we'll have
+that one failure, which is our integration test.
+
+585
+00:53:13,216 --> 00:53:15,520
+And the rest are working.
+
+586
+00:53:15,520 --> 00:53:18,656
+[New Chapter]
+
+587
+00:53:19,024 --> 00:53:24,640
+So we've now got that first piece
+of behaviour working on our spy object.
+
+588
+00:53:24,640 --> 00:53:27,984
+It's responding to everything, it's returning self.
+
+589
+00:53:27,980 --> 00:53:33,808
+Let's just pop back to our integration
+test and check where we're at.
+
+590
+00:53:33,920 --> 00:53:36,896
+We still haven't done this
+bond did you receive method.
+
+591
+00:53:36,890 --> 00:53:47,024
+So if we run that we can see...
+expect to receive method name.
+
+592
+00:53:47,040 --> 00:53:50,040
+CB: Is that because we're including
+something that has all the methods?
+
+593
+00:53:50,940 --> 00:53:55,424
+SP: So we're getting this failure because
+we implemented one did you receive
+
+594
+00:53:55,440 --> 00:53:58,912
+to automatically raise
+whenever the method is sent.
+
