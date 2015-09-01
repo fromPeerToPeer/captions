@@ -2281,3 +2281,245 @@ that are important to note here.
 Respond to is actually a
 two argument method in Ruby.
 
+499
+00:45:32,960 --> 00:45:36,448
+Most people implement it with one
+argument which is the method name, 
+
+500
+00:45:36,440 --> 00:45:40,944
+but it also takes a inaud true/false, which indicates whether or not the method is private.
+
+501
+00:45:41,000 --> 00:45:47,456
+but were going to ignore that, but
+I just wanted to make sure that's correct.
+
+502
+00:45:47,664 --> 00:45:54,192
+So because our object responds
+to all methods, it's going to return true.
+
+503
+00:45:54,190 --> 00:46:01,744
+So expect subject.respond
+(I can't type) this should be spy.
+
+504
+00:46:01,856 --> 00:46:08,256
+Respond to method, aim to be true.
+
+505
+00:46:08,380 --> 00:46:14,432
+And, that should fail in an exciting way.
+
+506
+00:46:14,464 --> 00:46:18,750
+We need to acquire the constant.
+
+507
+00:46:18,750 --> 00:46:21,760
+[Silence]
+
+508
+00:46:22,704 --> 00:46:26,752
+Undefined method, method name for bond spy.
+
+509
+00:46:26,960 --> 00:46:32,960
+That's our integration test
+failing so it's true or false.
+
+510
+00:46:32,960 --> 00:46:37,184
+At this point we can just make this pass.
+
+511
+00:46:40,944 --> 00:46:48,848
+Private is a reserved word, I think it would be better if we call inaud method private.
+
+512
+00:46:49,024 --> 00:46:53,920
+We can just stick the word true
+in here and that should work.
+
+513
+00:46:53,920 --> 00:46:56,912
+[Silence]
+
+514
+00:46:56,910 --> 00:46:59,840
+Can't have question marks or variable names
+
+515
+00:47:00,208 --> 00:47:03,392
+CB: I was going to ask about
+that, those are pretty cool.
+
+516
+00:47:03,390 --> 00:47:09,648
+SP: I'm just bad at Ruby.
+
+517
+00:47:09,872 --> 00:47:16,192
+Right so the method is private,
+it's optional, it defaults to false I think.
+
+518
+00:47:16,190 --> 00:47:19,440
+Let's check that.
+
+519
+00:47:21,808 --> 00:47:24,896
+Again, never be afraid to Google.
+
+520
+00:47:24,890 --> 00:47:30,448
+[Sam reads from screen]
+
+521
+00:47:30,440 --> 00:47:34,896
+CB: Can't include all also mean include private?
+
+522
+00:47:34,960 --> 00:47:37,328
+Sure, but actually it doesn't matter, 
+
+523
+00:47:37,344 --> 00:47:41,856
+because we're just implementing
+this method in the most obvious way.
+
+524
+00:47:42,336 --> 00:47:47,296
+We will be removing this
+definition in a bit, but for the moment
+
+525
+00:47:47,290 --> 00:47:51,760
+this is just enough to get us going.
+
+526
+00:47:52,624 --> 00:47:58,656
+So that test now passes and
+our integration test is still failing.
+
+527
+00:47:58,650 --> 00:48:07,680
+So now we've set it up to respond we
+need to describe what happens when it returns.
+
+528
+00:48:07,760 --> 00:48:13,520
+And I'm going to say that it
+returns self because that's our...
+
+529
+00:48:13,520 --> 00:48:16,800
+CB: Yes, it's going to be useful to do inaud.bar type.
+
+530
+00:48:17,008 --> 00:48:19,520
+SP: Yes, so we can dot chain.
+
+531
+00:48:19,744 --> 00:48:22,704
+[Silence]
+
+532
+00:48:25,296 --> 00:48:33,728
+[Sam dictates what he writes on screen]
+
+533
+00:48:34,480 --> 00:48:40,736
+It's probably worth noting here, that the reason I'm using B here instead of inaud
+
+534
+00:48:41,040 --> 00:48:46,480
+is that B does exact object comparison
+so we know it's definitely the same object.
+
+535
+00:48:46,512 --> 00:48:47,968
+CB: It's an object ID whereas....
+
+536
+00:48:47,960 --> 00:48:49,568
+SP: Yes not just one that compares.
+
+537
+00:48:49,560 --> 00:48:53,504
+CB: So behind the scenes B is comparing
+objects, what's the actual implementation here.
+
+538
+00:48:53,568 --> 00:48:58,160
+SP: It delegates onto something in Ruby.
+
+539
+00:48:58,160 --> 00:49:04,560
+I can't remember exactly,
+but that's the desired media.
+
+540
+00:49:04,752 --> 00:49:11,984
+So if we run that it's going to fail
+with undefined method name for bond spy.
+
+541
+00:49:12,192 --> 00:49:21,392
+And here's where I'm going to be
+adversarial in the way I do my implementation.
+
+542
+00:49:21,568 --> 00:49:23,968
+So I'm actually just going to write the method.
+
+543
+00:49:23,960 --> 00:49:27,952
+CB: Oh of course, inaud to make it pass.
+
+544
+00:49:27,950 --> 00:49:34,144
+SP: Totally, and now I can blow away
+my respond to definition and run this.
+
+545
+00:49:34,140 --> 00:49:40,992
+And those test should pass, and they
+do, only our integration test has failed.
+
+546
+00:49:43,100 --> 00:49:50,960
+What we're seeing is, because this
+method name is static we're never going to
+
+547
+00:49:51,008 --> 00:49:57,344
+be able to force the implementation of
+the spy via test to respond to everything.
+
+548
+00:49:57,664 --> 00:50:01,616
+So we need a more powerful construct here.
+
+549
+00:50:01,610 --> 00:50:07,312
+My understanding is that in Ruby
+basically any string is a valid method.
+
+550
+00:50:07,310 --> 00:50:14,176
+Valid method name if you
+use send [they both talk at once].
+
+551
+00:50:14,544 --> 00:50:20,128
+There's that fun gist like when you
+define imogee as your method names.
+
+552
+00:50:20,656 --> 00:50:26,960
+So I'm going to treat this
+like the tests are external.
+
