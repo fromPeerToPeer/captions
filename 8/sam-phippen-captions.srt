@@ -3107,3 +3107,223 @@ we need to immediately cover this with
 01:02:04,528 --> 01:02:06,480
 unit test coverage before we move on.
 
+681
+01:02:06,480 --> 01:02:11,616
+I think we're fine at the moment because
+we have that overriding integration test.
+
+682
+01:02:11,610 --> 01:02:18,352
+And also this feels to me like something
+we're going to pull out once were done.
+
+683
+01:02:18,704 --> 01:02:24,160
+At the moment I'm doing something that
+Sandy Mets calls looking for the honest green.
+
+684
+01:02:24,160 --> 01:02:28,400
+where I'm using the integration
+test to guide what I'm doing,
+
+685
+01:02:28,448 --> 01:02:33,136
+and writing unit tests where there's
+something that's obviously an object,
+
+686
+01:02:33,130 --> 01:02:42,352
+and then I'm going to wait to pull other
+things out until everything is functional.
+
+687
+01:02:44,368 --> 01:02:47,056
+CB: How do you do inaud lambda call here?
+
+688
+01:02:48,320 --> 01:02:55,904
+SP: One of the principles I have is to
+prefer lambdas over procs when racing.
+
+689
+01:02:56,336 --> 01:03:03,880
+Stuff like this, and the reason is because
+lambdas get their own stack frame and procs don't.
+
+690
+01:03:04,000 --> 01:03:09,792
+That means they can validate the inaud of their arguments because the arguments go onto the stack.
+
+691
+01:03:10,112 --> 01:03:15,824
+And you can also call the
+keyword safely from a lambda.
+
+692
+01:03:16,144 --> 01:03:22,704
+Otherwise they're very similar, I just think
+it's generally better to use lambdas where
+
+693
+01:03:22,700 --> 01:03:30,000
+you can because they tend to make more
+sense from a thing that you can call into view.
+
+694
+01:03:30,000 --> 01:03:35,280
+Having procs can sometimes
+lead to very strange behaviour.
+
+695
+01:03:35,312 --> 01:03:36,256
+CB: OK.
+
+696
+01:03:36,480 --> 01:03:47,904
+Now we're passing the proxy call back into our
+spy, if we run all the tests we've got some failures.
+
+697
+01:03:49,984 --> 01:03:59,080
+Wrong number of arguments, those are
+our three failures so we can fix that
+
+698
+01:03:59,530 --> 01:04:04,688
+by parsing the proxy call back in and if we run again...
+
+699
+01:04:04,800 --> 01:04:13,280
+... we still have failures. Now our unit tests
+are failing so we need to go back and fix that.
+
+700
+01:04:14,288 --> 01:04:17,184
+CB: Because we don't have a default proxy callback.
+
+701
+01:04:17,344 --> 01:04:20,160
+SP: Let's just run our tests again.
+
+702
+01:04:20,160 --> 01:04:25,888
+So we have no changes, so we need to
+go back to our unit tests and fix them up.
+
+703
+01:04:26,544 --> 01:04:32,144
+Ah... spy, we just need to re-load that.
+
+704
+01:04:32,320 --> 01:04:37,504
+So each change in construction of
+the spy is parsing a proxy callback.
+
+705
+01:04:37,984 --> 01:04:41,104
+We're going to need a top level let for that.
+
+706
+01:04:42,880 --> 01:04:47,632
+And what is a useful default value for this
+
+707
+01:04:48,112 --> 01:04:53,136
+For the moment I'll let that be nil and run the tests.
+
+708
+01:04:53,630 --> 01:04:59,808
+So now we're back to having
+the single integration test failure
+
+709
+01:04:59,800 --> 01:05:08,000
+and I'm going to add the behavior to
+the spy to record stuff into the proxy.
+
+710
+01:05:08,112 --> 01:05:10,624
+And we'll do that with tests.
+
+711
+01:05:10,768 --> 01:05:14,688
+[New Chapter]
+
+712
+01:05:15,328 --> 01:05:23,312
+SP: So the test for this
+records the method call on proxy.
+
+713
+01:05:23,552 --> 01:05:29,520
+And in order to do that, this is going
+to be a command method to the proxy
+
+714
+01:05:29,520 --> 01:05:33,232
+So we're probably going to mock the interaction.
+
+715
+01:05:34,000 --> 01:05:45,712
+So, if I send the method then we need
+some expectation that the proxy has been called.
+
+716
+01:05:46,016 --> 01:05:50,176
+We're going to get the proxy from the proxy callback.
+
+717
+01:05:51,312 --> 01:05:57,072
+But, it doesn't need to be very
+complicated, so we'll say expect proxy. 
+
+718
+01:05:57,340 --> 01:06:05,424
+And here we need the method name, like
+the recording of what the method calls is going to be.
+
+719
+01:06:05,760 --> 01:06:09,872
+And we're going to make the proxy and RSpec spy.
+
+720
+01:06:10,128 --> 01:06:13,248
+[They both talk at once]
+
+721
+01:06:13,240 --> 01:06:17,584
+Yes like a nest, spying libraries inside each other.
+
+722
+01:06:18,000 --> 01:06:24,672
+And we'll just call this record message received.
+
+723
+01:06:25,360 --> 01:06:30,672
+And we won't worry too much
+about arguments for the moment.
+
+724
+01:06:30,864 --> 01:06:34,680
+We'll just focus on recording method calls.
+
+725
+01:06:34,680 --> 01:06:39,872
+So expect proxy to be received,
+record message received.
+
+726
+01:06:40,400 --> 01:06:43,264
+We don't have a reference for the proxy at the moment,
+
+727
+01:06:43,408 --> 01:06:49,264
+so this is going to be a lambda which will take
+the argument and return the proxy for the moment.
+
+728
+01:06:49,260 --> 01:06:55,392
+The proxy will be a new let
+which can be an RSpec double.
+
