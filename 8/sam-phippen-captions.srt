@@ -3327,3 +3327,257 @@ the argument and return the proxy for the moment.
 The proxy will be a new let
 which can be an RSpec double.
 
+729
+01:06:55,840 --> 01:07:01,984
+We'll call it proxy and it responds
+to record message received
+
+730
+01:07:02,096 --> 01:07:06,048
+and we don't care about return
+values so I'll explicitly make that nil.
+
+731
+01:07:06,096 --> 01:07:12,976
+One thing to note here, I was talking
+about extracting duplication into lets.
+
+732
+01:07:13,744 --> 01:07:20,650
+I don't consider this to be a form
+of duplication, these are actually different
+
+733
+01:07:22,496 --> 01:07:26,976
+because this one is saying set
+up that you understand this message,
+
+734
+01:07:26,970 --> 01:07:29,840
+and this one is saying assert
+that the message was received.
+
+735
+01:07:29,840 --> 01:07:35,232
+So even though they are the
+same symbol and do the same thing,
+
+736
+01:07:35,344 --> 01:07:40,256
+these are being compared so
+I'm not going to pull it out at all.
+
+737
+01:07:40,250 --> 01:07:46,112
+So if we run that now we should have
+two failures, one unit and one integration.
+
+738
+01:07:46,704 --> 01:07:52,960
+We do and that's because record
+message received wasn't sent to that object.
+
+739
+01:07:53,136 --> 01:07:57,792
+So to fix that we just need to go back here.
+
+740
+01:07:57,984 --> 01:08:06,272
+And we can... [Sam dictates what he writes]
+
+741
+01:08:06,480 --> 01:08:12,752
+And one thing I've done here is put
+a double underscore under the method name.
+
+742
+01:08:13,360 --> 01:08:21,472
+This is a sort of conventional Ruby thing
+for libraries that are super weird.
+
+743
+01:08:21,712 --> 01:08:31,936
+So because we respond to all messages,
+we can't add more method calls to our object.
+
+744
+01:08:31,930 --> 01:08:39,280
+But it doesn't make sense to have the entire body of
+behaviour around recording method calls in.
+
+745
+01:08:39,408 --> 01:08:45,056
+Method missing so it's fine to
+push that out into another method.
+
+746
+01:08:45,344 --> 01:08:49,648
+In this case we're prefixing it with a
+double underscore so that we don't conflict.
+
+747
+01:08:49,840 --> 01:08:54,880
+It's very unlikely that anyone is ever going
+to want to call the method double underscore
+
+748
+01:08:54,880 --> 01:09:02,624
+record message sent to proxy on
+our spy, so that's probably fine.
+
+749
+01:09:03,040 --> 01:09:06,010
+CB: So if we were in a production
+environment we would probably have a thing
+
+750
+01:09:06,010 --> 01:09:10,736
+where we say if it receives inaud message sent to proxy then we do something different.
+
+751
+01:09:11,008 --> 01:09:15,472
+SP: Yes, the other thing that might end up
+happening is this method might be one line long,
+
+752
+01:09:15,470 --> 01:09:18,288
+and then we might just put it in there anyway.
+
+753
+01:09:18,280 --> 01:09:27,120
+But usually I want to give things a useful name.
+
+754
+01:09:27,120 --> 01:09:29,984
+I'm pulling this out, not for the
+abstraction, but for the name.
+
+755
+01:09:31,840 --> 01:09:38,832
+And this will just be
+@proxy.record message received name.
+
+756
+01:09:39,360 --> 01:09:49,856
+And then to make the proxy we should
+just be able to do [Sam dictates what he writes].
+
+757
+01:09:49,850 --> 01:09:51,152
+CB: inaud
+
+758
+01:09:51,150 --> 01:09:54,992
+SP: It does but I don't want to do that yet.
+
+759
+01:09:54,990 --> 01:09:56,304
+CB: OK, alright.
+
+760
+01:09:56,300 --> 01:10:03,264
+SP: We're going to slow down a bit
+and make this step a bit smaller.
+
+761
+01:10:03,400 --> 01:10:07,376
+In this case we can just have a
+lambda which returns the proxy.
+
+762
+01:10:07,370 --> 01:10:17,760
+And that should work [they both talk
+at once] we record message received name
+
+763
+01:10:18,336 --> 01:10:27,808
+We've got three failures because wrong number of arguments, zero for a one inaud call back.
+
+764
+01:10:28,736 --> 01:10:32,096
+Record message received.
+
+765
+01:10:34,960 --> 01:10:40,688
+Proxy inaud received, record message received which is that name, which is the same as that.
+
+766
+01:10:42,688 --> 01:10:49,936
+Let's just print proxy and make
+sure it's what we were expecting.
+
+767
+01:10:49,930 --> 01:10:52,864
+CB: What's getting the wrong
+number of arguments here.
+
+768
+01:10:52,960 --> 01:10:59,840
+So it's wrong number of arguments
+zero for 1, 18 proxy callback.
+
+769
+01:11:01,632 --> 01:11:12,816
+Ah! I see the problem, it's because this
+lambda is being passed into a context
+
+770
+01:11:13,008 --> 01:11:17,184
+where this let proxy isn't available.
+
+771
+01:11:18,144 --> 01:11:22,800
+CB: Right so we will want to make the proxy available.
+
+772
+01:11:24,720 --> 01:11:28,800
+SP: Or, we can just do this.
+
+773
+01:11:29,280 --> 01:11:33,936
+And I think that if we make
+this a proc, that should be fine.
+
+774
+01:11:34,912 --> 01:11:39,808
+It's kind of nuts that we have to do
+that but I think that's what we want.
+
+775
+01:11:41,136 --> 01:11:44,336
+Failing that...
+
+776
+01:11:44,448 --> 01:11:47,488
+[Sam and Camille ponder]
+
+777
+01:11:51,072 --> 01:11:55,824
+I'm not sure that I was right
+there either... block proxy callback.
+
+778
+01:11:55,936 --> 01:11:58,960
+[Sam thinks again]
+
+779
+01:12:02,192 --> 01:12:08,944
+Ah! wait, no we've misread the test failure output.
+
+780
+01:12:09,120 --> 01:12:11,488
+These are all our integration tests.
+
+781
+01:12:13,632 --> 01:12:19,376
+And it's because we're
+expecting self in the integration test,
+
+782
+01:12:19,370 --> 01:12:23,040
+because we moved ahead of ourselves, so that's fine.
+
+783
+01:12:25,744 --> 01:12:28,880
+For the moment we'll get our lambda back, that's fine.
+
