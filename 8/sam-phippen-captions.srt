@@ -2199,7 +2199,7 @@ constant in there twice is a bit of a duplication,
 481
 00:43:40,600 --> 00:43:49,632
 but I usually don't care about
-that because I think that you get a lot 
+that because I think that you get a lot
 
 482
 00:43:49,648 --> 00:43:54,032
@@ -2284,7 +2284,7 @@ two argument method in Ruby.
 499
 00:45:32,960 --> 00:45:36,448
 Most people implement it with one
-argument which is the method name, 
+argument which is the method name,
 
 500
 00:45:36,440 --> 00:45:40,944
@@ -2383,7 +2383,7 @@ CB: Can't include all also mean include private?
 
 522
 00:47:34,960 --> 00:47:37,328
-Sure, but actually it doesn't matter, 
+Sure, but actually it doesn't matter,
 
 523
 00:47:37,344 --> 00:47:41,856
@@ -2542,7 +2542,7 @@ So you can't fake it out.
 
 557
 00:50:44,360 --> 00:50:46,848
-CB: So you're randomizing a method name. 
+CB: So you're randomizing a method name.
 
 558
 00:50:47,136 --> 00:50:49,872
@@ -2605,7 +2605,7 @@ CB: I can't believe I'm going to let someone do inaud
 
 571
 00:51:53,200 --> 00:51:57,216
-SP: So the inaud method missing is it takes the method name 
+SP: So the inaud method missing is it takes the method name
 
 572
 00:51:57,210 --> 00:52:02,304
@@ -2628,7 +2628,7 @@ respond to and return true.
 
 576
 00:52:15,790 --> 00:52:19,296
-But that's not strictly correct. 
+But that's not strictly correct.
 
 577
 00:52:19,312 --> 00:52:26,528
@@ -2724,7 +2724,7 @@ and begin to change it to make that work.
 596
 00:54:07,712 --> 00:54:13,296
 And in order to do that we're going to
-have to do a couple of things to the spy class, 
+have to do a couple of things to the spy class,
 
 597
 00:54:13,290 --> 00:54:16,864
@@ -2776,7 +2776,7 @@ nothing else really cares about it.
 
 608
 00:55:06,110 --> 00:55:12,608
-Now we have a problem and that is, 
+Now we have a problem and that is,
 
 609
 00:55:12,730 --> 00:55:21,504
@@ -2831,6 +2831,279 @@ to check that the right things have happened
 without messing around with the methods on the spy.
 
 620
-00:56:05,696 --> 00:56:08,016
+00:56:05,690 --> 00:56:08,080
 SP: Exactly.
+
+621
+00:56:08,080 --> 00:56:10,752
+CB: Is that how RSpec works behind the scenes?
+
+622
+00:56:10,750 --> 00:56:17,984
+SP: Kind of, but it's a little
+bit more complicated than that.
+
+623
+00:56:18,090 --> 00:56:20,400
+But this is a good approximation.
+
+624
+00:56:20,416 --> 00:56:27,872
+Basically in RSpec, whenever you stub a
+mock on an object or you create a double or a spy,
+
+625
+00:56:28,000 --> 00:56:35,408
+a companion object is created for
+that object which tracks a bunch of details
+
+626
+00:56:35,400 --> 00:56:41,408
+about methods that have been
+replaced and called and arguments and stuff.
+
+627
+00:56:41,504 --> 00:56:47,856
+We're going to implement some of that, but because
+this library has a lower complexity boundary,
+
+628
+00:56:47,850 --> 00:56:55,392
+and also because it doesn't tough user objects,
+we're going to get away with doing a lot less.
+
+629
+00:56:55,584 --> 00:57:04,144
+So when we construct our spies we're
+going to need one of these proxy objects.
+
+630
+00:57:04,140 --> 00:57:09,216
+And we need to be able to get it back afterwords.
+
+631
+00:57:09,328 --> 00:57:21,856
+So in the bond module I'm going
+to have registered proxys hash.
+
+632
+00:57:22,544 --> 00:57:26,400
+This is going to be really simple for the moment.
+
+633
+00:57:26,560 --> 00:57:29,568
+[Silence]
+
+634
+00:57:34,688 --> 00:57:37,040
+CB: Why are you hesitating on this one?
+
+635
+00:57:37,040 --> 00:57:43,088
+SP: I'm trying to remember if this
+wants to be single 'at' or a double 'at'.
+
+636
+00:57:43,232 --> 00:57:47,328
+inaud proxys with the memorization.
+
+637
+00:57:47,320 --> 00:57:52,560
+Which probably means that there's a design problem.
+
+638
+00:57:53,712 --> 00:57:59,392
+I'm going to do something
+really gross and I'm going to fix it.
+
+639
+00:57:59,664 --> 00:58:02,672
+[Sam dictates what he writes]
+
+640
+00:58:04,140 --> 00:58:07,504
+CB: Ok, so your making an
+object to keep your proxys open.
+
+641
+00:58:07,500 --> 00:58:13,648
+SP: Yes, we're going to make an object and use the single inaud module.
+
+642
+00:58:14,928 --> 00:58:21,530
+Which is gross but it seems
+like a reasonable place to start.
+
+643
+00:58:21,888 --> 00:58:25,792
+Actually, the other thing we could do...
+
+644
+00:58:26,640 --> 00:58:39,360
+is just have a... this... and then we can
+reference bond concom proxys and do things to it
+
+645
+00:58:39,360 --> 00:58:42,688
+just until we're working,
+and then we can reflect on it.
+
+646
+00:58:44,672 --> 00:58:48,400
+CB: When you have an idea like this or something
+you definitely want to get rid of in the future,
+
+647
+00:58:48,400 --> 00:58:52,880
+Do you lead yourself or comment
+yourself or something like that?
+
+648
+00:58:54,368 --> 00:59:02,768
+SP: The real problem here is that
+this is a module and not an object.
+
+649
+00:59:02,940 --> 00:59:06,976
+Maybe we should fix that at some
+point, but the nice thing about modules
+
+650
+00:59:06,992 --> 00:59:11,328
+is that they can just be included into the tests.
+
+651
+00:59:11,968 --> 00:59:16,112
+Actually, no I think this should be a class variable.
+
+652
+00:59:16,688 --> 00:59:20,400
+I think I like this more.
+
+653
+00:59:20,640 --> 00:59:23,664
+[Silence]
+
+654
+00:59:25,200 --> 00:59:29,504
+CB: Let's see where it takes us and
+we can consider the pros and cons in a bit.
+
+655
+00:59:29,500 --> 00:59:34,096
+SP: I'm pretty sure that a single app would work there.
+
+656
+00:59:34,090 --> 00:59:39,120
+Mostly because it's going to happen
+during the execution of a single test.
+
+657
+00:59:40,736 --> 00:59:43,616
+CB: So you would re-register
+your proxys on every single run?
+
+658
+00:59:43,610 --> 00:59:48,672
+SP: Yes, this could just be an instance
+method, it doesn't need to be a class method,
+
+659
+00:59:48,720 --> 00:59:51,248
+and that should work fine.
+
+660
+00:59:51,240 --> 00:59:57,968
+One thing RSpec does is keep track of proxys
+globally, but we don't need to worry about that here.
+
+661
+00:59:57,960 --> 01:00:01,104
+So this should work just fine.
+
+662
+01:00:01,168 --> 01:00:07,536
+And then we need to create and
+register a proxy object for each spy.
+
+663
+01:00:07,584 --> 01:00:11,488
+So to do that we'll parse... [Sam types]
+
+664
+01:00:16,288 --> 01:00:23,440
+We're actually going to do...
+this is going to be slightly nuts.
+
+665
+01:00:23,744 --> 01:00:32,304
+So we're going to pass a lambda
+into the spy, which will call itself.
+
+666
+01:00:32,448 --> 01:00:44,976
+So this is the spy, and then we do
+register proxies [Sam dictates what he writes]
+
+667
+01:00:44,970 --> 01:00:51,408
+This line of code has gone
+terrible so let's just pull that out.
+
+668
+01:00:53,408 --> 01:00:57,856
+And in fact we can give this a
+method name, this is a proxy factory.
+
+669
+01:01:02,576 --> 01:01:06,352
+So basically...
+
+670
+01:01:09,136 --> 01:01:12,752
+And actually, this isn't a factory, it's a callback
+
+671
+01:01:15,472 --> 01:01:17,792
+CB: Oh good point.
+
+672
+01:01:17,790 --> 01:01:22,528
+So basically...
+
+673
+01:01:22,520 --> 01:01:25,536
+[Silence]
+
+674
+01:01:29,952 --> 01:01:32,368
+We need proxy to be returned from the left.
+
+675
+01:01:32,360 --> 01:01:40,624
+So, this looks slightly crazy so it's
+worth explaining what this is going to do.
+
+676
+01:01:40,768 --> 01:01:45,152
+[Sam thinks]
+
+677
+01:01:45,950 --> 01:01:55,056
+When we call the proxy callback in the
+spy it will pass the spy in so that we can basically
+
+678
+01:01:55,070 --> 01:01:59,792
+look the proxy up by the spy object
+itself later in the execution of the test.
+
+679
+01:01:59,950 --> 01:02:04,480
+I'm just trying to think about whether
+we need to immediately cover this with
+
+680
+01:02:04,528 --> 01:02:06,480
+unit test coverage before we move on.
 
