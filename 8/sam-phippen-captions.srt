@@ -3276,7 +3276,7 @@ We're going to get the proxy from the proxy callback.
 717
 01:05:51,312 --> 01:05:57,072
 But, it doesn't need to be very
-complicated, so we'll say expect proxy. 
+complicated, so we'll say expect proxy.
 
 718
 01:05:57,340 --> 01:06:05,424
@@ -3580,4 +3580,192 @@ because we moved ahead of ourselves, so that's fine.
 783
 01:12:25,744 --> 01:12:28,880
 For the moment we'll get our lambda back, that's fine.
+
+784
+01:12:30,224 --> 01:12:32,208
+It's important to make sure your reading the correct inaud.
+
+785
+01:12:32,200 --> 01:12:34,576
+So those are all our integration tests.
+
+786
+01:12:34,570 --> 01:12:36,480
+None of those need a test right.
+
+787
+01:12:36,480 --> 01:12:38,160
+CB: So now our RSpec has failed.
+
+788
+01:12:38,160 --> 01:12:45,040
+SP: So our actual unit test has passed
+because it has received that message.
+
+789
+01:12:45,072 --> 01:12:52,320
+The other thing that we need to add here is the name,
+which is something that we missed in our test.
+
+790
+01:12:52,320 --> 01:13:02,176
+Just to make sure that we actually do need
+that, I'm just going to delete the name.
+
+791
+01:13:02,400 --> 01:13:08,736
+It's still failing, that's fine.
+It's the first failure output.
+
+792
+01:13:08,970 --> 01:13:15,664
+And that's because the method name has been symbolized when we inaud.
+
+793
+01:13:15,664 --> 01:13:21,424
+So in this let method name we should inaud.
+
+794
+01:13:21,840 --> 01:13:26,288
+That should pass, and it does, we only
+have those three integration tests failing.
+
+795
+01:13:27,120 --> 01:13:32,528
+So we now have our basic method recording
+back, but the other thing we need to do
+
+796
+01:13:32,560 --> 01:13:40,840
+Is say, it sends itself to the proxy callback,
+which we are currently not monitoring but we need.
+
+797
+01:13:41,930 --> 01:13:46,544
+To facilitate that we're going to change
+the proxy callback from being a straight lambda,
+
+798
+01:13:46,544 --> 01:13:49,200
+To being another double.
+
+799
+01:13:49,600 --> 01:13:56,090
+And that's so we can spy on the inaud of the proxy callback,
+
+800
+01:13:56,800 --> 01:14:02,624
+to check that the self is passed in correctly.
+
+801
+01:14:04,208 --> 01:14:08,736
+CB: I need an aspirin. [Laughter]
+
+802
+01:14:09,072 --> 01:14:15,968
+This is going to return proxy from the call
+method so all our existing tests should still pass.
+
+803
+01:14:18,320 --> 01:14:22,528
+And then we'll do the same thing.
+
+804
+01:14:22,780 --> 01:14:24,960
+CB: So inaud public send and then...
+
+805
+01:14:25,056 --> 01:14:28,240
+SP: Yes just doing that would be sufficient.
+
+806
+01:14:28,490 --> 01:14:35,184
+We only need to go through the instructor but it's
+good to keep exercising the whole thing here.
+
+807
+01:14:35,280 --> 01:14:45,008
+And then inaud method name,[Sam dictates what he writes]
+
+808
+01:14:46,704 --> 01:14:52,400
+And so that should fail, and it does.
+
+809
+01:14:52,400 --> 01:14:59,088
+I'm not even going to read the failure output,
+I'm just going to do the thing I expect and see.
+
+810
+01:14:59,712 --> 01:15:02,000
+What! it does.
+
+811
+01:15:02,528 --> 01:15:08,048
+And because this is a single line it's
+probably worth putting that back up there.
+
+812
+01:15:08,040 --> 01:15:10,592
+I think that's good enough.
+
+813
+01:15:10,670 --> 01:15:15,328
+The other thing I would do if we
+weren't writing such a crazy object,
+
+814
+01:15:15,440 --> 01:15:20,464
+is add an inaud reader for proxy so I can change it later, 
+
+815
+01:15:20,496 --> 01:15:25,760
+but in this case it's probably not
+worth polluting the public interface.
+
+816
+01:15:25,760 --> 01:15:29,088
+[New Chapter]
+
+817
+01:15:30,080 --> 01:15:35,296
+So now we've done that, if we run
+all our tests we've got some failures
+
+818
+01:15:35,344 --> 01:15:40,624
+but that's because we haven't got proxy.
+
+819
+01:15:40,620 --> 01:15:44,640
+So let's follow those failures
+and implement that next.
+
+820
+01:15:46,144 --> 01:15:51,808
+[Sam dictates what he writes]
+
+821
+01:15:54,768 --> 01:16:03,008
+We'll also make a test file and run
+everything to see where we're at.
+
+822
+01:16:03,000 --> 01:16:07,824
+We're still going to get that name error,
+and that's because we haven't required it.
+
+823
+01:16:07,888 --> 01:16:10,880
+[Silence]
+
+824
+01:16:11,776 --> 01:16:16,720
+And we'll put that same require
+in the test file for proxy as well.
+
+825
+01:16:17,168 --> 01:16:23,344
+Now we only have a single failure, which is undefined
+method record message received for bond proxy.
 
