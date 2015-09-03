@@ -3765,7 +3765,249 @@ And we'll put that same require
 in the test file for proxy as well.
 
 825
-01:16:17,168 --> 01:16:23,344
-Now we only have a single failure, which is undefined
-method record message received for bond proxy.
+01:16:17,160 --> 01:16:19,680
+Now we only have a single failure, 
+
+826
+01:16:19,728 --> 01:16:23,728
+which is undefined method record
+message received for bond proxy.
+
+827
+01:16:23,720 --> 01:16:29,792
+which gives us a good way to start raising our tests.
+
+828
+01:16:29,790 --> 01:16:34,320
+We'll describe proxy, we'll put this in module bond.
+
+829
+01:16:34,432 --> 01:16:37,456
+[Silence]
+
+830
+01:16:38,288 --> 01:16:41,376
+[Sam dictates what he writes]
+
+831
+01:16:42,912 --> 01:16:52,496
+Proxy is the wrong name, it matches the
+class name but here proxy is the role it's taking.
+
+832
+01:16:53,130 --> 01:16:55,616
+At the moment we don't know if we
+need any constructor arguments 
+
+833
+01:16:55,632 --> 01:16:57,968
+so I'm just going to do proxy.new.
+
+834
+01:16:58,048 --> 01:17:03,712
+It's worth noting that RSpec will do this for you.
+
+835
+01:17:03,710 --> 01:17:10,176
+It implicitly will call subject,
+it's just name class new.
+
+836
+01:17:10,170 --> 01:17:19,712
+But I'm doing this so that we get this proxy name.
+
+837
+01:17:20,784 --> 01:17:27,072
+Just to remind ourselves
+where we are, let's run our tests.
+
+838
+01:17:27,488 --> 01:17:30,784
+So let's describe that.
+
+839
+01:17:31,152 --> 01:17:33,552
+[Sam dictates what he writes]
+
+840
+01:17:33,550 --> 01:17:37,360
+Here we need the hash -
+it's going to be an instance method.
+
+841
+01:17:37,360 --> 01:17:41,456
+And now there's a question
+about what this method does.
+
+842
+01:17:41,520 --> 01:17:50,608
+And internally the proxy is just
+going to store all the calls as an array.
+
+843
+01:17:50,912 --> 01:17:56,784
+And so on it's own, this
+method has no observable effect,
+
+844
+01:17:56,780 --> 01:17:58,976
+It's just effectively shoveling into an array.
+
+845
+01:17:59,040 --> 01:18:03,264
+We could just mock the array
+and observe the shovel method,
+
+846
+01:18:03,360 --> 01:18:13,168
+but that's total overkill, so instead
+we're going to have a method like
+
+847
+01:18:13,184 --> 01:18:14,992
+"was the call received".
+
+848
+01:18:14,992 --> 01:18:16,990
+CB: And we don't care about how
+the proxy stores it's stuff.
+
+849
+01:18:16,990 --> 01:18:21,456
+SP: So I'm not going to
+describe the individual methods.
+
+850
+01:18:21,450 --> 01:18:27,392
+But instead describe the
+work flow with this object.
+
+851
+01:18:27,390 --> 01:18:31,472
+And because of that I'm going
+to delete this describe block.
+
+852
+01:18:31,470 --> 01:18:36,464
+And I'm just going to say
+observing the method call.
+
+853
+01:18:36,784 --> 01:18:41,264
+I think I used the word
+recording so let's be consistent.
+
+854
+01:18:41,260 --> 01:18:44,256
+And again I'm going to
+start with a degenerate case,
+
+855
+01:18:44,368 --> 01:18:48,016
+which will just be the method
+wasn't received so we'll just return false.
+
+856
+01:18:48,010 --> 01:18:51,504
+CB: Do you usually start with the degenerate case?
+
+857
+01:18:51,500 --> 01:18:59,632
+Yes because it's usually easier to implement.
+
+858
+01:18:59,630 --> 01:19:06,048
+It offloads a certain amount of
+mental work for me and also,
+
+859
+01:19:06,170 --> 01:19:12,000
+I like to view doing this kind
+of TDD as very adversarial.
+
+860
+01:19:14,096 --> 01:19:22,768
+The test that I'm writing now should set me
+up to write a maximally contradicting test next.
+
+861
+01:19:22,760 --> 01:19:31,904
+So to do that I find it much easier to start
+with a really simple case than a complicated one.
+
+862
+01:19:31,984 --> 01:19:39,232
+So in this case inaud, respond to this false, did you receive this false,
+
+863
+01:19:40,016 --> 01:19:46,840
+is obvious and sets us up to maximally
+force implementation with the next test.
+
+864
+01:19:47,480 --> 01:19:56,480
+And the inaud here is it tells us it hasn't received a call when it hasn't,
+
+865
+01:19:56,528 --> 01:19:59,984
+which is a terrible test name, but
+I'm going to take that out anyway.
+
+866
+01:19:59,980 --> 01:20:03,232
+[Sam dictates what he writes]
+
+867
+01:20:05,504 --> 01:20:13,440
+And this is more like [Sam dictates what he writes]
+
+868
+01:20:13,952 --> 01:20:20,480
+I'm still not in love with this test name.
+
+869
+01:20:21,408 --> 01:20:23,936
+[Sam dictates what he writes]
+
+870
+01:20:24,448 --> 01:20:27,856
+Maybe we should describe the get a method.
+
+871
+01:20:28,544 --> 01:20:33,632
+Sometimes when I'm struggling I describe the get
+a method and make manipulations to the object.
+
+872
+01:20:33,856 --> 01:20:35,408
+And be OK with that.
+
+873
+01:20:35,400 --> 01:20:39,424
+So this is message received...
+
+874
+01:20:41,456 --> 01:20:45,312
+CB: So do you want inaud whether specific message received, that's your interface.
+
+875
+01:20:45,310 --> 01:20:46,528
+SP: Yes.
+
+876
+01:20:46,520 --> 01:20:48,096
+CB: When that message wasn't received then?
+
+877
+01:20:48,090 --> 01:20:59,536
+SP: Yes, well it's more like when
+no message has been received.
+
+878
+01:20:59,664 --> 01:21:02,704
+[Silence]
+
+879
+01:21:07,232 --> 01:21:09,792
+Have I got myself confused, yes, great.
 
