@@ -4011,3 +4011,48 @@ no message has been received.
 01:21:07,232 --> 01:21:09,792
 Have I got myself confused, yes, great.
 
+880
+01:21:09,790 --> 01:21:15,360
+And this is going to be
+expect proxy.message received.
+
+881
+01:21:16,016 --> 01:21:20,464
+And here we're going to pass a
+method name in, that will be a let,
+
+882
+01:21:20,460 --> 01:21:25,088
+because I know in future tests I'm going
+to have to keep referring to this method name.
+
+883
+01:21:25,080 --> 01:21:30,704
+So we'll allow let now to be false.
+
+884
+01:21:32,736 --> 01:21:36,520
+So if we run that... it fails.
+
+885
+01:21:37,020 --> 01:21:38,848
+We'll make a let.
+
+886
+01:21:38,920 --> 01:21:45,440
+Here this can be an RSpec double because
+we're not going to be sending real methods.
+
+887
+01:21:45,456 --> 01:21:49,984
+[they both talk at once]
+
+888
+01:21:49,980 --> 01:21:57,904
+The reason I like to use a double is that
+I know that the only way a double compares true
+
+889
+01:21:57,900 --> 01:22:01,552
+with another object is if it's the exact same object.
+
