@@ -4477,3 +4477,200 @@ we were saying before, we'll ask bond...
 01:30:33,664 --> 01:30:35,680
 ... the method name which is a get.
 
+982
+01:30:35,680 --> 01:30:40,000
+'And if we've done everything
+correctly, this should work.
+
+983
+01:30:40,192 --> 01:30:41,184
+It does.
+
+984
+01:30:41,232 --> 01:30:46,288
+Just to check that it's all
+working, let's also see it fail.
+
+985
+01:30:47,456 --> 01:30:52,992
+And it does, you can see here expected
+to receive get, in the bond did you receive call,
+
+986
+01:30:52,990 --> 01:30:56,256
+and it didn't, so our test failed.
+
+987
+01:30:56,380 --> 01:30:58,720
+Great, so we've got something useful.
+
+988
+01:30:58,736 --> 01:31:03,600
+It's probably worth  also breaking
+the implementation on the test.
+
+989
+01:31:04,160 --> 01:31:09,520
+So if we head back in to the counter
+client, and just comment this line of code out
+
+990
+01:31:09,520 --> 01:31:12,960
+and head back to our test helper and run it...
+
+991
+01:31:13,872 --> 01:31:21,472
+... you can see here, all our integration
+tests failed but also our inaud failed inaud.
+
+992
+01:31:21,968 --> 01:31:28,160
+Which means that despite our best
+efforts, the spy library actually works!
+
+993
+01:31:28,160 --> 01:31:35,648
+And tests something useful, which is very
+surprising, unsurprising, one of those two.
+
+994
+01:31:35,968 --> 01:31:37,200
+CB: A combination thereof.
+
+995
+01:31:37,344 --> 01:31:41,104
+[New Chapter]
+
+996
+01:31:41,100 --> 01:31:44,208
+CB: Alright, so we've got
+our minimal viable spying library.
+
+997
+01:31:44,688 --> 01:31:51,056
+Where would you take next this in terms of, like is it a feature or something else?
+
+998
+01:31:51,392 --> 01:31:58,144
+SP: I think that the best thing to do
+right now, given everything we've got...
+
+999
+01:31:59,600 --> 01:32:06,816
+...is do a little re-factoring of the library, because I
+think if I was going to make this production ready,
+
+1000
+01:32:06,810 --> 01:32:14,928
+specifically... this bond inaud is getting fairly large.
+
+1001
+01:32:15,536 --> 01:32:21,648
+This proxy callback is clearly a
+'thing' which could be given a class.
+
+1002
+01:32:21,776 --> 01:32:26,464
+All of this stuff like spy_received_method
+
+1003
+01:32:26,760 --> 01:32:31,808
+To me this feels like there are separate
+concerns here, and also at the moment
+
+1004
+01:32:31,824 --> 01:32:39,280
+the spy proxy is only using the method
+name to record past failure states.
+
+1005
+01:32:39,280 --> 01:32:45,536
+And I would probably change the way we
+record methods calls to include all of that data,
+
+1006
+01:32:45,550 --> 01:32:52,112
+and then push that decision down into the
+proxy object, which is actually how RSpec does it.
+
+1007
+01:32:52,800 --> 01:32:58,592
+The other thing... that I think
+a good re-factoring would be... 
+
+1008
+01:32:58,590 --> 01:33:03,984
+is that... we're just shoveling the method
+name in here, but when we add those details,
+
+1009
+01:33:04,010 --> 01:33:08,208
+that's going to end up being it's own object.
+
+1010
+01:33:08,224 --> 01:33:11,936
+Because it will have the method
+name, and the ARGS and a block...
+
+1011
+01:33:11,930 --> 01:33:17,168
+... and those things together
+are clearly a concept in the system.
+
+1012
+01:33:17,160 --> 01:33:24,288
+It's like add individual method call, and so
+I would probably end up giving that it's own name.
+
+1013
+01:33:24,430 --> 01:33:30,176
+This registered proxies thing as
+well, we're not using all of the hash interface,
+
+1014
+01:33:30,176 --> 01:33:36,624
+only a small amount of it, and that
+probably means that's a main object as well.
+
+1015
+01:33:37,712 --> 01:33:39,872
+You see, I can attack any of these.
+
+1016
+01:33:39,870 --> 01:33:47,696
+The other one that's really common, but we won't do
+now is... at the moment there's real no test cleanup,
+
+1017
+01:33:47,696 --> 01:33:53,504
+so you loose your references to all
+the objects at the end of the test.
+
+1018
+01:33:53,760 --> 01:34:01,880
+One thing RSpec does is prevent
+you from retaining any of the 
+
+1019
+01:34:01,880 --> 01:34:05,584
+mock stubs, spies or doubles across tests.
+
+1020
+01:34:05,760 --> 01:34:14,224
+It actually knows which test they were
+instantiated in and makes them invalid.
+
+1021
+01:34:14,400 --> 01:34:25,248
+The other thing, that's kind of funky here,
+is the spy returns self from all the things
+
+1022
+01:34:25,312 --> 01:34:31,792
+but that breaks a number of
+well understood Ruby protocols.
+
+1023
+01:34:31,790 --> 01:34:35,872
+2I, 2F, 2S and so on.
+
