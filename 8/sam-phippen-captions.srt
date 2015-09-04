@@ -3716,7 +3716,7 @@ weren't writing such a crazy object,
 
 814
 01:15:15,440 --> 01:15:20,464
-is add an inaud reader for proxy so I can change it later, 
+is add an inaud reader for proxy so I can change it later,
 
 815
 01:15:20,496 --> 01:15:25,760
@@ -3766,7 +3766,7 @@ in the test file for proxy as well.
 
 825
 01:16:17,160 --> 01:16:19,680
-Now we only have a single failure, 
+Now we only have a single failure,
 
 826
 01:16:19,728 --> 01:16:23,728
@@ -3797,7 +3797,7 @@ class name but here proxy is the role it's taking.
 832
 01:16:53,130 --> 01:16:55,616
 At the moment we don't know if we
-need any constructor arguments 
+need any constructor arguments
 
 833
 01:16:55,632 --> 01:16:57,968
@@ -4055,4 +4055,175 @@ I know that the only way a double compares true
 889
 01:21:57,900 --> 01:22:01,552
 with another object is if it's the exact same object.
+
+890
+01:22:01,680 --> 01:22:07,600
+The thing about symbols is that now they're
+dynamically garbage collectible in Ruby 2.2
+
+891
+01:22:07,600 --> 01:22:13,696
+you don't necessarily have that
+guarantee that's it's the exact same object.
+
+892
+01:22:14,040 --> 01:22:17,872
+It could have the exact same
+symbol content but it's not necessarily...
+
+893
+01:22:17,888 --> 01:22:22,110
+CB: So do you need to treat them in testing
+like you used to treat strings and older Rubys?
+
+894
+01:22:22,110 --> 01:22:26,960
+SP: Yes, and the other thing about
+this is that it's a really strong callout.
+
+895
+01:22:27,040 --> 01:22:30,848
+But this double is the thing that
+is going to be compared against.
+
+896
+01:22:30,840 --> 01:22:37,552
+That guarantee is really useful, because you know
+that doubles only ever compare true to themselves.
+
+897
+01:22:37,696 --> 01:22:44,640
+So now we have that set up we should
+run undefined method, method received.
+
+898
+01:22:44,832 --> 01:22:47,824
+[Silence]
+
+899
+01:22:53,120 --> 01:22:57,184
+And then wrong number of arguments.
+
+900
+01:22:59,040 --> 01:23:02,160
+And then expected false call nil.
+
+901
+01:23:03,120 --> 01:23:06,832
+And then parsing.
+
+902
+01:23:06,960 --> 01:23:12,448
+Great, and so the next one is it
+returns true when a message has been received.
+
+903
+01:23:13,072 --> 01:23:17,520
+CB: Surely that message has
+been received  right? SP: Sure.
+
+904
+01:23:18,048 --> 01:23:20,608
+A specific message? CB: Yes.
+
+905
+01:23:20,600 --> 01:23:27,184
+SP: And again here, this is an example
+of that maximum change required idea.
+
+906
+01:23:27,296 --> 01:23:31,968
+I could have implemented 'it returns false' when
+a specific message hasn't been received.
+
+907
+01:23:32,128 --> 01:23:36,208
+But that wouldn't require me to
+change my implementation at all.
+
+908
+01:23:38,140 --> 01:23:46,000
+CB: Would you return to a specific message
+received and then go to it actually returns false
+
+909
+01:23:46,064 --> 01:23:49,728
+when the specific message has been
+received but your testing for another one?
+
+910
+01:23:49,720 --> 01:23:52,240
+SP: Yes, exactly.
+
+911
+01:23:53,104 --> 01:23:58,128
+So we're going to record that the message
+was received and then [Sam dictates what he writes]
+
+912
+01:23:59,696 --> 01:24:05,200
+And we can copy this line
+and change the false to true
+
+913
+01:24:05,296 --> 01:24:07,936
+And if we run that it should fail.
+
+914
+01:24:08,000 --> 01:24:09,776
+CB: And it does.
+
+915
+01:24:09,872 --> 01:24:15,248
+Undefined method record message
+received, so that's forcing us to implement that.
+
+916
+01:24:17,472 --> 01:24:24,192
+I'm just going to go a little more
+quickly here so we get the next failure.
+
+917
+01:24:25,260 --> 01:24:33,392
+inaud false to do that we'll have a
+received messages which can be an array.
+
+918
+01:24:33,390 --> 01:24:37,424
+We'll do an attr.reader...
+
+919
+01:24:38,810 --> 01:24:45,184
+...and then receive messages shovel method name.
+
+920
+01:24:48,200 --> 01:24:58,176
+That's still failing so we'll do
+[Sam dictates what he types]
+
+921
+01:25:04,816 --> 01:25:08,448
+CB: So we still have our integration test failing?
+
+922
+01:25:08,440 --> 01:25:16,208
+SP: Right, and actually, before we move on,
+we should add a test for the negative case as well.
+
+923
+01:25:16,688 --> 01:25:19,696
+[Silence]
+
+924
+01:25:26,624 --> 01:25:30,128
+CB: inaud false on line 1 I think. SP: Yes.
+
+925
+01:25:30,672 --> 01:25:34,990
+SP: inaud pretty great.
+
+926
+01:25:35,376 --> 01:25:42,480
+Great! so that actually parsed
+without us seeing it fail.
 
