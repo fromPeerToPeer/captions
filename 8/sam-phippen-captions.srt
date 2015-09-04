@@ -4671,6 +4671,70 @@ but that breaks a number of
 well understood Ruby protocols.
 
 1023
-01:34:31,790 --> 01:34:35,872
-2I, 2F, 2S and so on.
+01:34:31,790 --> 01:34:38,320
+2I, 2F, 2S and so on will probably get
+their own specialized implementations as well.
+
+1024
+01:34:38,352 --> 01:34:41,808
+Just to not break other objects inaud
+
+1025
+01:34:41,800 --> 01:34:47,472
+In fact, RSpec totally special cases, inaud on its spy objects
+
+1026
+01:34:47,500 --> 01:34:51,632
+where this method missing  implementation
+first checks if it's any of those calls, 
+
+1027
+01:34:51,632 --> 01:34:53,968
+and otherwise it does just return itself.
+
+1028
+01:34:53,960 --> 01:34:57,904
+CB: So it's just like the usual public
+method on any plain old Ruby object?
+
+1029
+01:34:57,900 --> 01:35:05,360
+SP: Yes, one of the things that RSpec
+does is ensure that its double and spies
+
+1030
+01:35:05,360 --> 01:35:08,256
+are very compatible with
+the rest of the Ruby system.
+
+1031
+01:35:08,250 --> 01:35:13,216
+So == behaves as you would expect and so on.
+
+1032
+01:35:13,392 --> 01:35:19,680
+This implementation is fine as far
+as small is possible library perspective.
+
+1033
+01:35:19,680 --> 01:35:25,344
+But I think a re-factor is where I would go next.
+
+1034
+01:35:25,424 --> 01:35:28,640
+CB: OK, I think that's all the time we have for today,
+
+1035
+01:35:28,640 --> 01:35:32,528
+but thank you so much for doing this
+and the good explanations along the way.
+
+1036
+01:35:32,576 --> 01:35:36,608
+And it was great seeing you work...
+typing really furiously there.
+
+1037
+01:35:36,600 --> 01:35:38,880
+SP: Thanks, it's been a lot of fun.
 
