@@ -4225,5 +4225,255 @@ SP: inaud pretty great.
 926
 01:25:35,376 --> 01:25:42,480
 Great! so that actually parsed
-without us seeing it fail.
+without us seeing it fail,
+
+927
+01:25:42,640 --> 01:25:44,928
+which is a thing that happens sometimes.
+
+928
+01:25:44,920 --> 01:25:50,896
+I think it's useful to see tests in both
+states even though I can logically derive that 
+
+929
+01:25:50,890 --> 01:25:54,192
+this implementation is correct, so I'm
+going to do something obvious to break it,
+
+930
+01:25:54,190 --> 01:25:56,864
+and in this case I'm going
+to put 'not' on the front there.
+
+931
+01:25:56,860 --> 01:26:00,368
+I just want to see all of the tests fail.
+
+932
+01:26:00,360 --> 01:26:03,456
+CB: So typically we should have
+done something like receive message.empty 
+
+933
+01:26:03,456 --> 01:26:06,400
+and then move on to include, or something like that?
+
+934
+01:26:06,400 --> 01:26:11,888
+SP: Yes, it really doesn't matter as long
+as you see your tests in both states,
+
+935
+01:26:11,904 --> 01:26:14,880
+if your confident about what it's doing.
+
+936
+01:26:15,936 --> 01:26:22,912
+I'm happy with now and even though
+I didn't make my tests do it in the exact order,
+
+937
+01:26:22,910 --> 01:26:29,392
+I can logically derive that this is what
+we need to do, so it's probably fine.
+
+938
+01:26:31,104 --> 01:26:32,928
+Also, the implementation is really simple.
+
+939
+01:26:32,920 --> 01:26:36,304
+[New Chapter]
+
+940
+01:26:37,136 --> 01:26:45,070
+So back to our integration test which is
+[Sam dictates what he writes] I'll just run that.
+
+941
+01:26:46,096 --> 01:26:54,368
+Expected to receive method name... and this
+is because bond did you receive is raising still.
+
+942
+01:26:54,360 --> 01:26:58,704
+because spy receive method
+is still open to implementation.
+
+943
+01:26:58,700 --> 01:27:04,896
+We actually missed a bit up here
+earlier, we need to parse this method name in
+
+944
+01:27:05,640 --> 01:27:17,648
+And then we just do registered
+proxies fetch spy.message received...
+
+945
+01:27:19,600 --> 01:27:22,920
+...method name.
+
+946
+01:27:23,520 --> 01:27:27,696
+CB: OK, so what do our registered
+proxies look like at the moment?
+
+947
+01:27:27,690 --> 01:27:31,024
+SP: It starts life as an empty hash.
+
+948
+01:27:31,072 --> 01:27:36,752
+CB: So at what point are we doing things that add to it?
+
+949
+01:27:36,750 --> 01:27:45,952
+SP: Our proxy callback takes the spy and makes a
+proxy, inserts it into the registered proxys' hash,
+
+950
+01:27:46,320 --> 01:27:52,512
+which has persisted across whatever
+instance this module gets attached to.
+
+951
+01:27:52,510 --> 01:27:56,448
+CB: Do you want to use the spy as a key, like the name or...
+
+952
+01:27:56,960 --> 01:28:01,470
+SP: We can use a couple of things as a key here... 
+
+953
+01:28:01,470 --> 01:28:09,712
+...it' fine to use the spy as a key because the method
+missing implementation that we have on the spy
+
+954
+01:28:09,710 --> 01:28:14,000
+isn't going to beat all the methods on the object.
+
+955
+01:28:14,624 --> 01:28:21,248
+And you can store just objects in a
+hash and they will be looked up correctly.
+
+956
+01:28:21,280 --> 01:28:25,104
+So this should work... let's find out
+
+957
+01:28:25,100 --> 01:28:28,896
+It does... that's pretty great.
+
+958
+01:28:28,890 --> 01:28:34,512
+CB: So we've got inaud it checks our methods,
+how about we have a play around with it in our inaud.
+
+959
+01:28:35,130 --> 01:28:41,520
+SP: Yes, so this library can observe the
+methods were called and the subject will be
+
+960
+01:28:41,536 --> 01:28:48,816
+compatible enough to keep working, so it
+makes sense now to integrate it in for one last try.
+
+961
+01:28:48,810 --> 01:28:55,360
+We'll make sure all our tests are passing...
+and they are, so we'll head back into our Client
+
+962
+01:28:55,360 --> 01:29:00,800
+And modify the junk file to include bond...
+
+963
+01:29:01,744 --> 01:29:07,824
+And the way we do that is [Sam dictates what he writes]
+
+964
+01:29:08,368 --> 01:29:10,944
+It should work...  so let's just bundle install that.
+
+965
+01:29:10,940 --> 01:29:19,280
+And hopefully it's there... bond at 0.1.0 from
+source at./bond as you can see, which is great.
+
+966
+01:29:20,080 --> 01:29:25,280
+So let's go back into our tests and remind
+ourselves of where we were when we started.
+
+967
+01:29:25,296 --> 01:29:30,320
+So we're going to make a bond with
+an HTTP tag, include it and then super.
+
+968
+01:29:30,320 --> 01:29:39,648
+So to make that work we'll
+require bond and run these tests.
+
+969
+01:29:40,030 --> 01:29:41,904
+CB: Do you need to include it?
+
+970
+01:29:41,952 --> 01:29:44,400
+SP: It's already included in
+the test at the bottom there.
+
+971
+01:29:46,016 --> 01:29:50,784
+So let's check to see if that
+works by doing the correct thing...
+
+972
+01:29:50,780 --> 01:29:53,792
+inaud Ruby test helper...
+
+973
+01:29:53,790 --> 01:29:58,960
+Great so all our tests pass but more
+importantly, this test class worked.
+
+974
+01:29:58,960 --> 01:30:03,120
+So now we can write tests against the spy.
+
+975
+01:30:03,120 --> 01:30:08,960
+So we will say, [Sam dictates what he types]
+
+976
+01:30:09,104 --> 01:30:13,856
+This is testing that that
+delegation actually happens.
+
+977
+01:30:13,850 --> 01:30:18,384
+So to do that, we'll pull this test out and say...
+
+978
+01:30:18,570 --> 01:30:21,344
+counter client.get key...
+
+979
+01:30:21,360 --> 01:30:26,256
+...and then in a similar way to what
+we were saying before, we'll ask bond...
+
+980
+01:30:26,608 --> 01:30:33,152
+[Sam dictates what he writes]
+
+981
+01:30:33,664 --> 01:30:35,680
+... the method name which is a get.
 
