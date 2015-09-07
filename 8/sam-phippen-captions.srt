@@ -42,7 +42,7 @@ Building a Spy library.
 
 11
 00:00:34,440 --> 00:00:36,880
-CAMILLE BALLDOCK; So Sam, do you
+CAMILLE BALDOCK; So Sam, do you
 want to start by reading the challenge?
 
 12
@@ -60,7 +60,7 @@ which interacts with a RESTful API.
 
 15
 00:00:46,750 --> 00:00:52,308
-The app has a parseing test suite, but the tests
+The app has a parsing test suite, but the tests
 are an incomplete specification of its behaviour.
 
 16
@@ -93,7 +93,7 @@ SP: Sure... so...
 22
 00:01:13,020 --> 00:01:19,017
 It looks like we've got a gem file and
-a jem file.block lib and test directory.
+a gem file.block lib and test directory.
 
 23
 00:01:19,280 --> 00:01:26,377
