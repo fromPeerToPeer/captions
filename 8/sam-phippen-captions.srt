@@ -42,7 +42,7 @@ Building a Spy library.
 
 11
 00:00:34,440 --> 00:00:36,880
-CAMILLE BALLDOCK; So Sam, do you
+CAMILLE BALDOCK; So Sam, do you
 want to start by reading the challenge?
 
 12
@@ -60,7 +60,7 @@ which interacts with a RESTful API.
 
 15
 00:00:46,750 --> 00:00:52,308
-The app has a parseing test suite, but the tests
+The app has a parsing test suite, but the tests
 are an incomplete specification of its behaviour.
 
 16
@@ -93,7 +93,7 @@ SP: Sure... so...
 22
 00:01:13,020 --> 00:01:19,017
 It looks like we've got a gem file and
-a jem file.block lib and test directory.
+a gem file.block lib and test directory.
 
 23
 00:01:19,280 --> 00:01:26,377
@@ -216,7 +216,7 @@ fix we can make here before we move on.
 49
 00:03:40,068 --> 00:03:45,160
 At the top of the file here we're
-acquiring LHTTP but it looks like it's actually...
+requiring LHTTP but it looks like it's actually...
 
 50
 00:03:45,160 --> 00:03:46,434
@@ -308,7 +308,7 @@ be a good idea to add some isolated tests
 
 69
 00:05:29,620 --> 00:05:35,062
-which use the the fact that the
+which use the fact that the
 counter client is already dependency injection
 
 70
@@ -490,7 +490,7 @@ it's the same object which can respond to any method
 
 108
 00:08:56,820 --> 00:09:04,034
-so you can do eg. spy. inaud and that would work because it's just returning spy on each inaud
+so you can do e.g. spy. inaud and that would work because it's just returning spy on each inaud
 
 109
 00:09:04,830 --> 00:09:08,160
@@ -802,7 +802,7 @@ examples... so that's a good initial...
 177
 00:14:40,468 --> 00:14:45,211
 CB: I love this failing test initially bundler,
-it,s a great way to test your set up.
+it's a great way to test your set up.
 
 178
 00:14:45,210 --> 00:14:53,817
@@ -1017,7 +1017,7 @@ blow most of them away, that's what I usually do.
 
 223
 00:19:00,880 --> 00:19:04,388
-There's a lot of stuff that's usuful in here.
+There's a lot of stuff that's useful in here.
 
 224
 00:19:04,380 --> 00:19:09,897
@@ -1175,7 +1175,7 @@ CB: But how do you test for inaud if it responds to all of the methods?
 
 258
 00:22:07,314 --> 00:22:09,005
-Quaks, like, all the Ducks.
+Quacks, like, all the Ducks.
 
 259
 00:22:09,370 --> 00:22:14,377
@@ -1434,7 +1434,7 @@ makes it work... it totally does.
 
 316
 00:27:13,620 --> 00:27:19,097
-My guess would be, Bond version, the versoion inaud was being loaded,
+My guess would be, Bond version, the version inaud was being loaded,
 
 317
 00:27:19,090 --> 00:27:24,868
@@ -1557,7 +1557,7 @@ to interface with it directly.
 343
 00:29:17,760 --> 00:29:29,451
 Given this is a toy, we'll add that
-require there and we'll make lib bond spy.rp
+require there and we'll make lib bond spy.rb
 
 344
 00:29:29,542 --> 00:29:36,840
@@ -1888,7 +1888,7 @@ it has caused the test to pass.
 415
 00:37:00,620 --> 00:37:10,304
 So, in the true sense of the word
-we've done, like a little bit of tdd inaud,
+we've done, like a little bit of TDD inaud,
 
 416
 00:37:11,216 --> 00:37:16,890
@@ -2069,7 +2069,7 @@ and using public send is one way to achieve that.
 453
 00:40:50,480 --> 00:40:57,520
 CB: So in our case we want it to respond
-o public methods and private methods on the spy?
+to public methods and private methods on the spy?
 
 454
 00:40:57,520 --> 00:41:05,888
@@ -2521,7 +2521,7 @@ use send [they both talk at once].
 552
 00:50:14,544 --> 00:50:20,128
 There's that fun gist like when you
-define imogee as your method names.
+define emoji as your method names.
 
 553
 00:50:20,656 --> 00:50:26,960
@@ -2580,7 +2580,7 @@ At this point I expect both of these tests to fail.
 565
 00:51:13,960 --> 00:51:21,008
 And they do, with false and
-undefined method 916 etc 4 bond spy.
+undefined method 916 etc. 4 bond spy.
 
 566
 00:51:21,056 --> 00:51:29,376
@@ -2824,7 +2824,7 @@ that responds to all the things,
 618
 00:55:53,310 --> 00:55:56,976
 and there's also the proxy thing that
-will have methods along the the lines of
+will have methods along the lines of
 
 619
 00:55:57,040 --> 00:56:01,712
@@ -3187,7 +3187,7 @@ CB: OK.
 
 697
 01:03:36,480 --> 01:03:47,904
-Now we're parseing the proxy call back into our
+Now we're parsing the proxy call back into our
 spy, if we run all the tests we've got some failures.
 
 698
