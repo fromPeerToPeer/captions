@@ -1048,7 +1048,7 @@ So it disables the "should" syntax, but it also disables bare describe.
 
 230
 00:19:35,657 --> 00:19:48,034
-This is a lesser known thing it does, but if we reopen our one spec inaud file, which I deleted,
+This is a lesser known thing it does, but if we reopen our Bond spec inaud file, which I deleted,
 
 231
 00:19:49,188 --> 00:19:56,342
