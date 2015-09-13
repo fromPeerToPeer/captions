@@ -1052,7 +1052,7 @@ This is a lesser known thing it does, but if we reopen our Bond spec .rb file, w
 
 231
 00:19:49,188 --> 00:19:56,342
-Require spec helper, and then type inaud describe, like we had before with bundler.
+Require spec helper, and then type a top-level describe, like we had before with bundler.
 
 232
 00:19:56,834 --> 00:20:05,480
