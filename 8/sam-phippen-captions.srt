@@ -1031,7 +1031,7 @@ available without having to configure it.
 
 226
 00:19:14,765 --> 00:19:20,068
-SP: This is a setting I turn on inaud my spec helpers.
+SP: This is a setting I turn on in most of my spec helpers.
 
 227
 00:19:20,060 --> 00:19:24,251
