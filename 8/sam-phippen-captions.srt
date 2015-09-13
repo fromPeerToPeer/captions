@@ -1412,7 +1412,7 @@ So if we do Bond holder.bond arbitrary.
 
 310
 00:26:49,211 --> 00:26:52,514
-Undefined method bond inaud object... [Sam thinks]
+Undefined method bond for object... [Sam thinks]
 
 311
 00:26:52,510 --> 00:26:56,697
