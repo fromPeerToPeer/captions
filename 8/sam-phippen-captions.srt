@@ -1275,8 +1275,8 @@ We could have done include Bond, watch it fail, call the method, watch it fail,
 
 279
 00:24:11,080 --> 00:24:14,080
-Watch the class beyond
-defined and then define that,
+Watch the class be
+undefined and then define that,
 
 280
 00:24:14,114 --> 00:24:18,937
