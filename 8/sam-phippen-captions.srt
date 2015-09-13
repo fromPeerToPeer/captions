@@ -1535,7 +1535,7 @@ It's going to be a detail which is hidden from you.
 
 338
 00:28:54,320 --> 00:28:59,280
-Your just going to rely on the testing API
+You're just going to rely on the testing API
 that we provide, so you don't need to know about it.
 
 339
