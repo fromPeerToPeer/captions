@@ -973,7 +973,7 @@ bundler configuration with its own defaults,
 
 213
 00:17:59,520 --> 00:18:02,548
-CB: So this is your inaud RSpec yes?
+CB: So this is your dotfile for bundle exec RSpec yes?
 
 214
 00:18:02,540 --> 00:18:08,674
