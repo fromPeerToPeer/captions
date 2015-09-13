@@ -3722,7 +3722,7 @@ weren't writing such a crazy object,
 
 815
 01:15:15,440 --> 01:15:20,464
-is add an inaud reader for proxy so I can
+is add an attr_reader for proxy so I can
 change it later,
 
 816
@@ -3946,9 +3946,9 @@ with a really simple case than a complicated one.
 
 863
 01:19:31,984 --> 01:19:39,232
-So in this case inaud,
-respond to this false,
-did you receive this false,
+So in this case having the implementation
+literally just be, respond to this: false,
+did you receive this: false,
 
 864
 01:19:40,016 --> 01:19:46,840
@@ -3957,7 +3957,7 @@ force implementation with the next test.
 
 865
 01:19:47,480 --> 01:19:56,480
-And the inaud here is it tells us it hasn't received a call when it hasn't,
+And the it here is it tells us it hasn't received a call when it hasn't,
 
 866
 01:19:56,528 --> 01:19:59,984
@@ -3999,9 +3999,9 @@ So this is message received...
 
 875
 01:20:41,456 --> 01:20:45,312
-CB: So do you want inaud whether
-specific message received, that's
-your interface.
+CB: So do you want to know whether a
+specific message was received, that's
+your interface?
 
 876
 01:20:45,310 --> 01:20:46,528
@@ -4198,7 +4198,7 @@ quickly here so we get the next failure.
 
 918
 01:24:25,260 --> 01:24:33,392
-inaud false to do that we'll
+expected true got false, to do that we'll
 have a received messages which can be
 an array.
 
@@ -4230,12 +4230,12 @@ we should add a test for the negative case as well.
 
 925
 01:25:26,624 --> 01:25:30,128
-CB: inaud false on line 1 I think.
+CB: you want that to be false on line 1 currently.
 SP: Yes.
 
 926
 01:25:30,672 --> 01:25:34,990
-SP: inaud pretty great.
+SP: relative numbers, they're pretty great.
 
 927
 01:25:35,376 --> 01:25:42,480
@@ -4387,9 +4387,9 @@ It does... that's pretty great.
 
 959
 01:28:28,890 --> 01:28:34,512
-CB: So we've got inaud
-it checks our methods, how about
-we have a play around with it in our inaud.
+CB: So we've got our minimum viable spying,
+it checks that we've received methods, how about
+we have a play around with it in our actual client.
 
 960
 01:28:35,130 --> 01:28:41,520
@@ -4454,7 +4454,7 @@ works by doing the correct thing...
 
 973
 01:29:50,780 --> 01:29:53,792
-inaud Ruby test helper...
+bundle exec ruby test/test_helper.rb...
 
 974
 01:29:53,790 --> 01:29:58,960
@@ -4539,8 +4539,8 @@ and head back to our test helper and run it...
 992
 01:31:13,872 --> 01:31:21,472
 ... you can see here, all our integration
-tests failed but also our inaud failed
-inaud.
+tests failed but also our isolated test failed
+with: expected to receive get
 
 993
 01:31:21,968 --> 01:31:28,160
@@ -4581,7 +4581,7 @@ think if I was going to make this production ready,
 
 1001
 01:32:06,810 --> 01:32:14,928
-specifically... this bond inaud is getting fairly large.
+specifically... this bond.rb is getting fairly large.
 
 1002
 01:32:15,536 --> 01:32:21,648
@@ -4696,12 +4696,13 @@ their own specialized implementations as well.
 
 1025
 01:34:38,352 --> 01:34:41,808
-Just to not break other objects inaud
+Just to not break other objects that this
+goes through
 
 1026
 01:34:41,800 --> 01:34:47,472
-In fact, RSpec totally special cases, inaud
-on its spy objects
+In fact, RSpec totally special cases those
+out on its spy objects
 
 1027
 01:34:47,500 --> 01:34:51,632
