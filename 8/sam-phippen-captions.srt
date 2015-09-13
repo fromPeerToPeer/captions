@@ -1173,7 +1173,8 @@ by the time I've done writing my tests but...
 
 257
 00:22:03,211 --> 00:22:06,685
-CB: But how do you test for inaud if it responds to all of the methods?
+CB: But how do you test a thing is the right class
+if it responds to all of the methods?
 
 258
 00:22:07,314 --> 00:22:09,005
