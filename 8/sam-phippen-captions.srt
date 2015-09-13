@@ -3855,7 +3855,7 @@ going to store all the calls as an array.
 
 844
 01:17:50,912 --> 01:17:56,784
-And so on it's own, this
+And so on its own, this
 method has no observable effect,
 
 845
@@ -3879,7 +3879,7 @@ we're going to have a method like
 849
 01:18:14,992 --> 01:18:16,990
 CB: And we don't care about how
-the proxy stores it's stuff.
+the proxy stores its stuff.
 
 850
 01:18:16,990 --> 01:18:21,456
@@ -4077,7 +4077,7 @@ dynamically garbage collectible in Ruby 2.2
 892
 01:22:07,600 --> 01:22:13,696
 you don't necessarily have that
-guarantee that's it's the exact same object.
+guarantee that it's the exact same object.
 
 893
 01:22:14,040 --> 01:22:17,872
@@ -4162,7 +4162,7 @@ received and then go to it actually returns false
 910
 01:23:46,064 --> 01:23:49,728
 when the specific message has been
-received but your testing for another one?
+received but you're testing for another one?
 
 911
 01:23:49,720 --> 01:23:52,240
@@ -4346,7 +4346,7 @@ CB: So at what point are we doing things that add to it?
 950
 01:27:36,750 --> 01:27:45,952
 SP: Our proxy callback takes the spy and makes a
-proxy, inserts it into the registered_proxies' hash,
+proxy, inserts it into the registered_proxies hash,
 
 951
 01:27:46,320 --> 01:27:52,512
@@ -4364,7 +4364,7 @@ SP: We can use a couple of things as a key here...
 
 954
 01:28:01,470 --> 01:28:09,712
-...it' fine to use the spy as a key
+...it's fine to use the spy as a key
 because the method_missing implementation
 that we have on the spy
 
@@ -4497,7 +4497,7 @@ we were saying before, we'll ask bond...
 
 983
 01:30:35,680 --> 01:30:40,000
-'And if we've done everything
+And if we've done everything
 correctly, this should work.
 
 984
@@ -4624,7 +4624,7 @@ name in here, but when we add those details,
 
 1010
 01:33:04,010 --> 01:33:08,208
-that's going to end up being it's own object.
+that's going to end up being its own object.
 
 1011
 01:33:08,224 --> 01:33:11,936
@@ -4639,7 +4639,7 @@ are clearly a concept in the system.
 1013
 01:33:17,160 --> 01:33:24,288
 It's like an individual method call, and so
-I would probably end up giving that it's own name.
+I would probably end up giving that its own name.
 
 1014
 01:33:24,430 --> 01:33:30,176
@@ -4658,11 +4658,11 @@ You see, I can attack any of these.
 1017
 01:33:39,870 --> 01:33:47,696
 The other one that's really common, but we won't do
-now is... at the moment there's real no test cleanup,
+now is... at the moment there's no real test cleanup,
 
 1018
 01:33:47,696 --> 01:33:53,504
-so you loose your references to all
+so you lose your references to all
 the Bond objects at the end of the test.
 
 1019
