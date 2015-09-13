@@ -869,7 +869,8 @@ hard about where it came from later.
 
 191
 00:15:50,990 --> 00:15:54,560
-CB: So this is when you do your let in RSpec and specify inaud double.
+CB: So this is when you do your let in RSpec and specify the
+first symbol in double.
 
 192
 00:15:54,560 --> 00:16:02,651
