@@ -1447,7 +1447,7 @@ because this file defines the module.
 
 318
 00:27:24,860 --> 00:27:29,348
-CB: inaud no methods and try to inaud methods over it and not including them.
+CB: but no methods and try to inaud methods over it and not including them.
 
 319
 00:27:30,457 --> 00:27:32,660
