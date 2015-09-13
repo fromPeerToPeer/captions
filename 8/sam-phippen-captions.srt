@@ -834,7 +834,7 @@ which will return us an object and it takes a name.
 
 184
 00:15:18,830 --> 00:15:24,891
-The reason we tried that name is so
+The reason we provide that name is so
 we can put it in the inspect strings.
 
 185
