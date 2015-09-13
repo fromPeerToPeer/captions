@@ -1579,7 +1579,7 @@ To satisfy this we can just do bond spy.new and I'm going to thread the name thr
 
 347
 00:29:51,520 --> 00:29:56,971
-and cheat slightly, and parse that in as well.
+and cheat slightly, and pass that in as well.
 
 348
 00:29:56,970 --> 00:30:01,908
