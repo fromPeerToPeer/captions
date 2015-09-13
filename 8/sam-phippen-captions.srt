@@ -1303,7 +1303,8 @@ SP: Sure, alright let's run it and see what happens.
 
 285
 00:24:33,130 --> 00:24:41,560
-So we failed with undefined method Bond for RSpec inaud Bond, which is great.
+So we failed with undefined method Bond for RSpec example groupd
+Bond, which is great.
 
 286
 00:24:41,720 --> 00:24:50,891
