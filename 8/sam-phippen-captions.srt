@@ -816,7 +816,7 @@ see it hasn't run, but it's useful to have a test there.
 180
 00:14:58,890 --> 00:15:05,908
 So we sort of specified the API a
-little bit, back in our mini-test.
+little bit, back in our minitest test.
 
 181
 00:15:05,920 --> 00:15:10,285
