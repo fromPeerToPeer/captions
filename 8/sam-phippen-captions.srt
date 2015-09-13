@@ -4133,7 +4133,7 @@ returns true when a message has been received.
 904
 01:23:13,072 --> 01:23:17,520
 CB: Surely that message has
-been received  right? SP: Sure.
+been received right? SP: Sure.
 
 905
 01:23:18,048 --> 01:23:20,608
@@ -4524,7 +4524,7 @@ Great, so we've got something useful.
 
 989
 01:30:58,736 --> 01:31:03,600
-It's probably worth  also breaking
+It's probably worth also breaking
 the implementation on the test.
 
 990
@@ -4705,7 +4705,7 @@ on its spy objects
 
 1027
 01:34:47,500 --> 01:34:51,632
-where this method missing  implementation
+where this method missing implementation
 first checks if it's any of those calls, 
 
 1028
