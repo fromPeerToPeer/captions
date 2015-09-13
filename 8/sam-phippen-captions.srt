@@ -1044,7 +1044,7 @@ all objects and classes, whatever.
 
 229
 00:19:29,730 --> 00:19:35,508
-So it disables the inaud syntax, but it also disables bare describe.
+So it disables the "should" syntax, but it also disables bare describe.
 
 230
 00:19:35,657 --> 00:19:48,034
