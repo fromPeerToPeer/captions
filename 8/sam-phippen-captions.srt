@@ -982,7 +982,7 @@ that expands to bundle exec RSpec.
 
 215
 00:18:09,600 --> 00:18:18,342
-[Big sigh] it's inaud a lot, so now if I just close the spec helper and re-open it.
+[Big sigh] it's a command I type a lot, so now if I just close the spec helper and re-open it.
 
 216
 00:18:18,445 --> 00:18:21,680
