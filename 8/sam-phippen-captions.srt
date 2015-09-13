@@ -1169,7 +1169,7 @@ probably go away at some point as well.
 256
 00:21:56,308 --> 00:22:03,142
 I generally try not to have object type checks
-by the time I've done rating my tests but...
+by the time I've done writing my tests but...
 
 257
 00:22:03,211 --> 00:22:06,685
