@@ -1490,7 +1490,7 @@ one argument, expected zero,
 
 328
 00:28:07,040 --> 00:28:10,491
-So we can fix that with inaud name in here.
+So we can fix that with passing a name in here.
 
 329
 00:28:10,490 --> 00:28:15,520
