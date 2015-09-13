@@ -1074,7 +1074,8 @@ Where it lives by default.
 
 236
 00:20:16,200 --> 00:20:19,497
-CB: So why would you recommend inaud these tests.
+CB: So why would you recommend ruby developers
+do this in their tests.
 
 237
 00:20:19,660 --> 00:20:25,314
