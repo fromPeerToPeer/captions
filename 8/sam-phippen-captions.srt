@@ -1125,7 +1125,7 @@ to write RSpec.describe at the top of your file.
 
 247
 00:21:07,720 --> 00:21:12,457
-But once your in here you can write
+But once you're in here you can write
 describe as normal, and the reason for that
 
 248
