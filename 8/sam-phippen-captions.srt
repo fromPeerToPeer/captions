@@ -1070,7 +1070,7 @@ removed describe from module and object.
 
 235
 00:20:14,210 --> 00:20:16,205
-We're at inaud spider fault.
+Where it lives by default.
 
 236
 00:20:16,200 --> 00:20:19,497
