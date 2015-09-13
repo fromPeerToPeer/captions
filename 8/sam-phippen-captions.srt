@@ -893,7 +893,7 @@ But it seems like a sensible place to start.
 
 196
 00:16:19,440 --> 00:16:27,394
-So let's open the Bond spec backup
+So let's open the Bond spec back up
 and the first thing we're going to describe
 
 197
