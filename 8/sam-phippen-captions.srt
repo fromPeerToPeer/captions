@@ -1561,7 +1561,7 @@ to interface with it directly.
 343
 00:29:17,760 --> 00:29:29,451
 Given this is a toy, we'll add that
-require there and we'll make lib bond spy.rb
+require there and we'll make lib/bond/spy.rb
 
 344
 00:29:29,542 --> 00:29:36,840
