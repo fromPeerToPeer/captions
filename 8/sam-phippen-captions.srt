@@ -3722,7 +3722,8 @@ weren't writing such a crazy object,
 
 815
 01:15:15,440 --> 01:15:20,464
-is add an inaud reader for proxy so I can change it later,
+is add an inaud reader for proxy so I can
+change it later,
 
 816
 01:15:20,496 --> 01:15:25,760
@@ -3776,16 +3777,18 @@ Now we only have a single failure,
 
 827
 01:16:19,728 --> 01:16:23,728
-which is undefined method record
-message received for bond proxy.
+which is undefined method
+record message received for bond proxy.
 
 828
 01:16:23,720 --> 01:16:29,792
-which gives us a good way to start raising our tests.
+which gives us a good way to start raising
+our tests.
 
 829
 01:16:29,790 --> 01:16:34,320
-We'll describe proxy, we'll put this in module bond.
+We'll describe proxy, we'll put this in
+module bond.
 
 830
 01:16:34,432 --> 01:16:37,456
@@ -3943,7 +3946,9 @@ with a really simple case than a complicated one.
 
 863
 01:19:31,984 --> 01:19:39,232
-So in this case inaud, respond to this false, did you receive this false,
+So in this case inaud,
+respond to this false,
+did you receive this false,
 
 864
 01:19:40,016 --> 01:19:46,840
@@ -3994,7 +3999,9 @@ So this is message received...
 
 875
 01:20:41,456 --> 01:20:45,312
-CB: So do you want inaud whether specific message received, that's your interface.
+CB: So do you want inaud whether
+specific message received, that's
+your interface.
 
 876
 01:20:45,310 --> 01:20:46,528
@@ -4181,8 +4188,8 @@ CB: And it does.
 
 916
 01:24:09,872 --> 01:24:15,248
-Undefined method record message
-received, so that's forcing us to implement that.
+Undefined method record message received,
+so that's forcing us to implement that.
 
 917
 01:24:17,472 --> 01:24:24,192
@@ -4191,8 +4198,9 @@ quickly here so we get the next failure.
 
 918
 01:24:25,260 --> 01:24:33,392
-inaud false to do that we'll have a
-received messages which can be an array.
+inaud false to do that we'll
+have a received messages which can be
+an array.
 
 919
 01:24:33,390 --> 01:24:37,424
@@ -4222,7 +4230,8 @@ we should add a test for the negative case as well.
 
 925
 01:25:26,624 --> 01:25:30,128
-CB: inaud false on line 1 I think. SP: Yes.
+CB: inaud false on line 1 I think.
+SP: Yes.
 
 926
 01:25:30,672 --> 01:25:34,990
@@ -4314,8 +4323,8 @@ earlier, we need to parse this method name in.
 
 945
 01:27:05,640 --> 01:27:17,648
-And then we just do registered
-proxies fetch spy.message received...
+And then we just do
+registered proxies fetch spy.message received...
 
 946
 01:27:19,600 --> 01:27:22,920
@@ -4323,8 +4332,8 @@ proxies fetch spy.message received...
 
 947
 01:27:23,520 --> 01:27:27,696
-CB: OK, so what do our registered
-proxies look like at the moment?
+CB: OK, so what do our registered proxies
+look like at the moment?
 
 948
 01:27:27,690 --> 01:27:31,024
@@ -4346,7 +4355,8 @@ instance this module gets attached to.
 
 952
 01:27:52,510 --> 01:27:56,448
-CB: Do you want to use the spy as a key, like the name or...
+CB: Do you want to use the spy as a key,
+like the name or...
 
 953
 01:27:56,960 --> 01:28:01,470
@@ -4354,8 +4364,9 @@ SP: We can use a couple of things as a key here...
 
 954
 01:28:01,470 --> 01:28:09,712
-...it' fine to use the spy as a key because the method
-missing implementation that we have on the spy
+...it' fine to use the spy as a key
+because the method missing implementation
+that we have on the spy
 
 955
 01:28:09,710 --> 01:28:14,000
@@ -4376,8 +4387,9 @@ It does... that's pretty great.
 
 959
 01:28:28,890 --> 01:28:34,512
-CB: So we've got inaud it checks our methods,
-how about we have a play around with it in our inaud.
+CB: So we've got inaud
+it checks our methods, how about
+we have a play around with it in our inaud.
 
 960
 01:28:35,130 --> 01:28:41,520
@@ -4517,8 +4529,8 @@ the implementation on the test.
 
 990
 01:31:04,160 --> 01:31:09,520
-So if we head back in to the counter
-client, and just comment this line of code out
+So if we head back in to the counter client,
+and just comment this line of code out
 
 991
 01:31:09,520 --> 01:31:12,960
@@ -4527,7 +4539,8 @@ and head back to our test helper and run it...
 992
 01:31:13,872 --> 01:31:21,472
 ... you can see here, all our integration
-tests failed but also our inaud failed inaud.
+tests failed but also our inaud failed
+inaud.
 
 993
 01:31:21,968 --> 01:31:28,160
@@ -4687,7 +4700,8 @@ Just to not break other objects inaud
 
 1026
 01:34:41,800 --> 01:34:47,472
-In fact, RSpec totally special cases, inaud on its spy objects
+In fact, RSpec totally special cases, inaud
+on its spy objects
 
 1027
 01:34:47,500 --> 01:34:51,632
