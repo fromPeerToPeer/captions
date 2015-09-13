@@ -1575,7 +1575,7 @@ nil to be a kind of Bond spy.
 
 346
 00:29:43,760 --> 00:29:51,508
-To satisfy this we can just do bond spy.new and I'm going to thread the inaud through here,
+To satisfy this we can just do bond spy.new and I'm going to thread the name through here,
 
 347
 00:29:51,520 --> 00:29:56,971
