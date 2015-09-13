@@ -3700,11 +3700,11 @@ And so that should fail, and it does.
 810
 01:14:52,400 --> 01:14:59,088
 I'm not even going to read the failure output,
-I'm just going to do the thing I expect and see.
+I'm just going to do the thing I expect and see
 
 811
 01:14:59,712 --> 01:15:02,000
-What! it does.
+if it works. It does.
 
 812
 01:15:02,528 --> 01:15:08,048
@@ -3713,7 +3713,7 @@ probably worth putting that back up there.
 
 813
 01:15:08,040 --> 01:15:10,592
-I think that's good enough.
+I think that's clear enough.
 
 814
 01:15:10,670 --> 01:15:15,328
@@ -3769,7 +3769,7 @@ and that's because we haven't required it.
 825
 01:16:11,776 --> 01:16:16,720
 And we'll put that same require
-in the test file for proxy as well.
+in the unit test file for proxy as well.
 
 826
 01:16:17,160 --> 01:16:19,680
@@ -3840,7 +3840,7 @@ So let's describe that.
 
 841
 01:17:33,550 --> 01:17:37,360
-Here we need the hash -
+Here we are using the hash because
 it's going to be an instance method.
 
 842
@@ -4041,7 +4041,7 @@ to have to keep referring to this method name.
 
 884
 01:21:25,080 --> 01:21:30,704
-So we'll allow let now to be false.
+So we'll have a let now
 
 885
 01:21:32,736 --> 01:21:36,520
@@ -4092,11 +4092,11 @@ like you used to treat strings and older Rubys?
 895
 01:22:22,110 --> 01:22:26,960
 SP: Yes, and the other thing about
-this is that it's a really strong callout.
+this is that it's a really strong callout
 
 896
 01:22:27,040 --> 01:22:30,848
-But this double is the thing that
+that this double is the thing that
 is going to be compared against.
 
 897
@@ -4263,7 +4263,7 @@ to put 'not' on the front there.
 
 932
 01:25:56,860 --> 01:26:00,368
-I just want to see all of the tests fail.
+I just want to see all of those tests fail.
 
 933
 01:26:00,360 --> 01:26:03,456
@@ -4350,13 +4350,13 @@ proxy, inserts it into the registered proxies' hash,
 
 951
 01:27:46,320 --> 01:27:52,512
-which has persisted across whatever
+which is persisted across whatever
 instance this module gets attached to.
 
 952
 01:27:52,510 --> 01:27:56,448
 CB: Do you want to use the spy as a key,
-like the name or...
+or the spy's name, or...
 
 953
 01:27:56,960 --> 01:28:01,470
@@ -4399,7 +4399,7 @@ methods were called and the subject will be
 961
 01:28:41,536 --> 01:28:48,816
 compatible enough to keep working, so it
-makes sense now to integrate it in for one last try.
+makes sense now to integrate it in. For one last try,
 
 962
 01:28:48,810 --> 01:28:55,360
@@ -4431,7 +4431,7 @@ ourselves of where we were when we started.
 968
 01:29:25,296 --> 01:29:30,320
 So we're going to make a bond with
-an HTTP tag, include it and then super.
+the http tag, include it and then super.
 
 969
 01:29:30,320 --> 01:29:39,648
@@ -4493,7 +4493,7 @@ we were saying before, we'll ask bond...
 
 982
 01:30:33,664 --> 01:30:35,680
-... the method name which is a get.
+... the method name which is get.
 
 983
 01:30:35,680 --> 01:30:40,000
@@ -4525,7 +4525,7 @@ Great, so we've got something useful.
 989
 01:30:58,736 --> 01:31:03,600
 It's probably worth also breaking
-the implementation on the test.
+the implementation, not the test.
 
 990
 01:31:04,160 --> 01:31:09,520
@@ -4563,7 +4563,7 @@ CB: A combination thereof.
 997
 01:31:41,100 --> 01:31:44,208
 CB: Alright, so we've got
-our minimal viable spying library.
+our minimum viable spying library.
 
 998
 01:31:44,688 --> 01:31:51,056
@@ -4605,7 +4605,7 @@ name to record past failure states.
 1006
 01:32:39,280 --> 01:32:45,536
 And I would probably change the way we
-record methods calls to include all of that data,
+record method calls to include all of that data,
 
 1007
 01:32:45,550 --> 01:32:52,112
@@ -4648,7 +4648,7 @@ well, we're not using all of the hash interface,
 
 1015
 01:33:30,176 --> 01:33:36,624
-only a small amount of it, and that
+only a very small amount of it, and that
 probably means that's a main object as well.
 
 1016
@@ -4663,7 +4663,7 @@ now is... at the moment there's real no test cleanup,
 1018
 01:33:47,696 --> 01:33:53,504
 so you loose your references to all
-the objects at the end of the test.
+the Bond objects at the end of the test.
 
 1019
 01:33:53,760 --> 01:34:01,880
@@ -4672,7 +4672,7 @@ you from retaining any of the
 
 1020
 01:34:01,880 --> 01:34:05,584
-mock stubs, spies or doubles across tests.
+mocks, stubs, spies or doubles across tests.
 
 1021
 01:34:05,760 --> 01:34:14,224
@@ -4720,12 +4720,12 @@ method on any plain old Ruby object?
 1030
 01:34:57,900 --> 01:35:05,360
 SP: Yes, one of the things that RSpec
-does is ensure that its double and spies
+does is ensure that its doubles and spies
 
 1031
 01:35:05,360 --> 01:35:08,256
 are very compatible with
-the rest of the Ruby system.
+the rest of the Ruby ecosystem.
 
 1032
 01:35:08,250 --> 01:35:13,216
