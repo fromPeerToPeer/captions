@@ -1438,7 +1438,7 @@ makes it work... it totally does.
 
 316
 00:27:13,620 --> 00:27:19,097
-My guess would be, Bond version, the version inaud was being loaded,
+My guess would be, Bond version, the version constant was being loaded,
 
 317
 00:27:19,090 --> 00:27:24,868
