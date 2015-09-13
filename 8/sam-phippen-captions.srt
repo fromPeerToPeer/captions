@@ -1135,7 +1135,7 @@ is that we're inside an Rspec module and we have trust.
 249
 00:21:17,740 --> 00:21:24,457
 We've got out empty test set up and
-we need to write first test which will sort of
+we need to write a first test which will sort of
 
 250
 00:21:25,020 --> 00:21:31,977
