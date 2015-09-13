@@ -930,7 +930,7 @@ test these, right, that is an instance method call.
 
 204
 00:17:04,680 --> 00:17:11,097
-Not a parse method call, I was wrong,
+Not a class method call, I was wrong,
 but I had to work it out by saying it,
 
 205
