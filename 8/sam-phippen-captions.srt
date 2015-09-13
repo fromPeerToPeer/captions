@@ -1130,7 +1130,7 @@ describe as normal, and the reason for that
 
 248
 00:21:12,450 --> 00:21:16,731
-is that we're inside inaud we have trust.
+is that we're inside an Rspec module and we have trust.
 
 249
 00:21:17,740 --> 00:21:24,457
