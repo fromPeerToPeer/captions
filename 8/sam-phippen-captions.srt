@@ -3722,7 +3722,7 @@ weren't writing such a crazy object,
 
 815
 01:15:15,440 --> 01:15:20,464
-is add an attr_reader for proxy so I can
+is add an attr_reader for Proxy so I can
 change it later,
 
 816
@@ -3741,7 +3741,7 @@ all our tests we've got some failures
 
 819
 01:15:35,344 --> 01:15:40,624
-but that's because we haven't got proxy.
+but that's because we haven't got Proxy.
 
 820
 01:15:40,620 --> 01:15:44,640
@@ -3759,7 +3759,7 @@ everything to see where we're at.
 
 823
 01:16:03,000 --> 01:16:07,824
-We're still going to get that name error,
+We're still going to get that NameError,
 and that's because we haven't required it.
 
 824
@@ -3769,7 +3769,7 @@ and that's because we haven't required it.
 825
 01:16:11,776 --> 01:16:16,720
 And we'll put that same require
-in the unit test file for proxy as well.
+in the unit test file for Proxy as well.
 
 826
 01:16:17,160 --> 01:16:19,680
@@ -3778,7 +3778,7 @@ Now we only have a single failure,
 827
 01:16:19,728 --> 01:16:23,728
 which is undefined method
-record message received for bond proxy.
+record_message_received for Bond::Proxy.
 
 828
 01:16:23,720 --> 01:16:29,792
@@ -3787,8 +3787,8 @@ our tests.
 
 829
 01:16:29,790 --> 01:16:34,320
-We'll describe proxy, we'll put this in
-module bond.
+We'll describe Proxy, we'll put this in
+module Bond.
 
 830
 01:16:34,432 --> 01:16:37,456
@@ -3801,7 +3801,7 @@ module bond.
 832
 01:16:42,912 --> 01:16:52,496
 Proxy is the wrong name, it matches the
-class name but here proxy is the role it's taking.
+class name but here Proxy is the role it's taking.
 
 833
 01:16:53,130 --> 01:16:55,616
@@ -3810,7 +3810,7 @@ need any constructor arguments
 
 834
 01:16:55,632 --> 01:16:57,968
-so I'm just going to do proxy.new.
+so I'm just going to do Proxy.new.
 
 835
 01:16:58,048 --> 01:17:03,712
@@ -3819,11 +3819,11 @@ It's worth noting that RSpec will do this for you.
 836
 01:17:03,710 --> 01:17:10,176
 It implicitly will call subject,
-it's just name class new.
+it's just class_name.new.
 
 837
 01:17:10,170 --> 01:17:19,712
-But I'm doing this so that we get this proxy name.
+But I'm doing this so that we get this Proxy name.
 
 838
 01:17:20,784 --> 01:17:27,072
@@ -3995,7 +3995,7 @@ And be OK with that.
 
 874
 01:20:35,400 --> 01:20:39,424
-So this is message received...
+So this is message_received?...
 
 875
 01:20:41,456 --> 01:20:45,312
@@ -4027,7 +4027,7 @@ Have I got myself confused, yes, great.
 881
 01:21:09,790 --> 01:21:15,360
 And this is going to be
-expect proxy.message received.
+expect(proxy.message_received?
 
 882
 01:21:16,016 --> 01:21:20,464
@@ -4107,7 +4107,7 @@ that doubles only ever compare true to themselves.
 898
 01:22:37,696 --> 01:22:44,640
 So now we have that set up we should
-run undefined method, method received.
+run - undefined method, message_received?
 
 899
 01:22:44,832 --> 01:22:47,824
@@ -4188,7 +4188,7 @@ CB: And it does.
 
 916
 01:24:09,872 --> 01:24:15,248
-Undefined method record message received,
+Undefined method record_message_received,
 so that's forcing us to implement that.
 
 917
@@ -4199,16 +4199,16 @@ quickly here so we get the next failure.
 918
 01:24:25,260 --> 01:24:33,392
 expected true got false, to do that we'll
-have a received messages which can be
+have a @received_messages which can be
 an array.
 
 919
 01:24:33,390 --> 01:24:37,424
-We'll do an attr.reader...
+We'll do an attr_reader...
 
 920
 01:24:38,810 --> 01:24:45,184
-...and then receive messages shovel method name.
+...and then received_messages << method_name.
 
 921
 01:24:48,200 --> 01:24:58,176
@@ -4268,11 +4268,11 @@ I just want to see all of those tests fail.
 933
 01:26:00,360 --> 01:26:03,456
 CB: So typically we should have
-done something like receive message.empty 
+done something like received_messages.empty
 
 934
 01:26:03,456 --> 01:26:06,400
-and then move on to include, or something like that?
+and then move on to include?, or something like that?
 
 935
 01:26:06,400 --> 01:26:11,888
@@ -4308,12 +4308,12 @@ So back to our integration test which is
 
 942
 01:26:46,096 --> 01:26:54,368
-Expected to receive method name... and this
-is because bond did you receive is raising still.
+Expected to receive method_name... and this
+is because bond_did_you_receive? is raising still.
 
 943
 01:26:54,360 --> 01:26:58,704
-because spy receive method
+because spy_received_method?
 is still open to implementation.
 
 944
@@ -4324,15 +4324,15 @@ earlier, we need to parse this method name in.
 945
 01:27:05,640 --> 01:27:17,648
 And then we just do
-registered proxies fetch spy.message received...
+registered_proxies.fetch(spy).message_received?(...
 
 946
 01:27:19,600 --> 01:27:22,920
-...method name.
+...method_name).
 
 947
 01:27:23,520 --> 01:27:27,696
-CB: OK, so what do our registered proxies
+CB: OK, so what do our registered_proxies
 look like at the moment?
 
 948
@@ -4346,7 +4346,7 @@ CB: So at what point are we doing things that add to it?
 950
 01:27:36,750 --> 01:27:45,952
 SP: Our proxy callback takes the spy and makes a
-proxy, inserts it into the registered proxies' hash,
+proxy, inserts it into the registered_proxies' hash,
 
 951
 01:27:46,320 --> 01:27:52,512
@@ -4365,12 +4365,12 @@ SP: We can use a couple of things as a key here...
 954
 01:28:01,470 --> 01:28:09,712
 ...it' fine to use the spy as a key
-because the method missing implementation
+because the method_missing implementation
 that we have on the spy
 
 955
 01:28:09,710 --> 01:28:14,000
-isn't going to beat all the methods on the object.
+isn't going to beat all the methods on Object.
 
 956
 01:28:14,624 --> 01:28:21,248
@@ -4408,7 +4408,7 @@ and they are, so we'll head back into our Client
 
 963
 01:28:55,360 --> 01:29:00,800
-And modify the junk file to include bond...
+And modify the junk file to include Bond...
 
 964
 01:29:01,744 --> 01:29:07,824
@@ -4480,7 +4480,7 @@ So to do that, we'll pull this test out and say...
 
 979
 01:30:18,570 --> 01:30:21,344
-counter client.get key...
+counter_client.get(key)...
 
 980
 01:30:21,360 --> 01:30:26,256
@@ -4512,7 +4512,7 @@ working, let's also see it fail.
 986
 01:30:47,456 --> 01:30:52,992
 And it does, you can see here expected
-to receive get, in the bond did you receive call,
+to receive get, in the bond_did_you_receive? call,
 
 987
 01:30:52,990 --> 01:30:56,256
@@ -4529,7 +4529,7 @@ the implementation, not the test.
 
 990
 01:31:04,160 --> 01:31:09,520
-So if we head back in to the counter client,
+So if we head back in to the CounterClient,
 and just comment this line of code out
 
 991
@@ -4590,7 +4590,7 @@ This proxy callback is clearly a
 
 1003
 01:32:21,776 --> 01:32:26,464
-All of this stuff like spy_received_method
+All of this stuff like spy_received_method?
 
 1004
 01:32:26,760 --> 01:32:31,808
@@ -4643,8 +4643,8 @@ I would probably end up giving that it's own name.
 
 1014
 01:33:24,430 --> 01:33:30,176
-This registered proxies thing as
-well, we're not using all of the hash interface,
+This registered_proxies thing as
+well, we're not using all of the Hash interface,
 
 1015
 01:33:30,176 --> 01:33:36,624
@@ -4691,7 +4691,7 @@ well understood Ruby protocols.
 
 1024
 01:34:31,790 --> 01:34:38,320
-2I, 2F, 2S and so on will probably get
+to_i, to_f, to_s and so on will probably get
 their own specialized implementations as well.
 
 1025
@@ -4706,7 +4706,7 @@ out on its spy objects
 
 1027
 01:34:47,500 --> 01:34:51,632
-where this method missing implementation
+where this method_missing implementation
 first checks if it's any of those calls, 
 
 1028
