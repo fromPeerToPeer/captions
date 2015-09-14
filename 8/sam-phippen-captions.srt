@@ -718,7 +718,8 @@ That's for private gems.
 
 156
 00:12:47,291 --> 00:12:51,154
-CB: Alright so if you have your own internal Ruby [inaud], OK.
+CB: Alright so if you have
+your own internal Ruby, OK.
 
 157
 00:12:51,860 --> 00:12:58,937
