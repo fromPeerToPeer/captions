@@ -831,7 +831,7 @@ see it hasn't run, but it's useful to have a test there.
 180
 00:14:58,890 --> 00:15:05,908
 So we sort of specified the API a
-little bit, back in our mini-test.
+little bit, back in our minitest test.
 
 181
 00:15:05,920 --> 00:15:10,285
@@ -849,7 +849,7 @@ which will return us an object and it takes a name.
 
 184
 00:15:18,830 --> 00:15:24,891
-The reason we tried that name is so
+The reason we provide that name is so
 we can put it in the inspect strings.
 
 185
@@ -859,7 +859,7 @@ spies flying through your system
 
 186
 00:15:28,468 --> 00:15:32,685
-you don't necessary know which one
+you don't necessarily know which one
 is which so it can be useful to tag them.
 
 187
@@ -884,7 +884,8 @@ hard about where it came from later.
 
 191
 00:15:50,990 --> 00:15:54,560
-CB: So this is when you do your let in RSpec and specify inaud double.
+CB: So this is when you do your let in RSpec and specify
+your first symbol in double.
 
 192
 00:15:54,560 --> 00:16:02,651
@@ -907,7 +908,7 @@ But it seems like a sensible place to start.
 
 196
 00:16:19,440 --> 00:16:27,394
-So let's open the Bond spec backup
+So let's open the Bond spec back up
 and the first thing we're going to describe
 
 197
@@ -940,12 +941,12 @@ makes all the methods from that module available
 203
 00:16:58,570 --> 00:17:04,680
 Right, so when we have a test method like
-test these, right, that is an instance method call.
+test_bees, right, that is an instance method call.
 
 204
 00:17:04,680 --> 00:17:11,097
-Not a parse method call, I was wrong,
-but I had to work it out by saying it,
+Not a class method call, I was wrong,
+but I worked it out by saying it,
 
 205
 00:17:11,131 --> 00:17:12,914
@@ -987,7 +988,7 @@ bundler configuration with its own defaults,
 
 213
 00:17:59,520 --> 00:18:02,548
-CB: So this is your inaud RSpec yes?
+CB: So this is your alias for bundle exec RSpec yes?
 
 214
 00:18:02,540 --> 00:18:08,674
@@ -996,7 +997,8 @@ that expands to bundle exec RSpec.
 
 215
 00:18:09,600 --> 00:18:18,342
-[Big sigh] it's inaud a lot, so now if I just close the spec helper and re-open it.
+[Big sigh] it's a command I type a lot, so now if I
+just close the spec helper and re-open it.
 
 216
 00:18:18,445 --> 00:18:21,680
@@ -1045,7 +1047,7 @@ available without having to configure it.
 
 226
 00:19:14,765 --> 00:19:20,068
-SP: This is a setting I turn on inaud my spec helpers.
+SP: This is a setting I turn on in most of my spec helpers.
 
 227
 00:19:20,060 --> 00:19:24,251
@@ -1058,15 +1060,17 @@ all objects and classes, whatever.
 
 229
 00:19:29,730 --> 00:19:35,508
-So it disables the inaud syntax, but it also disables bare describe.
+So it disables the should syntax, but it also disables bare describe.
 
 230
 00:19:35,657 --> 00:19:48,034
-This is a lesser known thing it does, but if we reopen our one spec inaud file, which I deleted,
+This is a lesser known thing it does, but if we reopen our
+bond_spec.rb file, which I deleted,
 
 231
 00:19:49,188 --> 00:19:56,342
-Require spec helper, and then type inaud describe, like we had before with bundler.
+Require spec helper, and then type a top-level describe,
+like we had before with bundler.
 
 232
 00:19:56,834 --> 00:20:05,480
@@ -1084,11 +1088,12 @@ removed describe from module and object.
 
 235
 00:20:14,210 --> 00:20:16,205
-We're at inaud spider fault.
+Where it lives by default
 
 236
 00:20:16,200 --> 00:20:19,497
-CB: So why would you recommend inaud these tests.
+CB: So why would you recommend ruby developers do this
+in their tests?
 
 237
 00:20:19,660 --> 00:20:25,314
@@ -1101,11 +1106,11 @@ RSpec doesn't stomp on you, which people actually do.
 
 239
 00:20:29,100 --> 00:20:32,742
-It' not like describe is such an uncommon word.
+It's not like describe is such an uncommon word.
 
 240
 00:20:32,880 --> 00:20:35,577
-And nor should it specifically belong to RSpec.
+And nor should it necessarily belong to RSpec.
 
 241
 00:20:35,570 --> 00:20:39,840
@@ -1115,7 +1120,7 @@ or are there other things going on here?
 242
 00:20:39,840 --> 00:20:47,302
 It's a bunch of RSpec DSL methods so
-it also removes the example and specify.
+it also removes example and specify.
 
 243
 00:20:48,114 --> 00:20:54,342
@@ -1124,11 +1129,11 @@ other that delegate on to doing the same thing.
 
 244
 00:20:54,340 --> 00:20:55,760
-CB: They all describe inaud
+CB: They all do describe behind the scenes
 
 245
 00:20:55,760 --> 00:21:02,868
-SP: Yes, but the point is that's it's
+SP: Yes, but the point is that it's
 better not to have to think about that.
 
 246
@@ -1143,22 +1148,22 @@ describe as normal, and the reason for that
 
 248
 00:21:12,450 --> 00:21:16,731
-is that we're inside inaud we have trust.
+is that we're inside an RSpec module and we have trust.
 
 249
 00:21:17,740 --> 00:21:24,457
-We've got out MT test set up and
-we need to write first test which will sort of
+We've got our empty test set up and
+we need to write the first test which will sort of
 
 250
 00:21:25,020 --> 00:21:31,977
 help us begin to push the feature, which means
-we need the method to have it do something.
+we need the method and it needs to do something.
 
 251
 00:21:32,251 --> 00:21:37,000
 I think we will start by having
-it return a Bond spy object.
+it returns a Bond spy object.
 
 252
 00:21:38,125 --> 00:21:41,485
@@ -1182,15 +1187,16 @@ probably go away at some point as well.
 256
 00:21:56,308 --> 00:22:03,142
 I generally try not to have object type checks
-by the time I've done rating my tests but...
+by the time I've done writing my tests but...
 
 257
 00:22:03,211 --> 00:22:06,685
-CB: But how do you test for inaud if it responds to all of the methods?
+CB: But how do you test something is of a class if it
+responds to all of the methods?
 
 258
 00:22:07,314 --> 00:22:09,005
-Quacks, like, all the Ducks.
+If it quacks, like all the ducks.
 
 259
 00:22:09,370 --> 00:22:14,377
@@ -1209,7 +1215,7 @@ we're writing... it's the triple equals protocol.
 262
 00:22:31,070 --> 00:22:36,971
 What RSpec does internally is it will
-triple equals. the class against the object.
+triple equals the class against the object.
 
 263
 00:22:37,005 --> 00:22:43,360
@@ -1647,7 +1653,7 @@ having them on the top level is that it
 
 359
 00:31:04,810 --> 00:31:10,544
-provides very explicit usage documentation because we're interfacing with the inaud API.
+provides very explicit usage documentation because we're interfacing with the public API.
 
 360
 00:31:10,672 --> 00:31:13,376
@@ -1661,7 +1667,7 @@ SP: That's true.
 362
 00:31:20,240 --> 00:31:30,400
 The next test we're going to write will cover
-the entire behaviour work flow of the library.
+the entire behaviour workflow of the library.
 
 363
 00:31:30,448 --> 00:31:35,160
@@ -1684,7 +1690,7 @@ possible way to verify that.
 
 367
 00:31:54,250 --> 00:32:06,624
-So my spy is a bond... these names are arbitrary... inaud method name.
+So my spy is a bond... these names are arbitrary
 
 368
 00:32:06,700 --> 00:32:12,656
@@ -1693,7 +1699,7 @@ our library which is creating expectations
 
 369
 00:32:12,670 --> 00:32:15,792
-for the methods that were actually received.
+that the methods were actually received.
 
 370
 00:32:15,870 --> 00:32:21,456
@@ -1715,11 +1721,12 @@ And this could be a symbol, or a string ...
 
 374
 00:32:40,830 --> 00:32:45,904
-CB: So is this another test because we have the inaud something,
+CB: So is this another test because we have it responds to all
+method calls and records them
 
 375
 00:32:45,936 --> 00:32:52,432
-and then we have the action knows how to
+and then we have it actually knows how to
 tell me whether the things I want have happened.
 
 376
@@ -1729,12 +1736,12 @@ it fails the test when it didn't receive a method call.
 
 377
 00:33:04,176 --> 00:33:09,088
-CB: And this is the usual inaud reception thing which is the default test.
+CB: And this is the usual throwing exception thing which is the default test.
 
 378
 00:33:09,080 --> 00:33:15,024
 SP: We expect this to raise error,
-we don't really care about the inaud class right now.
+we don't really care about the exception class right now.
 
 379
 00:33:16,640 --> 00:33:19,472
@@ -1748,7 +1755,7 @@ we want to go after first.
 381
 00:33:24,256 --> 00:33:30,624
 I think it's going to be easier to write small
-amounts of code to get the raise error to parse.
+amounts of code to get the raise error to pass
 
 382
 00:33:30,896 --> 00:33:36,270
@@ -1763,7 +1770,7 @@ this an exit so it doesn't run all our tests.
 384
 00:33:45,312 --> 00:33:51,536
 And so if we run everything now,
-we have our return to bond spy.
+we have our returns a bond spy.
 
 385
 00:33:51,530 --> 00:33:54,016
@@ -1775,7 +1782,7 @@ CB: We've got one that's skipped.
 
 387
 00:34:01,480 --> 00:34:06,144
-CB: We're trying to be generic and RSpec is helping us not be inaud.
+CB: We're trying to be deliberately generic and RSpec is helping us not to be.
 
 388
 00:34:06,190 --> 00:34:15,040
@@ -1828,7 +1835,7 @@ have the same string being assigned to them.
 
 399
 00:35:17,392 --> 00:35:20,560
-It's like 'called out' is
+It's like called out as
 the thing were comparing on.
 
 400
@@ -1843,7 +1850,7 @@ to be a comparison, into a let,
 
 402
 00:35:31,120 --> 00:35:38,896
-because where you parse it in your being
+because where you pass it in you're being
 extremely explicit that it's the exact same thing.
 
 403
@@ -1853,8 +1860,8 @@ something that used numbers, and said, that is a 5
 
 404
 00:35:45,660 --> 00:35:50,384
-Well, there it's much more obvious
-that the method names are the same.
+Well, there it's much more obvious that this method_name
+is the same as that method_name
 
 405
 00:35:50,380 --> 00:35:59,840
@@ -1885,7 +1892,7 @@ So, that needs to go on bond itself.
 411
 00:36:27,312 --> 00:36:35,872
 It takes a spy or a bond, I think spy is the
-wrong name, so this is a spy and this is a method name.
+role name, so this is a spy and this is a method name.
 
 412
 00:36:36,640 --> 00:36:41,696
@@ -1903,16 +1910,16 @@ it has caused the test to pass.
 415
 00:37:00,620 --> 00:37:10,304
 So, in the true sense of the word
-we've done, like a little bit of TDD inaud,
+we've done, like a little bit of tdd.
 
 416
 00:37:11,216 --> 00:37:16,890
-we've written our test and then we've
+We've written our test and then we've
 done a really stupid thing to make it pass.
 
 417
 00:37:17,130 --> 00:37:20,400
-CB: OK, how about we inaud some actual logic now. [Laughter]
+CB: OK, how about we add some actual logic now. [Laughter]
 
 418
 00:37:20,624 --> 00:37:23,568
@@ -1926,7 +1933,7 @@ with something really simple, the degenerate case.
 420
 00:37:34,300 --> 00:37:43,776
 Now let's re-enable the test that is expecting a
-method call to go through implementing that.
+method call and go through implementing that.
 
 421
 00:37:43,808 --> 00:37:47,660
@@ -1935,12 +1942,12 @@ So I'll just delete and then run the tests.
 422
 00:37:47,776 --> 00:37:54,560
 And we get our failure that we were
-expecting, undefined this method name for bond spy.
+expecting, undefined this_method_name for bond spy.
 
 423
 00:37:54,560 --> 00:37:58,640
 CB: Something interesting happens when
-your inaud, can you scroll out to er...
+you run the tests, can you scroll out to er...
 
 424
 00:37:59,424 --> 00:38:09,088
@@ -1974,7 +1981,7 @@ because it failed, and then green red green.
 
 430
 00:38:42,910 --> 00:38:45,968
-CB: inaud
+CB: So you're on an exactly Red/Green refactoring cycle.
 
 431
 00:38:45,960 --> 00:38:54,832
@@ -1984,17 +1991,17 @@ we were stuck in red for a while, that happens.
 432
 00:38:55,680 --> 00:39:00,940
 One thing I tend to observe is,
-when I've had an integration test,
+when I have an integration test,
 
 433
 00:39:00,940 --> 00:39:05,696
 you get many more red commits
-as your pulling all the pieces together
+as you're pulling all the pieces together
 
 434
 00:39:06,192 --> 00:39:12,110
-but then once your beginning to
-flow you get a red/green switching.
+but then once you're beginning to
+flow you get red/green switching.
 
 435
 00:39:12,110 --> 00:39:17,728
@@ -2008,7 +2015,7 @@ we will be making individual unit tests.
 
 437
 00:39:23,904 --> 00:39:26,112
-CB: So your just going from
+CB: So you're just going from
 failure to failure to failure.
 
 438
@@ -2065,7 +2072,7 @@ which I think is useful.
 
 449
 00:40:29,020 --> 00:40:32,848
-CB: inaud
+CB: Out of curiosity; public_send vs. send?
 
 450
 00:40:32,840 --> 00:40:38,496
@@ -2102,11 +2109,11 @@ know that that difference exists.
 457
 00:41:15,360 --> 00:41:22,032
 Even if you send a method,
-your not caring about it's visibility
+you're not caring about its visibility
 
 458
 00:41:22,030 --> 00:41:27,472
-There are weird cases around that and we're not
+There are weird edge cases around that and we're not
 going to think too much about any of them today.
 
 459
@@ -2117,7 +2124,7 @@ access the private methods of the spy object.
 460
 00:41:35,760 --> 00:41:41,568
 Mostly because this library is
-for interface contract verification
+for interface and contract verification
 
 461
 00:41:41,560 --> 00:41:48,800
@@ -2153,7 +2160,7 @@ writing tests for this specific class.
 
 468
 00:42:13,600 --> 00:42:18,336
-To do that I'm just going to open a vim inaud with the spec file in.
+To do that I'm just going to open a vim split with the spec file in.
 
 469
 00:42:18,330 --> 00:42:22,656
@@ -2166,12 +2173,12 @@ so we'll pull in the spec helper.
 
 471
 00:42:28,360 --> 00:42:39,632
-Will describe spy and we'll
+We'll describe the spy and we'll
 put this inside the bond module.
 
 472
 00:42:39,630 --> 00:42:46,208
-That's just so we can reference things without having to put bond inaud in front of everything.
+That's just so we can reference things without having to put Bond:: in front of everything.
 
 473
 00:42:46,400 --> 00:42:53,392
@@ -2180,16 +2187,16 @@ we'll immediately make the subject of our test
 
 474
 00:42:53,390 --> 00:43:01,024
-the spy, and we'll do spy.new, and again
+the spy, and we'll do Spy.new, and again
 I think this name is arbitrary for the moment.
 
 475
 00:43:01,020 --> 00:43:05,008
-So we'll just parse in a symbol there.
+So we'll just pass in a symbol there.
 
 476
 00:43:05,000 --> 00:43:09,104
-One thing I tend to do is when I'm inaud values like this,
+One thing I tend to do is when I'm inlining values like this,
 
 477
 00:43:09,100 --> 00:43:14,160
@@ -2208,7 +2215,7 @@ to happen, I'll pull that out into a let.
 
 480
 00:43:25,770 --> 00:43:30,512
-CB: How do you go about
+CB: How do you feel about
 using describe class, in general?
 
 481
@@ -2227,7 +2234,8 @@ from explicitly referencing the class.
 
 484
 00:43:54,030 --> 00:44:01,296
-CB: inaud the favorite part of your files. [Laughter].
+CB: Can I point out that your snowmen are adorable.
+That is my favourite part of your dotfiles [Laughter].
 
 485
 00:44:02,032 --> 00:44:07,770
@@ -2236,7 +2244,7 @@ a test now, and usually at this point,
 
 486
 00:44:07,770 --> 00:44:13,072
-when your writing unit tests, you would
+when you're writing unit tests, you would
 write a test on a specific method name.
 
 487
@@ -2251,7 +2259,7 @@ so that's going to be the name of our describe.
 
 489
 00:44:30,280 --> 00:44:34,080
-It's very important to consider
+It's fairly important to consider
 how we're going to make this happen,
 
 490
