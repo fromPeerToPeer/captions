@@ -158,7 +158,8 @@ providing I guess, the integrated collaborator.
 
 36
 00:02:31,405 --> 00:02:35,782
-CB: [Inaud] using HTTP for the client right?
+CB: So you mean Line 17 (currently on screen)
+is using HTTP for the client, right?
 
 37
 00:02:35,780 --> 00:02:42,297
