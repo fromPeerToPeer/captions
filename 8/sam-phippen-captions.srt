@@ -528,11 +528,13 @@ various methods to our spy object.
 
 115
 00:09:30,970 --> 00:09:34,731
-We'll record them and then we'll assert on them after that
+We'll record them and then we'll assert on
+them after the fact.
 
 116
 00:09:34,840 --> 00:09:37,942
-CB: So we're doing the exact same tests we're doing on in [inaud]
+CB: So we're doing the exact same tests
+we're doing end to end
 
 117
 00:09:37,965 --> 00:09:40,605
