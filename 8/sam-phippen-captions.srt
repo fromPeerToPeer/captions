@@ -831,7 +831,7 @@ see it hasn't run, but it's useful to have a test there.
 180
 00:14:58,890 --> 00:15:05,908
 So we sort of specified the API a
-little bit, back in our mini-test.
+little bit, back in our minitest test.
 
 181
 00:15:05,920 --> 00:15:10,285
@@ -849,7 +849,7 @@ which will return us an object and it takes a name.
 
 184
 00:15:18,830 --> 00:15:24,891
-The reason we tried that name is so
+The reason we provide that name is so
 we can put it in the inspect strings.
 
 185
@@ -884,7 +884,8 @@ hard about where it came from later.
 
 191
 00:15:50,990 --> 00:15:54,560
-CB: So this is when you do your let in RSpec and specify inaud double.
+CB: So this is when you do your let in RSpec and specify the
+first symbol in double.
 
 192
 00:15:54,560 --> 00:16:02,651
@@ -907,7 +908,7 @@ But it seems like a sensible place to start.
 
 196
 00:16:19,440 --> 00:16:27,394
-So let's open the Bond spec backup
+So let's open the Bond spec back up
 and the first thing we're going to describe
 
 197
@@ -944,7 +945,7 @@ test these, right, that is an instance method call.
 
 204
 00:17:04,680 --> 00:17:11,097
-Not a parse method call, I was wrong,
+Not a class method call, I was wrong,
 but I had to work it out by saying it,
 
 205
@@ -987,7 +988,7 @@ bundler configuration with its own defaults,
 
 213
 00:17:59,520 --> 00:18:02,548
-CB: So this is your inaud RSpec yes?
+CB: So this is your dotfile for bundle exec RSpec yes?
 
 214
 00:18:02,540 --> 00:18:08,674
@@ -996,7 +997,7 @@ that expands to bundle exec RSpec.
 
 215
 00:18:09,600 --> 00:18:18,342
-[Big sigh] it's inaud a lot, so now if I just close the spec helper and re-open it.
+[Big sigh] it's a command I type a lot, so now if I just close the spec helper and re-open it.
 
 216
 00:18:18,445 --> 00:18:21,680
@@ -1045,7 +1046,7 @@ available without having to configure it.
 
 226
 00:19:14,765 --> 00:19:20,068
-SP: This is a setting I turn on inaud my spec helpers.
+SP: This is a setting I turn on in most of my spec helpers.
 
 227
 00:19:20,060 --> 00:19:24,251
@@ -1058,15 +1059,15 @@ all objects and classes, whatever.
 
 229
 00:19:29,730 --> 00:19:35,508
-So it disables the inaud syntax, but it also disables bare describe.
+So it disables the "should" syntax, but it also disables bare describe.
 
 230
 00:19:35,657 --> 00:19:48,034
-This is a lesser known thing it does, but if we reopen our one spec inaud file, which I deleted,
+This is a lesser known thing it does, but if we reopen our Bond spec .rb file, which I deleted,
 
 231
 00:19:49,188 --> 00:19:56,342
-Require spec helper, and then type inaud describe, like we had before with bundler.
+Require spec helper, and then type a top-level describe, like we had before with bundler.
 
 232
 00:19:56,834 --> 00:20:05,480
@@ -1084,11 +1085,12 @@ removed describe from module and object.
 
 235
 00:20:14,210 --> 00:20:16,205
-We're at inaud spider fault.
+Where it lives by default.
 
 236
 00:20:16,200 --> 00:20:19,497
-CB: So why would you recommend inaud these tests.
+CB: So why would you recommend ruby developers
+do this in their tests.
 
 237
 00:20:19,660 --> 00:20:25,314
@@ -1124,7 +1126,7 @@ other that delegate on to doing the same thing.
 
 244
 00:20:54,340 --> 00:20:55,760
-CB: They all describe inaud
+CB: They all do describe behind the scenes?
 
 245
 00:20:55,760 --> 00:21:02,868
@@ -1138,17 +1140,17 @@ to write RSpec.describe at the top of your file.
 
 247
 00:21:07,720 --> 00:21:12,457
-But once your in here you can write
+But once you're in here you can write
 describe as normal, and the reason for that
 
 248
 00:21:12,450 --> 00:21:16,731
-is that we're inside inaud we have trust.
+is that we're inside an Rspec module and we have trust.
 
 249
 00:21:17,740 --> 00:21:24,457
-We've got out MT test set up and
-we need to write first test which will sort of
+We've got out empty test set up and
+we need to write a first test which will sort of
 
 250
 00:21:25,020 --> 00:21:31,977
@@ -1182,11 +1184,12 @@ probably go away at some point as well.
 256
 00:21:56,308 --> 00:22:03,142
 I generally try not to have object type checks
-by the time I've done rating my tests but...
+by the time I've done writing my tests but...
 
 257
 00:22:03,211 --> 00:22:06,685
-CB: But how do you test for inaud if it responds to all of the methods?
+CB: But how do you test a thing is the right class
+if it responds to all of the methods?
 
 258
 00:22:07,314 --> 00:22:09,005
@@ -1283,12 +1286,12 @@ into paper before I run the test.
 
 278
 00:24:04,860 --> 00:24:09,965
-We could have done inaud Bond, watch it fail, call the method, watch it fail,
+We could have done include Bond, watch it fail, call the method, watch it fail,
 
 279
 00:24:11,080 --> 00:24:14,080
-Watch the class beyond
-defined and then define that,
+Watch the class be
+undefined and then define that,
 
 280
 00:24:14,114 --> 00:24:18,937
@@ -1302,7 +1305,7 @@ some steps but again I think that's fine.
 
 282
 00:24:23,330 --> 00:24:25,668
-CB: In the strictest sense, but your also
+CB: In the strictest sense, but you're also
 trying to show me where you're going,
 
 283
@@ -1315,7 +1318,8 @@ SP: Sure, alright let's run it and see what happens.
 
 285
 00:24:33,130 --> 00:24:41,560
-So we failed with undefined method Bond for RSpec inaud Bond, which is great.
+So we failed with undefined method Bond for RSpec example groupd
+Bond, which is great.
 
 286
 00:24:41,720 --> 00:24:50,891
@@ -1423,7 +1427,7 @@ So if we do Bond holder.bond arbitrary.
 
 310
 00:26:49,211 --> 00:26:52,514
-Undefined method bond inaud object... [Sam thinks]
+Undefined method bond for object... [Sam thinks]
 
 311
 00:26:52,510 --> 00:26:56,697
@@ -1449,7 +1453,7 @@ makes it work... it totally does.
 
 316
 00:27:13,620 --> 00:27:19,097
-My guess would be, Bond version, the version inaud was being loaded,
+My guess would be, Bond version, the version constant was being loaded,
 
 317
 00:27:19,090 --> 00:27:24,868
@@ -1458,7 +1462,7 @@ because this file defines the module.
 
 318
 00:27:24,860 --> 00:27:29,348
-CB: inaud no methods and try to inaud methods over it and not including them.
+CB: but no methods and trying to redefine methods over it and not including them.
 
 319
 00:27:30,457 --> 00:27:32,660
@@ -1466,7 +1470,7 @@ Ah Ruby....
 
 320
 00:27:32,754 --> 00:27:37,657
-SP: Yes, even RSpec inaud sometimes.
+SP: Yes, even RSpec maintainers struggle sometimes.
 
 321
 00:27:38,180 --> 00:27:42,640
@@ -1492,7 +1496,7 @@ how I think it works. [Laughter]
 
 326
 00:27:57,800 --> 00:28:01,874
-CB: Is there a mysterious thing to tack on the end inaud.
+CB: There's no mysterious thing to check at the end [inaud].
 
 327
 00:28:01,920 --> 00:28:07,040
@@ -1501,7 +1505,7 @@ one argument, expected zero,
 
 328
 00:28:07,040 --> 00:28:10,491
-So we can fix that with inaud name in here.
+So we can fix that with passing a name in here.
 
 329
 00:28:10,490 --> 00:28:15,520
@@ -1546,7 +1550,7 @@ It's going to be a detail which is hidden from you.
 
 338
 00:28:54,320 --> 00:28:59,280
-Your just going to rely on the testing API
+You're just going to rely on the testing API
 that we provide, so you don't need to know about it.
 
 339
@@ -1572,7 +1576,7 @@ to interface with it directly.
 343
 00:29:17,760 --> 00:29:29,451
 Given this is a toy, we'll add that
-require there and we'll make lib bond spy.rb
+require there and we'll make lib/bond/spy.rb
 
 344
 00:29:29,542 --> 00:29:36,840
@@ -1586,11 +1590,11 @@ nil to be a kind of Bond spy.
 
 346
 00:29:43,760 --> 00:29:51,508
-To satisfy this we can just do bond spy.new and I'm going to thread the inaud through here,
+To satisfy this we can just do bond spy.new and I'm going to thread the name through here,
 
 347
 00:29:51,520 --> 00:29:56,971
-and cheat slightly, and parse that in as well.
+and cheat slightly, and pass that in as well.
 
 348
 00:29:56,970 --> 00:30:01,908
