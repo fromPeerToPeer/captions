@@ -17,7 +17,8 @@ Who's a swashbuckling hacker from London, UK.
 
 5
 00:00:12,880 --> 00:00:16,754
-He fixes every size of data problem and inaud plausible solutions.
+He fixes every size of data problem and [inaud]
+plausible solutions.
 
 6
 00:00:17,771 --> 00:00:22,240
@@ -60,7 +61,7 @@ which interacts with a RESTful API.
 
 15
 00:00:46,750 --> 00:00:52,308
-The app has a parsing test suite, but the tests
+The app has a passing test suite, but the tests
 are an incomplete specification of its behaviour.
 
 16
@@ -92,8 +93,8 @@ SP: Sure... so...
 
 22
 00:01:13,020 --> 00:01:19,017
-It looks like we've got a gem file and
-a gem file.block lib and test directory.
+It looks like we've got a Gemfile and
+a Gemfile.lock, lib and test directory.
 
 23
 00:01:19,280 --> 00:01:26,377
@@ -103,7 +104,7 @@ is check that all the tests are passing.
 24
 00:01:26,982 --> 00:01:31,554
 The project has a test helper,
-so we'll run that... it should run
+so we'll run that... which should run all the tests
 
 25
 00:01:33,291 --> 00:01:35,645
@@ -119,7 +120,8 @@ Seems like a reasonable place to begin.
 
 28
 00:01:42,880 --> 00:01:49,908
-So we've got a sort of standard mini test inaud and we're requiring a file called Counter Client,
+So we've got a sort of standard minitest test
+setup and we're requiring a file called counter_client,
 
 29
 00:01:49,900 --> 00:01:55,222
@@ -129,11 +131,11 @@ client the challenge mentions.
 30
 00:01:55,220 --> 00:01:59,885
 And we can see here that
-we've got our counter client test class,
+we've got our CounterClientTest class,
 
 31
 00:01:59,908 --> 00:02:05,920
-Which inherits from Vtest test
+Which inherits from Minitest::Test
 and it has a set up phase, but
 
 32
@@ -143,7 +145,7 @@ it doesn't look like it has any actual tests in it.
 33
 00:02:09,390 --> 00:02:16,880
 Instead it's just used to do the set up, and then
-this child class integrated counter client test
+this child class IntegratedCounterClientTest
 
 34
 00:02:16,880 --> 00:02:20,274
@@ -156,16 +158,16 @@ providing I guess, the integrated collaborator.
 
 36
 00:02:31,405 --> 00:02:35,782
-CB: Inaud using HDP for the client right?
+CB: [Inaud] using HTTP for the client right?
 
 37
 00:02:35,780 --> 00:02:42,297
-SP: Yes so whatever this LHTTP thing is
+SP: Yes so whatever this LHttp thing is
 erm... that's presumably making the real
 
 38
 00:02:42,290 --> 00:02:46,365
-HTTP requests giving our integrated test.
+HTTP requests giving us our integrated test.
 
 39
 00:02:46,380 --> 00:02:51,668
@@ -196,7 +198,7 @@ SP: Sure so...
 
 45
 00:03:15,474 --> 00:03:21,154
-... counter client object can
+... CounterClient object can
 be initialized with an HTTP,
 
 46
@@ -216,7 +218,7 @@ fix we can make here before we move on.
 49
 00:03:40,068 --> 00:03:45,160
 At the top of the file here we're
-requiring LHTTP but it looks like it's actually...
+requiring lhttp but it looks like it's actually...
 
 50
 00:03:45,160 --> 00:03:46,434
@@ -229,11 +231,11 @@ I guess sometime in the past this file needed that.
 
 52
 00:03:53,040 --> 00:03:55,782
-CB: Alright and it's going to inaud to get that out.
+CB: Alright and it's been refactored to get that out.
 
 53
 00:03:55,780 --> 00:03:59,954
-SP: We should be able to play
+SP: We should be able to blow
 that away and still pass all the tests.
 
 54
@@ -257,7 +259,7 @@ top there but it can go either way.
 
 58
 00:04:26,760 --> 00:04:29,634
-Great, so we've past all of our tests.
+Great, so we've passed all of our tests.
 
 59
 00:04:30,120 --> 00:04:32,811
@@ -265,7 +267,7 @@ Back to green... that's nice.
 
 60
 00:04:32,857 --> 00:04:39,782
-So we've made a more change without having
+So we've made a small change without having
 to think too hard about anything in particular.
 
 61
@@ -275,17 +277,18 @@ describes the problem with these tests.
 
 62
 00:04:49,360 --> 00:04:58,520
-There's no actual evidence here of any real collaborations between the inaud HTTP and the counter client.
+There's no actual evidence here of any real
+collaborations between the passed in HTTP and the CounterClient.
 
 63
 00:04:58,960 --> 00:05:06,445
 If you look in these tests, no actual
-interactions occur with LHTTP and the test itself.
+interactions occur with LHttp and the test itself.
 
 64
 00:05:06,600 --> 00:05:10,960
 It's assumed therefore that the client is
-delegating that, and we know that's the case,
+delegating onto that, and we know that's the case,
 
 65
 00:05:10,971 --> 00:05:15,794
@@ -309,7 +312,7 @@ be a good idea to add some isolated tests
 69
 00:05:29,620 --> 00:05:35,062
 which use the fact that the
-counter client is already dependency injection
+CounterClient is already dependency injection
 
 70
 00:05:35,060 --> 00:05:42,400
@@ -324,7 +327,7 @@ using HTTP, all we care about is that our HTTP thing
 72
 00:05:48,120 --> 00:05:50,228
 that we've dependency
-injected in our counter client,
+injected in our CounterClient,
 
 73
 00:05:50,262 --> 00:05:53,634
@@ -337,8 +340,8 @@ Not just something else, right?
 
 75
 00:05:55,810 --> 00:06:05,588
-SP: Yes, effectively the counter client and
-doing HTTP are at different levels of construction.
+SP: Yes, effectively the CounterClient and
+doing HTTP are at different levels of abstraction.
 
 76
 00:06:06,788 --> 00:06:09,600
@@ -346,22 +349,23 @@ The specific languages here are different.
 
 77
 00:06:09,600 --> 00:06:15,542
-The counter client has methods that
-are talking in terms of our domain rate, inaud
+The CounterClient has methods that
+are talking in terms of our domain rate, getting a key and incrementing a key
 
 78
 00:06:15,540 --> 00:06:21,657
-And the HTTP client has inaud that is talking in terms of HTTP inaud get post URLs
+And the HTTP client has language that is talking
+in terms of HTTP verbs get post URLs
 
 79
 00:06:21,690 --> 00:06:29,760
 and then here we also we have conversion
-from the string to the integer response body
+from the string to the integer from the response body
 
 80
 00:06:29,840 --> 00:06:37,188
 because we have integer counts but
-we obviously can't specify the HTTP body.
+we obviously can't specify that in the HTTP body.
 
 81
 00:06:37,337 --> 00:06:42,948
@@ -389,12 +393,12 @@ SP: Sure, so we'll start by adding a test to get that.
 86
 00:06:59,770 --> 00:07:05,074
 So we're going to have a new test case
-which will be isolated counter client test.
+which will be IsolatedCounterClientTest.
 
 87
 00:07:05,165 --> 00:07:08,880
 Which is itself going to inherit
-from the counter client test base.
+from the CounterClientTest base.
 
 88
 00:07:09,325 --> 00:07:11,611
@@ -402,7 +406,7 @@ The same way our previous one did.
 
 89
 00:07:11,862 --> 00:07:16,948
-It's going to have a set up block, and
+It's going to have a setup block, and
 here it's going to be mostly the same.
 
 90
@@ -454,7 +458,7 @@ method and then we'll run the test.
 100
 00:08:10,780 --> 00:08:16,514
 CB: So what do you imagine this method
-doing, what is our Bond history going to do?
+doing, what is our bond(:http) going to do?
 
 101
 00:08:19,234 --> 00:08:26,050
@@ -478,11 +482,12 @@ SP: In RSpec, spy objects respond to all method calls,
 105
 00:08:42,760 --> 00:08:50,651
 that is, whenever you invoke any method on
-a spy it will actually succeed and then return self.
+a spy it will actually succeed and they return self,
 
 106
 00:08:50,880 --> 00:08:54,100
-which means you can do inaud, because when you get the object back
+which means you can do arbitrary dot chaining,
+because when you get the object back
 
 107
 00:08:54,100 --> 00:08:56,822
@@ -490,7 +495,8 @@ it's the same object which can respond to any method
 
 108
 00:08:56,820 --> 00:09:04,034
-so you can do e.g. spy. inaud and that would work because it's just returning spy on each inaud
+so you can do e.g. spy.foo.bar.baz and that would
+work because it's just returning spy on each invocation
 
 109
 00:09:04,830 --> 00:09:08,160
@@ -516,16 +522,16 @@ And so here, what we will do when we write our tests,
 
 114
 00:09:24,308 --> 00:09:30,971
-is the counter client will send the
+is the CounterClient will send the
 various methods to our spy object.
 
 115
 00:09:30,970 --> 00:09:34,731
-We'll record them and then we'll assert on them after the inaud
+We'll record them and then we'll assert on them after that
 
 116
 00:09:34,840 --> 00:09:37,942
-CB: So we're doing the exact same tests we're doing on inaud
+CB: So we're doing the exact same tests we're doing on in [inaud]
 
 117
 00:09:37,965 --> 00:09:40,605
@@ -556,7 +562,7 @@ and do bundle gem bond.
 
 123
 00:10:06,190 --> 00:10:13,520
-This will have bundler initialise and create the
+This will have bundler initialise and create a
 new gem for us with all of the necessary set up.
 
 124
@@ -570,7 +576,7 @@ called bond out there in the world.
 
 126
 00:10:22,030 --> 00:10:26,617
-SP: I'm sure we're stomping on someone else gem in inaud space but...
+SP: I'm sure we're stomping on someone else gem namespace but...
 
 127
 00:10:26,610 --> 00:10:28,308
@@ -583,7 +589,7 @@ SP: This will be fine for what we're doing.
 129
 00:10:31,630 --> 00:10:36,685
 So this is what our project looks like
-after bundler has generated for us.
+after bundler has generated it for us.
 
 130
 00:10:36,680 --> 00:10:39,977
@@ -596,22 +602,23 @@ now have a spec directory not a test directory
 
 132
 00:10:44,460 --> 00:10:49,725
-and that's got bundler set up to
+and that's because I've got bundler set up to
 automatically include RSpec into projects for me.
 
 133
 00:10:51,165 --> 00:10:55,257
-CB: So are we going to write our tests for inaud
+CB: So are we going to write our tests for our
+spy library in
 
 134
 00:10:55,250 --> 00:10:58,080
 RSpec and then revert back
-to mini-test for our client.
+to MiniTest for our client.
 
 135
 00:10:58,080 --> 00:11:05,794
 SP: Yes, so the idea would be that,
-our spy library, we can test it in whatever,
+our spying library, we can test it in whatever,
 
 136
 00:11:05,790 --> 00:11:07,200
@@ -628,7 +635,8 @@ And it should work.
 
 139
 00:11:16,685 --> 00:11:23,428
-The nice thing about using inaud Ruby is they all communicate failures the same way.
+The nice thing about test libraries in Ruby is
+they all communicate failures the same way.
 
 140
 00:11:23,420 --> 00:11:29,108
@@ -638,7 +646,7 @@ exceptions when expectations fail.
 141
 00:11:29,100 --> 00:11:34,240
 So all we need to do to make Bond
-compatible with both RSpec and mini-test,
+compatible with both RSpec and MiniTest,
 
 142
 00:11:34,240 --> 00:11:38,548
@@ -647,24 +655,27 @@ exceptions at the appropriate times.
 
 143
 00:11:38,540 --> 00:11:41,702
-and inaud our tests fail.
+and should make our tests fail.
 
 144
 00:11:41,700 --> 00:11:49,245
-CB: OK, a question before we go on... inaud Bond so our license inaud or what?
+CB: OK, a question before we go on... when you do
+bundle gem bond Bond so our license by default is what?
+MIT? and then we've got gemspec all setup?
 
 145
 00:11:50,380 --> 00:11:55,017
 SP: Yes, we have an MIT license, we have
-a gem file which has a gem speck in it,
+a Gemfile which has a gemspec in it,
 
 146
 00:11:55,085 --> 00:12:02,845
-and then the Bond gem speck declares development dependencies on bundler and inaud.
+and then the Bond gemspec declares development
+dependencies on bundler and rake.
 
 147
 00:12:02,840 --> 00:12:08,308
-It has 2 Ds here, we'll just fix those.
+It has TODOs here, we'll just fix those.
 
 148
 00:12:08,445 --> 00:12:11,474
@@ -673,7 +684,7 @@ It has 2 Ds here, we'll just fix those.
 149
 00:12:12,980 --> 00:12:18,765
 We'll just fix all of this we
-cant have any 'to dos' left or...
+can't have any TODOs left or...
 
 150
 00:12:18,788 --> 00:12:22,091
@@ -686,11 +697,11 @@ won't let you compile into a complete gem
 
 152
 00:12:28,210 --> 00:12:32,914
-if you have 'to dos' left in your summary or description or inaud page.
+if you have TODOs left in your summary or description or home page.
 
 153
 00:12:33,085 --> 00:12:38,262
-So it's to force you to put
+So as to force you to put
 something meaningful in there.
 
 154
@@ -700,11 +711,11 @@ thing in here so we can actually just blow this away.
 
 155
 00:12:44,434 --> 00:12:46,537
-That's from private gems.
+That's for private gems.
 
 156
 00:12:47,291 --> 00:12:51,154
-CB: Alright so if you have your own internal Ruby inaud, OK.
+CB: Alright so if you have your own internal Ruby [inaud], OK.
 
 157
 00:12:51,860 --> 00:12:58,937
@@ -718,7 +729,7 @@ development dependency on there?
 
 159
 00:13:01,200 --> 00:13:09,485
-SP: I'm actually going to put it in the gem file,
+SP: I'm actually going to put it in the Gemfile,
 because we're going to pull RSpec from GitHub Master.
 
 160
@@ -733,7 +744,7 @@ bugs when I'm actually using it.
 
 162
 00:13:17,360 --> 00:13:19,862
-CB: So you just work breeding RSpec or something?
+CB: So you just work on bleeding edge RSpec or something?
 
 163
 00:13:19,860 --> 00:13:25,017
@@ -781,8 +792,8 @@ CB: Who knows what today has in store for us.
 
 173
 00:14:10,960 --> 00:14:19,142
-SP: The other thing we will do quickly is GitHub the
-project and add the gem file and the gem spec.
+SP: The other thing we will do quickly is git init the
+project and add the Gemfile and the gemspec.
 
 174
 00:14:19,874 --> 00:14:25,600
@@ -796,8 +807,8 @@ generated which I am going to delete.
 
 176
 00:14:33,200 --> 00:14:40,342
-And with green with some
-examples... so that's a good initial...
+And with green with 0
+examples... so that's a good initial commit...
 
 177
 00:14:40,468 --> 00:14:45,211
