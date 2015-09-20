@@ -3067,7 +3067,7 @@ register a proxy object for each spy.
 
 664
 01:00:07,584 --> 01:00:11,488
-So to do that we'll parse... [Sam types]
+So to do that we'll pass... [Sam types]
 
 665
 01:00:16,288 --> 01:00:23,440
@@ -3076,13 +3076,13 @@ this is going to be slightly nuts.
 
 666
 01:00:23,744 --> 01:00:32,304
-So we're going to parse a lambda
-into the spy, which will call itself.
+So we're going to pass a lambda
+into the spy, which it will call with `self`.
 
 667
 01:00:32,448 --> 01:00:44,976
-So this is the spy, and then we do
-register proxies [Sam dictates what he writes]
+So this is `the_spy`, and then we do
+`register_proxies` [Sam dictates what he writes]
 
 668
 01:00:44,970 --> 01:00:51,408
@@ -3092,7 +3092,7 @@ terrible so let's just pull that out.
 669
 01:00:53,408 --> 01:00:57,856
 And in fact we can give this a
-method name, this is a proxy factory.
+method name, this is a `proxy_factory`.
 
 670
 01:01:02,576 --> 01:01:06,352
@@ -3116,7 +3116,7 @@ So basically...
 
 675
 01:01:29,952 --> 01:01:32,368
-We need proxy to be returned from the left.
+We need proxy to be returned from the lambda.
 
 676
 01:01:32,360 --> 01:01:40,624
@@ -3130,7 +3130,7 @@ worth explaining what this is going to do.
 678
 01:01:45,950 --> 01:01:55,056
 When we call the proxy callback in the
-spy it will parse the spy in so that we can basically
+spy it will pass the spy in so that we can basically
 
 679
 01:01:55,070 --> 01:01:59,792
@@ -3154,12 +3154,12 @@ we have that overriding integration test.
 683
 01:02:11,610 --> 01:02:18,352
 And also this feels to me like something
-we're going to pull out once were done.
+we're going to pull out once we're done.
 
 684
 01:02:18,704 --> 01:02:24,160
 At the moment I'm doing something that
-Sandy Mets calls looking for the honest green.
+Sandy Metz calls looking for the honest green.
 
 685
 01:02:24,160 --> 01:02:28,400
@@ -3178,25 +3178,25 @@ things out until everything is functional.
 
 688
 01:02:44,368 --> 01:02:47,056
-CB: How do you do inaud lambda call here?
+CB: How do you do make the proc versus lambda call here?
 
 689
 01:02:48,320 --> 01:02:55,904
 SP: One of the principles I have is to
-prefer lambdas over procs when racing.
+prefer lambdas over procs when writing
 
 690
 01:02:56,336 --> 01:03:03,880
-Stuff like this, and the reason is because
+stuff like this, and the reason is because
 lambdas get their own stack frame and procs don't.
 
 691
 01:03:04,000 --> 01:03:09,792
-That means they can validate the inaud of their arguments because the arguments go onto the stack.
+That means they can validate the arity of their arguments because the arguments go onto the stack.
 
 692
 01:03:10,112 --> 01:03:15,824
-And you can also call the
+And you can also call the `return`
 keyword safely from a lambda.
 
 693
@@ -3220,7 +3220,7 @@ CB: OK.
 
 697
 01:03:36,480 --> 01:03:47,904
-Now we're parsing the proxy call back into our
+Now we're passing the proxy callback into our
 spy, if we run all the tests we've got some failures.
 
 698
@@ -3230,7 +3230,7 @@ our three failures so we can fix that
 
 699
 01:03:59,530 --> 01:04:04,688
-by parsing the proxy call back in and if we run again...
+by passing the proxy callback in and if we run again...
 
 700
 01:04:04,800 --> 01:04:13,280
@@ -3256,8 +3256,8 @@ Ah... spy, we just need to re-load that.
 
 705
 01:04:32,320 --> 01:04:37,504
-So each change in construction of
-the spy is parsing a proxy callback.
+So each change the constructor of
+the spy to pass in a `proxy_callback`.
 
 706
 01:04:37,984 --> 01:04:41,104
@@ -3292,7 +3292,7 @@ And we'll do that with tests.
 713
 01:05:15,328 --> 01:05:23,312
 SP: So the test for this
-records the method call on proxy.
+is that it records the method call on the proxy.
 
 714
 01:05:23,552 --> 01:05:29,520
@@ -3324,7 +3324,7 @@ the recording of what the method calls is going to be.
 
 720
 01:06:05,760 --> 01:06:09,872
-And we're going to make the proxy and RSpec spy.
+And we're going to make the proxy an RSpec spy.
 
 721
 01:06:10,128 --> 01:06:13,248
@@ -3336,7 +3336,7 @@ Yes like a nest, spying libraries inside each other.
 
 723
 01:06:18,000 --> 01:06:24,672
-And we'll just call this record message received.
+And we'll just call this `record_message_received`.
 
 724
 01:06:25,360 --> 01:06:30,672
@@ -3349,8 +3349,8 @@ We'll just focus on recording method calls.
 
 726
 01:06:34,680 --> 01:06:39,872
-So expect proxy to be received,
-record message received.
+So `expect(proxy).to have_received`,
+`record_message_received`.
 
 727
 01:06:40,400 --> 01:06:43,264
@@ -3368,8 +3368,8 @@ which can be an RSpec double.
 
 730
 01:06:55,840 --> 01:07:01,984
-We'll call it proxy and it responds
-to record message received
+We'll call it `proxy` and it responds
+to `record_message_received`.
 
 731
 01:07:02,096 --> 01:07:06,048
@@ -3413,8 +3413,8 @@ two failures, one unit and one integration.
 
 739
 01:07:46,704 --> 01:07:52,960
-We do and that's because record
-message received wasn't sent to that object.
+We do and that's because `record message_received`
+wasn't sent to that object.
 
 740
 01:07:53,136 --> 01:07:57,792
@@ -3427,7 +3427,7 @@ And we can... [Sam dictates what he writes]
 742
 01:08:06,480 --> 01:08:12,752
 And one thing I've done here is put
-a double underscore under the method name.
+a double underscore in front of the method name.
 
 743
 01:08:13,360 --> 01:08:21,472
@@ -3446,7 +3446,7 @@ behaviour around recording method calls in.
 
 746
 01:08:39,408 --> 01:08:45,056
-Method missing so it's fine to
+`method_missing` so it's fine to
 push that out into another method.
 
 747
@@ -3471,7 +3471,7 @@ environment we would probably have a thing
 
 751
 01:09:06,010 --> 01:09:10,736
-where we say if it receives inaud message sent to proxy then we do something different.
+where we say if it receives `record_message_sent_to_proxy` then we do something different.
 
 752
 01:09:11,008 --> 01:09:15,472
@@ -3494,7 +3494,7 @@ abstraction, but for the name.
 756
 01:09:31,840 --> 01:09:38,832
 And this will just be
-@proxy.record message received name.
+`@proxy.record_message_received(name)`
 
 757
 01:09:39,360 --> 01:09:49,856
@@ -3503,7 +3503,7 @@ just be able to do [Sam dictates what he writes].
 
 758
 01:09:49,850 --> 01:09:51,152
-CB: inaud
+CB: And that takes a name?
 
 759
 01:09:51,150 --> 01:09:54,992
@@ -3530,7 +3530,8 @@ at once] we record message received name
 
 764
 01:10:18,336 --> 01:10:27,808
-We've got three failures because wrong number of arguments, zero for a one inaud call back.
+We've got three failures because wrong number of arguments, zero for a one with
+backtrace 18 block in proxy_callback.
 
 765
 01:10:28,736 --> 01:10:32,096
@@ -3538,11 +3539,11 @@ Record message received.
 
 766
 01:10:34,960 --> 01:10:40,688
-Proxy inaud received, record message received which is that name, which is the same as that.
+`proxy).to have_received(:record_message_received)` which is that name, which is the same as that.
 
 767
 01:10:42,688 --> 01:10:49,936
-Let's just print proxy and make
+Let's just print the proxy and make
 sure it's what we were expecting.
 
 768
@@ -3553,16 +3554,16 @@ number of arguments here.
 769
 01:10:52,960 --> 01:10:59,840
 So it's wrong number of arguments
-zero for 1, 18 proxy callback.
+zero for 1, 18 block in proxy_callback.
 
 770
 01:11:01,632 --> 01:11:12,816
 Ah! I see the problem, it's because
-this lambda is being parsed into a context
+this lambda is being passed into a context
 
 771
 01:11:13,008 --> 01:11:17,184
-where this let proxy isn't available.
+where this `let(:proxy)` isn't available.
 
 772
 01:11:18,144 --> 01:11:22,800
@@ -3593,7 +3594,7 @@ Failing that...
 778
 01:11:51,072 --> 01:11:55,824
 I'm not sure that I was right
-there either... block proxy callback.
+there either... block in `proxy_callback`.
 
 779
 01:11:55,936 --> 01:11:58,960
@@ -3610,7 +3611,7 @@ These are all our integration tests.
 782
 01:12:13,632 --> 01:12:19,376
 And it's because we're
-expecting self in the integration test,
+expecting `self` in the integration test,
 
 783
 01:12:19,370 --> 01:12:23,040
@@ -3622,7 +3623,7 @@ For the moment we'll get our lambda back, that's fine.
 
 785
 01:12:30,224 --> 01:12:32,208
-It's important to make sure your reading the correct inaud.
+It's important to make sure your reading the correct test output.
 
 786
 01:12:32,200 --> 01:12:34,576
@@ -3658,11 +3659,12 @@ It's the first failure output.
 
 793
 01:13:08,970 --> 01:13:15,664
-And that's because the method name has been symbolized when we inaud.
+And that's because the method name has been symbolized when we `public_send`-ed
+it.
 
 794
 01:13:15,664 --> 01:13:21,424
-So in this let method name we should inaud.
+So in this let method name we should `to_sym`.
 
 795
 01:13:21,840 --> 01:13:26,288
@@ -3676,7 +3678,7 @@ back, but the other thing we need to do
 
 797
 01:13:32,560 --> 01:13:40,840
-Is say, it sends itself to the proxy callback,
+Is say, it sends `self` to the proxy callback,
 which we are currently not monitoring but we need.
 
 798
@@ -3690,11 +3692,11 @@ To being another double.
 
 800
 01:13:49,600 --> 01:13:56,090
-And that's so we can spy on the inaud of the proxy callback,
+And that's so we can spy on the invocation of the proxy callback,
 
 801
 01:13:56,800 --> 01:14:02,624
-to check that the self is parsed in correctly.
+to check that the `self` is passed in correctly.
 
 802
 01:14:04,208 --> 01:14:08,736
@@ -3711,7 +3713,7 @@ And then we'll do the same thing.
 
 805
 01:14:22,780 --> 01:14:24,960
-CB: So inaud public send and then...
+CB: So still `spy.public_send` and then...
 
 806
 01:14:25,056 --> 01:14:28,240
@@ -3719,12 +3721,12 @@ SP: Yes just doing that would be sufficient.
 
 807
 01:14:28,490 --> 01:14:35,184
-We only need to go through the instructor but it's
+We only need to go through the constructor but it's
 good to keep exercising the whole thing here.
 
 808
 01:14:35,280 --> 01:14:45,008
-And then inaud method name,[Sam dictates what he writes]
+And then `public_send` method name,[Sam dictates what he writes]
 
 809
 01:14:46,704 --> 01:14:52,400
