@@ -17,7 +17,8 @@ Who's a swashbuckling hacker from London, UK.
 
 5
 00:00:12,880 --> 00:00:16,754
-He fixes every size of data problem and inaud plausible solutions.
+He fixes every size of data problem at
+Fun and Plausible solutions.
 
 6
 00:00:17,771 --> 00:00:22,240
@@ -42,7 +43,7 @@ Building a Spy library.
 
 11
 00:00:34,440 --> 00:00:36,880
-CAMILLE BALLDOCK; So Sam, do you
+CAMILLE BALDOCK; So Sam, do you
 want to start by reading the challenge?
 
 12
@@ -60,7 +61,7 @@ which interacts with a RESTful API.
 
 15
 00:00:46,750 --> 00:00:52,308
-The app has a parseing test suite, but the tests
+The app has a passing test suite, but the tests
 are an incomplete specification of its behaviour.
 
 16
@@ -92,8 +93,8 @@ SP: Sure... so...
 
 22
 00:01:13,020 --> 00:01:19,017
-It looks like we've got a gem file and
-a jem file.block lib and test directory.
+It looks like we've got a Gemfile and
+a Gemfile.lock, lib and test directory.
 
 23
 00:01:19,280 --> 00:01:26,377
@@ -103,7 +104,7 @@ is check that all the tests are passing.
 24
 00:01:26,982 --> 00:01:31,554
 The project has a test helper,
-so we'll run that... it should run
+so we'll run that... which should run all the tests
 
 25
 00:01:33,291 --> 00:01:35,645
@@ -119,7 +120,8 @@ Seems like a reasonable place to begin.
 
 28
 00:01:42,880 --> 00:01:49,908
-So we've got a sort of standard mini test inaud and we're requiring a file called Counter Client,
+So we've got a sort of standard minitest test
+setup and we're requiring a file called counter_client,
 
 29
 00:01:49,900 --> 00:01:55,222
@@ -129,11 +131,11 @@ client the challenge mentions.
 30
 00:01:55,220 --> 00:01:59,885
 And we can see here that
-we've got our counter client test class,
+we've got our CounterClientTest class,
 
 31
 00:01:59,908 --> 00:02:05,920
-Which inherits from Vtest test
+Which inherits from Minitest::Test
 and it has a set up phase, but
 
 32
@@ -143,7 +145,7 @@ it doesn't look like it has any actual tests in it.
 33
 00:02:09,390 --> 00:02:16,880
 Instead it's just used to do the set up, and then
-this child class integrated counter client test
+this child class IntegratedCounterClientTest
 
 34
 00:02:16,880 --> 00:02:20,274
@@ -156,16 +158,17 @@ providing I guess, the integrated collaborator.
 
 36
 00:02:31,405 --> 00:02:35,782
-CB: Inaud using HDP for the client right?
+CB: So you mean Line 17 (currently on screen)
+is using HTTP for the client, right?
 
 37
 00:02:35,780 --> 00:02:42,297
-SP: Yes so whatever this LHTTP thing is
+SP: Yes so whatever this LHttp thing is
 erm... that's presumably making the real
 
 38
 00:02:42,290 --> 00:02:46,365
-HTTP requests giving our integrated test.
+HTTP requests giving us our integrated test.
 
 39
 00:02:46,380 --> 00:02:51,668
@@ -196,7 +199,7 @@ SP: Sure so...
 
 45
 00:03:15,474 --> 00:03:21,154
-... counter client object can
+... CounterClient object can
 be initialized with an HTTP,
 
 46
@@ -216,7 +219,7 @@ fix we can make here before we move on.
 49
 00:03:40,068 --> 00:03:45,160
 At the top of the file here we're
-acquiring LHTTP but it looks like it's actually...
+requiring lhttp but it looks like it's actually...
 
 50
 00:03:45,160 --> 00:03:46,434
@@ -229,11 +232,11 @@ I guess sometime in the past this file needed that.
 
 52
 00:03:53,040 --> 00:03:55,782
-CB: Alright and it's going to inaud to get that out.
+CB: Alright and it's been refactored to get that out.
 
 53
 00:03:55,780 --> 00:03:59,954
-SP: We should be able to play
+SP: We should be able to blow
 that away and still pass all the tests.
 
 54
@@ -257,7 +260,7 @@ top there but it can go either way.
 
 58
 00:04:26,760 --> 00:04:29,634
-Great, so we've past all of our tests.
+Great, so we've passed all of our tests.
 
 59
 00:04:30,120 --> 00:04:32,811
@@ -265,7 +268,7 @@ Back to green... that's nice.
 
 60
 00:04:32,857 --> 00:04:39,782
-So we've made a more change without having
+So we've made a small change without having
 to think too hard about anything in particular.
 
 61
@@ -275,17 +278,18 @@ describes the problem with these tests.
 
 62
 00:04:49,360 --> 00:04:58,520
-There's no actual evidence here of any real collaborations between the inaud HTTP and the counter client.
+There's no actual evidence here of any real
+collaborations between the passed in HTTP and the CounterClient.
 
 63
 00:04:58,960 --> 00:05:06,445
 If you look in these tests, no actual
-interactions occur with LHTTP and the test itself.
+interactions occur with LHttp and the test itself.
 
 64
 00:05:06,600 --> 00:05:10,960
 It's assumed therefore that the client is
-delegating that, and we know that's the case,
+delegating onto that, and we know that's the case,
 
 65
 00:05:10,971 --> 00:05:15,794
@@ -308,8 +312,8 @@ be a good idea to add some isolated tests
 
 69
 00:05:29,620 --> 00:05:35,062
-which use the the fact that the
-counter client is already dependency injection
+which use the fact that the
+CounterClient is already dependency injection
 
 70
 00:05:35,060 --> 00:05:42,400
@@ -324,7 +328,7 @@ using HTTP, all we care about is that our HTTP thing
 72
 00:05:48,120 --> 00:05:50,228
 that we've dependency
-injected in our counter client,
+injected in our CounterClient,
 
 73
 00:05:50,262 --> 00:05:53,634
@@ -337,8 +341,8 @@ Not just something else, right?
 
 75
 00:05:55,810 --> 00:06:05,588
-SP: Yes, effectively the counter client and
-doing HTTP are at different levels of construction.
+SP: Yes, effectively the CounterClient and
+doing HTTP are at different levels of abstraction.
 
 76
 00:06:06,788 --> 00:06:09,600
@@ -346,22 +350,23 @@ The specific languages here are different.
 
 77
 00:06:09,600 --> 00:06:15,542
-The counter client has methods that
-are talking in terms of our domain rate, inaud
+The CounterClient has methods that
+are talking in terms of our domain rate, getting a key and incrementing a key
 
 78
 00:06:15,540 --> 00:06:21,657
-And the HTTP client has inaud that is talking in terms of HTTP inaud get post URLs
+And the HTTP client has language that is talking
+in terms of HTTP verbs get post URLs
 
 79
 00:06:21,690 --> 00:06:29,760
 and then here we also we have conversion
-from the string to the integer response body
+from the string to the integer from the response body
 
 80
 00:06:29,840 --> 00:06:37,188
 because we have integer counts but
-we obviously can't specify the HTTP body.
+we obviously can't specify that in the HTTP body.
 
 81
 00:06:37,337 --> 00:06:42,948
@@ -389,12 +394,12 @@ SP: Sure, so we'll start by adding a test to get that.
 86
 00:06:59,770 --> 00:07:05,074
 So we're going to have a new test case
-which will be isolated counter client test.
+which will be IsolatedCounterClientTest.
 
 87
 00:07:05,165 --> 00:07:08,880
 Which is itself going to inherit
-from the counter client test base.
+from the CounterClientTest base.
 
 88
 00:07:09,325 --> 00:07:11,611
@@ -402,7 +407,7 @@ The same way our previous one did.
 
 89
 00:07:11,862 --> 00:07:16,948
-It's going to have a set up block, and
+It's going to have a setup block, and
 here it's going to be mostly the same.
 
 90
@@ -454,7 +459,7 @@ method and then we'll run the test.
 100
 00:08:10,780 --> 00:08:16,514
 CB: So what do you imagine this method
-doing, what is our Bond history going to do?
+doing, what is our bond(:http) going to do?
 
 101
 00:08:19,234 --> 00:08:26,050
@@ -478,11 +483,12 @@ SP: In RSpec, spy objects respond to all method calls,
 105
 00:08:42,760 --> 00:08:50,651
 that is, whenever you invoke any method on
-a spy it will actually succeed and then return self.
+a spy it will actually succeed and they return self,
 
 106
 00:08:50,880 --> 00:08:54,100
-which means you can do inaud, because when you get the object back
+which means you can do arbitrary dot chaining,
+because when you get the object back
 
 107
 00:08:54,100 --> 00:08:56,822
@@ -490,7 +496,8 @@ it's the same object which can respond to any method
 
 108
 00:08:56,820 --> 00:09:04,034
-so you can do eg. spy. inaud and that would work because it's just returning spy on each inaud
+so you can do e.g. spy.foo.bar.baz and that would
+work because it's just returning spy on each invocation
 
 109
 00:09:04,830 --> 00:09:08,160
@@ -516,16 +523,18 @@ And so here, what we will do when we write our tests,
 
 114
 00:09:24,308 --> 00:09:30,971
-is the counter client will send the
+is the CounterClient will send the
 various methods to our spy object.
 
 115
 00:09:30,970 --> 00:09:34,731
-We'll record them and then we'll assert on them after the inaud
+We'll record them and then we'll assert on
+them after the fact.
 
 116
 00:09:34,840 --> 00:09:37,942
-CB: So we're doing the exact same tests we're doing on inaud
+CB: So we're doing the exact same tests
+we're doing end to end
 
 117
 00:09:37,965 --> 00:09:40,605
@@ -556,7 +565,7 @@ and do bundle gem bond.
 
 123
 00:10:06,190 --> 00:10:13,520
-This will have bundler initialise and create the
+This will have bundler initialise and create a
 new gem for us with all of the necessary set up.
 
 124
@@ -570,7 +579,7 @@ called bond out there in the world.
 
 126
 00:10:22,030 --> 00:10:26,617
-SP: I'm sure we're stomping on someone else gem in inaud space but...
+SP: I'm sure we're stomping on someone else gem namespace but...
 
 127
 00:10:26,610 --> 00:10:28,308
@@ -583,7 +592,7 @@ SP: This will be fine for what we're doing.
 129
 00:10:31,630 --> 00:10:36,685
 So this is what our project looks like
-after bundler has generated for us.
+after bundler has generated it for us.
 
 130
 00:10:36,680 --> 00:10:39,977
@@ -596,22 +605,23 @@ now have a spec directory not a test directory
 
 132
 00:10:44,460 --> 00:10:49,725
-and that's got bundler set up to
+and that's because I've got bundler set up to
 automatically include RSpec into projects for me.
 
 133
 00:10:51,165 --> 00:10:55,257
-CB: So are we going to write our tests for inaud
+CB: So are we going to write our tests for our
+spy library in
 
 134
 00:10:55,250 --> 00:10:58,080
 RSpec and then revert back
-to mini-test for our client.
+to MiniTest for our client.
 
 135
 00:10:58,080 --> 00:11:05,794
 SP: Yes, so the idea would be that,
-our spy library, we can test it in whatever,
+our spying library, we can test it in whatever,
 
 136
 00:11:05,790 --> 00:11:07,200
@@ -628,7 +638,8 @@ And it should work.
 
 139
 00:11:16,685 --> 00:11:23,428
-The nice thing about using inaud Ruby is they all communicate failures the same way.
+The nice thing about test libraries in Ruby is
+they all communicate failures the same way.
 
 140
 00:11:23,420 --> 00:11:29,108
@@ -638,7 +649,7 @@ exceptions when expectations fail.
 141
 00:11:29,100 --> 00:11:34,240
 So all we need to do to make Bond
-compatible with both RSpec and mini-test,
+compatible with both RSpec and MiniTest,
 
 142
 00:11:34,240 --> 00:11:38,548
@@ -647,24 +658,27 @@ exceptions at the appropriate times.
 
 143
 00:11:38,540 --> 00:11:41,702
-and inaud our tests fail.
+and should make our tests fail.
 
 144
 00:11:41,700 --> 00:11:49,245
-CB: OK, a question before we go on... inaud Bond so our license inaud or what?
+CB: OK, a question before we go on... when you do
+bundle gem bond Bond so our license by default is what?
+MIT? and then we've got gemspec all setup?
 
 145
 00:11:50,380 --> 00:11:55,017
 SP: Yes, we have an MIT license, we have
-a gem file which has a gem speck in it,
+a Gemfile which has a gemspec in it,
 
 146
 00:11:55,085 --> 00:12:02,845
-and then the Bond gem speck declares development dependencies on bundler and inaud.
+and then the Bond gemspec declares development
+dependencies on bundler and rake.
 
 147
 00:12:02,840 --> 00:12:08,308
-It has 2 Ds here, we'll just fix those.
+It has TODOs here, we'll just fix those.
 
 148
 00:12:08,445 --> 00:12:11,474
@@ -673,7 +687,7 @@ It has 2 Ds here, we'll just fix those.
 149
 00:12:12,980 --> 00:12:18,765
 We'll just fix all of this we
-cant have any 'to dos' left or...
+can't have any TODOs left or...
 
 150
 00:12:18,788 --> 00:12:22,091
@@ -686,11 +700,11 @@ won't let you compile into a complete gem
 
 152
 00:12:28,210 --> 00:12:32,914
-if you have 'to dos' left in your summary or description or inaud page.
+if you have TODOs left in your summary or description or home page.
 
 153
 00:12:33,085 --> 00:12:38,262
-So it's to force you to put
+So as to force you to put
 something meaningful in there.
 
 154
@@ -700,11 +714,12 @@ thing in here so we can actually just blow this away.
 
 155
 00:12:44,434 --> 00:12:46,537
-That's from private gems.
+That's for private gems.
 
 156
 00:12:47,291 --> 00:12:51,154
-CB: Alright so if you have your own internal Ruby inaud, OK.
+CB: Alright so if you have
+your own internal Ruby, OK.
 
 157
 00:12:51,860 --> 00:12:58,937
@@ -718,7 +733,7 @@ development dependency on there?
 
 159
 00:13:01,200 --> 00:13:09,485
-SP: I'm actually going to put it in the gem file,
+SP: I'm actually going to put it in the Gemfile,
 because we're going to pull RSpec from GitHub Master.
 
 160
@@ -733,7 +748,7 @@ bugs when I'm actually using it.
 
 162
 00:13:17,360 --> 00:13:19,862
-CB: So you just work breeding RSpec or something?
+CB: So you just work on bleeding edge RSpec or something?
 
 163
 00:13:19,860 --> 00:13:25,017
@@ -781,8 +796,8 @@ CB: Who knows what today has in store for us.
 
 173
 00:14:10,960 --> 00:14:19,142
-SP: The other thing we will do quickly is GitHub the
-project and add the gem file and the gem spec.
+SP: The other thing we will do quickly is git init the
+project and add the Gemfile and the gemspec.
 
 174
 00:14:19,874 --> 00:14:25,600
@@ -796,13 +811,13 @@ generated which I am going to delete.
 
 176
 00:14:33,200 --> 00:14:40,342
-And with green with some
-examples... so that's a good initial...
+And with green with 0
+examples... so that's a good initial commit...
 
 177
 00:14:40,468 --> 00:14:45,211
 CB: I love this failing test initially bundler,
-it,s a great way to test your set up.
+it's a great way to test your set up.
 
 178
 00:14:45,210 --> 00:14:53,817
@@ -816,7 +831,7 @@ see it hasn't run, but it's useful to have a test there.
 180
 00:14:58,890 --> 00:15:05,908
 So we sort of specified the API a
-little bit, back in our mini-test.
+little bit, back in our minitest test.
 
 181
 00:15:05,920 --> 00:15:10,285
@@ -834,7 +849,7 @@ which will return us an object and it takes a name.
 
 184
 00:15:18,830 --> 00:15:24,891
-The reason we tried that name is so
+The reason we provide that name is so
 we can put it in the inspect strings.
 
 185
@@ -844,7 +859,7 @@ spies flying through your system
 
 186
 00:15:28,468 --> 00:15:32,685
-you don't necessary know which one
+you don't necessarily know which one
 is which so it can be useful to tag them.
 
 187
@@ -869,7 +884,8 @@ hard about where it came from later.
 
 191
 00:15:50,990 --> 00:15:54,560
-CB: So this is when you do your let in RSpec and specify inaud double.
+CB: So this is when you do your let in RSpec and specify
+your first symbol in double.
 
 192
 00:15:54,560 --> 00:16:02,651
@@ -892,7 +908,7 @@ But it seems like a sensible place to start.
 
 196
 00:16:19,440 --> 00:16:27,394
-So let's open the Bond spec backup
+So let's open the Bond spec back up
 and the first thing we're going to describe
 
 197
@@ -925,12 +941,12 @@ makes all the methods from that module available
 203
 00:16:58,570 --> 00:17:04,680
 Right, so when we have a test method like
-test these, right, that is an instance method call.
+test_bees, right, that is an instance method call.
 
 204
 00:17:04,680 --> 00:17:11,097
-Not a parse method call, I was wrong,
-but I had to work it out by saying it,
+Not a class method call, I was wrong,
+but I worked it out by saying it,
 
 205
 00:17:11,131 --> 00:17:12,914
@@ -972,7 +988,7 @@ bundler configuration with its own defaults,
 
 213
 00:17:59,520 --> 00:18:02,548
-CB: So this is your inaud RSpec yes?
+CB: So this is your dotfile for bundle exec RSpec yes?
 
 214
 00:18:02,540 --> 00:18:08,674
@@ -981,7 +997,8 @@ that expands to bundle exec RSpec.
 
 215
 00:18:09,600 --> 00:18:18,342
-[Big sigh] it's inaud a lot, so now if I just close the spec helper and re-open it.
+[Big sigh] it's a command I type a lot, so now if I
+just close the spec helper and re-open it.
 
 216
 00:18:18,445 --> 00:18:21,680
@@ -1017,7 +1034,7 @@ blow most of them away, that's what I usually do.
 
 223
 00:19:00,880 --> 00:19:04,388
-There's a lot of stuff that's usuful in here.
+There's a lot of stuff that's useful in here.
 
 224
 00:19:04,380 --> 00:19:09,897
@@ -1030,7 +1047,7 @@ available without having to configure it.
 
 226
 00:19:14,765 --> 00:19:20,068
-SP: This is a setting I turn on inaud my spec helpers.
+SP: This is a setting I turn on in most of my spec helpers.
 
 227
 00:19:20,060 --> 00:19:24,251
@@ -1043,15 +1060,18 @@ all objects and classes, whatever.
 
 229
 00:19:29,730 --> 00:19:35,508
-So it disables the inaud syntax, but it also disables bare describe.
+So it disables the "should" syntax,
+but it also disables bare describe.
 
 230
 00:19:35,657 --> 00:19:48,034
-This is a lesser known thing it does, but if we reopen our one spec inaud file, which I deleted,
+This is a lesser known thing it does, but if we reopen our
+bond_spec.rb file, which I deleted,
 
 231
 00:19:49,188 --> 00:19:56,342
-Require spec helper, and then type inaud describe, like we had before with bundler.
+Require spec helper, and then type a top-level describe,
+like we had before with bundler.
 
 232
 00:19:56,834 --> 00:20:05,480
@@ -1069,11 +1089,12 @@ removed describe from module and object.
 
 235
 00:20:14,210 --> 00:20:16,205
-We're at inaud spider fault.
+Where it lives by default.
 
 236
 00:20:16,200 --> 00:20:19,497
-CB: So why would you recommend inaud these tests.
+CB: So why would you recommend ruby developers
+do this in their tests.
 
 237
 00:20:19,660 --> 00:20:25,314
@@ -1086,11 +1107,11 @@ RSpec doesn't stomp on you, which people actually do.
 
 239
 00:20:29,100 --> 00:20:32,742
-It' not like describe is such an uncommon word.
+It's not like describe is such an uncommon word.
 
 240
 00:20:32,880 --> 00:20:35,577
-And nor should it specifically belong to RSpec.
+And nor should it necessarily belong to RSpec.
 
 241
 00:20:35,570 --> 00:20:39,840
@@ -1100,7 +1121,7 @@ or are there other things going on here?
 242
 00:20:39,840 --> 00:20:47,302
 It's a bunch of RSpec DSL methods so
-it also removes the example and specify.
+it also removes example and specify.
 
 243
 00:20:48,114 --> 00:20:54,342
@@ -1109,11 +1130,11 @@ other that delegate on to doing the same thing.
 
 244
 00:20:54,340 --> 00:20:55,760
-CB: They all describe inaud
+CB: They all do describe behind the scenes?
 
 245
 00:20:55,760 --> 00:21:02,868
-SP: Yes, but the point is that's it's
+SP: Yes, but the point is that it's
 better not to have to think about that.
 
 246
@@ -1123,27 +1144,27 @@ to write RSpec.describe at the top of your file.
 
 247
 00:21:07,720 --> 00:21:12,457
-But once your in here you can write
+But once you're in here you can write
 describe as normal, and the reason for that
 
 248
 00:21:12,450 --> 00:21:16,731
-is that we're inside inaud we have trust.
+is that we're inside an RSpec module and we have trust.
 
 249
 00:21:17,740 --> 00:21:24,457
-We've got out MT test set up and
-we need to write first test which will sort of
+We've got our empty test set up and
+we need to write the first test which will sort of
 
 250
 00:21:25,020 --> 00:21:31,977
 help us begin to push the feature, which means
-we need the method to have it do something.
+we need the method and it needs to do something.
 
 251
 00:21:32,251 --> 00:21:37,000
 I think we will start by having
-it return a Bond spy object.
+it returns a Bond spy object.
 
 252
 00:21:38,125 --> 00:21:41,485
@@ -1167,15 +1188,16 @@ probably go away at some point as well.
 256
 00:21:56,308 --> 00:22:03,142
 I generally try not to have object type checks
-by the time I've done rating my tests but...
+by the time I've done writing my tests but...
 
 257
 00:22:03,211 --> 00:22:06,685
-CB: But how do you test for inaud if it responds to all of the methods?
+CB: But how do you test something is of a class if it
+responds to all of the methods?
 
 258
 00:22:07,314 --> 00:22:09,005
-Quaks, like, all the Ducks.
+If it quacks, like all the ducks.
 
 259
 00:22:09,370 --> 00:22:14,377
@@ -1194,7 +1216,7 @@ we're writing... it's the triple equals protocol.
 262
 00:22:31,070 --> 00:22:36,971
 What RSpec does internally is it will
-triple equals. the class against the object.
+triple equals the class against the object.
 
 263
 00:22:37,005 --> 00:22:43,360
@@ -1268,12 +1290,12 @@ into paper before I run the test.
 
 278
 00:24:04,860 --> 00:24:09,965
-We could have done inaud Bond, watch it fail, call the method, watch it fail,
+We could have done include Bond, watch it fail, call the method, watch it fail,
 
 279
 00:24:11,080 --> 00:24:14,080
-Watch the class beyond
-defined and then define that,
+Watch the class be
+undefined and then define that,
 
 280
 00:24:14,114 --> 00:24:18,937
@@ -1287,7 +1309,7 @@ some steps but again I think that's fine.
 
 282
 00:24:23,330 --> 00:24:25,668
-CB: In the strictest sense, but your also
+CB: In the strictest sense, but you're also
 trying to show me where you're going,
 
 283
@@ -1300,7 +1322,8 @@ SP: Sure, alright let's run it and see what happens.
 
 285
 00:24:33,130 --> 00:24:41,560
-So we failed with undefined method Bond for RSpec inaud Bond, which is great.
+So we failed with undefined method Bond for RSpec example groupd
+Bond, which is great.
 
 286
 00:24:41,720 --> 00:24:50,891
@@ -1408,7 +1431,7 @@ So if we do Bond holder.bond arbitrary.
 
 310
 00:26:49,211 --> 00:26:52,514
-Undefined method bond inaud object... [Sam thinks]
+Undefined method bond for object... [Sam thinks]
 
 311
 00:26:52,510 --> 00:26:56,697
@@ -1434,7 +1457,7 @@ makes it work... it totally does.
 
 316
 00:27:13,620 --> 00:27:19,097
-My guess would be, Bond version, the versoion inaud was being loaded,
+My guess would be, Bond version, the version constant was being loaded,
 
 317
 00:27:19,090 --> 00:27:24,868
@@ -1443,7 +1466,7 @@ because this file defines the module.
 
 318
 00:27:24,860 --> 00:27:29,348
-CB: inaud no methods and try to inaud methods over it and not including them.
+CB: but no methods and trying to redefine methods over it and not including them.
 
 319
 00:27:30,457 --> 00:27:32,660
@@ -1451,7 +1474,7 @@ Ah Ruby....
 
 320
 00:27:32,754 --> 00:27:37,657
-SP: Yes, even RSpec inaud sometimes.
+SP: Yes, even RSpec maintainers struggle sometimes.
 
 321
 00:27:38,180 --> 00:27:42,640
@@ -1477,7 +1500,7 @@ how I think it works. [Laughter]
 
 326
 00:27:57,800 --> 00:28:01,874
-CB: Is there a mysterious thing to tack on the end inaud.
+CB: There's no mysterious thing to check at the end [inaud].
 
 327
 00:28:01,920 --> 00:28:07,040
@@ -1486,7 +1509,7 @@ one argument, expected zero,
 
 328
 00:28:07,040 --> 00:28:10,491
-So we can fix that with inaud name in here.
+So we can fix that with passing a name in here.
 
 329
 00:28:10,490 --> 00:28:15,520
@@ -1531,7 +1554,7 @@ It's going to be a detail which is hidden from you.
 
 338
 00:28:54,320 --> 00:28:59,280
-Your just going to rely on the testing API
+You're just going to rely on the testing API
 that we provide, so you don't need to know about it.
 
 339
@@ -1557,7 +1580,7 @@ to interface with it directly.
 343
 00:29:17,760 --> 00:29:29,451
 Given this is a toy, we'll add that
-require there and we'll make lib bond spy.rp
+require there and we'll make lib/bond/spy.rb
 
 344
 00:29:29,542 --> 00:29:36,840
@@ -1571,11 +1594,11 @@ nil to be a kind of Bond spy.
 
 346
 00:29:43,760 --> 00:29:51,508
-To satisfy this we can just do bond spy.new and I'm going to thread the inaud through here,
+To satisfy this we can just do bond spy.new and I'm going to thread the name through here,
 
 347
 00:29:51,520 --> 00:29:56,971
-and cheat slightly, and parse that in as well.
+and cheat slightly, and pass that in as well.
 
 348
 00:29:56,970 --> 00:30:01,908
@@ -1632,7 +1655,7 @@ having them on the top level is that it
 
 359
 00:31:04,810 --> 00:31:10,544
-provides very explicit usage documentation because we're interfacing with the inaud API.
+provides very explicit usage documentation because we're interfacing with the public API.
 
 360
 00:31:10,672 --> 00:31:13,376
@@ -1646,7 +1669,7 @@ SP: That's true.
 362
 00:31:20,240 --> 00:31:30,400
 The next test we're going to write will cover
-the entire behaviour work flow of the library.
+the entire behaviour workflow of the library.
 
 363
 00:31:30,448 --> 00:31:35,160
@@ -1669,7 +1692,7 @@ possible way to verify that.
 
 367
 00:31:54,250 --> 00:32:06,624
-So my spy is a bond... these names are arbitrary... inaud method name.
+So my spy is a bond... these names are arbitrary
 
 368
 00:32:06,700 --> 00:32:12,656
@@ -1678,7 +1701,7 @@ our library which is creating expectations
 
 369
 00:32:12,670 --> 00:32:15,792
-for the methods that were actually received.
+that the methods were actually received.
 
 370
 00:32:15,870 --> 00:32:21,456
@@ -1700,11 +1723,12 @@ And this could be a symbol, or a string ...
 
 374
 00:32:40,830 --> 00:32:45,904
-CB: So is this another test because we have the inaud something,
+CB: So is this another test because we have it responds to all
+method calls and records them
 
 375
 00:32:45,936 --> 00:32:52,432
-and then we have the action knows how to
+and then we have it actually knows how to
 tell me whether the things I want have happened.
 
 376
@@ -1714,12 +1738,12 @@ it fails the test when it didn't receive a method call.
 
 377
 00:33:04,176 --> 00:33:09,088
-CB: And this is the usual inaud reception thing which is the default test.
+CB: And this is the usual throwing exception thing which is the default test.
 
 378
 00:33:09,080 --> 00:33:15,024
 SP: We expect this to raise error,
-we don't really care about the inaud class right now.
+we don't really care about the exception class right now.
 
 379
 00:33:16,640 --> 00:33:19,472
@@ -1733,7 +1757,7 @@ we want to go after first.
 381
 00:33:24,256 --> 00:33:30,624
 I think it's going to be easier to write small
-amounts of code to get the raise error to parse.
+amounts of code to get the raise error to pass
 
 382
 00:33:30,896 --> 00:33:36,270
@@ -1748,7 +1772,7 @@ this an exit so it doesn't run all our tests.
 384
 00:33:45,312 --> 00:33:51,536
 And so if we run everything now,
-we have our return to bond spy.
+we have our returns a bond spy.
 
 385
 00:33:51,530 --> 00:33:54,016
@@ -1760,7 +1784,7 @@ CB: We've got one that's skipped.
 
 387
 00:34:01,480 --> 00:34:06,144
-CB: We're trying to be generic and RSpec is helping us not be inaud.
+CB: We're trying to be deliberately generic and RSpec is helping us not to be.
 
 388
 00:34:06,190 --> 00:34:15,040
@@ -1813,7 +1837,7 @@ have the same string being assigned to them.
 
 399
 00:35:17,392 --> 00:35:20,560
-It's like 'called out' is
+It's like called out as
 the thing were comparing on.
 
 400
@@ -1828,7 +1852,7 @@ to be a comparison, into a let,
 
 402
 00:35:31,120 --> 00:35:38,896
-because where you parse it in your being
+because where you pass it in you're being
 extremely explicit that it's the exact same thing.
 
 403
@@ -1838,8 +1862,8 @@ something that used numbers, and said, that is a 5
 
 404
 00:35:45,660 --> 00:35:50,384
-Well, there it's much more obvious
-that the method names are the same.
+Well, there it's much more obvious that this method_name
+is the same as that method_name
 
 405
 00:35:50,380 --> 00:35:59,840
@@ -1870,7 +1894,7 @@ So, that needs to go on bond itself.
 411
 00:36:27,312 --> 00:36:35,872
 It takes a spy or a bond, I think spy is the
-wrong name, so this is a spy and this is a method name.
+role name, so this is a spy and this is a method name.
 
 412
 00:36:36,640 --> 00:36:41,696
@@ -1888,16 +1912,16 @@ it has caused the test to pass.
 415
 00:37:00,620 --> 00:37:10,304
 So, in the true sense of the word
-we've done, like a little bit of tdd inaud,
+we've done, like a little bit of tdd.
 
 416
 00:37:11,216 --> 00:37:16,890
-we've written our test and then we've
+We've written our test and then we've
 done a really stupid thing to make it pass.
 
 417
 00:37:17,130 --> 00:37:20,400
-CB: OK, how about we inaud some actual logic now. [Laughter]
+CB: OK, how about we add some actual logic now. [Laughter]
 
 418
 00:37:20,624 --> 00:37:23,568
@@ -1911,7 +1935,7 @@ with something really simple, the degenerate case.
 420
 00:37:34,300 --> 00:37:43,776
 Now let's re-enable the test that is expecting a
-method call to go through implementing that.
+method call and go through implementing that.
 
 421
 00:37:43,808 --> 00:37:47,660
@@ -1920,12 +1944,12 @@ So I'll just delete and then run the tests.
 422
 00:37:47,776 --> 00:37:54,560
 And we get our failure that we were
-expecting, undefined this method name for bond spy.
+expecting, undefined this_method_name for bond spy.
 
 423
 00:37:54,560 --> 00:37:58,640
 CB: Something interesting happens when
-your inaud, can you scroll out to er...
+you run the tests, can you scroll out to er...
 
 424
 00:37:59,424 --> 00:38:09,088
@@ -1959,7 +1983,7 @@ because it failed, and then green red green.
 
 430
 00:38:42,910 --> 00:38:45,968
-CB: inaud
+CB: So you're on an exactly Red/Green refactoring cycle.
 
 431
 00:38:45,960 --> 00:38:54,832
@@ -1969,17 +1993,17 @@ we were stuck in red for a while, that happens.
 432
 00:38:55,680 --> 00:39:00,940
 One thing I tend to observe is,
-when I've had an integration test,
+when I have an integration test,
 
 433
 00:39:00,940 --> 00:39:05,696
 you get many more red commits
-as your pulling all the pieces together
+as you're pulling all the pieces together
 
 434
 00:39:06,192 --> 00:39:12,110
-but then once your beginning to
-flow you get a red/green switching.
+but then once you're beginning to
+flow you get red/green switching.
 
 435
 00:39:12,110 --> 00:39:17,728
@@ -1993,7 +2017,7 @@ we will be making individual unit tests.
 
 437
 00:39:23,904 --> 00:39:26,112
-CB: So your just going from
+CB: So you're just going from
 failure to failure to failure.
 
 438
@@ -2050,7 +2074,7 @@ which I think is useful.
 
 449
 00:40:29,020 --> 00:40:32,848
-CB: inaud
+CB: Out of curiosity; public_send vs. send?
 
 450
 00:40:32,840 --> 00:40:38,496
@@ -2069,7 +2093,7 @@ and using public send is one way to achieve that.
 453
 00:40:50,480 --> 00:40:57,520
 CB: So in our case we want it to respond
-o public methods and private methods on the spy?
+to public methods and private methods on the spy?
 
 454
 00:40:57,520 --> 00:41:05,888
@@ -2087,11 +2111,11 @@ know that that difference exists.
 457
 00:41:15,360 --> 00:41:22,032
 Even if you send a method,
-your not caring about it's visibility
+you're not caring about its visibility
 
 458
 00:41:22,030 --> 00:41:27,472
-There are weird cases around that and we're not
+There are weird edge cases around that and we're not
 going to think too much about any of them today.
 
 459
@@ -2102,7 +2126,7 @@ access the private methods of the spy object.
 460
 00:41:35,760 --> 00:41:41,568
 Mostly because this library is
-for interface contract verification
+for interface and contract verification
 
 461
 00:41:41,560 --> 00:41:48,800
@@ -2138,7 +2162,7 @@ writing tests for this specific class.
 
 468
 00:42:13,600 --> 00:42:18,336
-To do that I'm just going to open a vim inaud with the spec file in.
+To do that I'm just going to open a vim split with the spec file in.
 
 469
 00:42:18,330 --> 00:42:22,656
@@ -2151,12 +2175,12 @@ so we'll pull in the spec helper.
 
 471
 00:42:28,360 --> 00:42:39,632
-Will describe spy and we'll
+We'll describe the spy and we'll
 put this inside the bond module.
 
 472
 00:42:39,630 --> 00:42:46,208
-That's just so we can reference things without having to put bond inaud in front of everything.
+That's just so we can reference things without having to put Bond:: in front of everything.
 
 473
 00:42:46,400 --> 00:42:53,392
@@ -2165,16 +2189,16 @@ we'll immediately make the subject of our test
 
 474
 00:42:53,390 --> 00:43:01,024
-the spy, and we'll do spy.new, and again
+the spy, and we'll do Spy.new, and again
 I think this name is arbitrary for the moment.
 
 475
 00:43:01,020 --> 00:43:05,008
-So we'll just parse in a symbol there.
+So we'll just pass in a symbol there.
 
 476
 00:43:05,000 --> 00:43:09,104
-One thing I tend to do is when I'm inaud values like this,
+One thing I tend to do is when I'm inlining values like this,
 
 477
 00:43:09,100 --> 00:43:14,160
@@ -2193,7 +2217,7 @@ to happen, I'll pull that out into a let.
 
 480
 00:43:25,770 --> 00:43:30,512
-CB: How do you go about
+CB: How do you feel about
 using describe class, in general?
 
 481
@@ -2212,7 +2236,8 @@ from explicitly referencing the class.
 
 484
 00:43:54,030 --> 00:44:01,296
-CB: inaud the favorite part of your files. [Laughter].
+CB: Can I point out that your snowmen are adorable.
+That is my favourite part of your dotfiles [Laughter].
 
 485
 00:44:02,032 --> 00:44:07,770
@@ -2221,7 +2246,7 @@ a test now, and usually at this point,
 
 486
 00:44:07,770 --> 00:44:13,072
-when your writing unit tests, you would
+when you're writing unit tests, you would
 write a test on a specific method name.
 
 487
@@ -2236,7 +2261,7 @@ so that's going to be the name of our describe.
 
 489
 00:44:30,280 --> 00:44:34,080
-It's very important to consider
+It's fairly important to consider
 how we're going to make this happen,
 
 490
@@ -2265,12 +2290,13 @@ true for any method on this object.
 
 495
 00:45:06,976 --> 00:45:13,152
-It should also inaud, but we'll worry about that later.
+It should also handle method_missing correctly,
+but we'll worry about that later.
 
 496
 00:45:14,890 --> 00:45:18,784
 And this might be a good place to
-describe the response to method like this
+describe the respond_to? method like this
 
 497
 00:45:18,832 --> 00:45:22,656
@@ -2283,7 +2309,7 @@ that are important to note here.
 
 499
 00:45:26,752 --> 00:45:32,960
-Respond to is actually a
+respond_to? is actually a
 two argument method in Ruby.
 
 500
@@ -2293,26 +2319,27 @@ argument which is the method name,
 
 501
 00:45:36,440 --> 00:45:40,944
-but it also takes a inaud true/false, which indicates whether or not the method is private.
+but it also takes a Boolean true/false,
+which indicates whether or not the method is private.
 
 502
 00:45:41,000 --> 00:45:47,456
-but were going to ignore that, but
-I just wanted to make sure that's correct.
+but we're going to ignore that, but
+it's important to make sure that's correct.
 
 503
 00:45:47,664 --> 00:45:54,192
-So because our object responds
-to all methods, it's going to return true.
+So because our object responds to all methods,
+it's going to need to return true.
 
 504
 00:45:54,190 --> 00:46:01,744
-So expect subject.respond
+So expect(subject.respond...
 (I can't type) this should be spy.
 
 505
 00:46:01,856 --> 00:46:08,256
-Respond to method, aim to be true.
+respond_to?(method_name)).to be true.
 
 506
 00:46:08,380 --> 00:46:14,432
@@ -2320,7 +2347,7 @@ And, that should fail in an exciting way.
 
 507
 00:46:14,464 --> 00:46:18,750
-We need to acquire the constant.
+We need to require the constant.
 
 508
 00:46:18,750 --> 00:46:21,760
@@ -2328,20 +2355,21 @@ We need to acquire the constant.
 
 509
 00:46:22,704 --> 00:46:26,752
-Undefined method, method name for bond spy.
+undefined method `method name' for #<Bond::Spy>
 
 510
 00:46:26,960 --> 00:46:32,960
 That's our integration test
-failing so it's true or false.
+failing so it expected true, got false.
 
 511
 00:46:32,960 --> 00:46:37,184
-At this point we can just make this parse.
+At this point we can just make this pass.
 
 512
 00:46:40,944 --> 00:46:48,848
-Private is a reserved word, I think it would be better if we call inaud method private.
+Private is a reserved word, I think it would be
+better if we called the variable private_method?.
 
 513
 00:46:49,024 --> 00:46:53,920
@@ -2354,7 +2382,7 @@ in here and that should work.
 
 515
 00:46:56,910 --> 00:46:59,840
-Can't have question marks or variable names
+Can't have question marks on variable names
 
 516
 00:47:00,208 --> 00:47:03,392
@@ -2421,7 +2449,7 @@ returns self because that's our...
 
 530
 00:48:13,520 --> 00:48:16,800
-CB: Yes, it's going to be useful to do inaud.bar type.
+CB: Yes, it's going to be useful to do .foo.bar type.
 
 531
 00:48:17,008 --> 00:48:19,520
@@ -2437,25 +2465,26 @@ SP: Yes, so we can dot chain.
 
 534
 00:48:34,480 --> 00:48:40,736
-It's probably worth noting here, that the reason I'm using B here instead of inaud
+It's probably worth noting here, that the
+reason I'm using 'be' here instead of 'eq'
 
 535
 00:48:41,040 --> 00:48:46,480
-is that B does exact object comparison
+is that 'be' does exact object comparison
 so we know it's definitely the same object.
 
 536
 00:48:46,512 --> 00:48:47,968
-CB: It's an object ID whereas....
+CB: The same object ID whereas....
 
 537
 00:48:47,960 --> 00:48:49,568
-SP: Yes not just one that compares.
+SP: Yes, not just one that compares.
 
 538
 00:48:49,560 --> 00:48:53,504
-CB: So behind the scenes B is comparing
-objects, what's the actual implementation here.
+CB: So behind the scenes 'be' is comparing
+object_ids, what's the actual implementation here.
 
 539
 00:48:53,568 --> 00:48:58,160
@@ -2464,12 +2493,12 @@ SP: It delegates onto something in Ruby.
 540
 00:48:58,160 --> 00:49:04,560
 I can't remember exactly,
-but that's the desired media.
+but that's the desired behaviour.
 
 541
 00:49:04,752 --> 00:49:11,984
 So if we run that it's going to fail
-with undefined method name for bond spy.
+with undefined method method_name for #<Bond::Spy>.
 
 542
 00:49:12,192 --> 00:49:21,392
@@ -2482,12 +2511,13 @@ So I'm actually just going to write the method.
 
 544
 00:49:23,960 --> 00:49:27,952
-CB: Oh of course, inaud to make it pass.
+CB: What do you mean by adversarial? Oh of
+course, *minimum syndical* to make it pass!
 
 545
 00:49:27,950 --> 00:49:34,144
 SP: Totally, and now I can blow away
-my respond to definition and run this.
+my respond_to? definition and run this.
 
 546
 00:49:34,140 --> 00:49:40,992
@@ -2511,17 +2541,16 @@ So we need a more powerful construct here.
 550
 00:50:01,610 --> 00:50:07,312
 My understanding is that in Ruby
-basically any string is a valid method.
+basically any string is a valid method name
 
 551
 00:50:07,310 --> 00:50:14,176
-Valid method name if you
-use send [they both talk at once].
+if you use send, define_method, or method_missing
 
 552
 00:50:14,544 --> 00:50:20,128
 There's that fun gist like when you
-define imogee as your method names.
+define emoji as your method names.
 
 553
 00:50:20,656 --> 00:50:26,960
@@ -2534,8 +2563,8 @@ Entirely external to the object.
 
 555
 00:50:30,224 --> 00:50:36,400
-So we can use secure random.hex
-to parse the method image.
+So we can use SecureRandom.hex
+to pass the method name in.
 
 556
 00:50:36,680 --> 00:50:42,288
@@ -2552,7 +2581,8 @@ CB: So you're randomizing a method name.
 
 559
 00:50:47,136 --> 00:50:49,872
-Silly question but can you have a method as such inaud that?
+Silly question but can you have
+a method that starts with a number?
 
 560
 00:50:49,870 --> 00:50:55,456
@@ -2571,7 +2601,7 @@ to start, so we'll just stick that in there.
 
 563
 00:51:05,184 --> 00:51:08,992
-And we'll require the secure random.
+And we'll require SecureRandom.
 
 564
 00:51:09,424 --> 00:51:13,968
@@ -2580,17 +2610,17 @@ At this point I expect both of these tests to fail.
 565
 00:51:13,960 --> 00:51:21,008
 And they do, with false and
-undefined method 916 etc 4 bond spy.
+undefined method 916 etc. for #<Bond::Spy>.
 
 566
 00:51:21,056 --> 00:51:29,376
 So now both of our tests are putting pressure
-on us to come up with a better representation.
+on us to come up with a better implementation.
 
 567
 00:51:29,370 --> 00:51:33,632
 It seems to me the best thing to
-do here is to use method messing,
+do here is to use method_missing,
 
 568
 00:51:33,936 --> 00:51:39,488
@@ -2599,24 +2629,26 @@ which will work for any method.
 
 569
 00:51:39,480 --> 00:51:45,200
-inaud
+It's a rare day when you say that the best choice
 
 570
 00:51:45,232 --> 00:51:48,960
-We have a method missing but here we are.
+is method missing but here we are.
 
 571
 00:51:48,960 --> 00:51:53,200
-CB: I can't believe I'm going to let someone do inaud
+CB: I can't believe I'm going to let
+someone do method_missing in front of me
 
 572
 00:51:53,200 --> 00:51:57,216
-SP: So the inaud method missing is it takes the method name
+SP: So the signature of method_missing is
+it takes the method name,
 
 573
 00:51:57,210 --> 00:52:02,304
 and then the ARGS that were
-passed to the method in a block.
+passed to the method, then a block.
 
 574
 00:52:02,944 --> 00:52:06,768
@@ -2625,12 +2657,13 @@ return self, so we'll stick self in there for a moment.
 
 575
 00:52:06,760 --> 00:52:10,704
-And then the other thing we need to do is make the inaud check work.
+And then the other thing we need to do
+is make the respond_to? check work.
 
 576
 00:52:10,720 --> 00:52:15,210
 To do that we could override
-respond to and return true.
+respond_to? and return true.
 
 577
 00:52:15,790 --> 00:52:19,296
@@ -2639,27 +2672,27 @@ But that's not strictly correct.
 578
 00:52:19,312 --> 00:52:26,528
 Ruby provides us with a hook to tell it about
-method missing implementations that we support.
+method_missing implementations that we support.
 
 579
 00:52:26,520 --> 00:52:32,096
-That's the method respond to missing,
-which is invoked as part of respond to checks,
+That's the method respond_to_missing?,
+which is invoked as part of respond_to? checks,
 
 580
 00:52:32,090 --> 00:52:36,688
-and as part of method missing dispatch to
+and as part of method_missing dispatch to
 know whether or not we actually respond to that.
 
 581
 00:52:36,680 --> 00:52:44,368
-So I think the signature is method name
+So I think the signature is method_name
 and visibility but we should check that.
 
 582
 00:52:44,360 --> 00:52:50,736
 In fact we happen to be right there,
-thanks Google, include all true or false.
+thanks Google, include_all true or false.
 
 583
 00:52:50,864 --> 00:52:59,152
@@ -2700,12 +2733,12 @@ test and check where we're at.
 591
 00:53:33,920 --> 00:53:36,896
 We still haven't done this
-bond did you receive method.
+bond_did_you_receive? method.
 
 592
 00:53:36,890 --> 00:53:47,024
 So if we run that we can see...
-expect to receive method name.
+Expected to receive :method_name.
 
 593
 00:53:47,040 --> 00:53:50,040
@@ -2715,7 +2748,7 @@ something that has all the methods?
 594
 00:53:50,940 --> 00:53:55,424
 SP: So we're getting this failure because
-we implemented one did you receive
+we implemented bond_did_you_receive?
 
 595
 00:53:55,440 --> 00:53:58,912
@@ -2739,16 +2772,16 @@ But let's not get ahead of ourselves.
 599
 00:54:17,136 --> 00:54:24,384
 So here, we really need to ask
-the question, "if the spy receives the method"
+the question, "if spy_received_method?"
 
 600
 00:54:24,496 --> 00:54:29,840
-then do nothing, otherwise raise, that can be inaud less.
+then do nothing, otherwise raise, that can be an unless.
 
 601
 00:54:32,016 --> 00:54:37,296
 And then we need to think
-about how (they both talk at once).
+about how we're going to implement that.
 
 602
 00:54:39,200 --> 00:54:42,208
@@ -2757,7 +2790,7 @@ CB: How do you feel about that interface?
 603
 00:54:42,200 --> 00:54:45,648
 SP: Well, we're going to
-change the interface a little bit.
+change the interface in a little bit.
 
 604
 00:54:45,640 --> 00:54:49,072
@@ -2791,7 +2824,7 @@ spy to respond to everything all the time, forever,
 
 611
 00:55:21,968 --> 00:55:30,368
-so we can't add method to our spy to allow us to
+so we can't add methods to our spy to allow us to
 interface with the calls that are being made to it.
 
 612
@@ -2805,12 +2838,12 @@ of spies to include another object.
 
 614
 00:55:41,488 --> 00:55:43,232
-Which we are going to call proxy.
+Which we are going to call a proxy.
 
 615
 00:55:43,310 --> 00:55:49,616
 And we'll then ask the proxy object
-for each spy what's happened to it
+for each spy what has happened to it
 
 616
 00:55:49,616 --> 00:55:51,040
@@ -2824,7 +2857,7 @@ that responds to all the things,
 618
 00:55:53,310 --> 00:55:56,976
 and there's also the proxy thing that
-will have methods along the the lines of
+will have methods along the lines of
 
 619
 00:55:57,040 --> 00:56:01,712
@@ -2855,7 +2888,7 @@ But this is a good approximation.
 
 625
 00:56:20,416 --> 00:56:27,872
-Basically in RSpec, whenever you stub a
+Basically in RSpec, whenever you stub or
 mock on an object or you create a double or a spy,
 
 626
@@ -2865,8 +2898,8 @@ that object which tracks a bunch of details
 
 627
 00:56:35,400 --> 00:56:41,408
-about methods that have been
-replaced and called and arguments and stuff.
+about methods that have been replaced and
+called, how many times, and arguments and stuff.
 
 628
 00:56:41,504 --> 00:56:47,856
@@ -2889,8 +2922,8 @@ And we need to be able to get it back afterwords.
 
 632
 00:57:09,328 --> 00:57:21,856
-So in the bond module I'm going
-to have registered proxies hash.
+So in the Bond module I'm going
+to have registered_proxies hash.
 
 633
 00:57:22,544 --> 00:57:26,400
@@ -2907,11 +2940,11 @@ CB: Why are you hesitating on this one?
 636
 00:57:37,040 --> 00:57:43,088
 SP: I'm trying to remember if this
-wants to be single 'at' or a double 'at'.
+wants to be single '@' or a double '@'.
 
 637
 00:57:43,232 --> 00:57:47,328
-inaud proxies with the memorization.
+on registered_proxies with the memorization.
 
 638
 00:57:47,320 --> 00:57:52,560
@@ -2920,7 +2953,7 @@ Which probably means that there's a design problem.
 639
 00:57:53,712 --> 00:57:59,392
 I'm going to do something
-really gross and I'm going to fix it.
+really gross and then we're going to fix it.
 
 640
 00:57:59,664 --> 00:58:02,672
@@ -2929,11 +2962,12 @@ really gross and I'm going to fix it.
 641
 00:58:04,140 --> 00:58:07,504
 CB: Ok, so your making an
-object to keep your proxies open.
+object to keep your proxies in.
 
 642
 00:58:07,500 --> 00:58:13,648
-SP: Yes, we're going to make an object and use the single inaud module.
+SP: Yes, we're going to make an object
+and use the singleton module.
 
 643
 00:58:14,928 --> 00:58:21,530
@@ -2946,13 +2980,13 @@ Actually, the other thing we could do...
 
 645
 00:58:26,640 --> 00:58:39,360
-is just have a... this... and then we can
-reference bond concom proxies and do things to it
+is just have... this... and then we can
+reference Bond::PROXIES and do things to it
 
 646
 00:58:39,360 --> 00:58:42,688
 just until we're working,
-and then we can reflect on it.
+and then we can refactor.
 
 647
 00:58:44,672 --> 00:58:48,400
@@ -2961,7 +2995,7 @@ you definitely want to get rid of in the future,
 
 648
 00:58:48,400 --> 00:58:52,880
-Do you lead yourself or comment
+Do you leave yourself comments to
 yourself or something like that?
 
 649
@@ -2997,7 +3031,7 @@ we can consider the pros and cons in a bit.
 
 656
 00:59:29,500 --> 00:59:34,096
-SP: I'm pretty sure that a single app would work there.
+SP: I'm pretty sure that a single '@' would work there.
 
 657
 00:59:34,090 --> 00:59:39,120
@@ -3034,7 +3068,7 @@ register a proxy object for each spy.
 
 664
 01:00:07,584 --> 01:00:11,488
-So to do that we'll parse... [Sam types]
+So to do that we'll pass... [Sam types]
 
 665
 01:00:16,288 --> 01:00:23,440
@@ -3043,13 +3077,13 @@ this is going to be slightly nuts.
 
 666
 01:00:23,744 --> 01:00:32,304
-So we're going to parse a lambda
-into the spy, which will call itself.
+So we're going to pass a lambda
+into the spy, which it will call with `self`.
 
 667
 01:00:32,448 --> 01:00:44,976
-So this is the spy, and then we do
-register proxies [Sam dictates what he writes]
+So this is `the_spy`, and then we do
+`register_proxies` [Sam dictates what he writes]
 
 668
 01:00:44,970 --> 01:00:51,408
@@ -3059,7 +3093,7 @@ terrible so let's just pull that out.
 669
 01:00:53,408 --> 01:00:57,856
 And in fact we can give this a
-method name, this is a proxy factory.
+method name, this is a `proxy_factory`.
 
 670
 01:01:02,576 --> 01:01:06,352
@@ -3083,7 +3117,7 @@ So basically...
 
 675
 01:01:29,952 --> 01:01:32,368
-We need proxy to be returned from the left.
+We need proxy to be returned from the lambda.
 
 676
 01:01:32,360 --> 01:01:40,624
@@ -3097,7 +3131,7 @@ worth explaining what this is going to do.
 678
 01:01:45,950 --> 01:01:55,056
 When we call the proxy callback in the
-spy it will parse the spy in so that we can basically
+spy it will pass the spy in so that we can basically
 
 679
 01:01:55,070 --> 01:01:59,792
@@ -3121,12 +3155,12 @@ we have that overriding integration test.
 683
 01:02:11,610 --> 01:02:18,352
 And also this feels to me like something
-we're going to pull out once were done.
+we're going to pull out once we're done.
 
 684
 01:02:18,704 --> 01:02:24,160
 At the moment I'm doing something that
-Sandy Mets calls looking for the honest green.
+Sandy Metz calls looking for the honest green.
 
 685
 01:02:24,160 --> 01:02:28,400
@@ -3145,25 +3179,25 @@ things out until everything is functional.
 
 688
 01:02:44,368 --> 01:02:47,056
-CB: How do you do inaud lambda call here?
+CB: How do you do make the proc versus lambda call here?
 
 689
 01:02:48,320 --> 01:02:55,904
 SP: One of the principles I have is to
-prefer lambdas over procs when racing.
+prefer lambdas over procs when writing
 
 690
 01:02:56,336 --> 01:03:03,880
-Stuff like this, and the reason is because
+stuff like this, and the reason is because
 lambdas get their own stack frame and procs don't.
 
 691
 01:03:04,000 --> 01:03:09,792
-That means they can validate the inaud of their arguments because the arguments go onto the stack.
+That means they can validate the arity of their arguments because the arguments go onto the stack.
 
 692
 01:03:10,112 --> 01:03:15,824
-And you can also call the
+And you can also call the `return`
 keyword safely from a lambda.
 
 693
@@ -3187,7 +3221,7 @@ CB: OK.
 
 697
 01:03:36,480 --> 01:03:47,904
-Now we're parseing the proxy call back into our
+Now we're passing the proxy callback into our
 spy, if we run all the tests we've got some failures.
 
 698
@@ -3197,7 +3231,7 @@ our three failures so we can fix that
 
 699
 01:03:59,530 --> 01:04:04,688
-by parsing the proxy call back in and if we run again...
+by passing the proxy callback in and if we run again...
 
 700
 01:04:04,800 --> 01:04:13,280
@@ -3223,8 +3257,8 @@ Ah... spy, we just need to re-load that.
 
 705
 01:04:32,320 --> 01:04:37,504
-So each change in construction of
-the spy is parsing a proxy callback.
+So each change the constructor of
+the spy to pass in a `proxy_callback`.
 
 706
 01:04:37,984 --> 01:04:41,104
@@ -3259,7 +3293,7 @@ And we'll do that with tests.
 713
 01:05:15,328 --> 01:05:23,312
 SP: So the test for this
-records the method call on proxy.
+is that it records the method call on the proxy.
 
 714
 01:05:23,552 --> 01:05:29,520
@@ -3291,7 +3325,7 @@ the recording of what the method calls is going to be.
 
 720
 01:06:05,760 --> 01:06:09,872
-And we're going to make the proxy and RSpec spy.
+And we're going to make the proxy an RSpec spy.
 
 721
 01:06:10,128 --> 01:06:13,248
@@ -3303,7 +3337,7 @@ Yes like a nest, spying libraries inside each other.
 
 723
 01:06:18,000 --> 01:06:24,672
-And we'll just call this record message received.
+And we'll just call this `record_message_received`.
 
 724
 01:06:25,360 --> 01:06:30,672
@@ -3316,8 +3350,8 @@ We'll just focus on recording method calls.
 
 726
 01:06:34,680 --> 01:06:39,872
-So expect proxy to be received,
-record message received.
+So `expect(proxy).to have_received`,
+`record_message_received`.
 
 727
 01:06:40,400 --> 01:06:43,264
@@ -3335,8 +3369,8 @@ which can be an RSpec double.
 
 730
 01:06:55,840 --> 01:07:01,984
-We'll call it proxy and it responds
-to record message received
+We'll call it `proxy` and it responds
+to `record_message_received`.
 
 731
 01:07:02,096 --> 01:07:06,048
@@ -3380,8 +3414,8 @@ two failures, one unit and one integration.
 
 739
 01:07:46,704 --> 01:07:52,960
-We do and that's because record
-message received wasn't sent to that object.
+We do and that's because `record message_received`
+wasn't sent to that object.
 
 740
 01:07:53,136 --> 01:07:57,792
@@ -3394,7 +3428,7 @@ And we can... [Sam dictates what he writes]
 742
 01:08:06,480 --> 01:08:12,752
 And one thing I've done here is put
-a double underscore under the method name.
+a double underscore in front of the method name.
 
 743
 01:08:13,360 --> 01:08:21,472
@@ -3413,7 +3447,7 @@ behaviour around recording method calls in.
 
 746
 01:08:39,408 --> 01:08:45,056
-Method missing so it's fine to
+`method_missing` so it's fine to
 push that out into another method.
 
 747
@@ -3438,7 +3472,7 @@ environment we would probably have a thing
 
 751
 01:09:06,010 --> 01:09:10,736
-where we say if it receives inaud message sent to proxy then we do something different.
+where we say if it receives `record_message_sent_to_proxy` then we do something different.
 
 752
 01:09:11,008 --> 01:09:15,472
@@ -3461,7 +3495,7 @@ abstraction, but for the name.
 756
 01:09:31,840 --> 01:09:38,832
 And this will just be
-@proxy.record message received name.
+`@proxy.record_message_received(name)`
 
 757
 01:09:39,360 --> 01:09:49,856
@@ -3470,7 +3504,7 @@ just be able to do [Sam dictates what he writes].
 
 758
 01:09:49,850 --> 01:09:51,152
-CB: inaud
+CB: And that takes a name?
 
 759
 01:09:51,150 --> 01:09:54,992
@@ -3497,7 +3531,8 @@ at once] we record message received name
 
 764
 01:10:18,336 --> 01:10:27,808
-We've got three failures because wrong number of arguments, zero for a one inaud call back.
+We've got three failures because wrong number of arguments, zero for a one with
+backtrace 18 block in proxy_callback.
 
 765
 01:10:28,736 --> 01:10:32,096
@@ -3505,11 +3540,11 @@ Record message received.
 
 766
 01:10:34,960 --> 01:10:40,688
-Proxy inaud received, record message received which is that name, which is the same as that.
+`proxy).to have_received(:record_message_received)` which is that name, which is the same as that.
 
 767
 01:10:42,688 --> 01:10:49,936
-Let's just print proxy and make
+Let's just print the proxy and make
 sure it's what we were expecting.
 
 768
@@ -3520,16 +3555,16 @@ number of arguments here.
 769
 01:10:52,960 --> 01:10:59,840
 So it's wrong number of arguments
-zero for 1, 18 proxy callback.
+zero for 1, 18 block in proxy_callback.
 
 770
 01:11:01,632 --> 01:11:12,816
 Ah! I see the problem, it's because
-this lambda is being parsed into a context
+this lambda is being passed into a context
 
 771
 01:11:13,008 --> 01:11:17,184
-where this let proxy isn't available.
+where this `let(:proxy)` isn't available.
 
 772
 01:11:18,144 --> 01:11:22,800
@@ -3560,7 +3595,7 @@ Failing that...
 778
 01:11:51,072 --> 01:11:55,824
 I'm not sure that I was right
-there either... block proxy callback.
+there either... block in `proxy_callback`.
 
 779
 01:11:55,936 --> 01:11:58,960
@@ -3577,7 +3612,7 @@ These are all our integration tests.
 782
 01:12:13,632 --> 01:12:19,376
 And it's because we're
-expecting self in the integration test,
+expecting `self` in the integration test,
 
 783
 01:12:19,370 --> 01:12:23,040
@@ -3589,7 +3624,7 @@ For the moment we'll get our lambda back, that's fine.
 
 785
 01:12:30,224 --> 01:12:32,208
-It's important to make sure your reading the correct inaud.
+It's important to make sure your reading the correct test output.
 
 786
 01:12:32,200 --> 01:12:34,576
@@ -3625,11 +3660,12 @@ It's the first failure output.
 
 793
 01:13:08,970 --> 01:13:15,664
-And that's because the method name has been symbolized when we inaud.
+And that's because the method name has been symbolized when we `public_send`-ed
+it.
 
 794
 01:13:15,664 --> 01:13:21,424
-So in this let method name we should inaud.
+So in this let method name we should `to_sym`.
 
 795
 01:13:21,840 --> 01:13:26,288
@@ -3643,7 +3679,7 @@ back, but the other thing we need to do
 
 797
 01:13:32,560 --> 01:13:40,840
-Is say, it sends itself to the proxy callback,
+Is say, it sends `self` to the proxy callback,
 which we are currently not monitoring but we need.
 
 798
@@ -3657,11 +3693,11 @@ To being another double.
 
 800
 01:13:49,600 --> 01:13:56,090
-And that's so we can spy on the inaud of the proxy callback,
+And that's so we can spy on the invocation of the proxy callback,
 
 801
 01:13:56,800 --> 01:14:02,624
-to check that the self is parsed in correctly.
+to check that the `self` is passed in correctly.
 
 802
 01:14:04,208 --> 01:14:08,736
@@ -3678,7 +3714,7 @@ And then we'll do the same thing.
 
 805
 01:14:22,780 --> 01:14:24,960
-CB: So inaud public send and then...
+CB: So still `spy.public_send` and then...
 
 806
 01:14:25,056 --> 01:14:28,240
@@ -3686,12 +3722,12 @@ SP: Yes just doing that would be sufficient.
 
 807
 01:14:28,490 --> 01:14:35,184
-We only need to go through the instructor but it's
+We only need to go through the constructor but it's
 good to keep exercising the whole thing here.
 
 808
 01:14:35,280 --> 01:14:45,008
-And then inaud method name,[Sam dictates what he writes]
+And then `public_send` method name,[Sam dictates what he writes]
 
 809
 01:14:46,704 --> 01:14:52,400
@@ -3700,11 +3736,11 @@ And so that should fail, and it does.
 810
 01:14:52,400 --> 01:14:59,088
 I'm not even going to read the failure output,
-I'm just going to do the thing I expect and see.
+I'm just going to do the thing I expect and see
 
 811
 01:14:59,712 --> 01:15:02,000
-What! it does.
+if it works. It does.
 
 812
 01:15:02,528 --> 01:15:08,048
@@ -3713,7 +3749,7 @@ probably worth putting that back up there.
 
 813
 01:15:08,040 --> 01:15:10,592
-I think that's good enough.
+I think that's clear enough.
 
 814
 01:15:10,670 --> 01:15:15,328
@@ -3722,12 +3758,13 @@ weren't writing such a crazy object,
 
 815
 01:15:15,440 --> 01:15:20,464
-is add an inaud reader for proxy so I can change it later,
+is add an attr_reader for Proxy so I can
+change it later,
 
 816
 01:15:20,496 --> 01:15:25,760
 but in this case it's probably not
-worth polluting the public interface.
+worth polluting the public namespace.
 
 817
 01:15:25,760 --> 01:15:29,088
@@ -3740,7 +3777,7 @@ all our tests we've got some failures
 
 819
 01:15:35,344 --> 01:15:40,624
-but that's because we haven't got proxy.
+but that's because we haven't got Proxy.
 
 820
 01:15:40,620 --> 01:15:44,640
@@ -3758,7 +3795,7 @@ everything to see where we're at.
 
 823
 01:16:03,000 --> 01:16:07,824
-We're still going to get that name error,
+We're still going to get that NameError,
 and that's because we haven't required it.
 
 824
@@ -3768,7 +3805,7 @@ and that's because we haven't required it.
 825
 01:16:11,776 --> 01:16:16,720
 And we'll put that same require
-in the test file for proxy as well.
+in the unit test file for Proxy as well.
 
 826
 01:16:17,160 --> 01:16:19,680
@@ -3776,16 +3813,18 @@ Now we only have a single failure,
 
 827
 01:16:19,728 --> 01:16:23,728
-which is undefined method record
-message received for bond proxy.
+which is undefined method
+record_message_received for Bond::Proxy.
 
 828
 01:16:23,720 --> 01:16:29,792
-which gives us a good way to start raising our tests.
+which gives us a good way to start writing
+our tests.
 
 829
 01:16:29,790 --> 01:16:34,320
-We'll describe proxy, we'll put this in module bond.
+We'll describe Proxy, we'll put this in
+module Bond.
 
 830
 01:16:34,432 --> 01:16:37,456
@@ -3797,8 +3836,8 @@ We'll describe proxy, we'll put this in module bond.
 
 832
 01:16:42,912 --> 01:16:52,496
-Proxy is the wrong name, it matches the
-class name but here proxy is the role it's taking.
+Proxy is the role name, it matches the
+class name but here Proxy is the role it's taking.
 
 833
 01:16:53,130 --> 01:16:55,616
@@ -3807,7 +3846,7 @@ need any constructor arguments
 
 834
 01:16:55,632 --> 01:16:57,968
-so I'm just going to do proxy.new.
+so I'm just going to do Proxy.new.
 
 835
 01:16:58,048 --> 01:17:03,712
@@ -3816,11 +3855,11 @@ It's worth noting that RSpec will do this for you.
 836
 01:17:03,710 --> 01:17:10,176
 It implicitly will call subject,
-it's just name class new.
+it's just class_name.new.
 
 837
 01:17:10,170 --> 01:17:19,712
-But I'm doing this so that we get this proxy name.
+But I'm doing this so that we get this Proxy name.
 
 838
 01:17:20,784 --> 01:17:27,072
@@ -3837,7 +3876,7 @@ So let's describe that.
 
 841
 01:17:33,550 --> 01:17:37,360
-Here we need the hash -
+Here we are using the hash because
 it's going to be an instance method.
 
 842
@@ -3852,7 +3891,7 @@ going to store all the calls as an array.
 
 844
 01:17:50,912 --> 01:17:56,784
-And so on it's own, this
+And so on its own, this
 method has no observable effect,
 
 845
@@ -3876,7 +3915,7 @@ we're going to have a method like
 849
 01:18:14,992 --> 01:18:16,990
 CB: And we don't care about how
-the proxy stores it's stuff.
+the proxy stores its stuff.
 
 850
 01:18:16,990 --> 01:18:21,456
@@ -3943,7 +3982,9 @@ with a really simple case than a complicated one.
 
 863
 01:19:31,984 --> 01:19:39,232
-So in this case inaud, respond to this false, did you receive this false,
+So in this case having the implementation
+literally just be, respond to this: false,
+did you receive this: false,
 
 864
 01:19:40,016 --> 01:19:46,840
@@ -3952,7 +3993,7 @@ force implementation with the next test.
 
 865
 01:19:47,480 --> 01:19:56,480
-And the inaud here is it tells us it hasn't received a call when it hasn't,
+And the it here is it tells us it hasn't received a call when it hasn't,
 
 866
 01:19:56,528 --> 01:19:59,984
@@ -3977,12 +4018,12 @@ I'm still not in love with this test name.
 
 871
 01:20:24,448 --> 01:20:27,856
-Maybe we should describe the get a method.
+Maybe we should describe the getter method.
 
 872
 01:20:28,544 --> 01:20:33,632
-Sometimes when I'm struggling I describe the get
-a method and make manipulations to the object.
+Sometimes when I'm struggling I describe the getter
+method and make manipulations to the object.
 
 873
 01:20:33,856 --> 01:20:35,408
@@ -3990,11 +4031,13 @@ And be OK with that.
 
 874
 01:20:35,400 --> 01:20:39,424
-So this is message received...
+So this is message_received?...
 
 875
 01:20:41,456 --> 01:20:45,312
-CB: So do you want inaud whether specific message received, that's your interface.
+CB: So do you want to know whether a
+specific message was received, that's
+your interface?
 
 876
 01:20:45,310 --> 01:20:46,528
@@ -4020,11 +4063,11 @@ Have I got myself confused, yes, great.
 881
 01:21:09,790 --> 01:21:15,360
 And this is going to be
-expect proxy.message received.
+expect(proxy.message_received?
 
 882
 01:21:16,016 --> 01:21:20,464
-And here we're going to parse a
+And here we're going to pass a
 method name in, that will be a let,
 
 883
@@ -4034,7 +4077,7 @@ to have to keep referring to this method name.
 
 884
 01:21:25,080 --> 01:21:30,704
-So we'll allow let now to be false.
+So we'll have a let now
 
 885
 01:21:32,736 --> 01:21:36,520
@@ -4070,7 +4113,7 @@ dynamically garbage collectible in Ruby 2.2
 892
 01:22:07,600 --> 01:22:13,696
 you don't necessarily have that
-guarantee that's it's the exact same object.
+guarantee that it's the exact same object.
 
 893
 01:22:14,040 --> 01:22:17,872
@@ -4085,11 +4128,11 @@ like you used to treat strings and older Rubys?
 895
 01:22:22,110 --> 01:22:26,960
 SP: Yes, and the other thing about
-this is that it's a really strong callout.
+this is that it's a really strong callout
 
 896
 01:22:27,040 --> 01:22:30,848
-But this double is the thing that
+that this double is the thing that
 is going to be compared against.
 
 897
@@ -4100,7 +4143,7 @@ that doubles only ever compare true to themselves.
 898
 01:22:37,696 --> 01:22:44,640
 So now we have that set up we should
-run undefined method, method received.
+run - undefined method, message_received?
 
 899
 01:22:44,832 --> 01:22:47,824
@@ -4112,11 +4155,11 @@ And then wrong number of arguments.
 
 901
 01:22:59,040 --> 01:23:02,160
-And then expected false call nil.
+And then expected false got nil.
 
 902
 01:23:03,120 --> 01:23:06,832
-And then parsing.
+And then passing.
 
 903
 01:23:06,960 --> 01:23:12,448
@@ -4126,7 +4169,7 @@ returns true when a message has been received.
 904
 01:23:13,072 --> 01:23:17,520
 CB: Surely that message has
-been received  right? SP: Sure.
+been received right? SP: Sure.
 
 905
 01:23:18,048 --> 01:23:20,608
@@ -4155,7 +4198,7 @@ received and then go to it actually returns false
 910
 01:23:46,064 --> 01:23:49,728
 when the specific message has been
-received but your testing for another one?
+received but you're testing for another one?
 
 911
 01:23:49,720 --> 01:23:52,240
@@ -4181,8 +4224,8 @@ CB: And it does.
 
 916
 01:24:09,872 --> 01:24:15,248
-Undefined method record message
-received, so that's forcing us to implement that.
+Undefined method record_message_received,
+so that's forcing us to implement that.
 
 917
 01:24:17,472 --> 01:24:24,192
@@ -4191,16 +4234,17 @@ quickly here so we get the next failure.
 
 918
 01:24:25,260 --> 01:24:33,392
-inaud false to do that we'll have a
-received messages which can be an array.
+expected true got false, to do that we'll
+have a @received_messages which can be
+an array.
 
 919
 01:24:33,390 --> 01:24:37,424
-We'll do an attr.reader...
+We'll do an attr_reader...
 
 920
 01:24:38,810 --> 01:24:45,184
-...and then receive messages shovel method name.
+...and then received_messages << method_name.
 
 921
 01:24:48,200 --> 01:24:58,176
@@ -4222,15 +4266,16 @@ we should add a test for the negative case as well.
 
 925
 01:25:26,624 --> 01:25:30,128
-CB: inaud false on line 1 I think. SP: Yes.
+CB: you want that to be false on line 1 currently.
+SP: Yes.
 
 926
 01:25:30,672 --> 01:25:34,990
-SP: inaud pretty great.
+SP: relative numbers, they're pretty great.
 
 927
 01:25:35,376 --> 01:25:42,480
-Great! so that actually parsed
+Great! so that actually passed
 without us seeing it fail,
 
 928
@@ -4254,16 +4299,16 @@ to put 'not' on the front there.
 
 932
 01:25:56,860 --> 01:26:00,368
-I just want to see all of the tests fail.
+I just want to see all of those tests fail.
 
 933
 01:26:00,360 --> 01:26:03,456
 CB: So typically we should have
-done something like receive message.empty 
+done something like received_messages.empty
 
 934
 01:26:03,456 --> 01:26:06,400
-and then move on to include, or something like that?
+and then move on to include?, or something like that?
 
 935
 01:26:06,400 --> 01:26:11,888
@@ -4276,7 +4321,7 @@ if your confident about what it's doing.
 
 937
 01:26:15,936 --> 01:26:22,912
-I'm happy with now and even though
+I'm happy with this now and even though
 I didn't make my tests do it in the exact order,
 
 938
@@ -4299,32 +4344,32 @@ So back to our integration test which is
 
 942
 01:26:46,096 --> 01:26:54,368
-Expected to receive method name... and this
-is because bond did you receive is raising still.
+Expected to receive method_name... and this
+is because bond_did_you_receive? is raising still.
 
 943
 01:26:54,360 --> 01:26:58,704
-because spy receive method
-is still open to implementation.
+because spy_received_method?
+is still an empty implementation.
 
 944
 01:26:58,700 --> 01:27:04,896
 We actually missed a bit up here
-earlier, we need to parse this method name in.
+earlier, we need to pass this method_name in.
 
 945
 01:27:05,640 --> 01:27:17,648
-And then we just do registered
-proxies fetch spy.message received...
+And then we just do
+registered_proxies.fetch(spy).message_received?(...
 
 946
 01:27:19,600 --> 01:27:22,920
-...method name.
+...method_name).
 
 947
 01:27:23,520 --> 01:27:27,696
-CB: OK, so what do our registered
-proxies look like at the moment?
+CB: OK, so what do our registered_proxies
+look like at the moment?
 
 948
 01:27:27,690 --> 01:27:31,024
@@ -4337,16 +4382,17 @@ CB: So at what point are we doing things that add to it?
 950
 01:27:36,750 --> 01:27:45,952
 SP: Our proxy callback takes the spy and makes a
-proxy, inserts it into the registered proxies' hash,
+proxy, inserts it into the registered_proxies hash,
 
 951
 01:27:46,320 --> 01:27:52,512
-which has persisted across whatever
+which is persisted across whatever
 instance this module gets attached to.
 
 952
 01:27:52,510 --> 01:27:56,448
-CB: Do you want to use the spy as a key, like the name or...
+CB: Do you want to use the spy as a key,
+or the spy's name, or...
 
 953
 01:27:56,960 --> 01:28:01,470
@@ -4354,12 +4400,13 @@ SP: We can use a couple of things as a key here...
 
 954
 01:28:01,470 --> 01:28:09,712
-...it' fine to use the spy as a key because the method
-missing implementation that we have on the spy
+...it's fine to use the spy as a key
+because the method_missing implementation
+that we have on the spy
 
 955
 01:28:09,710 --> 01:28:14,000
-isn't going to beat all the methods on the object.
+isn't going to beat all the methods on Object.
 
 956
 01:28:14,624 --> 01:28:21,248
@@ -4376,18 +4423,19 @@ It does... that's pretty great.
 
 959
 01:28:28,890 --> 01:28:34,512
-CB: So we've got inaud it checks our methods,
-how about we have a play around with it in our inaud.
+CB: So we've got our minimum viable spying,
+it checks that we've received methods, how about
+we have a play around with it in our actual client.
 
 960
 01:28:35,130 --> 01:28:41,520
-SP: Yes, so this library can observe the
+SP: Yes, so this library can observe that
 methods were called and the subject will be
 
 961
 01:28:41,536 --> 01:28:48,816
 compatible enough to keep working, so it
-makes sense now to integrate it in for one last try.
+makes sense now to integrate it in. For one last try,
 
 962
 01:28:48,810 --> 01:28:55,360
@@ -4396,7 +4444,7 @@ and they are, so we'll head back into our Client
 
 963
 01:28:55,360 --> 01:29:00,800
-And modify the junk file to include bond...
+And modify the Gemfile to include Bond...
 
 964
 01:29:01,744 --> 01:29:07,824
@@ -4419,7 +4467,7 @@ ourselves of where we were when we started.
 968
 01:29:25,296 --> 01:29:30,320
 So we're going to make a bond with
-an HTTP tag, include it and then super.
+the http tag, include it and then super.
 
 969
 01:29:30,320 --> 01:29:39,648
@@ -4442,7 +4490,7 @@ works by doing the correct thing...
 
 973
 01:29:50,780 --> 01:29:53,792
-inaud Ruby test helper...
+bundle exec ruby test/test_helper.rb...
 
 974
 01:29:53,790 --> 01:29:58,960
@@ -4468,7 +4516,7 @@ So to do that, we'll pull this test out and say...
 
 979
 01:30:18,570 --> 01:30:21,344
-counter client.get key...
+counter_client.get(key)...
 
 980
 01:30:21,360 --> 01:30:26,256
@@ -4481,11 +4529,11 @@ we were saying before, we'll ask bond...
 
 982
 01:30:33,664 --> 01:30:35,680
-... the method name which is a get.
+... the method name which is get.
 
 983
 01:30:35,680 --> 01:30:40,000
-'And if we've done everything
+And if we've done everything
 correctly, this should work.
 
 984
@@ -4500,7 +4548,7 @@ working, let's also see it fail.
 986
 01:30:47,456 --> 01:30:52,992
 And it does, you can see here expected
-to receive get, in the bond did you receive call,
+to receive get, in the bond_did_you_receive? call,
 
 987
 01:30:52,990 --> 01:30:56,256
@@ -4512,13 +4560,13 @@ Great, so we've got something useful.
 
 989
 01:30:58,736 --> 01:31:03,600
-It's probably worth  also breaking
-the implementation on the test.
+It's probably worth also breaking
+the implementation, not the test.
 
 990
 01:31:04,160 --> 01:31:09,520
-So if we head back in to the counter
-client, and just comment this line of code out
+So if we head back in to the CounterClient,
+and just comment this line of code out
 
 991
 01:31:09,520 --> 01:31:12,960
@@ -4527,7 +4575,8 @@ and head back to our test helper and run it...
 992
 01:31:13,872 --> 01:31:21,472
 ... you can see here, all our integration
-tests failed but also our inaud failed inaud.
+tests failed but also our isolated test failed
+with: expected to receive get
 
 993
 01:31:21,968 --> 01:31:28,160
@@ -4550,7 +4599,7 @@ CB: A combination thereof.
 997
 01:31:41,100 --> 01:31:44,208
 CB: Alright, so we've got
-our minimal viable spying library.
+our minimum viable spying library.
 
 998
 01:31:44,688 --> 01:31:51,056
@@ -4563,12 +4612,12 @@ right now, given everything we've got...
 
 1000
 01:31:59,600 --> 01:32:06,816
-...is do a little re-factoring of the library, because I
+...is do a little refactoring of the library, because I
 think if I was going to make this production ready,
 
 1001
 01:32:06,810 --> 01:32:14,928
-specifically... this bond inaud is getting fairly large.
+specifically... this bond.rb is getting fairly large.
 
 1002
 01:32:15,536 --> 01:32:21,648
@@ -4577,7 +4626,7 @@ This proxy callback is clearly a
 
 1003
 01:32:21,776 --> 01:32:26,464
-All of this stuff like spy_received_method
+All of this stuff like spy_received_method?
 
 1004
 01:32:26,760 --> 01:32:31,808
@@ -4587,12 +4636,12 @@ concerns here, and also at the moment
 1005
 01:32:31,824 --> 01:32:39,280
 the spy proxy is only using the method
-name to record past failure states.
+name to decide pass/failure states.
 
 1006
 01:32:39,280 --> 01:32:45,536
 And I would probably change the way we
-record methods calls to include all of that data,
+record method calls to include all of that data,
 
 1007
 01:32:45,550 --> 01:32:52,112
@@ -4602,7 +4651,7 @@ proxy object, which is actually how RSpec does it.
 1008
 01:32:52,800 --> 01:32:58,592
 The other thing... that I think
-a good re-factoring would be... 
+a good refactoring would be... 
 
 1009
 01:32:58,590 --> 01:33:03,984
@@ -4611,7 +4660,7 @@ name in here, but when we add those details,
 
 1010
 01:33:04,010 --> 01:33:08,208
-that's going to end up being it's own object.
+that's going to end up being its own object.
 
 1011
 01:33:08,224 --> 01:33:11,936
@@ -4625,18 +4674,18 @@ are clearly a concept in the system.
 
 1013
 01:33:17,160 --> 01:33:24,288
-It's like add individual method call, and so
-I would probably end up giving that it's own name.
+It's like an individual method call, and so
+I would probably end up giving that its own name.
 
 1014
 01:33:24,430 --> 01:33:30,176
-This registered proxies thing as
-well, we're not using all of the hash interface,
+This registered_proxies thing as
+well, we're not using all of the Hash interface,
 
 1015
 01:33:30,176 --> 01:33:36,624
-only a small amount of it, and that
-probably means that's a main object as well.
+only a very small amount of it, and that
+probably means that's a domain object as well.
 
 1016
 01:33:37,712 --> 01:33:39,872
@@ -4645,12 +4694,12 @@ You see, I can attack any of these.
 1017
 01:33:39,870 --> 01:33:47,696
 The other one that's really common, but we won't do
-now is... at the moment there's real no test cleanup,
+now is... at the moment there's no real test cleanup,
 
 1018
 01:33:47,696 --> 01:33:53,504
-so you loose your references to all
-the objects at the end of the test.
+so you lose your references to all
+the Bond objects at the end of the test.
 
 1019
 01:33:53,760 --> 01:34:01,880
@@ -4659,7 +4708,7 @@ you from retaining any of the
 
 1020
 01:34:01,880 --> 01:34:05,584
-mock stubs, spies or doubles across tests.
+mocks, stubs, spies or doubles across tests.
 
 1021
 01:34:05,760 --> 01:34:14,224
@@ -4678,25 +4727,27 @@ well understood Ruby protocols.
 
 1024
 01:34:31,790 --> 01:34:38,320
-2I, 2F, 2S and so on will probably get
+to_i, to_f, to_s and so on will probably get
 their own specialized implementations as well.
 
 1025
 01:34:38,352 --> 01:34:41,808
-Just to not break other objects inaud
+Just to not break other objects that this
+goes through
 
 1026
 01:34:41,800 --> 01:34:47,472
-In fact, RSpec totally special cases, inaud on its spy objects
+In fact, RSpec totally special cases those
+out on its spy objects
 
 1027
 01:34:47,500 --> 01:34:51,632
-where this method missing  implementation
+where this method_missing implementation
 first checks if it's any of those calls, 
 
 1028
 01:34:51,632 --> 01:34:53,968
-and otherwise it does just return itself.
+and otherwise it does just return self.
 
 1029
 01:34:53,960 --> 01:34:57,904
@@ -4706,12 +4757,12 @@ method on any plain old Ruby object?
 1030
 01:34:57,900 --> 01:35:05,360
 SP: Yes, one of the things that RSpec
-does is ensure that its double and spies
+does is ensure that its doubles and spies
 
 1031
 01:35:05,360 --> 01:35:08,256
 are very compatible with
-the rest of the Ruby system.
+the rest of the Ruby ecosystem.
 
 1032
 01:35:08,250 --> 01:35:13,216
@@ -4719,12 +4770,12 @@ So == behaves as you would expect and so on.
 
 1033
 01:35:13,392 --> 01:35:19,680
-This implementation is fine as far
-as small is possible library perspective.
+This implementation is fine from a
+smallest possible library perspective
 
 1034
 01:35:19,680 --> 01:35:25,344
-But I think a re-factor is where I would go next.
+But I think a refactor is where I would go next.
 
 1035
 01:35:25,424 --> 01:35:28,640
@@ -4744,3 +4795,6 @@ typing really furiously there.
 01:35:36,600 --> 01:35:38,880
 SP: Thanks, it's been a lot of fun.
 
+1039
+01:35:38,880 --> 01:35:43,880
+Captions produced by Bonnie Roworth
