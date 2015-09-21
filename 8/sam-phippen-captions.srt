@@ -2939,7 +2939,7 @@ CB: Why are you hesitating on this one?
 636
 00:57:37,040 --> 00:57:43,088
 SP: I'm trying to remember if this
-wants to be single '@' or a double '@@'.
+wants to be single '@' or a double '@'.
 
 637
 00:57:43,232 --> 00:57:47,328
@@ -3030,7 +3030,7 @@ we can consider the pros and cons in a bit.
 
 656
 00:59:29,500 --> 00:59:34,096
-SP: I'm pretty sure that a single @ would work there.
+SP: I'm pretty sure that a single '@' would work there.
 
 657
 00:59:34,090 --> 00:59:39,120
