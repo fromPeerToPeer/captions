@@ -2737,7 +2737,7 @@ bond_did_you_receive? method.
 592
 00:53:36,890 --> 00:53:47,024
 So if we run that we can see...
-Expected to receive :method name.
+Expected to receive :method_name.
 
 593
 00:53:47,040 --> 00:53:50,040
