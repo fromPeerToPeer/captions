@@ -2980,7 +2980,7 @@ Actually, the other thing we could do...
 645
 00:58:26,640 --> 00:58:39,360
 is just have... this... and then we can
-reference Bond concom proxies and do things to it
+reference Bond::PROXIES and do things to it
 
 646
 00:58:39,360 --> 00:58:42,688
