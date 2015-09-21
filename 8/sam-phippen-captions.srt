@@ -351,7 +351,7 @@ The specific languages here are different.
 77
 00:06:09,600 --> 00:06:15,542
 The CounterClient has methods that
-are talking in terms of our domain rate, getting a key and incrementing a key
+are talking in terms of our domain right? Getting a key and incrementing a key
 
 78
 00:06:15,540 --> 00:06:21,657
