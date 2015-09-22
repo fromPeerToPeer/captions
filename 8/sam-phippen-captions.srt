@@ -1667,7 +1667,8 @@ having them on the top level is that it
 
 359
 00:31:04,810 --> 00:31:10,544
-provides very explicit usage documentation because we're interfacing with the public API.
+provides very explicit usage documentation
+because we're interfacing with the public API.
 
 360
 00:31:10,672 --> 00:31:13,376
@@ -1704,11 +1705,11 @@ possible way to verify that.
 
 367
 00:31:54,250 --> 00:32:06,624
-So my spy is a bond... these names are arbitrary
+So my spy is a bond... these names are arbitrary.
 
 368
 00:32:06,700 --> 00:32:12,656
-and we need another method for
+And we need another method for
 our library which is creating expectations
 
 369
@@ -1735,8 +1736,8 @@ And this could be a symbol, or a string ...
 
 374
 00:32:40,830 --> 00:32:45,904
-CB: So is this another test because we have it responds to all
-method calls and records them
+CB: So is this another test because we have
+it responds to all method calls and records them
 
 375
 00:32:45,936 --> 00:32:52,432
@@ -1750,7 +1751,8 @@ it fails the test when it didn't receive a method call.
 
 377
 00:33:04,176 --> 00:33:09,088
-CB: And this is the usual throwing exception thing which is the default test.
+CB: And this is the usual throwing
+exception thing which is the default test.
 
 378
 00:33:09,080 --> 00:33:15,024
@@ -1769,7 +1771,7 @@ we want to go after first.
 381
 00:33:24,256 --> 00:33:30,624
 I think it's going to be easier to write small
-amounts of code to get the raise error to pass
+amounts of code to get the raise error to pass.
 
 382
 00:33:30,896 --> 00:33:36,270
@@ -1796,7 +1798,8 @@ CB: We've got one that's skipped.
 
 387
 00:34:01,480 --> 00:34:06,144
-CB: We're trying to be deliberately generic and RSpec is helping us not to be.
+CB: We're trying to be deliberately
+generic and RSpec is helping us not to be.
 
 388
 00:34:06,190 --> 00:34:15,040
@@ -1874,8 +1877,8 @@ something that used numbers, and said, that is a 5
 
 404
 00:35:45,660 --> 00:35:50,384
-Well, there it's much more obvious that this method_name
-is the same as that method_name
+Well, there it's much more obvious that
+this method_name is the same as that method_name
 
 405
 00:35:50,380 --> 00:35:59,840
@@ -1933,7 +1936,8 @@ done a really stupid thing to make it pass.
 
 417
 00:37:17,130 --> 00:37:20,400
-CB: OK, how about we add some actual logic now. [Laughter]
+CB: OK, how about we add
+some actual logic now. [Laughter]
 
 418
 00:37:20,624 --> 00:37:23,568
@@ -1959,9 +1963,9 @@ And we get our failure that we were
 expecting, undefined this_method_name for bond spy.
 
 423
-00:37:54,560 --> 00:37:58,640
-CB: Something interesting happens when
-you run the tests, can you scroll out to er...
+00:37:54,560 --> 00:37:59,296
+CB: Something interesting happens
+when you run the tests, can you scroll out to er...
 
 424
 00:37:59,424 --> 00:38:09,088
@@ -1995,7 +1999,8 @@ because it failed, and then green red green.
 
 430
 00:38:42,910 --> 00:38:45,968
-CB: So you're on an exactly Red/Green refactoring cycle.
+CB: So you're on an exactly
+Red/Green refactoring cycle.
 
 431
 00:38:45,960 --> 00:38:54,832
@@ -2127,8 +2132,8 @@ you're not caring about its visibility
 
 458
 00:41:22,030 --> 00:41:27,472
-There are weird edge cases around that and we're not
-going to think too much about any of them today.
+There are weird edge cases around that and we're
+not going to think too much about any of them today.
 
 459
 00:41:27,530 --> 00:41:35,648
@@ -2174,7 +2179,8 @@ writing tests for this specific class.
 
 468
 00:42:13,600 --> 00:42:18,336
-To do that I'm just going to open a vim split with the spec file in.
+To do that I'm just going to open
+a vim split with the spec file in.
 
 469
 00:42:18,330 --> 00:42:22,656
@@ -2192,7 +2198,8 @@ put this inside the bond module.
 
 472
 00:42:39,630 --> 00:42:46,208
-That's just so we can reference things without having to put Bond:: in front of everything.
+That's just so we can reference things
+without having to put Bond:: in front of everything.
 
 473
 00:42:46,400 --> 00:42:53,392
@@ -2210,7 +2217,8 @@ So we'll just pass in a symbol there.
 
 476
 00:43:05,000 --> 00:43:09,104
-One thing I tend to do is when I'm inlining values like this,
+One thing I tend to do is,
+when I'm inlining values like this,
 
 477
 00:43:09,100 --> 00:43:14,160
