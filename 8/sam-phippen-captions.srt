@@ -2568,7 +2568,7 @@ basically any string is a valid method name
 if you use send, define_method, or method_missing
 
 552
-00:50:14,544 --> 00:50:20,128
+00:50:14,540 --> 00:50:20,288
 There's that fun gist like when you
 define emoji as your method names.
 
@@ -2648,851 +2648,856 @@ in order to define the behaviour
 which will work for any method.
 
 569
-00:51:39,480 --> 00:51:45,200
-It's a rare day when you say that the best choice
+00:51:39,480 --> 00:51:48,544
+It's a rare day when you say that the
+best choice is method missing but here we are.
 
 570
-00:51:45,232 --> 00:51:48,960
-is method missing but here we are.
-
-571
 00:51:48,960 --> 00:51:53,200
 CB: I can't believe I'm going to let
 someone do method_missing in front of me
 
-572
+571
 00:51:53,200 --> 00:51:57,216
-SP: So the signature of method_missing is
-it takes the method name,
+SP: So the signature of
+method_missing is it takes the method name,
 
-573
+572
 00:51:57,210 --> 00:52:02,304
 and then the ARGS that were
 passed to the method, then a block.
 
-574
+573
 00:52:02,944 --> 00:52:06,768
 And we specified that we were going to
 return self, so we'll stick self in there for a moment.
 
-575
+574
 00:52:06,760 --> 00:52:10,704
-And then the other thing we need to do
-is make the respond_to? check work.
+And then the other thing we need to
+do is make the respond_to? check work.
 
-576
+575
 00:52:10,720 --> 00:52:15,210
 To do that we could override
 respond_to? and return true.
 
-577
+576
 00:52:15,790 --> 00:52:19,296
 But that's not strictly correct.
 
-578
+577
 00:52:19,312 --> 00:52:26,528
 Ruby provides us with a hook to tell it about
 method_missing implementations that we support.
 
-579
+578
 00:52:26,520 --> 00:52:32,096
 That's the method respond_to_missing?,
 which is invoked as part of respond_to? checks,
 
-580
+579
 00:52:32,090 --> 00:52:36,688
 and as part of method_missing dispatch to
 know whether or not we actually respond to that.
 
-581
+580
 00:52:36,680 --> 00:52:44,368
 So I think the signature is method_name
 and visibility but we should check that.
 
-582
+581
 00:52:44,360 --> 00:52:50,736
 In fact we happen to be right there,
 thanks Google, include_all true or false.
 
-583
+582
 00:52:50,864 --> 00:52:59,152
 We're actually not going to use that
 property and the property is not optional
 
-584
+583
 00:52:59,150 --> 00:53:05,568
 so we don't need to pass a default.
 
-585
+584
 00:53:05,808 --> 00:53:12,976
 Great, so if we run our tests now, hopefully we'll have
 that one failure, which is our integration test.
 
-586
+585
 00:53:13,216 --> 00:53:15,520
 And the rest are working.
 
-587
+586
 00:53:15,520 --> 00:53:18,656
 [New Chapter]
 
-588
+587
 00:53:19,024 --> 00:53:24,640
 So we've now got that first piece
 of behaviour working on our spy object.
 
-589
+588
 00:53:24,640 --> 00:53:27,984
 It's responding to everything, it's returning self.
 
-590
+589
 00:53:27,980 --> 00:53:33,808
 Let's just pop back to our integration
 test and check where we're at.
 
-591
+590
 00:53:33,920 --> 00:53:36,896
 We still haven't done this
 bond_did_you_receive? method.
 
-592
+591
 00:53:36,890 --> 00:53:47,024
 So if we run that we can see...
 Expected to receive :method_name.
 
-593
+592
 00:53:47,040 --> 00:53:50,040
 CB: Is that because we're including
 something that has all the methods?
 
-594
+593
 00:53:50,940 --> 00:53:55,424
 SP: So we're getting this failure because
 we implemented bond_did_you_receive?
 
-595
+594
 00:53:55,440 --> 00:53:58,912
 to automatically raise
 whenever the method is sent.
 
-596
+595
 00:53:58,960 --> 00:54:07,536
 Now we need to go back into that method
 and begin to change it to make that work.
 
-597
+596
 00:54:07,712 --> 00:54:13,296
 And in order to do that we're going to
 have to do a couple of things to the spy class,
 
-598
+597
 00:54:13,290 --> 00:54:16,864
 But let's not get ahead of ourselves.
 
-599
+598
 00:54:17,136 --> 00:54:24,384
 So here, we really need to ask
 the question, "if spy_received_method?"
 
-600
+599
 00:54:24,496 --> 00:54:29,840
-then do nothing, otherwise raise, that can be an unless.
+then do nothing, otherwise
+raise, that can be an unless.
 
-601
+600
 00:54:32,016 --> 00:54:37,296
 And then we need to think
 about how we're going to implement that.
 
-602
+601
 00:54:39,200 --> 00:54:42,208
 CB: How do you feel about that interface?
 
-603
+602
 00:54:42,200 --> 00:54:45,648
 SP: Well, we're going to
 change the interface in a little bit.
 
-604
+603
 00:54:45,640 --> 00:54:49,072
 CB: So how do you see the method on the spy, how do you...
 
-605
+604
 00:54:49,216 --> 00:54:54,832
 SP: Let's just start poking towards it, right.
 
-606
+605
 00:54:55,184 --> 00:54:58,224
 We're going to make this method
 private, that is an implementation detail,
 
-607
+606
 00:54:58,220 --> 00:55:01,152
 nothing else really cares about it.
 
-608
+607
 00:55:02,832 --> 00:55:05,664
 [Sam dictates what he writes on screen]
 
-609
+608
 00:55:06,110 --> 00:55:12,608
 Now we have a problem and that is,
 
-610
+609
 00:55:12,730 --> 00:55:21,504
 we've defined the public interface of the
 spy to respond to everything all the time, forever,
 
-611
+610
 00:55:21,968 --> 00:55:30,368
 so we can't add methods to our spy to allow us to
 interface with the calls that are being made to it.
 
-612
+611
 00:55:30,360 --> 00:55:32,608
 We need something else.
 
-613
+612
 00:55:32,600 --> 00:55:40,768
 So I'm going to change the construction
 of spies to include another object.
 
-614
+613
 00:55:41,488 --> 00:55:43,232
 Which we are going to call a proxy.
 
-615
+614
 00:55:43,310 --> 00:55:49,616
 And we'll then ask the proxy object
 for each spy what has happened to it
 
-616
+615
 00:55:49,616 --> 00:55:51,040
 during the execution of the test.
 
-617
+616
 00:55:51,040 --> 00:55:53,312
 CB: So you still have your spy
 that responds to all the things,
 
-618
+617
 00:55:53,310 --> 00:55:56,976
 and there's also the proxy thing that
 will have methods along the lines of
 
-619
+618
 00:55:57,040 --> 00:56:01,712
 have you received the method, and that
 thing is going to be keeping terms on the spy
 
-620
+619
 00:56:01,760 --> 00:56:05,648
 to check that the right things have happened
 without messing around with the methods on the spy.
 
-621
+620
 00:56:05,690 --> 00:56:08,080
 SP: Exactly.
 
-622
+621
 00:56:08,080 --> 00:56:10,752
 CB: Is that how RSpec works behind the scenes?
 
-623
+622
 00:56:10,750 --> 00:56:17,984
 SP: Kind of, but it's a little
 bit more complicated than that.
 
-624
+623
 00:56:18,090 --> 00:56:20,400
 But this is a good approximation.
 
-625
+624
 00:56:20,416 --> 00:56:27,872
 Basically in RSpec, whenever you stub or
 mock on an object or you create a double or a spy,
 
-626
+625
 00:56:28,000 --> 00:56:35,408
 a companion object is created for
 that object which tracks a bunch of details
 
-627
+626
 00:56:35,400 --> 00:56:41,408
 about methods that have been replaced and
 called, how many times, and arguments and stuff.
 
-628
+627
 00:56:41,504 --> 00:56:47,856
 We're going to implement some of that, but because
 this library has a lower complexity boundary,
 
-629
+628
 00:56:47,850 --> 00:56:55,392
 and also because it doesn't tough user objects,
 we're going to get away with doing a lot less.
 
-630
+629
 00:56:55,584 --> 00:57:04,144
 So when we construct our spies we're
 going to need one of these proxy objects.
 
-631
+630
 00:57:04,140 --> 00:57:09,216
 And we need to be able to get it back afterwords.
 
-632
+631
 00:57:09,328 --> 00:57:21,856
 So in the Bond module I'm going
 to have registered_proxies hash.
 
-633
+632
 00:57:22,544 --> 00:57:26,400
 This is going to be really simple for the moment.
 
-634
+633
 00:57:26,560 --> 00:57:29,568
 [Silence]
 
-635
+634
 00:57:34,688 --> 00:57:37,040
 CB: Why are you hesitating on this one?
 
-636
+635
 00:57:37,040 --> 00:57:43,088
 SP: I'm trying to remember if this
 wants to be single '@' or a double '@'.
 
-637
+636
 00:57:43,232 --> 00:57:47,328
 on registered_proxies with the memorization.
 
-638
+637
 00:57:47,320 --> 00:57:52,560
 Which probably means that there's a design problem.
 
-639
+638
 00:57:53,712 --> 00:57:59,392
 I'm going to do something
 really gross and then we're going to fix it.
 
-640
+639
 00:57:59,664 --> 00:58:02,672
 [Sam dictates what he writes]
 
-641
+640
 00:58:04,140 --> 00:58:07,504
 CB: Ok, so your making an
 object to keep your proxies in.
 
-642
+641
 00:58:07,500 --> 00:58:13,648
-SP: Yes, we're going to make an object
-and use the singleton module.
+SP: Yes, we're going to make an
+object and use the singleton module.
 
-643
+642
 00:58:14,928 --> 00:58:21,530
 Which is gross but it seems
 like a reasonable place to start.
 
-644
+643
 00:58:21,888 --> 00:58:25,792
 Actually, the other thing we could do...
 
-645
+644
 00:58:26,640 --> 00:58:39,360
 is just have... this... and then we can
-reference Bond::PROXIES and do things to it
+reference Bond::PROXIES and do things to it,
 
-646
+645
 00:58:39,360 --> 00:58:42,688
 just until we're working,
 and then we can refactor.
 
-647
+646
 00:58:44,672 --> 00:58:48,400
 CB: When you have an idea like this or something
 you definitely want to get rid of in the future,
 
-648
+647
 00:58:48,400 --> 00:58:52,880
-Do you leave yourself comments to
-yourself or something like that?
+Do you leave yourself comments
+to yourself or something like that?
 
-649
+648
 00:58:54,368 --> 00:59:02,768
 SP: The real problem here is that
 this is a module and not an object.
 
-650
+649
 00:59:02,940 --> 00:59:06,976
 Maybe we should fix that at some
 point, but the nice thing about modules
 
-651
+650
 00:59:06,992 --> 00:59:11,328
 is that they can just be included into the tests.
 
-652
+651
 00:59:11,968 --> 00:59:16,112
 Actually, no I think this should be a class variable.
 
-653
+652
 00:59:16,688 --> 00:59:20,400
 I think I like this more.
 
-654
+653
 00:59:20,640 --> 00:59:23,664
 [Silence]
 
-655
+654
 00:59:25,200 --> 00:59:29,504
 CB: Let's see where it takes us and
 we can consider the pros and cons in a bit.
 
-656
+655
 00:59:29,500 --> 00:59:34,096
 SP: I'm pretty sure that a single '@' would work there.
 
-657
+656
 00:59:34,090 --> 00:59:39,120
 Mostly because it's going to happen
 during the execution of a single test.
 
-658
+657
 00:59:40,736 --> 00:59:43,616
 CB: So you would re-register
 your proxies on every single run?
 
-659
+658
 00:59:43,610 --> 00:59:48,672
 SP: Yes, this could just be an instance
 method, it doesn't need to be a class method,
 
-660
+659
 00:59:48,720 --> 00:59:51,248
 and that should work fine.
 
-661
+660
 00:59:51,240 --> 00:59:57,968
 One thing RSpec does is keep track of proxies
 globally, but we don't need to worry about that here.
 
-662
+661
 00:59:57,960 --> 01:00:01,104
 So this should work just fine.
 
-663
+662
 01:00:01,168 --> 01:00:07,536
 And then we need to create and
 register a proxy object for each spy.
 
-664
+663
 01:00:07,584 --> 01:00:11,488
 So to do that we'll pass... [Sam types]
 
-665
+664
 01:00:16,288 --> 01:00:23,440
 We're actually going to do...
 this is going to be slightly nuts.
 
-666
+665
 01:00:23,744 --> 01:00:32,304
 So we're going to pass a lambda
 into the spy, which it will call with `self`.
 
-667
+666
 01:00:32,448 --> 01:00:44,976
 So this is `the_spy`, and then we do
 `register_proxies` [Sam dictates what he writes]
 
-668
+667
 01:00:44,970 --> 01:00:51,408
 This line of code has gone
 terrible so let's just pull that out.
 
-669
+668
 01:00:53,408 --> 01:00:57,856
 And in fact we can give this a
 method name, this is a `proxy_factory`.
 
-670
+669
 01:01:02,576 --> 01:01:06,352
 So basically...
 
-671
+670
 01:01:09,136 --> 01:01:12,752
 And actually, this isn't a factory, it's a callback
 
-672
+671
 01:01:15,472 --> 01:01:17,792
 CB: Oh good point.
 
-673
+672
 01:01:17,790 --> 01:01:22,528
 So basically...
 
-674
+673
 01:01:22,520 --> 01:01:25,536
 [Silence]
 
-675
+674
 01:01:29,952 --> 01:01:32,368
 We need proxy to be returned from the lambda.
 
-676
+675
 01:01:32,360 --> 01:01:40,624
 So, this looks slightly crazy so it's
 worth explaining what this is going to do.
 
-677
+676
 01:01:40,768 --> 01:01:45,152
 [Sam thinks]
 
-678
+677
 01:01:45,950 --> 01:01:55,056
 When we call the proxy callback in the
 spy it will pass the spy in so that we can basically
 
-679
+678
 01:01:55,070 --> 01:01:59,792
 look the proxy up by the spy object
 itself later in the execution of the test.
 
-680
+679
 01:01:59,950 --> 01:02:04,480
 I'm just trying to think about whether
 we need to immediately cover this with
 
-681
+680
 01:02:04,528 --> 01:02:06,480
 unit test coverage before we move on.
 
-682
+681
 01:02:06,480 --> 01:02:11,616
 I think we're fine at the moment because
 we have that overriding integration test.
 
-683
+682
 01:02:11,610 --> 01:02:18,352
 And also this feels to me like something
 we're going to pull out once we're done.
 
-684
+683
 01:02:18,704 --> 01:02:24,160
 At the moment I'm doing something that
 Sandy Metz calls looking for the honest green.
 
-685
+684
 01:02:24,160 --> 01:02:28,400
 where I'm using the integration
 test to guide what I'm doing,
 
-686
+685
 01:02:28,448 --> 01:02:33,136
 and writing unit tests where there's
 something that's obviously an object,
 
-687
+686
 01:02:33,130 --> 01:02:42,352
 and then I'm going to wait to pull other
 things out until everything is functional.
 
-688
+687
 01:02:44,368 --> 01:02:47,056
-CB: How do you do make the proc versus lambda call here?
+CB: How do you do make
+the proc versus lambda call here?
 
-689
+688
 01:02:48,320 --> 01:02:55,904
 SP: One of the principles I have is to
 prefer lambdas over procs when writing
 
-690
+689
 01:02:56,336 --> 01:03:03,880
 stuff like this, and the reason is because
 lambdas get their own stack frame and procs don't.
 
-691
+690
 01:03:04,000 --> 01:03:09,792
-That means they can validate the arity of their arguments because the arguments go onto the stack.
+That means they can validate the arity of their
+arguments because the arguments go onto the stack.
 
-692
+691
 01:03:10,112 --> 01:03:15,824
 And you can also call the `return`
 keyword safely from a lambda.
 
-693
+692
 01:03:16,144 --> 01:03:22,704
 Otherwise they're very similar, I just think
 it's generally better to use lambdas where
 
-694
+693
 01:03:22,700 --> 01:03:30,000
 you can because they tend to make more
 sense from a thing that you can call into view.
 
-695
+694
 01:03:30,000 --> 01:03:35,280
 Having procs can sometimes
 lead to very strange behaviour.
 
-696
+695
 01:03:35,312 --> 01:03:36,256
 CB: OK.
 
-697
+696
 01:03:36,480 --> 01:03:47,904
 Now we're passing the proxy callback into our
 spy, if we run all the tests we've got some failures.
 
-698
+697
 01:03:49,984 --> 01:03:59,080
 Wrong number of arguments, those are
 our three failures so we can fix that
 
-699
+698
 01:03:59,530 --> 01:04:04,688
 by passing the proxy callback in and if we run again...
 
-700
+699
 01:04:04,800 --> 01:04:13,280
 ... we still have failures. Now our unit tests
 are failing so we need to go back and fix that.
 
-701
+700
 01:04:14,288 --> 01:04:17,184
 CB: Because we don't have a default proxy callback.
 
-702
+701
 01:04:17,344 --> 01:04:20,160
 SP: Let's just run our tests again.
 
-703
+702
 01:04:20,160 --> 01:04:25,888
 So we have no changes, so we need to
 go back to our unit tests and fix them up.
 
-704
+703
 01:04:26,544 --> 01:04:32,144
 Ah... spy, we just need to re-load that.
 
-705
+704
 01:04:32,320 --> 01:04:37,504
 So each change the constructor of
 the spy to pass in a `proxy_callback`.
 
-706
+705
 01:04:37,984 --> 01:04:41,104
 We're going to need a top level let for that.
 
-707
+706
 01:04:42,880 --> 01:04:47,632
 And what is a useful default value for this
 
-708
+707
 01:04:48,112 --> 01:04:53,136
 For the moment I'll let that be nil and run the tests.
 
-709
+708
 01:04:53,630 --> 01:04:59,808
 So now we're back to having
 the single integration test failure
 
-710
+709
 01:04:59,800 --> 01:05:08,000
 and I'm going to add the behavior to
 the spy to record stuff into the proxy.
 
-711
+710
 01:05:08,112 --> 01:05:10,624
 And we'll do that with tests.
 
-712
+711
 01:05:10,768 --> 01:05:14,688
 [New Chapter]
 
-713
+712
 01:05:15,328 --> 01:05:23,312
-SP: So the test for this
-is that it records the method call on the proxy.
+SP: So the test for this is that it
+records the method call on the proxy.
 
-714
+713
 01:05:23,552 --> 01:05:29,520
 And in order to do that, this is going
 to be a command method to the proxy
 
-715
+714
 01:05:29,520 --> 01:05:33,232
 So we're probably going to mock the interaction.
 
-716
+715
 01:05:34,000 --> 01:05:45,712
 So, if I send the method then we need
 some expectation that the proxy has been called.
 
-717
+716
 01:05:46,016 --> 01:05:50,176
 We're going to get the proxy from the proxy callback.
 
-718
+717
 01:05:51,312 --> 01:05:57,072
 But, it doesn't need to be very
 complicated, so we'll say expect proxy.
 
-719
+718
 01:05:57,340 --> 01:06:05,424
 And here we need the method name, like
 the recording of what the method calls is going to be.
 
-720
+719
 01:06:05,760 --> 01:06:09,872
 And we're going to make the proxy an RSpec spy.
 
-721
+720
 01:06:10,128 --> 01:06:13,248
 [They both talk at once]
 
-722
+721
 01:06:13,240 --> 01:06:17,584
 Yes like a nest, spying libraries inside each other.
 
-723
+722
 01:06:18,000 --> 01:06:24,672
 And we'll just call this `record_message_received`.
 
-724
+723
 01:06:25,360 --> 01:06:30,672
 And we won't worry too much
 about arguments for the moment.
 
-725
+724
 01:06:30,864 --> 01:06:34,680
 We'll just focus on recording method calls.
 
-726
+725
 01:06:34,680 --> 01:06:39,872
 So `expect(proxy).to have_received`,
 `record_message_received`.
 
-727
+726
 01:06:40,400 --> 01:06:43,264
 We don't have a reference for the proxy at the moment,
 
-728
+727
 01:06:43,408 --> 01:06:49,264
 so this is going to be a lambda which will take
 the argument and return the proxy for the moment.
 
-729
+728
 01:06:49,260 --> 01:06:55,392
 The proxy will be a new let
 which can be an RSpec double.
 
-730
+729
 01:06:55,840 --> 01:07:01,984
-We'll call it `proxy` and it responds
-to `record_message_received`.
+We'll call it `proxy` and it
+responds to `record_message_received`.
 
-731
+730
 01:07:02,096 --> 01:07:06,048
 and we don't care about return
 values so I'll explicitly make that nil.
 
-732
+731
 01:07:06,096 --> 01:07:12,976
 One thing to note here, I was talking
 about extracting duplication into lets.
 
-733
+732
 01:07:13,744 --> 01:07:20,650
 I don't consider this to be a form
 of duplication, these are actually different
 
-734
+733
 01:07:22,496 --> 01:07:26,976
 because this one is saying set
 up that you understand this message,
 
-735
+734
 01:07:26,970 --> 01:07:29,840
 and this one is saying assert
 that the message was received.
 
-736
+735
 01:07:29,840 --> 01:07:35,232
 So even though they are the
 same symbol and do the same thing,
 
-737
+736
 01:07:35,344 --> 01:07:40,256
 these are being compared so
 I'm not going to pull it out at all.
 
-738
+737
 01:07:40,250 --> 01:07:46,112
 So if we run that now we should have
 two failures, one unit and one integration.
 
-739
+738
 01:07:46,704 --> 01:07:52,960
-We do and that's because `record message_received`
-wasn't sent to that object.
+We do and that's because `record
+message_received` wasn't sent to that object.
 
-740
+739
 01:07:53,136 --> 01:07:57,792
 So to fix that we just need to go back here.
 
-741
+740
 01:07:57,984 --> 01:08:06,272
 And we can... [Sam dictates what he writes]
 
-742
+741
 01:08:06,480 --> 01:08:12,752
-And one thing I've done here is put
-a double underscore in front of the method name.
+And one thing I've done here is put a
+double underscore in front of the method name.
 
-743
+742
 01:08:13,360 --> 01:08:21,472
 This is a sort of conventional Ruby thing
 for libraries that are super weird.
 
-744
+743
 01:08:21,712 --> 01:08:31,936
 So because we respond to all messages,
 we can't add more method calls to our object.
 
-745
+744
 01:08:31,930 --> 01:08:39,280
 But it doesn't make sense to have the entire body of
 behaviour around recording method calls in.
 
-746
+745
 01:08:39,408 --> 01:08:45,056
 `method_missing` so it's fine to
 push that out into another method.
 
-747
+746
 01:08:45,344 --> 01:08:49,648
 In this case we're prefixing it with a
 double underscore so that we don't conflict.
 
-748
+747
 01:08:49,840 --> 01:08:54,880
 It's very unlikely that anyone is ever going
 to want to call the method double underscore
 
-749
+748
 01:08:54,880 --> 01:09:02,624
 record message sent to proxy on
 our spy, so that's probably fine.
 
-750
+749
 01:09:03,040 --> 01:09:06,010
 CB: So if we were in a production
 environment we would probably have a thing
 
+750
+01:09:06,010 --> 01:09:08,864
+where we say if it receives
+`record_message_sent_to_proxy` 
+
 751
-01:09:06,010 --> 01:09:10,736
-where we say if it receives `record_message_sent_to_proxy` then we do something different.
+01:09:08,880 --> 01:09:11,000
+then we do something different.
 
 752
 01:09:11,008 --> 01:09:15,472
@@ -3550,1272 +3555,1284 @@ And that should work [they both talk
 at once] we record message received name
 
 764
-01:10:18,336 --> 01:10:27,808
-We've got three failures because wrong number of arguments, zero for a one with
-backtrace 18 block in proxy_callback.
+01:10:18,330 --> 01:10:23,536
+We've got three failures
+because wrong number of arguments, 
 
 765
+01:10:23,552 --> 01:10:28,730
+zero for a one with backtrace
+18 block in proxy_callback.
+
+766
 01:10:28,736 --> 01:10:32,096
 Record message received.
 
-766
-01:10:34,960 --> 01:10:40,688
-`proxy).to have_received(:record_message_received)` which is that name, which is the same as that.
-
 767
-01:10:42,688 --> 01:10:49,936
-Let's just print the proxy and make
-sure it's what we were expecting.
+01:10:34,960 --> 01:10:40,688
+`proxy).to have_received(:record_message_received)`
+which is that name, which is the same as that.
 
 768
+01:10:42,688 --> 01:10:49,936
+Let's just print the proxy and
+make sure it's what we were expecting.
+
+769
 01:10:49,930 --> 01:10:52,864
 CB: What's getting the wrong
 number of arguments here.
 
-769
+770
 01:10:52,960 --> 01:10:59,840
 So it's wrong number of arguments
 zero for 1, 18 block in proxy_callback.
 
-770
+771
 01:11:01,632 --> 01:11:12,816
 Ah! I see the problem, it's because
 this lambda is being passed into a context
 
-771
+772
 01:11:13,008 --> 01:11:17,184
 where this `let(:proxy)` isn't available.
 
-772
+773
 01:11:18,144 --> 01:11:22,800
 CB: Right so we will want to make the proxy available.
 
-773
+774
 01:11:24,720 --> 01:11:28,800
 SP: Or, we can just do this.
 
-774
+775
 01:11:29,280 --> 01:11:33,936
 And I think that if we make
 this a proc, that should be fine.
 
-775
+776
 01:11:34,912 --> 01:11:39,808
 It's kind of nuts that we have to do
 that but I think that's what we want.
 
-776
+777
 01:11:41,136 --> 01:11:44,336
 Failing that...
 
-777
+778
 01:11:44,448 --> 01:11:47,488
 [Sam and Camille ponder]
 
-778
+779
 01:11:51,072 --> 01:11:55,824
 I'm not sure that I was right
 there either... block in `proxy_callback`.
 
-779
+780
 01:11:55,936 --> 01:11:58,960
 [Sam thinks again]
 
-780
+781
 01:12:02,192 --> 01:12:08,944
 Ah! wait, no we've misread the test failure output.
 
-781
+782
 01:12:09,120 --> 01:12:11,488
 These are all our integration tests.
 
-782
+783
 01:12:13,632 --> 01:12:19,376
 And it's because we're
 expecting `self` in the integration test,
 
-783
+784
 01:12:19,370 --> 01:12:23,040
 because we moved ahead of ourselves, so that's fine.
 
-784
+785
 01:12:25,744 --> 01:12:28,880
 For the moment we'll get our lambda back, that's fine.
 
-785
-01:12:30,224 --> 01:12:32,208
-It's important to make sure your reading the correct test output.
-
 786
-01:12:32,200 --> 01:12:34,576
-So those are all our integration tests.
+01:12:30,220 --> 01:12:32,400
+It's important to make sure
+your reading the correct test output.
 
 787
+01:12:32,432 --> 01:12:34,570
+So those are all our integration tests.
+
+788
 01:12:34,570 --> 01:12:36,480
 None of those need a test right.
 
-788
+789
 01:12:36,480 --> 01:12:38,160
 CB: So now our RSpec has failed.
 
-789
+790
 01:12:38,160 --> 01:12:45,040
 SP: So our actual unit test has passed
 because it has received that message.
 
-790
+791
 01:12:45,072 --> 01:12:52,320
 The other thing that we need to add here is the name,
 which is something that we missed in our test.
 
-791
+792
 01:12:52,320 --> 01:13:02,176
 Just to make sure that we actually do need
 that, I'm just going to delete the name.
 
-792
+793
 01:13:02,400 --> 01:13:08,736
 It's still failing, that's fine.
 It's the first failure output.
 
-793
-01:13:08,970 --> 01:13:15,664
-And that's because the method name has been symbolized when we `public_send`-ed
-it.
-
 794
+01:13:08,970 --> 01:13:15,664
+And that's because the method name
+has been symbolized when we `public_send`-ed it.
+
+795
 01:13:15,664 --> 01:13:21,424
 So in this let method name we should `to_sym`.
 
-795
+796
 01:13:21,840 --> 01:13:26,288
 That should pass, and it does, we only
 have those three integration tests failing.
 
-796
+797
 01:13:27,120 --> 01:13:32,528
 So we now have our basic method recording
 back, but the other thing we need to do
 
-797
+798
 01:13:32,560 --> 01:13:40,840
 Is say, it sends `self` to the proxy callback,
 which we are currently not monitoring but we need.
 
-798
+799
 01:13:41,930 --> 01:13:46,544
 To facilitate that we're going to change
 the proxy callback from being a straight lambda,
 
-799
+800
 01:13:46,544 --> 01:13:49,200
 To being another double.
 
-800
-01:13:49,600 --> 01:13:56,090
-And that's so we can spy on the invocation of the proxy callback,
-
 801
+01:13:49,600 --> 01:13:56,090
+And that's so we can spy on
+the invocation of the proxy callback,
+
+802
 01:13:56,800 --> 01:14:02,624
 to check that the `self` is passed in correctly.
 
-802
+803
 01:14:04,208 --> 01:14:08,736
 CB: I need an aspirin. [Laughter]
 
-803
+804
 01:14:09,072 --> 01:14:15,968
 This is going to return proxy from the call
 method so all our existing tests should still pass.
 
-804
+805
 01:14:18,320 --> 01:14:22,528
 And then we'll do the same thing.
 
-805
+806
 01:14:22,780 --> 01:14:24,960
 CB: So still `spy.public_send` and then...
 
-806
+807
 01:14:25,056 --> 01:14:28,240
 SP: Yes just doing that would be sufficient.
 
-807
-01:14:28,490 --> 01:14:35,184
-We only need to go through the constructor but it's
-good to keep exercising the whole thing here.
-
 808
-01:14:35,280 --> 01:14:45,008
-And then `public_send` method name,[Sam dictates what he writes]
+01:14:28,490 --> 01:14:35,184
+We only need to go through the constructor but
+it's good to keep exercising the whole thing here.
 
 809
+01:14:35,280 --> 01:14:38,784
+And then `public_send` method name.
+
+810
+01:14:38,864 --> 01:14:41,872
+[Sam dictates what he writes]
+
+811
 01:14:46,704 --> 01:14:52,400
 And so that should fail, and it does.
 
-810
+812
 01:14:52,400 --> 01:14:59,088
 I'm not even going to read the failure output,
 I'm just going to do the thing I expect and see
 
-811
+813
 01:14:59,712 --> 01:15:02,000
 if it works. It does.
 
-812
+814
 01:15:02,528 --> 01:15:08,048
 And because this is a single line it's
 probably worth putting that back up there.
 
-813
+815
 01:15:08,040 --> 01:15:10,592
 I think that's clear enough.
 
-814
+816
 01:15:10,670 --> 01:15:15,328
 The other thing I would do if we
 weren't writing such a crazy object,
 
-815
+817
 01:15:15,440 --> 01:15:20,464
 is add an attr_reader for Proxy so I can
 change it later,
 
-816
+818
 01:15:20,496 --> 01:15:25,760
 but in this case it's probably not
 worth polluting the public namespace.
 
-817
+819
 01:15:25,760 --> 01:15:29,088
 [New Chapter]
 
-818
+820
 01:15:30,080 --> 01:15:35,296
 So now we've done that, if we run
 all our tests we've got some failures
 
-819
+821
 01:15:35,344 --> 01:15:40,624
 but that's because we haven't got Proxy.
 
-820
+822
 01:15:40,620 --> 01:15:44,640
 So let's follow those failures
 and implement that next.
 
-821
+823
 01:15:46,144 --> 01:15:51,808
 [Sam dictates what he writes]
 
-822
+824
 01:15:54,768 --> 01:16:03,008
 We'll also make a test file and run
 everything to see where we're at.
 
-823
+825
 01:16:03,000 --> 01:16:07,824
 We're still going to get that NameError,
 and that's because we haven't required it.
 
-824
+826
 01:16:07,888 --> 01:16:10,880
 [Silence]
 
-825
+827
 01:16:11,776 --> 01:16:16,720
 And we'll put that same require
 in the unit test file for Proxy as well.
 
-826
+828
 01:16:17,160 --> 01:16:19,680
 Now we only have a single failure,
 
-827
+829
 01:16:19,728 --> 01:16:23,728
 which is undefined method
 record_message_received for Bond::Proxy.
 
-828
+830
 01:16:23,720 --> 01:16:29,792
 which gives us a good way to start writing
 our tests.
 
-829
+831
 01:16:29,790 --> 01:16:34,320
 We'll describe Proxy, we'll put this in
 module Bond.
 
-830
+832
 01:16:34,432 --> 01:16:37,456
 [Silence]
 
-831
+833
 01:16:38,288 --> 01:16:41,376
 [Sam dictates what he writes]
 
-832
+834
 01:16:42,912 --> 01:16:52,496
 Proxy is the role name, it matches the
 class name but here Proxy is the role it's taking.
 
-833
+835
 01:16:53,130 --> 01:16:55,616
 At the moment we don't know if we
 need any constructor arguments
 
-834
+836
 01:16:55,632 --> 01:16:57,968
 so I'm just going to do Proxy.new.
 
-835
+837
 01:16:58,048 --> 01:17:03,712
 It's worth noting that RSpec will do this for you.
 
-836
+838
 01:17:03,710 --> 01:17:10,176
 It implicitly will call subject,
 it's just class_name.new.
 
-837
+839
 01:17:10,170 --> 01:17:19,712
 But I'm doing this so that we get this Proxy name.
 
-838
+840
 01:17:20,784 --> 01:17:27,072
 Just to remind ourselves
 where we are, let's run our tests.
 
-839
+841
 01:17:27,488 --> 01:17:30,784
 So let's describe that.
 
-840
+842
 01:17:31,152 --> 01:17:33,552
 [Sam dictates what he writes]
 
-841
+843
 01:17:33,550 --> 01:17:37,360
 Here we are using the hash because
 it's going to be an instance method.
 
-842
+844
 01:17:37,360 --> 01:17:41,456
 And now there's a question
 about what this method does.
 
-843
+845
 01:17:41,520 --> 01:17:50,608
 And internally the proxy is just
 going to store all the calls as an array.
 
-844
+846
 01:17:50,912 --> 01:17:56,784
 And so on its own, this
 method has no observable effect,
 
-845
+847
 01:17:56,780 --> 01:17:58,976
 It's just effectively shoveling into an array.
 
-846
+848
 01:17:59,040 --> 01:18:03,264
 We could just mock the array
 and observe the shovel method,
 
-847
+849
 01:18:03,360 --> 01:18:13,168
 but that's total overkill, so instead
 we're going to have a method like
 
-848
+850
 01:18:13,184 --> 01:18:14,992
 "was the call received".
 
-849
+851
 01:18:14,992 --> 01:18:16,990
 CB: And we don't care about how
 the proxy stores its stuff.
 
-850
+852
 01:18:16,990 --> 01:18:21,456
 SP: So I'm not going to
 describe the individual methods.
 
-851
+853
 01:18:21,450 --> 01:18:27,392
 But instead describe the
 work flow with this object.
 
-852
+854
 01:18:27,390 --> 01:18:31,472
 And because of that I'm going
 to delete this describe block.
 
-853
+855
 01:18:31,470 --> 01:18:36,464
 And I'm just going to say
 observing the method call.
 
-854
+856
 01:18:36,784 --> 01:18:41,264
 I think I used the word
 recording so let's be consistent.
 
-855
+857
 01:18:41,260 --> 01:18:44,256
 And again I'm going to
 start with a degenerate case,
 
-856
+858
 01:18:44,368 --> 01:18:48,016
 which will just be the method
 wasn't received so we'll just return false.
 
-857
+859
 01:18:48,010 --> 01:18:51,504
 CB: Do you usually start with the degenerate case?
 
-858
+860
 01:18:51,500 --> 01:18:59,632
 Yes because it's usually easier to implement.
 
-859
+861
 01:18:59,630 --> 01:19:06,048
 It offloads a certain amount of
 mental work for me and also,
 
-860
+862
 01:19:06,170 --> 01:19:12,000
 I like to view doing this kind
 of TDD as very adversarial.
 
-861
+863
 01:19:14,096 --> 01:19:22,768
 The test that I'm writing now should set me
 up to write a maximally contradicting test next.
 
-862
+864
 01:19:22,760 --> 01:19:31,904
 So to do that I find it much easier to start
 with a really simple case than a complicated one.
 
-863
+865
 01:19:31,984 --> 01:19:39,232
 So in this case having the implementation
 literally just be, respond to this: false,
 did you receive this: false,
 
-864
+866
 01:19:40,016 --> 01:19:46,840
 is obvious and sets us up to maximally
 force implementation with the next test.
 
-865
+867
 01:19:47,480 --> 01:19:56,480
 And the it here is it tells us it hasn't received a call when it hasn't,
 
-866
+868
 01:19:56,528 --> 01:19:59,984
 which is a terrible test name, but
 I'm going to take that out anyway.
 
-867
+869
 01:19:59,980 --> 01:20:03,232
 [Sam dictates what he writes]
 
-868
+870
 01:20:05,504 --> 01:20:13,440
 And this is more like [Sam dictates what he writes]
 
-869
+871
 01:20:13,952 --> 01:20:20,480
 I'm still not in love with this test name.
 
-870
+872
 01:20:21,408 --> 01:20:23,936
 [Sam dictates what he writes]
 
-871
+873
 01:20:24,448 --> 01:20:27,856
 Maybe we should describe the getter method.
 
-872
+874
 01:20:28,544 --> 01:20:33,632
 Sometimes when I'm struggling I describe the getter
 method and make manipulations to the object.
 
-873
+875
 01:20:33,856 --> 01:20:35,408
 And be OK with that.
 
-874
+876
 01:20:35,400 --> 01:20:39,424
 So this is message_received?...
 
-875
+877
 01:20:41,456 --> 01:20:45,312
 CB: So do you want to know whether a
 specific message was received, that's
 your interface?
 
-876
+878
 01:20:45,310 --> 01:20:46,528
 SP: Yes.
 
-877
+879
 01:20:46,520 --> 01:20:48,096
 CB: When that message wasn't received then?
 
-878
+880
 01:20:48,090 --> 01:20:59,536
 SP: Yes, well it's more like when
 no message has been received.
 
-879
+881
 01:20:59,664 --> 01:21:02,704
 [Silence]
 
-880
+882
 01:21:07,232 --> 01:21:09,792
 Have I got myself confused, yes, great.
 
-881
+883
 01:21:09,790 --> 01:21:15,360
 And this is going to be
 expect(proxy.message_received?
 
-882
+884
 01:21:16,016 --> 01:21:20,464
 And here we're going to pass a
 method name in, that will be a let,
 
-883
+885
 01:21:20,460 --> 01:21:25,088
 because I know in future tests I'm going
 to have to keep referring to this method name.
 
-884
+886
 01:21:25,080 --> 01:21:30,704
 So we'll have a let now
 
-885
+887
 01:21:32,736 --> 01:21:36,520
 So if we run that... it fails.
 
-886
+888
 01:21:37,020 --> 01:21:38,848
 We'll make a let.
 
-887
+889
 01:21:38,920 --> 01:21:45,440
 Here this can be an RSpec double because
 we're not going to be sending real methods.
 
-888
+890
 01:21:45,456 --> 01:21:49,984
 [they both talk at once]
 
-889
+891
 01:21:49,980 --> 01:21:57,904
 The reason I like to use a double is that
 I know that the only way a double compares true
 
-890
+892
 01:21:57,900 --> 01:22:01,552
 with another object is if it's the exact same object.
 
-891
+893
 01:22:01,680 --> 01:22:07,600
 The thing about symbols is that now they're
 dynamically garbage collectible in Ruby 2.2
 
-892
+894
 01:22:07,600 --> 01:22:13,696
 you don't necessarily have that
 guarantee that it's the exact same object.
 
-893
+895
 01:22:14,040 --> 01:22:17,872
 It could have the exact same
 symbol content but it's not necessarily...
 
-894
+896
 01:22:17,888 --> 01:22:22,110
 CB: So do you need to treat them in testing
 like you used to treat strings and older Rubys?
 
-895
+897
 01:22:22,110 --> 01:22:26,960
 SP: Yes, and the other thing about
 this is that it's a really strong callout
 
-896
+898
 01:22:27,040 --> 01:22:30,848
 that this double is the thing that
 is going to be compared against.
 
-897
+899
 01:22:30,840 --> 01:22:37,552
 That guarantee is really useful, because you know
 that doubles only ever compare true to themselves.
 
-898
+900
 01:22:37,696 --> 01:22:44,640
 So now we have that set up we should
 run - undefined method, message_received?
 
-899
+901
 01:22:44,832 --> 01:22:47,824
 [Silence]
 
-900
+902
 01:22:53,120 --> 01:22:57,184
 And then wrong number of arguments.
 
-901
+903
 01:22:59,040 --> 01:23:02,160
 And then expected false got nil.
 
-902
+904
 01:23:03,120 --> 01:23:06,832
 And then passing.
 
-903
+905
 01:23:06,960 --> 01:23:12,448
 Great, and so the next one is it
 returns true when a message has been received.
 
-904
+906
 01:23:13,072 --> 01:23:17,520
 CB: Surely that message has
 been received right? SP: Sure.
 
-905
+907
 01:23:18,048 --> 01:23:20,608
 A specific message? CB: Yes.
 
-906
+908
 01:23:20,600 --> 01:23:27,184
 SP: And again here, this is an example
 of that maximum change required idea.
 
-907
+909
 01:23:27,296 --> 01:23:31,968
 I could have implemented 'it returns false' when
 a specific message hasn't been received.
 
-908
+910
 01:23:32,128 --> 01:23:36,208
 But that wouldn't require me to
 change my implementation at all.
 
-909
+911
 01:23:38,140 --> 01:23:46,000
 CB: Would you return to a specific message
 received and then go to it actually returns false
 
-910
+912
 01:23:46,064 --> 01:23:49,728
 when the specific message has been
 received but you're testing for another one?
 
-911
+913
 01:23:49,720 --> 01:23:52,240
 SP: Yes, exactly.
 
-912
+914
 01:23:53,104 --> 01:23:58,128
 So we're going to record that the message
 was received and then [Sam dictates what he writes]
 
-913
+915
 01:23:59,696 --> 01:24:05,200
 And we can copy this line
 and change the false to true
 
-914
+916
 01:24:05,296 --> 01:24:07,936
 And if we run that it should fail.
 
-915
+917
 01:24:08,000 --> 01:24:09,776
 CB: And it does.
 
-916
+918
 01:24:09,872 --> 01:24:15,248
 Undefined method record_message_received,
 so that's forcing us to implement that.
 
-917
+919
 01:24:17,472 --> 01:24:24,192
 I'm just going to go a little more
 quickly here so we get the next failure.
 
-918
+920
 01:24:25,260 --> 01:24:33,392
 expected true got false, to do that we'll
 have a @received_messages which can be
 an array.
 
-919
+921
 01:24:33,390 --> 01:24:37,424
 We'll do an attr_reader...
 
-920
+922
 01:24:38,810 --> 01:24:45,184
 ...and then received_messages << method_name.
 
-921
+923
 01:24:48,200 --> 01:24:58,176
 That's still failing so we'll do
 [Sam dictates what he types]
 
-922
+924
 01:25:04,816 --> 01:25:08,448
 CB: So we still have our integration test failing?
 
-923
+925
 01:25:08,440 --> 01:25:16,208
 SP: Right, and actually, before we move on,
 we should add a test for the negative case as well.
 
-924
+926
 01:25:16,688 --> 01:25:19,696
 [Silence]
 
-925
+927
 01:25:26,624 --> 01:25:30,128
 CB: you want that to be false on line 1 currently.
 SP: Yes.
 
-926
+928
 01:25:30,672 --> 01:25:34,990
 SP: relative numbers, they're pretty great.
 
-927
+929
 01:25:35,376 --> 01:25:42,480
 Great! so that actually passed
 without us seeing it fail,
 
-928
+930
 01:25:42,640 --> 01:25:44,928
 which is a thing that happens sometimes.
 
-929
+931
 01:25:44,920 --> 01:25:50,896
 I think it's useful to see tests in both
 states even though I can logically derive that
 
-930
+932
 01:25:50,890 --> 01:25:54,192
 this implementation is correct, so I'm
 going to do something obvious to break it,
 
-931
+933
 01:25:54,190 --> 01:25:56,864
 and in this case I'm going
 to put 'not' on the front there.
 
-932
+934
 01:25:56,860 --> 01:26:00,368
 I just want to see all of those tests fail.
 
-933
+935
 01:26:00,360 --> 01:26:03,456
 CB: So typically we should have
 done something like received_messages.empty
 
-934
+936
 01:26:03,456 --> 01:26:06,400
 and then move on to include?, or something like that?
 
-935
+937
 01:26:06,400 --> 01:26:11,888
 SP: Yes, it really doesn't matter as long
 as you see your tests in both states,
 
-936
+938
 01:26:11,904 --> 01:26:14,880
 if your confident about what it's doing.
 
-937
+939
 01:26:15,936 --> 01:26:22,912
 I'm happy with this now and even though
 I didn't make my tests do it in the exact order,
 
-938
+940
 01:26:22,910 --> 01:26:29,392
 I can logically derive that this is what
 we need to do, so it's probably fine.
 
-939
+941
 01:26:31,104 --> 01:26:32,928
 Also, the implementation is really simple.
 
-940
+942
 01:26:32,920 --> 01:26:36,304
 [New Chapter]
 
-941
+943
 01:26:37,136 --> 01:26:45,070
 So back to our integration test which is
 [Sam dictates what he writes] I'll just run that.
 
-942
+944
 01:26:46,096 --> 01:26:54,368
 Expected to receive method_name... and this
 is because bond_did_you_receive? is raising still.
 
-943
+945
 01:26:54,360 --> 01:26:58,704
 because spy_received_method?
 is still an empty implementation.
 
-944
+946
 01:26:58,700 --> 01:27:04,896
 We actually missed a bit up here
 earlier, we need to pass this method_name in.
 
-945
+947
 01:27:05,640 --> 01:27:17,648
 And then we just do
 registered_proxies.fetch(spy).message_received?(...
 
-946
+948
 01:27:19,600 --> 01:27:22,920
 ...method_name).
 
-947
+949
 01:27:23,520 --> 01:27:27,696
 CB: OK, so what do our registered_proxies
 look like at the moment?
 
-948
+950
 01:27:27,690 --> 01:27:31,024
 SP: It starts life as an empty hash.
 
-949
+951
 01:27:31,072 --> 01:27:36,752
 CB: So at what point are we doing things that add to it?
 
-950
+952
 01:27:36,750 --> 01:27:45,952
 SP: Our proxy callback takes the spy and makes a
 proxy, inserts it into the registered_proxies hash,
 
-951
+953
 01:27:46,320 --> 01:27:52,512
 which is persisted across whatever
 instance this module gets attached to.
 
-952
+954
 01:27:52,510 --> 01:27:56,448
 CB: Do you want to use the spy as a key,
 or the spy's name, or...
 
-953
+955
 01:27:56,960 --> 01:28:01,470
 SP: We can use a couple of things as a key here...
 
-954
+956
 01:28:01,470 --> 01:28:09,712
 ...it's fine to use the spy as a key
 because the method_missing implementation
 that we have on the spy
 
-955
+957
 01:28:09,710 --> 01:28:14,000
 isn't going to beat all the methods on Object.
 
-956
+958
 01:28:14,624 --> 01:28:21,248
 And you can store just objects in a
 hash and they will be looked up correctly.
 
-957
+959
 01:28:21,280 --> 01:28:25,104
 So this should work... let's find out
 
-958
+960
 01:28:25,100 --> 01:28:28,896
 It does... that's pretty great.
 
-959
+961
 01:28:28,890 --> 01:28:34,512
 CB: So we've got our minimum viable spying,
 it checks that we've received methods, how about
 we have a play around with it in our actual client.
 
-960
+962
 01:28:35,130 --> 01:28:41,520
 SP: Yes, so this library can observe that
 methods were called and the subject will be
 
-961
+963
 01:28:41,536 --> 01:28:48,816
 compatible enough to keep working, so it
 makes sense now to integrate it in. For one last try,
 
-962
+964
 01:28:48,810 --> 01:28:55,360
 We'll make sure all our tests are passing...
 and they are, so we'll head back into our Client
 
-963
+965
 01:28:55,360 --> 01:29:00,800
 And modify the Gemfile to include Bond...
 
-964
+966
 01:29:01,744 --> 01:29:07,824
 And the way we do that is [Sam dictates what he writes]
 
-965
+967
 01:29:08,368 --> 01:29:10,944
 It should work...  so let's just bundle install that.
 
-966
+968
 01:29:10,940 --> 01:29:19,280
 And hopefully it's there... bond at 0.1.0 from
 source at./bond as you can see, which is great.
 
-967
+969
 01:29:20,080 --> 01:29:25,280
 So let's go back into our tests and remind
 ourselves of where we were when we started.
 
-968
+970
 01:29:25,296 --> 01:29:30,320
 So we're going to make a bond with
 the http tag, include it and then super.
 
-969
+971
 01:29:30,320 --> 01:29:39,648
 So to make that work we'll
 require bond and run these tests.
 
-970
+972
 01:29:40,030 --> 01:29:41,904
 CB: Do you need to include it?
 
-971
+973
 01:29:41,952 --> 01:29:44,400
 SP: It's already included in
 the test at the bottom there.
 
-972
+974
 01:29:46,016 --> 01:29:50,784
 So let's check to see if that
 works by doing the correct thing...
 
-973
+975
 01:29:50,780 --> 01:29:53,792
 bundle exec ruby test/test_helper.rb...
 
-974
+976
 01:29:53,790 --> 01:29:58,960
 Great so all our tests pass but more
 importantly, this test class worked.
 
-975
+977
 01:29:58,960 --> 01:30:03,120
 So now we can write tests against the spy.
 
-976
+978
 01:30:03,120 --> 01:30:08,960
 So we will say, [Sam dictates what he types]
 
-977
+979
 01:30:09,104 --> 01:30:13,856
 This is testing that that
 delegation actually happens.
 
-978
+980
 01:30:13,850 --> 01:30:18,384
 So to do that, we'll pull this test out and say...
 
-979
+981
 01:30:18,570 --> 01:30:21,344
 counter_client.get(key)...
 
-980
+982
 01:30:21,360 --> 01:30:26,256
 ...and then in a similar way to what
 we were saying before, we'll ask bond...
 
-981
+983
 01:30:26,608 --> 01:30:33,152
 [Sam dictates what he writes]
 
-982
+984
 01:30:33,664 --> 01:30:35,680
 ... the method name which is get.
 
-983
+985
 01:30:35,680 --> 01:30:40,000
 And if we've done everything
 correctly, this should work.
 
-984
+986
 01:30:40,192 --> 01:30:41,184
 It does.
 
-985
+987
 01:30:41,232 --> 01:30:46,288
 Just to check that it's all
 working, let's also see it fail.
 
-986
+988
 01:30:47,456 --> 01:30:52,992
 And it does, you can see here expected
 to receive get, in the bond_did_you_receive? call,
 
-987
+989
 01:30:52,990 --> 01:30:56,256
 and it didn't, so our test failed.
 
-988
+990
 01:30:56,380 --> 01:30:58,720
 Great, so we've got something useful.
 
-989
+991
 01:30:58,736 --> 01:31:03,600
 It's probably worth also breaking
 the implementation, not the test.
 
-990
+992
 01:31:04,160 --> 01:31:09,520
 So if we head back in to the CounterClient,
 and just comment this line of code out
 
-991
+993
 01:31:09,520 --> 01:31:12,960
 and head back to our test helper and run it...
 
-992
+994
 01:31:13,872 --> 01:31:21,472
 ... you can see here, all our integration
 tests failed but also our isolated test failed
 with: expected to receive get
 
-993
+995
 01:31:21,968 --> 01:31:28,160
 Which means that despite our best
 efforts, the spy library actually works!
 
-994
+996
 01:31:28,160 --> 01:31:35,648
 And tests something useful, which is very
 surprising, unsurprising, one of those two.
 
-995
+997
 01:31:35,968 --> 01:31:37,200
 CB: A combination thereof.
 
-996
+998
 01:31:37,344 --> 01:31:41,104
 [New Chapter]
 
-997
+999
 01:31:41,100 --> 01:31:44,208
 CB: Alright, so we've got
 our minimum viable spying library.
 
-998
+1000
 01:31:44,688 --> 01:31:51,056
 Where would you take next this in terms of, like is it a feature or something else?
 
-999
+1001
 01:31:51,392 --> 01:31:58,144
 SP: I think that the best thing to do
 right now, given everything we've got...
 
-1000
+1002
 01:31:59,600 --> 01:32:06,816
 ...is do a little refactoring of the library, because I
 think if I was going to make this production ready,
 
-1001
+1003
 01:32:06,810 --> 01:32:14,928
 specifically... this bond.rb is getting fairly large.
 
-1002
+1004
 01:32:15,536 --> 01:32:21,648
 This proxy callback is clearly a
 'thing' which could be given a class.
 
-1003
+1005
 01:32:21,776 --> 01:32:26,464
 All of this stuff like spy_received_method?
 
-1004
+1006
 01:32:26,760 --> 01:32:31,808
 To me this feels like there are separate
 concerns here, and also at the moment
 
-1005
+1007
 01:32:31,824 --> 01:32:39,280
 the spy proxy is only using the method
 name to decide pass/failure states.
 
-1006
+1008
 01:32:39,280 --> 01:32:45,536
 And I would probably change the way we
 record method calls to include all of that data,
 
-1007
+1009
 01:32:45,550 --> 01:32:52,112
 and then push that decision down into the
 proxy object, which is actually how RSpec does it.
 
-1008
+1010
 01:32:52,800 --> 01:32:58,592
 The other thing... that I think
 a good refactoring would be...
 
-1009
+1011
 01:32:58,590 --> 01:33:03,984
 is that... we're just shoveling the method
 name in here, but when we add those details,
 
-1010
+1012
 01:33:04,010 --> 01:33:08,208
 that's going to end up being its own object.
 
-1011
+1013
 01:33:08,224 --> 01:33:11,936
 Because it will have the method
 name, and the ARGS and a block...
 
-1012
+1014
 01:33:11,930 --> 01:33:17,168
 ... and those things together
 are clearly a concept in the system.
 
-1013
+1015
 01:33:17,160 --> 01:33:24,288
 It's like an individual method call, and so
 I would probably end up giving that its own name.
 
-1014
+1016
 01:33:24,430 --> 01:33:30,176
 This registered_proxies thing as
 well, we're not using all of the Hash interface,
 
-1015
+1017
 01:33:30,176 --> 01:33:36,624
 only a very small amount of it, and that
 probably means that's a domain object as well.
 
-1016
+1018
 01:33:37,712 --> 01:33:39,872
 You see, I can attack any of these.
 
-1017
+1019
 01:33:39,870 --> 01:33:47,696
 The other one that's really common, but we won't do
 now is... at the moment there's no real test cleanup,
 
-1018
+1020
 01:33:47,696 --> 01:33:53,504
 so you lose your references to all
 the Bond objects at the end of the test.
 
-1019
+1021
 01:33:53,760 --> 01:34:01,880
 One thing RSpec does is prevent
 you from retaining any of the
 
-1020
+1022
 01:34:01,880 --> 01:34:05,584
 mocks, stubs, spies or doubles across tests.
 
-1021
+1023
 01:34:05,760 --> 01:34:14,224
 It actually knows which test they were
 instantiated in and makes them invalid.
 
-1022
+1024
 01:34:14,400 --> 01:34:25,248
 The other thing, that's kind of funky here,
 is the spy returns self from all the things
 
-1023
+1025
 01:34:25,312 --> 01:34:31,792
 but that breaks a number of
 well understood Ruby protocols.
 
-1024
+1026
 01:34:31,790 --> 01:34:38,320
 to_i, to_f, to_s and so on will probably get
 their own specialized implementations as well.
 
-1025
+1027
 01:34:38,352 --> 01:34:41,808
 Just to not break other objects that this
 goes through
 
-1026
+1028
 01:34:41,800 --> 01:34:47,472
 In fact, RSpec totally special cases those
 out on its spy objects
 
-1027
+1029
 01:34:47,500 --> 01:34:51,632
 where this method_missing implementation
 first checks if it's any of those calls,
 
-1028
+1030
 01:34:51,632 --> 01:34:53,968
 and otherwise it does just return self.
 
-1029
+1031
 01:34:53,960 --> 01:34:57,904
 CB: So it's just like the usual public
 method on any plain old Ruby object?
 
-1030
+1032
 01:34:57,900 --> 01:35:05,360
 SP: Yes, one of the things that RSpec
 does is ensure that its doubles and spies
 
-1031
+1033
 01:35:05,360 --> 01:35:08,256
 are very compatible with
 the rest of the Ruby ecosystem.
 
-1032
+1034
 01:35:08,250 --> 01:35:13,216
 So == behaves as you would expect and so on.
 
-1033
+1035
 01:35:13,392 --> 01:35:19,680
 This implementation is fine from a
 smallest possible library perspective
 
-1034
+1036
 01:35:19,680 --> 01:35:25,344
 But I think a refactor is where I would go next.
 
-1035
+1037
 01:35:25,424 --> 01:35:28,640
 CB: OK, I think that's all the time we have for today,
 
-1036
+1038
 01:35:28,640 --> 01:35:32,528
 but thank you so much for doing this
 and the good explanations along the way.
 
-1037
+1039
 01:35:32,576 --> 01:35:36,608
 And it was great seeing you work...
 typing really furiously there.
 
-1038
+1040
 01:35:36,600 --> 01:35:38,880
 SP: Thanks, it's been a lot of fun.
 
-1039
+1041
 01:35:38,880 --> 01:35:43,880
 Captions produced by Bonnie Roworth
 
