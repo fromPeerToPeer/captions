@@ -1194,24 +1194,25 @@ probably go away at some point as well.
 
 256
 00:21:56,308 --> 00:22:03,142
-I generally try not to have object type checks
-by the time I've done writing my tests but...
+I generally try not to have object type
+checks by the time I've done writing my tests but...
 
 257
-00:22:03,211 --> 00:22:06,685
-CB: But how do you test something is of a class if it
-responds to all of the methods?
+00:22:03,210 --> 00:22:07,328
+CB: But how do you test something is
+of a class if it responds to all of the methods?
 
 258
-00:22:07,314 --> 00:22:09,005
+00:22:07,360 --> 00:22:09,312
 If it quacks, like all the ducks.
 
 259
-00:22:09,370 --> 00:22:14,377
-SP: Fortunately, there is a protocol in Ruby we can use,
+00:22:09,370 --> 00:22:14,800
+SP: Fortunately, there is a
+protocol in Ruby we can use,
 
 260
-00:22:15,062 --> 00:22:20,600
+00:22:15,088 --> 00:22:20,600
 regardless of how pathological
 the interface to our object is.
 
@@ -1297,7 +1298,8 @@ into paper before I run the test.
 
 278
 00:24:04,860 --> 00:24:09,965
-We could have done include Bond, watch it fail, call the method, watch it fail,
+We could have done include Bond,
+watch it fail, call the method, watch it fail,
 
 279
 00:24:11,080 --> 00:24:14,080
@@ -1316,8 +1318,8 @@ some steps but again I think that's fine.
 
 282
 00:24:23,330 --> 00:24:25,668
-CB: In the strictest sense, but you're also
-trying to show me where you're going,
+CB: In the strictest sense, but you're
+also trying to show me where you're going,
 
 283
 00:24:25,660 --> 00:24:29,085
@@ -1329,8 +1331,8 @@ SP: Sure, alright let's run it and see what happens.
 
 285
 00:24:33,130 --> 00:24:41,560
-So we failed with undefined method Bond for RSpec example groupd
-Bond, which is great.
+So we failed with undefined method
+Bond for RSpec example groupd Bond, which is great.
 
 286
 00:24:41,720 --> 00:24:50,891
@@ -1464,7 +1466,8 @@ makes it work... it totally does.
 
 316
 00:27:13,620 --> 00:27:19,097
-My guess would be, Bond version, the version constant was being loaded,
+My guess would be, Bond version,
+the version constant was being loaded,
 
 317
 00:27:19,090 --> 00:27:24,868
@@ -1472,11 +1475,12 @@ but not the whole module,
 because this file defines the module.
 
 318
-00:27:24,860 --> 00:27:29,348
-CB: but no methods and trying to redefine methods over it and not including them.
+00:27:24,860 --> 00:27:30,048
+CB: But no methods and trying to
+redefine methods over it and not including them.
 
 319
-00:27:30,457 --> 00:27:32,660
+00:27:30,160 --> 00:27:32,660
 Ah Ruby....
 
 320
@@ -1507,7 +1511,7 @@ how I think it works. [Laughter]
 
 326
 00:27:57,800 --> 00:28:01,874
-CB: There's no mysterious thing to check at the end [inaud].
+CB: There's no mysterious thing to check at the end.
 
 327
 00:28:01,920 --> 00:28:07,040
@@ -1601,7 +1605,8 @@ nil to be a kind of Bond spy.
 
 346
 00:29:43,760 --> 00:29:51,508
-To satisfy this we can just do bond spy.new and I'm going to thread the name through here,
+To satisfy this we can just do bond spy.new
+and I'm going to thread the name through here,
 
 347
 00:29:51,520 --> 00:29:56,971
