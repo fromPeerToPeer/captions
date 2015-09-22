@@ -16,9 +16,9 @@ Our guest today is Sam Phippen
 Who's a swashbuckling hacker from London, UK.
 
 5
-00:00:12,880 --> 00:00:16,754
-He fixes every size of data problem at
-Fun and Plausible solutions.
+00:00:12,880 --> 00:00:17,200
+He fixes every size of data problem
+at Fun and Plausible solutions.
 
 6
 00:00:17,771 --> 00:00:22,240
@@ -61,11 +61,7 @@ which interacts with a RESTful API.
 
 15
 00:00:46,750 --> 00:00:52,308
-<<<<<<< HEAD
-The app has a parsing test suite, but the tests
-=======
 The app has a passing test suite, but the tests
->>>>>>> origin/proofreading-sam-phippen-captions
 are an incomplete specification of its behaviour.
 
 16
@@ -145,7 +141,7 @@ we've got our CounterClientTest class,
 31
 00:01:59,908 --> 00:02:05,920
 Which inherits from Minitest::Test
-and it has a set up phase, but
+and it has a set up phase, but...
 
 32
 00:02:05,920 --> 00:02:09,394
@@ -537,13 +533,13 @@ various methods to our spy object.
 
 115
 00:09:30,970 --> 00:09:34,731
-We'll record them and then we'll assert on
-them after the fact.
+We'll record them and then
+we'll assert on them after the fact.
 
 116
 00:09:34,840 --> 00:09:37,942
-CB: So we're doing the exact same tests
-we're doing end to end
+CB: So we're doing the exact
+same tests we're doing end to end,
 
 117
 00:09:37,965 --> 00:09:40,605
@@ -838,7 +834,7 @@ see it hasn't run, but it's useful to have a test there.
 [New Chapter]
 
 180
-00:14:58,890 --> 00:15:05,908
+00:14:58,890 --> 00:15:05,904
 So we sort of specified the API a
 little bit, back in our minitest test.
 
@@ -858,8 +854,8 @@ which will return us an object and it takes a name.
 
 184
 00:15:18,830 --> 00:15:24,891
-The reason we provide that name is so
-we can put it in the inspect strings.
+The reason we provide that name is
+so we can put it in the inspect strings.
 
 185
 00:15:24,890 --> 00:15:28,457
@@ -893,8 +889,8 @@ hard about where it came from later.
 
 191
 00:15:50,990 --> 00:15:54,560
-CB: So this is when you do your let in RSpec and specify
-your first symbol in double.
+CB: So this is when you do your let in
+RSpec and specify your first symbol in double.
 
 192
 00:15:54,560 --> 00:16:02,651
@@ -1006,8 +1002,8 @@ that expands to bundle exec RSpec.
 
 215
 00:18:09,600 --> 00:18:18,342
-[Big sigh] it's a command I type a lot, so now if I
-just close the spec helper and re-open it.
+[Big sigh] it's a command I type a lot,
+so now if I just close the spec helper and re-open it.
 
 216
 00:18:18,445 --> 00:18:21,680
@@ -1056,7 +1052,8 @@ available without having to configure it.
 
 226
 00:19:14,765 --> 00:19:20,068
-SP: This is a setting I turn on in most of my spec helpers.
+SP: This is a setting I turn on
+in most of my spec helpers.
 
 227
 00:19:20,060 --> 00:19:24,251
@@ -1073,19 +1070,19 @@ So it disables the "should" syntax,
 but it also disables bare describe.
 
 230
-00:19:35,657 --> 00:19:48,034
-This is a lesser known thing it does, but if we reopen our
-bond_spec.rb file, which I deleted,
+00:19:36,624 --> 00:19:48,030
+This is a lesser known thing it does, but
+if we reopen our bond_spec.rb file, which I deleted,
 
 231
 00:19:49,188 --> 00:19:56,342
-Require spec helper, and then type a top-level describe,
-like we had before with bundler.
+Require spec helper, and then type a
+top-level describe, like we had before with bundler.
 
 232
 00:19:56,834 --> 00:20:05,480
-This won't work because we're in main,
-we're not in the main object, right.
+This won't work because we're in
+main, we're not in the main object, right.
 
 233
 00:20:05,668 --> 00:20:06,857
@@ -1101,9 +1098,9 @@ removed describe from module and object.
 Where it lives by default.
 
 236
-00:20:16,200 --> 00:20:19,497
-CB: So why would you recommend ruby developers
-do this in their tests.
+00:20:16,200 --> 00:20:19,632
+CB: So why would you recommend
+ruby developers do this in their tests?
 
 237
 00:20:19,660 --> 00:20:25,314
@@ -1129,13 +1126,13 @@ or are there other things going on here?
 
 242
 00:20:39,840 --> 00:20:47,302
-It's a bunch of RSpec DSL methods so
-it also removes example and specify.
+It's a bunch of RSpec DSL methods
+so it also removes example and specify.
 
 243
 00:20:48,114 --> 00:20:54,342
-And basically those are all aliases of each
-other that delegate on to doing the same thing.
+And basically those are all aliases of
+each other that delegate on to doing the same thing.
 
 244
 00:20:54,340 --> 00:20:55,760
@@ -1152,13 +1149,14 @@ The only trade off is it means you have
 to write RSpec.describe at the top of your file.
 
 247
-00:21:07,720 --> 00:21:12,457
-But once you're in here you can write
-describe as normal, and the reason for that
+00:21:07,720 --> 00:21:11,536
+But once you're in here you
+can write describe as normal,
 
 248
-00:21:12,450 --> 00:21:16,731
-is that we're inside an RSpec module and we have trust.
+00:21:11,568 --> 00:21:16,730
+and the reason for that is that we're
+inside an RSpec module and we have trust.
 
 249
 00:21:17,740 --> 00:21:24,457
@@ -2364,7 +2362,7 @@ We need to require the constant.
 
 509
 00:46:22,704 --> 00:46:26,752
-undefined method `method name' for #<Bond::Spy>
+undefined method `method name' for #<b></b>
 
 510
 00:46:26,960 --> 00:46:32,960
@@ -2507,7 +2505,7 @@ but that's the desired behaviour.
 541
 00:49:04,752 --> 00:49:11,984
 So if we run that it's going to fail
-with undefined method method_name for #<Bond::Spy>.
+with undefined method method_name for #<b>.</b>
 
 542
 00:49:12,192 --> 00:49:21,392
@@ -2619,7 +2617,7 @@ At this point I expect both of these tests to fail.
 565
 00:51:13,960 --> 00:51:21,008
 And they do, with false and
-undefined method 916 etc. for #<Bond::Spy>.
+undefined method 916 etc. for #<b>.</b>
 
 566
 00:51:21,056 --> 00:51:29,376
@@ -4294,7 +4292,7 @@ which is a thing that happens sometimes.
 929
 01:25:44,920 --> 01:25:50,896
 I think it's useful to see tests in both
-states even though I can logically derive that 
+states even though I can logically derive that
 
 930
 01:25:50,890 --> 01:25:54,192
@@ -4405,7 +4403,7 @@ or the spy's name, or...
 
 953
 01:27:56,960 --> 01:28:01,470
-SP: We can use a couple of things as a key here... 
+SP: We can use a couple of things as a key here...
 
 954
 01:28:01,470 --> 01:28:09,712
@@ -4660,7 +4658,7 @@ proxy object, which is actually how RSpec does it.
 1008
 01:32:52,800 --> 01:32:58,592
 The other thing... that I think
-a good refactoring would be... 
+a good refactoring would be...
 
 1009
 01:32:58,590 --> 01:33:03,984
@@ -4713,7 +4711,7 @@ the Bond objects at the end of the test.
 1019
 01:33:53,760 --> 01:34:01,880
 One thing RSpec does is prevent
-you from retaining any of the 
+you from retaining any of the
 
 1020
 01:34:01,880 --> 01:34:05,584
@@ -4752,7 +4750,7 @@ out on its spy objects
 1027
 01:34:47,500 --> 01:34:51,632
 where this method_missing implementation
-first checks if it's any of those calls, 
+first checks if it's any of those calls,
 
 1028
 01:34:51,632 --> 01:34:53,968
@@ -4807,3 +4805,4 @@ SP: Thanks, it's been a lot of fun.
 1039
 01:35:38,880 --> 01:35:43,880
 Captions produced by Bonnie Roworth
+
