@@ -93,13 +93,8 @@ SP: Sure... so...
 
 22
 00:01:13,020 --> 00:01:19,017
-<<<<<<< HEAD
-It looks like we've got a gem file and
-a gem file.block lib and test directory.
-=======
 It looks like we've got a Gemfile and
 a Gemfile.lock, lib and test directory.
->>>>>>> origin/proofreading-sam-phippen-captions
 
 23
 00:01:19,280 --> 00:01:26,377
