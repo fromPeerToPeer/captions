@@ -1,12 +1,162 @@
 ﻿1
-00:00:00,960 --> 00:00:02,777
-NARRATOR: Welcome to Peer to Peer
+00:00:00,560 --> 00:00:02,272
+NARRATOR: Welcome to Peer to Peer,
 
 2
-00:00:02,777 --> 00:00:06,770
-where you can watch how experts
-solve tech problems.
+00:00:02,304 --> 00:00:05,920
+where you can watch how
+experts solve tech problems.
 
 3
-00:00:06,891 --> 00:00:09,245
-Our guest today is Amy Wagner
+00:00:05,968 --> 00:00:11,376
+Our guest today is Amy Wagner,
+who is an independent Agile coach and consultant.
+
+4
+00:00:11,424 --> 00:00:14,656
+And a co-author of the Minimum Viable book.
+
+5
+00:00:14,720 --> 00:00:20,128
+Amys' client today is Anna Bowers,
+who's a product manager at Dorling Kindersley,
+
+6
+00:00:20,192 --> 00:00:22,448
+an international publishers.
+
+7
+00:00:22,480 --> 00:00:25,760
+Anna is managing the
+development of a new digital product,
+
+8
+00:00:25,808 --> 00:00:29,968
+which has lots of different
+stakeholders and a new development team.
+
+9
+00:00:30,000 --> 00:00:34,880
+Her company is used to sharing
+physical products on a fixed timetable.
+
+10
+00:00:34,910 --> 00:00:40,080
+For this new digital product, they're
+interested in adopting a more agile methodology 
+
+11
+00:00:40,112 --> 00:00:42,640
+and they're keen to get some coaching from Amy.
+
+12
+00:00:42,656 --> 00:00:47,632
+In this Peer to Peer session, we'll
+see how Amy coaches a client on a new project.
+
+13
+00:00:47,680 --> 00:00:52,608
+She'll work through 3 Agile techniques
+that she felt were appropriate in this case:
+
+14
+00:00:52,672 --> 00:00:57,600
+the Spine, Inception, and Impact Mapping.
+
+15
+00:00:57,648 --> 00:01:01,552
+[Chapter 1]
+
+16
+00:01:01,648 --> 00:01:05,088
+AMY WAGNER: So Anna maybe you
+can tell us a little bit about your product.
+
+17
+00:01:05,104 --> 00:01:09,856
+ANNA BOWERS: Yes, so I work
+for a publisher based in the UK.
+
+18
+00:01:09,872 --> 00:01:13,568
+And I sit on the web team as a product manager.
+
+19
+00:01:13,632 --> 00:01:18,832
+And we're just about to
+kick off an exciting new product.
+
+20
+00:01:18,830 --> 00:01:25,904
+And we've done about 3 or 4 months of
+discovery work, and we're looking to get into sprint.
+
+21
+00:01:26,048 --> 00:01:30,672
+It's going to be an online learning tool.
+
+22
+00:01:30,670 --> 00:01:35,456
+It started with a print element and we're
+going to take some of that and put it online,
+
+23
+00:01:35,488 --> 00:01:38,688
+so there's a digital element:
+and that's the bit I'm working on.
+
+24
+00:01:38,720 --> 00:01:42,480
+It consists of a course book
+and some practice books.
+
+25
+00:01:42,992 --> 00:01:46,704
+We need to host audio files
+that go with the course book online
+
+26
+00:01:46,700 --> 00:01:51,648
+And we also need to put
+some practice exercises online.
+
+27
+00:01:52,040 --> 00:01:56,448
+And potentially monetize
+them and create user accounts.
+
+28
+00:01:56,440 --> 00:01:59,984
+And track progress of the users.
+
+29
+00:01:59,980 --> 00:02:08,672
+AW: If you were to describe your
+product in one sentence... how would you do that?
+
+30
+00:02:08,670 --> 00:02:11,088
+AB: Alright, let me have a go.
+
+31
+00:02:11,080 --> 00:02:19,968
+So it's an online self study tool for adult learners...
+
+32
+00:02:20,080 --> 00:02:22,544
+that let's them track their progress.
+
+33
+00:02:22,624 --> 00:02:26,460
+[New Chapter]
+
+34
+00:02:27,640 --> 00:02:33,712
+AW: Right, so Anna, let's
+do an exercise called the spine.
+
+35
+00:02:33,728 --> 00:02:39,808
+The spine is something that you should
+be doing with your team and your stakeholders
+
