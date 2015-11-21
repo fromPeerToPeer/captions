@@ -591,7 +591,7 @@ No it would be really interesting to... learning tool.
 129
 00:11:18,528 --> 00:11:24,880
 I guess it doesn't really matter because
-what I want you to do is take this away 
+what I want you to do is take this away
 
 130
 00:11:24,896 --> 00:11:33,720
@@ -632,7 +632,7 @@ Good, so that's the spine.
 138
 00:12:07,320 --> 00:12:13,920
 AW: So here's one for you that you might
-want to run when you've got the team together, 
+want to run when you've got the team together,
 
 139
 00:12:13,960 --> 00:12:17,136
@@ -680,7 +680,7 @@ has these other lists to it.
 148
 00:13:01,210 --> 00:13:07,920
 Before we finish we're going to see if we can
-come up with some mitigation for these fears too. 
+come up with some mitigation for these fears too.
 
 149
 00:13:07,920 --> 00:13:12,944
@@ -699,7 +699,7 @@ this product and what do we need from it?"
 152
 00:13:28,760 --> 00:13:32,512
 So I think we should do
-a couple of ideas, just talking, 
+a couple of ideas, just talking,
 
 153
 00:13:32,510 --> 00:13:36,208
@@ -755,7 +755,7 @@ lot of discussion around from the drivers.
 
 164
 00:14:41,180 --> 00:14:44,352
-AW: So if you have already done your spine, 
+AW: So if you have already done your spine,
 
 165
 00:14:44,350 --> 00:14:50,976
@@ -848,7 +848,7 @@ AW: A lot of products go for users first, registrations first, inaud later.
 
 185
 00:16:01,320 --> 00:16:04,928
-And try and get inaud 
+And try and get inaud
 
 186
 00:16:04,920 --> 00:16:08,896
@@ -883,4 +883,128 @@ happens accidentally during this process?
 00:16:34,672 --> 00:16:40,704
 Accidentally, you have also communicated
 to everybody that this is more important than that.
+
+194
+00:16:40,700 --> 00:16:43,568
+And everyone's on exactly the same page. 
+
+195
+00:16:43,560 --> 00:16:47,408
+You can have an artifact later
+to say [they both talk at once].
+
+196
+00:16:47,424 --> 00:16:50,672
+Remember when you said market
+share was more important than revenue?
+
+197
+00:16:50,670 --> 00:16:55,376
+Well that is the case for the first
+6 months, or whatever context was there.
+
+198
+00:16:55,370 --> 00:17:04,800
+OK, how about hopes. What are your hopes
+for the product... and this can be personal, as well.
+
+199
+00:17:05,680 --> 00:17:11,408
+This can be, like... success based metrics.
+
+200
+00:17:11,400 --> 00:17:24,576
+OK, so you want a well received
+product. What does that mean, awards or...
+
+201
+00:17:24,590 --> 00:17:29,472
+AB: I think you could spin off awards from that.
+
+202
+00:17:29,530 --> 00:17:34,912
+I would like user testing to
+come back with lots of positives.
+
+203
+00:17:34,990 --> 00:17:42,368
+For it to make changes to peoples
+lives, so they achieve their goals.
+
+204
+00:17:42,448 --> 00:17:46,128
+Those things are quite hard to measure I suppose.
+
+205
+00:17:46,120 --> 00:17:51,200
+I want it to be well designed and well
+thought through, those are the hopes.
+
+206
+00:17:51,340 --> 00:17:57,296
+And how do you measure well designed,
+what's your perception of 'well designed'?
+
+207
+00:17:57,290 --> 00:18:02,224
+AB: Well it goes back to one of the
+principles, but I cant remember which one.
+
+208
+00:18:02,220 --> 00:18:09,584
+AW: Oh it would be continuous attention to technical and inaud.
+
+209
+00:18:10,256 --> 00:18:12,464
+Design excellence.
+
+210
+00:18:12,460 --> 00:18:17,744
+AB: Yes, just keeping an eye on things
+like technical debt and making sure...
+
+211
+00:18:17,740 --> 00:18:22,192
+AW: So design in terms of
+technical aspect as well, right, good.
+
+212
+00:18:22,190 --> 00:18:29,200
+AW: And the way the team works together
+as well, would you want that to be one of them?
+
+213
+00:18:29,200 --> 00:18:33,664
+From your career... its OK to
+say these things and then inception...
+
+214
+00:18:33,660 --> 00:18:38,048
+AB: Yes, I want a happy team.
+
+215
+00:18:38,040 --> 00:18:44,832
+I want a happy team that has continuous learning.
+
+216
+00:18:44,832 --> 00:18:46,830
+AW: Nice.
+
+217
+00:18:48,760 --> 00:18:53,664
+AB: Yes, so these are some goals.
+
+218
+00:18:53,720 --> 00:18:57,216
+AW: OK great, I think that's good for now.
+
+219
+00:18:57,310 --> 00:19:01,280
+And again what we normally do in
+inception when the whole team are here... 
+
+220
+00:19:01,310 --> 00:19:04,400
+you would go round the room...
+and so you would have lots of...
 
