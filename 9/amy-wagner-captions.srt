@@ -1008,3 +1008,218 @@ inception when the whole team are here...
 you would go round the room...
 and so you would have lots of...
 
+221
+00:19:04,400 --> 00:19:07,888
+You would end up seeing clusters of similar as well.
+
+222
+00:19:07,880 --> 00:19:13,168
+And then you can ask anyone who is
+coming along to then go, OK well that's similar 
+
+223
+00:19:13,168 --> 00:19:17,600
+to what Anna said, so we'll put
+that together and that becomes a cluster
+
+224
+00:19:17,600 --> 00:19:25,408
+which is about design excellence
+or well designed options - that kind of thing.
+
+225
+00:19:25,400 --> 00:19:32,752
+And again it would be nice to
+dot vote as well. [they both talk at once]
+
+226
+00:19:32,750 --> 00:19:37,120
+It might be that this is more important than this
+
+227
+00:19:37,240 --> 00:19:42,176
+because usually these things make
+these things happen with a happy team.
+
+228
+00:19:42,170 --> 00:19:47,472
+That's the most important,
+ it goes well beyond most things.
+
+229
+00:19:47,470 --> 00:19:55,312
+So then you would end up with your order of priority.
+
+230
+00:19:55,344 --> 00:19:59,248
+So let's say we've dot voted and this has come out number 1,
+
+231
+00:19:59,240 --> 00:20:01,904
+this has come out number two,
+
+232
+00:20:01,900 --> 00:20:03,680
+and this is number 3.
+
+233
+00:20:03,680 --> 00:20:10,384
+Circulate that, put it on the wall in
+your teams area, anything that that your fearful of
+
+234
+00:20:10,416 --> 00:20:15,180
+kicking this product off.
+
+235
+00:20:15,344 --> 00:20:21,424
+AB: OK if it fails, I mean there's lots
+of different ways of describing failure
+
+236
+00:20:21,420 --> 00:20:30,016
+but 'fails' is badly received I
+think - I've got well received there
+
+237
+00:20:30,576 --> 00:20:34,608
+Badly received. AW: Yes.
+
+238
+00:20:35,184 --> 00:20:41,840
+Here's a thing, just a quick tangent; it would be nice
+to know this sooner rather that later wouldn't it?
+
+239
+00:20:41,840 --> 00:20:43,536
+AB: Like at the beginning. AW: Yes.
+
+240
+00:20:43,530 --> 00:20:48,272
+So the sooner you can test this the better; the approach you're going for.
+
+241
+00:20:48,270 --> 00:20:51,632
+AB: Yes, with early testing.
+
+242
+00:20:51,630 --> 00:20:59,184
+Other fears - that it breaks.
+
+243
+00:20:59,180 --> 00:21:08,208
+AW: So when you say break do you mean things like inaud, poor user experience...
+
+244
+00:21:08,200 --> 00:21:11,120
+that sort of thing?
+
+245
+00:21:11,120 --> 00:21:15,072
+AB: I mean that sort of thing.
+
+246
+00:21:18,976 --> 00:21:25,152
+AW: You can have poor user experience
+with that as well but still, I guess that's an idea.
+
+247
+00:21:25,150 --> 00:21:29,600
+AB: We could go massively over budget.
+
+248
+00:21:30,752 --> 00:21:34,032
+We could run out of time.
+
+249
+00:21:34,030 --> 00:21:37,248
+We could miss our market opportunity.
+
+250
+00:21:37,240 --> 00:21:42,016
+There are lots of things, but there's a few.
+
+251
+00:21:42,010 --> 00:21:44,336
+AW: So do you have a specific time frame in mind?
+
+252
+00:21:44,330 --> 00:21:45,840
+AB: Yes
+
+253
+00:21:45,840 --> 00:21:47,600
+AW: So what are you thinking about.
+
+254
+00:21:47,600 --> 00:21:50,032
+AB: We're aiming for June 2016.
+
+255
+00:21:50,030 --> 00:21:55,920
+AW: So just under a year.
+
+256
+00:21:55,920 --> 00:22:00,240
+And what about a budget,
+do you have a specific budget.
+
+257
+00:22:00,280 --> 00:22:02,976
+AB: We do yes, and we can't go over that.
+
+258
+00:22:03,000 --> 00:22:07,808
+AW: So that's like - this is the maximum possible.
+
+259
+00:22:07,820 --> 00:22:20,800
+And so if you get half way and you burned through
+that entire budget that's not going to be good.
+
+260
+00:22:20,830 --> 00:22:25,808
+AB: But like you were saying, if you
+can measure all of these as early as possible 
+
+261
+00:22:25,850 --> 00:22:28,480
+then you can mitigate them. AW: Exactly.
+
+262
+00:22:28,512 --> 00:22:38,496
+So that's the next thing - to look at
+all the fears individually and to mitigate them.
+
+263
+00:22:38,490 --> 00:22:42,336
+And we'll just rush through this
+really quickly because this is the stuff 
+
+264
+00:22:42,352 --> 00:22:47,104
+you really should be doing with the
+team once you understand the technique.
+
+265
+00:22:47,100 --> 00:22:51,328
+Is there anything you can do to sort of control this?
+
+266
+00:22:51,320 --> 00:22:55,792
+AB: Yes, user testing would help a lot.
+
+267
+00:22:55,790 --> 00:23:03,296
+AW: And release as early as possible so
+you know you're going down the right path.
+
+268
+00:23:03,290 --> 00:23:09,728
+So early releases, and that
+term, minimal viable product.
+
+269
+00:23:09,720 --> 00:23:14,896
+I've heard that before, from that book inaud startup.
+
