@@ -1221,5 +1221,170 @@ term, minimal viable product.
 
 269
 00:23:09,720 --> 00:23:14,896
-I've heard that before, from that book inaud startup.
+I've heard that one before, maybe from that book inaud startup.
+
+270
+00:23:14,910 --> 00:23:19,664
+That helps you narrow in on
+something early, that you can test early,
+
+271
+00:23:19,660 --> 00:23:24,560
+and get it out the door, and see
+if it's worth taking that approach,
+
+272
+00:23:24,560 --> 00:23:30,512
+before you invest too much time into
+it, whatever that approach might be.
+
+273
+00:23:30,544 --> 00:23:35,408
+Let's think about what we
+can do to mitigate it 'breaking'.
+
+274
+00:23:35,400 --> 00:23:40,096
+AB: Yes, data loss and things like that... testing.
+
+275
+00:23:40,750 --> 00:23:47,456
+User acceptance testing,
+regression testing... all the testing.
+
+276
+00:23:48,032 --> 00:23:52,960
+With a list of best practices
+so we can have a standard.
+
+277
+00:23:52,960 --> 00:23:56,400
+Early on as well, hopefully.
+
+278
+00:23:56,400 --> 00:24:00,464
+And I found that it's good to get as
+many people as possible working on the project
+
+279
+00:24:00,496 --> 00:24:07,260
+doing all of these things, rather
+than just one person doing it all.
+
+280
+00:24:07,260 --> 00:24:11,328
+AW: And other things that software
+development teams are doing a lot of lately
+
+281
+00:24:11,344 --> 00:24:17,536
+is test driven development...
+so writing tests before features.
+
+282
+00:24:17,530 --> 00:24:23,792
+And also developers are owning their tests, not
+just passing it on to the person who owns testing.
+
+283
+00:24:23,790 --> 00:24:28,784
+inaud launching it over the fence to someone else who can think about testing.
+
+284
+00:24:28,800 --> 00:24:34,032
+AB: Yes, I'm not a massive fan
+of everyone having a go at that.
+
+285
+00:24:34,030 --> 00:24:38,064
+AW: Budgets.
+
+286
+00:24:38,060 --> 00:24:46,624
+AB: Yes, erm... we've done a few similar
+projects, so I think we've got a good budget estimate
+
+287
+00:24:46,620 --> 00:24:54,080
+That is a fear, but I think we've mitigated
+it already by using other products as a template.
+
+288
+00:24:54,144 --> 00:24:59,888
+So you've seen how some of the
+other products...[they both talk at once]
+
+289
+00:24:59,880 --> 00:25:01,712
+AB: So using past learning.
+
+290
+00:25:01,710 --> 00:25:07,584
+AW: Past learning, that's a great
+one, and was that with the same team?
+
+291
+00:25:07,580 --> 00:25:08,224
+AB: Yes.
+
+292
+00:25:08,220 --> 00:25:15,216
+AW: Well that's great because that's a bit of an
+unknown if you're setting up with a new product team.
+
+293
+00:25:15,210 --> 00:25:21,184
+But since your using an established
+product team within your organization...
+
+294
+00:25:21,230 --> 00:25:28,352
+AB: And with that one as well, we
+do quite a lot of comparative testing. 
+
+295
+00:25:28,368 --> 00:25:32,464
+if we want to use a new bit of
+software, or if we want a new component, 
+
+296
+00:25:32,460 --> 00:25:38,512
+we look at different ways of achieving
+that and balance benefit against cost.
+
+297
+00:25:38,510 --> 00:25:41,232
+AW: Cost benefit analysis.
+
+298
+00:25:41,230 --> 00:25:45,504
+AB: Definitely. So yes, that's
+how we would mitigate that.
+
+299
+00:25:45,500 --> 00:25:48,576
+AW: Running out of time.
+
+300
+00:25:48,570 --> 00:25:52,800
+AB: We just cant run out of time, that's it!
+
+301
+00:25:52,800 --> 00:25:59,200
+This comes back to one of the
+big fears I have about this project, 
+
+302
+00:25:59,248 --> 00:26:03,248
+which is over-promising on spring deliveries.
+
+303
+00:26:03,240 --> 00:26:10,704
+So managing the expectations
+and the work capacity of of a sprint
+
+304
+00:26:10,800 --> 00:26:17,632
+will be integral in not running out of time and
+working out how much we can realistically deliver.
 
