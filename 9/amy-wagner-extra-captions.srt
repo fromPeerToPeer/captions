@@ -1,12 +1,96 @@
 ﻿1
-00:00:00,960 --> 00:00:02,777
-NARRATOR: Welcome to Peer to Peer
+00:00:00,960 --> 00:00:02,544
+NARRATOR: Welcome to Peer to Peer,
 
 2
-00:00:02,777 --> 00:00:06,770
-where you can watch how experts
-solve tech problems.
+00:00:02,560 --> 00:00:05,760
+where you can watch how
+experts solve tech problems.
 
 3
-00:00:06,891 --> 00:00:09,245
-Our guest today is Amy Wagner
+00:00:05,808 --> 00:00:10,048
+In this bonus material,
+independent Agile coach Amy Wagner
+
+4
+00:00:10,090 --> 00:00:13,488
+introduces the Agile Manifesto.
+
+5
+00:00:13,808 --> 00:00:20,600
+ANY WAGNER: A lot of things I'm
+inspired by come from other peoples work.
+
+6
+00:00:20,600 --> 00:00:26,208
+Lots of techniques, some principles,
+and values from the Agile Manifesto.
+
+7
+00:00:26,200 --> 00:00:31,744
+And even from the leading
+software development world as well.
+
+8
+00:00:31,740 --> 00:00:37,728
+So the first thing I would normally
+look to do, when I'm working with a new person,
+
+9
+00:00:37,720 --> 00:00:43,392
+is just to step back to the Agile Manifesto.
+
+10
+00:00:43,472 --> 00:00:51,376
+And this looks very much like an
+early 2000 website, as you can see here.
+
+11
+00:00:51,424 --> 00:00:56,752
+There was a bunch of people who got
+together in 2001 and came up with the manifesto
+
+12
+00:00:56,750 --> 00:00:59,584
+for Agile software development.
+
+13
+00:00:59,744 --> 00:01:07,370
+And I think a lot of people don't
+take the time to go over these things,
+
+14
+00:01:07,800 --> 00:01:10,480
+When they're delivering projects with Agility.
+
+15
+00:01:10,480 --> 00:01:15,760
+Sometimes they will go straight to
+Scrum, or a very specific methodology.
+
+16
+00:01:15,760 --> 00:01:20,464
+So let's go through this, just
+to remind ourselves what it is.
+
+17
+00:01:20,460 --> 00:01:21,680
+The high level...
+
+18
+00:01:21,680 --> 00:01:24,064
+ANNA BOWERS: The principles. AW: Exactly.
+
+19
+00:01:24,060 --> 00:01:26,160
+So the Manifesto... they say: 
+
+20
+00:01:26,160 --> 00:01:32,640
+We are uncovering better ways of developing
+software by doing it and helping others do it.
+
+21
+00:01:32,752 --> 00:01:34,896
+Through this work we have come to value:
+
