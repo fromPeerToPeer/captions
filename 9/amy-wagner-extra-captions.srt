@@ -83,7 +83,7 @@ ANNA BOWERS: The principles. AW: Exactly.
 
 19
 00:01:24,060 --> 00:01:26,160
-So the Manifesto... they say: 
+So the Manifesto... they say:
 
 20
 00:01:26,160 --> 00:01:32,640
@@ -120,7 +120,7 @@ bottom, a bit of a caveat there,
 
 27
 00:01:54,240 --> 00:01:58,960
-that yes, things on the right here are important, 
+that yes, things on the right here are important,
 
 28
 00:01:59,008 --> 00:02:06,832
@@ -136,4 +136,279 @@ for a second... working software.
 00:02:12,200 --> 00:02:17,312
 I think that's where the emphasis is if
 you just look at the second one there.
+
+31
+00:02:17,504 --> 00:02:24,800
+Rather than writing a big long
+technical specification about building the thing,
+
+32
+00:02:24,800 --> 00:02:32,096
+we want to get much closer and inaud about making the software, and doing the thing.
+
+33
+00:02:32,090 --> 00:02:40,864
+People used to put months
+or years into designing an upfront idea
+
+34
+00:02:40,860 --> 00:02:49,744
+Maybe it would be a thing of beauty
+that  you would frame and put on the wall.
+
+35
+00:02:49,740 --> 00:02:53,072
+[Laughter]
+
+36
+00:02:53,070 --> 00:02:58,176
+And still at that point
+it's still something on paper.
+
+37
+00:02:58,170 --> 00:03:02,368
+And not what we are ultimately aiming
+for, which is to build some software 
+
+38
+00:03:02,360 --> 00:03:05,712
+and get it out there to users.
+
+39
+00:03:05,710 --> 00:03:12,048
+And the other thing worth noting
+here is the responding to change part.
+
+40
+00:03:12,064 --> 00:03:19,100
+I think culturally that can be hard if you
+come from a traditional product manager world.
+
+41
+00:03:19,936 --> 00:03:23,616
+This inaud thing, did you ever hear those words?
+
+42
+00:03:23,610 --> 00:03:26,384
+AB: Yes, you define it all
+upfront and then new things come
+
+43
+00:03:26,380 --> 00:03:28,800
+and that's called scope creep I suppose isn't it?
+
+44
+00:03:28,800 --> 00:03:31,776
+AW: Exactly, and we've got mission creep uhm...
+
+45
+00:03:31,770 --> 00:03:38,928
+But maybe it's like that for a reason, maybe
+we're just continuing to try to improve a service.
+
+46
+00:03:38,920 --> 00:03:44,016
+And rather than sticking to what
+we thought the thing was originally
+
+47
+00:03:44,010 --> 00:03:50,416
+And guarding that project plan or inaud.
+
+48
+00:03:50,410 --> 00:03:56,448
+This challenges to respond to
+change in user needs and the market.
+
+49
+00:03:56,440 --> 00:04:01,616
+And respond to changing technologies and
+language and best practices, things like that.
+
+50
+00:04:01,610 --> 00:04:03,008
+AB: OK.
+
+51
+00:04:03,000 --> 00:04:10,832
+AW: So, the other thing I was going to look
+at here quickly was the principles of the Manifesto.
+
+52
+00:04:10,830 --> 00:04:16,880
+There's twelve of these, and
+rather than go through them verbatim, 
+
+53
+00:04:16,880 --> 00:04:24,448
+let's just pick out a few that
+could be interesting, or worth noting.
+
+54
+00:04:24,480 --> 00:04:27,856
+The first one, get it out the door as fast as possible.
+
+55
+00:04:27,870 --> 00:04:35,472
+Early and continuous delivery of
+the thing, the software, the content, 
+
+56
+00:04:35,500 --> 00:04:43,632
+all of that stuff that becomes the final product,
+rather than delivering documentation about it.
+
+57
+00:04:43,740 --> 00:04:49,280
+Again, we talked about changing requirements...
+we welcome them even late in development.
+
+58
+00:04:49,280 --> 00:04:56,048
+That's quite a cultural change from
+the more traditional design up front.
+
+59
+00:04:56,040 --> 00:04:59,712
+And then we've got do it frequently, from
+a couple of weeks to a couple of months.
+
+60
+00:04:59,710 --> 00:05:07,680
+inaud we've been a week or two week time period. sometimes a month.
+
+61
+00:05:07,680 --> 00:05:10,752
+With a preference for the shorter timescale.
+
+62
+00:05:10,750 --> 00:05:14,784
+Have you though about how frequently you wanted...
+
+63
+00:05:14,780 --> 00:05:17,360
+AB: Well the other projects I'm working with,
+
+64
+00:05:17,360 --> 00:05:21,280
+(and I'll be sharing the inaud source,
+which is one of the challenges we have),
+
+65
+00:05:21,320 --> 00:05:26,368
+they work to three week sprints,
+so we'll probably be mirroring that.
+
+66
+00:05:26,416 --> 00:05:33,776
+They're already in sprints with other products
+and I'll be mirroring that, so yes three weeks.
+
+67
+00:05:33,770 --> 00:05:38,800
+AW: Three weeks, ok cool.
+
+68
+00:05:38,800 --> 00:05:41,104
+AB: We've started off
+other projects a little bit shorter,
+
+69
+00:05:41,100 --> 00:05:46,624
+but three weeks is workable
+for our team, so still quite short.
+
+70
+00:05:46,620 --> 00:05:51,168
+AW: Yes, it is, it's not three
+months is it, or three years. [Laughter]
+
+71
+00:05:51,184 --> 00:05:55,408
+Some people launch after three
+years of thinking about something.
+
+72
+00:05:55,400 --> 00:06:00,224
+Yes, so that's great, we'll get into
+to the detail of that in a little bit.
+
+73
+00:06:00,220 --> 00:06:06,496
+The other thing here is talking
+about business people and developers
+
+74
+00:06:06,490 --> 00:06:10,160
+working together daily throughout the project.
+
+75
+00:06:10,160 --> 00:06:13,648
+It sounds like your
+development team is on site with you?
+
+76
+00:06:13,640 --> 00:06:14,960
+AB: They are yes.
+
+77
+00:06:14,960 --> 00:06:17,312
+Do you mean business people as in stakeholders,
+
+78
+00:06:17,310 --> 00:06:20,352
+other people around the business
+that have something to do with the project?
+
+79
+00:06:20,350 --> 00:06:22,736
+AW: Yes ideally. 
+
+80
+00:06:22,730 --> 00:06:28,720
+As product manager you're going to be the
+person who helps to translate those requirements.
+
+81
+00:06:28,810 --> 00:06:35,552
+But if at all possible, you can bring
+the subject matter experts into the room.
+
+82
+00:06:35,568 --> 00:06:43,808
+And the people who are owning
+that strategy for the learning tool.
+
+83
+00:06:43,800 --> 00:06:51,168
+If the inaud get's a chance to work with him closely on a day to day basis
+
+84
+00:06:51,160 --> 00:06:53,312
+I think that's the most ideal situation.
+
+85
+00:06:53,310 --> 00:06:55,120
+AB: That would be awesome.
+
+86
+00:06:55,120 --> 00:07:04,560
+AW: A lot of people do that by inviting them to
+key meetings throughout your three week process.
+
+87
+00:07:05,776 --> 00:07:09,168
+The other bit here is about motivated individuals.
+
+88
+00:07:09,160 --> 00:07:13,648
+AB: Lots of sweets! [Laughter]
+
+89
+00:07:13,640 --> 00:07:15,120
+AW: Or carrots!
+
+90
+00:07:15,120 --> 00:07:17,856
+AB: Carrots, oh my gosh that's very healthy.
 
