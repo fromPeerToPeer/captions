@@ -546,3 +546,97 @@ video link available to someone who's at home.
 So it feels like they're in the
 room with you, or the rest of the team.
 
+120
+00:09:47,210 --> 00:09:49,840
+AB: It sounds very futuristic.
+
+121
+00:09:49,840 --> 00:09:57,344
+AW: The future has arrived,
+it's just not widely distributed.
+
+122
+00:09:57,360 --> 00:10:03,296
+The other one here, working software,
+working services, delivering the thing.
+
+123
+00:10:03,290 --> 00:10:05,728
+That is the primary measure of progress.
+
+124
+00:10:05,760 --> 00:10:12,528
+AB: That's interesting yes I'm interested to learn a bit more about the definition of inaud.
+
+125
+00:10:12,720 --> 00:10:15,952
+AW: Because we have some tricky ones.
+
+126
+00:10:15,952 --> 00:10:15,968
+I think that's challenging the traditional
+project management of doing things.
+AW: Because we have some tricky ones.
+
+127
+00:10:15,968 --> 00:10:22,032
+I think that's challenging the traditional
+project management of doing things.
+
+128
+00:10:23,664 --> 00:10:28,400
+Have you ever heard of a rag status report RAG?
+
+129
+00:10:28,400 --> 00:10:32,448
+It's a red, amber green status.
+
+130
+00:10:32,448 --> 00:10:34,440
+AB: Oh... yes.
+
+131
+00:10:34,440 --> 00:10:40,496
+Red, amber green, a RAG. inaud
+
+132
+00:10:40,700 --> 00:10:49,712
+The idea is that rather than just
+declaring how you think the project is doing,
+
+133
+00:10:49,710 --> 00:10:56,992
+Red being terrible, like... this is
+something I need to flag as a problem.
+
+134
+00:10:56,990 --> 00:11:01,024
+Amber means we might have
+a problem and green being OK.
+
+135
+00:11:01,020 --> 00:11:06,816
+Rather than doing that, shall we go
+"did we ship some software this week?"
+
+136
+00:11:07,344 --> 00:11:11,150
+"Did we deliver the thing, are users using it"?
+
+137
+00:11:11,150 --> 00:11:12,992
+AB: Like measuring our goals.
+
+138
+00:11:12,990 --> 00:11:18,448
+And then we really are halfway
+through trying to solve our problem
+
+139
+00:11:18,440 --> 00:11:20,112
+AB: I like that.
+
+140
+00:11:20,110 --> 00:11:29,104
+AW: I think it's less of an abstraction away from doing the thing, inaud RAG status report
+
