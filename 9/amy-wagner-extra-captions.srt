@@ -772,3 +772,167 @@ allowing your team to help simplify things.
 00:14:09,392 --> 00:14:11,056
 AB: Yes.
 
+169
+00:14:11,050 --> 00:14:17,328
+AW: And getting to know... solving a
+problem as fast and as simply as possible.
+
+170
+00:14:17,320 --> 00:14:21,808
+Rather than everything we
+thought we needed to do upfront.
+
+171
+00:14:21,800 --> 00:14:27,184
+So this one is about the best
+architectures, requirements, and designs
+
+172
+00:14:27,200 --> 00:14:31,136
+emerge from self-organizing teams.
+
+173
+00:14:31,130 --> 00:14:39,120
+One of the ideas here is to try to express
+your problem clearly to the whole team.
+
+174
+00:14:39,120 --> 00:14:46,528
+And then the priorities... the order
+in which we will try to solve this problem. 
+
+175
+00:14:46,680 --> 00:14:52,912
+And then you can often see things
+on a more... either user stories, or hypothesis.
+
+176
+00:14:52,910 --> 00:14:56,160
+You can see a very clear order of priority.
+
+177
+00:14:56,160 --> 00:15:00,656
+And then you empower the team to
+go and pick up the next most important thing,
+
+178
+00:15:00,688 --> 00:15:04,400
+and it's usually the thing at the top
+of the list, and move that forward.
+
+179
+00:15:04,400 --> 00:15:10,480
+That enables the two way design process
+because people can see what's a priority,
+
+180
+00:15:10,480 --> 00:15:16,928
+and say "I know that I'm the one with
+the skills to do that, to carry it forward".
+
+181
+00:15:16,920 --> 00:15:18,608
+AB: Brilliant, I like that one.
+
+182
+00:15:18,600 --> 00:15:24,368
+AW: Yes, I like that too, and I think it
+also reduces the management load for you. 
+
+183
+00:15:24,360 --> 00:15:32,032
+Your not micro managing anyone
+or making really rigid schedules.
+
+184
+00:15:32,030 --> 00:15:36,848
+Like "I need you to be doing this at
+10 O'clock and then you said 12 O'clock etc.
+
+185
+00:15:36,840 --> 00:15:41,744
+AB: It creates a shared understanding and
+then you can just trust people get on with it.
+
+186
+00:15:41,740 --> 00:15:47,888
+AW: Yes, the trust thing is really important... so true.
+
+187
+00:15:47,880 --> 00:15:54,176
+OK so the last one, which is probably
+one of the most important ones really.
+
+188
+00:15:54,576 --> 00:15:58,704
+At regular intervals, the team reflects
+on how to become more effective,
+
+189
+00:15:58,700 --> 00:16:01,744
+then tunes and adjusts its behaviour accordingly.
+
+190
+00:16:01,740 --> 00:16:07,072
+Some people say 'inspect and
+adapt' as a way of explaining this.
+
+191
+00:16:07,070 --> 00:16:11,472
+So you're not only checking
+where you are with your product,
+
+192
+00:16:11,470 --> 00:16:16,864
+but also where you are with your
+processes, and changing things there.
+
+193
+00:16:17,056 --> 00:16:21,248
+AB: Is this where you were doing a
+retrospective, at the end of each sprint.
+
+194
+00:16:21,240 --> 00:16:25,072
+AW: Yes, that's where that idea
+comes from, from this principle.
+
+195
+00:16:25,070 --> 00:16:30,880
+So yes a retrospective inaud
+
+196
+00:16:30,880 --> 00:16:35,440
+So, what actions can we take to
+support the things that went well,
+
+197
+00:16:35,504 --> 00:16:40,272
+and change those that didn't go so well.
+
+198
+00:16:40,270 --> 00:16:45,072
+So inspecting and adapting,
+and that's it... that's Agile.
+
+199
+00:16:45,070 --> 00:16:51,296
+That's were done, cool. [Laughter]
+
+200
+00:16:51,290 --> 00:16:55,616
+So I guess that's a background.
+
+201
+00:16:55,610 --> 00:17:01,040
+And there's also a question of why we do this.
+
+202
+00:17:01,040 --> 00:17:04,896
+And I think we should just go over that a little bit 
+
+203
+00:17:04,928 --> 00:17:09,072
+before we move on to some techniques
+on how to apply this stuff to your product.
+
