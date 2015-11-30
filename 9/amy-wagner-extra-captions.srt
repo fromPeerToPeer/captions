@@ -1060,5 +1060,156 @@ doing designs on paper... it's still paper.
 230
 00:19:37,520 --> 00:19:43,360
 You still have to take that piece of
-paper and apply it to something digital.
+paper and apply it to something digital,
+
+231
+00:19:43,360 --> 00:19:51,200
+that will become software and it can be much better than what you can produce inaud
+
+232
+00:19:51,536 --> 00:19:56,784
+So that's reason No. 1, why we do it.
+
+233
+00:19:56,832 --> 00:20:05,680
+Reason No. 2 is about where
+project management came from.
+
+234
+00:20:05,680 --> 00:20:11,488
+In the past if someone was
+building the Brunel Tunnel for example,
+
+235
+00:20:11,480 --> 00:20:15,504
+the first tunnel that went under the Thames.
+
+236
+00:20:15,500 --> 00:20:22,592
+Those types of projects were managed
+by Master builders, or civil engineers,
+
+237
+00:20:22,590 --> 00:20:25,632
+Usually on a sort of 'ad hoc' basis.
+
+238
+00:20:25,630 --> 00:20:33,984
+And that was for huge civil construction
+projects where you need a blueprint.
+
+239
+00:20:34,064 --> 00:20:42,784
+It wasn't until the 1950s or 60s that MBAs
+and that sort of thing became quite popular.
+
+240
+00:20:42,780 --> 00:20:46,704
+And project management
+became it's own distinct discipline.
+
+241
+00:20:46,700 --> 00:20:50,768
+And it really came from that
+physical architecture world.
+
+242
+00:20:50,760 --> 00:20:58,224
+It's strange, but when you think
+about the background of that,
+
+243
+00:20:58,220 --> 00:21:02,800
+I think that a lot of people in software,
+still use those sort of architectural terms.
+
+244
+00:21:02,800 --> 00:21:04,640
+AB: That's interesting.
+
+245
+00:21:04,640 --> 00:21:10,160
+AW: Information architecture, inaud construction, there's a lot of that same language,
+
+246
+00:21:10,160 --> 00:21:18,656
+When actually the things we are building are
+not as linear, and not as constrained by change.
+
+247
+00:21:18,736 --> 00:21:23,600
+So if we were building the Shard
+in London, just down the road here,
+
+248
+00:21:23,712 --> 00:21:29,840
+It would be very expensive, half way
+through to move the Shard over there.
+
+249
+00:21:29,840 --> 00:21:33,440
+And I think a lot of people have in their minds that
+
+250
+00:21:33,440 --> 00:21:40,416
+software development projects need to
+be like that as well. But it's not the case.
+
+251
+00:21:40,480 --> 00:21:46,880
+So I think that's two of my favorite
+reasons for why we don't do it like that.
+
+252
+00:21:46,880 --> 00:21:51,216
+AB: Yes, it's a mind-shift isn't it, from engineering?
+
+253
+00:21:51,280 --> 00:22:00,816
+AW: Yes, and there's so many things you have to
+un-learn about what we think project management is.
+
+254
+00:22:00,810 --> 00:22:06,816
+AB: And help other people learn that
+if you want your project to proceed... I think.
+
+255
+00:22:06,810 --> 00:22:17,440
+AW: That is critical, and on that note
+we're going to run through a few techniques soon.
+
+256
+00:22:17,480 --> 00:22:24,816
+And I think the most important
+thing to remember about this is that
+
+257
+00:22:24,860 --> 00:22:32,048
+these should be done with your team
+and your stakeholders outside this room.
+
+258
+00:22:32,128 --> 00:22:36,240
+AB: Well I'm hoping I can take away what
+I've learned today, and its a perfect time
+
+259
+00:22:36,240 --> 00:22:42,016
+because I'm just doing some kick off
+and I can use while it's fresh, and feedback.
+
+260
+00:22:42,128 --> 00:22:45,600
+AW: Perfect, perfect, perfect!
+
+261
+00:22:45,600 --> 00:22:53,680
+So I think we will look at a few of the things
+I think we should look at to kick off a project.
+
+262
+00:22:53,680 --> 00:23:00,112
+I'll get some detail and maybe we'll put some
+'post it' notes on the wall, and we'll go from there.
 
