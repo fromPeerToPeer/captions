@@ -168,7 +168,7 @@ it's still something on paper.
 37
 00:02:58,170 --> 00:03:02,368
 And not what we are ultimately aiming
-for, which is to build some software 
+for, which is to build some software
 
 38
 00:03:02,360 --> 00:03:05,712
@@ -237,7 +237,7 @@ at here quickly was the principles of the Manifesto.
 52
 00:04:10,830 --> 00:04:16,880
 There's twelve of these, and
-rather than go through them verbatim, 
+rather than go through them verbatim,
 
 53
 00:04:16,880 --> 00:04:24,448
@@ -251,7 +251,7 @@ The first one, get it out the door as fast as possible.
 55
 00:04:27,870 --> 00:04:35,472
 Early and continuous delivery of
-the thing, the software, the content, 
+the thing, the software, the content,
 
 56
 00:04:35,500 --> 00:04:43,632
@@ -362,7 +362,7 @@ that have something to do with the project?
 
 79
 00:06:20,350 --> 00:06:22,736
-AW: Yes ideally. 
+AW: Yes ideally.
 
 80
 00:06:22,730 --> 00:06:28,720
@@ -453,7 +453,7 @@ also want to tell them why your building something.
 99
 00:08:01,056 --> 00:08:04,832
 AW: That's such a good point and goes
-back to the point about business people 
+back to the point about business people
 
 100
 00:08:04,830 --> 00:08:08,400
@@ -639,4 +639,136 @@ AB: I like that.
 140
 00:11:20,110 --> 00:11:29,104
 AW: I think it's less of an abstraction away from doing the thing, inaud RAG status report
+
+141
+00:11:29,312 --> 00:11:36,464
+The other one here is Agile processes
+promote sustainable development.
+
+142
+00:11:37,728 --> 00:11:41,888
+When thinking about sustainable
+development, I think back to days where
+
+143
+00:11:41,880 --> 00:11:46,992
+people worked in agencies and haven't
+gone home for the week before your supposed
+
+144
+00:11:47,020 --> 00:11:52,320
+to launch a product, long nights in
+the office trying to finish the coding,
+
+145
+00:11:52,352 --> 00:11:54,784
+and delivering the thing.
+
+146
+00:11:54,780 --> 00:12:01,200
+And unfortunately, after you launch a
+lot of the team can be... basically rubbish.
+
+147
+00:12:01,200 --> 00:12:08,432
+They're completely burned out with
+delivery fatigue; the team needs a holiday.
+
+148
+00:12:08,430 --> 00:12:10,096
+[Laughter]
+
+149
+00:12:10,090 --> 00:12:20,032
+At that point when your burning the candle
+at both ends is when you make mistakes.
+
+150
+00:12:20,220 --> 00:12:24,960
+This is about sustaining development,
+a pace that you can sustain.
+
+151
+00:12:24,960 --> 00:12:32,400
+AB: And it seems like it's
+promoting a healthy work life as well.
+
+152
+00:12:32,400 --> 00:12:41,120
+AW: Hopefully. And that applies to
+everyone, to you as a product manager,
+
+153
+00:12:41,120 --> 00:12:44,112
+developers, designers... all the team. 
+
+154
+00:12:44,110 --> 00:12:48,160
+AB: And the users. [Laughter]
+
+155
+00:12:48,160 --> 00:12:53,104
+AW: They might be up all night too!
+
+156
+00:12:55,152 --> 00:13:00,256
+Nearly there... continuous attention
+to technical excellence and good design.
+
+157
+00:13:00,560 --> 00:13:05,552
+This enhances Agility... so doing
+things properly first time... 
+
+158
+00:13:05,550 --> 00:13:13,728
+you won't be battling with an older
+version of yourself saying "why did do this"?
+
+159
+00:13:13,792 --> 00:13:21,344
+If you keep the quality high, and not cut
+corners you will not have to fix stuff later.
+
+160
+00:13:21,340 --> 00:13:22,896
+AB: Yes, that's good.
+
+161
+00:13:22,890 --> 00:13:31,104
+AW: Simplicity, this is my favorite one... the art
+of maximizing the amount of work NOT done.
+
+162
+00:13:31,100 --> 00:13:32,752
+AB: Yes, that's essential.
+
+163
+00:13:32,750 --> 00:13:38,768
+AW: We were talking earlier
+about business people working together.
+
+164
+00:13:38,760 --> 00:13:46,240
+I think that if you just deliver instructions
+about how to do it from on high, to the team,
+
+165
+00:13:47,632 --> 00:13:54,280
+You often miss the trick of someone
+saying, "hey we could do this much more simply"
+
+166
+00:13:54,544 --> 00:13:59,680
+And rather than taking two weeks, it could
+take two hours, or two days or one week.
+
+167
+00:13:59,680 --> 00:14:09,264
+And that's the two way design process,
+allowing your team to help simplify things.
+
+168
+00:14:09,392 --> 00:14:11,056
+AB: Yes.
 
