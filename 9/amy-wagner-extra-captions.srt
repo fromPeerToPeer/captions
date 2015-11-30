@@ -936,3 +936,129 @@ And I think we should just go over that a little bit
 before we move on to some techniques
 on how to apply this stuff to your product.
 
+204
+00:17:09,070 --> 00:17:14,208
+We'll dig a little more into what you're
+doing and see if we can add some more content.
+
+205
+00:17:14,200 --> 00:17:18,272
+And have a go at some of these techniques.
+
+206
+00:17:18,270 --> 00:17:24,864
+So why should we do it?
+
+207
+00:17:24,992 --> 00:17:32,976
+The first reason I would mention,
+is the pace of change in the world.
+
+208
+00:17:32,970 --> 00:17:39,184
+And that pace is faster than ever before.
+
+209
+00:17:39,180 --> 00:17:45,632
+If I had my smartphone with me
+now I could just check how many apps
+
+210
+00:17:45,630 --> 00:17:49,504
+I needed to update: it's a constant battle...
+
+211
+00:17:49,500 --> 00:17:51,296
+AB: That little red one [Laughter].
+
+212
+00:17:51,290 --> 00:17:56,560
+AW: Yes, constant notification that I
+have to update these apps on the phone.
+
+213
+00:17:56,704 --> 00:18:02,570
+And that just shows that as
+users now out there in the world
+
+214
+00:18:02,570 --> 00:18:07,232
+things are constantly changing and
+improving for us with the software we use
+
+215
+00:18:07,280 --> 00:18:11,664
+on our phones, desktops and laptops.
+
+216
+00:18:11,660 --> 00:18:17,792
+Technology changes and the
+way we apply different technologies
+
+217
+00:18:17,790 --> 00:18:23,408
+languages and best
+practices are changing constantly.
+
+218
+00:18:23,400 --> 00:18:32,112
+So this idea of designing everything
+upfront; having a blueprint for a project,
+
+219
+00:18:32,110 --> 00:18:37,552
+Spending a year doing that, so all your
+requirements and documents and designs 
+
+220
+00:18:37,552 --> 00:18:43,424
+are on paper, and so beautiful that
+you may as well frame them on the wall.
+
+221
+00:18:43,420 --> 00:18:50,064
+You know, in this world we've moved on now.
+
+222
+00:18:50,060 --> 00:18:56,544
+And things would have changed
+since you created that document.
+
+223
+00:18:56,540 --> 00:19:00,864
+Did you ever come from that world
+by the way, did you do that sort of thing?
+
+224
+00:19:00,864 --> 00:19:09,520
+AB: A little bit more rigid yes, there was
+a lot of setting all of the requirements early on.
+
+225
+00:19:09,520 --> 00:19:14,384
+AW: A big document... [They both talk at once]. 
+
+226
+00:19:14,480 --> 00:19:22,080
+That was my background when I went
+into project management in the year 2000.
+
+227
+00:19:22,080 --> 00:19:28,736
+I was writing tons of documents and
+templates, and that was the world we were in.
+
+228
+00:19:28,730 --> 00:19:36,096
+And then I realised that if you were
+doing designs on paper... it's still paper.
+
+229
+00:19:36,090 --> 00:19:37,520
+[Laughter]
+
+230
+00:19:37,520 --> 00:19:43,360
+You still have to take that piece of
+paper and apply it to something digital.
+
