@@ -143,1072 +143,1079 @@ Rather than writing a big long
 technical specification about building the thing,
 
 32
-00:02:24,800 --> 00:02:32,096
-we want to get much closer and inaud about making the software, and doing the thing.
+00:02:24,800 --> 00:02:29,952
+we want to get much closer and make
+the emphasis about making the software, 
 
 33
+00:02:30,000 --> 00:02:32,090
+and doing the thing.
+
+34
 00:02:32,090 --> 00:02:40,864
 People used to put months
 or years into designing an upfront idea
 
-34
+35
 00:02:40,860 --> 00:02:49,744
 Maybe it would be a thing of beauty
 that  you would frame and put on the wall.
 
-35
+36
 00:02:49,740 --> 00:02:53,072
 [Laughter]
 
-36
+37
 00:02:53,070 --> 00:02:58,176
 And still at that point
 it's still something on paper.
 
-37
+38
 00:02:58,170 --> 00:03:02,368
 And not what we are ultimately aiming
 for, which is to build some software
 
-38
+39
 00:03:02,360 --> 00:03:05,712
 and get it out there to users.
 
-39
+40
 00:03:05,710 --> 00:03:12,048
 And the other thing worth noting
 here is the responding to change part.
 
-40
+41
 00:03:12,064 --> 00:03:19,100
 I think culturally that can be hard if you
 come from a traditional product manager world.
 
-41
+42
 00:03:19,936 --> 00:03:23,616
 This inaud thing, did you ever hear those words?
 
-42
+43
 00:03:23,610 --> 00:03:26,384
 AB: Yes, you define it all
 upfront and then new things come
 
-43
+44
 00:03:26,380 --> 00:03:28,800
 and that's called scope creep I suppose isn't it?
 
-44
+45
 00:03:28,800 --> 00:03:31,776
 AW: Exactly, and we've got mission creep uhm...
 
-45
+46
 00:03:31,770 --> 00:03:38,928
 But maybe it's like that for a reason, maybe
 we're just continuing to try to improve a service.
 
-46
+47
 00:03:38,920 --> 00:03:44,016
 And rather than sticking to what
 we thought the thing was originally
 
-47
-00:03:44,010 --> 00:03:50,416
-And guarding that project plan or inaud.
-
 48
+00:03:44,010 --> 00:03:50,416
+And guarding that project plan or tech spec.
+
+49
 00:03:50,410 --> 00:03:56,448
 This challenges to respond to
 change in user needs and the market.
 
-49
+50
 00:03:56,440 --> 00:04:01,616
 And respond to changing technologies and
 language and best practices, things like that.
 
-50
+51
 00:04:01,610 --> 00:04:03,008
 AB: OK.
 
-51
+52
 00:04:03,000 --> 00:04:10,832
 AW: So, the other thing I was going to look
 at here quickly was the principles of the Manifesto.
 
-52
+53
 00:04:10,830 --> 00:04:16,880
 There's twelve of these, and
 rather than go through them verbatim,
 
-53
+54
 00:04:16,880 --> 00:04:24,448
 let's just pick out a few that
 could be interesting, or worth noting.
 
-54
+55
 00:04:24,480 --> 00:04:27,856
 The first one, get it out the door as fast as possible.
 
-55
+56
 00:04:27,870 --> 00:04:35,472
 Early and continuous delivery of
 the thing, the software, the content,
 
-56
+57
 00:04:35,500 --> 00:04:43,632
 all of that stuff that becomes the final product,
 rather than delivering documentation about it.
 
-57
+58
 00:04:43,740 --> 00:04:49,280
 Again, we talked about changing requirements...
 we welcome them even late in development.
 
-58
+59
 00:04:49,280 --> 00:04:56,048
 That's quite a cultural change from
 the more traditional design up front.
 
-59
+60
 00:04:56,040 --> 00:04:59,712
 And then we've got do it frequently, from
 a couple of weeks to a couple of months.
 
-60
+61
 00:04:59,710 --> 00:05:07,680
 inaud we've been a week or two week time period. sometimes a month.
 
-61
+62
 00:05:07,680 --> 00:05:10,752
 With a preference for the shorter timescale.
 
-62
+63
 00:05:10,750 --> 00:05:14,784
 Have you though about how frequently you wanted...
 
-63
+64
 00:05:14,780 --> 00:05:17,360
 AB: Well the other projects I'm working with,
 
-64
+65
 00:05:17,360 --> 00:05:21,280
 (and I'll be sharing the inaud source,
 which is one of the challenges we have),
 
-65
+66
 00:05:21,320 --> 00:05:26,368
 they work to three week sprints,
 so we'll probably be mirroring that.
 
-66
+67
 00:05:26,416 --> 00:05:33,776
 They're already in sprints with other products
 and I'll be mirroring that, so yes three weeks.
 
-67
+68
 00:05:33,770 --> 00:05:38,800
 AW: Three weeks, ok cool.
 
-68
+69
 00:05:38,800 --> 00:05:41,104
 AB: We've started off
 other projects a little bit shorter,
 
-69
+70
 00:05:41,100 --> 00:05:46,624
 but three weeks is workable
 for our team, so still quite short.
 
-70
+71
 00:05:46,620 --> 00:05:51,168
 AW: Yes, it is, it's not three
 months is it, or three years. [Laughter]
 
-71
+72
 00:05:51,184 --> 00:05:55,408
 Some people launch after three
 years of thinking about something.
 
-72
+73
 00:05:55,400 --> 00:06:00,224
 Yes, so that's great, we'll get into
 to the detail of that in a little bit.
 
-73
+74
 00:06:00,220 --> 00:06:06,496
 The other thing here is talking
 about business people and developers
 
-74
+75
 00:06:06,490 --> 00:06:10,160
 working together daily throughout the project.
 
-75
+76
 00:06:10,160 --> 00:06:13,648
 It sounds like your
 development team is on site with you?
 
-76
+77
 00:06:13,640 --> 00:06:14,960
 AB: They are yes.
 
-77
+78
 00:06:14,960 --> 00:06:17,312
 Do you mean business people as in stakeholders,
 
-78
+79
 00:06:17,310 --> 00:06:20,352
 other people around the business
 that have something to do with the project?
 
-79
+80
 00:06:20,350 --> 00:06:22,736
 AW: Yes ideally.
 
-80
+81
 00:06:22,730 --> 00:06:28,720
 As product manager you're going to be the
 person who helps to translate those requirements.
 
-81
+82
 00:06:28,810 --> 00:06:35,552
 But if at all possible, you can bring
 the subject matter experts into the room.
 
-82
+83
 00:06:35,568 --> 00:06:43,808
 And the people who are owning
 that strategy for the learning tool.
 
-83
-00:06:43,800 --> 00:06:51,168
-If the inaud get's a chance to work with him closely on a day to day basis
-
 84
+00:06:43,800 --> 00:06:51,168
+If the whole team get's a chance to
+work with him closely on a day to day basis,
+
+85
 00:06:51,160 --> 00:06:53,312
 I think that's the most ideal situation.
 
-85
+86
 00:06:53,310 --> 00:06:55,120
 AB: That would be awesome.
 
-86
+87
 00:06:55,120 --> 00:07:04,560
 AW: A lot of people do that by inviting them to
 key meetings throughout your three week process.
 
-87
+88
 00:07:05,776 --> 00:07:09,168
 The other bit here is about motivated individuals.
 
-88
+89
 00:07:09,160 --> 00:07:13,648
 AB: Lots of sweets! [Laughter]
 
-89
+90
 00:07:13,640 --> 00:07:15,120
 AW: Or carrots!
 
-90
+91
 00:07:15,120 --> 00:07:18,368
 AB: Carrots, oh my gosh that's very healthy. [Laughter]
 
-91
+92
 00:07:18,400 --> 00:07:21,760
 AW: Makes you see in the dark.
 
-92
+93
 00:07:21,790 --> 00:07:30,880
 But... in general designing the environment to
 give people the support they need to get the job done,
 
-93
+94
 00:07:30,910 --> 00:07:37,104
 is so important... motivating people
 to get great work done, on a daily basis.
 
-94
-00:07:37,120 --> 00:07:42,640
-AB: Yes, we did those inaud personality tests recently
-
 95
-00:07:42,640 --> 00:07:46,208
-And you would think that
-developers would be very detail focused,
+00:07:37,120 --> 00:07:42,640
+AB: Yes, we did those inaud personality tests recently,
 
 96
+00:07:42,640 --> 00:07:46,208
+and you would think that
+developers would be very detail focused,
+
+97
 00:07:46,200 --> 00:07:51,184
 well they are, but a lot of them
 also appreciated the bigger picture,
 
-97
+98
 00:07:51,180 --> 00:07:55,776
 and that helps to motivate them,
 so it was really good to recognise that.
 
-98
+99
 00:07:55,770 --> 00:08:00,992
 As well as them needing strict requirements, you
 also want to tell them why your building something.
 
-99
+100
 00:08:01,056 --> 00:08:04,832
 AW: That's such a good point and goes
 back to the point about business people
 
-100
+101
 00:08:04,830 --> 00:08:08,400
 and developers... delivery people working together.
 
-101
+102
 00:08:09,184 --> 00:08:15,360
 That also brings that holistic
 theme of why you're there.
 
-102
+103
 00:08:15,360 --> 00:08:18,800
 Not just: "here's a list, do your best".
 
-103
+104
 00:08:18,800 --> 00:08:20,800
 AB: Exactly, yes.
 
-104
+105
 00:08:20,800 --> 00:08:26,688
 AW: It allows people to ask why,
 and also have a two way design process
 
-105
+106
 00:08:26,680 --> 00:08:30,880
 so that people can simplify a requirement as well,
 
-106
+107
 00:08:30,880 --> 00:08:35,744
 rather than just dealing with
 something that's passed down from on high.
 
-107
+108
 00:08:35,740 --> 00:08:39,344
 So it has to be a two way thing.
 
-108
+109
 00:08:39,340 --> 00:08:46,368
 OK, we also have the most efficient and
 effective method of conveying information
 
-109
+110
 00:08:46,360 --> 00:08:51,552
 'to and withing a development
 team is face to face conversation'
 
-110
+111
 00:08:52,240 --> 00:08:58,672
 I guess this is why you often see a lot
 of Agile teams doing stand ups in the morning.
 
-111
+112
 00:08:58,670 --> 00:09:01,120
 We'll go into what that is in a bit.
 
-112
+113
 00:09:01,120 --> 00:09:07,744
 They're just daily face to face contact
 where you talk about what you've been up to.
 
-113
+114
 00:09:07,740 --> 00:09:12,176
 And talk about anything
 that might be blocking that.
 
-114
+115
 00:09:13,008 --> 00:09:18,816
 Do you have any developers working from home or...
 
-115
+116
 00:09:18,810 --> 00:09:25,232
 AB: We've got a couple that work 4 days a
 week from home and then come in for a day,
 
-116
+117
 00:09:25,230 --> 00:09:27,584
 which is when we catch up with them.
 
-117
+118
 00:09:27,580 --> 00:09:32,880
 But most of them are in the office, so it's a mix.
 
-118
+119
 00:09:32,880 --> 00:09:41,936
 AW: I've seen some teams work with a continuous
 video link available to someone who's at home.
 
-119
+120
 00:09:41,930 --> 00:09:47,216
 So it feels like they're in the
 room with you, or the rest of the team.
 
-120
+121
 00:09:47,210 --> 00:09:49,840
 AB: It sounds very futuristic.
 
-121
+122
 00:09:49,840 --> 00:09:57,344
 AW: The future has arrived,
 it's just not widely distributed.
 
-122
+123
 00:09:57,360 --> 00:10:03,296
 The other one here, working software,
 working services, delivering the thing.
 
-123
+124
 00:10:03,290 --> 00:10:05,728
 That is the primary measure of progress.
 
-124
-00:10:05,760 --> 00:10:12,528
-AB: That's interesting yes I'm interested to learn a bit more about the definition of inaud.
-
 125
+00:10:05,760 --> 00:10:12,528
+AB: That's interesting yes, I'm interested to learn a bit more about the definition of inaud.
+
+126
 00:10:12,720 --> 00:10:15,952
 AW: Because we have some tricky ones.
 
-126
+127
 00:10:15,952 --> 00:10:15,968
 I think that's challenging the traditional
 project management of doing things.
 AW: Because we have some tricky ones.
 
-127
+128
 00:10:15,968 --> 00:10:22,032
 I think that's challenging the traditional
 project management of doing things.
 
-128
+129
 00:10:23,664 --> 00:10:28,400
 Have you ever heard of a rag status report RAG?
 
-129
+130
 00:10:28,400 --> 00:10:32,448
 It's a red, amber green status.
 
-130
+131
 00:10:32,448 --> 00:10:34,440
 AB: Oh... yes.
 
-131
+132
 00:10:34,440 --> 00:10:40,496
 Red, amber green, a RAG. inaud
 
-132
+133
 00:10:40,700 --> 00:10:49,712
 The idea is that rather than just
 declaring how you think the project is doing,
 
-133
+134
 00:10:49,710 --> 00:10:56,992
 Red being terrible, like... this is
 something I need to flag as a problem.
 
-134
+135
 00:10:56,990 --> 00:11:01,024
 Amber means we might have
 a problem and green being OK.
 
-135
+136
 00:11:01,020 --> 00:11:06,816
 Rather than doing that, shall we go
 "did we ship some software this week?"
 
-136
+137
 00:11:07,344 --> 00:11:11,150
 "Did we deliver the thing, are users using it"?
 
-137
+138
 00:11:11,150 --> 00:11:12,992
 AB: Like measuring our goals.
 
-138
+139
 00:11:12,990 --> 00:11:18,448
 And then we really are halfway
 through trying to solve our problem
 
-139
+140
 00:11:18,440 --> 00:11:20,112
 AB: I like that.
 
-140
-00:11:20,110 --> 00:11:29,104
-AW: I think it's less of an abstraction away from doing the thing, inaud RAG status report
-
 141
+00:11:20,110 --> 00:11:29,104
+AW: I think it's less of an abstraction away
+from doing the thing, a RAG status report.
+
+142
 00:11:29,312 --> 00:11:36,464
 The other one here is Agile processes
 promote sustainable development.
 
-142
+143
 00:11:37,728 --> 00:11:41,888
 When thinking about sustainable
 development, I think back to days where
 
-143
+144
 00:11:41,880 --> 00:11:46,992
 people worked in agencies and haven't
 gone home for the week before your supposed
 
-144
+145
 00:11:47,020 --> 00:11:52,320
 to launch a product, long nights in
 the office trying to finish the coding,
 
-145
+146
 00:11:52,352 --> 00:11:54,784
 and delivering the thing.
 
-146
+147
 00:11:54,780 --> 00:12:01,200
 And unfortunately, after you launch a
 lot of the team can be... basically rubbish.
 
-147
+148
 00:12:01,200 --> 00:12:08,432
 They're completely burned out with
 delivery fatigue; the team needs a holiday.
 
-148
+149
 00:12:08,430 --> 00:12:10,096
 [Laughter]
 
-149
+150
 00:12:10,090 --> 00:12:20,032
 At that point when your burning the candle
 at both ends is when you make mistakes.
 
-150
+151
 00:12:20,220 --> 00:12:24,960
 This is about sustaining development,
 a pace that you can sustain.
 
-151
+152
 00:12:24,960 --> 00:12:32,400
 AB: And it seems like it's
 promoting a healthy work life as well.
 
-152
+153
 00:12:32,400 --> 00:12:41,120
 AW: Hopefully. And that applies to
 everyone, to you as a product manager,
 
-153
-00:12:41,120 --> 00:12:44,112
-developers, designers... all the team. 
-
 154
+00:12:41,120 --> 00:12:44,112
+developers, designers... all the team.
+
+155
 00:12:44,110 --> 00:12:48,160
 AB: And the users. [Laughter]
 
-155
+156
 00:12:48,160 --> 00:12:53,104
 AW: They might be up all night too!
 
-156
+157
 00:12:55,152 --> 00:13:00,256
 Nearly there... continuous attention
 to technical excellence and good design.
 
-157
+158
 00:13:00,560 --> 00:13:05,552
 This enhances Agility... so doing
-things properly first time... 
+things properly first time...
 
-158
+159
 00:13:05,550 --> 00:13:13,728
 you won't be battling with an older
 version of yourself saying "why did do this"?
 
-159
+160
 00:13:13,792 --> 00:13:21,344
 If you keep the quality high, and not cut
 corners you will not have to fix stuff later.
 
-160
+161
 00:13:21,340 --> 00:13:22,896
 AB: Yes, that's good.
 
-161
+162
 00:13:22,890 --> 00:13:31,104
 AW: Simplicity, this is my favorite one... the art
 of maximizing the amount of work NOT done.
 
-162
+163
 00:13:31,100 --> 00:13:32,752
 AB: Yes, that's essential.
 
-163
+164
 00:13:32,750 --> 00:13:38,768
 AW: We were talking earlier
 about business people working together.
 
-164
+165
 00:13:38,760 --> 00:13:46,240
 I think that if you just deliver instructions
 about how to do it from on high, to the team,
 
-165
+166
 00:13:47,632 --> 00:13:54,280
 You often miss the trick of someone
 saying, "hey we could do this much more simply"
 
-166
+167
 00:13:54,544 --> 00:13:59,680
 And rather than taking two weeks, it could
 take two hours, or two days or one week.
 
-167
+168
 00:13:59,680 --> 00:14:09,264
 And that's the two way design process,
 allowing your team to help simplify things.
 
-168
+169
 00:14:09,392 --> 00:14:11,056
 AB: Yes.
 
-169
+170
 00:14:11,050 --> 00:14:17,328
 AW: And getting to know... solving a
 problem as fast and as simply as possible.
 
-170
+171
 00:14:17,320 --> 00:14:21,808
 Rather than everything we
 thought we needed to do upfront.
 
-171
+172
 00:14:21,800 --> 00:14:27,184
 So this one is about the best
 architectures, requirements, and designs
 
-172
+173
 00:14:27,200 --> 00:14:31,136
 emerge from self-organizing teams.
 
-173
+174
 00:14:31,130 --> 00:14:39,120
 One of the ideas here is to try to express
 your problem clearly to the whole team.
 
-174
+175
 00:14:39,120 --> 00:14:46,528
 And then the priorities... the order
-in which we will try to solve this problem. 
+in which we will try to solve this problem.
 
-175
+176
 00:14:46,680 --> 00:14:52,912
 And then you can often see things
 on a more... either user stories, or hypothesis.
 
-176
+177
 00:14:52,910 --> 00:14:56,160
 You can see a very clear order of priority.
 
-177
+178
 00:14:56,160 --> 00:15:00,656
 And then you empower the team to
 go and pick up the next most important thing,
 
-178
+179
 00:15:00,688 --> 00:15:04,400
 and it's usually the thing at the top
 of the list, and move that forward.
 
-179
+180
 00:15:04,400 --> 00:15:10,480
 That enables the two way design process
 because people can see what's a priority,
 
-180
+181
 00:15:10,480 --> 00:15:16,928
 and say "I know that I'm the one with
 the skills to do that, to carry it forward".
 
-181
+182
 00:15:16,920 --> 00:15:18,608
 AB: Brilliant, I like that one.
 
-182
+183
 00:15:18,600 --> 00:15:24,368
 AW: Yes, I like that too, and I think it
-also reduces the management load for you. 
+also reduces the management load for you.
 
-183
+184
 00:15:24,360 --> 00:15:32,032
 Your not micro managing anyone
 or making really rigid schedules.
 
-184
+185
 00:15:32,030 --> 00:15:36,848
 Like "I need you to be doing this at
 10 O'clock and then you said 12 O'clock etc.
 
-185
+186
 00:15:36,840 --> 00:15:41,744
 AB: It creates a shared understanding and
 then you can just trust people get on with it.
 
-186
+187
 00:15:41,740 --> 00:15:47,888
 AW: Yes, the trust thing is really important... so true.
 
-187
+188
 00:15:47,880 --> 00:15:54,176
 OK so the last one, which is probably
 one of the most important ones really.
 
-188
+189
 00:15:54,576 --> 00:15:58,704
 At regular intervals, the team reflects
 on how to become more effective,
 
-189
+190
 00:15:58,700 --> 00:16:01,744
 then tunes and adjusts its behaviour accordingly.
 
-190
+191
 00:16:01,740 --> 00:16:07,072
 Some people say 'inspect and
 adapt' as a way of explaining this.
 
-191
+192
 00:16:07,070 --> 00:16:11,472
 So you're not only checking
 where you are with your product,
 
-192
+193
 00:16:11,470 --> 00:16:16,864
 but also where you are with your
 processes, and changing things there.
 
-193
+194
 00:16:17,056 --> 00:16:21,248
 AB: Is this where you were doing a
 retrospective, at the end of each sprint.
 
-194
+195
 00:16:21,240 --> 00:16:25,072
 AW: Yes, that's where that idea
 comes from, from this principle.
 
-195
+196
 00:16:25,070 --> 00:16:30,880
 So yes a retrospective inaud
 
-196
+197
 00:16:30,880 --> 00:16:35,440
 So, what actions can we take to
 support the things that went well,
 
-197
+198
 00:16:35,504 --> 00:16:40,272
 and change those that didn't go so well.
 
-198
+199
 00:16:40,270 --> 00:16:45,072
 So inspecting and adapting,
 and that's it... that's Agile.
 
-199
+200
 00:16:45,070 --> 00:16:51,296
 That's were done, cool. [Laughter]
 
-200
+201
 00:16:51,290 --> 00:16:55,616
 So I guess that's a background.
 
-201
+202
 00:16:55,610 --> 00:17:01,040
 And there's also a question of why we do this.
 
-202
-00:17:01,040 --> 00:17:04,896
-And I think we should just go over that a little bit 
-
 203
+00:17:01,040 --> 00:17:04,896
+And I think we should just go over that a little bit
+
+204
 00:17:04,928 --> 00:17:09,072
 before we move on to some techniques
 on how to apply this stuff to your product.
 
-204
+205
 00:17:09,070 --> 00:17:14,208
 We'll dig a little more into what you're
 doing and see if we can add some more content.
 
-205
+206
 00:17:14,200 --> 00:17:18,272
 And have a go at some of these techniques.
 
-206
+207
 00:17:18,270 --> 00:17:24,864
 So why should we do it?
 
-207
+208
 00:17:24,992 --> 00:17:32,976
 The first reason I would mention,
 is the pace of change in the world.
 
-208
+209
 00:17:32,970 --> 00:17:39,184
 And that pace is faster than ever before.
 
-209
+210
 00:17:39,180 --> 00:17:45,632
 If I had my smartphone with me
 now I could just check how many apps
 
-210
+211
 00:17:45,630 --> 00:17:49,504
 I needed to update: it's a constant battle...
 
-211
+212
 00:17:49,500 --> 00:17:51,296
 AB: That little red one [Laughter].
 
-212
+213
 00:17:51,290 --> 00:17:56,560
 AW: Yes, constant notification that I
 have to update these apps on the phone.
 
-213
+214
 00:17:56,704 --> 00:18:02,570
 And that just shows that as
 users now out there in the world
 
-214
+215
 00:18:02,570 --> 00:18:07,232
 things are constantly changing and
 improving for us with the software we use
 
-215
+216
 00:18:07,280 --> 00:18:11,664
 on our phones, desktops and laptops.
 
-216
+217
 00:18:11,660 --> 00:18:17,792
 Technology changes and the
 way we apply different technologies
 
-217
+218
 00:18:17,790 --> 00:18:23,408
 languages and best
 practices are changing constantly.
 
-218
+219
 00:18:23,400 --> 00:18:32,112
 So this idea of designing everything
 upfront; having a blueprint for a project,
 
-219
+220
 00:18:32,110 --> 00:18:37,552
 Spending a year doing that, so all your
-requirements and documents and designs 
+requirements and documents and designs
 
-220
+221
 00:18:37,552 --> 00:18:43,424
 are on paper, and so beautiful that
 you may as well frame them on the wall.
 
-221
+222
 00:18:43,420 --> 00:18:50,064
 You know, in this world we've moved on now.
 
-222
+223
 00:18:50,060 --> 00:18:56,544
 And things would have changed
 since you created that document.
 
-223
+224
 00:18:56,540 --> 00:19:00,864
 Did you ever come from that world
 by the way, did you do that sort of thing?
 
-224
+225
 00:19:00,864 --> 00:19:09,520
 AB: A little bit more rigid yes, there was
 a lot of setting all of the requirements early on.
 
-225
-00:19:09,520 --> 00:19:14,384
-AW: A big document... [They both talk at once]. 
-
 226
+00:19:09,520 --> 00:19:14,384
+AW: A big document... [They both talk at once].
+
+227
 00:19:14,480 --> 00:19:22,080
 That was my background when I went
 into project management in the year 2000.
 
-227
+228
 00:19:22,080 --> 00:19:28,736
 I was writing tons of documents and
 templates, and that was the world we were in.
 
-228
+229
 00:19:28,730 --> 00:19:36,096
 And then I realised that if you were
 doing designs on paper... it's still paper.
 
-229
+230
 00:19:36,090 --> 00:19:37,520
 [Laughter]
 
-230
+231
 00:19:37,520 --> 00:19:43,360
 You still have to take that piece of
 paper and apply it to something digital,
 
-231
+232
 00:19:43,360 --> 00:19:51,200
 that will become software and it can be much better than what you can produce inaud
 
-232
+233
 00:19:51,536 --> 00:19:56,784
 So that's reason No. 1, why we do it.
 
-233
+234
 00:19:56,832 --> 00:20:05,680
 Reason No. 2 is about where
 project management came from.
 
-234
+235
 00:20:05,680 --> 00:20:11,488
 In the past if someone was
 building the Brunel Tunnel for example,
 
-235
+236
 00:20:11,480 --> 00:20:15,504
 the first tunnel that went under the Thames.
 
-236
+237
 00:20:15,500 --> 00:20:22,592
 Those types of projects were managed
 by Master builders, or civil engineers,
 
-237
+238
 00:20:22,590 --> 00:20:25,632
 Usually on a sort of 'ad hoc' basis.
 
-238
+239
 00:20:25,630 --> 00:20:33,984
 And that was for huge civil construction
 projects where you need a blueprint.
 
-239
+240
 00:20:34,064 --> 00:20:42,784
 It wasn't until the 1950s or 60s that MBAs
 and that sort of thing became quite popular.
 
-240
+241
 00:20:42,780 --> 00:20:46,704
 And project management
 became it's own distinct discipline.
 
-241
+242
 00:20:46,700 --> 00:20:50,768
 And it really came from that
 physical architecture world.
 
-242
+243
 00:20:50,760 --> 00:20:58,224
 It's strange, but when you think
 about the background of that,
 
-243
+244
 00:20:58,220 --> 00:21:02,800
 I think that a lot of people in software,
 still use those sort of architectural terms.
 
-244
+245
 00:21:02,800 --> 00:21:04,640
 AB: That's interesting.
 
-245
+246
 00:21:04,640 --> 00:21:10,160
 AW: Information architecture, inaud construction, there's a lot of that same language,
 
-246
+247
 00:21:10,160 --> 00:21:18,656
 When actually the things we are building are
 not as linear, and not as constrained by change.
 
-247
+248
 00:21:18,736 --> 00:21:23,600
 So if we were building the Shard
 in London, just down the road here,
 
-248
+249
 00:21:23,712 --> 00:21:29,840
 It would be very expensive, half way
 through to move the Shard over there.
 
-249
+250
 00:21:29,840 --> 00:21:33,440
 And I think a lot of people have in their minds that
 
-250
+251
 00:21:33,440 --> 00:21:40,416
 software development projects need to
 be like that as well. But it's not the case.
 
-251
+252
 00:21:40,480 --> 00:21:46,880
 So I think that's two of my favorite
 reasons for why we don't do it like that.
 
-252
+253
 00:21:46,880 --> 00:21:51,216
 AB: Yes, it's a mind-shift isn't it, from engineering?
 
-253
+254
 00:21:51,280 --> 00:22:00,816
 AW: Yes, and there's so many things you have to
 un-learn about what we think project management is.
 
-254
+255
 00:22:00,810 --> 00:22:06,816
 AB: And help other people learn that
 if you want your project to proceed... I think.
 
-255
+256
 00:22:06,810 --> 00:22:17,440
 AW: That is critical, and on that note
 we're going to run through a few techniques soon.
 
-256
+257
 00:22:17,480 --> 00:22:24,816
 And I think the most important
 thing to remember about this is that
 
-257
+258
 00:22:24,860 --> 00:22:32,048
 these should be done with your team
 and your stakeholders outside this room.
 
-258
+259
 00:22:32,128 --> 00:22:36,240
 AB: Well I'm hoping I can take away what
 I've learned today, and its a perfect time
 
-259
+260
 00:22:36,240 --> 00:22:42,016
 because I'm just doing some kick off
 and I can use while it's fresh, and feedback.
 
-260
+261
 00:22:42,128 --> 00:22:45,600
 AW: Perfect, perfect, perfect!
 
-261
+262
 00:22:45,600 --> 00:22:53,680
 So I think we will look at a few of the things
 I think we should look at to kick off a project.
 
-262
+263
 00:22:53,680 --> 00:23:00,112
 I'll get some detail and maybe we'll put some
 'post it' notes on the wall, and we'll go from there.
