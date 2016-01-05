@@ -301,7 +301,7 @@ look similar? No they all look different.
 
 66
 00:05:17,040 --> 00:05:22,144
-Their own inaud things...
+They're their own things...
 
 67
 00:05:22,176 --> 00:05:27,472
@@ -310,7 +310,7 @@ some others that are clustered here.
 
 68
 00:05:27,470 --> 00:05:30,432
-I've put my ideas down in inaud
+I've put my ideas down [inaudible]
 
 69
 00:05:30,512 --> 00:05:42,960
@@ -851,11 +851,13 @@ I think that's right.
 
 185
 00:15:54,400 --> 00:16:01,328
-AW: A lot of products go for users first, registrations first, inaud later.
+AW: A lot of products go for users first,
+and then try and monetize later.
 
 186
 00:16:01,320 --> 00:16:04,928
-And try and get inaud monetize.
+And try and get the revenue. I can't
+believe I just said that word "monetize".
 
 187
 00:16:04,920 --> 00:16:06,912
@@ -863,7 +865,7 @@ AB: Yes, you said it, we heard it.
 
 188
 00:16:06,912 --> 00:16:08,890
-AW: You can put pounds in the jar.
+AW: I need to put a pound in the jar.
 
 189
 00:16:08,890 --> 00:16:14,448
@@ -871,16 +873,18 @@ Anyway, so  that's how you would prioritize it.
 
 190
 00:16:14,440 --> 00:16:19,136
-There you go, you've been quit inaud with
-your drivers... Accidentally
+There you go, you've been quite linear
+with your drivers... Accidentally
 
 191
 00:16:19,504 --> 00:16:23,408
-Accidentally, on purpose. [laughter]
+AB: On purpose.
+AW: Accidentally, on purpose! [laughter]
 
 192
 00:16:23,400 --> 00:16:28,512
-OK, so let's say the whole team have done their drivers,
+OK, so let's say the whole team have done
+their drivers,
 
 193
 00:16:28,540 --> 00:16:30,512
@@ -965,11 +969,11 @@ principles, but I can't remember which one.
 210
 00:18:02,220 --> 00:18:09,584
 AW: Oh it would be continuous attention to
-technical and inaud.
+technical and design excellence?
 
 211
 00:18:10,256 --> 00:18:12,464
-Design excellence.
+So Design excellence.
 
 212
 00:18:12,460 --> 00:18:17,744
@@ -1423,16 +1427,17 @@ balance expectations against effort.
 310
 00:26:31,150 --> 00:26:37,264
 AW: The other thing that might help you
-with this one is inaud again
+with this one is early releases again
 
 311
 00:26:37,260 --> 00:26:39,120
-AB: Having an inaud and then building on that.
+AB: Having an MVP and then building on that.
 
 312
 00:26:39,120 --> 00:26:45,392
-AW: If you have a finite deadline inaud
-add on products, add on teams,
+AW: If you have a finite deadline, and
+that's another myth of agile products and
+agile teams
 
 313
 00:26:45,440 --> 00:26:48,880
@@ -1715,16 +1720,18 @@ with age... That might be another one as well.
 
 374
 00:32:08,910 --> 00:32:13,904
-AB: So can these be derived from your inaud?
+AB: So can these be derived from your
+personas?
 
 375
 00:32:13,900 --> 00:32:21,504
 AW: Yes, so ideally you'll be working with
-user research... You said you had done some already.
+a user researcher... You said you had done
+some discovery work already on this product.
 
 376
 00:32:21,500 --> 00:32:24,320
-AB: Yes, we've got some inaud in mind.
+AB: Yes, we've got some personas in mind.
 
 377
 00:32:24,320 --> 00:32:26,480
@@ -1732,7 +1739,8 @@ AB: So would that  be where you would put these guys?
 
 378
 00:32:26,480 --> 00:32:32,480
-AW: Yes, if that's the inaud that you know about, you feel comfortable with
+AW: Yeah! If you feel like they're the
+personas that you feel comfortable with
 
 379
 00:32:32,480 --> 00:32:36,208
@@ -1740,7 +1748,8 @@ then yes, you can break it down into that.
 
 380
 00:32:36,560 --> 00:32:44,830
-The only thing to remember is that a lot of the time inauds are built as assumptions.
+The only thing to remember is that a lot
+of the time personas are built as assumptions.
 
 381
 00:32:44,830 --> 00:32:47,536
@@ -1748,7 +1757,8 @@ Rather than who your users really are.
 
 382
 00:32:47,530 --> 00:32:51,920
-So it might be that they are your inauds to start off with,
+So it might be that they are your personas
+to start off with,
 
 383
 00:32:51,920 --> 00:32:56,768
@@ -1757,7 +1767,8 @@ hundred, two hundred, or even ten users,
 
 384
 00:32:56,760 --> 00:33:01,904
-Those inauds might not be the inauds that you thought you were going to have.
+Those personas might not be the personas
+that you thought you were going to have.
 
 385
 00:33:01,920 --> 00:33:09,920
@@ -1815,7 +1826,7 @@ provide say... An incentive for them.
 397
 00:34:04,380 --> 00:34:09,600
 AB: And would that be the WHAT, so the
-incentive is how is their inaud.
+incentive is how is their sign-up.
 
 398
 00:34:09,680 --> 00:34:20,432
@@ -1932,9 +1943,9 @@ which is 10,000 users signing up.
 
 423
 00:36:20,832 --> 00:36:30,590
-It's usually nice to put a bit more inaud
-around that, like a time frame... It could
-help.
+It's usually nice to put a bit more
+measurement around that, like a time
+frame... It could help.
 
 424
 00:36:30,640 --> 00:36:33,024
