@@ -187,11 +187,11 @@ here is the responding to change part.
 41
 00:03:12,064 --> 00:03:19,100
 I think culturally that can be hard if you
-come from a traditional product manager world.
+come from a traditional project management world.
 
 42
 00:03:19,936 --> 00:03:23,616
-This inaud thing, did you ever hear those words?
+This scope creep thing, did you ever hear those words?
 
 43
 00:03:23,610 --> 00:03:26,384
@@ -280,8 +280,9 @@ a couple of weeks to a couple of months.
 
 61
 00:04:59,710 --> 00:05:07,680
-inaud we've been a week or two week time
-period. Sometimes a month.
+A lot of agile teams do it within a week
+or two week time period. Sometimes a
+month.
 
 62
 00:05:07,680 --> 00:05:10,752
@@ -297,7 +298,7 @@ AB: Well the other projects I'm working with,
 
 65
 00:05:17,360 --> 00:05:21,280
-(and I'll be sharing the inaud source,
+(and I'll be sharing the dev resource
 which is one of the challenges we have),
 
 66
@@ -430,12 +431,14 @@ give people the support they need to get the job done,
 
 94
 00:07:30,910 --> 00:07:37,104
-is so important... Motivating people
-to get great work done, on a daily basis.
+is so important... Motivated people
+get great work done, and have smiles on
+their faces.
 
 95
 00:07:37,120 --> 00:07:42,640
-AB: Yes, we did those inaud personality tests recently,
+AB: Yes, we did those Myers-Briggs
+personality tests recently,
 
 96
 00:07:42,640 --> 00:07:46,208
@@ -575,7 +578,7 @@ That is the primary measure of progress.
 00:10:05,760 --> 00:10:12,528
 AB: That's interesting yes, I'm interested
 to learn a bit more about the definition
-of inaud.
+of 'done'.
 
 126
 00:10:12,720 --> 00:10:15,952
@@ -606,7 +609,8 @@ AB: Oh... Yes.
 
 132
 00:10:34,440 --> 00:10:40,496
-Red, amber green, a RAG. inaud
+Red, amber green, a RAG.
+We love our acronyms, don't we? So many!
 
 133
 00:10:40,700 --> 00:10:49,712
@@ -909,16 +913,17 @@ comes from, from this principle.
 
 196
 00:16:25,070 --> 00:16:30,880
-So yes a retrospective inaud
+So yes a retrospective is...
+What went well? What didn't go so well?
 
 197
 00:16:30,880 --> 00:16:35,440
-So, what actions can we take to
+What actions can we take to
 support the things that went well,
 
 198
 00:16:35,504 --> 00:16:40,272
-and change those that didn't go so well.
+and change those that didn't go so well?
 
 199
 00:16:40,270 --> 00:16:45,072
@@ -1074,7 +1079,9 @@ paper and apply it to something digital,
 
 232
 00:19:43,360 --> 00:19:51,200
-that will become software and it can be much better than what you can produce inaud
+that will become software and it can be
+much better than what you can produce
+in Photoshop.
 
 233
 00:19:51,536 --> 00:19:56,784
@@ -1135,11 +1142,12 @@ still use those sort of architectural terms.
 
 245
 00:21:02,800 --> 00:21:04,640
-AB: That's interesting.
+AB: That's so interesting!
 
 246
 00:21:04,640 --> 00:21:10,160
-AW: Information architecture, inaud construction, there's a lot of that same language,
+AW: We say 'information architecture',
+'infrastructure', we use a lot of that same language,
 
 247
 00:21:10,160 --> 00:21:18,656
