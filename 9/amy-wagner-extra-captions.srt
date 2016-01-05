@@ -83,7 +83,7 @@ ANNA BOWERS: The principles. AW: Exactly.
 
 19
 00:01:24,060 --> 00:01:26,160
-So the Manifesto... they say:
+So the Manifesto... They say:
 
 20
 00:01:26,160 --> 00:01:32,640
@@ -130,7 +130,7 @@ emphasis should be as they are more important.
 29
 00:02:06,830 --> 00:02:12,208
 So just thinking on that
-for a second... working software.
+for a second... Working software.
 
 30
 00:02:12,200 --> 00:02:17,312
@@ -266,7 +266,7 @@ rather than delivering documentation about it.
 58
 00:04:43,740 --> 00:04:49,280
 Again, we talked about changing requirements...
-we welcome them even late in development.
+We welcome them even late in development.
 
 59
 00:04:49,280 --> 00:04:56,048
@@ -280,7 +280,8 @@ a couple of weeks to a couple of months.
 
 61
 00:04:59,710 --> 00:05:07,680
-inaud we've been a week or two week time period. sometimes a month.
+inaud we've been a week or two week time
+period. Sometimes a month.
 
 62
 00:05:07,680 --> 00:05:10,752
@@ -311,7 +312,7 @@ and I'll be mirroring that, so yes three weeks.
 
 68
 00:05:33,770 --> 00:05:38,800
-AW: Three weeks, ok cool.
+AW: Three weeks, OK cool.
 
 69
 00:05:38,800 --> 00:05:41,104
@@ -386,7 +387,7 @@ that strategy for the learning tool.
 
 84
 00:06:43,800 --> 00:06:51,168
-If the whole team get's a chance to
+If the whole team gets a chance to
 work with him closely on a day to day basis,
 
 85
@@ -424,12 +425,12 @@ AW: Makes you see in the dark.
 
 93
 00:07:21,790 --> 00:07:30,880
-But... in general designing the environment to
+But... In general designing the environment to
 give people the support they need to get the job done,
 
 94
 00:07:30,910 --> 00:07:37,104
-is so important... motivating people
+is so important... Motivating people
 to get great work done, on a daily basis.
 
 95
@@ -463,7 +464,7 @@ back to the point about business people
 
 101
 00:08:04,830 --> 00:08:08,400
-and developers... delivery people working together.
+and developers... Delivery people working together.
 
 102
 00:08:09,184 --> 00:08:15,360
@@ -572,7 +573,9 @@ That is the primary measure of progress.
 
 125
 00:10:05,760 --> 00:10:12,528
-AB: That's interesting yes, I'm interested to learn a bit more about the definition of inaud.
+AB: That's interesting yes, I'm interested
+to learn a bit more about the definition
+of inaud.
 
 126
 00:10:12,720 --> 00:10:15,952
@@ -599,7 +602,7 @@ It's a red, amber green status.
 
 131
 00:10:32,448 --> 00:10:34,440
-AB: Oh... yes.
+AB: Oh... Yes.
 
 132
 00:10:34,440 --> 00:10:40,496
@@ -612,7 +615,7 @@ declaring how you think the project is doing,
 
 134
 00:10:49,710 --> 00:10:56,992
-Red being terrible, like... this is
+Red being terrible, like... This is
 something I need to flag as a problem.
 
 135
@@ -674,7 +677,7 @@ and delivering the thing.
 147
 00:11:54,780 --> 00:12:01,200
 And unfortunately, after you launch a
-lot of the team can be... basically rubbish.
+lot of the team can be... Basically rubbish.
 
 148
 00:12:01,200 --> 00:12:08,432
@@ -707,7 +710,7 @@ everyone, to you as a product manager,
 
 154
 00:12:41,120 --> 00:12:44,112
-developers, designers... all the team.
+developers, designers... All the team.
 
 155
 00:12:44,110 --> 00:12:48,160
@@ -719,12 +722,12 @@ AW: They might be up all night too!
 
 157
 00:12:55,152 --> 00:13:00,256
-Nearly there... continuous attention
+Nearly there... Continuous attention
 to technical excellence and good design.
 
 158
 00:13:00,560 --> 00:13:05,552
-This enhances Agility... so doing
+This enhances Agility... So doing
 things properly first time...
 
 159
@@ -743,7 +746,7 @@ AB: Yes, that's good.
 
 162
 00:13:22,890 --> 00:13:31,104
-AW: Simplicity, this is my favorite one... the art
+AW: Simplicity, this is my favorite one... The art
 of maximizing the amount of work NOT done.
 
 163
@@ -781,7 +784,7 @@ AB: Yes.
 
 170
 00:14:11,050 --> 00:14:17,328
-AW: And getting to know... solving a
+AW: And getting to know... Solving a
 problem as fast and as simply as possible.
 
 171
@@ -805,13 +808,13 @@ your problem clearly to the whole team.
 
 175
 00:14:39,120 --> 00:14:46,528
-And then the priorities... the order
+And then the priorities... The order
 in which we will try to solve this problem.
 
 176
 00:14:46,680 --> 00:14:52,912
 And then you can often see things
-on a more... either user stories, or hypothesis.
+on a more... Either user stories, or hypothesis.
 
 177
 00:14:52,910 --> 00:14:56,160
@@ -863,7 +866,7 @@ then you can just trust people get on with it.
 
 187
 00:15:41,740 --> 00:15:47,888
-AW: Yes, the trust thing is really important... so true.
+AW: Yes, the trust thing is really important... So true.
 
 188
 00:15:47,880 --> 00:15:54,176
@@ -920,7 +923,7 @@ and change those that didn't go so well.
 199
 00:16:40,270 --> 00:16:45,072
 So inspecting and adapting,
-and that's it... that's Agile.
+and that's it... That's Agile.
 
 200
 00:16:45,070 --> 00:16:51,296
@@ -1058,7 +1061,7 @@ templates, and that was the world we were in.
 229
 00:19:28,730 --> 00:19:36,096
 And then I realised that if you were
-doing designs on paper... it's still paper.
+doing designs on paper... It's still paper.
 
 230
 00:19:36,090 --> 00:19:37,520
@@ -1174,7 +1177,7 @@ AB: Yes, it's a mind-shift isn't it, from engineering?
 254
 00:21:51,280 --> 00:22:00,816
 AW: Yes, and there's so many things you have to
-un-learn about what we think project management is.
+unlearn about what we think project management is.
 
 255
 00:22:00,810 --> 00:22:06,816
