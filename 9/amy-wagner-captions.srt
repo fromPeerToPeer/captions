@@ -873,8 +873,8 @@ Anyway, so  that's how you would prioritize it.
 
 190
 00:16:14,440 --> 00:16:19,136
-There you go, you've been quite linear
-with your drivers... Accidentally
+There you go, you've been quite
+linear with your drivers... Accidentally
 
 191
 00:16:19,504 --> 00:16:23,408
@@ -883,8 +883,8 @@ AW: Accidentally, on purpose! [laughter]
 
 192
 00:16:23,400 --> 00:16:28,512
-OK, so let's say the whole team have done
-their drivers,
+OK, so let's say the whole
+team have done their drivers,
 
 193
 00:16:28,540 --> 00:16:30,512
@@ -968,8 +968,8 @@ principles, but I can't remember which one.
 
 210
 00:18:02,220 --> 00:18:09,584
-AW: Oh it would be continuous attention to
-technical and design excellence?
+AW: Oh it would be continuous attention
+to technical and design excellence?
 
 211
 00:18:10,256 --> 00:18:12,464
@@ -992,7 +992,7 @@ as well, would you want that to be one of them?
 
 215
 00:18:29,200 --> 00:18:33,664
-From your career... Its OK to
+From your career... It's OK to
 say these things and then 'Inception'...
 
 216
@@ -1240,8 +1240,8 @@ term, minimal viable product.
 
 271
 00:23:09,720 --> 00:23:14,896
-I've heard that one before, maybe from
-that book "The Lean Startup".
+I've heard that one before,
+maybe from that book "The Lean Startup".
 
 272
 00:23:14,910 --> 00:23:19,664
@@ -1426,8 +1426,8 @@ balance expectations against effort.
 
 310
 00:26:31,150 --> 00:26:37,264
-AW: The other thing that might help you
-with this one is early releases again
+AW: The other thing that might help
+you with this one is early releases again.
 
 311
 00:26:37,260 --> 00:26:39,120
@@ -1435,9 +1435,8 @@ AB: Having an MVP and then building on that.
 
 312
 00:26:39,120 --> 00:26:45,392
-AW: If you have a finite deadline, and
-that's another myth of agile products and
-agile teams
+AW: If you have a finite deadline, and that's
+another myth of agile products and agile teams
 
 313
 00:26:45,440 --> 00:26:48,880
@@ -1720,510 +1719,512 @@ with age... That might be another one as well.
 
 374
 00:32:08,910 --> 00:32:13,904
-AB: So can these be derived from your
-personas?
+AB: So can these be derived from your personas?
 
 375
-00:32:13,900 --> 00:32:21,504
-AW: Yes, so ideally you'll be working with
-a user researcher... You said you had done
-some discovery work already on this product.
+00:32:13,900 --> 00:32:18,752
+AW: Yes, so ideally you'll
+be working with a user researcher. 
 
 376
-00:32:21,500 --> 00:32:24,320
-AB: Yes, we've got some personas in mind.
+00:32:18,784 --> 00:32:21,856
+You said you had done some
+discovery work already on this product.
 
 377
-00:32:24,320 --> 00:32:26,480
-AB: So would that  be where you would put these guys?
+00:32:21,888 --> 00:32:24,416
+AB: Yes, we've got some personas in mind.
 
 378
+00:32:24,416 --> 00:32:26,480
+AB: So would that  be where you would put these guys?
+
+379
 00:32:26,480 --> 00:32:32,480
 AW: Yeah! If you feel like they're the
 personas that you feel comfortable with
 
-379
+380
 00:32:32,480 --> 00:32:36,208
 then yes, you can break it down into that.
 
-380
+381
 00:32:36,560 --> 00:32:44,830
 The only thing to remember is that a lot
 of the time personas are built as assumptions.
 
-381
+382
 00:32:44,830 --> 00:32:47,536
 Rather than who your users really are.
 
-382
-00:32:47,530 --> 00:32:51,920
-So it might be that they are your personas
-to start off with,
-
 383
-00:32:51,920 --> 00:32:56,768
-But after you've got to one
-hundred, two hundred, or even ten users,
+00:32:47,530 --> 00:32:51,920
+So it might be that they are
+your personas to start off with.
 
 384
+00:32:51,920 --> 00:32:56,768
+But after you've got to one
+hundred, two hundred, or even ten users.
+
+385
 00:32:56,760 --> 00:33:01,904
 Those personas might not be the personas
 that you thought you were going to have.
 
-385
+386
 00:33:01,920 --> 00:33:09,920
 So that's a kind of caveat, maybe
 it's a living map as you develop.
 
-386
+387
 00:33:09,920 --> 00:33:13,008
 So we've got one user group then.
 
-387
+388
 00:33:13,000 --> 00:33:18,368
 The next part is the impact, and in
 my mind this is one of the trickiest,
 
-388
+389
 00:33:18,360 --> 00:33:23,776
 but the most useful parts of the impact map.
 
-389
+390
 00:33:24,160 --> 00:33:31,952
 So this is about trying to work
 out how we want to change these user groups.
 
-390
+391
 00:33:32,000 --> 00:33:33,776
 The behaviour of these actors
 
-391
+392
 00:33:33,770 --> 00:33:37,632
 So how can we change their behaviour to get to there?
 
-392
+393
 00:33:37,630 --> 00:33:43,040
 And these are also people who
 can support or appraise you as well.
 
-393
+394
 00:33:43,040 --> 00:33:46,496
 AB: OK, give me an example of what you mean by that.
 
-394
+395
 00:33:46,490 --> 00:33:53,408
 AW: So... Let's see... You want them to sign up.
 
-395
+396
 00:33:55,344 --> 00:33:58,512
 Let's just make that clear here... You want them to sign up.
 
-396
+397
 00:33:58,510 --> 00:34:04,384
 So you might want to
 provide say... An incentive for them.
 
-397
-00:34:04,380 --> 00:34:09,600
-AB: And would that be the WHAT, so the
-incentive is how is their sign-up.
-
 398
+00:34:04,380 --> 00:34:09,600
+AB: And would that be the WHAT,
+so the incentive is how is their sign-up.
+
+399
 00:34:09,680 --> 00:34:20,432
 AW: Yes, that's a good question. So if
 we say the incentive... Let's say that is an incentive.
 
-399
+400
 00:34:20,430 --> 00:34:24,112
 The way you give the incentive is the WHAT.
 
-400
+401
 00:34:24,110 --> 00:34:27,120
 So it could be something specific.
 
-401
+402
 00:34:27,120 --> 00:34:30,912
 So that's a grouping of all of these features.
 
-402
+403
 00:34:30,910 --> 00:34:33,776
 So let's carry through an example.
 
-403
+404
 00:34:33,770 --> 00:34:38,368
 If you're going to give your users an incentive,
 what kind of an incentive could you give them.
 
-404
+405
 00:34:38,360 --> 00:34:43,440
 AB: Well, I suppose you could
 give them some free content.
 
-405
+406
 00:34:43,440 --> 00:34:48,704
 AW: Anything else you
 could give them as an incentive?
 
-406
+407
 00:34:48,752 --> 00:34:50,192
 AB: To sign up?
 
-407
+408
 00:34:50,190 --> 00:34:51,808
 AW: Yes, to get to here.
 
-408
+409
 00:34:51,800 --> 00:34:57,344
 And these would be thinking
 very specifically about Spanish adults.
 
-409
+410
 00:34:57,340 --> 00:35:01,440
 AB: Yes, maybe we could do local deal.
 
-410
+411
 00:35:01,440 --> 00:35:13,744
 In the Spanish market, we could give a
 discount in local bookshops, something like that.
 
-411
+412
 00:35:13,740 --> 00:35:20,240
 Maybe a discount on the print products would be
 a good incentive for people to sign up to the website.
 
-412
+413
 00:35:21,408 --> 00:35:26,272
 AW: So I've got local
 deals/discount, so that's another WHAT there.
 
-413
+414
 00:35:26,270 --> 00:35:29,008
 AB: We could possible do some bundling as well.
 
-414
+415
 00:35:29,000 --> 00:35:33,024
 If you sign up you get the book for free.
 
-415
+416
 00:35:35,168 --> 00:35:37,808
 AW: That's an incentive yes.
 
-416
+417
 00:35:37,800 --> 00:35:48,208
 So free print products...
 So this would be free digital content.
 
-417
+418
 00:35:49,920 --> 00:35:53,664
 [They both talk at once]
 
-418
+419
 00:35:53,660 --> 00:35:58,800
 So that's one carried through.
 
-419
+420
 00:35:58,800 --> 00:36:04,112
 So we can see that we've got
 this, this and this as some WHATS.
 
-420
+421
 00:36:04,110 --> 00:36:08,976
 And we've got  an incentive,
 which is our HOW, so our impact.
 
-421
+422
 00:36:08,970 --> 00:36:14,624
 And we've got our user groups,
 or actors... The WHO we were talking about.
 
-422
+423
 00:36:14,620 --> 00:36:20,800
 These all map back to our goal,
 which is 10,000 users signing up.
 
-423
-00:36:20,832 --> 00:36:30,590
-It's usually nice to put a bit more
-measurement around that, like a time
-frame... It could help.
-
 424
+00:36:20,832 --> 00:36:30,590
+It's usually nice to put a bit more measurement
+around that, like a time frame... It could help.
+
+425
 00:36:30,640 --> 00:36:33,024
 AB: Yes.
 
-425
+426
 00:36:33,020 --> 00:36:39,152
 AW: The other thing I like about this
-is that if you run these things as experiments
+is that if you run these things as experiments.
 
-426
+427
 00:36:39,150 --> 00:36:43,696
 The idea behind an impact map
 is not to deliver everything on it.
 
-427
+428
 00:36:43,690 --> 00:36:48,944
 It's to say, "Well we've got all these ideas,
 we've got a few impacts that we want to happen".
 
-428
+429
 00:36:48,940 --> 00:36:51,888
 We've got this broad concept called incentives.
 
-429
+430
 00:36:51,880 --> 00:36:56,480
 And we've got a few ways
 we can test if incentives works.
 
-430
+431
 00:36:56,480 --> 00:37:01,712
 And not to do everything at once,
 maybe do one first to see if it works.
 
-431
+432
 00:37:01,710 --> 00:37:04,528
 Decide if we carry on or not with that.
 
-432
+433
 00:37:04,520 --> 00:37:11,408
 This one here... Did local deals
 and discounts work - if it did, great carry on.
 
-433
+434
 00:37:11,400 --> 00:37:13,008
 AB: And they are measurable.
 
-434
+435
 00:37:13,040 --> 00:37:19,344
 AW: Exactly, so I think this helps when
 you have stakeholders that come in and say
 
-435
+436
 00:37:19,340 --> 00:37:25,104
 "I want you to do this - make the icon
 cornflower blue", or something like that.
 
-436
+437
 00:37:25,100 --> 00:37:32,720
 I think it helps because you can say,
 "Well, we need to test that, and we're testing this"
 
-437
+438
 00:37:32,720 --> 00:37:39,088
 Or, you can say "how does it map
 to this - making the icon cornflower blue"?
 
-438
+439
 00:37:39,080 --> 00:37:43,712
 Maybe it doesn't.
 
-439
+440
 00:37:43,710 --> 00:37:48,864
 This is a technique you should
 be doing with the entire team,
 
-440
+441
 00:37:48,860 --> 00:37:54,416
 and with stakeholders, making a
 real joint effort, so everyones ideas are up there.
 
-441
+442
 00:37:54,410 --> 00:37:57,072
 And then crucially, prioritizing these.
 
-442
+443
 00:37:57,104 --> 00:37:59,760
 So again, my favorite... Dot voting.
 
-443
+444
 00:37:59,760 --> 00:38:03,056
 Maybe if we just use 2 of those
 stars, even though I've given you a ton.
 
-444
+445
 00:38:03,072 --> 00:38:03,900
 AB: OK.
 
-445
+446
 00:38:04,656 --> 00:38:06,410
 I'm going to do this one.
 
-446
+447
 00:38:06,410 --> 00:38:07,936
 Is it these that you have to do?
 
-447
+448
 00:38:07,930 --> 00:38:09,136
 AW: Yes.
 
-448
+449
 00:38:09,130 --> 00:38:13,920
 And I don't really want to give
 anything away really, but we'll do the free ones.
 
-449
+450
 00:38:13,920 --> 00:38:18,560
 AW: Yes, so you might say
 "these two are the most important".
 
-450
+451
 00:38:18,560 --> 00:38:23,200
 Another thing to do is vote on the impacts as well,
 
-451
+452
 00:38:23,216 --> 00:38:27,296
 because it might be that we
 think that only a couple of these...
 
-452
+453
 00:38:27,312 --> 00:38:30,640
 AB: And that forms the basis for your sprint.
 
-453
+454
 00:38:30,688 --> 00:38:37,936
 AW: Yes, exactly, this can form part of the first
 features that you plan to deliver with the team.
 
-454
+455
 00:38:37,930 --> 00:38:44,768
 It can all go into your backlog... A list of
 things that you would like to deliver in the future.
 
-455
+456
 00:38:44,760 --> 00:38:50,464
 And things you would like to test. I keep
 talking a lot about experimenting and testing,
 
-456
+457
 00:38:50,496 --> 00:38:55,936
 and I think it's one of the most
 important things when your working with agility.
 
-457
+458
 00:38:55,980 --> 00:39:04,000
 Not to just assume you
 know what's going to give you this.
 
-458
+459
 00:39:04,080 --> 00:39:08,096
 So in a nutshell, that's impact mapping.
 
-459
+460
 00:39:08,608 --> 00:39:12,140
 [New Chapter]
 
-460
+461
 00:39:12,520 --> 00:39:14,048
 AW: So how was that for you Anna?
 
-461
+462
 00:39:14,040 --> 00:39:17,168
 AB: That was great, really useful.
 It's stuff that I can use straight away.
 
-462
+463
 00:39:17,168 --> 00:39:21,312
 so I'm hoping that it will be fresh
 in my mind for next week or the week after.
 
-463
+464
 00:39:21,310 --> 00:39:24,272
 I especially like the impact mapping.
 
-464
+465
 00:39:24,270 --> 00:39:31,440
 That's really good for getting things
 broken down into measurable deliverables,
 
-465
+466
 00:39:31,520 --> 00:39:37,056
 rather than just 'big project thinking'.
 So that's really going to help.
 
-466
+467
 00:39:37,050 --> 00:39:39,088
 AB: So thank you. AW: No problem at all.
 
-467
+468
 00:39:39,080 --> 00:39:46,816
 Something I was going to mention...
 I'm an Agile coach and it's like methodology agnostic.
 
-468
+469
 00:39:46,810 --> 00:39:53,376
 And we didn't go into all the different
 methodologies and techniques that make up Agile.
 
-469
+470
 00:39:53,370 --> 00:40:00,144
 We've got Scrum, there's XP, there's
 so many different methodologies out there
 
-470
+471
 00:40:00,140 --> 00:40:03,968
 that you can take as
 starter patterns for how to work.
 
-471
+472
 00:40:03,960 --> 00:40:10,224
 And there's other things like the basic
 facilitation techniques that I showed you today
 
-472
+473
 00:40:10,220 --> 00:40:14,448
 that can complement those sorts of patterns.
 
-473
+474
 00:40:14,440 --> 00:40:21,120
 I think, depending on who you work with,
 they will often tackle problems in a different way.
 
-474
+475
 00:40:21,376 --> 00:40:26,064
 And even over time, an
 Agile coach might learn new things
 
-475
+476
 00:40:26,128 --> 00:40:28,432
 and approach problems in different ways also.
 
-476
+477
 00:40:28,430 --> 00:40:31,696
 And I think that's about being Agile as well.
 
-477
+478
 00:40:31,690 --> 00:40:34,144
 AB: Being agile with you ability. [Laughter]
 
-478
+479
 00:40:34,140 --> 00:40:37,216
 AW: And approaching your
 Agile coaching with agility as well.
 
-479
+480
 00:40:37,728 --> 00:40:43,712
 But I think we always come back to
 those core principles of the Agile Manifesto.
 
-480
+481
 00:40:43,710 --> 00:40:49,536
 And keep trying to work out whether
 or not the things we are doing are valuable.
 
-481
+482
 00:40:49,530 --> 00:40:57,280
 And try to cut out any waste... Anything
 that might not be close to 'doing the thing'.
 
-482
+483
 00:40:59,232 --> 00:41:00,832
 Well, I think we will wrap up for today.
 
-483
+484
 00:41:00,848 --> 00:41:02,080
 AB: That was brilliant thank you.
 
-484
+485
 00:41:02,144 --> 00:41:04,992
 AW: Let me know how it goes.
 

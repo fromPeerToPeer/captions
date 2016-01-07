@@ -145,7 +145,7 @@ technical specification about building the thing,
 32
 00:02:24,800 --> 00:02:29,952
 we want to get much closer and make
-the emphasis about making the software, 
+the emphasis about making the software,
 
 33
 00:02:30,000 --> 00:02:32,090
@@ -191,7 +191,8 @@ come from a traditional project management world.
 
 42
 00:03:19,936 --> 00:03:23,616
-This scope creep thing, did you ever hear those words?
+This scope creep thing,
+did you ever hear those words?
 
 43
 00:03:23,610 --> 00:03:26,384
@@ -280,9 +281,8 @@ a couple of weeks to a couple of months.
 
 61
 00:04:59,710 --> 00:05:07,680
-A lot of agile teams do it within a week
-or two week time period. Sometimes a
-month.
+A lot of agile teams do it within a week or
+two week time period. Sometimes a month.
 
 62
 00:05:07,680 --> 00:05:10,752
@@ -431,14 +431,13 @@ give people the support they need to get the job done,
 
 94
 00:07:30,910 --> 00:07:37,104
-is so important... Motivated people
-get great work done, and have smiles on
-their faces.
+is so important... Motivated people get great
+work done, and have smiles on their faces.
 
 95
 00:07:37,120 --> 00:07:42,640
-AB: Yes, we did those Myers-Briggs
-personality tests recently,
+AB: Yes, we did those
+Myers-Briggs personality tests recently,
 
 96
 00:07:42,640 --> 00:07:46,208
@@ -576,9 +575,8 @@ That is the primary measure of progress.
 
 125
 00:10:05,760 --> 00:10:12,528
-AB: That's interesting yes, I'm interested
-to learn a bit more about the definition
-of 'done'.
+AB: That's interesting yes, I'm interested to
+learn a bit more about the definition of 'done'.
 
 126
 00:10:12,720 --> 00:10:15,952
@@ -912,17 +910,17 @@ AW: Yes, that's where that idea
 comes from, from this principle.
 
 196
-00:16:25,070 --> 00:16:30,880
+00:16:25,070 --> 00:16:32,208
 So yes a retrospective is...
 What went well? What didn't go so well?
 
 197
-00:16:30,880 --> 00:16:35,440
+00:16:32,208 --> 00:16:35,520
 What actions can we take to
 support the things that went well,
 
 198
-00:16:35,504 --> 00:16:40,272
+00:16:35,552 --> 00:16:40,270
 and change those that didn't go so well?
 
 199
@@ -1079,9 +1077,8 @@ paper and apply it to something digital,
 
 232
 00:19:43,360 --> 00:19:51,200
-that will become software and it can be
-much better than what you can produce
-in Photoshop.
+that will become software and it can be much
+better than what you can produce in Photoshop.
 
 233
 00:19:51,536 --> 00:19:56,784
