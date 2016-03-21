@@ -1,0 +1,129 @@
+# Chapter 5: Playing part 1 sequence on a loop
+
+Right now there is no way to loop. We just play 1 player.  And there is no way to adjust the tempo. And also there is no way to stop it. Once it starts playing I can't stop it and I can't continue, so we need to change this schedule thingy.
+
+So, now I need this comment... And we are sure this is playing. We need to do a proper way of scheduling, because I could go on following your challenge, I could go on with this sequence I have here in my array, I could go on and build something which generates this narrow variation. And also Load another sample so the other player is playing as well, but the issue with that (and same thing here), is that I'm scheduling the whole thing from the beginning. Then once its playing there's no way to stop it. And then I won't be doing the things that you ask me for which is playing it, changing the tempo or something. Right now this will be pretty boring.
+
+One of the best things with web audio is that you can interact with it. It's very playful, and generates things dynamically. And what we're doing is not very dynamic. As I said, web audio is running a different clock so you could try and do a timeout. But that's not a good idea because timeouts are very erratic and they depend on a lot of things. The way that is recommended is having a timeout that periodically checks to see if it needs to schedule things. So a way to explain that would be – we are going to keep track of which step we are in. And we know how long each step takes, so timeout is going to be checking like, "Do I need to schedule things? Do I need to schedule things?" Every time we've finished with a function  we give it a new timeout, so it's not a timer, it's a timeout.
+
+SP: So we are going to keep track of which position we are in the steps in the sequence.
+So every time the timeout is going to run its going to say "Which step are we in?" and see if it needs to trigger things or schedule things to be triggered.
+And then, the reason it's a timeout and not just a timer is because a timer is going to be trying to call all the time all the time as fast as possible.
+But with timeout, if for example you drift a little bit, the next time you called you will try to make up for the little bit you missed.
+
+DN: If I understand correctly, the way we've done it so far it's like we define, well so far one bar of music, and we've defined it all up front. And then we just set it running and it plays and we can't stop it.
+But with this it's almost like we're saying...
+SP: We're going to be reading the score.
+DN: We're going to be reading the score like a musician does. At each point in time were scheduling the next beat.
+SP: Exactly. And like a conductor saying "slow down". Because we changed the tempo, we're still reading the score but take longer.
+DN: Nice.
+SP: And if someone says pause, just pause for a moment, instead of "Oh, I can't pause now". So I will just describe a step or something and stop at 0. Which is where I am. So I want to introduce a couple of functions, one for starting and one for stopping, another for trying the timeout.
+Inaud
+SP: We won't call this playSequence, but I'll delete that thing later.
+I also like to have some spaces, some spaces here as well.
+And for some reason I like to have this curly thing.
+SP: Ok I've got start and I've got stop. I like to write this skeleton so I know I need to fill things later. So it's always what I'm doing, And at the end of this I will call this again.
+DN: I see.
+SP: I will use this so I can cancel this on stop... Is it clearTimeout?
+Because obviously cancel was not a good name.
+So that's more or less what we want to do.
+That's why I think it's a good idea to have the skeleton so you can say I want to start and stop. And that's the crux. Obviously we want to have more things in schedule().
+DN: Sure.
+SP: Not just like start or stop timeout. I also need to create the timeout as well. It's nothing right now. It's good to be clear about your intentions.
+So when I start this thing I'll save the time at which this started? Let me think. So that way I know when I pause the thing, and then I can calculate the steps.. This is a bit weird, and it takes a long time to understand, but you will understand why I schedule this thing.
+DN: OK.
+
+SP: So you have the sequence, but you can't pause or play,  or change the tempo, you're just like scheduling everything in advance.  That's not the way it should be, and it's not really playful.
+
+So what we should use is 2 clocks. There's this brilliant tutorial called "A tale of the two clocks". And if you look will find that.
+
+So essentially what were going to have is this timeout function, this scheduling function. It's going to be like the player looking at the score saying "What do I need to do now? What do I need to do now?" Its fast enough but not exactly like what a player would do. Inaud.
+
+So the way we do this thing is with the timeout that I'm going to be setting all the time. It's kind of complex to build this thing from the ground up, and  I always forget something, so I've prepared a skeleton. It's a simplified version of the tutorial, because the tutorial also deals with having swings, and letting you smooth out the tempo at every step. I think it is too complex for this, and also "Clapping Music" doesn't have swing changes!
+DN: No.
+SP: So I feel it's best to have a simplified version here.
+
+So what we will add is, this skeleton has a start function, a stop function so we can clear the timeout. And a schedule function, which, what it does is determine how long each beat is.
+Like 60 seconds slash the bpm, gives us the number of seconds per beat.
+And we want each step to be a quarter of a note.
+Like a black note, so the length of the step.
+And we want the schedule function running every time we can.
+Every time it runs it will look at the current time in context, minus the start time which is what we said when we started.
+So if you have the sequence it can try to make things relative to the steps.
+
+And not to whatever time the whole thing started.
+
+DN: Yes, right.
+SP: So the step time starts at zero, so if you start at zero and this thing is related to the serial thingy, it's easy to say "Am I still in this step, or do I need to jump to the next one?", or "Should I just stop because it's not time to play it yet?" So that's what we are doing here.
+
+So with the step time and the start time, you can say if something has to happen, it has to happen at step time, using the sequence. But when you scale something you scale in the context playtime, which is the web audio clock. So you have this sequence which is totally atemporal, so to speak, so we are going to be looping over the sequence all the time.
+But when you schedule things you do it with the context because we will be playing and stopping things several times during the lifetime of the website, so that the clock of the context keeps growing, but the sequences are still zero one.  Supposing its one step, one second, zero one two three four. At some point the context might be like – thousands of seconds, so that's why you need to remove or...
+how do you say, when you add something you sum it, but when you remove something you...?
+DN: Get the difference? Or subtract?
+SP: You subtract! That's the word.
+So that's why you want to subtract this start time, so it becomes relative again.
+So just go to the next step and if it's more than the number of steps we are looping so you go back to zero again. And then you have step length and you want to scale it again.
+DN: And it calls itself.
+SP: Yes. Writing this thing from scratch, I can't reason about this because I understand this thing now, but the first time I tried to do this by myself it didn't really work, it's hard to do it by yourself. You need to go through the tutorial first.
+I want to just copy this. So this is the functions and I'll put them at the end.
+DN: I did notice, here it talks about a context whereas you've abbreviated that as ac. That might cause problems.
+SP: Yes, I was being super minimal here. So we need to change this to ac. This extra 0.005 thingy, it gives you some leeway so when you press and release the button, a little bit after. Just in case there was some delay or whatever. I also need the firewalls. I might have some already? I don't know.
+
+I should maybe be using JSHint but I got this computer recently and I haven't installed JSHint yet. So things are missing.  I generally have indicators on the side like "this line is wrong" but I don't have anything yet.
+So, I suppose... This is step time, step length, we will make this independent on the BPM. So suppose I use 70. I've found this is the right number for clapping music. So now instead of playing this sequence. We just do playback, we don't do any more. Just play.
+We should shift everything to the right because it's not indented. Before we start we need to install the buffer somewhere because otherwise it won't know what to play with.
+Sole types
+Inaud
+DN: OK.
+SP: So I set the sample to decode the buffer.  So now when we start playing nothing is going to happen because we're not doing anything in the schedule() function. We have the start time, the step time is zero here inaud.
+DN: Oh yes, of course.
+SP: Let's suppose we start early. This is not zero so we will have an issue here. And then we want to play a quarter note la la la la.
+So here we need to decide what we are going to do every time we do this thing. So how do we inaud, we need to look at the sequence.
+
+Which element to look at for the current step. This is kind of similar to the previous play sequence but we may not look at the whole thing, just do one step at a time.
+So shouldPlay do a sequence of current steps. Inaud
+DN: So this schedule function gets called what, a hundred times a second?
+SP: Yes it could be, if its step time minus... Like step time plus this very small fraction of time so it shouldn't advance a lot in time. So currentStep there should play.
+I need to comment this thing... Let me think.
+So it needs to be called a number of times just to make sure this is happening.  I'm looping (laughter). So in theory it should start playing as soon as this thing is loaded. Nothing should play now but I'm trying to see if its looping. Every time you change the system you should also be different.  I want to make sure that things are happening on the right order. So just to make sure. I've got some error so that's good.
+So number of steps is undefined. That's why you need to complete the skeleton.
+[Silence]
+SP: Try again. OK so now it's doing things, then loop, and then it starts again.
+Where is it showing me? It should start at zero. I am confused.
+DN: It goes up to 13 doesn't it? 1 to 13.
+SP: yes, why is it inaud then... Oh because the next time it goes it says "hey this is longer than the number of steps I go back to" This is not correct.
+Later we might want to show the current step with base one, because that's what humans use. We don't say "We're in step zero, we're in step one." Have I done this thing without even knowing?
+So it's looking as it should be but were not playing that and we're also not pausing that, so we might want to make this thing play again. So if it should play, we should do the same thing as we did before.
+We want to use the clap sample. And when is context play time. Because that's the absolute time, instead of relative to this sequence.
+As I said, it's a bit confusing, but suppose you just want to have the score time with a clock and your copying the sequence and transposing that. If you pause, the sequences are stopped and then you continue again but it has to be starting from a new start.
+DN: Yes you have to add that time while it was paused.
+SP: Yes because otherwise you get weird things when you 'unpause'. Like, why is this not really playing as it should?
+So in theory and if I haven't messed anything up it should be playing again, and now it should loop... Yes!
+I think it's got the final...
+DN: It feels to me like there's an extra silent beat.
+(They listen to the music).
+SP: Is that right?
+DN: No. It feels like within a cell, the rests...
+SP: Ah there is an extra something, maybe?
+DN: Yeah, I think so.
+
+DN: And it's still going up to 13.  I think there's like two empty beats at the end.
+SP: Yeah, it feels like one empty beat.  OK, I'm going to go here and do this thing that we added which is ... (shut up... Laughter) so that's very convenient.
+OK why are you doing this thing? So it is going to 13 which it shouldn't. I think the issue is here it shouldn't be currentStep more than (>), it should be equal (===) and then hopefully... Let me play it again.
+DN: That sound good.
+SP: There is not the extra step.
+DN: And were going from 1 to 12 now
+SP: and also it wasn't playing. There was nothing in the sequence to play so it was saying ah ha no playing. If we had printed a value, which is something that I was going to do, then we would have got an undefined. And I will be like "hey we are going too far" something like that.
+DN: Yes.
+SP: So that's why sometimes, it's not the best practice, especially when we have lots of data.
+DN: You have to click that at just the right time.
+SP: Yes, I will need to file a bug for this.
+Yes so if you have a lot of data printing that to the console, it's not very convenient but these small things, it's OK, just to bring up the value and check that you're getting the right things, especially with timing. You notice when that's off!
+
+DN: So I guess at this point, if you want to change the beat per minute figure. If you were to hard code it to something else...
+SP: Yes I can hard code it... You can see the difference. OK, I made it to 100 bpm.
+DN: Yes. That's exciting!
+SP: I'm don't think the original plays this fast or any of the ones I've seen.
+
+I think with control-M... Ah yes! With control M you can mute. Ok, we learned something. So I guess we can make this go back to 70 bpm. And let's check this thing in...
+[Sole types]

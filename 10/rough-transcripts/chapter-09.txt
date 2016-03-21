@@ -1,0 +1,94 @@
+# Chapter 9: Add play and pause buttons
+
+Now we have this thing we can start adding the web components this is why we wanted to add the build system, not just for the sake of having a build system.
+DN: Right.
+SP: Here, because its inside the whole thing I could make this a function. I'm going to keep it like that.
+ I want to load the web components. This will make sure that the polyfill and everything is loaded. But this is maybe better outside here. So [webpack] just puts the code in there.
+I also want to load my component. And I need to register it as well because there are two parts to using web components with custom elements. You need to load the prototype, and then you need to register, which is making it available to the parser. So here you can use 'openmusic-transport' or you can use 'mega-component', or whatever you want.
+I've made that in a way that you can register it any way that you want, for example you may want to put different versions of the component.
+DN: I see.
+SP: And the parser can only cope with one name. So if you register something that already exists it will tell you no this has been already registered. I don't know if that's the best solution but it works for me.
+DN: So is that going to be the name of the tag you're going to use in the DOM.
+SP: This lets the browser know if there is a new tag that it can to use. So if it finds openmusic-transport in the index.html we will be able to include the thing... And then here is my parser saying, I don't know what you're doing. This is the problem with using web components, nothing knows what you are using. Yeah, I guess you need to cope.
+And the problem is I need to watch. I need to rebuild this thing now. So I need to run build etc. So were going to introduce the webpack watch version thingy. Watch mode.
+
+It's pretty much the same but with extra arguments.
+So with browserify, it's so modular that it doesn't even have the watch function itself.
+You need to install watchify, which then calls browserify.
+That's the cool thing with webpack, I still haven't explored all the advantages but so far this is neat enough. Especially if you want special things. With browserify I think you also have browserify transforms, I don't know if webpack supports those. These are the things I have learned so far.
+So if I run watch now it should compile the thing and then keep watching. So if I change something here and save... There is no difference.
+Yes, created something now because it's different. I think if there is no change it doesn't rewrite things. So that's cool when you're saving out of habit. [clapping plays]
+I've got my component here.
+Ah OK it doesn't have anything and it's not connected to anything. I can press these and nothing happens
+DN: That's interesting already. Pressing play disables the stop button.
+SP: Yes that's functionality from my component because I really hate writing UI. So if I write it once and it works I want to use it as much as I can.
+So detecting this is not super hard but if you can stop having to do that all the time its better. So it emits events, and you can listen to those events. If you just press play it will give you a play event. Or if you press stop or if you change the bpm, so you can access that thing.
+I just need to listen to those things and do things accordingly. So I'm going to connect both things.
+The issue with this component so far is that there's no way for me to tell it to start playing.
+Or to display the playing state.
+So my hack is to find the button and click. Like, trigger the click event. But this is not the best way, I want to find some way of specifying whats the current status declaratively. Like, in the mark up, say: this should be already playing. Instead of me clicking the button.
+DN: Something like an autoplay attribute?
+SP: No no no, right now if you look at the markup it just has the transport, I would like to be able to say something like: status="playing". And if I specify this, the play button should be disabled and the stop button enabled.  But right now you can't do this.
+So I'm going to do a kind of hack where I will add a listener to play and stop, and then I will immediately click play so it starts playing. Instead of me starting the play() function and changing the status of the button.  I'm going to attach listeners, and then click, click! Programmatically click play as if I was the user.
+That's how it works so far. It's a hack, but in the theory in future I should be able to specify it differently.  So I'm going to use that trick.
+I need to find the element.
+The cool thing about using web components as custom elements is that they are just DOM elements.
+So you can just use getElementById, or querySelector, or, you don't need to use whatever.
+For example, if you use React, it's wrapped in whatever React is using.
+So you can't access the DOM elements that easily because it wraps them up in a precious way.
+But with web components or polymer, you just use the elements.
+In this case I'm going to use querySelector.
+Close this thing...
+So that should give me the element and I can add the event listener, just like with any other DOM thingy.
+So I can say when play happens, start playing la la la...
+I should probably add this thing once... Ok this is fine.
+When 'Play' (is pressed) then we start.
+What we'll do here is, play here the button.
+Wait and you'll see.
+Let me undo this...
+Let's separate this thing so I can see what I'm doing.
+
+So we are adding the events here.
+When play button in the transport element is clicked, we want to start.
+Which is what we're doing up here.
+So instead of doing this thing, we're going to do transport.play element. When I start playing this thing inaud la la la but this is hack and I'm going to mark it as that: HACK!
+So we should probably do something like FIXME hack so you can search for that later, and make sure this hack is not surviving but anyway...
+Because this is a hack I'm going to do something gross: I'm going to look for a button which is a play button. A class play because that's how its created. If you look you will see class is playing. So I'm going to click it. So when all the samples are loaded I want it to click the button. It's going to be automatic.
+DN: So it's a sort of imperative version of autoplay.
+SP: Yes, exactly. Via the button. So then I just need to care about this thing is the code for everything, because I've got the events for everything and likewise when I stop... Sole types.
+I could just... And the same with start.
+I'll deal with the bpm later. Hopefully... Something's not really happy. Oh, it's muted!
+OK so its playing automatically. Without us having to stop it. [they listen] its correct. What's the inaud it should be stop but it's not working. Is the function called a stop, maybe it doesn't exist. Well we haven't tried it before.
+DN: Yes, we haven't tested that function until now.
+SP: So what happens when I click stop. We're going to use the debugger for once.
+[they listen]
+We haven't pressed stop.
+It has stopped, good.
+DN: scheduleTimeout is null.
+SP: Have I actually stored this anywhere? So we haven't been setting it to anything. If we clear the thing in-between we shouldn't call it again. I should remove the debugger. I should make a thing so every time it finishes building it says something with the say programme that says 'Done' when it stops building.  I don't know if you've seen this thing?
+Sometimes, when it's a very long build I do something like 'say done'.
+
+[audio: raise volume of speakers]
+Computer: Done
+
+I can do that in the background and go back to what I was doing.
+[they listen]
+OK it stops.
+DN: Am I right in thinking that the stop button is acting as a pause button?
+SP: Yes.
+DN: It stops you in time, and when you press play again it picks up where it left off.
+SP: Maybe I could rename it? But this is a web component, so I can't really. I guess for the challenge... Yeah, it's not very configurable.
+It does what I want, but the button doesn't say 'pause'.
+DN: When I set the challenge the said 'play' and 'stop' without giving much thought about what I meant by stop, but pause is...
+SP: The client wasn't clear here!
+DN: No, that's right.
+SP: It's just like, literally play and stop.
+I was making sure that it would continue in the right place.
+[they listen]
+DN: That's really cool.
+SP: And now we need to try to do the bpm.
+I could maybe do a commit already?  I'm going to try and split this thing. I like to have one thing running on one side and the other on the other side. And I also have npm in my bashrc or whatever, so every time I open a terminal it loads this node particular. So that why it takes a bit of time.
+
+[sole types]
+"Use transport for play and stop" to be exact.
+

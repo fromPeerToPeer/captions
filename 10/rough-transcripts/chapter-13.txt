@@ -1,0 +1,33 @@
+# Chapter 13: Panning each player left or right
+
+SP: I did commit this thing.
+Instead of reverting this thing, I'm going to reuse this structure I created for the gains. And instead of changing the volume I'm going to make sure that each panning node is on a different side so each player is on a different side.
+The playBuffer() function was, had the gainIndex in there had the gainValue. I don't need the gainValue because the panning is going to be set. So I'm going to remove that.
+So one of the notes will be on the left or the right, or whatever it is.
+We don't need this.  Instead of gain it should be panNode. I could maybe replace all.
+DN: Is there still a gainNodes somewhere?
+SP: Yes, somewhere but we know where they are.
+
+This is going to play in the pan zero. We don't care about the values now because they are inaud. This is a terrible function because its clapSamples1, plus some time and one number but you don't know what it is. It's not the best practice but you could elaborate on that later.
+
+I don't like this, like, "magic numbers" thing it's pretty terrible.
+Ok so we need to create panNodes instead of gainNodes. I think its panner actually.
+
+There is also a StereoPannerNode, which is the one we want because it's easier to set up.
+DN: Ah right.
+SP: So this StereoPannerNode just goes left and right with the pan thingy. Whereas the other one is 3D, and you need to set up direction and the listener and also specify the listener. So this one is easier just left and right. So I want to create the stereo panner. And nodes, this is a habit with me.
+DN: g... p...
+SP: So I connect this thing here. I also need to specify its pan. So p pan value. I need to create a stereo panner, and pan nodes.
+DN: is this going to be something  between -1 and +1?
+SP: Yes. Yes, -1 is full left, and plus one [full right]...
+So how do I do this inaud.
+I'm going to be super lazy because we are running out of time.  I'm going to v: allow here if j is zero minus one plus one. Because we are just going to write from zero one to one. Maybe we don't want it to be so specialised because this is extreme left and extreme right, but we will see.
+Sometimes you don't want to do it so saturated because if you play it in places that have proper speakers, some people won't listen to that because they are in the wrong place. But I think this should be ok.
+So hopefully this should still work. Yes, stereo.
+DN: Can you tell?
+SP: I can
+DN: Yes I can hear it now. From where I'm sitting I'm just getting a wall of sound. Like the inaud from before but...
+SP: I'm trying to click on this. Anyway in theory you can see where the property is.
+If you could stop it. Now you can see the pan here.
+DN: Right
+

@@ -1,0 +1,60 @@
+# Chapter 7: Using a different clap sample for each player
+
+SP: I have another sample somewhere, like here.
+DN: Yeah, they sound completely different!
+SP: They are different.  Maybe not the best, but they do sound different. So well just paste it in here, and now we have two.
+We want to load two and we want to make sure both have loaded before we continue. So here we enter the horrors of synchronicity in JavaScript. They created this thing called promises, so you can just press enter sync without having zero callbacks. If we didn't use promises we have to load the first sample and then the second, and it's not very elegant.
+We are going to turn this into a generic thing for loading the samples. Giving them the URL and then instead of just loading the thing we will make it give us a promise, and then we will use the Promise.all() method. That waits for everything to be loaded. So it's a bit less hard-coded and a bit more generic.
+So I'm going to change this comment to "Loading samples generally". So it will return a promise. I will do this step by step.
+Inaud as she blocks text.
+So instead of opening clap zero wave, I'm going to load the URL And instead of just returning this... I'll do it step by step. And also we don't want this thing here either.
+So if we load this sample, I want it to have some call back or something, so it can tell you this thing is done but I want to convert this into a promise because it should be faster.
+
+So I'm going to return a promise. You tell the person there's a promise. At some point something might happen. The promise happens or it is rejected, which is when something fails. When you have a promise you can use the then() method to say: when you fulfil this, promise me this thing then do it. It's like the connect() method but instead of for (web audio) nodes it's for things that might happen in the future. You can connect as many things as you want to the promise. You can connect a number of events. Inaud, for example you might want to load something sequentially, instead of all at the same time. But in this case we just do promise all.
+I don't know how it schedules things and I don't really care. I just care about the things being done. If you care about the order of execution you might want to use a different library. In this case I don't, so I will just make this thing. The way you use promises you wrap the code that you want to execute with a function that has two things, 'ok' and 'fail'.
+DN: OK.
+SP: I think this is not the correct method names, but I like this thing because it's pretty obvious.
+Like, this is the 'ok' callback or the 'fail' callback.
+
+So if you return this thing. So in this case I'm tuning the whole process, everything.
+When I'm loading I'm going to call the OK with a response. I will need to decode the thing, but anyway... I will use this thing or fail instead of this. So I do need to use the decode thingy. Load sample, I just want to get a sample out of here at the end, however you create it, or decode it, I just want you to give me a sample.
+DN: Yes, OK.
+[Sole types]
+This is a promise version of the inaud calculator but it doesn't work in Chrome yet.
+DN: I see.
+SP: So it's pretty much the same. This is a good case so I'm going to respond. I'm going to call fill the promise, decode buffer. And if there is an error, fail.  That's why I like the OK and fail because it's fairly obvious. Not like an error callback..it's too long.  Get on with it. I think with the promise version you can just return ok with the result of this. Inaud in chrome, I don't want to do this. I want to keep it simple and this should be simple enough.
+So if I call this function I'm just going to get a promise, and it doesn't actually do anything.
+I'm going to show you so I'm going to try to load clap_07.wav
+So if I do this...  the promise is pending.
+DN: Ah yes.
+SP: So nothing's happening. But if I say Promise.all() with an array of promises. In this case just one. Or maybe not. Let's not go that far. If I say sample promise then hopefully it will give me a sample.
+Ta Ta !
+So I could do this thing, or I could... This is not Ruby... So I need to have parenthesis. [laughter].
+We have some spaces.  So here I should have samples. So it will make all the promises happen somehow. I don't care how I just want it to be done and then give me the samples in another array. I should have another buffer which is the inaud as before. I could generate this but I don't think it's worth starting something. I'm just going to be very lazy again.
+DN: Sounds fine.
+SP: If I had another one I could list the samples to load. An array and map it so you have a map of promises, and then you make them so inaud. (laughter). So you could do all Promises.  Suppose its sample 1 and sample 2 and you could map that. Inaud URL.
+Sole types
+So you want to return promise and generate URL. So this should give you a list of promises that you then send to a promise.
+DN: Right.
+SP: I'm just going to inaud here. We need to complete this thing.
+DN: You need to call the first one 1 I think.
+SP: Yes. So in theory that should give me two samples. Yes, we have two samples, so now we can do this thing.
+I could store these samples in my global clap samples. Instead of having clap samples  I will make it into an array so if I try to have everything loaded inaud a break or something. We could start it here, but we want to start when everything has been loaded. So we can start here.
+Now I need to make other comments so it makes sense. It's loaded.
+So in theory that should do it. We need to change the function that plays samples so it uses different samples for each player. So this function loads the sample and decodes it. It doesn't have any other function it just gives you a response for the sample and that's the promise.
+DN: Right.
+SP: So it's really refactored nicely. So this is loaded and then we just need to make sure this one plays different things. But we know where they are. One is zero. This is not too good practice but as long as you know what you're doing (laughter) So instead of just playing the clap sample, play one and play the other one. It maybe should be less hard code. When you have many things happening at the same time you want to use arrays instead of variables but I think for the time being and simplicity its better. Because otherwise this syntax just gets with too many brackets. Just here it's an ugly array.
+I'm going to try this, see if it works.
+
+[editor: bring speaker audio into foreground]
+
+[They listen]
+
+SP: See? It's slightly different.
+DN: Yes.
+SP: Too perfect, but they are playing. They can get you tapping your foot.
+DN: Yes. That's completely transformed it, just by adding that other sample. It sounds so much less mechanical. Or less monotonous I should say, it still sounds mechanical.
+SP: Less robotical. At least you can differentiate otherwise it was like "I don't know what's going on".
+Ok So we've got this thing so we can make another commit.
+Now I need to add more files.
+

@@ -1,0 +1,80 @@
+# Chapter 6: Playing part 2 sequence
+
+So we've got this thing which is, sorry control-M which is looping. But, we might want to have the second player playing. Because right now it's incomplete!
+I'm going to mute this thing again.
+
+So looking at the challenge, well it says that it starts playing both at the same time. After 4 times of repeating the stanza, the second player shifts one note. And then after four times of doing that thing, the second player shifts another beat.
+
+So I want to increase the stanza number after every 4th repeat. So I'm going to use the stanza number every time I want to shift. So I'm going to algorithmically generate the score from the second player. Instead of giving this player a different score, I will take a look at the score but shift that. It's the second score but its determined based on the existing score. Because maybe later, if we have time we might want to change the score. That's why I'm not generating that from the beginning, but based that on the existing score.
+I guess I can have something like stanzaLoopTime... No I don't like this.
+DN: I suppose it's almost like, how many repetitions in a stanza.
+SP: Yeah, stanzaReps? Like power lifters! So we also want to loop 4 times to hard code everything.
+I don't know if I want to call the stanza inaud. numStanzaloops maybe, that sounds better.
+DN: OK
+SP: I will say I want to loop this thing 4 times, and every time its 4, I will just increase the reps and then decide what way to play it. Inaud nothing... Go away.  It's good to leave it clear.
+DN: Yes sure.
+SP: So this is what we want to repeat the same so this is what we want to increase. We also could get rid of these console thingies. What else, inaud for now. We could use it to print the number of reps.
+So stanzaReps.  We also want to know which is the correct stanza number. We want to keep the number of reps of the current one, maximum of 4 but we also need to know which is the current so we can increase that after 4 beats.
+DN: Sure.
+SP: And also make sense of this, is it the current one. The amount of time repeating the stanza. And this is the maximum inaud. I think it's a good idea to have it ordered in a logical way. So when we finish the sequence, we look but we also... We increment the number of repetitions inaud stanza. But if the stanza reps is the number of loops, we should increase the current stanza... Hopefully. [laughter]
+So I will print current stanza  And maybe the reps as well so we can check it.
+DN: Sure.
+SP: So this is the current stanza and reps
+I don't usually use the word stanza.
+DN: It's not slipping off your fingers.
+SP: No, it's not. In theory it should stop. Something broke.
+[they listen to the clapping]
+I'm not sending anything to zero. [laughter] So that's why it's going forever. So it should increase that but it also should... It's hard to think when this thing is clapping in your face.
+It should increase that but also go back to zero. Need to inaud because we're doing a new one. OK let's try again.
+[They listen again]
+I think that makes more sense.
+The first one doesn't load because we are not inaud yet., but |I think its correct.
+DN: It looked wrong at first there because...
+SP: Yes, we should show the thing on the screen all the time because it would make more sense. So I think I will wait until we get the player playing [they listen] This looks good, so I'm going to get the second player to play. I need to commit this in.
+I keep checking this, I am only changing main.js.
+So this should be "keep track of stanza and reps".
+
+So with that I can determine what the second player plays.
+DN: Yes.
+SP: So the ‘should play' is for the first player, and we need to determine if the second player has to play. So I'm going to rename this to shouldPlay1 and shouldPlay1, and then I'll find out if the second one needs to play. It's not very scalable when you have lots of things to play but for this case it should be OK. So this is going to be using the number of stanzas because every time we play another 4 loops we want to shift.
+I'm going to calculate the step separately so it's clear.
+
+So the current step is the current step, plus the current stanza because that shifts one but we don't want to go too far because the sequence only has 12 so if I'm in the last step and I'm playing the second player, I'm going to be out, so I have to look back and start from zero and you can use the modulo operator.
+Inaud, does that make sense.
+DN: Yes that makes sense.
+SP: So, for those at home that don't know.
+This I'm not going to execute.
+
+So if you have the modulo thingy. Suppose you have 12 which is the number of steps we have. So we model the values with 12,1 its 1,2 ahh. Its test, I'm just going to...
+11, I'm going to use eleven and 12 should be the serial because it goes back to zero. We never go out of there. Knowing how the modulo works is super handy when you have a number of values and you want to skip to the next. Do something videos++ modulo the length. And it works super quickly. Inaud
+It's not the best practice because you have to explain that. But you could say something like index++ No that is even worse it's better to say index % length inaud but for typing I might just use this thing, which is not the best practice. But if you're doing short things you might just want to use that.
+Just to make sure, just load it. Ah go back.
+OK so, we can't really say because its showing the other one. And so inaud some time
+DN: Ah..., OK.
+SP: So right now they are the same because we're still looping. But in the next block we should see how they've shifted.
+DN: Right.
+SP: It seems to be working fine. So now we know that that one should be playing a different thing.
+DN: Third stanza, zero two.
+SP: So there are two shifts. OK that looks good. So that's why sometimes logging is good.   You could debug this thing but the problem with debugging is that you need to go step by step. Whereas, if you can see the progression like this it's easier to see what's going on. You don't need to say next next next, it's really boring. And also, this is not the same its slowish. Yep, OK. We have the currentStep2, we can determine the shouldPlay2. So shouldPlay2 = sequence[currentStep2]
+DN: Right.
+Sp: So if(shouldPlay2) and just play the buffer. And clap sample. And you have at the same time, clap sample, it's just that they are looking at different points but they are still inaud because the steps are still step time.
+DN: Yes, right.
+SP: Maybe if this was a real score it would all happen in quarters, I don't know. Different lengths and things like that. This is a very simplified version. So in theory this should play the things I want.
+[playing clapping]
+SP: OK, let's try this.
+I will try this and see if there are more things. So you have two  playing. You can really see the difference now.
+DN: Ah there we go. It's really hard to tell who's playing isn't it.
+SP: Yes, because we still have the dynamics compressor so some things are going to be inaud. That inaud using the same sample for both. And we change the sample. [they listen]. Yes, it's hard to say. I'm going to change the sample and add another one. So we can see the difference because right now it's too hard to say.
+DN: Yeah.
+SP: I would say it's working, but who knows. OK so I will commit this and change to loading to 2 samples instead of using one for both. Otherwise I don't know what's going on.
+DN: What we have here is a performance.
+SP: A performance!
+DN: Well, yes it is clapping music.
+SP: But a very precise performance, all the players sound exactly the same. And always in time.
+DN: It's "clapping music" by a robot.
+SP: But it sounds like a machine as well, do do do do. Like you were saying off camera, There is no silence in the second stanza. And the reason why it's do do do is because of the dynamics compressor making sure we are never saturating. So if we didn't have it we would notice louder things.
+DN: Yeah.
+SP: But right now we can't.
+
+Let's try a different sample to start with. "Make second player play".
+

@@ -1,0 +1,39 @@
+# Chapter 3: Adding a limiter
+
+This is OK, but sometimes you want to make sure things don't get too noisy because maybe this sample is super super saturated. You don't want to get people deaf while using this.
+So it's a good idea to insert a limiter
+So instead of connecting the sample to the destination, you connect it to the limiter. So you don't maximise all the sounds.
+
+DN: Don't blow up your speakers.
+SP: Exactly!
+So I will create this thing up here... Very much a inaud name. And I will create another node which I think is called 'compressor'... DynamicsCompressor.
+
+So instead of connecting to the destination, I will connect to the limiter.  And connect the limiter to the destination.  So we create this whole chain. And this is always connected, so we don't need to do this all the time.
+So we connect this to the limiter, and this should play.
+This is the base here.
+DN: So we're seeing the graph?
+SP: Yes, but we don't see the buffer store because it's just died and it's been deleted.
+DN: I see.
+SP: You see now everything has gone because we're not using it anymore.
+The garbage collector is doing his thing [laughter]. So you saw that briefly.
+DN: A flash of a second.
+SP: Well we have more things running. We will see more things showing up and it's interesting to see that things don't stay.
+
+So that's inaud. So when you want to describe things, or when things inaud too long. Inaud.
+Hmm... Maybe I should check that everything's correct.
+DN: I see.
+SP: So it's good to keep an eye on these.  If something inaud correctly. We want to make sure things are really disposed of.
+DN: Yes.
+SP: So we've got this thing but it's just like a clap and we want to play the sequence.
+
+SP: So I would create a repo here and then inaud.  And obviously, everything's new. So will just add clap, index, main, and I'll commit that as ‘Hello world'. So there we go.
+
+As I was saying, I will have things that are sounding but I want to follow the sequence that you explained.
+Also before I continue I want to remove this from here because it's going to be blocking the body and if its huge, the programme will be saying what's going on here? I don't see anything. So it's best to move it here. So at least you get to see clapping music.  I get something. Something inaud before.
+So it will have something like loading la la la or this is an example of whatever, so far we can just leave it like this.
+Sole types
+SP: At some point you have more libraries and the inaud ends up growing.
+Depending on the connection speed it can take a long time and you get these blank pages happening inaud and you don't want that. [Laughter]
+DN: Yes.
+SP: You want people to stay, and wait for your magic.
+
