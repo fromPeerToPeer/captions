@@ -1,0 +1,81 @@
+# Chapter 2: Playing a clap sample
+
+SP: So this is just an empty directory: there's nothing here.
+I'll start by creating a file which is an HTML file, so we can start doing things.
+Right now I don't need to have anything but I suppose I should put something.
+So if I open this thing – there's nothing here.
+I need something that loads.. This is not the best place to put it but I will start with this. And obviously we need to write the file.
+I like to at least be a little correct.
+So the code at least waits for loading.
+It will start when the whole thing has loaded which should not be too complex because there isn't much at all.
+When you want a web audio you have to start by creating a context. A black box thing or mini universe, so you can just create it like this. Inaud because Safari doesn't know how to do things without prefixes.  If you want to do this in Safari you have to say look for the context.
+People start doing things like: AudioContext || WebkitAudioContext (I'm just going to delete this.)
+There is a polyfill you can install and it will bring all the variations and also patches some of the old methods safari has that are the old style...
+Because they haven't updated everything.
+But, I don't like to tamper with those things when I'm doing a new project.
+So I just try to do everything and then if I really need to make this thing work with safari and then I will add the polyfill and make sure that all the patches work with the new style of code, but for this example we can just leave it like this.
+And we have this and it doesn't do anything at all.
+
+I'll just make sure it works. Yes. So below that it is showing me ... The audio context ... And there's nothing happening.
+We have this thing but there is nothing to see.
+DN: I see, so this is a dedicated inspector.
+SP: Yes, and if you don't do anything, you don't give it the context. Nothing. We are waiting for something to happen – it's very lazy. It doesn't waste of resources, trying to show things when there is nothing to show.
+The way this works is you have nodes, and you connect those nodes to the destination.
+It creates a graph of sounds that go in a cascade to the context destination, which is the speakers.
+So if I want to make some clap sounds on this computer I need to load the sound, and then create a node that can play the things.... And then trigger the thing.
+
+Also it has to be connected to the destination
+So I will start by loading the file.
+DN: So there will be a sample.
+SP: Yes, I'm going to load a sample. I grew up with trackers and things, so samples feel natural to me, but I don't know if it's natural for everyone. So I'm never sure should it be sound file or sample or what.
+So yes I'm going to try to load this sample. When you know the sample it's just like binary data, but web audio doesn't know what to do with that.
+.. To call it and then I'm going to try and play it. Then we just do the sequences sort of things.
+So for loading this we use this cross request thingy.
+There is a thing called fetch; I can never remember the syntax of any of those so I look at my load sample thing.
+This is important, you want to create a new XMLHttpRequest. With a responseType of arraybuffer, and then you can inaud but I just go step by step. I just need a reminder (laughter).
+It's inaud because its uppercase... One upper case, it should be all uppercase.
+DN: HTTP is an abbreviation as well, isn't it?
+SP: Exactly so it should inaud. But it's not so inaud.
+DN: That's even harder to read.
+SP Yes, you need to say this is an arraybuffer because otherwise the browser tries to parse what it loads, as though it's JSON or something. You don't want it to touch the thing before its... You just want an arraybuffer.
+And then you add an event listener, so when the thing is ready it will tell you.
+Ok this is how you open the thing. I have to make sure clap is in the right place, and then just say send.
+So this is clap 07 WAV
+
+So I just paste this in here.
+So it's clap underscore. And that should load the thing.  It should say something here... Hi!
+So when it's loaded here, in this context, this is a request, so if I say "this data"; it should request data, I think. No.  Will it be response.  I should make a library so I don't have to remember these things. Always copy this again.
+DN: Ah, there we go.
+SP: In the context of the listener, this is a request, of a request of a response of the data that we put in. It's not a inaud or anything. It's just a inaud  So here's my 14K of data. So what you do with this is use it in the context that you created before. You decode audio data. So I say please decode this thing I just put out. And when you're ready...
+So it's got two call backs. That means it converts the binary data into something the browser can play, hopefully.
+It should be able to play because this is an 8.5. Also, I have tried it before.
+But if you don't know for sure that it's going to work of course. You should have a failed thingy. So this should tell you when you can't decode the thing. So it's a good practice.
+DN: Yeah, right.
+SP: This is terrible code, and then log the error. Something like that, so at least you can see something is happening. So supposing that we get that thing,.. Decoded buffer should print the thing. It's called that and it's called the thing.
+It makes sense that the inaud is happening because inaud. I think it's like CD size or something.
+DN: Yes, make sample rate.
+Because it's the challenge, I think it's a serial, not sure what's going on. Ah its 62bit so it makes sense.
+DN: Right.
+SP: It's not exact because you have the header as well. And the wave file, so it's not just raw binary data. You have the header, inaud you have wave file and Its got one channel la la la la.
+So this is what you call the inaud. First of all you need to work out the inaud, that depends on the browser.
+DN: This one's a .wav
+SP: Yes, it should be easy to play.  For a while they would just play on Firefox and not on Chrome or Safari, but right now with WAV things are pretty easy..
+DN: OK.
+SP: This is not the best option because they are big files
+DN: The duration is less than a second I think.
+SP: Yes, 0.16 seconds. So I could actually play that. (laughter)
+DN: It's over before it's started!
+SP: Yes, we just want to make something play. So we have this thing decoded, and instead of console logging we can maybe play the thing. So I'm going to say play sample: no playBuffer. I like to call things by their proper name. And I'll make the function somewhere else. Decode is happening here.
+DN: In a callback
+SP: Yes, happens in a callback
+This is terrible, we should change it, but these are the steps that we wanted to do,  so for playing we just say playBuffer (buffer)
+As I say, you need to create a node, so this thing we have here is a buffer. Buffer node is what we need to play.  So this is slightly confusing (laughter).
+So in the context that we created before, we create a bufferNode.
+And then you say bufferNode connect.  This is for establishing the graph. So you connect that to the destination. You also have the how to connect method. And you can connect to other nodes or another destination. Inaud, before we continue, but basically we need to say connect, and say the buffer that we want to play, and its bufferNode. Because you can play several samples with this, you can change the buffer property and get different things with this. Without changing the graph or anything.
+DN: Yes, OK.
+SP: And then you just say start.  And the final parameters inaud so in theory that should... Oh no maybe it's the buffer. I'm always confused with this. Is it buffer... No. OK this is where I check the API because I can never remember the names of the methods.
+DN: You went straight to the source W3C.
+SP: Oh, buffer source.  Is it source? Yes so buffer source and connect it's the same all the time.
+DN: This is the "hello world" of web audio.
+SP: It could be. OK yes, we have a clap, finally.
+

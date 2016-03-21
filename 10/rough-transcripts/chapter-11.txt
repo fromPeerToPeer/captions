@@ -1,0 +1,91 @@
+# Chapter 11: Humanize the performance
+
+SP: We have a thing which I think fulfils the challenge. So part one is playing this thingy part two is playing the variations. And we have a user interface to play and stop the music, and modify the tempo. That all works so the challenge should be fulfilled.
+DN: Yes sure.
+SP: The issue with this is it sounds super robotical!
+Normally when you play an instrument and you are a human, you make some errors.
+So I think we should make, every time a note is triggered it should be slightly not on time.
+
+So we'll add some randomness to that.
+I would start with doing that thing so it sounds a bit more natural.
+Because right now it's too perfect.
+DN: Yes, I've seen sequencing programs where they call it 'humanize' function, which adds some jitter.
+Sp: Yes, well we can just change the start time slightly. Not by a whole beat, but more subtly. I will make it a little less perfect until it sounds a bit better. So for the last time, this is too perfect [they listen].
+DN: Yes.
+SP: We can make it a bit more ‘funny'. We know when things are starting which is... So this is the context playtime. So instead of using the contextPlayTime we might get some randomness here. Like, a little ‘indecisiveness' of the players. So I will say getSomeRandom. I'm going to make this function that will return positive and negative values. When you are playing you anticipate a bit. So players are not perfect, they're not totally in sync so it's ok to have some randomness here.
+So what do we return. We can start with some randomness and then adjust depending on what we see. 0.5 second is a lot but so we can see the difference.
+You can call the random() function but this returns [a value] between 0.0 and 1.0. So if I multiply that with 0.5 its going to be just 0.0 to 0.5.
+DN: OK.
+SP: So that is going to be a bit later. I want some to be a bit earlier so if I have `0.5 - Math.random()` this is going to be in -0.5 to 0.5.
+
+Or, one minus this might be from aero to... So this can be negative or positive, I don't know (laughter)
+DN: Wouldn't that be: the maximum value would now be zero?
+SP: Yes.
+So I want this thing.
+So if it's zero it's 0.5? Or maybe...
+Ok, I'm just going to leave it like that. Whatever.
+DN: Let's see what happens.
+So this needs a semi colon. Now it should be a bit more erratic.
+Oh no, why not. What am I returning. If its negative? WAT? This doesn't make any sense. Why?
+I'm going to debug this thingy. What is when? This is fine.
+I guess it's because I've set the debugger, it introduces some delay, so I'm not having a negative time here. So I'm going to remove the breakpoint thingy.
+
+It's really messy. Because they are really bad players!
+[they listen]
+DN: I think the variation there is longer than a beat isn't it?
+SP: Yeah exactly.
+
+SP: I hate this! I always want to have a page with all of the one-liners I can check and make sure that they're ok.
+This is going to go from 1 to 0, but that's not what I want.
+So if I multiply this...
+This is me going off on a long-winded...
+What am I doing? Argh!
+One...
+This is easier:
+1-0=1
+1-1=0
+
+I think if it's:
+0.5 - 1 = -0.5
+0.5 - 0 =  0.5
+
+Ok, this is the one I want. And if I multiply that by 2 I get the right thing. Ok.
+SP: What I wanted actually to write from the beginning, but I didn't know how was:
+[Sole types]
+I knew that there was a one-liner, without the whole story.
+DN: So that'll give you a value between -1.0 and +1.0?
+SP: Yeah!
+
+This is going to return from minus 1 to 1. I'm going to multiply that by something else. 0.1 of a second. Maybe we should base this on the beat.
+This is because I'm working to small values.
+
+SP: This is still very terrible.
+Yes if the current time is minus we should win more probably.
+I'm going to make it always be slower.
+
+[they listen]
+
+SP: Its slightly better.
+DN: A little bit sloppy.
+SP: But that's what you want.
+
+[they listen]
+
+This is too much let's make it slower.
+It's not so mechanical, but maybe we can make it more crappy.
+It's good to adjust and see when does it stop sounding terrible.
+This is too much.
+DN: It is yeah.
+SP: This is too much I will leave it at 2.
+DN: OK
+[they listen]
+
+SP: Yes this is good. If I make it 0 there is no change at all. It sound fully on the beat. This is very subtle.
+DN: I think you left it at 0.2 rather than 0.02 there.
+[they listen]
+This is too much I would have left it there. Ok stop.
+
+I must say variation.
+Sometimes you need to explain what you did.
+I was going to just say "make it more humane", but what does that mean?
+

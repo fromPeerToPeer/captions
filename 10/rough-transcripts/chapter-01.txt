@@ -1,0 +1,29 @@
+# Chapter 1: The challenge
+
+Welcome to Peer to Peer, where you can hone your skills by watching live coding videos.
+
+Our guest today is Soledad Penades, who is a developer evangelist at Mozilla.
+She works on the web platform and developer tools for Firefox.
+And she loves to experiment with Web Audio and Web GL.
+
+I'm your host, Drew Neil, and the challenge that I set for Sole is called "Clapping Music".
+
+DN: Ok Sole, do you want to start by reading the challenge?
+SP: Yeah! I'll try to do my best! Ok, so the challenge is: Create a system that performs Steve Reich's composition "Clapping Music".
+"Clapping Music" has two parts that are based on the same rhythmic cell. Part 1 plays this rhythmic cell consistently throughout the piece (x means play a sound, _ means rest).
+So it's like tatata tata ta tata
+Part 2 begins by playing this cell then cycles through 11 variations, each of which is shifted by one beat.
+The system should have some user interface to pay and stop the music, as well as providing a way of modifying the tempo.
+DN: On this page we've got a representation of the score.
+(Laughter as Sole considers this too complicated for her to copy the sounds).
+SP: OK, so we have on the first line both players playing the same.
+And on the next repeat the first player is playing the same thing and the second player makes a shift on one side? Or it's like he's one step behind or ahead. Actually it's one step ahead, so we need to add one.
+DN: Yeah... (thoughtfully)
+SP: It keeps shifting and then at the end they are playing the same thing again.
+DN: Yes, that's right.
+So it's a very simple idea but it's surprisingly engaging.  The music that comes out of it is interesting: the noises it makes are quite exciting.
+SP: Yes, interesting (laughter). I think it can serve to show a number of techniques because this is very in sync, and if things drift you can not totally notice...because ... Repeat one time.. I would say lots of elements.... Or just like garbage collector with like WOW this is a lot of things for me to worry about. So inaud.
+DN: Yes, so you mentioned web audio; that's the technology you would use to solve this challenge?
+SP: Yes. I don't think you can do it correctly without ..... OK?
+DN: And that will run inside the browser.
+SP: Yes. We work in .... Browser. I will go to .... Later but ... Even in mobiles, tablets so it's really cool... Can play that everywhere.

@@ -1,0 +1,93 @@
+# Chapter 8: Add a build system
+
+I think we should go back to the challenge. Well we have this, but not the interface. We don't have play and stop and there's no way to modify the tempo unless we change [the code], and that's not very dynamic!
+DN: Right, change the code.
+SP: Yes, and reload. No! That's not very funny.
+So... I am very lazy so I'm going to use a component that renders all those buttons for you. I just don't want to do this anymore inaud. I suppose it's OK being lazy as a programmer, if you work then you don't have to work again.
+DN: That's right.
+SP: So I made a component and used it with npm. So I need to initialize this thing as an npm project, first. so I'm going to npm init this thingy. Because that way I'll have a package JSON. Otherwise it stores the thing in `node_packages` folder but it doesn't save the dependencies to packages.json. If I give you this repository and I don't check in the node modules, you're going to have a hard time figuring out what dependencies I'm using.
+DN: I see.
+SP: So it is important. So I will just... OK fine, then clapping. No text no repo, clap.
+In theory I should just press return, but I kind of like writing yes, it gives me the confidence (laughter) I'm not going to mess with something I shouldn't be messing with.
+So now I should be able to npm install things.
+They are going to be saved as dependencies in packages.json, otherwise if you say `npm install --save` it doesn't really save if there's no package.json.
+And I'm not going to create it from scratch because I can't remember.
+
+I think it's 'transport' - I hope it is.
+I don't know why they call it 'transport', but in musical software it's always called the transport.
+It's the buttons with play and stop, the bpm thingy.
+I didn't want to be too original so I just called it transport.
+DN: Yes, OK. I haven't heard that before but it makes sense.
+SP: If you look up transport you will find a lot of references to all the, especially MIDI creation software. I think its for, so you can transport yourself around the song. I'm not sure.
+
+So this comes from this organization that has more modules and things. This is the one I'm using. This is what it should look like, but the one that we are going to use doesn't really have any theming, we can add what we want.
+DN: OK
+SP: This uses web components to render, this is a web component. Because web components are not really ready yet, you need to install the component along with a web component polyfill to make sure this can work. Maybe I should also document this thing, because it's not obvious.
+There is a nice polyfill that you can install, which is called webcomponents-lite, and it installs the minimum that I need for this, which is: registerElement, and I think a couple more things, but I just need to be able to do registerElement. Because that's not enabled in Firefox yet. It's available in Chrome, so if you try things only in Chrome you don't notice. But if you try in Firefox without the DOM things enabled, you'll find errors. So this is going to polyfill the thing.
+
+So I've got all these things and to load them I need to use require and this is not standard JavaScript. I could try to load these things from node modules, but it doesn't really work with this component because it uses other modules you should require.
+So what I should use is webpack or browserify or something that takes my main.js that I've been using so far, and takes all the requirements and things and makes that just one bundle.
+DN: Right.
+SP: So this is when things get interesting.
+
+I just used webpack last week and that was the first time I've installed it. It's pretty easy to use. I'm going to reuse it again. It's kind of like browserify, but it's got watch and things like that which are very convenient. With browserify you need to install watchify or something but webpack does everything for you. They call it 'Batteries included'. I like to play with things and assess them. People say that webpack generates smaller packages but I haven't really used it in a project enough to compare. I like to experiment with things.
+DN: Yeah right.
+SP: And because this is the first time I've used webpack I'm going to check the syntax, so I'm going to go to getting started. So they recommend installing webpack minus g. That is not a good idea because I don't want everyone who uses my computer to be able to use webpack, so I'm going to do it a different way.
+So they suggest that you use webpack and then the entry.js, which in my case is main.js, and then it generates bundle.js
+So what I'm going to do is to call that from npm script. Then it will call it from the binary inside `node_modules`, but it doesn't need to be installed globally. So I will just run it from the package. So here's package.json.
+I can add a new script with is called build, and this one will use webpack.
+So we will tell it to take main.js and output that to bundle.js for now.
+And you run this with `npm run build`. It adds this bin to the current environment for that moment and then you don't need to have it globally because this is in the path.
+So you don't need to install it globally and then it's way cleaner. Because otherwise if I tell you to go and run webpack, you need to know that you need to install webpack. That's ok with webpack, but some other packages have a different name from the package. The binary they install is different. I think it was for example, Grunt? For Grunt you need to install grunt-cli. But how do I know that I need to install grunt-cli?
+DN: Right, there's a lot of assumed knowledge there.
+SP: So if you just keep it like that and your project uses webpack: I don't care! Because your project just deals with whatever the name of the executable is when we use our package.json script.
+So hopefully if this works... Yes it does build the thing.
+
+But I don't think it's a good idea to just output everything here (laughter), so it kind of grows.
+I'm going to make a directory for building things.
+DN: Yeah.
+SP: So I can build things here and then tell it to output the thing to build... I'll remove this one. And then run the script again. Not everything is in the same place so that's better.
+
+I also think that it's not very neat to have everything here with the build and everything else, so I'm going to move everything to a source directory.
+DN: OK yes.
+SP: This is too messy. I think I need to move all the claps.
+And package is not in the git thingy yet.. I need to move it to source. Which I haven't created yet? I have created that, OK. A new package has to be here anyway. I also need to ignore `node_modules` and build, because I want those to be added to git. Vim is complaining about everything not existing any more. So I will create the .gitignore.  This is the issue when you start adding build systems you have to move everything around  unless you start from the beginning. I think it's a good idea to prototype and not care about build systems because you get confused about webpack and watch etc. And you won't get anything done. 
+So we'll ignore `node_modules` and also the build directory.
+Since we're on a mac, DS_Store which at some point will show up!
+DN: Yes, sure.
+SP: So now if I run git status it will just try to add this, and not node_modules or anything.
+DN: I guess you will have to re-write the npm script as well, so that it looks inside source?
+SP: Yes. This need to look into this, and also because I haven't updated that and this is kind of gross but it's just going to load from the build. (laughter) I can fix that later.
+Just to make sure it works because if we have a server later and its starting on the build it can't access this thing so we want to maybe copy this file there and just load from the bundle. Step by step so it doesn't get too confusing here. So run the build now and then open source index. Did anything happen (laughter).What is going on here.
+So it's in build, it  has to go up one level and then look inside build.
+And why didn't it...?
+So because we are not using a local server it cannot even detect that we are using that.  
+If we were using a server it would have said "I can't find that thing".
+[they listen]
+Now its working, OK good.
+Ok so we are building everything again so I could...
+DN: Is that worth a commit?
+SP: Almost. I want to make sure that I have a clean task.
+DN: OK.
+SP: And also this one makes sure that the directory exists. Important!
+So there are two scripts that people use...
+I think it's prebuild?
+So it will detect that it goes before build and it will run them.
+So if I run build, it will run prebuild before. I don't know if this needs a hyphen.
+
+Ok, so it's called (prebuild) before.
+DN: Its working right.
+SP: So I can mkdirp the build thingy. That will make sure the directory exists and with this I want to delete the build directory, so I don't leave any traces.
+DN: Right. Is rimraf an alias?
+SP: No its two modules that I'm going to install
+DN: Oh, I see.
+SP: Because that way you can have this whole build task inside package.json without having to install a task runner like grunt or gulp. I just learned it recently and its super useful. If you running this in windows or something you don't need to worry about using different types of delete and things.
+DN: Nice, OK.
+SP: So I will install both. I think rimraf is made by Isaac Schlueter, the guy from npm. I'm not sure about mkdirp, but they are used by people in npm so you can trust it.
+Now, yeah I changed this thing.
+So if I run clean... The build has gone, so I don't have rubbish down here.
+I think now it's worth a commit.
+It's a bit of maintenance but I think it's important. It's good to have a clean slate before you ...
+[Sole types]
+"Adding a build system"
+

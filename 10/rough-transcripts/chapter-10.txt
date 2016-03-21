@@ -1,0 +1,21 @@
+# Chapter 10: Add a tempo control
+
+Now I need to add the listener for the other event, for the bpm event. And this one is slightly different because I need to read the data from the event. It's not just like an action I need to read the data from the event.
+It's using custom events, I don't know who designed this thing but you can just put properties, you have to use detailed inaud I guess it's so you don't create properties. Inaud future properties in the spec or in events in general. So you can only access them through the detail. In this case the value that you get is value [laughter]. On every event this is a new value you will get. The new values inaud.
+[they listen]
+SP: A lot of changes so OK. Inaud so you just need to change. Inaud. The score is being changed all the time. The events are calculated based on the current BPM every time the schedule function is run it will take the value that we send it. So we can change that on the fly. The only issue with this is that this might be sent as a string? Because it's coerced. I always make sure to multiply by one.
+DN: Ah right.
+SP: Especially if you try to add things because it might end up concatenating strings with numbers. So in case of that, I just multiply the thingy. And we have a global variable somewhere here. So we can just say the BPM is this new value. Hopefully that should change.
+[they listen] The music starts slowly and gets faster.
+DN: How fast will it go.
+SP: Its limited to 300.
+DN: That's fast enough.
+SP: Because, I do some happy hardcore things. Its 300 to 1.
+This is really slow, it's one beat per minute. We will get bored.
+DN: Yes, about 15 seconds between each click?
+SP: 60 seconds! I guess we can also add this thing. I never remember what I changed. In a more complex project I would use source tree so I can see the whole thing.
+[Sole types]
+"Change tempo with slider"
+
+Let's look at the challenge.  So we can stop and play and provide a way of modifying the tempo.
+

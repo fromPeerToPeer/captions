@@ -1,0 +1,49 @@
+# Chapter 4: Playing part 1 sequence once
+
+SP: OK, so we want to play this thing, at least once. Let's just make the first player play.
+So I'm going to copy this here inaud laughter.  Obviously we don't know how to play this thing. But I'm going to simulate this as an array. Make it as zeros and ones yes?
+DN: Yes, sure.
+SP: So it's one, one, one, and the score is zero, so it's nothing. Then it's one, one, zero, one, zero, one, one, zero.  So that's the same, but in binary.
+DN: Yes, binary solo.
+
+SP: Sometimes what I do when you have things that come from strings, because people are comfortable drawing things like ASCII art, you can parse it and say if it's an x replace it with a one  etc. But, in this case its short enough, we can leave it like that. Yes, that should be short enough.
+We can assume that every element of the array is a step.
+So I will arbitrarily give it a stepLength, say 0.2 seconds. Because web audio uses seconds.  So what I will do initially to play the sequence is calculate timing for all this and schedule the play, so we can reuse the same buffer.
+I don't need to load it every time, just load it once and reuse it with different buffer sources.
+So instead of playing the buffer, what I'll do is play the sequence. I want to inaud.
+Normally my font is very small so I can see everything, but here I can't so I need two panes here.
+
+When it's a long file like this I like to see the top.
+
+Also I've found you can use this :vsp to have two different files.
+So you can look at say the class in one side and using the class in the other.
+I was like, this is the best discovery I've made.
+Because I thought that the vertical split was only for the same file.
+I didn't know you could view different files, so this was a good discovery.
+
+So I've got this sequence, and I know how long I want to play each step for. So we'll just go through that and arrange for other things to be played.
+Sole types
+So initially, time is zero.
+So if I go through the sequence and I know the stepLength. I need to be adding the stepLength to time, because I want to say "do all these things at this time"
+DN: Yes.
+SP: So it should play the sequence at that position. So if it's one it would be truthy and if its zero it won't be truthy, so I won't do this thing.
+DN: Yes OK.
+SP: If it should play, let's say playBuffer.
+But I don't know when, so I need to add a new parameter.
+So I say when. And instead of just `start()`, I'll say `start(when)`.
+And I'll stay at `t`. But actually `t` is not zero. T has to be the AudioContext.currentTime
+Because, the way it works is when you create an audio context... Is it another context or when the page is created. Essentially the clock starts running, so when you say to web audio I want to do this thing, you don't tell it in the scripts time, but in the clock for the audio context.
+
+So when you want to scale things, you want to do that relative to the audio context 'timing' or 'clock' or whatever you want to call it.
+So if you start with the current time, you say "run it from there" and keep adding things, and it's like it's all in the same scale, are we using seconds Ok....... Because everything is using seconds that should all be correct.
+So it has to play, I was checking this, this is going to play all the time.
+
+So this is going to create 12 buffer sources and its going to connect them and start them. They're going to be scheduled to start playing then at some point they will just die.
+DN: Yes right.
+SP: And that's the way you should be doing things in web audio. You don't need to worry about deleting things, or stopping or re-using them because it's better to just schedule everything. Let web audio take care of things because it goes in a different thread. And you can't be sure that the things that your doing in this thread are the same.
+DN: I see.
+SP: In the same time scale or, you know... I call it the parallel universe. Just send things and hope for the best. In theory now this should now play. So see, they have disappeared, because they are being destroyed.
+DN: Yes.
+SP: And this is just happening once.  So this is good. It played the sequence.  So I'm going to make another commit. This is where I get obsessive about this.
+[Silence]
+

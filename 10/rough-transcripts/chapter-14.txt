@@ -1,0 +1,26 @@
+# Chapter 14: Wrapping up
+
+DN: OK Sole I think it's time to wrap up so let's return to the challenge and see where we are.
+SP: I think we have done it. We are playing all these things and also making it stop and changing tempo. We also added some humanisation.
+DN: Yes.
+SP: Also made it in stereo, so you don't get a wall of sound, so that's pretty much done for the time that we have.
+DN: As a performance, that ticks all the boxes.
+SP: Yes the only issue is that it will never stop, it's going to loop forever. If we had more time we could detect when we are at the end. Like this is the 12 time so stop. Clear the timeout don't do anything else.
+DN: Yes.
+SP: But you never said you didn't want this to loop.
+DN: No its not in the spec!
+SP: So that's one of the things that we could do.
+DN: And you have mentioned a few times that the code is messy. If you did have time to polish this up, what would you do to make the code cleaner.
+SP: This thing has caught my attention. I would remove it.  I would make sure that the component is a bit less. That would be on some other project. There is nothing I would do  I would definitely extract things to other functions. For example this play buffer doesn't need to be here because this file. It's not too long, its 134 lines. But it's hard to make out what's going on here. Things get loaded. I would make things into functions so I can see the sequence of what's going on. And more parameters because right now everything is using a global context. It connects things to things so it's not very neat so I would. I would have the main.js set the sequence of everything and then extract things into functions. Because we're using webpack its pretty easy to require things instead of having everything in one massive file.
+But it's also important not to worry about requires when your prototyping. Because then you're like: oh I need to add this file to git, and then it's a require. It kind of like stops you. If this was growing more and I was using it with more people in the project I would totally split that because it's easier to collaborate with people when every person is touching a different file. But when you're beginning, when you're sketching, you don't want to be worrying about small details. I would just go step by step in this refactoring.
+I would like to have main be a more a more general global thing to direct everything and make this sequence more obvious because right now we're having this giant initialisation of things and then a function in the middle [laughter]. And then sample promises. I would have something like initialise, then here's where the UI is set la la la instead of this massive chunk of things. And if you have proper parameters they can all go so you have a shorter main and, you can dig into the function if you need, but you don't need to have this whole thingy.
+The functionality of this instrument is not too huge so maybe you could keep this here. All the loading and decoding could be out of here and everything else is still here...   The important things are still in your sight. So to speak.
+Also, I would make sure that this index is copied to build. Because right now we are opening this thing from the bundle. But if you want to put this project on the internet, that's not going to happen.
+You would need to have automatic things, so I would improve the build process. So here I would refer to bundle and generate everything here. So once you've  created the build you would upload the whole thing to the internet. You don't need to use the human factor in building this.
+And this will not run on chrome because it doesn't let you do requests locally, we need a server. Firefox is permissive in that sense. But chrome is not going to let us load the thing.
+DN: I see.
+SP: So if you want to develop this you need to be using a server, which I haven't because we don't want to make it too complex. But improving the build would be a good idea so you can test it with Safari, Chrome and maybe have the polyfill for Safari. And also if you want to test it with phones you need to expose it somehow because you cannot load this locally with phones. So you will need a file server.
+So that is some of the things I would do.
+DN: Alright. Well it's been really interesting watching you work. Thanks for coming on the show.
+SP: Thanks for having me.
+DN: You're welcome!

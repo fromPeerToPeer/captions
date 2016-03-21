@@ -1,0 +1,100 @@
+# Chapter 12: Accenting the first beat
+
+DN: I suppose another thing to make it sound more musical, maybe the first beat could always be slightly louder? And that would give you a bit of orientation.
+SP: Could be,
+DN: That wasn't in the original spec!
+
+SP: So if were at the beginning of the rep we want some to be louder and the rest quieter. On a step scale. And it doesn't matter if it's the first or the second player, it's for both of them.
+DN: I think it will be just for the first player.
+SP: Ok so we just look at current step. The way web audio works is every node does a single thing. The buffer node doesn't have a volume parameter, so we need to create a node that only modifies the volume of whatever goes through it. It's called 'gain', so you can adjust the gain.
+DN: I see.
+SP: So here we create a buffer each time. So I'm going to introduce the gain node in between the buffer node and the limiter, and set the volume as well, so it's a bit contrived.
+So I will call it gain. I can never remember if its createGain() or createGainNode().
+If it doesn't work, we'll fix that.
+So I will connect buffer node. This has to be the gain value. Its gain limiter.
+I also need to set the gain value. The amount of gain that we want, and it's got gain. Its gain value, I will explain why.
+Let's make sure that this works, to start with. Let's suppose this is the gain value. For the first player. It's always zero so that it keeps playing. We don't want to change the second one so I'm going to make it inaud value. Classic JavaScript.
+If it's not undefined
+You don't want to just use gainValue because if it's zero it's going to assume that it's one. So if it's not undefined just use gain value, otherwise use 1.0. So it will not change anything at all. Question mark.
+So in theory, this should...
+[they listen]
+So let's see what's going on here. At some point it should disappear, but it hasn't for some reason.
+DN: Interesting! Have we introduced a memory leak here?
+SP: Yes! I think that's the way I'm connecting things. Hmm interesting.
+So now were just playing the buffers just not taking them to the limiter and this is growing, look at that. OK I need to close this before it hogs down everything. 
+Let me think about how to do this. When I was doing that I was thinking: will they just get removed? Or just create a disaster here? Maybe I should tell it which gain to connect. Maybe we should have 2 base...
+So we don't create all the gain nodes all the time. This is a bad idea. Like having two roads... Or, just tell it which gain to connect to so I don't do this massive amount of gains.
+Just as I have two samples I can have two gain nodes.
+Usually what you do is use the gain nodes as routers.
+DN: Right
+SP: They aren't actually modifying anything but you can connect things to them. Eventually they will be garbage collected when you're done with them, but you don't need to create the gain nodes all the time.
+Web audio can't get rid of those gain nodes because we want to use them afterwards. 
+The buffer source: once they are done they are done, so it knows I can get rid of them when they have ended and you don't have any listeners or anything.
+But the gain nodes: it doesn't know anything. So they are being kept.
+So I'm going to create two gain nodes. Because there is only so much you can optimise. It won't be very elegant but it should be more efficient. We don't want this thing to blow up!
+I could do a loop for two times. This is overblown. I'm trying to think of a variable that I'm not using anywhere else, but I'm just going to use this. This is the most stupid loop ever... Just for creating two gain nodes this is overblown but that's where I want to be. Hard coding, variable names.
+So this is not a good idea. Instead of doing it this way we could tell it which gain to connect to. Just as we said the buffer, we could also say the gain index. Array.  So we need to connect to node 1 and node 2. And then the value of this thing.
+Inaud the value, so inaud created the thing. It's getting complex. When you start writing things this way, it's kind of like writing your own synthesiser and introducing all the logic but it gets confusing.
+If you open a synthesiser you're not going to find an easy thing to look at, it's going to be complex. The routing is complex because it's a whole instrument and you're defining the whole logic.
+DN: Yes, right.
+SP: I'm not going to assume that you can't pass the gain index because this is required. The gainValue I can make optional, but you definitely need to specify the gainIndex. The gain is going to be the gainNodes of gainIndex. And also I need to connect the node. This is so terrible. Its ac.createGain(). No there is another solution otherwise they're not going to play.
+DN: And the limiter connects to?
+SP: Yes, it needs to be connected to the limiter.
+OK the gains are connected so we have these two base here waiting for us to connect things to them. And then decide which node to connect this, depending on which voice. The gain, we change the value again, this is just normal. We connect the node to the gain. This doesn't have to be here. And the rest should be ok.
+And we need to change this. Where we decide which thing to play.
+So its zero because this is the first voice. Lets suppose its zero because we don't set the value, and then the second one should be one, which is an index of zero. So in theory they should still be playing.
+DN: So let's see if we've patched that memory leak.
+[they listen]
+Wow it's doing a little dance.
+SP: Now we don't have this massive gain collection.
+
+Yeah it's funny, because depending on when you created the node...
+It looks like a visual for this thingy.
+So that's good. Now we need to change the volume. But we could maybe commit this thingy.
+
+Commit: "with two gains for different track volumes'
+
+The gain value should have been here anyway. So if the currentStep is zero, we want this one to be louder, otherwise it has to be 0.5 so I'm going to actually do it the other way. That's half of the volume. Everyone should use the same gain volume. But it doesn't.
+So if we change it here, it's going to be one and then the other one is going to be really quiet so we need to change both.
+We could start with 0.5 for everyone. I may want to have zero value one and zero value two. Gain value is always 0.5.
+DN: Yes sure.
+SP: And then gain value 1 might be 1. No 2.
+DN: And this one want s to be 1 as well.
+SP: Yes.
+If currentStep === 0 I want it to be 1... This might sound horrible.
+[they listen]
+DN: I'm not hearing any difference.
+SP: I'm going to console.log it.
+[they listen]
+Am I building this at all? Ah it shows from time to time.
+DN: I wonder if it's just stuck.
+SP: I m going to...
+DN: That's definitely quieter.
+SP: I've got to make it even quieter.
+
+[it gets quieter]
+
+DN: Its extremely loud for a single sample and then it cuts down....
+SP: Yes I need to make it ramp to the value.
+DN: Ah right! This is much more low level and involved than I imagined it would be.
+SP: Yes. So for that you have linearRampToValue and exponentialRamp. That's why I was saying that it has to be called gain.value. This is what they call audio params.
+So you don't set the value like that. You select functions in here.  So if I just set that value it would immediately change the value.
+But if I say linearRampToValue() it will try to ramp to that. And I can't even remember the syntax, but I'm going to look for this.
+
+linearRampToValueAtTime(). I didn't even remember the whole method name.
+So I want to automate this thing to make the thing and change this to linear value.
+Hopefully that might be a little be smoother.
+Let's try this.
+[they listen]
+DN: That's definitely audible.
+SP: Maybe we want to make it less extreme.
+DN: that's good.
+SP: Yes you can notice the higher. Do we want that, I don't know if it's worth it?
+DN: I think it's more noticeable now that they're out of phase.
+SP: Yes, but that's not how the music is actually.
+DN: I think that sounds a lot better than before.
+SP: I don't know. I'm conflicted, because I think the whole point of this is that they both sound the same. Form this kind of pattern. This is in balance and it doesn't give the same ... Like the shifting thingy.
+
+I don't think the result is worth it.
+I think for me, the best part of this music is how hypnotic it gets.
+
