@@ -88,8 +88,8 @@ a representation of the score.
 
 20
 00:01:18,912 --> 00:01:24,576
-SP:  Exactly. (Laughter as Sole considers
-how difficult it is to represent the sounds by voice).
+SP:  Exactly. [Laughter as Sole considers
+how difficult it is to represent the sounds by voice]
 
 21
 00:01:24,768 --> 00:01:30,432
@@ -135,13 +135,74 @@ the noises it makes are quite exciting to listen to.
 
 30
 00:02:18,848 --> 00:02:22,848
-SP: Yes, interesting (laughter).
+SP: Yes, interesting. [Laughter]
 
 31
-00:02:22,840 --> 00:02:27,328
- I think it can serve to show a number of techniques because this is very in sync, 
+00:02:22,840 --> 00:02:32,576
+I think it can serve to show a number of
+techniques because this is very in sync. 
 
 32
-00:02:27,328 --> 00:02:29,320
-and if things drift you can not totally notice...because ... Repeat one time.. I would say lots of elements.... Or just like garbage collector with like WOW this is a lot of things for me to worry about. So inaud.
+00:02:32,670 --> 00:02:39,120
+And if things drift it's very noticeable. So with
+normal audio text it's going to drift at some point,
+
+33
+00:02:39,120 --> 00:02:44,576
+because you repeat the same thing all the time.
+So for example, you think things are not working.
+
+34
+00:02:44,600 --> 00:02:50,096
+I would say you can generate lots of elements,
+so it would get memory links at some point.
+
+35
+00:02:50,128 --> 00:02:56,320
+Or just like garbage collector we think
+WOW this is a lot of things for me to worry about. 
+
+36
+00:02:56,384 --> 00:03:02,544
+So if you do web audio it should be in sync and
+realise. If you do inaud it could be messy.
+
+37
+00:03:02,540 --> 00:03:08,320
+DN: Yes, so you mentioned web audio; that's the
+technology you would use to solve this challenge?
+
+38
+00:03:08,320 --> 00:03:13,936
+SP: Yes. I don't think you can do it
+correctly without web audio in this case. 
+
+39
+00:03:14,016 --> 00:03:15,808
+DN: And that means it would run inside the browser.
+
+40
+00:03:15,840 --> 00:03:19,550
+SP: Yes, it will work in any Browser. 
+
+41
+00:03:19,550 --> 00:03:19,568
+I will go to the test later but it should
+in theory, work in any modern browser. 
+SP: Yes, it will work in any Browser. 
+
+42
+00:03:19,568 --> 00:03:25,344
+I will go to the test later but it should
+in theory, work in any modern browser. 
+
+43
+00:03:25,424 --> 00:03:32,240
+Even in mobiles and tablets, so it's really cool
+because you can have this running everywhere.
+
+44
+00:03:32,300 --> 00:03:35,008
+Friends can play with it everywhere [Laughter].
+DN: Nice.
 
