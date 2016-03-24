@@ -101,3 +101,87 @@ I like to be at least, a little correct. inaud here
 00:02:09,904 --> 00:02:15,488
 So the code at least waits for loading.
 
+25
+00:02:17,210 --> 00:02:20,688
+This should start when the whole thing has loaded. 
+
+26
+00:02:20,720 --> 00:02:24,064
+Which shouldn't be too
+complex because there isn't much at all. 
+
+27
+00:02:24,112 --> 00:02:28,240
+But it's good to start with a
+good habit from the beginning.
+
+28
+00:02:28,240 --> 00:02:31,184
+And then have the screens afterwards
+
+29
+00:02:31,216 --> 00:02:36,528
+When you want a web audio you
+have to start by creating a context. 
+
+30
+00:02:36,576 --> 00:02:46,112
+A black box thing or mini universe,
+so you can create a new AudioContext like this. 
+
+31
+00:02:46,140 --> 00:02:51,248
+Inaud because Safari doesn't
+know how to do things without prefixes.  
+
+32
+00:02:51,280 --> 00:02:57,792
+If you want to do this in Safari
+you have to say look at all the context.
+
+33
+00:02:57,800 --> 00:03:09,984
+People start doing things like:
+AudioContext || WebkitAudioContext 
+
+34
+00:03:10,016 --> 00:03:11,152
+This is pretty messy.
+
+35
+00:03:11,200 --> 00:03:14,720
+There is a polyfill you can install
+and it will bring all the variations,
+
+36
+00:03:14,760 --> 00:03:19,376
+and it also patches some methods
+safari has, that are the old style.
+
+37
+00:03:19,370 --> 00:03:21,200
+Because they haven't updated everything.
+
+38
+00:03:21,200 --> 00:03:24,530
+But, I don't like to tamper with
+those things when I'm doing a new project.
+
+39
+00:03:24,550 --> 00:03:28,670
+So I just try to do everything and then if
+I really need to make this thing work with safari,
+
+40
+00:03:28,680 --> 00:03:33,830
+then I will add the polyfill and make sure that all
+the patches work with the new style of code,
+
+41
+00:03:33,840 --> 00:03:37,540
+but for this example we can just leave it like this.
+
+42
+00:03:37,570 --> 00:03:40,020
+So we have this and it doesn't do anything at all.
+
