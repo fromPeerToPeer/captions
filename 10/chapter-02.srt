@@ -1,0 +1,103 @@
+﻿1
+00:00:00,000 --> 00:00:03,856
+[Chapter 2: Playing a clap sample]
+
+2
+00:00:03,850 --> 00:00:06,112
+SP: So this is just an empty
+directory: there's nothing here. 
+
+3
+00:00:06,128 --> 00:00:13,248
+I'll start by creating an HTML file,
+so we can start doing things.
+
+4
+00:00:13,240 --> 00:00:16,144
+And I'll just use Vim. [Laughter]
+
+5
+00:00:16,140 --> 00:00:22,912
+And I can configure that the way I like.
+I don't like decorum when I make things.
+
+6
+00:00:22,910 --> 00:00:31,552
+So the reason I comment something like inaud is because inaud the labels. Everyone says what kind of course is that why inaud.
+
+7
+00:00:31,550 --> 00:00:36,208
+<head> and [Silence as Sole types]
+
+8
+00:00:36,200 --> 00:00:40,400
+So this is just inaud.
+
+9
+00:00:40,400 --> 00:00:44,688
+[Silence]
+
+10
+00:00:44,680 --> 00:00:50,880
+I think I learned this trick from you, how to solve inaud.
+
+11
+00:00:50,880 --> 00:00:52,880
+DN: Is that utf-8?
+
+12
+00:00:52,880 --> 00:00:59,376
+No, this is me typing quickly. I think you can use both.
+
+13
+00:00:59,370 --> 00:01:02,816
+inaud the parser knows.
+
+14
+00:01:02,848 --> 00:01:10,448
+Right now I don't need to have anything
+but I suppose I should put something for it.
+
+15
+00:01:10,440 --> 00:01:16,512
+Close everything. Inaud.
+
+16
+00:01:16,590 --> 00:01:28,416
+So if I open this thing – there's nothing here,
+just this thing, nothings happening either.
+
+17
+00:01:28,656 --> 00:01:32,784
+To start with it's just the plain clap.
+
+18
+00:01:32,780 --> 00:01:39,520
+You can see how I start assembling the whole inaud.
+
+19
+00:01:39,520 --> 00:01:41,744
+So back to this thing.
+
+20
+00:01:41,760 --> 00:01:48,880
+I need something that loads, or does
+the thing, so I'm going to load a script which...
+
+21
+00:01:48,940 --> 00:01:55,040
+This is not the best place to
+put it but I will start with this. 
+
+22
+00:01:55,248 --> 00:02:00,080
+And obviously we need to write the file.
+
+23
+00:02:01,960 --> 00:02:09,840
+I like to be at least, a little correct. inaud here
+
+24
+00:02:09,904 --> 00:02:15,488
+So the code at least waits for loading.
+
