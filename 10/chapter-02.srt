@@ -240,9 +240,80 @@ play the things.... And then trigger the thing.
 
 54
 00:04:48,590 --> 00:04:54,280
-Also it has to be connected to the destination 
+Also it has to be connected to the destination
+so it can sound, so this is like inaud
 
 55
-00:04:54,280 --> 00:04:56,280
-So I will start by loading the file.
+00:04:54,280 --> 00:04:58,260
+So I will try and start by loading the file.
+
+56
+00:04:58,260 --> 00:04:59,630
+DN: So there will be a sample.
+
+57
+00:04:59,660 --> 00:05:01,560
+SP: Yes, I'm going to load a sample.
+
+58
+00:05:01,560 --> 00:05:09,310
+I grew up with trackers and things, so samples aren't
+natural to me, I don't think it's natural for everyone. 
+
+59
+00:05:09,360 --> 00:05:16,600
+So I'm never sure if I should
+call it a sound file or sample or what.
+
+60
+00:05:17,550 --> 00:05:21,210
+So yes, I'm going to try to load the sample. 
+
+61
+00:05:21,210 --> 00:05:26,340
+And then we decode it because when you 
+now the sample it's just like binary data.
+
+62
+00:05:26,360 --> 00:05:28,880
+but web audio doesn't know what to do with that.
+
+63
+00:05:28,900 --> 00:05:33,280
+There is inaud function to
+call it and then we will play it. 
+
+64
+00:05:33,290 --> 00:05:38,100
+So I'm going to try to do this thing first.
+Then we will do the sequences things.
+
+65
+00:05:38,160 --> 00:05:47,010
+So for loading this we use this
+famous cross request thingy.
+
+66
+00:05:47,040 --> 00:05:56,860
+There is a thing called fetch; I can't remember
+the syntax of that so I'll open my cheat thingy,
+
+67
+00:05:56,860 --> 00:06:02,270
+which is the load sample thing.
+
+68
+00:06:02,300 --> 00:06:12,150
+This is important, you want to create a new
+XMLHttpRequest with a responseType of arraybuffer. 
+
+69
+00:06:12,150 --> 00:06:18,400
+And then you want to listen once the thing has
+loaded, but I just want to go step by step. 
+
+70
+00:06:18,400 --> 00:06:20,400
+I just need a reminder (laughter).
+It's inaud because its uppercase... One upper case, it should be all uppercase.
 
