@@ -5,7 +5,7 @@
 2
 00:00:03,850 --> 00:00:06,112
 SP: So this is just an empty
-directory: there's nothing here. 
+directory: there's nothing here.
 
 3
 00:00:06,128 --> 00:00:13,248
@@ -87,7 +87,7 @@ the thing, so I'm going to load a script which...
 21
 00:01:48,940 --> 00:01:55,040
 This is not the best place to
-put it but I will start with this. 
+put it but I will start with this.
 
 22
 00:01:55,248 --> 00:02:00,080
@@ -103,12 +103,12 @@ So the code at least waits for loading.
 
 25
 00:02:17,210 --> 00:02:20,688
-This should start when the whole thing has loaded. 
+This should start when the whole thing has loaded.
 
 26
 00:02:20,720 --> 00:02:24,064
 Which shouldn't be too
-complex because there isn't much at all. 
+complex because there isn't much at all.
 
 27
 00:02:24,112 --> 00:02:28,240
@@ -122,17 +122,17 @@ And then have the screens afterwards
 29
 00:02:31,216 --> 00:02:36,528
 When you want a web audio you
-have to start by creating a context. 
+have to start by creating a context.
 
 30
 00:02:36,576 --> 00:02:46,112
 A black box thing or mini universe,
-so you can create a new AudioContext like this. 
+so you can create a new AudioContext like this.
 
 31
 00:02:46,140 --> 00:02:51,248
 Inaud because Safari doesn't
-know how to do things without prefixes.  
+know how to do things without prefixes.
 
 32
 00:02:51,280 --> 00:02:57,792
@@ -142,7 +142,7 @@ you have to say look at all the context.
 33
 00:02:57,800 --> 00:03:09,984
 People start doing things like:
-AudioContext || WebkitAudioContext 
+AudioContext || WebkitAudioContext
 
 34
 00:03:10,016 --> 00:03:11,152
@@ -184,4 +184,65 @@ but for this example we can just leave it like this.
 42
 00:03:37,570 --> 00:03:40,020
 So we have this and it doesn't do anything at all.
+
+43
+00:03:40,020 --> 00:03:45,870
+And just to make sure that it
+works, I just log simple things.
+
+44
+00:03:45,940 --> 00:03:52,310
+So below that it is showing me I have another
+context, and its got sample rate and inaud
+
+45
+00:03:52,420 --> 00:04:00,270
+And there's nothing happening.
+We have this thing but there is nothing to see.
+
+46
+00:04:00,270 --> 00:04:03,050
+DN: I see, so this is a dedicated inspector for the...
+
+47
+00:04:03,060 --> 00:04:10,370
+SP: Yes, and if you don't do anything, you don't
+give it the context. Nothing is going to be shown. 
+
+48
+00:04:10,380 --> 00:04:12,870
+We are waiting for something
+to happen – it's very lazy. 
+
+49
+00:04:12,880 --> 00:04:16,500
+It doesn't waste resources, trying to spec things. 
+
+50
+00:04:16,520 --> 00:04:25,570
+ So, the way this works is you have nodes,
+and you connect those nodes to the destination.
+
+51
+00:04:25,720 --> 00:04:37,750
+It creates a graph of sounds that go in a cascade
+to the context destination, which is the speakers.
+
+52
+00:04:37,780 --> 00:04:44,430
+So if I want to make some clap sounds
+on this computer I need to load the sound, 
+
+53
+00:04:44,430 --> 00:04:48,590
+and then create a node that can
+play the things.... And then trigger the thing.
+
+54
+00:04:48,590 --> 00:04:54,280
+Also it has to be connected to the destination 
+
+55
+00:04:54,280 --> 00:04:56,280
+So I will start by loading the file.
 
