@@ -430,34 +430,111 @@ remember these things. I always have to copy this.
 DN: Ah, there we go.
 
 97
-00:08:31,100 --> 00:08:35,100
+00:08:31,100 --> 00:08:37,110
 SP: In the context for the listener, this is a request,
 of a request of a response of the data that we loaded. 
 
 98
-00:08:35,100 --> 00:08:37,100
-So here's my 14K of data. So what you do with this is use it in the context that you created before. You decode audio data. So I say please decode this thing I just put out. And when you're ready...
-So it's got two call backs. That means it converts the binary data into something the browser can play, hopefully.
-It should be able to play because this is an 8.5. Also, I have tried it before.
-But if you don't know for sure that it's going to work of course. You should have a failed thingy. So this should tell you when you can't decode the thing. So it's a good practice.
-DN: Yeah, right.
-SP: This is terrible code, and then log the error. Something like that, so at least you can see something is happening. So supposing that we get that thing,.. Decoded buffer should print the thing. It's called that and it's called the thing.
-It makes sense that the inaud is happening because inaud. I think it's like CD size or something.
-DN: Yes, make sample rate.
-Because it's the challenge, I think it's a serial, not sure what's going on. Ah its 62bit so it makes sense.
-DN: Right.
-SP: It's not exact because you have the header as well. And the wave file, so it's not just raw binary data. You have the header, inaud you have wave file and Its got one channel la la la la.
-So this is what you call the inaud. First of all you need to work out the inaud, that depends on the browser.
-DN: This one's a .wav
-SP: In the context for the listener, this is a request,
-of a request of a response of the data that we loaded. 
+00:08:37,140 --> 00:08:39,990
+It's just an array buffer,
+it's not being parsed or anything.  
 
 99
-00:08:37,100 --> 00:08:37,110
-SP: In the context for the listener, this is a request,
-of a request of a response of the data that we loaded. 
+00:08:40,030 --> 00:08:46,580
+So here's my 14K of data,
+that I know what to do with.
 
 100
-00:08:37,140 --> 00:08:43,830
-It's not a inaud or anything. It's just a inaud  
+00:08:46,600 --> 00:08:51,420
+So what you do with this is use it
+in the context that you created before. 
+
+101
+00:08:51,420 --> 00:08:59,570
+You decode the audio data. So I say
+please decode this thing I just call up.
+
+102
+00:08:59,610 --> 00:09:05,980
+And when you're ready...
+So it's got two call backs. 
+
+103
+00:09:06,010 --> 00:09:10,420
+That means it converts the binary data
+into something the browser can play, hopefully.
+
+104
+00:09:10,440 --> 00:09:15,300
+It should be able to play because this
+is an 8.5. Also, I have tried it before. [Laughter]
+
+105
+00:09:15,350 --> 00:09:23,120
+But if you don't know for sure that it's going to
+work you should also have a failed thingy. 
+
+106
+00:09:23,140 --> 00:09:27,520
+This should tell you when you can't
+decode the thing. So it's a good practice.
+
+107
+00:09:27,570 --> 00:09:29,830
+DN: Yeah, right.
+
+108
+00:09:29,830 --> 00:09:33,840
+SP: This is terrible code.
+
+109
+00:09:33,880 --> 00:09:39,110
+And then log the error. Something like that,
+so at least you can see something is happening. 
+
+110
+00:09:39,110 --> 00:09:42,920
+So supposing that we get that thing,.. 
+
+111
+00:09:42,920 --> 00:09:48,630
+Decoded buffer should print the thing. 
+
+112
+00:09:48,630 --> 00:09:59,100
+It's called that and it's called the thing.
+It makes sense that the inaud is happening because inaud.
+
+113
+00:09:59,120 --> 00:10:03,770
+I think it's like CD size or something.
+ DN: Yeah... Sample rate.
+
+114
+00:10:03,780 --> 00:10:09,560
+SP: It's not exact because you have the header as well.
+And the wave file, so it's not just raw binary data. 
+
+115
+00:10:09,590 --> 00:10:13,620
+You have the header, and that describes
+the wave file and It's got one channel la la la la.
+
+116
+00:10:13,660 --> 00:10:17,950
+So this is what you call the
+decode data fraction does. 
+
+117
+00:10:17,950 --> 00:10:24,330
+First it needs to work out the type of
+file this is; it could be an old inaud file on mp3.
+
+118
+00:10:24,330 --> 00:10:28,330
+That depends on the browser. 
+
+119
+00:10:28,340 --> 00:10:29,520
+DN: This one's a .wav
 
