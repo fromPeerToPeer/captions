@@ -313,7 +313,151 @@ And then you want to listen once the thing has
 loaded, but I just want to go step by step. 
 
 70
-00:06:18,400 --> 00:06:20,400
-I just need a reminder (laughter).
-It's inaud because its uppercase... One upper case, it should be all uppercase.
+00:06:18,400 --> 00:06:22,850
+I can do this thing, I just need a reminder. [laughter]
+
+71
+00:06:26,310 --> 00:06:31,450
+It's super open because its got
+XMLH uppercase and the rest lower case.
+
+72
+00:06:31,490 --> 00:06:33,560
+It should be all uppercase, but it's not.
+
+73
+00:06:33,560 --> 00:06:35,980
+DN: HTTP is an abbreviation as well, isn't it?
+
+74
+00:06:35,980 --> 00:06:41,550
+SP: Exactly, it should be httprequest
+but its not so it's supre supre open.
+
+75
+00:06:41,550 --> 00:06:42,620
+DN: That's even harder to read
+
+76
+00:06:42,620 --> 00:06:50,780
+SP: Yes, whatever, they are changing that with inaud.
+
+77
+00:06:50,810 --> 00:06:57,660
+You need to say this is an arraybuffer because
+otherwise the browser tries to parse what it loads.
+
+78
+00:06:57,660 --> 00:07:02,030
+as though it's JSON or something. It doesn't
+want you to touch the thing before its inaud
+
+79
+00:07:02,050 --> 00:07:05,540
+You just want that arraybuffer.
+
+80
+00:07:05,740 --> 00:07:11,350
+And then you add an EventListener,
+so when the thing is ready it will tell you.
+
+81
+00:07:11,350 --> 00:07:14,070
+I could probably just complete...
+
+82
+00:07:18,760 --> 00:07:21,920
+Again, more console login [Laughter]
+
+83
+00:07:23,770 --> 00:07:29,410
+[Sole thinks]
+
+84
+00:07:29,430 --> 00:07:32,180
+OK this is how you open the thing. 
+
+85
+00:07:32,190 --> 00:07:38,610
+The URL let's say is CLAP07 
+
+86
+00:07:41,270 --> 00:07:46,740
+And then just say send and I have
+to make sure clap is in the right place. 
+
+87
+00:07:46,740 --> 00:07:48,190
+DN: Yes.
+
+88
+00:07:50,280 --> 00:07:54,480
+So this is clap 07 inaud this thing here.
+
+89
+00:07:54,480 --> 00:07:56,960
+So it's clap underscore. 
+
+90
+00:07:56,960 --> 00:07:59,520
+[Silence]
+
+91
+00:08:00,370 --> 00:08:05,870
+And that should load the thing.
+It should say something here... Hi!
+
+92
+00:08:05,870 --> 00:08:06,880
+DN: Ah, OK.
+
+93
+00:08:06,880 --> 00:08:13,180
+So when it's loaded, in this context, this is a request,
+
+94
+00:08:13,180 --> 00:08:22,210
+so if I say "this data"; it should request
+data, I think. No.  Maybe it will be response.  
+
+95
+00:08:22,320 --> 00:08:29,850
+I should make a library so I don't have to
+remember these things. I always have to copy this.
+
+96
+00:08:29,890 --> 00:08:31,100
+DN: Ah, there we go.
+
+97
+00:08:31,100 --> 00:08:35,100
+SP: In the context for the listener, this is a request,
+of a request of a response of the data that we loaded. 
+
+98
+00:08:35,100 --> 00:08:37,100
+So here's my 14K of data. So what you do with this is use it in the context that you created before. You decode audio data. So I say please decode this thing I just put out. And when you're ready...
+So it's got two call backs. That means it converts the binary data into something the browser can play, hopefully.
+It should be able to play because this is an 8.5. Also, I have tried it before.
+But if you don't know for sure that it's going to work of course. You should have a failed thingy. So this should tell you when you can't decode the thing. So it's a good practice.
+DN: Yeah, right.
+SP: This is terrible code, and then log the error. Something like that, so at least you can see something is happening. So supposing that we get that thing,.. Decoded buffer should print the thing. It's called that and it's called the thing.
+It makes sense that the inaud is happening because inaud. I think it's like CD size or something.
+DN: Yes, make sample rate.
+Because it's the challenge, I think it's a serial, not sure what's going on. Ah its 62bit so it makes sense.
+DN: Right.
+SP: It's not exact because you have the header as well. And the wave file, so it's not just raw binary data. You have the header, inaud you have wave file and Its got one channel la la la la.
+So this is what you call the inaud. First of all you need to work out the inaud, that depends on the browser.
+DN: This one's a .wav
+SP: In the context for the listener, this is a request,
+of a request of a response of the data that we loaded. 
+
+99
+00:08:37,100 --> 00:08:37,110
+SP: In the context for the listener, this is a request,
+of a request of a response of the data that we loaded. 
+
+100
+00:08:37,140 --> 00:08:43,830
+It's not a inaud or anything. It's just a inaud  
 
