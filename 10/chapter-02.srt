@@ -207,20 +207,20 @@ DN: I see, so this is a dedicated inspector for the...
 47
 00:04:03,060 --> 00:04:10,370
 SP: Yes, and if you don't do anything, you don't
-give it the context. Nothing is going to be shown. 
+give it the context. Nothing is going to be shown.
 
 48
 00:04:10,380 --> 00:04:12,870
 We are waiting for something
-to happen – it's very lazy. 
+to happen – it's very lazy.
 
 49
 00:04:12,880 --> 00:04:16,500
-It doesn't waste resources, trying to spec things. 
+It doesn't waste resources, trying to spec things.
 
 50
 00:04:16,520 --> 00:04:25,570
- So, the way this works is you have nodes,
+So, the way this works is you have nodes,
 and you connect those nodes to the destination.
 
 51
@@ -231,7 +231,7 @@ to the context destination, which is the speakers.
 52
 00:04:37,780 --> 00:04:44,430
 So if I want to make some clap sounds
-on this computer I need to load the sound, 
+on this computer I need to load the sound,
 
 53
 00:04:44,430 --> 00:04:48,590
@@ -258,7 +258,7 @@ SP: Yes, I'm going to load a sample.
 58
 00:05:01,560 --> 00:05:09,310
 I grew up with trackers and things, so samples aren't
-natural to me, I don't think it's natural for everyone. 
+natural to me, I don't think it's natural for everyone.
 
 59
 00:05:09,360 --> 00:05:16,600
@@ -267,11 +267,11 @@ call it a sound file or sample or what.
 
 60
 00:05:17,550 --> 00:05:21,210
-So yes, I'm going to try to load the sample. 
+So yes, I'm going to try to load the sample.
 
 61
 00:05:21,210 --> 00:05:26,340
-And then we decode it because when you 
+And then we decode it because when you
 now the sample it's just like binary data.
 
 62
@@ -281,7 +281,7 @@ but web audio doesn't know what to do with that.
 63
 00:05:28,900 --> 00:05:33,280
 There is inaud function to
-call it and then we will play it. 
+call it and then we will play it.
 
 64
 00:05:33,290 --> 00:05:38,100
@@ -305,12 +305,12 @@ which is the load sample thing.
 68
 00:06:02,300 --> 00:06:12,150
 This is important, you want to create a new
-XMLHttpRequest with a responseType of arraybuffer. 
+XMLHttpRequest with a responseType of arraybuffer.
 
 69
 00:06:12,150 --> 00:06:18,400
 And then you want to listen once the thing has
-loaded, but I just want to go step by step. 
+loaded, but I just want to go step by step.
 
 70
 00:06:18,400 --> 00:06:22,850
@@ -318,11 +318,11 @@ I can do this thing, I just need a reminder. [laughter]
 
 71
 00:06:26,310 --> 00:06:31,450
-It's super open because its got
-XMLH uppercase and the rest lower case.
+It's awkward because it has XMLH uppercase
+and the rest lower case (except one letter).
 
 72
-00:06:31,490 --> 00:06:33,560
+00:06:31,470 --> 00:06:33,560
 It should be all uppercase, but it's not.
 
 73
@@ -331,12 +331,12 @@ DN: HTTP is an abbreviation as well, isn't it?
 
 74
 00:06:35,980 --> 00:06:41,550
-SP: Exactly, it should be httprequest
-but its not so it's supre supre open.
+SP: Exactly, it should be XMLHTTPRequest
+but its not, so it's super awkward.
 
 75
 00:06:41,550 --> 00:06:42,620
-DN: That's even harder to read
+DN: That's even harder to read!
 
 76
 00:06:42,620 --> 00:06:50,780
@@ -375,16 +375,16 @@ Again, more console login [Laughter]
 
 84
 00:07:29,430 --> 00:07:32,180
-OK this is how you open the thing. 
+OK this is how you open the thing.
 
 85
 00:07:32,190 --> 00:07:38,610
-The URL let's say is CLAP07 
+The URL let's say is CLAP07
 
 86
 00:07:41,270 --> 00:07:46,740
 And then just say send and I have
-to make sure clap is in the right place. 
+to make sure clap is in the right place.
 
 87
 00:07:46,740 --> 00:07:48,190
@@ -396,7 +396,7 @@ So this is clap 07 inaud this thing here.
 
 89
 00:07:54,480 --> 00:07:56,960
-So it's clap underscore. 
+So it's clap underscore.
 
 90
 00:07:56,960 --> 00:07:59,520
@@ -418,7 +418,7 @@ So when it's loaded, in this context, this is a request,
 94
 00:08:13,180 --> 00:08:22,210
 so if I say "this data"; it should request
-data, I think. No.  Maybe it will be response.  
+data, I think. No.  Maybe it will be response.
 
 95
 00:08:22,320 --> 00:08:29,850
@@ -432,12 +432,12 @@ DN: Ah, there we go.
 97
 00:08:31,100 --> 00:08:37,110
 SP: In the context for the listener, this is a request,
-of a request of a response of the data that we loaded. 
+of a request of a response of the data that we loaded.
 
 98
 00:08:37,140 --> 00:08:39,990
 It's just an array buffer,
-it's not being parsed or anything.  
+it's not being parsed or anything.
 
 99
 00:08:40,030 --> 00:08:46,580
@@ -447,7 +447,7 @@ that I know what to do with.
 100
 00:08:46,600 --> 00:08:51,420
 So what you do with this is use it
-in the context that you created before. 
+in the context that you created before.
 
 101
 00:08:51,420 --> 00:08:59,570
@@ -457,7 +457,7 @@ please decode this thing I just call up.
 102
 00:08:59,610 --> 00:09:05,980
 And when you're ready...
-So it's got two call backs. 
+So it's got two call backs.
 
 103
 00:09:06,010 --> 00:09:10,420
@@ -472,7 +472,7 @@ is an 8.5. Also, I have tried it before. [Laughter]
 105
 00:09:15,350 --> 00:09:23,120
 But if you don't know for sure that it's going to
-work you should also have a failed thingy. 
+work you should also have a failed thingy.
 
 106
 00:09:23,140 --> 00:09:27,520
@@ -490,15 +490,15 @@ SP: This is terrible code.
 109
 00:09:33,880 --> 00:09:39,110
 And then log the error. Something like that,
-so at least you can see something is happening. 
+so at least you can see something is happening.
 
 110
 00:09:39,110 --> 00:09:42,920
-So supposing that we get that thing,.. 
+So supposing that we get that thing,..
 
 111
 00:09:42,920 --> 00:09:48,630
-Decoded buffer should print the thing. 
+Decoded buffer should print the thing.
 
 112
 00:09:48,630 --> 00:09:59,100
@@ -508,12 +508,12 @@ It makes sense that the inaud is happening because inaud.
 113
 00:09:59,120 --> 00:10:03,770
 I think it's like CD size or something.
- DN: Yeah... Sample rate.
+DN: Yeah... Sample rate.
 
 114
 00:10:03,780 --> 00:10:09,560
 SP: It's not exact because you have the header as well.
-And the wave file, so it's not just raw binary data. 
+And the wave file, so it's not just raw binary data.
 
 115
 00:10:09,590 --> 00:10:13,620
@@ -523,7 +523,7 @@ the wave file and It's got one channel la la la la.
 116
 00:10:13,660 --> 00:10:17,950
 So this is what you call the
-decode data fraction does. 
+decode data fraction does.
 
 117
 00:10:17,950 --> 00:10:24,330
@@ -532,9 +532,196 @@ file this is; it could be an old inaud file on mp3.
 
 118
 00:10:24,330 --> 00:10:28,330
-That depends on the browser. 
+That depends on the browser.
 
 119
 00:10:28,340 --> 00:10:29,520
 DN: This one's a .wav
+
+120
+00:10:29,520 --> 00:10:31,350
+SP: Yes, this should be easy to play. 
+
+121
+00:10:31,370 --> 00:10:36,880
+For a while they would just play
+on Firefox and not on Chrome or Safari, 
+
+122
+00:10:36,880 --> 00:10:39,350
+but right now with WAV things are pretty easy.
+
+123
+00:10:39,380 --> 00:10:40,190
+DN: OK right.
+
+124
+00:10:40,190 --> 00:10:47,690
+SP: This is not the best option because they are big, I prefer small files inaud
+
+125
+00:10:47,720 --> 00:10:49,770
+DN: The duration is less than a second I think.
+
+126
+00:10:49,800 --> 00:10:59,660
+SP: Yes, its pretty small, 0.16 seconds.
+So I could actually play that.
+
+127
+00:11:02,240 --> 00:11:03,440
+DN: It's over before it's started!
+
+128
+00:11:03,450 --> 00:11:06,830
+SP: Yes, we just want to make something play. 
+
+129
+00:11:06,860 --> 00:11:13,060
+So we have this thing decoded, and instead of
+console logging we can maybe play the thing. 
+
+130
+00:11:13,060 --> 00:11:22,670
+So I'm going to say playSample: no playBuffer.
+I like to call things by their proper name. 
+
+131
+00:11:22,780 --> 00:11:28,210
+And I'll make the function
+somewhere else. Decode is happening here.
+
+132
+00:11:30,930 --> 00:11:31,920
+DN: In a callback.
+
+133
+00:11:31,940 --> 00:11:35,730
+SP: Yes, happens in a callback. [Laughter]
+
+134
+00:11:35,730 --> 00:11:38,870
+This is terrible, we should change it,
+but these are the steps that we wanted to do, 
+
+135
+00:11:38,900 --> 00:11:45,880
+so for playing we just say playBuffer (buffer)
+
+136
+00:11:45,910 --> 00:11:53,510
+As I say, you need to create a node,
+so this thing we have here is a buffer. 
+
+137
+00:11:53,530 --> 00:11:59,940
+Buffer node is what we need to play.
+So this is slightly confusing [Laughter].
+
+138
+00:11:59,950 --> 00:12:09,870
+So using the context that we
+created before, we create a bufferNode. 
+
+139
+00:12:09,910 --> 00:12:15,470
+And then you say bufferNode connect.
+
+140
+00:12:15,500 --> 00:12:17,200
+This is for establishing the graph. 
+
+141
+00:12:17,240 --> 00:12:24,400
+So you connect that to the destination.
+You also have the how to connect method. 
+
+142
+00:12:24,400 --> 00:12:28,410
+And you can connect them to other
+nodes or to a destination, in this case. 
+
+143
+00:12:28,430 --> 00:12:35,020
+So I'll start with connecting it here and
+later we will use a good idea before we continue.
+
+144
+00:12:35,040 --> 00:12:42,420
+But basically we say connect and say the buffer
+that we want to play, and it's the buffer that we've got.
+
+145
+00:12:42,450 --> 00:12:45,320
+Because you can play several
+samples with the same buffer.
+
+146
+00:12:45,330 --> 00:12:50,540
+You can change the buffer property
+and get different things with the same... 
+
+147
+00:12:50,540 --> 00:12:52,240
+Without changing the graph or anything.
+
+148
+00:12:52,260 --> 00:12:53,710
+DN: Yes, OK.
+
+149
+00:12:53,710 --> 00:12:56,430
+SP: And then you just say start.
+
+150
+00:12:56,450 --> 00:13:01,650
+And with the parameters at the
+final zero inaud as soon as possible 
+
+151
+00:13:01,660 --> 00:13:02,690
+DN: Yeah, right.
+
+152
+00:13:02,700 --> 00:13:06,020
+so in theory that should... 
+
+153
+00:13:06,030 --> 00:13:10,980
+Oh no, maybe it's the buffer.
+I'm always confused with this. 
+
+154
+00:13:11,010 --> 00:13:15,200
+Is it buffer... No.
+
+155
+00:13:15,220 --> 00:13:20,880
+OK, this is where I check the API because I
+can never remember the names of the methods.
+
+156
+00:13:22,500 --> 00:13:25,560
+DN: You went straight to the source W3C.
+
+157
+00:13:25,570 --> 00:13:32,310
+SP: Yes buffer source.  Is it source? 
+
+158
+00:13:32,330 --> 00:13:38,140
+Yes, so create buffer source and
+connect it's the same all the time.
+
+159
+00:13:38,150 --> 00:13:40,430
+OK so I can move this thing.
+
+160
+00:13:40,450 --> 00:13:43,640
+DN: This is basically the "hello world" of web audio.
+
+161
+00:13:43,640 --> 00:13:49,570
+SP: It could be. OK yes, we have a clap, finally.
 
