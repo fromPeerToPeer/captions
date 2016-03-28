@@ -1,0 +1,145 @@
+﻿1
+00:00:00,000 --> 00:00:04,000
+Chapter 3: Adding a limiter.
+
+2
+00:00:04,000 --> 00:00:12,540
+This is OK, but sometimes you want
+to make sure things don't get too noisy 
+
+3
+00:00:12,570 --> 00:00:19,570
+because maybe this sample is super
+super saturated. You don't want to deafening.
+
+4
+00:00:19,600 --> 00:00:24,000
+So it's a good idea to insertn
+a limiter, in the meantime.
+
+5
+00:00:24,020 --> 00:00:27,670
+So instead of connecting the sample
+to the destination, you connect it to the limiter.
+
+6
+00:00:27,670 --> 00:00:30,360
+So you don't maximize all the sounds.
+
+7
+00:00:30,360 --> 00:00:34,350
+DN: So you don't blow up your speakers.
+SP: Exactly!
+
+8
+00:00:34,380 --> 00:00:43,380
+So I will create this thing up
+here... Very much a inaud name. 
+
+9
+00:00:43,390 --> 00:00:51,310
+And I will create another node
+which I think is called 'compressor'... 
+
+10
+00:00:54,030 --> 00:00:56,730
+DynamicsCompressor.
+
+11
+00:00:58,580 --> 00:01:02,520
+So instead of connecting to the
+destination, I will connect to the limiter.  
+
+12
+00:01:02,520 --> 00:01:08,960
+And then I  will connect the limiter to
+the destination.  So we create this whole chain. 
+
+13
+00:01:09,310 --> 00:01:13,920
+And this is always connected,
+so we don't need to do this all the time.
+
+14
+00:01:13,920 --> 00:01:18,630
+So I will connect this into the limiter.
+
+15
+00:01:18,910 --> 00:01:21,990
+and it should still play. [We hear a clap]
+
+16
+00:01:21,990 --> 00:01:23,080
+DN: OK.
+
+17
+00:01:23,080 --> 00:01:26,980
+Its not the format inaud. This is the base here.
+
+18
+00:01:27,010 --> 00:01:28,810
+DN: So we're seeing the graph?
+
+19
+00:01:28,810 --> 00:01:35,430
+SP: Yes, but we don't see the buffer store
+because it's just died and it's been deleted.
+
+20
+00:01:35,450 --> 00:01:36,550
+DN: I see.
+
+21
+00:01:36,560 --> 00:01:39,810
+SP: You see now everything has gone
+because we're not using it anymore.
+
+22
+00:01:40,160 --> 00:01:44,090
+DN: The garbage collector is
+doing his thing [laughter]. 
+
+23
+00:01:44,090 --> 00:01:46,270
+So you saw that very briefly.
+
+24
+00:01:46,300 --> 00:01:47,640
+DN: A flash of a second.
+
+25
+00:01:47,660 --> 00:01:51,120
+SP: Well we have more things running.
+We will see more things showing up. 
+
+26
+00:01:51,140 --> 00:01:53,500
+and it's interesting to see that things don't stay.
+
+27
+00:01:53,500 --> 00:01:55,720
+So that's inaud.
+
+28
+00:01:55,720 --> 00:01:57,500
+ So when you want to describe things, or when things inaud too long.
+
+29
+00:01:57,500 --> 00:01:59,500
+ Inaud.
+Hmm... Maybe I should check that everything's correct.
+
+ So when you want to describe things, or when things inaud too long.
+
+30
+00:01:59,500 --> 00:02:01,500
+DN: I see.
+SP: So it's good to keep an eye on these.  If something inaud correctly. We want to make sure things are really disposed of.
+DN: Yes.
+SP: So we've got this thing but it's just like a clap and we want to play the sequence.
+ So when you want to describe things, or when things inaud too long.
+
+31
+00:02:01,500 --> 00:02:01,970
+ So when you want to describe things, or when things inaud too long.
+
