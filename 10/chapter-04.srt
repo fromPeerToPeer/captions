@@ -1,0 +1,93 @@
+﻿1
+00:00:00,000 --> 00:00:03,880
+Chapter 4: Playing part 1 sequence once
+
+2
+00:00:03,880 --> 00:00:08,025
+SP: OK, so we want to play this thing, at least once. 
+
+3
+00:00:08,030 --> 00:00:10,580
+Let's just make the first player play inaud.
+
+4
+00:00:10,585 --> 00:00:11,520
+DN: Sure.
+
+5
+00:00:11,525 --> 00:00:17,780
+So I'm going to copy this
+here and add it as a comment. 
+
+6
+00:00:17,795 --> 00:00:19,875
+Obviously we don't know how to play the thing.
+
+7
+00:00:19,880 --> 00:00:27,240
+ But I'm going to simulate this as
+an array. Make it as zeros and ones.
+
+8
+00:00:27,250 --> 00:00:27,645
+DN: Yes, sure.
+
+9
+00:00:27,650 --> 00:00:32,615
+SP: So it's one, one, one, and
+the score is zero, so it's nothing. 
+
+10
+00:00:33,000 --> 00:00:46,510
+Then one, one, one zero, one one, zero, one,
+zero, one, one, zero.  So that's the same, but in binary.
+
+11
+00:00:46,530 --> 00:00:48,360
+DN: Yes, binary solo.
+
+12
+00:00:48,360 --> 00:00:54,850
+SP: Yes. Sometimes what I do when
+you have things that come from strings,
+
+13
+00:00:54,865 --> 00:00:59,690
+because people are comfortable
+drawing things, kind of like ASCII art.
+
+14
+00:00:59,700 --> 00:01:05,680
+You could parse it and say
+if it's an x replace it with a one  etc. 
+
+15
+00:01:05,690 --> 00:01:10,100
+But, in this case its short enough
+for us to leave it like that.
+
+16
+00:01:10,120 --> 00:01:12,790
+Yes, that should be short enough.
+
+17
+00:01:12,800 --> 00:01:14,665
+So, we can assume that
+every element of the array is a step.
+
+18
+00:01:14,665 --> 00:01:16,660
+So I will arbitrarily give it a stepLength, say 0.2 seconds. Because web audio uses seconds.  So what I will do initially to play the sequence is calculate timing for all this and schedule the play, so we can reuse the same buffer.
+I don't need to load it every time, just load it once and reuse it with different buffer sources.
+So instead of playing the buffer, what I'll do is play the sequence. I want to inaud.
+Normally my font is very small so I can see everything, but here I can't so I need two panes here.
+
+When it's a long file like this I like to see the top.
+So, we can assume that
+every element of the array is a step.
+
+19
+00:01:16,660 --> 00:01:20,675
+So, we can assume that
+every element of the array is a step.
+
