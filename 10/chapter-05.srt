@@ -209,10 +209,95 @@ one for starting and one for stopping,
 and another for trying the timeout. 
 
 45
-00:03:33,510 --> 00:03:35,510
-SP: We won't call this playSequence, but I'll delete that thing later.
-I also like to have some spaces, some spaces here as well.
-And for some reason I like to have this curly thing.
-SP: Ok I've got start and I've got stop. I like to write this skeleton so I know I need to fill things later. So it's always what I'm doing, And at the end of this I will call this again.
+00:03:29,240 --> 00:03:32,790
+SP: We won't call this playSequence,
+but I'll delete that thing later.
+
+46
+00:03:32,800 --> 00:03:42,120
+And I can delete this thing also.
+I like to have some spaces here as well.
+
+47
+00:03:42,170 --> 00:03:47,420
+And for some reason I
+have these little curly things.
+
+48
+00:03:47,450 --> 00:03:52,730
+SP: So I've got start and I've got stop.
+
+49
+00:03:52,750 --> 00:03:59,100
+I like to write this skeleton so
+I know I need to fill things later. 
+
+50
+00:03:59,120 --> 00:04:05,000
+It's what I always do. And at
+the end of this I will call this again.
+
+51
+00:04:05,030 --> 00:04:08,260
 DN: I see.
+
+52
+00:04:08,260 --> 00:04:16,940
+SP: I will use this so I can
+cancel this on stop... Is it clearTimeout?
+
+53
+00:04:16,970 --> 00:04:22,060
+Because obviously cancel was
+not a good name. [Laughter]
+
+54
+00:04:22,060 --> 00:04:25,440
+So I build this thing.
+
+55
+00:04:26,350 --> 00:04:29,620
+So that's more or less what we want to do.
+
+56
+00:04:29,650 --> 00:04:31,610
+That's why I think it's a
+good idea to have the skeleton;
+
+57
+00:04:31,670 --> 00:04:36,420
+so you can say I want to
+start and stop. And that's the crux.
+
+58
+00:04:36,450 --> 00:04:38,670
+Obviously we want to have more things in schedule().
+
+59
+00:04:38,690 --> 00:04:43,830
+SP: Not just like start or stop timeout.
+I also need to create the timeout as well. 
+
+60
+00:04:43,830 --> 00:04:46,990
+[Silence]
+
+61
+00:04:49,100 --> 00:04:55,720
+It's nothing right now. It's good
+to be clear about your intentions.
+
+62
+00:04:55,740 --> 00:05:05,170
+So when I start this thing I'll
+save the time at which this started? 
+
+63
+00:05:05,200 --> 00:05:09,120
+Let me think. 
+
+64
+00:05:09,120 --> 00:05:11,120
+So that way I know when I pause the thing, and then I can calculate the steps.. This is a bit weird, and it takes a long time to understand, but you will understand why I schedule this thing.
+DN: OK.
 
