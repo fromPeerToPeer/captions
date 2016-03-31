@@ -100,55 +100,119 @@ So a way to explain that would be... We
 are going to keep track of which step we are in.
 
 22
-00:01:49,860 --> 00:01:56,960
+00:01:49,860 --> 00:01:57,160
 And we know how long each step takes, so timeout is
 going to be checking if it needs to schedule things.
 
 23
-00:01:56,960 --> 00:01:57,160
- so it's not a timer, it's a timeout.
-
-SP: So we are going to keep track of which position we are in the steps in the sequence.
-So every time the timeout is going to run its going to say "Which step are we in?" and see if it needs to trigger things or schedule things to be triggered.
-And then, the reason it's a timeout and not just a timer is because a timer is going to be trying to call all the time all the time as fast as possible.
-But with timeout, if for example you drift a little bit, the next time you called you will try to make up for the little bit you missed.
-
-DN: If I understand correctly, the way we've done it so far it's like we define, well so far one bar of music, and we've defined it all up front. And then we just set it running and it plays and we can't stop it.
-But with this it's almost like we're saying...
-SP: We're going to be reading the score.
-And we know how long each step takes, so timeout is
-going to be checking if it needs to schedule things.
+00:01:57,180 --> 00:02:02,220
+Every time we've finished with
+a function we give it a new timeout.
 
 24
-00:01:57,160 --> 00:01:57,180
- so it's not a timer, it's a timeout.
-
-SP: So we are going to keep track of which position we are in the steps in the sequence.
-So every time the timeout is going to run its going to say "Which step are we in?" and see if it needs to trigger things or schedule things to be triggered.
-And then, the reason it's a timeout and not just a timer is because a timer is going to be trying to call all the time all the time as fast as possible.
-But with timeout, if for example you drift a little bit, the next time you called you will try to make up for the little bit you missed.
-
-DN: If I understand correctly, the way we've done it so far it's like we define, well so far one bar of music, and we've defined it all up front. And then we just set it running and it plays and we can't stop it.
-But with this it's almost like we're saying...
-SP: We're going to be reading the score.
+00:02:02,220 --> 00:02:04,100
+So it's not a timer, it's a timeout. 
 
 25
-00:01:57,180 --> 00:01:58,960
-Every time we've finished with
-a function we give it a new timeout.
- so it's not a timer, it's a timeout.
-
-SP: So we are going to keep track of which position we are in the steps in the sequence.
-So every time the timeout is going to run its going to say "Which step are we in?" and see if it needs to trigger things or schedule things to be triggered.
-And then, the reason it's a timeout and not just a timer is because a timer is going to be trying to call all the time all the time as fast as possible.
-But with timeout, if for example you drift a little bit, the next time you called you will try to make up for the little bit you missed.
-
-DN: If I understand correctly, the way we've done it so far it's like we define, well so far one bar of music, and we've defined it all up front. And then we just set it running and it plays and we can't stop it.
-But with this it's almost like we're saying...
-SP: We're going to be reading the score.
+00:02:04,140 --> 00:02:09,050
+So we are going to keep track of which
+position we are in in the steps in the sequence.
 
 26
-00:01:58,960 --> 00:02:02,220
-Every time we've finished with
-a function we give it a new timeout.
+00:02:09,110 --> 00:02:14,300
+So every time the timeout is going to
+run it's going to say "Which step are we in?",
+
+27
+00:02:14,310 --> 00:02:20,330
+and see if it needs to trigger
+things or schedule things to be triggered.
+
+28
+00:02:20,370 --> 00:02:22,970
+The reason it's a timeout
+and not just a timer is because 
+
+29
+00:02:22,980 --> 00:02:26,910
+a timer is going to be trying to
+call all the time as fast as possible.
+
+30
+00:02:26,920 --> 00:02:31,530
+But with timeout, if for
+example you drift a little bit, 
+
+31
+00:02:31,550 --> 00:02:39,330
+the next time you called you will try
+to make up for whatever you missed.
+
+32
+00:02:39,360 --> 00:02:45,590
+DN: If I understand correctly, the way
+we've done it so far is to define one bar of music, 
+
+33
+00:02:45,600 --> 00:02:49,810
+and we've defined it all up front. And then we just
+set it running and it plays and we can't stop it.
+
+34
+00:02:49,840 --> 00:02:51,700
+But with this it's almost like we're saying...
+
+35
+00:02:51,710 --> 00:02:53,240
+SP: We're going to be reading the score.
+
+36
+00:02:53,240 --> 00:02:56,120
+DN: We're going to be reading
+the score like a musician does.
+
+37
+00:02:56,150 --> 00:02:58,390
+And at each point in time
+we're scheduling the next beat.
+
+38
+00:02:58,410 --> 00:03:03,250
+SP: Exactly. And like a conductor saying
+"slow down" because we changed the tempo, 
+
+39
+00:03:03,280 --> 00:03:06,350
+we're still reading the score but take longer.
+
+40
+00:03:06,380 --> 00:03:11,880
+SP: And if someone says pause, just pause for
+a moment, instead of "Oh, I can't pause now".
+
+41
+00:03:11,880 --> 00:03:13,760
+DN: OK.
+
+42
+00:03:13,800 --> 00:03:19,550
+SP: So I will just describe a step or
+something and stop at 0. Which is where I am. 
+
+43
+00:03:19,630 --> 00:03:22,100
+So I want to introduce a couple of functions, 
+
+44
+00:03:22,110 --> 00:03:29,220
+one for starting and one for stopping,
+and another for trying the timeout. 
+
+45
+00:03:33,510 --> 00:03:35,510
+SP: We won't call this playSequence, but I'll delete that thing later.
+I also like to have some spaces, some spaces here as well.
+And for some reason I like to have this curly thing.
+SP: Ok I've got start and I've got stop. I like to write this skeleton so I know I need to fill things later. So it's always what I'm doing, And at the end of this I will call this again.
+DN: I see.
 
