@@ -12,7 +12,7 @@ DN: Right.
 
 4
 00:00:07,730 --> 00:00:10,870
- We just play 1 player.  
+We just play 1 player.
 
 5
 00:00:10,870 --> 00:00:13,690
@@ -21,7 +21,7 @@ And there is also no way to adjust the tempo.
 6
 00:00:13,690 --> 00:00:19,270
 And also there is no way to stop it. Once it starts
-playing I can't stop it and I can't continue. 
+playing I can't stop it and I can't continue.
 
 7
 00:00:19,300 --> 00:00:24,590
@@ -46,11 +46,11 @@ player is playing the same thing at the same time.
 11
 00:00:47,260 --> 00:00:52,830
 But the issue with that (and same thing here), is that
-I'm scheduling the whole thing from the beginning. 
+I'm scheduling the whole thing from the beginning.
 
 12
 00:00:52,880 --> 00:00:55,900
-Then once it's playing there's no way to stop it. 
+Then once it's playing there's no way to stop it.
 
 13
 00:00:55,910 --> 00:01:00,260
@@ -60,7 +60,7 @@ you ask me for which is playing it, stopping it,
 14
 00:01:00,310 --> 00:01:05,270
 and changing the tempo etc.
-Right now this will be pretty boring. 
+Right now this will be pretty boring.
 
 15
 00:01:05,270 --> 00:01:10,110
@@ -70,12 +70,12 @@ audio is that you can interact with it.
 16
 00:01:10,110 --> 00:01:17,700
 It's very playful, and generates things dynamically.
-And what we're doing is not very dynamic. 
+And what we're doing is not very dynamic.
 
 17
 00:01:17,720 --> 00:01:24,810
 As I said, web audio is running a
-different clock so you could try and do a timeout. 
+different clock so you could try and do a timeout.
 
 18
 00:01:24,820 --> 00:01:30,380
@@ -85,14 +85,14 @@ very erratic and they depend on a lot of things.
 19
 00:01:30,380 --> 00:01:30,560
 It is recommended to have a timeout that
-periodically checks if it needs to schedule things. 
+periodically checks if it needs to schedule things.
 But that's not a good idea because timeouts are
 very erratic and they depend on a lot of things.
 
 20
 00:01:30,560 --> 00:01:41,710
 It is recommended to have a timeout that
-periodically checks if it needs to schedule things. 
+periodically checks if it needs to schedule things.
 
 21
 00:01:41,730 --> 00:01:49,830
@@ -111,7 +111,7 @@ a function we give it a new timeout.
 
 24
 00:02:02,220 --> 00:02:04,100
-So it's not a timer, it's a timeout. 
+So it's not a timer, it's a timeout.
 
 25
 00:02:04,140 --> 00:02:09,050
@@ -131,7 +131,7 @@ things or schedule things to be triggered.
 28
 00:02:20,370 --> 00:02:22,970
 The reason it's a timeout
-and not just a timer is because 
+and not just a timer is because
 
 29
 00:02:22,980 --> 00:02:26,910
@@ -141,7 +141,7 @@ call all the time as fast as possible.
 30
 00:02:26,920 --> 00:02:31,530
 But with timeout, if for
-example you drift a little bit, 
+example you drift a little bit,
 
 31
 00:02:31,550 --> 00:02:39,330
@@ -151,7 +151,7 @@ to make up for whatever you missed.
 32
 00:02:39,360 --> 00:02:45,590
 DN: If I understand correctly, the way
-we've done it so far is to define one bar of music, 
+we've done it so far is to define one bar of music,
 
 33
 00:02:45,600 --> 00:02:49,810
@@ -179,7 +179,7 @@ we're scheduling the next beat.
 38
 00:02:58,410 --> 00:03:03,250
 SP: Exactly. And like a conductor saying
-"slow down" because we changed the tempo, 
+"slow down" because we changed the tempo,
 
 39
 00:03:03,280 --> 00:03:06,350
@@ -197,16 +197,16 @@ DN: OK.
 42
 00:03:13,800 --> 00:03:19,550
 SP: So I will just describe a step or
-something and stop at 0. Which is where I am. 
+something and stop at 0. Which is where I am.
 
 43
 00:03:19,630 --> 00:03:22,100
-So I want to introduce a couple of functions, 
+So I want to introduce a couple of functions,
 
 44
 00:03:22,110 --> 00:03:29,220
 one for starting and one for stopping,
-and another for trying the timeout. 
+and another for trying the timeout.
 
 45
 00:03:29,240 --> 00:03:32,790
@@ -230,7 +230,7 @@ SP: So I've got start and I've got stop.
 49
 00:03:52,750 --> 00:03:59,100
 I like to write this skeleton so
-I know I need to fill things later. 
+I know I need to fill things later.
 
 50
 00:03:59,120 --> 00:04:05,000
@@ -276,7 +276,7 @@ Obviously we want to have more things in schedule().
 59
 00:04:38,690 --> 00:04:43,830
 SP: Not just like start or stop timeout.
-I also need to create the timeout as well. 
+I also need to create the timeout as well.
 
 60
 00:04:43,830 --> 00:04:46,990
@@ -290,14 +290,27 @@ to be clear about your intentions.
 62
 00:04:55,740 --> 00:05:05,170
 So when I start this thing I'll
-save the time at which this started? 
+save the time at which this started?
 
 63
 00:05:05,200 --> 00:05:09,120
-Let me think. 
+Let me think.
 
 64
-00:05:09,120 --> 00:05:11,120
-So that way I know when I pause the thing, and then I can calculate the steps.. This is a bit weird, and it takes a long time to understand, but you will understand why I schedule this thing.
+00:05:09,140 --> 00:05:13,480
+That way I know when I pause
+the thing, I can calculate the steps.
+
+65
+00:05:13,510 --> 00:05:17,130
+This is a bit weird, and it
+takes a long time to understand, 
+
+66
+00:05:17,140 --> 00:05:19,920
+but you will understand why I schedule this thing.
+
+67
+00:05:19,940 --> 00:05:20,530
 DN: OK.
 
