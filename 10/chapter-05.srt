@@ -531,23 +531,81 @@ And then you have step length
 and you want to scale it again.
 
 113
-00:09:08,190 --> 00:09:12,060
+00:09:08,190 --> 00:09:10,320
 DN: And it calls itself.
 
 114
-00:09:12,060 --> 00:09:14,060
-SP: Yes. Writing this thing from scratch, I can't reason about this because I understand this thing now, 
+00:09:10,350 --> 00:09:16,420
+SP: Yes. I can reason about this
+now because I understand it better. 
 
 115
-00:09:14,060 --> 00:09:16,060
-but the first time I tried to do this by myself it didn't really work, it's hard to do it by yourself. You need to go through the tutorial first.
-I want to just copy this. So this is the functions and I'll put them at the end.
-DN: I did notice, here it talks about a context whereas you've abbreviated that as ac. That might cause problems.
-SP: Yes, I was being super minimal here. So we need to change this to ac. This extra 0.005 thingy, it gives you some leeway so when you press and release the button, a little bit after. Just in case there was some delay or whatever. I also need the firewalls. I might have some already? I don't know.
+00:09:16,460 --> 00:09:24,380
+But the first time I tried it, it didn't
+really work, it's hard to do it by yourself.
 
-I should maybe be using JSHint but I got this computer recently and I haven't installed JSHint yet. So things are missing.  I generally have indicators on the side like "this line is wrong" but I don't have anything yet.
+116
+00:09:24,420 --> 00:09:27,020
+You need to go through the tutorial first.
+
+117
+00:09:27,050 --> 00:09:36,060
+I want to just copy this. So this is
+the functions and I'll put them at the end.
+
+118
+00:09:37,220 --> 00:09:44,000
+DN: I did notice that here it talks about a
+context whereas you've abbreviated that as ac.
+
+119
+00:09:44,050 --> 00:09:47,840
+That might cause problems.
+
+120
+00:09:47,840 --> 00:09:54,850
+SP: Yes your right, I was being super
+minimal here. So we need to change this to ac. 
+
+121
+00:09:54,890 --> 00:10:00,460
+This extra 0.005 thingy, it gives you some leeway.
+
+122
+00:10:00,510 --> 00:10:08,820
+When you press and release the button, it's a little
+bit after; in case there was some delay or whatever. 
+
+123
+00:10:08,820 --> 00:10:13,050
+And here as well is a loop.
+
+124
+00:10:15,740 --> 00:10:18,300
+inaud
+
+125
+00:10:18,320 --> 00:10:23,090
+Then I also need the firewalls. I might
+have some already. I don't know.
+
+126
+00:10:26,030 --> 00:10:28,950
+I should maybe be using JSHint but I got this
+computer recently and I haven't installed it yet. 
+
+127
+00:10:28,950 --> 00:10:30,950
+So things are missing.  I generally have indicators on the side like "this line is wrong" but I don't have anything yet.
 So, I suppose... This is step time, step length, we will make this independent on the BPM. So suppose I use 70. I've found this is the right number for clapping music. So now instead of playing this sequence. We just do playback, we don't do any more. Just play.
 We should shift everything to the right because it's not indented. Before we start we need to install the buffer somewhere because otherwise it won't know what to play with.
 Sole types
 Inaud
+I should maybe be using JSHint but I got this
+computer recently and I haven't installed it yet. 
+
+128
+00:10:30,950 --> 00:10:33,310
+I should maybe be using JSHint but I got this
+computer recently and I haven't installed it yet. 
 
