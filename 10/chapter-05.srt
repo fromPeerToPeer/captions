@@ -507,13 +507,47 @@ At some point the context might
 be for example, thousands of seconds. 
 
 108
-00:08:39,340 --> 00:08:41,340
-so that's why you need to remove or...
-how do you say, when you add something you sum it, but when you remove something you...?
-DN: Get the difference? Or subtract?
-SP: You subtract! That's the word.
-So that's why you want to subtract this start time, so it becomes relative again.
-So just go to the next step and if it's more than the number of steps we are looping so you go back to zero again. And then you have step length and you want to scale it again.
+00:08:39,340 --> 00:08:49,400
+So that's why you need to
+remove or subtract something.
+
+109
+00:08:49,410 --> 00:08:56,410
+And that's when you need to subtract
+this start time, so it becomes relative again.
+
+110
+00:08:56,440 --> 00:09:01,720
+Then we go to the next step and if it's
+more than the number of steps we are looping, 
+
+111
+00:09:01,740 --> 00:09:03,990
+then we go back to zero again. 
+
+112
+00:09:04,030 --> 00:09:08,190
+And then you have step length
+and you want to scale it again.
+
+113
+00:09:08,190 --> 00:09:12,060
 DN: And it calls itself.
-it has to happen at step time, using the sequence.
+
+114
+00:09:12,060 --> 00:09:14,060
+SP: Yes. Writing this thing from scratch, I can't reason about this because I understand this thing now, 
+
+115
+00:09:14,060 --> 00:09:16,060
+but the first time I tried to do this by myself it didn't really work, it's hard to do it by yourself. You need to go through the tutorial first.
+I want to just copy this. So this is the functions and I'll put them at the end.
+DN: I did notice, here it talks about a context whereas you've abbreviated that as ac. That might cause problems.
+SP: Yes, I was being super minimal here. So we need to change this to ac. This extra 0.005 thingy, it gives you some leeway so when you press and release the button, a little bit after. Just in case there was some delay or whatever. I also need the firewalls. I might have some already? I don't know.
+
+I should maybe be using JSHint but I got this computer recently and I haven't installed JSHint yet. So things are missing.  I generally have indicators on the side like "this line is wrong" but I don't have anything yet.
+So, I suppose... This is step time, step length, we will make this independent on the BPM. So suppose I use 70. I've found this is the right number for clapping music. So now instead of playing this sequence. We just do playback, we don't do any more. Just play.
+We should shift everything to the right because it's not indented. Before we start we need to install the buffer somewhere because otherwise it won't know what to play with.
+Sole types
+Inaud
 
