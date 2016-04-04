@@ -590,22 +590,90 @@ Then I also need the firewalls. I might
 have some already. I don't know.
 
 126
-00:10:26,030 --> 00:10:28,950
+00:10:26,030 --> 00:10:33,310
 I should maybe be using JSHint but I got this
 computer recently and I haven't installed it yet. 
 
 127
-00:10:28,950 --> 00:10:30,950
-So things are missing.  I generally have indicators on the side like "this line is wrong" but I don't have anything yet.
-So, I suppose... This is step time, step length, we will make this independent on the BPM. So suppose I use 70. I've found this is the right number for clapping music. So now instead of playing this sequence. We just do playback, we don't do any more. Just play.
-We should shift everything to the right because it's not indented. Before we start we need to install the buffer somewhere because otherwise it won't know what to play with.
-Sole types
-Inaud
-I should maybe be using JSHint but I got this
-computer recently and I haven't installed it yet. 
+00:10:33,350 --> 00:10:34,900
+So things are missing. 
 
 128
-00:10:30,950 --> 00:10:33,310
-I should maybe be using JSHint but I got this
-computer recently and I haven't installed it yet. 
+00:10:34,920 --> 00:10:40,740
+I usually have indicators on the side like
+"this line is wrong" but I don't have anything yet.
+
+129
+00:10:40,760 --> 00:10:48,020
+So, I suppose... This is step time, step length,
+we will make this dependent on the BPM.
+
+130
+00:10:48,390 --> 00:10:55,030
+So suppose I use 70. I've found this
+is the right number for clapping music. 
+
+131
+00:10:56,390 --> 00:11:00,040
+So now instead of playing this sequence.
+
+132
+00:11:00,290 --> 00:11:03,300
+[Sole thinks]
+
+133
+00:11:06,780 --> 00:11:11,700
+We just do playback, we don't do any more.
+
+134
+00:11:11,700 --> 00:11:14,860
+Just play. [Laughter]
+
+135
+00:11:17,400 --> 00:11:20,720
+But play doesn't exist.
+
+136
+00:11:20,740 --> 00:11:28,040
+We should also shift everything to
+the right because it's not indented. 
+
+137
+00:11:28,040 --> 00:11:31,030
+[Silence]
+
+138
+00:11:31,630 --> 00:11:34,250
+Yes, this is start so...
+
+139
+00:11:34,280 --> 00:11:36,490
+Before we start we need
+to install the buffer somewhere, 
+
+140
+00:11:36,520 --> 00:11:39,650
+because otherwise it won't know what to play with.
+
+141
+00:11:39,650 --> 00:11:42,050
+DN: Right.
+
+142
+00:11:42,100 --> 00:11:45,200
+[Silence]
+
+143
+00:11:48,650 --> 00:11:52,330
+SP: For example. [Laughter]
+DN: OK.
+
+144
+00:11:52,350 --> 00:11:55,800
+
+SP: So I set the sample to decode the buffer.  So now when we start playing nothing is going to happen because we're not doing anything in the schedule() function. We have the start time, the step time is zero here inaud.
+DN: Oh yes, of course.
+SP: Let's suppose we start early. This is not zero so we will have an issue here. And then we want to play a quarter note la la la la.
+So here we need to decide what we are going to do every time we do this thing. So how do we inaud, we need to look at the sequence.
+
 
