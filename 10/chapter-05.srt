@@ -317,7 +317,7 @@ DN: OK.
 68
 00:05:20,530 --> 00:05:28,210
 SP: So you have the sequence, but you
-can't pause or play,  or change the tempo, 
+can't pause or play,  or change the tempo,
 
 69
 00:05:28,490 --> 00:05:32,060
@@ -327,7 +327,7 @@ advance and that's not the way it should be.
 70
 00:05:32,090 --> 00:05:37,190
 And it's not really playful. So
-what we should use is 2 clocks. 
+what we should use is 2 clocks.
 
 71
 00:05:37,200 --> 00:05:42,690
@@ -337,7 +337,7 @@ the two clocks'. And if you look will find that.
 72
 00:05:42,720 --> 00:05:46,910
 So essentially what were going to have is
-this timeout function; this scheduling function. 
+this timeout function; this scheduling function.
 
 73
 00:05:46,950 --> 00:05:52,640
@@ -362,7 +362,7 @@ this thing from the ground up,
 77
 00:06:12,730 --> 00:06:15,410
 and I always forget something,
-so I've prepared a skeleton. 
+so I've prepared a skeleton.
 
 78
 00:06:15,440 --> 00:06:18,070
@@ -371,7 +371,7 @@ It's a simplified version of the tutorial.
 79
 00:06:18,110 --> 00:06:24,060
 Because the tutorial also deals with having
-swings, so you can smooth out the tempo at every step. 
+swings, so you can smooth out the tempo at every step.
 
 80
 00:06:24,090 --> 00:06:27,920
@@ -447,7 +447,7 @@ or do I need to jump to the next one"?
 95
 00:07:46,210 --> 00:07:50,400
 Or, "Should I just stop
-because it's not time to play it yet?" 
+because it's not time to play it yet?"
 
 96
 00:07:50,440 --> 00:07:53,810
@@ -459,22 +459,61 @@ So with the step time and the start
 time, you can say if something has to happen,
 
 98
-00:07:59,230 --> 00:08:02,350
-it has to happen at step time, using the sequence. 
+00:07:59,230 --> 00:08:04,620
+it has to happen at step time, using the sequence.
 
 99
-00:08:02,350 --> 00:08:04,350
-But when you scale something you scale in the context playtime, which is the web audio clock. So you have this sequence which is totally atemporal, so to speak, so we are going to be looping over the sequence all the time.
-But when you schedule things you do it with the context because we will be playing and stopping things several times during the lifetime of the website, so that the clock of the context keeps growing, but the sequences are still zero one.  Supposing its one step, one second, zero one two three four. At some point the context might be like – thousands of seconds, so that's why you need to remove or...
+00:08:04,660 --> 00:08:08,670
+But when you scale something
+you scale in the context playtime,
+
+100
+00:08:08,670 --> 00:08:10,950
+which is the web audio clock. 
+
+101
+00:08:10,970 --> 00:08:14,650
+So you have this sequence which
+is totally atemporal, so to speak,
+
+102
+00:08:14,680 --> 00:08:17,340
+We are going to be looping
+over the sequence all the time.
+
+103
+00:08:17,340 --> 00:08:19,910
+But when you schedule
+things you do it with the context
+
+104
+00:08:19,920 --> 00:08:24,860
+because we will be playing and stopping things
+several times during the lifetime of the website,
+
+105
+00:08:24,900 --> 00:08:31,160
+so that the clock of the context keeps
+growing, but the sequences are still zero one.  
+
+106
+00:08:31,180 --> 00:08:35,790
+Supposing its one step, one
+second, zero one two three four.
+
+107
+00:08:35,810 --> 00:08:39,340
+At some point the context might
+be for example, thousands of seconds. 
+
+108
+00:08:39,340 --> 00:08:41,340
+so that's why you need to remove or...
 how do you say, when you add something you sum it, but when you remove something you...?
 DN: Get the difference? Or subtract?
 SP: You subtract! That's the word.
 So that's why you want to subtract this start time, so it becomes relative again.
 So just go to the next step and if it's more than the number of steps we are looping so you go back to zero again. And then you have step length and you want to scale it again.
 DN: And it calls itself.
-it has to happen at step time, using the sequence. 
-
-100
-00:08:04,350 --> 00:08:04,650
-it has to happen at step time, using the sequence. 
+it has to happen at step time, using the sequence.
 
