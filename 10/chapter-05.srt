@@ -714,45 +714,170 @@ So how do we start with something
 should happen; we need to look at the sequence.
 
 154
-00:12:46,820 --> 00:12:48,820
+00:12:46,820 --> 00:12:49,010
 DN: Right.
 
 155
-00:12:48,820 --> 00:12:49,010
-This is kind of similar to the previous play sequence but we may not look at the whole thing, just do one step at a time.
-So shouldPlay do a sequence of current steps. Inaud
-DN: So this schedule function gets called what, a hundred times a second?
-SP: Yes it could be, if its step time minus... Like step time plus this very small fraction of time so it shouldn't advance a lot in time. So currentStep there should play.
-I need to comment this thing... Let me think.
-So it needs to be called a number of times just to make sure this is happening.  I'm looping (laughter). So in theory it should start playing as soon as this thing is loaded. Nothing should play now but I'm trying to see if its looping. Every time you change the system you should also be different.  I want to make sure that things are happening on the right order. So just to make sure. I've got some error so that's good.
-So number of steps is undefined. That's why you need to complete the skeleton.
-[Silence]
-DN: Right.
+00:12:50,580 --> 00:12:57,040
+SP: Whatever element we are in
+we need to look at the current step. 
 
 156
-00:12:49,010 --> 00:12:50,580
-This is kind of similar to the previous play sequence but we may not look at the whole thing, just do one step at a time.
-So shouldPlay do a sequence of current steps. Inaud
-DN: So this schedule function gets called what, a hundred times a second?
-SP: Yes it could be, if its step time minus... Like step time plus this very small fraction of time so it shouldn't advance a lot in time. So currentStep there should play.
-I need to comment this thing... Let me think.
-So it needs to be called a number of times just to make sure this is happening.  I'm looping (laughter). So in theory it should start playing as soon as this thing is loaded. Nothing should play now but I'm trying to see if its looping. Every time you change the system you should also be different.  I want to make sure that things are happening on the right order. So just to make sure. I've got some error so that's good.
-So number of steps is undefined. That's why you need to complete the skeleton.
-[Silence]
+00:12:58,060 --> 00:13:00,650
+This is kind of similar to
+the previous play sequence
 
 157
-00:12:50,580 --> 00:12:50,820
-Which element to look at for the current step. 
-This is kind of similar to the previous play sequence but we may not look at the whole thing, just do one step at a time.
-So shouldPlay do a sequence of current steps. Inaud
-DN: So this schedule function gets called what, a hundred times a second?
-SP: Yes it could be, if its step time minus... Like step time plus this very small fraction of time so it shouldn't advance a lot in time. So currentStep there should play.
-I need to comment this thing... Let me think.
-So it needs to be called a number of times just to make sure this is happening.  I'm looping (laughter). So in theory it should start playing as soon as this thing is loaded. Nothing should play now but I'm trying to see if its looping. Every time you change the system you should also be different.  I want to make sure that things are happening on the right order. So just to make sure. I've got some error so that's good.
-So number of steps is undefined. That's why you need to complete the skeleton.
-[Silence]
+00:13:00,670 --> 00:13:07,600
+but we may not look at the
+whole thing, just do one step at a time.
 
 158
-00:12:50,820 --> 00:12:57,040
-Which element to look at for the current step. 
+00:13:07,620 --> 00:13:14,830
+So shouldPlay is a sequence of current step.
+
+159
+00:13:14,830 --> 00:13:20,030
+So if it should play...
+
+160
+00:13:21,120 --> 00:13:24,700
+Something should happen. [Laughter]
+
+161
+00:13:26,040 --> 00:13:29,770
+DN: So this schedule function gets
+called what, a hundred times a second?
+
+162
+00:13:29,800 --> 00:13:36,800
+SP: Yes it could be, if it's step time minus...
+
+163
+00:13:36,800 --> 00:13:40,410
+less than current time plus
+this very small fraction of time.
+
+164
+00:13:40,470 --> 00:13:45,010
+So it shouldn't advance a lot in time.
+
+165
+00:13:45,290 --> 00:13:49,030
+So currentStep should play...
+
+166
+00:13:49,040 --> 00:13:55,570
+I'm going to comment this thing... Let me think.
+
+167
+00:13:55,950 --> 00:14:03,500
+So it needs to be called a number
+of times just to make sure this is happening. 
+
+168
+00:14:05,930 --> 00:14:08,720
+I'm looping. [Laughter] 
+
+169
+00:14:08,720 --> 00:14:13,500
+So in theory it should start playing
+as soon as this thing is loaded. 
+
+170
+00:14:15,350 --> 00:14:22,540
+Nothing should play now but
+I'm trying to see if it's looping even more.
+
+171
+00:14:23,380 --> 00:14:27,440
+Every time you change the
+system you should also be different.  
+
+172
+00:14:27,470 --> 00:14:33,370
+I want to make sure that things
+are happening on the right order. 
+
+173
+00:14:36,120 --> 00:14:39,140
+So just to make sure.
+
+174
+00:14:41,150 --> 00:14:43,470
+I've got some error so that's good.
+
+175
+00:14:43,500 --> 00:14:49,460
+The number of steps is undefined...
+because inaud the sequence step.
+
+176
+00:14:50,690 --> 00:14:53,490
+That's why you need to complete the skeleton.
+
+177
+00:14:53,490 --> 00:14:55,820
+DN: Right
+
+178
+00:14:55,850 --> 00:14:59,240
+[Silence]
+
+179
+00:15:01,300 --> 00:15:07,700
+SP: Try again. OK so now it's doing things;
+ta ta ta then loop, and then it starts again.
+
+180
+00:15:09,260 --> 00:15:12,970
+Where is it showing me?
+
+181
+00:15:13,410 --> 00:15:16,450
+[Sole thinks]
+
+182
+00:15:18,350 --> 00:15:22,270
+It should start at zero. I am confused.
+
+183
+00:15:22,290 --> 00:15:25,500
+DN: It goes up to 13 doesn't it? 1 to 13.
+
+184
+00:15:25,510 --> 00:15:28,140
+SP: Why is it current step? 
+
+185
+00:15:28,170 --> 00:15:33,780
+Oh because the next time it goes it says "hey this
+is longer than the number of steps I go back to".
+
+186
+00:15:33,810 --> 00:15:34,760
+"So this is not correct".
+
+187
+00:15:34,760 --> 00:15:36,800
+DN: Right OK.
+
+188
+00:15:36,840 --> 00:15:40,240
+SP: Later we might want to show the current step
+with base one, because that's what humans use. 
+
+189
+00:15:40,240 --> 00:15:42,240
+We don't say "We're in step zero, we're in step one." Have I done this thing without even knowing?
+So it's looking as it should be but were not playing that and we're also not pausing that, so we might want to make this thing play again. So if it should play, we should do the same thing as we did before.
+We want to use the clap sample. And when is context play time. Because that's the absolute time, instead of relative to this sequence.
+As I said, it's a bit confusing, but suppose you just want to have the score time with a clock and your copying the sequence and transposing that. If you pause, the sequences are stopped and then you continue again but it has to be starting from a new start.
+SP: Later we might want to show the current step
+with base one, because that's what humans use. 
+
+190
+00:15:42,240 --> 00:15:43,460
+SP: Later we might want to show the current step
+with base one, because that's what humans use. 
 
