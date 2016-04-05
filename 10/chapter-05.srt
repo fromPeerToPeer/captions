@@ -933,23 +933,136 @@ DN: Yes you have to add
 that time while it was paused.
 
 203
-00:16:47,940 --> 00:16:49,940
-SP: Yes because otherwise you get weird things when you 'unpause'. Like, why is this not really playing as it should?
-So in theory and if I haven't messed anything up it should be playing again, and now it should loop... Yes!
+00:16:47,940 --> 00:16:52,770
+SP: Yes because otherwise you
+get weird things when you 'unpause'.
+
+204
+00:16:52,820 --> 00:16:55,760
+Like, why is this not really playing as it should?
+
+205
+00:16:55,780 --> 00:16:59,170
+So in theory, and if I haven't messed
+up anything else, it should play again.
+
+206
+00:16:59,170 --> 00:17:00,540
+[We hear the clapping]
+
+207
+00:17:00,540 --> 00:17:04,010
+and now it should loop... Yes!
+
+208
+00:17:04,050 --> 00:17:06,060
 I think it's got the final...
-DN: It feels to me like there's an extra silent beat.
-(They listen to the music).
+
+209
+00:17:06,080 --> 00:17:12,880
+DN: It feels to me like there's an
+extra silent beat. (They listen to the music).
+
+210
+00:17:13,740 --> 00:17:14,810
 SP: Is that right?
+
+211
+00:17:14,830 --> 00:17:20,020
 DN: No. It feels like within a cell, the rests...
+
+212
+00:17:20,060 --> 00:17:23,770
 SP: Ah there is an extra something, maybe?
 DN: Yeah, I think so.
 
-DN: And it's still going up to 13.  I think there's like two empty beats at the end.
-SP: Yeah, it feels like one empty beat.  OK, I'm going to go here and do this thing that we added which is ... (shut up... Laughter) so that's very convenient.
-OK why are you doing this thing? So it is going to 13 which it shouldn't. I think the issue is here it shouldn't be currentStep more than (>), it should be equal (===) and then hopefully... Let me play it again.
-DN: That sound good.
-SP: There is not the extra step.
-DN: And were going from 1 to 12 now
-SP: and also it wasn't playing. There was nothing in the sequence to play so it was saying ah ha no playing. If we had printed a value, which is something that I was going to do, then we would have got an undefined. And I will be like "hey we are going too far" something like that.
-DN: Yes.
+213
+00:17:24,260 --> 00:17:28,230
+DN: And it's still going up to 13.  I think
+there's like two empty beats at the end.
+
+214
+00:17:28,260 --> 00:17:31,380
+SP: Yeah, it feels like one empty beat.  
+
+215
+00:17:31,380 --> 00:17:39,960
+OK, I'm going to go here and do this thing
+that we added which is... so that's very convenient.
+
+216
+00:17:40,850 --> 00:17:45,420
+OK why are you doing this thing? 
+
+217
+00:17:45,420 --> 00:17:50,180
+So it is going to 13 which it shouldn't. 
+
+218
+00:17:50,180 --> 00:17:53,860
+I think the issue is here it
+shouldn't be currentStep more than (>), 
+
+219
+00:17:53,900 --> 00:17:57,860
+it should be equal (===) and then hopefully...
+
+220
+00:17:57,880 --> 00:18:00,090
+Let me play it again.
+
+221
+00:18:00,090 --> 00:18:03,410
+[They listen]
+
+222
+00:18:03,600 --> 00:18:04,470
+DN: That sounds good.
+
+223
+00:18:04,490 --> 00:18:08,760
+SP: But there isn't the extra step, from nowhere.
+
+224
+00:18:08,790 --> 00:18:10,530
+DN: And were going from 1 to 12 now.
+
+225
+00:18:10,540 --> 00:18:14,100
+SP: And also it wasn't playing because
+there was nothing in the sequence to play
+
+226
+00:18:14,100 --> 00:18:16,570
+so it was saying ah ha no playing.
+
+227
+00:18:16,600 --> 00:18:19,480
+If we had printed a value, which
+is something that I was going to do, 
+
+228
+00:18:19,500 --> 00:18:20,680
+then we would have got an undefined.
+
+229
+00:18:20,700 --> 00:18:23,810
+And I will be like "hey we are
+going too far" something like that.
+
+230
+00:18:23,810 --> 00:18:25,810
+SP: So that's why sometimes, it's not the best practice, especially when we have lots of data.
+DN: You have to click that at just the right time.
+SP: Yes, I will need to file a bug for this.
+Yes so if you have a lot of data printing that to the console, it's not very convenient but these small things, it's OK, just to bring up the value and check that you're getting the right things, especially with timing. You notice when that's off!
+
+DN: So I guess at this point, if you want to change the beat per minute figure. If you were to hard code it to something else...
+SP: Yes I can hard code it... You can see the difference. OK, I made it to 100 bpm.
+DN: Yes. That's exciting!
+SP: I'm don't think the original plays this fast or any of the ones I've seen.
+
+I think with control-M... Ah yes! With control M you can mute. Ok, we learned something. So I guess we can make this go back to 70 bpm. And let's check this thing in...
+[Sole types]
+
 
