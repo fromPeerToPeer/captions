@@ -863,21 +863,93 @@ is longer than the number of steps I go back to".
 DN: Right OK.
 
 188
-00:15:36,840 --> 00:15:40,240
+00:15:36,840 --> 00:15:43,460
 SP: Later we might want to show the current step
 with base one, because that's what humans use. 
 
 189
-00:15:40,240 --> 00:15:42,240
-We don't say "We're in step zero, we're in step one." Have I done this thing without even knowing?
-So it's looking as it should be but were not playing that and we're also not pausing that, so we might want to make this thing play again. So if it should play, we should do the same thing as we did before.
-We want to use the clap sample. And when is context play time. Because that's the absolute time, instead of relative to this sequence.
-As I said, it's a bit confusing, but suppose you just want to have the score time with a clock and your copying the sequence and transposing that. If you pause, the sequences are stopped and then you continue again but it has to be starting from a new start.
-SP: Later we might want to show the current step
-with base one, because that's what humans use. 
+00:15:43,490 --> 00:15:46,140
+We don't say "We're in step zero, we're in step one."
 
 190
-00:15:42,240 --> 00:15:43,460
-SP: Later we might want to show the current step
-with base one, because that's what humans use. 
+00:15:46,160 --> 00:15:49,740
+So I was thinking, have I done
+this thing without even knowing?
+
+191
+00:15:49,760 --> 00:15:56,490
+So it's looking as it should be, but were not
+playing that and we're also not pausing that, 
+
+192
+00:15:56,520 --> 00:16:00,080
+so we might want to make this thing play again. 
+
+193
+00:16:00,110 --> 00:16:05,380
+So if it should play...
+
+194
+00:16:06,750 --> 00:16:12,130
+We should do the same thing as we did before.
+Was it play buffer? (I can never remember).
+
+195
+00:16:12,130 --> 00:16:15,690
+I did it just a minute ago, let's just see...
+
+196
+00:16:15,690 --> 00:16:23,370
+We want to use the clap sample we
+stored before. And when is contextPlayTime. 
+
+197
+00:16:25,880 --> 00:16:30,960
+Because that's the absolute time,
+instead of relative to this sequence.
+
+198
+00:16:31,100 --> 00:16:35,640
+As I said, it's a bit confusing, but suppose
+you just have the whole time line with a clock.
+
+199
+00:16:35,650 --> 00:16:39,880
+And your copying the sequence
+and transposing that and you pause.
+
+200
+00:16:39,910 --> 00:16:42,770
+The sequences are stopped
+and then you continue again, 
+
+201
+00:16:42,800 --> 00:16:45,480
+but it has to be from a new starting point.
+
+202
+00:16:45,480 --> 00:16:47,940
+DN: Yes you have to add
+that time while it was paused.
+
+203
+00:16:47,940 --> 00:16:49,940
+SP: Yes because otherwise you get weird things when you 'unpause'. Like, why is this not really playing as it should?
+So in theory and if I haven't messed anything up it should be playing again, and now it should loop... Yes!
+I think it's got the final...
+DN: It feels to me like there's an extra silent beat.
+(They listen to the music).
+SP: Is that right?
+DN: No. It feels like within a cell, the rests...
+SP: Ah there is an extra something, maybe?
+DN: Yeah, I think so.
+
+DN: And it's still going up to 13.  I think there's like two empty beats at the end.
+SP: Yeah, it feels like one empty beat.  OK, I'm going to go here and do this thing that we added which is ... (shut up... Laughter) so that's very convenient.
+OK why are you doing this thing? So it is going to 13 which it shouldn't. I think the issue is here it shouldn't be currentStep more than (>), it should be equal (===) and then hopefully... Let me play it again.
+DN: That sound good.
+SP: There is not the extra step.
+DN: And were going from 1 to 12 now
+SP: and also it wasn't playing. There was nothing in the sequence to play so it was saying ah ha no playing. If we had printed a value, which is something that I was going to do, then we would have got an undefined. And I will be like "hey we are going too far" something like that.
+DN: Yes.
 
