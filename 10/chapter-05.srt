@@ -1051,18 +1051,75 @@ And I will be like "hey we are
 going too far" something like that.
 
 230
-00:18:23,810 --> 00:18:25,810
-SP: So that's why sometimes, it's not the best practice, especially when we have lots of data.
+00:18:23,810 --> 00:18:28,950
+So that's why sometimes, it's not the
+best practice, especially when we have lots of data.
+
+231
+00:18:30,980 --> 00:18:33,640
 DN: You have to click that at just the right time.
-SP: Yes, I will need to file a bug for this.
-Yes so if you have a lot of data printing that to the console, it's not very convenient but these small things, it's OK, just to bring up the value and check that you're getting the right things, especially with timing. You notice when that's off!
+SP: Yes, yes.
 
-DN: So I guess at this point, if you want to change the beat per minute figure. If you were to hard code it to something else...
-SP: Yes I can hard code it... You can see the difference. OK, I made it to 100 bpm.
-DN: Yes. That's exciting!
-SP: I'm don't think the original plays this fast or any of the ones I've seen.
+232
+00:18:33,640 --> 00:18:36,740
+I will need to file a bug for this.
 
-I think with control-M... Ah yes! With control M you can mute. Ok, we learned something. So I guess we can make this go back to 70 bpm. And let's check this thing in...
-[Sole types]
+233
+00:18:36,870 --> 00:18:39,850
+Yes so if you have a lot of
+data printing that to the console, 
 
+234
+00:18:39,880 --> 00:18:43,440
+it's not very convenient but with these
+small things it's OK, just to bring up the value 
+
+235
+00:18:43,470 --> 00:18:51,400
+and check that you're getting the right things,
+especially with timing. You notice when that's off!
+
+236
+00:18:51,420 --> 00:18:56,340
+DN: So I guess at this point, if you
+where to change the beat per minute figure.
+
+237
+00:18:56,360 --> 00:18:59,490
+If you were to hard code it to something else...
+
+238
+00:18:59,500 --> 00:19:03,560
+SP: Yes I can hard code it... You can see the difference. 
+
+239
+00:19:03,560 --> 00:19:08,260
+OK, I made it to 100 bpm.
+
+240
+00:19:08,290 --> 00:19:10,130
+DN: Yes. That's exciting! [the clapping plays]
+
+241
+00:19:10,160 --> 00:19:16,370
+SP: I'm hoping the original plays
+this fast or any of the ones I've seen.
+
+242
+00:19:18,310 --> 00:19:23,760
+I think with control-M... Ah yes!
+With control M you can mute.
+
+243
+00:19:23,780 --> 00:19:29,760
+OK, we learned something. So I
+guess we can make this go back to 70 bpm. 
+
+244
+00:19:29,790 --> 00:19:32,710
+And let's check this thing in...
+
+245
+00:19:32,770 --> 00:19:35,800
+[Silence]
 
