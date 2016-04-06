@@ -1,0 +1,41 @@
+﻿1
+00:00:00,000 --> 00:00:02,880
+Chapter 6: Playing part 2 sequence.
+
+2
+00:00:03,030 --> 00:00:09,000
+So we've got this thing which
+is, (sorry control-M)  looping.
+
+3
+00:00:09,020 --> 00:00:12,760
+But, we might want to have the second player playing. 
+
+4
+00:00:12,760 --> 00:00:15,560
+Because right now it's incomplete!
+
+5
+00:00:15,560 --> 00:00:17,710
+So I'm going to mute this thing again.
+
+6
+00:00:17,710 --> 00:00:19,710
+So looking at the challenge, it says
+that it starts playing both at the same time. 
+
+7
+00:00:19,710 --> 00:00:21,710
+After 4 times of repeating the stanza, the second player shifts one note. And then after four times of doing that thing, the second player shifts another beat.
+
+So I want to increase the stanza number after every 4th repeat. So I'm going to use the stanza number every time I want to shift. So I'm going to algorithmically generate the score from the second player. Instead of giving this player a different score, I will take a look at the score but shift that. It's the second score but its determined based on the existing score. Because maybe later, if we have time we might want to change the score. That's why I'm not generating that from the beginning, but based that on the existing score.
+I guess I can have something like stanzaLoopTime... No I don't like this.
+DN: I suppose it's almost like, how many repetitions in a stanza.
+So looking at the challenge, it says
+that it starts playing both at the same time. 
+
+8
+00:00:21,710 --> 00:00:25,230
+So looking at the challenge, it says
+that it starts playing both at the same time. 
+
