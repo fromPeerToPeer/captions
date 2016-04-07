@@ -9,33 +9,124 @@ is, (sorry control-M)  looping.
 
 3
 00:00:09,020 --> 00:00:12,760
-But, we might want to have the second player playing. 
+But, we might want to have the second player playing.
 
 4
 00:00:12,760 --> 00:00:15,560
 Because right now it's incomplete!
 
 5
-00:00:15,560 --> 00:00:17,710
+00:00:15,560 --> 00:00:17,640
 So I'm going to mute this thing again.
 
 6
-00:00:17,710 --> 00:00:19,710
-So looking at the challenge, it says
-that it starts playing both at the same time. 
+00:00:17,680 --> 00:00:25,300
+And so looking at the challenge, it says
+that it starts playing both at the same time.
 
 7
-00:00:19,710 --> 00:00:21,710
-After 4 times of repeating the stanza, the second player shifts one note. And then after four times of doing that thing, the second player shifts another beat.
-
-So I want to increase the stanza number after every 4th repeat. So I'm going to use the stanza number every time I want to shift. So I'm going to algorithmically generate the score from the second player. Instead of giving this player a different score, I will take a look at the score but shift that. It's the second score but its determined based on the existing score. Because maybe later, if we have time we might want to change the score. That's why I'm not generating that from the beginning, but based that on the existing score.
-I guess I can have something like stanzaLoopTime... No I don't like this.
-DN: I suppose it's almost like, how many repetitions in a stanza.
-So looking at the challenge, it says
-that it starts playing both at the same time. 
+00:00:25,310 --> 00:00:32,050
+After 4 times of repeating the stanza,
+the second player shifts one note?
 
 8
-00:00:21,710 --> 00:00:25,230
-So looking at the challenge, it says
-that it starts playing both at the same time. 
+00:00:32,050 --> 00:00:33,270
+DN: Yes.
+
+9
+00:00:33,290 --> 00:00:37,900
+And then after four times of doing that
+thing, the second player shifts another beat.
+
+10
+00:00:37,930 --> 00:00:48,590
+So I want to increase the stanza
+number after every 4th repeat. 
+
+11
+00:00:48,610 --> 00:00:53,580
+And I'm going to use the stanza
+number every time I want to shift. 
+
+12
+00:00:55,160 --> 00:01:00,160
+So I'm going to algorithmically
+generate the score for the second player. 
+
+13
+00:01:00,160 --> 00:01:08,750
+Instead of giving this player a different
+score I will look at the score and shift that.
+
+14
+00:01:08,780 --> 00:01:15,550
+It's the second score but it's
+determined based on the existing score. 
+
+15
+00:01:15,550 --> 00:01:20,070
+Because maybe later, if we have time we
+might want to change the score. inaud
+
+16
+00:01:20,090 --> 00:01:27,880
+That's why I'm not generating that from the
+beginning, but basing it on the existing score.
+
+17
+00:01:27,940 --> 00:01:36,650
+I guess I can have something like stanzaLoopTime... 
+
+18
+00:01:36,670 --> 00:01:40,040
+No, I don't like this variable here.
+
+19
+00:01:40,520 --> 00:01:43,755
+DN: I suppose it's almost like,
+how many repetitions in a stanza.
+
+20
+00:01:43,760 --> 00:01:48,435
+SP: Yeah, stanzaReps. Like power lifters! [Laughter]
+
+21
+00:01:48,445 --> 00:01:57,965
+OK, so we also want to loop
+4 times to hard code everything.
+
+22
+00:01:58,300 --> 00:02:07,590
+I don't know if I want to call it stanza loop.
+numStanzaloops maybe, that sounds better.
+
+23
+00:02:07,610 --> 00:02:08,395
+DN: OK.
+
+24
+00:02:08,415 --> 00:02:11,070
+
+SP: I will say I want to loop this thing 4 times, and every time its 4, I will just increase the reps and then decide what way to play it. Inaud nothing... Go away.  It's good to leave it clear.
+DN: Yes sure.
+SP: So this is what we want to repeat the same so this is what we want to increase. We also could get rid of these console thingies. What else, inaud for now. We could use it to print the number of reps.
+So stanzaReps.  We also want to know which is the correct stanza number. We want to keep the number of reps of the current one, maximum of 4 but we also need to know which is the current so we can increase that after 4 beats.
+DN: Sure.
+SP: And also make sense of this, is it the current one. The amount of time repeating the stanza. And this is the maximum inaud. I think it's a good idea to have it ordered in a logical way. So when we finish the sequence, we look but we also... We increment the number of repetitions inaud stanza. But if the stanza reps is the number of loops, we should increase the current stanza... Hopefully. [laughter]
+So I will print current stanza  And maybe the reps as well so we can check it.
+DN: Sure.
+SP: So this is the current stanza and reps
+I don't usually use the word stanza.
+DN: It's not slipping off your fingers.
+SP: No, it's not. In theory it should stop. Something broke.
+[they listen to the clapping]
+I'm not sending anything to zero. [laughter] So that's why it's going forever. So it should increase that but it also should... It's hard to think when this thing is clapping in your face.
+It should increase that but also go back to zero. Need to inaud because we're doing a new one. OK let's try again.
+[They listen again]
+I think that makes more sense.
+The first one doesn't load because we are not inaud yet., but |I think its correct.
+DN: It looked wrong at first there because...
+SP: Yes, we should show the thing on the screen all the time because it would make more sense. So I think I will wait until we get the player playing [they listen] This looks good, so I'm going to get the second player to play. I need to commit this in.
+I keep checking this, I am only changing main.js.
+So this should be "keep track of stanza and reps".
 
