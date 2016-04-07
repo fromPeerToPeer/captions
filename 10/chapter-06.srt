@@ -105,14 +105,111 @@ numStanzaloops maybe, that sounds better.
 DN: OK.
 
 24
-00:02:08,415 --> 00:02:11,070
+00:02:08,410 --> 00:02:11,675
+SP: I will say I want to loop this
+thing 4 times, and every time it's 4, 
 
-SP: I will say I want to loop this thing 4 times, and every time its 4, I will just increase the reps and then decide what way to play it. Inaud nothing... Go away.  It's good to leave it clear.
+25
+00:02:11,690 --> 00:02:15,920
+I will just increase the reps and
+then decide what way to play it.
+
+26
+00:02:21,390 --> 00:02:25,380
+Also, we can get rid of this play
+sequence because we are reducing the thing.
+
+27
+00:02:26,020 --> 00:02:29,735
+Go away.  It's good to leave it clear inaud.
+
+28
+00:02:29,730 --> 00:02:31,660
 DN: Yes sure.
-SP: So this is what we want to repeat the same so this is what we want to increase. We also could get rid of these console thingies. What else, inaud for now. We could use it to print the number of reps.
-So stanzaReps.  We also want to know which is the correct stanza number. We want to keep the number of reps of the current one, maximum of 4 but we also need to know which is the current so we can increase that after 4 beats.
+
+29
+00:02:34,470 --> 00:02:39,355
+SP: So this is when we should repeat
+the thing, so this is we need to increase.
+
+30
+00:02:39,370 --> 00:02:42,380
+We also could get rid of these console thingies. 
+
+31
+00:02:43,095 --> 00:02:47,280
+What else... For example here,
+but we will keep it for now. 
+
+32
+00:02:47,300 --> 00:02:51,235
+We could use it to print the
+number of reps that we've done.
+
+33
+00:02:51,230 --> 00:02:58,270
+I'll go to the top so I can see.
+
+34
+00:02:58,280 --> 00:03:00,100
+So stanzaReps. 
+
+35
+00:03:00,540 --> 00:03:04,580
+We also want to know which
+is the current stanza number.
+
+36
+00:03:07,145 --> 00:03:12,295
+We want to keep the number
+of reps of the current one; maximum of 4. 
+
+37
+00:03:12,290 --> 00:03:18,000
+But we also need to know which is the
+current one so we can increase that after 4 beats.
+
+38
+00:03:18,015 --> 00:03:18,690
 DN: Sure.
-SP: And also make sense of this, is it the current one. The amount of time repeating the stanza. And this is the maximum inaud. I think it's a good idea to have it ordered in a logical way. So when we finish the sequence, we look but we also... We increment the number of repetitions inaud stanza. But if the stanza reps is the number of loops, we should increase the current stanza... Hopefully. [laughter]
+
+39
+00:03:18,700 --> 00:03:21,480
+SP: And also make sense inaud this,
+
+40
+00:03:21,490 --> 00:03:22,850
+So this is the current one. 
+
+41
+00:03:22,850 --> 00:03:25,010
+This is the amount of time we repeat with the stanza. 
+
+42
+00:03:25,020 --> 00:03:28,185
+And this is the maximum we repeat the stanza.
+
+43
+00:03:28,200 --> 00:03:31,585
+I think it's a good idea to have
+variables ordered in a logical way. 
+
+44
+00:03:34,010 --> 00:03:39,350
+So when we finish the sequence, we look but we also... 
+
+45
+00:03:39,360 --> 00:03:46,755
+We increment the number
+of repetitions of the stanza. 
+
+46
+00:03:46,765 --> 00:03:51,770
+But if the stanza reps is the number of loops, we should increase the current stanza... Hopefully. [laughter]
+
+47
+00:03:51,770 --> 00:03:53,770
+
 So I will print current stanza  And maybe the reps as well so we can check it.
 DN: Sure.
 SP: So this is the current stanza and reps
