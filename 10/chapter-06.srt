@@ -229,11 +229,11 @@ And maybe the reps as well so we can check it.
 SP: So this is the current stanza and reps.
 
 52
-00:04:34,700 --> 00:04:38,630
+00:04:34,800 --> 00:04:38,630
 I don't usually use the word stanza.
 
 53
-00:04:38,640 --> 00:04:40,140
+00:04:38,640 --> 00:04:40,130
 DN: It's not flowing off your fingers. [Laughter]
 
 54
@@ -245,16 +245,97 @@ SP: No, it's not.
 In theory it should stop. 
 
 56
-00:04:47,220 --> 00:04:51,030
-Something broke.
-[they listen to the clapping]
-I'm not sending anything to zero. [laughter] So that's why it's going forever. So it should increase that but it also should... It's hard to think when this thing is clapping in your face.
-It should increase that but also go back to zero. Need to inaud because we're doing a new one. OK let's try again.
+00:04:49,020 --> 00:04:51,870
+Something broke. I don't know.
+
+57
+00:04:51,870 --> 00:04:54,200
+inaud
+
+58
+00:04:54,280 --> 00:05:03,250
+[They listen to the clapping]
+
+59
+00:05:04,580 --> 00:05:09,880
+I'm not sending anything to
+zero. So that's why it's going forever. 
+
+60
+00:05:09,880 --> 00:05:15,170
+So it should increase that but it also should... 
+
+61
+00:05:15,210 --> 00:05:19,040
+It's hard to think when this
+thing is clapping in your face.
+
+62
+00:05:19,070 --> 00:05:26,100
+It should increase that but also go back to zero.
+
+63
+00:05:26,140 --> 00:05:30,680
+We need to inaud that because we're doing a new one. 
+
+64
+00:05:30,800 --> 00:05:33,290
+OK let's try again.
+
+65
+00:05:33,320 --> 00:05:44,710
 [They listen again]
+
+66
+00:05:44,960 --> 00:05:48,680
 I think that makes more sense.
-The first one doesn't load because we are not inaud yet., but |I think its correct.
-DN: It looked wrong at first there because...
-SP: Yes, we should show the thing on the screen all the time because it would make more sense. So I think I will wait until we get the player playing [they listen] This looks good, so I'm going to get the second player to play. I need to commit this in.
+
+67
+00:05:50,830 --> 00:05:55,940
+The first one doesn't load because
+we are not inaud yet, but I think it's correct.
+
+68
+00:05:55,970 --> 00:05:58,260
+DN: It looked wrong at first there because... inaud
+
+69
+00:05:58,280 --> 00:06:01,760
+SP: Yes, we should show the thing on the
+screen all the time, it would make more sense.
+
+70
+00:06:01,790 --> 00:06:05,200
+So I think I will do that once
+we get the player playing.
+
+71
+00:06:05,230 --> 00:06:09,870
+[They listen] OK, this looks good.
+Now I need the second player to play.
+
+72
+00:06:09,900 --> 00:06:14,040
+I need to commit this.
+
+73
+00:06:14,090 --> 00:06:19,270
 I keep checking this, I am only changing main.js.
-So this should be "keep track of stanza and reps".
+
+74
+00:06:21,010 --> 00:06:27,620
+So this should be 'keep track of stanza and reps'.
+
+75
+00:06:27,620 --> 00:06:29,620
+So with that I can determine what the second player plays.
+DN: Yes.
+SP: So the ‘should play' is for the first player, and we need to determine if the second player has to play. So I'm going to rename this to shouldPlay1 and shouldPlay1, and then I'll find out if the second one needs to play. It's not very scalable when you have lots of things to play but for this case it should be OK. So this is going to be using the number of stanzas because every time we play another 4 loops we want to shift.
+I'm going to calculate the step separately so it's clear.
+
+So the current step is the current step, plus the current stanza because that shifts one but we don't want to go too far because the sequence only has 12 so if I'm in the last step and I'm playing the second player, I'm going to be out, so I have to look back and start from zero and you can use the modulo operator.
+Inaud, does that make sense.
+DN: Yes that makes sense.
+SP: So, for those at home that don't know.
+This I'm not going to execute.
 
