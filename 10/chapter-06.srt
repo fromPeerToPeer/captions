@@ -201,21 +201,52 @@ So when we finish the sequence, we look but we also...
 45
 00:03:39,360 --> 00:03:46,755
 We increment the number
-of repetitions of the stanza. 
+of repetitions of this stanza. 
 
 46
-00:03:46,765 --> 00:03:51,770
-But if the stanza reps is the number of loops, we should increase the current stanza... Hopefully. [laughter]
+00:03:46,760 --> 00:03:57,690
+But if the stanza reps is the number
+of loops, we should increase the current stanza... 
 
 47
-00:03:51,770 --> 00:03:53,770
+00:04:00,750 --> 00:04:02,970
+Hopefully. [laughter]
 
-So I will print current stanza  And maybe the reps as well so we can check it.
-DN: Sure.
-SP: So this is the current stanza and reps
+48
+00:04:08,430 --> 00:04:14,580
+So I will print current stanza here.
+
+49
+00:04:14,670 --> 00:04:17,730
+[Silence]
+
+50
+00:04:19,330 --> 00:04:25,290
+And maybe the reps as well so we can check it.
+
+51
+00:04:25,310 --> 00:04:34,700
+SP: So this is the current stanza and reps.
+
+52
+00:04:34,700 --> 00:04:38,630
 I don't usually use the word stanza.
-DN: It's not slipping off your fingers.
-SP: No, it's not. In theory it should stop. Something broke.
+
+53
+00:04:38,640 --> 00:04:40,140
+DN: It's not flowing off your fingers. [Laughter]
+
+54
+00:04:40,180 --> 00:04:41,980
+SP: No, it's not. 
+
+55
+00:04:41,980 --> 00:04:47,200
+In theory it should stop. 
+
+56
+00:04:47,220 --> 00:04:51,030
+Something broke.
 [they listen to the clapping]
 I'm not sending anything to zero. [laughter] So that's why it's going forever. So it should increase that but it also should... It's hard to think when this thing is clapping in your face.
 It should increase that but also go back to zero. Need to inaud because we're doing a new one. OK let's try again.
