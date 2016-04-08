@@ -41,17 +41,17 @@ thing, the second player shifts another beat.
 10
 00:00:37,930 --> 00:00:48,590
 So I want to increase the stanza
-number after every 4th repeat. 
+number after every 4th repeat.
 
 11
 00:00:48,610 --> 00:00:53,580
 And I'm going to use the stanza
-number every time I want to shift. 
+number every time I want to shift.
 
 12
 00:00:55,160 --> 00:01:00,160
 So I'm going to algorithmically
-generate the score for the second player. 
+generate the score for the second player.
 
 13
 00:01:00,160 --> 00:01:08,750
@@ -61,7 +61,7 @@ score I will look at the score and shift that.
 14
 00:01:08,780 --> 00:01:15,550
 It's the second score but it's
-determined based on the existing score. 
+determined based on the existing score.
 
 15
 00:01:15,550 --> 00:01:20,070
@@ -75,7 +75,7 @@ beginning, but basing it on the existing score.
 
 17
 00:01:27,940 --> 00:01:36,650
-I guess I can have something like stanzaLoopTime... 
+I guess I can have something like stanzaLoopTime...
 
 18
 00:01:36,670 --> 00:01:40,040
@@ -107,7 +107,7 @@ DN: OK.
 24
 00:02:08,410 --> 00:02:11,675
 SP: I will say I want to loop this
-thing 4 times, and every time it's 4, 
+thing 4 times, and every time it's 4,
 
 25
 00:02:11,690 --> 00:02:15,920
@@ -134,12 +134,12 @@ the thing, so this is we need to increase.
 
 30
 00:02:39,370 --> 00:02:42,380
-We also could get rid of these console thingies. 
+We also could get rid of these console thingies.
 
 31
 00:02:43,095 --> 00:02:47,280
 What else... For example here,
-but we will keep it for now. 
+but we will keep it for now.
 
 32
 00:02:47,300 --> 00:02:51,235
@@ -152,7 +152,7 @@ I'll go to the top so I can see.
 
 34
 00:02:58,280 --> 00:03:00,100
-So stanzaReps. 
+So stanzaReps.
 
 35
 00:03:00,540 --> 00:03:04,580
@@ -162,7 +162,7 @@ is the current stanza number.
 36
 00:03:07,145 --> 00:03:12,295
 We want to keep the number
-of reps of the current one; maximum of 4. 
+of reps of the current one; maximum of 4.
 
 37
 00:03:12,290 --> 00:03:18,000
@@ -179,11 +179,11 @@ SP: And also make sense inaud this,
 
 40
 00:03:21,490 --> 00:03:22,850
-So this is the current one. 
+So this is the current one.
 
 41
 00:03:22,850 --> 00:03:25,010
-This is the amount of time we repeat with the stanza. 
+This is the amount of time we repeat with the stanza.
 
 42
 00:03:25,020 --> 00:03:28,185
@@ -192,21 +192,21 @@ And this is the maximum we repeat the stanza.
 43
 00:03:28,200 --> 00:03:31,585
 I think it's a good idea to have
-variables ordered in a logical way. 
+variables ordered in a logical way.
 
 44
 00:03:34,010 --> 00:03:39,350
-So when we finish the sequence, we look but we also... 
+So when we finish the sequence, we look but we also...
 
 45
 00:03:39,360 --> 00:03:46,755
 We increment the number
-of repetitions of this stanza. 
+of repetitions of this stanza.
 
 46
 00:03:46,760 --> 00:03:57,690
 But if the stanza reps is the number
-of loops, we should increase the current stanza... 
+of loops, we should increase the current stanza...
 
 47
 00:04:00,750 --> 00:04:02,970
@@ -238,11 +238,11 @@ DN: It's not flowing off your fingers. [Laughter]
 
 54
 00:04:40,180 --> 00:04:41,980
-SP: No, it's not. 
+SP: No, it's not.
 
 55
 00:04:41,980 --> 00:04:47,200
-In theory it should stop. 
+In theory it should stop.
 
 56
 00:04:49,020 --> 00:04:51,870
@@ -259,11 +259,11 @@ inaud
 59
 00:05:04,580 --> 00:05:09,880
 I'm not sending anything to
-zero. So that's why it's going forever. 
+zero. So that's why it's going forever.
 
 60
 00:05:09,880 --> 00:05:15,170
-So it should increase that but it also should... 
+So it should increase that but it also should...
 
 61
 00:05:15,210 --> 00:05:19,040
@@ -276,7 +276,7 @@ It should increase that but also go back to zero.
 
 63
 00:05:26,140 --> 00:05:30,680
-We need to inaud that because we're doing a new one. 
+We need to inaud that because we're doing a new one.
 
 64
 00:05:30,800 --> 00:05:33,290
@@ -323,17 +323,64 @@ I need to commit this.
 I keep checking this, I am only changing main.js.
 
 74
-00:06:21,010 --> 00:06:27,620
-So this should be 'keep track of stanza and reps'.
+00:06:21,010 --> 00:06:27,690
+This should be 'keep track of stanza and reps'.
 
 75
-00:06:27,620 --> 00:06:29,620
-So with that I can determine what the second player plays.
-DN: Yes.
-SP: So the ‘should play' is for the first player, and we need to determine if the second player has to play. So I'm going to rename this to shouldPlay1 and shouldPlay1, and then I'll find out if the second one needs to play. It's not very scalable when you have lots of things to play but for this case it should be OK. So this is going to be using the number of stanzas because every time we play another 4 loops we want to shift.
-I'm going to calculate the step separately so it's clear.
+00:06:29,050 --> 00:06:33,530
+And with that I can determine
+what the second player should play.
 
-So the current step is the current step, plus the current stanza because that shifts one but we don't want to go too far because the sequence only has 12 so if I'm in the last step and I'm playing the second player, I'm going to be out, so I have to look back and start from zero and you can use the modulo operator.
+76
+00:06:33,560 --> 00:06:43,200
+So the ‘should play' is for the first player.
+
+77
+00:06:43,200 --> 00:06:46,130
+And we need to determine
+if the second player has to play. 
+
+78
+00:06:46,150 --> 00:06:51,020
+So I'm going to rename this
+to shouldPlay1 and shouldPlay1,
+
+79
+00:06:51,050 --> 00:06:56,330
+and then I'll find out if the second one needs to play. 
+
+80
+00:06:56,330 --> 00:07:01,790
+It's not very scalable when you have lots
+of things to play but for this case it should be OK. 
+
+81
+00:07:01,820 --> 00:07:08,440
+So this is going to be using
+the number of the current stanza, 
+
+82
+00:07:08,450 --> 00:07:13,960
+because every time we play
+another 4 loops we want to shift.
+
+83
+00:07:14,000 --> 00:07:20,860
+And I'm going to calculate
+the step separately, so it's clear.
+
+84
+00:07:20,890 --> 00:07:29,700
+So the current step is the current step,
+plus the current stanza because that shifts 1.
+
+85
+00:07:29,780 --> 00:07:39,780
+ but we don't want to go too far because the sequence only has 12 
+
+86
+00:07:39,780 --> 00:07:41,780
+so if I'm in the last step and I'm playing the second player, I'm going to be out, so I have to look back and start from zero and you can use the modulo operator.
 Inaud, does that make sense.
 DN: Yes that makes sense.
 SP: So, for those at home that don't know.
