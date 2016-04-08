@@ -375,14 +375,65 @@ So the current step is the current step,
 plus the current stanza because that shifts 1.
 
 85
-00:07:29,780 --> 00:07:39,780
- but we don't want to go too far because the sequence only has 12 
+00:07:29,780 --> 00:07:33,410
+But we don't want to go too
+far because the sequence only has 12.
 
 86
-00:07:39,780 --> 00:07:41,780
-so if I'm in the last step and I'm playing the second player, I'm going to be out, so I have to look back and start from zero and you can use the modulo operator.
-Inaud, does that make sense.
-DN: Yes that makes sense.
-SP: So, for those at home that don't know.
-This I'm not going to execute.
+00:07:33,440 --> 00:07:38,070
+So if I'm in the last step and I'm
+playing the second player, I'm going to be out. 
+
+87
+00:07:38,100 --> 00:07:48,980
+so we have to look back and start from zero and
+we can use the modulo operator for that.
+
+88
+00:07:49,030 --> 00:07:52,260
+Inaud,
+
+89
+00:07:54,510 --> 00:07:56,270
+Does that make sense?
+
+90
+00:07:56,290 --> 00:07:58,040
+DN: Yes that does make sense.
+
+91
+00:07:58,040 --> 00:08:03,260
+SP: So, for those at home that don't know...
+
+92
+00:08:03,930 --> 00:08:06,630
+(This we're not going to execute).
+
+93
+00:08:06,630 --> 00:08:12,960
+So if you have the module thingy. Suppose you
+have 12, which is the number of steps we have. 
+
+94
+00:08:13,000 --> 00:08:24,770
+So we model the values with 12,1 =1, 2=2 etc
+
+95
+00:08:24,770 --> 00:08:26,770
+We never go out of there. Knowing how the modulo works is super handy when you have a number of values and you want to skip to the next. Do something videos++ modulo the length. And it works super quickly. Inaud
+It's not the best practice because you have to explain that. But you could say something like index++ No that is even worse it's better to say index % length inaud but for typing I might just use this thing, which is not the best practice. But if you're doing short things you might just want to use that.
+Just to make sure, just load it. Ah go back.
+OK so, we can't really say because its showing the other one. And so inaud some time
+DN: Ah..., OK.
+SP: So right now they are the same because we're still looping. But in the next block we should see how they've shifted.
+DN: Right.
+So we model the values with 12,1 =1, 2=2 etc
+
+96
+00:08:26,770 --> 00:08:28,190
+So we model the values with 12,1 =1, 2=2 etc
+
+97
+00:08:28,210 --> 00:08:32,200
+And 12 should be zero, because it goes back to zero.
 
