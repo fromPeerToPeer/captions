@@ -66,7 +66,7 @@ So it's like tatata tata ta tata
 15
 00:00:58,576 --> 00:01:02,750
 Part 2 begins by playing this cell
-then cycles through11 variations,
+then cycles through 11 variations,
 
 16
 00:01:02,752 --> 00:01:05,696
@@ -94,7 +94,7 @@ how difficult it is to represent the sounds by voice]
 21
 00:01:24,768 --> 00:01:30,432
 SP: OK, so its tatata tata ta tata, so
-on the first line both players are playing the same.
+on the first line both players are playing in sync
 
 22
 00:01:30,430 --> 00:01:36,016
@@ -103,7 +103,7 @@ player is playing the same thing
 
 23
 00:01:37,180 --> 00:01:39,888
-and the second player makes a shift on one side?
+and the second player would shift one step?
 
 24
 00:01:39,900 --> 00:01:47,136
@@ -135,7 +135,8 @@ the noises it makes are quite exciting to listen to.
 
 30
 00:02:18,848 --> 00:02:22,848
-SP: Yes, interesting. [Laughter]
+SP: Yes, and all those videos on YouTube
+are really interesting. [Laughter]
 
 31
 00:02:22,840 --> 00:02:32,576
@@ -145,7 +146,7 @@ techniques because this is very in sync.
 32
 00:02:32,670 --> 00:02:39,120
 And if things drift it's very noticeable. So with
-normal audio text it's going to drift at some point,
+normal audio tags it's going to drift at some point,
 
 33
 00:02:39,120 --> 00:02:44,576
@@ -155,22 +156,22 @@ So for example, you think things are not working.
 34
 00:02:44,600 --> 00:02:50,096
 I would say you can generate lots of elements,
-so it would get memory links at some point.
+so it would get memory leaks at some point.
 
 35
 00:02:50,128 --> 00:02:56,320
-Or just like garbage collector we think
-WOW this is a lot of things for me to worry about.
+Or the garbage collector being like: "WOW
+this is a lot of things for me to worry about!"
 
 36
 00:02:56,384 --> 00:03:02,544
-So if you do web audio it should be in sync and
-realise. If you do inaud it could be messy.
+So if you do it with web audio it should
+be in sync. If you do badly it could be messy.
 
 37
 00:03:02,540 --> 00:03:08,320
 DN: Yes, so you mentioned web audio; that's the
-technology you would use to solve this challenge?
+technology you'd use to solve this challenge?
 
 38
 00:03:08,320 --> 00:03:13,936
@@ -187,7 +188,7 @@ SP: Yes, it will work in any Browser.
 
 41
 00:03:19,568 --> 00:03:25,344
-I will go to the test later but it should
+I will go through details later but it should
 in theory, work in any modern browser.
 
 42
