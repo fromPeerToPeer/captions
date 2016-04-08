@@ -78,7 +78,7 @@ every element of the array is a step.
 18
 00:01:20,650 --> 00:01:29,190
 So I will arbitrarily give it a stepLength,
-say 0.2 seconds. Because web audio uses seconds. 
+say 0.2 seconds. Because web audio uses seconds.
 
 19
 00:01:30,180 --> 00:01:33,835
@@ -163,7 +163,7 @@ different files, so this was a good discovery.
 37
 00:03:00,970 --> 00:03:06,580
 So I've got this sequence, and I
-know how long I want to play each step for. 
+know how long I want to play each step for.
 
 38
 00:03:06,600 --> 00:03:11,820
@@ -198,11 +198,11 @@ DN: Yes.
 
 45
 00:03:43,180 --> 00:03:48,540
-SP: So it should play the sequence at that position. 
+SP: So it should play the sequence at that position.
 
 46
 00:03:48,570 --> 00:03:54,690
-So if it's one it would be truthy and if its
+So if it's one it would be truthy and if it's
 zero it won't be truthy, so I won't do this thing.
 
 47
@@ -220,7 +220,7 @@ But I don't know when, so I need to add a new parameter.
 50
 00:04:08,850 --> 00:04:17,310
 So I say when. And instead of just
-`start()`, I'll say `start(when)`.And I'll say at `t`. 
+`start()`, I'll say `start(when)`.And I'll say at `t`.
 
 51
 00:04:17,350 --> 00:04:23,030
@@ -230,12 +230,12 @@ T has to be the AudioContext.currentTime.
 52
 00:04:23,030 --> 00:04:26,770
 Because, the way it works is
-when you create another context... 
+when you create another context...
 
 53
 00:04:26,770 --> 00:04:30,520
-I dont know if it's when you create
-another context or when the page is created. 
+I don't know if it's when you create
+another context or when the page is created.
 
 54
 00:04:30,550 --> 00:04:37,740
@@ -250,7 +250,7 @@ but in the clock for the audio context.
 56
 00:04:44,740 --> 00:04:51,210
 So when you want to scale things, you want to do
-that relative to the audio context 'timer' or 'clock' 
+that relative to the audio context 'timer' or 'clock'
 
 57
 00:04:51,230 --> 00:04:52,640
@@ -259,7 +259,7 @@ or whatever you want to call it.
 58
 00:04:52,650 --> 00:04:56,280
 So if you start with the current time, you say
-"run it from there" and we keep adding things, 
+"run it from there" and we keep adding things,
 
 59
 00:04:56,300 --> 00:05:01,100
@@ -279,7 +279,7 @@ to play all the time, it has to.
 62
 00:05:16,440 --> 00:05:25,900
 So this is going to create 12 buffer sources and
-it's going to connect them and start them. 
+it's going to connect them and start them.
 
 63
 00:05:25,960 --> 00:05:30,910
@@ -291,12 +291,12 @@ playing then at some point they will just die.
 DN: Yes right.
 
 65
-00:05:31,920 --> 00:05:33,480
+00:05:31,900 --> 00:05:33,500
 SP: And that's the way you
-should do things in web audio. 
+should do things in web audio.
 
 66
-00:05:33,480 --> 00:05:38,370
+00:05:33,520 --> 00:05:38,370
 You don't need to worry about
 deleting things, or stopping or re-using them
 
@@ -307,7 +307,7 @@ because it's better to just schedule everything.
 68
 00:05:40,710 --> 00:05:47,110
 And let web audio take care of
-things because it goes in a different thread. 
+things because it goes in a different thread.
 
 69
 00:05:47,150 --> 00:05:51,630
@@ -321,7 +321,7 @@ DN: I see.
 71
 00:05:52,630 --> 00:05:57,320
 SP: In the same time scale or,
-you know... I call it the parallel universe. 
+you know... I call it the parallel universe.
 
 72
 00:05:57,350 --> 00:06:00,090
@@ -329,7 +329,7 @@ Just send things and hope for the best.
 
 73
 00:06:00,090 --> 00:06:04,550
-So in theory now this should
+So in theory, this should
 now play. [We hear the claps]
 
 74
@@ -348,7 +348,7 @@ DN: Yes, how interesting.
 77
 00:06:11,280 --> 00:06:17,390
 SP: Yes, but this is just happening once.
-So this is good. It played the sequence. 
+So this is good. It played the sequence.
 
 78
 00:06:17,420 --> 00:06:21,620

@@ -5,16 +5,16 @@ Chapter 3: Adding a limiter.
 2
 00:00:04,000 --> 00:00:12,540
 This is OK, but sometimes you want
-to make sure things don't get too noisy 
+to make sure things don't get too noisy
 
 3
 00:00:12,570 --> 00:00:19,570
 because maybe this sample is super
-super saturated. You don't want to deafening.
+super saturated. You don't want it to be deafening.
 
 4
 00:00:19,600 --> 00:00:24,000
-So it's a good idea to insertn
+So it's a good idea to insert
 a limiter, in the meantime.
 
 5
@@ -34,12 +34,12 @@ SP: Exactly!
 8
 00:00:34,380 --> 00:00:43,380
 So I will create this thing up
-here... Very imaginative name! 
+here... Very imaginative name!
 
 9
 00:00:43,390 --> 00:00:51,310
 And I will create another node
-which I think is called 'compressor'... 
+which I think is called 'compressor'...
 
 10
 00:00:54,030 --> 00:00:56,730
@@ -48,12 +48,12 @@ DynamicsCompressor.
 11
 00:00:58,580 --> 00:01:02,520
 So instead of connecting to the
-destination, I will connect to the limiter.  
+destination, I will connect to the limiter.
 
 12
 00:01:02,520 --> 00:01:08,960
 And then I  will connect the limiter to
-the destination.  So we create this whole chain. 
+the destination.  So we create this whole chain.
 
 13
 00:01:09,310 --> 00:01:13,920
@@ -74,7 +74,7 @@ DN: OK.
 
 17
 00:01:23,080 --> 00:01:25,015
-It's not doing the formal... 
+It's not doing the formal...
 
 18
 00:01:25,020 --> 00:01:27,010
@@ -101,7 +101,7 @@ because we're not using it anymore.
 23
 00:01:40,160 --> 00:01:44,090
 DN: The garbage collector is
-doing his thing [laughter]. 
+doing his thing [laughter].
 
 24
 00:01:44,090 --> 00:01:46,270
@@ -114,7 +114,7 @@ DN: A flash of a second.
 26
 00:01:47,660 --> 00:01:51,120
 SP: Well we have more things running.
-We will see more things showing up. 
+We will see more things showing up.
 
 27
 00:01:51,140 --> 00:01:53,500
@@ -127,7 +127,7 @@ Because that's inaud.
 29
 00:01:55,720 --> 00:01:59,735
 So when you want to describe things,
-or when things are being connected for too long 
+or when things are being connected for too long
 
 30
 00:01:59,745 --> 00:02:06,260
@@ -136,7 +136,7 @@ Maybe we should check that everything's correct.
 
 31
 00:02:06,260 --> 00:02:07,655
-So it's good to keep an eye on these. 
+So it's good to keep an eye on these.
 
 32
 00:02:07,655 --> 00:02:13,480
@@ -154,12 +154,12 @@ like a clap and we want to play the sequence.
 
 35
 00:02:21,770 --> 00:02:28,640
-SP: So I would create a repo here and then just init.  
+SP: So I would create a repo here and then just init.
 
 36
 00:02:28,700 --> 00:02:39,910
 And obviously, everything's new. So will just add
-clap, index, main, and I'll commit that as ‘Hello world'. 
+clap, index, main, and I'll commit that as ‘Hello world'.
 
 37
 00:02:42,010 --> 00:02:44,210
@@ -183,7 +183,7 @@ what's going on here? I don't see anything.
 41
 00:03:01,700 --> 00:03:09,580
 So it's best to move it here. So at
-least you get to see clapping music.  
+least you get to see clapping music.
 
 42
 00:03:09,580 --> 00:03:13,920
@@ -196,7 +196,7 @@ DN: Ahh... Right.
 44
 00:03:15,130 --> 00:03:20,480
 So it will have something like
-loading, or this is an example of whatever. 
+loading, or this is an example of whatever.
 
 45
 00:03:20,510 --> 00:03:24,290
@@ -214,7 +214,7 @@ libraries and it ends up growing.
 48
 00:03:45,140 --> 00:03:48,330
 Depending on the connection
-speed it can take a long time 
+speed it can take a long time
 
 49
 00:03:48,335 --> 00:03:53,900
