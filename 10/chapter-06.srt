@@ -623,24 +623,95 @@ DN: Ah there we go. [The clapping speeds up]
 It's really hard to tell who's playing isn't it?
 
 141
-00:11:46,430 --> 00:11:48,430
-SP: Yes, because we still have the dynamics compressor so some things are going to be inaud.
+00:11:46,430 --> 00:11:53,630
+SP: Yes, We still have the dynamics compressor
+so things are not going to be super loud.
 
 142
-00:11:48,430 --> 00:11:50,430
- That inaud using the same sample for both. And we change the sample. [they listen]. Yes, it's hard to say. I'm going to change the sample and add another one. So we can see the difference because right now it's too hard to say.
+00:11:53,660 --> 00:11:58,660
+That's the issue with using the same sample
+for both, so I think I will change the sample. 
+
+143
+00:11:58,680 --> 00:12:01,050
+[They listen]. 
+
+144
+00:12:01,090 --> 00:12:05,440
+Yes, it's hard to say. I'm going to
+change the sample and add another one. 
+
+145
+00:12:05,470 --> 00:12:09,090
+So we can see the difference
+because right now it's too hard to say.
+
+146
+00:12:09,110 --> 00:12:10,670
 DN: Yeah.
-SP: I would say it's working, but who knows. OK so I will commit this and change to loading to 2 samples instead of using one for both. Otherwise I don't know what's going on.
+
+147
+00:12:10,690 --> 00:12:13,250
+SP: I would say it's working, but who knows. 
+
+148
+00:12:13,250 --> 00:12:19,210
+OK, so I will commit this and change to loading
+to 2 samples instead of using one for both. 
+
+149
+00:12:19,240 --> 00:12:21,340
+Otherwise I don't know what's going on.
+
+150
+00:12:21,340 --> 00:12:23,980
 DN: What we have here is a performance.
+
+151
+00:12:24,000 --> 00:12:25,310
 SP: A performance!
+
+152
+00:12:25,330 --> 00:12:29,450
 DN: Well, yes it is clapping music.
-SP: But a very precise performance, all the players sound exactly the same. And always in time.
-DN: It's "clapping music" by a robot.
-SP: But it sounds like a machine as well, do do do do. Like you were saying off camera, There is no silence in the second stanza. And the reason why it's do do do is because of the dynamics compressor making sure we are never saturating. So if we didn't have it we would notice louder things.
-DN: Yeah.
-SP: But right now we can't.
 
-Let's try a different sample to start with. "Make second player play".
+153
+00:12:29,450 --> 00:12:35,440
+SP: But a very precise performance, all the
+players sound exactly the same. And always in time.
 
+154
+00:12:35,440 --> 00:12:37,560
+DN: It's 'clapping music' by a robot.
 
+155
+00:12:37,610 --> 00:12:43,820
+SP: Yes, but it sounds like a machine as well, do do do do.
+
+156
+00:12:43,850 --> 00:12:54,340
+Also, in this case there is
+no silence in the second rep. 
+
+157
+00:12:54,360 --> 00:13:00,620
+And the reason is because the dynamics
+compressor makes sure we are never saturating. 
+
+158
+00:13:00,650 --> 00:13:06,520
+So if we didn't have it we would
+notice louder things... But right now we can't.
+
+159
+00:13:06,720 --> 00:13:10,010
+Let's try a different sample to start with. 
+
+160
+00:13:10,360 --> 00:13:13,200
+[Silence]
+
+161
+00:13:15,950 --> 00:13:20,230
+So 'make second player play'.
 
