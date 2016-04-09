@@ -500,19 +500,135 @@ But in the next block we
 should see how they've shifted.
 
 113
-00:09:57,340 --> 00:09:59,340
-SP: It seems to be working fine. So now we know that that one should be playing a different thing.
-DN: Third stanza, zero two.
-SP: So there are two shifts. OK that looks good. So that's why sometimes logging is good.   You could debug this thing but the problem with debugging is that you need to go step by step. Whereas, if you can see the progression like this it's easier to see what's going on. You don't need to say next next next, it's really boring. And also, this is not the same its slowish. Yep, OK. We have the currentStep2, we can determine the shouldPlay2. So shouldPlay2 = sequence[currentStep2]
-DN: Right.
-Sp: So if(shouldPlay2) and just play the buffer. And clap sample. And you have at the same time, clap sample, it's just that they are looking at different points but they are still inaud because the steps are still step time.
-DN: Yes, right.
-SP: Maybe if this was a real score it would all happen in quarters, I don't know. Different lengths and things like that. This is a very simplified version. So in theory this should play the things I want.
+00:09:56,670 --> 00:10:01,680
+It seems to be working fine.
+
+114
+00:10:01,680 --> 00:10:05,270
+So now we know that that
+one should be playing a different thing.
+
+115
+00:10:05,280 --> 00:10:09,450
+DN: We're in the third stanza, zero two.
+
+116
+00:10:09,460 --> 00:10:11,930
+SP: Yes, so there are two shifts. OK, that looks good. 
+
+117
+00:10:11,930 --> 00:10:15,010
+So that's why sometimes logging is good.  
+
+118
+00:10:15,010 --> 00:10:20,000
+You could debug this thing but the problem with
+debugging is that you need to go step by step. 
+
+119
+00:10:20,015 --> 00:10:24,535
+Whereas, if you can see the progression
+like this, it's easier to see what's going on. 
+
+120
+00:10:24,530 --> 00:10:28,290
+You don't need to say next next next,
+because that would be really boring. 
+
+121
+00:10:28,300 --> 00:10:34,575
+And also, this is not the same it's really slow-ish. 
+
+122
+00:10:34,590 --> 00:10:36,595
+So yep, OK. 
+
+123
+00:10:36,590 --> 00:10:40,260
+[Sole thinks]
+
+124
+00:10:40,400 --> 00:10:43,600
+We have the currentStep2,
+we can determine the shouldPlay2. 
+
+125
+00:10:43,600 --> 00:10:50,265
+So shouldPlay2 = sequence[currentStep2]
+
+126
+00:10:50,280 --> 00:10:53,000
+[Silence]
+
+127
+00:10:53,290 --> 00:11:01,115
+So if(shouldPlay2) and just
+play the buffer. And clap sample.
+
+128
+00:11:01,210 --> 00:11:03,380
+And they are happening at the same time. 
+
+129
+00:11:03,400 --> 00:11:06,840
+It's just that they are looking at
+different points in the sequence. 
+
+130
+00:11:06,880 --> 00:11:11,650
+But they are still inaud
+because the steps are still step time.
+
+131
+00:11:11,740 --> 00:11:16,150
+SP: Maybe if this was a proper score it
+would all happen in quarters, I don't know. 
+
+132
+00:11:16,180 --> 00:11:20,200
+Like different lengths and things like
+that. This is a very simplified version.
+
+133
+00:11:20,260 --> 00:11:23,390
+So in theory this should play the things I want.
+
+134
+00:11:23,410 --> 00:11:24,980
 [playing clapping]
-SP: OK, let's try this.
-I will try this and see if there are more things. So you have two  playing. You can really see the difference now.
-DN: Ah there we go. It's really hard to tell who's playing isn't it.
-SP: Yes, because we still have the dynamics compressor so some things are going to be inaud. That inaud using the same sample for both. And we change the sample. [they listen]. Yes, it's hard to say. I'm going to change the sample and add another one. So we can see the difference because right now it's too hard to say.
+
+135
+00:11:25,020 --> 00:11:26,590
+OK, let's try this.
+
+136
+00:11:26,590 --> 00:11:30,500
+I will look at this and see if there are more things.
+
+137
+00:11:30,540 --> 00:11:36,310
+So you have two  playing.
+You can really see the difference now.
+
+138
+00:11:36,310 --> 00:11:40,530
+[They listen]
+
+139
+00:11:40,580 --> 00:11:44,160
+DN: Ah there we go. [The clapping speeds up]
+
+140
+00:11:44,160 --> 00:11:46,430
+It's really hard to tell who's playing isn't it?
+
+141
+00:11:46,430 --> 00:11:48,430
+SP: Yes, because we still have the dynamics compressor so some things are going to be inaud.
+
+142
+00:11:48,430 --> 00:11:50,430
+ That inaud using the same sample for both. And we change the sample. [they listen]. Yes, it's hard to say. I'm going to change the sample and add another one. So we can see the difference because right now it's too hard to say.
 DN: Yeah.
 SP: I would say it's working, but who knows. OK so I will commit this and change to loading to 2 samples instead of using one for both. Otherwise I don't know what's going on.
 DN: What we have here is a performance.
