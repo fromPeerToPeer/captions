@@ -338,7 +338,7 @@ So the ‘should play' is for the first player.
 77
 00:06:43,200 --> 00:06:46,130
 And we need to determine
-if the second player has to play. 
+if the second player has to play.
 
 78
 00:06:46,150 --> 00:06:51,020
@@ -347,17 +347,17 @@ to shouldPlay1 and shouldPlay1,
 
 79
 00:06:51,050 --> 00:06:56,330
-and then I'll find out if the second one needs to play. 
+and then I'll find out if the second one needs to play.
 
 80
 00:06:56,330 --> 00:07:01,790
 It's not very scalable when you have lots
-of things to play but for this case it should be OK. 
+of things to play but for this case it should be OK.
 
 81
 00:07:01,820 --> 00:07:08,440
 So this is going to be using
-the number of the current stanza, 
+the number of the current stanza,
 
 82
 00:07:08,450 --> 00:07:13,960
@@ -382,7 +382,7 @@ far because the sequence only has 12.
 86
 00:07:33,440 --> 00:07:38,070
 So if I'm in the last step and I'm
-playing the second player, I'm going to be out. 
+playing the second player, I'm going to be out.
 
 87
 00:07:38,100 --> 00:07:48,980
@@ -411,8 +411,8 @@ SP: So, for those at home that don't know...
 
 93
 00:08:06,630 --> 00:08:12,960
-So if you have the module thingy. Suppose you
-have 12, which is the number of steps we have. 
+So if you have the modulo thingy. Suppose you
+have 12, which is the number of steps we have.
 
 94
 00:08:13,000 --> 00:08:28,190
@@ -424,16 +424,16 @@ And 12 should be zero, because it goes back to zero.
 
 96
 00:08:32,220 --> 00:08:35,310
-That way we never go out of the array. 
+That way we never go out of the array.
 
 97
 00:08:35,340 --> 00:08:41,610
 Knowing how the modulo works is super
-handy when you have a number of values 
+handy when you have a number of values
 
 98
 00:08:41,610 --> 00:08:43,850
-and you want to skip to the next. 
+and you want to skip to the next.
 
 99
 00:08:43,860 --> 00:08:48,830
@@ -443,18 +443,88 @@ modulo the length. And it works super quickly.
 100
 00:08:48,840 --> 00:08:55,530
 I like those kind of things, but it's not the best
-practice because then you have to explain them. 
+practice because then you have to explain them.
 
 101
 00:08:55,540 --> 00:08:59,080
-Or you could say something like index++ 
+Or you could say something like index++
 
 102
-00:08:59,090 --> 00:09:04,860
-No that is even worse it's better to say index % length inaud but for typing I might just use this thing, which is not the best practice. But if you're doing short things you might just want to use that.
-Just to make sure, just load it. Ah go back.
-OK so, we can't really say because its showing the other one. And so inaud some time
-DN: Ah..., OK.
-SP: So right now they are the same because we're still looping. But in the next block we should see how they've shifted.
+00:08:59,090 --> 00:09:05,960
+No that is even worse it's
+better to say ++ index % length.
+
+103
+00:09:05,980 --> 00:09:12,680
+It may be hard to understand, but sometimes
+when I'm typing in a rush, I might use this thing.
+
+104
+00:09:12,700 --> 00:09:21,433
+It's not the best practice. But if you're doing
+short things you might just want to use that.
+
+105
+00:09:23,580 --> 00:09:28,360
+Just to make sure... I will log it. 
+
+106
+00:09:28,450 --> 00:09:31,660
+Ahhhh go back.
+
+107
+00:09:31,660 --> 00:09:34,960
+[Silence]
+
+108
+00:09:35,160 --> 00:09:41,350
+We can't really say because
+it's showing the other one.
+
+109
+00:09:41,430 --> 00:09:43,830
+So let's show both at the same time.
+
+110
+00:09:43,860 --> 00:09:45,910
+DN: Ah... Right,OK.
+
+111
+00:09:45,930 --> 00:09:49,680
+SP: So right now they are the
+same because we're still not looping. 
+
+112
+00:09:49,790 --> 00:09:56,640
+But in the next block we
+should see how they've shifted.
+
+113
+00:09:57,340 --> 00:09:59,340
+SP: It seems to be working fine. So now we know that that one should be playing a different thing.
+DN: Third stanza, zero two.
+SP: So there are two shifts. OK that looks good. So that's why sometimes logging is good.   You could debug this thing but the problem with debugging is that you need to go step by step. Whereas, if you can see the progression like this it's easier to see what's going on. You don't need to say next next next, it's really boring. And also, this is not the same its slowish. Yep, OK. We have the currentStep2, we can determine the shouldPlay2. So shouldPlay2 = sequence[currentStep2]
 DN: Right.
+Sp: So if(shouldPlay2) and just play the buffer. And clap sample. And you have at the same time, clap sample, it's just that they are looking at different points but they are still inaud because the steps are still step time.
+DN: Yes, right.
+SP: Maybe if this was a real score it would all happen in quarters, I don't know. Different lengths and things like that. This is a very simplified version. So in theory this should play the things I want.
+[playing clapping]
+SP: OK, let's try this.
+I will try this and see if there are more things. So you have two  playing. You can really see the difference now.
+DN: Ah there we go. It's really hard to tell who's playing isn't it.
+SP: Yes, because we still have the dynamics compressor so some things are going to be inaud. That inaud using the same sample for both. And we change the sample. [they listen]. Yes, it's hard to say. I'm going to change the sample and add another one. So we can see the difference because right now it's too hard to say.
+DN: Yeah.
+SP: I would say it's working, but who knows. OK so I will commit this and change to loading to 2 samples instead of using one for both. Otherwise I don't know what's going on.
+DN: What we have here is a performance.
+SP: A performance!
+DN: Well, yes it is clapping music.
+SP: But a very precise performance, all the players sound exactly the same. And always in time.
+DN: It's "clapping music" by a robot.
+SP: But it sounds like a machine as well, do do do do. Like you were saying off camera, There is no silence in the second stanza. And the reason why it's do do do is because of the dynamics compressor making sure we are never saturating. So if we didn't have it we would notice louder things.
+DN: Yeah.
+SP: But right now we can't.
+
+Let's try a different sample to start with. "Make second player play".
+
+
 
