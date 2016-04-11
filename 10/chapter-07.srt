@@ -111,3 +111,150 @@ so it can tell you this thing is done.
 But I want to convert this into a
 promise because it should be faster.
 
+25
+00:02:15,520 --> 00:02:19,150
+So I'm going to return a promise. 
+
+26
+00:02:20,970 --> 00:02:25,830
+You tell the person there's a promise.
+At some point something might happen. 
+
+27
+00:02:25,830 --> 00:02:31,130
+The promise happens or it is
+rejected, which is when something fails.
+
+28
+00:02:31,170 --> 00:02:38,290
+When you have a promise you can use
+the then() method to say when you fulfill this, 
+
+29
+00:02:38,310 --> 00:02:41,200
+promise me this thing then do it. 
+
+30
+00:02:41,240 --> 00:02:45,620
+It's like the connect() method
+but instead of for (web audio) nodes. 
+
+31
+00:02:45,640 --> 00:02:48,290
+It's for things that might happen in the future.
+
+32
+00:02:48,360 --> 00:02:51,250
+You can connect as many
+things as you want to the promise. 
+
+33
+00:02:51,310 --> 00:02:56,700
+You can connect a number of events.
+Inaud, or you could load more things.
+
+34
+00:02:56,710 --> 00:03:00,700
+For example you might want to load something
+sequentially, instead of all at the same time.
+
+35
+00:03:00,710 --> 00:03:04,240
+But in this case we just do promise all.
+
+36
+00:03:04,260 --> 00:03:08,900
+I don't know how it schedules
+things and I don't really care. 
+
+37
+00:03:08,920 --> 00:03:10,450
+I just care about the things being done. 
+
+38
+00:03:10,480 --> 00:03:14,020
+If you care about the order of execution
+you might want to use a different library.
+
+39
+00:03:14,020 --> 00:03:18,290
+In this case I don't, so I will just make this thing. 
+
+40
+00:03:18,310 --> 00:03:25,910
+The way you use promises is you wrap the
+code that you want to execute with a function
+
+41
+00:03:25,910 --> 00:03:28,880
+that has two things, 'OK' and 'fail'.
+
+42
+00:03:28,900 --> 00:03:33,860
+I think this is not the correct method names,
+but I like this thing because it's pretty obvious.
+
+43
+00:03:33,890 --> 00:03:37,600
+This is the 'OK' callback or the 'fail' callback.
+
+44
+00:03:37,740 --> 00:03:43,420
+So if you return this thing...
+
+45
+00:03:44,470 --> 00:03:51,240
+In this case, instead of triggering the
+whole process of everything I'm going to...
+
+46
+00:03:51,240 --> 00:03:55,520
+(I'm not familiar with this keyboard)
+
+47
+00:03:56,390 --> 00:04:04,060
+When I'm loading I'm going
+to call the OK with a response. 
+
+48
+00:04:04,240 --> 00:04:06,540
+(I will need to decode the thing, but anyway...)
+
+49
+00:04:06,550 --> 00:04:14,450
+I will use this thing or use fail instead
+of this. So I do need to use the decode thingy.
+
+50
+00:04:14,450 --> 00:04:19,970
+It can be just 'load sample', because I just
+want to get a sample out of here at the end.
+
+51
+00:04:20,010 --> 00:04:26,270
+However you create it, or decode it,
+I just want you to load and give me a sample.
+
+52
+00:04:26,360 --> 00:04:34,420
+So I'm going to make it inaud and then here.
+
+53
+00:04:34,490 --> 00:04:39,010
+There is a promised version of the inaud
+ordinator but it doesn't work in Chrome yet.
+
+54
+00:04:39,010 --> 00:04:41,010
+DN: I see.
+SP: So it's pretty much the same. This is a good case so I'm going to respond. I'm going to call fill the promise, decode buffer. And if there is an error, fail.  That's why I like the OK and fail because it's fairly obvious. Not like an error callback..it's too long.  Get on with it. I think with the promise version you can just return ok with the result of this. Inaud in chrome, I don't want to do this. I want to keep it simple and this should be simple enough.
+So if I call this function I'm just going to get a promise, and it doesn't actually do anything.
+I'm going to show you so I'm going to try to load clap_07.wav
+So if I do this...  the promise is pending.
+DN: Ah yes.
+SP: So nothing's happening. But if I say Promise.all() with an array of promises. In this case just one. Or maybe not. Let's not go that far. If I say sample promise then hopefully it will give me a sample.
+Ta Ta !
+So I could do this thing, or I could... This is not Ruby... So I need to have parenthesis. [laughter].
+We have some spaces.  So here I should have samples. So it will make all the promises happen somehow. I don't care how I just want it to be done and then give me the samples in another array. I should have another buffer which is the inaud as before. I could generate this but I don't think it's worth starting something. I'm just going to be very lazy again.
+DN: Sounds fine.
+
