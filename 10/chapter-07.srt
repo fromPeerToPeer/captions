@@ -1,0 +1,113 @@
+﻿1
+00:00:00,000 --> 00:00:02,900
+Chapter 7: Using a different
+clap sample for each player.
+
+2
+00:00:02,900 --> 00:00:08,330
+SP: I have another sample somewhere, like here.
+
+3
+00:00:08,330 --> 00:00:12,320
+You can see the difference.
+
+4
+00:00:12,390 --> 00:00:14,910
+This one which doesn't want to play again.
+
+5
+00:00:14,920 --> 00:00:16,360
+DN: Yeah, they sound completely different!
+
+6
+00:00:16,360 --> 00:00:21,420
+SP: They are different.  Maybe not the
+best, but you want them to sound different. 
+
+7
+00:00:21,540 --> 00:00:26,020
+So we just paste it in here, so we have two.
+
+8
+00:00:38,160 --> 00:00:46,650
+We want to load two and we want to
+make sure both have loaded before we continue.
+
+9
+00:00:46,650 --> 00:00:51,810
+So here we enter the horrors
+of synchronicity in JavaScript. 
+
+10
+00:00:51,840 --> 00:01:00,110
+They created this thing called promises, so
+you can enter sync without having zero callbacks.
+
+11
+00:01:00,170 --> 00:01:08,540
+If we didn't use promises we have to load the first
+sample and then the second, and it's not very elegant.
+
+12
+00:01:08,560 --> 00:01:13,160
+So we are going to turn this into
+a generic thing for loading the samples.
+
+13
+00:01:13,160 --> 00:01:16,630
+Giving them the URL and
+then instead of just loading the thing, 
+
+14
+00:01:16,670 --> 00:01:20,650
+we will make it give us a promise,
+and then we will use the Promise.all() method. 
+
+15
+00:01:20,670 --> 00:01:26,710
+That waits for everything to be loaded. So
+it's a bit less hard-coded and a bit more generic.
+
+16
+00:01:26,760 --> 00:01:32,160
+So I'm going to change this
+comment to "Loading samples generally". 
+
+17
+00:01:33,560 --> 00:01:36,760
+So it will return a promise.
+I will do this step by step.
+
+18
+00:01:36,760 --> 00:01:46,740
+So I can give a URL, and take
+out the hard codedness of that.
+
+19
+00:01:46,760 --> 00:01:52,530
+So instead of opening clap zero
+wave, I'm going to load the URL 
+
+20
+00:01:52,570 --> 00:01:58,190
+And instead of just returning
+this... I'll do it step by step. 
+
+21
+00:01:58,230 --> 00:02:02,900
+And also we don't want this thing here either.
+
+22
+00:02:02,930 --> 00:02:07,580
+So if we load this sample, I want
+it to have some call back or something,
+
+23
+00:02:07,620 --> 00:02:09,840
+so it can tell you this thing is done. 
+
+24
+00:02:09,880 --> 00:02:15,520
+But I want to convert this into a
+promise because it should be faster.
+
