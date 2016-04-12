@@ -347,7 +347,46 @@ We have some spaces.
 So here I should have samples.
 
 76
-00:06:53,090 --> 00:07:05,330
- So it will make all the promises happen somehow. I don't care how I just want it to be done and then give me the samples in another array. I should have another buffer which is the inaud as before. I could generate this but I don't think it's worth starting something. I'm just going to be very lazy again.
-DN: Sounds fine.
+00:06:53,090 --> 00:06:57,510
+So it will make all the promises happen somehow. 
+
+77
+00:06:57,560 --> 00:07:04,710
+I don't care how, I just want it to be done,
+and then give me the samples in another array.
+
+78
+00:07:04,710 --> 00:07:09,490
+I should have another buffer which is the inaud before.
+
+79
+00:07:09,550 --> 00:07:16,200
+So I could do the two, or I could maybe just...
+
+80
+00:07:17,230 --> 00:07:21,670
+I could generate this but I don't
+think it's worth starting that. [Laughter]
+
+81
+00:07:21,690 --> 00:07:24,040
+Sample2... I'm just going to be very lazy.
+
+82
+00:07:24,070 --> 00:07:27,800
+DN: Seems fine.
+
+83
+00:07:27,800 --> 00:07:29,800
+SP: If I had another one I could list the samples to load. An array and map it so you have a map of promises, and then you make them so inaud. (laughter). So you could do all Promises.  Suppose its sample 1 and sample 2 and you could map that. Inaud URL.
+Sole types
+So you want to return promise and generate URL. So this should give you a list of promises that you then send to a promise.
+DN: Right.
+SP: I'm just going to inaud here. We need to complete this thing.
+DN: You need to call the first one 1 I think.
+SP: Yes. So in theory that should give me two samples. Yes, we have two samples, so now we can do this thing.
+I could store these samples in my global clap samples. Instead of having clap samples  I will make it into an array so if I try to have everything loaded inaud a break or something. We could start it here, but we want to start when everything has been loaded. So we can start here.
+Now I need to make other comments so it makes sense. It's loaded.
+So in theory that should do it. We need to change the function that plays samples so it uses different samples for each player. So this function loads the sample and decodes it. It doesn't have any other function it just gives you a response for the sample and that's the promise.
+DN: Right.
 
