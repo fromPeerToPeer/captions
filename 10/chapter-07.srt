@@ -457,24 +457,141 @@ So if I try to play when I have
 everything loaded inaud a break or something. 
 
 101
-00:09:12,790 --> 00:09:16,790
+00:09:12,790 --> 00:09:20,700
 We could start it here, but we want
 to start when everything has been loaded. 
 
 102
-00:09:16,790 --> 00:09:18,790
-Now I need to make other comments so it makes sense. It's loaded.
-So in theory that should do it. We need to change the function that plays samples so it uses different samples for each player. So this function loads the sample and decodes it. It doesn't have any other function it just gives you a response for the sample and that's the promise.
-DN: Right.
-We could start it here, but we want
-to start when everything has been loaded. 
-
-103
-00:09:18,790 --> 00:09:20,700
-We could start it here, but we want
-to start when everything has been loaded. 
-
-104
 00:09:20,890 --> 00:09:23,070
 So we can start here.
+
+103
+00:09:23,150 --> 00:09:27,420
+Now everything's done I'm going
+to add other comments so it makes sense. 
+
+104
+00:09:27,520 --> 00:09:30,860
+Everything's  loaded.
+
+105
+00:09:33,870 --> 00:09:39,350
+So in theory that should do it. 
+
+106
+00:09:39,470 --> 00:09:45,090
+We need to change the function that plays samples
+so it uses different samples for each player. 
+
+107
+00:09:45,130 --> 00:09:47,790
+(We can delete this).
+
+108
+00:09:47,830 --> 00:09:52,800
+So this function now is loading the sample
+and decoding it. It doesn't have any other logic.
+
+109
+00:09:52,830 --> 00:09:58,450
+it just gives you a response for
+the sample and that's the promise.
+
+110
+00:09:58,640 --> 00:10:02,310
+So it's really re-factored nicely. 
+
+111
+00:10:02,640 --> 00:10:07,830
+So this is loaded and then we just
+need to make sure this one plays different things. 
+
+112
+00:10:07,830 --> 00:10:10,260
+But we know where they are. One is zero.
+
+113
+00:10:10,300 --> 00:10:13,930
+This is not very good practice but as long
+as you know what your doing... [laughter]
+
+114
+00:10:13,930 --> 00:10:18,430
+So instead of just playing the clap
+sample; play one and play the other one.
+
+115
+00:10:19,990 --> 00:10:26,280
+It maybe should be less hard code. Especially when
+you have many things happening at the same time.
+
+116
+00:10:26,300 --> 00:10:31,480
+You want to use arrays instead of variables. But I
+think for the time being, and simplicity, it's better. 
+
+117
+00:10:31,480 --> 00:10:35,720
+Because otherwise the
+syntax has too many brackets. 
+
+118
+00:10:35,720 --> 00:10:39,280
+See just here; it's an ugly array.
+
+119
+00:10:39,340 --> 00:10:42,850
+So I'm going to try this, see if it works.
+
+120
+00:10:42,850 --> 00:10:45,210
+[They listen]
+
+121
+00:10:45,260 --> 00:10:48,760
+See? It's slightly different.
+
+122
+00:10:53,590 --> 00:10:55,870
+DN: Yeah.
+
+123
+00:11:02,390 --> 00:11:05,650
+Too perfect, but they are playing. 
+
+124
+00:11:05,740 --> 00:11:09,510
+They can get you tapping your foot.
+
+125
+00:11:10,020 --> 00:11:14,200
+DN: Yeah. That's completely transformed
+it, just by adding that other sample.
+
+126
+00:11:14,230 --> 00:11:19,260
+It sounds much less mechanical. Or less
+monotonous I should say, but still mechanical.
+
+127
+00:11:19,290 --> 00:11:21,450
+SP: Less robotical. 
+
+128
+00:11:21,520 --> 00:11:24,860
+At least you can differentiate. Otherwise
+it was like "I don't know what's going on".
+
+129
+00:11:24,900 --> 00:11:28,660
+OK, so we've got this thing.
+Now we can make another commit.
+
+130
+00:11:28,720 --> 00:11:34,400
+And now I need to add more files.
+
+131
+00:11:34,400 --> 00:11:37,330
+[Silence]
 
