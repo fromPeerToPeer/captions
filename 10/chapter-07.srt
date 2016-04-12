@@ -377,16 +377,104 @@ Sample2... I'm just going to be very lazy.
 DN: Seems fine.
 
 83
-00:07:27,800 --> 00:07:29,800
-SP: If I had another one I could list the samples to load. An array and map it so you have a map of promises, and then you make them so inaud. (laughter). So you could do all Promises.  Suppose its sample 1 and sample 2 and you could map that. Inaud URL.
-Sole types
-So you want to return promise and generate URL. So this should give you a list of promises that you then send to a promise.
+00:07:27,800 --> 00:07:32,150
+SP: If I had another one I could list
+the samples to load in an array;
+
+84
+00:07:32,180 --> 00:07:37,230
+and map it so you have a map
+of promises, and then you make them. 
+
+85
+00:07:37,320 --> 00:07:40,010
+So inaud. (laughter).
+
+86
+00:07:40,040 --> 00:07:44,920
+So you could do all Promises.
+
+87
+00:07:46,270 --> 00:07:58,060
+Suppose its sample1 and sample2...
+And you could map that to sample URL.
+
+88
+00:07:59,350 --> 00:08:05,550
+So you want to return promise and generate URL. 
+
+89
+00:08:05,690 --> 00:08:10,810
+So this should give you a list of
+promises that you then send to a promise.
+
+90
+00:08:10,880 --> 00:08:13,910
 DN: Right.
-SP: I'm just going to inaud here. We need to complete this thing.
-DN: You need to call the first one 1 I think.
-SP: Yes. So in theory that should give me two samples. Yes, we have two samples, so now we can do this thing.
-I could store these samples in my global clap samples. Instead of having clap samples  I will make it into an array so if I try to have everything loaded inaud a break or something. We could start it here, but we want to start when everything has been loaded. So we can start here.
+
+91
+00:08:14,090 --> 00:08:20,900
+SP: I'm just going to put that promise here. 
+
+92
+00:08:20,900 --> 00:08:23,930
+[Silence]
+
+93
+00:08:25,850 --> 00:08:30,920
+We need to complete this thing. [Laughter]
+
+94
+00:08:32,930 --> 00:08:35,800
+DN: I think you need to call the first one 1.
+
+95
+00:08:35,840 --> 00:08:43,580
+SP: Yes. So in theory that should
+give me two samples, hopefully. 
+
+96
+00:08:43,620 --> 00:08:47,710
+Yes, we have two samples, so now we can do this thing.
+
+97
+00:08:47,730 --> 00:08:56,830
+I could store these samples
+in my global clap samples.
+
+98
+00:08:56,830 --> 00:09:02,460
+inaud
+
+99
+00:09:02,490 --> 00:09:07,230
+Instead of having clap
+samples  I will make it an array.
+
+100
+00:09:07,280 --> 00:09:12,790
+So if I try to play when I have
+everything loaded inaud a break or something. 
+
+101
+00:09:12,790 --> 00:09:16,790
+We could start it here, but we want
+to start when everything has been loaded. 
+
+102
+00:09:16,790 --> 00:09:18,790
 Now I need to make other comments so it makes sense. It's loaded.
 So in theory that should do it. We need to change the function that plays samples so it uses different samples for each player. So this function loads the sample and decodes it. It doesn't have any other function it just gives you a response for the sample and that's the promise.
 DN: Right.
+We could start it here, but we want
+to start when everything has been loaded. 
+
+103
+00:09:18,790 --> 00:09:20,700
+We could start it here, but we want
+to start when everything has been loaded. 
+
+104
+00:09:20,890 --> 00:09:23,070
+So we can start here.
 
