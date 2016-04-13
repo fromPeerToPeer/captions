@@ -135,54 +135,131 @@ thing from scratch because I can't remember.
 [Silence]
 
 32
-00:02:06,350 --> 00:02:07,290
-
-It's the buttons with play and stop, the bpm thingy.
-I didn't want to be too original so I just called it transport.
-DN: Yes, OK. I haven't heard that before but it makes sense.
-SP: If you look up transport you will find a lot of references to all the, especially MIDI creation software. I think its for, so you can transport yourself around the song. I'm not sure.
-
-So this comes from this organization that has more modules and things. This is the one I'm using. This is what it should look like, but the one that we are going to use doesn't really have any theming, we can add what we want.
-DN: OK
-SP: This uses web components to render, this is a web component. Because web components are not really ready yet, you need to install the component along with a web component polyfill to make sure this can work. Maybe I should also document this thing, because it's not obvious.
-There is a nice polyfill that you can install, which is called webcomponents-lite, and it installs the minimum that I need for this, which is: registerElement, and I think a couple more things, but I just need to be able to do registerElement. Because that's not enabled in Firefox yet. It's available in Chrome, so if you try things only in Chrome you don't notice. But if you try in Firefox without the DOM things enabled, you'll find errors. So this is going to polyfill the thing.
-
-So I've got all these things and to load them I need to use require and this is not standard JavaScript. I could try to load these things from node modules, but it doesn't really work with this component because it uses other modules you should require.
-So what I should use is webpack or browserify or something that takes my main.js that I've been using so far, and takes all the requirements and things and makes that just one bundle.
-DN: Right.
-SP: So this is when things get interesting.
-
-I just used webpack last week and that was the first time I've installed it. It's pretty easy to use. I'm going to reuse it again. It's kind of like browserify, but it's got watch and things like that which are very convenient. With browserify you need to install watchify or something but webpack does everything for you. They call it 'Batteries included'. I like to play with things and assess them. People say that webpack generates smaller packages but I haven't really used it in a project enough to compare. I like to experiment with things.
-DN: Yeah right.
+00:02:07,290 --> 00:02:09,990
+I think it's 'transport' - I hope it is.
 
 33
-00:02:07,290 --> 00:02:08,350
-I think it's 'transport' - I hope it is.
-
-It's the buttons with play and stop, the bpm thingy.
-I didn't want to be too original so I just called it transport.
-DN: Yes, OK. I haven't heard that before but it makes sense.
-SP: If you look up transport you will find a lot of references to all the, especially MIDI creation software. I think its for, so you can transport yourself around the song. I'm not sure.
-
-So this comes from this organization that has more modules and things. This is the one I'm using. This is what it should look like, but the one that we are going to use doesn't really have any theming, we can add what we want.
-DN: OK
-SP: This uses web components to render, this is a web component. Because web components are not really ready yet, you need to install the component along with a web component polyfill to make sure this can work. Maybe I should also document this thing, because it's not obvious.
-There is a nice polyfill that you can install, which is called webcomponents-lite, and it installs the minimum that I need for this, which is: registerElement, and I think a couple more things, but I just need to be able to do registerElement. Because that's not enabled in Firefox yet. It's available in Chrome, so if you try things only in Chrome you don't notice. But if you try in Firefox without the DOM things enabled, you'll find errors. So this is going to polyfill the thing.
-
-So I've got all these things and to load them I need to use require and this is not standard JavaScript. I could try to load these things from node modules, but it doesn't really work with this component because it uses other modules you should require.
-So what I should use is webpack or browserify or something that takes my main.js that I've been using so far, and takes all the requirements and things and makes that just one bundle.
-DN: Right.
-SP: So this is when things get interesting.
-
-I just used webpack last week and that was the first time I've installed it. It's pretty easy to use. I'm going to reuse it again. It's kind of like browserify, but it's got watch and things like that which are very convenient. With browserify you need to install watchify or something but webpack does everything for you. They call it 'Batteries included'. I like to play with things and assess them. People say that webpack generates smaller packages but I haven't really used it in a project enough to compare. I like to experiment with things.
-DN: Yeah right.
-
-34
-00:02:08,350 --> 00:02:09,990
-I think it's 'transport' - I hope it is.
-
-35
 00:02:10,000 --> 00:02:19,330
 I don't know why they call it 'transport',
 but in musical software it's always called that.
+
+34
+00:02:19,360 --> 00:02:23,770
+It's the buttons with play and stop, the bpm thingy.
+
+35
+00:02:23,780 --> 00:02:27,720
+I didn't want to be too
+original so I just called it transport.
+
+36
+00:02:27,740 --> 00:02:31,730
+DN: Yes, OK. I haven't heard
+that before but it makes sense.
+
+37
+00:02:31,760 --> 00:02:37,050
+SP: If you look up transport you will
+find a lot of references to all the inaud, 
+
+38
+00:02:37,090 --> 00:02:39,610
+especially MIDI creation software inaud transport.
+
+39
+00:02:39,650 --> 00:02:46,390
+I think it's so you can transport
+yourself around the song. I'm not sure.
+
+40
+00:02:46,490 --> 00:02:52,370
+So this comes from this organization
+that has more modules and things. 
+
+41
+00:02:52,370 --> 00:02:56,510
+This is the one I'm using. 
+
+42
+00:02:56,510 --> 00:02:59,070
+This is what it should look like, if you use example.
+
+43
+00:02:59,090 --> 00:03:02,050
+But the one that we are going to
+use doesn't really have any theming; 
+
+44
+00:03:02,050 --> 00:03:05,870
+we can add whatever we want.
+
+45
+00:03:06,340 --> 00:03:11,910
+SP: This uses web components
+to render, this is a web component. 
+
+46
+00:03:12,340 --> 00:03:15,470
+Because web components are not really clear yet.
+
+47
+00:03:15,480 --> 00:03:23,420
+You need to install the component along with a
+web component polyfill to make sure this can work.
+
+48
+00:03:23,420 --> 00:03:26,350
+DN: Right.
+
+49
+00:03:26,380 --> 00:03:31,520
+Maybe I should also document
+this thing, because it's not obvious.
+
+50
+00:03:31,550 --> 00:03:35,570
+There is a nice polyfill that you
+can install, which is called webcomponents-lite, 
+
+51
+00:03:35,610 --> 00:03:41,200
+and it installs the minimum that
+I need for this, which is: registerElement. 
+
+52
+00:03:41,230 --> 00:03:44,350
+and I think a couple more things, but I
+just need to be able to do registerElement,
+
+53
+00:03:44,380 --> 00:03:46,940
+because that's not enabled in Firefox yet. 
+
+54
+00:03:46,940 --> 00:03:46,950
+It's available in Chrome, so if you
+try things only in Chrome you don't notice. 
+because that's not enabled in Firefox yet. 
+
+55
+00:03:46,950 --> 00:03:51,930
+It's available in Chrome, so if you
+try things only in Chrome you don't notice. 
+
+56
+00:03:51,970 --> 00:03:57,370
+But if you try in Firefox without the
+DOM things enabled, you'll find errors. 
+
+57
+00:03:57,370 --> 00:03:59,370
+So this is going to polyfill the thing.
+
+So I've got all these things and to load them I need to use require and this is not standard JavaScript. I could try to load these things from node modules, but it doesn't really work with this component because it uses other modules you should require.
+So what I should use is webpack or browserify or something that takes my main.js that I've been using so far, and takes all the requirements and things and makes that just one bundle.
+DN: Right.
+SP: So this is when things get interesting.
+
+I just used webpack last week and that was the first time I've installed it. It's pretty easy to use. I'm going to reuse it again. It's kind of like browserify, but it's got watch and things like that which are very convenient. With browserify you need to install watchify or something but webpack does everything for you. They call it 'Batteries included'. I like to play with things and assess them. People say that webpack generates smaller packages but I haven't really used it in a project enough to compare. I like to experiment with things.
+DN: Yeah right.
 
