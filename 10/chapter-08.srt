@@ -1,0 +1,47 @@
+﻿1
+00:00:00,000 --> 00:00:02,620
+Chapter 8: Adding a build system.
+
+2
+00:00:02,700 --> 00:00:06,480
+So... I think we should go back to the challenge. 
+
+3
+00:00:06,480 --> 00:00:13,160
+Well we have this, but not the interface.
+
+4
+00:00:13,190 --> 00:00:16,470
+We don't have play and stop and
+there's no way to modify the tempo,
+
+5
+00:00:16,500 --> 00:00:19,660
+unless we change [the code],
+and that's not very dynamic!
+
+6
+00:00:19,690 --> 00:00:21,100
+DN: Right, change the code.
+
+7
+00:00:21,110 --> 00:00:24,550
+SP: Yes, and reload. No! That's not very funny.
+
+8
+00:00:24,550 --> 00:00:30,450
+So... I am lazy so I'm going to use a
+component that renders all those buttons for you.
+
+9
+00:00:31,360 --> 00:00:33,360
+I just don't want to do this anymore inaud. I suppose it's OK being lazy as a programmer, if you work then you don't have to work again.
+DN: That's right.
+SP: So I made a component and used it with npm. So I need to initialize this thing as an npm project, first. so I'm going to npm init this thingy. Because that way I'll have a package JSON. Otherwise it stores the thing in `node_packages` folder but it doesn't save the dependencies to packages.json. If I give you this repository and I don't check in the node modules, you're going to have a hard time figuring out what dependencies I'm using.
+DN: I see.
+SP: So it is important. So I will just... OK fine, then clapping. No text no repo, clap.
+In theory I should just press return, but I kind of like writing yes, it gives me the confidence (laughter) I'm not going to mess with something I shouldn't be messing with.
+So now I should be able to npm install things.
+They are going to be saved as dependencies in packages.json, otherwise if you say `npm install --save` it doesn't really save if there's no package.json.
+And I'm not going to create it from scratch because I can't remember.
+
