@@ -252,14 +252,89 @@ But if you try in Firefox without the
 DOM things enabled, you'll find errors. 
 
 57
-00:03:57,370 --> 00:03:59,370
+00:03:57,370 --> 00:04:00,490
 So this is going to polyfill the thing.
 
-So I've got all these things and to load them I need to use require and this is not standard JavaScript. I could try to load these things from node modules, but it doesn't really work with this component because it uses other modules you should require.
-So what I should use is webpack or browserify or something that takes my main.js that I've been using so far, and takes all the requirements and things and makes that just one bundle.
+58
+00:04:00,490 --> 00:04:10,620
+So I've got all these things and to load them I need
+to use require, and this is not standard JavaScript.
+
+59
+00:04:10,620 --> 00:04:16,770
+I could try to load these things from node modules,
+but it doesn't really work with this component,
+
+60
+00:04:16,790 --> 00:04:19,250
+because it uses other modules you should require.
+
+61
+00:04:19,290 --> 00:04:22,730
+So what I should use is webpack or browserify,
+
+62
+00:04:22,740 --> 00:04:28,410
+or something that takes my main.js
+that I've been using so far, and converts that
+
+63
+00:04:28,470 --> 00:04:33,810
+into something that takes all the requirements
+and things and makes that just one bundle.
+
+64
+00:04:33,830 --> 00:04:34,640
 DN: Right.
+
+65
+00:04:34,640 --> 00:04:37,090
 SP: So this is when things get interesting.
 
-I just used webpack last week and that was the first time I've installed it. It's pretty easy to use. I'm going to reuse it again. It's kind of like browserify, but it's got watch and things like that which are very convenient. With browserify you need to install watchify or something but webpack does everything for you. They call it 'Batteries included'. I like to play with things and assess them. People say that webpack generates smaller packages but I haven't really used it in a project enough to compare. I like to experiment with things.
-DN: Yeah right.
+66
+00:04:37,090 --> 00:04:42,530
+I just used webpack last week and
+that was the first time I've installed it. 
+
+67
+00:04:42,540 --> 00:04:48,530
+It's pretty easy to use. I'm going to reuse it again.
+
+68
+00:04:50,470 --> 00:04:56,380
+It's kind of like browserify, but it's got watch
+and things like that which are very convenient. 
+
+69
+00:04:56,410 --> 00:05:02,790
+With browserify you need to install watchify
+or something but webpack does everything for you. 
+
+70
+00:05:02,830 --> 00:05:10,290
+They call it 'Batteries included'. I like to
+play with different things and assess them. 
+
+71
+00:05:10,290 --> 00:05:14,960
+People say that webpack also
+generates smaller packages,
+
+72
+00:05:14,990 --> 00:05:22,250
+but I haven't really used it in a project enough
+to compare. I like to experiment with things.
+
+73
+00:05:22,250 --> 00:05:24,250
+SP: And because this is the first time I've used webpack I'm going to check the syntax, so I'm going to go to getting started. So they recommend installing webpack minus g. That is not a good idea because I don't want everyone who uses my computer to be able to use webpack, so I'm going to do it a different way.
+So they suggest that you use webpack and then the entry.js, which in my case is main.js, and then it generates bundle.js
+So what I'm going to do is to call that from npm script. Then it will call it from the binary inside `node_modules`, but it doesn't need to be installed globally. So I will just run it from the package. So here's package.json.
+I can add a new script with is called build, and this one will use webpack.
+So we will tell it to take main.js and output that to bundle.js for now.
+And you run this with `npm run build`. It adds this bin to the current environment for that moment and then you don't need to have it globally because this is in the path.
+So you don't need to install it globally and then it's way cleaner. Because otherwise if I tell you to go and run webpack, you need to know that you need to install webpack. That's ok with webpack, but some other packages have a different name from the package. The binary they install is different. I think it was for example, Grunt? For Grunt you need to install grunt-cli. But how do I know that I need to install grunt-cli?
+DN: Right, there's a lot of assumed knowledge there.
+SP: So if you just keep it like that and your project uses webpack: I don't care! Because your project just deals with whatever the name of the executable is when we use our package.json script.
+So hopefully if this works... Yes it does build the thing.
 
