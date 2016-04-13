@@ -34,14 +34,155 @@ So... I am lazy so I'm going to use a
 component that renders all those buttons for you.
 
 9
-00:00:31,360 --> 00:00:33,360
-I just don't want to do this anymore inaud. I suppose it's OK being lazy as a programmer, if you work then you don't have to work again.
-DN: That's right.
-SP: So I made a component and used it with npm. So I need to initialize this thing as an npm project, first. so I'm going to npm init this thingy. Because that way I'll have a package JSON. Otherwise it stores the thing in `node_packages` folder but it doesn't save the dependencies to packages.json. If I give you this repository and I don't check in the node modules, you're going to have a hard time figuring out what dependencies I'm using.
-DN: I see.
-SP: So it is important. So I will just... OK fine, then clapping. No text no repo, clap.
-In theory I should just press return, but I kind of like writing yes, it gives me the confidence (laughter) I'm not going to mess with something I shouldn't be messing with.
+00:00:30,460 --> 00:00:34,440
+Because I just don't want to do this over and over.
+
+10
+00:00:34,440 --> 00:00:41,870
+I suppose it's good to be lazy as a programmer,
+if you work to make sure you don't have to work again.
+
+11
+00:00:41,870 --> 00:00:44,940
+So I made a component and used it with npm. 
+
+12
+00:00:44,940 --> 00:00:48,680
+I need to initialize this thing as an npm project, first. 
+
+13
+00:00:48,680 --> 00:00:51,350
+So I'm going to npm init this thingy. 
+
+14
+00:00:51,380 --> 00:00:53,100
+Because that way I'll have a package JSON. 
+
+15
+00:00:53,120 --> 00:00:57,090
+Otherwise it stores the thing
+in `node_packages` folder, 
+
+16
+00:00:57,110 --> 00:01:00,120
+but it doesn't save the
+dependencies to packages.json.
+
+17
+00:01:00,130 --> 00:01:03,630
+If I give you this repository and
+I don't check in the node modules,
+
+18
+00:01:03,650 --> 00:01:06,800
+you're going to have a hard time figuring out what dependencies I'm using.
+
+19
+00:01:06,800 --> 00:01:09,240
+So this is important. 
+
+20
+00:01:09,240 --> 00:01:13,120
+So I will just... OK fine, then clapping.
+
+21
+00:01:17,580 --> 00:01:22,430
+No text no repo, clap.
+
+22
+00:01:22,460 --> 00:01:25,440
+[Silence]
+
+23
+00:01:28,490 --> 00:01:32,110
+You have to do it that way or it doesn't like it.
+
+24
+00:01:32,110 --> 00:01:34,470
+Yes, it's perfect.
+
+25
+00:01:34,510 --> 00:01:41,420
+In theory I should just press return, but I
+like writing yes, it gives me confidence. [Laughter]
+
+26
+00:01:41,440 --> 00:01:44,530
+I'm not going to mess with
+something I shouldn't be messing with.
+
+27
+00:01:44,530 --> 00:01:47,870
 So now I should be able to npm install things.
-They are going to be saved as dependencies in packages.json, otherwise if you say `npm install --save` it doesn't really save if there's no package.json.
-And I'm not going to create it from scratch because I can't remember.
+
+28
+00:01:47,870 --> 00:01:51,740
+They are going to be saved
+as dependencies in packages.json.
+
+29
+00:01:51,740 --> 00:01:58,500
+Otherwise if you say `npm install --save`,
+it doesn't really save if there's no package.json.
+
+30
+00:01:58,500 --> 00:02:03,290
+And I'm not going to create this
+thing from scratch because I can't remember.
+
+31
+00:02:03,290 --> 00:02:06,350
+[Silence]
+
+32
+00:02:06,350 --> 00:02:07,290
+
+It's the buttons with play and stop, the bpm thingy.
+I didn't want to be too original so I just called it transport.
+DN: Yes, OK. I haven't heard that before but it makes sense.
+SP: If you look up transport you will find a lot of references to all the, especially MIDI creation software. I think its for, so you can transport yourself around the song. I'm not sure.
+
+So this comes from this organization that has more modules and things. This is the one I'm using. This is what it should look like, but the one that we are going to use doesn't really have any theming, we can add what we want.
+DN: OK
+SP: This uses web components to render, this is a web component. Because web components are not really ready yet, you need to install the component along with a web component polyfill to make sure this can work. Maybe I should also document this thing, because it's not obvious.
+There is a nice polyfill that you can install, which is called webcomponents-lite, and it installs the minimum that I need for this, which is: registerElement, and I think a couple more things, but I just need to be able to do registerElement. Because that's not enabled in Firefox yet. It's available in Chrome, so if you try things only in Chrome you don't notice. But if you try in Firefox without the DOM things enabled, you'll find errors. So this is going to polyfill the thing.
+
+So I've got all these things and to load them I need to use require and this is not standard JavaScript. I could try to load these things from node modules, but it doesn't really work with this component because it uses other modules you should require.
+So what I should use is webpack or browserify or something that takes my main.js that I've been using so far, and takes all the requirements and things and makes that just one bundle.
+DN: Right.
+SP: So this is when things get interesting.
+
+I just used webpack last week and that was the first time I've installed it. It's pretty easy to use. I'm going to reuse it again. It's kind of like browserify, but it's got watch and things like that which are very convenient. With browserify you need to install watchify or something but webpack does everything for you. They call it 'Batteries included'. I like to play with things and assess them. People say that webpack generates smaller packages but I haven't really used it in a project enough to compare. I like to experiment with things.
+DN: Yeah right.
+
+33
+00:02:07,290 --> 00:02:08,350
+I think it's 'transport' - I hope it is.
+
+It's the buttons with play and stop, the bpm thingy.
+I didn't want to be too original so I just called it transport.
+DN: Yes, OK. I haven't heard that before but it makes sense.
+SP: If you look up transport you will find a lot of references to all the, especially MIDI creation software. I think its for, so you can transport yourself around the song. I'm not sure.
+
+So this comes from this organization that has more modules and things. This is the one I'm using. This is what it should look like, but the one that we are going to use doesn't really have any theming, we can add what we want.
+DN: OK
+SP: This uses web components to render, this is a web component. Because web components are not really ready yet, you need to install the component along with a web component polyfill to make sure this can work. Maybe I should also document this thing, because it's not obvious.
+There is a nice polyfill that you can install, which is called webcomponents-lite, and it installs the minimum that I need for this, which is: registerElement, and I think a couple more things, but I just need to be able to do registerElement. Because that's not enabled in Firefox yet. It's available in Chrome, so if you try things only in Chrome you don't notice. But if you try in Firefox without the DOM things enabled, you'll find errors. So this is going to polyfill the thing.
+
+So I've got all these things and to load them I need to use require and this is not standard JavaScript. I could try to load these things from node modules, but it doesn't really work with this component because it uses other modules you should require.
+So what I should use is webpack or browserify or something that takes my main.js that I've been using so far, and takes all the requirements and things and makes that just one bundle.
+DN: Right.
+SP: So this is when things get interesting.
+
+I just used webpack last week and that was the first time I've installed it. It's pretty easy to use. I'm going to reuse it again. It's kind of like browserify, but it's got watch and things like that which are very convenient. With browserify you need to install watchify or something but webpack does everything for you. They call it 'Batteries included'. I like to play with things and assess them. People say that webpack generates smaller packages but I haven't really used it in a project enough to compare. I like to experiment with things.
+DN: Yeah right.
+
+34
+00:02:08,350 --> 00:02:09,990
+I think it's 'transport' - I hope it is.
+
+35
+00:02:10,000 --> 00:02:19,330
+I don't know why they call it 'transport',
+but in musical software it's always called that.
 
