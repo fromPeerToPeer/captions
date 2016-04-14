@@ -523,15 +523,137 @@ because I don't want those to be added to git.
 Vim is complaining about everything not existing any more. 
 
 116
-00:08:51,690 --> 00:08:53,690
-So I will create the .gitignore.  This is the issue when you start adding build systems you have to move everything around  unless you start from the beginning. I think it's a good idea to prototype and not care about build systems because you get confused about webpack and watch etc. And you won't get anything done. 
-So we'll ignore `node_modules` and also the build directory.
-Since we're on a mac, DS_Store which at some point will show up!
+00:08:53,020 --> 00:08:56,900
+So I will create the .gitignore. 
+
+117
+00:08:57,020 --> 00:09:01,460
+This is the issue when you start adding build
+systems you have to move everything around. 
+
+118
+00:09:01,490 --> 00:09:02,940
+unless you start from the beginning.
+
+119
+00:09:02,950 --> 00:09:06,110
+But I think it's a good idea to
+prototype and not care about build systems,
+
+120
+00:09:06,130 --> 00:09:13,580
+because you get confused about webpack and
+watch etc. And you won't get anything done. 
+
+121
+00:09:13,620 --> 00:09:19,780
+So we'll ignore `node_modules`
+and also the build directory.
+
+122
+00:09:19,780 --> 00:09:24,350
+Since we're on a mac, DS_Store
+at some point will show up!
+
+123
+00:09:24,370 --> 00:09:25,670
 DN: Yes, sure.
-SP: So now if I run git status it will just try to add this, and not node_modules or anything.
-DN: I guess you will have to re-write the npm script as well, so that it looks inside source?
-SP: Yes. This need to look into this, and also because I haven't updated that and this is kind of gross but it's just going to load from the build. (laughter) I can fix that later.
-Just to make sure it works because if we have a server later and its starting on the build it can't access this thing so we want to maybe copy this file there and just load from the bundle. Step by step so it doesn't get too confusing here. So run the build now and then open source index. Did anything happen (laughter).What is going on here.
-So it's in build, it  has to go up one level and then look inside build.
+
+124
+00:09:25,720 --> 00:09:31,880
+SP: So now if I run git status it will just try
+to add this, and not node_modules or anything.
+
+125
+00:09:32,010 --> 00:09:39,500
+DN: I guess you will have to re-write the
+npm script as well, so that it looks inside source?
+
+126
+00:09:39,520 --> 00:09:44,890
+SP: Yes. This need to look into these.
+
+127
+00:09:44,910 --> 00:09:49,950
+and also because I haven't updated that...
+
+128
+00:09:50,000 --> 00:09:56,730
+And this is kind of gross but it's
+just going to load from the build.
+
+129
+00:09:56,760 --> 00:09:58,690
+I can fix that later.
+
+130
+00:09:58,720 --> 00:10:07,010
+Just to make sure it works because if we have
+a server later and it's starting on the build,
+
+131
+00:10:07,010 --> 00:10:11,600
+it can't access this thing so we want to
+maybe copy this file there and just load bundle.
+
+132
+00:10:11,630 --> 00:10:15,860
+But step by step so it doesn't get too confusing here. 
+
+133
+00:10:15,950 --> 00:10:22,630
+So if I run the build now and then open source index. 
+
+134
+00:10:22,630 --> 00:10:25,650
+[Silence]
+
+135
+00:10:28,040 --> 00:10:30,650
+Did anything happen (laughter).
+
+136
+00:10:31,580 --> 00:10:34,610
+What is going on here?
+
+137
+00:10:34,650 --> 00:10:39,990
+So this is... Is it called inaud? I'm confused now.
+
+138
+00:10:40,620 --> 00:10:44,030
+So it takes inaud
+
+139
+00:10:44,030 --> 00:10:47,140
+[Silence]
+
+140
+00:10:47,350 --> 00:10:54,660
+So it's in build, it  has to go
+up one level and then build.
+
+141
+00:10:54,660 --> 00:10:57,210
+And why didn't it...?
+
+142
+00:10:57,940 --> 00:11:02,410
+So because we are not using a local server it
+cannot even detect that we are not using that.  
+
+143
+00:11:02,450 --> 00:11:06,640
+If we were using a server it would
+have said "I can't find that thing".
+
+144
+00:11:06,640 --> 00:11:08,640
+[they listen]
+Now its working, OK good.
+Ok so we are building everything again so I could...
+DN: Is that worth a commit?
+SP: Almost. I want to make sure that I have a clean task.
+DN: OK.
 
 
