@@ -4,7 +4,7 @@ Chapter 8: Adding a build system.
 
 2
 00:00:02,700 --> 00:00:06,480
-So... I think we should go back to the challenge. 
+So... I think we should go back to the challenge.
 
 3
 00:00:06,480 --> 00:00:13,160
@@ -44,24 +44,24 @@ if you work to make sure you don't have to work again.
 
 11
 00:00:41,870 --> 00:00:44,940
-So I made a component and used it with npm. 
+So I made a component and used it with npm.
 
 12
 00:00:44,940 --> 00:00:48,680
-I need to initialize this thing as an npm project, first. 
+I need to initialize this thing as an npm project, first.
 
 13
 00:00:48,680 --> 00:00:51,350
-So I'm going to npm init this thingy. 
+So I'm going to npm init this thingy.
 
 14
 00:00:51,380 --> 00:00:53,100
-Because that way I'll have a package JSON. 
+Because that way I'll have a package JSON.
 
 15
 00:00:53,120 --> 00:00:57,090
 Otherwise it stores the thing
-in `node_packages` folder, 
+in `node_packages` folder,
 
 16
 00:00:57,110 --> 00:01:00,120
@@ -79,7 +79,7 @@ you're going to have a hard time figuring out what dependencies I'm using.
 
 19
 00:01:06,800 --> 00:01:09,240
-So this is important. 
+So this is important.
 
 20
 00:01:09,240 --> 00:01:13,120
@@ -160,7 +160,7 @@ that before but it makes sense.
 37
 00:02:31,760 --> 00:02:37,050
 SP: If you look up transport you will
-find a lot of references to all the inaud, 
+find a lot of references to all the inaud,
 
 38
 00:02:37,090 --> 00:02:39,610
@@ -174,11 +174,11 @@ yourself around the song. I'm not sure.
 40
 00:02:46,490 --> 00:02:52,370
 So this comes from this organization
-that has more modules and things. 
+that has more modules and things.
 
 41
 00:02:52,370 --> 00:02:56,510
-This is the one I'm using. 
+This is the one I'm using.
 
 42
 00:02:56,510 --> 00:02:59,070
@@ -187,7 +187,7 @@ This is what it should look like, if you use example.
 43
 00:02:59,090 --> 00:03:02,050
 But the one that we are going to
-use doesn't really have any theming; 
+use doesn't really have any theming;
 
 44
 00:03:02,050 --> 00:03:05,870
@@ -196,7 +196,7 @@ we can add whatever we want.
 45
 00:03:06,340 --> 00:03:11,910
 SP: This uses web components
-to render, this is a web component. 
+to render, this is a web component.
 
 46
 00:03:12,340 --> 00:03:15,470
@@ -219,12 +219,12 @@ this thing, because it's not obvious.
 50
 00:03:31,550 --> 00:03:35,570
 There is a nice polyfill that you
-can install, which is called webcomponents-lite, 
+can install, which is called webcomponents-lite,
 
 51
 00:03:35,610 --> 00:03:41,200
 and it installs the minimum that
-I need for this, which is: registerElement. 
+I need for this, which is: registerElement.
 
 52
 00:03:41,230 --> 00:03:44,350
@@ -233,23 +233,23 @@ just need to be able to do registerElement,
 
 53
 00:03:44,380 --> 00:03:46,940
-because that's not enabled in Firefox yet. 
+because that's not enabled in Firefox yet.
 
 54
 00:03:46,940 --> 00:03:46,950
 It's available in Chrome, so if you
-try things only in Chrome you don't notice. 
-because that's not enabled in Firefox yet. 
+try things only in Chrome you don't notice.
+because that's not enabled in Firefox yet.
 
 55
 00:03:46,950 --> 00:03:51,930
 It's available in Chrome, so if you
-try things only in Chrome you don't notice. 
+try things only in Chrome you don't notice.
 
 56
 00:03:51,970 --> 00:03:57,370
 But if you try in Firefox without the
-DOM things enabled, you'll find errors. 
+DOM things enabled, you'll find errors.
 
 57
 00:03:57,370 --> 00:04:00,490
@@ -294,7 +294,7 @@ SP: So this is when things get interesting.
 66
 00:04:37,090 --> 00:04:42,530
 I just used webpack last week and
-that was the first time I've installed it. 
+that was the first time I've installed it.
 
 67
 00:04:42,540 --> 00:04:48,530
@@ -303,17 +303,17 @@ It's pretty easy to use. I'm going to reuse it again.
 68
 00:04:50,470 --> 00:04:56,380
 It's kind of like browserify, but it's got watch
-and things like that which are very convenient. 
+and things like that which are very convenient.
 
 69
 00:04:56,410 --> 00:05:02,790
 With browserify you need to install watchify
-or something but webpack does everything for you. 
+or something but webpack does everything for you.
 
 70
 00:05:02,830 --> 00:05:10,290
 They call it 'Batteries included'. I like to
-play with different things and assess them. 
+play with different things and assess them.
 
 71
 00:05:10,290 --> 00:05:14,960
@@ -326,13 +326,88 @@ but I haven't really used it in a project enough
 to compare. I like to experiment with things.
 
 73
-00:05:22,250 --> 00:05:24,250
-SP: And because this is the first time I've used webpack I'm going to check the syntax, so I'm going to go to getting started. So they recommend installing webpack minus g. That is not a good idea because I don't want everyone who uses my computer to be able to use webpack, so I'm going to do it a different way.
-So they suggest that you use webpack and then the entry.js, which in my case is main.js, and then it generates bundle.js
-So what I'm going to do is to call that from npm script. Then it will call it from the binary inside `node_modules`, but it doesn't need to be installed globally. So I will just run it from the package. So here's package.json.
-I can add a new script with is called build, and this one will use webpack.
-So we will tell it to take main.js and output that to bundle.js for now.
-And you run this with `npm run build`. It adds this bin to the current environment for that moment and then you don't need to have it globally because this is in the path.
+00:05:23,440 --> 00:05:28,240
+And because this is the first time
+I've used webpack, I don't remember the syntax.
+
+74
+00:05:28,280 --> 00:05:31,170
+So I'm going to go to look at 'getting started'. 
+
+75
+00:05:31,200 --> 00:05:35,710
+So you install it (this is not good
+practice, they say you should install...)
+
+76
+00:05:35,730 --> 00:05:37,950
+So they recommend installing webpack minus g. 
+
+77
+00:05:37,960 --> 00:05:43,540
+That's not a good idea, because I don't want everyone
+who uses my computer to be able to use webpack.
+
+78
+00:05:44,100 --> 00:05:46,420
+So I'm going to do it a different way.
+
+79
+00:05:46,420 --> 00:05:50,410
+So they suggest that you use
+webpack and then the entry.js, 
+
+80
+00:05:50,420 --> 00:05:55,300
+which in my case is main.js,
+and then it generates bundle.js
+
+81
+00:05:55,330 --> 00:05:59,720
+So what I'm going to do is
+to call that from npm script. 
+
+82
+00:05:59,770 --> 00:06:04,580
+Then it will call it from the
+binary inside `node_modules`,
+
+83
+00:06:04,610 --> 00:06:11,680
+but it doesn't need to be installed
+globally. So I will just run it from the package.
+
+84
+00:06:11,780 --> 00:06:14,500
+So here's package.json.
+
+85
+00:06:14,500 --> 00:06:21,900
+And then I can add a new script which
+is called build, and this one will use webpack.
+
+86
+00:06:21,900 --> 00:06:29,080
+So we will tell it to take main.js
+and output that to bundle.js for now.
+
+87
+00:06:29,110 --> 00:06:35,050
+And you run this with `npm run build`. 
+
+88
+00:06:35,090 --> 00:06:49,010
+It adds this bin to the current
+environment for that moment. 
+
+89
+00:06:49,030 --> 00:06:52,490
+And then you don't need to have
+it globally because this is in the path.
+
+90
+00:06:56,360 --> 00:06:58,360
+
 So you don't need to install it globally and then it's way cleaner. Because otherwise if I tell you to go and run webpack, you need to know that you need to install webpack. That's ok with webpack, but some other packages have a different name from the package. The binary they install is different. I think it was for example, Grunt? For Grunt you need to install grunt-cli. But how do I know that I need to install grunt-cli?
 DN: Right, there's a lot of assumed knowledge there.
 SP: So if you just keep it like that and your project uses webpack: I don't care! Because your project just deals with whatever the name of the executable is when we use our package.json script.
