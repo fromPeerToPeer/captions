@@ -457,16 +457,74 @@ So hopefully if this works... inaud
 Yes, so it does build the thing.
 
 101
-00:07:37,910 --> 00:07:39,910
-But I don't think it's a good idea to just output everything here (laughter), so it kind of grows.
-I'm going to make a directory for building things.
-DN: Yeah.
-SP: So I can build things here and then tell it to output the thing to build... I'll remove this one. And then run the script again. Not everything is in the same place so that's better.
+00:07:37,910 --> 00:07:43,360
+But I don't think it's a good idea to just
+output everything here, so it kind of grows.
 
-I also think that it's not very neat to have everything here with the build and everything else, so I'm going to move everything to a source directory.
-DN: OK yes.
-SP: This is too messy. I think I need to move all the claps.
-And package is not in the git thingy yet.. I need to move it to source. Which I haven't created yet? I have created that, OK. A new package has to be here anyway. I also need to ignore `node_modules` and build, because I want those to be added to git. Vim is complaining about everything not existing any more. So I will create the .gitignore.  This is the issue when you start adding build systems you have to move everything around  unless you start from the beginning. I think it's a good idea to prototype and not care about build systems because you get confused about webpack and watch etc. And you won't get anything done. 
+102
+00:07:43,360 --> 00:07:50,500
+So I'm going to make a directory for building things.
+
+103
+00:07:50,500 --> 00:07:57,510
+So I can build things here and
+then tell it to output the thing to build.
+
+104
+00:07:57,600 --> 00:08:01,390
+I'll remove this one. 
+
+105
+00:08:01,390 --> 00:08:04,990
+And then run the script again.
+
+106
+00:08:05,880 --> 00:08:08,250
+Not everything's is in the
+same place so that's better.
+
+107
+00:08:08,250 --> 00:08:12,700
+I also think that it's not very neat to have
+everything here with the build and everything else, 
+
+108
+00:08:12,720 --> 00:08:16,540
+so I'm going to move
+everything to a source directory.
+
+109
+00:08:17,410 --> 00:08:19,570
+Otherwise it's too messy.
+
+110
+00:08:20,050 --> 00:08:24,540
+I think I need to move all the claps.
+
+111
+00:08:27,200 --> 00:08:30,680
+And package, I think, is not in the git thingy yet.
+
+112
+00:08:31,870 --> 00:08:36,560
+I need to move it to source. I have created that, OK. 
+
+113
+00:08:36,810 --> 00:08:41,860
+A new package has to be here anyway.
+
+114
+00:08:41,860 --> 00:08:47,790
+I also need to ignore `node_modules` and build,
+because I don't want those to be added to git.
+
+115
+00:08:48,570 --> 00:08:51,690
+Vim is complaining about everything not existing any more. 
+
+116
+00:08:51,690 --> 00:08:53,690
+So I will create the .gitignore.  This is the issue when you start adding build systems you have to move everything around  unless you start from the beginning. I think it's a good idea to prototype and not care about build systems because you get confused about webpack and watch etc. And you won't get anything done. 
 So we'll ignore `node_modules` and also the build directory.
 Since we're on a mac, DS_Store which at some point will show up!
 DN: Yes, sure.
