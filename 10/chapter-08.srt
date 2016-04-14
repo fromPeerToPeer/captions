@@ -406,10 +406,74 @@ And then you don't need to have
 it globally because this is in the path.
 
 90
-00:06:56,360 --> 00:06:58,360
+00:06:52,520 --> 00:06:56,210
+So you don't need to install
+it globally and then it's way cleaner. 
 
-So you don't need to install it globally and then it's way cleaner. Because otherwise if I tell you to go and run webpack, you need to know that you need to install webpack. That's ok with webpack, but some other packages have a different name from the package. The binary they install is different. I think it was for example, Grunt? For Grunt you need to install grunt-cli. But how do I know that I need to install grunt-cli?
-DN: Right, there's a lot of assumed knowledge there.
-SP: So if you just keep it like that and your project uses webpack: I don't care! Because your project just deals with whatever the name of the executable is when we use our package.json script.
-So hopefully if this works... Yes it does build the thing.
+91
+00:06:56,210 --> 00:07:01,150
+Because otherwise if I tell you to go and run
+webpack, you need to know that you need to install it. 
+
+92
+00:07:01,200 --> 00:07:06,960
+That's OK with webpack, but some other packages
+have a different name from the package. 
+
+93
+00:07:06,980 --> 00:07:11,070
+The binary they install is different.
+I think Grunt is an example?
+
+94
+00:07:11,140 --> 00:07:15,660
+For Grunt you need to install grunt-cli. But how do I
+know that I need to install grunt-cli?
+
+95
+00:07:15,680 --> 00:07:18,380
+DN: Right, so there's a lot of assumed knowledge there.
+
+96
+00:07:18,410 --> 00:07:22,160
+SP: So if you just keep it like that
+and your project uses webpack: I don't care! 
+
+97
+00:07:22,180 --> 00:07:25,470
+Because your project just deals with
+whatever the name of the executable is 
+
+98
+00:07:25,500 --> 00:07:30,220
+if you use package.json script.
+
+99
+00:07:30,250 --> 00:07:35,690
+So hopefully if this works... inaud
+
+100
+00:07:35,690 --> 00:07:37,910
+Yes, so it does build the thing.
+
+101
+00:07:37,910 --> 00:07:39,910
+But I don't think it's a good idea to just output everything here (laughter), so it kind of grows.
+I'm going to make a directory for building things.
+DN: Yeah.
+SP: So I can build things here and then tell it to output the thing to build... I'll remove this one. And then run the script again. Not everything is in the same place so that's better.
+
+I also think that it's not very neat to have everything here with the build and everything else, so I'm going to move everything to a source directory.
+DN: OK yes.
+SP: This is too messy. I think I need to move all the claps.
+And package is not in the git thingy yet.. I need to move it to source. Which I haven't created yet? I have created that, OK. A new package has to be here anyway. I also need to ignore `node_modules` and build, because I want those to be added to git. Vim is complaining about everything not existing any more. So I will create the .gitignore.  This is the issue when you start adding build systems you have to move everything around  unless you start from the beginning. I think it's a good idea to prototype and not care about build systems because you get confused about webpack and watch etc. And you won't get anything done. 
+So we'll ignore `node_modules` and also the build directory.
+Since we're on a mac, DS_Store which at some point will show up!
+DN: Yes, sure.
+SP: So now if I run git status it will just try to add this, and not node_modules or anything.
+DN: I guess you will have to re-write the npm script as well, so that it looks inside source?
+SP: Yes. This need to look into this, and also because I haven't updated that and this is kind of gross but it's just going to load from the build. (laughter) I can fix that later.
+Just to make sure it works because if we have a server later and its starting on the build it can't access this thing so we want to maybe copy this file there and just load from the bundle. Step by step so it doesn't get too confusing here. So run the build now and then open source index. Did anything happen (laughter).What is going on here.
+So it's in build, it  has to go up one level and then look inside build.
+
 
