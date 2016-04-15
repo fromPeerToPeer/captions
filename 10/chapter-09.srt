@@ -1,0 +1,141 @@
+﻿1
+00:00:00,000 --> 00:00:02,670
+Chapter 9: Add play and pause buttons.
+
+2
+00:00:02,840 --> 00:00:07,440
+SP: Now we have this thing we can
+start adding the web components;
+
+3
+00:00:07,470 --> 00:00:12,440
+this is why we wanted to add the build system,
+not just for the sake of having a build system.
+
+4
+00:00:12,460 --> 00:00:14,950
+DN: Right.
+
+5
+00:00:15,270 --> 00:00:19,010
+SP: So here... I want to load the web components.
+
+6
+00:00:21,170 --> 00:00:25,600
+This will make sure that the
+polyfill and everything is loaded. 
+
+7
+00:00:26,240 --> 00:00:29,970
+But this is maybe better outside here.
+
+8
+00:00:29,970 --> 00:00:33,340
+So [webpack] just puts the code in there.
+
+9
+00:00:33,340 --> 00:00:37,450
+[Sole thinks]
+
+10
+00:00:37,530 --> 00:00:41,180
+I also want to load my component. 
+
+11
+00:00:45,980 --> 00:00:49,120
+And I need to register it as well, 
+
+12
+00:00:49,930 --> 00:00:52,810
+because there are two parts to using
+web components with custom elements.
+
+13
+00:00:52,820 --> 00:00:59,660
+You need to load the prototype, and then register;
+which is making it available to the parser. 
+
+14
+00:00:59,680 --> 00:01:07,660
+So here you can use 'openmusic-transport' or you
+can use 'mega-component', or whatever you want.
+
+15
+00:01:07,700 --> 00:01:10,570
+I've made that in a way that you
+can register it any way that you want, 
+
+16
+00:01:10,570 --> 00:01:14,220
+for example you may want to
+put different versions of the component.
+
+17
+00:01:14,250 --> 00:01:17,830
+And the parser can only cope with one name. 
+
+18
+00:01:17,870 --> 00:01:22,240
+So if you try to register something
+that already exists it won't let you. 
+
+19
+00:01:24,880 --> 00:01:28,370
+I don't know if that's the best
+solution but it works for me.
+
+20
+00:01:28,370 --> 00:01:32,030
+DN: So is that going to be the name
+of the tag you're going to use in the DOM.
+
+21
+00:01:32,040 --> 00:01:35,250
+SP: This lets the browser know that
+there is a new tag that it can use. 
+
+22
+00:01:35,280 --> 00:01:42,340
+So if it finds openmusic-transport in the
+index.html we will be able to include the thing. 
+
+23
+00:01:44,360 --> 00:01:47,270
+Hopefully... I hope this works.
+
+24
+00:01:47,270 --> 00:01:50,280
+[Sole types]
+
+25
+00:01:51,000 --> 00:01:53,440
+OK the completion is good.
+
+26
+00:01:53,460 --> 00:01:58,110
+And then here is my parser saying,
+I don't know what you're doing. 
+
+27
+00:01:58,180 --> 00:02:02,720
+This is the problem with using web
+components, nothing knows what you are using. 
+
+28
+00:02:02,750 --> 00:02:04,960
+But I guess you just have to cope with it.
+
+29
+00:02:04,960 --> 00:02:06,960
+And the problem is I need to watch. I need to rebuild this thing now. So I need to run build etc. So were going to introduce the webpack watch version thingy. Watch mode.
+
+It's pretty much the same but with extra arguments.
+So with browserify, it's so modular that it doesn't even have the watch function itself.
+You need to install watchify, which then calls browserify.
+That's the cool thing with webpack, I still haven't explored all the advantages but so far this is neat enough. Especially if you want special things. With browserify I think you also have browserify transforms, I don't know if webpack supports those. These are the things I have learned so far.
+So if I run watch now it should compile the thing and then keep watching. So if I change something here and save... There is no difference.
+Yes, created something now because it's different. I think if there is no change it doesn't rewrite things. So that's cool when you're saving out of habit. [clapping plays]
+I've got my component here.
+Ah OK it doesn't have anything and it's not connected to anything. I can press these and nothing happens
+DN: That's interesting already. Pressing play disables the stop button.
+
