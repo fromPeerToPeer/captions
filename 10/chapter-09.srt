@@ -126,12 +126,42 @@ components, nothing knows what you are using.
 But I guess you just have to cope with it.
 
 29
-00:02:04,960 --> 00:02:06,960
-And the problem is I need to watch. I need to rebuild this thing now. So I need to run build etc. So were going to introduce the webpack watch version thingy. Watch mode.
+00:02:04,960 --> 00:02:07,880
+And the problem is I need to watch.
 
+30
+00:02:07,880 --> 00:02:10,550
+I need to rebuild this thing now. 
+
+31
+00:02:10,730 --> 00:02:14,400
+So I need to run build etc. 
+
+32
+00:02:14,560 --> 00:02:21,580
+So were going to use the webpack
+watch version thingy. Watch mode.
+
+33
+00:02:26,870 --> 00:02:31,130
+[inaud]
+
+34
+00:02:31,130 --> 00:02:34,190
+[Silence]
+
+35
+00:02:36,570 --> 00:02:43,120
 It's pretty much the same but with extra arguments.
-So with browserify, it's so modular that it doesn't even have the watch function itself.
-You need to install watchify, which then calls browserify.
+
+36
+00:02:43,320 --> 00:02:48,690
+So with browserify, it's so modular that
+it doesn't even have the watch function itself.
+
+37
+00:02:48,690 --> 00:02:52,440
+NYou need to install watchify, which then calls browserify.
 That's the cool thing with webpack, I still haven't explored all the advantages but so far this is neat enough. Especially if you want special things. With browserify I think you also have browserify transforms, I don't know if webpack supports those. These are the things I have learned so far.
 So if I run watch now it should compile the thing and then keep watching. So if I change something here and save... There is no difference.
 Yes, created something now because it's different. I think if there is no change it doesn't rewrite things. So that's cool when you're saving out of habit. [clapping plays]
