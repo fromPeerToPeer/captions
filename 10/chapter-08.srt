@@ -332,7 +332,7 @@ I've used webpack, I don't remember the syntax.
 
 74
 00:05:28,280 --> 00:05:31,170
-So I'm going to go to look at 'getting started'. 
+So I'm going to go to look at 'getting started'.
 
 75
 00:05:31,200 --> 00:05:35,710
@@ -341,7 +341,7 @@ practice, they say you should install...)
 
 76
 00:05:35,730 --> 00:05:37,950
-So they recommend installing webpack minus g. 
+So they recommend installing webpack minus g.
 
 77
 00:05:37,960 --> 00:05:43,540
@@ -355,7 +355,7 @@ So I'm going to do it a different way.
 79
 00:05:46,420 --> 00:05:50,410
 So they suggest that you use
-webpack and then the entry.js, 
+webpack and then the entry.js,
 
 80
 00:05:50,420 --> 00:05:55,300
@@ -365,7 +365,7 @@ and then it generates bundle.js
 81
 00:05:55,330 --> 00:05:59,720
 So what I'm going to do is
-to call that from npm script. 
+to call that from npm script.
 
 82
 00:05:59,770 --> 00:06:04,580
@@ -393,12 +393,12 @@ and output that to bundle.js for now.
 
 87
 00:06:29,110 --> 00:06:35,050
-And you run this with `npm run build`. 
+And you run this with `npm run build`.
 
 88
 00:06:35,090 --> 00:06:49,010
 It adds this bin to the current
-environment for that moment. 
+environment for that moment.
 
 89
 00:06:49,030 --> 00:06:52,490
@@ -408,17 +408,17 @@ it globally because this is in the path.
 90
 00:06:52,520 --> 00:06:56,210
 So you don't need to install
-it globally and then it's way cleaner. 
+it globally and then it's way cleaner.
 
 91
 00:06:56,210 --> 00:07:01,150
 Because otherwise if I tell you to go and run
-webpack, you need to know that you need to install it. 
+webpack, you need to know that you need to install it.
 
 92
 00:07:01,200 --> 00:07:06,960
 That's OK with webpack, but some other packages
-have a different name from the package. 
+have a different name from the package.
 
 93
 00:07:06,980 --> 00:07:11,070
@@ -437,12 +437,12 @@ DN: Right, so there's a lot of assumed knowledge there.
 96
 00:07:18,410 --> 00:07:22,160
 SP: So if you just keep it like that
-and your project uses webpack: I don't care! 
+and your project uses webpack: I don't care!
 
 97
 00:07:22,180 --> 00:07:25,470
 Because your project just deals with
-whatever the name of the executable is 
+whatever the name of the executable is
 
 98
 00:07:25,500 --> 00:07:30,220
@@ -472,7 +472,7 @@ then tell it to output the thing to build.
 
 104
 00:07:57,600 --> 00:08:01,390
-I'll remove this one. 
+I'll remove this one.
 
 105
 00:08:01,390 --> 00:08:04,990
@@ -486,7 +486,7 @@ same place so that's better.
 107
 00:08:08,250 --> 00:08:12,700
 I also think that it's not very neat to have
-everything here with the build and everything else, 
+everything here with the build and everything else,
 
 108
 00:08:12,720 --> 00:08:16,540
@@ -507,7 +507,7 @@ And package, I think, is not in the git thingy yet.
 
 112
 00:08:31,870 --> 00:08:36,560
-I need to move it to source. I have created that, OK. 
+I need to move it to source. I have created that, OK.
 
 113
 00:08:36,810 --> 00:08:41,860
@@ -520,16 +520,16 @@ because I don't want those to be added to git.
 
 115
 00:08:48,570 --> 00:08:51,690
-Vim is complaining about everything not existing any more. 
+Vim is complaining about everything not existing any more.
 
 116
 00:08:53,020 --> 00:08:56,900
-So I will create the .gitignore. 
+So I will create the .gitignore.
 
 117
 00:08:57,020 --> 00:09:01,460
 This is the issue when you start adding build
-systems you have to move everything around. 
+systems you have to move everything around.
 
 118
 00:09:01,490 --> 00:09:02,940
@@ -543,7 +543,7 @@ prototype and not care about build systems,
 120
 00:09:06,130 --> 00:09:13,580
 because you get confused about webpack and
-watch etc. And you won't get anything done. 
+watch etc. And you won't get anything done.
 
 121
 00:09:13,620 --> 00:09:19,780
@@ -598,11 +598,11 @@ maybe copy this file there and just load bundle.
 
 132
 00:10:11,630 --> 00:10:15,860
-But step by step so it doesn't get too confusing here. 
+But step by step so it doesn't get too confusing here.
 
 133
 00:10:15,950 --> 00:10:22,630
-So if I run the build now and then open source index. 
+So if I run the build now and then open source index.
 
 134
 00:10:22,630 --> 00:10:25,650
@@ -640,7 +640,7 @@ And why didn't it...?
 142
 00:10:57,940 --> 00:11:02,410
 So because we are not using a local server it
-cannot even detect that we are not using that.  
+cannot even detect that we are not using that.
 
 143
 00:11:02,450 --> 00:11:06,640
@@ -648,12 +648,134 @@ If we were using a server it would
 have said "I can't find that thing".
 
 144
-00:11:06,640 --> 00:11:08,640
-[they listen]
-Now its working, OK good.
-Ok so we are building everything again so I could...
+00:11:06,640 --> 00:11:13,270
+[They listen] Now it's working, OK good 
+
+145
+00:11:13,330 --> 00:11:20,610
+OK, so we are building
+everything again so I could maybe...
+
+146
+00:11:20,640 --> 00:11:22,380
 DN: Is that worth a commit?
+
+147
+00:11:22,430 --> 00:11:29,600
 SP: Almost. I want to make sure that I have a clean task.
+
+148
+00:11:29,640 --> 00:11:30,600
 DN: OK.
 
+149
+00:11:30,600 --> 00:11:38,620
+SP: And also make sure that this directory exists. 
+
+150
+00:11:40,200 --> 00:11:45,610
+So there are two scripts that
+people use...I think it's prebuild?
+
+151
+00:11:45,640 --> 00:11:50,590
+It will detect that it goes
+before build and it will run those.
+
+152
+00:11:52,640 --> 00:11:59,360
+If I run build, it will run prebuild before.
+(I don't know if this needs a hyphen).
+
+153
+00:11:59,380 --> 00:12:01,380
+OK, so it's called (prebuild) before.
+
+154
+00:12:01,440 --> 00:12:06,760
+So I can mkdirp - the build thingy.
+
+155
+00:12:06,800 --> 00:12:09,460
+That will make sure the directory exists.
+
+156
+00:12:09,490 --> 00:12:15,010
+And with this I want to delete the build
+directory, so I don't leave any traces.
+
+157
+00:12:15,120 --> 00:12:17,150
+DN: Right. Is rimraf an alias?
+
+158
+00:12:17,170 --> 00:12:19,890
+SP: No it's two modules that I'm going to install.
+
+159
+00:12:19,910 --> 00:12:23,890
+SP: Because that way you can have
+this whole build task inside package.json
+
+160
+00:12:23,890 --> 00:12:29,570
+without having to install a task runner like grunt
+or gulp. I learned it recently and it's very useful. 
+
+161
+00:12:29,580 --> 00:12:34,120
+If you running this in windows or something, 
+
+162
+00:12:34,130 --> 00:12:37,850
+you don't need to worry about
+using different types of delete and things.
+
+163
+00:12:37,860 --> 00:12:38,840
+DN: Nice, OK.
+
+164
+00:12:38,840 --> 00:12:43,520
+SP: So I will install both.
+
+165
+00:12:45,870 --> 00:12:50,590
+I think rimraf is made by
+Isaac Schlueter, the guy from npm.
+
+166
+00:12:50,630 --> 00:13:00,230
+I'm not sure about mkdirp, but they are used
+by people in npm so you can trust it I think.
+
+167
+00:13:00,230 --> 00:13:04,570
+Now... Yeah I changed this thing,
+so I've got new dependencies here.
+
+168
+00:13:04,610 --> 00:13:09,600
+So if I run clean...
+
+169
+00:13:09,650 --> 00:13:13,870
+The build has gone, so I don't have rubbish down here.
+
+170
+00:13:15,180 --> 00:13:18,030
+I think now it's worth a commit.
+
+171
+00:13:18,030 --> 00:13:21,880
+This is a bit of maintenance
+but I think it's important.
+
+172
+00:13:21,930 --> 00:13:26,870
+It's good to have a clean slate before you move on.
+
+173
+00:13:26,870 --> 00:13:28,880
+[Silence]
 
