@@ -276,17 +276,103 @@ that there's no way for me to tell it to start playing.
 Or to display the playing state.
 
 62
-00:04:45,520 --> 00:04:47,520
-So my hack is to find the button and click. Like, trigger the click event. But this is not the best way, I want to find some way of specifying whats the current status declaratively. Like, in the mark up, say: this should be already playing. Instead of me clicking the button.
+00:04:45,520 --> 00:04:54,080
+So my hack is to find the button and trigger
+the click event. But this is not the best thing.
+
+63
+00:04:54,100 --> 00:04:59,360
+I want to find some way of specifying
+what's the current status declaratively. 
+
+64
+00:04:59,420 --> 00:05:04,100
+Like, in the mark up it should say "this should be
+already playing". Instead of me clicking the button.
+
+65
+00:05:04,140 --> 00:05:07,160
 DN: Something like an autoplay attribute?
-SP: No no no, right now if you look at the markup it just has the transport, I would like to be able to say something like: status="playing". And if I specify this, the play button should be disabled and the stop button enabled.  But right now you can't do this.
-So I'm going to do a kind of hack where I will add a listener to play and stop, and then I will immediately click play so it starts playing. Instead of me starting the play() function and changing the status of the button.  I'm going to attach listeners, and then click, click! Programmatically click play as if I was the user.
-That's how it works so far. It's a hack, but in the theory in future I should be able to specify it differently.  So I'm going to use that trick.
-I need to find the element.
-The cool thing about using web components as custom elements is that they are just DOM elements.
-So you can just use getElementById, or querySelector, or, you don't need to use whatever.
-For example, if you use React, it's wrapped in whatever React is using.
-So you can't access the DOM elements that easily because it wraps them up in a precious way.
+
+66
+00:05:07,200 --> 00:05:12,010
+SP: No no no, right now if you 
+look at the markup it just has the transport.
+
+67
+00:05:12,020 --> 00:05:16,700
+I would like to be able to say
+something like: status="playing". 
+
+68
+00:05:16,700 --> 00:05:24,330
+And if I specify this, the play button should
+be disabled and the stop button enabled. 
+
+69
+00:05:24,380 --> 00:05:26,260
+But right now you can't do that.
+
+70
+00:05:26,330 --> 00:05:35,020
+So I'm going to do a kind of hack where
+I will add a listener to play and stop, 
+
+71
+00:05:35,060 --> 00:05:37,780
+and then I will immediately
+click play so it starts playing. 
+
+72
+00:05:37,800 --> 00:05:41,210
+Instead of me starting the play()
+function and changing the status of the button.  
+
+73
+00:05:41,250 --> 00:05:50,360
+I'm going to attach listeners, and then
+programmatically click play as if I was the user.
+
+74
+00:05:50,580 --> 00:05:53,220
+That's how it works so far. It's a hack!
+
+75
+00:05:53,280 --> 00:06:00,970
+In theory, in future I should be able to specify it
+differently, but for now I'm going to use that trick.
+
+76
+00:06:01,100 --> 00:06:04,100
+So I need to define the element.
+
+77
+00:06:06,860 --> 00:06:11,110
+The good thing about using web components
+as custom elements is that they are just DOM elements.
+
+78
+00:06:11,110 --> 00:06:16,890
+So you can just use getElementById, or
+querySelector, or, you don't need to use whatever.
+
+79
+00:06:16,900 --> 00:06:20,900
+For example, if you use React,
+it's wrapped in whatever React is using.
+
+80
+00:06:20,920 --> 00:06:25,910
+So you can't access the DOM elements that easily
+because it wraps them up in a precious way.
+
+81
+00:06:25,910 --> 00:06:26,410
+DN: Yes.
+
+82
+00:06:26,430 --> 00:06:29,110
+
 But with web components or polymer, you just use the elements.
 In this case I'm going to use querySelector.
 Close this thing...
