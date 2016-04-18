@@ -23,7 +23,7 @@ SP: So here... I want to load the web components.
 6
 00:00:21,170 --> 00:00:25,600
 This will make sure that the
-polyfill and everything is loaded. 
+polyfill and everything is loaded.
 
 7
 00:00:26,240 --> 00:00:29,970
@@ -39,11 +39,11 @@ So [webpack] just puts the code in there.
 
 10
 00:00:37,530 --> 00:00:41,180
-I also want to load my component. 
+I also want to load my component.
 
 11
 00:00:45,980 --> 00:00:49,120
-And I need to register it as well, 
+And I need to register it as well,
 
 12
 00:00:49,930 --> 00:00:52,810
@@ -53,7 +53,7 @@ web components with custom elements.
 13
 00:00:52,820 --> 00:00:59,660
 You need to load the prototype, and then register;
-which is making it available to the parser. 
+which is making it available to the parser.
 
 14
 00:00:59,680 --> 00:01:07,660
@@ -63,7 +63,7 @@ can use 'mega-component', or whatever you want.
 15
 00:01:07,700 --> 00:01:10,570
 I've made that in a way that you
-can register it any way that you want, 
+can register it any way that you want,
 
 16
 00:01:10,570 --> 00:01:14,220
@@ -72,12 +72,12 @@ put different versions of the component.
 
 17
 00:01:14,250 --> 00:01:17,830
-And the parser can only cope with one name. 
+And the parser can only cope with one name.
 
 18
 00:01:17,870 --> 00:01:22,240
 So if you try to register something
-that already exists it won't let you. 
+that already exists it won't let you.
 
 19
 00:01:24,880 --> 00:01:28,370
@@ -92,12 +92,12 @@ of the tag you're going to use in the DOM.
 21
 00:01:32,040 --> 00:01:35,250
 SP: This lets the browser know that
-there is a new tag that it can use. 
+there is a new tag that it can use.
 
 22
 00:01:35,280 --> 00:01:42,340
 So if it finds openmusic-transport in the
-index.html we will be able to include the thing. 
+index.html we will be able to include the thing.
 
 23
 00:01:44,360 --> 00:01:47,270
@@ -114,12 +114,12 @@ OK the completion is good.
 26
 00:01:53,460 --> 00:01:58,110
 And then here is my parser saying,
-I don't know what you're doing. 
+I don't know what you're doing.
 
 27
 00:01:58,180 --> 00:02:02,720
 This is the problem with using web
-components, nothing knows what you are using. 
+components, nothing knows what you are using.
 
 28
 00:02:02,750 --> 00:02:04,960
@@ -131,11 +131,11 @@ And the problem is I need to watch.
 
 30
 00:02:07,880 --> 00:02:10,550
-I need to rebuild this thing now. 
+I need to rebuild this thing now.
 
 31
 00:02:10,730 --> 00:02:14,400
-So I need to run build etc. 
+So I need to run build etc.
 
 32
 00:02:14,560 --> 00:02:21,580
@@ -155,17 +155,140 @@ watch version thingy. Watch mode.
 It's pretty much the same but with extra arguments.
 
 36
-00:02:43,320 --> 00:02:48,690
+00:02:43,320 --> 00:02:48,670
 So with browserify, it's so modular that
 it doesn't even have the watch function itself.
 
 37
-00:02:48,690 --> 00:02:52,440
-NYou need to install watchify, which then calls browserify.
-That's the cool thing with webpack, I still haven't explored all the advantages but so far this is neat enough. Especially if you want special things. With browserify I think you also have browserify transforms, I don't know if webpack supports those. These are the things I have learned so far.
-So if I run watch now it should compile the thing and then keep watching. So if I change something here and save... There is no difference.
-Yes, created something now because it's different. I think if there is no change it doesn't rewrite things. So that's cool when you're saving out of habit. [clapping plays]
-I've got my component here.
-Ah OK it doesn't have anything and it's not connected to anything. I can press these and nothing happens
-DN: That's interesting already. Pressing play disables the stop button.
+00:02:48,690 --> 00:02:53,030
+You need to install watchify,
+which then calls browserify.
+
+38
+00:02:53,080 --> 00:02:54,340
+That's the cool thing with webpack,
+
+39
+00:02:54,360 --> 00:02:58,370
+I still haven't explored all the
+advantages but so far this is neat enough.
+
+40
+00:02:58,370 --> 00:03:00,800
+I guess i if you don't want special things because, 
+
+41
+00:03:00,840 --> 00:03:06,140
+with browserify you also have browserify
+transforms; I don't know if webpack supports those. 
+
+42
+00:03:06,170 --> 00:03:10,030
+These are the things I have learned so far.
+
+43
+00:03:10,030 --> 00:03:14,780
+So if I run watch now it should
+compile the thing and then keep watching. 
+
+44
+00:03:14,820 --> 00:03:22,200
+So if I change something here
+and save... There is no difference.
+
+45
+00:03:22,340 --> 00:03:25,330
+[Silence]
+
+46
+00:03:27,360 --> 00:03:30,470
+Yes, created something now because it's different.
+
+47
+00:03:30,470 --> 00:03:34,920
+I think if there is no change
+it doesn't rewrite things. 
+
+48
+00:03:34,930 --> 00:03:40,930
+So that's cool when you're saving out of habit. 
+
+49
+00:03:40,930 --> 00:03:45,070
+So if I go to... I've got my
+component here.[clapping plays]. 
+
+50
+00:03:45,120 --> 00:03:49,100
+Ah OK it doesn't have anything
+and it's not connected to anything. 
+
+51
+00:03:49,110 --> 00:03:51,230
+I can press these and nothing happens.
+
+52
+00:03:53,390 --> 00:03:56,420
+DN: That's interesting already.
+Pressing play disables the stop button.
+
+53
+00:03:56,420 --> 00:04:02,530
+SP: Yes that's functionality from my
+component because I really hate writing UI. 
+
+54
+00:04:02,550 --> 00:04:06,520
+So if I write it once and it works
+I want to use it as much as I can.
+
+55
+00:04:06,590 --> 00:04:15,090
+So detecting this is not super hard but if you
+can stop having to do that all the time it's better. 
+
+56
+00:04:15,120 --> 00:04:21,040
+So it emits events, and you
+can listen to those events.
+
+57
+00:04:21,040 --> 00:04:26,510
+If you just press play it will
+give you a play event, or stop.
+
+58
+00:04:26,520 --> 00:04:29,370
+Or, if you change the bpm, so you can access that thing.
+
+59
+00:04:29,400 --> 00:04:34,790
+I need to listen to it and do things
+accordingly. So I'm going to connect both things.
+
+60
+00:04:34,880 --> 00:04:41,770
+The issue with this component so far is
+that there's no way for me to tell it to start playing.
+
+61
+00:04:41,820 --> 00:04:45,520
+Or to display the playing state.
+
+62
+00:04:45,520 --> 00:04:47,520
+So my hack is to find the button and click. Like, trigger the click event. But this is not the best way, I want to find some way of specifying whats the current status declaratively. Like, in the mark up, say: this should be already playing. Instead of me clicking the button.
+DN: Something like an autoplay attribute?
+SP: No no no, right now if you look at the markup it just has the transport, I would like to be able to say something like: status="playing". And if I specify this, the play button should be disabled and the stop button enabled.  But right now you can't do this.
+So I'm going to do a kind of hack where I will add a listener to play and stop, and then I will immediately click play so it starts playing. Instead of me starting the play() function and changing the status of the button.  I'm going to attach listeners, and then click, click! Programmatically click play as if I was the user.
+That's how it works so far. It's a hack, but in the theory in future I should be able to specify it differently.  So I'm going to use that trick.
+I need to find the element.
+The cool thing about using web components as custom elements is that they are just DOM elements.
+So you can just use getElementById, or querySelector, or, you don't need to use whatever.
+For example, if you use React, it's wrapped in whatever React is using.
+So you can't access the DOM elements that easily because it wraps them up in a precious way.
+But with web components or polymer, you just use the elements.
+In this case I'm going to use querySelector.
+Close this thing...
+
 
