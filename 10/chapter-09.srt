@@ -493,13 +493,76 @@ click the button and it's going to be automatic.
 \DN: So it's a sort of imperative version of autoplay.
 
 110
-00:08:52,220 --> 00:08:54,220
+00:08:52,220 --> 00:08:54,590
+SP: Yes, exactly. Via the buttons. 
 
-SP: Yes, exactly. Via the button. So then I just need to care about this thing is the code for everything, because I've got the events for everything and likewise when I stop... Sole types.
+111
+00:08:54,590 --> 00:08:59,050
+So then I just need to care about
+this thing, is it the code for everything,
+
+112
+00:08:59,050 --> 00:09:05,960
+Because I've got the events for
+everything and likewise when I stop... 
+
+113
+00:09:05,960 --> 00:09:08,710
+[Sole types]
+
+114
+00:09:10,890 --> 00:09:18,530
 I could just... And the same with start.
-I'll deal with the bpm later. Hopefully... Something's not really happy. Oh, it's muted!
-OK so its playing automatically. Without us having to stop it. [they listen] its correct. What's the inaud it should be stop but it's not working. Is the function called a stop, maybe it doesn't exist. Well we haven't tried it before.
+
+115
+00:09:21,860 --> 00:09:27,110
+OK So... I'll deal with the bpm later. Hopefully... 
+
+116
+00:09:28,390 --> 00:09:33,120
+Something's not really happy here.
+
+117
+00:09:34,800 --> 00:09:39,010
+Oh, it's muted. That's interesting.
+
+118
+00:09:39,010 --> 00:09:44,910
+OK so it's playing automatically.
+Without us having to stop it. 
+
+119
+00:09:44,910 --> 00:09:47,730
+[They listen] 
+
+120
+00:09:47,750 --> 00:09:51,440
+It's not being stopped for some reason.
+
+121
+00:09:54,520 --> 00:09:55,310
+It's correct.
+
+122
+00:09:55,330 --> 00:10:00,680
+What's the name of the event?
+It should be stop but it's not working. 
+
+123
+00:10:00,680 --> 00:10:05,690
+Is the function called a stop, maybe it doesn't exist. 
+
+124
+00:10:06,230 --> 00:10:08,720
+Well we haven't tried it before.
+
+125
+00:10:08,720 --> 00:10:12,250
 DN: Yes, we haven't tested that function until now.
+
+126
+00:10:12,250 --> 00:10:14,250
+
 SP: So what happens when I click stop. We're going to use the debugger for once.
 [they listen]
 
