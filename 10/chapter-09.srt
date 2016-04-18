@@ -561,8 +561,88 @@ Well we haven't tried it before.
 DN: Yes, we haven't tested that function until now.
 
 126
-00:10:12,250 --> 00:10:14,250
+00:10:12,250 --> 00:10:19,240
+SP: So what happens when I click stop.
+We're going to use the debugger for once. 
 
-SP: So what happens when I click stop. We're going to use the debugger for once.
+127
+00:10:19,240 --> 00:10:22,040
+[They listen]
+
+128
+00:10:22,040 --> 00:10:27,060
+We haven't pressed stop. It has stopped, good.
+
+129
+00:10:29,750 --> 00:10:31,470
+DN: scheduleTimeout is null.
+
+130
+00:10:31,530 --> 00:10:37,220
+SP: Have I actually stored this anywhere? 
+
+131
+00:10:37,700 --> 00:10:43,850
+So we haven't been sending it to anything.
+
+132
+00:10:43,850 --> 00:10:47,440
+If we clear the thing in-between
+it shouldn't call it again.
+
+133
+00:10:47,440 --> 00:10:47,660
+ I should remove the debugger. I should make a thing so every time it finishes building it says something with the say programme that says 'Done' when it stops building.  I don't know if you've seen this thing?
+Sometimes, when it's a very long build I do something like 'say done'.
+
+[audio: raise volume of speakers]
+Computer: Done
+
+I can do that in the background and go back to what I was doing.
 [they listen]
+OK it stops.
+DN: Am I right in thinking that the stop button is acting as a pause button?
+SP: Yes.
+DN: It stops you in time, and when you press play again it picks up where it left off.
+SP: Maybe I could rename it? But this is a web component, so I can't really. I guess for the challenge... Yeah, it's not very configurable.
+It does what I want, but the button doesn't say 'pause'.
+DN: When I set the challenge the said 'play' and 'stop' without giving much thought about what I meant by stop, but pause is...
+SP: The client wasn't clear here!
+DN: No, that's right.
+SP: It's just like, literally play and stop.
+I was making sure that it would continue in the right place.
+[they listen]
+DN: That's really cool.
+SP: And now we need to try to do the bpm.
+I could maybe do a commit already?  I'm going to try and split this thing. I like to have one thing running on one side and the other on the other side. And I also have npm in my bashrc or whatever, so every time I open a terminal it loads this node particular. So that why it takes a bit of time.
+
+If we clear the thing in-between
+it shouldn't call it again.
+
+134
+00:10:47,660 --> 00:10:49,440
+ I should remove the debugger. I should make a thing so every time it finishes building it says something with the say programme that says 'Done' when it stops building.  I don't know if you've seen this thing?
+Sometimes, when it's a very long build I do something like 'say done'.
+
+[audio: raise volume of speakers]
+Computer: Done
+
+I can do that in the background and go back to what I was doing.
+[they listen]
+OK it stops.
+DN: Am I right in thinking that the stop button is acting as a pause button?
+SP: Yes.
+DN: It stops you in time, and when you press play again it picks up where it left off.
+SP: Maybe I could rename it? But this is a web component, so I can't really. I guess for the challenge... Yeah, it's not very configurable.
+It does what I want, but the button doesn't say 'pause'.
+DN: When I set the challenge the said 'play' and 'stop' without giving much thought about what I meant by stop, but pause is...
+SP: The client wasn't clear here!
+DN: No, that's right.
+SP: It's just like, literally play and stop.
+I was making sure that it would continue in the right place.
+[they listen]
+DN: That's really cool.
+SP: And now we need to try to do the bpm.
+I could maybe do a commit already?  I'm going to try and split this thing. I like to have one thing running on one side and the other on the other side. And I also have npm in my bashrc or whatever, so every time I open a terminal it loads this node particular. So that why it takes a bit of time.
+
 
