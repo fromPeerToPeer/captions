@@ -371,10 +371,135 @@ because it wraps them up in a precious way.
 DN: Yes.
 
 82
-00:06:26,430 --> 00:06:29,110
+00:06:26,430 --> 00:06:31,670
+But with web components or 
+polymer, you just use the elements.
 
-But with web components or polymer, you just use the elements.
+83
+00:06:31,670 --> 00:06:35,760
 In this case I'm going to use querySelector.
-Close this thing...
 
+84
+00:06:40,860 --> 00:06:41,790
+Close these things...
+
+85
+00:06:41,790 --> 00:06:51,720
+That should give me the element and I can add
+the event listener, like with any other DOM thingy.
+
+86
+00:06:51,750 --> 00:06:58,680
+So I can say when play happens, start playing.
+
+87
+00:07:00,850 --> 00:07:02,520
+But I don't want to start...
+
+88
+00:07:02,570 --> 00:07:06,250
+I should probably add this thing once... 
+
+89
+00:07:06,750 --> 00:07:09,560
+No, this is all fine.
+
+90
+00:07:09,560 --> 00:07:14,010
+When 'Play' (is pressed) then we start.
+
+91
+00:07:14,010 --> 00:07:17,180
+What we'll do here is, play here the button.
+
+92
+00:07:19,090 --> 00:07:21,430
+Yeah, wait and you'll see.
+
+93
+00:07:21,430 --> 00:07:24,050
+Let me undo this...
+
+94
+00:07:24,090 --> 00:07:27,380
+Let's separate this thing so
+you can see what I'm doing.
+
+95
+00:07:27,380 --> 00:07:31,160
+We are adding the events here.
+
+96
+00:07:31,260 --> 00:07:36,580
+When the play button in the
+transport element is clicked, we want to start.
+
+97
+00:07:36,590 --> 00:07:38,720
+Which is what we're doing up here.
+
+98
+00:07:38,790 --> 00:07:44,670
+So instead of doing this thing,
+we're going to do transport.play element.
+
+99
+00:07:44,670 --> 00:07:47,270
+Which is not like that but....
+
+100
+00:07:48,500 --> 00:07:55,010
+This is hack and I'm going to mark it as that: HACK!
+
+101
+00:07:55,010 --> 00:08:00,630
+So we should probably do something
+like FIXME hack so we can search for that later, 
+
+102
+00:08:00,650 --> 00:08:07,300
+and make sure this hack is not surviving, but anyway...
+
+103
+00:08:07,360 --> 00:08:11,330
+Because this is a hack I'm
+going to do something kind of gross.
+
+104
+00:08:11,330 --> 00:08:16,010
+I'm going to look for a button which is a play button. 
+
+105
+00:08:16,010 --> 00:08:19,700
+A class play because that's how it's created.
+
+106
+00:08:19,700 --> 00:08:25,770
+If you look at the sites you
+will see the class is play. 
+
+107
+00:08:25,770 --> 00:08:33,080
+So I'm going to look for this
+button and I'm going to click it.
+
+108
+00:08:37,370 --> 00:08:47,550
+So when all the samples are loaded I want to
+click the button and it's going to be automatic.
+
+109
+00:08:47,580 --> 00:08:52,220
+\DN: So it's a sort of imperative version of autoplay.
+
+110
+00:08:52,220 --> 00:08:54,220
+
+SP: Yes, exactly. Via the button. So then I just need to care about this thing is the code for everything, because I've got the events for everything and likewise when I stop... Sole types.
+I could just... And the same with start.
+I'll deal with the bpm later. Hopefully... Something's not really happy. Oh, it's muted!
+OK so its playing automatically. Without us having to stop it. [they listen] its correct. What's the inaud it should be stop but it's not working. Is the function called a stop, maybe it doesn't exist. Well we haven't tried it before.
+DN: Yes, we haven't tested that function until now.
+SP: So what happens when I click stop. We're going to use the debugger for once.
+[they listen]
 
