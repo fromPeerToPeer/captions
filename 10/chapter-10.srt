@@ -1,0 +1,72 @@
+﻿1
+00:00:00,000 --> 00:00:02,930
+Chapter 10: Add a tempo control.
+
+2
+00:00:03,110 --> 00:00:08,640
+Now I need to add the
+listener for the for the bpm event.
+
+3
+00:00:08,670 --> 00:00:13,990
+And this one is slightly different because
+I need to read the data from the event. 
+
+4
+00:00:15,550 --> 00:00:22,380
+It's not just like an action I need
+to read the data from the event.
+
+5
+00:00:22,460 --> 00:00:29,770
+It's using custom events, I don't know who designed
+this thing but you can't just put properties.
+
+6
+00:00:30,420 --> 00:00:37,860
+You have to use details. I guess
+it's so you don't create properties. 
+
+7
+00:00:37,860 --> 00:00:45,050
+With the object inaud future
+properties in the spec or the events in general. 
+
+8
+00:00:45,050 --> 00:00:47,250
+So you can only access them through the detail. 
+
+9
+00:00:47,270 --> 00:00:54,370
+In this case the value that
+you get is value [Laughter]. 
+
+10
+00:00:54,370 --> 00:01:00,100
+So if you have a bpm event
+this is a new value you will get. 
+
+11
+00:01:00,330 --> 00:01:02,870
+I will log it and you can see.
+
+12
+00:01:02,870 --> 00:01:06,200
+The new values inaud.
+[they listen]
+SP: A lot of changes so OK. Inaud so you just need to change. Inaud. The score is being changed all the time. The events are calculated based on the current BPM every time the schedule function is run it will take the value that we send it. So we can change that on the fly. The only issue with this is that this might be sent as a string? Because it's coerced. I always make sure to multiply by one.
+DN: Ah right.
+SP: Especially if you try to add things because it might end up concatenating strings with numbers. So in case of that, I just multiply the thingy. And we have a global variable somewhere here. So we can just say the BPM is this new value. Hopefully that should change.
+[they listen] The music starts slowly and gets faster.
+DN: How fast will it go.
+SP: Its limited to 300.
+DN: That's fast enough.
+SP: Because, I do some happy hardcore things. Its 300 to 1.
+This is really slow, it's one beat per minute. We will get bored.
+DN: Yes, about 15 seconds between each click?
+SP: 60 seconds! I guess we can also add this thing. I never remember what I changed. In a more complex project I would use source tree so I can see the whole thing.
+[Sole types]
+"Change tempo with slider"
+
+Let's look at the challenge.  So we can stop and play and provide a way of modifying the tempo.
+
