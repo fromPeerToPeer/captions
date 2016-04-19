@@ -1,0 +1,87 @@
+﻿1
+00:00:00,000 --> 00:00:02,900
+Chapter 11: Humanize the performance.
+
+2
+00:00:03,020 --> 00:00:07,260
+SP: We have a thing which
+I think fulfills the challenge. 
+
+3
+00:00:07,260 --> 00:00:09,140
+DN: Yeah.
+
+4
+00:00:10,820 --> 00:00:16,520
+Part one is playing this thingy,
+part two is playing the variations.
+
+5
+00:00:17,000 --> 00:00:22,490
+And we have a user interface to
+play and stop the music, and modify the tempo. 
+
+6
+00:00:23,150 --> 00:00:28,340
+That all works so the
+challenge should be fulfilled.
+
+7
+00:00:28,370 --> 00:00:29,230
+DN: Yes sure.
+
+8
+00:00:29,230 --> 00:00:34,140
+SP: The issue with this is, it sounds super robotic!
+
+9
+00:00:34,140 --> 00:00:38,320
+Normally when you play an instrument
+and you are a human, you make some errors.
+
+10
+00:00:38,360 --> 00:00:46,110
+So I think we should make, every
+note triggered slightly out of time.
+
+11
+00:00:46,130 --> 00:00:48,380
+So we'll add some randomness.
+
+12
+00:00:48,410 --> 00:00:54,750
+I would start with doing that so it sounds a
+bit more natural. Because right now it's too perfect.
+
+13
+00:00:54,790 --> 00:01:01,310
+DN: Yes, I've seen sequencing programs where they
+call it a 'humanize' function, it adds some jitter.
+
+14
+00:01:01,320 --> 00:01:07,880
+SP: Yes, well we can just change the start time
+slightly. Not by a whole beat, but more subtly.
+
+15
+00:01:07,920 --> 00:01:13,510
+I will make it a little less
+perfect until it sounds a bit better.
+
+16
+00:01:13,580 --> 00:01:18,070
+So for the last time, this
+is too perfect [They listen].
+
+17
+00:01:18,100 --> 00:01:19,000
+DN: Yes.
+
+18
+00:01:20,470 --> 00:01:22,470
+NSP: We can make it a bit more ‘funny'. We know when things are starting which is... So this is the context playtime. So instead of using the contextPlayTime we might get some randomness here. Like, a little ‘indecisiveness' of the players. So I will say getSomeRandom. I'm going to make this function that will return positive and negative values. When you are playing you anticipate a bit. So players are not perfect, they're not totally in sync so it's ok to have some randomness here.
+So what do we return. We can start with some randomness and then adjust depending on what we see. 0.5 second is a lot but so we can see the difference.
+You can call the random() function but this returns [a value] between 0.0 and 1.0. So if I multiply that with 0.5 its going to be just 0.0 to 0.5.
+DN: OK.
+
+
