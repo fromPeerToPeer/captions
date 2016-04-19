@@ -586,63 +586,141 @@ SP: Have I actually stored this anywhere?
 So we haven't been sending it to anything.
 
 132
-00:10:43,850 --> 00:10:47,440
+00:10:43,850 --> 00:10:47,660
 If we clear the thing in-between
 it shouldn't call it again.
 
 133
-00:10:47,440 --> 00:10:47,660
- I should remove the debugger. I should make a thing so every time it finishes building it says something with the say programme that says 'Done' when it stops building.  I don't know if you've seen this thing?
-Sometimes, when it's a very long build I do something like 'say done'.
-
-[audio: raise volume of speakers]
-Computer: Done
-
-I can do that in the background and go back to what I was doing.
-[they listen]
-OK it stops.
-DN: Am I right in thinking that the stop button is acting as a pause button?
-SP: Yes.
-DN: It stops you in time, and when you press play again it picks up where it left off.
-SP: Maybe I could rename it? But this is a web component, so I can't really. I guess for the challenge... Yeah, it's not very configurable.
-It does what I want, but the button doesn't say 'pause'.
-DN: When I set the challenge the said 'play' and 'stop' without giving much thought about what I meant by stop, but pause is...
-SP: The client wasn't clear here!
-DN: No, that's right.
-SP: It's just like, literally play and stop.
-I was making sure that it would continue in the right place.
-[they listen]
-DN: That's really cool.
-SP: And now we need to try to do the bpm.
-I could maybe do a commit already?  I'm going to try and split this thing. I like to have one thing running on one side and the other on the other side. And I also have npm in my bashrc or whatever, so every time I open a terminal it loads this node particular. So that why it takes a bit of time.
-
-If we clear the thing in-between
-it shouldn't call it again.
+00:10:51,150 --> 00:10:55,430
+I should remove the debugger.
 
 134
-00:10:47,660 --> 00:10:49,440
- I should remove the debugger. I should make a thing so every time it finishes building it says something with the say programme that says 'Done' when it stops building.  I don't know if you've seen this thing?
-Sometimes, when it's a very long build I do something like 'say done'.
+00:10:55,480 --> 00:10:58,390
+I should make a thing so
+every time it finishes building, 
 
-[audio: raise volume of speakers]
-Computer: Done
+135
+00:10:58,400 --> 00:11:02,230
+it says something with the same
+program that says 'Done' when it stops building. 
 
-I can do that in the background and go back to what I was doing.
-[they listen]
+136
+00:11:02,230 --> 00:11:08,210
+I don't know if you've seen
+this thing inaud? 
+
+137
+00:11:08,310 --> 00:11:09,820
+[Computer says Hi.]
+
+138
+00:11:09,850 --> 00:11:12,910
+Sometimes, when it's a very long
+build I do something like 'say done'.
+
+139
+00:11:12,940 --> 00:11:14,100
+[Computer says 'done']
+
+140
+00:11:14,120 --> 00:11:18,990
+I can do that in the background
+and go back to what I was doing.
+
+141
+00:11:18,990 --> 00:11:24,060
+OK so this should be doing it's thing. [they listen] OK.
+
+142
+00:11:24,270 --> 00:11:27,060
 OK it stops.
-DN: Am I right in thinking that the stop button is acting as a pause button?
-SP: Yes.
-DN: It stops you in time, and when you press play again it picks up where it left off.
-SP: Maybe I could rename it? But this is a web component, so I can't really. I guess for the challenge... Yeah, it's not very configurable.
-It does what I want, but the button doesn't say 'pause'.
-DN: When I set the challenge the said 'play' and 'stop' without giving much thought about what I meant by stop, but pause is...
-SP: The client wasn't clear here!
-DN: No, that's right.
-SP: It's just like, literally play and stop.
-I was making sure that it would continue in the right place.
-[they listen]
-DN: That's really cool.
-SP: And now we need to try to do the bpm.
-I could maybe do a commit already?  I'm going to try and split this thing. I like to have one thing running on one side and the other on the other side. And I also have npm in my bashrc or whatever, so every time I open a terminal it loads this node particular. So that why it takes a bit of time.
 
+143
+00:11:27,060 --> 00:11:32,120
+[They listen]
+
+144
+00:11:32,520 --> 00:11:38,570
+DN: Am I right in thinking that the
+stop button is acting as a pause button?
+
+145
+00:11:38,570 --> 00:11:38,970
+SP: Yes.
+
+146
+00:11:38,970 --> 00:11:41,930
+DN: It stops you in time, and when
+you press play again it picks up where it left off.
+
+147
+00:11:41,930 --> 00:11:46,040
+SP: Maybe I could rename it? But this
+is a web component, so I can't really. 
+
+148
+00:11:46,090 --> 00:11:50,580
+I guess for the challenge... Yeah,
+but it's not very configurable.
+
+149
+00:11:50,600 --> 00:11:53,610
+It does what it wants, but
+the button doesn't say 'pause'.
+
+150
+00:11:53,640 --> 00:11:55,380
+DN: When I set the challenge I said 'play' and 'stop' 
+
+151
+00:11:55,420 --> 00:11:58,460
+without giving much though to what I meant by stop. 
+
+152
+00:11:58,480 --> 00:12:00,540
+SP: Exactly, the client wasn't clear here!
+
+153
+00:12:00,560 --> 00:12:02,420
+DN: No, that's right.
+
+154
+00:12:02,420 --> 00:12:08,970
+SP: It's literally play and stop. I was making
+sure that it would continue in the right place.
+
+155
+00:12:09,070 --> 00:12:10,540
+DN: That's really cool.
+
+156
+00:12:10,540 --> 00:12:12,540
+[They listen] 
+
+157
+00:12:14,850 --> 00:12:19,190
+SP: And now we need to try to do the
+bpm and I could maybe do a commit?  
+
+158
+00:12:19,220 --> 00:12:22,170
+I'm going to try and split this thing.
+
+159
+00:12:22,170 --> 00:12:27,250
+I like to have one thing running on one
+side and the other on the other side.
+
+160
+00:12:28,540 --> 00:12:33,720
+And I also have npm in my bashrc or whatever,
+
+161
+00:12:33,740 --> 00:12:39,490
+so every time I open a terminal it loads this node
+in particular. So that why it takes a bit of time.
+
+162
+00:12:39,490 --> 00:12:46,060
+'Use transport for play and stop', to be more exact.
 
