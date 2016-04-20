@@ -246,21 +246,146 @@ DN: Interesting yes.
 SP: So I'm going to remove the breakpoint thingy.
 
 57
-00:04:17,350 --> 00:04:21,370
-It's really messy. Because they are really bad players!
-[they listen]
-DN: I think the variation there is longer than a beat isn't it?
+00:04:17,380 --> 00:04:20,820
+[They listen]
+
+58
+00:04:20,890 --> 00:04:29,080
+It's really messy. Because
+they are really bad players!
+
+59
+00:04:29,090 --> 00:04:31,630
+DN: I think the variation there
+is longer than a beat isn't it?
+
+60
+00:04:31,630 --> 00:04:33,290
 SP: Yeah exactly.
 
-SP: I hate this! I always want to have a page with all of the one-liners I can check and make sure that they're ok.
-This is going to go from 1 to 0, but that's not what I want.
-So if I multiply this...
-This is me going off on a long-winded...
-What am I doing? Argh!
-One...
-This is easier:
-1-0=1
-1-1=0
+61
+00:04:33,290 --> 00:04:38,370
+I hate this! I always want to have a
+page with all of the one-liners I can check
 
-I think if it's:
+62
+00:04:38,390 --> 00:04:39,750
+and make sure that they're OK.
+
+63
+00:04:39,750 --> 00:04:44,960
+This is going to go from 1 to 0,
+but that's not what I want.
+
+64
+00:04:45,010 --> 00:04:48,690
+So if I multiply this...
+
+65
+00:04:50,620 --> 00:04:56,390
+This is me going off on a long-winded... So 2 minus...
+
+66
+00:04:56,390 --> 00:04:59,870
+What am I doing? Argh!
+
+67
+00:04:59,930 --> 00:05:09,200
+1...This is easier: 1-0=1 1-1=0
+
+68
+00:05:09,230 --> 00:05:21,650
+I think if it's: 0.5 - 1 = -0.5, 
+
+69
+00:05:23,510 --> 00:05:30,150
+OK, this is the one I want. And if I
+multiply that by 2 I get the right thing.
+
+70
+00:05:30,200 --> 00:05:36,640
+What I wanted actually to write from
+the beginning, but I didn't know how was...
+
+71
+00:05:38,540 --> 00:05:42,500
+I knew that there was a one-liner, without the whole story.
+
+72
+00:05:44,060 --> 00:05:47,720
+DN: So that will give you a value between -1.0 and +1.0?
+
+73
+00:05:47,760 --> 00:05:52,300
+SP: Yeah! This is going to return from minus 1 to 1. 
+
+74
+00:05:52,300 --> 00:06:00,780
+I'm going to multiply that by
+something else... 0.1 of a second.
+
+75
+00:06:00,780 --> 00:06:06,620
+Maybe we should base this on the beat.
+
+76
+00:06:09,510 --> 00:06:13,510
+This is because I'm working to small values.
+
+77
+00:06:15,000 --> 00:06:17,710
+This is still very terrible.
+
+78
+00:06:19,830 --> 00:06:25,690
+Yes if the current time is
+minus we should win more probably.
+
+79
+00:06:25,690 --> 00:06:29,650
+[Sole thinks]
+
+80
+00:06:36,640 --> 00:06:43,040
+I'm going to make it always be slower.
+
+81
+00:06:51,650 --> 00:06:55,290
+[They listen]
+
+82
+00:06:55,410 --> 00:06:57,030
+SP: It's slightly better.
+
+83
+00:06:57,060 --> 00:06:58,190
+DN: A little bit sloppy.
+
+84
+00:06:58,190 --> 00:07:01,770
+SP: Yes, but that's what you want.
+
+85
+00:07:01,770 --> 00:07:03,770
+[they listen]
+
+This is too much let's make it slower.
+It's not so mechanical, but maybe we can make it more crappy.
+It's good to adjust and see when does it stop sounding terrible.
+This is too much.
+DN: It is yeah.
+SP: This is too much I will leave it at 2.
+DN: OK
+[they listen]
+
+SP: Yes this is good. If I make it 0 there is no change at all. It sound fully on the beat. This is very subtle.
+DN: I think you left it at 0.2 rather than 0.02 there.
+[they listen]
+This is too much I would have left it there. Ok stop.
+
+I must say variation.
+Sometimes you need to explain what you did.
+I was going to just say "make it more humane", but what does that mean?
+
+
 
