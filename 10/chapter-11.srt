@@ -5,7 +5,7 @@ Chapter 11: Humanize the performance.
 2
 00:00:03,020 --> 00:00:07,260
 SP: We have a thing which
-I think fulfills the challenge. 
+I think fulfills the challenge.
 
 3
 00:00:07,260 --> 00:00:09,140
@@ -19,7 +19,7 @@ part two is playing the variations.
 5
 00:00:17,000 --> 00:00:22,490
 And we have a user interface to
-play and stop the music, and modify the tempo. 
+play and stop the music, and modify the tempo.
 
 6
 00:00:23,150 --> 00:00:28,340
@@ -78,10 +78,189 @@ is too perfect [They listen].
 DN: Yes.
 
 18
-00:01:20,470 --> 00:01:22,470
-NSP: We can make it a bit more ‘funny'. We know when things are starting which is... So this is the context playtime. So instead of using the contextPlayTime we might get some randomness here. Like, a little ‘indecisiveness' of the players. So I will say getSomeRandom. I'm going to make this function that will return positive and negative values. When you are playing you anticipate a bit. So players are not perfect, they're not totally in sync so it's ok to have some randomness here.
-So what do we return. We can start with some randomness and then adjust depending on what we see. 0.5 second is a lot but so we can see the difference.
-You can call the random() function but this returns [a value] between 0.0 and 1.0. So if I multiply that with 0.5 its going to be just 0.0 to 0.5.
-DN: OK.
+00:01:19,030 --> 00:01:23,590
+SP: We can make it a bit more ‘amusing'. 
 
+19
+00:01:24,550 --> 00:01:30,470
+We know when things are starting which is... 
+
+20
+00:01:30,470 --> 00:01:37,570
+So this is the contextPlayTime. Instead of
+using that we might get some randomness here. 
+
+21
+00:01:37,590 --> 00:01:41,870
+Like, a little ‘indecisiveness' of the players.
+
+22
+00:01:42,650 --> 00:01:46,370
+So I will say getSomeRandom()
+
+23
+00:01:46,370 --> 00:01:51,500
+I'm going to make this function that
+will return positive and negative values. 
+
+24
+00:01:51,830 --> 00:01:56,040
+It could be that when you are playing,
+sometimes you anticipate a bit. 
+
+25
+00:01:56,040 --> 00:02:03,030
+Players are not perfect, they're not totally
+in sync so it's OK to have some randomness here.
+
+26
+00:02:03,030 --> 00:02:09,050
+[Silence]
+
+27
+00:02:09,220 --> 00:02:14,000
+So we just make the function here.
+
+28
+00:02:14,180 --> 00:02:15,230
+So what do we return?
+
+29
+00:02:15,260 --> 00:02:21,220
+We can start with some randomness and
+then adjust depending on what we see. 
+
+30
+00:02:21,330 --> 00:02:26,030
+0.5 second is a lot, but so we can see the difference.
+
+31
+00:02:26,030 --> 00:02:29,560
+[Silence]
+
+32
+00:02:29,660 --> 00:02:34,790
+You can call the random() function but
+this returns [a value] between 0.0 and 1.0. 
+
+33
+00:02:34,810 --> 00:02:39,270
+So if I multiply that with 0.5 it's going to be just 0.0 to 0.5.
+
+34
+00:02:39,690 --> 00:02:42,880
+So that means it's always going to be a bit later.
+
+35
+00:02:42,880 --> 00:02:45,970
+I want some to be a bit earlier.
+
+36
+00:02:46,110 --> 00:02:55,370
+So if I have `0.5 - Math.random()` this
+is going to be in -0.5 to 0.5 ... I think.
+
+37
+00:02:55,370 --> 00:02:59,330
+[Sole thinks]
+
+38
+00:02:59,430 --> 00:03:03,860
+Or, one minus this might be from zero to... 
+
+39
+00:03:03,890 --> 00:03:07,790
+So this can be negative or positive...
+I don't know now. [laughter]
+
+40
+00:03:07,790 --> 00:03:10,530
+DN: Wouldn't that mean the
+maximum value would be zero?
+
+41
+00:03:10,530 --> 00:03:13,600
+SP: Yes. So I want this thing.
+
+42
+00:03:15,280 --> 00:03:20,390
+So if it's zero it's 0.5? Or maybe...
+OK, I'm just going to leave it like that. Whatever.
+
+43
+00:03:20,430 --> 00:03:23,330
+DN: Let's see what happens.
+
+44
+00:03:23,960 --> 00:03:28,010
+SP: So this needs a semi colon.
+
+45
+00:03:28,090 --> 00:03:31,480
+Now it should be a bit more erratic.
+
+46
+00:03:31,540 --> 00:03:35,080
+Oh no, why not.
+
+47
+00:03:36,360 --> 00:03:39,070
+What am I returning? 
+
+48
+00:03:39,070 --> 00:03:42,060
+[Silence]
+
+49
+00:03:42,830 --> 00:03:51,380
+So if it's negative? WHAT?
+This doesn't make any sense. Why?
+
+50
+00:03:51,440 --> 00:03:55,160
+I'm going to debug this thingy. 
+
+51
+00:03:55,160 --> 00:03:57,970
+What is when, which is fine.
+
+52
+00:03:57,970 --> 00:04:01,960
+[Silence]
+
+53
+00:04:04,640 --> 00:04:09,800
+I guess it's because I've set the
+debugger which introduces some delay, 
+
+54
+00:04:09,850 --> 00:04:12,320
+so I'm not getting a negative time here.
+
+55
+00:04:12,320 --> 00:04:13,270
+DN: Interesting yes.
+
+56
+00:04:13,270 --> 00:04:17,350
+SP: So I'm going to remove the breakpoint thingy.
+
+57
+00:04:17,350 --> 00:04:21,370
+It's really messy. Because they are really bad players!
+[they listen]
+DN: I think the variation there is longer than a beat isn't it?
+SP: Yeah exactly.
+
+SP: I hate this! I always want to have a page with all of the one-liners I can check and make sure that they're ok.
+This is going to go from 1 to 0, but that's not what I want.
+So if I multiply this...
+This is me going off on a long-winded...
+What am I doing? Argh!
+One...
+This is easier:
+1-0=1
+1-1=0
+
+I think if it's:
 
