@@ -1,0 +1,171 @@
+﻿1
+00:00:00,000 --> 00:00:02,970
+Chapter 12: Accenting the first beat.
+
+2
+00:00:03,390 --> 00:00:05,790
+DN: I suppose another thing
+to make it sound more musical, 
+
+3
+00:00:05,810 --> 00:00:11,390
+maybe the first beat could always be slightly
+louder. And that would give you a bit of orientation.
+
+4
+00:00:11,420 --> 00:00:12,610
+SP: Could be,
+
+5
+00:00:12,670 --> 00:00:14,560
+DN: That wasn't in the original spec.
+
+6
+00:00:14,560 --> 00:00:17,780
+SP: Yes, we could maybe look at that later.
+
+7
+00:00:17,830 --> 00:00:27,930
+SP: So if we're at the beginning of the rep we want some to be louder and the rest quieter. 
+
+8
+00:00:27,950 --> 00:00:30,670
+DN: Yes, or just normal.
+
+9
+00:00:30,670 --> 00:00:38,630
+SP: We want it to be current step zero.
+
+10
+00:00:38,710 --> 00:00:43,520
+And it doesn't matter if it's the first
+or the second player, it's for both of them.
+
+11
+00:00:43,550 --> 00:00:45,500
+DN: I think it will be just for the first player.
+
+12
+00:00:45,500 --> 00:00:51,450
+SP: OK so we just look at current step. 
+
+13
+00:00:51,520 --> 00:00:58,210
+The way web audio works is,
+every node does a single thing. 
+
+14
+00:00:58,210 --> 00:01:03,380
+The buffer node doesn't have a volume parameter, 
+
+15
+00:01:03,380 --> 00:01:09,290
+so we need to create a node that only
+modifies the volume of whatever goes through it. 
+
+16
+00:01:09,290 --> 00:01:13,420
+It's called 'gain', so you can adjust the gain.
+
+17
+00:01:13,450 --> 00:01:16,090
+DN: I see.
+
+18
+00:01:16,170 --> 00:01:20,340
+SP: So here we create a buffer each time. 
+
+19
+00:01:20,390 --> 00:01:27,030
+So I'm going to introduce the gain node
+in between the buffer node and the limiter, 
+
+20
+00:01:27,040 --> 00:01:33,410
+and set the volume as well, so it's
+a bit contrived, but it should be OK.
+
+21
+00:01:33,450 --> 00:01:37,240
+So I will call it gain.
+
+22
+00:01:37,240 --> 00:01:40,430
+[Silence]
+
+23
+00:01:43,420 --> 00:01:47,310
+I can never remember if it's
+createGain() or createGainNode().
+
+24
+00:01:47,330 --> 00:01:49,520
+If it doesn't work, we'll fix that.
+
+25
+00:01:49,570 --> 00:01:53,670
+So I will connect buffer node to the gain. 
+
+26
+00:01:55,310 --> 00:02:02,550
+This has to be the gain value.
+And then the gain to the limiter.
+
+27
+00:02:05,290 --> 00:02:08,560
+I also need to set the gain value. 
+
+28
+00:02:09,080 --> 00:02:14,560
+The amount of gain that we want, and it's got gain. 
+
+29
+00:02:15,710 --> 00:02:21,650
+It's gainValue, I will explain why.
+
+30
+00:02:23,800 --> 00:02:28,690
+Let's make sure that this works, to start with.
+
+31
+00:02:28,690 --> 00:02:31,930
+[Silence]
+
+32
+00:02:31,950 --> 00:02:41,520
+Let's suppose this is the
+gainValue... For the first player. 
+
+33
+00:02:41,550 --> 00:02:46,560
+Let's suppose it's always
+zero so that it keeps playing. 
+
+34
+00:02:47,210 --> 00:02:55,510
+We don't want to change the second
+one so I'm going to make it inaud value.
+
+35
+00:02:55,560 --> 00:03:02,590
+Classic JavaScript.
+
+36
+00:03:02,770 --> 00:03:05,740
+If it's not undefined
+
+37
+00:03:05,740 --> 00:03:07,740
+You don't want to just use gainValue because if it's zero it's going to assume that it's one. So if it's not undefined just use gain value, otherwise use 1.0. So it will not change anything at all. Question mark.
+So in theory, this should...
+[they listen]
+So let's see what's going on here. At some point it should disappear, but it hasn't for some reason.
+DN: Interesting! Have we introduced a memory leak here?
+SP: Yes! I think that's the way I'm connecting things. Hmm interesting.
+So now were just playing the buffers just not taking them to the limiter and this is growing, look at that. OK I need to close this before it hogs down everything. 
+Let me think about how to do this. When I was doing that I was thinking: will they just get removed? Or just create a disaster here? Maybe I should tell it which gain to connect. Maybe we should have 2 base...
+So we don't create all the gain nodes all the time. This is a bad idea. Like having two roads... Or, just tell it which gain to connect to so I don't do this massive amount of gains.
+Just as I have two samples I can have two gain nodes.
+Usually what you do is use the gain nodes as routers.
+
+
