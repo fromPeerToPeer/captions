@@ -155,17 +155,122 @@ Classic JavaScript.
 If it's not undefined
 
 37
-00:03:05,740 --> 00:03:07,740
-You don't want to just use gainValue because if it's zero it's going to assume that it's one. So if it's not undefined just use gain value, otherwise use 1.0. So it will not change anything at all. Question mark.
+00:03:05,740 --> 00:03:11,960
+You don't want to just use gainValue because if
+it's zero it's going to assume that it's one. 
+
+38
+00:03:12,070 --> 00:03:17,420
+So if it's not undefined just
+use gainValue, otherwise use 1.0. 
+
+39
+00:03:17,520 --> 00:03:21,540
+So we don't change anything at all.
+
+40
+00:03:23,290 --> 00:03:26,540
+Question mark.
+
+41
+00:03:26,780 --> 00:03:30,610
 So in theory, this should...
-[they listen]
-So let's see what's going on here. At some point it should disappear, but it hasn't for some reason.
-DN: Interesting! Have we introduced a memory leak here?
-SP: Yes! I think that's the way I'm connecting things. Hmm interesting.
-So now were just playing the buffers just not taking them to the limiter and this is growing, look at that. OK I need to close this before it hogs down everything. 
-Let me think about how to do this. When I was doing that I was thinking: will they just get removed? Or just create a disaster here? Maybe I should tell it which gain to connect. Maybe we should have 2 base...
-So we don't create all the gain nodes all the time. This is a bad idea. Like having two roads... Or, just tell it which gain to connect to so I don't do this massive amount of gains.
-Just as I have two samples I can have two gain nodes.
+
+42
+00:03:30,640 --> 00:03:31,380
+[They listen]
+
+43
+00:03:31,380 --> 00:03:35,240
+And we should see new nodes here. 
+
+44
+00:03:35,240 --> 00:03:38,130
+Inaud so here's the thing.
+
+45
+00:03:40,050 --> 00:03:43,620
+At some point it should disappear,
+but it hasn't for some reason.
+
+46
+00:03:44,100 --> 00:03:47,400
+DN: Interesting! Have we
+introduced a memory leak here?
+
+47
+00:03:47,400 --> 00:03:53,240
+SP: Yes! I think that's the way I'm connecting things.
+
+48
+00:03:53,600 --> 00:03:55,240
+Hmm interesting.
+
+49
+00:03:55,240 --> 00:03:59,980
+So now were just playing the buffers,
+just not connecting them to the limiter. 
+
+50
+00:03:59,990 --> 00:04:03,100
+And this is definitely growing... Look at that. 
+
+51
+00:04:03,180 --> 00:04:06,330
+OK I need to close this
+before it hogs down everything.
+
+52
+00:04:06,330 --> 00:04:10,500
+Let me think about how to do this.
+
+53
+00:04:10,500 --> 00:04:15,440
+Will they just get removed?
+Or create a disaster here?
+
+54
+00:04:15,590 --> 00:04:21,000
+So maybe I should tell it which gain
+to connect. Maybe we should have 2 base...
+
+55
+00:04:21,000 --> 00:04:26,390
+So we don't create all the gain nodes all the time. Maybe this is a bad idea. 
+
+56
+00:04:27,020 --> 00:04:33,330
+Like having two roads... Or, just
+tell it which gain to connect to,
+
+57
+00:04:33,410 --> 00:04:37,870
+so I don't do this massive amount of gains.
+
+58
+00:04:37,870 --> 00:04:39,870
+Let me think how I would do this.
+
+59
+00:04:41,030 --> 00:04:45,320
+Just as I have two samples
+I could have two gain nodes.
+
+60
+00:04:48,150 --> 00:04:53,770
 Usually what you do is use the gain nodes as routers.
 
+61
+00:04:53,770 --> 00:04:55,770
+DN: Right
+SP: They aren't actually modifying anything but you can connect things to them. Eventually they will be garbage collected when you're done with them, but you don't need to create the gain nodes all the time.
+Web audio can't get rid of those gain nodes because we want to use them afterwards. 
+The buffer source: once they are done they are done, so it knows I can get rid of them when they have ended and you don't have any listeners or anything.
+But the gain nodes: it doesn't know anything. So they are being kept.
+So I'm going to create two gain nodes. Because there is only so much you can optimise. It won't be very elegant but it should be more efficient. We don't want this thing to blow up!
+I could do a loop for two times. This is overblown. I'm trying to think of a variable that I'm not using anywhere else, but I'm just going to use this. This is the most stupid loop ever... Just for creating two gain nodes this is overblown but that's where I want to be. Hard coding, variable names.
+So this is not a good idea. Instead of doing it this way we could tell it which gain to connect to. Just as we said the buffer, we could also say the gain index. Array.  So we need to connect to node 1 and node 2. And then the value of this thing.
+Inaud the value, so inaud created the thing. It's getting complex. When you start writing things this way, it's kind of like writing your own synthesiser and introducing all the logic but it gets confusing.
+If you open a synthesiser you're not going to find an easy thing to look at, it's going to be complex. The routing is complex because it's a whole instrument and you're defining the whole logic.
+DN: Yes, right.
 
