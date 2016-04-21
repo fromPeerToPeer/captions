@@ -68,8 +68,27 @@ SP: Yes, some gains somewhere
 but we know where they are.
 
 17
-00:01:31,257 --> 00:01:33,250
-This is going to play in the pan zero. We don't care about the values now because they are inaud. This is a terrible function because its clapSamples1, plus some time and one number but you don't know what it is. It's not the best practice but you could elaborate on that later.
+00:01:31,874 --> 00:01:37,280
+This is going to play in the pan zero.
+
+18
+00:01:37,280 --> 00:01:42,114
+We don't care about the
+values now because they are inaud.
+
+19
+00:01:42,110 --> 00:01:46,868
+This is a terrible function call
+because it's clapSamples1,
+
+20
+00:01:46,880 --> 00:01:51,790
+plus some time and one number,
+but you don't know what it is. 
+
+21
+00:01:51,794 --> 00:01:53,790
+It's not the best practice but you could elaborate on that later.
 
 I don't like this, like, "magic numbers" thing it's pretty terrible.
 Ok so we need to create panNodes instead of gainNodes. I think its panner actually.
