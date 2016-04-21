@@ -261,9 +261,21 @@ I could have two gain nodes.
 Usually what you do is use the gain nodes as routers.
 
 61
-00:04:53,770 --> 00:04:55,770
+00:04:53,782 --> 00:04:53,870
 DN: Right
-SP: They aren't actually modifying anything but you can connect things to them. Eventually they will be garbage collected when you're done with them, but you don't need to create the gain nodes all the time.
+
+62
+00:04:53,870 --> 00:04:53,872
+SP: They aren't actually modifying anything but you can connect things to them. 
+DN: Right
+
+63
+00:04:53,872 --> 00:04:53,897
+DN: Right
+
+64
+00:04:53,984 --> 00:04:55,980
+Eventually they will be garbage collected when you're done with them, but you don't need to create the gain nodes all the time.
 Web audio can't get rid of those gain nodes because we want to use them afterwards. 
 The buffer source: once they are done they are done, so it knows I can get rid of them when they have ended and you don't have any listeners or anything.
 But the gain nodes: it doesn't know anything. So they are being kept.
