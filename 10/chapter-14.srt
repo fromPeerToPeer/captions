@@ -88,19 +88,109 @@ SP: This thing has caught my
 attention. I would remove it. 
 
 21
-00:01:41,702 --> 00:01:43,700
- I would make sure that the component is a bit less. That would be on some other project. There is nothing I would do  I would definitely extract things to other functions. For example this play buffer doesn't need to be here because this file. It's not too long, its 134 lines. But it's hard to make out what's going on here. Things get loaded. I would make things into functions so I can see the sequence of what's going on. And more parameters because right now everything is using a global context. It connects things to things so it's not very neat so I would. I would have the main.js set the sequence of everything and then extract things into functions. Because we're using webpack its pretty easy to require things instead of having everything in one massive file.
-But it's also important not to worry about requires when your prototyping. Because then you're like: oh I need to add this file to git, and then it's a require. It kind of like stops you. If this was growing more and I was using it with more people in the project I would totally split that because it's easier to collaborate with people when every person is touching a different file. But when you're beginning, when you're sketching, you don't want to be worrying about small details. I would just go step by step in this refactoring.
-I would like to have main be a more a more general global thing to direct everything and make this sequence more obvious because right now we're having this giant initialisation of things and then a function in the middle [laughter]. And then sample promises. I would have something like initialise, then here's where the UI is set la la la instead of this massive chunk of things. And if you have proper parameters they can all go so you have a shorter main and, you can dig into the function if you need, but you don't need to have this whole thingy.
-The functionality of this instrument is not too huge so maybe you could keep this here. All the loading and decoding could be out of here and everything else is still here...   The important things are still in your sight. So to speak.
-Also, I would make sure that this index is copied to build. Because right now we are opening this thing from the bundle. But if you want to put this project on the internet, that's not going to happen.
-You would need to have automatic things, so I would improve the build process. So here I would refer to bundle and generate everything here. So once you've  created the build you would upload the whole thing to the internet. You don't need to use the human factor in building this.
-And this will not run on chrome because it doesn't let you do requests locally, we need a server. Firefox is permissive in that sense. But chrome is not going to let us load the thing.
-DN: I see.
-SP: So if you want to develop this you need to be using a server, which I haven't because we don't want to make it too complex. But improving the build would be a good idea so you can test it with Safari, Chrome and maybe have the polyfill for Safari. And also if you want to test it with phones you need to expose it somehow because you cannot load this locally with phones. So you will need a file server.
-So that is some of the things I would do.
-DN: Alright. Well it's been really interesting watching you work. Thanks for coming on the show.
-SP: Thanks for having me.
-DN: You're welcome!
+00:01:41,600 --> 00:01:48,148
+I would make sure that the component
+is a bit less. That would be on some other project. 
 
+22
+00:01:48,171 --> 00:01:51,725
+There is nothing else I would do.
+
+23
+00:01:51,782 --> 00:01:59,040
+I would definitely extract
+things to other functions. 
+
+24
+00:01:59,040 --> 00:02:03,748
+For example this playBuffer doesn't
+need to be here because this file is long. 
+
+25
+00:02:03,740 --> 00:02:12,080
+It's not too long, its 134 lines. But it's
+hard to make out what's going on here. 
+
+26
+00:02:12,525 --> 00:02:14,617
+Things get loaded. 
+
+27
+00:02:14,651 --> 00:02:18,560
+I would make things into functions
+so I can see the sequence of what's going on.
+
+28
+00:02:18,620 --> 00:02:22,480
+And more parameters because right
+now everything is using a global context.
+
+29
+00:02:22,502 --> 00:02:29,702
+It connects things to things but it's not very neat. 
+
+30
+00:02:29,700 --> 00:02:35,771
+I would have the main.js set the sequence
+and then extract things into functions.
+
+31
+00:02:35,770 --> 00:02:42,160
+And because we're using webpack
+it's pretty easy to require things 
+
+32
+00:02:42,160 --> 00:02:45,222
+instead of having everything in one massive file.
+
+33
+00:02:45,220 --> 00:02:50,914
+But it's also important not to worry
+about requires when your prototyping.
+
+34
+00:02:50,910 --> 00:02:55,965
+Because then you're like: oh I need
+to add this file to git, and then it's a require;
+
+35
+00:02:55,960 --> 00:02:57,942
+And it kind of like stops you.
+
+36
+00:02:57,940 --> 00:03:04,742
+If this was growing more and I was using it
+with more people in the project I would  split that 
+
+37
+00:03:04,754 --> 00:03:09,180
+because it's easier to collaborate with people
+when every person is touching a different file. 
+
+38
+00:03:09,180 --> 00:03:15,360
+But when you're beginning, when you're sketching,
+you don't want to be worrying about small details.
+
+39
+00:03:15,380 --> 00:03:20,765
+I would just go step by step in this re-factoring.
+
+40
+00:03:23,370 --> 00:03:29,268
+I would like to have main be a more
+a more general global thing to direct everything
+
+41
+00:03:29,280 --> 00:03:30,765
+and make this sequence more obvious.
+
+42
+00:03:30,760 --> 00:03:35,222
+Because right now we're
+having this giant initialization of things 
+
+43
+00:03:35,257 --> 00:03:39,950
+and then a function in the middle [laughter]. 
 
