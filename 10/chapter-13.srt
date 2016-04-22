@@ -87,29 +87,160 @@ plus some time and one number,
 but you don't know what it is. 
 
 21
-00:01:51,794 --> 00:01:53,790
-It's not the best practice but you could elaborate on that later.
+00:01:51,790 --> 00:01:56,685
+It's not the best practice but
+you could elaborate on that later.
 
-I don't like this, like, "magic numbers" thing it's pretty terrible.
-Ok so we need to create panNodes instead of gainNodes. I think its panner actually.
+22
+00:01:56,680 --> 00:02:02,102
+I don't like this, "magic
+numbers" thing it's pretty terrible.
 
-There is also a StereoPannerNode, which is the one we want because it's easier to set up.
-DN: Ah right.
-SP: So this StereoPannerNode just goes left and right with the pan thingy. Whereas the other one is 3D, and you need to set up direction and the listener and also specify the listener. So this one is easier just left and right. So I want to create the stereo panner. And nodes, this is a habit with me.
+23
+00:02:02,100 --> 00:02:07,382
+OK so we need to create
+panNodes instead of gainNodes.
+
+24
+00:02:09,210 --> 00:02:14,057
+I think it's Panner actually.
+
+25
+00:02:14,125 --> 00:02:17,177
+Let me make sure.
+
+26
+00:02:17,170 --> 00:02:26,800
+There is also a StereoPannerNode, which is
+the one we want because it's easier to set up.
+
+27
+00:02:26,800 --> 00:02:31,725
+So this StereoPannerNode just
+goes left and right with the pan thingy. 
+
+28
+00:02:31,805 --> 00:02:37,520
+Whereas the other one is 3D, and you
+need to set up direction and the listener
+
+29
+00:02:37,542 --> 00:02:42,011
+and also specify the listener. So
+this one is easier - just left and right. 
+
+30
+00:02:43,188 --> 00:02:52,205
+So I want to create the StereoPanner... And nodes.
+
+31
+00:02:52,200 --> 00:02:53,600
+This is a habit with me.
+
+32
+00:02:53,600 --> 00:02:56,354
 DN: g... p...
-SP: So I connect this thing here. I also need to specify its pan. So p pan value. I need to create a stereo panner, and pan nodes.
-DN: is this going to be something  between -1 and +1?
-SP: Yes. Yes, -1 is full left, and plus one [full right]...
-So how do I do this inaud.
-I'm going to be super lazy because we are running out of time.  I'm going to v: allow here if j is zero minus one plus one. Because we are just going to write from zero one to one. Maybe we don't want it to be so specialised because this is extreme left and extreme right, but we will see.
-Sometimes you don't want to do it so saturated because if you play it in places that have proper speakers, some people won't listen to that because they are in the wrong place. But I think this should be ok.
-So hopefully this should still work. Yes, stereo.
+
+33
+00:02:56,788 --> 00:03:02,530
+SP: So I connect this thing here.
+I also need to specify it's pan. 
+
+34
+00:03:02,530 --> 00:03:04,411
+This is terrible.
+
+35
+00:03:04,434 --> 00:03:07,382
+So p pan value.
+
+36
+00:03:07,485 --> 00:03:12,057
+DN: Is this going to be something  between -1 and +1?
+
+37
+00:03:12,354 --> 00:03:18,068
+SP: Yes, -1 is full left, and plus one [full right]...
+So how do I do inaud function of this.
+
+38
+00:03:18,060 --> 00:03:22,800
+I'm going to be super lazy
+because we are running out of time.
+
+39
+00:03:22,834 --> 00:03:47,177
+I'm going to say v: allow here
+if j is zero minus one plus one. 
+
+40
+00:03:47,170 --> 00:03:51,211
+Because we are just going to write from zero to one. 
+
+41
+00:03:51,280 --> 00:03:53,508
+Maybe we don't want it to be so specialized,
+
+42
+00:03:53,542 --> 00:03:57,565
+because this is extreme left and
+extreme right, but we will see.
+
+43
+00:03:57,700 --> 00:04:00,365
+Sometimes you don't want
+to do it so saturated because,
+
+44
+00:04:00,422 --> 00:04:04,240
+if you play it in places that have
+proper speakers, some people won't listen to it 
+
+45
+00:04:04,240 --> 00:04:08,080
+because they are in the wrong place.
+But I think for us this should be OK.
+
+46
+00:04:08,080 --> 00:04:14,468
+So hopefully this should still work.
+
+47
+00:04:14,460 --> 00:04:16,354
+[They listen]
+
+48
+00:04:16,350 --> 00:04:18,137
+Yes, stereo.
+
+49
+00:04:18,160 --> 00:04:19,142
 DN: Can you tell?
-SP: I can
-DN: Yes I can hear it now. From where I'm sitting I'm just getting a wall of sound. Like the inaud from before but...
-SP: I'm trying to click on this. Anyway in theory you can see where the property is.
-If you could stop it. Now you can see the pan here.
-DN: Right
 
+50
+00:04:19,200 --> 00:04:22,011
+SP: I can.
 
+51
+00:04:22,350 --> 00:04:28,754
+DN: Yes I can hear it now. From where
+I'm sitting I'm just getting a wall of sound. 
+
+52
+00:04:31,394 --> 00:04:34,057
+SP: Like the inaud from before but...
+
+53
+00:04:36,217 --> 00:04:40,354
+I'm trying to click on this to
+stop it but it's hard to capture. 
+
+54
+00:04:43,790 --> 00:04:50,537
+Anyway in theory you can see
+where the property is, if you could stop it. 
+
+55
+00:04:53,160 --> 00:04:55,565
+Now you can see the pan here.
 
