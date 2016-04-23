@@ -75,7 +75,8 @@ I don't check in the node modules,
 
 18
 00:01:03,650 --> 00:01:06,800
-you're going to have a hard time figuring out what dependencies I'm using.
+you're going to have a hard time
+figuring out what dependencies I'm using.
 
 19
 00:01:06,800 --> 00:01:09,240
@@ -163,11 +164,11 @@ SP: If you look up transport you will
 find a lot of references to all the inaud,
 
 38
-00:02:37,090 --> 00:02:39,610
+00:02:37,090 --> 00:02:39,680
 especially MIDI creation software inaud transport.
 
 39
-00:02:39,650 --> 00:02:46,390
+00:02:39,702 --> 00:02:46,390
 I think it's so you can transport
 yourself around the song. I'm not sure.
 
@@ -187,7 +188,7 @@ This is what it should look like, if you use example.
 43
 00:02:59,090 --> 00:03:02,050
 But the one that we are going to
-use doesn't really have any theming;
+use doesn't really have any themeing;
 
 44
 00:03:02,050 --> 00:03:05,870
@@ -236,546 +237,541 @@ just need to be able to do registerElement,
 because that's not enabled in Firefox yet.
 
 54
-00:03:46,940 --> 00:03:46,950
-It's available in Chrome, so if you
-try things only in Chrome you don't notice.
-because that's not enabled in Firefox yet.
-
-55
 00:03:46,950 --> 00:03:51,930
 It's available in Chrome, so if you
 try things only in Chrome you don't notice.
 
-56
+55
 00:03:51,970 --> 00:03:57,370
 But if you try in Firefox without the
 DOM things enabled, you'll find errors.
 
-57
+56
 00:03:57,370 --> 00:04:00,490
 So this is going to polyfill the thing.
 
-58
+57
 00:04:00,490 --> 00:04:10,620
 So I've got all these things and to load them I need
 to use require, and this is not standard JavaScript.
 
-59
+58
 00:04:10,620 --> 00:04:16,770
 I could try to load these things from node modules,
 but it doesn't really work with this component,
 
-60
+59
 00:04:16,790 --> 00:04:19,250
 because it uses other modules you should require.
 
-61
+60
 00:04:19,290 --> 00:04:22,730
 So what I should use is webpack or browserify,
 
-62
+61
 00:04:22,740 --> 00:04:28,410
 or something that takes my main.js
 that I've been using so far, and converts that
 
-63
+62
 00:04:28,470 --> 00:04:33,810
 into something that takes all the requirements
 and things and makes that just one bundle.
 
-64
+63
 00:04:33,830 --> 00:04:34,640
 DN: Right.
 
-65
+64
 00:04:34,640 --> 00:04:37,090
 SP: So this is when things get interesting.
 
-66
+65
 00:04:37,090 --> 00:04:42,530
 I just used webpack last week and
 that was the first time I've installed it.
 
-67
+66
 00:04:42,540 --> 00:04:48,530
 It's pretty easy to use. I'm going to reuse it again.
 
-68
+67
 00:04:50,470 --> 00:04:56,380
 It's kind of like browserify, but it's got watch
 and things like that which are very convenient.
 
-69
+68
 00:04:56,410 --> 00:05:02,790
 With browserify you need to install watchify
 or something but webpack does everything for you.
 
-70
+69
 00:05:02,830 --> 00:05:10,290
 They call it 'Batteries included'. I like to
 play with different things and assess them.
 
-71
+70
 00:05:10,290 --> 00:05:14,960
 People say that webpack also
 generates smaller packages,
 
-72
+71
 00:05:14,990 --> 00:05:22,250
 but I haven't really used it in a project enough
 to compare. I like to experiment with things.
 
-73
+72
 00:05:23,440 --> 00:05:28,240
 And because this is the first time
 I've used webpack, I don't remember the syntax.
 
-74
+73
 00:05:28,280 --> 00:05:31,170
 So I'm going to go to look at 'getting started'.
 
-75
+74
 00:05:31,200 --> 00:05:35,710
 So you install it (this is not good
 practice, they say you should install...)
 
-76
+75
 00:05:35,730 --> 00:05:37,950
 So they recommend installing webpack minus g.
 
-77
+76
 00:05:37,960 --> 00:05:43,540
 That's not a good idea, because I don't want everyone
 who uses my computer to be able to use webpack.
 
-78
+77
 00:05:44,100 --> 00:05:46,420
 So I'm going to do it a different way.
 
-79
+78
 00:05:46,420 --> 00:05:50,410
 So they suggest that you use
 webpack and then the entry.js,
 
-80
+79
 00:05:50,420 --> 00:05:55,300
 which in my case is main.js,
 and then it generates bundle.js
 
-81
+80
 00:05:55,330 --> 00:05:59,720
 So what I'm going to do is
 to call that from npm script.
 
-82
+81
 00:05:59,770 --> 00:06:04,580
 Then it will call it from the
 binary inside `node_modules`,
 
-83
+82
 00:06:04,610 --> 00:06:11,680
 but it doesn't need to be installed
 globally. So I will just run it from the package.
 
-84
+83
 00:06:11,780 --> 00:06:14,500
 So here's package.json.
 
-85
+84
 00:06:14,500 --> 00:06:21,900
 And then I can add a new script which
 is called build, and this one will use webpack.
 
-86
+85
 00:06:21,900 --> 00:06:29,080
 So we will tell it to take main.js
 and output that to bundle.js for now.
 
-87
+86
 00:06:29,110 --> 00:06:35,050
 And you run this with `npm run build`.
 
-88
+87
 00:06:35,090 --> 00:06:49,010
 It adds this bin to the current
 environment for that moment.
 
-89
+88
 00:06:49,030 --> 00:06:52,490
 And then you don't need to have
 it globally because this is in the path.
 
-90
+89
 00:06:52,520 --> 00:06:56,210
 So you don't need to install
 it globally and then it's way cleaner.
 
-91
+90
 00:06:56,210 --> 00:07:01,150
 Because otherwise if I tell you to go and run
 webpack, you need to know that you need to install it.
 
-92
+91
 00:07:01,200 --> 00:07:06,960
 That's OK with webpack, but some other packages
 have a different name from the package.
 
-93
+92
 00:07:06,980 --> 00:07:11,070
 The binary they install is different.
 I think Grunt is an example?
 
-94
+93
 00:07:11,140 --> 00:07:15,660
 For Grunt you need to install grunt-cli. But how do I
 know that I need to install grunt-cli?
 
-95
+94
 00:07:15,680 --> 00:07:18,380
 DN: Right, so there's a lot of assumed knowledge there.
 
-96
+95
 00:07:18,410 --> 00:07:22,160
 SP: So if you just keep it like that
 and your project uses webpack: I don't care!
 
-97
+96
 00:07:22,180 --> 00:07:25,470
 Because your project just deals with
 whatever the name of the executable is
 
-98
+97
 00:07:25,500 --> 00:07:30,220
 if you use package.json script.
 
-99
+98
 00:07:30,250 --> 00:07:35,690
-So hopefully if this works... inaud
+So hopefully if this works it
+should just run the thingy.
 
-100
+99
 00:07:35,690 --> 00:07:37,910
 Yes, so it does build the thing.
 
-101
+100
 00:07:37,910 --> 00:07:43,360
 But I don't think it's a good idea to just
 output everything here, so it kind of grows.
 
-102
+101
 00:07:43,360 --> 00:07:50,500
 So I'm going to make a directory for building things.
 
-103
+102
 00:07:50,500 --> 00:07:57,510
 So I can build things here and
 then tell it to output the thing to build.
 
-104
+103
 00:07:57,600 --> 00:08:01,390
 I'll remove this one.
 
-105
+104
 00:08:01,390 --> 00:08:04,990
 And then run the script again.
 
-106
+105
 00:08:05,880 --> 00:08:08,250
 Not everything's is in the
 same place so that's better.
 
-107
+106
 00:08:08,250 --> 00:08:12,700
-I also think that it's not very neat to have
+I also think it's not very neat to have
 everything here with the build and everything else,
 
-108
+107
 00:08:12,720 --> 00:08:16,540
 so I'm going to move
 everything to a source directory.
 
-109
+108
 00:08:17,410 --> 00:08:19,570
 Otherwise it's too messy.
 
-110
+109
 00:08:20,050 --> 00:08:24,540
 I think I need to move all the claps.
 
-111
+110
 00:08:27,200 --> 00:08:30,680
 And package, I think, is not in the git thingy yet.
 
-112
+111
 00:08:31,870 --> 00:08:36,560
 I need to move it to source. I have created that, OK.
 
-113
+112
 00:08:36,810 --> 00:08:41,860
 A new package has to be here anyway.
 
-114
+113
 00:08:41,860 --> 00:08:47,790
 I also need to ignore `node_modules` and build,
 because I don't want those to be added to git.
 
-115
+114
 00:08:48,570 --> 00:08:51,690
 Vim is complaining about everything not existing any more.
 
-116
+115
 00:08:53,020 --> 00:08:56,900
 So I will create the .gitignore.
 
-117
+116
 00:08:57,020 --> 00:09:01,460
 This is the issue when you start adding build
-systems you have to move everything around.
+systems you have to move everything around,
 
-118
+117
 00:09:01,490 --> 00:09:02,940
 unless you start from the beginning.
 
-119
+118
 00:09:02,950 --> 00:09:06,110
 But I think it's a good idea to
 prototype and not care about build systems,
 
-120
+119
 00:09:06,130 --> 00:09:13,580
 because you get confused about webpack and
 watch etc. And you won't get anything done.
 
-121
+120
 00:09:13,620 --> 00:09:19,780
 So we'll ignore `node_modules`
 and also the build directory.
 
-122
+121
 00:09:19,780 --> 00:09:24,350
 Since we're on a mac, DS_Store
 at some point will show up!
 
-123
+122
 00:09:24,370 --> 00:09:25,670
 DN: Yes, sure.
 
-124
+123
 00:09:25,720 --> 00:09:31,880
 SP: So now if I run git status it will just try
 to add this, and not node_modules or anything.
 
-125
+124
 00:09:32,010 --> 00:09:39,500
 DN: I guess you will have to re-write the
 npm script as well, so that it looks inside source?
 
-126
+125
 00:09:39,520 --> 00:09:44,890
 SP: Yes. This need to look into these.
 
-127
+126
 00:09:44,910 --> 00:09:49,950
 and also because I haven't updated that...
 
-128
+127
 00:09:50,000 --> 00:09:56,730
 And this is kind of gross but it's
 just going to load from the build.
 
-129
+128
 00:09:56,760 --> 00:09:58,690
 I can fix that later.
 
-130
+129
 00:09:58,720 --> 00:10:07,010
 Just to make sure it works because if we have
 a server later and it's starting on the build,
 
-131
+130
 00:10:07,010 --> 00:10:11,600
 it can't access this thing so we want to
 maybe copy this file there and just load bundle.
 
-132
+131
 00:10:11,630 --> 00:10:15,860
 But step by step so it doesn't get too confusing here.
 
-133
+132
 00:10:15,950 --> 00:10:22,630
 So if I run the build now and then open source index.
 
-134
+133
 00:10:22,630 --> 00:10:25,650
 [Silence]
 
-135
+134
 00:10:28,040 --> 00:10:30,650
 Did anything happen (laughter).
 
-136
+135
 00:10:31,580 --> 00:10:34,610
 What is going on here?
 
-137
+136
 00:10:34,650 --> 00:10:39,990
 So this is... Is it called inaud? I'm confused now.
 
-138
+137
 00:10:40,620 --> 00:10:44,030
 So it takes inaud
 
-139
+138
 00:10:44,030 --> 00:10:47,140
 [Silence]
 
-140
+139
 00:10:47,350 --> 00:10:54,660
 So it's in build, it  has to go
 up one level and then build.
 
-141
+140
 00:10:54,660 --> 00:10:57,210
 And why didn't it...?
 
-142
+141
 00:10:57,940 --> 00:11:02,410
 So because we are not using a local server it
 cannot even detect that we are not using that.
 
-143
+142
 00:11:02,450 --> 00:11:06,640
 If we were using a server it would
 have said "I can't find that thing".
 
-144
+143
 00:11:06,640 --> 00:11:13,270
-[They listen] Now it's working, OK good 
+[They listen] Now it's working, OK good
 
-145
+144
 00:11:13,330 --> 00:11:20,610
 OK, so we are building
 everything again so I could maybe...
 
-146
+145
 00:11:20,640 --> 00:11:22,380
 DN: Is that worth a commit?
 
-147
+146
 00:11:22,430 --> 00:11:29,600
 SP: Almost. I want to make sure that I have a clean task.
 
-148
+147
 00:11:29,640 --> 00:11:30,600
 DN: OK.
 
-149
+148
 00:11:30,600 --> 00:11:38,620
-SP: And also make sure that this directory exists. 
+SP: And also make sure that this directory exists.
 
-150
+149
 00:11:40,200 --> 00:11:45,610
 So there are two scripts that
 people use...I think it's prebuild?
 
-151
+150
 00:11:45,640 --> 00:11:50,590
 It will detect that it goes
 before build and it will run those.
 
-152
+151
 00:11:52,640 --> 00:11:59,360
 If I run build, it will run prebuild before.
 (I don't know if this needs a hyphen).
 
-153
+152
 00:11:59,380 --> 00:12:01,380
 OK, so it's called (prebuild) before.
 
-154
+153
 00:12:01,440 --> 00:12:06,760
 So I can mkdirp - the build thingy.
 
-155
+154
 00:12:06,800 --> 00:12:09,460
 That will make sure the directory exists.
 
-156
+155
 00:12:09,490 --> 00:12:15,010
 And with this I want to delete the build
 directory, so I don't leave any traces.
 
-157
+156
 00:12:15,120 --> 00:12:17,150
 DN: Right. Is rimraf an alias?
 
-158
+157
 00:12:17,170 --> 00:12:19,890
 SP: No it's two modules that I'm going to install.
 
-159
+158
 00:12:19,910 --> 00:12:23,890
 SP: Because that way you can have
 this whole build task inside package.json
 
-160
+159
 00:12:23,890 --> 00:12:29,570
 without having to install a task runner like grunt
-or gulp. I learned it recently and it's very useful. 
+or gulp. I learned it recently and it's very useful.
+
+160
+00:12:29,580 --> 00:12:34,120
+If you running this in windows or something,
 
 161
-00:12:29,580 --> 00:12:34,120
-If you running this in windows or something, 
-
-162
 00:12:34,130 --> 00:12:37,850
 you don't need to worry about
 using different types of delete and things.
 
-163
+162
 00:12:37,860 --> 00:12:38,840
 DN: Nice, OK.
 
-164
+163
 00:12:38,840 --> 00:12:43,520
 SP: So I will install both.
 
-165
+164
 00:12:45,870 --> 00:12:50,590
 I think rimraf is made by
 Isaac Schlueter, the guy from npm.
 
-166
+165
 00:12:50,630 --> 00:13:00,230
 I'm not sure about mkdirp, but they are used
 by people in npm so you can trust it I think.
 
-167
+166
 00:13:00,230 --> 00:13:04,570
 Now... Yeah I changed this thing,
 so I've got new dependencies here.
 
-168
+167
 00:13:04,610 --> 00:13:09,600
 So if I run clean...
 
-169
+168
 00:13:09,650 --> 00:13:13,870
 The build has gone, so I don't have rubbish down here.
 
-170
+169
 00:13:15,180 --> 00:13:18,030
 I think now it's worth a commit.
 
-171
+170
 00:13:18,030 --> 00:13:21,880
 This is a bit of maintenance
 but I think it's important.
 
-172
+171
 00:13:21,930 --> 00:13:26,870
 It's good to have a clean slate before you move on.
 
-173
+172
 00:13:26,870 --> 00:13:28,880
 [Silence]
 

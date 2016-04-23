@@ -79,16 +79,16 @@ DN: Yes.
 
 18
 00:01:19,030 --> 00:01:23,590
-SP: We can make it a bit more ‘amusing'. 
+SP: We can make it a bit more ‘amusing'.
 
 19
 00:01:24,550 --> 00:01:30,470
-We know when things are starting which is... 
+We know when things are starting which is...
 
 20
 00:01:30,470 --> 00:01:37,570
 So this is the contextPlayTime. Instead of
-using that we might get some randomness here. 
+using that we might get some randomness here.
 
 21
 00:01:37,590 --> 00:01:41,870
@@ -101,12 +101,12 @@ So I will say getSomeRandom()
 23
 00:01:46,370 --> 00:01:51,500
 I'm going to make this function that
-will return positive and negative values. 
+will return positive and negative values.
 
 24
 00:01:51,830 --> 00:01:56,040
 It could be that when you are playing,
-sometimes you anticipate a bit. 
+sometimes you anticipate a bit.
 
 25
 00:01:56,040 --> 00:02:03,030
@@ -128,7 +128,7 @@ So what do we return?
 29
 00:02:15,260 --> 00:02:21,220
 We can start with some randomness and
-then adjust depending on what we see. 
+then adjust depending on what we see.
 
 30
 00:02:21,330 --> 00:02:26,030
@@ -141,7 +141,7 @@ then adjust depending on what we see.
 32
 00:02:29,660 --> 00:02:34,790
 You can call the random() function but
-this returns [a value] between 0.0 and 1.0. 
+this returns [a value] between 0.0 and 1.0.
 
 33
 00:02:34,810 --> 00:02:39,270
@@ -166,7 +166,7 @@ is going to be in -0.5 to 0.5 ... I think.
 
 38
 00:02:59,430 --> 00:03:03,860
-Or, one minus this might be from zero to... 
+Or, one minus this might be from zero to...
 
 39
 00:03:03,890 --> 00:03:07,790
@@ -205,7 +205,7 @@ Oh no, why not.
 
 47
 00:03:36,360 --> 00:03:39,070
-What am I returning? 
+What am I returning?
 
 48
 00:03:39,070 --> 00:03:42,060
@@ -218,7 +218,7 @@ This doesn't make any sense. Why?
 
 50
 00:03:51,440 --> 00:03:55,160
-I'm going to debug this thingy. 
+I'm going to debug this thingy.
 
 51
 00:03:55,160 --> 00:03:57,970
@@ -231,7 +231,7 @@ What is when, which is fine.
 53
 00:04:04,640 --> 00:04:09,800
 I guess it's because I've set the
-debugger which introduces some delay, 
+debugger which introduces some delay,
 
 54
 00:04:09,850 --> 00:04:12,320
@@ -269,11 +269,11 @@ I hate this! I always want to have a
 page with all of the one-liners I can check
 
 62
-00:04:38,390 --> 00:04:39,750
+00:04:38,390 --> 00:04:39,782
 and make sure that they're OK.
 
 63
-00:04:39,750 --> 00:04:44,960
+00:04:39,805 --> 00:04:44,960
 This is going to go from 1 to 0,
 but that's not what I want.
 
@@ -295,7 +295,7 @@ What am I doing? Argh!
 
 68
 00:05:09,230 --> 00:05:21,650
-I think if it's: 0.5 - 1 = -0.5, 
+I think if it's: 0.5 - 1 = -0.5,
 
 69
 00:05:23,510 --> 00:05:30,150
@@ -317,7 +317,7 @@ DN: So that will give you a value between -1.0 and +1.0?
 
 73
 00:05:47,760 --> 00:05:52,300
-SP: Yeah! This is going to return from minus 1 to 1. 
+SP: Yeah! This is going to return from minus 1 to 1.
 
 74
 00:05:52,300 --> 00:06:00,780
@@ -429,7 +429,7 @@ at 0.2 rather than 0.02 there.
 
 100
 00:08:10,640 --> 00:08:13,270
-SP: Inaud 
+SP: Inaud
 
 101
 00:08:13,290 --> 00:08:19,700

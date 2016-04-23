@@ -144,7 +144,7 @@ but instead of for (web audio) nodes.
 It's for things that might happen in the future.
 
 32
-00:02:48,360 --> 00:02:51,250
+00:02:48,360 --> 00:02:51,291
 You can connect as many
 things as you want to the promise.
 
@@ -256,32 +256,32 @@ This is a good case so I'm going to respond.
 56
 00:04:48,820 --> 00:04:52,880
 I'm going to fulfill the
-promise, with decoded buffer. 
+promise, with decoded buffer.
 
 57
 00:04:53,780 --> 00:04:59,000
 And if there is an error, I'm
-going to fail with the error.  
+going to fail with the error.
 
 58
-00:04:59,030 --> 00:05:01,660
+00:04:59,030 --> 00:05:01,794
 That's why I like the OK and
-fail because it's fairly obvious. 
+fail because it's fairly obvious.
 
 59
-00:05:01,690 --> 00:05:06,780
+00:05:01,805 --> 00:05:06,780
 Not like an error callback...
 It's too long...  Get on with it!
 
 60
 00:05:06,790 --> 00:05:16,370
 So I think with the promise version you
-can just return OK with the result of this. 
+can just return OK with the result of this.
 
 61
 00:05:16,420 --> 00:05:23,100
 But that's not in chrome, unless I add
-another poly filler and I don't want to do that. 
+another poly filler and I don't want to do that.
 
 62
 00:05:23,150 --> 00:05:27,030
@@ -304,19 +304,19 @@ going to try to load 'CLAP_07.WAV'
 
 66
 00:05:48,320 --> 00:05:51,880
-So if I do this... 
+So if I do this...
 
 67
 00:05:56,100 --> 00:06:01,060
-The promise is pending. So nothing's happening. 
+The promise is pending. So nothing's happening.
 
 68
 00:06:02,880 --> 00:06:09,010
-But if I say Promise.all() 
+But if I say Promise.all()
 
 69
 00:06:09,400 --> 00:06:14,340
-With an array of promises. In this case just one. 
+With an array of promises. In this case just one.
 
 70
 00:06:14,340 --> 00:06:26,070
@@ -348,7 +348,7 @@ So here I should have samples.
 
 76
 00:06:53,090 --> 00:06:57,510
-So it will make all the promises happen somehow. 
+So it will make all the promises happen somehow.
 
 77
 00:06:57,560 --> 00:07:04,710
@@ -384,7 +384,7 @@ the samples to load in an array;
 84
 00:07:32,180 --> 00:07:37,230
 and map it so you have a map
-of promises, and then you make them. 
+of promises, and then you make them.
 
 85
 00:07:37,320 --> 00:07:40,010
@@ -401,7 +401,7 @@ And you could map that to sample URL.
 
 88
 00:07:59,350 --> 00:08:05,550
-So you want to return promise and generate URL. 
+So you want to return promise and generate URL.
 
 89
 00:08:05,690 --> 00:08:10,810
@@ -414,7 +414,7 @@ DN: Right.
 
 91
 00:08:14,090 --> 00:08:20,900
-SP: I'm just going to put that promise here. 
+SP: I'm just going to put that promise here.
 
 92
 00:08:20,900 --> 00:08:23,930
@@ -431,7 +431,7 @@ DN: I think you need to call the first one 1.
 95
 00:08:35,840 --> 00:08:43,580
 SP: Yes. So in theory that should
-give me two samples, hopefully. 
+give me two samples, hopefully.
 
 96
 00:08:43,620 --> 00:08:47,710
@@ -444,22 +444,22 @@ in my global clap samples.
 
 98
 00:08:56,830 --> 00:09:02,460
-inaud
+Instead of just clap sample as I was doing before, (inaud)
 
 99
 00:09:02,490 --> 00:09:07,230
 Instead of having clap
-samples  I will make it an array.
+samples, I will make it an array.
 
 100
 00:09:07,280 --> 00:09:12,790
 So if I try to play when I have
-everything loaded inaud a break or something. 
+everything loaded inaud a break or something.
 
 101
 00:09:12,790 --> 00:09:20,700
 We could start it here, but we want
-to start when everything has been loaded. 
+to start when everything has been loaded.
 
 102
 00:09:20,890 --> 00:09:23,070
@@ -468,7 +468,7 @@ So we can start here.
 103
 00:09:23,150 --> 00:09:27,420
 Now everything's done I'm going
-to add other comments so it makes sense. 
+to add other comments so it makes sense.
 
 104
 00:09:27,520 --> 00:09:30,860
@@ -476,12 +476,12 @@ Everything's  loaded.
 
 105
 00:09:33,870 --> 00:09:39,350
-So in theory that should do it. 
+So in theory that should do it.
 
 106
 00:09:39,470 --> 00:09:45,090
 We need to change the function that plays samples
-so it uses different samples for each player. 
+so it uses different samples for each player.
 
 107
 00:09:45,130 --> 00:09:47,790
@@ -499,12 +499,12 @@ the sample and that's the promise.
 
 110
 00:09:58,640 --> 00:10:02,310
-So it's really re-factored nicely. 
+So it's really re-factored nicely.
 
 111
 00:10:02,640 --> 00:10:07,830
 So this is loaded and then we just
-need to make sure this one plays different things. 
+need to make sure this one plays different things.
 
 112
 00:10:07,830 --> 00:10:10,260
@@ -528,12 +528,12 @@ you have many things happening at the same time.
 116
 00:10:26,300 --> 00:10:31,480
 You want to use arrays instead of variables. But I
-think for the time being, and simplicity, it's better. 
+think for the time being, and simplicity, it's better.
 
 117
 00:10:31,480 --> 00:10:35,720
 Because otherwise the
-syntax has too many brackets. 
+syntax has too many brackets.
 
 118
 00:10:35,720 --> 00:10:39,280
@@ -557,7 +557,7 @@ DN: Yeah.
 
 123
 00:11:02,390 --> 00:11:05,650
-Too perfect, but they are playing. 
+Too perfect, but they are playing.
 
 124
 00:11:05,740 --> 00:11:09,510
@@ -575,7 +575,7 @@ monotonous I should say, but still mechanical.
 
 127
 00:11:19,290 --> 00:11:21,450
-SP: Less robotical. 
+SP: Less robotical.
 
 128
 00:11:21,520 --> 00:11:24,860

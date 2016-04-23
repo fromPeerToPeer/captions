@@ -182,11 +182,11 @@ SP: And also make sense inaud this,
 So this is the current one.
 
 41
-00:03:22,850 --> 00:03:25,010
+00:03:22,850 --> 00:03:25,154
 This is the amount of time we repeat with the stanza.
 
 42
-00:03:25,020 --> 00:03:28,185
+00:03:25,165 --> 00:03:28,180
 And this is the maximum we repeat the stanza.
 
 43
@@ -234,10 +234,10 @@ I don't usually use the word stanza.
 
 53
 00:04:38,640 --> 00:04:40,130
-DN: It's not flowing off your fingers. [Laughter]
+DN: It's not flowing off your fingers.
 
 54
-00:04:40,180 --> 00:04:41,980
+00:04:40,160 --> 00:04:41,954
 SP: No, it's not.
 
 55
@@ -466,7 +466,7 @@ short things you might just want to use that.
 
 105
 00:09:23,580 --> 00:09:28,360
-Just to make sure... I will log it. 
+Just to make sure... I will log it.
 
 106
 00:09:28,450 --> 00:09:31,660
@@ -492,7 +492,7 @@ DN: Ah... Right,OK.
 111
 00:09:45,930 --> 00:09:49,680
 SP: So right now they are the
-same because we're still not looping. 
+same because we're still not looping.
 
 112
 00:09:49,790 --> 00:09:56,640
@@ -514,34 +514,34 @@ DN: We're in the third stanza, zero two.
 
 116
 00:10:09,460 --> 00:10:11,930
-SP: Yes, so there are two shifts. OK, that looks good. 
+SP: Yes, so there are two shifts. OK, that looks good.
 
 117
 00:10:11,930 --> 00:10:15,010
-So that's why sometimes logging is good.  
+So that's why sometimes logging is good.
 
 118
 00:10:15,010 --> 00:10:20,000
 You could debug this thing but the problem with
-debugging is that you need to go step by step. 
+debugging is that you need to go step by step.
 
 119
 00:10:20,015 --> 00:10:24,535
 Whereas, if you can see the progression
-like this, it's easier to see what's going on. 
+like this, it's easier to see what's going on.
 
 120
 00:10:24,530 --> 00:10:28,290
 You don't need to say next next next,
-because that would be really boring. 
+because that would be really boring.
 
 121
 00:10:28,300 --> 00:10:34,575
-And also, this is not the same it's really slow-ish. 
+And also, this is not the same it's really slow-ish.
 
 122
 00:10:34,590 --> 00:10:36,595
-So yep, OK. 
+So yep, OK.
 
 123
 00:10:36,590 --> 00:10:40,260
@@ -550,7 +550,7 @@ So yep, OK.
 124
 00:10:40,400 --> 00:10:43,600
 We have the currentStep2,
-we can determine the shouldPlay2. 
+we can determine the shouldPlay2.
 
 125
 00:10:43,600 --> 00:10:50,265
@@ -567,22 +567,21 @@ play the buffer. And clap sample.
 
 128
 00:11:01,210 --> 00:11:03,380
-And they are happening at the same time. 
+And they are happening at the same time.
 
 129
 00:11:03,400 --> 00:11:06,840
 It's just that they are looking at
-different points in the sequence. 
+different points in the sequence.
 
 130
 00:11:06,880 --> 00:11:11,650
-But they are still inaud
-because the steps are still step time.
+But the the steps are still in step time.
 
 131
 00:11:11,740 --> 00:11:16,150
-SP: Maybe if this was a proper score it
-would all happen in quarters, I don't know. 
+Maybe if this was a proper score it
+would all happen in quarters, I don't know.
 
 132
 00:11:16,180 --> 00:11:20,200
@@ -595,7 +594,7 @@ So in theory this should play the things I want.
 
 134
 00:11:23,410 --> 00:11:24,980
-[playing clapping]
+[They listen]
 
 135
 00:11:25,020 --> 00:11:26,590
@@ -630,16 +629,16 @@ so things are not going to be super loud.
 142
 00:11:53,660 --> 00:11:58,660
 That's the issue with using the same sample
-for both, so I think I will change the sample. 
+for both, so I think I will change the sample.
 
 143
 00:11:58,680 --> 00:12:01,050
-[They listen]. 
+[They listen].
 
 144
 00:12:01,090 --> 00:12:05,440
 Yes, it's hard to say. I'm going to
-change the sample and add another one. 
+change the sample and add another one.
 
 145
 00:12:05,470 --> 00:12:09,090
@@ -652,12 +651,12 @@ DN: Yeah.
 
 147
 00:12:10,690 --> 00:12:13,250
-SP: I would say it's working, but who knows. 
+SP: I would say it's working, but who knows.
 
 148
 00:12:13,250 --> 00:12:19,210
 OK, so I will commit this and change to loading
-to 2 samples instead of using one for both. 
+to 2 samples instead of using one for both.
 
 149
 00:12:19,240 --> 00:12:21,340
@@ -691,12 +690,12 @@ SP: Yes, but it sounds like a machine as well, do do do do.
 156
 00:12:43,850 --> 00:12:54,340
 Also, in this case there is
-no silence in the second rep. 
+no silence in the second rep.
 
 157
 00:12:54,360 --> 00:13:00,620
 And the reason is because the dynamics
-compressor makes sure we are never saturating. 
+compressor makes sure we are never saturating.
 
 158
 00:13:00,650 --> 00:13:06,520
@@ -705,7 +704,7 @@ notice louder things... But right now we can't.
 
 159
 00:13:06,720 --> 00:13:10,010
-Let's try a different sample to start with. 
+Let's try a different sample to start with.
 
 160
 00:13:10,360 --> 00:13:13,200
