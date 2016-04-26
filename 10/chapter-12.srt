@@ -5,7 +5,7 @@ Chapter 12: Accenting the first beat.
 2
 00:00:03,390 --> 00:00:05,790
 DN: I suppose another thing
-to make it sound more musical, 
+to make it sound more musical,
 
 3
 00:00:05,810 --> 00:00:11,390
@@ -26,7 +26,7 @@ SP: Yes, we could maybe look at that later.
 
 7
 00:00:17,830 --> 00:00:27,930
-SP: So if we're at the beginning of the rep we want some to be louder and the rest quieter. 
+SP: So if we're at the beginning of the rep we want some to be louder and the rest quieter.
 
 8
 00:00:27,950 --> 00:00:30,670
@@ -47,21 +47,21 @@ DN: I think it will be just for the first player.
 
 12
 00:00:45,500 --> 00:00:51,450
-SP: OK so we just look at current step. 
+SP: OK so we just look at current step.
 
 13
 00:00:51,520 --> 00:00:58,210
 The way web audio works is,
-every node does a single thing. 
+every node does a single thing.
 
 14
 00:00:58,210 --> 00:01:03,380
-The buffer node doesn't have a volume parameter, 
+The buffer node doesn't have a volume parameter,
 
 15
 00:01:03,380 --> 00:01:09,290
 so we need to create a node that only
-modifies the volume of whatever goes through it. 
+modifies the volume of whatever goes through it.
 
 16
 00:01:09,290 --> 00:01:13,420
@@ -73,12 +73,12 @@ DN: I see.
 
 18
 00:01:16,170 --> 00:01:20,340
-SP: So here we create a buffer each time. 
+SP: So here we create a buffer each time.
 
 19
 00:01:20,390 --> 00:01:27,030
 So I'm going to introduce the gain node
-in between the buffer node and the limiter, 
+in between the buffer node and the limiter,
 
 20
 00:01:27,040 --> 00:01:33,410
@@ -104,7 +104,7 @@ If it doesn't work, we'll fix that.
 
 25
 00:01:49,570 --> 00:01:53,670
-So I will connect buffer node to the gain. 
+So I will connect buffer node to the gain.
 
 26
 00:01:55,310 --> 00:02:02,550
@@ -113,11 +113,11 @@ And then the gain to the limiter.
 
 27
 00:02:05,290 --> 00:02:08,560
-I also need to set the gain value. 
+I also need to set the gain value.
 
 28
 00:02:09,080 --> 00:02:14,560
-The amount of gain that we want, and it's got gain. 
+The amount of gain that we want, and it's got gain.
 
 29
 00:02:15,710 --> 00:02:21,650
@@ -134,12 +134,12 @@ Let's make sure that this works, to start with.
 32
 00:02:31,950 --> 00:02:41,520
 Let's suppose this is the
-gainValue... For the first player. 
+gainValue... For the first player.
 
 33
 00:02:41,550 --> 00:02:46,560
 Let's suppose it's always
-zero so that it keeps playing. 
+zero so that it keeps playing.
 
 34
 00:02:47,210 --> 00:02:55,510
@@ -157,12 +157,12 @@ If it's not undefined
 37
 00:03:05,740 --> 00:03:11,960
 You don't want to just use gainValue because if
-it's zero it's going to assume that it's one. 
+it's zero it's going to assume that it's one.
 
 38
 00:03:12,070 --> 00:03:17,420
 So if it's not undefined just
-use gainValue, otherwise use 1.0. 
+use gainValue, otherwise use 1.0.
 
 39
 00:03:17,520 --> 00:03:21,540
@@ -182,7 +182,7 @@ So in theory, this should...
 
 43
 00:03:31,380 --> 00:03:35,240
-And we should see new nodes here. 
+And we should see new nodes here.
 
 44
 00:03:35,240 --> 00:03:38,130
@@ -209,11 +209,11 @@ Hmm interesting.
 49
 00:03:55,240 --> 00:03:59,980
 So now were just playing the buffers,
-just not connecting them to the limiter. 
+just not connecting them to the limiter.
 
 50
 00:03:59,990 --> 00:04:03,100
-And this is definitely growing... Look at that. 
+And this is definitely growing... Look at that.
 
 51
 00:04:03,180 --> 00:04:06,330
@@ -236,7 +236,7 @@ to connect. Maybe we should have 2 base...
 
 55
 00:04:21,000 --> 00:04:26,390
-So we don't create all the gain nodes all the time. Maybe this is a bad idea. 
+So we don't create all the gain nodes all the time. Maybe this is a bad idea.
 
 56
 00:04:27,020 --> 00:04:33,330
@@ -257,30 +257,92 @@ Just as I have two samples
 I could have two gain nodes.
 
 60
-00:04:48,150 --> 00:04:53,770
+00:04:48,150 --> 00:04:54,525
 Usually what you do is use the gain nodes as routers.
 
 61
-00:04:53,782 --> 00:04:53,870
+00:04:54,651 --> 00:04:55,360
 DN: Right
 
 62
-00:04:53,870 --> 00:04:53,872
-SP: They aren't actually modifying anything but you can connect things to them. 
-DN: Right
+00:04:55,394 --> 00:05:00,171
+SP: They aren't actually modifying
+anything but you can connect things to them.
 
 63
-00:04:53,872 --> 00:04:53,897
-DN: Right
+00:05:00,182 --> 00:05:01,554
+DN: Yeah, OK.
 
 64
-00:04:53,984 --> 00:04:55,980
-Eventually they will be garbage collected when you're done with them, but you don't need to create the gain nodes all the time.
-Web audio can't get rid of those gain nodes because we want to use them afterwards. 
-The buffer source: once they are done they are done, so it knows I can get rid of them when they have ended and you don't have any listeners or anything.
-But the gain nodes: it doesn't know anything. So they are being kept.
-So I'm going to create two gain nodes. Because there is only so much you can optimise. It won't be very elegant but it should be more efficient. We don't want this thing to blow up!
-I could do a loop for two times. This is overblown. I'm trying to think of a variable that I'm not using anywhere else, but I'm just going to use this. This is the most stupid loop ever... Just for creating two gain nodes this is overblown but that's where I want to be. Hard coding, variable names.
+00:05:01,580 --> 00:05:05,280
+SP: Eventually they will be garbage
+collected when you're done with them,
+
+65
+00:05:05,302 --> 00:05:07,874
+but you don't need to create the gain every time.
+
+66
+00:05:07,940 --> 00:05:14,822
+Web audio can't get rid of those gain nodes because
+it doesn't know if you want to use them afterwards.
+
+67
+00:05:14,880 --> 00:05:19,188
+The buffer source: once they are done
+they are done, so it knows I can get rid of them 
+
+68
+00:05:19,200 --> 00:05:23,440
+when they have ended and you
+don't have any listeners or anything.
+
+69
+00:05:23,462 --> 00:05:28,297
+But the gainNodes: it doesn't
+know anything. So they are being kept.
+
+70
+00:05:28,290 --> 00:05:33,657
+So I'm going to create two gainNodes. 
+
+71
+00:05:33,650 --> 00:05:39,908
+Because there is only so much you can optimise.
+
+72
+00:05:40,434 --> 00:05:48,750
+It won't be very elegant but it should be
+more efficient. We don't want this thing to blow up!
+
+73
+00:05:52,445 --> 00:05:57,245
+I could do a loop for two times. [Laughter]
+
+74
+00:05:57,240 --> 00:06:01,737
+Interesting...This is totally overblown.
+
+75
+00:06:02,091 --> 00:06:07,771
+I'm trying to think of a variable that I'm not
+using anywhere else, but I'm just going to use this. 
+
+76
+00:06:10,660 --> 00:06:16,354
+This is the most stupid loop ever...
+
+77
+00:06:22,137 --> 00:06:26,914
+Just for creating two gain nodes this
+is overblown but that's where I want to be. 
+
+78
+00:06:26,914 --> 00:06:29,302
+Hard coding, variable names.
+
+79
+00:06:29,302 --> 00:06:31,300
 So this is not a good idea. Instead of doing it this way we could tell it which gain to connect to. Just as we said the buffer, we could also say the gain index. Array.  So we need to connect to node 1 and node 2. And then the value of this thing.
 Inaud the value, so inaud created the thing. It's getting complex. When you start writing things this way, it's kind of like writing your own synthesiser and introducing all the logic but it gets confusing.
 If you open a synthesiser you're not going to find an easy thing to look at, it's going to be complex. The routing is complex because it's a whole instrument and you're defining the whole logic.
