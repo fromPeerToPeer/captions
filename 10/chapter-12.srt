@@ -390,3 +390,56 @@ you would find it very complex.
 The routing is complex because it's a whole
 instrument and you're defining the whole logic.
 
+90
+00:07:28,370 --> 00:07:31,257
+So its bound to be confusing in some way.
+
+91
+00:07:31,280 --> 00:07:39,600
+I'm not going to assume that you
+can't pass the gain index because this is required. 
+
+92
+00:07:39,610 --> 00:07:45,325
+The gainValue I can make optional, but
+you definitely need to specify the gainIndex. 
+
+93
+00:07:45,337 --> 00:07:46,880
+The gain is going to be the gainNodes of gainIndex. And also I need to connect the node. This is so terrible. Its ac.createGain(). No there is another solution otherwise they're not going to play.
+DN: And the limiter connects to?
+SP: Yes, it needs to be connected to the limiter.
+OK the gains are connected so we have these two base here waiting for us to connect things to them. And then decide which node to connect this, depending on which voice. The gain, we change the value again, this is just normal. We connect the node to the gain. This doesn't have to be here. And the rest should be ok.
+And we need to change this. Where we decide which thing to play.
+So its zero because this is the first voice. Lets suppose its zero because we don't set the value, and then the second one should be one, which is an index of zero. So in theory they should still be playing.
+DN: So let's see if we've patched that memory leak.
+[they listen]
+Wow it's doing a little dance.
+SP: Now we don't have this massive gain collection.
+
+Yeah it's funny, because depending on when you created the node...
+It looks like a visual for this thingy.
+So that's good. Now we need to change the volume. But we could maybe commit this thingy.
+
+Commit: "with two gains for different track volumes'
+
+The gain value should have been here anyway. So if the currentStep is zero, we want this one to be louder, otherwise it has to be 0.5 so I'm going to actually do it the other way. That's half of the volume. Everyone should use the same gain volume. But it doesn't.
+So if we change it here, it's going to be one and then the other one is going to be really quiet so we need to change both.
+We could start with 0.5 for everyone. I may want to have zero value one and zero value two. Gain value is always 0.5.
+DN: Yes sure.
+SP: And then gain value 1 might be 1. No 2.
+DN: And this one want s to be 1 as well.
+SP: Yes.
+If currentStep === 0 I want it to be 1... This might sound horrible.
+[they listen]
+DN: I'm not hearing any difference.
+SP: I'm going to console.log it.
+[they listen]
+Am I building this at all? Ah it shows from time to time.
+DN: I wonder if it's just stuck.
+SP: I m going to...
+DN: That's definitely quieter.
+SP: I've got to make it even quieter.
+
+[it gets quieter]
+
