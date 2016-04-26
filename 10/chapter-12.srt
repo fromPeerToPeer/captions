@@ -405,17 +405,97 @@ The gainValue I can make optional, but
 you definitely need to specify the gainIndex. 
 
 93
-00:07:45,337 --> 00:07:46,880
-The gain is going to be the gainNodes of gainIndex. And also I need to connect the node. This is so terrible. Its ac.createGain(). No there is another solution otherwise they're not going to play.
+00:07:45,337 --> 00:07:52,640
+The gain is going to be the gainNodes of gainIndex. 
+
+94
+00:07:52,640 --> 00:07:58,285
+And also I need to connect the node.
+
+95
+00:07:58,380 --> 00:08:04,182
+This is so terrible. It's ac.createGain(). 
+
+96
+00:08:04,251 --> 00:08:09,794
+And then inaud I also need to connect that to the destination.
+
+97
+00:08:09,790 --> 00:08:13,817
+Otherwise they're not going to play.
+
+98
+00:08:13,851 --> 00:08:16,480
 DN: And the limiter connects to?
+
+99
+00:08:16,525 --> 00:08:20,640
 SP: Yes, it needs to be connected to the limiter.
-OK the gains are connected so we have these two base here waiting for us to connect things to them. And then decide which node to connect this, depending on which voice. The gain, we change the value again, this is just normal. We connect the node to the gain. This doesn't have to be here. And the rest should be ok.
-And we need to change this. Where we decide which thing to play.
-So its zero because this is the first voice. Lets suppose its zero because we don't set the value, and then the second one should be one, which is an index of zero. So in theory they should still be playing.
+
+100
+00:08:20,708 --> 00:08:26,457
+OK the gains are connected
+so we have these two base here 
+
+101
+00:08:26,450 --> 00:08:28,525
+waiting for us to connect things to them.
+
+102
+00:08:28,570 --> 00:08:34,605
+And then inaud decide which node
+to connect this, depending on which voice. 
+
+103
+00:08:34,685 --> 00:08:40,994
+The gain, we change the value again, this is
+just normal. We connect the node to the gain. 
+
+104
+00:08:41,051 --> 00:08:46,530
+This doesn't have to be here. And the rest should be OK.
+
+105
+00:08:46,530 --> 00:08:54,708
+And we need to change this;
+where we decide which thing to play.
+
+106
+00:08:54,754 --> 00:09:00,068
+So it's zero because this is the first voice. 
+
+107
+00:09:00,137 --> 00:09:03,725
+Let's suppose it's zero because we don't set the value,
+
+108
+00:09:03,760 --> 00:09:10,354
+and then the second one should
+be one, which is an index of zero. 
+
+109
+00:09:10,388 --> 00:09:12,171
+So in theory they should still be playing.
+
+110
+00:09:12,170 --> 00:09:16,297
 DN: So let's see if we've patched that memory leak.
-[they listen]
-Wow it's doing a little dance.
+
+111
+00:09:18,080 --> 00:09:26,720
+[They listen]
+
+112
+00:09:29,337 --> 00:09:31,800
+DN: Wow it's doing a little dance.
+
+113
+00:09:33,700 --> 00:09:37,634
 SP: Now we don't have this massive gain collection.
+
+114
+00:09:39,314 --> 00:09:44,422
+
 
 Yeah it's funny, because depending on when you created the node...
 It looks like a visual for this thingy.
