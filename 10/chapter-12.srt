@@ -342,9 +342,51 @@ is overblown but that's where I want to be.
 Hard coding, variable names.
 
 79
-00:06:29,302 --> 00:06:31,300
-So this is not a good idea. Instead of doing it this way we could tell it which gain to connect to. Just as we said the buffer, we could also say the gain index. Array.  So we need to connect to node 1 and node 2. And then the value of this thing.
-Inaud the value, so inaud created the thing. It's getting complex. When you start writing things this way, it's kind of like writing your own synthesiser and introducing all the logic but it gets confusing.
-If you open a synthesiser you're not going to find an easy thing to look at, it's going to be complex. The routing is complex because it's a whole instrument and you're defining the whole logic.
-DN: Yes, right.
+00:06:29,634 --> 00:06:34,594
+So we did this thing but it is not a good idea.
+
+80
+00:06:34,620 --> 00:06:40,674
+So instead of doing it this way we
+could tell it which gain to connect to.
+
+81
+00:06:40,685 --> 00:06:46,525
+Just as we said the buffer, we
+could also say the gain index... Array. 
+
+82
+00:06:46,520 --> 00:06:51,805
+So it will try to connect to node 1 or node 2. 
+
+83
+00:06:51,800 --> 00:06:55,062
+And then the value of this thing...  
+
+84
+00:06:55,060 --> 00:07:01,725
+Inaud
+
+85
+00:07:02,731 --> 00:07:05,291
+It's getting complex. 
+
+86
+00:07:05,290 --> 00:07:11,908
+When you start routing things this way,
+it's kind of like writing your own synthesizer 
+
+87
+00:07:11,920 --> 00:07:14,857
+and introducing all the logic but it gets confusing.
+
+88
+00:07:16,262 --> 00:07:23,417
+If you open a synthesizer
+you would find it very complex.
+
+89
+00:07:23,440 --> 00:07:28,377
+The routing is complex because it's a whole
+instrument and you're defining the whole logic.
 
