@@ -633,43 +633,141 @@ I'm going to make it even quieter.
 OK so now it's quieter. I think I need to...
 
 147
-00:12:52,280 --> 00:13:01,805
-DN: I suppose another thing to make it sound more musical, maybe the first beat could always be slightly louder? And that would give you a bit of orientation.
-SP: Could be,
-DN: That wasn't in the original spec!
+00:12:54,228 --> 00:12:55,660
+SP: It's very quick.
 
-SP: So if were at the beginning of the rep we want some to be louder and the rest quieter. On a step scale. And it doesn't matter if it's the first or the second player, it's for both of them.
-DN: I think it will be just for the first player.
-SP: Ok so we just look at current step. The way web audio works is every node does a single thing. The buffer node doesn't have a volume parameter, so we need to create a node that only modifies the volume of whatever goes through it. It's called 'gain', so you can adjust the gain.
-DN: I see.
-SP: So here we create a buffer each time. So I'm going to introduce the gain node in between the buffer node and the limiter, and set the volume as well, so it's a bit contrived.
-So I will call it gain. I can never remember if its createGain() or createGainNode().
-If it doesn't work, we'll fix that.
-So I will connect buffer node. This has to be the gain value. Its gain limiter.
-I also need to set the gain value. The amount of gain that we want, and it's got gain. Its gain value, I will explain why.
-Let's make sure that this works, to start with. Let's suppose this is the gain value. For the first player. It's always zero so that it keeps playing. We don't want to change the second one so I'm going to make it inaud value. Classic JavaScript.
-If it's not undefined
-You don't want to just use gainValue because if it's zero it's going to assume that it's one. So if it's not undefined just use gain value, otherwise use 1.0. So it will not change anything at all. Question mark.
-So in theory, this should...
-[they listen]
-So let's see what's going on here. At some point it should disappear, but it hasn't for some reason.
-DN: Interesting! Have we introduced a memory leak here?
-SP: Yes! I think that's the way I'm connecting things. Hmm interesting.
-So now were just playing the buffers just not taking them to the limiter and this is growing, look at that. OK I need to close this before it hogs down everything. 
-Let me think about how to do this. When I was doing that I was thinking: will they just get removed? Or just create a disaster here? Maybe I should tell it which gain to connect. Maybe we should have 2 base...
-So we don't create all the gain nodes all the time. This is a bad idea. Like having two roads... Or, just tell it which gain to connect to so I don't do this massive amount of gains.
-Just as I have two samples I can have two gain nodes.
-Usually what you do is use the gain nodes as routers.
-DN: Right
-SP: They aren't actually modifying anything but you can connect things to them. Eventually they will be garbage collected when you're done with them, but you don't need to create the gain nodes all the time.
-Web audio can't get rid of those gain nodes because we want to use them afterwards. 
-The buffer source: once they are done they are done, so it knows I can get rid of them when they have ended and you don't have any listeners or anything.
-But the gain nodes: it doesn't know anything. So they are being kept.
-So I'm going to create two gain nodes. Because there is only so much you can optimise. It won't be very elegant but it should be more efficient. We don't want this thing to blow up!
-I could do a loop for two times. This is overblown. I'm trying to think of a variable that I'm not using anywhere else, but I'm just going to use this. This is the most stupid loop ever... Just for creating two gain nodes this is overblown but that's where I want to be. Hard coding, variable names.
-So this is not a good idea. Instead of doing it this way we could tell it which gain to connect to. Just as we said the buffer, we could also say the gain index. Array.  So we need to connect to node 1 and node 2. And then the value of this thing.
-Inaud the value, so inaud created the thing. It's getting complex. When you start writing things this way, it's kind of like writing your own synthesiser and introducing all the logic but it gets confusing.
-If you open a synthesiser you're not going to find an easy thing to look at, it's going to be complex. The routing is complex because it's a whole instrument and you're defining the whole logic.
-DN: Yes, right.
+148
+00:12:55,660 --> 00:12:59,268
+DN: It's extremely loud for a
+single sample, and then it cuts down...
 
+149
+00:12:59,268 --> 00:13:05,988
+SP: Yes I need to make it ramp to the value.
+
+150
+00:13:05,980 --> 00:13:13,794
+DN: Ah right! This is much more low
+level and involved than I imagined it would be.
+
+151
+00:13:13,790 --> 00:13:17,714
+SP: Yes. So for that you have
+linearRampToValue and exponentialRamp. 
+
+152
+00:13:17,725 --> 00:13:21,748
+That's why I was saying that
+it has to be called gain.value. 
+
+153
+00:13:21,740 --> 00:13:30,971
+This is what they call audio params. So you don't set
+the value like that. You select functions in here.  
+
+154
+00:13:30,970 --> 00:13:34,411
+So if I just set that value it
+would immediately change the value.
+
+155
+00:13:34,410 --> 00:13:43,028
+But if I say linearRampToValue()
+it will try to ramp to that. 
+
+156
+00:13:43,040 --> 00:13:47,211
+And I can't even remember the
+syntax, so I'm going to look for it.
+
+157
+00:13:47,410 --> 00:13:51,862
+linearRampToValueAtTime().
+I couldn't remember the whole method name.
+
+158
+00:13:51,920 --> 00:14:00,011
+So the value and the end time.
+No there was another... I'm confused.
+
+159
+00:14:00,010 --> 00:14:05,188
+Yes, so it's near enough ToValueAtTime.
+
+160
+00:14:08,217 --> 00:14:14,228
+So I want to automate this thing
+and have it change this to linear value.
+
+161
+00:14:14,220 --> 00:14:18,102
+Hopefully that might be a little be smoother.
+
+162
+00:14:19,462 --> 00:14:21,885
+Let's try this. 
+
+163
+00:14:21,880 --> 00:14:24,834
+[They listen]
+
+164
+00:14:25,085 --> 00:14:29,828
+DN: Oh yeah, that's definitely audible.
+
+165
+00:14:34,068 --> 00:14:38,605
+SP: Maybe we want to make it less extreme.
+
+166
+00:14:40,320 --> 00:14:42,708
+DN: that's good.
+
+167
+00:14:44,731 --> 00:14:47,520
+SP: Yes you can notice the higher... 
+
+168
+00:14:54,011 --> 00:14:57,142
+Do we want that, I don't know if it's worth it?
+
+169
+00:15:03,862 --> 00:15:08,834
+DN: I think it's more noticeable
+now that they're out of phase.
+
+170
+00:15:09,170 --> 00:15:12,811
+SP: Yes, but that's not how the music is actually.
+
+171
+00:15:15,428 --> 00:15:18,137
+DN: I think that sounds a lot better than before.
+
+172
+00:15:18,180 --> 00:15:25,542
+SP: I don't know. I'm conflicted, because I think the
+whole idea of this is that they both sound the same.
+
+173
+00:15:25,930 --> 00:15:28,342
+Form this kind of pattern. 
+
+174
+00:15:28,370 --> 00:15:35,725
+This is in balance and it doesn't
+give the same ... Like the shifting thingy.
+
+175
+00:15:35,730 --> 00:15:37,554
+I don't think the result is worth it.
+
+176
+00:15:37,554 --> 00:15:39,291
+DN: No it's not really.
+
+177
+00:15:39,337 --> 00:15:43,840
+SP: I think for me, the best thing
+about this music is how hypnotic it gets.
 
