@@ -42,12 +42,12 @@ And it doesn't matter if it's the first
 or the second player, it's for both of them.
 
 11
-00:00:43,550 --> 00:00:45,500
+00:00:43,550 --> 00:00:45,565
 DN: I think it will be just for the first player.
 
 12
-00:00:45,500 --> 00:00:51,450
-SP: OK so we just look at current step.
+00:00:45,577 --> 00:00:51,450
+SP: OK, so we just look at current step.
 
 13
 00:00:51,520 --> 00:00:58,210
