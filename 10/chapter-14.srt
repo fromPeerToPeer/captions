@@ -272,29 +272,66 @@ You don't need to use the
 human factor in building this.
 
 60
-00:05:02,920 --> 00:05:11,908
+00:05:02,920 --> 00:05:13,702
 And this will not run on Chrome because it doesn't
 let you do requests locally, you need a server. 
 
 61
-00:05:11,908 --> 00:05:13,702
-Firefox is permissive in that sense. But chrome is not going to let us load the thing.
-DN: I see.
-SP: So if you want to develop this you need to be using a server, which I haven't because we don't want to make it too complex. But improving the build would be a good idea so you can test it with Safari, Chrome and maybe have the polyfill for Safari. And also if you want to test it with phones you need to expose it somehow because you cannot load this locally with phones. So you will need a file server.
-So that is some of the things I would do.
-DN: Alright. Well it's been really interesting watching you work. Thanks for coming on the show.
-SP: Thanks for having me.
-DN: You're welcome!
-And this will not run on Chrome because it doesn't
-let you do requests locally, you need a server. 
+00:05:13,740 --> 00:05:20,285
+Firefox is permissive in that sense. But
+Chrome is not going to let us load the thing.
 
 62
-00:05:13,702 --> 00:05:13,900
-Firefox is permissive in that sense. But chrome is not going to let us load the thing.
+00:05:20,285 --> 00:05:21,062
 DN: I see.
-SP: So if you want to develop this you need to be using a server, which I haven't because we don't want to make it too complex. But improving the build would be a good idea so you can test it with Safari, Chrome and maybe have the polyfill for Safari. And also if you want to test it with phones you need to expose it somehow because you cannot load this locally with phones. So you will need a file server.
+
+63
+00:05:21,085 --> 00:05:23,500
+SP: So if your developing
+you should be using a server, 
+
+64
+00:05:23,520 --> 00:05:26,720
+which I haven't because we
+don't want to make it too complex. 
+
+65
+00:05:26,720 --> 00:05:32,262
+But improving the build would be a good
+idea so you can test it with Safari and Chrome,
+
+66
+00:05:32,262 --> 00:05:35,440
+and maybe have a polyfill for Safari.
+
+67
+00:05:35,480 --> 00:05:40,217
+And also if you want to test it with
+phones you need to expose it somehow
+
+68
+00:05:40,240 --> 00:05:45,405
+because you cannot load this locally
+with phones. So you will need a file server.
+
+69
+00:05:46,674 --> 00:05:49,280
 So that is some of the things I would do.
-DN: Alright. Well it's been really interesting watching you work. Thanks for coming on the show.
+
+70
+00:05:49,280 --> 00:05:51,428
+DN: Alright. Well it's been really
+interesting watching you work. 
+
+71
+00:05:51,451 --> 00:05:53,360
+Thanks for coming on the show.
+
+72
+00:05:53,382 --> 00:05:54,285
 SP: Thanks for having me.
+
+73
+00:05:54,297 --> 00:05:55,611
 DN: You're welcome!
 
