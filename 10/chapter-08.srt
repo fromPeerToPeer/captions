@@ -188,7 +188,7 @@ This is what it should look like, if you use example.
 43
 00:02:59,090 --> 00:03:02,050
 But the one that we are going to
-use doesn't really have any themeing;
+use doesn't really have any theming;
 
 44
 00:03:02,050 --> 00:03:05,870

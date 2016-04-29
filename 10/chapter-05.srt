@@ -800,7 +800,7 @@ I've got some error so that's good.
 173
 00:14:43,500 --> 00:14:49,460
 The number of steps is undefined...
-because inaud the sequence step.
+Because inaud the sequence step.
 
 174
 00:14:50,690 --> 00:14:53,490

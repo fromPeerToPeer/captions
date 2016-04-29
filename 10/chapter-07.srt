@@ -81,7 +81,7 @@ I will do this step by step.
 18
 00:01:36,760 --> 00:01:46,740
 So I can give a URL, and take
-out the hard codedness of that.
+out the hard-codedness of that.
 
 19
 00:01:46,760 --> 00:01:52,530

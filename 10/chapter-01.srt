@@ -9,7 +9,7 @@ by watching live coding videos.
 
 3
 00:00:06,440 --> 00:00:12,448
-Our guest today is Soledad Penades,
+Our guest today is Soledad Penadés,
 who is a developer evangelist at Mozilla.
 
 4
@@ -20,7 +20,7 @@ and developer tools for Firefox.
 5
 00:00:17,230 --> 00:00:21,680
 And she loves to experiment
-with Web Audio and Web GL.
+with Web Audio and WebGL.
 
 6
 00:00:21,696 --> 00:00:27,840

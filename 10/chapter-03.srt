@@ -86,7 +86,7 @@ DN: So we're seeing the graph?
 
 20
 00:01:28,810 --> 00:01:35,430
-SP: Yes, but we don't see the BufferStore
+SP: Yes, but we don't see the BufferSource
 because it's just died and it's been deleted.
 
 21
