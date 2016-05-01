@@ -40,12 +40,12 @@ of synchronicity in JavaScript.
 
 10
 00:00:51,840 --> 00:01:00,110
-They created this thing called promises, so
-you can enter sync without having zero callbacks.
+They created this thing called promises, so you can
+use them to sync without having several callbacks.
 
 11
 00:01:00,170 --> 00:01:08,540
-If we didn't use promises we have to load the first
+If we didn't use promises we would have to load the first
 sample and then the second, and it's not very elegant.
 
 12
@@ -71,7 +71,7 @@ it's a bit less hard-coded and a bit more generic.
 16
 00:01:26,760 --> 00:01:32,160
 So I'm going to change this
-comment to "Loading samples generally".
+thing into "Loading samples generally".
 
 17
 00:01:33,560 --> 00:01:36,760
@@ -128,7 +128,7 @@ rejected, which is when something fails.
 28
 00:02:31,170 --> 00:02:38,290
 When you have a promise you can use
-the then() method to say when you fulfill this,
+the then() method to say when you fulfil this,
 
 29
 00:02:38,310 --> 00:02:41,200
@@ -150,12 +150,12 @@ things as you want to the promise.
 
 33
 00:02:51,310 --> 00:02:56,700
-You can connect a number of events.
-Inaud, or you could load more things.
+You can connect a number of events
+in the UI, or you could load more things.
 
 34
 00:02:56,710 --> 00:03:00,700
-For example you might want to load something
+For example you might want to load samples
 sequentially, instead of all at the same time.
 
 35
@@ -237,12 +237,12 @@ I just want you to load and give me a sample.
 
 52
 00:04:26,360 --> 00:04:34,420
-So I'm going to make it inaud and then here.
+So I'm going to make it fire whatever, and then here.
 
 53
 00:04:34,490 --> 00:04:39,090
-There is a promised version of the inaud
-ordinator but it doesn't work in Chrome yet.
+There is a promise version of decodeAudioData
+but it doesn't work in Chrome yet.
 
 54
 00:04:39,120 --> 00:04:43,130
@@ -251,11 +251,11 @@ So I'm still using the callback.
 55
 00:04:43,150 --> 00:04:48,780
 So it's pretty much the same.
-This is a good case so I'm going to respond.
+This is the good case so I'm going to respond.
 
 56
 00:04:48,820 --> 00:04:52,880
-I'm going to fulfill the
+I'm going to fulfil the
 promise, with decoded buffer.
 
 57
@@ -270,7 +270,7 @@ fail because it's fairly obvious.
 
 59
 00:05:01,805 --> 00:05:06,780
-Not like an error callback...
+Not like onError callback...
 It's too long...  Get on with it!
 
 60
@@ -281,7 +281,7 @@ can just return OK with the result of this.
 61
 00:05:16,420 --> 00:05:23,100
 But that's not in chrome, unless I add
-another poly filler and I don't want to do that.
+another polyfill and I don't want to do that.
 
 62
 00:05:23,150 --> 00:05:27,030
@@ -321,7 +321,7 @@ With an array of promises. In this case just one.
 70
 00:06:14,340 --> 00:06:26,070
 Or maybe not. Let's not go that far. If I say sample
-promise then hopefully it will give me a sample.
+promise then, hopefully it will give me a sample.
 
 71
 00:06:26,100 --> 00:06:29,320
@@ -329,7 +329,7 @@ promise then hopefully it will give me a sample.
 
 72
 00:06:29,320 --> 00:06:32,200
-Ta Ta !
+Ta da!
 
 73
 00:06:32,200 --> 00:06:41,120
@@ -339,7 +339,7 @@ use promise all with... Err not that far.
 74
 00:06:41,140 --> 00:06:47,290
 This is not Ruby... So I need
-to have parenthesis. [laughter].
+to have parentheses. [laughter].
 
 75
 00:06:48,630 --> 00:06:52,920
@@ -357,7 +357,8 @@ and then give me the samples in another array.
 
 78
 00:07:04,710 --> 00:07:09,490
-I should have another buffer which is the inaud before.
+I should have another buffer which
+is the same thing as before.
 
 79
 00:07:09,550 --> 00:07:16,200
@@ -388,7 +389,7 @@ of promises, and then you make them.
 
 85
 00:07:37,320 --> 00:07:40,010
-So inaud. (laughter).
+So, I could actually do it (laughter).
 
 86
 00:07:40,040 --> 00:07:44,920
@@ -406,7 +407,7 @@ So you want to return promise and generate URL.
 89
 00:08:05,690 --> 00:08:10,810
 So this should give you a list of
-promises that you then send to a promise.
+promises that you then send to promise.
 
 90
 00:08:10,880 --> 00:08:13,910
@@ -444,7 +445,7 @@ in my global clap samples.
 
 98
 00:08:56,830 --> 00:09:02,460
-Instead of just clap sample as I was doing before, (inaud)
+Instead of just clap sample as I was doing before.
 
 99
 00:09:02,490 --> 00:09:07,230
@@ -453,8 +454,8 @@ samples, I will make it an array.
 
 100
 00:09:07,280 --> 00:09:12,790
-So if I try to play when I have
-everything loaded inaud a break or something.
+So if I try to play something without having
+everything loaded it will break or something.
 
 101
 00:09:12,790 --> 00:09:20,700
@@ -522,7 +523,7 @@ sample; play one and play the other one.
 
 115
 00:10:19,990 --> 00:10:26,280
-It maybe should be less hard code. Especially when
+It maybe should be less hard-coded. Especially when
 you have many things happening at the same time.
 
 116
