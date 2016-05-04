@@ -144,7 +144,8 @@ watch version thingy. Watch mode.
 
 33
 00:02:26,870 --> 00:02:31,130
-[inaud]
+So I can just use this thing, when I write
+it will call build again.
 
 34
 00:02:31,130 --> 00:02:34,190
@@ -601,13 +602,12 @@ every time it finishes building,
 
 135
 00:10:58,400 --> 00:11:02,230
-it says something with the same
+it says something with the 'say'
 program that says 'Done' when it stops building.
 
 136
 00:11:02,230 --> 00:11:08,210
-I don't know if you've seen
-this thing inaud?
+I don't know if you've seen this thing.
 
 137
 00:11:08,310 --> 00:11:09,820
