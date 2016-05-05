@@ -520,12 +520,12 @@ decodedBuffer should print the thing.
 
 113
 00:09:48,630 --> 00:09:59,100
-It's called that and it's decoded the thing.
-It makes sense that the length is 7 bytes,
+So it's got that and then decoded the thing.
+[Sole points out that the number of samples..
 
 114
 00:09:59,120 --> 00:10:03,770
-because this is the byteLength...
+being half the byteLength makes sense]
 I think it's like CD size or something.
 
 115
