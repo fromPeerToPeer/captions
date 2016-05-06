@@ -20,7 +20,7 @@ to know the...
 5
 00:00:22,460 --> 00:00:29,770
 It's using custom events, I don't know who designed
-this thing but you can't just put properties.
+this thing but you can't just put properties in the event.
 
 6
 00:00:30,420 --> 00:00:37,860
