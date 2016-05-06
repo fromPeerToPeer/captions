@@ -15,7 +15,7 @@ I need to read the data from the event.
 4
 00:00:15,550 --> 00:00:22,380
 It's not just like an action I need
-to read the data from the event.
+to know the...
 
 5
 00:00:22,460 --> 00:00:29,770
