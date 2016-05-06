@@ -24,7 +24,7 @@ this thing but you can't just put properties in the event.
 
 6
 00:00:30,420 --> 00:00:37,860
-You have to use details. I guess
+You have to use detail. I guess
 it's so you don't create properties.
 
 7
