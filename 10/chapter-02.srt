@@ -9,7 +9,7 @@ directory: there's nothing here.
 
 3
 00:00:06,128 --> 00:00:13,248
-I'll start by creating an HTML file,
+I'll start by creating a HTML file,
 so we can start doing things.
 
 4
@@ -23,7 +23,7 @@ don't like the colors, but I like them.
 
 6
 00:00:22,910 --> 00:00:27,320
-the reason the comments are so bright is
+The reason the comments are so bright is
 because they are like little labels.
 
 7
@@ -79,7 +79,8 @@ just this thing, nothings happening either.
 
 18
 00:01:28,656 --> 00:01:32,784
-To start with it's just the plain clap.
+I think what we should start with is just
+playing the clap.
 
 19
 00:01:32,780 --> 00:01:39,520
@@ -133,12 +134,12 @@ And then load the script afterwards.
 
 30
 00:02:31,216 --> 00:02:36,528
-When you do web audio you
+When you use Web Audio you
 have to start by creating a context.
 
 31
 00:02:36,576 --> 00:02:46,112
-A black box thing or mini universe.
+It's a black box where things happen, a mini universe.
 You can create a new AudioContext like this.
 
 32
@@ -182,7 +183,7 @@ those things when I'm doing a new project.
 40
 00:03:24,550 --> 00:03:28,670
 So I just try to do everything and then if
-I really need to make this thing work with safari,
+I really need to make this thing work with Safari,
 
 41
 00:03:28,680 --> 00:03:33,830
@@ -205,7 +206,7 @@ works, I just log simple things.
 45
 00:03:45,940 --> 00:03:52,310
 So I'll reload and it's showing me I have
-another context, and its got sample rate.
+an AudioContext, and its got a sampleRate.
 
 46
 00:03:52,420 --> 00:04:00,270
@@ -215,21 +216,21 @@ We have this thing but there is nothing to see.
 47
 00:04:00,270 --> 00:04:03,050
 DN: I see, so this is a dedicated inspector
-for the Audio Context?
+for Web Audio?
 
 48
 00:04:03,060 --> 00:04:10,370
-SP: Yes, and if you don't do anything, you don't
-give it the context. Nothing is going to be shown.
+SP: Yes, but if you don't connect anything to the
+context, nothing is going to be shown.
 
 49
 00:04:10,380 --> 00:04:12,870
-We are waiting for something
+It's waiting for something
 to happen – it's very lazy.
 
 50
 00:04:12,880 --> 00:04:16,500
-It doesn't waste resources, trying to spec things.
+It doesn't waste resources, trying to inspect things.
 
 51
 00:04:16,520 --> 00:04:25,570
@@ -249,7 +250,7 @@ on this computer I need to load the sound,
 54
 00:04:44,430 --> 00:04:48,590
 and then create a node that can
-play the things.... And then trigger the thing.
+play that kind of thing and then trigger it.
 
 55
 00:04:48,590 --> 00:04:54,280
@@ -262,7 +263,7 @@ So I will try and start by loading the file.
 
 57
 00:04:58,260 --> 00:04:59,630
-DN: So there will be a sample.
+DN: So it will be like a sample.
 
 58
 00:04:59,660 --> 00:05:01,560
@@ -289,17 +290,18 @@ load the sample it's just like binary data.
 
 63
 00:05:26,360 --> 00:05:28,880
-but web audio doesn't know what to do with that.
+Web Audio doesn't know what to do with
+that so you need to decode it.
 
 64
 00:05:28,900 --> 00:05:33,280
-There is a function to
+There is a function it provides to
 decode it, and then we will play it.
 
 65
 00:05:33,290 --> 00:05:38,100
 So I'm going to try to do this thing first.
-Then we will do the sequences things.
+Then we will do the sequences.
 
 66
 00:05:38,160 --> 00:05:47,010
@@ -313,7 +315,7 @@ the syntax of that so I'll open my cheat thingy,
 
 68
 00:05:56,860 --> 00:06:02,270
-which is the load sample thing.
+which is this loadSample.js thing.
 
 69
 00:06:02,300 --> 00:06:12,150
@@ -322,7 +324,7 @@ XMLHttpRequest with a responseType of arraybuffer.
 
 70
 00:06:12,150 --> 00:06:18,400
-And then you want to listen when the thing has
+And then you want to listen for when the thing has
 loaded, but I just want to go step by step.
 
 71
@@ -331,12 +333,12 @@ I can do this thing, I just need a reminder. [laughter]
 
 72
 00:06:26,310 --> 00:06:31,450
-It's awkward because it has XMLH uppercase
-and the rest lower case (except one letter).
+It's awkward because it has XML uppercase but
+only the first letter of Http is uppercase.
 
 73
 00:06:31,470 --> 00:06:33,560
-It should be all uppercase, but it's not.
+HTTP should be all uppercase, but it's not.
 
 74
 00:06:33,560 --> 00:06:35,980
@@ -363,7 +365,7 @@ otherwise the browser tries to parse what it loads.
 
 79
 00:06:57,660 --> 00:07:02,030
-as though it's JSON or something. You don't
+Maybe if it's JSON or something. You don't
 want it to touch the thing before it's ready.
 
 80
@@ -393,12 +395,13 @@ OK this is how you open the thing.
 
 86
 00:07:32,190 --> 00:07:38,610
-The URL let's say is CLAP07
+The URL let's say it's "CLAP07". I think
+that's the name of the file.
 
 87
 00:07:41,270 --> 00:07:46,740
-And then just say send. And I have
-to make sure clap is in the right place.
+And then we just say send(). And I have
+to make sure the clap file is in the right place.
 
 88
 00:07:46,740 --> 00:07:48,190
@@ -406,12 +409,12 @@ DN: Yes.
 
 89
 00:07:50,280 --> 00:07:54,480
-So this is clap_07
-Space this thing here.
+Almost there, it's "CLAP_07". Let's place
+this in here.
 
 90
 00:07:54,480 --> 00:07:56,960
-So it's clap underscore...
+So it's CLAP_...
 
 91
 00:07:56,960 --> 00:07:59,520
@@ -428,12 +431,12 @@ DN: Ah, OK.
 
 94
 00:08:06,880 --> 00:08:13,180
-So when it's loaded, in this context, this is a request,
+So when it's loaded, in this context, "this" is the request,
 
 95
 00:08:13,180 --> 00:08:22,210
-so if I say "this data"; it should request
-data, I think. No.  Maybe it will be response.
+so if I say this.data; it should be the request
+data, I think. No. Maybe it will be the this.response?
 
 96
 00:08:22,320 --> 00:08:29,850
@@ -446,8 +449,8 @@ DN: Ah, there we go.
 
 98
 00:08:31,100 --> 00:08:37,110
-SP: In the context for the listener, this is a request,
-of a request of a response of the data that we loaded.
+SP: In the context of the listener, "this" is a request,
+so "this.response" is the data that we loaded.
 
 99
 00:08:37,140 --> 00:08:39,990
@@ -461,8 +464,8 @@ that I know what to do with.
 
 101
 00:08:46,600 --> 00:08:51,420
-So what you do with this is use it
-in the context that you created before.
+So what you do with this is, using
+the context that you created before:
 
 102
 00:08:51,420 --> 00:08:59,570
@@ -472,7 +475,7 @@ please decode this thing I just got.
 103
 00:08:59,610 --> 00:09:05,980
 And when you're ready...
-So it's got two call backs.
+So it's got two callbacks.
 
 104
 00:09:06,010 --> 00:09:10,420
@@ -482,7 +485,7 @@ into something the browser can play, hopefully.
 105
 00:09:10,440 --> 00:09:15,300
 It should be able to play because this
-is a wav file. Also, I have tried it before. [Laughter]
+is a WAV file. Also, I have tried it before. [Laughter]
 
 106
 00:09:15,350 --> 00:09:23,120
@@ -500,7 +503,7 @@ DN: Yeah, right.
 
 109
 00:09:29,830 --> 00:09:33,840
-SP: This is terrible code.
+SP: This is terrible I cannot decode it.
 
 110
 00:09:33,880 --> 00:09:39,110
@@ -513,16 +516,16 @@ So supposing that we get that thing,..
 
 112
 00:09:42,920 --> 00:09:48,630
-Decoded buffer should print the thing.
+decodedBuffer should print the thing.
 
 113
 00:09:48,630 --> 00:09:59,100
-It's called that and it's decoded the thing.
-It makes sense that the length is 7 bytes,
+So it's got that and then decoded the thing.
+[Sole points out that the number of samples..
 
 114
 00:09:59,120 --> 00:10:03,770
-because this is the byteLength...
+being half the byteLength makes sense]
 I think it's like CD size or something.
 
 115
@@ -533,18 +536,17 @@ raw binary data.
 
 116
 00:10:09,590 --> 00:10:13,620
-You have the header, and that describes
-the wave file and It's got one channel la la la la.
+You have the header, and that describes:
+This is a wave file, it's got one channel la la la la.
 
 117
 00:10:13,660 --> 00:10:17,950
-So this is what you call the
-decodeAudioData function does.
+So this is what the decodeAudioData function does.
 
 118
 00:10:17,950 --> 00:10:24,330
-First it needs to work out the type of file
-this is; it could be an OGG file or an mp3.
+It reads a header and tries to find what type of
+file it is; it could be an Ogg file or an MP3.
 
 119
 00:10:24,330 --> 00:10:28,330
@@ -552,7 +554,7 @@ That depends on the browser.
 
 120
 00:10:28,340 --> 00:10:29,520
-DN: This one's a .wav
+DN: This one's a WAV.
 
 121
 00:10:29,520 --> 00:10:31,350
@@ -627,7 +629,8 @@ but these are the steps that we wanted to do,
 
 137
 00:11:38,900 --> 00:11:45,880
-so for playing we just say playBuffer (buffer)
+so for playing we just create playBuffer and
+give it a buffer parameter.
 
 138
 00:11:45,910 --> 00:11:53,510
@@ -646,7 +649,7 @@ created before, we create a bufferNode.
 
 141
 00:12:09,910 --> 00:12:15,470
-And then you say bufferNode connect.
+And then you say bufferNode.connect.
 
 142
 00:12:15,500 --> 00:12:17,200
@@ -692,7 +695,7 @@ DN: Yes, OK.
 
 151
 00:12:53,710 --> 00:12:56,430
-SP: And then you just say start.
+SP: And then you just say start().
 
 152
 00:12:56,450 --> 00:13:01,650
@@ -705,16 +708,16 @@ DN: Yeah, right.
 
 154
 00:13:02,700 --> 00:13:06,020
-so in theory that should...
+So in theory that should...
 
 155
 00:13:06,030 --> 00:13:10,980
-Oh no, maybe it's the buffer.
+Oh no, maybe it's just Buffer.
 I'm always confused with this.
 
 156
 00:13:11,010 --> 00:13:15,200
-Is it buffer... No.
+Is it Buffer... No.
 
 157
 00:13:15,220 --> 00:13:20,880
@@ -723,20 +726,20 @@ can never remember the names of the methods.
 
 158
 00:13:22,500 --> 00:13:25,560
-DN: You went straight to the source W3C.
+DN: You went straight to the source, the W3C.
 
 159
 00:13:25,570 --> 00:13:30,310
-SP: Yes bufferSource.
+SP: Yes. Ah, BufferSource.
 
 160
 00:13:30,320 --> 00:13:32,320
-Is it source? Yes.
+Is it Source? Yes.
 
 161
 00:13:32,330 --> 00:13:38,140
-Yes, so createBufferSource and
-connect it's the same all the time.
+Yes, they are doing the same thing, this
+is the same all the time.
 
 162
 00:13:38,150 --> 00:13:40,430
@@ -745,7 +748,7 @@ OK so I can move this thing.
 163
 00:13:40,450 --> 00:13:43,640
 DN: This is basically the "hello world" of
-web audio?
+Web Audio?
 
 164
 00:13:43,640 --> 00:13:49,570

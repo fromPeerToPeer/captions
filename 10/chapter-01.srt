@@ -99,7 +99,7 @@ on the first line both players are playing in sync
 22
 00:01:30,430 --> 00:01:36,016
 And on the next repeat the first
-player is playing the same thing
+player keeps playing the same thing
 
 23
 00:01:37,180 --> 00:01:39,888
@@ -165,18 +165,18 @@ this is a lot of things for me to worry about!"
 
 36
 00:02:56,384 --> 00:03:02,544
-So if you do it with web audio it should
+So if you do it with Web Audio it should
 be in sync. If you do badly it could be messy.
 
 37
 00:03:02,540 --> 00:03:08,320
-DN: Yes, so you mentioned web audio; that's the
+DN: Yes, so you mentioned Web Audio; that's the
 technology you'd use to solve this challenge?
 
 38
 00:03:08,320 --> 00:03:13,936
 SP: Yes. I don't think you can do it
-correctly without web audio in this case.
+correctly without Web Audio in this case.
 
 39
 00:03:14,016 --> 00:03:15,808
@@ -184,7 +184,7 @@ DN: And that means it would run inside the browser.
 
 40
 00:03:15,840 --> 00:03:19,550
-SP: Yes, it will work in any Browser.
+SP: Yes, it will work in any browser.
 
 41
 00:03:19,568 --> 00:03:25,344
