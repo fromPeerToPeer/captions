@@ -39,8 +39,8 @@ the score is zero, so it's nothing.
 
 10
 00:00:33,000 --> 00:00:46,510
-Then one, one, one zero, one, one, zero, one,
-zero, one, one, zero.  So that's the same, but in binary.
+Then one, one, zero, one, zero, one, one,
+zero.  So that's the same, but in binary.
 
 11
 00:00:46,530 --> 00:00:48,360
