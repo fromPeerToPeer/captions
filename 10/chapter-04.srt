@@ -226,7 +226,7 @@ So I say when. And instead of just
 51
 00:04:17,350 --> 00:04:23,030
 But actually `t` is not zero.
-T has to be the AudioContext.currentTime.
+`t` has to be the AudioContext.currentTime.
 
 52
 00:04:23,030 --> 00:04:26,770
