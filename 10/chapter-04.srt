@@ -245,7 +245,7 @@ when you say to Web Audio I want to do this thing,
 
 55
 00:04:37,750 --> 00:04:44,720
-you don't tell it in the scripts time,
+you don't tell it in the script's time,
 but in the clock for the audio context.
 
 56
