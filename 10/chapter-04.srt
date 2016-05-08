@@ -78,7 +78,7 @@ every element of the array is a step.
 18
 00:01:20,650 --> 00:01:29,190
 So I will arbitrarily give it a stepLength,
-say 0.2 seconds. Because web audio uses seconds.
+say 0.2 seconds. Because Web Audio uses seconds.
 
 19
 00:01:30,180 --> 00:01:33,835
@@ -241,7 +241,7 @@ another context or when the page is created.
 54
 00:04:30,550 --> 00:04:37,740
 But essentially the clock starts running, so
-when you say to web audio I want to do this thing,
+when you say to Web Audio I want to do this thing,
 
 55
 00:04:37,750 --> 00:04:44,720
@@ -294,7 +294,7 @@ DN: Yes right.
 65
 00:05:31,900 --> 00:05:33,500
 SP: And that's the way you
-should do things in web audio.
+should do things in Web Audio.
 
 66
 00:05:33,520 --> 00:05:38,370
@@ -307,7 +307,7 @@ because it's better to just schedule everything.
 
 68
 00:05:40,710 --> 00:05:47,110
-And let web audio take care of
+And let Web Audio take care of
 things because it goes in a different thread.
 
 69
