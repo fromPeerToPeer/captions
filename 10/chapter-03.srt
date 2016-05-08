@@ -52,7 +52,7 @@ destination, I will connect to the limiter.
 
 12
 00:01:02,520 --> 00:01:08,960
-And then I  will connect the limiter to
+And then I will connect the limiter to
 the destination.  So we create this whole chain.
 
 13

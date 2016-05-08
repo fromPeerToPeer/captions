@@ -221,7 +221,7 @@ But I don't know when, so I need to add a new parameter.
 50
 00:04:08,850 --> 00:04:17,310
 So I say when. And instead of just
-`start()`, I'll say `start(when)`.And I'll say at `t`.
+`start()`, I'll say `start(when)`. And I'll say at `t`.
 
 51
 00:04:17,350 --> 00:04:23,030
