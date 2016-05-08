@@ -35,7 +35,7 @@ DN: Yes, sure.
 9
 00:00:27,650 --> 00:00:32,615
 SP: So it's one, one, one, and
-the score is zero, so it's nothing.
+the underscore is zero, so it's nothing.
 
 10
 00:00:33,000 --> 00:00:46,510
@@ -250,7 +250,7 @@ but in the clock for the audio context.
 
 56
 00:04:44,740 --> 00:04:51,210
-So when you want to scale things, you want to do
+So when you want to schedule things, you want to do
 that relative to the audio context 'timer' or 'clock'
 
 57
