@@ -63,7 +63,7 @@ if it's an x replace it with a one  etc.
 
 15
 00:01:05,690 --> 00:01:10,100
-But, in this case its short
+But, in this case it's short
 enough for us to leave it like that.
 
 16
@@ -313,7 +313,7 @@ things because it goes in a different thread.
 69
 00:05:47,150 --> 00:05:51,630
 And you can't be sure that the things
-that your doing in this thread are the same.
+that you're doing in this thread are the same.
 
 70
 00:05:51,630 --> 00:05:52,600
