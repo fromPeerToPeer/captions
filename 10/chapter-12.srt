@@ -553,7 +553,7 @@ But we could maybe commit this thingy.
 117
 00:09:55,890 --> 00:10:03,474
 Commit: "with two gains for different
-track volumes'
+track volumes"
 
 118
 00:10:05,565 --> 00:10:07,771
