@@ -25,11 +25,11 @@ this thing but you can't just put properties in the event.
 6
 00:00:30,420 --> 00:00:37,860
 You have to use detail. I guess
-it's so you don't create properties.
+it's so you don't create properties
 
 7
 00:00:37,860 --> 00:00:45,050
-With the object inaud future
+in the object that might interfere with future
 properties in the spec or the events in general.
 
 8
