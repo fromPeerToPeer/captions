@@ -35,12 +35,12 @@ DN: Yes, sure.
 9
 00:00:27,650 --> 00:00:32,615
 SP: So it's one, one, one, and
-the score is zero, so it's nothing.
+the underscore is zero, so it's nothing.
 
 10
 00:00:33,000 --> 00:00:46,510
-Then one, one, one zero, one, one, zero, one,
-zero, one, one, zero.  So that's the same, but in binary.
+Then one, one, zero, one, zero, one, one,
+zero.  So that's the same, but in binary.
 
 11
 00:00:46,530 --> 00:00:48,360
@@ -59,11 +59,11 @@ drawing things, kind of like ASCII art.
 14
 00:00:59,700 --> 00:01:05,680
 You could parse it and say
-if it's an x replace it with a one  etc.
+if it's an x replace it with a one, etc.
 
 15
 00:01:05,690 --> 00:01:10,100
-But, in this case its short
+But, in this case it's short
 enough for us to leave it like that.
 
 16
@@ -78,7 +78,7 @@ every element of the array is a step.
 18
 00:01:20,650 --> 00:01:29,190
 So I will arbitrarily give it a stepLength,
-say 0.2 seconds. Because web audio uses seconds.
+say 0.2 seconds. Because Web Audio uses seconds.
 
 19
 00:01:30,180 --> 00:01:33,835
@@ -221,12 +221,12 @@ But I don't know when, so I need to add a new parameter.
 50
 00:04:08,850 --> 00:04:17,310
 So I say when. And instead of just
-`start()`, I'll say `start(when)`.And I'll say at `t`.
+`start()`, I'll say `start(when)`. And I'll say at `t`.
 
 51
 00:04:17,350 --> 00:04:23,030
 But actually `t` is not zero.
-T has to be the AudioContext.currentTime.
+`t` has to be the AudioContext.currentTime.
 
 52
 00:04:23,030 --> 00:04:26,770
@@ -241,16 +241,16 @@ another context or when the page is created.
 54
 00:04:30,550 --> 00:04:37,740
 But essentially the clock starts running, so
-when you say to web audio I want to do this thing,
+when you say to Web Audio I want to do this thing,
 
 55
 00:04:37,750 --> 00:04:44,720
-you don't tell it in the scripts time,
+you don't tell it in the script's time,
 but in the clock for the audio context.
 
 56
 00:04:44,740 --> 00:04:51,210
-So when you want to scale things, you want to do
+So when you want to schedule things, you want to do
 that relative to the audio context 'timer' or 'clock'
 
 57
@@ -294,7 +294,7 @@ DN: Yes right.
 65
 00:05:31,900 --> 00:05:33,500
 SP: And that's the way you
-should do things in web audio.
+should do things in Web Audio.
 
 66
 00:05:33,520 --> 00:05:38,370
@@ -307,13 +307,13 @@ because it's better to just schedule everything.
 
 68
 00:05:40,710 --> 00:05:47,110
-And let web audio take care of
+And let Web Audio take care of
 things because it goes in a different thread.
 
 69
 00:05:47,150 --> 00:05:51,630
 And you can't be sure that the things
-that your doing in this thread are the same.
+that you're doing in this thread are the same.
 
 70
 00:05:51,630 --> 00:05:52,600
