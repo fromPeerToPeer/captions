@@ -69,7 +69,7 @@ we get a new BPM.
 
 16
 00:01:15,660 --> 00:01:19,330
-You just need to change the new bpm.
+You just need to change that and update that.
 
 17
 00:01:19,570 --> 00:01:22,380
