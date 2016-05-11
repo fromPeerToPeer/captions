@@ -1,6 +1,6 @@
 ﻿1
 00:00:00,000 --> 00:00:02,900
-Chapter 11: Humanize the performance.
+Chapter 11: Humanizing the performance.
 
 2
 00:00:03,020 --> 00:00:07,260
@@ -83,7 +83,7 @@ SP: We can make it a bit more ‘amusing'.
 
 19
 00:01:24,550 --> 00:01:30,470
-We know when things are starting which is...
+We know when things are started which is...
 
 20
 00:01:30,470 --> 00:01:37,570
@@ -429,7 +429,7 @@ at 0.2 rather than 0.02 there.
 
 100
 00:08:10,640 --> 00:08:13,270
-SP: Inaud
+SP: Do I want this, or do I want this?
 
 101
 00:08:13,290 --> 00:08:19,700
@@ -437,7 +437,7 @@ SP: Inaud
 
 102
 00:08:19,840 --> 00:08:23,110
-I think this is too much inaud this.
+I think this is too much I will leave it at this.
 
 103
 00:08:26,890 --> 00:08:29,170
