@@ -90,7 +90,8 @@ attention. I would remove it.
 21
 00:01:41,600 --> 00:01:48,148
 I would make sure that the component
-is a bit less. That would be on some other project.
+is a bit less… so that we could use
+it on some other project.
 
 22
 00:01:48,171 --> 00:01:51,725
@@ -103,7 +104,7 @@ things to other functions.
 
 24
 00:01:59,040 --> 00:02:03,748
-For example this playBuffer doesn't
+For example this playBuffer() doesn't
 need to be here because this file is long.
 
 25
@@ -127,7 +128,8 @@ now everything is using a global context.
 
 29
 00:02:22,502 --> 00:02:29,702
-It connects things to things but it's not very neat.
+It connects things to other things
+but it's not very neat.
 
 30
 00:02:29,700 --> 00:02:35,771
@@ -136,7 +138,7 @@ and then extract things into functions.
 
 31
 00:02:35,770 --> 00:02:42,160
-And because we're using webpack
+And because we're using webpack or browserify
 it's pretty easy to require things
 
 32
@@ -174,11 +176,11 @@ you don't want to be worrying about small details.
 
 39
 00:03:15,380 --> 00:03:20,765
-I would just go step by step in this re-factoring.
+I would just go step by step in this refactoring.
 
 40
 00:03:23,370 --> 00:03:29,268
-I would like to have main be a more
+I would like to have main() be a more
 a more general global thing to direct everything
 
 41
@@ -196,12 +198,12 @@ and then a function in the middle [laughter].
 
 44
 00:03:38,770 --> 00:03:41,017
-And then sample promises. 
+And then sample promises.
 
 45
 00:03:41,040 --> 00:03:47,771
-I would have something like initialise,
-then here's where the UI is set, la la la 
+I would have something like initialize,
+then here's where the UI is set, la la la
 
 46
 00:03:47,780 --> 00:03:50,480
@@ -210,11 +212,11 @@ instead of this massive chunk of things.
 47
 00:03:50,540 --> 00:03:55,097
 And all these functions, if you have
-proper parameters they can all go out there 
+proper parameters they can all go out there
 
 48
 00:03:55,090 --> 00:03:58,628
-so you have a shorter main and,
+so you have a shorter main() and,
 you can dig into the function if you need,
 
 49
@@ -224,12 +226,12 @@ but you don't need to have this whole thingy.
 50
 00:04:01,714 --> 00:04:11,085
 The functionality of this instrument is not
-too huge so maybe you could keep this here. 
+too huge so maybe you could keep this here.
 
 51
 00:04:11,085 --> 00:04:18,617
 All the loading and decoding could
-be out of here and everything else is still...   
+be out of here and everything else is still…
 
 52
 00:04:18,640 --> 00:04:22,811
@@ -239,12 +241,12 @@ still in your sight. So to speak.
 53
 00:04:23,760 --> 00:04:31,131
 Also, I would make sure that
-this index is copied to build. 
+this index.html is copied to build.
 
 54
 00:04:31,200 --> 00:04:35,588
 Because right now we are
-opening this thing from the bundle. 
+opening this thing from the bundle.
 
 55
 00:04:35,965 --> 00:04:42,594
@@ -254,17 +256,17 @@ the internet, that's not going to happen.
 56
 00:04:42,617 --> 00:04:48,491
 You would need to have automatic
-things, so I would improve the build process. 
+things, so I would improve the build process.
 
 57
 00:04:48,514 --> 00:04:53,040
-So here I would refer to bundle
+So here I would refer to bundle.js
 and generate everything here.
 
 58
 00:04:53,040 --> 00:04:58,331
 So once you've  created the build you
-would upload the whole thing to the internet. 
+would upload the whole thing to the internet.
 
 59
 00:04:58,330 --> 00:05:02,914
@@ -274,7 +276,7 @@ human factor in building this.
 60
 00:05:02,920 --> 00:05:13,702
 And this will not run on Chrome because it doesn't
-let you do requests locally, you need a server. 
+let you do requests locally, you need a server.
 
 61
 00:05:13,740 --> 00:05:20,285
@@ -288,12 +290,12 @@ DN: I see.
 63
 00:05:21,085 --> 00:05:23,500
 SP: So if your developing
-you should be using a server, 
+you should be using a server,
 
 64
 00:05:23,520 --> 00:05:26,720
 which I haven't because we
-don't want to make it too complex. 
+don't want to make it too complex.
 
 65
 00:05:26,720 --> 00:05:32,262
@@ -321,7 +323,7 @@ So that is some of the things I would do.
 70
 00:05:49,280 --> 00:05:51,428
 DN: Alright. Well it's been really
-interesting watching you work. 
+interesting watching you work.
 
 71
 00:05:51,451 --> 00:05:53,360
@@ -334,4 +336,3 @@ SP: Thanks for having me.
 73
 00:05:54,297 --> 00:05:55,611
 DN: You're welcome!
-

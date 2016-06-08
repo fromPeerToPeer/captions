@@ -40,13 +40,14 @@ thing, the second player shifts another beat.
 
 10
 00:00:37,930 --> 00:00:48,590
-So I want to increase the stanza
-number after every 4th repeat.
+So what I want to do is to skip counts
+after every 4th repeat.
 
 11
 00:00:48,610 --> 00:00:53,580
 And I'm going to use the stanza
-number every time I want to shift.
+number to determine how many times
+I need to shift.
 
 12
 00:00:55,160 --> 00:01:00,160
@@ -75,7 +76,7 @@ beginning, but basing it on the existing score.
 
 17
 00:01:27,940 --> 00:01:36,650
-I guess I can have something like stanzaLoopTime...
+I guess I can have something like stanzaLoopTime ...
 
 18
 00:01:36,670 --> 00:01:40,040
@@ -92,8 +93,7 @@ SP: Yeah, stanzaReps. Like power lifters! [Laughter]
 
 21
 00:01:48,445 --> 00:01:57,965
-OK, so we also want to loop
-4 times to hard code everything.
+OK, so we also want to loop every 4 times.
 
 22
 00:01:58,300 --> 00:02:07,590
@@ -107,7 +107,7 @@ DN: OK.
 24
 00:02:08,410 --> 00:02:11,675
 SP: I will say I want to loop this
-thing 4 times, and every time it's 4,
+thing 4 times, and every time it's 4.
 
 25
 00:02:11,690 --> 00:02:15,920
@@ -129,12 +129,12 @@ DN: Yes sure.
 
 29
 00:02:34,470 --> 00:02:39,355
-SP: So this is when we should repeat
-the thing, so this is we need to increase.
+SP: So this when we should repeat the thing,
+so this is when we need to increase.
 
 30
 00:02:39,370 --> 00:02:42,380
-We also could get rid of these console thingies.
+We also could get rid of these console things.
 
 31
 00:02:43,095 --> 00:02:47,280
@@ -196,7 +196,7 @@ variables ordered in a logical way.
 
 44
 00:03:34,010 --> 00:03:39,350
-So when we finish the sequence, we look but we also...
+So when we finish the sequence, we look but we also ...
 
 45
 00:03:39,360 --> 00:03:46,755
@@ -223,6 +223,7 @@ So I will print current stanza here.
 50
 00:04:19,330 --> 00:04:25,290
 And maybe the reps as well so we can check it.
+DN: Sure.
 
 51
 00:04:25,310 --> 00:04:34,700
@@ -242,7 +243,7 @@ SP: No, it's not.
 
 55
 00:04:41,980 --> 00:04:47,200
-In theory it should stop.
+So in theory, it should stop.
 
 56
 00:04:49,020 --> 00:04:51,870
@@ -272,7 +273,7 @@ thing is clapping in your face.
 
 62
 00:05:19,070 --> 00:05:26,100
-It should increase that but also go back to zero.
+It should increase that but also go back to zero [laughter].
 
 63
 00:05:26,140 --> 00:05:30,680
@@ -333,7 +334,8 @@ what the second player should play.
 
 76
 00:06:33,560 --> 00:06:43,200
-So the ‘should play' is for the first player.
+So we go back to what 'should play'
+- it's for the first player.
 
 77
 00:06:43,200 --> 00:06:46,130
@@ -420,7 +422,8 @@ So we model the values with 12,1 =1, 2=2 etc
 
 95
 00:08:28,210 --> 00:08:32,200
-And 12 should be zero, because it goes back to zero.
+
+Suppose 12 should be zero, because it goes back to zero.
 
 96
 00:08:32,220 --> 00:08:35,310
@@ -447,7 +450,7 @@ practice because then you have to explain them.
 
 101
 00:08:55,540 --> 00:08:59,080
-Or you could say something like index++
+Or you could say something like index++.
 
 102
 00:08:59,090 --> 00:09:05,960
@@ -456,7 +459,7 @@ better to say ++ index % length.
 
 103
 00:09:05,980 --> 00:09:12,680
-It may be hard to understand, but sometimes
+It's really hard to understand, but sometimes
 when I'm typing in a rush, I might use this thing.
 
 104
@@ -487,7 +490,7 @@ So let's show both at the same time.
 
 110
 00:09:43,860 --> 00:09:45,910
-DN: Ah... Right,OK.
+DN: Ah... Right, OK.
 
 111
 00:09:45,930 --> 00:09:49,680
@@ -700,7 +703,7 @@ compressor makes sure we are never saturating.
 158
 00:13:00,650 --> 00:13:06,520
 So if we didn't have it we would
-notice louder things... But right now we can't.
+notice louder things ... But right now we can't.
 
 159
 00:13:06,720 --> 00:13:10,010
@@ -708,7 +711,7 @@ Let's try a different sample to start with.
 
 160
 00:13:10,360 --> 00:13:13,200
-[Silence]
+[Silence].
 
 161
 00:13:15,950 --> 00:13:20,230

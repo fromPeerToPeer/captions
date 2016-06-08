@@ -36,7 +36,7 @@ because I could go on following your challenge,
 9
 00:00:32,940 --> 00:00:43,160
 With this sequence I have in my array, I could build
-something which generates this narrow variation.
+something which generates this number of variations.
 
 10
 00:00:43,190 --> 00:00:47,394
@@ -74,7 +74,7 @@ dynamically. And what we're doing isn't very dynamic.
 
 17
 00:01:17,720 --> 00:01:24,810
-As I said, web audio is running a
+As I said, Web Audio is running a
 different clock so you could try and do a timeout.
 
 18
@@ -189,8 +189,8 @@ DN: OK.
 
 41
 00:03:13,800 --> 00:03:19,550
-SP: So I will just describe a step or
-something and stop at 0. Which is where I am.
+SP: So I will just use currentStep or
+something and start with 0. Which is where I am.
 
 42
 00:03:19,630 --> 00:03:22,100
@@ -329,7 +329,7 @@ called 'A tale of the two clocks'.
 
 71
 00:05:42,720 --> 00:05:46,910
-So essentially what were going to have is
+So essentially what we're going to have is
 this timeout function; this scheduling function.
 
 72
@@ -340,7 +340,7 @@ the score saying "What do I need to do now"?
 73
 00:05:52,660 --> 00:05:59,610
 It's fast enough but not exactly
-like what a player would do. Inaud.
+like what a player would do. Like attention.
 
 74
 00:05:59,640 --> 00:06:09,030
@@ -426,7 +426,8 @@ DN: Yes, right.
 91
 00:07:30,930 --> 00:07:40,150
 SP: So the step time starts at zero, so if you start at
-zero and this thing is related to the serial thingy,
+zero every time you start and this thing is also related
+to the zero thingy,
 
 92
 00:07:40,170 --> 00:07:46,190
@@ -453,12 +454,12 @@ it has to happen at step time, using the sequence.
 
 97
 00:08:04,660 --> 00:08:08,670
-But when you scale the thing
-you scale in the context playtime,
+But when you schedule the thing
+you schedule in the contextPlayTime,
 
 98
 00:08:08,670 --> 00:08:10,950
-which is the web audio clock.
+which is the Web Audio clock.
 
 99
 00:08:10,970 --> 00:08:14,650
@@ -508,7 +509,7 @@ this start time, so it becomes relative again.
 108
 00:08:56,440 --> 00:09:01,720
 Then we go to the next step and if it's
-more than the number of steps we are looping,
+more than the number of steps, we are looping
 
 109
 00:09:01,740 --> 00:09:03,990
@@ -517,7 +518,7 @@ then we go back to zero again.
 110
 00:09:04,030 --> 00:09:08,190
 And then you have step length
-and you want to scale it again.
+and you want to schedule it again.
 
 111
 00:09:08,190 --> 00:09:10,320
@@ -553,7 +554,7 @@ That might cause problems.
 
 118
 00:09:47,840 --> 00:09:54,850
-SP: Yes your right, I was being super
+SP: Yes you're right, I was being super
 minimal here. So we need to change this to ac.
 
 119
@@ -567,15 +568,15 @@ bit after; in case there was some delay or whatever.
 
 121
 00:10:08,820 --> 00:10:13,050
-And here as well is a loop.
+And here as well.
 
 122
 00:10:15,740 --> 00:10:18,300
-inaud
+OK, that should be it.
 
 123
 00:10:18,320 --> 00:10:23,090
-Then I also need the firewalls. I might
+Then I also need the variables. I might
 have some already. I don't know.
 
 124
@@ -595,7 +596,7 @@ I usually have indicators on the side like
 127
 00:10:40,760 --> 00:10:48,020
 So, I suppose... This is step time, step length,
-we will make this dependent on the BPM.
+we will make this independent of the BPM.
 
 128
 00:10:48,390 --> 00:10:55,030
@@ -612,7 +613,7 @@ So now instead of playing this sequence...
 
 131
 00:11:06,780 --> 00:11:11,700
-We just do playback, we don't do any more.
+We used to playBuffer, we don't do that any more.
 
 132
 00:11:11,700 --> 00:11:14,860
@@ -638,7 +639,7 @@ Yes, this is start so...
 137
 00:11:34,280 --> 00:11:36,914
 Before we start we need
-to install the buffer somewhere,
+to store the buffer somewhere,
 
 138
 00:11:36,948 --> 00:11:39,650
@@ -660,7 +661,7 @@ DN: OK.
 
 142
 00:11:52,350 --> 00:11:55,500
-SP: So I set the sample to decode the buffer.
+SP: So I set the sample to decodedBuffer.
 
 143
 00:11:57,620 --> 00:11:59,990
@@ -715,7 +716,7 @@ we need to look at the current step.
 154
 00:12:57,670 --> 00:13:00,650
 This is kind of similar to
-the previous play sequence
+the previous playSequence
 
 155
 00:13:00,670 --> 00:13:07,600
@@ -781,13 +782,13 @@ I'm trying to see if it's looping even more.
 
 169
 00:14:23,380 --> 00:14:27,440
-Every time you change the
-system you should also be different.
+Every time it changes the
+step it should also be different.
 
 170
 00:14:27,470 --> 00:14:33,370
 I want to make sure that things
-are happening on the right order.
+are happening in the right order.
 
 171
 00:14:36,120 --> 00:14:39,140
@@ -800,7 +801,7 @@ I've got some error so that's good.
 173
 00:14:43,500 --> 00:14:49,460
 The number of steps is undefined...
-because inaud the sequence step.
+Because it's the sequence length.
 
 174
 00:14:50,690 --> 00:14:53,490
@@ -821,7 +822,7 @@ ta ta ta then loop, and then it starts again.
 
 178
 00:15:09,260 --> 00:15:12,970
-Where is it showing me?
+Why are you showing me?
 
 179
 00:15:13,410 --> 00:15:16,450
@@ -864,7 +865,7 @@ this thing without even knowing?
 
 188
 00:15:49,760 --> 00:15:56,490
-So it's looking as it should be, but were not
+So it's looking as it should be, but we're not
 playing that and we're also not pausing that,
 
 189
@@ -878,7 +879,7 @@ So if it should play...
 191
 00:16:06,750 --> 00:16:12,130
 We should do the same thing as we did before.
-Was it play buffer? (I can never remember).
+Was it playBuffer? (I can never remember).
 
 192
 00:16:12,130 --> 00:16:15,690
@@ -886,7 +887,7 @@ I did it just a minute ago, let's just see...
 
 193
 00:16:15,690 --> 00:16:23,370
-We want to use the clap sample we
+We want to use the clapSample we
 stored before. And when is contextPlayTime.
 
 194
@@ -901,7 +902,7 @@ you just have the whole time line with a clock.
 
 196
 00:16:35,650 --> 00:16:39,880
-And your copying the sequence
+And you're copying the sequence
 and transposing that and you pause.
 
 197
@@ -1011,7 +1012,7 @@ SP: But there isn't the extra step, from nowhere.
 
 221
 00:18:08,790 --> 00:18:10,530
-DN: And were going from 1 to 12 now.
+DN: And we're going from 1 to 12 now.
 
 222
 00:18:10,540 --> 00:18:14,100

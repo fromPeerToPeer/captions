@@ -52,7 +52,7 @@ destination, I will connect to the limiter.
 
 12
 00:01:02,520 --> 00:01:08,960
-And then I  will connect the limiter to
+And then I will connect the limiter to
 the destination.  So we create this whole chain.
 
 13
@@ -86,7 +86,7 @@ DN: So we're seeing the graph?
 
 20
 00:01:28,810 --> 00:01:35,430
-SP: Yes, but we don't see the BufferStore
+SP: Yes, but we don't see the BufferSource
 because it's just died and it's been deleted.
 
 21
@@ -168,17 +168,17 @@ So there we go.
 
 38
 00:02:44,240 --> 00:02:50,680
-I will have things that are sounding but we
+Now we have things that are sounding but we
 want to follow the sequence that you explained.
 
 39
 00:02:50,700 --> 00:02:56,820
-Also before I continue I want to remove this
-from here because it's going to be blocking the body.
+Also before I continue I am going to move this
+away from here because it's going to be blocking the body.
 
 40
 00:02:56,840 --> 00:03:01,680
-and if its huge, the people will be saying
+and if it's huge, the people will be saying
 what's going on here? I don't see anything.
 
 41
@@ -221,7 +221,7 @@ take a long time of blocking and nothing happening
 49
 00:03:48,335 --> 00:03:53,900
 and you get these blank pages happening people
-loose interest, and you don't want that. [Laughter]
+lose interest, and you don't want that. [Laughter]
 
 50
 00:03:53,910 --> 00:03:56,520

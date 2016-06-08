@@ -15,26 +15,26 @@ I need to read the data from the event.
 4
 00:00:15,550 --> 00:00:22,380
 It's not just like an action I need
-to read the data from the event.
+to know the...
 
 5
 00:00:22,460 --> 00:00:29,770
 It's using custom events, I don't know who designed
-this thing but you can't just put properties.
+this thing but you can't just put properties in the event.
 
 6
 00:00:30,420 --> 00:00:37,860
-You have to use details. I guess
-it's so you don't create properties.
+You have to use detail. I guess
+it's so you don't create properties
 
 7
 00:00:37,860 --> 00:00:45,050
-With the object inaud future
+in the object that might interfere with future
 properties in the spec or the events in general.
 
 8
 00:00:45,050 --> 00:00:47,250
-So you can only access them through the detail.
+So you can only access them through detail.
 
 9
 00:00:47,270 --> 00:00:54,370
@@ -52,7 +52,7 @@ I will log it and you can see.
 
 12
 00:01:02,870 --> 00:01:06,150
-The new values are inaud.
+The new values that we're getting.
 
 13
 00:01:06,670 --> 00:01:08,420
@@ -64,11 +64,12 @@ SP: I can change that.
 
 15
 00:01:10,320 --> 00:01:15,660
-There's lot of changes so OK. Inaud
+There's lot of changes so OK. If I change that
+we get a new BPM.
 
 16
 00:01:15,660 --> 00:01:19,330
-You just need to change the new bpm.
+You just need to change that and update that.
 
 17
 00:01:19,570 --> 00:01:22,380

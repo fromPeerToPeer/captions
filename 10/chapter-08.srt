@@ -8,7 +8,7 @@ So... I think we should go back to the challenge.
 
 3
 00:00:06,480 --> 00:00:13,160
-Well we have this, but not the interface.
+Well we have this, but we don't have a user interface.
 
 4
 00:00:13,190 --> 00:00:16,470
@@ -17,7 +17,7 @@ there's no way to modify the tempo,
 
 5
 00:00:16,500 --> 00:00:19,660
-unless we change [the code],
+unless we change it here,
 and that's not very dynamic!
 
 6
@@ -52,7 +52,7 @@ I need to initialize this thing as an npm project, first.
 
 13
 00:00:48,680 --> 00:00:51,350
-So I'm going to npm init this thingy.
+So I'm going to 'npm init' this thingy.
 
 14
 00:00:51,380 --> 00:00:53,100
@@ -114,7 +114,7 @@ something I shouldn't be messing with.
 
 27
 00:01:44,530 --> 00:01:47,870
-So now I should be able to npm install things.
+So now I should be able to 'npm install' things.
 
 28
 00:01:47,870 --> 00:01:51,740
@@ -161,11 +161,11 @@ that before but it makes sense.
 37
 00:02:31,760 --> 00:02:37,050
 SP: If you look up transport you will
-find a lot of references to all the inaud,
+find a lot of references to all the meanings...
 
 38
 00:02:37,090 --> 00:02:39,680
-especially MIDI creation software inaud transport.
+especially MIDI creation software meanings of transport.
 
 39
 00:02:39,702 --> 00:02:46,390
@@ -188,7 +188,7 @@ This is what it should look like, if you use example.
 43
 00:02:59,090 --> 00:03:02,050
 But the one that we are going to
-use doesn't really have any themeing;
+use doesn't really have any theming;
 
 44
 00:03:02,050 --> 00:03:05,870
@@ -253,7 +253,7 @@ So this is going to polyfill the thing.
 57
 00:04:00,490 --> 00:04:10,620
 So I've got all these things and to load them I need
-to use require, and this is not standard JavaScript.
+to use 'require', and this is not standard JavaScript.
 
 58
 00:04:10,620 --> 00:04:16,770
@@ -297,7 +297,7 @@ It's pretty easy to use. I'm going to reuse it again.
 
 67
 00:04:50,470 --> 00:04:56,380
-It's kind of like browserify, but it's got watch
+It's kind of like browserify, but it's got 'watch'
 and things like that which are very convenient.
 
 68
@@ -336,7 +336,7 @@ practice, they say you should install...)
 
 75
 00:05:35,730 --> 00:05:37,950
-So they recommend installing webpack minus g.
+So they recommend installing 'webpack -g'.
 
 76
 00:05:37,960 --> 00:05:43,540
@@ -598,7 +598,7 @@ But step by step so it doesn't get too confusing here.
 
 132
 00:10:15,950 --> 00:10:22,630
-So if I run the build now and then open source index.
+So if I run the build now and then open 'src/index'.
 
 133
 00:10:22,630 --> 00:10:25,650
@@ -614,11 +614,11 @@ What is going on here?
 
 136
 00:10:34,650 --> 00:10:39,990
-So this is... Is it called inaud? I'm confused now.
+So this is... Is it called bundle? I'm confused now.
 
 137
 00:10:40,620 --> 00:10:44,030
-So it takes inaud
+So it takes that...
 
 138
 00:10:44,030 --> 00:10:47,140
@@ -658,7 +658,7 @@ DN: Is that worth a commit?
 
 146
 00:11:22,430 --> 00:11:29,600
-SP: Almost. I want to make sure that I have a clean task.
+SP: Almost. I want to make sure that I have a 'clean' task.
 
 147
 00:11:29,640 --> 00:11:30,600
@@ -671,7 +671,7 @@ SP: And also make sure that this directory exists.
 149
 00:11:40,200 --> 00:11:45,610
 So there are two scripts that
-people use...I think it's prebuild?
+people use...I think it's 'prebuild'?
 
 150
 00:11:45,640 --> 00:11:50,590
@@ -680,12 +680,12 @@ before build and it will run those.
 
 151
 00:11:52,640 --> 00:11:59,360
-If I run build, it will run prebuild before.
+If I run build, it will run 'prebuild' before.
 (I don't know if this needs a hyphen).
 
 152
 00:11:59,380 --> 00:12:01,380
-OK, so it's called (prebuild) before.
+OK, so it's called (prebuild).
 
 153
 00:12:01,440 --> 00:12:06,760
@@ -720,7 +720,7 @@ or gulp. I learned it recently and it's very useful.
 
 160
 00:12:29,580 --> 00:12:34,120
-If you running this in windows or something,
+If you running this in Windows or something,
 
 161
 00:12:34,130 --> 00:12:37,850
@@ -752,7 +752,7 @@ so I've got new dependencies here.
 
 167
 00:13:04,610 --> 00:13:09,600
-So if I run clean...
+So if I run 'clean'...
 
 168
 00:13:09,650 --> 00:13:13,870
