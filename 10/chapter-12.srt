@@ -56,7 +56,7 @@ SP: OK, so we just look at current step.
 
 13
 00:00:51,520 --> 00:00:58,210
-The way web audio works is, every node
+The way Web Audio works is, every node
 does a single thing.
 
 14
@@ -304,7 +304,7 @@ every time.
 
 66
 00:05:07,940 --> 00:05:14,822
-Web audio can't get rid of those gain
+Web Audio can't get rid of those gain
 nodes because it doesn't know if you want
 to use them afterwards.
 

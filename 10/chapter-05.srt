@@ -74,7 +74,7 @@ dynamically. And what we're doing isn't very dynamic.
 
 17
 00:01:17,720 --> 00:01:24,810
-As I said, web audio is running a
+As I said, Web Audio is running a
 different clock so you could try and do a timeout.
 
 18
@@ -459,7 +459,7 @@ you schedule in the contextPlayTime,
 
 98
 00:08:08,670 --> 00:08:10,950
-which is the web audio clock.
+which is the Web Audio clock.
 
 99
 00:08:10,970 --> 00:08:14,650

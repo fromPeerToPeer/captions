@@ -137,7 +137,7 @@ promise me this thing then do it.
 30
 00:02:41,240 --> 00:02:45,620
 It's like the connect() method
-but instead of for (web audio) nodes.
+but instead of for (Web Audio) nodes.
 
 31
 00:02:45,640 --> 00:02:48,290
