@@ -424,689 +424,692 @@ And not to whatever time the whole thing started.
 DN: Yes, right.
 
 91
-00:07:30,930 --> 00:07:40,150
-SP: So the step time starts at zero, so if you start at
-zero every time you start and this thing is also related
-to the zero thingy,
+00:07:30,930 --> 00:07:36,742
+SP: So the step time starts at zero,
+so if you start at zero every time you start
 
 92
+00:07:36,765 --> 00:07:40,114
+and this thing is also related to the zero thingy,
+
+93
 00:07:40,170 --> 00:07:46,190
 it's easy to say "Am I still in this step,
 or do I need to jump to the next one"?
 
-93
+94
 00:07:46,210 --> 00:07:50,400
 Or, "Should I just stop
 because it's not time to play it yet?"
 
-94
+95
 00:07:50,440 --> 00:07:53,810
 So that's what we are doing here.
 
-95
+96
 00:07:53,840 --> 00:07:59,200
 So with the step time and the start
 time, you can say if something has to happen,
 
-96
+97
 00:07:59,230 --> 00:08:04,620
 it has to happen at step time, using the sequence.
 
-97
+98
 00:08:04,660 --> 00:08:08,670
 But when you schedule the thing
 you schedule in the contextPlayTime,
 
-98
+99
 00:08:08,670 --> 00:08:10,950
 which is the Web Audio clock.
 
-99
+100
 00:08:10,970 --> 00:08:14,650
 So you have this sequence which
 is totally atemporal, so to speak,
 
-100
+101
 00:08:14,680 --> 00:08:17,340
 We are going to be looping
 over the sequence all the time.
 
-101
+102
 00:08:17,340 --> 00:08:19,910
 But when you schedule
 things you do it with the context
 
-102
+103
 00:08:19,920 --> 00:08:24,860
 because we will be playing and stopping things
 several times during the lifetime of the website,
 
-103
+104
 00:08:24,900 --> 00:08:31,160
 so that the clock of the context keeps
 growing, but the sequences are still zero one.
 
-104
+105
 00:08:31,180 --> 00:08:35,790
 Supposing its one step, one
 second, zero one two three four.
 
-105
+106
 00:08:35,810 --> 00:08:39,340
 At some point the context might
 be for example, thousands of seconds.
 
-106
+107
 00:08:39,340 --> 00:08:49,400
 So that's why you need to
 remove or subtract something.
 
-107
+108
 00:08:49,410 --> 00:08:56,410
 And that's when you need to subtract
 this start time, so it becomes relative again.
 
-108
+109
 00:08:56,440 --> 00:09:01,720
 Then we go to the next step and if it's
 more than the number of steps, we are looping
 
-109
+110
 00:09:01,740 --> 00:09:03,990
 then we go back to zero again.
 
-110
+111
 00:09:04,030 --> 00:09:08,190
 And then you have step length
 and you want to schedule it again.
 
-111
+112
 00:09:08,190 --> 00:09:10,320
 DN: And it calls itself.
 
-112
+113
 00:09:10,350 --> 00:09:16,420
 SP: Yes. I can reason about this
 now because I understand it better.
 
-113
+114
 00:09:16,460 --> 00:09:24,380
 But the first time I tried it, it didn't
 really work, it's hard to do it by yourself.
 
-114
+115
 00:09:24,420 --> 00:09:27,020
 You need to go through the tutorial first.
 
-115
+116
 00:09:27,050 --> 00:09:36,060
 I want to just copy this. So this is
 the functions and I'll put them at the end.
 
-116
+117
 00:09:37,220 --> 00:09:44,000
 DN: I did notice that here it talks about a
 context whereas you've abbreviated that as ac.
 
-117
+118
 00:09:44,050 --> 00:09:47,840
 That might cause problems.
 
-118
+119
 00:09:47,840 --> 00:09:54,850
 SP: Yes you're right, I was being super
 minimal here. So we need to change this to ac.
 
-119
+120
 00:09:54,890 --> 00:10:00,460
 This extra 0.005 thingy, it gives you some leeway.
 
-120
+121
 00:10:00,510 --> 00:10:08,820
 When you press and release the button, it's a little
 bit after; in case there was some delay or whatever.
 
-121
+122
 00:10:08,820 --> 00:10:13,050
 And here as well.
 
-122
+123
 00:10:15,740 --> 00:10:18,300
 OK, that should be it.
 
-123
+124
 00:10:18,320 --> 00:10:23,090
 Then I also need the variables. I might
 have some already. I don't know.
 
-124
+125
 00:10:26,030 --> 00:10:33,310
 I should maybe be using JSHint but I got this
 computer recently and I haven't installed it yet.
 
-125
+126
 00:10:33,350 --> 00:10:34,900
 So things are missing.
 
-126
+127
 00:10:34,920 --> 00:10:40,740
 I usually have indicators on the side like
 "this line is wrong" but I don't have anything yet.
 
-127
+128
 00:10:40,760 --> 00:10:48,020
 So, I suppose... This is step time, step length,
 we will make this independent of the BPM.
 
-128
+129
 00:10:48,390 --> 00:10:55,030
 So suppose I use 70. I've found this
 is the right number for clapping music.
 
-129
+130
 00:10:56,390 --> 00:11:00,040
 So now instead of playing this sequence...
 
-130
+131
 00:11:00,290 --> 00:11:03,300
 [Sole thinks]
 
-131
+132
 00:11:06,780 --> 00:11:11,700
 We used to playBuffer, we don't do that any more.
 
-132
+133
 00:11:11,700 --> 00:11:14,860
 Just play. [Laughter]
 
-133
+134
 00:11:17,400 --> 00:11:20,720
 But play doesn't exist.
 
-134
+135
 00:11:20,740 --> 00:11:28,040
 We should also shift everything to
 the right because it's not indented.
 
-135
+136
 00:11:28,040 --> 00:11:31,030
 [Silence]
 
-136
+137
 00:11:32,970 --> 00:11:34,250
 Yes, this is start so...
 
-137
+138
 00:11:34,280 --> 00:11:36,914
 Before we start we need
 to store the buffer somewhere,
 
-138
+139
 00:11:36,948 --> 00:11:39,650
 because otherwise it won't
 know what to play with what.
 
-139
+140
 00:11:39,650 --> 00:11:42,050
 DN: Right.
 
-140
+141
 00:11:42,100 --> 00:11:45,200
 [Silence]
 
-141
+142
 00:11:48,650 --> 00:11:52,330
 SP: For example. [Laughter]
 DN: OK.
 
-142
+143
 00:11:52,350 --> 00:11:55,500
 SP: So I set the sample to decodedBuffer.
 
-143
+144
 00:11:57,620 --> 00:11:59,990
 And then we can start playing.
 
-144
+145
 00:12:00,030 --> 00:12:01,800
 So now when we start playing,
 nothing is going to happen,
 
-145
+146
 00:12:01,820 --> 00:12:05,320
 because we're not doing
 anything in the schedule() function.
 
-146
+147
 00:12:05,350 --> 00:12:13,970
 We have the start time, the step time is zero here.
 
-147
+148
 00:12:13,970 --> 00:12:21,470
 we have a schedule button thingy, and
 we will need buttons for starting and stopping.
 
-148
+149
 00:12:21,500 --> 00:12:25,350
 Let's suppose we start early.
 
-149
+150
 00:12:25,410 --> 00:12:33,530
 This is not zero so we will have an issue here.
 
-150
+151
 00:12:33,550 --> 00:12:37,480
 And then we want to play a quarter note la la la la.
 
-151
+152
 00:12:37,500 --> 00:12:43,120
 So here we need to decide what we are
 going to do every time we do this schedule thing.
 
-152
+153
 00:12:43,120 --> 00:12:48,971
 So how do we start with something
 should happen; we need to look at the sequence.
 
-153
+154
 00:12:50,580 --> 00:12:57,040
 Whatever element we are in
 we need to look at the current step.
 
-154
+155
 00:12:57,670 --> 00:13:00,650
 This is kind of similar to
 the previous playSequence
 
-155
+156
 00:13:00,670 --> 00:13:07,600
 but we may not look at the
 whole thing, just do one step at a time.
 
-156
+157
 00:13:07,620 --> 00:13:14,830
 So shouldPlay is a sequence of current step.
 
-157
+158
 00:13:16,980 --> 00:13:20,030
 So if it should play...
 
-158
+159
 00:13:21,120 --> 00:13:24,700
 Something should happen. [Laughter]
 
-159
+160
 00:13:26,040 --> 00:13:29,770
 DN: So this schedule function gets
 called what, a hundred times a second?
 
-160
+161
 00:13:29,800 --> 00:13:36,800
 SP: Yes it could be, if it's step time minus...
 
-161
+162
 00:13:36,800 --> 00:13:40,410
 less than current time plus
 this very small fraction of time.
 
-162
+163
 00:13:40,470 --> 00:13:45,010
 So it shouldn't advance a lot in time.
 
-163
+164
 00:13:45,290 --> 00:13:49,030
 So currentStep should play...
 
-164
+165
 00:13:49,040 --> 00:13:55,570
 I'm going to comment this thing... Let me think.
 
-165
+166
 00:13:55,950 --> 00:14:03,500
 So it needs to be called a number
 of times just to make sure this is happening.
 
-166
+167
 00:14:05,930 --> 00:14:08,720
 I'm looping. [Laughter]
 
-167
+168
 00:14:08,720 --> 00:14:13,500
 So in theory it should start
 playing as soon as this thing is loaded.
 
-168
+169
 00:14:15,350 --> 00:14:22,540
 Nothing should play now but
 I'm trying to see if it's looping even more.
 
-169
+170
 00:14:23,380 --> 00:14:27,440
 Every time it changes the
 step it should also be different.
 
-170
+171
 00:14:27,470 --> 00:14:33,370
 I want to make sure that things
 are happening in the right order.
 
-171
+172
 00:14:36,120 --> 00:14:39,140
 So just to make sure.
 
-172
+173
 00:14:41,150 --> 00:14:43,470
 I've got some error so that's good.
 
-173
+174
 00:14:43,500 --> 00:14:49,460
 The number of steps is undefined...
 Because it's the sequence length.
 
-174
+175
 00:14:50,690 --> 00:14:53,490
 That's why you need to complete the skeleton.
 
-175
+176
 00:14:53,490 --> 00:14:55,820
 DN: Right
 
-176
+177
 00:14:55,850 --> 00:14:59,240
 [Silence]
 
-177
+178
 00:15:01,300 --> 00:15:07,700
 SP: Try again. OK so now it's doing things;
 ta ta ta then loop, and then it starts again.
 
-178
+179
 00:15:09,260 --> 00:15:12,970
 Why are you showing me?
 
-179
+180
 00:15:13,410 --> 00:15:16,450
 [Sole thinks]
 
-180
+181
 00:15:18,350 --> 00:15:22,270
 It should start at zero. I am confused.
 
-181
+182
 00:15:22,290 --> 00:15:25,500
 DN: It goes up to 13 doesn't it? 1 to 13.
 
-182
+183
 00:15:25,510 --> 00:15:28,140
 SP: Why is it current step?
 
-183
+184
 00:15:28,170 --> 00:15:33,780
 Oh because the next time it goes it says "hey this
 is longer than the number of steps I go back to".
 
-184
+185
 00:15:33,810 --> 00:15:36,377
 "So this is not correct".
 
-185
+186
 00:15:36,468 --> 00:15:43,460
 Later we might want to show the current step
 with base one, because that's what humans use.
 
-186
+187
 00:15:43,490 --> 00:15:46,140
 We don't say "We're in step zero, we're in step one."
 
-187
+188
 00:15:46,160 --> 00:15:49,740
 So I was thinking, have I done
 this thing without even knowing?
 
-188
+189
 00:15:49,760 --> 00:15:56,490
 So it's looking as it should be, but we're not
 playing that and we're also not pausing that,
 
-189
+190
 00:15:56,520 --> 00:16:00,080
 so we might want to make this thing play again.
 
-190
+191
 00:16:00,110 --> 00:16:05,380
 So if it should play...
 
-191
+192
 00:16:06,750 --> 00:16:12,130
 We should do the same thing as we did before.
 Was it playBuffer? (I can never remember).
 
-192
+193
 00:16:12,130 --> 00:16:15,690
 I did it just a minute ago, let's just see...
 
-193
+194
 00:16:15,690 --> 00:16:23,370
 We want to use the clapSample we
 stored before. And when is contextPlayTime.
 
-194
+195
 00:16:25,880 --> 00:16:30,960
 Because that's the absolute time,
 instead of relative to this sequence.
 
-195
+196
 00:16:31,100 --> 00:16:35,640
 As I said, it's a bit confusing, but suppose
 you just have the whole time line with a clock.
 
-196
+197
 00:16:35,650 --> 00:16:39,880
 And you're copying the sequence
 and transposing that and you pause.
 
-197
+198
 00:16:39,910 --> 00:16:42,770
 The sequences are stopped
 and then you continue again,
 
-198
+199
 00:16:42,800 --> 00:16:45,480
 but it has to be from a new starting point.
 
-199
+200
 00:16:45,480 --> 00:16:47,940
 DN: Yes you have to add
 that time while it was paused.
 
-200
+201
 00:16:47,940 --> 00:16:52,770
 SP: Yes because otherwise you
 get weird things when you 'unpause'.
 
-201
+202
 00:16:52,820 --> 00:16:55,760
 Like, why is this not really playing as it should?
 
-202
+203
 00:16:55,780 --> 00:16:59,170
 So in theory, and if I haven't messed
 up anything else, it should play again.
 
-203
+204
 00:16:59,170 --> 00:17:00,540
 [We hear the clapping]
 
-204
+205
 00:17:00,540 --> 00:17:04,010
 And now it should loop... Yes!
 
-205
+206
 00:17:04,050 --> 00:17:06,060
 I think it's got the final...
 
-206
+207
 00:17:06,080 --> 00:17:12,880
 DN: It feels to me like there's an
 extra silent beat. (They listen to the music).
 
-207
+208
 00:17:13,740 --> 00:17:14,810
 SP: Is that right?
 
-208
+209
 00:17:14,830 --> 00:17:20,020
 DN: No. It feels like within a cell, the rests...
 
-209
+210
 00:17:20,060 --> 00:17:23,770
 SP: Ah there is an extra something, maybe?
 DN: Yeah, I think so.
 
-210
+211
 00:17:24,260 --> 00:17:28,230
 DN: And it's still going up to 13.  I think
 there's like two empty beats at the end.
 
-211
+212
 00:17:28,260 --> 00:17:31,380
 SP: Yeah, it feels like one empty beat.
 
-212
+213
 00:17:31,380 --> 00:17:39,960
 OK, I'm going to go here and do this thing
 that we added which is... so that's very convenient.
 
-213
+214
 00:17:40,850 --> 00:17:45,420
 OK why are you doing this thing?
 
-214
+215
 00:17:45,420 --> 00:17:50,180
 So it is going to 13 which it shouldn't.
 
-215
+216
 00:17:50,180 --> 00:17:53,860
 I think the issue is here it
 shouldn't be currentStep more than (>),
 
-216
+217
 00:17:53,900 --> 00:17:57,860
 it should be equal (===) and then hopefully...
 
-217
+218
 00:17:57,880 --> 00:18:00,090
 Let me play it again.
 
-218
+219
 00:18:00,090 --> 00:18:03,410
 [They listen]
 
-219
+220
 00:18:03,600 --> 00:18:04,470
 DN: That sounds good.
 
-220
+221
 00:18:04,490 --> 00:18:08,760
 SP: But there isn't the extra step, from nowhere.
 
-221
+222
 00:18:08,790 --> 00:18:10,530
 DN: And we're going from 1 to 12 now.
 
-222
+223
 00:18:10,540 --> 00:18:14,100
 SP: And also it wasn't playing because
 there was nothing in the sequence to play
 
-223
+224
 00:18:14,100 --> 00:18:16,570
 so it was saying ah ha no playing.
 
-224
+225
 00:18:16,600 --> 00:18:19,480
 If we had printed a value, which
 is something that I was going to do,
 
-225
+226
 00:18:19,500 --> 00:18:20,790
 then we would have got an undefined.
 
-226
+227
 00:18:20,810 --> 00:18:23,810
 And I will be like "hey we are
 going too far" something like that.
 
-227
+228
 00:18:23,810 --> 00:18:28,950
 So that's why sometimes, it's not the
 best practice, especially when we have lots of data.
 
-228
+229
 00:18:30,990 --> 00:18:33,640
 DN: You have to click that at just the right time.
 SP: Yes, yes.
 
-229
+230
 00:18:33,640 --> 00:18:36,740
 I will need to file a bug for this.
 
-230
+231
 00:18:36,811 --> 00:18:39,850
 Yes so if you have a lot of
 data printing that to the console,
 
-231
+232
 00:18:39,880 --> 00:18:43,580
 it's not very convenient but with these
 small things it's OK, just to bring up the value
 
-232
+233
 00:18:43,590 --> 00:18:51,400
 and check that you're getting the right things,
 especially with timing. You notice when that's off!
 
-233
+234
 00:18:51,420 --> 00:18:56,340
 DN: So I guess at this point, if you
 where to change the beat per minute figure.
 
-234
+235
 00:18:56,360 --> 00:18:59,490
 If you were to hard code it to something else...
 
-235
+236
 00:18:59,500 --> 00:19:03,560
 SP: Yes I can hard code it... You can see the difference.
 
-236
+237
 00:19:03,560 --> 00:19:08,260
 OK, I made it to 100 bpm.
 
-237
+238
 00:19:08,290 --> 00:19:10,130
 DN: Yes. That's exciting! [the clapping plays]
 
-238
+239
 00:19:10,160 --> 00:19:16,370
 SP: I'm hoping the original plays
 this fast or any of the ones I've seen.
 
-239
+240
 00:19:18,310 --> 00:19:23,760
 I think with control-M... Ah yes!
 With control M you can mute.
 
-240
+241
 00:19:23,780 --> 00:19:29,760
 OK, we learned something. So I
 guess we can make this go back to 70 bpm.
 
-241
+242
 00:19:29,790 --> 00:19:32,710
 And let's check this thing in...
 
-242
+243
 00:19:32,770 --> 00:19:35,800
 [Silence]
 

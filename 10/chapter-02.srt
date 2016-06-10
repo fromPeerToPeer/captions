@@ -28,8 +28,7 @@ because they are like little labels.
 
 7
 00:00:27,350 --> 00:00:31,510
-Everyone is like: "What kind of colors is
-that?"
+Everyone is like: "What kind of colors is that?"
 
 8
 00:00:31,550 --> 00:00:36,208
@@ -79,13 +78,13 @@ just this thing, nothings happening either.
 
 18
 00:01:28,656 --> 00:01:32,784
-I think what we should start with is just
-playing the clap.
+I think what we should start
+with is just playing the clap.
 
 19
 00:01:32,780 --> 00:01:39,520
-You can see how I start assembling the
-whole quagmire.
+You can see how I start
+assembling the whole quagmire.
 
 20
 00:01:39,520 --> 00:01:41,744
@@ -138,620 +137,624 @@ When you use Web Audio you
 have to start by creating a context.
 
 31
-00:02:36,576 --> 00:02:46,112
-It's a black box where things happen, a mini universe.
-You can create a new AudioContext like this.
+00:02:36,570 --> 00:02:41,885
+It's a black box where things happen; a mini universe.
 
 32
+00:02:41,920 --> 00:02:46,080
+You can create a new AudioContext like this.
+
+33
 00:02:46,140 --> 00:02:51,248
 One of those details: Safari doesn't
 know how to do things without prefixes.
 
-33
+34
 00:02:51,280 --> 00:02:57,792
 If you want to do this in Safari
 you have to say: WebKitAudioContext.
 
-34
+35
 00:02:57,800 --> 00:03:09,984
 People start doing things like:
 AudioContext || WebkitAudioContext
 
-35
+36
 00:03:10,016 --> 00:03:11,152
 This is pretty messy.
 
-36
+37
 00:03:11,200 --> 00:03:14,720
 There is a polyfill you can install
 and it will bring all the variations,
 
-37
+38
 00:03:14,760 --> 00:03:19,376
 and it also patches some methods
 Safari has, that are the old style.
 
-38
+39
 00:03:19,370 --> 00:03:21,200
 Because they haven't updated everything.
 
-39
+40
 00:03:21,200 --> 00:03:24,530
 But, I don't like to tamper with
 those things when I'm doing a new project.
 
-40
+41
 00:03:24,550 --> 00:03:28,670
 So I just try to do everything and then if
 I really need to make this thing work with Safari,
 
-41
+42
 00:03:28,680 --> 00:03:33,830
 then I will add the polyfill and make sure that all
 the patches work with the new style of code,
 
-42
+43
 00:03:33,840 --> 00:03:37,540
 but for this example we can just leave it like this.
 
-43
+44
 00:03:37,570 --> 00:03:40,020
 So we have this and it doesn't do anything at all.
 
-44
+45
 00:03:40,020 --> 00:03:45,870
 And just to make sure that it
 works, I just log simple things.
 
-45
+46
 00:03:45,940 --> 00:03:52,310
 So I'll reload and it's showing me I have
 an AudioContext, and its got a sampleRate.
 
-46
+47
 00:03:52,420 --> 00:04:00,270
 And there's nothing happening.
 We have this thing but there is nothing to see.
 
-47
-00:04:00,270 --> 00:04:03,050
-DN: I see, so this is a dedicated inspector
-for Web Audio?
-
 48
-00:04:03,060 --> 00:04:10,370
-SP: Yes, but if you don't connect anything to the
-context, nothing is going to be shown.
+00:04:00,270 --> 00:04:03,050
+DN: I see, so this is a
+dedicated inspector for Web Audio?
 
 49
+00:04:03,060 --> 00:04:10,370
+SP: Yes, but if you don't connect anything
+to the context, nothing is going to be shown.
+
+50
 00:04:10,380 --> 00:04:12,870
 It's waiting for something
 to happen – it's very lazy.
 
-50
-00:04:12,880 --> 00:04:16,500
-It doesn't waste resources, trying to inspect things.
-
 51
+00:04:12,880 --> 00:04:16,500
+It doesn't waste resources,
+trying to inspect things.
+
+52
 00:04:16,520 --> 00:04:25,570
 So, the way this works is you have nodes,
 and you connect those nodes to the destination.
 
-52
+53
 00:04:25,720 --> 00:04:37,750
 It creates a graph of sounds that go in a cascade
 to the context destination, which is the speakers.
 
-53
+54
 00:04:37,780 --> 00:04:44,430
 So if I want to make some clap sounds
 on this computer I need to load the sound,
 
-54
+55
 00:04:44,430 --> 00:04:48,590
 and then create a node that can
 play that kind of thing and then trigger it.
 
-55
+56
 00:04:48,590 --> 00:04:54,280
 Also it has to be connected to the destination
 so it can sound, so this is like several parts.
 
-56
+57
 00:04:54,280 --> 00:04:58,260
 So I will try and start by loading the file.
 
-57
+58
 00:04:58,260 --> 00:04:59,630
 DN: So it will be like a sample.
 
-58
+59
 00:04:59,660 --> 00:05:01,560
 SP: Yes, I'm going to load a sample.
 
-59
+60
 00:05:01,560 --> 00:05:09,310
 I grew up making music with trackers, so samples
 are natural to me, but maybe not for everyone?
 
-60
+61
 00:05:09,360 --> 00:05:16,600
 So I'm never sure if I should
 call it a sound file or sample or what.
 
-61
+62
 00:05:17,550 --> 00:05:21,210
 So yes, I'm going to try to load the sample.
 
-62
+63
 00:05:21,210 --> 00:05:26,340
 And then we decode it because when you
 load the sample it's just like binary data.
 
-63
-00:05:26,360 --> 00:05:28,880
-Web Audio doesn't know what to do with
-that so you need to decode it.
-
 64
-00:05:28,900 --> 00:05:33,280
+00:05:26,360 --> 00:05:29,600
+Web Audio doesn't know what to
+do with that so you need to decode it.
+
+65
+00:05:29,622 --> 00:05:33,280
 There is a function it provides to
 decode it, and then we will play it.
 
-65
-00:05:33,290 --> 00:05:38,100
-So I'm going to try to do this thing first.
-Then we will do the sequences.
-
 66
+00:05:33,290 --> 00:05:38,100
+So I'm going to try to do this thing
+first. Then we will do the sequences.
+
+67
 00:05:38,160 --> 00:05:47,010
 So for loading this we use this
 famous cross request thingy.
 
-67
+68
 00:05:47,040 --> 00:05:56,860
 There is a new thing called fetch; I can't remember
 the syntax of that so I'll open my cheat thingy,
 
-68
+69
 00:05:56,860 --> 00:06:02,270
 which is this loadSample.js thing.
 
-69
-00:06:02,300 --> 00:06:12,150
-This is important, you want to create a new
-XMLHttpRequest with a responseType of arraybuffer.
-
 70
-00:06:12,150 --> 00:06:18,400
-And then you want to listen for when the thing has
-loaded, but I just want to go step by step.
+00:06:02,300 --> 00:06:09,234
+This is important, you want
+to create a new XMLHttpRequest
 
 71
+00:06:09,268 --> 00:06:12,114
+with a responseType of arraybuffer.
+
+72
+00:06:12,150 --> 00:06:18,400
+And then you want to listen for when the
+thing has loaded, but I just want to go step by step.
+
+73
 00:06:18,400 --> 00:06:22,850
 I can do this thing, I just need a reminder. [laughter]
 
-72
+74
 00:06:26,310 --> 00:06:31,450
-It's awkward because it has XML uppercase but
-only the first letter of Http is uppercase.
+It's awkward because it has XML uppercase
+but only the first letter of Http is uppercase.
 
-73
+75
 00:06:31,470 --> 00:06:33,560
 HTTP should be all uppercase, but it's not.
 
-74
+76
 00:06:33,560 --> 00:06:35,980
 DN: HTTP is an abbreviation as well, isn't it?
 
-75
+77
 00:06:35,980 --> 00:06:41,550
 SP: Exactly, it should be XMLHTTPRequest
 but its not, so it's super awkward.
 
-76
-00:06:41,550 --> 00:06:42,620
-DN: That's even harder to read!
-To my eyes.
+78
+00:06:41,550 --> 00:06:43,108
+DN: That's even harder to read!To my eyes.
 
-77
-00:06:42,620 --> 00:06:50,780
+79
+00:06:43,108 --> 00:06:50,780
 SP: Yes whatever, they are changing that with fetch.
 
-78
+80
 00:06:50,810 --> 00:06:57,660
 You need to say this is an arraybuffer because
 otherwise the browser tries to parse what it loads.
 
-79
+81
 00:06:57,660 --> 00:07:02,030
 Maybe if it's JSON or something. You don't
 want it to touch the thing before it's ready.
 
-80
+82
 00:07:02,050 --> 00:07:05,540
 You just want an arraybuffer.
 
-81
+83
 00:07:05,740 --> 00:07:11,350
 And then you add an EventListener,
 so when the thing is ready it will tell you.
 
-82
+84
 00:07:11,350 --> 00:07:14,070
 I could probably just complete...
 
-83
+85
 00:07:18,760 --> 00:07:21,920
 Again, more console logging [Laughter]
 
-84
+86
 00:07:23,770 --> 00:07:29,410
 [Sole thinks]
 
-85
+87
 00:07:29,430 --> 00:07:32,180
 OK this is how you open the thing.
 
-86
+88
 00:07:32,190 --> 00:07:38,610
-The URL let's say it's "CLAP07". I think
-that's the name of the file.
+The URL let's say it's "CLAP07".
+I think that's the name of the file.
 
-87
+89
 00:07:41,270 --> 00:07:46,740
 And then we just say send(). And I have
 to make sure the clap file is in the right place.
 
-88
+90
 00:07:46,740 --> 00:07:48,190
 DN: Yes.
 
-89
+91
 00:07:50,280 --> 00:07:54,480
-Almost there, it's "CLAP_07". Let's place
-this in here.
+Almost there, it's "CLAP_07". Let's place this in here.
 
-90
+92
 00:07:54,480 --> 00:07:56,960
 So it's CLAP_...
 
-91
+93
 00:07:56,960 --> 00:07:59,520
 [Silence]
 
-92
+94
 00:08:00,370 --> 00:08:05,870
 And that should load the thing.
 It should say something here... Hi!
 
-93
+95
 00:08:05,870 --> 00:08:06,880
 DN: Ah, OK.
 
-94
+96
 00:08:06,880 --> 00:08:13,180
 So when it's loaded, in this context, "this" is the request,
 
-95
+97
 00:08:13,180 --> 00:08:22,210
 so if I say this.data; it should be the request
 data, I think. No. Maybe it will be the this.response?
 
-96
+98
 00:08:22,320 --> 00:08:29,850
 I should make a library so I don't have to
 remember these things. I always have to copy this.
 
-97
+99
 00:08:29,890 --> 00:08:31,100
 DN: Ah, there we go.
 
-98
+100
 00:08:31,100 --> 00:08:37,110
-SP: In the context of the listener, "this" is a request,
-so "this.response" is the data that we loaded.
+SP: In the context of the listener, "this" is a
+request, so "this.response" is the data that we loaded.
 
-99
+101
 00:08:37,140 --> 00:08:39,990
 It's just an array buffer,
 it's not being parsed or anything.
 
-100
+102
 00:08:40,030 --> 00:08:46,580
 So here's my 14K of data,
 that I know what to do with.
 
-101
+103
 00:08:46,600 --> 00:08:51,420
 So what you do with this is, using
 the context that you created before:
 
-102
+104
 00:08:51,420 --> 00:08:59,570
 You decode the audio data. So I say
 please decode this thing I just got.
 
-103
+105
 00:08:59,610 --> 00:09:05,980
 And when you're ready...
 So it's got two callbacks.
 
-104
+106
 00:09:06,010 --> 00:09:10,420
 That means it converts the binary data
 into something the browser can play, hopefully.
 
-105
+107
 00:09:10,440 --> 00:09:15,300
 It should be able to play because this
 is a WAV file. Also, I have tried it before. [Laughter]
 
-106
+108
 00:09:15,350 --> 00:09:23,120
 But if you don't know for sure that it's going to
 work you should also have a fail callback.
 
-107
+109
 00:09:23,140 --> 00:09:27,520
 This should tell you when you can't
 decode the thing. So it's a good practice.
 
-108
+110
 00:09:27,570 --> 00:09:29,830
 DN: Yeah, right.
 
-109
+111
 00:09:29,830 --> 00:09:33,840
 SP: This is terrible I cannot decode it.
 
-110
+112
 00:09:33,880 --> 00:09:39,110
 And then log the error. Something like that,
 so at least you can see something is happening.
 
-111
+113
 00:09:39,110 --> 00:09:42,920
 So supposing that we get that thing,..
 
-112
+114
 00:09:42,920 --> 00:09:48,630
 decodedBuffer should print the thing.
 
-113
+115
 00:09:48,630 --> 00:09:59,100
 It's called that and it's decoded the thing.
 It makes sense that the length is 7 bytes,
 
-114
+116
 00:09:59,120 --> 00:10:03,770
 because this is the byteLength...
 I think it's like CD size or something.
 
-115
+117
 00:10:03,780 --> 00:10:09,560
 It's not exact because you have the header
 of the wave file as well, so it's not just
 raw binary data.
 
-116
+118
 00:10:09,590 --> 00:10:13,620
 You have the header, and that describes:
 This is a wave file, it's got one channel la la la la.
 
-117
+119
 00:10:13,660 --> 00:10:17,950
 So this is what the decodeAudioData function does.
 
-118
+120
 00:10:17,950 --> 00:10:24,330
-It reads a header and tries to find what type of
-file it is; it could be an Ogg file or an MP3.
+It reads a header and tries to find what type
+of file it is; it could be an Ogg file or an MP3.
 
-119
+121
 00:10:24,330 --> 00:10:28,330
 That depends on the browser.
 
-120
+122
 00:10:28,340 --> 00:10:29,520
 DN: This one's a WAV.
 
-121
+123
 00:10:29,520 --> 00:10:31,350
 SP: Yes, this should be easy to play.
 
-122
+124
 00:10:31,370 --> 00:10:36,880
 For a while they would just play
 on Firefox and not on Chrome or Safari,
 
-123
+125
 00:10:36,880 --> 00:10:39,350
 but right now with WAV things are pretty easy.
 
-124
+126
 00:10:39,380 --> 00:10:40,190
 DN: OK right.
 
-125
+127
 00:10:40,190 --> 00:10:45,040
 SP: This is not the best option because
 they are big.
 
-126
+128
 00:10:45,050 --> 00:10:47,180
 But for this demonstration they are OK.
 
-127
+129
 00:10:47,720 --> 00:10:49,770
 DN: The duration is less than a second I think.
 
-128
+130
 00:10:49,800 --> 00:10:59,660
 SP: Yes, its pretty small, 0.16 seconds.
 So I could actually play that.
 
-129
+131
 00:11:02,240 --> 00:11:03,440
 DN: It's over before it's started!
 
-130
+132
 00:11:03,450 --> 00:11:06,830
 SP: Yes, we just want to make something play.
 
-131
+133
 00:11:06,860 --> 00:11:13,060
 So we have this thing decoded, and instead of
 console logging we can maybe play the thing.
 
-132
+134
 00:11:13,060 --> 00:11:22,670
 So I'm going to say playSample, no playBuffer.
 I like to call things by their proper name.
 
-133
+135
 00:11:22,780 --> 00:11:28,210
 And I'll make the function
 somewhere else. Decode is happening here.
 
-134
+136
 00:11:30,930 --> 00:11:31,920
 DN: In a callback.
 
-135
+137
 00:11:31,940 --> 00:11:35,730
 SP: Yes, happens in a callback. [Laughter]
 
-136
+138
 00:11:35,730 --> 00:11:38,870
 This is terrible, we should change it,
 but these are the steps that we wanted to do,
 
-137
+139
 00:11:38,900 --> 00:11:45,880
-so for playing we just create playBuffer and
-give it a buffer parameter.
+so for playing we just create
+playBuffer and give it a buffer parameter.
 
-138
+140
 00:11:45,910 --> 00:11:53,510
 As I say, you need to create a node,
 so this thing we have here is a buffer.
 
-139
+141
 00:11:53,530 --> 00:11:59,940
 BufferNode is what we need to play buffers.
 So this is slightly confusing [Laughter].
 
-140
+142
 00:11:59,950 --> 00:12:09,870
 So using the context that we
 created before, we create a bufferNode.
 
-141
+143
 00:12:09,910 --> 00:12:15,470
 And then you say bufferNode.connect.
 
-142
+144
 00:12:15,500 --> 00:12:17,200
 This is for establishing the graph.
 
-143
+145
 00:12:17,240 --> 00:12:24,400
 So you connect that to the destination.
 All the nodes have the connect method.
 
-144
+146
 00:12:24,400 --> 00:12:28,410
 And you can connect them to other
 nodes or to a destination, in this case.
 
-145
+147
 00:12:28,430 --> 00:12:35,020
 So I'll start with connecting it here and
 later we will use a good idea before we continue.
 
-146
+148
 00:12:35,040 --> 00:12:42,420
 But basically we say connect and say the buffer
 that we want to play, and it's the buffer that we've got.
 
-147
+149
 00:12:42,450 --> 00:12:45,320
 Because you can play several
 samples with the same BufferNode.
 
-148
+150
 00:12:45,330 --> 00:12:50,540
 You can change the buffer property
 and get different things with the same...
 
-149
+151
 00:12:50,540 --> 00:12:52,240
 Without changing the graph or anything.
 
-150
+152
 00:12:52,260 --> 00:12:53,710
 DN: Yes, OK.
 
-151
+153
 00:12:53,710 --> 00:12:56,430
 SP: And then you just say start().
 
-152
+154
 00:12:56,450 --> 00:13:01,650
 With the parameters: could use undefined or
 zero, which means: "as soon as possible".
 
-153
+155
 00:13:01,660 --> 00:13:02,690
 DN: Yeah, right.
 
-154
+156
 00:13:02,700 --> 00:13:06,020
 So in theory that should...
 
-155
+157
 00:13:06,030 --> 00:13:10,980
 Oh no, maybe it's just Buffer.
 I'm always confused with this.
 
-156
+158
 00:13:11,010 --> 00:13:15,200
 Is it Buffer... No.
 
-157
+159
 00:13:15,220 --> 00:13:20,880
 OK, this is where I check the API because I
 can never remember the names of the methods.
 
-158
+160
 00:13:22,500 --> 00:13:25,560
 DN: You went straight to the source, the W3C.
 
-159
+161
 00:13:25,570 --> 00:13:30,310
 SP: Yes. Ah, BufferSource.
 
-160
+162
 00:13:30,320 --> 00:13:32,320
 Is it Source? Yes.
 
-161
+163
 00:13:32,330 --> 00:13:38,140
-Yes, they are doing the same thing, this
-is the same all the time.
+Yes, they are doing the same thing,
+this is the same all the time.
 
-162
+164
 00:13:38,150 --> 00:13:40,430
 OK so I can move this thing.
 
-163
+165
 00:13:40,450 --> 00:13:43,640
-DN: This is basically the "hello world" of
-Web Audio?
+DN: This is basically the "hello world" of Web Audio?
 
-164
+166
 00:13:43,640 --> 00:13:49,570
-SP: It could be. OK yes, we have a clap,
-finally.
+SP: It could be. OK yes, we have a clap, finally.
 

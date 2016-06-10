@@ -115,13 +115,13 @@ DN: Yeah... [thoughtfully].
 
 26
 00:01:49,120 --> 00:01:58,192
-SP: Actually it's one step ahead, so we
-want to add one step to the thingy.
+SP: Actually it's one step ahead, so
+we want to add one step to the thingy.
 
 27
 00:01:58,280 --> 00:02:06,160
-SP: It keeps shifting and then at the end
-they are playing the same thing again.
+SP: It keeps shifting and then at the
+end they are playing the same thing again.
 
 28
 00:02:06,160 --> 00:02:14,256
@@ -135,8 +135,8 @@ the noises it makes are quite exciting to listen to.
 
 30
 00:02:18,848 --> 00:02:22,848
-SP: Yes, and all those videos on YouTube
-are really interesting. [Laughter]
+SP: Yes, and all those videos
+on YouTube are really interesting. [Laughter]
 
 31
 00:02:22,840 --> 00:02:32,576
@@ -170,8 +170,8 @@ be in sync. If you do badly it could be messy.
 
 37
 00:03:02,540 --> 00:03:08,320
-DN: Yes, so you mentioned Web Audio; that's the
-technology you'd use to solve this challenge?
+DN: Yes, so you mentioned Web Audio; that's
+the technology you'd use to solve this challenge?
 
 38
 00:03:08,320 --> 00:03:13,936

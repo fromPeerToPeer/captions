@@ -40,14 +40,13 @@ thing, the second player shifts another beat.
 
 10
 00:00:37,930 --> 00:00:48,590
-So what I want to do is to skip counts
-after every 4th repeat.
+So what I want to do is to
+skip counts after every 4th repeat.
 
 11
 00:00:48,610 --> 00:00:53,580
-And I'm going to use the stanza
-number to determine how many times
-I need to shift.
+And I'm going to use the stanza number
+to determine how many times I need to shift.
 
 12
 00:00:55,160 --> 00:01:00,160
@@ -129,8 +128,8 @@ DN: Yes sure.
 
 29
 00:02:34,470 --> 00:02:39,355
-SP: So this when we should repeat the thing,
-so this is when we need to increase.
+SP: So this when we should repeat the
+thing, so this is when we need to increase.
 
 30
 00:02:39,370 --> 00:02:42,380
@@ -273,11 +272,12 @@ thing is clapping in your face.
 
 62
 00:05:19,070 --> 00:05:26,100
-It should increase that but also go back to zero [laughter].
+It should increase that but
+also go back to zero [laughter].
 
 63
 00:05:26,140 --> 00:05:30,680
-We need to inaud that because we're doing a new one.
+We need to erase that because we're doing a new one.
 
 64
 00:05:30,800 --> 00:05:33,290
@@ -334,8 +334,8 @@ what the second player should play.
 
 76
 00:06:33,560 --> 00:06:43,200
-So we go back to what 'should play'
-- it's for the first player.
+So we go back to what
+'should play' - it's for the first player.
 
 77
 00:06:43,200 --> 00:06:46,130
@@ -422,8 +422,8 @@ So we model the values with 12,1 =1, 2=2 etc
 
 95
 00:08:28,210 --> 00:08:32,200
-
-Suppose 12 should be zero, because it goes back to zero.
+Suppose 12 should be zero,
+because it goes back to zero.
 
 96
 00:08:32,220 --> 00:08:35,310

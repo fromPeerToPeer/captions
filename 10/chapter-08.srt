@@ -164,11 +164,12 @@ SP: If you look up transport you will
 find a lot of references to all the meanings...
 
 38
-00:02:37,090 --> 00:02:39,680
-especially MIDI creation software meanings of transport.
+00:02:37,090 --> 00:02:40,011
+especially MIDI creation
+software meanings of transport.
 
 39
-00:02:39,702 --> 00:02:46,390
+00:02:40,057 --> 00:02:46,390
 I think it's so you can transport
 yourself around the song. I'm not sure.
 
