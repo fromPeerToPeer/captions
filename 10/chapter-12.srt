@@ -4,828 +4,785 @@ Chapter 12: Accenting the first beat.
 
 2
 00:00:03,390 --> 00:00:05,790
-DN: I suppose another thing to make it
-sound more musical,
+DN: I suppose another thing
+to make it sound more musical,
 
 3
-00:00:05,810 --> 00:00:11,390
-maybe the first beat could always be
-slightly louder. And that would give you a
-bit of orientation.
+00:00:05,810 --> 00:00:09,108
+maybe the first beat could always be slightly louder. 
 
 4
-00:00:11,420 --> 00:00:12,610
-SP: Could be,
+00:00:09,142 --> 00:00:11,420
+And that would give you a bit of orientation.
 
 5
+00:00:11,420 --> 00:00:12,610
+SP: Could be.
+
+6
 00:00:12,670 --> 00:00:14,560
 DN: That wasn't in the original spec.
 
-6
-00:00:14,560 --> 00:00:17,780
-SP: Yes, we could maybe look at that
-later.
-
 7
-00:00:17,830 --> 00:00:27,930
-SP: So if we're at the beginning of the
-rep we want the beat to be louder and the
-rest quieter.
+00:00:14,560 --> 00:00:17,780
+SP: Yes, we could maybe look at that later.
 
 8
+00:00:17,830 --> 00:00:24,422
+SP: So if we're at the beginning of
+the rep we want the beat to be louder.
+
+9
+00:00:24,445 --> 00:00:27,931
+And the rest quieter.
+
+10
 00:00:27,950 --> 00:00:30,670
 DN: Yes, or just normal.
 
-9
+11
 00:00:30,670 --> 00:00:38,630
 SP: We want it to be current step zero.
 
-10
-00:00:38,710 --> 00:00:43,520
-And it doesn't matter if it's the first or
-the second player, it's for both of them.
-
-11
-00:00:43,550 --> 00:00:45,565
-DN: I think it will be just for the first
-player.
-
 12
+00:00:38,710 --> 00:00:43,520
+And it doesn't matter if it's the first
+or the second player, it's for both of them.
+
+13
+00:00:43,550 --> 00:00:45,565
+DN: I think it will be just for the first player.
+
+14
 00:00:45,577 --> 00:00:51,450
 SP: OK, so we just look at current step.
 
-13
-00:00:51,520 --> 00:00:58,210
-The way Web Audio works is, every node
-does a single thing.
-
-14
-00:00:58,210 --> 00:01:03,380
-The buffer node doesn't have a volume
-parameter,
-
 15
-00:01:03,380 --> 00:01:09,290
-so we need to create a node that only
-modifies the volume of whatever goes
-through it.
+00:00:51,520 --> 00:00:58,210
+The way Web Audio works is,
+every node does a single thing.
 
 16
-00:01:09,290 --> 00:01:13,420
-It's called 'gain', so you can adjust the
-gain.
+00:00:58,210 --> 00:01:03,380
+The buffer node doesn't have a volume parameter.
 
 17
+00:01:03,380 --> 00:01:09,290
+So we need to create a node that only
+modifies the volume of whatever goes through it.
+
+18
+00:01:09,290 --> 00:01:13,420
+It's called 'gain', so you can adjust the gain.
+
+19
 00:01:13,450 --> 00:01:16,090
 DN: I see.
 
-18
+20
 00:01:16,170 --> 00:01:20,340
 SP: So here we create a buffer each time.
 
-19
-00:01:20,390 --> 00:01:27,030
-So I'm going to introduce the gain node in
-between the buffer node and the limiter,
-
-20
-00:01:27,040 --> 00:01:33,410
-and set the volume as well, so it's a bit
-contrived, but it should be OK.
-
 21
+00:01:20,390 --> 00:01:27,030
+So I'm going to introduce the gain node
+in between the buffer node and the limiter.
+
+22
+00:01:27,040 --> 00:01:33,410
+And set the volume as well, so it's
+a bit contrived, but it should be OK.
+
+23
 00:01:33,450 --> 00:01:37,240
 So I will call it gain.
 
-22
+24
 00:01:37,240 --> 00:01:40,430
 [Silence]
 
-23
+25
 00:01:43,420 --> 00:01:47,310
-I can never remember if it's createGain()
-or createGainNode().
+I can never remember if it's
+createGain() or createGainNode().
 
-24
+26
 00:01:47,330 --> 00:01:49,520
 If it doesn't work, we'll fix that.
 
-25
+27
 00:01:49,570 --> 00:01:53,670
 So I will connect buffer node to the gain.
 
-26
+28
 00:01:55,310 --> 00:02:02,550
-This has to be the gain value.  And then
-the gain to the limiter.
+This has to be the gain value.
+And then the gain to the limiter.
 
-27
+29
 00:02:05,290 --> 00:02:08,560
 I also need to set the gain value.
 
-28
+30
 00:02:09,080 --> 00:02:14,560
-The amount of gain that we want, and it's
-called gain.
+The amount of gain that we want, and it's called gain.
 
-29
+31
 00:02:15,710 --> 00:02:21,650
 It's gainValue, I will explain why.
 
-30
+32
 00:02:23,800 --> 00:02:28,690
-Let's make sure that this works, to start
-with.
+Let's make sure that this works, to start with.
 
-31
+33
 00:02:28,690 --> 00:02:31,930
 [Silence]
 
-32
-00:02:31,950 --> 00:02:41,520
-Let's suppose this is the gainValue... For
-the first player.
-
-33
-00:02:41,550 --> 00:02:46,560
-Let's suppose it's always zero so that it
-keeps playing.
-
 34
-00:02:47,210 --> 00:02:55,510
-We don't want to change the second one so
-I'm going to make it detect if I'm not
-sending the value for this just use zero.
+00:02:31,950 --> 00:02:41,520
+Let's suppose this is the
+gainValue... For the first player.
 
 35
-00:02:55,560 --> 00:03:02,590
-Classic JavaScript.
+00:02:41,550 --> 00:02:46,560
+Let's suppose it's always
+zero so that it keeps playing.
 
 36
+00:02:47,210 --> 00:02:49,302
+We don't want to change the second one.
+
+37
+00:02:49,337 --> 00:02:56,537
+So I'm going to make it detect if I'm
+not sending the value for this just use zero.
+
+38
+00:02:56,674 --> 00:03:00,548
+Classic JavaScript.
+
+39
 00:03:02,770 --> 00:03:05,740
 If it's not undefined
 
-37
+40
 00:03:05,740 --> 00:03:11,960
-You don't want to just use gainValue
-because if it's zero it's going to assume
-that it's one.
+You don't want to just use gainValue because
+if it's zero it's going to assume that it's one.
 
-38
+41
 00:03:12,070 --> 00:03:17,420
-So if it's not undefined just use
-gainValue, otherwise use 1.0.
+So if it's not undefined just
+use gainValue, otherwise use 1.0.
 
-39
+42
 00:03:17,520 --> 00:03:21,540
 So we don't change anything at all.
 
-40
+43
 00:03:23,290 --> 00:03:26,540
 Question mark.
 
-41
+44
 00:03:26,780 --> 00:03:30,610
 So in theory, this should...
 
-42
+45
 00:03:30,640 --> 00:03:31,380
 [They listen]
 
-43
+46
 00:03:31,380 --> 00:03:35,240
 And we should see new nodes here.
 
-44
-00:03:35,240 --> 00:03:38,130
-Sometimes it doesn't engage... So here's
-the thing.
-
-45
-00:03:40,050 --> 00:03:43,620
-At some point it should disappear, but it
-hasn't for some reason.
-
-46
-00:03:44,100 --> 00:03:47,400
-DN: Interesting! Have we introduced a
-memory leak here?
-
 47
-00:03:47,400 --> 00:03:53,240
-SP: Yes!  I think that's the way I'm
-connecting things.
+00:03:35,240 --> 00:03:38,130
+Sometimes it doesn't engage... So here's the thing.
 
 48
+00:03:40,050 --> 00:03:43,620
+At some point it should disappear,
+but it hasn't for some reason.
+
+49
+00:03:44,100 --> 00:03:47,400
+DN: Interesting! Have we
+introduced a memory leak here?
+
+50
+00:03:47,400 --> 00:03:53,240
+SP: Yes!  I think that's the way I'm connecting things.
+
+51
 00:03:53,600 --> 00:03:55,240
 Hmm interesting.
 
-49
-00:03:55,240 --> 00:03:59,980
-So now were just playing the buffers, just
-not connecting them to the limiter.
-
-50
-00:03:59,990 --> 00:04:03,100
-And this is definitely growing... Look at
-that.
-
-51
-00:04:03,180 --> 00:04:06,330
-OK I need to close this before it hogs
-down everything.
-
 52
+00:03:55,240 --> 00:03:59,980
+So now were just playing the buffers,
+just not connecting them to the limiter.
+
+53
+00:03:59,990 --> 00:04:03,100
+And this is definitely growing... Look at that.
+
+54
+00:04:03,180 --> 00:04:06,330
+OK I need to close this
+before it hogs down everything.
+
+55
 00:04:06,330 --> 00:04:10,500
 Let me think about how to do this.
 
-53
-00:04:10,500 --> 00:04:15,440
-Will they just get removed?  Or create a
-disaster here?
-
-54
-00:04:15,590 --> 00:04:21,000
-So maybe I should tell it which gain to
-connect.  Maybe we should have 2 base...
-
-55
-00:04:21,000 --> 00:04:26,390
-So we don't create all the gain nodes all
-the time. Maybe this is a bad idea.
-
 56
-00:04:27,020 --> 00:04:33,330
-Like having two roads... Or, just tell it
-which gain to connect to,
+00:04:10,500 --> 00:04:15,440
+Will they just get removed? 
+Or create a disaster here?
 
 57
-00:04:33,410 --> 00:04:37,870
-so I don't do this massive amount of
-gains.
+00:04:15,590 --> 00:04:21,000
+So maybe I should tell it which gain
+to connect.  Maybe we should have 2 base...
 
 58
+00:04:21,000 --> 00:04:26,390
+So we don't create all the gain nodes
+all the time. Maybe this is a bad idea.
+
+59
+00:04:27,020 --> 00:04:33,330
+Like having two roads... Or, just
+tell it which gain to connect to,
+
+60
+00:04:33,410 --> 00:04:37,870
+so I don't do this massive amount of gains.
+
+61
 00:04:37,870 --> 00:04:39,870
 Let me think how I would do this.
 
-59
+62
 00:04:41,030 --> 00:04:45,320
-Just as I have two samples I could have
-two gain nodes.
+Just as I have two samples
+I could have two gain nodes.
 
-60
+63
 00:04:48,150 --> 00:04:54,525
-Usually what you do is use the gain nodes
-as routers.
+Usually what you do is use the gain nodes as routers.
 
-61
+64
 00:04:54,651 --> 00:04:55,360
 DN: Right
 
-62
+65
 00:04:55,394 --> 00:05:00,171
 SP: They aren't actually modifying
-anything but you can connect things to
-them.
+anything but you can connect things to them.
 
-63
+66
 00:05:00,182 --> 00:05:01,554
 DN: Yeah, OK.
 
-64
+67
 00:05:01,580 --> 00:05:05,280
 SP: Eventually they will be garbage
 collected when you're done with them,
 
-65
-00:05:05,302 --> 00:05:07,874
-but you don't need to create the gain
-every time.
-
-66
-00:05:07,940 --> 00:05:14,822
-Web Audio can't get rid of those gain
-nodes because it doesn't know if you want
-to use them afterwards.
-
-67
-00:05:14,880 --> 00:05:19,188
-The buffer source: once they are done they
-are done, so it knows I can get rid of
-them
-
 68
-00:05:19,200 --> 00:05:23,440
-when they have ended and you don't have
-any listeners or anything.
+00:05:05,302 --> 00:05:07,874
+but you don't need to create the gain every time.
 
 69
-00:05:23,462 --> 00:05:28,297
-But the gainNodes: it doesn't know
-anything. So they are being kept.
+00:05:07,940 --> 00:05:14,822
+Web Audio can't get rid of those gain nodes because
+it doesn't know if you want to use them afterwards.
 
 70
+00:05:14,880 --> 00:05:19,188
+The buffer source: once they are done
+they are done, so it knows I can get rid of them.
+
+71
+00:05:19,200 --> 00:05:23,440
+When they have ended and you
+don't have any listeners or anything.
+
+72
+00:05:23,462 --> 00:05:28,297
+But the gainNodes: it doesn't
+know anything. So they are being kept.
+
+73
 00:05:28,290 --> 00:05:33,657
 So I'm going to create two gainNodes.
 
-71
-00:05:33,650 --> 00:05:39,908
-Because there is only so much you can
-optimise.
-
-72
-00:05:40,434 --> 00:05:48,750
-It won't be very elegant but it should be
-more efficient. We don't want this thing
-to blow up!
-
-73
-00:05:52,445 --> 00:05:57,245
-I could do a loop for two times.
-[Laughter]
-
 74
+00:05:33,650 --> 00:05:39,908
+Because there is only so much you can optimise.
+
+75
+00:05:40,434 --> 00:05:48,750
+It won't be very elegant but it should be more
+efficient. We don't want this thing to blow up!
+
+76
+00:05:52,445 --> 00:05:57,245
+I could do a loop for two times. [Laughter]
+
+77
 00:05:57,240 --> 00:06:01,737
 Interesting...This is totally overblown.
 
-75
+78
 00:06:02,091 --> 00:06:07,771
-I'm trying to think of a variable that I'm
-not using anywhere else, but I'm just
-going to use this.
+I'm trying to think of a variable that I'm not
+using anywhere else, but I'm just going to use this.
 
-76
+79
 00:06:10,660 --> 00:06:16,354
 This is the most stupid loop ever...
 
-77
+80
 00:06:22,137 --> 00:06:26,914
-Just for creating two gain nodes this is
-overblown but that's where I want to be.
+Just for creating two gain nodes this
+is overblown but that's where I want to be.
 
-78
+81
 00:06:26,914 --> 00:06:29,302
 Hard coding, variable names.
 
-79
-00:06:29,634 --> 00:06:34,594
-So we did this thing but it is not a good
-idea.
-
-80
-00:06:34,620 --> 00:06:40,674
-So instead of doing it this way we could
-tell it which gain to connect to.
-
-81
-00:06:40,685 --> 00:06:46,525
-Just as we said the buffer, we could also
-say the gain index... Array.
-
 82
+00:06:29,634 --> 00:06:34,594
+So we did this thing but it is not a good idea.
+
+83
+00:06:34,620 --> 00:06:40,674
+So instead of doing it this way we
+could tell it which gain to connect to.
+
+84
+00:06:40,685 --> 00:06:46,525
+Just as we said the buffer, we
+could also say the gain index... Array.
+
+85
 00:06:46,520 --> 00:06:51,805
 So it will try to connect to node 1 or
 node 2.
 
-83
+86
 00:06:51,800 --> 00:06:55,062
 And then the value of this thing...
 
-84
+87
 00:06:55,060 --> 00:07:01,725
-So we are changing the thing. Instead of
-creating the thing, we just use it.
+So we are changing the thing
+Instead of creating the thing, we just use it.
 
-85
+88
 00:07:02,731 --> 00:07:05,291
 It's getting complex.
 
-86
+89
 00:07:05,290 --> 00:07:11,908
 When you start routing things this way,
-it's kind of like writing your own
-synthesizer
-
-87
-00:07:11,920 --> 00:07:14,857
-and introducing all the logic but it gets
-confusing.
-
-88
-00:07:16,262 --> 00:07:23,417
-If you open a synthesizer you would find
-it very complex.
-
-89
-00:07:23,440 --> 00:07:28,377
-The routing is complex because it's a
-whole instrument and you're defining the
-whole logic.
+it's kind of like writing your own synthesizer
 
 90
+00:07:11,920 --> 00:07:14,857
+and introducing all the logic but it gets confusing.
+
+91
+00:07:16,262 --> 00:07:23,417
+If you open a synthesizer
+you would find it very complex.
+
+92
+00:07:23,440 --> 00:07:28,377
+The routing is complex because it's a whole
+instrument and you're defining the whole logic.
+
+93
 00:07:28,370 --> 00:07:31,257
 So its bound to be confusing in some way.
 
-91
+94
 00:07:31,280 --> 00:07:39,600
 I'm not going to assume that you can't
-pass the gainIndex because this is
-required.
+pass the gainIndex because this is required.
 
-92
+95
 00:07:39,610 --> 00:07:45,325
-The gainValue I can make optional, but you
-definitely need to specify the gainIndex.
+The gainValue I can make optional, but
+you definitely need to specify the gainIndex.
 
-93
+96
 00:07:45,337 --> 00:07:52,640
-The gain is going to be the gainNodes of
-gainIndex.
+The gain is going to be the gainNodes of gainIndex.
 
-94
+97
 00:07:52,640 --> 00:07:58,285
 And also I need to connect the node.
 
-95
+98
 00:07:58,380 --> 00:08:04,182
 This is so terrible. It's ac.createGain().
 
-96
+99
 00:08:04,251 --> 00:08:09,794
-And then I push the thing.  I also need to
-connect that to the destination.
+And then I push the thing.  I also
+need to connect that to the destination.
 
-97
+100
 00:08:09,790 --> 00:08:13,817
 Otherwise they're not going to play.
 
-98
+101
 00:08:13,851 --> 00:08:16,480
 DN: And the limiter connects to?
 
-99
+102
 00:08:16,525 --> 00:08:20,640
-SP: Yes, it needs to be connected to the
-limiter.
+SP: Yes, it needs to be connected to the limiter.
 
-100
+103
 00:08:20,708 --> 00:08:26,457
-OK the gains are connected so we have
-these two base here
+OK the gains are connected,
+so we have these two base here
 
-101
+104
 00:08:26,450 --> 00:08:28,525
 waiting for us to connect things to them.
 
-102
-00:08:28,570 --> 00:08:34,605
-And then here we decide which node to
-connect this, depending on which voice.
-
-103
-00:08:34,685 --> 00:08:40,994
-The gain, we change the value again, this
-is just normal. We connect the node to the
-gain.
-
-104
-00:08:41,051 --> 00:08:46,530
-This doesn't have to be here. And the rest
-should be OK.
-
 105
-00:08:46,530 --> 00:08:54,708
-And we need to change this; where we
-decide which thing to play.
+00:08:28,570 --> 00:08:34,605
+And then here we decide which node
+to connect this, depending on which voice.
 
 106
-00:08:54,754 --> 00:09:00,068
-So it's zero because this is the first
-voice.
+00:08:34,685 --> 00:08:40,994
+The gain, we change the value again, this is
+just normal. We connect the node to the gain.
 
 107
-00:09:00,137 --> 00:09:03,725
-Let's suppose it's zero because we don't
-set the value,
+00:08:41,051 --> 00:08:46,530
+This doesn't have to be here. And the rest should be OK.
 
 108
-00:09:03,760 --> 00:09:10,354
-and then the second one should be one,
-which is an index of zero.
+00:08:46,530 --> 00:08:54,708
+And we need to change this;
+where we decide which thing to play.
 
 109
+00:08:54,754 --> 00:09:00,068
+So it's zero because this is the first voice.
+
+110
+00:09:00,137 --> 00:09:03,725
+Let's suppose it's zero because we don't set the value,
+
+111
+00:09:03,760 --> 00:09:10,354
+and then the second one should
+be one, which is an index of zero.
+
+112
 00:09:10,388 --> 00:09:12,171
 So in theory they should still be playing.
 
-110
+113
 00:09:12,170 --> 00:09:16,297
-DN: So let's see if we've patched that
-memory leak.
+DN: So let's see if we've patched that memory leak.
 
-111
+114
 00:09:18,080 --> 00:09:26,720
 [They listen]
 
-112
+115
 00:09:29,337 --> 00:09:31,800
 DN: Wow it's doing a little dance.
 
-113
-00:09:33,700 --> 00:09:37,634
-SP: Now we don't have this massive gain
-collection.
-
-114
-00:09:39,325 --> 00:09:44,420
-It's funny, because depending on when you
-created the node...It looks like a visual
-for this thingy.
-
-115
-00:09:44,420 --> 00:09:48,365
-So that's good. Now we need to change the
-volume.
-
 116
-00:09:48,377 --> 00:09:53,074
-But we could maybe commit this thingy. 
+00:09:33,700 --> 00:09:37,634
+SP: Now we don't have this massive gain collection.
 
 117
-00:09:55,890 --> 00:10:03,474
-Commit: "with two gains for different
-track volumes"
+00:09:39,325 --> 00:09:44,420
+It's funny, because depending on when you created
+the node...It looks like a visual for this thingy.
 
 118
+00:09:44,420 --> 00:09:48,365
+So that's good. Now we need to change the volume.
+
+119
+00:09:48,377 --> 00:09:53,074
+But we could maybe commit this thingy.
+
+120
+00:09:55,890 --> 00:10:03,474
+Commit: "with two gains for different track volumes"
+
+121
 00:10:05,565 --> 00:10:07,771
 Whatever.
 
-119
+122
 00:10:07,770 --> 00:10:13,885
 [Sole thinks]
 
-120
+123
 00:10:15,142 --> 00:10:18,331
-The gain value should have been here
-anyway.
+The gain value should have been here anyway.
 
-121
+124
 00:10:18,330 --> 00:10:23,634
 So it should play 1 gainValue...
 
-122
+125
 00:10:30,171 --> 00:10:36,960
 So if the currentStep is zero, we want
-this one to be louder, otherwise it has to
-be 0.5 
-
-123
-00:10:37,988 --> 00:10:44,920
-So I'm going to actually do it the other
-way. 0.5 that's half of the volume.
-
-124
-00:10:46,445 --> 00:10:51,154
-Everyone should use the same gain volume.
-But it doesn't.
-
-125
-00:10:51,170 --> 00:10:53,714
-So if we change it here, it's going to be
-1,
+this one to be louder, otherwise it has to be 0.5.
 
 126
-00:10:53,720 --> 00:11:00,320
-but then the other one is going to be
-really quiet so we need to change both.
+00:10:37,988 --> 00:10:44,920
+So I'm going to actually do it the
+other way. 0.5 that's half of the volume.
 
 127
-00:11:00,354 --> 00:11:08,971
-We could start with 0.5 for everyone. I
-may want to have  gainValue1 and
-gainValue2.
+00:10:46,445 --> 00:10:51,154
+Everyone should use the
+same gain volume. But it doesn't.
 
 128
+00:10:51,170 --> 00:10:53,714
+So if we change it here, it's going to be 1,
+
+129
+00:10:53,720 --> 00:11:00,320
+but then the other one is going to
+be really quiet so we need to change both.
+
+130
+00:11:00,354 --> 00:11:08,971
+We could start with 0.5 for everyone. I may
+want to have  gainValue1 and gainValue2.
+
+131
 00:11:09,160 --> 00:11:12,091
 Because gainValue2 is always 0.5.
 
-129
+132
 00:11:12,110 --> 00:11:17,988
-And then gainValue1 might be 1 because
-it's louder.
+And then gainValue1 might be 1 because it's louder.
 
-130
+133
 00:11:20,080 --> 00:11:26,948
 DN: And this one wants to be 1 as well.
 
-131
+134
 00:11:27,805 --> 00:11:32,960
-SP: Yes.  If currentStep === 0 I want it
-to be 1.
+SP: Yes.  If currentStep === 0 I want it to be 1.
 
-132
+135
 00:11:32,960 --> 00:11:36,925
 [Silence]
 
-133
+136
 00:11:39,497 --> 00:11:41,885
 This might sound horrible, we'll see.
 
-134
+137
 00:11:45,120 --> 00:11:52,011
 [They listen]
 
-135
+138
 00:11:52,160 --> 00:11:54,914
 DN: I'm not hearing any difference.
 
-136
+139
 00:11:54,971 --> 00:11:59,394
 SP: I'm going to console.log it.
 
-137
+140
 00:11:59,550 --> 00:12:08,868
 [They listen]
 
-138
+141
 00:12:10,937 --> 00:12:13,880
-Am I building this at all? 
+Am I building this at all?
 
-139
+142
 00:12:13,880 --> 00:12:17,005
 Ah.. It shows from time to time.
 
-140
+143
 00:12:17,000 --> 00:12:20,262
 DN: I wonder if it's just dumb.
 
-141
+144
 00:12:20,274 --> 00:12:25,131
 SP: I m going to make them brilliant.
 
-142
+145
 00:12:25,130 --> 00:12:28,960
 Because initially they are [inaudible]
 
-143
+146
 00:12:28,960 --> 00:12:33,737
 [They listen]
 
-144
+147
 00:12:34,080 --> 00:12:36,982
 DN: That's definitely quieter. SP: Yes.
 
-145
+148
 00:12:44,502 --> 00:12:47,200
 I'm going to make it even quieter.
 
-146
+149
 00:12:47,200 --> 00:12:52,102
-OK so now it's quieter. I think I need
-to...
+OK so now it's quieter. I think I need to...
 
-147
+150
 00:12:54,228 --> 00:12:55,660
 SP: It's very quick.
 
-148
+151
 00:12:55,660 --> 00:12:59,268
-DN: It's extremely loud for a single
-sample, and then it cuts down...
+DN: It's extremely loud for a
+single sample, and then it cuts down...
 
-149
+152
 00:12:59,268 --> 00:13:05,988
-SP: Yes I need to make it ramp to the
-value.
+SP: Yes I need to make it ramp to the value.
 
-150
+153
 00:13:05,980 --> 00:13:13,794
 DN: Ah right! This is much more low level
 and involved than I imagined it would be.
 
-151
+154
 00:13:13,790 --> 00:13:17,714
 SP: Yes.  So for that you have
-linearRampToValue and exponentialRamp. 
-
-152
-00:13:17,725 --> 00:13:21,748
-That's why I was saying that it has to be
-called gain.value. 
-
-153
-00:13:21,740 --> 00:13:30,971
-This is what they call audio params. So
-you don't set the value like that. You
-select functions in here.  
-
-154
-00:13:30,970 --> 00:13:34,411
-So if I just set that value it would
-immediately change the value.
+linearRampToValue and exponentialRamp.
 
 155
-00:13:34,410 --> 00:13:43,028
-But if I say linearRampToValue() it will
-try to ramp to that. 
+00:13:17,725 --> 00:13:21,748
+That's why I was saying that
+it has to be called gain.value.
 
 156
-00:13:43,040 --> 00:13:47,211
-And I can't even remember the syntax, so
-I'm going to look for it.
+00:13:21,740 --> 00:13:30,971
+This is what they call audio params. So you don't set
+the value like that. You select functions in here.
 
 157
-00:13:47,410 --> 00:13:51,862
-linearRampToValueAtTime().  I couldn't
-remember the whole method name.
+00:13:30,970 --> 00:13:34,411
+So if I just set that value it
+would immediately change the value.
 
 158
-00:13:51,920 --> 00:14:00,011
-So the value and the end time.  No there
-was another... I'm confused.
+00:13:34,410 --> 00:13:43,028
+But if I say linearRampToValue()
+it will try to ramp to that.
 
 159
+00:13:43,040 --> 00:13:47,211
+And I can't even remember the
+syntax, so I'm going to look for it.
+
+160
+00:13:47,410 --> 00:13:51,862
+linearRampToValueAtTime().
+I couldn't remember the whole method name.
+
+161
+00:13:51,920 --> 00:14:00,011
+So the value and the end time.
+No there was another... I'm confused.
+
+162
 00:14:00,010 --> 00:14:05,188
 Yes, so it's linearRampToValueAtTime.
 
-160
-00:14:08,217 --> 00:14:14,228
-So I want to automate this thing and have
-it change this to linear value.
-
-161
-00:14:14,220 --> 00:14:18,102
-Hopefully that might be a little be
-smoother.
-
-162
-00:14:19,462 --> 00:14:21,885
-Let's try this. 
-
 163
+00:14:08,217 --> 00:14:14,228
+So I want to automate this thing
+and have it change this to linear value.
+
+164
+00:14:14,220 --> 00:14:18,102
+Hopefully that might be a little be smoother.
+
+165
+00:14:19,462 --> 00:14:21,885
+Let's try this.
+
+166
 00:14:21,880 --> 00:14:24,834
 [They listen]
 
-164
+167
 00:14:25,085 --> 00:14:29,828
 DN: Oh yeah, that's definitely audible.
 
-165
+168
 00:14:34,068 --> 00:14:38,605
 SP: Maybe we want to make it less extreme.
 
-166
-00:14:40,320 --> 00:14:42,708
-DN: that's good.
-
-167
-00:14:44,731 --> 00:14:47,520
-SP: Yes you can notice the higher... 
-
-168
-00:14:54,011 --> 00:14:57,142
-Do we want that, I don't know if it's
-worth it?
-
 169
-00:15:03,862 --> 00:15:08,834
-DN: I think it's more noticeable now that
-they're out of phase.
+00:14:40,320 --> 00:14:42,708
+DN: That's good.
 
 170
-00:15:09,170 --> 00:15:12,811
-SP: Yes, but that's not how the music is
-actually.
+00:14:44,731 --> 00:14:47,520
+SP: Yes you can notice the higher...
 
 171
-00:15:15,428 --> 00:15:18,137
-DN: I think that sounds a lot better than
-before.
+00:14:54,011 --> 00:14:57,142
+Do we want that, I don't know if it's worth it?
 
 172
-00:15:18,180 --> 00:15:25,542
-SP: I don't know. I'm conflicted, because
-I think the whole idea of this is that
-they both sound the same.
+00:15:03,862 --> 00:15:08,834
+DN: I think it's more noticeable
+now that they're out of phase.
 
 173
-00:15:25,930 --> 00:15:28,342
-Form this kind of pattern. 
+00:15:09,170 --> 00:15:12,811
+SP: Yes, but that's not how the music is actually.
 
 174
-00:15:28,370 --> 00:15:35,725
-This is in balance and it doesn't give the
-same ... Like the shifting thingy.
+00:15:15,428 --> 00:15:18,137
+DN: I think that sounds a lot better than before.
 
 175
+00:15:18,180 --> 00:15:25,542
+SP: I don't know. I'm conflicted, because I think the
+whole idea of this is that they both sound the same.
+
+176
+00:15:25,930 --> 00:15:28,342
+Form this kind of pattern.
+
+177
+00:15:28,370 --> 00:15:35,725
+This is in balance and it doesn't
+give the same ... Like the shifting thingy.
+
+178
 00:15:35,730 --> 00:15:37,554
 I don't think the result is worth it.
 
-176
+179
 00:15:37,554 --> 00:15:39,291
 DN: No it's not really.
 
-177
+180
 00:15:39,337 --> 00:15:43,840
-SP: I think for me, the best thing about
-this music is how hypnotic it gets.
+SP: I think for me, the best thing
+about this music is how hypnotic it gets.
 
