@@ -44,555 +44,559 @@ They created this thing called promises, so you can
 use them to sync without having several callbacks.
 
 11
-00:01:00,170 --> 00:01:08,540
-If we didn't use promises we would have to load the first
-sample and then the second, and it's not very elegant.
+00:01:00,170 --> 00:01:04,560
+If we didn't use promises we
+would have to load the first sample 
 
 12
+00:01:04,582 --> 00:01:08,560
+and then the second, and it's not very elegant.
+
+13
 00:01:08,560 --> 00:01:13,160
 So we are going to turn this into
 a generic thing for loading the samples.
 
-13
+14
 00:01:13,160 --> 00:01:16,630
 Giving them the URL and
 then instead of just loading the thing,
 
-14
+15
 00:01:16,670 --> 00:01:20,650
 we will make it give us a promise,
 and then we will use the Promise.all() method.
 
-15
+16
 00:01:20,670 --> 00:01:26,710
 That waits for everything to be loaded. So
 it's a bit less hard-coded and a bit more generic.
 
-16
+17
 00:01:26,760 --> 00:01:32,160
 So I'm going to change this
 thing into "Loading samples generally".
 
-17
+18
 00:01:33,560 --> 00:01:36,760
 So it will return a promise.
 I will do this step by step.
 
-18
+19
 00:01:36,760 --> 00:01:46,740
 So I can give a URL, and take
 out the hard-codedness of that.
 
-19
+20
 00:01:46,760 --> 00:01:52,530
 So instead of opening clap zero
 wave, I'm going to load the URL
 
-20
+21
 00:01:52,570 --> 00:01:58,190
 And instead of just returning
 this... I'll do it step by step.
 
-21
+22
 00:01:58,230 --> 00:02:02,900
 And also we don't want this thing here either.
 
-22
+23
 00:02:02,930 --> 00:02:07,580
 So if we load this sample, I want
 it to have some call back or something,
 
-23
+24
 00:02:07,620 --> 00:02:09,840
 so it can tell you this thing is done.
 
-24
+25
 00:02:09,880 --> 00:02:15,520
 But I want to convert this into a
 promise because it should be faster.
 
-25
+26
 00:02:15,520 --> 00:02:19,150
 So I'm going to return a promise.
 
-26
+27
 00:02:20,970 --> 00:02:25,830
 You tell the person there's a promise.
 At some point something might happen.
 
-27
+28
 00:02:25,830 --> 00:02:31,130
 The promise happens or it is
 rejected, which is when something fails.
 
-28
+29
 00:02:31,170 --> 00:02:38,290
 When you have a promise you can use
 the then() method to say when you fulfil this,
 
-29
+30
 00:02:38,310 --> 00:02:41,200
 promise me this thing then do it.
 
-30
+31
 00:02:41,240 --> 00:02:45,620
 It's like the connect() method
 but instead of for (Web Audio) nodes.
 
-31
+32
 00:02:45,640 --> 00:02:48,290
 It's for things that might happen in the future.
 
-32
+33
 00:02:48,360 --> 00:02:51,291
 You can connect as many
 things as you want to the promise.
 
-33
+34
 00:02:51,310 --> 00:02:56,700
 You can connect a number of events
 in the UI, or you could load more things.
 
-34
+35
 00:02:56,710 --> 00:03:00,700
 For example you might want to load samples
 sequentially, instead of all at the same time.
 
-35
+36
 00:03:00,710 --> 00:03:04,240
 But in this case we just do promise all.
 
-36
+37
 00:03:04,260 --> 00:03:08,900
 I don't know how it schedules
 things and I don't really care.
 
-37
+38
 00:03:08,920 --> 00:03:10,450
 I just care about the things being done.
 
-38
+39
 00:03:10,480 --> 00:03:14,020
 If you care about the order of execution
 you might want to use a different library.
 
-39
+40
 00:03:14,020 --> 00:03:18,290
 In this case I don't, so I will just make this thing.
 
-40
+41
 00:03:18,310 --> 00:03:25,910
 The way you use promises is you wrap the
 code that you want to execute with a function
 
-41
+42
 00:03:25,910 --> 00:03:28,880
 that has two things, 'OK' and 'fail'.
 
-42
+43
 00:03:28,900 --> 00:03:33,860
 I think this is not the correct method names,
 but I like this thing because it's pretty obvious.
 
-43
+44
 00:03:33,890 --> 00:03:37,600
 This is the 'OK' callback or the 'fail' callback.
 
-44
+45
 00:03:37,740 --> 00:03:43,420
 So if you return this thing...
 
-45
+46
 00:03:44,470 --> 00:03:51,240
 In this case, instead of triggering the
 whole process of everything I'm going to...
 
-46
+47
 00:03:51,240 --> 00:03:55,520
 (I'm not familiar with this keyboard)
 
-47
+48
 00:03:56,390 --> 00:04:04,060
 When I'm loading I'm going
 to call the OK with a response.
 
-48
+49
 00:04:04,240 --> 00:04:06,540
 (I will need to decode the thing, but anyway...)
 
-49
+50
 00:04:06,550 --> 00:04:14,450
 I will use this thing or use fail instead
 of this. So I do need to use the decode thingy.
 
-50
+51
 00:04:14,450 --> 00:04:19,970
 It can be just 'load sample', because I just
 want to get a sample out of here at the end.
 
-51
+52
 00:04:20,010 --> 00:04:26,270
 However you create it, or decode it,
 I just want you to load and give me a sample.
 
-52
+53
 00:04:26,360 --> 00:04:34,420
 So I'm going to make it fire whatever, and then here.
 
-53
-00:04:34,490 --> 00:04:39,090
-There is a promise version of decodeAudioData
-but it doesn't work in Chrome yet.
-
 54
+00:04:34,490 --> 00:04:39,090
+There is a promise version of
+decodeAudioData but it doesn't work in Chrome yet.
+
+55
 00:04:39,120 --> 00:04:43,130
 So I'm still using the callback.
 
-55
+56
 00:04:43,150 --> 00:04:48,780
 So it's pretty much the same.
 This is the good case so I'm going to respond.
 
-56
+57
 00:04:48,820 --> 00:04:52,880
 I'm going to fulfil the
 promise, with decoded buffer.
 
-57
+58
 00:04:53,780 --> 00:04:59,000
 And if there is an error, I'm
 going to fail with the error.
 
-58
+59
 00:04:59,030 --> 00:05:01,794
 That's why I like the OK and
 fail because it's fairly obvious.
 
-59
+60
 00:05:01,805 --> 00:05:06,780
 Not like onError callback...
 It's too long...  Get on with it!
 
-60
+61
 00:05:06,790 --> 00:05:16,370
 So I think with the promise version you
 can just return OK with the result of this.
 
-61
+62
 00:05:16,420 --> 00:05:23,100
 But that's not in chrome, unless I add
 another polyfill and I don't want to do that.
 
-62
+63
 00:05:23,150 --> 00:05:27,030
 I want to keep it simple and
 this should be simple enough.
 
-63
+64
 00:05:27,060 --> 00:05:32,590
 So if I call this function I'm just going to get
 a promise, and it doesn't actually do anything.
 
-64
+65
 00:05:32,590 --> 00:05:40,910
 I'm going to show you. I'm
 going to try to load 'CLAP_07.WAV'
 
-65
+66
 00:05:40,930 --> 00:05:43,910
 [Silence]
 
-66
+67
 00:05:48,320 --> 00:05:51,880
 So if I do this...
 
-67
+68
 00:05:56,100 --> 00:06:01,060
 The promise is pending. So nothing's happening.
 
-68
+69
 00:06:02,880 --> 00:06:09,010
 But if I say Promise.all()
 
-69
+70
 00:06:09,400 --> 00:06:14,340
 With an array of promises. In this case just one.
 
-70
+71
 00:06:14,340 --> 00:06:26,070
 Or maybe not. Let's not go that far. If I say sample
 promise then, hopefully it will give me a sample.
 
-71
+72
 00:06:26,100 --> 00:06:29,320
 [Silence]
 
-72
+73
 00:06:29,320 --> 00:06:32,200
 Ta da!
 
-73
+74
 00:06:32,200 --> 00:06:41,120
 I could do this thing, or I could
 use promise all with... Err not that far.
 
-74
+75
 00:06:41,140 --> 00:06:47,290
 This is not Ruby... So I need
 to have parentheses. [laughter].
 
-75
+76
 00:06:48,630 --> 00:06:52,920
 We have some spaces.
 So here I should have samples.
 
-76
+77
 00:06:53,090 --> 00:06:57,510
 So it will make all the promises happen somehow.
 
-77
+78
 00:06:57,560 --> 00:07:04,710
 I don't care how, I just want it to be done,
 and then give me the samples in another array.
 
-78
-00:07:04,710 --> 00:07:09,490
-I should have another buffer which
-is the same thing as before.
-
 79
+00:07:04,710 --> 00:07:09,490
+I should have another buffer
+which is the same thing as before.
+
+80
 00:07:09,550 --> 00:07:16,200
 So I could do the two, or I could maybe just...
 
-80
+81
 00:07:17,230 --> 00:07:21,670
 I could generate this but I don't
 think it's worth starting that. [Laughter]
 
-81
+82
 00:07:21,690 --> 00:07:24,040
 Sample2... I'm just going to be very lazy.
 
-82
+83
 00:07:24,070 --> 00:07:27,800
 DN: Seems fine.
 
-83
+84
 00:07:27,800 --> 00:07:32,150
 SP: If I had another one I could list
 the samples to load in an array;
 
-84
+85
 00:07:32,180 --> 00:07:37,230
 and map it so you have a map
 of promises, and then you make them.
 
-85
+86
 00:07:37,320 --> 00:07:40,010
 So, I could actually do it (laughter).
 
-86
+87
 00:07:40,040 --> 00:07:44,920
 So you could do all Promises.
 
-87
+88
 00:07:46,270 --> 00:07:58,060
 Suppose its sample1 and sample2...
 And you could map that to sample URL.
 
-88
+89
 00:07:59,350 --> 00:08:05,550
 So you want to return promise and generate URL.
 
-89
+90
 00:08:05,690 --> 00:08:10,810
 So this should give you a list of
 promises that you then send to promise.
 
-90
+91
 00:08:10,880 --> 00:08:13,910
 DN: Right.
 
-91
+92
 00:08:14,090 --> 00:08:20,900
 SP: I'm just going to put that promise here.
 
-92
+93
 00:08:20,900 --> 00:08:23,930
 [Silence]
 
-93
+94
 00:08:25,850 --> 00:08:30,920
 We need to complete this thing. [Laughter]
 
-94
+95
 00:08:32,930 --> 00:08:35,800
 DN: I think you need to call the first one 1.
 
-95
+96
 00:08:35,840 --> 00:08:43,580
 SP: Yes. So in theory that should
 give me two samples, hopefully.
 
-96
+97
 00:08:43,620 --> 00:08:47,710
 Yes, we have two samples, so now we can do this thing.
 
-97
+98
 00:08:47,730 --> 00:08:56,830
 I could store these samples
 in my global clap samples.
 
-98
+99
 00:08:56,830 --> 00:09:02,460
 Instead of just clap sample as I was doing before.
 
-99
+100
 00:09:02,490 --> 00:09:07,230
 Instead of having clap
 samples, I will make it an array.
 
-100
+101
 00:09:07,280 --> 00:09:12,790
 So if I try to play something without having
 everything loaded it will break or something.
 
-101
+102
 00:09:12,790 --> 00:09:20,700
 We could start it here, but we want
 to start when everything has been loaded.
 
-102
+103
 00:09:20,890 --> 00:09:23,070
 So we can start here.
 
-103
+104
 00:09:23,150 --> 00:09:27,420
 Now everything's done I'm going
 to add other comments so it makes sense.
 
-104
+105
 00:09:27,520 --> 00:09:30,860
 Everything's  loaded.
 
-105
+106
 00:09:33,870 --> 00:09:39,350
 So in theory that should do it.
 
-106
+107
 00:09:39,470 --> 00:09:45,090
 We need to change the function that plays samples
 so it uses different samples for each player.
 
-107
+108
 00:09:45,130 --> 00:09:47,790
 (We can delete this).
 
-108
+109
 00:09:47,830 --> 00:09:52,800
 So this function now is loading the sample
 and decoding it. It doesn't have any other logic.
 
-109
+110
 00:09:52,830 --> 00:09:58,450
 it just gives you a response for
 the sample and that's the promise.
 
-110
+111
 00:09:58,640 --> 00:10:02,310
 So it's really re-factored nicely.
 
-111
+112
 00:10:02,640 --> 00:10:07,830
 So this is loaded and then we just
 need to make sure this one plays different things.
 
-112
+113
 00:10:07,830 --> 00:10:10,260
 But we know where they are. One is zero.
 
-113
+114
 00:10:10,300 --> 00:10:13,930
 This is not very good practice but as long
 as you know what your doing... [laughter]
 
-114
+115
 00:10:13,930 --> 00:10:18,430
 So instead of just playing the clap
 sample; play one and play the other one.
 
-115
+116
 00:10:19,990 --> 00:10:26,280
 It maybe should be less hard-coded. Especially when
 you have many things happening at the same time.
 
-116
+117
 00:10:26,300 --> 00:10:31,480
 You want to use arrays instead of variables. But I
 think for the time being, and simplicity, it's better.
 
-117
+118
 00:10:31,480 --> 00:10:35,720
 Because otherwise the
 syntax has too many brackets.
 
-118
+119
 00:10:35,720 --> 00:10:39,280
 See just here; it's an ugly array.
 
-119
+120
 00:10:39,340 --> 00:10:42,850
 So I'm going to try this, see if it works.
 
-120
+121
 00:10:42,850 --> 00:10:45,210
 [They listen]
 
-121
+122
 00:10:45,260 --> 00:10:48,760
 See? It's slightly different.
 
-122
+123
 00:10:53,590 --> 00:10:55,870
 DN: Yeah.
 
-123
+124
 00:11:02,390 --> 00:11:05,650
 Too perfect, but they are playing.
 
-124
+125
 00:11:05,740 --> 00:11:09,510
 They can get you tapping your foot.
 
-125
+126
 00:11:10,020 --> 00:11:14,200
 DN: Yeah. That's completely transformed
 it, just by adding that other sample.
 
-126
+127
 00:11:14,230 --> 00:11:19,260
 It sounds much less mechanical. Or less
 monotonous I should say, but still mechanical.
 
-127
+128
 00:11:19,290 --> 00:11:21,450
 SP: Less robotical.
 
-128
+129
 00:11:21,520 --> 00:11:24,860
 At least you can differentiate. Otherwise
 it was like "I don't know what's going on".
 
-129
+130
 00:11:24,900 --> 00:11:28,660
 OK, so we've got this thing.
 Now we can make another commit.
 
-130
+131
 00:11:28,720 --> 00:11:34,400
 And now I need to add more files.
 
-131
+132
 00:11:34,400 --> 00:11:37,330
 [Silence]
 

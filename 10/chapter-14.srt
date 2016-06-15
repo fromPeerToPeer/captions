@@ -90,8 +90,7 @@ attention. I would remove it.
 21
 00:01:41,600 --> 00:01:48,148
 I would make sure that the component
-is a bit less… so that we could use
-it on some other project.
+is a bit less… That would be on some other project.
 
 22
 00:01:48,171 --> 00:01:51,725
@@ -128,8 +127,8 @@ now everything is using a global context.
 
 29
 00:02:22,502 --> 00:02:29,702
-It connects things to other things
-but it's not very neat.
+It connects things to other
+things but it's not very neat.
 
 30
 00:02:29,700 --> 00:02:35,771
@@ -138,8 +137,8 @@ and then extract things into functions.
 
 31
 00:02:35,770 --> 00:02:42,160
-And because we're using webpack or browserify
-it's pretty easy to require things
+And because we're using webpack
+or browserify it's pretty easy to require things
 
 32
 00:02:42,160 --> 00:02:45,222
@@ -336,3 +335,4 @@ SP: Thanks for having me.
 73
 00:05:54,297 --> 00:05:55,611
 DN: You're welcome!
+

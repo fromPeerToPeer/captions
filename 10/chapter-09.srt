@@ -144,8 +144,8 @@ watch version thingy. Watch mode.
 
 33
 00:02:26,870 --> 00:02:31,130
-So I can just use this thing, when I write
-it will call build again.
+So I can just use this thing,
+when I write it will call build again.
 
 34
 00:02:31,130 --> 00:02:34,190
@@ -166,7 +166,7 @@ You need to install watchify,
 which then calls browserify.
 
 38
-00:02:53,080 --> 00:02:54,340
+00:02:53,080 --> 00:02:54,331
 That's the cool thing with webpack.
 
 39

@@ -14,161 +14,164 @@ I need to read the data from the event.
 
 4
 00:00:15,550 --> 00:00:22,380
-It's not just like an action I need
-to know the...
+It's not just like an action I need to know the...
 
 5
-00:00:22,460 --> 00:00:29,770
-It's using custom events, I don't know who designed
-this thing but you can't just put properties in the event.
+00:00:22,460 --> 00:00:27,394
+It's using custom events,
+I don't know who designed this thing,
 
 6
+00:00:27,405 --> 00:00:30,420
+but you can't just put properties in the event.
+
+7
 00:00:30,420 --> 00:00:37,860
 You have to use detail. I guess
 it's so you don't create properties
 
-7
+8
 00:00:37,860 --> 00:00:45,050
 in the object that might interfere with future
 properties in the spec or the events in general.
 
-8
+9
 00:00:45,050 --> 00:00:47,250
 So you can only access them through detail.
 
-9
+10
 00:00:47,270 --> 00:00:54,370
 In this case the value that
 you get is value [Laughter].
 
-10
+11
 00:00:54,370 --> 00:01:00,100
 So if you have a bpm event
 this is a new value you will get.
 
-11
+12
 00:01:00,330 --> 00:01:02,870
 I will log it and you can see.
 
-12
+13
 00:01:02,870 --> 00:01:06,150
 The new values that we're getting.
 
-13
+14
 00:01:06,670 --> 00:01:08,420
 [They listen]
 
-14
+15
 00:01:08,450 --> 00:01:10,320
 SP: I can change that.
 
-15
-00:01:10,320 --> 00:01:15,660
-There's lot of changes so OK. If I change that
-we get a new BPM.
-
 16
+00:01:10,320 --> 00:01:15,660
+There's lot of changes so OK.
+If I change that we get a new BPM.
+
+17
 00:01:15,660 --> 00:01:19,330
 You just need to change that and update that.
 
-17
+18
 00:01:19,570 --> 00:01:22,380
 The score is being changed all the time.
 
-18
+19
 00:01:22,380 --> 00:01:29,490
 The events are calculated based on the current
 bpm every time the schedule function is run.
 
-19
+20
 00:01:29,530 --> 00:01:33,610
 It will take the value that we send it,
 and we can change that on the fly.
 
-20
+21
 00:01:38,310 --> 00:01:44,900
 The only issue with this is
 that this might be sent as a string?
 
-21
+22
 00:01:44,900 --> 00:01:48,550
 Because it's coerced. I always
 make sure to multiply by one.
 
-22
+23
 00:01:48,550 --> 00:01:49,210
 DN: Ah right.
 
-23
+24
 00:01:49,220 --> 00:01:56,680
 SP: Especially if you try to add things because it
 might end up concatenating strings with numbers.
 
-24
+25
 00:01:56,690 --> 00:01:59,760
 So in case of that, I just multiply the thingy.
 
-25
+26
 00:01:59,760 --> 00:02:04,830
 And we have a global variable somewhere here.
 So we can just say the bpm is this new value.
 
-26
+27
 00:02:05,310 --> 00:02:08,560
 And hopefully that should change.
 
-27
+28
 00:02:08,600 --> 00:02:10,340
 [They listen]
 
-28
+29
 00:02:10,370 --> 00:02:19,290
 [The music starts slowly and gets faster]
 
-29
+30
 00:02:19,290 --> 00:02:21,430
 SP: So now it's going really fast.
 
-30
+31
 00:02:24,940 --> 00:02:27,220
 DN: How fast will it go.
 
-31
+32
 00:02:27,330 --> 00:02:29,930
 SP: I think it's limited to 300.
 
-32
+33
 00:02:29,960 --> 00:02:36,740
 Because, I do some happy hardcore
 things. I think It's from 300 to 1.
 
-33
+34
 00:02:36,740 --> 00:02:37,800
 DN: Yes.
 
-34
+35
 00:02:37,830 --> 00:02:42,090
 This is really slow, it's one beat per minute.
 
-35
+36
 00:02:42,150 --> 00:02:46,700
 I guess we can also add this thing.
 I never remember what I changed.
 
-36
+37
 00:02:47,690 --> 00:02:54,400
 In a more complex project I would use source tree so
 I can see the whole thing but for this it's fine to use....
 
-37
+38
 00:02:54,400 --> 00:02:57,420
 [Silence]
 
-38
+39
 00:03:01,380 --> 00:03:03,880
 I think this meets the challenge...
 
-39
+40
 00:03:03,920 --> 00:03:08,040
 Because you can play and stop the music
 and have a way of modifying the tempo.

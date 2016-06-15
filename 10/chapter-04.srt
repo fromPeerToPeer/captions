@@ -33,7 +33,7 @@ an array. Make it as zeros and ones.
 DN: Yes, sure.
 
 9
-00:00:27,650 --> 00:00:32,615
+00:00:27,650 --> 00:00:32,651
 SP: So it's one, one, one, and
 the underscore is zero, so it's nothing.
 
@@ -113,8 +113,8 @@ With the decodedBuffer... I'll change things later.
 
 26
 00:02:06,760 --> 00:02:11,870
-I'm going to be building up on things that
-already exist.
+I'm going to be building up
+on things that already exist.
 
 27
 00:02:11,910 --> 00:02:14,760
