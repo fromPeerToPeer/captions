@@ -422,7 +422,6 @@ So we model the values with 12,1 =1, 2=2 etc
 
 95
 00:08:28,210 --> 00:08:32,200
-
 Suppose 12 should be zero, because it goes back to zero.
 
 96
