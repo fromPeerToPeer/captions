@@ -1,0 +1,56 @@
+JC: The thing that gets trickier about this is when you have multiple instructions. You want them all to be executed and because they have side-effects you want them done in a particular order. Specifying that with mocks can be a bit tricky but one thing that we can do, which is a use-case I've not got to yet: what if any of them fails?
+So we can say something like: if the first one fails, the second one should not be executed and that implies that there's an ordering.
+TS: Right.
+JC: So let's do that context – he reads as he writes
+It doesn't matter what these are because we are/not? going to execute them.
+As he writes... will add later.
+And we also want to execute all of the instructions.
+
+That should be a target in this case. And puts should be system inaud target. I believe these will work.
+Now we want to say – as he writes.
+TS: So you're saying here that it doesn't matter what order it does it, that's not testing it?
+JC: No, rspec will not check. It doesn't expect things to be called in the order in which you set up the mocks,
+
+You could switch the lines around. If i switch those this will still pass. That isn't what I want but specifying that you want things called in a certain order is... the way that I program is inaud order specifying what.. but if you have something where one thing can prevent the next thing from happening, that implies an ordering.  It enough to say that one thing happens before the other.
+TS: And that's something else that you want to test anyway.
+JC: Yes. You want it to abort the build if something bad happens. So when the first instruction fails, means that I'm going to allow the target to receive system with first argument and return nill, which is what the system returns if the command doesn't work.
+
+So with that scenario...I'm not going to bother with the printing stuff, we've done that to death. It does execute the first argument... first instruction. But it doesn't execute the second. So that means we expect this. Do we need to tell it that it will return nil? Not sure that we do. Well find out.
+
+I think I've done something weird – of I've got caps on, sorry!
+
+Copy that, so let me find the second instructions. And then it's not. So let me check this over, if the target returns nil as per the instruction, it should still execute it, but not the second one. This shouldn't work because I haven't inaud this yet. So expect it to use a target that i haven't actually told it to build – that's quite important – laughter. Target.Build
+
+Now it's executing the second instruction which it shouldn't. So if we go back to our code we can say it's going to print the instruction and then raise failed command unless system returns something truthy.
+TS: So what will system return if it's not an error.
+JC: True. We can see this in the shell for a second. So if you system, echo something, it does the thing and returns true. And if you ask it to run a programme that doesn't exist it returns nil
+TS: Ok great.
+JC: So it's quite handy for having a high level API inaud system.
+So make an exception and raise that unless system returns something truthy
+TS: So you've made a decision here that you don't want it to skip them silently, you want them to actually...
+
+JC: No because a build is just a sequence. You turn a coffee script file into a JavaScript file and i need to put multiple files into a single one. If the first step fails you can't do the second step. And you shouldn't try because if those files don't exist, like if your command uses a shell wildcard or tries to interpolate something that doesn't exist you might end up constructing a command that will do something dangerous. So it really ought to check that everything you've done so far did what you expected.
+
+So shall we run that, ok so loads of things are now not working, which is common and fine. So let's find out why that was. A lot of these raised, i was not expecting them to be raised. Eg the first one, 33 lets run that.
+It's raising, and it's raising from build. We said we're not going to raise unless system raised something truthy but we haven't made system raise anything, we stubbed it out.
+TS: So that will be returning nil by default.
+JC: Yes, so we should make that return true and anywhere else we're saying it should be called. That's a not so it doesn't matter.
+TS: Earlier you said you were expecting these to inherit the behaviour of the stuff anyway.
+JC: That's a good point yes. I think if you stub something and then put mock expectation on it... the thing at the top says if you call it with anything it just returns true. The mocks tend to be more specific. Inaud not to but it doesn't matter because it's not going to be called... but here we're saying it should be called with something and that's a different use case. I believe in those situations you have to tell it again what you want it to return. Thats passing, a couple are still not passing 64 and 69.
+TS: Why were they failing?
+JC: I believe this,
+
+this will raise and it's supposed to raise, but I'm not catching that it raises.
+I should have another test that says it raises FailedCommand. Expect target build to raise error and fakemake failed command.
+TS: So the problem with these tests is that the problem was bubbling out of the tests.
+JC: Right. And then i can just rescue. Ok so that's all green again.
+TS: Great
+JC: It took a while to get there but i think thats enough of a specification of what the thing does about running commands. We've now got a thing that can run arbitrary commands and it can do something reasonable sensible with that.
+So I'm going to get out of here to make a commit. So what have we got?
+
+I might just move build.sh to my scratch directory and keep that hanging around.
+
+JC: So i ought to add the Gemfile things and the example, though not everything in example. There are a few things we definitely don't want.
+I don't want an example bundle.js or example lib. Nor node modules, because they are just for running the examples. I don't want scratch. Inaud package JavaScripton either, we're building a ruby project – although that is... no that's metadata about the examples and you will use it to install your inaud models but you don't want no models... that's fine. I'll move .js off there.
+So if I give that all of this. So what do we end up with...  git ignore and some gem files and some example code and our source code and package.json  - that's specoffee script. Which looks reasonable to me.
+Types

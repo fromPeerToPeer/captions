@@ -1,0 +1,41 @@
+So we did the case where you are forced to rebuild yourself, you return your regeneration time. If your already up to date you should return your original time so that you don't imply that you're newer than you are going to force things downstream to get rebuilt.
+So where was that lazy build exe. When the dependencies are newer than the target it returns a new time at the file. When the dependencies are older than the target it returns the mtime of the unmodified file.
+ In that case we expect target.build to equal the target time.
+So... its not.
+JC: Do you think this was a rather unfair test because those two times wouldn't be the same if you hadn't run them the instructions. The mtime of the file wouldn't have changed. So you've set up the test in such a way that you've assumed that the mtime changes.
+JC: What im testing, by accident is that it returns the result of the second mtime call, which I've said in the thing is, I think, the original time plus 10 minutes.
+Expected 1712, got 1722 just because it's returning the value of the second call.
+
+"17.22"
+
+TS: Which would be fine but it's not fine.
+JC: No. [Laughter]
+So is that an accident or is it what i really mean?
+That it returns the result of the second mtime call. Because what else can you say you're not actually interacting with the system. You're not running these commands; we're not changing any files. Is there some other way that I can say it should return the same time as before.
+If you decided not to run the build, which you don't need to run the File.mtime a second time.
+TS: Right. I guess it depends on whether you care about mtime being run twice or not. Do you feel it's important it only gets run as many times as necessary?
+He thinks. Well this feature that we're working on is all about doing as little work as possible i suppose. I mean it is a very cheap operation, but it still hits disc, you know hitting disc is bad. I'm probably worrying more than I ought to. The question that I have is how you test this in an accurate way. It's not just working by accident, it's actually correct.
+TS: Is it possible to get it to have the behaviour that you specified in your test or will you have to relax your test in order to do anything.
+JC: Well i could stub it so it returns the same value the both times but then if it does that, from reading the test you can't tell which of those values its returning. That is not helpful. I could make it so the code caches the first call to mtime and returns that if it decides not to do any work.
+TS: So you could have an instance variable when your initial mtime gets stored and then if it does the build it updates that mtime and returns whichever one of those 'won'.
+JC: Yes i think I'll do that.
+I've accidentally swapped my terminals around. Nevermind!
+So if I go back in to target. We can make this just return mtime. Then we can assign that to an instance variable there and make that a variable there. Then at the end of this we can say file.mtime.pathname. this will now implicitly return mtime [laughter] because it's the last thing that build calls. But I want build to be the recipe of the steps that you do.
+Expected two types of arguments
+TS: Is this the change you made to un-break the test before.
+JC: Yes, maybe I should remove that and fix this specifically where it is done.
+TS: Previously you unended your test to say that it always receives mtime twice, but now you've improved your code so that it only receives it once in a case where it only needs to receive it once. You've optimized away the second of those mtimes.
+
+JC: Let's try something else. In this case it's called twice. I could make it so this is defined to be called once. This scenario. And it returns that.
+So when the dependencies are newer it calls mtime twice and returns the second return value. In this case it only returns it once. No that's not true, it does... oh it only calls mtime again if the things are newer, so this ought to be fine.
+Time always makes me confused.
+TS: Where's this inaud coming from?
+There is probably a test... so we've stubbed it out globally. We said it was allowed to be called twice. This is the test that checks the mtime on its own file, that's that one.
+TS: But you only put the twice in there to stop that test breaking.
+JC: That's true. Now ive specified it more strongly in those tests, this ought not to be necessary.
+TS: Well the change you made to the implementation was so that it doesn't get called twice unless it needs to be.
+JC: Yes. Ok so it's green so we should check what we've done and commit.
+
+JC: A few Things have changed so made build return mtime. We have then used that to make it skip building itself. And then we've made a new mtime at the end. Oh there's that method I extracted that isn't actually needed. Let's get rid of that.
+ Yes so we've returned mtime. Made it skip if everything's up to date. And everything else is tests:
+

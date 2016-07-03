@@ -1,0 +1,12 @@
+TS: So what next?
+JC: We've got dependencies so the next thing to do... the build has to lazy. And once you have dependencies, and you know what your file depends on you can tell if your file is up to date because you can ask your dependencies if they're up to date. That also introduces the problem... when a target builds it tells all the other targets to build. So what If multiple things depend on the same target, in that situation something will be told to build multiple times which is wasteful.
+So we could write a test that says if you call build twice on a target, it only runs its command once. That would be good. And we also want a test that says if you try to build a target that's newer than the things it depends on then that should also not do anything.
+I think I'll deal with the first of those first.
+
+JC: If we go back into our tests: spec/fakemake/target_spec. So we have dealing with dependencies. You don't necessarily need dependencies for what I was just talking about you just want to say if you call build twice, it should run its instructions once. So we can put that in a case where there is an instruction. So it only executes the instructions once. So that's essentially this test over again. Except that we call this twice.
+This ought to fail. Which it does.
+One thing about this test – I'm glad I did this -it should receive this once. It's a side effect we care about how many times it's called. But rspec says it was called 2 times. That ought to be reasonably easy to fix if we go back into our source code. If we look at build self we can store a flag in here that says I've been built you don't have to do anything. So return if already built... and then set that to true... and then that's passing.
+
+I think I'll commit that.
+
+

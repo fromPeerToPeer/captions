@@ -1,0 +1,94 @@
+JC: If we go back to our code. What do we need to do. We've got these mtimes so we need to store that. Ensure updated dependencies. We've said on our test that calling build on a dependency will return its mtime. So let's store that in here when we build dependencies. Call map so we get the values.
+And then here we can say return unless any of the dependency times are greater than our own. I think that will be ok. For this to work the build method will need to return mtime but I haven't written a test that requires that yet. I'm just thinking how I would force myself to do that... in a second.
+Undefined method `>` for NilClass.
+
+"undefined method `>' for nil:NilClass
+
+That must mean that I've stubbed mtime to somehow return... Target spec 33. Whats going on in there?
+
+JC: Oh yes in this test those build targets are not returning anything.
+TS: So they're getting nil back and then trying to compare it to something.
+JC: Exactly.
+I think this is the point where I need to put a value that actually makes sense.
+Now everything passes.
+
+JC: This is a bit of an illusion. I'm surprised that the integration test works because build isn't returning the mtime.
+TS: It's the integration test of the previous behaviour that you're expecting to break?
+JC: Yes. That's probably because in the integration test we're building things that don't exist. So it isn't hitting that code path.
+TS: So we don't have an integration test for this laziness behaviour right?
+JC: No.
+
+JC: There the targets, so let's...
+One target depends on another. We could put a context in here that creates one.txt and then see if the second one will build.
+He types... when one target already exists do file 1.text. let's just make it one rather than from where the files it was previously derived from are. No let's not do that. I don't want this test to get into setting out times on various files. They're going to be created in a certain order but the time resolution on those time stamps on the files is only a second.
+So sometimes, depending on whether your time stamps overlaps a second boundary they will sometimes be the same value and sometimes not. The ordering is not predictable.
+To be on the save side I'm going to make this have the value that it would actually have if you had built it from source.
+Builds the final target successfully. I suppose successfully is implicit when you're writing any sort of test but...
+This is still saying when you build the second target the target should have content based on that but this ought to trigger the first target to try to check the...
+No the first target will try to check the mtimes of the files a and b that it depends on and it will get nil from their build methods, so this should fall over. Yes, so a second error out of that.
+TS: So this is not yet a test of the laziness functionality but it is exercising more of the code than the previous integration test was?
+JC: Yes.
+
+JC: That integration test makes sure that you can rebuild a partially built system.
+It means you need a test for build that returns the mtime.
+TS: Right.
+JC: Going back to our unit tests:..where did we have something with a dependency.
+This doesn't necessarily mean there are dependencies.
+
+JC: There are two cases for this. If the file already exists and is up to date it should return its existing mtime. If you had to rebuild it, it should return Time.now, I guess.
+So we can build those in to here so when the dependencies are newer than the target it returns the later of the dependencies. It could either return the latest dependencies bult but building the target itself will take time so if you say later, then its dependencies work.
+Or, if its dependencies were touched a very long time ago, but they're still newer than you are we might get into a like... something appears older than it actually is, so i think i should probably return time of now. He types then pauses..
+In this context we've already stubbed out time.
+
+TS: This reminds me of something I was confused about, in the build self we get the mtime of the possibly stale file, but you're talking about not the mtime of that file at that point but almost the end point of that file after its been regenerated.
+JC: Yes, because if you have a chain of dependencies. Say we have a file called 2 that depends on 1 that depends on a. If for some bizarre reason, the second is newer than a but 1 isn't. You will regenerate 1, which means you ought to regenerate 2, but one returns the mtime of a, then  the second will think it's up to date. So it really has to return the time right now because it has to report to us down stream – I was regenerated, im newer than you.
+That's what i meant about getting into ordering problems. So i want to say it returns the current time. I could stub Time.now. i don't feel great about that, that's one of those global things, if you stub it loads of things could blow up.
+
+We could try it and see if anything bad happens, but it might not. Sometimes inaud I'll make a method called current time that just returns Time.now, and doesn't need testing really. And then I'll stub that. The rest of the system can use the real Time.now. by interacting with the code it's going to use.
+TS: Is the reason your expecting it to return Time.now because that's what the mtime of the newly generated  file is going to be?
+JC: Yes.
+I could read the file system again to get that.
+TS: Is that better or worse than returning the current time. I guess it's more expensive.
+JC: It would be more correct because all the times you're using, all the times the file system has. If your ruby process is for some reason, using a different locale from your OS, which might happen for some reason, then those times might be in different offsets, different time zones, they might conflict. mtime is really the correct thing. I think I'm worrying about the fact that I've stubbed it up here
+TS: Right, so you need mtime to return two different values for the course of one test right?
+JC: Yes. We can try that. If it blows up, it blows up. The fact that you're calling mtime twice with the same argument, which makes it hard to distinguish the cause. I could do this by saying that it has to call some private method to get its new time and assert on that but... let's try it this way and we'll see if anything blows up in our faces.
+Ok so returns new mtime of the file. Let's say that new mtime is, I'm just going to make that a double, i don't care what its value is... although it does have to be a time because we're stubbing this before the code gets run so...
+
+JC: why don't we say you can call this twice up here
+Let's say, if first I call target time and then let's call this regeneration time, and say that regeneration time is target time plus 10 minutes. Somewhat arbitrary.
+TS: What's the syntax, where you've passed two arguments into `and_return`. What does that mean?
+JC: That means, when you call this method you will get each of these in sequence. The first time you call it you will get target time, and the second time you call it you will get regeneration time.
+TS: Is that what you want?
+JC: Yes.
+TS: Great.
+
+JC: So, i don't have to do that. So i have to say expect target.build to equal the regeneration time. That's what should be returned from this method.
+System will still be stubbed out because I stubbed out all the times. That's fine.
+Let's try running this.
+Ok two failures. One in target spec and one in the integration tests. So it was expecting regeneration time and call echo high. That's because... the end of our build self method... the last thing in that is a inaud instructions, which returns the thing it was called on. I think i want to leave that where it is and maybe extract a thing... yes extract a thing and get the inaud on it.
+Silence.
+mtime... yes
+Up here I can do... target mtime... mtime and then return unless that and any of those are greater than this. That cleans up that bit of code.
+And then up in our build method we can just have that return mtime. That ought to be ok.
+Loads of things have blown up. I don't think I've got the hang of unit testing. [Laughter]
+
+There are now a lot of tests that are now...Now that we're calling mtime in build method in a code path that everything is going to hit, more tests have blown up. In some cases we're getting mock expectation failures. There's a lot of logical failures here that aren't just the thing that returned the right time.
+I could back that out and check the repatching I did. Oh i have actually broken something. I'm just going to rewind all of this until we get back to what we wanted. Ok lets make it work and then re-factor it.
+So, if the file exists, pathname... oh well if you built it yourself then your file should exist.
+TS: You hope.
+JC: Well if something failed you would have got an exception and bailed out of this method.
+So let's assume that things worked and call file m.time with the pathname. That's the only difference I've made, since the tests were in this state. We still get that loads of things explode.
+
+JC: Yes so those are the things that don't exist when we call mtime.
+But we're not getting those mock expectations, but still inaud mock expectations. Oh because there's an assertion that its called once. But those failures we we're seeing before have basically gone away. So either inauds trying to call mtime and it doesn't work. Or it's calling it twice when it should be calling it once.
+
+What's the one where it said whether it should be called once or twice? Line thirty-two. Maybe once is implicit. I'll check inaud file.
+TS: Can you relax that implicit constraint somehow?
+JC: Yes. Err, what is the context here. When you build it, if the file exists it should call mtime twice.
+TS: First to decide whether to build it and then to report to any downstream.
+JC: Exactly. We had 9 failures, and now we've got 8 failures.
+
+JC: The other thing it's calling mtime on things that don't exist. So that is probably a thing that needs stubbing out. Up here... So that's this thing I did up here to... because I thought it would bypass that code path to stub it and now we're returning it in all cases. It still needs stubbing.
+And it ought to be sufficient to return something of an acceptable type.
+
+JC: Great! Now everything is green.

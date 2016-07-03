@@ -1,0 +1,25 @@
+TS: So where does that get us to?
+JC: Well if we go back to the original example we were given, that there was that script was hacking around with. I'm trying to figure out what the user interface to this should be. So this will now be a lib fakemake.
+There are two sorts of files. I will need the target for both of those. These are in the namespace now.. is it complementor.
+TS: Yes.
+Ok so those are two targets with no dependencies and no build instructions. They have hello JavaScript. Which is derived from hello.coffee and you build that.  We could make a target for the lib directory, not sure if I'll go through extracting that or maybe i will.
+Actually, directories do have mtimes
+Target new example lib which has no dependencies. And is built by calling make dir  p example lib.
+Inaud that
+That goes that way.
+Let's clone that rather than...  Complementor.js does that.
+Complemento.js depends on complimentor.coffee. That all looks ok. And bundle.js depends on two JavaScript files inaud calling that and then build it. Ok so... this was in scratch test rb. As always lets remove everything that we had before. The tree just has the source code in it. If we run ruby scratch test. Inaud target. Oh I didn't namespace everything did I.
+TS: Great.
+JC: Its run everything. And we've got everything in there. And example bundle contains the code that we wanted. If we run it again because we've made it lazy enough it should happen. And indeed nothing happens. Because we've made it this recursive structure. If anything does need rebuilding it should rebuild it but not rebuild everything. So if i use touch, which sets the mtime on a file to now, and creates it if it's not there. If I touch example lib hello.js. Or rather, let's touch hello coffee. Sorry.
+TS: So this is simulating you having edited it?
+JC: Yes. So if I touch that. Hello.js is now up to date. The compliment.js isn't. So I should run the coffee compiler once and then run uglify. Because the whole bundle is out of date as well because you changed the source file. So it should recompile what needs to be recompiled but only those files.
+TS: Ok.
+JC: And we see there that it has run coffee once on hello.coffee. but not on complimenter.
+TS: Right.
+JC: So that seems to be doing what we want. I'm just going to check because I haven't revisited this file in a while. It is the changes we made that made it do this.
+If I delete this line, then it should become unlazy. It should do all the work every time.
+It does, you can see it churning away there. I'll reinstate that line, and it becomes lazy again.
+TS: Excellent.
+JC: So that seems to do what we want.
+TS: That's great. Well congratulations on getting it working, that's really good. That seems like a good place for us to stop. Thanks very much, I've really enjoyed this.
+JC: Me too, thanks Tom.

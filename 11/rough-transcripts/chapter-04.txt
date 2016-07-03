@@ -1,0 +1,40 @@
+just going to make a scratch directory here and try something out.
+Yes,
+I'm thinking I want to do this, require scratch target. And hello.js is a target with a path (whoops). The minimum,... it has a parse name which is the file its going to generate and then it has a list of commands that are how to generate that thing.
+TS: What do you mean by target here?
+JC: A target is a file, i guess I'm borrowing some nomenclature from make here but a target is any of the files in your system. So when you talk about hello.js is derived from hello.coffee. hello.coffee could also be a target. They can either derived things or primary things, like your source code.
+TS: I suppose in this case hello.js is both a target and also its going to be the input to the target.
+JC: Exactly. So there's a recursion there. And you want these things to compose in that way so you can make targets out of other targets.
+TS: right.
+JC: in ruby you could do this for example by putting a block here. Like ... what way round do you do this... he types. That would work but im leaning toward making this string be data rather than blocks.
+Here we've duplicated this pathname example source hello, oh its coffee isn't it. This is the dir that the target lives in. If you're doing make you can do that... so $@ is the pathname of the target your currently building. And there's various functions so dir is the function that gives you the dir of that. I'm not going to do that but it means that i don't necessarily want to do a block that just runs this code, I want to provide this code as data because it might need to be further interpreted by the system before being executed.
+Ts so if it's a block its some opaque code that can't then be modified.
+Java script. Yes. So i want inaud data. I'm going to do that in an array.
+TS: Is the expectation at this point that you will pass that to system? Like now.
+JC: Exactly
+So if I make a target and build it. I want it to be built. But the name of the thing I'm building and the way it gets built are both data now so you could put anything in.
+TS: Why did you make it an array?
+JC: That's a good question, there's only one command. We possibly don't need an array. There is one thing I've missed out, when i deleted that code earlier, i left that dir out dint i so ... we need to know that dir exists before we compile anything into it so... let's also make that dir part of the thing. You can see how this is starts to get competitive because you mention the same things over and over again. That wants a word from a clean slate now because thats all the commands that need to be run to inaud the dir and compile code. I want this scrip when it's run to make that file.
+If i run this it will get better as far as scratch target..
+So you need a target class. And thats going to take the pathname of the thing we're building... and a serve instructions.
+So: undefined method `build` for Target... ok.
+
+I want to build the thing and like you said we could pass each of those strings into system and it ought to run them.
+Types.
+I'm going to print what each instruction is, that's a helpful thing that make does and it helps you see what you build is actually doing.  When we ran that shell script, another thing it didn't do is you couldn't see what was going on.
+TS: right.
+JC: If you can see what's going on you can verify if it's being lazy, not running the certain things. So we'll print each one and then pass it to system, and that will be enough.  I've made this `@output` variable, partly because I'm anticipating that... if I'm calling puts, generally things that have puts statements in them are not good for your tests because they fill up the tests with whatever's going on.
+It's a habit I have... if I know that something's going to need to be a parameter or a constant or an instance variable later, I'll make it but then assign it to a constant in the constructor. It means I don't need to go through all the code later and go through the extraction process.
+This may be a bit premature but I can see that coming up so I'll just do that.
+So it's printed what it's doing and made the directory and the coffeescript. And now there should be one file in lib which is hello.js and that should contain compile code.lib, which it does.
+
+So i guess that's a minimum viable build system. We've got this... we can make another one out of complementor. Then we could build each of them. And then we could have one for the bundle. Types. And build this inaud in our script.
+
+We ran this command so...I'll just take that. Types.
+So it's run the lib dir twice and made the coffee twice, those two things so let's run uglyfy. We've got our output like we wanted.
+This is like enough of the system, that you can do something useful with.
+TS: How close is this to the generalized instructions mention in the brief? Are these the generalised instructions or are they not sufficiently general to count?
+JC: They are general in that you can put any shell command in here, and it will be run. There wasn't a great way for supplying the input to the system and there's a lot that it can't do yet. But this is a minimal thing for modelling a file and how a file gets created. We're still not using the pathname input to this yet. That will become more important when things want to check that they're up to date because they have to know where their target is. This target only runs shell commands it doesn't really look at the output of those shell commands, nor relate them to the output file in any way. When it wants to know if something's up to date it's going to have to look at those files.
+TS: I thought it was interesting that you didn't start by building the target class, but by using the target class and then you dropped down... every time you ran in this it failed and you looked at the method on it till it worked.
+JC: Right. I have a vague idea where im going because it should look like something that im already familiar with. But i don't know what models and functions i want yet. I'm just thinking, how would you want to interact with this.
+

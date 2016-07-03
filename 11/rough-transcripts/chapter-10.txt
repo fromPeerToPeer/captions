@@ -1,0 +1,96 @@
+The other thing is they should be lazy, so if you run the build and make no changes then run it again nothing should happen. Because builds take a long time as your project grows, especially minifying javascript can get very slow.
+A simple way to do this is to look at the modified times of the files and if any of the things that you depend on are newer than your own file, then you rebuild. Otherwise you don't.
+
+TS: Just to clarify can you talk us through... you've already addressed one case about unnecessary work being done. You've made some change that ensures something doesn't get done twice. And now you're making another change which is also about something not being done twice but in a different way.
+
+TS: So the change you've already made, what kind of case has that dealt with that hasn't been dealt with here?
+JC: If you have a build that has a diamond shape so you have your build that you want, and that depends on two things, then they both depend on one thing.
+TS: OK.
+So when you call build here it will call build on these two, and they will both call build on that thing. I just made it so that those two builds to the same target don't cause work to be duplicated within the same process.
+TS: Right.
+JC:we're now talking about when you run your build twice, the second time you run it if you haven't changed anything, no work should need to be done. It skips you waiting around for things that don't need to be recompiled or whatever it is that you need to be doing.
+Its duplicate work within one build, and then across multiple builds.
+TS: Ok
+
+JC: So when you have things going across multiple builds, like multiple executions of your build tool you don't have that info in memory. We solved the first problem by putting a flag in memory on an object to say don't do this again, you've already done it. When you have multiple invocations of something you have to rely on some state that exists between processes. In this case that state could be the modified state of the files you're looking at. That's why basing this thing around files as the primary thing. It's good because it gives you an almost free way to check that the files are up to date.
+TS: OK.
+
+JC: So we have these tests for dependencies. We could also... what would we like to do.  So this is the thing that tells the things to build... which is what we want to do. We should probably also say that depending on the result of what those calls are, what is this target going to do. If any of those calls return a time that's higher than the time that I have, then I should quit.
+TS: What does higher mean?
+JC: Later than.
+
+JC: Say you have your coffee script file and your JavaScript file. If the coffee script file was modified later than the JavaScript file, the JavaScript file is out of date, so it will recompile it.
+TS: Right.
+JC: If it's the other way round that means your JavaScript file has presumably been generated since the last time you modified the coffee script. And you don't need to do any more work.
+TS: OK.
+JC: Let's say... we can have some context inside here. He writes.
+We can say that we allow the first dependency to receive build and return time now plus 5 minutes. Likewise with the second dependency to return time now plus 2 minutes.
+
+JC: The target itself is going to take those times it got from the dependencies and compare them to what it has. It's going to call a file called mtime.
+
+TS: What does mtime mean?
+JC: Its the modification time. The unix file system, every file has time stamps attached to it and one of those is the last time it was modified. You also get the last time it was accessed, and some other things. When you write to a file, the file system updates that time stamp so you can tell the last time it was changed.
+
+TS: Is this the point at which it needs the pathname that you've been passing in all along?
+JC: Yes. I introduced that quite prematurely. This is the first time that we need it. Maybe the first thing we should do is assert that it checks the time of its own pathname. He types. So we expect file to receive mtime with pathname.  I'll change that up here to make it less of a generic name. Or target pathname. The result inaud sometime, we don't really care what it is. So when you call target.build that should happen.
+I've just realised this test isn't part of this context... we need these things to be true. We can move that out.
+TS: It's something that always has to happen regardless?
+JC: Yes. Im thinking this through in a reverse way. Thinking it's going to look at its dependencies times and then compare them to itself. I should write a test to say that it asks the file system for some information but I realise that wasn't part of this.
+
+So we can check that it does this and then given that the dependencies return some values that compares with what it knows about itself.
+
+TS: I'm having trouble conceptualising these dependencies were built in the future. But it's relative to what you're imagining. We're imagining the Time.now is the mtime of this target.
+JC: And I'm just doing that because hard code time values always ends up blowing up in my face. You know, six months later your build starts failing for no reason, so I usually do them as offsets from wherever you are right now.
+TS: OK.
+JC: I could have put them in the past but it doesn't make much difference, it's the relative offset.
+
+JC: This will fail now because we're not doing that, we're not showing the mtime. This won't work.
+
+He mumbles... build with no arcoffee script. In Target spec 28.
+"received unexpected message :build with (no args)"
+
+Oh right, its telling those things to build. That's fine; we just need to give them a build method.
+Its only later we say that that build method should return something. It's not important what these tests return.
+I'm trying to make the doubles express the minimum interface they need to make the test work.
+TS: So you didn't need to do this before because there was only one example in this context and that had expectations on those doubles.
+JC: Right yes. I wrote this test down here, that stubs it, but this test, those don't apply so i had to put build back on top. Now its failing for the right reason and file isn't receiving mtime with the right things. So let's go and fix that.
+
+So build_self, so we're already returning we're already built so that's an easy cheap check. We don't want to call the file system if we know we've already built, it's a waste of some io. So we'll look at the mtime. File.mtime we don't need that variable. He mumbles. With our path name.
+
+TS: So this the piece of state you we're talking about. We update these mtimes when we run a build and then next time we run a build we can look to see if someone else has been in and changed anything.
+JC: Yes, and you can set that explicitly yourself. You can tell unix to set the mtime of this file to this. But it also happens implicitly when you write a file. That's why this is the first time it's appeared so far.
+TS: Wow.
+JC: That was load loads of thing just blew up.
+
+No such file or directory.
+Most of these tests are using file names that don't exist. This is the only test where we mentioned a mock expectation of inaud all the other tests are actually going to be calling it. And then it will fail because you've asked for a file that doesn't exist.
+
+So this is another bit of system stuff that we need to stub out in all the tests: So allow target to receive system and return true. The other targets in these tests are doubles so that doesn't matter. He types
+TS: Is it important that it does return a specific value at this stage?
+JC: Not at this stage because we're not using it so let's remove the .....
+TS: But your imagining that at some point you want to control the mtime that comes back from this.
+JC: Yes. The next things we will do is use that value and compare it to some other things and at that point have that value, the right time will be later.
+TS: You had to come back and put return true in here to make it so that stuff didn't think that system had failed.
+JC: Exactly. On line 27 nothing is actually using that value so its probably safe to have it return nil.
+
+JC: So we're still getting one fail and that's in the integration tests: for the same reason.
+TS: Should the integration test not actually work?
+JC: You're right, the integration test should work. And I shouldn't be stubbing things in the integration test. It's using real files.
+TS: So what's the problem
+JC: No such file or directory.
+
+"No such file or directory"
+
+TS: Is this the target that's trying to build 1.txt?
+JC: Right yes I've told the dependencies to update themselves then I've said what's the mtype of my file but I might not build my file yet.
+TS: So this is the special case when you're running the build for the first time. And this file doesn't exist yet.
+JC: Exactly. It's happening recursively so that what's going wrong. So it's the code that's wrong.
+TS: I guess this is why we have integration tests.
+JC: Yes. We can check the file exists first. That's a start. Now we're back to something reasonable
+TS: That fixed your integration test?
+JC: Yes but now the unit test is failing because this is still fake pathname that doesn't exist. When you call File.exists with it it won't work. So we'll also have to stub that in the unit test. Which means we can in general, bypass that whole code path by having this return false. Then we won't need to stub more things. But in the case where were doing this... we also need to expect file to receive exists with target pathname and return true. I could write another test... if the file exists it checks the thing or if it doesn't exist it doesn't check the thing but its sort of implicit. Like, something already failed that made me write the file with this check so I'm not desperate about writing those tests now.
+TS: Ok.
+JC: So now everything's passing so it does check its own mtime.
+
+
+

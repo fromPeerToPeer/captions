@@ -1,0 +1,10 @@
+TS: So James would you like to start by reading the challenge?
+JC: Sure, so the challenge is: Create a tool for automating the steps required to build a javascript project.
+A sample project is supplied with coffescript files. These need to be compiled to javascript then minified and concatenated.  The build tool should be able to accept generalised instructions for carrying out each of these steps.
+Where possible the build tool should be lazy, only running steps if they if they produce fresh output.
+So this is quite a lot like the make build system so I'll be taking inspiration from that inaud figuring out the steps... if you were to do that sort of thing yourself.
+There's coffescript so we'll need the coffee compiller.
+And it has to be minified so I'll use uglify.js for that... and concatenated either uglify will do that, or I'll use cat, or something like that. But a good thing to do first is to run these things by hand.
+TS: Right.
+JC: And see that they work before we try to automate them
+

@@ -1,0 +1,65 @@
+So this is an example that I should probably turn into a test now.
+There's not really enough here that there's any integration vs unit separation test. There's only a tiny amount of code, so I think I'm going to start by moving target into the source code of the project and write a test for it.
+Let's make a thing called lib, let's move scratch target into... let's make lib.fakemake, and then move scratch target to that. And also... types make spacer, like that. We're going to want some tests: And something to run tests: Go to inaud and get some gems. Gem file. Put rspec in there... save that, and install it into the project.
+Did I make a spec dir – yes i did. So let's write a test for this file, I called it a target..
+Obligatory "require 'spec_helper'" and (not end) which ive not written..
+Call it ... require_relative 'lib/fakemake', which also doesn't exist so im going to create it.
+Module fakemake.
+I usually use autoloads for these, so it loads things lazily.
+
+He types.
+
+Auto load target from root + fakemake target. That ought to be enough to load things. So if we go back to target spec and...he types.
+Does that at least run. Yes, it didn't complain about anything.
+
+OK so, looking back at the code, there's already a few scenarios here. There's... well the only thing this actually does, I suppose, it takes a list of instructions and executes them but now we're coming to a test we can pass it inaud thing. I'll make that mean that. Output. The test i have in mind is if you write a target with no instructions that's fine. If you write a target that gets executed or printed and executed. And if you write one with many instructions, they all get executed. Although we should probably also check to see what happens if you write an instruction that doesn't work... so system will return nill if you run a command for inaud. Rather shelling out, running stuff on the system will cause system to work or not work.
+So give a few variables. This inaud wont really matter it's just something to pass in the target will be a , and target new, which takes the pathname and the instructions and the output. Let's also make an output for inaud.
+And then we can have some scenarios. Let's describe the build method.
+When there are no instructions we said that nothing should happen its should not print i think. And expect output not to receive puts: And target build.
+I'll create a new shell over here.
+Ah! I didn't put my ruby on the path.
+Do i really want path.
+
+I'm not doing the good TDD thing here, i should probably see this break just to test if that test is doing something. So let's have this do output.puts something bad.
+That does fail so that's fine.
+And it should not execute anything I think.
+We're calling system on target itself... its a kernel method. I could have called target on puts itself and stubbed it in inaud here. But that also means... like sometime we're going to have a graph of these things and you might not have direct access in your test to the actual thing that's printing something. So you want to be able to pass this output object along. So it's a thing you have a handle on in your test when you make a inaud.
+TS: Right
+JC: Maybe I should do the same thing with execution. I could tell kernel to expect to receive system.
+TS: And then pass kernel in as another argument, or...?
+JC: That's what I'm not sure about, so i think i should leave it for now, until it becomes a problem.
+TS: Ok
+JC: The output thing it... like i knew I didn't want stuff printing things in the middle of my tests, whereas you also don't want the inaud to go and execute commands. Here because I've used a string io for the output, there just go into the ether and not be used anywhere, whereas.. for example... well we don't have any instructions yet but when we do and I write some of the test for printing, it will then go and execute the thing. So I'll have to stub out system to make it not go and do that. But I'm not sure that the object that we're calling it on is the problem in that situation. You'd have to do that in any case.
+TS: Right
+JC: So the target should not receive the system... types
+Ok, two passing tests.
+When there is an instruction let the instruction be... it doesn't really matter what it is... let's say echo, but we're never going to execute it, so it doesn't matter, as long as it's some unique value. And that should be an array shouldn't it.
+It prints the instruction. And we expect the output to receive puts with instruction once. And it executes the instruction.
+With the instruction... once.
+I go back and forth on this without saying wether something should be called... whether i should say how many times... but at this point I think it's important that you... because these things have side effects, the number of times you call them is important.
+TS: right.
+JC: And i also said that system should be stubbed in any case, even if you're not making assertions on it. That should probably happen in all cases so I'll put that at the top.
+TS: So if you didn't do this, one of those tests you wrote would actually try to execute that?
+JC: Exactly. Well let's run it. You should actually see this, because system inherits standard output, from your inaud process. And you will see an instruction pop up in the test when they're run, because of this, I think.
+
+Inaud instructions type it somewhere. Where did i do that? Target spec was 6.
+Oh I've only said instruction there... ok
+Undefined, ah yes. right. I've used instruction everywhere which is what I mean but the constructor wants a plural. So let's do that, and remove the array from here
+
+And that should be better...
+
+Instruction: Highlight the words 'an instruction' from this text:
+$ be rspec -c
+..an instruction
+..
+Finished in 0.0122 seconds
+4 examples, 0 failures
+
+so yes it's printed 'an instruction' while the tests are running, so it's actually executed that command.
+
+So let's stop it being able to do that by stubbing system out.
+What i like about this... one good thing about calling it on target and not on kernel is that i generally dislike stubbing out global things. This is working with files a lot, we're not directly working with files in Ruby yet but you get various gems that will stub out the file system, or it will stub out Net::HTTP or whatever it is... I find those usually get in the way somewhere. You really want only this test, this tiny piece of code, to be isolated from something.
+For example if you use something that stubs out of the file system, you can't use `require` any more, so your code stops loading. So the fact that this only affects the object under test is appealing to me.
+TS: Right.
+JC: So if we run those tests. Now it's not printing stuff in the middle of them because it's not calling echo. So that's better.
+

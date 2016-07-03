@@ -1,0 +1,41 @@
+JC: So in order for that to work. The second target has been given its dependencies as input, so we should be able to tell them to build themselves.
+So if we go back into our target class then build. So we've got this dependencies thing that we've not stored. So build could call update.no sorry going to go into update to make sure they're up to date. Call this .. extract... call build. Build self, so build is now a sort of sequence of high level ythings you need to do. And this is how to do each one.
+We have - as typed. So we should be able to go in and say update dependencies each build. And they will build themselves. These things here, which are primary resources we already created; they don't have any instructions and should work ok. This is why I made it ok to have no instructions, because you need to be able to model things that already exist. This should go off and tell file a and b to build themselves, which will do nothing and then this will tell file c to build themselves. The first target will run this command here and those inaud commands here. We should be ok.
+It works. Hurrah
+
+JC: So we've got an integration test and all that we have changed to do that is... quite a lot of things. (Laughter)
+I don't know if all these unit tests should be on the build method, or on build_self. I don't want to specify the implementation of target but I want to specify its relationship with other things.
+The important thing is when you build one target; it will tell those dependencies to build themselves. That's the minimum abstract thing that needs to be checked. I don't want to tell it how its private method should be organised. It's more about, what's its interaction with other stuff and that is that it calls build on them.
+
+In terms of unit  tests make target spec. so build, so this is all about running instructions and stuff, but before we get to running instructions we have dependencies.
+
+I'm not sure if it makes sense to write a test for when there are no dependencies. These tests are already implicitly for when there are no dependencies so when there are none there's no other target for you to say that it should or should not call build on.
+
+So let's make a test for when there are dependencies. We can have several of them. In this case the order shouldn't be important or rather you shouldn't construct your dependency tree so the order doesn't matter.
+
+If c depends on a and b, but b has to happen after a then you should say b depends on a. That will ensure that that happens first.
+
+So first dependency is a double. And second dependency is a double. This does let us check that if the first dependency fails then we don't call the second dependency. That isn't really a requirements its a dependency tool because the order doesn't matter.
+
+So we should say – as typed.
+So we expect `first_dep` to receive build once
+And likewise for the `second_dep`
+And, what's our target here?
+Our target is
+a FakeMake::Target.new with a pathname (that won't matter yet) and the dependencies, and no instructions because we're not testing that here.
+
+So when we call target build it should tell each of the targets to build themselves.
+Ooops, I've lost my other shell.
+Path again...
+
+OK that looks good. This is a good place to commit. It's a new feature: we have dependency management.
+Let's have a look at what we've changed. We've added dependencies to target class and made it so that the target will build its dependencies. If you have a tree of targets they will recursively build themselves, and we've added tests for those things.
+
+TS: I was surprised to see when you ran that unit test it looks like there was some output on standard out during the test which wasn't what i expected to see.
+JC: You're right we're printing the commands. Well still have an issue with this with system. Because system inherit stood out from the ruby process. Cat happens to not emit any output, well it does emit output but we're binding it to the files so we're still echoing stuff.
+TS: But this wasn't happening before right? When you ran the unit test before it was just a line of green dots:
+JC: Yes. I've led these targets in the integration tests to use standard out and i can maybe stop them from doing that. It's a bit frustrating in that i could have used puts and set dollar string out inaud output. It's one of those isolation things. I want this thing that prints stuff to print a black hole and I want the tests that are running the process to still be able to talk to stood out. We can get around that by passing it an output like we did before. Well call it stub out here to make it a bit more clear what its role is and then that can take it as an argument. Although not all of them will need it. Only the ones that run code need it.
+Private method puts called for... that's interesting. Here I've called it output, sorry, I forgot what I called it. It's called stood out. Ok that's better, outputs gone away.
+
+# Chapter 9: Being lazy within a build
+

@@ -1,0 +1,74 @@
+Ok so we just committed the working target class. It can't do an awful lot just yet, it can just run the commands. So if we go back to... what did we have in here. My test file.
+When i was sketching this out earlier... down here I told each of the targets to build. They're all just isolated. A better user interface would be to do that... and have everything needed to produce the final result just happen. For that sort of thing you're going to need to know for example what bundle.js will dependencyend on. Hello JavaScript and complementor JavaScript. Whereas these won't depend on anything. They are their own things. Although they do arguably depend on their source code. In order for the build system to be lazy and work out if any more work needs doing, it will need to know about that relationship. So it's probably advisable if we... here we have these target objects to represent these things, but if we source files, we could say that they are e.g. hello coffee is a target new example source hello.coffee, which actually depends on nothing because the source code you wrote is not derived from anything and has no build instructions. Also, you wrote it; it doesn't need generating. And this can take that as a dependency and you can do the same for complementor and what have you.
+
+I'm on the fence about whether to pass these things around as values or by name. Because, to pass this by `example/src/hello.coffee`.
+TS: What's the trade off there doing it one way or the other?
+JC: Good question, if you write them by name you can do your target in any order. This can be beneficial. But this is supposed to be a declarative system. It can also mean that you make dependencies on things that don't exist yet. So for example complementor.js won't exist when you start the build. The target represents something that will exist in the future so you don't need the file to exist, but having the pass by name you can do something for example by having patterns like if you want to say star.js depends on star.coffee, we don't want to have to write all these targets out by hand once the project gets big, so you may want to have some general rule for how you get from one to the other.
+TS: It sounds like that may be more complicated though.
+JC: Eh... yes, we can probably start by passing by value and if it becomes a problem we can pass by name and then have those names looked up in something else.
+TS: Alright.
+JC: But turned into the value, so that should be a fairly minor change to make later.
+TS: OK
+JC: So let's do the pass by value thing. So if we go back to our spec inaud because it was in another shell.
+So... this is all talking about running instructions. We also want to talk about having dependencies.
+So we've decided that the target is going to have a new argument which is dependencies. That ought to run but it doesn't... why not.
+Oh yes, ok so the tests we need... he mumbles.
+
+And I like things that line up. So that ought to be fine.
+So these tests are now testing a thing that has no dependencies. Ultimately we would like to have a target that will depend on something else, and if you build your target it will also build the other thing.
+Maybe this is where we get into integration tests scenario. Because I'm going to have two target objects writing unit tests against those... like i could write a test to say when you call build on this call build on this other thing, but maybe that's specifying implementation too much.
+So I'm going to try and write... I'm just wondering where I'm going to put my inaud test. So if i write ... it's inaud rb. That's not inaud specoffee script is it...describe... mumbles. Say when one target depends on another. As something simple, I'm going to say that if you have... what's something simple we can do with files, just like catting them.
+
+So if we say... he types. Not quite sure how to phrase this yet but... let's say that we have... like there exists a file called a.text that just contains an a and likewise there are some files called b and c that have their letters in them inaud.
+So if there are those files, then you have your first target. And let's add these somewhere... like in spec temp.
+So if the first target is spec temp 1.text ... and thats new that... and it has no dependencies or rather it does have dependencies which are.. Sorry i got a bit side tracked. So file a.
+TS: Ah so we need targets to represent these files even though there not going to be build in any format.
+Java script. There'll be some nicer user interface around this at some point but it makes this a bit more complicated as far as those values because you have to make values for thing that are just primitive files.
+TS: Whereas if you identified things by name, the assumption would have been if I've named something by name it isn't a target it's just a file.
+JC: Yes. These have no dependencies in them or instructions, so they can be done like that.
+That's b that's c.
+So this dependencyends on file a and file b, and works by catting spec temp a.text spec temp b.text into spec temp 1.text.
+And the second target is called second.  And that works by depending on the first target - file c. Then that is going to work by taking 1.text and c.text and put that into the second. I suppose this could be our before block. Types
+TS: So you haven't actually built anything yet?
+JC: No. If we just build the second target – as he writes – because everything has been concatenated together.
+I'm going to  make some helper functions here, so if I use this file helper here, I just need to define that.
+Ive made this helper because I want everything to be cleaned up automatically afterwards. This helper is going to make the file with that content and keep track of it so if there's inaud remove all of them.
+TS: OK.
+JC: File Utils has a make dir.-p function, so we can make that, and then we can file open it path name and write content into that. We can store the path name in there. And there's an afterhook, we can say spec files he writes. So file unlink to delete things. We ought not to be left with, files that exist between tests and cause subsequent tests to not do the right thing.
+So does this say what we actually want? We have 3 files and they have content, and we've made targets for them and the first target depends on a and b and if you cat those files together you get 1.text. The second target depends on the first target file c and you cat those two to make the second file, and that works.
+The way things are at the moment, if we run second target.build it might end up throwing because this 1.file won't exist. So cat in that situation, I can't remember... if it fails silently and returns zero... we'll find out, but either way.. It should throw or it shouldn't have the right content in it. A and b will be missing. So let's have a go at running those... spec features.
+No variables, second target on where... 38. Ah yes. That's a local variable that split apart. Inaud that. We've got a failed command from line 38 where we tried to build that thing. I assume because the cat is failing. It would be nice if that error told us what had failed. It would be really helpful. So let's make it do that.
+Raise failed command. He writes.
+
+Command failed cat spec temp 1. So that is expected.
+
+I hope those files are not hanging around in temp
+So this knows how to clean up the files we created with file but it doesn't know how to clean up.
+TS: How you going to fix that?
+JC: We could poke those things into the array so it knows about them but it still feels a little unclean. I accidentally made a new shell there. We could just nuke the temp directory. I think that's maybe why I put them in a directory in the first place, so you can just wipe the slate clean.
+
+So let's do that and then we don't need this tracking stuff. I have put this spec temp all over the test, maybe that's something i should clean up. I maybe wanted to say... what i originally wanted to do was save file a.text and then have that create a slash inaud tab but to make these commands work i would have had to change process directory into there, which we could do. I think I'm happier with that, lets remove.... those. Because they're crufting everything up.
+
+If we do that...
+
+Let's say `in_temp_dir`.
+FileUtils has another nice helper function where you can FileUtils.cd to somewhere...
+
+Just pass the block through (it takes a block). It changes working directory into somewhere, runs the block, and then comes back out again to where you were before, which is kind of nice.
+
+TS: So you're not having to do any clean up of the current stuff, it just goes back to where it was when you started.
+JC: Exactly. Creating those files... we don't do anything, these just make target objects, they don't do system calls or write any files. So file would have to make that temp directory.
+
+And then put that in here.
+
+So if we make those files inside spec temp and then run everything in that directory and afterwards remove it again, everything should be OK I think.
+
+Let's see what it makes of that.
+"Wrong number of arguments (0 for 1)"
+
+Right, i didn't pass an arguement to that, I used it to hide where we're storing things.
+Command failed cat 1 with c... that temp dir has gone away, that's nice. I feel better about that.
+TS: OK good.
+
+# Chapter 8: Making Target dependencies build
+

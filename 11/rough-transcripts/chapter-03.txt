@@ -1,0 +1,28 @@
+Ok so we know the things that we want to run, we have the rough steps. So for example, if i wrote this as a shell script... we know that we want to run node modules in coffee script with compiler and the example... example source – types.
+And then we also want to do that for... have i got coffee... before we do that it would be a good idea to make sure that the output directory exists. So well do that and then compile the coffeescript.  Once we have those... modify JavaScript – he types- inaud there. We want to combine all the JavaScript files from example lib into a single file called example bundle.js so...
+TS: The order of those files doesn't matter? Where happy just to take them in presumably...
+JC: It doesn't matter in this case because each file... well if we have a look at the files. So this file declares a class called complimentor. And it makes one of the inaud. Its the same method and the other one does much the same thing, it just has a different limitation before inaud method does. These files do have side effects because they block stuff but they don't depend on each other. If you're expecting the output to be in a certain order... maybe it depends...if i was going to force a dependency order, i would use line modules or the new model syntax that's in inaud 6. And then get inaud browser or something like that to resolve it so that the dependency was part of the source code, not part of the build.
+OK so we had our inaud script. So those are all the steps that we did before... so if i remove the compile JavaScript bundle, then running that should produce the same results
+It couldn't find inaud /coffee script. Why not? Oh it's because it's just called coffee.
+I think maybe i should show the tree before it and after it because.. because it shows the actual difference  - he writes. So the tree before it has just got our source code in it. Then if we run the build.. That does something... and now there are the compiled JavaScript files in there.. And the bundle.. And that is how we were expecting it to look.
+TS: does this count as a solution to the problem?
+JC: Done! Success.
+
+So a totally reasonable solution to a lot of the problems is just write a shell script. But there's a bunch of ways that the shellscript doesn't meet the brief. We had to make it lazy so it doesn't do work it doesn't need to. And it has to be able to orchestrate arbitrary commands.
+
+**What we just did is like, we figure out what needs to be done and then we tell the computer to do those things. Whereas you want a build system to be smarter than that and you tell it what your project is and how its structured and then it figures out how to build it.**
+
+If you haven't changed any of your coffee script since you last ran the build, like, don't bother running the compiler again. And if you haven't  changed any of your files since the last build don't bother running the entire process again. You want that to be quite granular so you can figure out which bits of work need doing. And just run those bits but make sure you get something up to date each time. We want a system where we can say lib/hello.js is derived from src/hello.coffee and then it can look to see if hello.coffee is newer than hello.js and recompile it if it isn't.
+TS: So part of that is generalising how you turn because at the moment you've told it to turn coffee script into jhs twice, once for each file right?
+Your saying you want it in general to turn any coffee script file into any JavaScript file
+JC: Right, and to have it understand this file was derived from this other file and it can, like i said before it can check the modification time of two files, and if the output is at least as new as the input it doesn't need to do anything.
+TS: OK.
+JC: So there's an intermediate step there where you can repeat this instruction and you can solve that with a bash inaud. So I'll take that and just shove that file on the end. And get rid of this. This ought to do the same thing.. if we remove everything. Inaud example build... check the example again. It does the same thing, maybe a slight improvement to how much boiler plate we've written. But this isn't lazy. It will run this line every time. So as your project grows this will get slower and what have you.
+There's a lot of things that we want when we start. I guessthe simplest thing is to have something where you can say, like, there's a file i want to build and this is how to build it. And have those be things you can specify. So maybe that's the placed to start.
+TS: So that's ignoring the laziness stuff you were talking about and just concentrating on how do I get this hello.js given that i have hello.coffee.
+JC: Well maybe not given that i have hello.coffee just how do i make hello.js
+TS: right fine
+JC: and then the idea that it's derived from some other files, and the system knows about that, it can maybe be the next step.
+[He thinks]
+
+

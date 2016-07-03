@@ -1,0 +1,31 @@
+So we have the code checked out over here so weve got a couple of files. I know we're going to need coffeescript and we're going to need uglify, so let's make a package.json with those things in it.
+TS: What will the package.json allow you to do.
+JG: Package.json is what npm the node packaging system uses and one of its function is to manage dependencyendencies.  There are two sets of dependencies, dependencies and dev-dependencies. Dependencies are things that your program uses in run time for production and dev-dependencies are things you use for testing examples or what have you. So coffeescript and uglify are not going to be part of the tool, they're something you can run with the tool. They'll be part of the examples.
+TS: OK
+JC: So save that, and if you run npm install it should install them for you. So thats good.
+Packages that provide executables npm puts those in `node_modules/.bin`. And they just sit inside the project so we should be able to compile each of those things into a javascript file and then minify them and concatenate the results:
+James thinks
+Let's make another directory... can I do it that way, let's find out.
+TS: Looks like it.
+JC: Ok so those are in source, we'll make another directory called lib. So I want to run node modules.bin with coffee... I want to compile and put the output in example lib and compile example source with complimenter coffee
+TS: So what's that done?
+JC: That should have compiled that file in to the example lib.directory. So that has showed up ... a good example source complimenter that has code in it. So example lib complementor should look the same, like javascript. That does look reasonable. And then we'll do the same with the other file.
+
+James types, I'll use hello..
+So that's compiled it.
+So the next thing to do with those files .... he thinks. Given that one of the requirements of the brief is that the build should be lazy, and only do steps when theyre required. The way that make does that is ... any intermediate results:.. you put in files, because  it can then check the modified time of the files and if it's less recent, to inaud in that file, then it will rebuild it.
+So, to minify something inaud I think its with these flags. This flag inaud compress which is... let's see what the help says.
+So – C enables compressor options which is... you have to tell that to make it minify the file.
+TS: Right.
+JC: The option called m has not been found... it's up there... it's mangle... which means it will do things like shift variable names. And – inaud is for output inaud
+TS: So is uglyfy going to be responsible for concatenating these or does contactonation come after the uglification?
+JC: Thats the bit im not sure about actually. Whether you give it multiple input files and have it write them all to the same place.
+TS: It seems that the coffeescript compiler is one to one, You give it one coffee script file and one JavaScript file.
+JC: Exactly. So the first line here says the usage is... they contain multiple input files. So why dont we try to get it to do that.
+James mumbles as he types. We'll see inaud there OK that looks as if it has encoded it. Tom laughs.
+Oh it will have mangled all the names and everything so... it will only reduce the size of local variables because it doesn't matter what those are... and method name should stay the same. So I think there is a say... yes inaud same method... and its got that going in if we want it.  So this looks like the output that we want to produce.
+TS: Whats the trade off between concatenating and minifying them all in one step versus... I presume if you wanted you could minify them separately and then post-process them together or is it necessary for them to be minified all together?
+JC: I think there are certain optimisations you can do by considering things like – in total, and because there are various different work-flows for JavaScript. Like if you've got all your... depending on which of  the various module formats your using, like you might of used a tool to resolve all of those modules, inaud them before you did the coffee script compilation or if you're using something like browserify, you can give it a plug-in that will convert coffee script inaud.  Or you can do the separate steps, like compile coffee script and then get browserify to resolve everything.
+TS: Right
+JC: The word that a lot of people are using at the moment is browserfy or webpack, or something like that. But minifying the individual files and then concatenating them will usually be the same as getting the tool to do it for you.
+TS: So your happy with this chain of operations in order to produce the output?

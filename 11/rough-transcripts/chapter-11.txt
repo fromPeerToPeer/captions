@@ -1,0 +1,30 @@
+JC: The next question is does it use the mtime to do something useful like skipping work. So when the dependencies are newer than the target. And that means... so lets say some offset to base these on... Let the target time be time now. And then we can say, use that here... he types and it's clearer that they are in the future from when the target was built.
+TS: So are you using Time.now as the most convenient way to get a real time value.
+JC: That it's the current time is not relevant.
+
+JC: So what's the context? When the dependencies are newer than the target. That means that the... allow file to receive m file, so for the time the target asks for will return the target time. And we need exists to return true as well.
+So the target will use target time inaud, the dependencies time is later than that so if that kept pace, the dependencies are newer so that means the target should execute its instructions. But we haven't given it any.
+ Let instruction- he mumbles and types.
+System is stubbed out with these tests, I'm not worried about that. And also we want that output her because it's going to start printing stuff otherwise.
+Do we have that everywhere?
+And that line's gone quite wrong so I'll use terminator block like that.
+Ok so we have a target with some dependencies, an instruction and an output stream. So we want to see that in this case it executes its instruction. I don't want to specify by saying you should invoke some primary method because that like specifying a limitation. I want to specify the effect that it has on the world which is that it makes a system command.
+
+TS: Ok.
+JC: So, we expect target to receive system with the instruction once when we build it. Now, it will prob do this anyway because it isn't checking anything so far because I haven't introduced anything that will make that test fail.
+TS: So this is what you're currently testing it's just the normal what it would do...
+JC: Yes
+TS: What we're driving towards is what happens when it's NOT out of date, and you haven't tested that yet.
+JC: Exactly.
+
+JC: It's basically going to result in duplicating most of this context. So if feel I should pull some of this stuff out.
+Lazy building. So if i have that. I want to take this stuff which is going to be needed for all of these tests, and put it in here. I don't like that. Then...
+
+Is that all back in shape. I think so. Yes.
+TS: So what's going to be different in the other context?
+JC: These steps here rather than returning things in the future will return things in the past, or the past relative to the targets own modification time.
+
+TS: Right.
+JC: And in that case we shouldn't execute the instruction. Just leave things alone. So I'm going to copy most of that then inaud and these can be inaud. And we can say it does not execute instruction. And this is the thing that should fail. It expected target.system to go high zero times inaud time, so that's the thing that needs fixing.
+
+
