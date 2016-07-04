@@ -114,7 +114,37 @@ Let's make another directory inside there and move...
 Can I do it that way? We'll soon find out.
 
 27
-00:02:25,942 --> 00:02:27,940
+00:02:26,057 --> 00:02:28,548
 TS: Looks like it.
-JC: Ok so those are in source, we'll make another directory called lib. So I want to run node modules.bin with coffee... I want to compile and put the output in example lib and compile example source with complimenter coffee
+
+28
+00:02:28,822 --> 00:02:36,800
+JC: OK so those are in source,
+we'll make another directory called lib. 
+
+29
+00:02:37,740 --> 00:02:43,234
+So I want to run node modules.bin with coffee... 
+
+30
+00:02:47,977 --> 00:02:51,497
+I want to compile and put the output in example lib. 
+
+31
+00:02:51,588 --> 00:02:55,760
+And compile example source
+with complimenter coffee.
+
+32
+00:02:57,760 --> 00:02:58,365
+JC: That should have compiled that file in to the example lib.directory. So that has showed up ... a good example source complimenter that has code in it. So example lib complementor should look the same, like javascript. That does look reasonable. And then we'll do the same with the other file.
+
+33
+00:02:58,365 --> 00:02:59,451
+TS: So what's that done?
+JC: That should have compiled that file in to the example lib.directory. So that has showed up ... a good example source complimenter that has code in it. So example lib complementor should look the same, like javascript. That does look reasonable. And then we'll do the same with the other file.
+
+34
+00:02:59,451 --> 00:02:59,760
+JC: That should have compiled that file in to the example lib.directory. So that has showed up ... a good example source complimenter that has code in it. So example lib complementor should look the same, like javascript. That does look reasonable. And then we'll do the same with the other file.
 
