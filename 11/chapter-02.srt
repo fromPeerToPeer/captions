@@ -1,0 +1,22 @@
+﻿1
+00:00:00,057 --> 00:00:03,977
+[Chapter 02: Executing a build by hand.]
+
+2
+00:00:04,411 --> 00:00:09,165
+So we have the code checked out over here. 
+
+3
+00:00:10,354 --> 00:00:14,940
+So we've got a couple of files.
+
+4
+00:00:15,100 --> 00:00:18,022
+I know we're going to need
+coffeescript and also uglify, 
+
+5
+00:00:18,045 --> 00:00:23,977
+so let's make a package.json
+with those things in it.
+
