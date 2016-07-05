@@ -333,11 +333,115 @@ because it doesn't matter
 what those are externally,
 
 77
-00:06:50,880 --> 00:06:54,971
+00:06:50,880 --> 00:06:52,240
 but method name should stay the same.
 
 78
-00:06:54,971 --> 00:06:56,970
-So I think there is a say... yes inaud same method... and its got that going in if we want it.  So this looks like the output that we want to produce.
-TS: Whats the trade off between concatenating and minifying them all in one step versus...
+00:06:52,280 --> 00:06:57,954
+So I think there is a say... Yes, there's
+some say method being defined there.
+
+79
+00:06:59,725 --> 00:07:01,531
+And it's got that code in it that we wanted. 
+
+80
+00:07:01,530 --> 00:07:07,691
+So this looks like the output
+that we want to produce.
+
+81
+00:07:09,211 --> 00:07:14,120
+TS: Whats the trade off between concatenating
+and minifying them all in one step versus...
+
+82
+00:07:14,120 --> 00:07:16,285
+I presume if you wanted  to,
+you could minify them separately 
+
+83
+00:07:16,297 --> 00:07:19,340
+and then post-process them
+to concatenate them together,
+
+84
+00:07:19,360 --> 00:07:24,114
+or is it necessary for them
+to be minified all together?
+
+85
+00:07:24,840 --> 00:07:29,942
+JC: I think there are certain optimisations you
+can do by considering things like – in total.
+
+86
+00:07:29,954 --> 00:07:36,171
+And because there are various different work-flows
+for JavaScript. Like if you've got all your...
+
+87
+00:07:38,491 --> 00:07:41,451
+Depending on which of the
+various module formats your using...
+
+88
+00:07:41,474 --> 00:07:46,148
+Like, you might have used a tool
+to resolve all of those modules, 
+
+89
+00:07:46,160 --> 00:07:49,851
+and in-line them before you
+did the coffee script compilation. 
+
+90
+00:07:49,860 --> 00:07:51,942
+Or if you're using something like browserify, 
+
+91
+00:07:51,954 --> 00:07:57,165
+you can give it a plug-in that
+will convert coffee script on the fly.
+
+92
+00:07:57,234 --> 00:07:58,571
+Or you can do them in separate steps,
+
+93
+00:07:58,605 --> 00:08:02,537
+like compile all your coffee script and
+then get browserify to resolve everything.
+
+94
+00:08:02,537 --> 00:08:04,530
+TS: Fine.
+
+95
+00:08:06,080 --> 00:08:09,097
+JC: Yes, they're usually...
+
+96
+00:08:10,457 --> 00:08:16,320
+The word that a lot of people are using these days
+is browserify or webpack, or something like that. 
+
+97
+00:08:17,000 --> 00:08:19,851
+But minifying the individual files
+and then concatenating them 
+
+98
+00:08:19,860 --> 00:08:23,737
+will usually be the roughly the same
+as getting the tool to do it for you.
+
+99
+00:08:27,497 --> 00:08:30,742
+TS: So your happy with this chain of
+operations in order to produce the output?
+
+100
+00:08:30,765 --> 00:08:31,330
+JC: Yes.
 
