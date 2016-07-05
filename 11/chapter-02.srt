@@ -276,7 +276,68 @@ Whether you can give it multiple input files
 and have it write them all to the same place.
 
 64
-00:05:52,045 --> 00:05:54,040
-TS: It seems that the coffeescript compiler is one to one, You give it one coffee script file and one JavaScript file.
-JC: Exactly. So the first line here says the usage is... they contain multiple input files. So why dont we try to get it to do that.
+00:05:52,040 --> 00:05:55,645
+TS: It seems that the
+coffeescript compiler is one to one. 
+
+65
+00:05:55,680 --> 00:05:58,000
+You give it one coffee script
+file and one JavaScript file.
+
+66
+00:05:58,000 --> 00:06:00,731
+JC: Exactly. 
+
+67
+00:06:00,730 --> 00:06:06,262
+So the first line here says the usage
+is that they contain multiple input files. 
+
+68
+00:06:06,260 --> 00:06:09,954
+So why don't we try to get it to do that.
+
+69
+00:06:10,770 --> 00:06:12,822
+I'll just remove those.
+
+70
+00:06:13,420 --> 00:06:18,754
+cmo example/bundle.js
+
+71
+00:06:18,891 --> 00:06:23,748
+example/lib/*
+
+72
+00:06:24,030 --> 00:06:26,697
+And we'll see what goes on in there.
+
+73
+00:06:30,411 --> 00:06:35,222
+OK that looks like it has some code in it.
+
+74
+00:06:36,582 --> 00:06:43,714
+It will have mangled all the names and everything
+so whatever I was looking for in here...
+
+75
+00:06:45,210 --> 00:06:48,480
+It will only reduce the size of local variables,
+
+76
+00:06:48,500 --> 00:06:50,857
+because it doesn't matter
+what those are externally,
+
+77
+00:06:50,880 --> 00:06:54,971
+but method name should stay the same.
+
+78
+00:06:54,971 --> 00:06:56,970
+So I think there is a say... yes inaud same method... and its got that going in if we want it.  So this looks like the output that we want to produce.
+TS: Whats the trade off between concatenating and minifying them all in one step versus...
 
