@@ -4,7 +4,7 @@
 
 2
 00:00:04,411 --> 00:00:09,165
-So we have the code checked out over here. 
+So we have the code checked out over here.
 
 3
 00:00:10,354 --> 00:00:14,940
@@ -13,7 +13,7 @@ So we've got a couple of files.
 4
 00:00:15,100 --> 00:00:18,022
 I know we're going to need
-coffeescript and also uglify, 
+coffeescript and also uglify,
 
 5
 00:00:18,045 --> 00:00:23,977
@@ -36,7 +36,7 @@ the node packaging system uses.
 9
 00:00:51,760 --> 00:00:58,217
 And one of its functions is
-to manage your dependencies.  
+to manage your dependencies.
 
 10
 00:00:58,210 --> 00:01:01,908
@@ -46,17 +46,17 @@ dependencies and dev-dependencies.
 11
 00:01:01,900 --> 00:01:05,371
 Dependencies are things that your
-program uses in run time in production, 
+program uses in run time in production,
 
 12
 00:01:05,370 --> 00:01:10,537
 and dev-dependencies are things you use
-for testing or examples, or what have you. 
+for testing or examples, or what have you.
 
 13
 00:01:11,470 --> 00:01:17,200
 So coffeescript and uglify are
-not going to be part of the tool, 
+not going to be part of the tool,
 
 14
 00:01:17,230 --> 00:01:19,051
@@ -73,7 +73,7 @@ TS: OK
 17
 00:01:24,560 --> 00:01:32,411
 JC: So save that, and if you run
-npm install it should install them for you. 
+npm install it should install them for you.
 
 18
 00:01:32,457 --> 00:01:36,308
@@ -82,7 +82,7 @@ So that's good.
 19
 00:01:36,468 --> 00:01:43,508
 Packages that provide executables
-npm puts those in `node_modules/.bin`. 
+npm puts those in `node_modules/.bin`.
 
 20
 00:01:44,140 --> 00:01:47,222
@@ -95,7 +95,7 @@ of those things into a javascript file.
 
 22
 00:01:56,754 --> 00:01:59,874
-And then minify them and concatenate the results. 
+And then minify them and concatenate the results.
 
 23
 00:01:59,870 --> 00:02:03,634
@@ -120,31 +120,163 @@ TS: Looks like it.
 28
 00:02:28,822 --> 00:02:36,800
 JC: OK so those are in source,
-we'll make another directory called lib. 
+we'll make another directory called lib.
 
 29
 00:02:37,740 --> 00:02:43,234
-So I want to run node modules.bin with coffee... 
+So I want to run node modules.bin with coffee...
 
 30
 00:02:47,977 --> 00:02:51,497
-I want to compile and put the output in example lib. 
+I want to compile and put the output in example lib.
 
 31
-00:02:51,588 --> 00:02:55,760
+00:02:51,580 --> 00:02:56,560
 And compile example source
 with complimenter coffee.
 
 32
-00:02:57,760 --> 00:02:58,365
-JC: That should have compiled that file in to the example lib.directory. So that has showed up ... a good example source complimenter that has code in it. So example lib complementor should look the same, like javascript. That does look reasonable. And then we'll do the same with the other file.
+00:02:58,377 --> 00:02:59,462
+TS: So what's that done?
 
 33
-00:02:58,365 --> 00:02:59,451
-TS: So what's that done?
-JC: That should have compiled that file in to the example lib.directory. So that has showed up ... a good example source complimenter that has code in it. So example lib complementor should look the same, like javascript. That does look reasonable. And then we'll do the same with the other file.
+00:02:59,485 --> 00:03:04,354
+JC: That should have compiled that
+file in to the example lib.directory.
 
 34
-00:02:59,451 --> 00:02:59,760
-JC: That should have compiled that file in to the example lib.directory. So that has showed up ... a good example source complimenter that has code in it. So example lib complementor should look the same, like javascript. That does look reasonable. And then we'll do the same with the other file.
+00:03:04,350 --> 00:03:08,582
+So that has showed up.
+
+35
+00:03:09,485 --> 00:03:14,765
+Look at example source
+complimenter that has some code in it.
+
+36
+00:03:14,910 --> 00:03:20,114
+So example lib complimenter should
+look the same, but in  JavaScript.
+
+37
+00:03:20,160 --> 00:03:24,388
+That does look reasonable.
+
+38
+00:03:26,320 --> 00:03:30,548
+And then we'll do the same with the other file.
+
+39
+00:03:30,685 --> 00:03:33,611
+[James types]
+
+40
+00:03:38,582 --> 00:03:41,325
+I'll use hello.
+
+41
+00:03:41,497 --> 00:03:45,062
+[Silence]
+
+42
+00:03:45,210 --> 00:03:47,314
+So that's compiled it.
+
+43
+00:03:47,348 --> 00:03:55,154
+So the next thing to do with those files .... [he thinks].
+
+44
+00:03:56,940 --> 00:04:04,205
+Given that one of the requirements of
+the brief is that the build should be lazy,
+
+45
+00:04:04,731 --> 00:04:08,582
+and only do steps when they're required.
+
+46
+00:04:10,560 --> 00:04:16,891
+The way that make does that is, any
+intermediate results, you put in files.
+
+47
+00:04:16,910 --> 00:04:20,297
+Because  it can then check
+the modified time of the files,
+
+48
+00:04:20,320 --> 00:04:26,251
+and if it's less recent, than any of the
+inputs to that file, it will rebuild it.
+
+49
+00:04:26,400 --> 00:04:32,148
+So, to minify something...
+
+50
+00:04:33,120 --> 00:04:37,108
+Again, we can use inaud run uglify.
+
+51
+00:04:41,470 --> 00:04:49,634
+I think it's these flags.
+Those flags have compress which is...
+
+52
+00:04:49,630 --> 00:04:54,822
+Let's see what the help says.
+
+53
+00:04:54,820 --> 00:05:01,131
+inaud
+
+54
+00:05:01,828 --> 00:05:04,800
+[Silence]
+
+55
+00:05:09,090 --> 00:05:18,148
+So – C enables compressor options.
+You have to tell that to make it minify the file.
+
+56
+00:05:18,140 --> 00:05:19,760
+TS: Right.
+
+57
+00:05:19,760 --> 00:05:25,542
+JC: The option called m has not been found. 
+
+58
+00:05:25,600 --> 00:05:31,748
+It's up there... It's mangle... Which means
+it will do things like shift variable names.
+
+59
+00:05:32,228 --> 00:05:35,920
+And – O is for output inaud file.
+
+60
+00:05:35,970 --> 00:05:38,868
+TS: So is uglify going to be responsible for concatenating these 
+
+61
+00:05:38,868 --> 00:05:42,331
+or does concatenation
+come after the uglification?
+
+62
+00:05:42,450 --> 00:05:47,154
+JC: That's the bit I'm not sure about actually. 
+
+63
+00:05:47,485 --> 00:05:52,045
+Whether you can give it multiple input files
+and have it write them all to the same place.
+
+64
+00:05:52,045 --> 00:05:54,040
+TS: It seems that the coffeescript compiler is one to one, You give it one coffee script file and one JavaScript file.
+JC: Exactly. So the first line here says the usage is... they contain multiple input files. So why dont we try to get it to do that.
 
