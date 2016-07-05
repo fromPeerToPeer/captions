@@ -1,0 +1,28 @@
+﻿1
+00:00:00,000 --> 00:00:03,954
+Chapter 03.
+Automating build steps with a shell script.
+
+2
+00:00:04,400 --> 00:00:14,960
+OK so we know the things that we
+want to run... We have the rough steps. 
+
+3
+00:00:15,000 --> 00:00:19,965
+So for example, if I wrote this as a shell script... 
+
+4
+00:00:20,640 --> 00:00:23,748
+[Silence]
+
+5
+00:00:26,530 --> 00:00:38,880
+We know that we want to run
+node_modules/.bin/coffee-script
+
+6
+00:00:40,468 --> 00:00:54,960
+With compiler and put the output in example/lib
+with example source complimenter.coffee
+
