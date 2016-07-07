@@ -6,11 +6,11 @@ Automating build steps with a shell script.
 2
 00:00:04,400 --> 00:00:14,960
 OK so we know the things that we
-want to run... We have the rough steps. 
+want to run... We have the rough steps.
 
 3
 00:00:15,000 --> 00:00:19,965
-So for example, if I wrote this as a shell script... 
+So for example, if I wrote this as a shell script...
 
 4
 00:00:20,640 --> 00:00:23,748
@@ -25,4 +25,178 @@ node_modules/.bin/coffee-script
 00:00:40,468 --> 00:00:54,960
 With compiler and put the output in example/lib
 with example source complimenter.coffee
+
+7
+00:00:57,634 --> 00:01:02,000
+And then we also want to do that for... 
+
+8
+00:01:02,160 --> 00:01:04,400
+Have I got coffee?
+
+9
+00:01:08,270 --> 00:01:14,994
+Before we do that it would be a good idea to
+make sure that the output directory exists. 
+
+10
+00:01:16,548 --> 00:01:22,022
+So we'll do that and then compile the coffeescripts. 
+
+11
+00:01:22,434 --> 00:01:26,045
+Once we have those... 
+
+12
+00:01:27,257 --> 00:01:30,080
+Uglifyjs.
+
+13
+00:01:30,331 --> 00:01:33,600
+[Silence]
+
+14
+00:01:34,720 --> 00:01:37,360
+Put inaud in there.
+
+15
+00:01:41,130 --> 00:01:46,091
+We want to combine all the
+JavaScript files from example/lib 
+
+16
+00:01:46,170 --> 00:01:50,377
+into a single file called
+example/bundle.js so we get all those.
+
+17
+00:01:50,460 --> 00:01:57,394
+TS: The order of those files doesn't matter?
+We're happy just to take them in presumably...
+
+18
+00:01:57,400 --> 00:02:03,588
+JC: It doesn't matter in this case because
+each file... Well if we have a look at the files. 
+
+19
+00:02:07,920 --> 00:02:11,440
+So this file declares a class called complimenter.
+
+20
+00:02:11,960 --> 00:02:20,925
+And it makes one of them
+and it console logs its' say method. 
+
+21
+00:02:21,900 --> 00:02:27,520
+and the other one, example source
+hello does much the same thing, 
+
+22
+00:02:27,565 --> 00:02:34,750
+it just has a different implementation
+for what its' say method does.
+
+23
+00:02:37,760 --> 00:02:41,622
+These files do have side effects because they
+log stuff but they don't depend on each other. 
+
+24
+00:02:41,630 --> 00:02:47,337
+If you're expecting the output to be
+in a certain order... Maybe it depends...
+
+25
+00:02:49,320 --> 00:02:53,165
+If I was going to force a dependency
+order, I would use node modules,
+
+26
+00:02:53,170 --> 00:02:59,474
+or the new module syntax that's in MScript 6. 
+
+27
+00:02:59,620 --> 00:03:04,571
+And then get babel or browserify
+or something like that to resolve it,
+
+28
+00:03:04,594 --> 00:03:09,920
+so that the dependency was part of
+the source code, not part of the build.
+
+29
+00:03:12,868 --> 00:03:17,165
+OK, so we have our build script. 
+
+30
+00:03:18,354 --> 00:03:22,194
+Those were the steps that we did before.
+
+31
+00:03:26,720 --> 00:03:37,177
+If I remove the compile JavaScript and the bundle,
+then running that should produce the same result.
+
+32
+00:03:40,650 --> 00:03:45,005
+Util.error: Use console.error instead. [James thinks]
+
+33
+00:03:45,810 --> 00:03:50,205
+It couldn't find ./node_modules/.bin/coffee-script.
+
+34
+00:03:53,028 --> 00:03:56,194
+Why can it not find that?
+
+35
+00:03:58,971 --> 00:04:02,114
+Oh it's because it's just called coffee, OK.
+
+36
+00:04:03,154 --> 00:04:06,182
+[Silence]
+
+37
+00:04:17,640 --> 00:04:24,045
+I think maybe I should show the tree before
+and after because it shows the actual difference. 
+
+38
+00:04:24,125 --> 00:04:28,628
+So move the bundle and the compiled code.
+
+39
+00:04:28,620 --> 00:04:35,600
+So the tree before has just got our
+source code in it. And if we run the build...
+
+40
+00:04:36,510 --> 00:04:38,662
+And that did something. 
+
+41
+00:04:38,811 --> 00:04:44,160
+And now there are the compiled
+JavaScript files in there, and the bundle.
+
+42
+00:04:45,794 --> 00:04:49,040
+And that is how we were expecting it to look.
+
+43
+00:04:49,062 --> 00:04:55,040
+TS: Great, does this count as a solution to the problem?
+JC: Done! Success.
+
+44
+00:04:55,325 --> 00:05:02,731
+So a totally reasonable solution to a lot of the problems is just write a shell script. 
+
+45
+00:05:02,731 --> 00:05:04,730
+But there's a bunch of ways that the shellscript doesn't meet the brief. We had to make it lazy so it doesn't do work it doesn't need to. And it has to be able to orchestrate arbitrary commands.
 
