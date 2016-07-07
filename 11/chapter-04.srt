@@ -1,0 +1,55 @@
+﻿1
+00:00:00,000 --> 00:00:03,954
+Chapter 4./nSketching the API of a Target class.
+
+2
+00:00:04,834 --> 00:00:08,914
+I'm just going to make a scratch
+directory here and try something out.
+
+3
+00:00:11,620 --> 00:00:23,657
+Yes,I'm thinking I want to do
+something like this; require scratch target. 
+
+4
+00:00:24,090 --> 00:00:37,897
+And hello_js is a target with a path.
+
+5
+00:00:40,845 --> 00:00:45,005
+We've not doing Haskel,(whoops). 
+
+6
+00:00:48,491 --> 00:00:54,468
+The minimum... It has a parse name
+which is the file it's going to generate.
+
+7
+00:00:54,514 --> 00:01:05,440
+and then it has a list of commands
+that are how to generate that thing.
+
+8
+00:01:06,034 --> 00:01:08,685
+TS: What do you mean by target here?
+
+9
+00:01:08,680 --> 00:01:17,165
+JC: A target is a file (I guess I'm borrowing
+some nomenclature from make here), 
+
+10
+00:01:17,177 --> 00:01:23,211
+but a target is any of the files in your system.
+
+11
+00:01:24,000 --> 00:01:30,022
+So when you talk about hello.js is
+derived from hello.coffee, hello.js is the target. 
+
+12
+00:01:30,148 --> 00:01:35,657
+They can either derived things or primary things, like your source code.
+TS: I suppose in this case hello.js is both a target and also its going to be the input to the target.
+
