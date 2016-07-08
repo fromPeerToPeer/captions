@@ -49,7 +49,203 @@ So when you talk about hello.js is
 derived from hello.coffee, hello.js is the target. 
 
 12
-00:01:30,148 --> 00:01:35,657
-They can either derived things or primary things, like your source code.
-TS: I suppose in this case hello.js is both a target and also its going to be the input to the target.
+00:01:30,171 --> 00:01:33,390
+However coffee could also be a
+target inaud other things. 
+
+13
+00:01:33,885 --> 00:01:41,325
+They can either derived things or
+primary things, like your source code.
+
+14
+00:01:41,942 --> 00:01:47,691
+TS: I suppose in this case hello.js is both a target
+and also it's going to be the input to the target.
+
+15
+00:01:47,690 --> 00:01:50,914
+JC: Exactly. So there's a recursion there.
+
+16
+00:01:51,611 --> 00:01:58,280
+And you want these things to compose in that
+way so you can make targets out of other targets.
+
+17
+00:01:58,365 --> 00:02:01,588
+[Silence]
+
+18
+00:02:03,737 --> 00:02:14,468
+In Ruby you could do this, for example
+by putting a block here. Like system erm...
+
+19
+00:02:14,697 --> 00:02:21,520
+What way round do you do this... [he types]. 
+
+20
+00:02:38,720 --> 00:02:49,520
+That would work, but I'm leaning toward
+making this string be data rather than blocks.
+
+21
+00:02:49,520 --> 00:02:56,845
+Just because it's quite common to do inaud
+
+22
+00:02:56,960 --> 00:03:06,468
+Here we've duplicated this pathname
+example source hello.js. That's it's coffee isn't it.
+
+23
+00:03:11,577 --> 00:03:18,617
+The idea here is that we've duplicated.
+This is the directory that the target lives in.
+
+24
+00:03:18,731 --> 00:03:27,634
+If you're doing make you can do that... So $@ is the
+pathname of the target your currently building. 
+
+25
+00:03:27,630 --> 00:03:34,457
+And there's various functions so dir is the
+function that gives you the directory of that. 
+
+26
+00:03:34,740 --> 00:03:37,348
+I'm not going to get do that yet, 
+
+27
+00:03:37,405 --> 00:03:44,091
+but it means that I don't necessarily want
+to provide a block that just runs this code.
+
+28
+00:03:44,110 --> 00:03:45,931
+I want to provide this code as data, 
+
+29
+00:03:45,954 --> 00:03:51,980
+because it might need to be further
+interpreted by the system before being executed.
+
+30
+00:03:52,330 --> 00:03:56,491
+TS: So if it's a block it's some opaque
+code that can't then be modified.
+
+31
+00:03:56,530 --> 00:04:05,291
+JC: Yes, I want it to be data.
+So I'm going to put that in an array.
+
+32
+00:04:07,480 --> 00:04:12,491
+TS: Is the expectation at this point
+that you will pass that to system... Right now?
+
+33
+00:04:12,502 --> 00:04:14,662
+JC: Exactly
+
+34
+00:04:20,662 --> 00:04:27,714
+So if I make a target and build
+it, then I want it to BE built. 
+
+35
+00:04:27,710 --> 00:04:35,017
+But the name of the thing I'm building and
+the way in which it gets built are both data now, 
+
+36
+00:04:35,040 --> 00:04:38,068
+so you could put anything in it.
+
+37
+00:04:38,060 --> 00:04:40,685
+TS: Why did you make it an array?
+
+38
+00:04:42,420 --> 00:04:46,525
+JC: That's a good question, there's only one command. 
+
+39
+00:04:46,560 --> 00:04:51,725
+So we possibly don't need an array. 
+
+40
+00:04:51,770 --> 00:05:01,554
+There is one thing I've missed out, when I deleted
+that code earlier, I left that directory out didn't I?
+
+41
+00:05:01,560 --> 00:05:07,165
+So we need to make sure that directory
+exists before we compile anything into it. 
+
+42
+00:05:07,180 --> 00:05:17,520
+So let's also make that directory part of the thing. 
+
+43
+00:05:17,540 --> 00:05:22,651
+You can see how this becomes repetitive because
+you mention the same things over and over again. 
+
+44
+00:05:22,860 --> 00:05:25,657
+That aught to work from a clean slate now 
+
+45
+00:05:25,691 --> 00:05:31,371
+because that's all the commands that need
+to be run to set up the directory and compile code. 
+
+46
+00:05:31,474 --> 00:05:36,834
+I want this script, when it's run, to make that file.
+
+47
+00:05:36,925 --> 00:05:40,000
+[Silence]
+
+48
+00:05:52,457 --> 00:05:55,980
+If I run this it will get no such file scratch target.
+
+49
+00:05:55,980 --> 00:05:59,885
+As I expected, scratch target.rb. OK.
+
+50
+00:05:59,885 --> 00:06:03,725
+So you need a target class. 
+
+51
+00:06:06,030 --> 00:06:10,400
+And that's going to take the
+pathname of the thing we're building.
+
+52
+00:06:10,480 --> 00:06:15,622
+And a serve instructions.
+
+53
+00:06:15,622 --> 00:06:15,920
+So: undefined method `build` for Target... ok.
+
+I want to build the thing and like you said we could pass each of those strings into system and it ought to run them.
+Types.
+And a serve instructions.
+
+54
+00:06:15,920 --> 00:06:17,620
+So: undefined method `build` for Target... ok.
+
+I want to build the thing and like you said we could pass each of those strings into system and it ought to run them.
+Types.
 
