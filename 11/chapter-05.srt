@@ -1,0 +1,51 @@
+﻿1
+00:00:00,000 --> 00:00:03,908
+Chapter 05
+Unit testing the Target class.
+
+2
+00:00:04,240 --> 00:00:09,790
+JC: So this is an example that I
+should probably turn into a test now.
+
+3
+00:00:09,790 --> 00:00:16,034
+There's not really enough here that there's
+any integration vs unit test separation . 
+
+4
+00:00:16,057 --> 00:00:17,428
+There's only a tiny amount of code.
+
+5
+00:00:17,440 --> 00:00:28,720
+So I think I'll start by moving target into the
+source code of the project and write a test for it.
+
+6
+00:00:32,740 --> 00:00:39,634
+Let's make a thing called lib,
+and let's move scratch target into... 
+
+7
+00:00:39,880 --> 00:00:52,925
+No let's make a directory called  lib.fakemake,
+and then move scratch target to that. 
+
+8
+00:00:55,394 --> 00:01:02,020
+Then also name spacer... Like that. 
+
+9
+00:01:05,600 --> 00:01:07,737
+OK.
+
+10
+00:01:08,030 --> 00:01:14,765
+And we're going to want some
+tests, and something to run them.
+
+11
+00:01:14,765 --> 00:01:16,760
+Go to inaud and get some gems. Gem file. Put rspec in there... save that, and install it into the project.
+
