@@ -405,7 +405,98 @@ So let's run uglyfy so we get
 our output as we wanted it.
 
 91
-00:10:33,520 --> 00:10:35,520
-This is like enough of the system, that you can do something useful with.
-TS: How close is this to the generalized instructions mention in the brief? Are these the generalised instructions or are they not sufficiently general to count?
+00:10:39,657 --> 00:10:44,674
+This is like enough of a system, that
+you can do something useful with.
+
+92
+00:10:44,948 --> 00:10:47,188
+TS: OK.
+
+93
+00:10:47,748 --> 00:10:53,977
+How close is this to the generalized
+instructions mention in the brief? 
+
+94
+00:10:53,970 --> 00:11:00,800
+Are these the gereralised instructions or
+are they not sufficiently general to count?
+
+95
+00:11:01,160 --> 00:11:06,125
+JC: They are general in that you can put any
+shell command in here, and it will be run. 
+
+96
+00:11:06,160 --> 00:11:12,765
+There wasn't a great way for supplying the input to
+the system and there's a lot that it can't do yet. 
+
+97
+00:11:12,857 --> 00:11:21,942
+But this is a minimal thing for
+modeling a file and how it gets created. 
+
+98
+00:11:22,605 --> 00:11:27,165
+We're still not using the pathname input to this yet. 
+
+99
+00:11:27,211 --> 00:11:31,531
+That will become more important when
+things want to check that they're up to date,
+
+100
+00:11:31,554 --> 00:11:35,257
+because they have to know where their target is. 
+
+101
+00:11:35,290 --> 00:11:42,902
+This target only runs shell commands, it doesn't
+look at the output of those shell commands.
+
+102
+00:11:42,937 --> 00:11:46,662
+And it doesn't relate them to
+the output file in any way. 
+
+103
+00:11:46,670 --> 00:11:51,737
+But when it wants to know if something's up to date,
+it's going to have to look at those files.
+
+104
+00:11:51,908 --> 00:11:57,348
+TS: I thought it was interesting that you
+didn't start by building the target class,
+
+105
+00:11:57,680 --> 00:12:02,091
+but by USING the target class and
+then you kind of dropped down...
+
+106
+00:12:02,091 --> 00:12:07,028
+And every time you ran this it failed, so you
+implemented a method on it till it worked.
+
+107
+00:12:07,074 --> 00:12:08,674
+JC: Right. 
+
+108
+00:12:08,700 --> 00:12:15,520
+I have a vague idea where I'm going because it should 
+look like something I'm already familiar with. 
+
+109
+00:12:17,680 --> 00:12:19,988
+But I don't quite know what
+models and functions I want yet.
+
+110
+00:12:20,011 --> 00:12:24,045
+I'm just thinking, how would
+you want to interact with this?
 
