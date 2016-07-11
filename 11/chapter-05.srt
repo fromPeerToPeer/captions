@@ -371,10 +371,96 @@ calling it on is the problem in that situation.
 You'd have to do that in any case.
 
 85
-00:09:26,491 --> 00:09:30,182
-So the target should not receive the system... types
-Ok, two passing tests.
-When there is an instruction let the instruction be... it doesn't really matter what it is... let's say echo, but we're never going to execute it, so it doesn't matter, as long as it's some unique value. And that should be an array shouldn't it.
-It prints the instruction. And we expect the output to receive puts with instruction once. And it executes the instruction.
-With the instruction... once.
+00:09:26,780 --> 00:09:38,948
+So the target should not receive
+the system when you build it. 
+
+86
+00:09:39,291 --> 00:09:41,908
+[Silence]
+
+87
+00:09:47,177 --> 00:09:50,914
+OK, two passing tests.
+
+88
+00:09:54,994 --> 00:09:58,937
+When there is an instruction 
+
+89
+00:10:00,308 --> 00:10:09,931
+let the instruction be...
+
+90
+00:10:11,131 --> 00:10:14,914
+It doesn't really matter what it is... Let's say echo. 
+
+91
+00:10:16,205 --> 00:10:22,490
+We're never going to execute it, so it doesn't
+matter, as long as it's some unique value.
+
+92
+00:10:23,394 --> 00:10:25,920
+And that should be an array shouldn't it?
+
+93
+00:10:29,965 --> 00:10:35,180
+It prints the instruction.
+
+94
+00:10:38,411 --> 00:10:51,965
+And we expect the output to
+receive puts with instruction once.
+
+95
+00:10:56,297 --> 00:10:59,440
+And it executes the instruction.
+
+96
+00:10:59,908 --> 00:11:02,937
+[Silence]
+
+97
+00:11:13,268 --> 00:11:19,302
+With the instruction once.
+
+98
+00:11:21,050 --> 00:11:24,102
+I go back and forth without
+saying something should be called.
+
+99
+00:11:24,114 --> 00:11:27,908
+Whether I should say how many times...
+But in this case I think it's important that you... 
+
+100
+00:11:28,000 --> 00:11:33,890
+Because these things have side effects, the
+number of times you call them is important.
+
+101
+00:11:33,890 --> 00:11:35,890
+And i also said that system should be stubbed in any case, even if you're not making assertions on it. That should probably happen in all cases so I'll put that at the top.
+TS: So if you didn't do this, one of those tests you wrote would actually try to execute that?
+JC: Exactly. Well let's run it. You should actually see this, because system inherits standard output, from your inaud process. And you will see an instruction pop up in the test when they're run, because of this, I think.
+
+Inaud instructions type it somewhere. Where did i do that? Target spec was 6.
+Oh I've only said instruction there... ok
+Undefined, ah yes. right. I've used instruction everywhere which is what I mean but the constructor wants a plural. So let's do that, and remove the array from here
+
+And that should be better...
+
+Instruction: Highlight the words 'an instruction' from this text:
+$ be rspec -c
+..an instruction
+..
+Finished in 0.0122 seconds
+4 examples, 0 failures
+
+so yes it's printed 'an instruction' while the tests are running, so it's actually executed that command.
+
+So let's stop it being able to do that by stubbing system out.
+What i like about this... one good thing about calling it on target and not on kernel is that i generally dislike stubbing out global things. This is working with files a lot, we're not directly working with files in Ruby yet but you get various gems that will stub out the file system, or it will stub out Net::HTTP or whatever it is... I find those usually get in the way somewhere. You really want only this test, this tiny piece of code, to be isolated from something.
 
