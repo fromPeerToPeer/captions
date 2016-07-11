@@ -11,7 +11,7 @@ should probably turn into a test now.
 3
 00:00:09,790 --> 00:00:16,034
 There's not really enough here that there's
-any integration vs unit test separation . 
+any integration vs unit test separation .
 
 4
 00:00:16,057 --> 00:00:17,428
@@ -25,16 +25,16 @@ source code of the project and write a test for it.
 6
 00:00:32,740 --> 00:00:39,634
 Let's make a thing called lib,
-and let's move scratch target into... 
+and let's move scratch target into...
 
 7
 00:00:39,880 --> 00:00:52,925
 No let's make a directory called  lib.fakemake,
-and then move scratch target to that. 
+and then move scratch target to that.
 
 8
 00:00:55,394 --> 00:01:02,020
-Then also name spacer... Like that. 
+Then also name spacer... Like that.
 
 9
 00:01:05,600 --> 00:01:07,737
@@ -46,6 +46,193 @@ And we're going to want some
 tests, and something to run them.
 
 11
-00:01:14,765 --> 00:01:16,760
-Go to inaud and get some gems. Gem file. Put rspec in there... save that, and install it into the project.
+00:01:14,760 --> 00:01:21,428
+Go to inaud and get some gems.
+
+12
+00:01:25,177 --> 00:01:27,862
+I've got the gem file and put rspec in there.
+
+13
+00:01:28,160 --> 00:01:34,891
+Save that, and install it into the project.
+
+14
+00:01:35,040 --> 00:01:38,571
+[Silence]
+
+15
+00:01:44,460 --> 00:01:47,657
+Did I make a spec directory – yes I did. 
+
+16
+00:01:47,771 --> 00:01:51,394
+[Silence]
+
+17
+00:01:52,171 --> 00:01:58,480
+So let's try to write a test
+for this file, I called it a target..
+
+18
+00:01:58,730 --> 00:02:01,920
+[Silence]
+
+19
+00:02:04,670 --> 00:02:08,582
+Obligatory require 'spec_helper'. 
+
+20
+00:02:09,017 --> 00:02:14,434
+and (not end) which I've not written but...
+
+21
+00:02:18,274 --> 00:02:27,520
+This will require_relative 'lib/fakemake', 
+
+22
+00:02:28,982 --> 00:02:33,748
+which also doesn't exist so I'm going to create it.
+
+23
+00:02:34,285 --> 00:02:37,760
+Module FakeMake.
+
+24
+00:02:41,222 --> 00:02:46,697
+I usually use autoloads for these, so it loads things lazily.
+
+25
+00:02:47,760 --> 00:02:51,451
+[Silence]
+
+26
+00:02:52,582 --> 00:02:54,811
+And path.
+
+27
+00:02:55,005 --> 00:02:58,537
+[Silence]
+
+28
+00:03:00,045 --> 00:03:09,737
+And then autoload target
+from root + fakemake target. 
+
+29
+00:03:11,920 --> 00:03:18,491
+That ought to be enough to load things.
+So if we go back to target spec and...
+
+30
+00:03:22,468 --> 00:03:26,742
+Describe FakeMake target.
+
+31
+00:03:30,880 --> 00:03:35,970
+Does that at least run.
+
+32
+00:03:36,022 --> 00:03:40,137
+Yes, it didn't complain about anything.
+
+33
+00:03:40,130 --> 00:03:50,331
+So, looking back at the code,
+there's already a few scenarios here. 
+
+34
+00:03:52,777 --> 00:04:02,708
+The only thing this actually does, I suppose, is that
+it takes a list of instructions and executes them.
+
+35
+00:04:04,194 --> 00:04:10,800
+But now we're coming to a test we can
+pass in some alternative output thing.
+
+36
+00:04:11,154 --> 00:04:14,571
+[Silence]
+
+37
+00:04:18,650 --> 00:04:21,725
+I'll make that be that - output.
+
+38
+00:04:25,390 --> 00:04:32,445
+The test I have in mind is if you write
+a target with no instructions that's fine. 
+
+39
+00:04:33,897 --> 00:04:39,965
+If you write a target with an
+instruction it gets printed and executed. 
+
+40
+00:04:41,108 --> 00:04:47,474
+And if you write one with many
+instructions, they all get executed. 
+
+41
+00:04:47,611 --> 00:04:53,691
+Although we should also check to see what happens
+if you write an instruction that doesn't work. 
+
+42
+00:04:55,371 --> 00:05:04,430
+So system will return nil if you
+run a command that has a inaud status.
+
+43
+00:05:06,430 --> 00:05:14,148
+Rather than shelling out, running stuff on the
+system we can stubb system to work or not work.
+
+44
+00:05:16,811 --> 00:05:23,897
+So make a few variables. 
+
+45
+00:05:25,954 --> 00:05:32,137
+This value wont really matter
+it's just something to pass in.
+
+46
+00:05:32,420 --> 00:05:47,211
+The target will be target.new, which takes the
+pathname and the instructions and the output.
+
+47
+00:05:49,360 --> 00:05:52,548
+Let's also make an output for inaud.
+
+48
+00:05:58,925 --> 00:06:02,320
+And then we can have some scenarios.
+
+49
+00:06:02,320 --> 00:06:06,171
+Let's describe the build method.
+
+50
+00:06:06,171 --> 00:06:06,651
+
+When there are no instructions we said that nothing should happen its should not print i think. And expect output not to receive puts: And target build.
+I'll create a new shell over here.
+Ah! I didn't put my ruby on the path.
+Do i really want path.
+
+I'm not doing the good TDD thing here, i should probably see this break just to test if that test is doing something. So let's have this do output.puts something bad.
+Let's describe the build method.
+
+51
+00:06:06,651 --> 00:06:08,170
+
+When there are no instructions we said that nothing should happen its should not print i think. And expect output not to receive puts: And target build.
+I'll create a new shell over here.
+Ah! I didn't put my ruby on the path.
+Do i really want path.
+
+I'm not doing the good TDD thing here, i should probably see this break just to test if that test is doing something. So let's have this do output.puts something bad.
 
