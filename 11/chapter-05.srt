@@ -212,27 +212,144 @@ Let's also make an output for inaud.
 And then we can have some scenarios.
 
 49
-00:06:02,320 --> 00:06:06,171
+00:06:02,320 --> 00:06:06,651
 Let's describe the build method.
 
 50
-00:06:06,171 --> 00:06:06,651
-
-When there are no instructions we said that nothing should happen its should not print i think. And expect output not to receive puts: And target build.
-I'll create a new shell over here.
-Ah! I didn't put my ruby on the path.
-Do i really want path.
-
-I'm not doing the good TDD thing here, i should probably see this break just to test if that test is doing something. So let's have this do output.puts something bad.
-Let's describe the build method.
+00:06:10,137 --> 00:06:16,822
+When there are no instructions we
+said that nothing should happen.
 
 51
-00:06:06,651 --> 00:06:08,170
+00:06:17,154 --> 00:06:20,160
+[Silence]
 
-When there are no instructions we said that nothing should happen its should not print i think. And expect output not to receive puts: And target build.
-I'll create a new shell over here.
+52
+00:06:23,480 --> 00:06:28,148
+It should not print anything.
+
+53
+00:06:31,177 --> 00:06:39,337
+And expect output not to receive puts.
+
+54
+00:06:40,570 --> 00:06:44,617
+And target build.
+
+55
+00:06:44,920 --> 00:06:48,148
+[Silence]
+
+56
+00:06:51,131 --> 00:06:54,411
+I'll make a new shell over here.
+
+57
+00:06:56,820 --> 00:07:01,828
 Ah! I didn't put my ruby on the path.
-Do i really want path.
 
-I'm not doing the good TDD thing here, i should probably see this break just to test if that test is doing something. So let's have this do output.puts something bad.
+58
+00:07:02,022 --> 00:07:05,417
+[Silence]
+
+59
+00:07:16,220 --> 00:07:18,080
+I'm not doing the good TDD thing here.
+
+60
+00:07:18,125 --> 00:07:23,650
+I should probably see this break just
+to check if that test is doing something.
+
+61
+00:07:24,308 --> 00:07:34,160
+So let's have this do output.puts something bad.
+
+62
+00:07:36,331 --> 00:07:40,114
+That does fail so that's fine.
+
+63
+00:07:44,560 --> 00:07:48,148
+And it should not execute anything.
+
+64
+00:07:48,320 --> 00:07:51,805
+[Silence]
+
+65
+00:07:53,691 --> 00:08:00,285
+We're calling system on target
+itself... It's a kernel method.
+
+66
+00:08:00,411 --> 00:08:06,114
+I could have called puts on target
+itself and stubbed it in inaud here. 
+
+67
+00:08:06,502 --> 00:08:12,125
+But that also means... Like at some point
+we're going to have a graph of these things. 
+
+68
+00:08:12,342 --> 00:08:18,388
+And you might not have direct access in your
+test to the actual thing that's printing something. 
+
+69
+00:08:18,422 --> 00:08:20,948
+So you want to be able to
+pass this output object along. 
+
+70
+00:08:21,302 --> 00:08:25,051
+So it's a thing you have a handle on in your
+test and you can make assertions against it.
+
+71
+00:08:25,050 --> 00:08:25,725
+TS: Right
+
+72
+00:08:25,790 --> 00:08:33,062
+JC: Maybe I should do the same thing with execution.
+I could tell kernel to expect to receive system.
+
+73
+00:08:33,108 --> 00:08:36,342
+TS: And then pass kernel in as another argument, or...?
+
+74
+00:08:36,388 --> 00:08:38,457
+JC: That's what I'm not sure about.
+
+75
+00:08:38,525 --> 00:08:44,697
+Because I'm not sure I think I should
+leave it for now, until it becomes a problem.
+
+76
+00:08:45,500 --> 00:08:50,457
+The output thing... I knew I didn't want
+stuff printing things in the middle of my tests, 
+
+77
+00:08:50,500 --> 00:08:56,960
+whereas you also don't want the unit
+tests to go and execute system commands. 
+
+78
+00:08:58,617 --> 00:09:01,140
+Because I've used a string io here for the output, 
+
+79
+00:09:01,154 --> 00:09:04,651
+those put commands are just going to go
+into the ether and not be used anywhere.
+
+80
+00:09:08,114 --> 00:09:10,110
+ whereas.. for example... well we don't have any instructions yet but when we do and I write some of the test for printing, it will then go and execute the thing. So I'll have to stub out system to make it not go and do that. But I'm not sure that the object that we're calling it on is the problem in that situation. You'd have to do that in any case.
+TS: Right
 
