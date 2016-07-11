@@ -349,7 +349,32 @@ those put commands are just going to go
 into the ether and not be used anywhere.
 
 80
-00:09:08,114 --> 00:09:10,110
- whereas.. for example... well we don't have any instructions yet but when we do and I write some of the test for printing, it will then go and execute the thing. So I'll have to stub out system to make it not go and do that. But I'm not sure that the object that we're calling it on is the problem in that situation. You'd have to do that in any case.
-TS: Right
+00:09:04,670 --> 00:09:08,160
+We don't have any instructions yet,
+
+81
+00:09:08,290 --> 00:09:14,217
+but when we do and I write some of the test for
+printing, it will then go and execute the thing. 
+
+82
+00:09:14,342 --> 00:09:17,588
+I'll have to stub out system to make it not do that.
+
+83
+00:09:17,760 --> 00:09:22,010
+But I'm not sure that the object that we're
+calling it on is the problem in that situation. 
+
+84
+00:09:22,010 --> 00:09:25,942
+You'd have to do that in any case.
+
+85
+00:09:26,491 --> 00:09:30,182
+So the target should not receive the system... types
+Ok, two passing tests.
+When there is an instruction let the instruction be... it doesn't really matter what it is... let's say echo, but we're never going to execute it, so it doesn't matter, as long as it's some unique value. And that should be an array shouldn't it.
+It prints the instruction. And we expect the output to receive puts with instruction once. And it executes the instruction.
+With the instruction... once.
 
