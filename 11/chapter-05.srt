@@ -441,26 +441,141 @@ Because these things have side effects, the
 number of times you call them is important.
 
 101
-00:11:33,890 --> 00:11:35,890
-And i also said that system should be stubbed in any case, even if you're not making assertions on it. That should probably happen in all cases so I'll put that at the top.
-TS: So if you didn't do this, one of those tests you wrote would actually try to execute that?
-JC: Exactly. Well let's run it. You should actually see this, because system inherits standard output, from your inaud process. And you will see an instruction pop up in the test when they're run, because of this, I think.
+00:11:34,285 --> 00:11:37,565
+[Silence]
 
-Inaud instructions type it somewhere. Where did i do that? Target spec was 6.
-Oh I've only said instruction there... ok
-Undefined, ah yes. right. I've used instruction everywhere which is what I mean but the constructor wants a plural. So let's do that, and remove the array from here
+102
+00:11:40,410 --> 00:11:46,422
+And i also said that system
+should be stubbed in any case, 
 
-And that should be better...
+103
+00:11:46,457 --> 00:11:47,920
+even if you're not making assertions on it.
 
-Instruction: Highlight the words 'an instruction' from this text:
-$ be rspec -c
-..an instruction
-..
-Finished in 0.0122 seconds
-4 examples, 0 failures
+104
+00:11:47,920 --> 00:11:52,674
+And that should probably happen
+in all cases so I'll put that at the top.
 
-so yes it's printed 'an instruction' while the tests are running, so it's actually executed that command.
+105
+00:11:52,800 --> 00:11:58,194
+TS: So if you didn't do this, one of those tests
+you wrote would actually try to execute that?
 
-So let's stop it being able to do that by stubbing system out.
-What i like about this... one good thing about calling it on target and not on kernel is that i generally dislike stubbing out global things. This is working with files a lot, we're not directly working with files in Ruby yet but you get various gems that will stub out the file system, or it will stub out Net::HTTP or whatever it is... I find those usually get in the way somewhere. You really want only this test, this tiny piece of code, to be isolated from something.
+106
+00:11:58,200 --> 00:12:01,908
+JC: Exactly... Well, let's run it
+and you should actually see this,
+
+107
+00:12:02,330 --> 00:12:05,657
+because system inherits standard
+output from your Ruby process.
+
+108
+00:12:05,668 --> 00:12:12,910
+And you will see an instruction pop up in the
+tests when they're run, because of this, I think.
+
+109
+00:12:15,702 --> 00:12:21,965
+Undefinable local variable method
+instruction... So I made a typo somewhere.
+
+110
+00:12:23,150 --> 00:12:25,908
+Where did I do that? 
+
+111
+00:12:26,260 --> 00:12:30,342
+Target spec 6... OK.
+
+112
+00:12:33,851 --> 00:12:37,931
+Oh I've only said instruction there... 
+
+113
+00:12:38,320 --> 00:12:39,930
+OK.
+
+114
+00:12:43,108 --> 00:12:46,537
+Undefined... Ah yes, right.
+
+115
+00:12:46,720 --> 00:12:55,394
+I've used instruction everywhere which is what
+I mean, but the constructor wants a plural.
+
+116
+00:12:56,148 --> 00:13:03,977
+So let's do that, and remove the array from here.
+
+117
+00:13:05,370 --> 00:13:08,548
+And that should be better.
+
+118
+00:13:09,090 --> 00:13:14,537
+So yes it's printed 'an instruction' while the tests
+are running, so it's actually executed that command.
+
+119
+00:13:14,560 --> 00:13:26,948
+So let's stop it being able to
+do that by stubbing system out.
+
+120
+00:13:32,914 --> 00:13:36,251
+One good thing about calling
+it on target and not on kernel, 
+
+121
+00:13:36,285 --> 00:13:39,360
+is that I generally dislike
+stubbing out global things. 
+
+122
+00:13:41,050 --> 00:13:45,577
+This is working with files a lot... We're
+not directly working with files in Ruby yet,
+
+123
+00:13:45,620 --> 00:13:53,782
+but you get various gems that will stub out
+the file system, or Net::HTTP or whatever it is.
+
+124
+00:13:53,805 --> 00:13:57,508
+I find those usually get in the way somewhere. 
+
+125
+00:13:57,520 --> 00:14:04,091
+You really want only this test, this tiny
+piece of code, to be isolated from something.
+
+126
+00:14:04,240 --> 00:14:07,040
+For example, if you use something
+that stubs out of the file system, 
+
+127
+00:14:07,074 --> 00:14:11,302
+you can't use `require` any more,
+so your code stops loading. 
+
+128
+00:14:11,737 --> 00:14:17,291
+So the fact that this only affects the
+object under test is appealing to me.
+
+129
+00:14:18,030 --> 00:14:23,725
+So if we run those tests now it's not printing stuff
+in the middle of them because it's not calling echo. 
+
+130
+00:14:23,920 --> 00:14:26,720
+So that's better.
 
