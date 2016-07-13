@@ -6,11 +6,11 @@ Raising an exception when a build step fails.
 2
 00:00:04,200 --> 00:00:08,262
 JC: The thing that gets trickier about
-this is when you have multiple instructions. 
+this is when you have multiple instructions.
 
 3
 00:00:08,285 --> 00:00:10,251
-You want them all to be executed 
+You want them all to be executed
 
 4
 00:00:10,285 --> 00:00:13,222
@@ -20,7 +20,7 @@ want them done in a particular order.
 5
 00:00:13,230 --> 00:00:18,000
 Specifying that with mocks
-can be a bit tricky but... 
+can be a bit tricky but...
 
 6
 00:00:18,217 --> 00:00:23,245
@@ -81,7 +81,7 @@ That should be the target in this case.
 
 19
 00:01:49,360 --> 00:02:01,451
-And puts should be system when you build target. 
+And puts should be system when you build target.
 
 20
 00:02:01,790 --> 00:02:04,354
@@ -103,27 +103,35 @@ TS: So you're saying here that it doesn't matter
 what order it does it, that's not testing it?
 
 24
-00:02:23,150 --> 00:02:27,150
-JC: No, rspec will not check. It doesn't expect things t
- be called in the order in which you set up the mocks.
+00:02:23,150 --> 00:02:26,205
+JC: No, rspec will not check.
 
 25
-00:02:27,150 --> 00:02:29,150
-That isn't what I want but specifying that you want things called in a certain order is... the way that I program is inaud order specifying what.. but if you have something where one thing can prevent the next thing from happening, that implies an ordering.  It enough to say that one thing happens before the other.
-TS: And that's something else that you want to test anyway.
-JC: No, rspec will not check. It doesn't expect things t
- be called in the order in which you set up the mocks.
+00:02:26,285 --> 00:02:30,514
+Rspec doesn't expect things to be called in
+the order in which you set up the mocks.
 
 26
-00:02:29,150 --> 00:02:30,514
-JC: No, rspec will not check. It doesn't expect things t
- be called in the order in which you set up the mocks.
+00:02:30,510 --> 00:02:32,514
+You could switch these lines around.
 
 27
-00:02:30,530 --> 00:02:32,411
-You could switch these lines around. 
+00:02:32,640 --> 00:02:37,120
+If I switch those this will still pass.
 
 28
-00:02:33,051 --> 00:02:37,005
-If I switch those this will still pass. 
+00:02:38,822 --> 00:02:42,205
+Even though that isn't what I want.
+
+29
+00:02:42,514 --> 00:02:47,588
+But specifying that you want
+things called in a certain order is... 
+
+30
+00:02:48,274 --> 00:02:52,297
+the way that I program is inaud order specifying what.. but if you have something where one thing can prevent the next thing from happening, that implies an ordering.  It enough to say that one thing happens before the other.
+TS: And that's something else that you want to test anyway.
+JC: No, rspec will not check. It doesn't expect things t
+be called in the order in which you set up the mocks.
 
