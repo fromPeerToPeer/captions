@@ -126,12 +126,196 @@ Even though that isn't what I want.
 29
 00:02:42,514 --> 00:02:47,588
 But specifying that you want
-things called in a certain order is... 
+things called in a certain order is...
 
 30
-00:02:48,274 --> 00:02:52,297
-the way that I program is inaud order specifying what.. but if you have something where one thing can prevent the next thing from happening, that implies an ordering.  It enough to say that one thing happens before the other.
-TS: And that's something else that you want to test anyway.
-JC: No, rspec will not check. It doesn't expect things t
-be called in the order in which you set up the mocks.
+00:02:48,270 --> 00:02:53,405
+The way that I program is an uncommon use case
+and is awkward to specifying using mocks.
+
+31
+00:02:53,420 --> 00:02:57,977
+But if you have something where one thing
+can prevent the next thing from happening, 
+
+32
+00:02:58,030 --> 00:03:03,040
+then that implies an ordering.  It's enough to
+say that one thing happens before the other.
+
+33
+00:03:03,108 --> 00:03:06,068
+TS: And that's something else
+that you want to test anyway.
+
+34
+00:03:06,060 --> 00:03:11,417
+JC: Yes you want it to abort the
+build if something bad happens.
+
+35
+00:03:12,582 --> 00:03:21,417
+So when the first instruction fails, it
+means that I'm going to allow the target 
+
+36
+00:03:22,480 --> 00:03:34,285
+to receive system with
+first argument and return nil.
+
+37
+00:03:34,280 --> 00:03:38,411
+Which is what system returns
+if the command doesn't work.
+
+38
+00:03:40,697 --> 00:03:50,834
+So that scenario...(I'm not going to bother with
+the printing stuff, we've done that to death). 
+
+39
+00:03:50,982 --> 00:03:55,920
+It does execute the first argument.
+
+40
+00:03:58,937 --> 00:04:04,400
+But it does not execute the second. 
+
+41
+00:04:07,405 --> 00:04:14,000
+So that means we expect this... Once.
+
+42
+00:04:14,434 --> 00:04:17,428
+[Silence]
+
+43
+00:04:21,634 --> 00:04:29,382
+Do we need to tell it that it will
+return nil? Not sure that we do. 
+
+44
+00:04:32,102 --> 00:04:34,960
+We'll find out.
+
+45
+00:04:35,634 --> 00:04:41,634
+I think I've done something weird.
+Oh, I've got caps lock on, sorry!
+
+46
+00:04:43,131 --> 00:04:44,274
+I'll copy that.
+
+47
+00:04:44,270 --> 00:04:55,897
+So let me find the second instructions.
+
+48
+00:04:59,300 --> 00:05:04,605
+And it's not once, It's not.
+
+49
+00:05:07,760 --> 00:05:09,291
+So let me check this over. 
+
+50
+00:05:09,290 --> 00:05:13,348
+So if the target returns nil
+for the first instruction,
+
+51
+00:05:13,360 --> 00:05:17,554
+it should still execute it, but not the second one. 
+
+52
+00:05:19,420 --> 00:05:22,914
+This shouldn't work because I haven't
+implemented anything like this yet. 
+
+53
+00:05:23,050 --> 00:05:27,851
+So expect it to use a target
+(that i haven't actually told it to build).
+
+54
+00:05:27,897 --> 00:05:30,742
+That's quite important. [laughter].
+
+55
+00:05:30,740 --> 00:05:33,085
+Target.Build
+
+56
+00:05:33,417 --> 00:05:36,411
+[Silence]
+
+57
+00:05:38,422 --> 00:05:42,948
+Now it's executing the second
+instruction when it shouldn't. 
+
+58
+00:05:42,982 --> 00:05:48,411
+So if we go back to our code we can
+say it's going to print the instruction.
+
+59
+00:05:48,410 --> 00:05:59,062
+And then we could raise failed command
+unless system returns something truthy.
+
+60
+00:05:59,542 --> 00:06:03,005
+TS: So what will system return if it's not an error?
+
+61
+00:06:03,165 --> 00:06:08,320
+JC: True. We can see this in the shell for a second. 
+
+62
+00:06:08,360 --> 00:06:15,965
+So if you system, echo something,
+it does the thing and returns true.
+
+63
+00:06:15,970 --> 00:06:19,337
+And if you ask it to run a program
+that doesn't exist it returns nil.
+
+64
+00:06:19,360 --> 00:06:21,428
+TS: OK great.
+
+65
+00:06:23,760 --> 00:06:30,422
+JC: So it's quite handy for having
+a high level API inaud system.
+
+66
+00:06:30,420 --> 00:06:33,622
+inaud
+
+67
+00:06:36,662 --> 00:06:45,771
+So make an exception and raise that
+unless system returns something truthy.
+
+68
+00:06:49,782 --> 00:06:56,388
+TS: So you've made a decision here that you don't want
+it to skip them silently, you want them to actually...
+
+69
+00:06:56,617 --> 00:07:01,394
+JC: No because a build is just a sequence. 
+
+70
+00:07:01,700 --> 00:07:06,297
+You turn a coffee-script file into a JavaScript file
+and you need to put multiple files into a single one. 
+
+71
+00:07:06,308 --> 00:07:09,634
+If the first step fails you can't do the second step.
 
