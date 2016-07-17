@@ -319,3 +319,219 @@ and you need to put multiple files into a single one.
 00:07:06,308 --> 00:07:09,634
 If the first step fails you can't do the second step.
 
+72
+00:07:09,630 --> 00:07:15,074
+And you shouldn't try
+because if those files don't exist, 
+
+73
+00:07:15,097 --> 00:07:19,668
+like if your command uses a shell wildcard or
+tries to interpolate something that doesn't exist, 
+
+74
+00:07:19,660 --> 00:07:23,554
+you might end up constructing a
+command that will do something dangerous. 
+
+75
+00:07:23,550 --> 00:07:29,440
+So it really ought to check that everything
+you've done so far did what you expected.
+
+76
+00:07:31,280 --> 00:07:39,085
+So we shall run that. OK so loads of things are
+now not working, which is common, and fine. 
+
+77
+00:07:41,600 --> 00:07:44,114
+So let's find out why that was.
+
+78
+00:07:45,074 --> 00:07:50,102
+A lot of these raised, I was not
+expecting them to be raised. 
+
+79
+00:07:52,960 --> 00:07:59,131
+For example, the first one, 33 lets run that.
+
+80
+00:08:01,420 --> 00:08:03,474
+It's raising,
+
+81
+00:08:05,554 --> 00:08:09,371
+And it's raising from build.
+
+82
+00:08:14,360 --> 00:08:18,605
+We said we're going to raise unless
+system returned something truthy. 
+
+83
+00:08:18,617 --> 00:08:22,582
+But we haven't made system
+return anything, we stubbed it out.
+
+84
+00:08:22,720 --> 00:08:24,731
+TS: So that will be returning nil by default.
+
+85
+00:08:24,730 --> 00:08:31,554
+JC: Yes, so we should make that return true and
+anywhere else we're saying it should be called.
+
+86
+00:08:31,565 --> 00:08:34,514
+That's a not so it doesn't matter.
+
+87
+00:08:36,765 --> 00:08:43,380
+TS: Earlier you said you were expecting these
+to inherit the behaviour of the stuff anyway.
+
+88
+00:08:45,000 --> 00:08:46,445
+JC: That's a good point yes.
+
+89
+00:08:46,480 --> 00:08:51,302
+I think if you stub something and
+then put mock expectation on it, 
+
+90
+00:08:51,622 --> 00:08:57,417
+the thing at the top says if you call
+it with anything it just returns true. 
+
+91
+00:08:57,420 --> 00:08:59,097
+The mocks tend to be more specific.
+
+92
+00:08:59,142 --> 00:09:03,725
+Inaud not to but it doesn't matter
+because it's not going to be called.
+
+93
+00:09:04,670 --> 00:09:09,348
+But here we're saying it should be called
+with something and that's a different use case.
+
+94
+00:09:09,370 --> 00:09:15,017
+I believe in those situations you have
+to tell it again what you want it to return. 
+
+95
+00:09:15,050 --> 00:09:21,702
+That's passing, a couple are
+still not passing 64 and 69.
+
+96
+00:09:21,828 --> 00:09:25,588
+[Silence]
+
+97
+00:09:30,057 --> 00:09:33,702
+TS: Why were they failing?
+
+98
+00:09:34,708 --> 00:09:42,480
+JC: I believe this will raise and it's supposed
+to raise, but I'm not catching that it raises.
+
+99
+00:09:43,154 --> 00:09:50,365
+I should have another test that
+says it raises FailedCommand. 
+
+100
+00:09:54,171 --> 00:10:06,400
+Expect target.build to raise
+error and FakeMake FailedCommand.
+
+101
+00:10:06,490 --> 00:10:10,502
+TS: So the problem with these tests is that
+the exception was bubbling out of the tests.
+
+102
+00:10:10,520 --> 00:10:13,165
+JC: Right.
+
+103
+00:10:13,710 --> 00:10:17,725
+And then I can just rescue in here.
+
+104
+00:10:18,171 --> 00:10:21,462
+[Silence]
+
+105
+00:10:22,971 --> 00:10:24,365
+OK so that's all green again.
+
+106
+00:10:24,400 --> 00:10:25,222
+TS: Great.
+
+107
+00:10:27,650 --> 00:10:28,857
+JC: It took a while to get there,
+
+108
+00:10:28,914 --> 00:10:34,788
+But I think that's enough of a specification
+of what the thing does about running commands. 
+
+109
+00:10:34,800 --> 00:10:40,525
+We've now got a thing that can run arbitrary commands
+and can do something reasonably sensible with them.
+
+110
+00:10:40,520 --> 00:10:45,554
+So I'm going to get out of here to make a commit.
+
+111
+00:10:45,550 --> 00:10:47,245
+So what have we got?
+
+112
+00:10:50,365 --> 00:10:55,051
+I might just move build.sh to my scratch
+directory and keep that hanging around.
+
+113
+00:10:55,222 --> 00:11:03,714
+So I ought to add the Gemfile things and the
+example, although not everything in example.
+
+114
+00:11:04,960 --> 00:11:08,137
+There are a few things we definitely don't want.
+
+115
+00:11:11,942 --> 00:11:17,040
+I don't want an example bundle.js or example lib. 
+
+116
+00:11:17,782 --> 00:11:22,914
+Nor node modules, because they
+are just for running the examples. 
+
+117
+00:11:26,514 --> 00:11:28,742
+I don't want scratch.
+
+118
+00:11:28,742 --> 00:11:30,740
+ Inaud package JavaScripton either, we're building a ruby project – although that is... no that's metadata about the examples and you will use it to install your inaud models but you don't want no models... that's fine. I'll move .js off there.
+So if I give that all of this. So what do we end up with...  git ignore and some gem files and some example code and our source code and package.json  - that's specoffee script. Which looks reasonable to me.
+Types
+
+
