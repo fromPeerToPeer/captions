@@ -529,9 +529,41 @@ are just for running the examples.
 I don't want scratch.
 
 118
-00:11:28,742 --> 00:11:30,740
- Inaud package JavaScripton either, we're building a ruby project – although that is... no that's metadata about the examples and you will use it to install your inaud models but you don't want no models... that's fine. I'll move .js off there.
-So if I give that all of this. So what do we end up with...  git ignore and some gem files and some example code and our source code and package.json  - that's specoffee script. Which looks reasonable to me.
-Types
+00:11:33,420 --> 00:11:38,205
+Inaud package either, we're
+building a ruby project – although that is... 
 
+119
+00:11:38,320 --> 00:11:42,342
+No that's metadata about the examples
+and you will use it to install your node modules.
+
+120
+00:11:42,354 --> 00:11:45,920
+But you don't want node models... that's fine. 
+
+121
+00:11:46,034 --> 00:11:52,411
+I'll move .js off there. So if I give that
+all of this. So what do we end up with? 
+
+122
+00:11:53,570 --> 00:11:56,491
+Git ignore and some gem files and some example code
+
+123
+00:11:56,491 --> 00:11:59,725
+and our source code and package.json and specs.
+
+124
+00:12:00,251 --> 00:12:03,737
+ Which looks reasonable to me.
+
+125
+00:12:04,000 --> 00:12:07,417
+[Silence]
+
+126
+00:12:16,434 --> 00:12:17,737
+OK.
 
