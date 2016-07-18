@@ -261,10 +261,220 @@ and if you build your target it
 will also build the other thing.
 
 58
-00:06:06,182 --> 00:06:08,180
-Maybe this is where we get into integration tests scenario.
+00:06:09,474 --> 00:06:14,525
+Maybe this is where we get
+into integration tests scenario.
 
 59
-00:06:08,180 --> 00:06:10,180
- Because I'm going to have two target objects writing unit tests against those... like i could write a test to say when you call build on this call build on this other thing, but maybe that's specifying implementation too much.
+00:06:14,731 --> 00:06:20,365
+Because I'm going to have two target
+objects maybe writing unit tests against those.
+
+60
+00:06:20,434 --> 00:06:24,982
+I could write a test to say when you call
+build on this call build on this other thing, 
+
+61
+00:06:26,091 --> 00:06:29,280
+but maybe that's specifying
+implementation too much.
+
+62
+00:06:29,794 --> 00:06:35,085
+So I'm going to try and write... 
+
+63
+00:06:38,628 --> 00:06:43,600
+Spec/features is where I'm
+going to put my generation test. 
+
+64
+00:06:43,668 --> 00:06:50,697
+Dependent targets spec.rb.
+
+65
+00:06:51,657 --> 00:06:54,651
+[Silence]
+
+66
+00:06:59,451 --> 00:07:03,074
+No that's not how you write specs is it?
+
+67
+00:07:03,977 --> 00:07:10,628
+Describe dependent targets do.
+
+68
+00:07:11,268 --> 00:07:14,434
+[James thinks]
+
+69
+00:07:17,428 --> 00:07:26,628
+Say when one target depends on another.
+
+70
+00:07:29,440 --> 00:07:38,571
+As something simple, I'm going to say that if you have...
+
+71
+00:07:38,742 --> 00:07:42,731
+what's something simple we can
+do with files, just like catting them.
+
+72
+00:07:42,810 --> 00:07:49,188
+So if you have file c that is...
+
+73
+00:07:49,840 --> 00:07:53,474
+I'll write it in code, that might be a bit clearer.
+
+74
+00:07:53,600 --> 00:07:56,194
+So if we say...
+
+75
+00:07:59,142 --> 00:08:05,165
+Not quite sure how to phrase this yet but... 
+
+76
+00:08:05,188 --> 00:08:08,182
+let's say that we have...
+
+77
+00:08:08,434 --> 00:08:18,480
+There exists a file called a.text that
+just contains an a with a new line in it.
+
+78
+00:08:20,160 --> 00:08:30,148
+And likewise there are some files called
+b and c that have their letters in them.
+
+79
+00:08:30,422 --> 00:08:33,714
+[Silence]
+
+80
+00:08:34,982 --> 00:08:45,325
+So if there are those files,
+then you have your first target.
+
+81
+00:08:47,520 --> 00:08:57,748
+And let's add these somewhere... Like in spec temp.
+
+82
+00:08:58,160 --> 00:09:01,211
+[Silence}
+
+83
+00:09:04,742 --> 00:09:12,674
+So if the first target is spec temp 1.text.
+
+84
+00:09:14,994 --> 00:09:21,165
+And that's new with that.
+
+85
+00:09:21,782 --> 00:09:29,405
+And it has no dependencies, or rather
+it does have dependencies which are...
+
+86
+00:09:32,750 --> 00:09:34,685
+Sorry I got a bit side tracked. 
+
+87
+00:09:34,742 --> 00:09:39,234
+So file_a.
+
+88
+00:09:39,462 --> 00:09:44,137
+TS: So we need targets to represent these files
+even though there not going to be built in any way.
+
+89
+00:09:47,154 --> 00:09:49,817
+There will be some nicer user
+interface around this at some point.
+
+90
+00:09:49,810 --> 00:09:53,200
+But it makes this a bit more
+complicated as far as those values, 
+
+91
+00:09:53,234 --> 00:09:56,960
+because you have to make values
+for thing that are just primitive files.
+
+92
+00:09:56,960 --> 00:09:59,714
+TS: Whereas if you identified things by name,
+
+93
+00:09:59,710 --> 00:10:04,434
+the assumption would have been if I've named
+something by name it isn't a target it's just a file.
+
+94
+00:10:04,460 --> 00:10:05,748
+JC: Yes. 
+
+95
+00:10:05,780 --> 00:10:17,177
+So these have no dependencies in them,
+no build instructions, so they can be done like that.
+
+96
+00:10:19,508 --> 00:10:21,714
+That's b that's c.
+
+97
+00:10:21,817 --> 00:10:29,131
+So if this depends on file a and file b, 
+
+98
+00:10:29,680 --> 00:10:51,142
+And works by catting spec temp a.text
+spec temp b.text into spec temp 1.text.
+
+99
+00:10:55,154 --> 00:11:07,451
+And the second target is called second.
+
+100
+00:11:09,770 --> 00:11:21,405
+And that works by depending
+on the first target - file c. 
+
+101
+00:11:23,080 --> 00:11:32,640
+Then that is going to work by taking 1.text
+and c.text and putting that into the second. 
+
+102
+00:11:32,731 --> 00:11:38,148
+I suppose this could be our before block.
+
+103
+00:11:38,377 --> 00:11:41,794
+[Silence]
+
+104
+00:11:50,651 --> 00:11:52,697
+TS: So you haven't actually built anything yet?
+
+105
+00:11:52,690 --> 00:11:55,131
+JC: No.
+
+106
+00:11:55,131 --> 00:11:57,130
+If we just build the second target – as he writes – because everything has been concatenated together.
+I'm going to  make some helper functions here, so if I use this file helper here, I just need to define that.
+Ive made this helper because I want everything to be cleaned up automatically afterwards. This helper is going to make the file with that content and keep track of it so if there's inaud remove all of them.
+TS: OK.
 
