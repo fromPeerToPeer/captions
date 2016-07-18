@@ -472,9 +472,230 @@ TS: So you haven't actually built anything yet?
 JC: No.
 
 106
-00:11:55,131 --> 00:11:57,130
-If we just build the second target – as he writes – because everything has been concatenated together.
-I'm going to  make some helper functions here, so if I use this file helper here, I just need to define that.
-Ive made this helper because I want everything to be cleaned up automatically afterwards. This helper is going to make the file with that content and keep track of it so if there's inaud remove all of them.
+00:11:59,360 --> 00:12:14,228
+If we just build the second target then we expect
+file read spec temp second text to equal...
+
+107
+00:12:16,617 --> 00:12:22,937
+a newline, b newline, c newline.
+
+108
+00:12:23,177 --> 00:12:27,154
+Because everything has
+been concatenated together.
+
+109
+00:12:27,337 --> 00:12:30,857
+[Silence]
+
+110
+00:12:38,914 --> 00:12:41,890
+I'm going to  make some helper functions here. 
+
+111
+00:12:41,931 --> 00:12:49,531
+So I've made this file helper
+here, I just need to define that.
+
+112
+00:12:51,977 --> 00:12:56,600
+I've made this helper because I want everything
+to be cleaned up automatically afterwards. 
+
+113
+00:12:57,268 --> 00:13:01,325
+This helper is going to make the file
+with that content and keep track of it.
+
+114
+00:13:01,320 --> 00:13:05,725
+And if there's inaud remove all of them.
+
+115
+00:13:05,720 --> 00:13:07,531
 TS: OK.
+
+116
+00:13:07,588 --> 00:13:15,280
+JC: So file utils has a make dir-p function.
+
+117
+00:13:18,068 --> 00:13:28,700
+We can make that, and then we can file open,
+the path name and write content into that.
+
+118
+00:13:29,142 --> 00:13:32,582
+[Silence]
+
+119
+00:13:37,790 --> 00:13:43,108
+Then we can store the path name in there. 
+
+120
+00:13:43,474 --> 00:13:46,720
+[Silence]
+
+121
+00:13:48,060 --> 00:13:54,102
+And then there's an afterhook, we can say...
+
+122
+00:13:54,960 --> 00:14:00,148
+Spec files each do path name.
+
+123
+00:14:00,845 --> 00:14:05,131
+So file unlink to delete things.
+
+124
+00:14:07,200 --> 00:14:12,354
+So then we ought not to be left
+with load of files that exist between tests.
+
+125
+00:14:12,365 --> 00:14:17,337
+and cause subsequent tests
+to not do the right thing.
+
+126
+00:14:17,520 --> 00:14:19,485
+So does this say what we actually want?
+
+127
+00:14:19,520 --> 00:14:22,880
+We have 3 files and they have content.
+
+128
+00:14:23,108 --> 00:14:28,068
+And we've made targets for them and the first target depends on a and b 
+
+129
+00:14:28,060 --> 00:14:31,474
+and if you cat those two
+files together you get 1.text.
+
+130
+00:14:31,520 --> 00:14:34,982
+The second target depends on the first target and file c 
+
+131
+00:14:34,980 --> 00:14:42,308
+and if you can cat those two
+to make the second file, that works.
+
+132
+00:14:42,300 --> 00:14:46,514
+The way things are at the moment,
+if we just run second target.build, 
+
+133
+00:14:47,074 --> 00:14:53,714
+it might end up throwing because
+this 1. text file won't exist.
+
+134
+00:14:54,045 --> 00:15:01,462
+So cat in that situation, I can't remember...
+If it fails silently and returns zero or not.
+
+135
+00:15:01,460 --> 00:15:06,057
+We'll find out, but either way.. It should throw
+or it shouldn't have the right content in it. 
+
+136
+00:15:06,114 --> 00:15:08,514
+A and b will be missing.
+
+137
+00:15:08,742 --> 00:15:14,102
+So let's have a go at running those spec features.
+
+138
+00:15:15,702 --> 00:15:20,365
+No variables, second target on where... 38. 
+
+139
+00:15:22,982 --> 00:15:25,131
+Ah yes. 
+
+140
+00:15:25,360 --> 00:15:28,788
+[Silence]
+
+141
+00:15:31,420 --> 00:15:36,148
+That's a local variable that split apart.
+
+142
+00:15:36,445 --> 00:15:37,828
+Just run that.
+
+143
+00:15:37,930 --> 00:15:43,771
+We've got a failed command from line
+38 where we tried to build that thing.
+
+144
+00:15:44,091 --> 00:15:48,148
+I assume because the cat is failing.
+
+145
+00:15:49,657 --> 00:15:56,034
+It would be nice if that error told us what
+command had failed. It would be really helpful. 
+
+146
+00:15:56,057 --> 00:16:01,154
+So let's make it do that, so
+we know, lib/fakemake/target.
+
+147
+00:16:03,428 --> 00:16:07,257
+Raise fake command.
+
+148
+00:16:11,410 --> 00:16:23,371
+Unless system instruction message
+equals command failed with the instruction.
+
+149
+00:16:23,554 --> 00:16:25,188
+TS: Right.
+
+150
+00:16:25,497 --> 00:16:28,742
+[Silence]
+
+151
+00:16:32,342 --> 00:16:34,125
+JC: Raise that.
+
+152
+00:16:34,400 --> 00:16:37,885
+[Silence]
+
+153
+00:16:38,720 --> 00:16:45,097
+Command failed cat spec temp 1. So that is expected.
+
+154
+00:16:48,205 --> 00:16:50,685
+I hope those files are not hanging around in temp.
+
+155
+00:16:50,680 --> 00:17:00,228
+So this knows how to clean up the files we created
+with file but it doesn't know how to clean up.
+
+156
+00:17:02,320 --> 00:17:04,137
+TS: How you going to fix that?
+
+157
+00:17:04,422 --> 00:17:08,502
+JC: We could poke those things into the array so it knows about them but it still feels a little unclean. I accidentally made a new shell there. We could just nuke the temp directory. I think that's maybe why I put them in a directory in the first place, so you can just wipe the slate clean.
+
 
