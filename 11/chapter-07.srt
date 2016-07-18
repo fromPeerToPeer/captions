@@ -14,7 +14,7 @@ yet, it can just run the commands.
 
 4
 00:00:12,410 --> 00:00:16,251
- So if we go back to...
+So if we go back to...
 
 5
 00:00:17,817 --> 00:00:21,257
@@ -23,7 +23,7 @@ What did we have in here. My test file.
 6
 00:00:21,250 --> 00:00:28,925
 When I was sketching this out earlier,
-down here I told each of the targets to build. 
+down here I told each of the targets to build.
 
 7
 00:00:28,948 --> 00:00:32,102
@@ -36,7 +36,7 @@ A better user interface would be to do that.
 9
 00:00:37,668 --> 00:00:44,982
 And have everything needed to
-produce the final result just happen. 
+produce the final result just happen.
 
 10
 00:00:46,080 --> 00:00:52,960
@@ -45,18 +45,226 @@ know for example, what bundle.js will depend on.
 
 11
 00:00:54,670 --> 00:00:58,251
-Hello_js and complimenter_js 
+Hello_js and complimenter_js
 
 12
 00:00:58,250 --> 00:01:05,222
-Whereas these won't depend on anything. 
+Whereas these won't depend on anything.
 
 13
-00:01:06,240 --> 00:01:10,708
-They are their own things. 
+00:01:06,560 --> 00:01:10,700
+They are their own things.
 
 14
-00:01:10,708 --> 00:01:12,700
-Although they do arguably depend on their source code. In order for the build system to be lazy and work out if any more work needs doing, it will need to know about that relationship. So it's probably advisable if we... here we have these target objects to represent these things, but if we source files, we could say that they are e.g. hello coffee is a target new example source hello.coffee, which actually depends on nothing because the source code you wrote is not derived from anything and has no build instructions. Also, you wrote it; it doesn't need generating. And this can take that as a dependency and you can do the same for complementor and what have you.
+00:01:10,845 --> 00:01:15,885
+Although they do arguably depend on their source code.
 
+15
+00:01:19,508 --> 00:01:24,742
+In order for the build system to be lazy
+and work out if any more work needs doing, 
+
+16
+00:01:24,754 --> 00:01:27,542
+it will need to know about that relationship.
+
+17
+00:01:27,540 --> 00:01:32,651
+So it's probably advisable if we say... 
+
+18
+00:01:32,660 --> 00:01:35,702
+Here we have these target
+objects to represent these things.
+
+19
+00:01:35,725 --> 00:01:43,005
+but for these source files,
+we could say that they are...
+
+20
+00:01:44,130 --> 00:01:56,400
+For example, hello coffee is a
+target new example source hello.coffee, 
+
+21
+00:01:56,457 --> 00:02:01,634
+which actually depends on nothing because the
+source code you wrote is not derived from anything.
+
+22
+00:02:01,725 --> 00:02:08,011
+And it has no build instructions and
+because you wrote it it doesn't need generating. 
+
+23
+00:02:08,902 --> 00:02:13,131
+And then this could take that as a dependency.
+
+24
+00:02:13,325 --> 00:02:17,920
+And you can do the same for
+complimenter, and what have you.
+
+25
+00:02:19,737 --> 00:02:27,188
+I'm on the fence about whether to pass
+these things around as values or by name. 
+
+26
+00:02:27,280 --> 00:02:36,914
+Because, to pass this by saying
+`example/src/hello.coffee`...
+
+27
+00:02:38,834 --> 00:02:43,348
+TS: What's the trade off there?
+Why would you want to do it one way or the other?
+
+28
+00:02:45,542 --> 00:02:51,965
+JC: Good question, if you do them by
+name you can do your target in any order. 
+
+29
+00:02:52,434 --> 00:02:58,000
+This can be beneficial. This is
+supposed to be a declarative system. 
+
+30
+00:02:58,708 --> 00:03:03,234
+It can also mean that you make
+dependencies on things that don't exist yet. 
+
+31
+00:03:03,325 --> 00:03:11,142
+So for example complimentor.js
+won't exist when you start the build. 
+
+32
+00:03:11,140 --> 00:03:17,280
+The target represents something that will exist
+in the future so you don't need the file to exist.
+
+33
+00:03:17,340 --> 00:03:25,611
+But having the pass by name means that you
+can do something for example, by having patterns. 
+
+34
+00:03:25,645 --> 00:03:30,514
+Like if you want to say star.js
+depends on star.coffee, 
+
+35
+00:03:30,510 --> 00:03:36,605
+we don't want to have to write all these
+targets out by hand once the project gets large. 
+
+36
+00:03:36,651 --> 00:03:42,902
+So you may want to have some general
+rule for how you get from one to the other.
+
+37
+00:03:43,668 --> 00:03:47,840
+TS: It sounds like that may
+be more complicated though.
+
+38
+00:03:49,520 --> 00:03:55,897
+JC: Yeah, erh... We can
+probably start by passing by value 
+
+39
+00:03:56,457 --> 00:03:59,554
+and if it becomes a problem we can pass by name,
+
+40
+00:03:59,550 --> 00:04:04,902
+and then have those names be looked up
+in something else but turned into the values.
+
+41
+00:04:04,925 --> 00:04:08,240
+That should be a fairly minor change to make later.
+
+42
+00:04:08,308 --> 00:04:12,068
+So let's do the pass by value thing.
+
+43
+00:04:12,868 --> 00:04:20,217
+So if we go back to our spec.
+
+44
+00:04:20,240 --> 00:04:24,857
+I already had this open
+because it was in another shell.
+
+45
+00:04:26,868 --> 00:04:33,040
+Yes, so... This is all talking
+about running instructions. 
+
+46
+00:04:34,994 --> 00:04:37,142
+We also want to talk about having dependencies.
+
+47
+00:04:37,165 --> 00:04:44,605
+So we've decided that the target is going to
+have a new argument, which is its dependencies. 
+
+48
+00:04:45,051 --> 00:04:48,091
+[Silence]
+
+49
+00:05:07,005 --> 00:05:11,120
+That ought to run but it doesn't... Why not?
+
+50
+00:05:11,394 --> 00:05:14,754
+[James is thinking]
+
+51
+00:05:15,770 --> 00:05:22,617
+Oh yes, OK so the tests we need...
+
+52
+00:05:25,154 --> 00:05:31,440
+I need to write that properly...
+Dependencies is some list.
+
+53
+00:05:34,182 --> 00:05:37,200
+And I like things that line up.
+
+54
+00:05:37,554 --> 00:05:40,491
+So that ought to be fine.
+
+55
+00:05:43,245 --> 00:05:50,057
+So these tests are now testing
+a thing that has no dependencies.
+
+56
+00:05:52,720 --> 00:06:00,300
+Ultimately we would like to have
+a target that will depend on something else, 
+
+57
+00:06:01,302 --> 00:06:06,182
+and if you build your target it
+will also build the other thing.
+
+58
+00:06:06,182 --> 00:06:08,180
+Maybe this is where we get into integration tests scenario.
+
+59
+00:06:08,180 --> 00:06:10,180
+ Because I'm going to have two target objects writing unit tests against those... like i could write a test to say when you call build on this call build on this other thing, but maybe that's specifying implementation too much.
 
