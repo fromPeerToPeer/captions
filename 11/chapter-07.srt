@@ -62,7 +62,7 @@ Although they do arguably depend on their source code.
 15
 00:01:19,508 --> 00:01:24,742
 In order for the build system to be lazy
-and work out if any more work needs doing, 
+and work out if any more work needs doing,
 
 16
 00:01:24,754 --> 00:01:27,542
@@ -70,7 +70,7 @@ it will need to know about that relationship.
 
 17
 00:01:27,540 --> 00:01:32,651
-So it's probably advisable if we say... 
+So it's probably advisable if we say...
 
 18
 00:01:32,660 --> 00:01:35,702
@@ -85,7 +85,7 @@ we could say that they are...
 20
 00:01:44,130 --> 00:01:56,400
 For example, hello coffee is a
-target new example source hello.coffee, 
+target new example source hello.coffee,
 
 21
 00:01:56,457 --> 00:02:01,634
@@ -95,7 +95,7 @@ source code you wrote is not derived from anything.
 22
 00:02:01,725 --> 00:02:08,011
 And it has no build instructions and
-because you wrote it it doesn't need generating. 
+because you wrote it it doesn't need generating.
 
 23
 00:02:08,902 --> 00:02:13,131
@@ -109,7 +109,7 @@ complimenter, and what have you.
 25
 00:02:19,737 --> 00:02:27,188
 I'm on the fence about whether to pass
-these things around as values or by name. 
+these things around as values or by name.
 
 26
 00:02:27,280 --> 00:02:36,914
@@ -124,22 +124,22 @@ Why would you want to do it one way or the other?
 28
 00:02:45,542 --> 00:02:51,965
 JC: Good question, if you do them by
-name you can do your target in any order. 
+name you can do your target in any order.
 
 29
 00:02:52,434 --> 00:02:58,000
 This can be beneficial. This is
-supposed to be a declarative system. 
+supposed to be a declarative system.
 
 30
 00:02:58,708 --> 00:03:03,234
 It can also mean that you make
-dependencies on things that don't exist yet. 
+dependencies on things that don't exist yet.
 
 31
 00:03:03,325 --> 00:03:11,142
 So for example complimentor.js
-won't exist when you start the build. 
+won't exist when you start the build.
 
 32
 00:03:11,140 --> 00:03:17,280
@@ -149,17 +149,17 @@ in the future so you don't need the file to exist.
 33
 00:03:17,340 --> 00:03:25,611
 But having the pass by name means that you
-can do something for example, by having patterns. 
+can do something for example, by having patterns.
 
 34
 00:03:25,645 --> 00:03:30,514
 Like if you want to say star.js
-depends on star.coffee, 
+depends on star.coffee,
 
 35
 00:03:30,510 --> 00:03:36,605
 we don't want to have to write all these
-targets out by hand once the project gets large. 
+targets out by hand once the project gets large.
 
 36
 00:03:36,651 --> 00:03:42,902
@@ -174,7 +174,7 @@ be more complicated though.
 38
 00:03:49,520 --> 00:03:55,897
 JC: Yeah, erh... We can
-probably start by passing by value 
+probably start by passing by value
 
 39
 00:03:56,457 --> 00:03:59,554
@@ -205,7 +205,7 @@ because it was in another shell.
 45
 00:04:26,868 --> 00:04:33,040
 Yes, so... This is all talking
-about running instructions. 
+about running instructions.
 
 46
 00:04:34,994 --> 00:04:37,142
@@ -214,7 +214,7 @@ We also want to talk about having dependencies.
 47
 00:04:37,165 --> 00:04:44,605
 So we've decided that the target is going to
-have a new argument, which is its dependencies. 
+have a new argument, which is its dependencies.
 
 48
 00:04:45,051 --> 00:04:48,091
@@ -253,7 +253,7 @@ a thing that has no dependencies.
 56
 00:05:52,720 --> 00:06:00,300
 Ultimately we would like to have
-a target that will depend on something else, 
+a target that will depend on something else,
 
 57
 00:06:01,302 --> 00:06:06,182
@@ -273,7 +273,7 @@ objects maybe writing unit tests against those.
 60
 00:06:20,434 --> 00:06:24,982
 I could write a test to say when you call
-build on this call build on this other thing, 
+build on this call build on this other thing,
 
 61
 00:06:26,091 --> 00:06:29,280
@@ -282,12 +282,12 @@ implementation too much.
 
 62
 00:06:29,794 --> 00:06:35,085
-So I'm going to try and write... 
+So I'm going to try and write...
 
 63
 00:06:38,628 --> 00:06:43,600
 Spec/features is where I'm
-going to put my generation test. 
+going to put my generation test.
 
 64
 00:06:43,668 --> 00:06:50,697
@@ -336,7 +336,7 @@ So if we say...
 
 75
 00:07:59,142 --> 00:08:05,165
-Not quite sure how to phrase this yet but... 
+Not quite sure how to phrase this yet but...
 
 76
 00:08:05,188 --> 00:08:08,182
@@ -384,7 +384,7 @@ it does have dependencies which are...
 
 86
 00:09:32,750 --> 00:09:34,685
-Sorry I got a bit side tracked. 
+Sorry I got a bit side tracked.
 
 87
 00:09:34,742 --> 00:09:39,234
@@ -403,7 +403,7 @@ interface around this at some point.
 90
 00:09:49,810 --> 00:09:53,200
 But it makes this a bit more
-complicated as far as those values, 
+complicated as far as those values,
 
 91
 00:09:53,234 --> 00:09:56,960
@@ -421,7 +421,7 @@ something by name it isn't a target it's just a file.
 
 94
 00:10:04,460 --> 00:10:05,748
-JC: Yes. 
+JC: Yes.
 
 95
 00:10:05,780 --> 00:10:17,177
@@ -434,7 +434,7 @@ That's b that's c.
 
 97
 00:10:21,817 --> 00:10:29,131
-So if this depends on file a and file b, 
+So if this depends on file a and file b,
 
 98
 00:10:29,680 --> 00:10:51,142
@@ -448,12 +448,12 @@ And the second target is called second.
 100
 00:11:09,770 --> 00:11:21,405
 And that works by depending
-on the first target - file c. 
+on the first target - file c.
 
 101
 00:11:23,080 --> 00:11:32,640
 Then that is going to work by taking 1.text
-and c.text and putting that into the second. 
+and c.text and putting that into the second.
 
 102
 00:11:32,731 --> 00:11:38,148
@@ -491,7 +491,7 @@ been concatenated together.
 
 110
 00:12:38,914 --> 00:12:41,890
-I'm going to  make some helper functions here. 
+I'm going to  make some helper functions here.
 
 111
 00:12:41,931 --> 00:12:49,531
@@ -501,7 +501,7 @@ here, I just need to define that.
 112
 00:12:51,977 --> 00:12:56,600
 I've made this helper because I want everything
-to be cleaned up automatically afterwards. 
+to be cleaned up automatically afterwards.
 
 113
 00:12:57,268 --> 00:13:01,325
@@ -531,7 +531,7 @@ the path name and write content into that.
 
 119
 00:13:37,790 --> 00:13:43,108
-Then we can store the path name in there. 
+Then we can store the path name in there.
 
 120
 00:13:43,474 --> 00:13:46,720
@@ -569,7 +569,7 @@ We have 3 files and they have content.
 
 128
 00:14:23,108 --> 00:14:28,068
-And we've made targets for them and the first target depends on a and b 
+And we've made targets for them and the first target depends on a and b
 
 129
 00:14:28,060 --> 00:14:31,474
@@ -578,7 +578,7 @@ files together you get 1.text.
 
 130
 00:14:31,520 --> 00:14:34,982
-The second target depends on the first target and file c 
+The second target depends on the first target and file c
 
 131
 00:14:34,980 --> 00:14:42,308
@@ -588,7 +588,7 @@ to make the second file, that works.
 132
 00:14:42,300 --> 00:14:46,514
 The way things are at the moment,
-if we just run second target.build, 
+if we just run second target.build,
 
 133
 00:14:47,074 --> 00:14:53,714
@@ -603,7 +603,7 @@ If it fails silently and returns zero or not.
 135
 00:15:01,460 --> 00:15:06,057
 We'll find out, but either way.. It should throw
-or it shouldn't have the right content in it. 
+or it shouldn't have the right content in it.
 
 136
 00:15:06,114 --> 00:15:08,514
@@ -615,11 +615,11 @@ So let's have a go at running those spec features.
 
 138
 00:15:15,702 --> 00:15:20,365
-No variables, second target on where... 38. 
+No variables, second target on where... 38.
 
 139
 00:15:22,982 --> 00:15:25,131
-Ah yes. 
+Ah yes.
 
 140
 00:15:25,360 --> 00:15:28,788
@@ -645,7 +645,7 @@ I assume because the cat is failing.
 145
 00:15:49,657 --> 00:15:56,034
 It would be nice if that error told us what
-command had failed. It would be really helpful. 
+command had failed. It would be really helpful.
 
 146
 00:15:56,057 --> 00:16:01,154
@@ -695,7 +695,167 @@ with file but it doesn't know how to clean up.
 TS: How you going to fix that?
 
 157
-00:17:04,422 --> 00:17:08,502
-JC: We could poke those things into the array so it knows about them but it still feels a little unclean. I accidentally made a new shell there. We could just nuke the temp directory. I think that's maybe why I put them in a directory in the first place, so you can just wipe the slate clean.
+00:17:04,420 --> 00:17:07,074
+JC: We could poke those things into
+the array so it knows about them,
 
+158
+00:17:07,085 --> 00:17:09,508
+but it still feels a little unclean.
+
+159
+00:17:09,542 --> 00:17:11,542
+I accidentally made a new shell there.
+
+160
+00:17:15,577 --> 00:17:17,965
+We could just nuke the temp directory.
+
+161
+00:17:17,960 --> 00:17:23,462
+I think that's maybe why I put them in a directory in
+the first place, so you can just wipe the slate clean.
+
+162
+00:17:23,460 --> 00:17:29,417
+So let's do that and then we
+don't need this tracking stuff.
+
+163
+00:17:32,022 --> 00:17:37,417
+I have put this spec temp all over the test,
+maybe that's something I should clean up. 
+
+164
+00:17:37,428 --> 00:17:39,485
+I maybe wanted to say...
+
+165
+00:17:39,691 --> 00:17:46,240
+What I originally wanted to do was save file
+a.text and then have that create a slash inaud tab. 
+
+166
+00:17:46,270 --> 00:17:52,891
+But to make these commands work I would have
+had to change process directory into there. 
+
+167
+00:17:52,910 --> 00:17:56,217
+which we could do, but I think I'm happier with that. 
+
+168
+00:17:56,240 --> 00:18:03,988
+Lets remove those.
+
+169
+00:18:04,194 --> 00:18:07,851
+[Silence]
+
+170
+00:18:09,142 --> 00:18:14,530
+Because they're really just
+crufting everything up.
+
+171
+00:18:14,605 --> 00:18:21,588
+If we do that... `in_tmp_dir`.
+
+172
+00:18:21,860 --> 00:18:25,028
+[Silence]
+
+173
+00:18:30,400 --> 00:18:38,022
+FileUtils has another nice helper function
+where you can FileUtils.cd to somewhere.
+
+174
+00:18:38,160 --> 00:18:41,622
+[Silence]
+
+175
+00:18:42,308 --> 00:18:44,800
+Just pass the block through, (it takes a block).
+
+176
+00:18:44,890 --> 00:18:48,548
+It changes working directory
+into somewhere, runs the block, 
+
+177
+00:18:48,560 --> 00:18:53,474
+and then comes back out again to
+wherever you were before, which is kind of nice.
+
+178
+00:18:53,714 --> 00:18:56,868
+TS: So you're not having to do
+any clean up of the current stuff,
+
+179
+00:18:56,868 --> 00:18:58,860
+it just goes back to what it was when you started.
+
+180
+00:18:58,860 --> 00:19:03,062
+JC: Exactly. 
+
+181
+00:19:03,900 --> 00:19:06,982
+So creating those files...
+
+182
+00:19:07,531 --> 00:19:13,200
+We don't do anything, these just make target objects,
+they don't do system calls or write any files. 
+
+183
+00:19:13,310 --> 00:19:23,005
+So file would have to make that temp directory.
+
+184
+00:19:23,520 --> 00:19:26,011
+And then put that in here.
+
+185
+00:19:27,280 --> 00:19:33,542
+So if we make those files inside spec temp
+and then run everything in that directory,
+
+186
+00:19:33,657 --> 00:19:47,120
+and afterwards remove it again,
+everything should be OK, I think.
+
+187
+00:19:48,411 --> 00:19:51,040
+Let's see what it makes of that.
+
+188
+00:19:52,280 --> 00:19:57,988
+"Wrong number of arguments (0 for 1) on line 10"
+
+189
+00:20:01,850 --> 00:20:06,022
+Oh I didn't actually pass an argument
+to that one when I used it did I?
+
+190
+00:20:06,914 --> 00:20:11,062
+It's just to to hide where
+we're storing things from the code.
+
+191
+00:20:14,640 --> 00:20:19,188
+Command failed cat 1 with c didn't work
+
+192
+00:20:20,102 --> 00:20:24,400
+And that temp directory has gone away, so that's nice. 
+
+193
+00:20:24,880 --> 00:20:27,314
+OK, I feel better about that.
+TS: OK good.
 
