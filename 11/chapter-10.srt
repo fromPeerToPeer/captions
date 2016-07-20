@@ -1,0 +1,79 @@
+﻿1
+00:00:00,000 --> 00:00:03,965
+Chapter 10.
+Checking the mtime of the Target.
+
+2
+00:00:04,140 --> 00:00:09,920
+The other thing is they should be lazy.
+
+3
+00:00:11,554 --> 00:00:15,920
+So if you run the build and make no changes
+then run it again nothing should happen. 
+
+4
+00:00:15,960 --> 00:00:19,325
+Builds take a long time as your project grows,
+
+5
+00:00:19,360 --> 00:00:24,090
+especially minifying
+javascript, it can get very slow.
+
+6
+00:00:25,090 --> 00:00:30,125
+A simple way to do this is to look
+at the modified times of the files,
+
+7
+00:00:30,228 --> 00:00:35,897
+and if any of the things that you depend on
+are newer than your own file, then you rebuild.
+
+8
+00:00:35,897 --> 00:00:38,971
+Otherwise you don't.
+
+9
+00:00:39,080 --> 00:00:42,982
+TS: Just to clarify can you talk us through... 
+
+10
+00:00:43,097 --> 00:00:47,954
+You've already addressed one case
+about unnecessary work being done. 
+
+11
+00:00:48,020 --> 00:00:52,902
+You've made some change that
+ensures something doesn't get done twice. 
+
+12
+00:00:52,982 --> 00:00:57,417
+And now you're making another change which
+is also about something not being done twice,
+
+13
+00:00:57,410 --> 00:00:59,782
+but in a different way.
+
+14
+00:00:59,780 --> 00:01:03,325
+TS: So the change you've already made,
+
+15
+00:01:03,320 --> 00:01:08,480
+what kind of case has that dealt
+with that hasn't been dealt with here?
+
+16
+00:01:10,525 --> 00:01:14,342
+JC: If you have a build that has a diamond shape so you have your build that you want, and that depends on two things, then they both depend on one thing.
+TS: OK.
+So when you call build here it will call build on these two, and they will both call build on that thing. I just made it so that those two builds to the same target don't cause work to be duplicated within the same process.
+TS: Right.
+JC:we're now talking about when you run your build twice, the second time you run it if you haven't changed anything, no work should need to be done. It skips you waiting around for things that don't need to be recompiled or whatever it is that you need to be doing.
+Its duplicate work within one build, and then across multiple builds.
+TS: Ok
+
