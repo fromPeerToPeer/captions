@@ -150,11 +150,144 @@ thing that needs to be checked.
 
 33
 00:03:01,640 --> 00:03:05,908
- I don't want to tell it how its private method should be organised. It's more about, what's its interaction with other stuff and that is that it calls build on them.
+I don't want to tell it how its
+private method should be organized. 
 
-In terms of unit  tests make target spec. so build, so this is all about running instructions and stuff, but before we get to running instructions we have dependencies.
+34
+00:03:07,930 --> 00:03:14,011
+It's more about, what's its interaction with other
+stuff and that is that it calls build on them.
 
-I'm not sure if it makes sense to write a test for when there are no dependencies. These tests are already implicitly for when there are no dependencies so when there are none there's no other target for you to say that it should or should not call build on.
+35
+00:03:14,788 --> 00:03:22,530
+In terms of unit tests...
+fakemake target_spec... so build.
 
-So let's make a test for when there are dependencies. We can have several of them. In this case the order shouldn't be important or rather you shouldn't construct your dependency tree so the order doesn't matter.
+36
+00:03:22,720 --> 00:03:24,994
+This is all about running instructions and stuff.
+
+37
+00:03:25,017 --> 00:03:29,280
+But before we get to running
+instructions we have dependencies.
+
+38
+00:03:31,291 --> 00:03:33,920
+I'm not sure if it makes sense to write
+a test for when there are no dependencies. 
+
+39
+00:03:33,920 --> 00:03:36,582
+These tests are already implicitly
+for when there are no dependencies. 
+
+40
+00:03:36,590 --> 00:03:43,885
+And if there are none there's no other target for
+you to say that it should or should not call build on.
+
+41
+00:03:44,114 --> 00:03:47,954
+So let's make a test for when there are dependencies. 
+
+42
+00:03:48,240 --> 00:03:51,668
+[Silence]
+
+43
+00:03:58,680 --> 00:04:04,891
+We can have several of them and in
+this case the order shouldn't be important.
+
+44
+00:04:04,982 --> 00:04:10,982
+Or rather you should construct your
+dependency tree so the order doesn't matter.
+
+45
+00:04:10,980 --> 00:04:21,245
+If c depends on a and b, but b has to happen
+after a then you should just say b depends on a.
+
+46
+00:04:21,240 --> 00:04:25,405
+That will ensure that that happens first.
+
+47
+00:04:26,880 --> 00:04:34,640
+So... The first dependency is a double. 
+
+48
+00:04:35,960 --> 00:04:40,388
+And the second dependency is also a double.
+
+49
+00:04:44,971 --> 00:04:50,491
+This does let us check that if the first dependency
+fails then we don't call the second dependency. 
+
+50
+00:04:50,490 --> 00:04:54,400
+That isn't really a requirement, it's
+accidental because the order doesn't matter.
+
+51
+00:04:56,620 --> 00:05:06,388
+So we should say it should tell all
+its dependencies to build themselves.
+
+52
+00:05:08,354 --> 00:05:18,971
+So we expect `first_dep` to receive build once.
+
+53
+00:05:19,382 --> 00:05:24,125
+And likewise for the `second_dep`.
+
+54
+00:05:24,720 --> 00:05:26,571
+And, what's our target here?
+
+55
+00:05:26,594 --> 00:05:38,262
+Our target is FakeMake::Target.new
+with a pathname (that won't matter yet).
+
+56
+00:05:38,880 --> 00:05:45,360
+And the dependencies, second dep and no
+instructions because we're not testing that here.
+
+57
+00:05:50,650 --> 00:05:56,388
+That looks OK, so when we call target build it
+should tell each of the targets to build themselves.
+
+58
+00:05:57,028 --> 00:05:59,348
+Oops, I've lost my other shell.
+
+59
+00:06:02,091 --> 00:06:05,428
+Path again...
+
+60
+00:06:05,737 --> 00:06:09,017
+[Silence]
+
+61
+00:06:13,211 --> 00:06:16,251
+OK that looks good. 
+
+62
+00:06:16,788 --> 00:06:22,605
+This is a good place to commit. It's a new
+feature - we have dependency management.
+
+63
+00:06:22,605 --> 00:06:24,600
+Let's have a look at what we've changed. We've added dependencies to target class and made it so that the target will build its dependencies. If you have a tree of targets they will recursively build themselves, and we've added tests for those things.
+
+TS: I was surprised to see when you ran that unit test it looks like there was some output on standard out during the test which wasn't what i expected to see.
 
