@@ -1,0 +1,160 @@
+﻿1
+00:00:00,000 --> 00:00:04,000
+Chapter 08
+Making Target dependencies build.
+
+2
+00:00:04,651 --> 00:00:11,005
+JC: So in order for that to work, we just need to.... 
+
+3
+00:00:12,400 --> 00:00:17,588
+The second target has been
+given its dependencies as input, 
+
+4
+00:00:17,862 --> 00:00:21,977
+So we should just be able
+to tell them to build themselves.
+
+5
+00:00:22,331 --> 00:00:28,388
+So if we go back into our target class then build. 
+
+6
+00:00:28,834 --> 00:00:32,960
+And we've got this dependencies
+thing that we've not stored.
+
+7
+00:00:33,440 --> 00:00:36,537
+[Silence]
+
+8
+00:00:40,091 --> 00:00:45,211
+So build could call update  or...
+
+9
+00:00:45,862 --> 00:00:50,114
+No sorry, I'm going to update
+to make sure they're up to date.
+
+10
+00:00:52,411 --> 00:00:58,034
+ensure-updated-dependencies
+
+11
+00:00:58,250 --> 00:01:04,297
+And then let's inaud extract...
+call build inaud build self. 
+
+12
+00:01:04,765 --> 00:01:12,674
+So build is now a sort of sequence of high level
+things you need to do, and this is how to do each one.
+
+13
+00:01:13,360 --> 00:01:16,662
+[Silence]
+
+14
+00:01:21,371 --> 00:01:26,457
+We have def ensure_updated_dependencies.
+
+15
+00:01:26,450 --> 00:01:32,971
+So we should be able to go in
+and say dependencies each build.
+
+16
+00:01:36,045 --> 00:01:38,971
+And they will build themselves.
+
+17
+00:01:40,170 --> 00:01:45,371
+These things here, which are
+primary resources we already created,
+
+18
+00:01:45,380 --> 00:01:49,554
+they don't have any build
+instructions and should work OK. 
+
+19
+00:01:49,660 --> 00:01:53,017
+This is why I made it so it was
+OK to have no instructions,
+
+20
+00:01:53,040 --> 00:01:56,000
+because you need to be able to
+model things that already exist. 
+
+21
+00:01:56,270 --> 00:02:01,291
+This should go off and tell file a and b
+to build themselves, which will do nothing.
+
+22
+00:02:01,630 --> 00:02:04,377
+And then this will tell the first
+target and file c to build themselves. 
+
+23
+00:02:04,410 --> 00:02:10,331
+The first target will run this command here and
+once those are done, run this command here.
+
+24
+00:02:10,380 --> 00:02:13,657
+And everything should be OK.
+
+25
+00:02:15,770 --> 00:02:18,400
+It works. Hurrah!
+TS: Amazing!
+
+26
+00:02:20,370 --> 00:02:25,794
+JC: Right, so we've got an integration test
+and all that we've changed to do that
+
+27
+00:02:25,862 --> 00:02:29,714
+is quite a lot of things. (Laughter)
+
+28
+00:02:29,737 --> 00:02:38,068
+I don't know if all these unit tests should
+be on the build method, or on build_self. 
+
+29
+00:02:42,137 --> 00:02:44,480
+I don't want to specify the
+implementation of target 
+
+30
+00:02:44,514 --> 00:02:48,148
+but I want to specify its
+relationship with other things.
+
+31
+00:02:51,051 --> 00:02:56,354
+The important thing is when you build one target, it
+will tell those dependencies to build themselves. 
+
+32
+00:02:56,377 --> 00:03:01,645
+That's the minimum abstract
+thing that needs to be checked.
+
+33
+00:03:01,640 --> 00:03:05,908
+ I don't want to tell it how its private method should be organised. It's more about, what's its interaction with other stuff and that is that it calls build on them.
+
+In terms of unit  tests make target spec. so build, so this is all about running instructions and stuff, but before we get to running instructions we have dependencies.
+
+I'm not sure if it makes sense to write a test for when there are no dependencies. These tests are already implicitly for when there are no dependencies so when there are none there's no other target for you to say that it should or should not call build on.
+
+So let's make a test for when there are dependencies. We can have several of them. In this case the order shouldn't be important or rather you shouldn't construct your dependency tree so the order doesn't matter.
+
