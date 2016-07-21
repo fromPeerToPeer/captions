@@ -10,7 +10,7 @@ The other thing is they should be lazy.
 3
 00:00:11,554 --> 00:00:15,920
 So if you run the build and make no changes
-then run it again nothing should happen. 
+then run it again nothing should happen.
 
 4
 00:00:15,960 --> 00:00:19,325
@@ -37,17 +37,17 @@ Otherwise you don't.
 
 9
 00:00:39,080 --> 00:00:42,982
-TS: Just to clarify can you talk us through... 
+TS: Just to clarify can you talk us through...
 
 10
 00:00:43,097 --> 00:00:47,954
 You've already addressed one case
-about unnecessary work being done. 
+about unnecessary work being done.
 
 11
 00:00:48,020 --> 00:00:52,902
 You've made some change that
-ensures something doesn't get done twice. 
+ensures something doesn't get done twice.
 
 12
 00:00:52,982 --> 00:00:57,417
@@ -68,12 +68,91 @@ what kind of case has that dealt
 with that hasn't been dealt with here?
 
 16
-00:01:10,525 --> 00:01:14,342
-JC: If you have a build that has a diamond shape so you have your build that you want, and that depends on two things, then they both depend on one thing.
+00:01:10,520 --> 00:01:15,360
+JC: If you have a build that has say a diamond shape...
+So you have the thing that you want.
+
+17
+00:01:15,622 --> 00:01:20,800
+And that depends on two things.
+Then they both depend on one thing.
+
+18
+00:01:20,960 --> 00:01:24,445
+So when you call build here it
+will call build on these two,
+
+19
+00:01:24,480 --> 00:01:27,554
+and then they will both call build on that thing. 
+
+20
+00:01:27,550 --> 00:01:33,097
+What I just did was I made it so that
+those two builds to the same target
+
+21
+00:01:33,188 --> 00:01:38,354
+don't cause work to be duplicated
+within the same build process.
+
+22
+00:01:38,350 --> 00:01:45,211
+We're now talking about
+when you run your build twice. 
+
+23
+00:01:45,382 --> 00:01:52,320
+That the second time you run it, if you haven't
+changed anything, no work should need to be done.
+
+24
+00:01:53,074 --> 00:01:56,777
+It skips you waiting around for things
+that don't need to be recompiled;
+
+25
+00:01:56,770 --> 00:01:59,394
+or whatever it is that your doing.
+
+26
+00:01:59,390 --> 00:02:01,097
+TS: OK, Cool.
+
+27
+00:02:01,090 --> 00:02:06,594
+JC: It's duplicate work within
+one build across multiple builds.
+
+28
+00:02:08,125 --> 00:02:14,914
+When you have things going across multiple builds,
+like multiple executions of your build tool,
+
+29
+00:02:14,994 --> 00:02:17,908
+you don't have that information in memory.
+
+30
+00:02:17,900 --> 00:02:21,382
+We solved the first problem by
+putting a flag in memory on an object
+
+31
+00:02:21,417 --> 00:02:21,931
+to say don't do this again, you've already done it. 
+
+32
+00:02:21,931 --> 00:02:23,930
+When you have multiple invocations of something you have to rely on some state that exists between processes. In this case that state could be the modified state of the files you're looking at. That's why basing this thing around files as the primary thing. It's good because it gives you an almost free way to check that the files are up to date.
 TS: OK.
-So when you call build here it will call build on these two, and they will both call build on that thing. I just made it so that those two builds to the same target don't cause work to be duplicated within the same process.
-TS: Right.
-JC:we're now talking about when you run your build twice, the second time you run it if you haven't changed anything, no work should need to be done. It skips you waiting around for things that don't need to be recompiled or whatever it is that you need to be doing.
-Its duplicate work within one build, and then across multiple builds.
-TS: Ok
+
+JC: So we have these tests for dependencies. We could also... what would we like to do.  So this is the thing that tells the things to build... which is what we want to do. We should probably also say that depending on the result of what those calls are, what is this target going to do. If any of those calls return a time that's higher than the time that I have, then I should quit.
+TS: What does higher mean?
+JC: Later than.
+to say don't do this again, you've already done it. 
+
+33
+00:02:23,930 --> 00:02:24,640
+to say don't do this again, you've already done it. 
 
