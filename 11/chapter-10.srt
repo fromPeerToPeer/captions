@@ -139,20 +139,180 @@ We solved the first problem by
 putting a flag in memory on an object
 
 31
-00:02:21,417 --> 00:02:21,931
+00:02:21,417 --> 00:02:24,640
 to say don't do this again, you've already done it. 
 
 32
-00:02:21,931 --> 00:02:23,930
-When you have multiple invocations of something you have to rely on some state that exists between processes. In this case that state could be the modified state of the files you're looking at. That's why basing this thing around files as the primary thing. It's good because it gives you an almost free way to check that the files are up to date.
-TS: OK.
-
-JC: So we have these tests for dependencies. We could also... what would we like to do.  So this is the thing that tells the things to build... which is what we want to do. We should probably also say that depending on the result of what those calls are, what is this target going to do. If any of those calls return a time that's higher than the time that I have, then I should quit.
-TS: What does higher mean?
-JC: Later than.
-to say don't do this again, you've already done it. 
+00:02:24,765 --> 00:02:26,731
+When you have multiple invocations of something
 
 33
-00:02:23,930 --> 00:02:24,640
-to say don't do this again, you've already done it. 
+00:02:26,742 --> 00:02:30,822
+you have to rely on some state
+that exists between processes.
+
+34
+00:02:30,830 --> 00:02:35,222
+In this case that state could be the
+modified times of the files you're looking at. 
+
+35
+00:02:35,234 --> 00:02:39,771
+That's why basing this around
+files as the primary thing... 
+
+36
+00:02:40,617 --> 00:02:46,777
+It's good because it gives you an almost
+free way to check that the files are up to date.
+
+37
+00:02:46,770 --> 00:02:48,342
+TS: OK.
+
+38
+00:02:48,770 --> 00:02:55,417
+JC: So we have these tests for when
+there's dependencies. We could also have ...
+
+39
+00:02:57,074 --> 00:03:01,017
+What would we like to do here?
+So this is the thing that tells the things to build... 
+
+40
+00:03:01,070 --> 00:03:03,314
+Which is what we want to do.
+
+41
+00:03:03,410 --> 00:03:09,485
+We should then probably also say that
+depending on the result of what those calls is,
+
+42
+00:03:10,160 --> 00:03:12,228
+what is this target going to do?
+
+43
+00:03:12,270 --> 00:03:18,342
+So if any of those calls return a time
+that's higher than the time that I have, 
+
+44
+00:03:18,445 --> 00:03:21,405
+then I should quit.
+
+45
+00:03:22,137 --> 00:03:25,462
+TS: What does higher than mean?
+
+46
+00:03:26,262 --> 00:03:30,971
+JC: (I always get this backwards
+in time!). I mean later than.
+
+47
+00:03:31,074 --> 00:03:33,485
+You have your coffee script
+file and your JavaScript file.
+
+48
+00:03:33,570 --> 00:03:37,222
+If the coffee script file was modified
+later than the JavaScript file,
+
+49
+00:03:37,234 --> 00:03:39,988
+that means the JavaScript file is
+out of date, so it will recompile it.
+
+50
+00:03:40,022 --> 00:03:45,005
+If it's the other way round
+that means your JavaScript file 
+
+51
+00:03:45,017 --> 00:03:48,822
+has presumably been generated since
+the last time you modified the coffee script. 
+
+52
+00:03:48,834 --> 00:03:51,245
+And you don't need to do any more work.
+
+53
+00:03:51,240 --> 00:03:59,817
+So let's say... We can have some context inside here. 
+
+54
+00:03:59,810 --> 00:04:12,068
+When the dependencies are newer than the target - do.
+
+55
+00:04:14,342 --> 00:04:16,868
+OK
+
+56
+00:04:17,760 --> 00:04:20,240
+So how am I going to model that?
+
+57
+00:04:20,280 --> 00:04:44,857
+We can say that we allow the first dependency
+to receive build and return time now plus 5 minutes.
+
+58
+00:04:46,400 --> 00:04:55,017
+Likewise with the second dependency
+to return time now plus 2 minutes.
+
+59
+00:04:59,860 --> 00:05:04,411
+The target itself is going to take
+those times it got from the dependencies 
+
+60
+00:05:04,411 --> 00:05:05,988
+and then compare them to what it has. 
+
+61
+00:05:06,000 --> 00:05:11,017
+And to do that it's probably going to call file.mtime.
+
+62
+00:05:11,210 --> 00:05:13,165
+TS: What does mtime mean?
+
+63
+00:05:13,234 --> 00:05:14,880
+JC: It's the modification time.
+
+64
+00:05:14,880 --> 00:05:19,931
+The unix file system; every file has
+several time stamps attached to it.
+
+65
+00:05:20,022 --> 00:05:23,085
+And one of those time stamps
+is the last time it was modified.
+
+66
+00:05:23,080 --> 00:05:26,160
+You also get the last time it was
+accessed, and some other things.
+
+67
+00:05:26,937 --> 00:05:30,605
+When you write to a file, the file
+system updates that time stamp 
+
+68
+00:05:30,628 --> 00:05:33,560
+so you can tell the last time it was changed.
+
+69
+00:05:33,560 --> 00:05:35,560
+TS: Is this the point at which it needs the pathname that you've been passing in all along?
+JC: Yes. I introduced that quite prematurely. This is the first time that we need it. Maybe the first thing we should do is assert that it checks the time of its own pathname. He types. So we expect file to receive mtime with pathname.  I'll change that up here to make it less of a generic name. Or target pathname. The result inaud sometime, we don't really care what it is. So when you call target.build that should happen.
 
