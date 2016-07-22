@@ -498,23 +498,284 @@ file isn't receiving mtime with the right things.
 So let's go and fix that.
 
 109
-00:09:22,068 --> 00:09:23,860
+00:09:22,068 --> 00:09:29,337
 So  to build_self, we're already returning
 we're already built so that's an easy cheap check. 
 
 110
-00:09:23,860 --> 00:09:25,860
-We don't want to call the file system if we know we've already built, it's a waste of some io. So we'll look at the mtime. File.mtime we don't need that variable. He mumbles. With our path name.
-
-TS: So this the piece of state you we're talking about. We update these mtimes when we run a build and then next time we run a build we can look to see if someone else has been in and changed anything.
-JC: Yes, and you can set that explicitly yourself. You can tell unix to set the mtime of this file to this. But it also happens implicitly when you write a file. That's why this is the first time it's appeared so far.
-TS: Wow.
-JC: That was load loads of thing just blew up.
-So  to build_self, we're already returning
-we're already built so that's an easy cheap check. 
+00:09:29,474 --> 00:09:35,600
+If that fails we don't want to call the file system
+if we know we've already built, it's a waste of some io.
 
 111
-00:09:25,860 --> 00:09:29,337
-So  to build_self, we're already returning
-we're already built so that's an easy cheap check. 
+00:09:37,210 --> 00:09:39,977
+So we'll look at the mtime. 
+
+112
+00:09:43,140 --> 00:09:49,211
+We don't need that variable to pass that test, we
+just need to call File.mtime with our path name.
+
+113
+00:09:49,690 --> 00:09:51,417
+TS: So this is the piece of
+state you we're talking about. 
+
+114
+00:09:51,450 --> 00:09:54,320
+We update these mtimes when we run the build. 
+
+115
+00:09:54,365 --> 00:09:59,400
+And then next time we run a build we can look to see
+if someone else has been in and changed something.
+
+116
+00:09:59,400 --> 00:10:05,805
+JC: Yes, and you can set that explicitly yourself.
+You can tell unix to set the mtime of this file to this. 
+
+117
+00:10:05,840 --> 00:10:09,180
+But it also happens implicitly
+when you write to a file.
+
+118
+00:10:09,220 --> 00:10:13,074
+That's why this is the first time it's appeared so far.
+
+119
+00:10:15,931 --> 00:10:17,108
+TS: Wow.
+
+120
+00:10:17,188 --> 00:10:21,497
+JC: That was... Loads of things just blew up.
+
+121
+00:10:21,805 --> 00:10:25,325
+[Silence]
+
+122
+00:10:28,822 --> 00:10:31,451
+No such file or directory.
+
+123
+00:10:34,910 --> 00:10:38,514
+Most of these tests are using
+file names that don't exist.
+
+124
+00:10:38,582 --> 00:10:42,434
+This is the only test where we mentioned
+a mock expectation on file at mtime. 
+
+125
+00:10:42,457 --> 00:10:45,382
+All the other tests are
+actually going to be calling it. 
+
+126
+00:10:45,380 --> 00:10:50,491
+And then it will fail because you've
+asked for a file that doesn't exist.
+
+127
+00:10:50,868 --> 00:10:56,845
+So this is another bit of system stuff
+that we need to stub out in all the tests. 
+
+128
+00:10:56,960 --> 00:11:00,468
+So allow target to receive system and return true. 
+
+129
+00:11:00,610 --> 00:11:03,577
+The other targets in these tests
+are doubles so that doesn't matter. 
+
+130
+00:11:03,630 --> 00:11:20,640
+But we're also going to allow file
+to receive mtime and return time now.
+
+131
+00:11:21,497 --> 00:11:24,742
+Inaud for consistency.
+
+132
+00:11:26,000 --> 00:11:30,582
+TS: Is it important that it does
+return a specific value at this stage?
+
+133
+00:11:30,700 --> 00:11:35,817
+JC: Not at this stage because we're
+not using it so let's remove the .....
+
+134
+00:11:35,851 --> 00:11:40,960
+TS: But your imagining that at some point you
+want to control the mtime that comes back from this.
+
+135
+00:11:40,960 --> 00:11:47,062
+JC: Yes. The next thing we will do is use that
+value and compare it to some other things,
+
+136
+00:11:47,060 --> 00:11:49,942
+and at that point having the right
+value at the right time will be important.
+
+137
+00:11:49,940 --> 00:11:52,777
+TS: And that's why you had to
+come back and put return true in here
+
+138
+00:11:52,800 --> 00:11:57,451
+to make it so that stuff didn't
+think that system had failed.
+
+139
+00:11:57,520 --> 00:12:09,611
+JC: Exactly, but on line 27 nothing is using that
+value so it's probably safe to have it return nil.
+
+140
+00:12:11,805 --> 00:12:18,651
+So we're still getting one fail and that's
+in the integration tests: for the same reason.
+
+141
+00:12:18,914 --> 00:12:22,285
+[Silence]
+
+142
+00:12:30,034 --> 00:12:32,640
+TS: Should the integration test now actually work?
+
+143
+00:12:32,960 --> 00:12:34,651
+JC: You're right, the integration test should work. 
+
+144
+00:12:34,674 --> 00:12:38,285
+And I shouldn't be stubbing things in
+the integration test. It's using real files.
+
+145
+00:12:38,297 --> 00:12:41,880
+TS: So what's the problem?
+
+146
+00:12:42,171 --> 00:12:45,622
+JC: "No such file or directory"
+
+147
+00:12:45,760 --> 00:12:49,737
+TS: Is this the target that's trying to build 1.txt?
+
+148
+00:12:51,200 --> 00:12:55,657
+JC: Right yes, I've told the
+dependencies to update themselves.
+
+149
+00:12:55,650 --> 00:13:00,274
+Then I'm saying what's the mtime of my
+file; but I might not have built my file yet.
+
+150
+00:13:00,300 --> 00:13:04,080
+TS: So this is the special case when
+you're running the build for the first time.
+
+151
+00:13:04,102 --> 00:13:06,034
+And this file doesn't exist yet.
+
+152
+00:13:06,068 --> 00:13:11,211
+JC: Exactly. It's happening
+recursively so that what's going wrong.
+
+153
+00:13:11,302 --> 00:13:14,982
+So, it's actually the code that's wrong.
+
+154
+00:13:16,274 --> 00:13:18,171
+TS: I guess this is why we have integration tests.
+
+155
+00:13:18,205 --> 00:13:26,880
+JC: Yes. So we can check the file exists first. 
+
+156
+00:13:30,460 --> 00:13:33,554
+That's a start. 
+
+157
+00:13:33,920 --> 00:13:37,165
+Now we're back to something reasonable.
+
+158
+00:13:37,188 --> 00:13:38,925
+TS: So that fixed your integration test?
+
+159
+00:13:38,920 --> 00:13:44,102
+JC: Yes, but now the unit test is failing because this
+is still fake pathname that doesn't exist.
+
+160
+00:13:44,100 --> 00:13:49,314
+When you call File.exists with it it won't work.
+
+161
+00:13:50,525 --> 00:13:57,817
+So we'll also have to stub that in the unit test. 
+
+162
+00:13:57,970 --> 00:14:08,925
+Which means we can, in general, bypass that
+whole code path by having this return false.
+
+163
+00:14:09,130 --> 00:14:12,194
+Then we won't need to stub more things. 
+
+164
+00:14:12,190 --> 00:14:16,320
+But in the case where were doing this... 
+
+165
+00:14:16,342 --> 00:14:33,600
+We also need to expect file to receive
+exists with target pathname and return true.
+
+166
+00:14:34,620 --> 00:14:36,045
+I could write a bunch of tests...
+
+167
+00:14:36,060 --> 00:14:39,885
+Like, if the file exists it checks the thing
+or if it doesn't exist it doesn't check the thing, 
+
+168
+00:14:39,920 --> 00:14:41,485
+but it's sort of implicit.
+
+169
+00:14:41,508 --> 00:14:45,588
+In that something already failed,
+that made me write the file exists check.
+
+170
+00:14:45,600 --> 00:14:49,508
+So I'm not desperate about
+writing those tests right now.
 
