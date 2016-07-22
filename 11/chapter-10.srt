@@ -84,7 +84,7 @@ will call build on these two,
 
 19
 00:01:24,480 --> 00:01:27,554
-and then they will both call build on that thing. 
+and then they will both call build on that thing.
 
 20
 00:01:27,550 --> 00:01:33,097
@@ -99,7 +99,7 @@ within the same build process.
 22
 00:01:38,350 --> 00:01:45,211
 We're now talking about
-when you run your build twice. 
+when you run your build twice.
 
 23
 00:01:45,382 --> 00:01:52,320
@@ -140,7 +140,7 @@ putting a flag in memory on an object
 
 31
 00:02:21,417 --> 00:02:24,640
-to say don't do this again, you've already done it. 
+to say don't do this again, you've already done it.
 
 32
 00:02:24,765 --> 00:02:26,731
@@ -154,12 +154,12 @@ that exists between processes.
 34
 00:02:30,830 --> 00:02:35,222
 In this case that state could be the
-modified times of the files you're looking at. 
+modified times of the files you're looking at.
 
 35
 00:02:35,234 --> 00:02:39,771
 That's why basing this around
-files as the primary thing... 
+files as the primary thing...
 
 36
 00:02:40,617 --> 00:02:46,777
@@ -178,7 +178,7 @@ there's dependencies. We could also have ...
 39
 00:02:57,074 --> 00:03:01,017
 What would we like to do here?
-So this is the thing that tells the things to build... 
+So this is the thing that tells the things to build...
 
 40
 00:03:01,070 --> 00:03:03,314
@@ -196,7 +196,7 @@ what is this target going to do?
 43
 00:03:12,270 --> 00:03:18,342
 So if any of those calls return a time
-that's higher than the time that I have, 
+that's higher than the time that I have,
 
 44
 00:03:18,445 --> 00:03:21,405
@@ -229,12 +229,12 @@ out of date, so it will recompile it.
 50
 00:03:40,022 --> 00:03:45,005
 If it's the other way round
-that means your JavaScript file 
+that means your JavaScript file
 
 51
 00:03:45,017 --> 00:03:48,822
 has presumably been generated since
-the last time you modified the coffee script. 
+the last time you modified the coffee script.
 
 52
 00:03:48,834 --> 00:03:51,245
@@ -242,7 +242,7 @@ And you don't need to do any more work.
 
 53
 00:03:51,240 --> 00:03:59,817
-So let's say... We can have some context inside here. 
+So let's say... We can have some context inside here.
 
 54
 00:03:59,810 --> 00:04:12,068
@@ -269,11 +269,11 @@ to return time now plus 2 minutes.
 59
 00:04:59,860 --> 00:05:04,411
 The target itself is going to take
-those times it got from the dependencies 
+those times it got from the dependencies
 
 60
 00:05:04,411 --> 00:05:05,988
-and then compare them to what it has. 
+and then compare them to what it has.
 
 61
 00:05:06,000 --> 00:05:11,017
@@ -305,7 +305,7 @@ accessed, and some other things.
 67
 00:05:26,937 --> 00:05:30,605
 When you write to a file, the file
-system updates that time stamp 
+system updates that time stamp
 
 68
 00:05:30,628 --> 00:05:33,560
@@ -319,7 +319,7 @@ pathname that you've been passing in all along?
 70
 00:05:37,920 --> 00:05:45,188
 JC: Yes. I introduced that quite prematurely.
-This is the first time that we need it. 
+This is the first time that we need it.
 
 71
 00:05:46,100 --> 00:05:53,245
@@ -332,7 +332,7 @@ Checks the mtime of its own file.
 
 73
 00:06:01,554 --> 00:06:14,262
- So we expect file to receive mtime with pathname. 
+So we expect file to receive mtime with pathname.
 
 74
 00:06:15,200 --> 00:06:23,257
@@ -341,7 +341,7 @@ make it less of a generic name.
 
 75
 00:06:23,570 --> 00:06:27,234
-Or target pathname. 
+Or target pathname.
 
 76
 00:06:27,645 --> 00:06:30,937
@@ -350,7 +350,7 @@ Or target pathname.
 77
 00:06:33,691 --> 00:06:39,028
 The result inaud sometime,
-we don't really care what it is. 
+we don't really care what it is.
 
 78
 00:06:39,428 --> 00:06:45,577
@@ -359,11 +359,11 @@ So when you call target.build that should happen.
 79
 00:06:45,970 --> 00:06:48,617
 I've just realised this test
-isn't part of this context... 
+isn't part of this context...
 
 80
 00:06:48,628 --> 00:06:50,925
-It doesn't need these things to be true. 
+It doesn't need these things to be true.
 
 81
 00:06:51,028 --> 00:06:53,211
@@ -387,7 +387,7 @@ times and then compare them to itself.
 85
 00:07:11,165 --> 00:07:16,240
 Therefore I should write a test to say
-that it asks the file system for some information 
+that it asks the file system for some information
 
 86
 00:07:17,050 --> 00:07:18,914
@@ -396,7 +396,7 @@ But I realise that wasn't part of this.
 87
 00:07:18,925 --> 00:07:23,142
 So we can check that it does this and then
-given that the dependencies return some values, 
+given that the dependencies return some values,
 
 88
 00:07:23,154 --> 00:07:25,794
@@ -415,7 +415,7 @@ imagining the Time.now is the mtime of this target.
 91
 00:07:38,120 --> 00:07:44,171
 JC: Yes and I'm just doing that because hard coding
-time values always ends up blowing up in my face. 
+time values always ends up blowing up in my face.
 
 92
 00:07:45,657 --> 00:07:48,811
@@ -433,8 +433,88 @@ I could have put them in the past but it doesn't
 make much difference, it's the relative offset.
 
 95
-00:08:00,388 --> 00:08:02,380
+00:08:00,674 --> 00:08:08,640
+This will fail now because we're not doing that,
+we're not showing the mtime so this won't work.
 
+96
+00:08:11,150 --> 00:08:17,680
+"received unexpected message :build with (no args)"
+in Target spec 28.
 
-JC: This will fail now because we're not doing that, we're not showing the mtime. This won't work.
+97
+00:08:17,954 --> 00:08:21,440
+[Silence]
+
+98
+00:08:23,440 --> 00:08:28,662
+Oh right, it's telling those things to build.
+That's fine, we just need to give them a build method.
+
+99
+00:08:28,948 --> 00:08:32,400
+[Silence]
+
+100
+00:08:34,982 --> 00:08:38,537
+It's only later we say that that
+build method should return something.
+
+101
+00:08:38,530 --> 00:08:41,005
+It's not important what these tests return.
+
+102
+00:08:41,250 --> 00:08:49,085
+I'm trying to make the doubles express the minimum
+interface they need to make the test work.
+
+103
+00:08:49,211 --> 00:08:52,582
+TS: So you didn't need to do this before because
+there was only one example in this context,
+
+104
+00:08:52,594 --> 00:08:56,571
+and that had expectations on those doubles.
+
+105
+00:08:56,780 --> 00:09:03,005
+JC: Right yes. I wrote this
+test down here, that stubs it.
+
+106
+00:09:03,142 --> 00:09:09,691
+But for this test, those don't apply
+so I had to put build method up top.
+
+107
+00:09:11,931 --> 00:09:17,954
+Now it's failing for the right reason and
+file isn't receiving mtime with the right things. 
+
+108
+00:09:17,950 --> 00:09:21,862
+So let's go and fix that.
+
+109
+00:09:22,068 --> 00:09:23,860
+So  to build_self, we're already returning
+we're already built so that's an easy cheap check. 
+
+110
+00:09:23,860 --> 00:09:25,860
+We don't want to call the file system if we know we've already built, it's a waste of some io. So we'll look at the mtime. File.mtime we don't need that variable. He mumbles. With our path name.
+
+TS: So this the piece of state you we're talking about. We update these mtimes when we run a build and then next time we run a build we can look to see if someone else has been in and changed anything.
+JC: Yes, and you can set that explicitly yourself. You can tell unix to set the mtime of this file to this. But it also happens implicitly when you write a file. That's why this is the first time it's appeared so far.
+TS: Wow.
+JC: That was load loads of thing just blew up.
+So  to build_self, we're already returning
+we're already built so that's an easy cheap check. 
+
+111
+00:09:25,860 --> 00:09:29,337
+So  to build_self, we're already returning
+we're already built so that's an easy cheap check. 
 
