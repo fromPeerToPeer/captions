@@ -1,0 +1,72 @@
+﻿1
+00:00:00,000 --> 00:00:03,588
+Chapter 12.
+Returning fresh mtime from a regenerated Target.
+
+2
+00:00:04,057 --> 00:00:08,777
+JC: If we go back to our code. 
+
+3
+00:00:09,080 --> 00:00:15,965
+What do we need to do? We've got
+these mtimes so we need to store that. 
+
+4
+00:00:18,160 --> 00:00:20,754
+Ensure updated dependencies. 
+
+5
+00:00:20,857 --> 00:00:25,691
+We've said in our test that calling build
+on a dependency will return its' mtime. 
+
+6
+00:00:25,690 --> 00:00:37,074
+So let's store that in here when we build the
+dependencies and call map so we get the values.
+
+7
+00:00:39,748 --> 00:00:54,217
+And then here we can say return unless any of
+the dependent times are greater than our own.
+
+8
+00:00:57,257 --> 00:01:00,285
+I think that will be OK. 
+
+9
+00:01:00,502 --> 00:01:04,982
+What I do need to do for this to work... 
+
+10
+00:01:05,337 --> 00:01:08,605
+The build method will need to return mtime.
+
+11
+00:01:08,600 --> 00:01:13,462
+But I haven't written a test that requires that yet.
+
+12
+00:01:13,462 --> 00:01:15,460
+I'm just thinking how I would force myself to do that... in a second.
+Undefined method `>` for NilClass.
+
+"undefined method `>' for nil:NilClass
+
+That must mean that I've stubbed mtime to somehow return... Target spec 33. Whats going on in there?
+
+JC: Oh yes in this test those build targets are not returning anything.
+TS: So they're getting nil back and then trying to compare it to something.
+JC: Exactly.
+I think this is the point where I need to put a value that actually makes sense.
+Now everything passes.
+
+JC: This is a bit of an illusion. I'm surprised that the integration test works because build isn't returning the mtime.
+TS: It's the integration test of the previous behaviour that you're expecting to break?
+JC: Yes. That's probably because in the integration test we're building things that don't exist. So it isn't hitting that code path.
+TS: So we don't have an integration test for this laziness behaviour right?
+JC: No.
+
+JC: There the targets, so let's...
+
