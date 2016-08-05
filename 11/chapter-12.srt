@@ -141,8 +141,87 @@ Dependent targets.
 [James thinks]
 
 33
-00:03:01,485 --> 00:03:03,480
-One target depends on another. We could put a context in here that creates one.txt and then see if the second one will build.
-He types... when one target already exists do file 1.text. let's just make it one rather than from where the files it was previously derived from are. No let's not do that. I don't want this test to get into setting out times on various files. They're going to be created in a certain order but the time resolution on those time stamps on the files is only a second.
-So sometimes, depending on whether your time stamps overlaps a second boundary they will sometimes be the same value and sometimes not. The ordering is not predictable.
+00:03:02,034 --> 00:03:03,360
+When one target depends on another... 
+
+34
+00:03:03,360 --> 00:03:13,942
+We could put a context in here that creates one.txt
+and then sees if the second one will build.
+
+35
+00:03:14,260 --> 00:03:25,440
+context when one target
+already exists do file one.text.
+
+36
+00:03:30,620 --> 00:03:38,102
+Let's just make it include one rather than from
+where the files it was previously derived from are.
+
+37
+00:03:39,782 --> 00:03:44,822
+No let's not do that. I don't want this test
+to get into setting mtimes on various files. 
+
+38
+00:03:44,820 --> 00:03:48,731
+They're going to be created in a certain order .
+
+39
+00:03:48,770 --> 00:03:53,222
+But the time resolution on those
+time stamps on the files is only a second.
+
+40
+00:03:53,268 --> 00:03:59,920
+So sometimes, depending on whether your
+test execution overlaps a second boundary,
+
+41
+00:03:59,954 --> 00:04:05,577
+there will sometimes be the same value and
+sometimes not. The ordering is not predictable.
+
+42
+00:04:06,571 --> 00:04:18,651
+To be safe, I'm going to make this have the value
+that it would have if you had built it from source.
+
+43
+00:04:19,280 --> 00:04:24,628
+Builds the final target successfully.
+
+44
+00:04:26,000 --> 00:04:32,022
+I suppose successfully is implicit
+when you're writing any sort of test but...
+
+45
+00:04:32,742 --> 00:04:35,645
+Yeah...
+
+46
+00:04:37,634 --> 00:04:40,662
+I could just do that.
+
+47
+00:04:41,668 --> 00:04:52,685
+This is still saying when you build the second target the target should have content based on that but this ought to trigger the first target to try to check the...
+No the first target will try to check the mtimes of the files a and b that it depends on and it will get nil from their build methods, so this should fall over. Yes, so a second error out of that.
+TS: So this is not yet a test of the laziness functionality but it is exercising more of the code than the previous integration test was?
+JC: Yes.
+
+JC: That integration test makes sure that you can rebuild a partially built system.
+It means you need a test for build that returns the mtime.
+TS: Right.
+JC: Going back to our unit tests:..where did we have something with a dependency.
+This doesn't necessarily mean there are dependencies.
+
+JC: There are two cases for this. If the file already exists and is up to date it should return its existing mtime. If you had to rebuild it, it should return Time.now, I guess.
+So we can build those in to here so when the dependencies are newer than the target it returns the later of the dependencies. It could either return the latest dependencies bult but building the target itself will take time so if you say later, then its dependencies work.
+Or, if its dependencies were touched a very long time ago, but they're still newer than you are we might get into a like... something appears older than it actually is, so i think i should probably return time of now. He types then pauses..
+In this context we've already stubbed out time.
+
+TS: This reminds me of something I was confused about, in the build self we get the mtime of the possibly stale file, but you're talking about not the mtime of that file at that point but almost the end point of that file after its been regenerated.
 
