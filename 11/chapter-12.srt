@@ -206,21 +206,109 @@ Yeah...
 I could just do that.
 
 47
-00:04:41,668 --> 00:04:52,685
-This is still saying when you build the second target the target should have content based on that but this ought to trigger the first target to try to check the...
-No the first target will try to check the mtimes of the files a and b that it depends on and it will get nil from their build methods, so this should fall over. Yes, so a second error out of that.
-TS: So this is not yet a test of the laziness functionality but it is exercising more of the code than the previous integration test was?
-JC: Yes.
+00:04:41,660 --> 00:04:50,491
+This is still saying when you build the second
+target it should have that content based on that.
 
-JC: That integration test makes sure that you can rebuild a partially built system.
-It means you need a test for build that returns the mtime.
-TS: Right.
-JC: Going back to our unit tests:..where did we have something with a dependency.
-This doesn't necessarily mean there are dependencies.
+48
+00:04:50,525 --> 00:05:01,302
+But this ought to trigger the
+first target to try to check the...
 
-JC: There are two cases for this. If the file already exists and is up to date it should return its existing mtime. If you had to rebuild it, it should return Time.now, I guess.
-So we can build those in to here so when the dependencies are newer than the target it returns the later of the dependencies. It could either return the latest dependencies bult but building the target itself will take time so if you say later, then its dependencies work.
-Or, if its dependencies were touched a very long time ago, but they're still newer than you are we might get into a like... something appears older than it actually is, so i think i should probably return time of now. He types then pauses..
+49
+00:05:02,570 --> 00:05:08,617
+No, the first target will try to check the
+mtimes of the files a and b that it depends on.
+
+50
+00:05:08,650 --> 00:05:14,674
+and it will get nil from their build
+methods, so this should fall over. 
+
+51
+00:05:15,020 --> 00:05:17,577
+Yes, so a second error out of that.
+
+52
+00:05:17,600 --> 00:05:20,491
+TS: So this is not yet a test
+of the laziness functionality, 
+
+53
+00:05:20,525 --> 00:05:24,388
+but it is exercising more of the code
+than the previous integration test was?
+
+54
+00:05:24,380 --> 00:05:33,954
+JC: Yes. That integration test makes sure
+that you can rebuild a partially built system.
+
+55
+00:05:34,050 --> 00:05:40,262
+It means you need a test for
+build that returns the mtime.
+
+56
+00:05:44,000 --> 00:05:55,028
+Going back to our unit tests, where did
+we have something with a dependency?
+
+57
+00:05:55,588 --> 00:06:01,085
+This doesn't necessarily mean
+there are dependencies.
+
+58
+00:06:01,080 --> 00:06:03,154
+There's actually two cases for this. 
+
+59
+00:06:03,170 --> 00:06:07,714
+If the file already exists and is up
+to date it should return its existing mtime. 
+
+60
+00:06:07,725 --> 00:06:13,965
+but if you had to rebuild it, it
+should return time.now, I guess.
+
+61
+00:06:14,060 --> 00:06:20,274
+So we can build those in to here.
+
+62
+00:06:20,285 --> 00:06:32,251
+So when the dependencies are newer than the target
+it returns the later of the dependencies.
+
+63
+00:06:32,605 --> 00:06:39,268
+It could either return the latest
+of the dependencies build times, 
+
+64
+00:06:40,360 --> 00:06:46,491
+but building a target will take time so it might be
+a few seconds later than its' dependencies were.
+
+65
+00:06:48,770 --> 00:06:54,880
+Or, if its' dependencies were touched a very long
+time ago, but they're still newer than you are...
+
+66
+00:06:54,914 --> 00:07:02,182
+We might get into like... Something
+appears older than it actually is.
+
+67
+00:07:02,217 --> 00:07:07,222
+So I think I should probably return time.now. 
+
+68
+00:07:07,222 --> 00:07:09,220
+He types then pauses..
 In this context we've already stubbed out time.
 
 TS: This reminds me of something I was confused about, in the build self we get the mtime of the possibly stale file, but you're talking about not the mtime of that file at that point but almost the end point of that file after its been regenerated.
