@@ -48,25 +48,101 @@ The build method will need to return mtime.
 But I haven't written a test that requires that yet.
 
 12
-00:01:13,462 --> 00:01:15,460
-I'm just thinking how I would force myself to do that... in a second.
-Undefined method `>` for NilClass.
+00:01:13,630 --> 00:01:20,262
+I'm just thinking how I would force myself
+to do that, but we'll get to that in a second.
 
+13
+00:01:20,620 --> 00:01:25,040
 "undefined method `>' for nil:NilClass
 
-That must mean that I've stubbed mtime to somehow return... Target spec 33. Whats going on in there?
+14
+00:01:25,070 --> 00:01:30,560
+So that must mean that I've
+stubbed mtime to somehow return (hmm)... 
 
-JC: Oh yes in this test those build targets are not returning anything.
-TS: So they're getting nil back and then trying to compare it to something.
-JC: Exactly.
-I think this is the point where I need to put a value that actually makes sense.
-Now everything passes.
+15
+00:01:31,302 --> 00:01:35,017
+So this is Target spec 33. 
 
-JC: This is a bit of an illusion. I'm surprised that the integration test works because build isn't returning the mtime.
-TS: It's the integration test of the previous behaviour that you're expecting to break?
-JC: Yes. That's probably because in the integration test we're building things that don't exist. So it isn't hitting that code path.
-TS: So we don't have an integration test for this laziness behaviour right?
+16
+00:01:36,194 --> 00:01:39,954
+What's going on in there?
+
+17
+00:01:42,205 --> 00:01:49,970
+Oh yes, in this test those build
+targets are not returning anything.
+
+18
+00:01:50,388 --> 00:01:54,388
+TS: So they're getting nil back and
+then trying to compare it to something.
+
+19
+00:01:54,400 --> 00:02:02,971
+JC: Exactly. I think this is the point where I need
+to put a value that actually makes sense in here.
+
+20
+00:02:03,108 --> 00:02:07,291
+[Silence]
+
+21
+00:02:07,885 --> 00:02:10,937
+Now everything passes. 
+
+22
+00:02:14,388 --> 00:02:17,417
+This is a bit of an illusion because it doesn't (hmm)...
+
+23
+00:02:17,474 --> 00:02:24,640
+I'm surprised that the integration test
+works because build isn't returning the mtime.
+
+24
+00:02:24,777 --> 00:02:29,462
+[James thinks]
+
+25
+00:02:29,828 --> 00:02:36,034
+TS: It's the integration test of the previous
+behaviour that you're expecting to break?
+
+26
+00:02:36,170 --> 00:02:38,971
+JC: Yes. 
+
+27
+00:02:39,417 --> 00:02:43,085
+That's probably because in the integration
+test we're building things that don't exist. 
+
+28
+00:02:43,080 --> 00:02:46,000
+So it isn't hitting that code path.
+
+29
+00:02:47,142 --> 00:02:51,508
+TS: So we don't have an integration
+test for this laziness behaviour right?
+
+30
+00:02:51,500 --> 00:02:52,674
 JC: No.
 
-JC: There the targets, so let's...
+31
+00:02:52,760 --> 00:02:55,085
+Dependent targets.
+
+32
+00:02:55,360 --> 00:03:01,485
+[James thinks]
+
+33
+00:03:01,485 --> 00:03:03,480
+One target depends on another. We could put a context in here that creates one.txt and then see if the second one will build.
+He types... when one target already exists do file 1.text. let's just make it one rather than from where the files it was previously derived from are. No let's not do that. I don't want this test to get into setting out times on various files. They're going to be created in a certain order but the time resolution on those time stamps on the files is only a second.
+So sometimes, depending on whether your time stamps overlaps a second boundary they will sometimes be the same value and sometimes not. The ordering is not predictable.
 
