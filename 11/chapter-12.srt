@@ -5,21 +5,21 @@ Returning fresh mtime from a regenerated Target.
 
 2
 00:00:04,057 --> 00:00:08,777
-JC: If we go back to our code. 
+JC: If we go back to our code.
 
 3
 00:00:09,080 --> 00:00:15,965
 What do we need to do? We've got
-these mtimes so we need to store that. 
+these mtimes so we need to store that.
 
 4
 00:00:18,160 --> 00:00:20,754
-Ensure updated dependencies. 
+Ensure updated dependencies.
 
 5
 00:00:20,857 --> 00:00:25,691
 We've said in our test that calling build
-on a dependency will return its' mtime. 
+on a dependency will return its' mtime.
 
 6
 00:00:25,690 --> 00:00:37,074
@@ -33,11 +33,11 @@ the dependent times are greater than our own.
 
 8
 00:00:57,257 --> 00:01:00,285
-I think that will be OK. 
+I think that will be OK.
 
 9
 00:01:00,502 --> 00:01:04,982
-What I do need to do for this to work... 
+What I do need to do for this to work...
 
 10
 00:01:05,337 --> 00:01:08,605
@@ -59,11 +59,11 @@ to do that, but we'll get to that in a second.
 14
 00:01:25,070 --> 00:01:30,560
 So that must mean that I've
-stubbed mtime to somehow return (hmm)... 
+stubbed mtime to somehow return (hmm)...
 
 15
 00:01:31,302 --> 00:01:35,017
-So this is Target spec 33. 
+So this is Target spec 33.
 
 16
 00:01:36,194 --> 00:01:39,954
@@ -90,7 +90,7 @@ to put a value that actually makes sense in here.
 
 21
 00:02:07,885 --> 00:02:10,937
-Now everything passes. 
+Now everything passes.
 
 22
 00:02:14,388 --> 00:02:17,417
@@ -112,12 +112,12 @@ behaviour that you're expecting to break?
 
 26
 00:02:36,170 --> 00:02:38,971
-JC: Yes. 
+JC: Yes.
 
 27
 00:02:39,417 --> 00:02:43,085
 That's probably because in the integration
-test we're building things that don't exist. 
+test we're building things that don't exist.
 
 28
 00:02:43,080 --> 00:02:46,000
@@ -142,7 +142,7 @@ Dependent targets.
 
 33
 00:03:02,034 --> 00:03:03,360
-When one target depends on another... 
+When one target depends on another...
 
 34
 00:03:03,360 --> 00:03:13,942
@@ -162,7 +162,7 @@ where the files it was previously derived from are.
 37
 00:03:39,782 --> 00:03:44,822
 No let's not do that. I don't want this test
-to get into setting mtimes on various files. 
+to get into setting mtimes on various files.
 
 38
 00:03:44,820 --> 00:03:48,731
@@ -223,7 +223,7 @@ mtimes of the files a and b that it depends on.
 50
 00:05:08,650 --> 00:05:14,674
 and it will get nil from their build
-methods, so this should fall over. 
+methods, so this should fall over.
 
 51
 00:05:15,020 --> 00:05:17,577
@@ -232,7 +232,7 @@ Yes, so a second error out of that.
 52
 00:05:17,600 --> 00:05:20,491
 TS: So this is not yet a test
-of the laziness functionality, 
+of the laziness functionality,
 
 53
 00:05:20,525 --> 00:05:24,388
@@ -261,12 +261,12 @@ there are dependencies.
 
 58
 00:06:01,080 --> 00:06:03,154
-There's actually two cases for this. 
+There's actually two cases for this.
 
 59
 00:06:03,170 --> 00:06:07,714
 If the file already exists and is up
-to date it should return its existing mtime. 
+to date it should return its existing mtime.
 
 60
 00:06:07,725 --> 00:06:13,965
@@ -285,7 +285,7 @@ it returns the later of the dependencies.
 63
 00:06:32,605 --> 00:06:39,268
 It could either return the latest
-of the dependencies build times, 
+of the dependencies build times,
 
 64
 00:06:40,360 --> 00:06:46,491
@@ -304,12 +304,226 @@ appears older than it actually is.
 
 67
 00:07:02,217 --> 00:07:07,222
-So I think I should probably return time.now. 
+So I think I should probably return time.now.
 
 68
-00:07:07,222 --> 00:07:09,220
-He types then pauses..
-In this context we've already stubbed out time.
+00:07:08,057 --> 00:07:11,908
+Returns the ...
 
-TS: This reminds me of something I was confused about, in the build self we get the mtime of the possibly stale file, but you're talking about not the mtime of that file at that point but almost the end point of that file after its been regenerated.
+69
+00:07:12,020 --> 00:07:16,948
+In this context we've already
+stubbed  mtime... [James thinks]
+
+70
+00:07:17,120 --> 00:07:19,302
+TS: This reminds me of
+something I was confused about, 
+
+71
+00:07:19,314 --> 00:07:27,382
+in the build self we get the
+mtime of the possibly stale file.
+
+72
+00:07:27,380 --> 00:07:31,040
+But you're talking about not
+the mtime of that file at that point.
+
+73
+00:07:31,051 --> 00:07:35,622
+But your talking about almost the end
+point of that file after it's been regenerated.
+
+74
+00:07:35,908 --> 00:07:44,857
+JC: Yes, because if you have a chain of dependencies.
+
+75
+00:07:47,840 --> 00:07:54,617
+Say we have a file called 2 that
+depends on 1 that depends on a. 
+
+76
+00:07:54,720 --> 00:08:05,600
+So if for some bizarre reason,
+the second is newer than a but 1 isn't. 
+
+77
+00:08:06,090 --> 00:08:12,285
+You will regenerate 1, which means you ought
+to regenerate 2, but one returns the mtime of a, 
+
+78
+00:08:12,354 --> 00:08:15,108
+then  the second will think it's up to date. 
+
+79
+00:08:15,100 --> 00:08:21,348
+So it really has to return the time right now
+because it has to report to us down stream.
+
+80
+00:08:21,340 --> 00:08:25,222
+"I was regenerated, I'm now newer than you".
+
+81
+00:08:25,268 --> 00:08:29,771
+That's what I meant about
+getting into ordering problems.
+
+82
+00:08:29,770 --> 00:08:33,588
+So i want to say it returns the current time.
+
+83
+00:08:33,714 --> 00:08:38,560
+I could stub Time.now but
+I don't feel great about that.
+
+84
+00:08:38,560 --> 00:08:41,542
+It's one of those global things,
+if you stub it loads of things could blow up.
+
+85
+00:08:41,540 --> 00:08:44,331
+We could try it and see if anything bad happens.
+
+86
+00:08:44,340 --> 00:08:45,817
+Sometimes I'll indirect something.
+
+87
+00:08:45,810 --> 00:08:51,405
+like make a method called current time that just
+returns time.now, and doesn't need testing really.
+
+88
+00:08:51,470 --> 00:08:55,885
+And then I'll stub that, so it means the
+rest of the system can use the real Time.now,
+
+89
+00:08:55,942 --> 00:08:59,188
+but I've indirected the thing
+the code is going to use.
+
+90
+00:08:59,280 --> 00:09:01,691
+TS: Is the reason your
+expecting it to return time.now 
+
+91
+00:09:01,702 --> 00:09:06,057
+because that's what the mtime of
+the newly generated file is going to be?
+
+92
+00:09:06,050 --> 00:09:11,200
+JC: Yes. I could read the file system again to get that.
+
+93
+00:09:11,440 --> 00:09:17,691
+TS: Is that better or worse than returning
+the current time? I guess it's more expensive.
+
+94
+00:09:18,560 --> 00:09:23,280
+JC: It would be more correct because all the times
+you're using, are the times the file system has. 
+
+95
+00:09:23,302 --> 00:09:30,171
+If your ruby process is for some reason,
+using a different locale from your OS, 
+
+96
+00:09:30,457 --> 00:09:37,165
+which may happen for some reason, then those times
+may be in different time zones, they might conflict.
+
+97
+00:09:37,620 --> 00:09:42,342
+Mtime is really the correct thing. I think I'm
+worrying about the fact that I've stubbed it up here.
+
+98
+00:09:42,365 --> 00:09:49,885
+TS: Right, so you need mtime to return two
+different values for the course of one test right?
+
+99
+00:09:50,148 --> 00:09:55,691
+JC: Yes. We can try that. If it blows up, it blows up. 
+
+100
+00:09:55,700 --> 00:10:02,434
+By calling mtime twice with the same argument
+makes it hard to distinguish the cause.
+
+101
+00:10:02,750 --> 00:10:09,325
+I could say that it has to call some private
+method to get its' new time and assert on that. 
+
+102
+00:10:09,360 --> 00:10:17,417
+But... Let's try it this way and we'll
+see if anything blows up in our faces.
+
+103
+00:10:18,125 --> 00:10:23,862
+OK, so returns the new mtime of the file.
+
+104
+00:10:24,194 --> 00:10:31,428
+Let's say that new mtime is, (I'm just going to
+make that a double), I don't care what its' value is.
+
+105
+00:10:33,177 --> 00:10:39,405
+Although it does have to be a time because we're
+stubbing this before the code gets run so...
+
+106
+00:10:42,457 --> 00:10:46,400
+Why don't we say you can call this twice up here.
+
+107
+00:10:46,628 --> 00:10:53,108
+[Silence]
+
+108
+00:10:53,554 --> 00:10:55,725
+Let's say...
+
+109
+00:10:57,314 --> 00:11:03,451
+Let's leave that as target time and
+then let's call this regeneration time.
+
+110
+00:11:03,451 --> 00:11:04,445
+And say that regeneration time is target time plus 10 minutes. Somewhat arbitrary.
+TS: What's the syntax, where you've passed two arguments into `and_return`. What does that mean?
+JC: That means, when you call this method you will get each of these in sequence. The first time you call it you will get target time, and the second time you call it you will get regeneration time.
+TS: Is that what you want?
+JC: Yes.
+TS: Great.
+
+JC: So, i don't have to do that. So i have to say expect target.build to equal the regeneration time. That's what should be returned from this method.
+Let's leave that as target time and
+then let's call this regeneration time.
+
+111
+00:11:04,445 --> 00:11:05,450
+And say that regeneration time is target time plus 10 minutes. Somewhat arbitrary.
+TS: What's the syntax, where you've passed two arguments into `and_return`. What does that mean?
+JC: That means, when you call this method you will get each of these in sequence. The first time you call it you will get target time, and the second time you call it you will get regeneration time.
+TS: Is that what you want?
+JC: Yes.
+TS: Great.
+
+JC: So, i don't have to do that. So i have to say expect target.build to equal the regeneration time. That's what should be returned from this method.
 
