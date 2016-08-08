@@ -1,0 +1,189 @@
+﻿1
+00:00:00,000 --> 00:00:04,000
+Chapter 13.
+Returning original mtime from an up to date Target.
+
+2
+00:00:04,205 --> 00:00:12,571
+So we did the case where you are forced to rebuild
+yourself, you return your regeneration time.
+
+3
+00:00:12,780 --> 00:00:17,622
+If your already up to date you
+should return your original time,
+
+4
+00:00:17,645 --> 00:00:25,291
+so that you don't imply that you're newer than
+you are and force things downstream to get rebuilt.
+
+5
+00:00:26,297 --> 00:00:28,137
+So where was that; lazy build exe.
+
+6
+00:00:28,130 --> 00:00:31,611
+When the dependencies are newer than
+the target it returns a new time at the file.
+
+7
+00:00:31,622 --> 00:00:42,285
+When the dependencies are older than the target
+it returns the mtime of the unmodified file.
+
+8
+00:00:53,154 --> 00:01:04,285
+In that case we expect
+target.build to equal the target time.
+
+9
+00:01:04,822 --> 00:01:10,285
+[Silence]
+
+10
+00:01:10,354 --> 00:01:14,731
+So... It's not.
+
+11
+00:01:14,900 --> 00:01:19,497
+TS: Do you think this was a rather unfair test
+because those two times would be the same
+
+12
+00:01:19,508 --> 00:01:25,782
+if you hadn't run the instructions,
+the mtime of the file wouldn't have changed.
+
+13
+00:01:25,897 --> 00:01:30,194
+So you've set up the test in such a way
+that you've assumed that the mtime changes.
+
+14
+00:01:30,217 --> 00:01:37,611
+JC: What I'm testing, by accident is that
+it returns the result of the second mtime call,
+
+15
+00:01:37,610 --> 00:01:45,817
+which I've said in the thing is
+the original time plus 10 minutes.
+
+16
+00:01:46,217 --> 00:01:50,560
+But what it's done is returned me...
+
+17
+00:01:50,742 --> 00:01:58,811
+Expected 1712, got 1722 just because
+it's returning the value of the second call.
+
+18
+00:01:58,902 --> 00:02:02,045
+TS: Which would be fine, but it's not fine.
+
+19
+00:02:02,040 --> 00:02:03,577
+JC: No. [Laughter]
+
+20
+00:02:03,620 --> 00:02:10,080
+So is that an accident or is it what i really mean?
+
+21
+00:02:10,190 --> 00:02:13,645
+That it returns the result of the second mtime call.
+
+22
+00:02:13,680 --> 00:02:16,960
+Because what else can you say; you're
+not actually interacting with the system. 
+
+23
+00:02:16,990 --> 00:02:20,400
+You're not running these commands; we're not changing any files.
+
+24
+00:02:20,560 --> 00:02:27,017
+Is there some other way that I can say
+it should return the same time as before?
+
+25
+00:02:30,217 --> 00:02:35,417
+If you decided not to run the build, which you
+don't need to run the File.mtime a second time.
+
+26
+00:02:35,410 --> 00:02:40,377
+TS: Right. I guess it depends on whether
+you care about mtime being run twice or not. 
+
+27
+00:02:40,720 --> 00:02:45,108
+Do you feel it's important it only
+gets run as many times as necessary?
+
+28
+00:02:48,868 --> 00:02:55,337
+JC: Well, this feature that we're working on is all
+about doing as little work as possible I suppose.
+
+29
+00:02:55,340 --> 00:03:03,360
+I mean it is a very cheap operation, but it
+still hits disc, and you know hitting disc is bad. 
+
+30
+00:03:05,530 --> 00:03:07,440
+I'm probably worrying about it more than I ought to. 
+
+31
+00:03:07,500 --> 00:03:12,560
+The question that I have is how
+you test this in an accurate way. 
+
+32
+00:03:12,617 --> 00:03:16,320
+It's not just working by
+accident, it's actually correct.
+
+33
+00:03:16,377 --> 00:03:21,017
+TS: Is it possible to get it to have the
+behaviour that you specified in your test
+
+34
+00:03:21,010 --> 00:03:23,010
+or will you have to relax your
+test in order to do anything?
+
+35
+00:03:23,010 --> 00:03:25,010
+JC: Well i could stub it so it returns the same value the both times but then if it does that, from reading the test you can't tell which of those values its returning. That is not helpful. I could make it so the code caches the first call to mtime and returns that if it decides not to do any work.
+TS: So you could have an instance variable when your initial mtime gets stored and then if it does the build it updates that mtime and returns whichever one of those 'won'.
+JC: Yes i think I'll do that.
+I've accidentally swapped my terminals around. Nevermind!
+So if I go back in to target. We can make this just return mtime. Then we can assign that to an instance variable there and make that a variable there. Then at the end of this we can say file.mtime.pathname. this will now implicitly return mtime [laughter] because it's the last thing that build calls. But I want build to be the recipe of the steps that you do.
+Expected two types of arguments
+TS: Is this the change you made to un-break the test before.
+JC: Yes, maybe I should remove that and fix this specifically where it is done.
+TS: Previously you unended your test to say that it always receives mtime twice, but now you've improved your code so that it only receives it once in a case where it only needs to receive it once. You've optimized away the second of those mtimes.
+
+JC: Let's try something else. In this case it's called twice. I could make it so this is defined to be called once. This scenario. And it returns that.
+So when the dependencies are newer it calls mtime twice and returns the second return value. In this case it only returns it once. No that's not true, it does... oh it only calls mtime again if the things are newer, so this ought to be fine.
+Time always makes me confused.
+TS: Where's this inaud coming from?
+There is probably a test... so we've stubbed it out globally. We said it was allowed to be called twice. This is the test that checks the mtime on its own file, that's that one.
+TS: But you only put the twice in there to stop that test breaking.
+JC: That's true. Now ive specified it more strongly in those tests, this ought not to be necessary.
+TS: Well the change you made to the implementation was so that it doesn't get called twice unless it needs to be.
+JC: Yes. Ok so it's green so we should check what we've done and commit.
+or will you have to relax your
+test in order to do anything?
+
+36
+00:03:25,010 --> 00:03:26,045
+or will you have to relax your
+test in order to do anything?
+
