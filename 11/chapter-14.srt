@@ -169,19 +169,109 @@ made it lazy enough, it should happen.
 And indeed nothing happens. 
 
 40
-00:03:54,228 --> 00:03:56,220
-Because we've made it this recursive structure. If anything does need rebuilding it should rebuild it but not rebuild everything. So if i use touch, which sets the mtime on a file to now, and creates it if it's not there. If I touch example lib hello.js. Or rather, let's touch hello coffee. Sorry.
-TS: So this is simulating you having edited it?
-JC: Yes. So if I touch that. Hello.js is now up to date. The compliment.js isn't. So I should run the coffee compiler once and then run uglify. Because the whole bundle is out of date as well because you changed the source file. So it should recompile what needs to be recompiled but only those files.
-TS: Ok.
-JC: And we see there that it has run coffee once on hello.coffee. but not on complimenter.
-TS: Right.
-JC: So that seems to be doing what we want. I'm just going to check because I haven't revisited this file in a while. It is the changes we made that made it do this.
-If I delete this line, then it should become unlazy. It should do all the work every time.
-It does, you can see it churning away there. I'll reinstate that line, and it becomes lazy again.
-TS: Excellent.
-JC: So that seems to do what we want.
-TS: That's great. Well congratulations on getting it working, that's really good. That seems like a good place for us to stop. Thanks very much, I've really enjoyed this.
-JC: Me too, thanks Tom.
+00:03:54,285 --> 00:03:57,714
+Because we've made it this recursive structure...
 
+41
+00:03:57,771 --> 00:04:01,531
+If anything does need rebuilding it
+should rebuild it but not rebuild everything.
+
+42
+00:04:01,702 --> 00:04:09,690
+So if I use touch, which sets the mtime on
+a file to now, and creates it if it's not there.
+
+43
+00:04:10,297 --> 00:04:19,130
+If I touch example lib hello.js.
+Or rather, let's touch hello coffee. Sorry.
+
+44
+00:04:19,302 --> 00:04:23,291
+TS: So this is simulating you having edited it?
+
+45
+00:04:23,337 --> 00:04:28,297
+JC: Yes. So if I touch that. Hello.js is now
+up to date. The complimenter.js isn't. 
+
+46
+00:04:28,290 --> 00:04:32,125
+So this should run the coffee
+compiler once and then run uglify.
+
+47
+00:04:32,120 --> 00:04:36,400
+Because the whole bundle is out of date
+as well, because you changed the source file. 
+
+48
+00:04:36,400 --> 00:04:36,480
+So it should recompile what needs
+to be recompiled but only those files.
+Because the whole bundle is out of date
+as well, because you changed the source file. 
+
+49
+00:04:36,480 --> 00:04:40,274
+So it should recompile what needs
+to be recompiled but only those files.
+
+50
+00:04:40,331 --> 00:04:42,228
+TS: OK.
+
+51
+00:04:42,220 --> 00:04:48,537
+JC: And we see there that it has run coffee
+once on hello.coffee. but not on complimenter.
+
+52
+00:04:48,530 --> 00:04:50,114
+JC: So that seems to be doing what we want.
+
+53
+00:04:50,110 --> 00:04:53,805
+I'm just going to check because
+I haven't revisited this file in a while. 
+
+54
+00:04:53,850 --> 00:04:59,360
+It is the changes we made that made it do this.
+
+55
+00:05:01,417 --> 00:05:11,828
+If I delete this line, then it should become
+unlazy. It should do all the work every time.
+
+56
+00:05:11,820 --> 00:05:16,080
+It does, you can see it churning away there.
+
+57
+00:05:16,377 --> 00:05:20,468
+I'll reinstate that line, and it becomes lazy again.
+
+58
+00:05:20,460 --> 00:05:21,154
+TS: Excellent.
+
+59
+00:05:21,150 --> 00:05:22,880
+JC: So that seems to do what we want.
+
+60
+00:05:23,150 --> 00:05:27,200
+TS: That's great. Well congratulations
+on getting it working, that's really good.
+
+61
+00:05:27,200 --> 00:05:32,137
+That seems like a good place for us to stop.
+Thanks very much, I've really enjoyed this.
+
+62
+00:05:32,130 --> 00:05:33,565
+JC: Me too, thanks Tom.
 
