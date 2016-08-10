@@ -10,12 +10,12 @@ TS: So where does that get us to?
 3
 00:00:06,114 --> 00:00:11,977
 JC: Well if we go back to the
-original example that we were given, 
+original example that we were given,
 
 4
 00:00:11,970 --> 00:00:20,617
 I was hacking around with the script trying to
-decide what the user interface to this should be. 
+decide what the user interface to this should be.
 
 5
 00:00:21,977 --> 00:00:27,280
@@ -27,15 +27,15 @@ So this will now be lib/fakemake.
 
 7
 00:00:32,570 --> 00:00:39,577
-Now... With the target... there's two source files. 
+Now... With the target... there's two source files.
 
 8
 00:00:39,570 --> 00:00:43,188
-I will need the target for both of those. 
+I will need the target for both of those.
 
 9
 00:00:43,180 --> 00:00:46,982
-These are in the namespace now. 
+These are in the namespace now.
 
 10
 00:00:47,120 --> 00:00:54,617
@@ -57,12 +57,12 @@ no dependencies and no build instructions.
 14
 00:01:11,760 --> 00:01:22,971
 They have hello JavaScript. Which is
-derived from hello.coffee and you build that. 
+derived from hello.coffee and you build that.
 
 15
 00:01:23,370 --> 00:01:28,011
 We could make a target for the lib directory,
-not sure if I'll go through extracting that. 
+not sure if I'll go through extracting that.
 
 16
 00:01:28,020 --> 00:01:30,491
@@ -79,7 +79,7 @@ Actually, directories do have mtimes.
 19
 00:01:40,605 --> 00:01:49,885
 Yes, target new example lib;
-which has no dependencies. 
+which has no dependencies.
 
 20
 00:01:49,942 --> 00:01:56,994
@@ -87,7 +87,7 @@ And is built by calling make dir  p example lib.
 
 21
 00:01:58,210 --> 00:02:01,085
-Which means you can remove that. 
+Which means you can remove that.
 
 22
 00:02:05,428 --> 00:02:09,931
@@ -95,7 +95,7 @@ Which means that goes that way.
 
 23
 00:02:11,360 --> 00:02:15,188
-Let's clone that rather than... 
+Let's clone that rather than...
 
 24
 00:02:15,440 --> 00:02:21,440
@@ -112,12 +112,12 @@ Let's do that one and then...
 27
 00:02:31,490 --> 00:02:38,994
 So complimenter.js depends on
-complimenter.coffee. That all looks OK. 
+complimenter.coffee. That all looks OK.
 
 28
 00:02:39,490 --> 00:02:49,005
 And bundle.js depends on two JavaScript files and
-you build it by calling that and then you build it. 
+you build it by calling that and then you build it.
 
 29
 00:02:49,108 --> 00:02:52,411
@@ -125,12 +125,12 @@ OK so...
 
 30
 00:02:54,480 --> 00:02:57,980
-This was in scratch test rb. 
+This was in scratch test rb.
 
 31
 00:03:00,182 --> 00:03:08,765
 As always, let's remove
-everything that we had before. 
+everything that we had before.
 
 32
 00:03:09,074 --> 00:03:12,068
@@ -157,16 +157,16 @@ we've got everything in there.
 37
 00:03:36,811 --> 00:03:44,068
 And example bundle contains
-the code that we wanted. 
+the code that we wanted.
 
 38
 00:03:44,060 --> 00:03:50,194
 If we run it again, because we've
-made it lazy enough, it should happen. 
+made it lazy enough, it should happen.
 
 39
 00:03:50,262 --> 00:03:54,228
-And indeed nothing happens. 
+And indeed nothing happens.
 
 40
 00:03:54,285 --> 00:03:57,714
@@ -194,7 +194,7 @@ TS: So this is simulating you having edited it?
 45
 00:04:23,337 --> 00:04:28,297
 JC: Yes. So if I touch that. Hello.js is now
-up to date. The complimenter.js isn't. 
+up to date. The complimenter.js isn't.
 
 46
 00:04:28,290 --> 00:04:32,125
@@ -202,76 +202,69 @@ So this should run the coffee
 compiler once and then run uglify.
 
 47
-00:04:32,120 --> 00:04:36,400
+00:04:32,120 --> 00:04:36,491
 Because the whole bundle is out of date
-as well, because you changed the source file. 
+as well, because you changed the source file.
 
 48
-00:04:36,400 --> 00:04:36,480
+00:04:36,525 --> 00:04:40,270
 So it should recompile what needs
 to be recompiled but only those files.
-Because the whole bundle is out of date
-as well, because you changed the source file. 
 
 49
-00:04:36,480 --> 00:04:40,274
-So it should recompile what needs
-to be recompiled but only those files.
-
-50
 00:04:40,331 --> 00:04:42,228
 TS: OK.
 
-51
+50
 00:04:42,220 --> 00:04:48,537
 JC: And we see there that it has run coffee
 once on hello.coffee. but not on complimenter.
 
-52
-00:04:48,530 --> 00:04:50,114
+51
+00:04:48,530 --> 00:04:50,251
 JC: So that seems to be doing what we want.
 
-53
-00:04:50,110 --> 00:04:53,805
+52
+00:04:50,285 --> 00:04:53,800
 I'm just going to check because
-I haven't revisited this file in a while. 
+I haven't revisited this file in a while,
+
+53
+00:04:53,850 --> 00:04:59,360
+that it is the changes we made that made it do this.
 
 54
-00:04:53,850 --> 00:04:59,360
-It is the changes we made that made it do this.
-
-55
 00:05:01,417 --> 00:05:11,828
 If I delete this line, then it should become
 unlazy. It should do all the work every time.
 
-56
+55
 00:05:11,820 --> 00:05:16,080
 It does, you can see it churning away there.
 
-57
+56
 00:05:16,377 --> 00:05:20,468
 I'll reinstate that line, and it becomes lazy again.
 
-58
+57
 00:05:20,460 --> 00:05:21,154
 TS: Excellent.
 
-59
+58
 00:05:21,150 --> 00:05:22,880
 JC: So that seems to do what we want.
 
-60
+59
 00:05:23,150 --> 00:05:27,200
 TS: That's great. Well congratulations
 on getting it working, that's really good.
 
-61
+60
 00:05:27,200 --> 00:05:32,137
 That seems like a good place for us to stop.
 Thanks very much, I've really enjoyed this.
 
-62
+61
 00:05:32,130 --> 00:05:33,565
 JC: Me too, thanks Tom.
 

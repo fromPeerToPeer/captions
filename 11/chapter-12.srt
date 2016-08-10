@@ -115,12 +115,12 @@ behaviour that you're expecting to break?
 JC: Yes.
 
 27
-00:02:39,417 --> 00:02:43,085
+00:02:39,325 --> 00:02:43,222
 That's probably because in the integration
 test we're building things that don't exist.
 
 28
-00:02:43,080 --> 00:02:46,000
+00:02:43,234 --> 00:02:46,000
 So it isn't hitting that code path.
 
 29
@@ -316,12 +316,12 @@ In this context we've already
 stubbed  mtime... [James thinks]
 
 70
-00:07:17,120 --> 00:07:19,302
+00:07:17,120 --> 00:07:19,531
 TS: This reminds me of
-something I was confused about, 
+something I was confused about,
 
 71
-00:07:19,314 --> 00:07:27,382
+00:07:19,554 --> 00:07:27,380
 in the build self we get the
 mtime of the possibly stale file.
 
@@ -342,21 +342,21 @@ JC: Yes, because if you have a chain of dependencies.
 75
 00:07:47,840 --> 00:07:54,617
 Say we have a file called 2 that
-depends on 1 that depends on a. 
+depends on 1 that depends on a.
 
 76
 00:07:54,720 --> 00:08:05,600
 So if for some bizarre reason,
-the second is newer than a but 1 isn't. 
+the second is newer than a but 1 isn't.
 
 77
 00:08:06,090 --> 00:08:12,285
 You will regenerate 1, which means you ought
-to regenerate 2, but one returns the mtime of a, 
+to regenerate 2, but one returns the mtime of a,
 
 78
 00:08:12,354 --> 00:08:15,108
-then  the second will think it's up to date. 
+then  the second will think it's up to date.
 
 79
 00:08:15,100 --> 00:08:21,348
@@ -402,7 +402,7 @@ returns time.now, and doesn't need testing really.
 88
 00:08:51,470 --> 00:08:55,885
 And then I'll stub that, so it means the
-rest of the system can use the real Time.now,
+rest of the system can use the real time.now,
 
 89
 00:08:55,942 --> 00:08:59,188
@@ -412,7 +412,7 @@ the code is going to use.
 90
 00:08:59,280 --> 00:09:01,691
 TS: Is the reason your
-expecting it to return time.now 
+expecting it to return time.now
 
 91
 00:09:01,702 --> 00:09:06,057
@@ -431,12 +431,12 @@ the current time? I guess it's more expensive.
 94
 00:09:18,560 --> 00:09:23,280
 JC: It would be more correct because all the times
-you're using, are the times the file system has. 
+you're using, are the times the file system has.
 
 95
 00:09:23,302 --> 00:09:30,171
 If your ruby process is for some reason,
-using a different locale from your OS, 
+using a different locale from your OS,
 
 96
 00:09:30,457 --> 00:09:37,165
@@ -455,7 +455,7 @@ different values for the course of one test right?
 
 99
 00:09:50,148 --> 00:09:55,691
-JC: Yes. We can try that. If it blows up, it blows up. 
+JC: Yes. We can try that. If it blows up, it blows up.
 
 100
 00:09:55,700 --> 00:10:02,434
@@ -465,7 +465,7 @@ makes it hard to distinguish the cause.
 101
 00:10:02,750 --> 00:10:09,325
 I could say that it has to call some private
-method to get its' new time and assert on that. 
+method to get its' new time and assert on that.
 
 102
 00:10:09,360 --> 00:10:17,417
@@ -506,7 +506,7 @@ then let's call this regeneration time.
 110
 00:11:04,937 --> 00:11:14,434
 And we'll  say that regeneration
-time is target time plus 10 minutes. 
+time is target time plus 10 minutes.
 
 111
 00:11:16,125 --> 00:11:18,068
@@ -520,7 +520,7 @@ arguments into `and_return`. What does that mean?
 113
 00:11:22,857 --> 00:11:28,331
 JC: That means, when you call this method
-you will get each of these in sequence. 
+you will get each of these in sequence.
 
 114
 00:11:28,342 --> 00:11:32,697
@@ -528,11 +528,11 @@ The first time you call it you will get target time,
 and the second time you will get regeneration time.
 
 115
-00:11:32,720 --> 00:11:33,805
+00:11:32,720 --> 00:11:33,920
 TS: And that's exactly what you want?
 
 116
-00:11:33,851 --> 00:11:35,382
+00:11:33,954 --> 00:11:35,380
 JC: Yes, that's great.
 
 117
@@ -559,7 +559,7 @@ OK two failures.
 
 122
 00:12:01,730 --> 00:12:06,422
-One in target spec and one in the integration tests. 
+One in target spec and one in the integration tests.
 
 123
 00:12:06,420 --> 00:12:14,777
@@ -568,7 +568,7 @@ regeneration time and got echo high.
 
 124
 00:12:16,020 --> 00:12:23,074
-That's because the end of our build self method... 
+That's because the end of our build self method...
 
 125
 00:12:23,142 --> 00:12:29,234
@@ -581,7 +581,7 @@ I think i want to leave that where it is.
 
 127
 00:12:35,737 --> 00:12:42,400
-And maybe extract a thing... 
+And maybe extract a thing...
 
 128
 00:12:42,948 --> 00:12:46,457
@@ -606,7 +606,7 @@ Target mtime equals mtime.
 133
 00:13:21,920 --> 00:13:34,377
 And then return unless that
-and any of those are greater than this. 
+and any of those are greater than this.
 
 134
 00:13:34,370 --> 00:13:39,394
@@ -625,7 +625,7 @@ I've got the hang of unit testing. [Laughter]
 137
 00:14:04,820 --> 00:14:09,805
 Now that we're calling mtime in build method in
-a code path that everything is going to hit, 
+a code path that everything is going to hit,
 
 138
 00:14:09,908 --> 00:14:12,845
@@ -634,7 +634,7 @@ more tests have blown up.
 139
 00:14:13,010 --> 00:14:19,577
 In some cases we're getting
-mock expectation failures. 
+mock expectation failures.
 
 140
 00:14:19,771 --> 00:14:28,777
@@ -660,7 +660,7 @@ OK let's make it work and then re-factor it.
 
 145
 00:14:50,000 --> 00:14:59,497
-So, if the file exists, pathname... 
+So, if the file exists, pathname...
 
 146
 00:14:59,645 --> 00:15:02,937
@@ -679,11 +679,11 @@ got an exception and bailed out of this method.
 149
 00:15:10,148 --> 00:15:19,428
 So let's assume that things worked and
-just call file.mtime with the pathname. 
+just call file.mtime with the pathname.
 
 150
 00:15:21,074 --> 00:15:28,480
-That's the only difference I've made, since the tests were in this state. 
+That's the only difference I've made, since the tests were in this state.
 
 151
 00:15:28,560 --> 00:15:35,474
@@ -702,12 +702,12 @@ we still are getting some mock expectations.
 154
 00:15:45,794 --> 00:15:49,474
 Oh, because there's an
-assertion that its called once. 
+assertion that its called once.
 
 155
 00:15:49,640 --> 00:15:53,337
 But those failures we we're seeing
-before have mostly gone away. 
+before have mostly gone away.
 
 156
 00:15:53,360 --> 00:15:56,674
@@ -726,7 +726,7 @@ it should be called once but it got twice?
 
 159
 00:16:15,931 --> 00:16:18,480
-Line thirty-two. 
+Line thirty-two.
 
 160
 00:16:21,268 --> 00:16:28,697
@@ -771,15 +771,15 @@ needs stubbing out up here.
 
 169
 00:17:10,780 --> 00:17:14,548
-So that's this thing I did up here to... 
+So that's this thing I did up here to...
 
 170
-00:17:14,540 --> 00:17:16,811
+00:17:14,540 --> 00:17:16,948
 Because I thought it would bypass
 that code path, I wouldn't need to stub it,
 
 171
-00:17:16,830 --> 00:17:23,462
+00:17:16,960 --> 00:17:23,460
 but now we're returning it in
 all cases it still needs stubbing.
 

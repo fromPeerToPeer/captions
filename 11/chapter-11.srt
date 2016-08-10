@@ -1,27 +1,27 @@
 ﻿1
 00:00:00,000 --> 00:00:03,805
-Chapter 11
+Chapter 11.
 Specifying Target behaviour
 with older and newer dependencies.
 
 2
-00:00:04,080 --> 00:00:06,914
+00:00:04,080 --> 00:00:07,005
 JC: OK, now everything is passing,
 so the thing does check its' mtime.
 
 3
-00:00:06,948 --> 00:00:12,114
+00:00:07,005 --> 00:00:12,537
 The next question is does it use the mtime
-to do something useful like skipping work. 
+to do something useful like skipping work.
 
 4
 00:00:12,660 --> 00:00:17,211
-So when the dependencies are newer than the target... 
+So when the dependencies are newer than the target...
 
 5
 00:00:17,220 --> 00:00:26,160
 And that means... So let's say...
-Some offset to base these on... 
+Some offset to base these on...
 
 6
 00:00:26,354 --> 00:00:32,274
@@ -52,11 +52,11 @@ JC: Yes, actually the current time is not relevant.
 12
 00:01:01,160 --> 00:01:05,908
 So what's the context? When the
-dependencies are newer than the target. 
+dependencies are newer than the target.
 
 13
 00:01:05,900 --> 00:01:13,988
-That means that the... 
+That means that the...
 
 14
 00:01:14,914 --> 00:01:19,314
@@ -65,7 +65,7 @@ Allow file to receive mtime.
 15
 00:01:19,325 --> 00:01:29,222
 So the time the target asks
-for will return the target time. 
+for will return the target time.
 
 16
 00:01:32,845 --> 00:01:37,954
@@ -74,12 +74,12 @@ And we need exists to return true as well.
 17
 00:01:41,930 --> 00:01:47,497
 The target will use target time as its' time and the
-dependencies have times which are later than that. 
+dependencies have times which are later than that.
 
 18
 00:01:49,020 --> 00:01:54,262
 The dependencies are newer, so that means
-the target should execute its' instruction. 
+the target should execute its' instruction.
 
 19
 00:01:54,525 --> 00:01:57,988
@@ -97,7 +97,7 @@ it doesn't really matter what it is.
 22
 00:02:12,900 --> 00:02:18,537
 System is stubbed out in all these tests,
-so I'm not really worried about that. 
+so I'm not really worried about that.
 
 23
 00:02:19,100 --> 00:02:26,171
@@ -116,7 +116,7 @@ I'll use terminator block like that.
 26
 00:02:43,451 --> 00:02:50,525
 So we have a target with some dependencies,
-an instruction and an output stream. 
+an instruction and an output stream.
 
 27
 00:02:50,697 --> 00:02:57,588
@@ -131,7 +131,7 @@ invoke some private method that you have,
 29
 00:03:02,068 --> 00:03:05,188
 because that like over
-specifying the implementation. . 
+specifying the implementation. .
 
 30
 00:03:05,211 --> 00:03:12,994
@@ -141,12 +141,12 @@ world which is that it makes a system command.
 31
 00:03:14,560 --> 00:03:26,620
 So, we expect the target to receive system
-with the instruction once when we build it. 
+with the instruction once when we build it.
 
 32
 00:03:28,651 --> 00:03:32,800
 Now, it will prob do this anyway
-because it isn't checking anything so far 
+because it isn't checking anything so far
 
 33
 00:03:32,800 --> 00:03:36,697
@@ -208,7 +208,7 @@ different in the other context?
 46
 00:04:41,954 --> 00:04:47,851
 JC: The difference is these steps here,
-rather than returning things in the future 
+rather than returning things in the future
 
 47
 00:04:47,870 --> 00:04:53,702
@@ -218,11 +218,11 @@ relative to the targets' own modification time.
 48
 00:04:53,730 --> 00:05:00,697
 And in that case we shouldn't execute
-the instruction, but just leave things alone. 
+the instruction, but just leave things alone.
 
 49
 00:05:00,830 --> 00:05:07,531
-So I'm going to copy most of that. 
+So I'm going to copy most of that.
 
 50
 00:05:07,691 --> 00:05:12,971

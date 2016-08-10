@@ -1,16 +1,16 @@
 ﻿1
 00:00:00,000 --> 00:00:04,000
-Chapter 08
+Chapter 08.
 Making Target dependencies build.
 
 2
 00:00:04,651 --> 00:00:11,005
-JC: So in order for that to work, we just need to.... 
+JC: So in order for that to work, we just need to....
 
 3
 00:00:12,400 --> 00:00:17,588
 The second target has been
-given its dependencies as input, 
+given its' dependencies as input,
 
 4
 00:00:17,862 --> 00:00:21,977
@@ -19,7 +19,7 @@ to tell them to build themselves.
 
 5
 00:00:22,331 --> 00:00:28,388
-So if we go back into our target class then build. 
+So if we go back into our target class then build.
 
 6
 00:00:28,834 --> 00:00:32,960
@@ -46,7 +46,7 @@ ensure-updated-dependencies
 11
 00:00:58,250 --> 00:01:04,297
 And then let's inaud extract...
-call build inaud build self. 
+call build inaud build self.
 
 12
 00:01:04,765 --> 00:01:12,674
@@ -78,7 +78,7 @@ primary resources we already created,
 18
 00:01:45,380 --> 00:01:49,554
 they don't have any build
-instructions and should work OK. 
+instructions and should work OK.
 
 19
 00:01:49,660 --> 00:01:53,017
@@ -88,7 +88,7 @@ OK to have no instructions,
 20
 00:01:53,040 --> 00:01:56,000
 because you need to be able to
-model things that already exist. 
+model things that already exist.
 
 21
 00:01:56,270 --> 00:02:01,291
@@ -96,12 +96,12 @@ This should go off and tell file a and b
 to build themselves, which will do nothing.
 
 22
-00:02:01,630 --> 00:02:04,377
+00:02:01,302 --> 00:02:04,514
 And then this will tell the first
-target and file c to build themselves. 
+target and file c to build themselves.
 
 23
-00:02:04,410 --> 00:02:10,331
+00:02:04,537 --> 00:02:10,330
 The first target will run this command here and
 once those are done, run this command here.
 
@@ -126,22 +126,22 @@ is quite a lot of things. (Laughter)
 28
 00:02:29,737 --> 00:02:38,068
 I don't know if all these unit tests should
-be on the build method, or on build_self. 
+be on the build method, or on build_self.
 
 29
-00:02:42,137 --> 00:02:44,480
+00:02:42,034 --> 00:02:44,480
 I don't want to specify the
-implementation of target 
+implementation of target
 
 30
 00:02:44,514 --> 00:02:48,148
-but I want to specify its
+but I want to specify it's
 relationship with other things.
 
 31
 00:02:51,051 --> 00:02:56,354
 The important thing is when you build one target, it
-will tell those dependencies to build themselves. 
+will tell those dependencies to build themselves.
 
 32
 00:02:56,377 --> 00:03:01,645
@@ -150,12 +150,12 @@ thing that needs to be checked.
 
 33
 00:03:01,640 --> 00:03:05,908
-I don't want to tell it how its
-private method should be organized. 
+I don't want to tell it how its'
+private method should be organized.
 
 34
 00:03:07,930 --> 00:03:14,011
-It's more about, what's its interaction with other
+It's more about, what's its' interaction with other
 stuff and that is that it calls build on them.
 
 35
@@ -164,7 +164,7 @@ In terms of unit tests...
 fakemake target_spec... so build.
 
 36
-00:03:22,720 --> 00:03:24,994
+00:03:22,571 --> 00:03:24,990
 This is all about running instructions and stuff.
 
 37
@@ -175,21 +175,21 @@ instructions we have dependencies.
 38
 00:03:31,291 --> 00:03:33,920
 I'm not sure if it makes sense to write
-a test for when there are no dependencies. 
+a test for when there are no dependencies.
 
 39
-00:03:33,920 --> 00:03:36,582
+00:03:33,920 --> 00:03:36,708
 These tests are already implicitly
-for when there are no dependencies. 
+for when there are no dependencies.
 
 40
-00:03:36,590 --> 00:03:43,885
+00:03:36,731 --> 00:03:43,880
 And if there are none there's no other target for
 you to say that it should or should not call build on.
 
 41
 00:03:44,114 --> 00:03:47,954
-So let's make a test for when there are dependencies. 
+So let's make a test for when there are dependencies.
 
 42
 00:03:48,240 --> 00:03:51,668
@@ -216,7 +216,7 @@ That will ensure that that happens first.
 
 47
 00:04:26,880 --> 00:04:34,640
-So... The first dependency is a double. 
+So... The first dependency is a double.
 
 48
 00:04:35,960 --> 00:04:40,388
@@ -225,17 +225,17 @@ And the second dependency is also a double.
 49
 00:04:44,971 --> 00:04:50,491
 This does let us check that if the first dependency
-fails then we don't call the second dependency. 
+fails then we don't call the second dependency.
 
 50
-00:04:50,490 --> 00:04:54,400
+00:04:50,490 --> 00:04:56,331
 That isn't really a requirement, it's
 accidental because the order doesn't matter.
 
 51
 00:04:56,620 --> 00:05:06,388
 So we should say it should tell all
-its dependencies to build themselves.
+its' dependencies to build themselves.
 
 52
 00:05:08,354 --> 00:05:18,971
@@ -278,7 +278,7 @@ Path again...
 
 61
 00:06:13,211 --> 00:06:16,251
-OK that looks good. 
+OK that looks good.
 
 62
 00:06:16,788 --> 00:06:22,605
@@ -287,17 +287,17 @@ feature: we have dependency management.
 
 63
 00:06:24,360 --> 00:06:27,371
-Let's have a look at what we've changed. 
+Let's have a look at what we've changed.
 
 64
 00:06:27,980 --> 00:06:36,468
 We've added dependencies to target class and made
-it so that the target will build its dependencies. 
+it so that the target will build its' dependencies.
 
 65
 00:06:36,480 --> 00:06:40,411
 If you have a tree of targets
-they will recursively build themselves. 
+they will recursively build themselves.
 
 66
 00:06:40,525 --> 00:06:44,365
@@ -318,10 +318,10 @@ TS: I was surprised to see when you ran that unit test,
 70
 00:06:58,170 --> 00:07:01,805
 it looks like there was some output
-on standard out during the test, 
+on standard out during the test,
 
 71
-00:07:01,840 --> 00:07:05,610
+00:07:01,805 --> 00:07:05,610
 which wasn't what I expected to see.
 
 72
@@ -344,7 +344,7 @@ Bur we are still echoing stuff.
 
 76
 00:07:26,530 --> 00:07:28,388
-TS: But this wasn't happening before right? 
+TS: But this wasn't happening before right?
 
 77
 00:07:28,434 --> 00:07:31,737
@@ -358,7 +358,7 @@ JC: Yes.
 79
 00:07:34,750 --> 00:07:38,525
 I've let these targets in the
-integration tests use standard out. 
+integration tests use standard out.
 
 80
 00:07:38,560 --> 00:07:41,451
@@ -376,12 +376,12 @@ It's one of those isolation things.
 83
 00:07:53,337 --> 00:07:57,725
 I want this thing that prints
-stuff to print a black hole. 
+stuff to print a black hole.
 
 84
 00:07:57,720 --> 00:08:02,034
 And I want the tests that are running the
-process to still be able to talk to stood out. 
+process to still be able to talk to stood out.
 
 85
 00:08:03,965 --> 00:08:13,462
@@ -391,12 +391,12 @@ it an output like we did before.
 86
 00:08:18,330 --> 00:08:22,674
 Well call it stood out here to make
-it a bit more clear what its role is.
+it a bit more clear what its' role is.
 
 87
 00:08:24,868 --> 00:08:30,400
 And then that can take it as an argument.
-Although not all of them will need it. 
+Although not all of them will need it.
 
 88
 00:08:30,400 --> 00:08:34,640
@@ -417,7 +417,7 @@ Private method puts called for; that's interesting.
 92
 00:08:52,525 --> 00:08:57,714
 Oh! I've called it output sorry, I forgot what
-I called it. It's called stood out in this test. 
+I called it. It's called stood out in this test.
 
 93
 00:09:01,314 --> 00:09:03,931

@@ -166,11 +166,11 @@ returns the same value both times
 36
 00:03:32,217 --> 00:03:38,754
 but then if it does that, from reading the test
-you can't tell which of those values it's returning. 
+you can't tell which of those values it's returning.
 
 37
 00:03:38,780 --> 00:03:42,217
-That is not helpful. 
+That is not helpful.
 
 38
 00:03:42,628 --> 00:03:51,611
@@ -180,7 +180,7 @@ and returns that if it decides not to do any work.
 39
 00:03:52,220 --> 00:03:56,057
 TS: So you could have an instance
-variable where your initial mtime gets stored 
+variable where your initial mtime gets stored
 
 40
 00:03:56,080 --> 00:04:04,491
@@ -198,16 +198,16 @@ terminals around. Nevermind!
 
 43
 00:04:18,057 --> 00:04:25,074
-So if I go back into lib/fakemake/target. 
+So if I go back into lib/fakemake/target.
 
 44
 00:04:27,080 --> 00:04:32,457
-We can make this just return mtime. 
+We can make this just return mtime.
 
 45
 00:04:33,360 --> 00:04:42,891
 Then we can assign that
-to an instance variable there. 
+to an instance variable there.
 
 46
 00:04:42,890 --> 00:04:47,862
@@ -216,12 +216,12 @@ And make that an instance variable there.
 47
 00:04:47,954 --> 00:04:59,714
 Then at the end of this we can say
-mtime = file.mtime with the pathname. 
+mtime = file.mtime with the pathname.
 
 48
 00:04:59,748 --> 00:05:07,154
 this will now implicitly return mtime [laughter]
-because it's the last thing that build calls. 
+because it's the last thing that build calls.
 
 49
 00:05:07,300 --> 00:05:13,097
@@ -255,7 +255,7 @@ to say that it always receives mtime twice.
 55
 00:05:40,770 --> 00:05:44,594
 but now you've improved your
-code so that it only receives it once 
+code so that it only receives it once
 
 56
 00:05:44,590 --> 00:05:49,451
@@ -281,7 +281,7 @@ In this case it's called twice.
 61
 00:06:13,890 --> 00:06:20,491
 We could make it so this is defined
-to be called once in this scenario. 
+to be called once in this scenario.
 
 62
 00:06:23,668 --> 00:06:28,708
@@ -290,7 +290,7 @@ And it just returns that.
 63
 00:06:28,740 --> 00:06:37,817
 So when the dependencies are newer it calls
-mtime twice and returns the second return value. 
+mtime twice and returns the second return value.
 
 64
 00:06:37,885 --> 00:06:42,708
@@ -298,7 +298,7 @@ In this case it only returns it once.
 
 65
 00:06:42,780 --> 00:06:46,560
-No that's not true, it does... 
+No that's not true, it does...
 
 66
 00:06:46,640 --> 00:06:52,982
@@ -320,7 +320,7 @@ TS: Where's this failure coming from?
 70
 00:07:01,970 --> 00:07:05,394
 JC: There is probably a test...
-So we've stubbed it out globally. 
+So we've stubbed it out globally.
 
 71
 00:07:05,460 --> 00:07:09,108
@@ -348,7 +348,7 @@ it doesn't get called twice unless it needs to be.
 
 76
 00:07:33,577 --> 00:07:36,137
-JC: Yes. 
+JC: Yes.
 
 77
 00:07:38,194 --> 00:07:44,320
@@ -358,16 +358,16 @@ check what we've done and make a commit.
 78
 00:07:45,120 --> 00:07:50,011
 A few things have changed:
-we've made build return mtime. 
+we've made build return mtime.
 
 79
 00:07:50,114 --> 00:07:55,988
 We have then used that
-to make it skip building itself. 
+to make it skip building itself.
 
 80
 00:07:56,057 --> 00:07:59,302
-And then we've made a new mtime at the end. 
+And then we've made a new mtime at the end.
 
 81
 00:07:59,300 --> 00:08:06,582
@@ -380,7 +380,7 @@ isn't actually needed. Let's get rid of that.
 
 83
 00:08:14,857 --> 00:08:17,931
-(That's not needed) 
+(That's not needed)
 
 84
 00:08:18,890 --> 00:08:24,262

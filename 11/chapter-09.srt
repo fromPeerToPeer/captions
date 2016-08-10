@@ -1,6 +1,6 @@
 ﻿1
 00:00:00,000 --> 00:00:03,988
-Chapter 09
+Chapter 09.
 Being lazy within a build.
 
 2
@@ -10,7 +10,7 @@ TS: So what next?
 3
 00:00:06,880 --> 00:00:12,902
 JC: We've got dependencies so the
-next thing to do... The build has to lazy. 
+next thing to do... The build has to lazy.
 
 4
 00:00:13,588 --> 00:00:18,422
@@ -30,7 +30,7 @@ builds it tells all the other targets to build.
 7
 00:00:32,857 --> 00:00:36,708
 So what If multiple things
-depend on the same target? 
+depend on the same target?
 
 8
 00:00:36,900 --> 00:00:42,788
@@ -40,16 +40,16 @@ to build multiple times, which is wasteful.
 9
 00:00:43,131 --> 00:00:50,834
 So we could write a test that says if you call build
-twice on a target, it only runs its command once. 
+twice on a target, it only runs its' command once.
 
 10
 00:00:50,868 --> 00:00:52,411
-That would be good. 
+That would be good.
 
 11
 00:00:52,480 --> 00:01:03,428
 And we also want a test that says if you try to build
-a target that's newer than the things it depends on. 
+a target that's newer than the things it depends on.
 
 12
 00:01:03,600 --> 00:01:07,417
@@ -62,7 +62,7 @@ So I think I'll deal with the first of those first.
 14
 00:01:12,160 --> 00:01:22,650
 So if we go back into our tests:
-spec/fakemake/target_spec. 
+spec/fakemake/target_spec.
 
 15
 00:01:24,788 --> 00:01:29,120
@@ -76,15 +76,15 @@ dependencies for what I was just talking about.
 17
 00:01:34,137 --> 00:01:38,342
 You just want to say if you call build
-twice, it should run its instructions once. 
+twice, it should run its' instructions once.
 
 18
-00:01:38,354 --> 00:01:41,485
+00:01:38,350 --> 00:01:41,542
 So we can put that into the
-case where there is an instruction. 
+case where there is an instruction.
 
 19
-00:01:41,480 --> 00:01:51,497
+00:01:41,542 --> 00:01:51,490
 So it only executes the instructions once do.
 
 20
@@ -111,7 +111,7 @@ I did this); it should receive this once.
 25
 00:02:14,102 --> 00:02:18,022
 It's a side effect we care about
-how many times it's called. 
+how many times it's called.
 
 26
 00:02:18,045 --> 00:02:22,160
@@ -129,7 +129,7 @@ store a flag in here that says
 
 29
 00:02:36,160 --> 00:02:38,868
-I've been built you don't need to do anything. 
+I've been built you don't need to do anything.
 
 30
 00:02:38,891 --> 00:02:44,200

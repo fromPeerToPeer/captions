@@ -10,7 +10,7 @@ directory here and try something out.
 3
 00:00:11,620 --> 00:00:23,657
 Yes,I'm thinking I want to do
-something like this; require scratch target. 
+something like this; require scratch target.
 
 4
 00:00:24,090 --> 00:00:37,897
@@ -18,7 +18,7 @@ And hello_js is a target with a path.
 
 5
 00:00:40,845 --> 00:00:45,005
-We've not doing Haskel,(whoops). 
+We've not doing Haskel,(whoops).
 
 6
 00:00:48,491 --> 00:00:54,468
@@ -37,7 +37,7 @@ TS: What do you mean by target here?
 9
 00:01:08,680 --> 00:01:17,165
 JC: A target is a file (I guess I'm borrowing
-some nomenclature from make here), 
+some nomenclature from make here),
 
 10
 00:01:17,177 --> 00:01:23,211
@@ -46,12 +46,12 @@ but a target is any of the files in your system.
 11
 00:01:24,000 --> 00:01:30,022
 So when you talk about hello.js is
-derived from hello.coffee, hello.js is the target. 
+derived from hello.coffee, hello.js is the target.
 
 12
 00:01:30,171 --> 00:01:33,390
 However coffee could also be a
-target inaud other things. 
+target inaud other things.
 
 13
 00:01:33,885 --> 00:01:41,325
@@ -83,7 +83,7 @@ by putting a block here. Like system erm...
 
 19
 00:02:14,697 --> 00:02:21,520
-What way round do you do this... [he types]. 
+What way round do you do this... [he types].
 
 20
 00:02:38,720 --> 00:02:49,520
@@ -107,16 +107,16 @@ This is the directory that the target lives in.
 24
 00:03:18,731 --> 00:03:27,634
 If you're doing make you can do that... So $@ is the
-pathname of the target your currently building. 
+pathname of the target your currently building.
 
 25
 00:03:27,630 --> 00:03:34,457
 And there's various functions so dir is the
-function that gives you the directory of that. 
+function that gives you the directory of that.
 
 26
 00:03:34,740 --> 00:03:37,348
-I'm not going to get do that yet, 
+I'm not going to get do that yet,
 
 27
 00:03:37,405 --> 00:03:44,091
@@ -125,7 +125,7 @@ to provide a block that just runs this code.
 
 28
 00:03:44,110 --> 00:03:45,931
-I want to provide this code as data, 
+I want to provide this code as data,
 
 29
 00:03:45,954 --> 00:03:51,980
@@ -154,12 +154,12 @@ JC: Exactly
 34
 00:04:20,662 --> 00:04:27,714
 So if I make a target and build
-it, then I want it to BE built. 
+it, then I want it to BE built.
 
 35
 00:04:27,710 --> 00:04:35,017
 But the name of the thing I'm building and
-the way in which it gets built are both data now, 
+the way in which it gets built are both data now,
 
 36
 00:04:35,040 --> 00:04:38,068
@@ -171,11 +171,11 @@ TS: Why did you make it an array?
 
 38
 00:04:42,420 --> 00:04:46,525
-JC: That's a good question, there's only one command. 
+JC: That's a good question, there's only one command.
 
 39
 00:04:46,560 --> 00:04:51,725
-So we possibly don't need an array. 
+So we possibly don't need an array.
 
 40
 00:04:51,770 --> 00:05:01,554
@@ -185,25 +185,25 @@ that code earlier, I left that directory out didn't I?
 41
 00:05:01,560 --> 00:05:07,165
 So we need to make sure that directory
-exists before we compile anything into it. 
+exists before we compile anything into it.
 
 42
 00:05:07,180 --> 00:05:17,520
-So let's also make that directory part of the thing. 
+So let's also make that directory part of the thing.
 
 43
 00:05:17,540 --> 00:05:22,651
 You can see how this becomes repetitive because
-you mention the same things over and over again. 
+you mention the same things over and over again.
 
 44
 00:05:22,860 --> 00:05:25,657
-That aught to work from a clean slate now 
+That aught to work from a clean slate now
 
 45
 00:05:25,691 --> 00:05:31,371
 because that's all the commands that need
-to be run to set up the directory and compile code. 
+to be run to set up the directory and compile code.
 
 46
 00:05:31,474 --> 00:05:36,834
@@ -223,7 +223,7 @@ As I expected, scratch target.rb. OK.
 
 50
 00:05:59,885 --> 00:06:03,725
-So you need a target class. 
+So you need a target class.
 
 51
 00:06:06,030 --> 00:06:10,400
@@ -262,7 +262,7 @@ I'm going to print what each instruction is.
 59
 00:07:04,880 --> 00:07:11,142
 Because that's a helpful thing that make does, and it
-helps you see what you build is actually doing.  
+helps you see what you build is actually doing.
 
 60
 00:07:11,154 --> 00:07:16,994
@@ -272,12 +272,12 @@ it didn't do is show us what was going on.
 61
 00:07:17,382 --> 00:07:23,090
 If you can see what's going on you can verify if
-it's being lazy, not running the certain things. 
+it's being lazy, not running the certain things.
 
 62
 00:07:23,100 --> 00:07:32,422
 So we'll print each one and then pass
-it to system, and that will be enough.  
+it to system, and that will be enough.
 
 63
 00:07:32,434 --> 00:07:38,148
@@ -297,7 +297,7 @@ with whatever is going on.
 66
 00:07:51,740 --> 00:07:58,057
 It's a sort of habit I have...  If I know that
-something's going to need to be a parameter 
+something's going to need to be a parameter
 
 67
 00:07:58,080 --> 00:08:01,028
@@ -306,7 +306,7 @@ or maybe a constant or an instance variable later.
 68
 00:08:01,040 --> 00:08:09,794
 I'll make it but then assign it
-to a constant in the constructor. 
+to a constant in the constructor.
 
 69
 00:08:09,817 --> 00:08:15,337
@@ -321,12 +321,12 @@ see that coming up so I'll just do that.
 71
 00:08:23,337 --> 00:08:28,777
 So it's printed what it's doing and
-made the directory and the coffeescript. 
+made the directory and the coffeescript.
 
 72
 00:08:28,940 --> 00:08:34,262
 And now there should be
-one file in lib which is hello.js 
+one file in lib which is hello.js
 
 73
 00:08:34,297 --> 00:08:43,337
@@ -335,7 +335,7 @@ And that should contain compile code, which it does.
 74
 00:08:47,040 --> 00:08:55,131
 So I guess that's a minimum
-viable build system... I suppose. 
+viable build system... I suppose.
 
 75
 00:08:55,154 --> 00:08:57,474
@@ -343,7 +343,7 @@ We've got this.
 
 76
 00:08:57,470 --> 00:09:06,560
-And we can make another one out of complimenter. 
+And we can make another one out of complimenter.
 
 77
 00:09:06,765 --> 00:09:09,520
@@ -351,11 +351,11 @@ And we can make another one out of complimenter.
 
 78
 00:09:14,605 --> 00:09:19,337
-Then we could build each of them. 
+Then we could build each of them.
 
 79
 00:09:22,742 --> 00:09:29,348
-And then we could have one for the bundle. 
+And then we could have one for the bundle.
 
 80
 00:09:29,508 --> 00:09:32,582
@@ -372,7 +372,7 @@ And build this... What did we do in our build script?
 
 83
 00:09:49,770 --> 00:09:55,325
-We ran this command. So I'll just take that. 
+We ran this command. So I'll just take that.
 
 84
 00:09:55,531 --> 00:09:59,108
@@ -397,7 +397,7 @@ Ruby scratch test.
 89
 00:10:21,040 --> 00:10:27,657
 OK, so that's made the lib directory twice
-and run the coffee twice with the two things. 
+and run the coffee twice with the two things.
 
 90
 00:10:27,691 --> 00:10:33,520
@@ -416,7 +416,7 @@ TS: OK.
 93
 00:10:47,748 --> 00:10:53,977
 How close is this to the generalized
-instructions mention in the brief? 
+instructions mention in the brief?
 
 94
 00:10:53,970 --> 00:11:00,800
@@ -426,21 +426,21 @@ are they not sufficiently general to count?
 95
 00:11:01,160 --> 00:11:06,125
 JC: They are general in that you can put any
-shell command in here, and it will be run. 
+shell command in here, and it will be run.
 
 96
 00:11:06,160 --> 00:11:12,765
 There wasn't a great way for supplying the input to
-the system and there's a lot that it can't do yet. 
+the system and there's a lot that it can't do yet.
 
 97
 00:11:12,857 --> 00:11:21,942
 But this is a minimal thing for
-modeling a file and how it gets created. 
+modeling a file and how it gets created.
 
 98
 00:11:22,605 --> 00:11:27,165
-We're still not using the pathname input to this yet. 
+We're still not using the pathname input to this yet.
 
 99
 00:11:27,211 --> 00:11:31,531
@@ -449,7 +449,7 @@ things want to check that they're up to date,
 
 100
 00:11:31,554 --> 00:11:35,257
-because they have to know where their target is. 
+because they have to know where their target is.
 
 101
 00:11:35,290 --> 00:11:42,902
@@ -459,7 +459,7 @@ look at the output of those shell commands.
 102
 00:11:42,937 --> 00:11:46,662
 And it doesn't relate them to
-the output file in any way. 
+the output file in any way.
 
 103
 00:11:46,670 --> 00:11:51,737
@@ -483,20 +483,20 @@ implemented a method on it till it worked.
 
 107
 00:12:07,074 --> 00:12:08,674
-JC: Right. 
+JC: Right.
 
 108
 00:12:08,700 --> 00:12:15,520
-I have a vague idea where I'm going because it should 
-look like something I'm already familiar with. 
+I have a vague idea where I'm going because it should
+look like something I'm already familiar with.
 
 109
-00:12:17,680 --> 00:12:19,988
+00:12:17,680 --> 00:12:20,160
 But I don't quite know what
 models and functions I want yet.
 
 110
-00:12:20,011 --> 00:12:24,045
+00:12:20,182 --> 00:12:25,028
 I'm just thinking, how would
 you want to interact with this?
 

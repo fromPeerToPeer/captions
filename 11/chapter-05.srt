@@ -1,6 +1,6 @@
 ﻿1
 00:00:00,000 --> 00:00:03,908
-Chapter 05
+Chapter 05.
 Unit testing the Target class.
 
 2
@@ -63,7 +63,7 @@ Save that, and install it into the project.
 
 15
 00:01:44,460 --> 00:01:47,657
-Did I make a spec directory – yes I did. 
+Did I make a spec directory – yes I did.
 
 16
 00:01:47,771 --> 00:01:51,394
@@ -80,7 +80,7 @@ for this file, I called it a target..
 
 19
 00:02:04,670 --> 00:02:08,582
-Obligatory require 'spec_helper'. 
+Obligatory require 'spec_helper'.
 
 20
 00:02:09,017 --> 00:02:14,434
@@ -88,7 +88,7 @@ and (not end) which I've not written but...
 
 21
 00:02:18,274 --> 00:02:27,520
-This will require_relative 'lib/fakemake', 
+This will require_relative 'lib/fakemake',
 
 22
 00:02:28,982 --> 00:02:33,748
@@ -117,7 +117,7 @@ And path.
 28
 00:03:00,045 --> 00:03:09,737
 And then autoload target
-from root + fakemake target. 
+from root + fakemake target.
 
 29
 00:03:11,920 --> 00:03:18,491
@@ -139,7 +139,7 @@ Yes, it didn't complain about anything.
 33
 00:03:40,130 --> 00:03:50,331
 So, looking back at the code,
-there's already a few scenarios here. 
+there's already a few scenarios here.
 
 34
 00:03:52,777 --> 00:04:02,708
@@ -162,22 +162,22 @@ I'll make that be that - output.
 38
 00:04:25,390 --> 00:04:32,445
 The test I have in mind is if you write
-a target with no instructions that's fine. 
+a target with no instructions that's fine.
 
 39
 00:04:33,897 --> 00:04:39,965
 If you write a target with an
-instruction it gets printed and executed. 
+instruction it gets printed and executed.
 
 40
 00:04:41,108 --> 00:04:47,474
 And if you write one with many
-instructions, they all get executed. 
+instructions, they all get executed.
 
 41
 00:04:47,611 --> 00:04:53,691
 Although we should also check to see what happens
-if you write an instruction that doesn't work. 
+if you write an instruction that doesn't work.
 
 42
 00:04:55,371 --> 00:05:04,430
@@ -191,7 +191,7 @@ system we can stubb system to work or not work.
 
 44
 00:05:16,811 --> 00:05:23,897
-So make a few variables. 
+So make a few variables.
 
 45
 00:05:25,954 --> 00:05:32,137
@@ -285,22 +285,22 @@ itself... It's a kernel method.
 66
 00:08:00,411 --> 00:08:06,114
 I could have called puts on target
-itself and stubbed it in inaud here. 
+itself and stubbed it in the same way here.
 
 67
 00:08:06,502 --> 00:08:12,125
 But that also means... Like at some point
-we're going to have a graph of these things. 
+we're going to have a graph of these things.
 
 68
 00:08:12,342 --> 00:08:18,388
 And you might not have direct access in your
-test to the actual thing that's printing something. 
+test to the actual thing that's printing something.
 
 69
 00:08:18,422 --> 00:08:20,948
 So you want to be able to
-pass this output object along. 
+pass this output object along.
 
 70
 00:08:21,302 --> 00:08:25,051
@@ -332,16 +332,16 @@ leave it for now, until it becomes a problem.
 76
 00:08:45,500 --> 00:08:50,457
 The output thing... I knew I didn't want
-stuff printing things in the middle of my tests, 
+stuff printing things in the middle of my tests,
 
 77
 00:08:50,500 --> 00:08:56,960
 whereas you also don't want the unit
-tests to go and execute system commands. 
+tests to go and execute system commands.
 
 78
 00:08:58,617 --> 00:09:01,140
-Because I've used a string io here for the output, 
+Because I've used a string io here for the output,
 
 79
 00:09:01,154 --> 00:09:04,651
@@ -355,7 +355,7 @@ We don't have any instructions yet,
 81
 00:09:08,290 --> 00:09:14,217
 but when we do and I write some of the test for
-printing, it will then go and execute the thing. 
+printing, it will then go and execute the thing.
 
 82
 00:09:14,342 --> 00:09:17,588
@@ -364,7 +364,7 @@ I'll have to stub out system to make it not do that.
 83
 00:09:17,760 --> 00:09:22,010
 But I'm not sure that the object that we're
-calling it on is the problem in that situation. 
+calling it on is the problem in that situation.
 
 84
 00:09:22,010 --> 00:09:25,942
@@ -373,7 +373,7 @@ You'd have to do that in any case.
 85
 00:09:26,780 --> 00:09:38,948
 So the target should not receive
-the system when you build it. 
+the system when you build it.
 
 86
 00:09:39,291 --> 00:09:41,908
@@ -385,7 +385,7 @@ OK, two passing tests.
 
 88
 00:09:54,994 --> 00:09:58,937
-When there is an instruction 
+When there is an instruction
 
 89
 00:10:00,308 --> 00:10:09,931
@@ -393,7 +393,7 @@ let the instruction be...
 
 90
 00:10:11,131 --> 00:10:14,914
-It doesn't really matter what it is... Let's say echo. 
+It doesn't really matter what it is... Let's say echo.
 
 91
 00:10:16,205 --> 00:10:22,490
@@ -433,7 +433,7 @@ saying something should be called.
 99
 00:11:24,114 --> 00:11:27,908
 Whether I should say how many times...
-But in this case I think it's important that you... 
+But in this case I think it's important that you...
 
 100
 00:11:28,000 --> 00:11:33,890
@@ -447,14 +447,14 @@ number of times you call them is important.
 102
 00:11:40,410 --> 00:11:46,422
 And i also said that system
-should be stubbed in any case, 
+should be stubbed in any case,
 
 103
-00:11:46,457 --> 00:11:47,920
+00:11:46,450 --> 00:11:48,045
 even if you're not making assertions on it.
 
 104
-00:11:47,920 --> 00:11:52,674
+00:11:48,057 --> 00:11:52,670
 And that should probably happen
 in all cases so I'll put that at the top.
 
@@ -469,9 +469,9 @@ JC: Exactly... Well, let's run it
 and you should actually see this,
 
 107
-00:12:02,330 --> 00:12:05,657
-because system inherits standard
-output from your Ruby process.
+00:12:02,160 --> 00:12:05,650
+because system inherits
+standard out from your Ruby process.
 
 108
 00:12:05,668 --> 00:12:12,910
@@ -485,7 +485,7 @@ instruction... So I made a typo somewhere.
 
 110
 00:12:23,150 --> 00:12:25,908
-Where did I do that? 
+Where did I do that?
 
 111
 00:12:26,260 --> 00:12:30,342
@@ -493,7 +493,7 @@ Target spec 6... OK.
 
 112
 00:12:33,851 --> 00:12:37,931
-Oh I've only said instruction there... 
+Oh I've only said instruction there...
 
 113
 00:12:38,320 --> 00:12:39,930
@@ -529,12 +529,12 @@ do that by stubbing system out.
 120
 00:13:32,914 --> 00:13:36,251
 One good thing about calling
-it on target and not on kernel, 
+it on target and not on kernel,
 
 121
 00:13:36,285 --> 00:13:39,360
 is that I generally dislike
-stubbing out global things. 
+stubbing out global things.
 
 122
 00:13:41,050 --> 00:13:45,577
@@ -548,7 +548,7 @@ the file system, or Net::HTTP or whatever it is.
 
 124
 00:13:53,805 --> 00:13:57,508
-I find those usually get in the way somewhere. 
+I find those usually get in the way somewhere.
 
 125
 00:13:57,520 --> 00:14:04,091
@@ -558,12 +558,12 @@ piece of code, to be isolated from something.
 126
 00:14:04,240 --> 00:14:07,040
 For example, if you use something
-that stubs out of the file system, 
+that stubs out of the file system,
 
 127
 00:14:07,074 --> 00:14:11,302
 you can't use `require` any more,
-so your code stops loading. 
+so your code stops loading.
 
 128
 00:14:11,737 --> 00:14:17,291
@@ -573,7 +573,7 @@ object under test is appealing to me.
 129
 00:14:18,030 --> 00:14:23,725
 So if we run those tests now it's not printing stuff
-in the middle of them because it's not calling echo. 
+in the middle of them because it's not calling echo.
 
 130
 00:14:23,920 --> 00:14:26,720

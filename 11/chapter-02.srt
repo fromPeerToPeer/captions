@@ -1,6 +1,7 @@
 ﻿1
 00:00:00,057 --> 00:00:03,977
-[Chapter 02: Executing a build by hand.]
+Chapter 02.
+Executing a build by hand.
 
 2
 00:00:04,411 --> 00:00:09,165
@@ -35,7 +36,7 @@ the node packaging system uses.
 
 9
 00:00:51,760 --> 00:00:58,217
-And one of its functions is
+And one of its' functions is
 to manage your dependencies.
 
 10
@@ -246,7 +247,7 @@ TS: Right.
 
 57
 00:05:19,760 --> 00:05:25,542
-JC: The option called m has not been found. 
+JC: The option called m has not been found.
 
 58
 00:05:25,600 --> 00:05:31,748
@@ -259,7 +260,7 @@ And – O is for output inaud file.
 
 60
 00:05:35,970 --> 00:05:38,868
-TS: So is uglify going to be responsible for concatenating these 
+TS: So is uglify going to be responsible for concatenating these
 
 61
 00:05:38,868 --> 00:05:42,331
@@ -268,7 +269,7 @@ come after the uglification?
 
 62
 00:05:42,450 --> 00:05:47,154
-JC: That's the bit I'm not sure about actually. 
+JC: That's the bit I'm not sure about actually.
 
 63
 00:05:47,485 --> 00:05:52,045
@@ -278,21 +279,21 @@ and have it write them all to the same place.
 64
 00:05:52,040 --> 00:05:55,645
 TS: It seems that the
-coffeescript compiler is one to one. 
+coffeescript compiler is one to one.
 
 65
 00:05:55,680 --> 00:05:58,000
-You give it one coffee script
+You give it one coffee-script
 file and one JavaScript file.
 
 66
 00:05:58,000 --> 00:06:00,731
-JC: Exactly. 
+JC: Exactly.
 
 67
 00:06:00,730 --> 00:06:06,262
 So the first line here says the usage
-is that they contain multiple input files. 
+is that they contain multiple input files.
 
 68
 00:06:06,260 --> 00:06:09,954
@@ -343,7 +344,7 @@ some say method being defined there.
 
 79
 00:06:59,725 --> 00:07:01,531
-And it's got that code in it that we wanted. 
+And it's got that code in it that we wanted.
 
 80
 00:07:01,530 --> 00:07:07,691
@@ -358,7 +359,7 @@ and minifying them all in one step versus...
 82
 00:07:14,120 --> 00:07:16,285
 I presume if you wanted  to,
-you could minify them separately 
+you could minify them separately
 
 83
 00:07:16,297 --> 00:07:19,340
@@ -388,21 +389,21 @@ various module formats your using...
 88
 00:07:41,474 --> 00:07:46,148
 Like, you might have used a tool
-to resolve all of those modules, 
+to resolve all of those modules,
 
 89
 00:07:46,160 --> 00:07:49,851
 and in-line them before you
-did the coffee script compilation. 
+did the coffee-script compilation.
 
 90
 00:07:49,860 --> 00:07:51,942
-Or if you're using something like browserify, 
+Or if you're using something like Browserify,
 
 91
 00:07:51,954 --> 00:07:57,165
 you can give it a plug-in that
-will convert coffee script on the fly.
+will convert coffee-script on the fly.
 
 92
 00:07:57,234 --> 00:07:58,571
@@ -410,8 +411,8 @@ Or you can do them in separate steps,
 
 93
 00:07:58,605 --> 00:08:02,537
-like compile all your coffee script and
-then get browserify to resolve everything.
+like compile all your coffee-script and
+then get Browserify to resolve everything.
 
 94
 00:08:02,537 --> 00:08:04,530
@@ -424,12 +425,12 @@ JC: Yes, they're usually...
 96
 00:08:10,457 --> 00:08:16,320
 The word that a lot of people are using these days
-is browserify or webpack, or something like that. 
+is Browserify or Webpack, or something like that.
 
 97
 00:08:17,000 --> 00:08:19,851
 But minifying the individual files
-and then concatenating them 
+and then concatenating them
 
 98
 00:08:19,860 --> 00:08:23,737

@@ -17,7 +17,7 @@ Author of JavaScript testing recipes.
 
 5
 00:00:11,360 --> 00:00:16,914
-And creator of open source projects such as ?? and web socket driver.
+And creator of open source projects such as Faye and web socket driver.
 
 6
 00:00:17,337 --> 00:00:19,577
@@ -30,7 +30,8 @@ for James is called Building a build tool.
 
 8
 00:00:24,537 --> 00:00:28,360
-[Chapter 01. The Challenge.]
+Chapter 01.
+The Challenge.
 
 9
 00:00:28,422 --> 00:00:31,600
@@ -39,7 +40,7 @@ like to start by reading the challenge?
 
 10
 00:00:31,645 --> 00:00:33,748
-James Coglan: Sure, so the challenge is: 
+James Coglan: Sure, so the challenge is:
 
 11
 00:00:33,748 --> 00:00:39,320
@@ -54,11 +55,11 @@ supplied with coffescript files.
 13
 00:00:42,410 --> 00:00:46,651
 These need to be compiled to
-javascript then minified and concatenated. 
+javascript then minified and concatenated.
 
 14
 00:00:46,650 --> 00:00:49,097
-The build tool should be able to accept 
+The build tool should be able to accept
 
 15
 00:00:49,120 --> 00:00:52,582
@@ -96,7 +97,7 @@ use uglify.js for that... and concatenated.
 22
 00:01:32,530 --> 00:01:39,817
 either uglify will do that, or I'll use cat,
-or something like that. [James ponders]
+or something like that. [James thinks]
 
 23
 00:01:39,840 --> 00:01:42,925

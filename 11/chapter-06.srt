@@ -136,7 +136,7 @@ and is awkward to specifying using mocks.
 31
 00:02:53,420 --> 00:02:57,977
 But if you have something where one thing
-can prevent the next thing from happening, 
+can prevent the next thing from happening,
 
 32
 00:02:58,030 --> 00:03:03,040
@@ -156,7 +156,7 @@ build if something bad happens.
 35
 00:03:12,582 --> 00:03:21,417
 So when the first instruction fails, it
-means that I'm going to allow the target 
+means that I'm going to allow the target
 
 36
 00:03:22,480 --> 00:03:34,285
@@ -171,7 +171,7 @@ if the command doesn't work.
 38
 00:03:40,697 --> 00:03:50,834
 So that scenario...(I'm not going to bother with
-the printing stuff, we've done that to death). 
+the printing stuff, we've done that to death).
 
 39
 00:03:50,982 --> 00:03:55,920
@@ -179,7 +179,7 @@ It does execute the first argument.
 
 40
 00:03:58,937 --> 00:04:04,400
-But it does not execute the second. 
+But it does not execute the second.
 
 41
 00:04:07,405 --> 00:04:14,000
@@ -192,7 +192,7 @@ So that means we expect this... Once.
 43
 00:04:21,634 --> 00:04:29,382
 Do we need to tell it that it will
-return nil? Not sure that we do. 
+return nil? Not sure that we do.
 
 44
 00:04:32,102 --> 00:04:34,960
@@ -217,7 +217,7 @@ And it's not once, It's not.
 
 49
 00:05:07,760 --> 00:05:09,291
-So let me check this over. 
+So let me check this over.
 
 50
 00:05:09,290 --> 00:05:13,348
@@ -226,12 +226,12 @@ for the first instruction,
 
 51
 00:05:13,360 --> 00:05:17,554
-it should still execute it, but not the second one. 
+it should still execute it, but not the second one.
 
 52
 00:05:19,420 --> 00:05:22,914
 This shouldn't work because I haven't
-implemented anything like this yet. 
+implemented anything like this yet.
 
 53
 00:05:23,050 --> 00:05:27,851
@@ -253,7 +253,7 @@ Target.Build
 57
 00:05:38,422 --> 00:05:42,948
 Now it's executing the second
-instruction when it shouldn't. 
+instruction when it shouldn't.
 
 58
 00:05:42,982 --> 00:05:48,411
@@ -271,7 +271,7 @@ TS: So what will system return if it's not an error?
 
 61
 00:06:03,165 --> 00:06:08,320
-JC: True. We can see this in the shell for a second. 
+JC: True. We can see this in the shell for a second.
 
 62
 00:06:08,360 --> 00:06:15,965
@@ -308,12 +308,12 @@ it to skip them silently, you want them to actually...
 
 69
 00:06:56,617 --> 00:07:01,394
-JC: No because a build is just a sequence. 
+JC: No because a build is just a sequence.
 
 70
 00:07:01,700 --> 00:07:06,297
 You turn a coffee-script file into a JavaScript file
-and you need to put multiple files into a single one. 
+and you need to put multiple files into a single one.
 
 71
 00:07:06,308 --> 00:07:09,634
@@ -322,17 +322,17 @@ If the first step fails you can't do the second step.
 72
 00:07:09,630 --> 00:07:15,074
 And you shouldn't try
-because if those files don't exist, 
+because if those files don't exist,
 
 73
 00:07:15,097 --> 00:07:19,668
 like if your command uses a shell wildcard or
-tries to interpolate something that doesn't exist, 
+tries to interpolate something that doesn't exist,
 
 74
 00:07:19,660 --> 00:07:23,554
 you might end up constructing a
-command that will do something dangerous. 
+command that will do something dangerous.
 
 75
 00:07:23,550 --> 00:07:29,440
@@ -342,7 +342,7 @@ you've done so far did what you expected.
 76
 00:07:31,280 --> 00:07:39,085
 So we shall run that. OK so loads of things are
-now not working, which is common, and fine. 
+now not working, which is common, and fine.
 
 77
 00:07:41,600 --> 00:07:44,114
@@ -351,7 +351,7 @@ So let's find out why that was.
 78
 00:07:45,074 --> 00:07:50,102
 A lot of these raised, I was not
-expecting them to be raised. 
+expecting them to be raised.
 
 79
 00:07:52,960 --> 00:07:59,131
@@ -368,7 +368,7 @@ And it's raising from build.
 82
 00:08:14,360 --> 00:08:18,605
 We said we're going to raise unless
-system returned something truthy. 
+system returned something truthy.
 
 83
 00:08:18,617 --> 00:08:22,582
@@ -400,12 +400,12 @@ JC: That's a good point yes.
 89
 00:08:46,480 --> 00:08:51,302
 I think if you stub something and
-then put mock expectation on it, 
+then put mock expectation on it,
 
 90
 00:08:51,622 --> 00:08:57,417
 the thing at the top says if you call
-it with anything it just returns true. 
+it with anything it just returns true.
 
 91
 00:08:57,420 --> 00:08:59,097
@@ -424,7 +424,7 @@ with something and that's a different use case.
 94
 00:09:09,370 --> 00:09:15,017
 I believe in those situations you have
-to tell it again what you want it to return. 
+to tell it again what you want it to return.
 
 95
 00:09:15,050 --> 00:09:21,702
@@ -447,7 +447,7 @@ to raise, but I'm not catching that it raises.
 99
 00:09:43,154 --> 00:09:50,365
 I should have another test that
-says it raises FailedCommand. 
+says it raises FailedCommand.
 
 100
 00:09:54,171 --> 00:10:06,400
@@ -480,13 +480,13 @@ OK so that's all green again.
 TS: Great.
 
 107
-00:10:27,650 --> 00:10:28,857
+00:10:27,074 --> 00:10:28,850
 JC: It took a while to get there,
 
 108
 00:10:28,914 --> 00:10:34,788
 But I think that's enough of a specification
-of what the thing does about running commands. 
+of what the thing does about running commands.
 
 109
 00:10:34,800 --> 00:10:40,525
@@ -517,12 +517,12 @@ There are a few things we definitely don't want.
 
 115
 00:11:11,942 --> 00:11:17,040
-I don't want an example bundle.js or example lib. 
+I don't want an example bundle.js or example lib.
 
 116
 00:11:17,782 --> 00:11:22,914
 Nor node modules, because they
-are just for running the examples. 
+are just for running the examples.
 
 117
 00:11:26,514 --> 00:11:28,742
@@ -531,21 +531,21 @@ I don't want scratch.
 118
 00:11:33,420 --> 00:11:38,205
 Inaud package either, we're
-building a ruby project – although that is... 
+building a ruby project – although that is...
 
 119
-00:11:38,320 --> 00:11:42,342
+00:11:38,285 --> 00:11:42,340
 No that's metadata about the examples
 and you will use it to install your node modules.
 
 120
 00:11:42,354 --> 00:11:45,920
-But you don't want node models... that's fine. 
+But you don't want node models... that's fine.
 
 121
 00:11:46,034 --> 00:11:52,411
 I'll move .js off there. So if I give that
-all of this. So what do we end up with? 
+all of this. So what do we end up with?
 
 122
 00:11:53,570 --> 00:11:56,491
@@ -557,7 +557,7 @@ and our source code and package.json and specs.
 
 124
 00:12:00,251 --> 00:12:03,737
- Which looks reasonable to me.
+Which looks reasonable to me.
 
 125
 00:12:04,000 --> 00:12:07,417
