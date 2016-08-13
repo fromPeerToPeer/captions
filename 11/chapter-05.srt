@@ -182,7 +182,7 @@ if you write an instruction that doesn't work.
 42
 00:04:55,371 --> 00:05:04,430
 So system will return nil if you
-run a command that has a none zero exit status.
+run a command that has a non-zero exit status.
 
 43
 00:05:06,430 --> 00:05:14,148
