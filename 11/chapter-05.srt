@@ -47,7 +47,7 @@ tests, and something to run them.
 
 11
 00:01:14,760 --> 00:01:21,428
-Go to inaud and get some gems.
+Go to Bundler and get some gems.
 
 12
 00:01:25,177 --> 00:01:27,862
@@ -182,7 +182,7 @@ if you write an instruction that doesn't work.
 42
 00:04:55,371 --> 00:05:04,430
 So system will return nil if you
-run a command that has a inaud status.
+run a command that has a none zero exit status.
 
 43
 00:05:06,430 --> 00:05:14,148
@@ -205,7 +205,7 @@ pathname and the instructions and the output.
 
 47
 00:05:49,360 --> 00:05:52,548
-Let's also make an output for inaud.
+Let's also make an output for it to use.
 
 48
 00:05:58,925 --> 00:06:02,320
@@ -446,7 +446,7 @@ number of times you call them is important.
 
 102
 00:11:40,410 --> 00:11:46,422
-And i also said that system
+And I also said that system
 should be stubbed in any case,
 
 103
