@@ -5,7 +5,7 @@ Being lazy within a build.
 
 2
 00:00:04,830 --> 00:00:06,788
-TS: So what next?
+TS: What next?
 
 3
 00:00:06,880 --> 00:00:12,902
@@ -25,11 +25,11 @@ can ask your dependencies if they're up to date.
 6
 00:00:26,110 --> 00:00:32,800
 That also introduces the problem of... When a target
-builds it tells all the other targets to build.
+builds it tells all its other targets to build.
 
 7
 00:00:32,857 --> 00:00:36,708
-So what If multiple things
+So what if multiple things
 depend on the same target?
 
 8
@@ -40,7 +40,7 @@ to build multiple times, which is wasteful.
 9
 00:00:43,131 --> 00:00:50,834
 So we could write a test that says if you call build
-twice on a target, it only runs its' command once.
+twice on a target, it only runs its command once.
 
 10
 00:00:50,868 --> 00:00:52,411
@@ -62,7 +62,7 @@ So I think I'll deal with the first of those first.
 14
 00:01:12,160 --> 00:01:22,650
 So if we go back into our tests:
-spec/fakemake/target_spec.
+spec/fakemake/target_spec.rb
 
 15
 00:01:24,788 --> 00:01:29,120
@@ -76,7 +76,7 @@ dependencies for what I was just talking about.
 17
 00:01:34,137 --> 00:01:38,342
 You just want to say if you call build
-twice, it should run its' instructions once.
+twice, it should run its instructions once.
 
 18
 00:01:38,350 --> 00:01:41,542
@@ -85,7 +85,7 @@ case where there is an instruction.
 
 19
 00:01:41,542 --> 00:01:51,490
-So it only executes the instructions once do.
+So it 'only executes the instructions once' do.
 
 20
 00:01:52,590 --> 00:01:56,537
@@ -115,7 +115,7 @@ how many times it's called.
 
 26
 00:02:18,045 --> 00:02:22,160
-But rspec says it was called 2 times.
+But RSpec says it was called 2 times.
 
 27
 00:02:22,190 --> 00:02:31,165
@@ -124,7 +124,7 @@ if we go back into our source code.
 
 28
 00:02:31,720 --> 00:02:36,091
-If we look at build self we can
+If we look at build self we could
 store a flag in here that says
 
 29
