@@ -239,7 +239,7 @@ Let's see what the help says.
 
 55
 00:05:09,090 --> 00:05:18,148
-So – C enables compressor options.
+So "–c" enables compressor options.
 You have to tell that to make it minify the file.
 
 56
