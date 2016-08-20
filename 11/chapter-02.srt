@@ -217,7 +217,8 @@ So, to minify something...
 
 50
 00:04:33,120 --> 00:04:37,108
-Again, we can use inaud run uglify.
+Again, we can use things in node_modules/...
+we run uglify.
 
 51
 00:04:41,470 --> 00:04:49,634
