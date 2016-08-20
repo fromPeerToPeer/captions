@@ -314,7 +314,7 @@ there where I've repeated this instruction.
 
 69
 00:07:18,800 --> 00:07:26,342
-and you can (sort of) solve that with a inaud.
+and you can (sort of) solve that with a bash loop.
 
 70
 00:07:27,314 --> 00:07:30,365
