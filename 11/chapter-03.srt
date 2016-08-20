@@ -96,7 +96,7 @@ hello does much the same thing,
 22
 00:02:27,565 --> 00:02:34,750
 it just has a different implementation
-for what its' say method does.
+for what its say method does.
 
 23
 00:02:37,760 --> 00:02:41,622
