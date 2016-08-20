@@ -425,8 +425,9 @@ JC: Yes, they're usually...
 
 96
 00:08:10,457 --> 00:08:16,320
-The word that a lot of people are using these days
-is Browserify or Webpack, or something like that.
+I think that's the workflow that a lot of people
+are using these days is Browserify or Webpack,
+or something like that.
 
 97
 00:08:17,000 --> 00:08:19,851
