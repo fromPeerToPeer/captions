@@ -266,7 +266,7 @@ lib/hello.js is derived from src/hello.coffee
 59
 00:06:36,170 --> 00:06:41,570
 and then it can look to see if hello.coffee
-is newer than hello.js and recompile it if it isn't.
+is newer than hello.js and recompile it if it is.
 
 60
 00:06:41,680 --> 00:06:44,580
