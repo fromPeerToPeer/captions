@@ -86,7 +86,7 @@ So this file declares a class called complimenter.
 20
 00:02:11,960 --> 00:02:20,925
 And it makes one of them
-and it console logs its' say method.
+and it console logs its say method.
 
 21
 00:02:21,900 --> 00:02:27,520
