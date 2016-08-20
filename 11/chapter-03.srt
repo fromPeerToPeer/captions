@@ -137,7 +137,7 @@ Those were the steps that we did before.
 
 31
 00:03:26,720 --> 00:03:37,177
-If I remove the compile JavaScript and the bundle,
+If I remove the compiled JavaScript and the bundle,
 then running that should produce the same result.
 
 32
