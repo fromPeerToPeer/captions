@@ -57,7 +57,7 @@ Uglifyjs.
 
 14
 00:01:34,720 --> 00:01:37,360
-Put inaud in there.
+Put the examples in there.
 
 15
 00:01:41,130 --> 00:01:46,091
