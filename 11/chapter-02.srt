@@ -294,7 +294,7 @@ JC: Exactly.
 67
 00:06:00,730 --> 00:06:06,262
 So the first line here says the usage
-is that they contain multiple input files.
+is that it can take multiple input files.
 
 68
 00:06:06,260 --> 00:06:09,954
