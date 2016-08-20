@@ -253,7 +253,7 @@ JC: The option called m has not been found.
 58
 00:05:25,600 --> 00:05:31,748
 It's up there... It's mangle... Which means
-it will do things like shift variable names.
+it will do things like shrink variable names.
 
 59
 00:05:32,228 --> 00:05:35,920
