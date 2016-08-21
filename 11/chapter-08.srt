@@ -319,7 +319,7 @@ TS: I was surprised to see when you ran that unit test,
 70
 00:06:58,170 --> 00:07:01,805
 it looks like there was some output
-on standard out during the test,
+on stdout during the test,
 
 71
 00:07:01,805 --> 00:07:05,610
