@@ -240,11 +240,11 @@ its dependencies to build themselves.
 
 52
 00:05:08,354 --> 00:05:18,971
-So we expect `first_dep` to receive build once.
+So we expect first_dep to receive build once.
 
 53
 00:05:19,382 --> 00:05:24,125
-And likewise for the `second_dep`.
+And likewise for the second_dep.
 
 54
 00:05:24,720 --> 00:05:26,571
