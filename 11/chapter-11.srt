@@ -125,7 +125,7 @@ this case it executes its instruction.
 
 28
 00:02:57,634 --> 00:03:02,045
-I don't want to specify by saying you should
+I don't want to specify this by saying you should
 invoke some private method that you have,
 
 29
