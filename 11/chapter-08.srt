@@ -378,7 +378,7 @@ It's one of those isolation things.
 83
 00:07:53,337 --> 00:07:57,725
 I want this thing that prints
-stuff to print a black hole.
+stuff to print to a black hole.
 
 84
 00:07:57,720 --> 00:08:02,034
