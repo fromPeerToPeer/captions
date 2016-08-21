@@ -382,8 +382,8 @@ stuff to print to a black hole.
 
 84
 00:07:57,720 --> 00:08:02,034
-And I want the tests that are running the
-process to still be able to talk to stood out.
+But I want the tests that are running the
+process to still be able to talk to stdout.
 
 85
 00:08:03,965 --> 00:08:13,462
@@ -392,8 +392,8 @@ it an output like we did before.
 
 86
 00:08:18,330 --> 00:08:22,674
-Well call it stood out here to make
-it a bit more clear what its' role is.
+We'll call it stdout here to make
+it a bit more clear what its role is.
 
 87
 00:08:24,868 --> 00:08:30,400
@@ -419,7 +419,7 @@ Private method puts called for; that's interesting.
 92
 00:08:52,525 --> 00:08:57,714
 Oh! I've called it output sorry, I forgot what
-I called it. It's called stood out in this test.
+I called it. It's called stdout in this test.
 
 93
 00:09:01,314 --> 00:09:03,931
