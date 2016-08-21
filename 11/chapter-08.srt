@@ -45,8 +45,8 @@ ensure_updated_dependencies
 
 11
 00:00:58,250 --> 00:01:04,297
-And then let's inaud extract...
-call build inaud build self.
+And then let's extract that into something
+called build_self.
 
 12
 00:01:04,765 --> 00:01:12,674
