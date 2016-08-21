@@ -38,11 +38,11 @@ the future from when the target was built.
 
 9
 00:00:46,822 --> 00:00:48,628
-It doesn't matter that it's time.now
+It doesn't matter that it's Time.now
 
 10
 00:00:48,651 --> 00:00:54,480
-TS: So are you using time.now as the most
+TS: So are you using Time.now as the most
 convenient way to get a real time value?
 
 11
