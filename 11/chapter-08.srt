@@ -108,6 +108,7 @@ once those are done, run this command here.
 24
 00:02:10,380 --> 00:02:13,657
 And everything should be OK.
+TS: Does it work?
 
 25
 00:02:15,770 --> 00:02:18,400
