@@ -337,7 +337,7 @@ system inherits stdout from the ruby process.
 74
 00:07:18,050 --> 00:07:23,840
 Cat happens to not emit any output; well it does,
-but we're binding it to the files, so it's fine.
+but we're piping it into a file, so it's fine.
 
 75
 00:07:23,874 --> 00:07:26,457
