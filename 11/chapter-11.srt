@@ -182,7 +182,8 @@ Lazy building.
 
 40
 00:04:05,340 --> 00:04:11,977
-So if i have that... I want to take this stuff which is going to be needed for all of these tests,
+So if i have that... I want to take this stuff
+which is going to be needed for all of these tests,
 
 41
 00:04:12,228 --> 00:04:16,925
