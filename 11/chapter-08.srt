@@ -64,7 +64,7 @@ We have def ensure_updated_dependencies.
 15
 00:01:26,450 --> 00:01:32,971
 So we should be able to go in
-and say dependencies each build.
+and say dependencies.each &:build.
 
 16
 00:01:36,045 --> 00:01:38,971
