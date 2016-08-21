@@ -7,7 +7,7 @@ with older and newer dependencies.
 2
 00:00:04,080 --> 00:00:07,005
 JC: OK, now everything is passing,
-so the thing does check its' mtime.
+so the thing does check its mtime.
 
 3
 00:00:07,005 --> 00:00:12,537
@@ -73,13 +73,13 @@ And we need exists to return true as well.
 
 17
 00:01:41,930 --> 00:01:47,497
-The target will use target time as its' time and the
+The target will use target_time as its time and the
 dependencies have times which are later than that.
 
 18
 00:01:49,020 --> 00:01:54,262
 The dependencies are newer, so that means
-the target should execute its' instruction.
+the target should execute its instruction.
 
 19
 00:01:54,525 --> 00:01:57,988
@@ -121,7 +121,7 @@ an instruction and an output stream.
 27
 00:02:50,697 --> 00:02:57,588
 So we want to say is that in
-this case it executes its' instruction.
+this case it executes its instruction.
 
 28
 00:02:57,634 --> 00:03:02,045
@@ -234,7 +234,7 @@ And these can be minus signs.
 
 52
 00:05:16,910 --> 00:05:23,257
-And we can say it does not execute its' instruction.
+And we can say it does not execute its instruction.
 
 53
 00:05:25,440 --> 00:05:30,982
