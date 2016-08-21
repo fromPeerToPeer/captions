@@ -10,7 +10,7 @@ JC: So in order for that to work, we just need to....
 3
 00:00:12,400 --> 00:00:17,588
 The second target has been
-given its' dependencies as input,
+given its dependencies as input,
 
 4
 00:00:17,862 --> 00:00:21,977
@@ -150,12 +150,12 @@ thing that needs to be checked.
 
 33
 00:03:01,640 --> 00:03:05,908
-I don't want to tell it how its'
+I don't want to tell it how its
 private method should be organized.
 
 34
 00:03:07,930 --> 00:03:14,011
-It's more about, what's its' interaction with other
+It's more about, what's its interaction with other
 stuff and that is that it calls build on them.
 
 35
@@ -235,7 +235,7 @@ accidental because the order doesn't matter.
 51
 00:04:56,620 --> 00:05:06,388
 So we should say it should tell all
-its' dependencies to build themselves.
+its dependencies to build themselves.
 
 52
 00:05:08,354 --> 00:05:18,971
@@ -292,7 +292,7 @@ Let's have a look at what we've changed.
 64
 00:06:27,980 --> 00:06:36,468
 We've added dependencies to target class and made
-it so that the target will build its' dependencies.
+it so that the target will build its dependencies.
 
 65
 00:06:36,480 --> 00:06:40,411
