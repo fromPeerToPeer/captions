@@ -60,7 +60,7 @@ That means that the...
 
 14
 00:01:14,914 --> 00:01:19,314
-Allow file to receive mtime.
+allow(File).to receive(:mtime)
 
 15
 00:01:19,325 --> 00:01:29,222
