@@ -32,7 +32,7 @@ thing that we've not stored.
 
 8
 00:00:40,091 --> 00:00:45,211
-So build could call update  or...
+So build could call update or...
 
 9
 00:00:45,862 --> 00:00:50,114
