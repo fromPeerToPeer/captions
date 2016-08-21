@@ -341,7 +341,7 @@ but we're piping it into a file, so it's fine.
 
 75
 00:07:23,874 --> 00:07:26,457
-Bur we are still echoing stuff.
+But we are still echoing stuff.
 
 76
 00:07:26,530 --> 00:07:28,388
