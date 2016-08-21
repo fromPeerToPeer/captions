@@ -25,7 +25,7 @@ Some offset to base these on...
 
 6
 00:00:26,354 --> 00:00:32,274
-Let the target time be time.now.
+Let the target_time be Time.now.
 
 7
 00:00:32,845 --> 00:00:41,142
