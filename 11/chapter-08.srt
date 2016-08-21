@@ -388,7 +388,7 @@ process to still be able to talk to stdout.
 85
 00:08:03,965 --> 00:08:13,462
 We can get around that by passing
-it an output like we did before.
+in an output like we did before.
 
 86
 00:08:18,330 --> 00:08:22,674
