@@ -130,8 +130,8 @@ invoke some private method that you have,
 
 29
 00:03:02,068 --> 00:03:05,188
-because that like over
-specifying the implementation. .
+because that's over specifying
+the implementation.
 
 30
 00:03:05,211 --> 00:03:12,994
