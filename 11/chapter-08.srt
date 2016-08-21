@@ -332,7 +332,7 @@ JC: You're right we're printing the commands.
 73
 00:07:11,954 --> 00:07:17,650
 We'll still have an issue with system, because
-system inherit stood out from the ruby process.
+system inherits stdout from the ruby process.
 
 74
 00:07:18,050 --> 00:07:23,840
