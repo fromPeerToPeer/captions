@@ -359,7 +359,7 @@ JC: Yes.
 79
 00:07:34,750 --> 00:07:38,525
 I've let these targets in the
-integration tests use standard out.
+integration tests use stdout.
 
 80
 00:07:38,560 --> 00:07:41,451
