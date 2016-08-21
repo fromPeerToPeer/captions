@@ -247,8 +247,8 @@ And this is the thing that should fail.
 
 55
 00:05:38,120 --> 00:05:44,925
-So target.system echo high expected
-zero times; but received one time.
+So target.system("echo hi")
+expected zero times; received one time.
 
 56
 00:05:44,948 --> 00:05:46,845
