@@ -41,11 +41,11 @@ produce the final result just happen.
 10
 00:00:46,080 --> 00:00:52,960
 For that sort of thing you're going to need to
-know for example, what bundle.js will depend on.
+know for example, that bundle.js will depend on...
 
 11
 00:00:54,670 --> 00:00:58,251
-Hello_js and complimenter_js
+hello_js and complimenter_js
 
 12
 00:00:58,250 --> 00:01:05,222
@@ -84,8 +84,8 @@ we could say that they are...
 
 20
 00:01:44,130 --> 00:01:56,400
-For example, hello coffee is a
-target new example source hello.coffee,
+For example, hello_coffee is a
+Target.new('example/src/hello.coffee',
 
 21
 00:01:56,457 --> 00:02:01,634
@@ -94,8 +94,8 @@ source code you wrote is not derived from anything.
 
 22
 00:02:01,725 --> 00:02:08,011
-And it has no build instructions and
-because you wrote it it doesn't need generating.
+And it has no build instructions because
+you wrote it so it doesn't need generating.
 
 23
 00:02:08,902 --> 00:02:13,131
@@ -124,7 +124,7 @@ Why would you want to do it one way or the other?
 28
 00:02:45,542 --> 00:02:51,965
 JC: Good question, if you do them by
-name you can do your target in any order.
+name you can write your target in any order.
 
 29
 00:02:52,434 --> 00:02:58,000
@@ -153,8 +153,8 @@ can do something for example, by having patterns.
 
 34
 00:03:25,645 --> 00:03:30,514
-Like if you want to say star.js
-depends on star.coffee,
+Like if you want to say *.js
+depends on *.coffee,
 
 35
 00:03:30,510 --> 00:03:36,605
@@ -230,7 +230,7 @@ That ought to run but it doesn't... Why not?
 
 51
 00:05:15,770 --> 00:05:22,617
-Oh yes, OK so the tests we need...
+Oh yes, OK so in the tests we need...
 
 52
 00:05:25,154 --> 00:05:31,440
@@ -263,12 +263,12 @@ will also build the other thing.
 58
 00:06:09,474 --> 00:06:14,525
 Maybe this is where we get
-into integration tests scenario.
+into an integration test scenario.
 
 59
 00:06:14,731 --> 00:06:20,365
-Because I'm going to have two target
-objects maybe writing unit tests against those.
+Because I'm going to have two target objects
+maybe writing unit tests against those is...
 
 60
 00:06:20,434 --> 00:06:24,982
@@ -278,7 +278,7 @@ build on this call build on this other thing,
 61
 00:06:26,091 --> 00:06:29,280
 but maybe that's specifying
-implementation too much.
+the implementation too much.
 
 62
 00:06:29,794 --> 00:06:35,085
@@ -286,12 +286,12 @@ So I'm going to try and write...
 
 63
 00:06:38,628 --> 00:06:43,600
-Spec/features is where I'm
-going to put my generation test.
+spec/features is where I'm
+going to put my integration test.
 
 64
 00:06:43,668 --> 00:06:50,697
-Dependent targets spec.rb.
+dependent_targets_spec.rb
 
 65
 00:06:51,657 --> 00:06:54,651
@@ -303,7 +303,7 @@ No that's not how you write specs is it?
 
 67
 00:07:03,977 --> 00:07:10,628
-Describe dependent targets do.
+describe 'dependent targets' do
 
 68
 00:07:11,268 --> 00:07:14,434
@@ -320,7 +320,7 @@ As something simple, I'm going to say that if you have...
 71
 00:07:38,742 --> 00:07:42,731
 what's something simple we can
-do with files, just like catting them.
+do with files, just like cat-ing them.
 
 72
 00:07:42,810 --> 00:07:49,188
@@ -344,8 +344,8 @@ let's say that we have...
 
 77
 00:08:08,434 --> 00:08:18,480
-There exists a file called a.text that
-just contains an a with a new line in it.
+There exists a file called a.txt that
+just contains an A with a new line in it.
 
 78
 00:08:20,160 --> 00:08:30,148
@@ -363,15 +363,15 @@ then you have your first target.
 
 81
 00:08:47,520 --> 00:08:57,748
-And let's add these somewhere... Like in spec temp.
+And let's put these somewhere... Like in spec/tmp.
 
 82
 00:08:58,160 --> 00:09:01,211
-[Silence}
+[Silence]
 
 83
 00:09:04,742 --> 00:09:12,674
-So if the first target is spec temp 1.text.
+So if the first target is spec/tmp/one.txt.
 
 84
 00:09:14,994 --> 00:09:21,165
@@ -403,12 +403,12 @@ interface around this at some point.
 90
 00:09:49,810 --> 00:09:53,200
 But it makes this a bit more
-complicated as far as those values,
+complicated to pass in those values,
 
 91
 00:09:53,234 --> 00:09:56,960
 because you have to make values
-for thing that are just primitive files.
+for things that are just primitive files.
 
 92
 00:09:56,960 --> 00:09:59,714
@@ -434,12 +434,12 @@ That's b that's c.
 
 97
 00:10:21,817 --> 00:10:29,131
-So if this depends on file a and file b,
+So if this depends on file_a and file_b,
 
 98
 00:10:29,680 --> 00:10:51,142
-And works by catting spec temp a.text
-spec temp b.text into spec temp 1.text.
+And works by cat-ing spec/temp/a.txt
+spec/temp/b.txt into spec/temp/one.txt.
 
 99
 00:10:55,154 --> 00:11:07,451
@@ -448,12 +448,12 @@ And the second target is called second.
 100
 00:11:09,770 --> 00:11:21,405
 And that works by depending
-on the first target - file c.
+on first_target and file_c.
 
 101
 00:11:23,080 --> 00:11:32,640
-Then that is going to work by taking 1.text
-and c.text and putting that into the second.
+Then that is going to work by taking one.txt
+and c.txt and putting that into the second.
 
 102
 00:11:32,731 --> 00:11:38,148
@@ -474,11 +474,11 @@ JC: No.
 106
 00:11:59,360 --> 00:12:14,228
 If we just build the second target then we expect
-file read spec temp second text to equal...
+File.read(spec/tmp/second.txt) to equal...
 
 107
 00:12:16,617 --> 00:12:22,937
-a newline, b newline, c newline.
+A newline, B newline, C newline.
 
 108
 00:12:23,177 --> 00:12:27,154
@@ -510,7 +510,7 @@ with that content and keep track of it.
 
 114
 00:13:01,320 --> 00:13:05,725
-And if there's inaud remove all of them.
+And then use an `after` hook to remove all of them.
 
 115
 00:13:05,720 --> 00:13:07,531
@@ -518,11 +518,11 @@ TS: OK.
 
 116
 00:13:07,588 --> 00:13:15,280
-JC: So file utils has a make dir-p function.
+JC: So file utils has a `mkdir_p` function.
 
 117
 00:13:18,068 --> 00:13:28,700
-We can make that, and then we can file open,
+We can make that, and then we can `File.open`,
 the path name and write content into that.
 
 118
@@ -539,20 +539,20 @@ Then we can store the path name in there.
 
 121
 00:13:48,060 --> 00:13:54,102
-And then there's an afterhook, we can say...
+And then as an `after` hook, we can say...
 
 122
 00:13:54,960 --> 00:14:00,148
-Spec files each do path name.
+spec_files.each do path name.
 
 123
 00:14:00,845 --> 00:14:05,131
-So file unlink to delete things.
+Is it `File.unlink` to delete things?
 
 124
 00:14:07,200 --> 00:14:12,354
 So then we ought not to be left
-with load of files that exist between tests.
+with loads of files that exist between tests.
 
 125
 00:14:12,365 --> 00:14:17,337
@@ -574,7 +574,7 @@ And we've made targets for them and the first target depends on a and b
 129
 00:14:28,060 --> 00:14:31,474
 and if you cat those two
-files together you get 1.text.
+files together you get one.txt.
 
 130
 00:14:31,520 --> 00:14:34,982
@@ -588,12 +588,12 @@ to make the second file, that works.
 132
 00:14:42,300 --> 00:14:46,514
 The way things are at the moment,
-if we just run second target.build,
+if we just run second_target.build,
 
 133
 00:14:47,074 --> 00:14:53,714
 it might end up throwing because
-this 1. text file won't exist.
+this one.txt file won't exist.
 
 134
 00:14:54,045 --> 00:15:01,462
@@ -607,7 +607,7 @@ or it shouldn't have the right content in it.
 
 136
 00:15:06,114 --> 00:15:08,514
-A and b will be missing.
+A and B will be missing.
 
 137
 00:15:08,742 --> 00:15:14,102
@@ -615,7 +615,7 @@ So let's have a go at running those spec features.
 
 138
 00:15:15,702 --> 00:15:20,365
-No variables, second target on where... 38.
+No variable `second_target` on where... 38.
 
 139
 00:15:22,982 --> 00:15:25,131
@@ -640,12 +640,12 @@ We've got a failed command from line
 
 144
 00:15:44,091 --> 00:15:48,148
-I assume because the cat is failing.
+I assume because cat is failing.
 
 145
 00:15:49,657 --> 00:15:56,034
 It would be nice if that error told us what
-command had failed. It would be really helpful.
+command had failed. That would be really helpful.
 
 146
 00:15:56,057 --> 00:16:01,154
@@ -658,8 +658,8 @@ Raise fake command.
 
 148
 00:16:11,410 --> 00:16:23,371
-Unless system instruction message
-equals command failed with the instruction.
+Unless system(instruction)
+message equals "command failed" with the instruction.
 
 149
 00:16:23,554 --> 00:16:25,188
@@ -679,16 +679,16 @@ JC: Raise that.
 
 153
 00:16:38,720 --> 00:16:45,097
-Command failed cat spec temp 1. So that is expected.
+Command failed: cat spec/tmp/one. So that is expected.
 
 154
 00:16:48,205 --> 00:16:50,685
-I hope those files are not hanging around in temp.
+I hope those files are not hanging around in tmp.
 
 155
 00:16:50,680 --> 00:17:00,228
 So this knows how to clean up the files we created
-with file but it doesn't know how to clean up.
+with `file` but it doesn't know how to clean up.
 
 156
 00:17:02,320 --> 00:17:04,137
@@ -709,7 +709,7 @@ I accidentally made a new shell there.
 
 160
 00:17:15,577 --> 00:17:17,965
-We could just nuke the temp directory.
+We could just nuke the tmp directory.
 
 161
 00:17:17,960 --> 00:17:23,462
@@ -723,7 +723,7 @@ don't need this tracking stuff.
 
 163
 00:17:32,022 --> 00:17:37,417
-I have put this spec temp all over the test,
+I have put this `spec/tmp` all over the test,
 maybe that's something I should clean up.
 
 164
@@ -732,8 +732,8 @@ I maybe wanted to say...
 
 165
 00:17:39,691 --> 00:17:46,240
-What I originally wanted to do was save file
-a.text and then have that create a slash inaud tab.
+What I originally wanted to do was say file
+a.text and then have that created spec/tmp.
 
 166
 00:17:46,270 --> 00:17:52,891
@@ -742,7 +742,7 @@ had to change process directory into there.
 
 167
 00:17:52,910 --> 00:17:56,217
-which we could do, but I think I'm happier with that.
+which we could do, I think I'm happier with that.
 
 168
 00:17:56,240 --> 00:18:03,988
@@ -808,7 +808,7 @@ So creating those files...
 182
 00:19:07,531 --> 00:19:13,200
 We don't do anything, these just make target objects,
-they don't do system calls or write any files.
+they don't run system calls or write any files.
 
 183
 00:19:13,310 --> 00:19:23,005
@@ -820,7 +820,7 @@ And then put that in here.
 
 185
 00:19:27,280 --> 00:19:33,542
-So if we make those files inside spec temp
+So if we make those files inside spec/tmp
 and then run everything in that directory,
 
 186
@@ -848,7 +848,7 @@ we're storing things from the code.
 
 191
 00:20:14,640 --> 00:20:19,188
-Command failed cat 1 with c didn't work
+Command failed cat one with c didn't work
 
 192
 00:20:20,102 --> 00:20:24,400
