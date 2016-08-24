@@ -247,7 +247,7 @@ that you can build a partially built system.
 55
 00:05:34,050 --> 00:05:40,262
 It means you need to test
-that build that returns the mtime.
+that build returns the mtime.
 
 56
 00:05:44,000 --> 00:05:55,028
