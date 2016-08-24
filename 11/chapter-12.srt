@@ -332,7 +332,7 @@ the mtime of that file at that point.
 
 73
 00:07:31,051 --> 00:07:35,622
-But your talking about almost the mtime
+But you're talking about almost the mtime
 of that file after it's been regenerated.
 
 74
