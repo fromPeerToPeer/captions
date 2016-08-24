@@ -5,7 +5,7 @@ Using FakeMake to build the sample project.
 
 2
 00:00:04,331 --> 00:00:06,091
-TS: So where does that get us to?
+TS: So it gets us to...
 
 3
 00:00:06,114 --> 00:00:11,977
@@ -14,8 +14,8 @@ original example that we were given,
 
 4
 00:00:11,970 --> 00:00:20,617
-I was hacking around with the script trying to
-decide what the user interface to this should be.
+There was that script that I was hacking around trying to
+figure out what the user interface to this should be.
 
 5
 00:00:21,977 --> 00:00:27,280
@@ -27,7 +27,7 @@ So this will now be lib/fakemake.
 
 7
 00:00:32,570 --> 00:00:39,577
-Now... With the target... there's two source files.
+Now... This will need to be... With the target... there's two source files.
 
 8
 00:00:39,570 --> 00:00:43,188
@@ -56,13 +56,13 @@ no dependencies and no build instructions.
 
 14
 00:01:11,760 --> 00:01:22,971
-They have hello JavaScript. Which is
-derived from hello.coffee and you build that.
+They have hello.js. Which is derived
+from hello.coffee and you build that.
 
 15
 00:01:23,370 --> 00:01:28,011
 We could make a target for the lib directory,
-not sure if I'll go through extracting that.
+I am not sure if I'll go through extracting that.
 
 16
 00:01:28,020 --> 00:01:30,491
@@ -78,12 +78,12 @@ Actually, directories do have mtimes.
 
 19
 00:01:40,605 --> 00:01:49,885
-Yes, target new example lib;
+Yeah, target new example lib;
 which has no dependencies.
 
 20
 00:01:49,942 --> 00:01:56,994
-And is built by calling make dir  p example lib.
+annd is built by calling make dir p example lib.
 
 21
 00:01:58,210 --> 00:02:01,085
@@ -103,7 +103,7 @@ Let's clone that rather than...
 
 25
 00:02:21,680 --> 00:02:26,217
-So complementor.js depends on that.
+So complimenter.js depends on that.
 
 26
 00:02:26,262 --> 00:02:30,930
@@ -125,7 +125,7 @@ OK so...
 
 30
 00:02:54,480 --> 00:02:57,980
-This was in scratch test rb.
+This was in scratch/test.rb.
 
 31
 00:03:00,182 --> 00:03:08,765
@@ -179,13 +179,13 @@ should rebuild it but not rebuild everything.
 
 42
 00:04:01,702 --> 00:04:09,690
-So if I use touch, which sets the mtime on
-a file to now, and creates it if it's not there.
+So if I use touch, which what touch does is that it just sets the
+mtime on a file to now, and creates it if it's not there.
 
 43
 00:04:10,297 --> 00:04:19,130
 If I touch example lib hello.js.
-Or rather, let's touch hello coffee. Sorry.
+Or rather, let's touch hello.coffee. Sorry.
 
 44
 00:04:19,302 --> 00:04:23,291

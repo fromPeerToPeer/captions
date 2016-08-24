@@ -5,13 +5,13 @@ Returning original mtime from an up to date Target.
 
 2
 00:00:04,205 --> 00:00:12,571
-So we did the case where you are forced to rebuild
-yourself, you return your regeneration time.
+So, that was one case, we did the case where when you are forced
+to rebuild yourself, you return your regeneration time.
 
 3
 00:00:12,780 --> 00:00:17,622
-If your already up to date you
-should return your original time,
+If you are already up to date you
+should return your target, your original time,
 
 4
 00:00:17,645 --> 00:00:25,291
@@ -48,7 +48,7 @@ So... It's not.
 11
 00:01:14,900 --> 00:01:19,497
 TS: Do you think this was a rather unfair test
-because those two times would be the same
+because actually those two times would be the same
 
 12
 00:01:19,508 --> 00:01:25,782
@@ -62,7 +62,7 @@ that you've assumed that the mtime changes.
 
 14
 00:01:30,217 --> 00:01:37,611
-JC: What I'm testing, by accident is that
+JC: What I'm testing, by accident, is that
 it returns the result of the second mtime call,
 
 15
@@ -89,7 +89,8 @@ JC: No. [Laughter]
 
 20
 00:02:03,620 --> 00:02:10,080
-So is that an accident or is it what i really mean?
+So, is that what I really mean?
+Is that an accident or is it what I really mean?
 
 21
 00:02:10,190 --> 00:02:13,645
@@ -102,26 +103,27 @@ not actually interacting with the system.
 
 23
 00:02:16,990 --> 00:02:20,400
-You're not running these commands; we're not changing any files.
+You're not running these commands;
+we're not actually changing any files.
 
 24
 00:02:20,560 --> 00:02:27,017
 Is there some other way that I can say
-it should return the same time as before?
+"it should return the same time as before"?
 
 25
 00:02:30,217 --> 00:02:35,417
-If you decided not to run the build, which you
+I guess, if you decided not to run the build, you
 don't need to run the File.mtime a second time.
 
 26
 00:02:35,410 --> 00:02:40,377
-TS: Right. I guess it depends on whether
+TS: Right. I suppose it does depend on whether
 you care about mtime being run twice or not.
 
 27
 00:02:40,720 --> 00:02:45,108
-Do you feel it's important it only
+Do you feel that it's important it only
 gets run as many times as necessary?
 
 28
@@ -140,7 +142,7 @@ I'm probably worrying about it more than I ought to.
 
 31
 00:03:07,500 --> 00:03:12,560
-The question that I have is how
+The question that I actually have is how
 you test this in an accurate way.
 
 32
@@ -155,12 +157,12 @@ behaviour that you specified in your test
 
 34
 00:03:21,010 --> 00:03:26,091
-or will you have to relax your
+or are you gonna have to relax your
 test in order to do anything?
 
 35
 00:03:27,828 --> 00:03:32,137
-JC: Well I could stub it so it
+JC: Well I could stub it so that it
 returns the same value both times
 
 36
@@ -170,16 +172,16 @@ you can't tell which of those values it's returning.
 
 37
 00:03:38,780 --> 00:03:42,217
-That is not helpful.
+So that is not helpful.
 
 38
 00:03:42,628 --> 00:03:51,611
-I could make the code cache the first call to mtime
+I could make it so the code caches the first call to mtime
 and returns that if it decides not to do any work.
 
 39
 00:03:52,220 --> 00:03:56,057
-TS: So you could have an instance
+TS: Right. Oh, so mean that you could have an instance
 variable where your initial mtime gets stored
 
 40
@@ -220,7 +222,7 @@ mtime = file.mtime with the pathname.
 
 48
 00:04:59,748 --> 00:05:07,154
-this will now implicitly return mtime [laughter]
+This will now implicitly return mtime [laughter]
 because it's the last thing that build calls.
 
 49
@@ -239,8 +241,8 @@ Yeah, so that's where I've got hmm...
 
 52
 00:05:25,340 --> 00:05:28,662
-TS: Is this the change you
-made to un-break the test before?
+TS: Is this the change you had to
+make to un-break the test before?
 
 53
 00:05:28,685 --> 00:05:34,320
@@ -298,12 +300,12 @@ In this case it only returns it once.
 
 65
 00:06:42,780 --> 00:06:46,560
-No that's not true, it does...
+No, wait, that's not actually true, it does...
 
 66
 00:06:46,640 --> 00:06:52,982
-No it only calls mtime again if the things
-are newer, so this aught to be fine.
+No, it only calls mtime again if the things
+are newer, so this ought to be fine.
 
 67
 00:06:54,662 --> 00:06:57,291
@@ -329,7 +331,7 @@ We said it was allowed to be called twice.
 72
 00:07:09,234 --> 00:07:15,474
 This is the test that checks the
-mtime on its' own file, that's that one.
+mtime of its own file, that's that one.
 
 73
 00:07:15,840 --> 00:07:19,131
@@ -339,12 +341,12 @@ in there to stop that test breaking.
 74
 00:07:19,211 --> 00:07:27,474
 JC: That's true. But now I've specified it more strongly
-in those tests, this ought not to be necessary.
+in those tests, this ought to not be necessary.
 
 75
 00:07:28,410 --> 00:07:33,554
-TS: Well you changed the implementation so that
-it doesn't get called twice unless it needs to be.
+TS: Well then the change you made in the the implementation was
+so that it doesn't get called twice unless it needs to be.
 
 76
 00:07:33,577 --> 00:07:36,137
