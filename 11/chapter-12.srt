@@ -19,7 +19,7 @@ Ensure updated dependencies.
 5
 00:00:20,857 --> 00:00:25,691
 We've said in our test that calling build
-on a dependency will return its' mtime.
+on a dependency will return its mtime.
 
 6
 00:00:25,690 --> 00:00:37,074
@@ -28,7 +28,7 @@ dependencies and call map so we get the values.
 
 7
 00:00:39,748 --> 00:00:54,217
-And then here we can say return unless any of
+And then here we can say "return unless" any of
 the dependent times are greater than our own.
 
 8
@@ -54,7 +54,7 @@ to do that, but we'll get to that in a second.
 
 13
 00:01:20,620 --> 00:01:25,040
-"undefined method `>' for nil:NilClass
+"undefined method `>' for nil:NilClass"
 
 14
 00:01:25,070 --> 00:01:30,560
@@ -98,7 +98,7 @@ This is a bit of an illusion because it doesn't (hmm)...
 
 23
 00:02:17,474 --> 00:02:24,640
-I'm surprised that the integration test
+I'm actually surprised that the integration test
 works because build isn't returning the mtime.
 
 24
@@ -151,13 +151,13 @@ and then sees if the second one will build.
 
 35
 00:03:14,260 --> 00:03:25,440
-context when one target
-already exists do file one.text.
+[saying what he's typing]
+
 
 36
 00:03:30,620 --> 00:03:38,102
-Let's just make it include one rather than from
-where the files it was previously derived from are.
+Let's just make it include one rather than
+whatever the files it was previously derived from are.
 
 37
 00:03:39,782 --> 00:03:44,822
@@ -166,12 +166,12 @@ to get into setting mtimes on various files.
 
 38
 00:03:44,820 --> 00:03:48,731
-They're going to be created in a certain order .
+They're going to be created in a certain order.
 
 39
 00:03:48,770 --> 00:03:53,222
 But the time resolution on those
-time stamps on the files is only a second.
+time stamps on the file-system is only a second.
 
 40
 00:03:53,268 --> 00:03:59,920
@@ -203,7 +203,7 @@ Yeah...
 
 46
 00:04:37,634 --> 00:04:40,662
-I could just do that.
+I'll just do that.
 
 47
 00:04:41,660 --> 00:04:50,491
@@ -227,7 +227,7 @@ methods, so this should fall over.
 
 51
 00:05:15,020 --> 00:05:17,577
-Yes, so a second error out of that.
+Yes, so the same error out of that.
 
 52
 00:05:17,600 --> 00:05:20,491
@@ -242,17 +242,17 @@ than the previous integration test was?
 54
 00:05:24,380 --> 00:05:33,954
 JC: Yes. That integration test makes sure
-that you can rebuild a partially built system.
+that you can build a partially built system.
 
 55
 00:05:34,050 --> 00:05:40,262
-It means you need a test for
-build that returns the mtime.
+It means you need to test
+that build returns the mtime.
 
 56
 00:05:44,000 --> 00:05:55,028
 Going back to our unit tests, where did
-we have something with a dependency?
+we have something when there are dependencies?
 
 57
 00:05:55,588 --> 00:06:01,085
@@ -275,7 +275,7 @@ should return time.now, I guess.
 
 61
 00:06:14,060 --> 00:06:20,274
-So we can build those in to here.
+So we can build those into here.
 
 62
 00:06:20,285 --> 00:06:32,251
@@ -290,11 +290,11 @@ of the dependencies build times,
 64
 00:06:40,360 --> 00:06:46,491
 but building a target will take time so it might be
-a few seconds later than its' dependencies were.
+a few seconds later than its dependencies were.
 
 65
 00:06:48,770 --> 00:06:54,880
-Or, if its' dependencies were touched a very long
+Or, if its dependencies were last touched a very long
 time ago, but they're still newer than you are...
 
 66
@@ -332,8 +332,8 @@ the mtime of that file at that point.
 
 73
 00:07:31,051 --> 00:07:35,622
-But your talking about almost the end
-point of that file after it's been regenerated.
+But your talking about almost the mtime
+of that file after it's been regenerated.
 
 74
 00:07:35,908 --> 00:07:44,857
@@ -347,16 +347,16 @@ depends on 1 that depends on a.
 76
 00:07:54,720 --> 00:08:05,600
 So if for some bizarre reason,
-the second is newer than a but 1 isn't.
+file 2 is newer than file a, but file 1 isn't.
 
 77
 00:08:06,090 --> 00:08:12,285
 You will regenerate 1, which means you ought
-to regenerate 2, but one returns the mtime of a,
+to regenerate 2, but if 1 returns the mtime of a,
 
 78
 00:08:12,354 --> 00:08:15,108
-then  the second will think it's up to date.
+then the 2nd will think it's up to date.
 
 79
 00:08:15,100 --> 00:08:21,348
@@ -374,7 +374,7 @@ getting into ordering problems.
 
 82
 00:08:29,770 --> 00:08:33,588
-So i want to say it returns the current time.
+So I want to say it returns the current time.
 
 83
 00:08:33,714 --> 00:08:38,560
@@ -397,12 +397,12 @@ Sometimes I'll indirect something.
 87
 00:08:45,810 --> 00:08:51,405
 like make a method called current time that just
-returns time.now, and doesn't need testing really.
+returns Time.now, and doesn't need testing really.
 
 88
 00:08:51,470 --> 00:08:55,885
 And then I'll stub that, so it means the
-rest of the system can use the real time.now,
+rest of the system can use the real Time.now,
 
 89
 00:08:55,942 --> 00:08:59,188
@@ -412,7 +412,7 @@ the code is going to use.
 90
 00:08:59,280 --> 00:09:01,691
 TS: Is the reason your
-expecting it to return time.now
+expecting it to return Time.now
 
 91
 00:09:01,702 --> 00:09:06,057
@@ -445,7 +445,7 @@ may be in different time zones, they might conflict.
 
 97
 00:09:37,620 --> 00:09:42,342
-Mtime is really the correct thing. I think I'm
+mtime is really the correct thing. I think I'm
 worrying about the fact that I've stubbed it up here.
 
 98
@@ -465,7 +465,7 @@ makes it hard to distinguish the cause.
 101
 00:10:02,750 --> 00:10:09,325
 I could say that it has to call some private
-method to get its' new time and assert on that.
+method to get its new time and assert on that.
 
 102
 00:10:09,360 --> 00:10:17,417
@@ -479,7 +479,7 @@ OK, so returns the new mtime of the file.
 104
 00:10:24,194 --> 00:10:31,428
 Let's say that new mtime is, (I'm just going to
-make that a double), I don't care what its' value is.
+make that a double), I don't care what its value is.
 
 105
 00:10:33,177 --> 00:10:39,405
@@ -500,13 +500,13 @@ Let's say...
 
 109
 00:10:57,314 --> 00:11:04,445
-Let's leave that as target time and
-then let's call this regeneration time.
+Let's leave that called target_time and
+then let's call this regeneration_time.
 
 110
 00:11:04,937 --> 00:11:14,434
-And we'll  say that regeneration
-time is target time plus 10 minutes.
+And we'll say that regeneration_time
+is target_time plus 10 minutes.
 
 111
 00:11:16,125 --> 00:11:18,068
@@ -537,8 +537,8 @@ JC: Yes, that's great.
 
 117
 00:11:35,380 --> 00:11:46,342
-I don't have to do that. I have to say expect
-target.build to equal the regeneration time.
+I don't have to do that. I have to say "expect
+target.build to equal the regeneration_time".
 
 118
 00:11:46,377 --> 00:11:50,034
@@ -547,7 +547,7 @@ That's what should be returned from this method.
 119
 00:11:50,125 --> 00:11:54,365
 System will still be stubbed out because
-I stubbed out all the times. That's fine.
+it's stubbed out all the times. That's fine.
 
 120
 00:11:54,480 --> 00:11:58,182
@@ -564,7 +564,7 @@ One in target spec and one in the integration tests.
 123
 00:12:06,420 --> 00:12:14,777
 So it was expecting
-regeneration time and got echo high.
+regeneration_time and got echo high.
 
 124
 00:12:16,020 --> 00:12:23,074
@@ -572,12 +572,12 @@ That's because the end of our build self method...
 
 125
 00:12:23,142 --> 00:12:29,234
-The last thing in that is a inaud instructions,
+The last thing in that is an each over the instructions,
 which each returns the thing it was called on.
 
 126
 00:12:29,302 --> 00:12:35,440
-I think i want to leave that where it is.
+I think I want to leave that where it is.
 
 127
 00:12:35,737 --> 00:12:42,400
@@ -585,7 +585,7 @@ And maybe extract a thing...
 
 128
 00:12:42,948 --> 00:12:46,457
-Yes let's extract a thing and forget the mtime.
+Yes let's extract a thing, forgetting the mtime.
 
 129
 00:12:46,742 --> 00:13:02,240
@@ -601,11 +601,11 @@ Up here I can do...
 
 132
 00:13:17,520 --> 00:13:21,440
-Target mtime equals mtime.
+target_mtime equals mtime.
 
 133
 00:13:21,920 --> 00:13:34,377
-And then return unless that
+And then return_unless that
 and any of those are greater than this.
 
 134
@@ -624,7 +624,7 @@ I've got the hang of unit testing. [Laughter]
 
 137
 00:14:04,820 --> 00:14:09,805
-Now that we're calling mtime in build method in
+Now that we're calling mtime in the build method in
 a code path that everything is going to hit,
 
 138
@@ -643,7 +643,7 @@ just because the thing didn't return the right time.
 
 141
 00:14:28,770 --> 00:14:34,445
-I will back that out and check the re-patching I did.
+I will back that out and check that refactoring I did.
 
 142
 00:14:34,605 --> 00:14:39,268
@@ -656,7 +656,7 @@ until we get back to what we wanted.
 
 144
 00:14:47,394 --> 00:14:49,954
-OK let's make it work and then re-factor it.
+OK let's make it work and then refactor it.
 
 145
 00:14:50,000 --> 00:14:59,497
@@ -702,11 +702,11 @@ we still are getting some mock expectations.
 154
 00:15:45,794 --> 00:15:49,474
 Oh, because there's an
-assertion that its called once.
+assertion that it's called once.
 
 155
 00:15:49,640 --> 00:15:53,337
-But those failures we we're seeing
+But those failures that we're seeing
 before have mostly gone away.
 
 156
@@ -721,7 +721,7 @@ it should be calling it once.
 
 158
 00:16:05,470 --> 00:16:15,737
-What's the one where it said whether
+What's the one where that said
 it should be called once but it got twice?
 
 159
@@ -731,7 +731,7 @@ Line thirty-two.
 160
 00:16:21,268 --> 00:16:28,697
 Maybe the once is implicit...
-Check the mtime on its' own file.
+Check the mtime on its own file.
 
 161
 00:16:31,210 --> 00:16:35,862
@@ -762,7 +762,7 @@ We had 9 failures, and now we've got 8 failures.
 167
 00:17:01,330 --> 00:17:05,440
 The other thing is that it's calling
-mtime on things that don't exist.
+mtime with loads of things that don't exist.
 
 168
 00:17:06,045 --> 00:17:10,788
