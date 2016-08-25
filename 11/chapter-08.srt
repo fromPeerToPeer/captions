@@ -10,7 +10,7 @@ JC: So in order for that to work, we just need to....
 3
 00:00:12,400 --> 00:00:17,588
 The second target has been
-given its' dependencies as input,
+given its dependencies as input,
 
 4
 00:00:17,862 --> 00:00:21,977
@@ -32,21 +32,21 @@ thing that we've not stored.
 
 8
 00:00:40,091 --> 00:00:45,211
-So build could call update  or...
+So build could call update or...
 
 9
 00:00:45,862 --> 00:00:50,114
-No sorry, I'm going to update
-to make sure they're up to date.
+Not necessarily going to update them,
+I'm going to make sure they're up to date.
 
 10
 00:00:52,411 --> 00:00:58,034
-ensure-updated-dependencies
+ensure_updated_dependencies
 
 11
 00:00:58,250 --> 00:01:04,297
-And then let's inaud extract...
-call build inaud build self.
+And then let's extract that into something
+called build_self.
 
 12
 00:01:04,765 --> 00:01:12,674
@@ -64,7 +64,7 @@ We have def ensure_updated_dependencies.
 15
 00:01:26,450 --> 00:01:32,971
 So we should be able to go in
-and say dependencies each build.
+and say dependencies.each &:build.
 
 16
 00:01:36,045 --> 00:01:38,971
@@ -108,6 +108,7 @@ once those are done, run this command here.
 24
 00:02:10,380 --> 00:02:13,657
 And everything should be OK.
+TS: Does it work?
 
 25
 00:02:15,770 --> 00:02:18,400
@@ -150,12 +151,12 @@ thing that needs to be checked.
 
 33
 00:03:01,640 --> 00:03:05,908
-I don't want to tell it how its'
+I don't want to tell it how its
 private method should be organized.
 
 34
 00:03:07,930 --> 00:03:14,011
-It's more about, what's its' interaction with other
+It's more about, what's its interaction with other
 stuff and that is that it calls build on them.
 
 35
@@ -235,15 +236,15 @@ accidental because the order doesn't matter.
 51
 00:04:56,620 --> 00:05:06,388
 So we should say it should tell all
-its' dependencies to build themselves.
+its dependencies to build themselves.
 
 52
 00:05:08,354 --> 00:05:18,971
-So we expect `first_dep` to receive build once.
+So we expect first_dep to receive build once.
 
 53
 00:05:19,382 --> 00:05:24,125
-And likewise for the `second_dep`.
+And likewise for the second_dep.
 
 54
 00:05:24,720 --> 00:05:26,571
@@ -292,7 +293,7 @@ Let's have a look at what we've changed.
 64
 00:06:27,980 --> 00:06:36,468
 We've added dependencies to target class and made
-it so that the target will build its' dependencies.
+it so that the target will build its dependencies.
 
 65
 00:06:36,480 --> 00:06:40,411
@@ -318,7 +319,7 @@ TS: I was surprised to see when you ran that unit test,
 70
 00:06:58,170 --> 00:07:01,805
 it looks like there was some output
-on standard out during the test,
+on stdout during the test,
 
 71
 00:07:01,805 --> 00:07:05,610
@@ -331,16 +332,16 @@ JC: You're right we're printing the commands.
 73
 00:07:11,954 --> 00:07:17,650
 We'll still have an issue with system, because
-system inherit stood out from the ruby process.
+system inherits stdout from the ruby process.
 
 74
 00:07:18,050 --> 00:07:23,840
 Cat happens to not emit any output; well it does,
-but we're binding it to the files, so it's fine.
+but we're piping it into a file, so it's fine.
 
 75
 00:07:23,874 --> 00:07:26,457
-Bur we are still echoing stuff.
+But we are still echoing stuff.
 
 76
 00:07:26,530 --> 00:07:28,388
@@ -358,7 +359,7 @@ JC: Yes.
 79
 00:07:34,750 --> 00:07:38,525
 I've let these targets in the
-integration tests use standard out.
+integration tests use stdout.
 
 80
 00:07:38,560 --> 00:07:41,451
@@ -367,7 +368,8 @@ and I can maybe stop them from doing that.
 81
 00:07:41,565 --> 00:07:48,845
 It's a bit frustrating in that I could have
-used puts and set dollar stood out inaud output.
+used puts and set $stdout to StringIO, but
+then the tests wouldn't emit any output.
 
 82
 00:07:49,908 --> 00:07:53,245
@@ -376,22 +378,22 @@ It's one of those isolation things.
 83
 00:07:53,337 --> 00:07:57,725
 I want this thing that prints
-stuff to print a black hole.
+stuff to print to a black hole.
 
 84
 00:07:57,720 --> 00:08:02,034
-And I want the tests that are running the
-process to still be able to talk to stood out.
+But I want the tests that are running the
+process to still be able to talk to stdout.
 
 85
 00:08:03,965 --> 00:08:13,462
 We can get around that by passing
-it an output like we did before.
+in an output like we did before.
 
 86
 00:08:18,330 --> 00:08:22,674
-Well call it stood out here to make
-it a bit more clear what its' role is.
+We'll call it stdout here to make
+it a bit more clear what its role is.
 
 87
 00:08:24,868 --> 00:08:30,400
@@ -417,7 +419,7 @@ Private method puts called for; that's interesting.
 92
 00:08:52,525 --> 00:08:57,714
 Oh! I've called it output sorry, I forgot what
-I called it. It's called stood out in this test.
+I called it. It's called stdout in this test.
 
 93
 00:09:01,314 --> 00:09:03,931

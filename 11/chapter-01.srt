@@ -13,11 +13,12 @@ Our guest today is James Coglan.
 
 4
 00:00:08,740 --> 00:00:11,360
-Author of JavaScript testing recipes.
+Author of JavaScript Testing Recipes.
 
 5
 00:00:11,360 --> 00:00:16,914
-And creator of open source projects such as Faye and web socket driver.
+And creator of open source projects such
+as Faye and web socket driver.
 
 6
 00:00:17,337 --> 00:00:19,577
@@ -90,7 +91,7 @@ There's coffeescript,
 so we'll need the coffee compiler.
 
 21
-00:01:27,440 --> 00:01:32,502
+00:01:22,440 --> 00:01:32,502
 And it has to be minified so I'll
 use uglify.js for that... and concatenated.
 

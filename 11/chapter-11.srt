@@ -7,7 +7,7 @@ with older and newer dependencies.
 2
 00:00:04,080 --> 00:00:07,005
 JC: OK, now everything is passing,
-so the thing does check its' mtime.
+so the thing does check its mtime.
 
 3
 00:00:07,005 --> 00:00:12,537
@@ -25,7 +25,7 @@ Some offset to base these on...
 
 6
 00:00:26,354 --> 00:00:32,274
-Let the target time be time.now.
+Let the target_time be Time.now.
 
 7
 00:00:32,845 --> 00:00:41,142
@@ -38,11 +38,11 @@ the future from when the target was built.
 
 9
 00:00:46,822 --> 00:00:48,628
-It doesn't matter that it's time.now
+It doesn't matter that it's Time.now
 
 10
 00:00:48,651 --> 00:00:54,480
-TS: So are you using time.now as the most
+TS: So are you using Time.now as the most
 convenient way to get a real time value?
 
 11
@@ -60,7 +60,7 @@ That means that the...
 
 14
 00:01:14,914 --> 00:01:19,314
-Allow file to receive mtime.
+allow(File).to receive(:mtime)
 
 15
 00:01:19,325 --> 00:01:29,222
@@ -73,13 +73,13 @@ And we need exists to return true as well.
 
 17
 00:01:41,930 --> 00:01:47,497
-The target will use target time as its' time and the
+The target will use target_time as its time and the
 dependencies have times which are later than that.
 
 18
 00:01:49,020 --> 00:01:54,262
 The dependencies are newer, so that means
-the target should execute its' instruction.
+the target should execute its instruction.
 
 19
 00:01:54,525 --> 00:01:57,988
@@ -121,17 +121,17 @@ an instruction and an output stream.
 27
 00:02:50,697 --> 00:02:57,588
 So we want to say is that in
-this case it executes its' instruction.
+this case it executes its instruction.
 
 28
 00:02:57,634 --> 00:03:02,045
-I don't want to specify by saying you should
+I don't want to specify this by saying you should
 invoke some private method that you have,
 
 29
 00:03:02,068 --> 00:03:05,188
-because that like over
-specifying the implementation. .
+because that's over specifying
+the implementation.
 
 30
 00:03:05,211 --> 00:03:12,994
@@ -174,7 +174,7 @@ in duplicating most of this context.
 
 38
 00:03:55,028 --> 00:03:59,908
-So if feel I should pull some of this stuff out.
+So I feel I should pull some of this stuff out.
 
 39
 00:04:02,651 --> 00:04:05,211
@@ -182,7 +182,8 @@ Lazy building.
 
 40
 00:04:05,340 --> 00:04:11,977
-So if i have that... I want to take this stuff which is going to be needed for all of these tests,
+So if i have that... I want to take this stuff
+which is going to be needed for all of these tests,
 
 41
 00:04:12,228 --> 00:04:16,925
@@ -234,7 +235,7 @@ And these can be minus signs.
 
 52
 00:05:16,910 --> 00:05:23,257
-And we can say it does not execute its' instruction.
+And we can say it does not execute its instruction.
 
 53
 00:05:25,440 --> 00:05:30,982
@@ -246,8 +247,8 @@ And this is the thing that should fail.
 
 55
 00:05:38,120 --> 00:05:44,925
-So target.system echo high expected
-zero times; but received one time.
+So target.system("echo hi")
+expected zero times; received one time.
 
 56
 00:05:44,948 --> 00:05:46,845

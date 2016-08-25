@@ -23,7 +23,7 @@ javascript, it can get very slow.
 
 6
 00:00:25,090 --> 00:00:30,125
-A simple way to do this is to look
+A simple way to do that is to look
 at the modified times of the files,
 
 7
@@ -46,7 +46,7 @@ about unnecessary work being done.
 
 11
 00:00:48,020 --> 00:00:52,902
-You've made some change that
+You've made some change to it that
 ensures something doesn't get done twice.
 
 12
@@ -88,7 +88,7 @@ and then they will both call build on that thing.
 
 20
 00:01:27,550 --> 00:01:33,097
-What I just did was I made it so that
+What I just did was make it so that
 those two builds to the same target
 
 21
@@ -121,8 +121,8 @@ TS: OK, Cool.
 
 27
 00:02:01,090 --> 00:02:06,594
-JC: It's duplicate work within
-one build across multiple builds.
+JC: It's duplicate work within one build
+and then across multiple builds.
 
 28
 00:02:08,125 --> 00:02:14,914
@@ -140,7 +140,7 @@ putting a flag in memory on an object
 
 31
 00:02:21,417 --> 00:02:24,640
-to say don't do this again, you've already done it.
+to say "don't do this again, you've already done it."
 
 32
 00:02:24,765 --> 00:02:26,731
@@ -164,7 +164,7 @@ files as the primary thing...
 36
 00:02:40,617 --> 00:02:46,777
 It's good because it gives you an almost
-free way to check that the files are up to date.
+free way to check that things are up to date.
 
 37
 00:02:46,770 --> 00:02:48,342
@@ -204,7 +204,7 @@ then I should quit.
 
 45
 00:03:22,137 --> 00:03:25,462
-TS: What does higher than mean?
+TS: What does 'higher than' mean?
 
 46
 00:03:26,262 --> 00:03:30,971
@@ -213,12 +213,12 @@ in time!). I mean later than.
 
 47
 00:03:31,005 --> 00:03:33,565
-You have your coffee-script
+You have your CoffeeScript
 file and your JavaScript file.
 
 48
 00:03:33,570 --> 00:03:37,222
-If the coffee script file was modified
+If the CoffeeScript file was modified
 later than the JavaScript file,
 
 49
@@ -234,7 +234,7 @@ that means your JavaScript file
 51
 00:03:45,010 --> 00:03:48,971
 has presumably been generated since
-the last time you modified the coffee-script.
+the last time you modified the CoffeeScript.
 
 52
 00:03:48,994 --> 00:03:51,240
@@ -259,11 +259,11 @@ So how am I going to model that?
 57
 00:04:20,280 --> 00:04:44,857
 We can say that we allow the first dependency
-to receive build and return time now plus 5 minutes.
+to receive build and return Time.now plus 5 minutes.
 
 58
 00:04:46,400 --> 00:04:55,017
-Likewise with the second dependency
+Likewise we'll allow the second dependency
 to return time now plus 2 minutes.
 
 59
@@ -277,7 +277,7 @@ and then compare them to what it has.
 
 61
 00:05:06,000 --> 00:05:11,017
-And to do that it's probably going to call file.mtime.
+And to do that it's probably going to call File.mtime.
 
 62
 00:05:11,210 --> 00:05:13,165
@@ -341,7 +341,7 @@ make it less of a generic name.
 
 75
 00:06:23,570 --> 00:06:27,234
-Or target pathname.
+Or target/pathname.
 
 76
 00:06:27,645 --> 00:06:30,937
@@ -349,7 +349,7 @@ Or target pathname.
 
 77
 00:06:33,691 --> 00:06:39,028
-The result inaud sometime,
+return some time value here,
 we don't really care what it is.
 
 78
@@ -381,7 +381,7 @@ through a little bit in reverse.
 
 84
 00:07:06,468 --> 00:07:11,120
-Thinking it's going to look at its dependencies
+Thinking it's going to look at its dependencies'
 times and then compare them to itself.
 
 85
@@ -391,7 +391,7 @@ that it asks the file system for some information
 
 86
 00:07:17,050 --> 00:07:18,914
-But I realise that wasn't part of this.
+But I realised that wasn't part of this.
 
 87
 00:07:18,925 --> 00:07:23,142
@@ -400,7 +400,8 @@ given that the dependencies return some values,
 
 88
 00:07:23,154 --> 00:07:25,794
-that compare with what it knows about itself.
+how does it compare with
+what it knows about itself.
 
 89
 00:07:25,862 --> 00:07:30,080
@@ -435,12 +436,12 @@ make much difference, it's the relative offset.
 95
 00:08:00,674 --> 00:08:08,640
 This will fail now because we're not doing that,
-we're not showing the mtime so this won't work.
+we're not checking the mtime so this won't work.
 
 96
 00:08:11,150 --> 00:08:17,680
 "received unexpected message :build with (no args)"
-in Target spec 28.
+in target_spec.rb line 28.
 
 97
 00:08:17,954 --> 00:08:21,440
@@ -462,12 +463,13 @@ build method should return something.
 
 101
 00:08:38,530 --> 00:08:41,005
-It's not important what these tests return.
+In this test it's not important
+what they return.
 
 102
 00:08:41,250 --> 00:08:49,085
-I'm trying to make the doubles express the minimum
-interface they need to make the test work.
+I'm trying to keep the doubles to only expressing
+the minimum interface they need to make the test work.
 
 103
 00:08:49,131 --> 00:08:52,580
@@ -480,18 +482,18 @@ and that had expectations on those doubles.
 
 105
 00:08:56,780 --> 00:09:03,005
-JC: Right yes. I wrote this
+JC: Right, yes. I wrote this
 test down here, that stubs it.
 
 106
 00:09:03,142 --> 00:09:09,691
 But for this test, those don't apply
-so I had to put build method up top.
+so I had to put build method on them up top.
 
 107
 00:09:11,931 --> 00:09:17,954
 Now it's failing for the right reason and
-file isn't receiving mtime with the right things.
+File isn't receiving mtime with the right things.
 
 108
 00:09:17,950 --> 00:09:21,862
@@ -499,13 +501,13 @@ So let's go and fix that.
 
 109
 00:09:22,068 --> 00:09:29,337
-So  to build_self, we're already returning
-we're already built so that's an easy cheap check.
+So build_self, we're already returning
+"we're already built" so that's an easy, cheap check.
 
 110
 00:09:29,474 --> 00:09:35,600
 If that fails we don't want to call the file system
-if we know we've already built, it's a waste of some io.
+if we know we've already built, it's a waste of some IO.
 
 111
 00:09:37,210 --> 00:09:39,977
@@ -568,7 +570,7 @@ file names that don't exist.
 124
 00:10:38,582 --> 00:10:42,434
 This is the only test where we mentioned
-a mock expectation on file at mtime.
+a mock expectation on File.mtime.
 
 125
 00:10:42,457 --> 00:10:45,382
@@ -596,12 +598,12 @@ are doubles so that doesn't matter.
 
 130
 00:11:03,630 --> 00:11:20,640
-But we're also going to allow file
-to receive mtime and return time now.
+But we're also going to allow File
+to receive mtime and return Time.now.
 
 131
 00:11:21,497 --> 00:11:24,742
-Inaud for consistency.
+Remove parentheses for consistency.
 
 132
 00:11:26,000 --> 00:11:30,582
@@ -675,7 +677,7 @@ JC: "No such file or directory"
 
 147
 00:12:45,760 --> 00:12:49,737
-TS: Is this the target that's trying to build 1.txt?
+TS: Is this the target that's trying to build one.txt?
 
 148
 00:12:51,200 --> 00:12:55,657
@@ -728,7 +730,7 @@ TS: So that fixed your integration test?
 159
 00:13:38,920 --> 00:13:44,102
 JC: Yes, but now the unit test is failing because this
-is still fake pathname that doesn't exist.
+is still a fake pathname that doesn't exist.
 
 160
 00:13:44,100 --> 00:13:49,314
@@ -754,7 +756,7 @@ But in the case where were doing this...
 165
 00:14:16,342 --> 00:14:33,600
 We also need to expect file to receive
-exists with target pathname and return true.
+exists with target/pathname and return true.
 
 166
 00:14:34,620 --> 00:14:36,182

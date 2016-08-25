@@ -36,7 +36,7 @@ the node packaging system uses.
 
 9
 00:00:51,760 --> 00:00:58,217
-And one of its' functions is
+And one of its functions is
 to manage your dependencies.
 
 10
@@ -143,7 +143,7 @@ TS: So what's that done?
 33
 00:02:59,485 --> 00:03:04,354
 JC: That should have compiled that
-file in to the example lib.directory.
+file in to the example lib directory.
 
 34
 00:03:04,350 --> 00:03:08,582
@@ -217,7 +217,8 @@ So, to minify something...
 
 50
 00:04:33,120 --> 00:04:37,108
-Again, we can use inaud run uglify.
+Again, we can use things in node_modules/...
+we run uglify.
 
 51
 00:04:41,470 --> 00:04:49,634
@@ -230,7 +231,7 @@ Let's see what the help says.
 
 53
 00:04:54,820 --> 00:05:01,131
-inaud
+[Thinking]... And I have to run it with --help
 
 54
 00:05:01,828 --> 00:05:04,800
@@ -238,7 +239,7 @@ inaud
 
 55
 00:05:09,090 --> 00:05:18,148
-So – C enables compressor options.
+So "–c" enables compressor options.
 You have to tell that to make it minify the file.
 
 56
@@ -252,11 +253,11 @@ JC: The option called m has not been found.
 58
 00:05:25,600 --> 00:05:31,748
 It's up there... It's mangle... Which means
-it will do things like shift variable names.
+it will do things like shrink variable names.
 
 59
 00:05:32,228 --> 00:05:35,920
-And – O is for output inaud file.
+And "–o" is for output; so, where to put the resulting file.
 
 60
 00:05:35,970 --> 00:05:38,868
@@ -293,7 +294,7 @@ JC: Exactly.
 67
 00:06:00,730 --> 00:06:06,262
 So the first line here says the usage
-is that they contain multiple input files.
+is that it can take multiple input files.
 
 68
 00:06:06,260 --> 00:06:09,954
@@ -384,7 +385,7 @@ for JavaScript. Like if you've got all your...
 87
 00:07:38,491 --> 00:07:41,451
 Depending on which of the
-various module formats your using...
+various module formats you're using...
 
 88
 00:07:41,474 --> 00:07:46,148
@@ -424,8 +425,9 @@ JC: Yes, they're usually...
 
 96
 00:08:10,457 --> 00:08:16,320
-The word that a lot of people are using these days
-is Browserify or Webpack, or something like that.
+I think that's the workflow that a lot of people
+are using these days is Browserify or Webpack,
+or something like that.
 
 97
 00:08:17,000 --> 00:08:19,851
@@ -439,7 +441,7 @@ as getting the tool to do it for you.
 
 99
 00:08:27,497 --> 00:08:30,742
-TS: So your happy with this chain of
+TS: So you're happy with this chain of
 operations in order to produce the output?
 
 100

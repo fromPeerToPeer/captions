@@ -57,7 +57,7 @@ Uglifyjs.
 
 14
 00:01:34,720 --> 00:01:37,360
-Put inaud in there.
+Put the examples in there.
 
 15
 00:01:41,130 --> 00:01:46,091
@@ -86,7 +86,7 @@ So this file declares a class called complimenter.
 20
 00:02:11,960 --> 00:02:20,925
 And it makes one of them
-and it console logs its' say method.
+and it console logs its say method.
 
 21
 00:02:21,900 --> 00:02:27,520
@@ -96,7 +96,7 @@ hello does much the same thing,
 22
 00:02:27,565 --> 00:02:34,750
 it just has a different implementation
-for what its' say method does.
+for what its say method does.
 
 23
 00:02:37,760 --> 00:02:41,622
@@ -115,7 +115,7 @@ order, I would use node modules,
 
 26
 00:02:53,170 --> 00:02:59,474
-or the new module syntax that's in MScript 6.
+or the new module syntax that's in ECMAScript 6.
 
 27
 00:02:59,620 --> 00:03:04,571
@@ -137,7 +137,7 @@ Those were the steps that we did before.
 
 31
 00:03:26,720 --> 00:03:37,177
-If I remove the compile JavaScript and the bundle,
+If I remove the compiled JavaScript and the bundle,
 then running that should produce the same result.
 
 32
@@ -266,7 +266,7 @@ lib/hello.js is derived from src/hello.coffee
 59
 00:06:36,170 --> 00:06:41,570
 and then it can look to see if hello.coffee
-is newer than hello.js and recompile it if it isn't.
+is newer than hello.js and recompile it if it is.
 
 60
 00:06:41,680 --> 00:06:44,580
@@ -314,7 +314,7 @@ there where I've repeated this instruction.
 
 69
 00:07:18,800 --> 00:07:26,342
-and you can (sort of) solve that with a inaud.
+and you can (sort of) solve that with a bash loop.
 
 70
 00:07:27,314 --> 00:07:30,365

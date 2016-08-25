@@ -1,6 +1,7 @@
 ﻿1
 00:00:00,000 --> 00:00:03,954
-Chapter 4./nSketching the API of a Target class.
+Chapter 4.
+Sketching the API of a Target class.
 
 2
 00:00:04,834 --> 00:00:08,914
@@ -10,19 +11,20 @@ directory here and try something out.
 3
 00:00:11,620 --> 00:00:23,657
 Yes,I'm thinking I want to do
-something like this; require scratch target.
+something like this; I want to
+require './scratch/target'.
 
 4
 00:00:24,090 --> 00:00:37,897
-And hello_js is a target with a path.
+And hello_js is a Target with a path.
 
 5
 00:00:40,845 --> 00:00:45,005
-We've not doing Haskel,(whoops).
+We are not doing Haskell,(whoops).
 
 6
 00:00:48,491 --> 00:00:54,468
-The minimum... It has a parse name
+The minimum... It has a path name
 which is the file it's going to generate.
 
 7
@@ -50,8 +52,8 @@ derived from hello.coffee, hello.js is the target.
 
 12
 00:01:30,171 --> 00:01:33,390
-However coffee could also be a
-target inaud other things.
+hello.coffee could also be a
+target that is derived from other things.
 
 13
 00:01:33,885 --> 00:01:41,325
@@ -83,7 +85,7 @@ by putting a block here. Like system erm...
 
 19
 00:02:14,697 --> 00:02:21,520
-What way round do you do this... [he types].
+How do we do this... We run... [he types].
 
 20
 00:02:38,720 --> 00:02:49,520
@@ -92,12 +94,13 @@ making this string be data rather than blocks.
 
 21
 00:02:49,520 --> 00:02:56,845
-Just because it's quite common to do inaud
+Just because it's quite common to do,
+like in make
 
 22
 00:02:56,960 --> 00:03:06,468
 Here we've duplicated this pathname
-example source hello.js. That's it's coffee isn't it.
+example/src/hello.js. That's coffee isn't it.
 
 23
 00:03:11,577 --> 00:03:18,617
@@ -198,7 +201,7 @@ you mention the same things over and over again.
 
 44
 00:05:22,860 --> 00:05:25,657
-That aught to work from a clean slate now
+That ought to work from a clean slate now
 
 45
 00:05:25,691 --> 00:05:31,371
@@ -215,15 +218,15 @@ I want this script, when it's run, to make that file.
 
 48
 00:05:52,457 --> 00:05:55,980
-If I run this it will get no such file scratch target.
+If I run this it will get no such file scratch/target.
 
 49
 00:05:55,980 --> 00:05:59,885
-As I expected, scratch target.rb. OK.
+As I expected, scratch/target.rb. OK.
 
 50
 00:05:59,885 --> 00:06:03,725
-So you need a target class.
+So you need a Target class.
 
 51
 00:06:06,030 --> 00:06:10,400
@@ -232,7 +235,7 @@ pathname of the thing we're building.
 
 52
 00:06:10,480 --> 00:06:15,920
-And a serve instructions.
+And some instructions.
 
 53
 00:06:16,651 --> 00:06:19,645
@@ -330,7 +333,7 @@ one file in lib which is hello.js
 
 73
 00:08:34,297 --> 00:08:43,337
-And that should contain compile code, which it does.
+And that should contain compiled code, which it does.
 
 74
 00:08:47,040 --> 00:08:55,131
@@ -363,7 +366,7 @@ And then we could have one for the bundle.
 
 81
 00:09:36,354 --> 00:09:40,520
-Target new. ('example./bundle.js'
+Target.new('example/bundle.js')
 is what's being built here.
 
 82
@@ -392,7 +395,7 @@ Ah! This doesn't exist yet because we didn't build it.
 
 88
 00:10:16,491 --> 00:10:19,382
-Ruby scratch test.
+ruby scratch/test.rb
 
 89
 00:10:21,040 --> 00:10:27,657
@@ -401,7 +404,7 @@ and run the coffee twice with the two things.
 
 90
 00:10:27,691 --> 00:10:33,520
-So let's run uglyfy so we get
+So let's run uglify so we get
 our output as we wanted it.
 
 91
@@ -420,7 +423,7 @@ instructions mention in the brief?
 
 94
 00:10:53,970 --> 00:11:00,800
-Are these the gereralised instructions or
+Are these the generalised instructions or
 are they not sufficiently general to count?
 
 95
