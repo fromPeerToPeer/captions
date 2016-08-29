@@ -27,7 +27,7 @@ And we've got this dependencies
 thing that we've not stored.
 
 7
-00:00:33,440 --> 00:00:36,537
+00:00:33,188 --> 00:00:39,977
 [Silence]
 
 8
@@ -45,8 +45,8 @@ ensure_updated_dependencies
 
 11
 00:00:58,250 --> 00:01:04,297
-And then let's extract that into something
-called build_self.
+And then let's extract that
+into something called build_self.
 
 12
 00:01:04,765 --> 00:01:12,674
@@ -54,7 +54,7 @@ So build is now a sort of sequence of high level
 things you need to do, and this is how to do each one.
 
 13
-00:01:13,360 --> 00:01:16,662
+00:01:12,857 --> 00:01:21,268
 [Silence]
 
 14
@@ -108,320 +108,326 @@ once those are done, run this command here.
 24
 00:02:10,380 --> 00:02:13,657
 And everything should be OK.
-TS: Does it work?
 
 25
-00:02:15,770 --> 00:02:18,400
-It works. Hurrah!
-TS: Amazing!
+00:02:13,650 --> 00:02:15,565
+TS: Does it work?
 
 26
+00:02:15,600 --> 00:02:20,354
+JC: It works. Hurrah!
+TS: Amazing!
+
+27
 00:02:20,370 --> 00:02:25,794
 JC: Right, so we've got an integration test
 and all that we've changed to do that
 
-27
+28
 00:02:25,862 --> 00:02:29,714
 is quite a lot of things. (Laughter)
 
-28
+29
 00:02:29,737 --> 00:02:38,068
 I don't know if all these unit tests should
 be on the build method, or on build_self.
 
-29
+30
 00:02:42,034 --> 00:02:44,480
 I don't want to specify the
 implementation of target
 
-30
+31
 00:02:44,514 --> 00:02:48,148
 but I want to specify it's
 relationship with other things.
 
-31
+32
 00:02:51,051 --> 00:02:56,354
 The important thing is when you build one target, it
 will tell those dependencies to build themselves.
 
-32
+33
 00:02:56,377 --> 00:03:01,645
 That's the minimum abstract
 thing that needs to be checked.
 
-33
+34
 00:03:01,640 --> 00:03:05,908
 I don't want to tell it how its
 private method should be organized.
 
-34
+35
 00:03:07,930 --> 00:03:14,011
 It's more about, what's its interaction with other
 stuff and that is that it calls build on them.
 
-35
+36
 00:03:14,788 --> 00:03:22,530
 In terms of unit tests...
 fakemake target_spec... so build.
 
-36
+37
 00:03:22,571 --> 00:03:24,990
 This is all about running instructions and stuff.
 
-37
+38
 00:03:25,017 --> 00:03:29,280
 But before we get to running
 instructions we have dependencies.
 
-38
+39
 00:03:31,291 --> 00:03:33,920
 I'm not sure if it makes sense to write
 a test for when there are no dependencies.
 
-39
+40
 00:03:33,920 --> 00:03:36,708
 These tests are already implicitly
 for when there are no dependencies.
 
-40
+41
 00:03:36,731 --> 00:03:43,880
 And if there are none there's no other target for
 you to say that it should or should not call build on.
 
-41
+42
 00:03:44,114 --> 00:03:47,954
 So let's make a test for when there are dependencies.
 
-42
-00:03:48,240 --> 00:03:51,668
+43
+00:03:48,102 --> 00:03:58,571
 [Silence]
 
-43
+44
 00:03:58,680 --> 00:04:04,891
 We can have several of them and in
 this case the order shouldn't be important.
 
-44
+45
 00:04:04,982 --> 00:04:10,982
 Or rather you should construct your
 dependency tree so the order doesn't matter.
 
-45
+46
 00:04:10,980 --> 00:04:21,245
 If c depends on a and b, but b has to happen
 after a then you should just say b depends on a.
 
-46
+47
 00:04:21,240 --> 00:04:25,405
 That will ensure that that happens first.
 
-47
+48
 00:04:26,880 --> 00:04:34,640
 So... The first dependency is a double.
 
-48
+49
 00:04:35,960 --> 00:04:40,388
 And the second dependency is also a double.
 
-49
+50
 00:04:44,971 --> 00:04:50,491
 This does let us check that if the first dependency
 fails then we don't call the second dependency.
 
-50
+51
 00:04:50,490 --> 00:04:56,331
 That isn't really a requirement, it's
 accidental because the order doesn't matter.
 
-51
+52
 00:04:56,620 --> 00:05:06,388
 So we should say it should tell all
 its dependencies to build themselves.
 
-52
+53
 00:05:08,354 --> 00:05:18,971
 So we expect first_dep to receive build once.
 
-53
+54
 00:05:19,382 --> 00:05:24,125
 And likewise for the second_dep.
 
-54
+55
 00:05:24,720 --> 00:05:26,571
 And, what's our target here?
 
-55
+56
 00:05:26,594 --> 00:05:38,262
 Our target is FakeMake::Target.new
 with a pathname (that won't matter yet).
 
-56
+57
 00:05:38,880 --> 00:05:45,360
 And the dependencies, second dep and no
 instructions because we're not testing that here.
 
-57
+58
 00:05:50,650 --> 00:05:56,388
 That looks OK, so when we call target build it
 should tell each of the targets to build themselves.
 
-58
+59
 00:05:57,028 --> 00:05:59,348
 Oops, I've lost my other shell.
 
-59
+60
 00:06:02,091 --> 00:06:05,428
 Path again...
 
-60
-00:06:05,737 --> 00:06:09,017
+61
+00:06:05,730 --> 00:06:13,040
 [Silence]
 
-61
+62
 00:06:13,211 --> 00:06:16,251
 OK that looks good.
 
-62
+63
 00:06:16,788 --> 00:06:22,605
 This is a good place to commit. It's a new
 feature: we have dependency management.
 
-63
+64
 00:06:24,360 --> 00:06:27,371
 Let's have a look at what we've changed.
 
-64
+65
 00:06:27,980 --> 00:06:36,468
 We've added dependencies to target class and made
 it so that the target will build its dependencies.
 
-65
+66
 00:06:36,480 --> 00:06:40,411
 If you have a tree of targets
 they will recursively build themselves.
 
-66
+67
 00:06:40,525 --> 00:06:44,365
 And we've added tests for those things.
 
-67
-00:06:44,662 --> 00:06:48,045
+68
+00:06:44,660 --> 00:06:48,262
 [Silence]
 
-68
+69
 00:06:48,388 --> 00:06:50,420
 OK.
 
-69
+70
 00:06:56,130 --> 00:06:58,171
 TS: I was surprised to see when you ran that unit test,
 
-70
-00:06:58,170 --> 00:07:01,805
-it looks like there was some output
-on stdout during the test,
-
 71
+00:06:58,170 --> 00:07:01,805
+it looks like there was some
+output on stdout during the test,
+
+72
 00:07:01,805 --> 00:07:05,610
 which wasn't what I expected to see.
 
-72
+73
 00:07:05,988 --> 00:07:11,851
 JC: You're right we're printing the commands.
 
-73
+74
 00:07:11,954 --> 00:07:17,650
 We'll still have an issue with system, because
 system inherits stdout from the ruby process.
 
-74
+75
 00:07:18,050 --> 00:07:23,840
 Cat happens to not emit any output; well it does,
 but we're piping it into a file, so it's fine.
 
-75
+76
 00:07:23,874 --> 00:07:26,457
 But we are still echoing stuff.
 
-76
+77
 00:07:26,530 --> 00:07:28,388
 TS: But this wasn't happening before right?
 
-77
+78
 00:07:28,434 --> 00:07:31,737
 When you ran the unit test before
 it was just a line of green dots.
 
-78
+79
 00:07:31,760 --> 00:07:34,400
 JC: Yes.
 
-79
+80
 00:07:34,750 --> 00:07:38,525
 I've let these targets in the
 integration tests use stdout.
 
-80
+81
 00:07:38,560 --> 00:07:41,451
 and I can maybe stop them from doing that.
 
-81
-00:07:41,565 --> 00:07:48,845
-It's a bit frustrating in that I could have
-used puts and set $stdout to StringIO, but
-then the tests wouldn't emit any output.
-
 82
+00:07:41,560 --> 00:07:47,131
+It's a bit frustrating in that I could have
+used puts and set $stdout to StringIO,
+
+83
+00:07:47,131 --> 00:07:49,900
+but then the tests wouldn't emit any output.
+
+84
 00:07:49,908 --> 00:07:53,245
 It's one of those isolation things.
 
-83
+85
 00:07:53,337 --> 00:07:57,725
 I want this thing that prints
 stuff to print to a black hole.
 
-84
+86
 00:07:57,720 --> 00:08:02,034
 But I want the tests that are running the
 process to still be able to talk to stdout.
 
-85
+87
 00:08:03,965 --> 00:08:13,462
 We can get around that by passing
 in an output like we did before.
 
-86
+88
 00:08:18,330 --> 00:08:22,674
 We'll call it stdout here to make
 it a bit more clear what its role is.
 
-87
+89
 00:08:24,868 --> 00:08:30,400
 And then that can take it as an argument.
 Although not all of them will need it.
 
-88
+90
 00:08:30,400 --> 00:08:34,640
 Only the ones that run code need it.
 
-89
-00:08:35,080 --> 00:08:38,137
+91
+00:08:34,822 --> 00:08:41,680
 [Silence]
 
-90
-00:08:42,342 --> 00:08:45,691
+92
+00:08:41,954 --> 00:08:46,651
 I'm not having a very good typing day today. [Laughter]
 
-91
+93
 00:08:48,285 --> 00:08:52,251
 Private method puts called for; that's interesting.
 
-92
+94
 00:08:52,525 --> 00:08:57,714
 Oh! I've called it output sorry, I forgot what
 I called it. It's called stdout in this test.
 
-93
+95
 00:09:01,314 --> 00:09:03,931
 OK that's better, outputs gone away.
 TS: Great.

@@ -43,8 +43,8 @@ So let's do that context:
 
 10
 00:00:41,977 --> 00:00:54,274
-let the instructions be 'first-instruction'
-and 'second-instruction'.
+let the instructions be
+'first-instruction' and 'second-instruction'.
 
 11
 00:00:54,280 --> 00:00:59,234
@@ -108,8 +108,8 @@ JC: No, RSpec will not check.
 
 25
 00:02:26,285 --> 00:02:30,514
-RSpec doesn't expect things to be called in
-the order in which you set up the mocks.
+RSpec doesn't expect things to be called
+in the order in which you set up the mocks.
 
 26
 00:02:30,510 --> 00:02:32,514
@@ -130,8 +130,8 @@ things called in a certain order is...
 
 30
 00:02:48,270 --> 00:02:53,405
-The way that I program is an uncommon use case
-and is awkward to specify using mocks.
+The way that I program is an uncommon use
+case and is awkward to specify using mocks.
 
 31
 00:02:53,420 --> 00:02:57,977
@@ -186,119 +186,119 @@ But it does not execute the second.
 So that means we expect this... Once.
 
 42
-00:04:14,434 --> 00:04:17,428
+00:04:14,262 --> 00:04:18,491
 [Silence]
 
 43
+00:04:18,617 --> 00:04:21,565
+Once.
+
+44
 00:04:21,634 --> 00:04:29,382
 Do we need to tell it that it will
 return nil? Not sure that we do.
 
-44
+45
 00:04:32,102 --> 00:04:34,960
 We'll find out.
 
-45
-00:04:35,634 --> 00:04:41,634
-I think I've done something weird to Vim.
-Oh, I've got caps lock on, sorry!
-
 46
+00:04:35,634 --> 00:04:41,634
+I think I've done something weird
+to Vim. Oh, I've got caps lock on, sorry!
+
+47
 00:04:43,131 --> 00:04:44,274
 I'll copy that.
 
-47
-00:04:44,270 --> 00:04:55,897
-So let me find the second- they're not
-arguments, they're instructions.
-
 48
+00:04:44,270 --> 00:04:55,897
+So let me find the second-
+they're not arguments, they're instructions.
+
+49
 00:04:59,300 --> 00:05:04,605
 And it's not 'once', it's 'not'.
 
-49
+50
 00:05:07,760 --> 00:05:09,291
 So let me check this over.
 
-50
+51
 00:05:09,290 --> 00:05:13,348
 So if the target returns nil
 for the first instruction,
 
-51
+52
 00:05:13,360 --> 00:05:17,554
 it should still execute it, but not the second one.
 
-52
+53
 00:05:19,420 --> 00:05:22,914
 This shouldn't work because I haven't
 implemented anything like this yet.
 
-53
+54
 00:05:23,050 --> 00:05:27,851
 So expect it to use a target
 (that I haven't actually told it to build).
 
-54
+55
 00:05:27,897 --> 00:05:30,742
 That's quite important. [laughter].
 
-55
+56
 00:05:30,740 --> 00:05:33,085
 target.build
 
-56
-00:05:33,417 --> 00:05:36,411
+57
+00:05:33,222 --> 00:05:38,320
 [Silence]
 
-57
+58
 00:05:38,422 --> 00:05:42,948
 Now it's executing the second
 instruction when it shouldn't.
 
-58
+59
 00:05:42,982 --> 00:05:48,411
 So if we go back to our code we can
 say it's going to print the instruction.
 
-59
+60
 00:05:48,410 --> 00:05:59,062
 And then we could raise failed command
 unless system returns something truthy.
 
-60
+61
 00:05:59,542 --> 00:06:03,005
 TS: So what will system return if it's not an error?
 
-61
+62
 00:06:03,165 --> 00:06:08,320
 JC: True. We can see this in the shell for a second.
 
-62
+63
 00:06:08,360 --> 00:06:15,965
 So if you system, echo something,
 it does the thing and returns true.
 
-63
+64
 00:06:15,970 --> 00:06:19,337
 And if you ask it to run a program
 that doesn't exist it returns nil.
 
-64
+65
 00:06:19,360 --> 00:06:21,428
 TS: OK great.
 
-65
-00:06:23,760 --> 00:06:30,422
-JC: So it's quite handy for having a high
-level API onto what your system is
-
 66
-00:06:30,420 --> 00:06:33,622
-doing.
+00:06:23,760 --> 00:06:33,417
+JC: So it's quite handy for having a high
+level API onto what your system is doing.
 
 67
-00:06:36,662 --> 00:06:45,771
+00:06:36,628 --> 00:06:49,462
 So make an exception and raise that
 unless system returns something truthy.
 
@@ -433,7 +433,7 @@ That's passing, a couple are
 still not passing 64 and 69.
 
 96
-00:09:21,828 --> 00:09:25,588
+00:09:21,820 --> 00:09:29,965
 [Silence]
 
 97
@@ -469,7 +469,7 @@ JC: Right.
 And then I can just rescue in here.
 
 104
-00:10:18,171 --> 00:10:21,462
+00:10:17,850 --> 00:10:22,628
 [Silence]
 
 105
@@ -561,7 +561,7 @@ and our source code and package.json and specs.
 Which looks reasonable to me.
 
 125
-00:12:04,000 --> 00:12:07,417
+00:12:04,000 --> 00:12:16,331
 [Silence]
 
 126

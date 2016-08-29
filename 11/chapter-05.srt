@@ -58,524 +58,532 @@ I've got the gem file and put rspec in there.
 Save that, and install it into the project.
 
 14
-00:01:35,040 --> 00:01:38,571
+00:01:35,040 --> 00:01:42,445
 [Silence]
 
 15
+00:01:42,445 --> 00:01:44,440
+OK.
+
+16
 00:01:44,460 --> 00:01:47,657
 Did I make a spec directory – yes I did.
 
-16
-00:01:47,771 --> 00:01:51,394
+17
+00:01:47,770 --> 00:01:52,080
 [Silence]
 
-17
+18
 00:01:52,171 --> 00:01:58,480
 So let's try to write a test
 for this file, I called it a target..
 
-18
-00:01:58,730 --> 00:02:01,920
+19
+00:01:58,730 --> 00:02:04,525
 [Silence]
 
-19
+20
 00:02:04,670 --> 00:02:08,582
 Obligatory require 'spec_helper'.
 
-20
+21
 00:02:09,017 --> 00:02:14,434
 and (not end) which I've not written but...
 
-21
+22
 00:02:18,274 --> 00:02:27,520
 This will require_relative 'lib/fakemake',
 
-22
+23
 00:02:28,982 --> 00:02:33,748
 which also doesn't exist so I'm going to create it.
 
-23
+24
 00:02:34,285 --> 00:02:37,760
 Module FakeMake.
 
-24
+25
 00:02:41,222 --> 00:02:46,697
 I usually use autoloads for these, so it loads things lazily.
 
-25
-00:02:47,760 --> 00:02:51,451
+26
+00:02:46,788 --> 00:02:52,502
 [Silence]
 
-26
+27
 00:02:52,582 --> 00:02:54,811
 And path.
 
-27
-00:02:55,005 --> 00:02:58,537
+28
+00:02:55,000 --> 00:02:59,725
 [Silence]
 
-28
+29
 00:03:00,045 --> 00:03:09,737
 And then autoload target
 from root + fakemake target.
 
-29
+30
 00:03:11,920 --> 00:03:18,491
 That ought to be enough to load things.
 So if we go back to target spec and...
 
-30
+31
 00:03:22,468 --> 00:03:26,742
 Describe FakeMake target.
 
-31
+32
 00:03:30,880 --> 00:03:35,970
 Does that at least run.
 
-32
+33
 00:03:36,022 --> 00:03:40,137
 Yes, it didn't complain about anything.
 
-33
+34
 00:03:40,130 --> 00:03:50,331
 So, looking back at the code,
 there's already a few scenarios here.
 
-34
+35
 00:03:52,777 --> 00:04:02,708
 The only thing this actually does, I suppose, is that
 it takes a list of instructions and executes them.
 
-35
+36
 00:04:04,194 --> 00:04:10,800
 But now we're coming to a test we can
 pass in some alternative output thing.
 
-36
-00:04:11,154 --> 00:04:14,571
+37
+00:04:11,150 --> 00:04:18,548
 [Silence]
 
-37
+38
 00:04:18,650 --> 00:04:21,725
 I'll make that be that - output.
 
-38
+39
 00:04:25,390 --> 00:04:32,445
 The test I have in mind is if you write
 a target with no instructions that's fine.
 
-39
+40
 00:04:33,897 --> 00:04:39,965
 If you write a target with an
 instruction it gets printed and executed.
 
-40
+41
 00:04:41,108 --> 00:04:47,474
 And if you write one with many
 instructions, they all get executed.
 
-41
+42
 00:04:47,611 --> 00:04:53,691
 Although we should also check to see what happens
 if you write an instruction that doesn't work.
 
-42
+43
 00:04:55,371 --> 00:05:04,430
 So system will return nil if you
 run a command that has a non-zero exit status.
 
-43
+44
 00:05:06,430 --> 00:05:14,148
 Rather than shelling out, running stuff on the
 system we can stubb system to work or not work.
 
-44
+45
 00:05:16,811 --> 00:05:23,897
 So make a few variables.
 
-45
+46
 00:05:25,954 --> 00:05:32,137
 This value wont really matter
 it's just something to pass in.
 
-46
+47
 00:05:32,420 --> 00:05:47,211
 The target will be target.new, which takes the
 pathname and the instructions and the output.
 
-47
+48
 00:05:49,360 --> 00:05:52,548
 Let's also make an output for it to use.
 
-48
+49
 00:05:58,925 --> 00:06:02,320
 And then we can have some scenarios.
 
-49
+50
 00:06:02,320 --> 00:06:06,651
 Let's describe the build method.
 
-50
+51
 00:06:10,137 --> 00:06:16,822
 When there are no instructions we
 said that nothing should happen.
 
-51
-00:06:17,154 --> 00:06:20,160
+52
+00:06:17,150 --> 00:06:23,280
 [Silence]
 
-52
+53
 00:06:23,480 --> 00:06:28,148
 It should not print anything.
 
-53
+54
 00:06:31,177 --> 00:06:39,337
 And expect output not to receive puts.
 
-54
+55
 00:06:40,570 --> 00:06:44,617
 And target build.
 
-55
-00:06:44,920 --> 00:06:48,148
+56
+00:06:44,920 --> 00:06:50,182
 [Silence]
 
-56
+57
 00:06:51,131 --> 00:06:54,411
 I'll make a new shell over here.
 
-57
+58
 00:06:56,820 --> 00:07:01,828
 Ah! I didn't put my ruby on the path.
 
-58
-00:07:02,022 --> 00:07:05,417
+59
+00:07:02,020 --> 00:07:08,788
 [Silence]
 
-59
+60
+00:07:08,914 --> 00:07:15,930
+OK, that should...
+
+61
 00:07:16,220 --> 00:07:18,080
 I'm not doing the good TDD thing here.
 
-60
+62
 00:07:18,125 --> 00:07:23,650
 I should probably see this break just
 to check if that test is doing something.
 
-61
+63
 00:07:24,308 --> 00:07:34,160
 So let's have this do output.puts something bad.
 
-62
+64
 00:07:36,331 --> 00:07:40,114
 That does fail so that's fine.
 
-63
+65
 00:07:44,560 --> 00:07:48,148
 And it should not execute anything.
 
-64
-00:07:48,320 --> 00:07:51,805
+66
+00:07:48,320 --> 00:07:53,577
 [Silence]
 
-65
+67
 00:07:53,691 --> 00:08:00,285
 We're calling system on target
 itself... It's a kernel method.
 
-66
+68
 00:08:00,411 --> 00:08:06,114
 I could have called puts on target
 itself and stubbed it in the same way here.
 
-67
+69
 00:08:06,502 --> 00:08:12,125
 But that also means... Like at some point
 we're going to have a graph of these things.
 
-68
+70
 00:08:12,342 --> 00:08:18,388
 And you might not have direct access in your
 test to the actual thing that's printing something.
 
-69
+71
 00:08:18,422 --> 00:08:20,948
 So you want to be able to
 pass this output object along.
 
-70
-00:08:21,302 --> 00:08:25,051
+72
+00:08:20,982 --> 00:08:25,050
 So it's a thing you have a handle on in your
 test and you can make assertions against it.
 
-71
+73
 00:08:25,050 --> 00:08:25,725
 TS: Right
 
-72
+74
 00:08:25,790 --> 00:08:33,062
 JC: Maybe I should do the same thing with execution.
 I could tell kernel to expect to receive system.
 
-73
+75
 00:08:33,108 --> 00:08:36,342
 TS: And then pass kernel in as another argument, or...?
 
-74
+76
 00:08:36,388 --> 00:08:38,457
 JC: That's what I'm not sure about.
 
-75
+77
 00:08:38,525 --> 00:08:44,697
 Because I'm not sure I think I should
 leave it for now, until it becomes a problem.
 
-76
+78
 00:08:45,500 --> 00:08:50,457
 The output thing... I knew I didn't want
 stuff printing things in the middle of my tests,
 
-77
+79
 00:08:50,500 --> 00:08:56,960
 whereas you also don't want the unit
 tests to go and execute system commands.
 
-78
+80
 00:08:58,617 --> 00:09:01,140
 Because I've used a string io here for the output,
 
-79
+81
 00:09:01,154 --> 00:09:04,651
 those put commands are just going to go
 into the ether and not be used anywhere.
 
-80
+82
 00:09:04,670 --> 00:09:08,160
 We don't have any instructions yet,
 
-81
+83
 00:09:08,290 --> 00:09:14,217
 but when we do and I write some of the test for
 printing, it will then go and execute the thing.
 
-82
+84
 00:09:14,342 --> 00:09:17,588
 I'll have to stub out system to make it not do that.
 
-83
+85
 00:09:17,760 --> 00:09:22,010
 But I'm not sure that the object that we're
 calling it on is the problem in that situation.
 
-84
+86
 00:09:22,010 --> 00:09:25,942
 You'd have to do that in any case.
 
-85
+87
 00:09:26,780 --> 00:09:38,948
 So the target should not receive
 the system when you build it.
 
-86
-00:09:39,291 --> 00:09:41,908
+88
+00:09:39,290 --> 00:09:46,960
 [Silence]
 
-87
+89
 00:09:47,177 --> 00:09:50,914
 OK, two passing tests.
 
-88
-00:09:54,994 --> 00:09:58,937
-When there is an instruction
+90
+00:09:54,990 --> 00:09:59,931
+So, when there is an instruction
 
-89
+91
 00:10:00,308 --> 00:10:09,931
 let the instruction be...
 
-90
+92
 00:10:11,131 --> 00:10:14,914
 It doesn't really matter what it is... Let's say echo.
 
-91
+93
 00:10:16,205 --> 00:10:22,490
 We're never going to execute it, so it doesn't
 matter, as long as it's some unique value.
 
-92
+94
 00:10:23,394 --> 00:10:25,920
 And that should be an array shouldn't it?
 
-93
+95
 00:10:29,965 --> 00:10:35,180
 It prints the instruction.
 
-94
+96
 00:10:38,411 --> 00:10:51,965
 And we expect the output to
 receive puts with instruction once.
 
-95
+97
 00:10:56,297 --> 00:10:59,440
 And it executes the instruction.
 
-96
-00:10:59,908 --> 00:11:02,937
+98
+00:10:59,900 --> 00:11:13,120
 [Silence]
 
-97
+99
 00:11:13,268 --> 00:11:19,302
 With the instruction once.
 
-98
+100
 00:11:21,050 --> 00:11:24,102
 I go back and forth without
 saying something should be called.
 
-99
+101
 00:11:24,114 --> 00:11:27,908
 Whether I should say how many times...
 But in this case I think it's important that you...
 
-100
+102
 00:11:28,000 --> 00:11:33,890
 Because these things have side effects, the
 number of times you call them is important.
 
-101
-00:11:34,285 --> 00:11:37,565
+103
+00:11:34,280 --> 00:11:40,228
 [Silence]
 
-102
+104
 00:11:40,410 --> 00:11:46,422
 And I also said that system
 should be stubbed in any case,
 
-103
+105
 00:11:46,450 --> 00:11:48,045
 even if you're not making assertions on it.
 
-104
+106
 00:11:48,057 --> 00:11:52,670
 And that should probably happen
 in all cases so I'll put that at the top.
 
-105
+107
 00:11:52,800 --> 00:11:58,194
 TS: So if you didn't do this, one of those tests
 you wrote would actually try to execute that?
 
-106
+108
 00:11:58,200 --> 00:12:01,908
 JC: Exactly... Well, let's run it
 and you should actually see this,
 
-107
+109
 00:12:02,160 --> 00:12:05,650
 because system inherits
 standard out from your Ruby process.
 
-108
+110
 00:12:05,668 --> 00:12:12,910
 And you will see an instruction pop up in the
 tests when they're run, because of this, I think.
 
-109
+111
 00:12:15,702 --> 00:12:21,965
 Undefinable local variable method
 instruction... So I made a typo somewhere.
 
-110
+112
 00:12:23,150 --> 00:12:25,908
 Where did I do that?
 
-111
+113
 00:12:26,260 --> 00:12:30,342
 Target spec 6... OK.
 
-112
+114
 00:12:33,851 --> 00:12:37,931
 Oh I've only said instruction there...
 
-113
+115
 00:12:38,320 --> 00:12:39,930
 OK.
 
-114
+116
 00:12:43,108 --> 00:12:46,537
 Undefined... Ah yes, right.
 
-115
+117
 00:12:46,720 --> 00:12:55,394
 I've used instruction everywhere which is what
 I mean, but the constructor wants a plural.
 
-116
+118
 00:12:56,148 --> 00:13:03,977
 So let's do that, and remove the array from here.
 
-117
+119
 00:13:05,370 --> 00:13:08,548
 And that should be better.
 
-118
+120
 00:13:09,090 --> 00:13:14,537
 So yes it's printed 'an instruction' while the tests
 are running, so it's actually executed that command.
 
-119
+121
 00:13:14,560 --> 00:13:26,948
 So let's stop it being able to
 do that by stubbing system out.
 
-120
+122
 00:13:32,914 --> 00:13:36,251
 One good thing about calling
 it on target and not on kernel,
 
-121
+123
 00:13:36,285 --> 00:13:39,360
 is that I generally dislike
 stubbing out global things.
 
-122
+124
 00:13:41,050 --> 00:13:45,577
 This is working with files a lot... We're
 not directly working with files in Ruby yet,
 
-123
+125
 00:13:45,620 --> 00:13:53,782
 but you get various gems that will stub out
 the file system, or Net::HTTP or whatever it is.
 
-124
+126
 00:13:53,805 --> 00:13:57,508
 I find those usually get in the way somewhere.
 
-125
+127
 00:13:57,520 --> 00:14:04,091
 You really want only this test, this tiny
 piece of code, to be isolated from something.
 
-126
+128
 00:14:04,240 --> 00:14:07,040
 For example, if you use something
 that stubs out of the file system,
 
-127
+129
 00:14:07,074 --> 00:14:11,302
 you can't use `require` any more,
 so your code stops loading.
 
-128
+130
 00:14:11,737 --> 00:14:17,291
 So the fact that this only affects the
 object under test is appealing to me.
 
-129
+131
 00:14:18,030 --> 00:14:23,725
 So if we run those tests now it's not printing stuff
 in the middle of them because it's not calling echo.
 
-130
+132
 00:14:23,920 --> 00:14:26,720
 So that's better.
 

@@ -117,7 +117,7 @@ Because, to pass this by saying
 `example/src/hello.coffee`...
 
 27
-00:02:38,834 --> 00:02:43,348
+00:02:38,830 --> 00:02:45,451
 TS: What's the trade off there?
 Why would you want to do it one way or the other?
 
@@ -153,8 +153,7 @@ can do something for example, by having patterns.
 
 34
 00:03:25,645 --> 00:03:30,514
-Like if you want to say *.js
-depends on *.coffee,
+Like if you want to say *.js depends on *.coffee,
 
 35
 00:03:30,510 --> 00:03:36,605
@@ -217,7 +216,7 @@ So we've decided that the target is going to
 have a new argument, which is its dependencies.
 
 48
-00:04:45,051 --> 00:04:48,091
+00:04:44,754 --> 00:05:02,240
 [Silence]
 
 49
@@ -294,7 +293,7 @@ going to put my integration test.
 dependent_targets_spec.rb
 
 65
-00:06:51,657 --> 00:06:54,651
+00:06:50,822 --> 00:06:56,330
 [Silence]
 
 66
@@ -353,7 +352,7 @@ And likewise there are some files called
 b and c that have their letters in them.
 
 79
-00:08:30,422 --> 00:08:33,714
+00:08:30,420 --> 00:08:34,822
 [Silence]
 
 80
@@ -366,7 +365,7 @@ then you have your first target.
 And let's put these somewhere... Like in spec/tmp.
 
 82
-00:08:58,160 --> 00:09:01,211
+00:08:57,920 --> 00:09:04,434
 [Silence]
 
 83
@@ -460,7 +459,7 @@ and c.txt and putting that into the second.
 I suppose this could be our before block.
 
 103
-00:11:38,377 --> 00:11:41,794
+00:11:38,370 --> 00:11:50,411
 [Silence]
 
 104
@@ -486,7 +485,7 @@ Because everything has
 been concatenated together.
 
 109
-00:12:27,337 --> 00:12:30,857
+00:12:27,330 --> 00:12:38,411
 [Silence]
 
 110
@@ -526,7 +525,7 @@ We can make that, and then we can `File.open`,
 the path name and write content into that.
 
 118
-00:13:29,142 --> 00:13:32,582
+00:13:28,925 --> 00:13:37,634
 [Silence]
 
 119
@@ -534,7 +533,7 @@ the path name and write content into that.
 Then we can store the path name in there.
 
 120
-00:13:43,474 --> 00:13:46,720
+00:13:43,470 --> 00:13:48,045
 [Silence]
 
 121
@@ -569,7 +568,8 @@ We have 3 files and they have content.
 
 128
 00:14:23,108 --> 00:14:28,068
-And we've made targets for them and the first target depends on a and b
+And we've made targets for them and
+the first target depends on a and b
 
 129
 00:14:28,060 --> 00:14:31,474
@@ -578,7 +578,8 @@ files together you get one.txt.
 
 130
 00:14:31,520 --> 00:14:34,982
-The second target depends on the first target and file c
+The second target depends on
+the first target and file c
 
 131
 00:14:34,980 --> 00:14:42,308
@@ -622,7 +623,7 @@ No variable `second_target` on where... 38.
 Ah yes.
 
 140
-00:15:25,360 --> 00:15:28,788
+00:15:25,360 --> 00:15:31,222
 [Silence]
 
 141
@@ -666,7 +667,7 @@ message equals "command failed" with the instruction.
 TS: Right.
 
 150
-00:16:25,497 --> 00:16:28,742
+00:16:25,490 --> 00:16:32,194
 [Silence]
 
 151
@@ -674,11 +675,11 @@ TS: Right.
 JC: Raise that.
 
 152
-00:16:34,400 --> 00:16:37,885
+00:16:34,400 --> 00:16:38,788
 [Silence]
 
 153
-00:16:38,720 --> 00:16:45,097
+00:16:38,880 --> 00:16:45,090
 Command failed: cat spec/tmp/one. So that is expected.
 
 154
@@ -737,19 +738,19 @@ a.text and then have that created spec/tmp.
 
 166
 00:17:46,270 --> 00:17:52,891
-But to make these commands work I would have
-had to change process directory into there.
+But to make these commands work I would
+have had to change process directory into there.
 
 167
 00:17:52,910 --> 00:17:56,217
-which we could do, I think I'm happier with that.
+Which we could do, I think I'm happier with that.
 
 168
 00:17:56,240 --> 00:18:03,988
 Lets remove those.
 
 169
-00:18:04,194 --> 00:18:07,851
+00:18:04,190 --> 00:18:08,994
 [Silence]
 
 170
@@ -762,7 +763,7 @@ crufting everything up.
 If we do that... `in_tmp_dir`.
 
 172
-00:18:21,860 --> 00:18:25,028
+00:18:21,860 --> 00:18:30,171
 [Silence]
 
 173
@@ -771,7 +772,7 @@ FileUtils has another nice helper function
 where you can FileUtils.cd to somewhere.
 
 174
-00:18:38,160 --> 00:18:41,622
+00:18:38,160 --> 00:18:42,091
 [Silence]
 
 175
@@ -815,7 +816,7 @@ they don't run system calls or write any files.
 So file would have to make that temp directory.
 
 184
-00:19:23,520 --> 00:19:26,011
+00:19:23,520 --> 00:19:27,017
 And then put that in here.
 
 185
