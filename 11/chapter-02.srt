@@ -217,8 +217,8 @@ So, to minify something...
 
 50
 00:04:33,120 --> 00:04:37,108
-Again, we can use things in node_modules/...
-we run uglify.
+Again, we can use things in
+node_modules/... We run uglify.
 
 51
 00:04:41,470 --> 00:04:49,634
@@ -230,221 +230,229 @@ Those flags have compress which is...
 Let's see what the help says.
 
 53
-00:04:54,820 --> 00:05:01,131
-[Thinking]... And I have to run it with --help
+00:04:54,820 --> 00:04:59,485
+[Thinking]
 
 54
-00:05:01,828 --> 00:05:04,800
-[Silence]
+00:04:59,480 --> 00:05:02,822
+And I have to run it with --help
 
 55
+00:05:02,914 --> 00:05:09,005
+[Silence]
+
+56
 00:05:09,090 --> 00:05:18,148
 So "–c" enables compressor options.
 You have to tell that to make it minify the file.
 
-56
+57
 00:05:18,140 --> 00:05:19,760
 TS: Right.
 
-57
+58
 00:05:19,760 --> 00:05:25,542
 JC: The option called m has not been found.
 
-58
+59
 00:05:25,600 --> 00:05:31,748
 It's up there... It's mangle... Which means
 it will do things like shrink variable names.
 
-59
-00:05:32,228 --> 00:05:35,920
-And "–o" is for output; so, where to put the resulting file.
-
 60
-00:05:35,970 --> 00:05:38,868
-TS: So is uglify going to be responsible for concatenating these
+00:05:32,228 --> 00:05:35,920
+And "–o" is for output;
+so, where to put the resulting file.
 
 61
+00:05:35,970 --> 00:05:38,868
+TS: So is uglify going to be
+responsible for concatenating these,
+
+62
 00:05:38,868 --> 00:05:42,331
 or does concatenation
 come after the uglification?
 
-62
+63
 00:05:42,450 --> 00:05:47,154
 JC: That's the bit I'm not sure about actually.
 
-63
+64
 00:05:47,485 --> 00:05:52,045
 Whether you can give it multiple input files
 and have it write them all to the same place.
 
-64
+65
 00:05:52,040 --> 00:05:55,645
 TS: It seems that the
 coffeescript compiler is one to one.
 
-65
+66
 00:05:55,680 --> 00:05:58,000
 You give it one coffee-script
 file and one JavaScript file.
 
-66
+67
 00:05:58,000 --> 00:06:00,731
 JC: Exactly.
 
-67
+68
 00:06:00,730 --> 00:06:06,262
 So the first line here says the usage
 is that it can take multiple input files.
 
-68
+69
 00:06:06,260 --> 00:06:09,954
 So why don't we try to get it to do that.
 
-69
+70
 00:06:10,770 --> 00:06:12,822
 I'll just remove those.
 
-70
+71
 00:06:13,420 --> 00:06:18,754
 cmo example/bundle.js
 
-71
+72
 00:06:18,891 --> 00:06:23,748
 example/lib/*
 
-72
+73
 00:06:24,030 --> 00:06:26,697
 And we'll see what goes on in there.
 
-73
+74
 00:06:30,411 --> 00:06:35,222
 OK that looks like it has some code in it.
 
-74
+75
 00:06:36,582 --> 00:06:43,714
 It will have mangled all the names and everything
 so whatever I was looking for in here...
 
-75
+76
 00:06:45,210 --> 00:06:48,480
 It will only reduce the size of local variables,
 
-76
+77
 00:06:48,500 --> 00:06:50,857
 because it doesn't matter
 what those are externally,
 
-77
+78
 00:06:50,880 --> 00:06:52,240
 but method name should stay the same.
 
-78
+79
 00:06:52,280 --> 00:06:57,954
 So I think there is a say... Yes, there's
 some say method being defined there.
 
-79
+80
 00:06:59,725 --> 00:07:01,531
 And it's got that code in it that we wanted.
 
-80
+81
 00:07:01,530 --> 00:07:07,691
 So this looks like the output
 that we want to produce.
 
-81
+82
 00:07:09,211 --> 00:07:14,120
 TS: Whats the trade off between concatenating
 and minifying them all in one step versus...
 
-82
+83
 00:07:14,120 --> 00:07:16,285
 I presume if you wanted  to,
 you could minify them separately
 
-83
+84
 00:07:16,297 --> 00:07:19,340
 and then post-process them
 to concatenate them together,
 
-84
+85
 00:07:19,360 --> 00:07:24,114
 or is it necessary for them
 to be minified all together?
 
-85
+86
 00:07:24,840 --> 00:07:29,942
 JC: I think there are certain optimisations you
 can do by considering things like – in total.
 
-86
+87
 00:07:29,954 --> 00:07:36,171
 And because there are various different work-flows
 for JavaScript. Like if you've got all your...
 
-87
+88
 00:07:38,491 --> 00:07:41,451
 Depending on which of the
 various module formats you're using...
 
-88
+89
 00:07:41,474 --> 00:07:46,148
 Like, you might have used a tool
 to resolve all of those modules,
 
-89
+90
 00:07:46,160 --> 00:07:49,851
 and in-line them before you
 did the coffee-script compilation.
 
-90
+91
 00:07:49,860 --> 00:07:51,942
 Or if you're using something like Browserify,
 
-91
+92
 00:07:51,954 --> 00:07:57,165
 you can give it a plug-in that
 will convert coffee-script on the fly.
 
-92
+93
 00:07:57,234 --> 00:07:58,571
 Or you can do them in separate steps,
 
-93
+94
 00:07:58,605 --> 00:08:02,537
 like compile all your coffee-script and
 then get Browserify to resolve everything.
 
-94
+95
 00:08:02,537 --> 00:08:04,530
 TS: Fine.
 
-95
+96
 00:08:06,080 --> 00:08:09,097
 JC: Yes, they're usually...
 
-96
+97
 00:08:10,457 --> 00:08:16,320
-I think that's the workflow that a lot of people
-are using these days is Browserify or Webpack,
+I think that the workflow a lot of people are using these days is Browserify or Webpack,
+
+98
+00:08:16,320 --> 00:08:17,000
 or something like that.
 
-97
+99
 00:08:17,000 --> 00:08:19,851
 But minifying the individual files
 and then concatenating them
 
-98
+100
 00:08:19,860 --> 00:08:23,737
 will usually be the roughly the same
 as getting the tool to do it for you.
 
-99
+101
 00:08:27,497 --> 00:08:30,742
 TS: So you're happy with this chain of
 operations in order to produce the output?
 
-100
+102
 00:08:30,765 --> 00:08:31,330
 JC: Yes.
 

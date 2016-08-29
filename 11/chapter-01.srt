@@ -17,8 +17,8 @@ Author of JavaScript Testing Recipes.
 
 5
 00:00:11,360 --> 00:00:16,914
-And creator of open source projects such
-as Faye and web socket driver.
+And creator of open source projects
+such as Faye and web socket driver.
 
 6
 00:00:17,337 --> 00:00:19,577
@@ -91,13 +91,13 @@ There's coffeescript,
 so we'll need the coffee compiler.
 
 21
-00:01:22,440 --> 00:01:32,502
-And it has to be minified so I'll
-use uglify.js for that... and concatenated.
+00:01:21,954 --> 00:01:32,500
+And they need to be minified so I'll
+use uglify.js for that, and concatenated is...
 
 22
 00:01:32,530 --> 00:01:39,817
-either uglify will do that, or I'll use cat,
+Either uglify will do that, or I'll use cat,
 or something like that. [James thinks]
 
 23

@@ -10,9 +10,8 @@ directory here and try something out.
 
 3
 00:00:11,620 --> 00:00:23,657
-Yes,I'm thinking I want to do
-something like this; I want to
-require './scratch/target'.
+Yes, I'm thinking I want to do something
+like this; I want to require './scratch/target'.
 
 4
 00:00:24,090 --> 00:00:37,897
@@ -46,7 +45,7 @@ some nomenclature from make here),
 but a target is any of the files in your system.
 
 11
-00:01:24,000 --> 00:01:30,022
+00:01:24,000 --> 00:01:30,160
 So when you talk about hello.js is
 derived from hello.coffee, hello.js is the target.
 
@@ -75,17 +74,17 @@ And you want these things to compose in that
 way so you can make targets out of other targets.
 
 17
-00:01:58,365 --> 00:02:01,588
+00:01:58,360 --> 00:02:03,645
 [Silence]
 
 18
 00:02:03,737 --> 00:02:14,468
 In Ruby you could do this, for example
-by putting a block here. Like system erm...
+by putting a block here. Like system... [he thinks]
 
 19
 00:02:14,697 --> 00:02:21,520
-How do we do this... We run... [he types].
+How did we do this... We ran... [he types].
 
 20
 00:02:38,720 --> 00:02:49,520
@@ -93,9 +92,9 @@ That would work, but I'm leaning toward
 making this string be data rather than blocks.
 
 21
-00:02:49,520 --> 00:02:56,845
-Just because it's quite common to do,
-like in make
+00:02:49,657 --> 00:02:56,840
+Just because it's quite common
+to do, like in make you can...
 
 22
 00:02:56,960 --> 00:03:06,468
@@ -213,7 +212,7 @@ to be run to set up the directory and compile code.
 I want this script, when it's run, to make that file.
 
 47
-00:05:36,925 --> 00:05:40,000
+00:05:36,920 --> 00:05:52,377
 [Silence]
 
 48
@@ -238,267 +237,275 @@ pathname of the thing we're building.
 And some instructions.
 
 53
-00:06:16,651 --> 00:06:19,645
+00:06:16,102 --> 00:06:26,937
 [Silence]
 
 54
-00:06:30,491 --> 00:06:33,702
-So: undefined method build for Target... OK
+00:06:26,930 --> 00:06:28,640
+OK
 
 55
+00:06:30,490 --> 00:06:34,240
+So: undefined method build for Target... OK, that's fine.
+
+56
 00:06:36,171 --> 00:06:38,617
 I want to build the thing.
 
-56
+57
 00:06:38,628 --> 00:06:46,960
 And like you said,we could pass each of those
 strings into system and it ought to run them.
 
-57
+58
 00:06:48,262 --> 00:06:54,845
 So we can put @instruction.each do |instruction|
 
-58
+59
 00:07:01,862 --> 00:07:04,811
 I'm going to print what each instruction is.
 
-59
+60
 00:07:04,880 --> 00:07:11,142
 Because that's a helpful thing that make does, and it
 helps you see what you build is actually doing.
 
-60
+61
 00:07:11,154 --> 00:07:16,994
 When we ran that shell script, another thing
 it didn't do is show us what was going on.
 
-61
+62
 00:07:17,382 --> 00:07:23,090
 If you can see what's going on you can verify if
 it's being lazy, not running the certain things.
 
-62
+63
 00:07:23,100 --> 00:07:32,422
 So we'll print each one and then pass
 it to system, and that will be enough.
 
-63
+64
 00:07:32,434 --> 00:07:38,148
 I've made this `@output` variable,
 partly because I'm anticipating that...
 
-64
+65
 00:07:39,170 --> 00:07:46,320
 If I'm calling puts, generally things that have
 puts statements in them are not good for your tests,
 
-65
+66
 00:07:46,365 --> 00:07:49,268
 because they fill up the tests
 with whatever is going on.
 
-66
+67
 00:07:51,740 --> 00:07:58,057
 It's a sort of habit I have...  If I know that
 something's going to need to be a parameter
 
-67
+68
 00:07:58,080 --> 00:08:01,028
 or maybe a constant or an instance variable later.
 
-68
+69
 00:08:01,040 --> 00:08:09,794
 I'll make it but then assign it
 to a constant in the constructor.
 
-69
+70
 00:08:09,817 --> 00:08:15,337
 It means I don't need to go through all the code
 later and go through the extraction process.
 
-70
+71
 00:08:16,130 --> 00:08:22,342
 This may be a bit premature but I can
 see that coming up so I'll just do that.
 
-71
+72
 00:08:23,337 --> 00:08:28,777
 So it's printed what it's doing and
 made the directory and the coffeescript.
 
-72
+73
 00:08:28,940 --> 00:08:34,262
 And now there should be
 one file in lib which is hello.js
 
-73
+74
 00:08:34,297 --> 00:08:43,337
 And that should contain compiled code, which it does.
 
-74
+75
 00:08:47,040 --> 00:08:55,131
 So I guess that's a minimum
 viable build system... I suppose.
 
-75
+76
 00:08:55,154 --> 00:08:57,474
 We've got this.
 
-76
+77
 00:08:57,470 --> 00:09:06,560
 And we can make another one out of complimenter.
 
-77
-00:09:06,765 --> 00:09:09,520
+78
+00:09:06,760 --> 00:09:14,548
 [Silence]
 
-78
-00:09:14,605 --> 00:09:19,337
-Then we could build each of them.
-
 79
+00:09:14,605 --> 00:09:19,337
+And...Then we could build each of them.
+
+80
 00:09:22,742 --> 00:09:29,348
 And then we could have one for the bundle.
 
-80
-00:09:29,508 --> 00:09:32,582
+81
+00:09:29,500 --> 00:09:35,325
 [Silence]
 
-81
+82
 00:09:36,354 --> 00:09:40,520
 Target.new('example/bundle.js')
 is what's being built here.
 
-82
+83
 00:09:40,594 --> 00:09:47,325
 And build this... What did we do in our build script?
 
-83
+84
 00:09:49,770 --> 00:09:55,325
 We ran this command. So I'll just take that.
 
-84
-00:09:55,531 --> 00:09:59,108
+85
+00:09:55,530 --> 00:09:58,525
 [Silence]
 
-85
+86
+00:09:58,520 --> 00:10:03,348
+Put that there and then...
+
+87
 00:10:03,554 --> 00:10:07,291
 Build it.
 
-86
-00:10:07,622 --> 00:10:10,914
+88
+00:10:07,620 --> 00:10:13,257
 [Silence]
 
-87
+89
 00:10:13,291 --> 00:10:16,400
 Ah! This doesn't exist yet because we didn't build it.
 
-88
+90
 00:10:16,491 --> 00:10:19,382
 ruby scratch/test.rb
 
-89
+91
 00:10:21,040 --> 00:10:27,657
 OK, so that's made the lib directory twice
 and run the coffee twice with the two things.
 
-90
+92
 00:10:27,691 --> 00:10:33,520
 So let's run uglify so we get
 our output as we wanted it.
 
-91
+93
 00:10:39,657 --> 00:10:44,674
 This is like enough of a system, that
 you can do something useful with.
 
-92
+94
 00:10:44,948 --> 00:10:47,188
 TS: OK.
 
-93
+95
 00:10:47,748 --> 00:10:53,977
 How close is this to the generalized
 instructions mention in the brief?
 
-94
+96
 00:10:53,970 --> 00:11:00,800
 Are these the generalised instructions or
 are they not sufficiently general to count?
 
-95
+97
 00:11:01,160 --> 00:11:06,125
 JC: They are general in that you can put any
 shell command in here, and it will be run.
 
-96
+98
 00:11:06,160 --> 00:11:12,765
 There wasn't a great way for supplying the input to
 the system and there's a lot that it can't do yet.
 
-97
+99
 00:11:12,857 --> 00:11:21,942
 But this is a minimal thing for
 modeling a file and how it gets created.
 
-98
+100
 00:11:22,605 --> 00:11:27,165
 We're still not using the pathname input to this yet.
 
-99
+101
 00:11:27,211 --> 00:11:31,531
 That will become more important when
 things want to check that they're up to date,
 
-100
+102
 00:11:31,554 --> 00:11:35,257
 because they have to know where their target is.
 
-101
+103
 00:11:35,290 --> 00:11:42,902
 This target only runs shell commands, it doesn't
 look at the output of those shell commands.
 
-102
+104
 00:11:42,937 --> 00:11:46,662
 And it doesn't relate them to
 the output file in any way.
 
-103
+105
 00:11:46,670 --> 00:11:51,737
 But when it wants to know if something's up to date,
 it's going to have to look at those files.
 
-104
+106
 00:11:51,908 --> 00:11:57,348
 TS: I thought it was interesting that you
 didn't start by building the target class,
 
-105
+107
 00:11:57,680 --> 00:12:02,091
 but by USING the target class and
 then you kind of dropped down...
 
-106
+108
 00:12:02,091 --> 00:12:07,028
 And every time you ran this it failed, so you
 implemented a method on it till it worked.
 
-107
+109
 00:12:07,074 --> 00:12:08,674
 JC: Right.
 
-108
+110
 00:12:08,700 --> 00:12:15,520
 I have a vague idea where I'm going because it should
 look like something I'm already familiar with.
 
-109
+111
 00:12:17,680 --> 00:12:20,160
 But I don't quite know what
 models and functions I want yet.
 
-110
+112
 00:12:20,182 --> 00:12:25,028
 I'm just thinking, how would
 you want to interact with this?
