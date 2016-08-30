@@ -86,7 +86,7 @@ the target should execute its instruction.
 But we haven't given it any instructions.
 
 20
-00:01:58,170 --> 00:02:02,948
+00:01:58,170 --> 00:02:04,605
 [Silence]
 
 21
@@ -194,7 +194,7 @@ and put it in here. But not like that!
 And then...
 
 43
-00:04:25,050 --> 00:04:32,160
+00:04:25,050 --> 00:04:33,508
 [Silence]
 
 44
