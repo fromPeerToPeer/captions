@@ -22,7 +22,7 @@ so let's make a package.json
 with those things in it.
 
 6
-00:00:24,274 --> 00:00:27,474
+00:00:24,270 --> 00:00:39,888
 [Silence]
 
 7
@@ -176,7 +176,7 @@ And then we'll do the same with the other file.
 I'll use hello.
 
 41
-00:03:41,497 --> 00:03:45,062
+00:03:41,490 --> 00:03:45,136
 [Silence]
 
 42
@@ -216,9 +216,9 @@ inputs to that file, it will rebuild it.
 So, to minify something...
 
 50
-00:04:33,120 --> 00:04:37,108
+00:04:33,120 --> 00:04:38,816
 Again, we can use things in
-node_modules/... We run uglify.
+node_modules/... We run uglify with...
 
 51
 00:04:41,470 --> 00:04:49,634
@@ -234,7 +234,7 @@ Let's see what the help says.
 [Thinking]
 
 54
-00:04:59,480 --> 00:05:02,822
+00:04:59,480 --> 00:05:02,608
 And I have to run it with --help
 
 55
@@ -417,7 +417,7 @@ will convert coffee-script on the fly.
 Or you can do them in separate steps,
 
 94
-00:07:58,605 --> 00:08:02,537
+00:07:58,600 --> 00:08:02,528
 like compile all your coffee-script and
 then get Browserify to resolve everything.
 
@@ -430,11 +430,12 @@ TS: Fine.
 JC: Yes, they're usually...
 
 97
-00:08:10,457 --> 00:08:16,320
-I think that the workflow a lot of people are using these days is Browserify or Webpack,
+00:08:10,450 --> 00:08:15,200
+I think that the workflow a lot of people
+are using these days is Browserify or Webpack,
 
 98
-00:08:16,320 --> 00:08:17,000
+00:08:15,248 --> 00:08:17,000
 or something like that.
 
 99
@@ -443,7 +444,7 @@ But minifying the individual files
 and then concatenating them
 
 100
-00:08:19,860 --> 00:08:23,737
+00:08:19,860 --> 00:08:26,336
 will usually be the roughly the same
 as getting the tool to do it for you.
 

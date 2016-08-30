@@ -4,396 +4,408 @@ Chapter 13.
 Returning original mtime from an up to date Target.
 
 2
-00:00:04,205 --> 00:00:12,571
-So, that was one case, we did the case where when you are forced
-to rebuild yourself, you return your regeneration time.
+00:00:04,200 --> 00:00:06,064
+So, that was one case.
 
 3
+00:00:06,064 --> 00:00:12,780
+We did the case where when you are forced to rebuild
+yourself, you return your regeneration time.
+
+4
 00:00:12,780 --> 00:00:17,622
 If you are already up to date you
 should return your target, your original time,
 
-4
+5
 00:00:17,645 --> 00:00:25,291
 so that you don't imply that you're newer than
 you are and force things downstream to get rebuilt.
 
-5
+6
 00:00:26,297 --> 00:00:28,137
 So where was that; lazy build exe.
 
-6
+7
 00:00:28,130 --> 00:00:31,611
 When the dependencies are newer than
 the target it returns a new time at the file.
 
-7
+8
 00:00:31,622 --> 00:00:42,285
 When the dependencies are older than the target
 it returns the mtime of the unmodified file.
 
-8
+9
 00:00:53,154 --> 00:01:04,285
 In that case we expect
 target.build to equal the target time.
 
-9
+10
 00:01:04,464 --> 00:01:10,280
 [Silence]
 
-10
+11
 00:01:10,354 --> 00:01:14,731
 So... It's not.
 
-11
+12
 00:01:14,900 --> 00:01:19,497
 TS: Do you think this was a rather unfair test
 because actually those two times would be the same
 
-12
+13
 00:01:19,508 --> 00:01:25,782
 if you hadn't run the instructions,
 the mtime of the file wouldn't have changed.
 
-13
+14
 00:01:25,897 --> 00:01:30,194
 So you've set up the test in such a way
 that you've assumed that the mtime changes.
 
-14
+15
 00:01:30,217 --> 00:01:37,611
 JC: What I'm testing, by accident, is that
 it returns the result of the second mtime call,
 
-15
+16
 00:01:37,610 --> 00:01:45,817
 which I've said in the thing is
 the original time plus 10 minutes.
 
-16
+17
 00:01:46,217 --> 00:01:50,560
 But what it's done is returned me...
 
-17
+18
 00:01:50,742 --> 00:01:58,811
 Expected 1712, got 1722 just because
 it's returning the value of the second call.
 
-18
+19
 00:01:58,902 --> 00:02:02,045
 TS: Which would be fine, but it's not fine.
 
-19
+20
 00:02:02,040 --> 00:02:03,577
 JC: No. [Laughter]
 
-20
+21
 00:02:03,620 --> 00:02:10,080
 So, is that what I really mean?
 Is that an accident or is it what I really mean?
 
-21
+22
 00:02:10,190 --> 00:02:13,645
 That it returns the result of the second mtime call.
 
-22
+23
 00:02:13,680 --> 00:02:16,960
 Because what else can you say; you're
 not actually interacting with the system.
 
-23
-00:02:16,990 --> 00:02:20,400
+24
+00:02:16,990 --> 00:02:20,512
 You're not running these commands;
 we're not actually changing any files.
 
-24
+25
 00:02:20,560 --> 00:02:27,017
 Is there some other way that I can say
 "it should return the same time as before"?
 
-25
+26
 00:02:30,217 --> 00:02:35,417
 I guess, if you decided not to run the build, you
 don't need to run the File.mtime a second time.
 
-26
+27
 00:02:35,410 --> 00:02:40,377
 TS: Right. I suppose it does depend on whether
 you care about mtime being run twice or not.
 
-27
+28
 00:02:40,720 --> 00:02:45,108
 Do you feel that it's important it only
 gets run as many times as necessary?
 
-28
+29
 00:02:48,868 --> 00:02:55,337
 JC: Well, this feature that we're working on is all
 about doing as little work as possible I suppose.
 
-29
+30
 00:02:55,340 --> 00:03:03,360
 I mean it is a very cheap operation, but it
 still hits disc, and you know hitting disc is bad.
 
-30
+31
 00:03:05,530 --> 00:03:07,440
 I'm probably worrying about it more than I ought to.
 
-31
+32
 00:03:07,500 --> 00:03:12,560
-The question that I actually have is how
+The question that I have is how
 you test this in an accurate way.
 
-32
+33
 00:03:12,617 --> 00:03:16,320
 It's not just working by
 accident, it's actually correct.
 
-33
+34
 00:03:16,377 --> 00:03:21,017
 TS: Is it possible to get it to have the
 behaviour that you specified in your test
 
-34
+35
 00:03:21,010 --> 00:03:26,091
-or are you gonna have to relax your
+or will you have to relax your
 test in order to do anything?
 
-35
+36
 00:03:27,828 --> 00:03:32,137
 JC: Well I could stub it so that it
-returns the same value both times
+returns the same value both times,
 
-36
+37
 00:03:32,217 --> 00:03:38,754
 but then if it does that, from reading the test
 you can't tell which of those values it's returning.
 
-37
+38
 00:03:38,780 --> 00:03:42,217
 So that is not helpful.
 
-38
-00:03:42,628 --> 00:03:51,611
-I could make it so the code caches the first call to mtime
-and returns that if it decides not to do any work.
-
 39
-00:03:52,220 --> 00:03:56,057
-TS: Right. Oh, so mean that you could have an instance
-variable where your initial mtime gets stored
+00:03:42,620 --> 00:03:52,144
+I could make the code cache the first call to mtime
+and return that if it decides not to do any work.
 
 40
+00:03:52,240 --> 00:03:56,050
+TS: So you could have an instance
+variable where your initial mtime gets stored
+
+41
 00:03:56,080 --> 00:04:04,491
 and then if it does the build it updates that mtime
 and returns whichever one of those 'won'.
 
-41
+42
 00:04:04,570 --> 00:04:08,400
 JC: Yes.. I think I'll do that.
 
-42
+43
 00:04:12,377 --> 00:04:17,131
 I've accidentally swapped my
 terminals around. Nevermind!
 
-43
+44
 00:04:18,057 --> 00:04:25,074
 So if I go back into lib/fakemake/target.
 
-44
+45
 00:04:27,080 --> 00:04:32,457
 We can make this just return mtime.
 
-45
+46
 00:04:33,360 --> 00:04:42,891
 Then we can assign that
 to an instance variable there.
 
-46
+47
 00:04:42,890 --> 00:04:47,862
 And make that an instance variable there.
 
-47
+48
 00:04:47,954 --> 00:04:59,714
 Then at the end of this we can say
 mtime = file.mtime with the pathname.
 
-48
+49
 00:04:59,748 --> 00:05:07,154
 This will now implicitly return mtime [laughter]
 because it's the last thing that build calls.
 
-49
+50
 00:05:07,300 --> 00:05:13,097
 But I want build to be the
 recipe of the steps that you do.
 
-50
+51
 00:05:13,302 --> 00:05:17,657
 [Silence]
 
-51
+52
 00:05:18,720 --> 00:05:25,062
 Expected two times with arguments.
 Yeah, so that's where I've got hmm...
 
-52
+53
 00:05:25,340 --> 00:05:28,662
 TS: Is this the change you had to
 make to un-break the test before?
 
-53
+54
 00:05:28,685 --> 00:05:34,320
 JC: Yes, maybe I should remove that
 and fix this specifically where it is done.
 
-54
+55
 00:05:35,817 --> 00:05:40,777
 TS: Well previously you amended your test
 to say that it always receives mtime twice.
 
-55
+56
 00:05:40,770 --> 00:05:44,594
 but now you've improved your
 code so that it only receives it once
 
-56
+57
 00:05:44,590 --> 00:05:49,451
 in a case where it only needs to receive it once.
 So you've optimized away the second of those mtimes.
 
-57
+58
 00:05:49,500 --> 00:05:52,617
 JC: Yes.
 
-58
+59
 00:05:52,651 --> 00:05:57,314
 OK, let's try something else.
 
-59
+60
 00:06:00,068 --> 00:06:07,462
 In this case it's called twice.
 
-60
+61
 00:06:07,714 --> 00:06:13,451
 [Silence]
 
-61
+62
 00:06:13,890 --> 00:06:20,491
 We could make it so this is defined
 to be called once in this scenario.
 
-62
+63
 00:06:23,668 --> 00:06:28,708
 And it just returns that.
 
-63
+64
 00:06:28,740 --> 00:06:37,817
 So when the dependencies are newer it calls
 mtime twice and returns the second return value.
 
-64
+65
 00:06:37,885 --> 00:06:42,708
 In this case it only returns it once.
 
-65
+66
 00:06:42,780 --> 00:06:46,560
 No, wait, that's not actually true, it does...
 
-66
-00:06:46,640 --> 00:06:52,982
-No, it only calls mtime again if the things
-are newer, so this ought to be fine.
-
 67
+00:06:46,640 --> 00:06:52,982
+No, it only calls mtime again if the
+things are newer, so this ought to be fine.
+
+68
 00:06:54,662 --> 00:06:57,291
 Time always makes me confused.
 
-68
+69
 00:06:57,360 --> 00:06:59,280
 TS: Where's this failure coming from?
 
-69
+70
 00:06:59,348 --> 00:07:01,817
 [James thinks]
 
-70
+71
 00:07:01,970 --> 00:07:05,394
 JC: There is probably a test...
 So we've stubbed it out globally.
 
-71
+72
 00:07:05,460 --> 00:07:09,108
 We said it was allowed to be called twice.
 
-72
+73
 00:07:09,234 --> 00:07:15,474
 This is the test that checks the
 mtime of its own file, that's that one.
 
-73
+74
 00:07:15,840 --> 00:07:19,131
 TS: But you only put the twice
 in there to stop that test breaking.
 
-74
-00:07:19,211 --> 00:07:27,474
-JC: That's true. But now I've specified it more strongly
-in those tests, this ought to not be necessary.
-
 75
-00:07:28,410 --> 00:07:33,554
-TS: Well then the change you made in the the implementation was
-so that it doesn't get called twice unless it needs to be.
+00:07:19,210 --> 00:07:24,704
+JC: That's true. But now I've specified it more strongly in those tests, 
 
 76
+00:07:24,960 --> 00:07:28,224
+this should not be necessary.
+
+77
+00:07:28,288 --> 00:07:30,410
+TS: Well then the change you
+made in the the implementation 
+
+78
+00:07:30,448 --> 00:07:33,520
+was so that it doesn't get
+called twice unless it needs to be.
+
+79
 00:07:33,577 --> 00:07:36,137
 JC: Yes.
 
-77
+80
 00:07:38,194 --> 00:07:44,320
 OK, so everything's green, so we should
 check what we've done and make a commit.
 
-78
+81
 00:07:45,120 --> 00:07:50,011
 A few things have changed:
 we've made build return mtime.
 
-79
+82
 00:07:50,114 --> 00:07:55,988
 We have then used that
 to make it skip building itself.
 
-80
+83
 00:07:56,057 --> 00:07:59,302
 And then we've made a new mtime at the end.
 
-81
+84
 00:07:59,300 --> 00:08:06,582
 Oh, there's that method I extracted that
 isn't actually needed. Let's get rid of that.
 
-82
+85
 00:08:06,674 --> 00:08:11,954
 [Silence]
 
-83
+86
 00:08:14,857 --> 00:08:17,931
 (That's not needed)
 
-84
+87
 00:08:18,890 --> 00:08:24,262
 Yes. So we've returned mtime.
 Made it skip if everything's up to date.
 
-85
+88
 00:08:24,400 --> 00:08:28,491
 And everything else is tests.
 
-86
+89
 00:08:34,500 --> 00:08:35,120
 OK.
 
