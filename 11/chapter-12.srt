@@ -85,7 +85,7 @@ JC: Exactly. I think this is the point where I need
 to put a value that actually makes sense in here.
 
 20
-00:02:03,108 --> 00:02:07,291
+00:02:03,100 --> 00:02:07,600
 [Silence]
 
 21
@@ -153,7 +153,6 @@ and then sees if the second one will build.
 00:03:14,260 --> 00:03:25,440
 [saying what he's typing]
 
-
 36
 00:03:30,620 --> 00:03:38,102
 Let's just make it include one rather than
@@ -170,8 +169,8 @@ They're going to be created in a certain order.
 
 39
 00:03:48,770 --> 00:03:53,222
-But the time resolution on those
-time stamps on the file-system is only a second.
+But the time resolution on those time
+stamps on the file-system is only a second.
 
 40
 00:03:53,268 --> 00:03:59,920
@@ -294,7 +293,7 @@ a few seconds later than its dependencies were.
 
 65
 00:06:48,770 --> 00:06:54,880
-Or, if its dependencies were last touched a very long
+Or, if its dependencies were last touched a long
 time ago, but they're still newer than you are...
 
 66
@@ -571,224 +570,228 @@ regeneration_time and got echo high.
 That's because the end of our build self method...
 
 125
-00:12:23,142 --> 00:12:29,234
-The last thing in that is an each over the instructions,
-which each returns the thing it was called on.
+00:12:23,088 --> 00:12:25,420
+The last thing in that is
+an each over the instructions,
 
 126
+00:12:25,456 --> 00:12:29,248
+which each returns the thing it was called on.
+
+127
 00:12:29,302 --> 00:12:35,440
 I think I want to leave that where it is.
 
-127
+128
 00:12:35,737 --> 00:12:42,400
 And maybe extract a thing...
 
-128
+129
 00:12:42,948 --> 00:12:46,457
 Yes let's extract a thing, forgetting the mtime.
 
-129
+130
 00:12:46,742 --> 00:13:02,240
 [Silence]
 
-130
+131
 00:13:02,240 --> 00:13:06,560
 File mtime... Yes.
 
-131
+132
 00:13:09,097 --> 00:13:17,520
 Up here I can do...
 
-132
+133
 00:13:17,520 --> 00:13:21,440
 target_mtime equals mtime.
 
-133
+134
 00:13:21,920 --> 00:13:34,377
 And then return_unless that
 and any of those are greater than this.
 
-134
+135
 00:13:34,370 --> 00:13:39,394
 That cleans up that bit of code.
 
-135
+136
 00:13:39,828 --> 00:13:47,440
 And then up in our build method we can just
 have that return mtime. That ought to be OK.
 
-136
+137
 00:13:49,260 --> 00:13:58,937
 Loads of things have blown up. I don't think
 I've got the hang of unit testing. [Laughter]
 
-137
-00:14:04,820 --> 00:14:09,805
-Now that we're calling mtime in the build method in
-a code path that everything is going to hit,
-
 138
+00:14:04,820 --> 00:14:09,805
+Now that we're calling mtime in the build method
+in a code path that everything is going to hit,
+
+139
 00:14:09,908 --> 00:14:12,845
 more tests have blown up.
 
-139
+140
 00:14:13,010 --> 00:14:19,577
 In some cases we're getting
 mock expectation failures.
 
-140
+141
 00:14:19,771 --> 00:14:28,777
 There's a lot of logical failures here that aren't
 just because the thing didn't return the right time.
 
-141
+142
 00:14:28,770 --> 00:14:34,445
 I will back that out and check that refactoring I did.
 
-142
+143
 00:14:34,605 --> 00:14:39,268
 Oh, I have actually broken something.
 So I'm going to rewind all of this
 
-143
+144
 00:14:42,902 --> 00:14:46,571
 until we get back to what we wanted.
 
-144
+145
 00:14:47,394 --> 00:14:49,954
 OK let's make it work and then refactor it.
 
-145
+146
 00:14:50,000 --> 00:14:59,497
 So, if the file exists, pathname...
 
-146
+147
 00:14:59,645 --> 00:15:02,937
 Oh, well if you've built yourself
 then your file should exist.
 
-147
+148
 00:15:02,930 --> 00:15:06,137
 TS: You hope.
 
-148
+149
 00:15:06,350 --> 00:15:10,091
 JC: Well if something failed you would have
 got an exception and bailed out of this method.
 
-149
+150
 00:15:10,148 --> 00:15:19,428
 So let's assume that things worked and
 just call file.mtime with the pathname.
 
-150
+151
 00:15:21,074 --> 00:15:28,480
 That's the only difference I've made, since the tests were in this state.
 
-151
+152
 00:15:28,560 --> 00:15:35,474
 We still get that loads of things explode.
 
-152
+153
 00:15:36,010 --> 00:15:40,800
 JC: Yes so those are the things
 that don't exist when we call mtime.
 
-153
+154
 00:15:40,925 --> 00:15:45,737
 But we're not getting those mock expectations,
 we still are getting some mock expectations.
 
-154
+155
 00:15:45,794 --> 00:15:49,474
 Oh, because there's an
 assertion that it's called once.
 
-155
-00:15:49,640 --> 00:15:53,337
-But those failures that we're seeing
-before have mostly gone away.
-
 156
+00:15:49,640 --> 00:15:53,337
+But those failures that we were
+seeing before have mostly gone away.
+
+157
 00:15:53,360 --> 00:15:56,674
 So either it's trying to call
 mtime and it doesn't work.
 
-157
+158
 00:15:56,754 --> 00:16:02,480
 Or it's calling it twice when
 it should be calling it once.
 
-158
+159
 00:16:05,470 --> 00:16:15,737
 What's the one where that said
 it should be called once but it got twice?
 
-159
+160
 00:16:15,931 --> 00:16:18,480
 Line thirty-two.
 
-160
+161
 00:16:21,268 --> 00:16:28,697
 Maybe the once is implicit...
 Check the mtime on its own file.
 
-161
+162
 00:16:31,210 --> 00:16:35,862
 TS: Can you relax that implicit constraint somehow?
 
-162
+163
 00:16:35,965 --> 00:16:40,937
 JC: Yeah... [James thinks]
 
-163
+164
 00:16:40,930 --> 00:16:49,440
 What is the context here? When you build it,
 if the file exists it should call mtime twice.
 
-164
+165
 00:16:50,400 --> 00:16:54,285
 TS: First to decide whether to build it
 and then to report to any downstream.
 
-165
+166
 00:16:54,280 --> 00:16:57,634
 JC: Exactly.
 
-166
+167
 00:16:57,748 --> 00:17:01,337
 We had 9 failures, and now we've got 8 failures.
 
-167
-00:17:01,330 --> 00:17:05,440
+168
+00:17:01,330 --> 00:17:06,000
 The other thing is that it's calling
 mtime with loads of things that don't exist.
 
-168
+169
 00:17:06,045 --> 00:17:10,788
 So that is probably a thing that
 needs stubbing out up here.
 
-169
+170
 00:17:10,780 --> 00:17:14,548
 So that's this thing I did up here to...
 
-170
+171
 00:17:14,540 --> 00:17:16,948
 Because I thought it would bypass
 that code path, I wouldn't need to stub it,
 
-171
+172
 00:17:16,960 --> 00:17:23,460
 but now we're returning it in
 all cases it still needs stubbing.
 
-172
-00:17:23,714 --> 00:17:29,840
+173
+00:17:23,710 --> 00:17:30,480
 And it ought to be sufficient to
 return something of an acceptable type.
 
-173
+174
 00:17:32,274 --> 00:17:33,862
 JC: Now everything is green.
 

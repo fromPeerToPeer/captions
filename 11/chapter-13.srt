@@ -38,7 +38,7 @@ In that case we expect
 target.build to equal the target time.
 
 9
-00:01:04,822 --> 00:01:10,285
+00:01:04,464 --> 00:01:10,280
 [Silence]
 
 10
